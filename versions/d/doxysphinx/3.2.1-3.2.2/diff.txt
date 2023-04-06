@@ -1,0 +1,226 @@
+--- tmp/doxysphinx-3.2.1.tar.gz
++++ tmp/doxysphinx-3.2.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "doxysphinx-3.2.1.tar", max compression
+│ +gzip compressed data, was "doxysphinx-3.2.2.tar", max compression
+│   --- doxysphinx-3.2.1.tar
+├── +++ doxysphinx-3.2.2.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ --rw-r--r--   0        0        0     1068 2023-02-28 15:42:05.051179 doxysphinx-3.2.1/LICENSE
+│ │ --rw-r--r--   0        0        0     1078 2023-02-28 15:42:05.051179 doxysphinx-3.2.1/LICENSE.md
+│ │ --rw-r--r--   0        0        0     2602 2023-02-28 15:42:05.051179 doxysphinx-3.2.1/README.md
+│ │ --rw-r--r--   0        0        0      926 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/__init__.py
+│ │ --rw-r--r--   0        0        0      608 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/__main__.py
+│ │ --rw-r--r--   0        0        0     7300 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/cli.py
+│ │ --rw-r--r--   0        0        0    12376 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/doxygen.py
+│ │ --rw-r--r--   0        0        0    19836 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/html_parser.py
+│ │ --rw-r--r--   0        0        0     7740 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/process.py
+│ │ --rw-r--r--   0        0        0     5859 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/resources/custom.scss
+│ │ --rw-r--r--   0        0        0        0 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/resources/toc_template.html.j2
+│ │ --rw-r--r--   0        0        0     9683 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/resources.py
+│ │ --rw-r--r--   0        0        0     2943 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/sphinx.py
+│ │ --rw-r--r--   0        0        0    10875 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/toc.py
+│ │ --rw-r--r--   0        0        0      527 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/utils/__init__.py
+│ │ --rw-r--r--   0        0        0     2282 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/utils/contexts.py
+│ │ --rw-r--r--   0        0        0     1156 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/utils/exceptions.py
+│ │ --rw-r--r--   0        0        0     4967 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/utils/files.py
+│ │ --rw-r--r--   0        0        0     1757 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/utils/iterators.py
+│ │ --rw-r--r--   0        0        0     1431 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/utils/pathlib_fix.py
+│ │ --rw-r--r--   0        0        0    12216 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/doxysphinx/writer.py
+│ │ --rw-r--r--   0        0        0     4630 2023-02-28 15:42:05.067179 doxysphinx-3.2.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     4122 1970-01-01 00:00:00.000000 doxysphinx-3.2.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1068 2023-04-06 08:03:27.314633 doxysphinx-3.2.2/LICENSE
+│ │ +-rw-r--r--   0        0        0     1078 2023-04-06 08:03:27.314633 doxysphinx-3.2.2/LICENSE.md
+│ │ +-rw-r--r--   0        0        0     2602 2023-04-06 08:03:27.314633 doxysphinx-3.2.2/README.md
+│ │ +-rw-r--r--   0        0        0      926 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/__init__.py
+│ │ +-rw-r--r--   0        0        0      608 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/__main__.py
+│ │ +-rw-r--r--   0        0        0     7300 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/cli.py
+│ │ +-rw-r--r--   0        0        0    12357 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/doxygen.py
+│ │ +-rw-r--r--   0        0        0    19836 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/html_parser.py
+│ │ +-rw-r--r--   0        0        0     7740 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/process.py
+│ │ +-rw-r--r--   0        0        0     5859 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/resources/custom.scss
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/resources/toc_template.html.j2
+│ │ +-rw-r--r--   0        0        0     9683 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/resources.py
+│ │ +-rw-r--r--   0        0        0     2943 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/sphinx.py
+│ │ +-rw-r--r--   0        0        0    10875 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/toc.py
+│ │ +-rw-r--r--   0        0        0      527 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     2282 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/utils/contexts.py
+│ │ +-rw-r--r--   0        0        0     1156 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/utils/exceptions.py
+│ │ +-rw-r--r--   0        0        0     4967 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/utils/files.py
+│ │ +-rw-r--r--   0        0        0     1757 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/utils/iterators.py
+│ │ +-rw-r--r--   0        0        0     1431 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/utils/pathlib_fix.py
+│ │ +-rw-r--r--   0        0        0    12216 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/doxysphinx/writer.py
+│ │ +-rw-r--r--   0        0        0     4630 2023-04-06 08:03:27.330633 doxysphinx-3.2.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     4122 1970-01-01 00:00:00.000000 doxysphinx-3.2.2/PKG-INFO
+│ │   --- doxysphinx-3.2.1/LICENSE
+│ ├── +++ doxysphinx-3.2.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/LICENSE.md
+│ ├── +++ doxysphinx-3.2.2/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/README.md
+│ ├── +++ doxysphinx-3.2.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/__init__.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/__main__.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/cli.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/cli.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/doxygen.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/doxygen.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -2,19 +2,21 @@
+│ │  #  C O P Y R I G H T
+│ │  # -------------------------------------------------------------------------------------
+│ │  #  Copyright (c) 2023 by Robert Bosch GmbH. All rights reserved.
+│ │  #
+│ │  #  Author(s):
+│ │  #  - Markus Braun, :em engineering methods AG (contracted by Robert Bosch GmbH)
+│ │  #  - Celina Adelhardt, :em engineering methods AG (contracted by Robert Bosch GmbH)
+│ │ +#  - Gergely Meszaros, Stream HPC B.V. (contracted by Advanced Micro Devices Inc.)
+│ │  # =====================================================================================
+│ │  """The doxygen module contains classes and functions specific to doxygen."""
+│ │  
+│ │  import os
+│ │  import re
+│ │ +import shutil
+│ │  from dataclasses import dataclass
+│ │  from pathlib import Path
+│ │  from typing import Any, Dict, List, Union
+│ │  
+│ │  import json5
+│ │  
+│ │  from doxysphinx.utils.pathlib_fix import path_is_relative_to, path_resolve
+│ │ @@ -46,26 +48,25 @@
+│ │      config["WARNINGS"] = _parse_stderr(output.err)
+│ │      return config
+│ │  
+│ │  
+│ │  def _compare_configs(doxyfile: Path, doxygen_exe: str, doxygen_cwd: Path) -> DoxyOutput:
+│ │      from subprocess import CalledProcessError, run  # nosec: B404
+│ │  
+│ │ +    doxygen = shutil.which(doxygen_exe)
+│ │ +    if doxygen is None:
+│ │ +        return DoxyOutput("", f"Command not found: {doxygen_exe}")
+│ │ +
+│ │      try:
+│ │ -        default_config = run(  # nosec: B607, B603
+│ │ -            f"{doxygen_exe} -s -g -", cwd=doxygen_cwd, shell=True, capture_output=True  # nosec: B607, B603, B602
+│ │ -        )  # nosec: B607, B603
+│ │ -        if default_config.check_returncode:
+│ │ -            custom_config = run(  # nosec: B607, B603
+│ │ -                f"{doxygen_exe} -x {doxyfile}",
+│ │ -                cwd=doxygen_cwd,
+│ │ -                shell=True,  # nosec: B602
+│ │ -                capture_output=True,  # nosec: B607, B603
+│ │ -            )  # nosec: B607, B603
+│ │ -            custom_config.check_returncode
+│ │ +        default_config = run(  # nosec: B603
+│ │ +            [doxygen_exe, "-s", "-g", "-"], cwd=doxygen_cwd, capture_output=True, check=True
+│ │ +        )
+│ │ +        custom_config = run(  # nosec: B603
+│ │ +            [doxygen_exe, "-x", doxyfile.absolute()], cwd=doxygen_cwd, capture_output=True, check=False
+│ │ +        )
+│ │  
+│ │          return DoxyOutput(
+│ │              default_config.stdout.decode("utf-8") + custom_config.stdout.decode("utf-8"),
+│ │              default_config.stderr.decode("utf-8") + custom_config.stderr.decode("utf-8"),
+│ │          )
+│ │  
+│ │      except CalledProcessError as err:
+│ │   --- doxysphinx-3.2.1/doxysphinx/html_parser.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/html_parser.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/process.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/process.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/resources/custom.scss
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/resources/custom.scss
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/resources.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/resources.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/sphinx.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/sphinx.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/toc.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/toc.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/utils/__init__.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/utils/contexts.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/utils/contexts.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/utils/exceptions.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/utils/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/utils/files.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/utils/files.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/utils/iterators.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/utils/iterators.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/utils/pathlib_fix.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/utils/pathlib_fix.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/doxysphinx/writer.py
+│ ├── +++ doxysphinx-3.2.2/doxysphinx/writer.py
+│ │┄ Files identical despite different names
+│ │   --- doxysphinx-3.2.1/pyproject.toml
+│ ├── +++ doxysphinx-3.2.2/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -5,15 +5,15 @@
+│ │  ##
+│ │  ##  Author(s):
+│ │  ##  - Markus Braun, :em engineering methods AG (contracted by Robert Bosch GmbH)
+│ │  ## =====================================================================================
+│ │  
+│ │  [tool.poetry]
+│ │  name = "doxysphinx"
+│ │ -version = "3.2.1"
+│ │ +version = "3.2.2"
+│ │  description = "Integrates doxygen html documentation with sphinx."
+│ │  authors = [
+│ │      "Nirmal Sasidharan <nirmal.sasidharan@de.bosch.com>",
+│ │      "Markus Braun <markus.braun@em.ag>",
+│ │      "Aniket Salve <aniketdilip.salve@bosch.com>",
+│ │  ]
+│ │  maintainers = ["Nirmal Sasidharan <nirmal.sasidharan@de.bosch.com>"]
+│ │ @@ -84,15 +84,15 @@
+│ │  sphinx-autoapi = "^2.0.0"
+│ │  
+│ │  [tool.poetry.scripts]
+│ │  doxysphinx = "doxysphinx.cli:cli"
+│ │  
+│ │  [tool.commitizen]
+│ │  name = "cz_conventional_commits"
+│ │ -version = "3.2.1"
+│ │ +version = "3.2.2"
+│ │  tag_format = "v$version"
+│ │  version_files = ["pyproject.toml:^version"]
+│ │  bump_message = """chore(release): release $current_version → $new_version by commitizen [skip-ci]
+│ │  
+│ │  Signed-off-by: github-actions <actions@github.com>
+│ │  """
+│ │   --- doxysphinx-3.2.1/PKG-INFO
+│ ├── +++ doxysphinx-3.2.2/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: doxysphinx
+│ │ -Version: 3.2.1
+│ │ +Version: 3.2.2
+│ │  Summary: Integrates doxygen html documentation with sphinx.
+│ │  Home-page: https://github.com/boschglobal/doxysphinx
+│ │  License: MIT
+│ │  Keywords: DaC,docs-as-code,doxygen,sphinx
+│ │  Author: Nirmal Sasidharan
+│ │  Author-email: nirmal.sasidharan@de.bosch.com
+│ │  Maintainer: Nirmal Sasidharan

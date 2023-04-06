@@ -1,0 +1,882 @@
+# Comparing `tmp/watchmen_collector_surface-16.4.10.tar.gz` & `tmp/watchmen_collector_surface-16.4.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "watchmen_collector_surface-16.4.10.tar", max compression
++gzip compressed data, was "watchmen_collector_surface-16.4.9.tar", max compression
+```
+
+## Comparing `watchmen_collector_surface-16.4.10.tar` & `watchmen_collector_surface-16.4.9.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,22 @@
+--rw-r--r--   0        0        0     1061 2023-04-06 08:03:43.729688 watchmen_collector_surface-16.4.10/LICENSE
+--rw-r--r--   0        0        0     1258 2023-04-06 08:03:43.729688 watchmen_collector_surface-16.4.10/pyproject.toml
+--rw-r--r--   0        0        0      106 2023-04-06 08:03:43.729688 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/__init__.py
+--rw-r--r--   0        0        0      188 2023-04-06 08:03:43.729688 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/__init__.py
+--rw-r--r--   0        0        0     5306 2023-04-06 08:03:43.729688 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/monitor_event.py
+--rw-r--r--   0        0        0    11506 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/post_json.py
+--rw-r--r--   0        0        0    10062 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/record_to_json.py
+--rw-r--r--   0        0        0     7538 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/table_extractor.py
+--rw-r--r--   0        0        0       65 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/connects/__init__.py
+--rw-r--r--   0        0        0     4829 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/connects/s3_connector.py
+--rw-r--r--   0        0        0        0 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/__init__.py
+--rw-r--r--   0        0        0     3988 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/config_router.py
+--rw-r--r--   0        0        0     2034 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/task_router.py
+--rw-r--r--   0        0        0     1450 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/trigger_router.py
+--rw-r--r--   0        0        0      258 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/main.py
+--rw-r--r--   0        0        0     1716 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/settings.py
+--rw-r--r--   0        0        0     1230 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/surface.py
+--rw-r--r--   0        0        0       46 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/task/__init__.py
+--rw-r--r--   0        0        0     2329 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/task/handler.py
+--rw-r--r--   0        0        0     2737 2023-04-06 08:03:43.733687 watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/task/task_listener.py
+--rw-r--r--   0        0        0     1243 1970-01-01 00:00:00.000000 watchmen_collector_surface-16.4.10/PKG-INFO
++-rw-r--r--   0        0        0     1061 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/LICENSE
++-rw-r--r--   0        0        0     1247 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/pyproject.toml
++-rw-r--r--   0        0        0      106 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/__init__.py
++-rw-r--r--   0        0        0      188 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/__init__.py
++-rw-r--r--   0        0        0     5306 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/monitor_event.py
++-rw-r--r--   0        0        0     9962 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/post_json.py
++-rw-r--r--   0        0        0     8375 2023-02-23 10:23:45.972775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/record_to_json.py
++-rw-r--r--   0        0        0     7496 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/table_extractor.py
++-rw-r--r--   0        0        0       65 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/connects/__init__.py
++-rw-r--r--   0        0        0     4623 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/connects/s3_connector.py
++-rw-r--r--   0        0        0        0 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/__init__.py
++-rw-r--r--   0        0        0     3988 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/config_router.py
++-rw-r--r--   0        0        0     2034 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/task_router.py
++-rw-r--r--   0        0        0     1450 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/trigger_router.py
++-rw-r--r--   0        0        0      258 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/main.py
++-rw-r--r--   0        0        0     1716 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/settings.py
++-rw-r--r--   0        0        0     1230 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/surface.py
++-rw-r--r--   0        0        0       46 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/task/__init__.py
++-rw-r--r--   0        0        0     2329 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/task/handler.py
++-rw-r--r--   0        0        0     2572 2023-02-23 10:23:45.976775 watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/task/task_listener.py
++-rw-r--r--   0        0        0     1322 1970-01-01 00:00:00.000000 watchmen_collector_surface-16.4.9/setup.py
++-rw-r--r--   0        0        0     1232 1970-01-01 00:00:00.000000 watchmen_collector_surface-16.4.9/PKG-INFO
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/LICENSE` & `watchmen_collector_surface-16.4.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/pyproject.toml` & `watchmen_collector_surface-16.4.9/pyproject.toml`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,29 +1,29 @@
+ [tool.poetry]
+ name = "watchmen-collector-surface"
+-version = "16.4.10"
++version = "16.4.9"
+ description = ""
+ authors = ["botlikes <75356972+botlikes456@users.noreply.github.com>"]
+ license = "MIT"
+ packages = [
+     { include = "watchmen_collector_surface", from = "src" }
+ ]
+ 
+ [tool.poetry.dependencies]
+ python = "^3.9"
+-watchmen-collector-kernel = "16.4.10"
+-watchmen-pipeline-kernel = "16.4.10"
+-watchmen-rest = "16.4.10"
+-watchmen-storage-mysql = { version = "16.4.10", optional = true }
+-watchmen-storage-oracle = { version = "16.4.10", optional = true }
+-watchmen-storage-mongodb = { version = "16.4.10", optional = true }
+-watchmen-storage-mssql = { version = "16.4.10", optional = true }
+-watchmen-storage-postgresql = { version = "16.4.10", optional = true }
+-watchmen-storage-oss = { version = "16.4.10", optional = true }
+-watchmen-storage-s3 = { version = "16.4.10", optional = true }
++watchmen-collector-kernel = "16.4.9"
++watchmen-pipeline-kernel = "16.4.9"
++watchmen-rest = "16.4.9"
++watchmen-storage-mysql = { version = "16.4.9", optional = true }
++watchmen-storage-oracle = { version = "16.4.9", optional = true }
++watchmen-storage-mongodb = { version = "16.4.9", optional = true }
++watchmen-storage-mssql = { version = "16.4.9", optional = true }
++watchmen-storage-postgresql = { version = "16.4.9", optional = true }
++watchmen-storage-oss = { version = "16.4.9", optional = true }
++watchmen-storage-s3 = { version = "16.4.9", optional = true }
+ 
+ [tool.poetry.dev-dependencies]
+ 
+ [tool.poetry.extras]
+ mysql = ["watchmen-storage-mysql"]
+ oracle = ["watchmen-storage-oracle"]
+ mongodb = ["watchmen-storage-mongodb"]
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/monitor_event.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/monitor_event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/post_json.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/post_json.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ from watchmen_collector_kernel.common import TENANT_ID, CHANGE_JSON_ID, WAVE
+ from watchmen_collector_kernel.model import ChangeDataJson, ScheduledTask, TriggerModel, \
+ 	CollectorModelConfig, TriggerEvent
+ 
+ from watchmen_collector_kernel.service.lock_helper import get_resource_lock, try_lock_nowait, unlock
+ from watchmen_collector_kernel.storage import get_change_data_json_service, get_competitive_lock_service, \
+ 	get_scheduled_task_service, get_collector_model_config_service, get_trigger_model_service, \
+-	get_trigger_event_service, get_change_data_record_service, get_change_data_json_history_service
++	get_trigger_event_service, get_change_data_record_service
+ from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator, ask_super_admin
+ from watchmen_utilities import ArrayHelper
+ 
+ logger = getLogger(__name__)
+ 
+ 
+ def init_json_listener():
+@@ -31,17 +31,14 @@
+ 		self.competitive_lock_service = get_competitive_lock_service(self.storage)
+ 		self.change_record_service = get_change_data_record_service(self.storage,
+ 		                                                            self.snowflake_generator,
+ 		                                                            self.principle_service)
+ 		self.change_json_service = get_change_data_json_service(self.storage,
+ 		                                                        self.snowflake_generator,
+ 		                                                        self.principle_service)
+-		self.change_json_history_service = get_change_data_json_history_service(self.storage,
+-		                                                                        self.snowflake_generator,
+-		                                                                        self.principle_service)
+ 		self.scheduled_task_service = get_scheduled_task_service(self.storage,
+ 		                                                         self.snowflake_generator,
+ 		                                                         self.principle_service)
+ 		self.model_config_service = get_collector_model_config_service(self.storage,
+ 		                                                               self.snowflake_generator,
+ 		                                                               self.principle_service)
+ 		self.trigger_model_service = get_trigger_model_service(self.storage,
+@@ -62,106 +59,82 @@
+ 			logger.error(e, exc_info=True, stack_info=True)
+ 			sleep(5)
+ 			self.create_thread()
+ 
+ 	def change_data_json_listener(self):
+ 		unfinished_events = self.trigger_event_service.find_unfinished_events()
+ 		if len(unfinished_events) == 0:
+-			sleep(5)
++			sleep(1)
+ 		else:
+ 			ArrayHelper(unfinished_events).each(self.process_models)
+ 
+ 	def process_models(self, unfinished_event: TriggerEvent):
+ 		trigger_models = self.trigger_model_service.find_by_event_trigger_id(unfinished_event.get('event_trigger_id'))
+ 
+ 		def process_model(trigger_model: TriggerModel):
+ 			model_config = self.model_config_service.find_by_name(trigger_model.modelName)
+ 			if model_config.dependOn is None or self.is_all_dependent_trigger_model_finished(model_config,
+ 			                                                                                 trigger_model):
+ 				if model_config.isParalleled or self.is_sequenced_trigger_model_finished(trigger_model):
+-					self.process_change_data_json(model_config, trigger_model)
++					self.process_change_data_json(trigger_model)
+ 				else:
+ 					logger.debug(f'model config is paralleled: {model_config.isParalleled}')
+ 			else:
+ 				logger.debug(f'depend on: {model_config.dependOn}')
+ 
+ 		ArrayHelper(trigger_models).each(process_model)
+ 
+-	def process_change_data_json(self, model_config: CollectorModelConfig, trigger_model: TriggerModel):
+-		# not_posted_json = self.change_json_service.find_not_posted_json(trigger_model.modelTriggerId)
+-		not_posted_json = self.change_json_service.find_partial_json(trigger_model.modelTriggerId)
++	def process_change_data_json(self, trigger_model: TriggerModel):
++		not_posted_json = self.change_json_service.find_not_posted_json(trigger_model.modelTriggerId)
+ 		if len(not_posted_json) == 0:
+ 			sleep(1)
+ 		else:
+ 			for json_record in not_posted_json:
+ 				lock = get_resource_lock(self.snowflake_generator.next_id(),
+-				                         json_record.changeJsonId,
+-				                         json_record.tenantId)
++				                         json_record.get(CHANGE_JSON_ID),
++				                         json_record.get(TENANT_ID))
+ 				try:
+ 					if try_lock_nowait(self.competitive_lock_service, lock):
+-						"""
+ 						change_data_json = self.change_json_service.find_json_by_id(
+ 							json_record.get(CHANGE_JSON_ID))
+-						"""
+-						change_data_json = json_record
+-						# perhaps have been processed by other dolls, remove to history table.
+-						# and also need to consider duplicated json record.
+-						if self.change_json_service.is_existed(change_data_json):
+-							if not self.is_duplicated(change_data_json):
+-								try:
+-									if self.can_post(model_config, change_data_json):
+-										self.post_json(model_config, change_data_json)
+-								except Exception as e:
+-									logger.error(e, exc_info=True, stack_info=True)
+-									change_data_json.isPosted = True
+-									change_data_json.result = format_exc()
+-									self.update_result(change_data_json)
+-							else:
++						if self.is_posted(change_data_json):
++							continue
++						else:
++							try:
++								model_config = self.model_config_service.find_by_name(change_data_json.modelName)
++								if self.can_post(model_config, change_data_json):
++									self.post_json(change_data_json)
++									break
++								else:
++									continue
++							except Exception as e:
++								logger.error(e, exc_info=True, stack_info=True)
+ 								change_data_json.isPosted = True
+-								self.update_result(change_data_json, True)
++								change_data_json.result = format_exc()
++								self.change_json_service.update_change_data_json(change_data_json)
+ 				finally:
+ 					unlock(self.competitive_lock_service, lock)
+ 
+-	def is_duplicated(self, change_data_json: ChangeDataJson) -> bool:
+-		existed_json = self.change_json_history_service.find_by_resource_id(change_data_json.resourceId)
+-		if existed_json:
+-			return True
+-		else:
+-			return False
+-
+-	def update_result(self, change_data_json: ChangeDataJson, is_duplicated: bool = False):
+-		self.change_json_service.begin_transaction()
+-		try:
+-			if not is_duplicated:
+-				self.change_json_history_service.create(change_data_json)
+-			# noinspection PyTypeChecker
+-			self.change_json_service.delete(change_data_json.changeJsonId)
+-			self.change_json_service.commit_transaction()
+-		except Exception as e:
+-			raise e
+-
+ 	# noinspection PyMethodMayBeStatic
+ 	def is_posted(self, change_json: ChangeDataJson) -> bool:
+ 		return change_json.isPosted
+ 
+-	# noinspection PyMethodMayBeStatic
+ 	def is_paralleled(self, model_config: CollectorModelConfig) -> bool:
+ 		return model_config.is_paralleled
+ 
+ 	def is_all_dependent_trigger_model_finished(self, model_config: CollectorModelConfig,
+ 	                                            trigger_model: TriggerModel) -> bool:
+ 		if model_config.dependOn:
+ 			all_trigger_model = self.trigger_model_service.find_by_event_trigger_id(trigger_model.eventTriggerId)
+ 			return ArrayHelper(all_trigger_model).filter(
+ 				lambda trigger: self.is_dependent_model(trigger, model_config)
+ 			).every(self.is_trigger_model_finished)
+ 		else:
+ 			return True
+ 
+-	# noinspection PyMethodMayBeStatic
+ 	def is_dependent_model(self, trigger_model: TriggerModel, model_config: CollectorModelConfig) -> bool:
+ 		if trigger_model.modelName in model_config.dependOn:
+ 			return True
+ 		else:
+ 			return False
+ 
+ 	def is_trigger_model_finished(self, trigger_model: TriggerModel) -> bool:
+@@ -180,84 +153,86 @@
+ 		else:
+ 			if self.is_sequenced(change_json):
+ 				return True
+ 			else:
+ 				return False
+ 
+ 	def is_sequenced(self, change_json: ChangeDataJson) -> bool:
+-		json_records = self.change_json_service.find_by_object_id(change_json.modelName,
+-		                                                          change_json.objectId,
+-		                                                          change_json.modelTriggerId)
++		json = self.change_json_service.find_by_object_id(change_json.modelName,
++		                                                  change_json.objectId,
++		                                                  change_json.modelTriggerId)
+ 
+-		def sequenced(sequenced_json: ChangeDataJson) -> bool:
++		def is_finished(sequenced_json: ChangeDataJson) -> bool:
+ 			if compare_sequence(sequenced_json.sequence, change_json.sequence):
+ 				if sequenced_json.isPosted:
+ 					return True
+ 				else:
+ 					return False
+ 			else:
+ 				return True
+ 
+ 		def compare_sequence(sequence_0, sequence_1) -> bool:
+ 			if sequence_0 and sequence_1:
+ 				return sequence_0 < sequence_1
+ 			else:
+ 				return False
+ 
+-		return ArrayHelper(json_records).every(sequenced)
++		return ArrayHelper(json).every(is_finished)
+ 
+-	def post_json(self, model_config: CollectorModelConfig, change_json: ChangeDataJson) -> ScheduledTask:
+-		task = self.get_scheduled_task(model_config, change_json)
++	def post_json(self, change_json: ChangeDataJson) -> ScheduledTask:
++		task = self.get_scheduled_task(change_json)
+ 		self.scheduled_task_service.begin_transaction()
+ 		try:
+ 			self.scheduled_task_service.create(task)
+ 			change_json.isPosted = True
+ 			change_json.taskId = task.taskId
+-			self.change_json_history_service.create(change_json)
+-			# noinspection PyTypeChecker
+-			self.change_json_service.delete(change_json.changeJsonId)
++			self.change_json_service.update(change_json)
+ 			self.scheduled_task_service.commit_transaction()
+ 			return task
+ 		except Exception as e:
+ 			self.scheduled_task_service.rollback_transaction()
+ 			raise e
+ 
+-	def get_scheduled_task(self, model_config: CollectorModelConfig, change_json: ChangeDataJson) -> ScheduledTask:
++	def get_scheduled_task(self, change_json: ChangeDataJson) -> ScheduledTask:
+ 		return ScheduledTask(
+ 			taskId=self.snowflake_generator.next_id(),
+ 			resourceId=self.generate_resource_id(change_json),
+ 			topicCode=self.get_topic_code(change_json),
+ 			content=change_json.content,
+ 			modelName=change_json.modelName,
+ 			objectId=change_json.objectId,
+-			dependOn=change_json.dependOn,
+-			parentTaskId=[] if model_config.isParalleled else self.get_dependent_tasks(change_json),
++			dependence=self.get_dependent_tasks(change_json),
+ 			isFinished=False,
+ 			result=None,
+ 			tenantId=change_json.tenantId
+ 		)
+ 
+ 	def get_topic_code(self, change_json: ChangeDataJson) -> str:
+ 		return self.model_config_service.find_by_name(change_json.modelName).rawTopicCode
+ 
+ 	def get_dependent_tasks(self, change_json: ChangeDataJson) -> List[int]:
+-		json_records = self.change_json_history_service.find_by_object_id(change_json.modelName,
+-		                                                                  change_json.objectId,
+-		                                                                  change_json.modelTriggerId)
++		dependencies = change_json.dependOn
+ 
+-		def is_dependent_task(dependent_json_record: ChangeDataJson, current_json_record: ChangeDataJson) -> bool:
+-			if dependent_json_record.sequence < current_json_record.sequence:
+-				return True
+-			else:
+-				return False
++		def get_dependent_change_json(instance: PostJsonService,
++		                              model_name: str,
++		                              object_id: str,
++		                              event_trigger_id: int) ->  List[ChangeDataJson]:
++			return instance.change_json_service.find_by_object_id(model_name, object_id, event_trigger_id)
++
++		return ArrayHelper(dependencies).map(
++			lambda dependence: get_dependent_change_json(self, dependence.modelName,
++			                                             dependence.objectId,
++			                                             change_json.eventTriggerId)
++		).filter(self.has_task_id).map(self.get_dependent_task).to_list()
+ 
+-		return ArrayHelper(json_records).filter(
+-			lambda json_record: is_dependent_task(json_record, change_json)
+-		).map(lambda json_record: self.get_dependent_task(json_record)).to_list()
++	def has_task_id(self, change_json: ChangeDataJson) -> bool:
++		if change_json.taskId:
++			return True
++		else:
++			return False
+ 
+-	# noinspection PyMethodMayBeStatic
+ 	def get_dependent_task(self, change_json: ChangeDataJson) -> int:
+ 		return change_json.taskId
+ 
+ 	# noinspection PyMethodMayBeStatic
+ 	def generate_resource_id(self, change_json: ChangeDataJson) -> str:
+ 		return f'{change_json.changeJsonId}{WAVE}{change_json.eventTriggerId}'
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/record_to_json.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/record_to_json.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ from traceback import format_exc
+-from typing import Dict, Tuple, Optional, List, Any
++from typing import Dict, Tuple, Optional, List
+ 
+ from watchmen_collector_kernel.common import CHANGE_RECORD_ID, TENANT_ID, WAVE
+ from watchmen_collector_kernel.model import CollectorTableConfig, \
+ 	ChangeDataRecord, ChangeDataJson
+ from watchmen_collector_kernel.model.change_data_json import Dependence
+ from watchmen_collector_kernel.model.collector_table_config import Dependence as DependenceConfig
+ from watchmen_collector_kernel.service import try_lock_nowait, unlock, \
+@@ -12,16 +12,15 @@
+ from threading import Thread
+ 
+ from time import sleep
+ 
+ from watchmen_collector_kernel.service.extract_utils import get_data_id
+ from watchmen_collector_kernel.service.lock_helper import get_resource_lock
+ from watchmen_collector_kernel.storage import get_competitive_lock_service, get_change_data_record_service, \
+-	get_change_data_json_service, get_collector_table_config_service, get_change_data_record_history_service, \
+-	get_change_data_json_history_service
++	get_change_data_json_service, get_collector_table_config_service
+ from watchmen_meta.common import ask_meta_storage, ask_super_admin, ask_snowflake_generator
+ from watchmen_utilities import ArrayHelper
+ 
+ logger = getLogger(__name__)
+ 
+ 
+ def init_record_listener():
+@@ -37,23 +36,17 @@
+ 		self.competitive_lock_service = get_competitive_lock_service(self.storage)
+ 		self.table_config_service = get_collector_table_config_service(self.storage,
+ 		                                                               self.snowflake_generator,
+ 		                                                               self.principle_service)
+ 		self.change_record_service = get_change_data_record_service(self.storage,
+ 		                                                            self.snowflake_generator,
+ 		                                                            self.principle_service)
+-		self.change_record_history_service = get_change_data_record_history_service(self.storage,
+-		                                                                            self.snowflake_generator,
+-		                                                                            self.principle_service)
+ 		self.change_json_service = get_change_data_json_service(self.storage,
+ 		                                                        self.snowflake_generator,
+ 		                                                        self.principle_service)
+-		self.change_json_history_service = get_change_data_json_history_service(self.storage,
+-		                                                                        self.snowflake_generator,
+-		                                                                        self.principle_service)
+ 		self.data_capture_service = DataCaptureService(self.storage,
+ 		                                               self.snowflake_generator,
+ 		                                               self.principle_service)
+ 
+ 	def create_thread(self) -> None:
+ 		Thread(target=RecordToJsonService.run, args=(self,), daemon=True).start()
+ 
+@@ -67,105 +60,89 @@
+ 			self.create_thread()
+ 
+ 	# noinspection PyMethodMayBeStatic
+ 	def is_merged(self, change_record: ChangeDataRecord) -> bool:
+ 		return change_record.isMerged
+ 
+ 	def change_data_record_listener(self):
+-		# unmerged_records = self.change_record_service.find_unmerged_records()
+-		unmerged_records = self.change_record_service.find_partial_records()
++		# Not a complete record, just change_record_id and tenant_id
++		# Can not use for record operation.
++		unmerged_records = self.change_record_service.find_unmerged_records()
+ 		if len(unmerged_records) == 0:
+ 			sleep(5)
+ 		else:
+ 			for unmerged_record in unmerged_records:
+-				# Not a complete record, just change_record_id and tenant_id
+-				# Can not use for record operation.
+-				"""
+ 				lock = get_resource_lock(self.snowflake_generator.next_id(),
+ 				                         unmerged_record.get(CHANGE_RECORD_ID),
+ 				                         unmerged_record.get(TENANT_ID))
+-				"""
+-				lock = get_resource_lock(self.snowflake_generator.next_id(),
+-				                         unmerged_record.changeRecordId,
+-				                         unmerged_record.tenantId)
+ 				try:
+ 					if try_lock_nowait(self.competitive_lock_service, lock):
+-						"""
+ 						change_data_record = self.change_record_service.find_change_record_by_id(
+ 							unmerged_record.get(CHANGE_RECORD_ID))
+-						"""
+-						change_data_record = unmerged_record
+-						# perhaps have been processed by other dolls, remove to history table.
+-						if self.change_record_service.is_existed(change_data_record):
++						if self.is_merged(change_data_record):
++							continue
++						else:
+ 							try:
+ 								self.process_record(change_data_record)
++								break
+ 							except Exception as e:
+ 								logger.error(e, exc_info=True, stack_info=True)
+-								self.update_result(change_data_record, format_exc())
++								self.update_process_result(change_data_record, format_exc())
+ 				finally:
+ 					unlock(self.competitive_lock_service, lock)
+ 
+-	def update_result(self, change_data_record: ChangeDataRecord, result: str) -> None:
++	def update_process_result(self, change_data_record: ChangeDataRecord, result: str) -> None:
+ 		change_data_record.isMerged = True
+ 		change_data_record.result = result
+-		self.finish_and_backup_record(change_data_record, None, False)
+-
+-	def finish_and_backup_record(self,
+-	                             change_data_record: ChangeDataRecord,
+-	                             change_data_json: Optional[ChangeDataJson] = None,
+-	                             is_create_json: bool = False):
+-		self.change_record_service.begin_transaction()
+-		try:
+-			if is_create_json:
+-				self.change_json_service.create(change_data_json)
+-			self.change_record_history_service.create(change_data_record)
+-			# noinspection PyTypeChecker
+-			self.change_record_service.delete(change_data_record.changeRecordId)
+-			self.change_record_service.commit_transaction()
+-		except Exception as e:
+-			self.change_record_service.rollback_transaction()
+-			raise e
++		self.change_record_service.update_change_record(change_data_record)
+ 
+ 	def process_record(self, change_data_record: ChangeDataRecord) -> None:
+ 		config = self.table_config_service.find_by_table_name(change_data_record.tableName)
+-		root_config, root_data, record = self.find_root(config, change_data_record)
+-		if self.is_duplicated(record):
+-			record.isMerged = True
+-			self.finish_and_backup_record(record, None, False)
++		is_existed, change_record, change_json = self.merge_json(config, change_data_record)
++		if is_existed:
++			self.change_record_service.update_change_record(change_record)
++		else:
++			self.change_record_service.begin_transaction()
++			try:
++				self.change_record_service.update(change_record)
++				self.change_json_service.create(change_json)
++				self.change_record_service.commit_transaction()
++			except Exception as e:
++				self.change_record_service.rollback_transaction()
++				raise e
++
++	def is_existed(self, change_record: ChangeDataRecord) -> Tuple[bool, Optional[ChangeDataJson]]:
++		existed_change_json = self.change_json_service.find_id_by_resource_id(self.generate_resource_id(change_record))
++		if existed_change_json:
++			return True, existed_change_json
+ 		else:
+-			change_json = self.create_json(root_config, root_data, change_data_record)
+-			record.isMerged = True
+-			self.finish_and_backup_record(record, change_json, True)
+-
+-	def find_root(self, config: CollectorTableConfig, change_data_record: ChangeDataRecord) -> Tuple[CollectorTableConfig,
+-	                                                                                                 Optional[Dict[str, Any]],
+-	                                                                                                 ChangeDataRecord]:
++			return False, None
++
++	def merge_json(self,
++	               config: CollectorTableConfig,
++	               change_data_record: ChangeDataRecord) -> Tuple[bool,
++	                                                              ChangeDataRecord,
++	                                                              Optional[ChangeDataJson]]:
+ 		data = self.data_capture_service.find_data_by_data_id(config, change_data_record.dataId)
+ 		root_config, root_data = self.data_capture_service.find_parent_node(config,
+ 		                                                                    data)
+ 		change_data_record.rootTableName = root_config.tableName
+ 		change_data_record.rootDataId = get_data_id(root_config.primaryKey, root_data)
+-		return root_config, root_data, change_data_record
+-
+-	def create_json(self, root_config: CollectorTableConfig,
+-	                root_data: Optional[Dict[str, Any]],
+-	                change_data_record: ChangeDataRecord) -> ChangeDataJson:
+-		json_data = root_data.copy()
+-		self.data_capture_service.build_json(root_config, json_data)
+-		return self.get_change_data_json(change_data_record, root_config, root_data, json_data)
+-
+-	def is_duplicated(self, change_record: ChangeDataRecord) -> bool:
+-		resource_id = self.generate_resource_id(change_record)
+-		existed_history_json = self.change_json_history_service.find_by_resource_id(resource_id)
+-		if existed_history_json:
+-			return True
+-		existed_json = self.change_json_service.find_by_resource_id(resource_id)
+-		if existed_json:
+-			return True
+-		return False
++		is_existed, change_json = self.is_existed(change_data_record)
++		if is_existed:
++			change_data_record.isMerged = True
++			return True, change_data_record, change_json
++		else:
++			json_data = root_data.copy()
++			self.data_capture_service.build_json(root_config, json_data)
++			change_data_json = self.get_change_data_json(change_data_record,
++			                                             root_config,
++			                                             root_data,
++			                                             json_data)
++			return False, change_data_record, change_data_json
+ 
+ 	# noinspection PyMethodMayBeStatic
+ 	def fill_record_root_info(self, config: CollectorTableConfig,
+ 	                          change_data_record: ChangeDataRecord,
+ 	                          root_table_name: str,
+ 	                          root_data: Dict):
+ 		change_data_record.rootTableName = root_table_name
+@@ -194,19 +171,17 @@
+ 
+ 	# noinspection PyMethodMayBeStatic
+ 	def generate_resource_id(self, change_record: ChangeDataRecord) -> str:
+ 		resource_id_list = []
+ 		for key, value in change_record.rootDataId.items():
+ 			resource_id_list.append(f'{value}')
+ 		resource_id_list.append(f'{change_record.rootTableName}')
+-		resource_id_list.append(f'{change_record.modelName}')
+ 		resource_id_list.append(f'{change_record.eventTriggerId}')
+ 		return WAVE.join(resource_id_list)
+ 
+-	# noinspection PyMethodMayBeStatic
+ 	def get_dependencies(self, config: CollectorTableConfig, data_: Dict) -> List[Dependence]:
+ 
+ 		def get_dependence(dependence_config: DependenceConfig) -> Dependence:
+ 			return Dependence(modelName=dependence_config.modelName,
+ 			                  objectId=data_.get(dependence_config.objectKey))
+ 
+ 		return ArrayHelper(config.dependOn).map(get_dependence).to_list()
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/cdc/table_extractor.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/cdc/table_extractor.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -133,38 +133,36 @@
+ 		self.change_data_record_service.create_change_record(change_data_record)
+ 
+ 	def source_to_change(self, trigger_table: TriggerTable, data_id: Dict) -> ChangeDataRecord:
+ 		return self.get_change_data_record(
+ 			trigger_table.modelName,
+ 			trigger_table.tableName,
+ 			data_id,
+-			trigger_table.tenantId,
+ 			trigger_table.tableTriggerId,
+ 			trigger_table.modelTriggerId,
+ 			trigger_table.eventTriggerId
+ 		)
+ 
+ 	def get_change_data_record(self,
+ 	                           model_name: str,
+ 	                           table_name: str,
+ 	                           data_id: Dict,
+-	                           tenant_id: str,
+ 	                           table_trigger_id: int,
+ 	                           model_trigger_id: int,
+ 	                           event_trigger_id: int) -> ChangeDataRecord:
+ 		return ChangeDataRecord(
+ 			changeRecordId=self.snowflake_generator.next_id(),
+ 			modelName=model_name,
+ 			tableName=table_name,
+ 			dataId=data_id,
+ 			isMerged=False,
+ 			tableTriggerId=table_trigger_id,
+ 			modelTriggerId=model_trigger_id,
+ 			eventTriggerId=event_trigger_id,
+-			tenantId=tenant_id
++			tenantId=self.principal_service.get_tenant_id()
+ 		)
+ 
+ 	# noinspection PyMethodMayBeStatic
+ 	def get_diff(self, source_records, existed_records) -> Any:
+ 		source_array = np.asarray(
+ 			ArrayHelper(source_records).map(lambda source_record: list(source_record.values())[:]).to_list()
+ 		)
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/connects/s3_connector.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/connects/s3_connector.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,14 +1,15 @@
+ from logging import getLogger
+ from threading import Thread
+ from typing import Any, Optional
+ 
+ from time import sleep
+ 
+-from watchmen_collector_kernel.model.scheduled_task import ScheduledTask, Dependence
++from watchmen_collector_kernel.model.change_data_json import Dependence
++from watchmen_collector_kernel.model.scheduled_task import ScheduledTask
+ from watchmen_collector_kernel.service.lock_helper import get_resource_lock, try_lock_nowait, unlock
+ from watchmen_collector_kernel.storage import get_scheduled_task_service, get_competitive_lock_service
+ from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator, ask_super_admin
+ from watchmen_model.common import SettingsModel
+ from watchmen_storage_s3 import SimpleStorageService
+ 
+ logger = getLogger(__name__)
+@@ -80,50 +81,45 @@
+ 									self.scheduled_task_service.create_task(self.get_task(object_))
+ 									self.simpleStorageService.delete_object(object_.key)
+ 									break
+ 						finally:
+ 							unlock(self.competitive_lock_service, lock)
+ 		except Exception as e:
+ 			logger.error(e, exc_info=True, stack_info=True)
+-			sleep(5)
++			sleep(60)
+ 			self.create_thread()
+ 
+ 	# noinspection PyMethodMayBeStatic
+ 	def get_dependency(self, object_: Any) -> Optional[Dependence]:
+ 		object_key = object_.key.removeprefix(self.consume_prefix)
+ 		key_parts = object_key.split(identifier_delimiter)
+ 		if len(key_parts) == 5:
+-			return Dependence(modelName=key_parts[3].lower(), objectId=key_parts[4])
++			return Dependence(modelName=key_parts[3], objectId=key_parts[4])
++		elif len(key_parts) == 3:
++			return Dependence(modelName=key_parts[1], objectId=key_parts[2])
+ 		else:
+ 			return None
+ 
+ 	def get_model_name(self, object_: Any) -> str:
+ 		object_key = object_.key.removeprefix(self.consume_prefix)
+ 		key_parts = object_key.split(identifier_delimiter)
+-		return key_parts[1].lower()
++		return key_parts[1]
+ 
+ 	def get_object_id(self, object_: Any) -> str:
+ 		object_key = object_.key.removeprefix(self.consume_prefix)
+ 		key_parts = object_key.split(identifier_delimiter)
+ 		return key_parts[2]
+ 
+-	def get_resource_id(self, object_: Any) -> str:
+-		object_key = object_.key.removeprefix(self.consume_prefix)
+-		key_parts = object_key.split(identifier_delimiter)
+-		return key_parts[0]
+-
+-	def get_topic_code(self, object_: Any) -> str:
+-		object_key = object_.key.removeprefix(self.consume_prefix)
+-		key_parts = object_key.split(identifier_delimiter)
+-		return 'raw_' + key_parts[1].lower()
+-
+ 	def get_task(self, object_: Any) -> ScheduledTask:
+ 		return ScheduledTask(taskId=self.snowflake_generator.next_id(),
+-		                     resourceId=self.get_resource_id(object_),
+-		                     topicCode=self.get_topic_code(object_),
++		                     resourceId=object_.key,
+ 		                     content=self.simpleStorageService.get_object(object_.key),
+ 		                     modelName=self.get_model_name(object_),
+ 		                     objectId=self.get_object_id(object_),
+-		                     dependOn=[self.get_dependency(object_)],
+-		                     isFinished=False,
+-		                     result=None,
+-		                     tenantId=self.tenant_id)
++		                     dependencies=[self.get_dependency(object_)],
++		                     status=0,
++		                     result=None)
++
++	# noinspection PyMethodMayBeStatic
++	def get_code(self, identifier: str) -> str:
++		key_parts = identifier.split(identifier_delimiter)
++		return 'raw_' + key_parts[1].lower()
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/config_router.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/config_router.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/task_router.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/task_router.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/data/trigger_router.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/data/trigger_router.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/settings.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/surface.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/surface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/task/handler.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/task/handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_collector_surface-16.4.10/src/watchmen_collector_surface/task/task_listener.py` & `watchmen_collector_surface-16.4.9/src/watchmen_collector_surface/task/task_listener.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -41,28 +41,28 @@
+ 				self.task_listener()
+ 		except Exception as e:
+ 			logger.error(e, exc_info=True, stack_info=True)
+ 			sleep(60)
+ 			self.create_thread()
+ 
+ 	def task_listener(self) -> None:
+-		# unfinished_tasks = self.scheduled_task_service.find_unfinished_tasks()
+-		unfinished_tasks = self.scheduled_task_service.find_partial_tasks()
++		unfinished_tasks = self.scheduled_task_service.find_unfinished_tasks()
+ 		for unfinished_task in unfinished_tasks:
+ 			lock = get_resource_lock(self.snowflake_generator.next_id(),
+-			                         unfinished_task.resourceId,
+-			                         unfinished_task.tenantId)
++			                         unfinished_task.get('resource_id'),
++			                         unfinished_task.get(TENANT_ID))
+ 			try:
+ 				if try_lock_nowait(self.competitive_lock_service, lock):
+ 					# noinspection PyUnresolvedReferences
+-					# task = self.scheduled_task_service.find_task_by_id(unfinished_task.get('task_id'))
+-					# perhaps have been processed by other dolls, remove to history table.
+-					if self.scheduled_task_service.is_existed(unfinished_task):
+-						if self.task_service.is_dependencies_finished(unfinished_task):
+-							self.task_service.consume_task(unfinished_task, pipeline_data)
++					task = self.scheduled_task_service.find_task_by_id(unfinished_task.get('task_id'))
++					if self.is_finished(task):
++						continue
++					else:
++						if self.task_service.is_dependencies_finished(task):
++							self.task_service.consume_task(task, pipeline_data)
+ 							break
+ 						else:
+ 							continue
+ 			finally:
+ 				unlock(self.competitive_lock_service, lock)
+ 
+ 	# noinspection PyMethodMayBeStatic
+```
+
+### Comparing `watchmen_collector_surface-16.4.10/PKG-INFO` & `watchmen_collector_surface-16.4.9/PKG-INFO`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: watchmen-collector-surface
+-Version: 16.4.10
++Version: 16.4.9
+ Summary: 
+ License: MIT
+ Author: botlikes
+ Author-email: 75356972+botlikes456@users.noreply.github.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+@@ -14,17 +14,17 @@
+ Provides-Extra: mongodb
+ Provides-Extra: mssql
+ Provides-Extra: mysql
+ Provides-Extra: oracle
+ Provides-Extra: oss
+ Provides-Extra: postgresql
+ Provides-Extra: s3
+-Requires-Dist: watchmen-collector-kernel (==16.4.10)
+-Requires-Dist: watchmen-pipeline-kernel (==16.4.10)
+-Requires-Dist: watchmen-rest (==16.4.10)
+-Requires-Dist: watchmen-storage-mongodb (==16.4.10) ; extra == "mongodb"
+-Requires-Dist: watchmen-storage-mssql (==16.4.10) ; extra == "mssql"
+-Requires-Dist: watchmen-storage-mysql (==16.4.10) ; extra == "mysql"
+-Requires-Dist: watchmen-storage-oracle (==16.4.10) ; extra == "oracle"
+-Requires-Dist: watchmen-storage-oss (==16.4.10) ; extra == "oss"
+-Requires-Dist: watchmen-storage-postgresql (==16.4.10) ; extra == "postgresql"
+-Requires-Dist: watchmen-storage-s3 (==16.4.10) ; extra == "s3"
++Requires-Dist: watchmen-collector-kernel (==16.4.9)
++Requires-Dist: watchmen-pipeline-kernel (==16.4.9)
++Requires-Dist: watchmen-rest (==16.4.9)
++Requires-Dist: watchmen-storage-mongodb (==16.4.9) ; extra == "mongodb"
++Requires-Dist: watchmen-storage-mssql (==16.4.9) ; extra == "mssql"
++Requires-Dist: watchmen-storage-mysql (==16.4.9) ; extra == "mysql"
++Requires-Dist: watchmen-storage-oracle (==16.4.9) ; extra == "oracle"
++Requires-Dist: watchmen-storage-oss (==16.4.9) ; extra == "oss"
++Requires-Dist: watchmen-storage-postgresql (==16.4.9) ; extra == "postgresql"
++Requires-Dist: watchmen-storage-s3 (==16.4.9) ; extra == "s3"
+```
+

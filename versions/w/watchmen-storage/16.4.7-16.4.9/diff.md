@@ -1,0 +1,206 @@
+# Comparing `tmp/watchmen_storage-16.4.7.tar.gz` & `tmp/watchmen_storage-16.4.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "watchmen_storage-16.4.7.tar", max compression
++gzip compressed data, was "watchmen_storage-16.4.9.tar", max compression
+```
+
+## Comparing `watchmen_storage-16.4.7.tar` & `watchmen_storage-16.4.9.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+--rw-r--r--   0        0        0     1061 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/LICENSE
+--rw-r--r--   0        0        0      474 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/pyproject.toml
+--rw-r--r--   0        0        0     2178 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/__init__.py
+--rw-r--r--   0        0        0     4917 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/competitive_worker_id_generator.py
+--rw-r--r--   0        0        0     5549 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/data_source_helper.py
+--rw-r--r--   0        0        0     1650 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/free_storage_types.py
+--rw-r--r--   0        0        0      211 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/secrets_manager.py
+--rw-r--r--   0        0        0      730 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/secrets_manager_aws.py
+--rw-r--r--   0        0        0      988 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/settings.py
+--rw-r--r--   0        0        0     2750 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/snowflake.py
+--rw-r--r--   0        0        0      232 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/snowflake_worker_id_generator.py
+--rw-r--r--   0        0        0     7259 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/storage_based_worker_id_generator.py
+--rw-r--r--   0        0        0      721 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/storage_exception.py
+--rw-r--r--   0        0        0     5884 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/storage_spi.py
+--rw-r--r--   0        0        0     4368 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/storage_types.py
+--rw-r--r--   0        0        0      630 2023-01-18 10:06:03.466851 watchmen_storage-16.4.7/src/watchmen_storage/topic_utils.py
+--rw-r--r--   0        0        0      695 1970-01-01 00:00:00.000000 watchmen_storage-16.4.7/setup.py
+--rw-r--r--   0        0        0      521 1970-01-01 00:00:00.000000 watchmen_storage-16.4.7/PKG-INFO
++-rw-r--r--   0        0        0     1061 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/LICENSE
++-rw-r--r--   0        0        0      474 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/pyproject.toml
++-rw-r--r--   0        0        0     2196 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/__init__.py
++-rw-r--r--   0        0        0     4917 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/competitive_worker_id_generator.py
++-rw-r--r--   0        0        0     5549 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/data_source_helper.py
++-rw-r--r--   0        0        0     1650 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/free_storage_types.py
++-rw-r--r--   0        0        0      211 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/secrets_manager.py
++-rw-r--r--   0        0        0      730 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/secrets_manager_aws.py
++-rw-r--r--   0        0        0      988 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/settings.py
++-rw-r--r--   0        0        0     2750 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/snowflake.py
++-rw-r--r--   0        0        0      232 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/snowflake_worker_id_generator.py
++-rw-r--r--   0        0        0     7259 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/storage_based_worker_id_generator.py
++-rw-r--r--   0        0        0      721 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/storage_exception.py
++-rw-r--r--   0        0        0     5884 2023-02-23 10:23:46.016776 watchmen_storage-16.4.9/src/watchmen_storage/storage_spi.py
++-rw-r--r--   0        0        0     4610 2023-02-23 10:23:46.020776 watchmen_storage-16.4.9/src/watchmen_storage/storage_types.py
++-rw-r--r--   0        0        0      630 2023-02-23 10:23:46.020776 watchmen_storage-16.4.9/src/watchmen_storage/topic_utils.py
++-rw-r--r--   0        0        0      695 1970-01-01 00:00:00.000000 watchmen_storage-16.4.9/setup.py
++-rw-r--r--   0        0        0      521 1970-01-01 00:00:00.000000 watchmen_storage-16.4.9/PKG-INFO
+```
+
+### Comparing `watchmen_storage-16.4.7/LICENSE` & `watchmen_storage-16.4.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/__init__.py` & `watchmen_storage-16.4.9/src/watchmen_storage/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -17,10 +17,10 @@
+ from .storage_spi import StorageSPI, TopicDataStorageSPI, TransactionalStorageSPI
+ from .storage_types import ColumnNameLiteral, ComputedLiteral, ComputedLiteralOperator, Entity, \
+ 	EntityColumnAggregateArithmetic, EntityColumnName, EntityColumnValue, EntityCriteria, EntityCriteriaExpression, \
+ 	EntityCriteriaJoint, EntityCriteriaJointConjunction, EntityCriteriaOperator, EntityCriteriaStatement, \
+ 	EntityDeleter, EntityDistinctValuesFinder, EntityFinder, EntityHelper, EntityId, EntityIdHelper, EntityList, \
+ 	EntityName, EntityPager, EntityRow, EntityShaper, EntitySort, EntitySortColumn, EntitySortMethod, \
+ 	EntityStraightAggregateColumn, EntityStraightColumn, EntityStraightValuesFinder, EntityUpdate, EntityUpdater, \
+-	Literal
++	Literal, EntityColumnType
+ from .topic_utils import as_table_name
+```
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/competitive_worker_id_generator.py` & `watchmen_storage-16.4.9/src/watchmen_storage/competitive_worker_id_generator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/data_source_helper.py` & `watchmen_storage-16.4.9/src/watchmen_storage/data_source_helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/free_storage_types.py` & `watchmen_storage-16.4.9/src/watchmen_storage/free_storage_types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/secrets_manager_aws.py` & `watchmen_storage-16.4.9/src/watchmen_storage/secrets_manager_aws.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/settings.py` & `watchmen_storage-16.4.9/src/watchmen_storage/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/snowflake.py` & `watchmen_storage-16.4.9/src/watchmen_storage/snowflake.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/storage_based_worker_id_generator.py` & `watchmen_storage-16.4.9/src/watchmen_storage/storage_based_worker_id_generator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/storage_exception.py` & `watchmen_storage-16.4.9/src/watchmen_storage/storage_exception.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/storage_spi.py` & `watchmen_storage-16.4.9/src/watchmen_storage/storage_spi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/storage_types.py` & `watchmen_storage-16.4.9/src/watchmen_storage/storage_types.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -154,17 +154,28 @@
+ 
+ 
+ class EntityDistinctValuesFinder(EntityFinder):
+ 	distinctColumnNames: List[EntityColumnName] = None
+ 	distinctValueOnSingleColumn: bool = False  # distinct value when it is True and only one column assigned
+ 
+ 
++class EntityColumnType(str, Enum):
++	INTEGER = 'integer',
++	STRING = 'string',
++	TEXT = 'text',
++	BOOLEAN = 'boolean',
++	DATE = 'date',
++	DATETIME = 'datetime',
++	JSON = 'json'
++
++
+ class EntityStraightColumn(DataModel):
+ 	columnName: EntityColumnName  # original name
+ 	alias: Optional[EntityColumnName]  # alias name
++	columnType: Optional[EntityColumnType] = None  # literal column type
+ 
+ 
+ class EntityColumnAggregateArithmetic(str, Enum):
+ 	COUNT = 'count',
+ 	SUM = 'sum',
+ 	AVG = 'avg',
+ 	MAX = 'max',
+```
+
+### Comparing `watchmen_storage-16.4.7/src/watchmen_storage/topic_utils.py` & `watchmen_storage-16.4.9/src/watchmen_storage/topic_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage-16.4.7/setup.py` & `watchmen_storage-16.4.9/setup.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -7,19 +7,19 @@
+ packages = \
+ ['watchmen_storage']
+ 
+ package_data = \
+ {'': ['*']}
+ 
+ install_requires = \
+-['watchmen-model==16.4.7']
++['watchmen-model==16.4.9']
+ 
+ setup_kwargs = {
+     'name': 'watchmen-storage',
+-    'version': '16.4.7',
++    'version': '16.4.9',
+     'description': '',
+     'long_description': 'None',
+     'author': 'botlikes',
+     'author_email': '75356972+botlikes456@users.noreply.github.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
+### Comparing `watchmen_storage-16.4.7/PKG-INFO` & `watchmen_storage-16.4.9/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ Metadata-Version: 2.1
+ Name: watchmen-storage
+-Version: 16.4.7
++Version: 16.4.9
+ Summary: 
+ License: MIT
+ Author: botlikes
+ Author-email: 75356972+botlikes456@users.noreply.github.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Requires-Dist: boto3 (>=1.24.20,<2.0.0)
+-Requires-Dist: watchmen-model (==16.4.7)
++Requires-Dist: watchmen-model (==16.4.9)
+```
+

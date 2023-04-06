@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/usr/bin/diffoscope --no-progress tmp/watchmen_rest-16.4.7.tar.gz tmp/watchmen_rest-16.4.9.tar.gz --html versions/w/watchmen-rest/16.4.7-16.4.9/index.html --text versions/w/watchmen-rest/16.4.7-16.4.9/diff.txt --markdown versions/w/watchmen-rest/16.4.7-16.4.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.87 KB</span></div>
+  <div><span class="source">tmp/watchmen_rest-16.4.7.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/watchmen_rest-16.4.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">196 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_rest-16.4.<del>7</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_rest-16.4.<ins>9</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.62 KB</span></div>
+    <div><span class="source">watchmen_rest-16.4.7.tar</span> vs.</div>
+    <div id="watchmen_rest---.-.-.tar"><span class="source">watchmen_rest-16.4.9.tar</span>
+      <a class="anchor" href="#watchmen_rest---.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.01 KB</span></div>
+      <div id="watchmen_rest---.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>658<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/pyproject.toml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>658<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>668<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>668<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2089<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/auth_helper.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2089<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/auth_helper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5801<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/authentication.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5801<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/authentication.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>419<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/cors.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>419<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/cors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/exceptions.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>295<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/prometheus.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>295<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/prometheus.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2492<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/rest_app.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2492<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/rest_app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>938<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/settings.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>938<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/settings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/system/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/system/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>139<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/system/health_router.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>139<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/system/health_router.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>130<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/util/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>130<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/util/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1467<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/util/raise_http_exception.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1467<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/util/raise_http_exception.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>949<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span>10:<del>06</del>:<del>03</del>.<del>45</del>0<del>851</del><span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/src/watchmen_rest/util/validator.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>949<span class="dp">·</span>2023-0<ins>2</ins>-<ins>23</ins><span class="dp">·</span>10:<ins>23</ins>:<ins>46</ins>.<ins>00</ins>0<ins>775</ins><span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/src/watchmen_rest/util/validator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>912<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/setup.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>912<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>793<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_rest-16.4.<del>7</del>/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>793<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_rest-16.4.<ins>9</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/LICENSE</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--LICENSE"><span class="source">watchmen_rest-16.4.9/LICENSE</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">823 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/pyproject.toml</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--pyproject.toml"><span class="source">watchmen_rest-16.4.9/pyproject.toml</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;watchmen-rest&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;watchmen-rest&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;16.4.<del>7</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;16.4.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;botlikes<span class="dp">·</span>&lt;75356972+botlikes456@users.noreply.github.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;botlikes<span class="dp">·</span>&lt;75356972+botlikes456@users.noreply.github.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;watchmen_rest&quot;,<span class="dp">·</span>from<span class="dp">·</span>=<span class="dp">·</span>&quot;src&quot;<span class="dp">·</span>}</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;watchmen_rest&quot;,<span class="dp">·</span>from<span class="dp">·</span>=<span class="dp">·</span>&quot;src&quot;<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 13, 16 lines modified</td><td colspan="2">Offset 13, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">fastapi<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.75.1&quot;</td><td class="diffline">13 </td><td class="diffpresent">fastapi<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.75.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">uvicorn<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.17.6&quot;</td><td class="diffline">14 </td><td class="diffpresent">uvicorn<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.17.6&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">jsonschema<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.4.0&quot;</td><td class="diffline">15 </td><td class="diffpresent">jsonschema<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.4.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">python-jose<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.3.0&quot;</td><td class="diffline">16 </td><td class="diffpresent">python-jose<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.3.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>jose<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.0&quot;</td><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>jose<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">python-dotenv<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.20.0&quot;</td><td class="diffline">18 </td><td class="diffpresent">python-dotenv<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.20.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">starlette-prometheus<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.9.0&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td><td class="diffline">19 </td><td class="diffpresent">starlette-prometheus<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.9.0&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">watchmen-auth<span class="dp">·</span>=<span class="dp">·</span>&quot;16.4.<del>7</del>&quot;</td><td class="diffline">20 </td><td class="diffpresent">watchmen-auth<span class="dp">·</span>=<span class="dp">·</span>&quot;16.4.<ins>9</ins>&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">watchmen-storage<span class="dp">·</span>=<span class="dp">·</span>&quot;16.4.<del>7</del>&quot;</td><td class="diffline">21 </td><td class="diffpresent">watchmen-storage<span class="dp">·</span>=<span class="dp">·</span>&quot;16.4.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td><td class="diffline">22 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">[tool.poetry.extras]</td><td class="diffline">23 </td><td class="diffpresent">[tool.poetry.extras]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">[build-system]</td><td class="diffline">24 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;poetry-core&gt;=1.0.0&quot;]</td><td class="diffline">25 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;poetry-core&gt;=1.0.0&quot;]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/__init__.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-__init__.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/__init__.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/auth_helper.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-auth_helper.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/auth_helper.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-auth_helper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/authentication.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-authentication.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/authentication.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-authentication.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/rest_app.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-rest_app.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/rest_app.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-rest_app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/settings.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-settings.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/settings.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-settings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/util/raise_http_exception.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-util-raise_http_exception.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/util/raise_http_exception.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-util-raise_http_exception.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/src/watchmen_rest/util/validator.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-util-validator.py"><span class="source">watchmen_rest-16.4.9/src/watchmen_rest/util/validator.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--src-watchmen_rest-util-validator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">746 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/setup.py</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--setup.py"><span class="source">watchmen_rest-16.4.9/setup.py</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 12, 20 lines modified</td><td colspan="2">Offset 12, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">12 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">[&#x27;fastapi&gt;=0.75.1,&lt;0.76.0&#x27;,</td><td class="diffline">13 </td><td class="diffpresent">[&#x27;fastapi&gt;=0.75.1,&lt;0.76.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span>&#x27;jsonschema&gt;=4.4.0,&lt;5.0.0&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span>&#x27;jsonschema&gt;=4.4.0,&lt;5.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span>&#x27;python-dotenv&gt;=0.20.0,&lt;0.21.0&#x27;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span>&#x27;python-dotenv&gt;=0.20.0,&lt;0.21.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span>&#x27;python-jose&gt;=3.3.0,&lt;4.0.0&#x27;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span>&#x27;python-jose&gt;=3.3.0,&lt;4.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span>&#x27;uvicorn&gt;=0.17.6,&lt;0.18.0&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span>&#x27;uvicorn&gt;=0.17.6,&lt;0.18.0&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span>&#x27;watchmen-auth==16.4.<del>7</del>&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span>&#x27;watchmen-auth==16.4.<ins>9</ins>&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span>&#x27;watchmen-storage==16.4.<del>7</del>&#x27;]</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span>&#x27;watchmen-storage==16.4.<ins>9</ins>&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">20 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;watchmen-rest&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;watchmen-rest&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;16.4.<del>7</del>&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;16.4.<ins>9</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;botlikes&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;botlikes&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;75356972+botlikes456@users.noreply.github.com&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;75356972+botlikes456@users.noreply.github.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">947 B</span></div>
+      <div><span class="source">watchmen_rest-16.4.7/PKG-INFO</span> vs.</div>
+      <div id="watchmen_rest---.-.-.tar---watchmen_rest---.-.--PKG-INFO"><span class="source">watchmen_rest-16.4.9/PKG-INFO</span>
+        <a class="anchor" href="#watchmen_rest---.-.-.tar---watchmen_rest---.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-rest</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-rest</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.4.<del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.4.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 13, 9 lines modified</td><td colspan="2">Offset 13, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>fastapi<span class="dp">·</span>(&gt;=0.75.1,&lt;0.76.0)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>fastapi<span class="dp">·</span>(&gt;=0.75.1,&lt;0.76.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>jsonschema<span class="dp">·</span>(&gt;=4.4.0,&lt;5.0.0)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>jsonschema<span class="dp">·</span>(&gt;=4.4.0,&lt;5.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>python-dotenv<span class="dp">·</span>(&gt;=0.20.0,&lt;0.21.0)</td><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>python-dotenv<span class="dp">·</span>(&gt;=0.20.0,&lt;0.21.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>python-jose<span class="dp">·</span>(&gt;=3.3.0,&lt;4.0.0)</td><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>python-jose<span class="dp">·</span>(&gt;=3.3.0,&lt;4.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>starlette-prometheus<span class="dp">·</span>(&gt;=0.9.0,&lt;0.10.0)</td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>starlette-prometheus<span class="dp">·</span>(&gt;=0.9.0,&lt;0.10.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>uvicorn<span class="dp">·</span>(&gt;=0.17.6,&lt;0.18.0)</td><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>uvicorn<span class="dp">·</span>(&gt;=0.17.6,&lt;0.18.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-auth<span class="dp">·</span>(==16.4.<del>7</del>)</td><td class="diffline">20 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-auth<span class="dp">·</span>(==16.4.<ins>9</ins>)</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-storage<span class="dp">·</span>(==16.4.<del>7</del>)</td><td class="diffline">21 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-storage<span class="dp">·</span>(==16.4.<ins>9</ins>)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
