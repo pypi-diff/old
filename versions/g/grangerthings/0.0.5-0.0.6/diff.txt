@@ -1,0 +1,136 @@
+--- tmp/grangerthings-0.0.5.tar.gz
++++ tmp/grangerthings-0.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "grangerthings-0.0.5.tar", last modified: Thu Mar 23 12:51:26 2023, max compression
+│ +gzip compressed data, was "grangerthings-0.0.6.tar", last modified: Thu Apr  6 08:26:03 2023, max compression
+│   --- grangerthings-0.0.5.tar
+├── +++ grangerthings-0.0.6.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 12:51:26.809441 grangerthings-0.0.5/
+│ │ --rw-rw-rw-   0        0        0     1088 2023-02-24 13:47:54.000000 grangerthings-0.0.5/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0      894 2023-03-23 12:51:26.808832 grangerthings-0.0.5/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      489 2023-02-24 13:36:32.000000 grangerthings-0.0.5/README.md
+│ │ --rw-rw-rw-   0        0        0      460 2023-03-23 12:51:08.000000 grangerthings-0.0.5/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-23 12:51:26.810453 grangerthings-0.0.5/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 12:51:26.784946 grangerthings-0.0.5/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 12:51:26.797917 grangerthings-0.0.5/src/grangerthings/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-24 13:18:19.000000 grangerthings-0.0.5/src/grangerthings/__init__.py
+│ │ --rw-rw-rw-   0        0        0    16746 2023-03-23 12:42:59.000000 grangerthings-0.0.5/src/grangerthings/automata.py
+│ │ --rw-rw-rw-   0        0        0    17395 2023-03-16 12:47:52.000000 grangerthings-0.0.5/src/grangerthings/predictor.py
+│ │ --rw-rw-rw-   0        0        0     2864 2023-02-24 13:15:56.000000 grangerthings-0.0.5/src/grangerthings/quickhull.py
+│ │ --rw-rw-rw-   0        0        0     6675 2023-02-28 15:44:36.000000 grangerthings-0.0.5/src/grangerthings/wordutils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 12:51:26.806933 grangerthings-0.0.5/src/grangerthings.egg-info/
+│ │ --rw-rw-rw-   0        0        0      894 2023-03-23 12:51:26.000000 grangerthings-0.0.5/src/grangerthings.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      353 2023-03-23 12:51:26.000000 grangerthings-0.0.5/src/grangerthings.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-23 12:51:26.000000 grangerthings-0.0.5/src/grangerthings.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       14 2023-03-23 12:51:26.000000 grangerthings-0.0.5/src/grangerthings.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 08:26:03.320701 grangerthings-0.0.6/
+│ │ +-rw-rw-rw-   0        0        0     1088 2023-02-24 13:47:54.000000 grangerthings-0.0.6/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0      894 2023-04-06 08:26:03.319691 grangerthings-0.0.6/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      489 2023-02-24 13:36:32.000000 grangerthings-0.0.6/README.md
+│ │ +-rw-rw-rw-   0        0        0      460 2023-04-06 08:25:29.000000 grangerthings-0.0.6/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 08:26:03.320701 grangerthings-0.0.6/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 08:26:03.293349 grangerthings-0.0.6/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 08:26:03.308351 grangerthings-0.0.6/src/grangerthings/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-24 13:18:19.000000 grangerthings-0.0.6/src/grangerthings/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    17219 2023-04-06 08:17:24.000000 grangerthings-0.0.6/src/grangerthings/automata.py
+│ │ +-rw-rw-rw-   0        0        0    17395 2023-03-16 12:47:52.000000 grangerthings-0.0.6/src/grangerthings/predictor.py
+│ │ +-rw-rw-rw-   0        0        0     2864 2023-02-24 13:15:56.000000 grangerthings-0.0.6/src/grangerthings/quickhull.py
+│ │ +-rw-rw-rw-   0        0        0     6675 2023-02-28 15:44:36.000000 grangerthings-0.0.6/src/grangerthings/wordutils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 08:26:03.318546 grangerthings-0.0.6/src/grangerthings.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      894 2023-04-06 08:26:03.000000 grangerthings-0.0.6/src/grangerthings.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      353 2023-04-06 08:26:03.000000 grangerthings-0.0.6/src/grangerthings.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 08:26:03.000000 grangerthings-0.0.6/src/grangerthings.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       14 2023-04-06 08:26:03.000000 grangerthings-0.0.6/src/grangerthings.egg-info/top_level.txt
+│ │   --- grangerthings-0.0.5/LICENSE.txt
+│ ├── +++ grangerthings-0.0.6/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- grangerthings-0.0.5/PKG-INFO
+│ ├── +++ grangerthings-0.0.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: grangerthings
+│ │ -Version: 0.0.5
+│ │ +Version: 0.0.6
+│ │  Summary: Implementation of Granger networks
+│ │  Author-email: Bas Testerink <btesterinkdev@gmail.com>
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │   --- grangerthings-0.0.5/src/grangerthings/automata.py
+│ ├── +++ grangerthings-0.0.6/src/grangerthings/automata.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -95,20 +95,27 @@
+│ │          return vector
+│ │          
+│ │      # Extract a strongly connected component with the highest support, 
+│ │      # returns None if automaton is already strongly connected
+│ │      def extract_strongly_connected_automaton(self, state_counts):
+│ │          components = self.strongly_connected_components()
+│ │          if len(components) == 1:
+│ │ -            return self # already strongly connected 
+│ │ +            return self # already strongly connected  
+│ │ +        components = self.prune_connected_components(components)
+│ │          states, transitions = self.strongly_connected_transitions(state_counts, components)
+│ │          self.rename_transition_states(states, transitions)
+│ │          automaton = GenerativeAutomaton(transitions)
+│ │          return automaton
+│ │      
+│ │ +    def prune_connected_components(self, components):
+│ │ +        # Remove single state components, since they form bad automata anyway
+│ │ +        nondegenerate = [c for c in components if len(c) > 1] 
+│ │ +        # TODO: check if other types of components can be removed
+│ │ +        return components if len(nondegenerate) == 0 else nondegenerate
+│ │ +        
+│ │      def rename_transition_states(self, states, transitions):
+│ │          mapping = dict()
+│ │          for state in states: 
+│ │              mapping[state] = len(mapping)
+│ │          for i in range(len(transitions)):
+│ │              t = transitions[i]
+│ │              transitions[i] = (mapping[t[0]],t[1], t[2], mapping[t[3]])
+│ │ @@ -237,14 +244,15 @@
+│ │          result[-1] = 1 - sum(result[:-1])
+│ │          return result 
+│ │          
+│ │      def extract_strongly_connected_automaton(self, state_counts):
+│ │          components = self.strongly_connected_components()
+│ │          if len(components) == 1:
+│ │              return self # already strongly connected 
+│ │ +        components = self.prune_connected_components(components)
+│ │          states, transitions = self.strongly_connected_transitions(state_counts, components) 
+│ │          mapping = self.rename_transition_states(states, transitions)
+│ │          new_morph = [[]] * len(states)
+│ │          for state in states: 
+│ │              new_morph[mapping[state]] = self.morph[state]
+│ │          automaton = CrossedAutomaton(self.alphabet_size, transitions, len(self.secondary_alphabet), new_morph)
+│ │          return automaton
+│ │   --- grangerthings-0.0.5/src/grangerthings/predictor.py
+│ ├── +++ grangerthings-0.0.6/src/grangerthings/predictor.py
+│ │┄ Files identical despite different names
+│ │   --- grangerthings-0.0.5/src/grangerthings/quickhull.py
+│ ├── +++ grangerthings-0.0.6/src/grangerthings/quickhull.py
+│ │┄ Files identical despite different names
+│ │   --- grangerthings-0.0.5/src/grangerthings/wordutils.py
+│ ├── +++ grangerthings-0.0.6/src/grangerthings/wordutils.py
+│ │┄ Files identical despite different names
+│ │   --- grangerthings-0.0.5/src/grangerthings.egg-info/PKG-INFO
+│ ├── +++ grangerthings-0.0.6/src/grangerthings.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: grangerthings
+│ │ -Version: 0.0.5
+│ │ +Version: 0.0.6
+│ │  Summary: Implementation of Granger networks
+│ │  Author-email: Bas Testerink <btesterinkdev@gmail.com>
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown

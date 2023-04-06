@@ -1,0 +1,213 @@
+# Comparing `tmp/currensees-1.0.1.tar.gz` & `tmp/currensees-1.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/currensees-1.0.1.tar", last modified: Wed Apr  5 17:17:35 2023, max compression
++gzip compressed data, was "dist/currensees-1.0.2.tar", last modified: Thu Apr  6 08:25:56 2023, max compression
+```
+
+## Comparing `currensees-1.0.1.tar` & `currensees-1.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,20 +1,20 @@
+-drwxr-xr-x   0 finn       (501) staff       (20)        0 2023-04-05 17:17:35.003867 currensees-1.0.1/
+--rw-r--r--   0 finn       (501) staff       (20)     5258 2023-04-05 17:17:35.004053 currensees-1.0.1/PKG-INFO
+--rw-r--r--   0 finn       (501) staff       (20)     2347 2023-04-05 17:10:47.000000 currensees-1.0.1/README.md
+-drwxr-xr-x   0 finn       (501) staff       (20)        0 2023-04-05 17:17:35.001224 currensees-1.0.1/currensees/
+--rw-r--r--   0 finn       (501) staff       (20)      163 2023-04-05 11:07:01.000000 currensees-1.0.1/currensees/__init__.py
+--rw-r--r--   0 finn       (501) staff       (20)      584 2023-04-05 16:38:00.000000 currensees-1.0.1/currensees/auth.py
+--rw-r--r--   0 finn       (501) staff       (20)      781 2023-04-05 16:54:46.000000 currensees-1.0.1/currensees/convert.py
+--rw-r--r--   0 finn       (501) staff       (20)      671 2023-04-05 16:57:18.000000 currensees-1.0.1/currensees/convert_all.py
+--rw-r--r--   0 finn       (501) staff       (20)      940 2023-04-05 16:52:00.000000 currensees-1.0.1/currensees/currencies.py
+--rw-r--r--   0 finn       (501) staff       (20)     1030 2023-04-05 17:02:43.000000 currensees-1.0.1/currensees/historical.py
+--rw-r--r--   0 finn       (501) staff       (20)       17 2023-04-05 17:11:44.000000 currensees-1.0.1/currensees/version.py
+-drwxr-xr-x   0 finn       (501) staff       (20)        0 2023-04-05 17:17:35.003574 currensees-1.0.1/currensees.egg-info/
+--rw-r--r--   0 finn       (501) staff       (20)     5258 2023-04-05 17:17:34.000000 currensees-1.0.1/currensees.egg-info/PKG-INFO
+--rw-r--r--   0 finn       (501) staff       (20)      392 2023-04-05 17:17:34.000000 currensees-1.0.1/currensees.egg-info/SOURCES.txt
+--rw-r--r--   0 finn       (501) staff       (20)        1 2023-04-05 17:17:34.000000 currensees-1.0.1/currensees.egg-info/dependency_links.txt
+--rw-r--r--   0 finn       (501) staff       (20)        1 2023-04-05 17:17:21.000000 currensees-1.0.1/currensees.egg-info/not-zip-safe
+--rw-r--r--   0 finn       (501) staff       (20)        9 2023-04-05 17:17:34.000000 currensees-1.0.1/currensees.egg-info/requires.txt
+--rw-r--r--   0 finn       (501) staff       (20)       11 2023-04-05 17:17:34.000000 currensees-1.0.1/currensees.egg-info/top_level.txt
+--rw-r--r--   0 finn       (501) staff       (20)       38 2023-04-05 17:17:35.004510 currensees-1.0.1/setup.cfg
+--rw-r--r--   0 finn       (501) staff       (20)     2646 2023-04-05 17:11:34.000000 currensees-1.0.1/setup.py
++drwxr-xr-x   0 finn       (501) staff       (20)        0 2023-04-06 08:25:56.903865 currensees-1.0.2/
++-rw-r--r--   0 finn       (501) staff       (20)     5258 2023-04-06 08:25:56.904091 currensees-1.0.2/PKG-INFO
++-rw-r--r--   0 finn       (501) staff       (20)     2393 2023-04-06 08:19:45.000000 currensees-1.0.2/README.md
++drwxr-xr-x   0 finn       (501) staff       (20)        0 2023-04-06 08:25:56.887569 currensees-1.0.2/currensees/
++-rw-r--r--   0 finn       (501) staff       (20)      163 2023-04-05 11:07:01.000000 currensees-1.0.2/currensees/__init__.py
++-rw-r--r--   0 finn       (501) staff       (20)      584 2023-04-05 16:38:00.000000 currensees-1.0.2/currensees/auth.py
++-rw-r--r--   0 finn       (501) staff       (20)      781 2023-04-05 16:54:46.000000 currensees-1.0.2/currensees/convert.py
++-rw-r--r--   0 finn       (501) staff       (20)      671 2023-04-05 16:57:18.000000 currensees-1.0.2/currensees/convert_all.py
++-rw-r--r--   0 finn       (501) staff       (20)      940 2023-04-05 16:52:00.000000 currensees-1.0.2/currensees/currencies.py
++-rw-r--r--   0 finn       (501) staff       (20)     1030 2023-04-05 17:02:43.000000 currensees-1.0.2/currensees/historical.py
++-rw-r--r--   0 finn       (501) staff       (20)       17 2023-04-06 08:20:15.000000 currensees-1.0.2/currensees/version.py
++drwxr-xr-x   0 finn       (501) staff       (20)        0 2023-04-06 08:25:56.903416 currensees-1.0.2/currensees.egg-info/
++-rw-r--r--   0 finn       (501) staff       (20)     5258 2023-04-06 08:25:56.000000 currensees-1.0.2/currensees.egg-info/PKG-INFO
++-rw-r--r--   0 finn       (501) staff       (20)      392 2023-04-06 08:25:56.000000 currensees-1.0.2/currensees.egg-info/SOURCES.txt
++-rw-r--r--   0 finn       (501) staff       (20)        1 2023-04-06 08:25:56.000000 currensees-1.0.2/currensees.egg-info/dependency_links.txt
++-rw-r--r--   0 finn       (501) staff       (20)        1 2023-04-06 08:25:42.000000 currensees-1.0.2/currensees.egg-info/not-zip-safe
++-rw-r--r--   0 finn       (501) staff       (20)        9 2023-04-06 08:25:56.000000 currensees-1.0.2/currensees.egg-info/requires.txt
++-rw-r--r--   0 finn       (501) staff       (20)       11 2023-04-06 08:25:56.000000 currensees-1.0.2/currensees.egg-info/top_level.txt
++-rw-r--r--   0 finn       (501) staff       (20)       38 2023-04-06 08:25:56.905843 currensees-1.0.2/setup.cfg
++-rw-r--r--   0 finn       (501) staff       (20)     2646 2023-04-06 08:25:12.000000 currensees-1.0.2/setup.py
+```
+
+### Comparing `currensees-1.0.1/PKG-INFO` & `currensees-1.0.2/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: currensees
+-Version: 1.0.1
++Version: 1.0.2
+ Summary: Python library for integrating with the Currency API.
+ Home-page: https://moatsystems.com/currency-api/
+ Author: Moat Systems Limited
+ Author-email: support@moatsystems.com
+ License: BSD 3-Clause
+ Project-URL: Bug Tracker, https://github.com/moatsystems/currensees_sdk/issues
+ Project-URL: Changes, https://github.com/moatsystems/currensees_sdk/blob/main/CHANGELOG.md
+@@ -118,15 +118,15 @@
+         .. |copy| unicode:: 0xA9 .. copyright sign
+         .. _Moat Systems Limited: https://moatsystems.com/
+         
+ Keywords: currency,currency api,currensees,currensees sdk,rate,rates,exchange rates,moat,moatsystems,moat systems
+ Platform: UNKNOWN
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Intended Audience :: Developers
+-Classifier: License :: OSI Approved :: MIT License
++Classifier: License :: OSI Approved :: BSD License
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 2
+ Classifier: Programming Language :: Python :: 2.7
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.4
+ Classifier: Programming Language :: Python :: 3.5
+```
+
+### Comparing `currensees-1.0.1/README.md` & `currensees-1.0.2/README.md`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -73,13 +73,13 @@
+ ## Using the Currency API
+ 
+ You can read the [API documentation](https://docs.currensees.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
+ 
+ 
+ ## License
+ 
+-This project is licensed under the [BSD 3-Clause License](./LICENSE).
++This project is licensed under the [BSD 3-Clause License](https://moatsystems.com/assets/license/BSD_3_Clause.txt).
+ 
+ 
+ ## Copyright
+ 
+ (c) 2023 [Moat Systems Limited](https://moatsystems.com/). All Rights Reserved.
+```
+
+### Comparing `currensees-1.0.1/currensees/auth.py` & `currensees-1.0.2/currensees/auth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `currensees-1.0.1/currensees/convert.py` & `currensees-1.0.2/currensees/convert.py`
+
+ * *Files identical despite different names*
+
+### Comparing `currensees-1.0.1/currensees/convert_all.py` & `currensees-1.0.2/currensees/convert_all.py`
+
+ * *Files identical despite different names*
+
+### Comparing `currensees-1.0.1/currensees/currencies.py` & `currensees-1.0.2/currensees/currencies.py`
+
+ * *Files identical despite different names*
+
+### Comparing `currensees-1.0.1/currensees/historical.py` & `currensees-1.0.2/currensees/historical.py`
+
+ * *Files identical despite different names*
+
+### Comparing `currensees-1.0.1/currensees.egg-info/PKG-INFO` & `currensees-1.0.2/currensees.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: currensees
+-Version: 1.0.1
++Version: 1.0.2
+ Summary: Python library for integrating with the Currency API.
+ Home-page: https://moatsystems.com/currency-api/
+ Author: Moat Systems Limited
+ Author-email: support@moatsystems.com
+ License: BSD 3-Clause
+ Project-URL: Bug Tracker, https://github.com/moatsystems/currensees_sdk/issues
+ Project-URL: Changes, https://github.com/moatsystems/currensees_sdk/blob/main/CHANGELOG.md
+@@ -118,15 +118,15 @@
+         .. |copy| unicode:: 0xA9 .. copyright sign
+         .. _Moat Systems Limited: https://moatsystems.com/
+         
+ Keywords: currency,currency api,currensees,currensees sdk,rate,rates,exchange rates,moat,moatsystems,moat systems
+ Platform: UNKNOWN
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Intended Audience :: Developers
+-Classifier: License :: OSI Approved :: MIT License
++Classifier: License :: OSI Approved :: BSD License
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 2
+ Classifier: Programming Language :: Python :: 2.7
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.4
+ Classifier: Programming Language :: Python :: 3.5
+```
+
+### Comparing `currensees-1.0.1/setup.py` & `currensees-1.0.2/setup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ # coding: utf-8
+ 
+ import sys
+ from setuptools import setup, find_packages  # noqa: H301
+ from distutils.core import Extension
+ 
+ NAME = "currensees"
+-VERSION = "1.0.1"
++VERSION = "1.0.2"
+ REQUIRES = ["requests"]
+ 
+ # read the contents of your README file
+ from os import path
+ this_directory = path.abspath(path.dirname(__file__))
+ with open(path.join(this_directory, 'LONG_DESCRIPTION.rst')) as f:
+     long_description = f.read()
+@@ -39,15 +39,15 @@
+         "Changes": "https://github.com/moatsystems/currensees_sdk/blob/main/CHANGELOG.md",
+         "Documentation": "https://docs.currensees.com/",
+         "Source Code": "https://github.com/moatsystems/currensees_sdk",
+     },
+     classifiers=[
+         "Development Status :: 5 - Production/Stable",
+         "Intended Audience :: Developers",
+-        "License :: OSI Approved :: MIT License",
++        "License :: OSI Approved :: BSD License",
+         "Operating System :: OS Independent",
+         "Programming Language :: Python",
+         "Programming Language :: Python :: 2",
+         "Programming Language :: Python :: 2.7",
+         "Programming Language :: Python :: 3",
+         "Programming Language :: Python :: 3.4",
+         "Programming Language :: Python :: 3.5",
+```
+

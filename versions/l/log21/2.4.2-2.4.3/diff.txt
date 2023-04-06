@@ -1,0 +1,365 @@
+--- tmp/log21-2.4.2.tar.gz
++++ tmp/log21-2.4.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "log21-2.4.2.tar", last modified: Mon Feb 20 20:13:03 2023, max compression
+│ +gzip compressed data, was "log21-2.4.3.tar", last modified: Thu Apr  6 08:26:28 2023, max compression
+│   --- log21-2.4.2.tar
+├── +++ log21-2.4.3.tar
+│ ├── file list
+│ │ @@ -1,30 +1,30 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-20 20:13:03.932934 log21-2.4.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11351 2023-02-20 20:12:58.000000 log21-2.4.2/LICENSE.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10098 2023-02-20 20:13:03.932934 log21-2.4.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9355 2023-02-20 20:12:58.000000 log21-2.4.2/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-20 20:13:03.928934 log21-2.4.2/log21/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    21618 2023-02-20 20:12:58.000000 log21-2.4.2/log21/Argparse.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10578 2023-02-20 20:12:58.000000 log21-2.4.2/log21/Colors.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-20 20:13:03.932934 log21-2.4.2/log21/CrashReporter/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-02-20 20:12:58.000000 log21-2.4.2/log21/CrashReporter/Formatters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13938 2023-02-20 20:12:58.000000 log21-2.4.2/log21/CrashReporter/Reporters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      268 2023-02-20 20:12:58.000000 log21-2.4.2/log21/CrashReporter/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      959 2023-02-20 20:12:58.000000 log21-2.4.2/log21/FileHandler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9036 2023-02-20 20:12:58.000000 log21-2.4.2/log21/Formatters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      370 2023-02-20 20:12:58.000000 log21-2.4.2/log21/Levels.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6836 2023-02-20 20:12:58.000000 log21-2.4.2/log21/Logger.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    31105 2023-02-20 20:12:58.000000 log21-2.4.2/log21/LoggingWindow.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1817 2023-02-20 20:12:58.000000 log21-2.4.2/log21/Manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25534 2023-02-20 20:12:58.000000 log21-2.4.2/log21/PPrint.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12059 2023-02-20 20:12:58.000000 log21-2.4.2/log21/ProgressBar.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6717 2023-02-20 20:12:58.000000 log21-2.4.2/log21/StreamHandler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6896 2023-02-20 20:12:58.000000 log21-2.4.2/log21/TreePrint.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20031 2023-02-20 20:12:58.000000 log21-2.4.2/log21/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-20 20:13:03.928934 log21-2.4.2/log21.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10098 2023-02-20 20:13:03.000000 log21-2.4.2/log21.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      517 2023-02-20 20:13:03.000000 log21-2.4.2/log21.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-20 20:13:03.000000 log21-2.4.2/log21.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       10 2023-02-20 20:13:03.000000 log21-2.4.2/log21.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        6 2023-02-20 20:13:03.000000 log21-2.4.2/log21.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-20 20:13:03.932934 log21-2.4.2/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1093 2023-02-20 20:12:58.000000 log21-2.4.2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:26:28.672809 log21-2.4.3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11351 2023-04-06 08:26:19.000000 log21-2.4.3/LICENSE.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10101 2023-04-06 08:26:28.672809 log21-2.4.3/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9358 2023-04-06 08:26:19.000000 log21-2.4.3/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:26:28.672809 log21-2.4.3/log21/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    21618 2023-04-06 08:26:19.000000 log21-2.4.3/log21/Argparse.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10578 2023-04-06 08:26:19.000000 log21-2.4.3/log21/Colors.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:26:28.672809 log21-2.4.3/log21/CrashReporter/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2506 2023-04-06 08:26:19.000000 log21-2.4.3/log21/CrashReporter/Formatters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13938 2023-04-06 08:26:19.000000 log21-2.4.3/log21/CrashReporter/Reporters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      268 2023-04-06 08:26:19.000000 log21-2.4.3/log21/CrashReporter/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      959 2023-04-06 08:26:19.000000 log21-2.4.3/log21/FileHandler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9036 2023-04-06 08:26:19.000000 log21-2.4.3/log21/Formatters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      370 2023-04-06 08:26:19.000000 log21-2.4.3/log21/Levels.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6836 2023-04-06 08:26:19.000000 log21-2.4.3/log21/Logger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    31105 2023-04-06 08:26:19.000000 log21-2.4.3/log21/LoggingWindow.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1817 2023-04-06 08:26:19.000000 log21-2.4.3/log21/Manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25534 2023-04-06 08:26:19.000000 log21-2.4.3/log21/PPrint.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12059 2023-04-06 08:26:19.000000 log21-2.4.3/log21/ProgressBar.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6717 2023-04-06 08:26:19.000000 log21-2.4.3/log21/StreamHandler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6896 2023-04-06 08:26:19.000000 log21-2.4.3/log21/TreePrint.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20787 2023-04-06 08:26:19.000000 log21-2.4.3/log21/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:26:28.672809 log21-2.4.3/log21.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10101 2023-04-06 08:26:28.000000 log21-2.4.3/log21.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      517 2023-04-06 08:26:28.000000 log21-2.4.3/log21.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 08:26:28.000000 log21-2.4.3/log21.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 08:26:28.000000 log21-2.4.3/log21.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 08:26:28.000000 log21-2.4.3/log21.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 08:26:28.672809 log21-2.4.3/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1093 2023-04-06 08:26:19.000000 log21-2.4.3/setup.py
+│ │   --- log21-2.4.2/LICENSE.txt
+│ ├── +++ log21-2.4.3/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/PKG-INFO
+│ ├── +++ log21-2.4.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: log21
+│ │ -Version: 2.4.2
+│ │ +Version: 2.4.3
+│ │  Summary: A simple logging package that helps you log colorized messages in Windows console.
+│ │  Home-page: https://github.com/MPCodeWriter21/log21
+│ │  Author: CodeWriter21(Mehrad Pooryoussof)
+│ │  Author-email: <CodeWriter21@gmail.com>
+│ │  License: Apache-2.0 License
+│ │  Keywords: python,log,colorize,color,logging
+│ │  Classifier: Intended Audience :: Developers
+│ │ @@ -68,17 +68,17 @@
+│ │  ```shell
+│ │  python setup.py install
+│ │  ```
+│ │  
+│ │  Changes
+│ │  -------
+│ │  
+│ │ -### 2.4.2
+│ │ +### 2.4.3
+│ │  
+│ │ -Bug fixes.
+│ │ +Improvements.
+│ │  
+│ │  [Full Changes Log](https://github.com/MPCodeWriter21/log21/blob/master/CHANGES-LOG.md)
+│ │  
+│ │  
+│ │  Usage Examples:
+│ │  ---------------
+│ │   --- log21-2.4.2/README.md
+│ ├── +++ log21-2.4.3/README.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -49,17 +49,17 @@
+│ │  ```shell
+│ │  python setup.py install
+│ │  ```
+│ │  
+│ │  Changes
+│ │  -------
+│ │  
+│ │ -### 2.4.2
+│ │ +### 2.4.3
+│ │  
+│ │ -Bug fixes.
+│ │ +Improvements.
+│ │  
+│ │  [Full Changes Log](https://github.com/MPCodeWriter21/log21/blob/master/CHANGES-LOG.md)
+│ │  
+│ │  
+│ │  Usage Examples:
+│ │  ---------------
+│ │   --- log21-2.4.2/log21/Argparse.py
+│ ├── +++ log21-2.4.3/log21/Argparse.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/Colors.py
+│ ├── +++ log21-2.4.3/log21/Colors.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/CrashReporter/Formatters.py
+│ ├── +++ log21-2.4.3/log21/CrashReporter/Formatters.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/CrashReporter/Reporters.py
+│ ├── +++ log21-2.4.3/log21/CrashReporter/Reporters.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/FileHandler.py
+│ ├── +++ log21-2.4.3/log21/FileHandler.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/Formatters.py
+│ ├── +++ log21-2.4.3/log21/Formatters.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/Logger.py
+│ ├── +++ log21-2.4.3/log21/Logger.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/LoggingWindow.py
+│ ├── +++ log21-2.4.3/log21/LoggingWindow.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/Manager.py
+│ ├── +++ log21-2.4.3/log21/Manager.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/PPrint.py
+│ ├── +++ log21-2.4.3/log21/PPrint.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/ProgressBar.py
+│ ├── +++ log21-2.4.3/log21/ProgressBar.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/StreamHandler.py
+│ ├── +++ log21-2.4.3/log21/StreamHandler.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/TreePrint.py
+│ ├── +++ log21-2.4.3/log21/TreePrint.py
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/log21/__init__.py
+│ ├── +++ log21-2.4.3/log21/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,15 @@
+│ │  # log21.__init__.py
+│ │  # CodeWriter21
+│ │  
+│ │  import io as _io
+│ │ +import os as _os
+│ │  import logging as _logging
+│ │  
+│ │ -from typing import Union as _Union, Dict as _Dict
+│ │ +from typing import Union as _Union, Dict as _Dict, Type as _Type
+│ │  
+│ │  import log21.CrashReporter as CrashReporter
+│ │  
+│ │  from log21.Levels import INPUT, CRITICAL, FATAL, ERROR, WARNING, WARN, INFO, DEBUG, NOTSET
+│ │  from log21.Logger import Logger
+│ │  from log21.Manager import Manager
+│ │  from log21.ProgressBar import ProgressBar
+│ │ @@ -17,15 +18,15 @@
+│ │  from log21.Argparse import ColorizingArgumentParser
+│ │  from log21.FileHandler import DecolorizingFileHandler
+│ │  from log21.LoggingWindow import LoggingWindow, LoggingWindowHandler
+│ │  from log21.StreamHandler import ColorizingStreamHandler, StreamHandler
+│ │  from log21.Formatters import ColorizingFormatter, DecolorizingFormatter
+│ │  from log21.Colors import Colors, get_color, get_colors, ansi_escape, get_color_name, closest_color
+│ │  
+│ │ -__version__ = "2.4.2"
+│ │ +__version__ = "2.4.3"
+│ │  __author__ = "CodeWriter21 (Mehrad Pooryoussof)"
+│ │  __github__ = "Https://GitHub.com/MPCodeWriter21/log21"
+│ │  __all__ = ['ColorizingStreamHandler', 'DecolorizingFileHandler', 'ColorizingFormatter', 'DecolorizingFormatter',
+│ │             'get_logger', 'Logger', 'Colors', 'get_color', 'get_colors', 'CRITICAL', 'FATAL', 'ERROR', 'WARNING', 'WARN',
+│ │             'INFO', 'DEBUG', 'NOTSET', 'StreamHandler', 'ColorizingArgumentParser', 'PrettyPrinter', 'pformat',
+│ │             'pprint', 'pretty_print', 'tree_format', 'TreePrint', 'Manager', 'get_color_name', 'closest_color',
+│ │             'ansi_escape', '__version__', '__author__', '__github__', 'debug', 'info', 'warning', 'warn', 'error',
+│ │ @@ -35,38 +36,42 @@
+│ │  
+│ │  _manager = Manager()
+│ │  _logging.setLoggerClass(Logger)
+│ │  
+│ │  
+│ │  def _prepare_formatter(fmt: str = None, style: str = '%', datefmt: str = "%H:%M:%S", show_level: bool = True,
+│ │                         show_time: bool = True, colorize_time_and_level: bool = True,
+│ │ -                       level_names: _Dict[int, str] = None):
+│ │ +                       level_names: _Dict[int, str] = None,
+│ │ +                       formatter_class: _Type[_logging.Formatter] = ColorizingFormatter):
+│ │      # Prepares a formatting if the fmt was None
+│ │      if not fmt:
+│ │          style = '%'
+│ │          fmt = "%(message)s"
+│ │          if show_level:
+│ │              fmt = "[%(levelname)s] " + fmt
+│ │          if show_time:
+│ │              fmt = "[%(asctime)s] " + fmt
+│ │          fmt = '\r' + fmt
+│ │      # Defines the formatter
+│ │ -    formatter = ColorizingFormatter(fmt, datefmt, style=style, level_names=level_names)
+│ │ -    if not colorize_time_and_level:
+│ │ +    formatter = formatter_class(fmt, datefmt, style=style)
+│ │ +    if isinstance(formatter, Formatters._Formatter):
+│ │ +        formatter.level_names = level_names
+│ │ +    if not colorize_time_and_level and isinstance(formatter, ColorizingFormatter):
+│ │          for key in formatter.level_colors:
+│ │              formatter.level_colors[key] = tuple()
+│ │          formatter.time_color = tuple()
+│ │  
+│ │      return formatter
+│ │  
+│ │  
+│ │  def get_logger(name: str = '', level: _Union[int, str] = NOTSET, show_time: bool = True,
+│ │                 show_level: bool = True, colorize_time_and_level: bool = True, fmt: str = None,
+│ │                 datefmt: str = "%H:%M:%S", style: str = '%', handle_carriage_return: bool = True,
+│ │ -               handle_new_line: bool = True, override=False, level_names: _Dict[int, str] = None) -> Logger:
+│ │ +               handle_new_line: bool = True, override=False, level_names: _Dict[int, str] = None,
+│ │ +               file: _Union[_os.PathLike, str] = None) -> Logger:
+│ │      """
+│ │      Returns a logging.Logger with colorizing support.
+│ │      >>>
+│ │      >>> import log21
+│ │      >>>
+│ │      >>> l = log21.get_logger()
+│ │      >>> l.warning('Pretty basic, huh?')
+│ │ @@ -117,14 +122,15 @@
+│ │          string.
+│ │      :param colorize_time_and_level: bool = True: Colorizes the time and level using the default colors
+│ │      :param handle_carriage_return: bool = True: Adds a line of space characters to remove any text before the CR
+│ │      :param handle_new_line: bool = True: Places the NewLine characters at the beginning of the text before everything
+│ │          else
+│ │      :param override: bool = True: Overrides the logger attributes even if it already exists
+│ │      :param level_names: Dict[int, str] = None: You can specify custom level names.
+│ │ +    :param file: Union[os.PathLike, str] = None: The file to log to
+│ │      :return: log21.Logger
+│ │      """
+│ │      if not isinstance(name, str):
+│ │          raise TypeError('A logger name must be a string')
+│ │      logger = None
+│ │      if name:
+│ │          logger = _manager.getLogger(name)
+│ │ @@ -134,14 +140,22 @@
+│ │  
+│ │          # Defines the handler
+│ │          handler = ColorizingStreamHandler(handle_carriage_return=handle_carriage_return,
+│ │                                            handle_new_line=handle_new_line)
+│ │          handler.setFormatter(formatter)
+│ │          logger.addHandler(handler)
+│ │          _manager.addLogger(name, logger)
+│ │ +
+│ │ +        if file:
+│ │ +            file_handler = FileHandler.FileHandler(file)
+│ │ +            file_formatter = _prepare_formatter(fmt, style, datefmt, show_level, show_time, False, level_names,
+│ │ +                                                formatter_class=Formatters.DecolorizingFormatter)
+│ │ +            file_handler.setFormatter(file_formatter)
+│ │ +            logger.addHandler(file_handler)
+│ │ +
+│ │      return logger
+│ │  
+│ │  
+│ │  def get_logging_window(name: str = '', level: _Union[int, str] = NOTSET, show_time: bool = True,
+│ │                         show_level: bool = True, colorize_time_and_level: bool = True, fmt: str = None,
+│ │                         datefmt: str = "%H:%M:%S", style: str = '%', handle_carriage_return: bool = True,
+│ │                         handle_new_line: bool = True, override=False, level_names: _Dict[int, str] = None,
+│ │ @@ -253,15 +267,15 @@
+│ │  tprint = tree_print
+│ │  
+│ │  root = Logger('root-logger', INFO)
+│ │  
+│ │  
+│ │  def basic_config(force: bool = False, encoding: str = None, errors: str = 'backslashreplace', handlers=None,
+│ │                   stream=None, filename=None, filemode: str = 'a', date_format: str = "%H:%M:%S", style: str = '%',
+│ │ -                 format_: str = None, level: int = None):
+│ │ +                 format_: str = None, level: _Union[int, str] = None):
+│ │      """
+│ │      Do basic configuration for the logging system.
+│ │  
+│ │      This function does nothing if the root logger already has handlers
+│ │      configured, unless the keyword argument *force* is set to ``True``.
+│ │      It is a convenience method intended for use by simple scripts
+│ │      to do one-shot configuration of the logging package.
+│ │   --- log21-2.4.2/log21.egg-info/PKG-INFO
+│ ├── +++ log21-2.4.3/log21.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: log21
+│ │ -Version: 2.4.2
+│ │ +Version: 2.4.3
+│ │  Summary: A simple logging package that helps you log colorized messages in Windows console.
+│ │  Home-page: https://github.com/MPCodeWriter21/log21
+│ │  Author: CodeWriter21(Mehrad Pooryoussof)
+│ │  Author-email: <CodeWriter21@gmail.com>
+│ │  License: Apache-2.0 License
+│ │  Keywords: python,log,colorize,color,logging
+│ │  Classifier: Intended Audience :: Developers
+│ │ @@ -68,17 +68,17 @@
+│ │  ```shell
+│ │  python setup.py install
+│ │  ```
+│ │  
+│ │  Changes
+│ │  -------
+│ │  
+│ │ -### 2.4.2
+│ │ +### 2.4.3
+│ │  
+│ │ -Bug fixes.
+│ │ +Improvements.
+│ │  
+│ │  [Full Changes Log](https://github.com/MPCodeWriter21/log21/blob/master/CHANGES-LOG.md)
+│ │  
+│ │  
+│ │  Usage Examples:
+│ │  ---------------
+│ │   --- log21-2.4.2/log21.egg-info/SOURCES.txt
+│ ├── +++ log21-2.4.3/log21.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- log21-2.4.2/setup.py
+│ ├── +++ log21-2.4.3/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  with open('README.md', 'r') as file:
+│ │      long_description = file.read()
+│ │  
+│ │  DESCRIPTION = 'A simple logging package that helps you log colorized messages in Windows console.'
+│ │ -VERSION = '2.4.2'
+│ │ +VERSION = '2.4.3'
+│ │  
+│ │  setup(
+│ │      name='log21',
+│ │      version=VERSION,
+│ │      url='https://github.com/MPCodeWriter21/log21',
+│ │      author='CodeWriter21(Mehrad Pooryoussof)',
+│ │      author_email='<CodeWriter21@gmail.com>',
