@@ -1,0 +1,145 @@
+--- tmp/unstructured_api_tools-0.9.1.tar.gz
++++ tmp/unstructured_api_tools-0.9.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "unstructured_api_tools-0.9.1.tar", last modified: Mon Apr  3 22:13:46 2023, max compression
+│ +gzip compressed data, was "unstructured_api_tools-0.9.2.tar", last modified: Thu Apr  6 08:08:49 2023, max compression
+│   --- unstructured_api_tools-0.9.1.tar
+├── +++ unstructured_api_tools-0.9.2.tar
+│ ├── file list
+│ │ @@ -1,26 +1,26 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11360 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/LICENSE.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6377 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4536 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2261 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/unstructured_api_tools/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       42 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/__version__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1647 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4015 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/api_conventions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15564 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/convert.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3613 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/lint.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/templates/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16795 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/templates/pipeline_api.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      821 2023-04-03 22:13:39.000000 unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/templates/pipeline_app.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 22:13:46.936739 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6377 2023-04-03 22:13:46.000000 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      734 2023-04-03 22:13:46.000000 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 22:13:46.000000 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-03 22:13:46.000000 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-03 22:13:46.000000 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-03 22:13:46.000000 unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:49.546601 unstructured_api_tools-0.9.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11360 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/LICENSE.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6377 2023-04-06 08:08:49.546601 unstructured_api_tools-0.9.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4536 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-06 08:08:49.546601 unstructured_api_tools-0.9.2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2261 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:49.542601 unstructured_api_tools-0.9.2/unstructured_api_tools/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       42 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/__version__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1647 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:49.542601 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4015 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/api_conventions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15564 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/convert.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3613 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/lint.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:49.542601 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/templates/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16942 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/templates/pipeline_api.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      821 2023-04-06 08:08:35.000000 unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/templates/pipeline_app.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:08:49.542601 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6377 2023-04-06 08:08:49.000000 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      734 2023-04-06 08:08:49.000000 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 08:08:49.000000 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 08:08:49.000000 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-06 08:08:49.000000 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 08:08:49.000000 unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/top_level.txt
+│ │   --- unstructured_api_tools-0.9.1/LICENSE.md
+│ ├── +++ unstructured_api_tools-0.9.2/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/PKG-INFO
+│ ├── +++ unstructured_api_tools-0.9.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: unstructured_api_tools
+│ │ -Version: 0.9.1
+│ │ +Version: 0.9.2
+│ │  Summary: A library that prepares raw documents for downstream ML tasks.
+│ │  Home-page: https://github.com/Unstructured-IO/unstructured-api-tools
+│ │  Author: Unstructured Technologies
+│ │  Author-email: mrobinson@unstructuredai.io
+│ │  License: Apache-2.0
+│ │  Description: <h3 align="center">
+│ │            <img
+│ │   --- unstructured_api_tools-0.9.1/README.md
+│ ├── +++ unstructured_api_tools-0.9.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/setup.py
+│ ├── +++ unstructured_api_tools-0.9.2/setup.py
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools/cli.py
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools/cli.py
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/api_conventions.py
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/api_conventions.py
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/convert.py
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/convert.py
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/lint.py
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/lint.py
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/templates/pipeline_api.txt
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/templates/pipeline_api.txt
+│ │┄ Files 0% similar despite different names
+│ │ @@ -45,15 +45,21 @@
+│ │              content_type = "text/markdown"
+│ │  
+│ │      allowed_mimetypes_str = os.environ.get("UNSTRUCTURED_ALLOWED_MIMETYPES")
+│ │      if allowed_mimetypes_str is not None:
+│ │          allowed_mimetypes = allowed_mimetypes_str.split(",")
+│ │  
+│ │          if content_type not in allowed_mimetypes:
+│ │ -            raise HTTPException(status_code=400, detail=f"File type not supported: {file.filename}")
+│ │ +            raise HTTPException(
+│ │ +                status_code=400,
+│ │ +                detail=(
+│ │ +                    f"Unable to process {file.filename}: "
+│ │ +                    f"File type {content_type} is not supported."
+│ │ +                )
+│ │ +            )
+│ │  
+│ │      return content_type
+│ │  
+│ │  {% if accepts_text or accepts_file %}
+│ │  
+│ │  class MultipartMixedResponse(StreamingResponse):
+│ │      CRLF = b"\r\n"
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools/pipelines/templates/pipeline_app.txt
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools/pipelines/templates/pipeline_app.txt
+│ │┄ Files identical despite different names
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/PKG-INFO
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: unstructured-api-tools
+│ │ -Version: 0.9.1
+│ │ +Version: 0.9.2
+│ │  Summary: A library that prepares raw documents for downstream ML tasks.
+│ │  Home-page: https://github.com/Unstructured-IO/unstructured-api-tools
+│ │  Author: Unstructured Technologies
+│ │  Author-email: mrobinson@unstructuredai.io
+│ │  License: Apache-2.0
+│ │  Description: <h3 align="center">
+│ │            <img
+│ │   --- unstructured_api_tools-0.9.1/unstructured_api_tools.egg-info/SOURCES.txt
+│ ├── +++ unstructured_api_tools-0.9.2/unstructured_api_tools.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

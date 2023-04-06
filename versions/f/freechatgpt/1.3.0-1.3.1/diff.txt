@@ -1,0 +1,108 @@
+--- tmp/freechatgpt-1.3.0.tar.gz
++++ tmp/freechatgpt-1.3.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/freechatgpt-1.3.0.tar", last modified: Thu Apr  6 07:57:29 2023, max compression
+│ +gzip compressed data, was "dist/freechatgpt-1.3.1.tar", last modified: Thu Apr  6 08:10:28 2023, max compression
+│   --- freechatgpt-1.3.0.tar
+├── +++ freechatgpt-1.3.1.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxr-xr-x   0 admin      (501) staff       (20)        0 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/
+│ │ --rw-r--r--   0 admin      (501) staff       (20)     1590 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/PKG-INFO
+│ │ -drwxr-xr-x   0 admin      (501) staff       (20)        0 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt/
+│ │ --rw-r--r--   0 admin      (501) staff       (20)      144 2023-03-02 03:57:41.000000 freechatgpt-1.3.0/freechatgpt/__init__.py
+│ │ --rw-r--r--   0 admin      (501) staff       (20)     4995 2023-04-06 07:56:41.000000 freechatgpt-1.3.0/freechatgpt/free_chatgpt.py
+│ │ --rw-r--r--   0 admin      (501) staff       (20)      461 2023-03-02 04:28:25.000000 freechatgpt-1.3.0/README.md
+│ │ --rw-r--r--   0 admin      (501) staff       (20)     1361 2023-04-06 07:56:41.000000 freechatgpt-1.3.0/setup.py
+│ │ -drwxr-xr-x   0 admin      (501) staff       (20)        0 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt.egg-info/
+│ │ --rw-r--r--   0 admin      (501) staff       (20)     1590 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 admin      (501) staff       (20)      244 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 admin      (501) staff       (20)       33 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt.egg-info/requires.txt
+│ │ --rw-r--r--   0 admin      (501) staff       (20)       12 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt.egg-info/top_level.txt
+│ │ --rw-r--r--   0 admin      (501) staff       (20)        1 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/freechatgpt.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 admin      (501) staff       (20)       38 2023-04-06 07:57:29.000000 freechatgpt-1.3.0/setup.cfg
+│ │ +drwxr-xr-x   0 admin      (501) staff       (20)        0 2023-04-06 08:10:28.000000 freechatgpt-1.3.1/
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)     1590 2023-04-06 08:10:28.000000 freechatgpt-1.3.1/PKG-INFO
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)      461 2023-03-02 04:28:25.000000 freechatgpt-1.3.1/README.md
+│ │ +drwxr-xr-x   0 admin      (501) staff       (20)        0 2023-04-06 08:10:28.000000 freechatgpt-1.3.1/freechatgpt/
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)      144 2023-03-02 03:57:41.000000 freechatgpt-1.3.1/freechatgpt/__init__.py
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)     5007 2023-04-06 08:10:20.000000 freechatgpt-1.3.1/freechatgpt/free_chatgpt.py
+│ │ +drwxr-xr-x   0 admin      (501) staff       (20)        0 2023-04-06 08:10:28.000000 freechatgpt-1.3.1/freechatgpt.egg-info/
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)     1590 2023-04-06 08:10:27.000000 freechatgpt-1.3.1/freechatgpt.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)      244 2023-04-06 08:10:27.000000 freechatgpt-1.3.1/freechatgpt.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)        1 2023-04-06 08:10:27.000000 freechatgpt-1.3.1/freechatgpt.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)       33 2023-04-06 08:10:27.000000 freechatgpt-1.3.1/freechatgpt.egg-info/requires.txt
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)       12 2023-04-06 08:10:27.000000 freechatgpt-1.3.1/freechatgpt.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)       38 2023-04-06 08:10:28.000000 freechatgpt-1.3.1/setup.cfg
+│ │ +-rw-r--r--   0 admin      (501) staff       (20)     1361 2023-04-06 08:10:20.000000 freechatgpt-1.3.1/setup.py
+│ │   --- freechatgpt-1.3.0/PKG-INFO
+│ ├── +++ freechatgpt-1.3.1/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: freechatgpt
+│ │ -Version: 1.3.0
+│ │ +Version: 1.3.1
+│ │  Summary: free chatgpt api, not need token
+│ │  Home-page: https://github.com/abo123456789
+│ │  Author: abo123456789
+│ │  Author-email: abcdef123456chen@sohu.com
+│ │  Maintainer: abo123456789
+│ │  Maintainer-email: abcdef123456chen@sohu.com
+│ │  License: MIT License
+│ │   --- freechatgpt-1.3.0/freechatgpt/free_chatgpt.py
+│ ├── +++ freechatgpt-1.3.1/freechatgpt/free_chatgpt.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -96,15 +96,15 @@
+│ │              'Host': 'free-gpt.store',
+│ │              'Origin': 'http://free-gpt.store',
+│ │              'Referer': 'http://free-gpt.store/',
+│ │              'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+│ │              'X-Requested-With': 'XMLHttpRequest'
+│ │          }
+│ │  
+│ │ -        response = requests.request("POST", url, headers=headers, data=payload)
+│ │ +        response = requests.request("POST", url, headers=headers, data=payload, timeout=60)
+│ │          rs = response.text.split('答：')[1].strip('<br />').strip('<br />')
+│ │          return rs
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      # r = FreeChatgpt.ask(question='帮我优化这段话:pandas快速替换所有字符中的特殊字符')
+│ │      # print(r)
+│ │   --- freechatgpt-1.3.0/setup.py
+│ ├── +++ freechatgpt-1.3.1/setup.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  # @Author abo123456789
+│ │  # @TIME 2019/5/25 23:26
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name='freechatgpt',
+│ │ -    version='1.3.0',
+│ │ +    version='1.3.1',
+│ │      description=(
+│ │          'free chatgpt api, not need token'
+│ │      ),
+│ │      keywords=(
+│ │          "chatgpt,free"),
+│ │      long_description_content_type="text/markdown",
+│ │      long_description=open('README.md', encoding='utf-8').read(),
+│ │   --- freechatgpt-1.3.0/freechatgpt.egg-info/PKG-INFO
+│ ├── +++ freechatgpt-1.3.1/freechatgpt.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: freechatgpt
+│ │ -Version: 1.3.0
+│ │ +Version: 1.3.1
+│ │  Summary: free chatgpt api, not need token
+│ │  Home-page: https://github.com/abo123456789
+│ │  Author: abo123456789
+│ │  Author-email: abcdef123456chen@sohu.com
+│ │  Maintainer: abo123456789
+│ │  Maintainer-email: abcdef123456chen@sohu.com
+│ │  License: MIT License

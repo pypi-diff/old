@@ -1,0 +1,1048 @@
+# Comparing `tmp/dtlpy-1.74.14-py3-none-any.whl.zip` & `tmp/dtlpy-1.75.8-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,10 +1,10 @@
+-Zip file size: 538057 bytes, number of entries: 238
+--rw-rw-rw-  2.0 fat    20170 b- defN 23-Mar-20 13:48 dtlpy/__init__.py
+--rw-rw-rw-  2.0 fat       21 b- defN 23-Mar-23 16:02 dtlpy/__version__.py
++Zip file size: 538789 bytes, number of entries: 239
++-rw-rw-rw-  2.0 fat    20170 b- defN 23-Apr-04 16:44 dtlpy/__init__.py
++-rw-rw-rw-  2.0 fat       20 b- defN 23-Apr-04 17:20 dtlpy/__version__.py
+ -rw-rw-rw-  2.0 fat     2996 b- defN 22-Jun-14 12:29 dtlpy/exceptions.py
+ -rw-rw-rw-  2.0 fat     5843 b- defN 23-Mar-20 13:48 dtlpy/new_instance.py
+ -rw-rw-rw-  2.0 fat     1002 b- defN 23-Jan-25 12:50 dtlpy/assets/__init__.py
+ -rw-rw-rw-  2.0 fat    24081 b- defN 21-Apr-13 14:29 dtlpy/assets/lock_open.png
+ -rw-rw-rw-  2.0 fat     1433 b- defN 22-Jun-14 12:29 dtlpy/assets/main.py
+ -rw-rw-rw-  2.0 fat      285 b- defN 22-Jun-14 12:29 dtlpy/assets/main_partial.py
+ -rw-rw-rw-  2.0 fat      160 b- defN 22-Jun-14 12:29 dtlpy/assets/mock.json
+@@ -23,15 +23,16 @@
+ -rw-rw-rw-  2.0 fat     1112 b- defN 23-Feb-27 16:46 dtlpy/assets/__pycache__/__init__.cpython-310.pyc
+ -rw-rw-rw-  2.0 fat     1702 b- defN 23-Mar-23 14:24 dtlpy/assets/__pycache__/__init__.cpython-311.pyc
+ -rw-rw-rw-  2.0 fat     1100 b- defN 23-Jan-25 18:10 dtlpy/assets/__pycache__/__init__.cpython-37.pyc
+ -rw-rw-rw-  2.0 fat     1068 b- defN 22-Jul-14 16:38 dtlpy/assets/__pycache__/__init__.cpython-39.pyc
+ -rw-rw-rw-  2.0 fat     1719 b- defN 22-Jun-09 09:46 dtlpy/assets/__pycache__/main.cpython-37.pyc
+ -rw-rw-rw-  2.0 fat      648 b- defN 22-Jun-09 09:46 dtlpy/assets/__pycache__/main_partial.cpython-37.pyc
+ -rw-rw-rw-  2.0 fat     6376 b- defN 22-Jun-09 09:46 dtlpy/assets/__pycache__/model_adapter.cpython-37.pyc
+--rw-rw-rw-  2.0 fat      561 b- defN 23-Feb-17 16:31 dtlpy/assets/code_server/installation.sh
++-rw-rw-rw-  2.0 fat       50 b- defN 23-Apr-04 17:16 dtlpy/assets/code_server/config.yaml
++-rw-rw-rw-  2.0 fat      862 b- defN 23-Apr-04 17:16 dtlpy/assets/code_server/installation.sh
+ -rw-rw-rw-  2.0 fat      344 b- defN 23-Jan-25 12:50 dtlpy/assets/code_server/launch.json
+ -rw-rw-rw-  2.0 fat       66 b- defN 23-Jan-25 12:50 dtlpy/assets/code_server/settings.json
+ -rw-rw-rw-  2.0 fat     1676 b- defN 21-Apr-13 14:29 dtlpy/assets/service_runners/__init__.py
+ -rw-rw-rw-  2.0 fat     2915 b- defN 22-Jun-14 12:29 dtlpy/assets/service_runners/converter.py
+ -rw-rw-rw-  2.0 fat     1249 b- defN 22-Jun-14 12:29 dtlpy/assets/service_runners/multi_method.py
+ -rw-rw-rw-  2.0 fat     1602 b- defN 22-Jun-14 12:29 dtlpy/assets/service_runners/multi_method_annotation.py
+ -rw-rw-rw-  2.0 fat     1647 b- defN 22-Jun-14 12:29 dtlpy/assets/service_runners/multi_method_dataset.py
+@@ -55,50 +56,50 @@
+ -rw-rw-rw-  2.0 fat      888 b- defN 21-May-24 14:31 dtlpy/dlp/__init__.py
+ -rw-rw-rw-  2.0 fat    16404 b- defN 22-Jun-14 12:29 dtlpy/dlp/cli_utilities.py
+ -rw-rw-rw-  2.0 fat    32280 b- defN 23-Jan-25 12:50 dtlpy/dlp/command_executor.py
+ -rw-rw-rw-  2.0 fat       11 b- defN 21-May-24 14:31 dtlpy/dlp/dlp
+ -rw-rw-rw-  2.0 fat       38 b- defN 21-May-24 14:31 dtlpy/dlp/dlp.bat
+ -rw-rw-rw-  2.0 fat     4406 b- defN 21-May-24 14:31 dtlpy/dlp/dlp.py
+ -rw-rw-rw-  2.0 fat    31202 b- defN 23-Jan-25 12:50 dtlpy/dlp/parser.py
+--rw-rw-rw-  2.0 fat     4335 b- defN 23-Mar-20 13:48 dtlpy/entities/__init__.py
++-rw-rw-rw-  2.0 fat     4335 b- defN 23-Apr-04 16:44 dtlpy/entities/__init__.py
+ -rw-rw-rw-  2.0 fat    11665 b- defN 22-Nov-15 22:39 dtlpy/entities/analytic.py
+--rw-rw-rw-  2.0 fat    69115 b- defN 23-Mar-23 17:00 dtlpy/entities/annotation.py
+--rw-rw-rw-  2.0 fat    30245 b- defN 22-Dec-12 10:20 dtlpy/entities/annotation_collection.py
++-rw-rw-rw-  2.0 fat    67925 b- defN 23-Apr-04 17:16 dtlpy/entities/annotation.py
++-rw-rw-rw-  2.0 fat    30245 b- defN 23-Apr-04 17:20 dtlpy/entities/annotation_collection.py
+ -rw-rw-rw-  2.0 fat     4999 b- defN 23-Mar-20 13:48 dtlpy/entities/app.py
+ -rw-rw-rw-  2.0 fat     5885 b- defN 22-Nov-15 22:39 dtlpy/entities/artifact.py
+ -rw-rw-rw-  2.0 fat    14739 b- defN 22-Dec-12 10:20 dtlpy/entities/assignment.py
+ -rw-rw-rw-  2.0 fat     7642 b- defN 23-Jan-25 12:50 dtlpy/entities/base_entity.py
+ -rw-rw-rw-  2.0 fat     3932 b- defN 22-Jun-14 12:29 dtlpy/entities/bot.py
+--rw-rw-rw-  2.0 fat     9280 b- defN 23-Jan-25 12:50 dtlpy/entities/codebase.py
++-rw-rw-rw-  2.0 fat     9295 b- defN 23-Apr-04 17:16 dtlpy/entities/codebase.py
+ -rw-rw-rw-  2.0 fat     5138 b- defN 23-Mar-20 13:48 dtlpy/entities/command.py
+ -rw-rw-rw-  2.0 fat    45150 b- defN 23-Mar-20 13:48 dtlpy/entities/dataset.py
+ -rw-rw-rw-  2.0 fat     1230 b- defN 22-Jun-14 12:29 dtlpy/entities/directory_tree.py
+ -rw-rw-rw-  2.0 fat    10737 b- defN 23-Mar-20 13:48 dtlpy/entities/dpk.py
+--rw-rw-rw-  2.0 fat     7032 b- defN 23-Mar-20 13:48 dtlpy/entities/driver.py
++-rw-rw-rw-  2.0 fat     7032 b- defN 23-Apr-04 16:44 dtlpy/entities/driver.py
+ -rw-rw-rw-  2.0 fat    12747 b- defN 23-Mar-20 13:48 dtlpy/entities/execution.py
+ -rw-rw-rw-  2.0 fat     4518 b- defN 23-Mar-20 13:48 dtlpy/entities/feature.py
+ -rw-rw-rw-  2.0 fat     4530 b- defN 23-Mar-20 13:48 dtlpy/entities/feature_set.py
+--rw-rw-rw-  2.0 fat    18869 b- defN 23-Jan-25 18:00 dtlpy/entities/filters.py
+--rw-rw-rw-  2.0 fat     3621 b- defN 23-Mar-20 13:48 dtlpy/entities/integration.py
++-rw-rw-rw-  2.0 fat    18869 b- defN 23-Apr-04 14:37 dtlpy/entities/filters.py
++-rw-rw-rw-  2.0 fat     3621 b- defN 23-Apr-04 16:44 dtlpy/entities/integration.py
+ -rw-rw-rw-  2.0 fat    28708 b- defN 23-Mar-20 13:48 dtlpy/entities/item.py
+ -rw-rw-rw-  2.0 fat     3992 b- defN 23-Jan-25 12:50 dtlpy/entities/label.py
+ -rw-rw-rw-  2.0 fat     2601 b- defN 22-Jun-14 12:29 dtlpy/entities/links.py
+--rw-rw-rw-  2.0 fat    17554 b- defN 23-Mar-20 13:48 dtlpy/entities/model.py
++-rw-rw-rw-  2.0 fat    17554 b- defN 23-Apr-04 17:14 dtlpy/entities/model.py
+ -rw-rw-rw-  2.0 fat    35390 b- defN 23-Mar-20 13:48 dtlpy/entities/node.py
+ -rw-rw-rw-  2.0 fat    30018 b- defN 23-Mar-20 13:48 dtlpy/entities/ontology.py
+ -rw-rw-rw-  2.0 fat    10180 b- defN 23-Mar-20 13:48 dtlpy/entities/organization.py
+ -rw-rw-rw-  2.0 fat    26681 b- defN 23-Mar-20 13:48 dtlpy/entities/package.py
+ -rw-rw-rw-  2.0 fat      216 b- defN 21-Apr-13 14:29 dtlpy/entities/package_defaults.py
+ -rw-rw-rw-  2.0 fat     5947 b- defN 23-Jan-25 12:50 dtlpy/entities/package_function.py
+ -rw-rw-rw-  2.0 fat     4134 b- defN 23-Jan-25 12:50 dtlpy/entities/package_module.py
+ -rw-rw-rw-  2.0 fat     5867 b- defN 23-Jan-25 12:50 dtlpy/entities/package_slot.py
+ -rw-rw-rw-  2.0 fat     6041 b- defN 23-Mar-20 13:48 dtlpy/entities/paged_entities.py
+ -rw-rw-rw-  2.0 fat    18072 b- defN 23-Mar-20 13:48 dtlpy/entities/pipeline.py
+--rw-rw-rw-  2.0 fat     7916 b- defN 23-Mar-20 13:48 dtlpy/entities/pipeline_execution.py
+--rw-rw-rw-  2.0 fat    14592 b- defN 23-Mar-20 13:48 dtlpy/entities/project.py
++-rw-rw-rw-  2.0 fat     7417 b- defN 23-Apr-04 17:16 dtlpy/entities/pipeline_execution.py
++-rw-rw-rw-  2.0 fat    14686 b- defN 23-Apr-04 17:16 dtlpy/entities/project.py
+ -rw-rw-rw-  2.0 fat     9793 b- defN 23-Mar-20 13:48 dtlpy/entities/recipe.py
+ -rw-rw-rw-  2.0 fat     3375 b- defN 22-Oct-23 10:24 dtlpy/entities/reflect_dict.py
+ -rw-rw-rw-  2.0 fat     5171 b- defN 23-Mar-20 13:48 dtlpy/entities/resource_execution.py
+ -rw-rw-rw-  2.0 fat    28019 b- defN 23-Mar-20 13:48 dtlpy/entities/service.py
+ -rw-rw-rw-  2.0 fat     8911 b- defN 23-Jan-25 12:50 dtlpy/entities/setting.py
+ -rw-rw-rw-  2.0 fat     6318 b- defN 22-Jun-14 12:29 dtlpy/entities/similarity.py
+ -rw-rw-rw-  2.0 fat    19245 b- defN 22-Dec-12 10:20 dtlpy/entities/task.py
+@@ -146,63 +147,63 @@
+ -rw-rw-rw-  2.0 fat      691 b- defN 21-Apr-13 14:29 dtlpy/examples/upload_batch_of_items.py
+ -rw-rw-rw-  2.0 fat     2363 b- defN 21-Apr-13 14:29 dtlpy/examples/upload_items_and_custom_format_annotations.py
+ -rw-rw-rw-  2.0 fat     1891 b- defN 22-Jun-14 12:29 dtlpy/examples/upload_items_with_modalities.py
+ -rw-rw-rw-  2.0 fat     1432 b- defN 21-Apr-13 14:29 dtlpy/examples/upload_segmentation_annotations_from_mask_image.py
+ -rw-rw-rw-  2.0 fat     2680 b- defN 21-Apr-13 14:29 dtlpy/examples/upload_yolo_format_annotations.py
+ -rw-rw-rw-  2.0 fat      849 b- defN 22-Nov-15 22:39 dtlpy/miscellaneous/__init__.py
+ -rw-rw-rw-  2.0 fat     3584 b- defN 22-Oct-23 10:23 dtlpy/miscellaneous/dict_differ.py
+--rw-rw-rw-  2.0 fat     7611 b- defN 23-Mar-23 11:55 dtlpy/miscellaneous/git_utils.py
++-rw-rw-rw-  2.0 fat     8188 b- defN 23-Apr-04 17:16 dtlpy/miscellaneous/git_utils.py
+ -rw-rw-rw-  2.0 fat      442 b- defN 22-Nov-15 22:39 dtlpy/miscellaneous/json_utils.py
+ -rw-rw-rw-  2.0 fat     4913 b- defN 22-Jun-14 12:29 dtlpy/miscellaneous/list_print.py
+ -rw-rw-rw-  2.0 fat     5245 b- defN 22-Nov-17 23:38 dtlpy/miscellaneous/zipping.py
+ -rw-rw-rw-  2.0 fat      819 b- defN 22-Nov-15 22:39 dtlpy/ml/__init__.py
+--rw-rw-rw-  2.0 fat    35225 b- defN 23-Mar-20 13:48 dtlpy/ml/base_model_adapter.py
+--rw-rw-rw-  2.0 fat    20336 b- defN 23-Mar-23 11:55 dtlpy/ml/metrics.py
+--rw-rw-rw-  2.0 fat    12018 b- defN 23-Mar-23 11:55 dtlpy/ml/predictions_utils.py
++-rw-rw-rw-  2.0 fat    35225 b- defN 23-Apr-04 17:14 dtlpy/ml/base_model_adapter.py
++-rw-rw-rw-  2.0 fat    20498 b- defN 23-Apr-04 17:16 dtlpy/ml/metrics.py
++-rw-rw-rw-  2.0 fat    12758 b- defN 23-Apr-04 17:16 dtlpy/ml/predictions_utils.py
+ -rw-rw-rw-  2.0 fat     2841 b- defN 22-Oct-23 10:23 dtlpy/ml/summary_writer.py
+--rw-rw-rw-  2.0 fat     3545 b- defN 22-Nov-15 22:39 dtlpy/ml/train_utils.py
++-rw-rw-rw-  2.0 fat     3545 b- defN 23-Apr-04 17:14 dtlpy/ml/train_utils.py
+ -rw-rw-rw-  2.0 fat     1893 b- defN 22-Nov-15 22:39 dtlpy/repositories/__init__.py
+ -rw-rw-rw-  2.0 fat     3051 b- defN 23-Mar-20 13:48 dtlpy/repositories/analytics.py
+ -rw-rw-rw-  2.0 fat    35948 b- defN 23-Mar-20 13:48 dtlpy/repositories/annotations.py
+ -rw-rw-rw-  2.0 fat    10396 b- defN 23-Mar-20 13:48 dtlpy/repositories/apps.py
+ -rw-rw-rw-  2.0 fat    19986 b- defN 23-Mar-20 13:48 dtlpy/repositories/artifacts.py
+ -rw-rw-rw-  2.0 fat    26008 b- defN 23-Mar-20 13:48 dtlpy/repositories/assignments.py
+ -rw-rw-rw-  2.0 fat     8408 b- defN 23-Mar-20 13:48 dtlpy/repositories/bots.py
+--rw-rw-rw-  2.0 fat    24566 b- defN 23-Mar-23 11:55 dtlpy/repositories/codebases.py
+--rw-rw-rw-  2.0 fat     5576 b- defN 23-Mar-20 13:48 dtlpy/repositories/commands.py
+--rw-rw-rw-  2.0 fat    43208 b- defN 23-Mar-20 13:48 dtlpy/repositories/datasets.py
++-rw-rw-rw-  2.0 fat    25740 b- defN 23-Apr-04 17:16 dtlpy/repositories/codebases.py
++-rw-rw-rw-  2.0 fat     5374 b- defN 23-Apr-04 17:16 dtlpy/repositories/commands.py
++-rw-rw-rw-  2.0 fat    43380 b- defN 23-Apr-04 17:16 dtlpy/repositories/datasets.py
+ -rw-rw-rw-  2.0 fat    41923 b- defN 23-Jan-25 12:50 dtlpy/repositories/downloader.py
+ -rw-rw-rw-  2.0 fat    15357 b- defN 23-Mar-20 13:48 dtlpy/repositories/dpks.py
+--rw-rw-rw-  2.0 fat    10441 b- defN 23-Mar-20 13:48 dtlpy/repositories/drivers.py
+--rw-rw-rw-  2.0 fat    30968 b- defN 23-Mar-20 13:48 dtlpy/repositories/executions.py
++-rw-rw-rw-  2.0 fat    10454 b- defN 23-Apr-04 17:16 dtlpy/repositories/drivers.py
++-rw-rw-rw-  2.0 fat    30968 b- defN 23-Apr-04 14:37 dtlpy/repositories/executions.py
+ -rw-rw-rw-  2.0 fat     7724 b- defN 23-Mar-20 13:48 dtlpy/repositories/feature_sets.py
+ -rw-rw-rw-  2.0 fat     9919 b- defN 23-Mar-20 13:48 dtlpy/repositories/features.py
+--rw-rw-rw-  2.0 fat    10118 b- defN 23-Mar-20 13:48 dtlpy/repositories/integrations.py
++-rw-rw-rw-  2.0 fat    10118 b- defN 23-Apr-04 16:44 dtlpy/repositories/integrations.py
+ -rw-rw-rw-  2.0 fat    38664 b- defN 23-Mar-20 13:48 dtlpy/repositories/items.py
+--rw-rw-rw-  2.0 fat    23472 b- defN 23-Mar-22 23:43 dtlpy/repositories/models.py
++-rw-rw-rw-  2.0 fat    23472 b- defN 23-Apr-04 17:14 dtlpy/repositories/models.py
+ -rw-rw-rw-  2.0 fat     3141 b- defN 23-Mar-20 13:48 dtlpy/repositories/nodes.py
+--rw-rw-rw-  2.0 fat    20035 b- defN 23-Mar-20 13:48 dtlpy/repositories/ontologies.py
++-rw-rw-rw-  2.0 fat    20035 b- defN 23-Mar-29 12:32 dtlpy/repositories/ontologies.py
+ -rw-rw-rw-  2.0 fat    23479 b- defN 23-Mar-20 13:48 dtlpy/repositories/organizations.py
+ -rw-rw-rw-  2.0 fat    88407 b- defN 23-Mar-20 13:48 dtlpy/repositories/packages.py
+ -rw-rw-rw-  2.0 fat    12067 b- defN 23-Mar-20 13:48 dtlpy/repositories/pipeline_executions.py
+ -rw-rw-rw-  2.0 fat    22927 b- defN 23-Mar-20 13:48 dtlpy/repositories/pipelines.py
+ -rw-rw-rw-  2.0 fat    22418 b- defN 23-Mar-20 13:48 dtlpy/repositories/projects.py
+ -rw-rw-rw-  2.0 fat    15746 b- defN 23-Mar-20 13:48 dtlpy/repositories/recipes.py
+ -rw-rw-rw-  2.0 fat     5511 b- defN 23-Mar-20 13:48 dtlpy/repositories/resource_executions.py
+ -rw-rw-rw-  2.0 fat    65527 b- defN 23-Feb-22 15:06 dtlpy/repositories/services.py
+ -rw-rw-rw-  2.0 fat    12648 b- defN 22-Oct-25 07:58 dtlpy/repositories/settings.py
+--rw-rw-rw-  2.0 fat    47174 b- defN 23-Mar-20 13:48 dtlpy/repositories/tasks.py
++-rw-rw-rw-  2.0 fat    47331 b- defN 23-Apr-04 17:16 dtlpy/repositories/tasks.py
+ -rw-rw-rw-  2.0 fat    11698 b- defN 23-Mar-20 13:48 dtlpy/repositories/times_series.py
+--rw-rw-rw-  2.0 fat    22432 b- defN 23-Mar-20 13:48 dtlpy/repositories/triggers.py
++-rw-rw-rw-  2.0 fat    22432 b- defN 23-Apr-04 17:20 dtlpy/repositories/triggers.py
+ -rw-rw-rw-  2.0 fat     9476 b- defN 22-Oct-23 10:23 dtlpy/repositories/upload_element.py
+ -rw-rw-rw-  2.0 fat    31308 b- defN 23-Mar-20 13:48 dtlpy/repositories/uploader.py
+ -rw-rw-rw-  2.0 fat     9282 b- defN 23-Mar-20 13:48 dtlpy/repositories/webhooks.py
+ -rw-rw-rw-  2.0 fat      926 b- defN 23-Mar-20 13:48 dtlpy/services/__init__.py
+ -rw-rw-rw-  2.0 fat     5153 b- defN 21-Apr-13 14:29 dtlpy/services/aihttp_retry.py
+--rw-rw-rw-  2.0 fat    66643 b- defN 23-Mar-20 13:48 dtlpy/services/api_client.py
++-rw-rw-rw-  2.0 fat    66643 b- defN 23-Mar-29 12:15 dtlpy/services/api_client.py
+ -rw-rw-rw-  2.0 fat     1555 b- defN 22-Dec-12 10:20 dtlpy/services/api_reference.py
+ -rw-rw-rw-  2.0 fat     2918 b- defN 22-Oct-23 10:23 dtlpy/services/async_utils.py
+ -rw-rw-rw-  2.0 fat     1080 b- defN 21-Apr-13 14:29 dtlpy/services/calls_counter.py
+ -rw-rw-rw-  2.0 fat     3687 b- defN 22-Nov-15 22:39 dtlpy/services/check_sdk.py
+ -rw-rw-rw-  2.0 fat     3809 b- defN 22-Oct-23 10:23 dtlpy/services/cookie.py
+ -rw-rw-rw-  2.0 fat     6488 b- defN 22-Oct-23 10:23 dtlpy/services/create_logger.py
+ -rw-rw-rw-  2.0 fat     3770 b- defN 22-Nov-15 22:39 dtlpy/services/events.py
+@@ -222,19 +223,19 @@
+ -rw-rw-rw-  2.0 fat     6630 b- defN 23-Jan-25 12:50 dtlpy/utilities/local_development/local_session.py
+ -rw-rw-rw-  2.0 fat      126 b- defN 22-Oct-23 10:23 dtlpy/utilities/reports/__init__.py
+ -rw-rw-rw-  2.0 fat     6103 b- defN 22-Nov-17 23:38 dtlpy/utilities/reports/figures.py
+ -rw-rw-rw-  2.0 fat     2710 b- defN 22-Oct-23 10:23 dtlpy/utilities/reports/report.py
+ -rw-rw-rw-  2.0 fat      751 b- defN 21-Apr-13 14:29 dtlpy/utilities/videos/__init__.py
+ -rw-rw-rw-  2.0 fat    24670 b- defN 22-Jun-14 12:29 dtlpy/utilities/videos/video_player.py
+ -rw-rw-rw-  2.0 fat    22345 b- defN 22-Oct-23 10:23 dtlpy/utilities/videos/videos.py
+--rw-rw-rw-  2.0 fat       11 b- defN 21-May-24 14:31 dtlpy-1.74.14.data/scripts/dlp
+--rw-rw-rw-  2.0 fat       38 b- defN 21-May-24 14:31 dtlpy-1.74.14.data/scripts/dlp.bat
+--rw-rw-rw-  2.0 fat     4406 b- defN 21-May-24 14:31 dtlpy-1.74.14.data/scripts/dlp.py
++-rw-rw-rw-  2.0 fat       11 b- defN 21-May-24 14:31 dtlpy-1.75.8.data/scripts/dlp
++-rw-rw-rw-  2.0 fat       38 b- defN 21-May-24 14:31 dtlpy-1.75.8.data/scripts/dlp.bat
++-rw-rw-rw-  2.0 fat     4406 b- defN 21-May-24 14:31 dtlpy-1.75.8.data/scripts/dlp.py
+ -rw-rw-rw-  2.0 fat        0 b- defN 21-Apr-13 14:29 tests/features/__init__.py
+ -rw-rw-rw-  2.0 fat     8810 b- defN 23-Mar-20 13:48 tests/features/environment.py
+--rw-rw-rw-  2.0 fat    11556 b- defN 23-Mar-23 17:26 dtlpy-1.74.14.dist-info/LICENSE
+--rw-rw-rw-  2.0 fat     2867 b- defN 23-Mar-23 17:26 dtlpy-1.74.14.dist-info/METADATA
+--rw-rw-rw-  2.0 fat       92 b- defN 23-Mar-23 17:26 dtlpy-1.74.14.dist-info/WHEEL
+--rw-rw-rw-  2.0 fat       44 b- defN 23-Mar-23 17:26 dtlpy-1.74.14.dist-info/entry_points.txt
+--rw-rw-rw-  2.0 fat       12 b- defN 23-Mar-23 17:26 dtlpy-1.74.14.dist-info/top_level.txt
+-?rw-rw-r--  2.0 fat    21567 b- defN 23-Mar-23 17:26 dtlpy-1.74.14.dist-info/RECORD
+-238 files, 2194145 bytes uncompressed, 503827 bytes compressed:  77.0%
++-rw-rw-rw-  2.0 fat    11556 b- defN 23-Apr-06 08:09 dtlpy-1.75.8.dist-info/LICENSE
++-rw-rw-rw-  2.0 fat     2867 b- defN 23-Apr-06 08:09 dtlpy-1.75.8.dist-info/METADATA
++-rw-rw-rw-  2.0 fat       92 b- defN 23-Apr-06 08:09 dtlpy-1.75.8.dist-info/WHEEL
++-rw-rw-rw-  2.0 fat       44 b- defN 23-Apr-06 08:09 dtlpy-1.75.8.dist-info/entry_points.txt
++-rw-rw-rw-  2.0 fat       12 b- defN 23-Apr-06 08:09 dtlpy-1.75.8.dist-info/top_level.txt
++?rw-rw-r--  2.0 fat    21649 b- defN 23-Apr-06 08:09 dtlpy-1.75.8.dist-info/RECORD
++239 files, 2195790 bytes uncompressed, 504429 bytes compressed:  77.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -78,14 +78,17 @@
+ 
+ Filename: dtlpy/assets/__pycache__/main_partial.cpython-37.pyc
+ Comment: 
+ 
+ Filename: dtlpy/assets/__pycache__/model_adapter.cpython-37.pyc
+ Comment: 
+ 
++Filename: dtlpy/assets/code_server/config.yaml
++Comment: 
++
+ Filename: dtlpy/assets/code_server/installation.sh
+ Comment: 
+ 
+ Filename: dtlpy/assets/code_server/launch.json
+ Comment: 
+ 
+ Filename: dtlpy/assets/code_server/settings.json
+@@ -675,41 +678,41 @@
+ 
+ Filename: dtlpy/utilities/videos/video_player.py
+ Comment: 
+ 
+ Filename: dtlpy/utilities/videos/videos.py
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.data/scripts/dlp
++Filename: dtlpy-1.75.8.data/scripts/dlp
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.data/scripts/dlp.bat
++Filename: dtlpy-1.75.8.data/scripts/dlp.bat
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.data/scripts/dlp.py
++Filename: dtlpy-1.75.8.data/scripts/dlp.py
+ Comment: 
+ 
+ Filename: tests/features/__init__.py
+ Comment: 
+ 
+ Filename: tests/features/environment.py
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.dist-info/LICENSE
++Filename: dtlpy-1.75.8.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.dist-info/METADATA
++Filename: dtlpy-1.75.8.dist-info/METADATA
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.dist-info/WHEEL
++Filename: dtlpy-1.75.8.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.dist-info/entry_points.txt
++Filename: dtlpy-1.75.8.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.dist-info/top_level.txt
++Filename: dtlpy-1.75.8.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: dtlpy-1.74.14.dist-info/RECORD
++Filename: dtlpy-1.75.8.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## dtlpy/__version__.py
+
+```diff
+@@ -1 +1 @@
+-version = '1.74.14'
++version = '1.75.8'
+```
+
+## dtlpy/assets/code_server/installation.sh
+
+```diff
+@@ -1 +1,25 @@
+-#!/bin/bashcd /tmp/appPORT=${1?}# check if curl command existsif ! command -v curl &> /dev/nullthen    echo "curl could not be found. installing..."    apt update -y    apt install -y curlfi# check if code-server command existsif ! command -v code-server &> /dev/nullthen    echo "code-server could not be found. installing..."    bash <(curl -s https://raw.githubusercontent.com/coder/code-server/main/install.sh)    code-server --install-extension ms-python.pythonficode-server --bind-addr 0.0.0.0:${PORT} --auth none --cert false /tmp/app
++#!/bin/bash
++cd /tmp/app
++
++PORT=${1?}
++
++# check if curl command exists
++if ! command -v curl &> /dev/null
++then
++    echo "curl could not be found. installing..."
++    apt update -y
++    apt install -y curl
++fi
++
++# check if code-server command exists
++if ! command -v code-server &> /dev/null
++then
++    echo "code-server could not be found. installing..."
++    bash <(curl -s https://raw.githubusercontent.com/coder/code-server/main/install.sh)
++    code-server --install-extension ms-python.python
++    code-server --install-extension okteto.remote-kubernetes
++    code-server --install-extension ms-vscode-remote.vscode-remote-extensionpack
++    code-server --install-extension ms-vscode-remote.remote-containers
++    code-server --install-extension ms-vscode-remote.remote-wsl
++fi
++code-server --bind-addr 0.0.0.0:${PORT} --auth none --cert false /tmp/app
+```
+
+## dtlpy/entities/annotation.py
+
+```diff
+@@ -1463,66 +1463,44 @@
+             if description is not None:
+                 annotation.description = description
+ 
+         #################
+         # if has frames #
+         #################
+         if is_video:
+-            if annotation.type in ['class', 'subtitle', 'pose']:
+-                if end_frame is None:
+-                    end_frame = start_frame
+-                # for class type annotation create frames
+-                # make copies of the head annotations for all frames in it
+-                for frame_num in range(start_frame, end_frame + 1):
+-                    snapshot = {
+-                        'frame': frame_num,
+-                        'attributes': first_frame_attributes,
+-                        'coordinates': first_frame_coordinates,
+-                        'fixed': True,
+-                        'label': _json['label'],
+-                        'type': annotation.type,
+-                        'namedAttributes': named_attributes
+-                    }
+-                    frame = FrameAnnotation.from_snapshot(
+-                        _json=snapshot,
+-                        annotation=annotation,
+-                        fps=fps
+-                    )
+-                    annotation.frames[frame.frame_num] = frame
+-            else:
+-                # set first frame
+-                snapshot = {
+-                    'attributes': first_frame_attributes,
+-                    'coordinates': first_frame_coordinates,
+-                    'fixed': True,
+-                    'objectVisible': True,
+-                    'frame': first_frame_number,
+-                    'label': _json['label'],
+-                    'type': annotation.type,
+-                    'namedAttributes': named_attributes
+-                }
++            # set first frame
++            snapshot = {
++                'attributes': first_frame_attributes,
++                'coordinates': first_frame_coordinates,
++                'fixed': True,
++                'objectVisible': True,
++                'frame': first_frame_number,
++                'label': _json['label'],
++                'type': annotation.type,
++                'namedAttributes': named_attributes
++            }
++
++            # add first frame
++            frame = FrameAnnotation.from_snapshot(
++                _json=snapshot,
++                annotation=annotation,
++                fps=fps
++            )
++            annotation.frames[frame.frame_num] = frame
++            annotation.annotation_definition = frame.annotation_definition
+ 
+-                # add first frame
++            # put snapshots if there are any
++            for snapshot in _json['metadata']['system'].get('snapshots_', []):
+                 frame = FrameAnnotation.from_snapshot(
+                     _json=snapshot,
+                     annotation=annotation,
+                     fps=fps
+                 )
+-                annotation.frames[frame.frame_num] = frame
+-                annotation.annotation_definition = frame.annotation_definition
+-
+-                # put snapshots if there are any
+-                for snapshot in _json['metadata']['system'].get('snapshots_', []):
+-                    frame = FrameAnnotation.from_snapshot(
+-                        _json=snapshot,
+-                        annotation=annotation,
+-                        fps=fps
+-                    )
+ 
+-                    annotation.frames[frame.frame_num] = frame
++                annotation.frames[frame.frame_num] = frame
+ 
+             annotation.annotation_definition = annotation.frames[min(frames.actual_keys())].annotation_definition
+             if annotation.annotation_definition:
+                 description = _json.get('description', None)
+                 if description is not None:
+                     annotation.description = description
+ 
+@@ -1629,15 +1607,15 @@
+             _json['metadata']['system']['frame'] = self.start_frame
+             _json['metadata']['system']['startTime'] = self.start_time
+             _json['metadata']['system']['endTime'] = self.end_time
+             if self.end_frame is not None:
+                 _json['metadata']['system']['endFrame'] = self.end_frame
+ 
+             # add snapshots only if classification
+-            if self.type not in ['class', 'subtitle']:
++            if self.type not in ['subtitle']:
+                 _json['metadata']['system']['snapshots_'] = snapshots
+ 
+         return _json
+ 
+ 
+ @attr.s
+ class FrameAnnotation(entities.BaseEntity):
+```
+
+## dtlpy/entities/codebase.py
+
+```diff
+@@ -35,15 +35,15 @@
+                                       client_api=client_api)
+     else:
+         raise ValueError('[Codebase constructor] Unknown codebase type: {}'.format(kwargs['type']))
+     return cls
+ 
+ 
+ class GitCodebase(entities.DlEntity):
+-    type = entities.DlProperty(location=['type'], _type=str)
++    type = entities.DlProperty(location=['type'], _type=str, default='git')
+     git_url = entities.DlProperty(location=['gitUrl'], _type=str)
+     git_tag = entities.DlProperty(location=['gitTag'], _type=str)
+     credentials = entities.DlProperty(location=['credentials'], _type=dict)
+     _codebases = None
+     client_api: 'services.ClientApi'
+ 
+     @property
+```
+
+## dtlpy/entities/pipeline_execution.py
+
+```diff
+@@ -109,35 +109,28 @@
+         if pipeline is not None:
+             if pipeline.id != _json.get('pipelineId', None):
+                 logger.warning('Pipeline has been fetched from a project that is not belong to it')
+                 pipeline = None
+ 
+         nodes = [PipelineExecutionNode.from_json(_json=node) for node in _json.get('nodes', list())]
+ 
+-        executions = _json.get('executions', dict())
+-        for node_id, executions_list in executions.items():
+-            if len(executions_list) > 0 and isinstance(executions_list[0], dict):
+-                executions[node_id] = [entities.Execution.from_json(_json=execution,
+-                                                                    client_api=client_api
+-                                                                    )
+-                                       for execution in executions_list]
+-
+         inst = cls(
+             id=_json.get('id', None),
+             created_at=_json.get('createdAt', None),
+             updated_at=_json.get('updatedAt', None),
+             pipeline_id=_json.get('pipelineId', None),
+             status=_json.get('status', None),
+             max_attempts=_json.get('maxAttempts', None),
+             creator=_json.get('creator', None),
+             nodes=nodes,
+-            executions=executions,
++            executions=_json.get('executions', dict()),
+             pipeline=pipeline,
+             client_api=client_api,
+         )
++
+         inst.is_fetched = is_fetched
+         return inst
+ 
+     def to_json(self):
+         """
+         Turn Package entity into a platform representation of Package
+```
+
+## dtlpy/entities/project.py
+
+```diff
+@@ -29,14 +29,15 @@
+     id = attr.ib()
+     name = attr.ib()
+     org = attr.ib(repr=False)
+     updated_at = attr.ib(repr=False)
+     role = attr.ib(repr=False)
+     account = attr.ib(repr=False)
+     is_blocked = attr.ib(repr=False)
++    archived = attr.ib(repr=False)
+ 
+     # name change
+     feature_constraints = attr.ib()
+ 
+     # api
+     _client_api = attr.ib(type=ApiClient, repr=False)
+ 
+@@ -271,14 +272,15 @@
+                    updated_at=_json.get('updatedAt', None),
+                    creator=_json.get('creator', None),
+                    account=_json.get('account', None),
+                    name=_json.get('name', None),
+                    role=_json.get('role', None),
+                    org=_json.get('org', None),
+                    id=_json.get('id', None),
++                   archived=_json.get('archived', None),
+                    client_api=client_api)
+         inst.is_fetched = is_fetched
+         return inst
+ 
+     def to_json(self):
+         """
+         Returns platform _json format of project object
+```
+
+## dtlpy/miscellaneous/git_utils.py
+
+```diff
+@@ -150,14 +150,23 @@
+         :param git_url: `str` git url to clone from
+         :return `bool` for successful clone
+         """
+         cmd = ''
+         if not os.path.isdir(path):
+             os.makedirs(path)
+         try:
++            username = kwargs.get('username')
++            password = kwargs.get('password')
++            if username is not None and password is not None:
++                if git_url.startswith('https://'):
++                    git_url = git_url.replace('https://', 'https://{}:{}@'.format(username, password))
++                elif git_url.startswith('http://'):
++                    git_url = git_url.replace('http://', 'http://{}:{}@'.format(username, password))
++                else:
++                    git_url = 'https://{}:{}@{}'.format(username, password, git_url)
+             tag = kwargs.get('tag')
+             branch = kwargs.get('branch')
+             if tag is not None:
+                 branch_cmd = ['--branch', tag]
+             elif branch is not None:
+                 branch_cmd = ['--branch', branch]
+             else:
+```
+
+## dtlpy/ml/metrics.py
+
+```diff
+@@ -37,14 +37,16 @@
+             'n_annotations_set_one': total_set_one,
+             'n_annotations_set_two': total_set_two,
+             'n_annotations_total': total_set_one + total_set_two,
+             'n_annotations_unmatched_set_one': unmatched_set_one,
+             'n_annotations_unmatched_set_two': unmatched_set_two,
+             'n_annotations_unmatched_total': unmatched_set_one + unmatched_set_two,
+             'n_annotations_matched_total': matched_set_one,
++            'precision': matched_set_one / (matched_set_one + unmatched_set_two),
++            'recall': matched_set_one / (matched_set_one + unmatched_set_one)
+         }
+ 
+ 
+ class Match:
+     def __init__(self,
+                  first_annotation_id, first_annotation_label, first_annotation_confidence,
+                  second_annotation_id, second_annotation_label, second_annotation_confidence,
+```
+
+## dtlpy/ml/predictions_utils.py
+
+```diff
+@@ -34,14 +34,17 @@
+         annotations_set_two: entities.AnnotationCollection,
+         match_threshold=0.5,
+         ignore_labels=False,
+         ignore_attributes=False,
+         compare_types=None):
+     """
+     Compares list (or collections) of annotations
++    This will also return the precision and recall of the two sets, given that the first that is a GT and the second set
++    is the detection (this affects the denominator of the calculation).
++
+ 
+     :param annotations_set_one: dl.AnnotationCollection entity with a list of annotations to compare
+     :param annotations_set_two: dl.AnnotationCollection entity with a list of annotations to compare
+     :param match_threshold: IoU threshold to count as a match
+     :param ignore_labels: ignore label when comparing - measure only geometry
+     :param ignore_attributes: ignore attribute score for final annotation score
+     :param compare_types: list of type to compare. enum dl.AnnotationType
+@@ -53,14 +56,17 @@
+         compare_types = [entities.AnnotationType.BOX,
+                          entities.AnnotationType.CLASSIFICATION,
+                          entities.AnnotationType.POLYGON,
+                          entities.AnnotationType.POINT,
+                          entities.AnnotationType.SEGMENTATION]
+     final_results = dict()
+     all_scores = list()
++    true_positives = 0
++    false_positives = 0
++    false_negatives = 0
+ 
+     # for local annotations - set random id if None
+     for annotation in annotations_set_one:
+         if annotation.id is None:
+             annotation.id = str(uuid.uuid1())
+     for annotation in annotations_set_two:
+         if annotation.id is None:
+@@ -101,15 +107,21 @@
+                                                          ignore_attributes=ignore_attributes
+                                                          )
+         if len(matches) == 0:
+             continue
+         all_scores.extend(matches.to_df()['annotation_score'])
+         final_results[compare_type] = metrics.Results(matches=matches,
+                                                       annotation_type=compare_type)
++        true_positives += final_results[compare_type].summary()['n_annotations_matched_total']
++        false_positives += final_results[compare_type].summary()['n_annotations_unmatched_set_two']
++        false_negatives += final_results[compare_type].summary()['n_annotations_unmatched_set_one']
++
+     final_results['total_mean_score'] = mean_or_nan(all_scores)
++    final_results['precision'] = true_positives / (true_positives + false_positives)
++    final_results['recall'] = true_positives / (true_positives + false_negatives)
+     return final_results
+ 
+ 
+ def measure_item(ref_item: entities.Item, test_item: entities.Item,
+                  ref_project: entities.Project = None, test_project: entities.Project = None,
+                  ignore_labels=False,
+                  ignore_attributes=False,
+```
+
+## dtlpy/repositories/codebases.py
+
+```diff
+@@ -407,14 +407,40 @@
+                 artifact_filepath = self.pull_git(codebase=codebase, local_path=local_path)
+             else:  # Clone the repo if not exist
+                 artifact_filepath = self.clone_git(codebase=codebase, local_path=local_path)
+         else:
+             raise ValueError('Not implemented: "_unpack_single" for codebase type: {!r}'.format(codebase.type))
+         return artifact_filepath
+ 
++    def _get_single(self, codebase: entities.GitCodebase, name: str):
++        value = None
++        integration_id = codebase.credentials.get(name, {}).get('id', None)
++        key = codebase.credentials.get(name, {}).get('key', None)
++
++        if integration_id is not None:
++            try:
++                key = self.project.integrations.get(integrations_id=integration_id).name
++            except Exception:
++                pass
++            value = os.environ.get(key, None)
++
++        return value
++
++    def _get_credential(self, codebase: entities.GitCodebase):
++        username = password = None
++
++        if codebase.credentials:
++            try:
++                username = self._get_single(codebase=codebase, name='username')
++                password = self._get_single(codebase=codebase, name='password')
++            except Exception:
++                logger.exception('Failed to get credentials from codebase')
++
++        return username, password
++
+     def clone_git(self,
+                   codebase: entities.Codebase,
+                   local_path: str):
+         """
+         Clone code base
+ 
+         **Prerequisites**: You must be in the role of an *owner* or *developer*. You must have a package.
+@@ -428,17 +454,20 @@
+ 
+         .. code-block:: python
+ 
+             package.codebases.clone_git(codebase='codebase_entity', local_path='local_path')
+         """
+         if not isinstance(codebase, entities.GitCodebase):
+             raise RuntimeError('only support Git Codebase')
++        username, password = self._get_credential(codebase=codebase)
+         response = self.git_utils.git_clone(path=local_path,
+                                             git_url=codebase.git_url,
+-                                            tag=codebase.git_tag)
++                                            tag=codebase.git_tag,
++                                            username=username,
++                                            password=password)
+         if response:
+             logger.info('Source code was cloned from {}(Git) to: {}'.format(codebase.git_url, local_path))
+         else:
+             raise RuntimeError('Failed cloning. See above for full log. codebase: {}'.format(codebase))
+         return os.path.join(local_path, codebase.git_repo_name)
+ 
+     def pull_git(self, codebase, local_path):
+```
+
+## dtlpy/repositories/commands.py
+
+```diff
+@@ -84,18 +84,14 @@
+         :param str command_id: Command id to wait to
+         :param int timeout: int, seconds to wait until TimeoutError is raised. if 0 - wait until done
+         :param int step: int, seconds between polling
+         :param str url: url to the command
+         :param float backoff_factor: A backoff factor to apply between attempts after the second try
+         :return: Command  object
+         """
+-        if step is not None:
+-            warnings.warn(
+-                message='step param will be Deprecation from version 1.58.0 use backoff_factor',
+-                category=DeprecationWarning)
+         elapsed = 0
+         start = time.time()
+         if timeout is None or timeout <= 0:
+             timeout = np.inf
+ 
+         command = None
+         pbar = tqdm.tqdm(total=100, disable=self._client_api.verbose.disable_progress_bar,
+```
+
+## dtlpy/repositories/datasets.py
+
+```diff
+@@ -683,14 +683,17 @@
+                         thickness,
+                         with_text,
+                         progress,
+                         alpha,
+                         export_version):
+         # this is to convert the downloaded json files to any other annotation type
+         try:
++            if entities.ViewAnnotationOptions.ANNOTATION_ON_IMAGE in annotation_options:
++                if img_filepath is None:
++                    img_filepath = item.download()
+             downloader._download_img_annotations(item=item,
+                                                  img_filepath=img_filepath,
+                                                  local_path=local_path,
+                                                  overwrite=overwrite,
+                                                  annotation_options=annotation_options,
+                                                  annotation_filters=annotation_filters,
+                                                  thickness=thickness,
+@@ -811,15 +814,15 @@
+                                         local_path=local_path,
+                                         overwrite=overwrite,
+                                         include_annotations_in_output=include_annotations_in_output,
+                                         export_png_files=export_png_files,
+                                         filter_output_annotations=filter_output_annotations,
+                                         export_version=export_version
+                                         )
+-        if annotation_options is not None:
++        if annotation_options:
+             pages = dataset.items.list(filters=filters)
+             if not isinstance(annotation_options, list):
+                 annotation_options = [annotation_options]
+             # convert all annotations to annotation_options
+             pool = dataset._client_api.thread_pools(pool_name='dataset.download')
+             jobs = [None for _ in range(pages.items_count)]
+             progress = tqdm.tqdm(total=pages.items_count,
+```
+
+## dtlpy/repositories/drivers.py
+
+```diff
+@@ -153,18 +153,18 @@
+                path: str = ""):
+         """
+         Create a storage driver.
+ 
+         **Prerequisites**: You must be in the role of an *owner* or *developer*.
+ 
+         :param str name: the driver name
+-        :param str driver_type: ExternalStorage.S3, ExternalStorage.GCS, ExternalStorage.AZUREBLOB
++        :param ExternalStorage driver_type: dl.ExternalStorage (Enum). For all options run: list(dl.ExsternalStorage)
+         :param str integration_id: the integration id
+         :param str bucket_name: the external bucket name
+-        :param str integration_type: ExternalStorage.S3, ExternalStorage.GCS, ExternalStorage.AZUREBLOB, ExternalStorage.AWS_STS
++        :param ExternalStorage integration_type: dl.ExternalStorage (Enum). For all options run: list(dl.ExsternalStorage)
+         :param str project_id: project id
+         :param bool allow_external_delete: true to allow deleting files from external storage when files are deleted in your Dataloop storage
+         :param str region: relevant only for s3 - the bucket region
+         :param str storage_class: rilevante only for s3
+         :param str path: Optional. By default path is the root folder. Path is case sensitive integration
+         :return: driver object
+         :rtype: dtlpy.entities.driver.Driver
+```
+
+## dtlpy/repositories/tasks.py
+
+```diff
+@@ -862,15 +862,18 @@
+                                                          json_req=payload)
+ 
+         if success:
+             command = entities.Command.from_json(_json=response.json(),
+                                                  client_api=self._client_api)
+             if not wait:
+                 return command
+-            command = command.wait(timeout=0)
++            backoff_factor = 0.1
++            if command.type == 'BulkAddToTaskSetting':
++                backoff_factor = 8
++            command = command.wait(timeout=0, backoff_factor=backoff_factor)
+             if task is None:
+                 task = self.get(task_id=task_id)
+             if 'addToTaskPayload' not in command.spec:
+                 raise exceptions.PlatformException(error='400',
+                                                    message="addToTaskPayload key is missing in command response: {}"
+                                                    .format(response))
+         else:
+```
+
+## Comparing `dtlpy-1.74.14.data/scripts/dlp.py` & `dtlpy-1.75.8.data/scripts/dlp.py`
+
+ * *Files identical despite different names*
+
+## Comparing `dtlpy-1.74.14.dist-info/LICENSE` & `dtlpy-1.75.8.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `dtlpy-1.74.14.dist-info/METADATA` & `dtlpy-1.75.8.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: dtlpy
+-Version: 1.74.14
++Version: 1.75.8
+ Summary: SDK and CLI for Dataloop platform
+ Home-page: https://github.com/dataloop-ai/dtlpy
+ Author: Dataloop Team
+ Author-email: info@dataloop.ai
+ License: Apache License 2.0
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+@@ -26,15 +26,15 @@
+ Requires-Dist: requests (>=2.25.0)
+ Requires-Dist: numpy (>=1.16.2)
+ Requires-Dist: pandas (>=0.24.2)
+ Requires-Dist: tabulate (==0.8.9)
+ Requires-Dist: Pillow (>=7.2)
+ Requires-Dist: PyJWT (>=2.4)
+ Requires-Dist: jinja2 (>=2.11.3)
+-Requires-Dist: attrs (<20.0.0)
++Requires-Dist: attrs (<=22.2.0)
+ Requires-Dist: prompt-toolkit (>=2.0.9)
+ Requires-Dist: fuzzyfinder (<=2.1.0)
+ Requires-Dist: dictdiffer (>=0.8.1)
+ Requires-Dist: validators (<=0.18.2)
+ Requires-Dist: pathspec (>=0.8.1)
+ Requires-Dist: filelock (>=3.0.12)
+ Requires-Dist: diskcache (>=5.4)
+```
+
+## Comparing `dtlpy-1.74.14.dist-info/RECORD` & `dtlpy-1.75.8.dist-info/RECORD`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ dtlpy/__init__.py,sha256=hH2m7d5RptSR35v2Cmq9ZY-3XqauZnNrQXCVI0r-S20,20170
+-dtlpy/__version__.py,sha256=YFVOWdB6uH5_sbTmwyUuYaM8AHj7UvSm4RpyB22Hv_w,21
++dtlpy/__version__.py,sha256=g1OcNHvULcwTKbiSCvxDGZ-tWYtJvooZf4AJm4WiCqY,20
+ dtlpy/exceptions.py,sha256=3-QaX1marJ1oCNNnEgnvqPlhHq8mVKjufI157pzxGZU,2996
+ dtlpy/new_instance.py,sha256=5gyea5WNez5CN3ipn7BLWKYaTlayw_C21vDGzACSj3c,5843
+ dtlpy/assets/__init__.py,sha256=AzcOoxymAF5O2ujLGtBIXWcA_AZx20Z0BzKLQsQWw94,1002
+ dtlpy/assets/lock_open.png,sha256=vXHune4YF__fINPQ2l61G2zI3BeJPX_z5gkwzUNFAxs,24081
+ dtlpy/assets/main.py,sha256=ZzihXeha0F56LdKj3fi-WSKZSgjPFtTcV7lOsmFWT-A,1433
+ dtlpy/assets/main_partial.py,sha256=Bd76_Iebp_AlDgQtSQr7jyknsetCem359Ng4_l77dv8,285
+ dtlpy/assets/mock.json,sha256=5Qeb71I7vHO14WWpnpOsogMgI_O3ubiadhuFjXEu-jY,160
+@@ -22,15 +22,16 @@
+ dtlpy/assets/__pycache__/__init__.cpython-310.pyc,sha256=F4kLByEgzzoWTqUPF7wUuH41CN-1k8vSeto2v3dQDew,1112
+ dtlpy/assets/__pycache__/__init__.cpython-311.pyc,sha256=ReXjOZwo_AtLz_x-PhOXRSC3v_Sn7SvymglCbxYPwMw,1702
+ dtlpy/assets/__pycache__/__init__.cpython-37.pyc,sha256=tnmt4-FtMW5IKzHRE0Fr8p34FkRRKlU9wgPaGQdXmIU,1100
+ dtlpy/assets/__pycache__/__init__.cpython-39.pyc,sha256=dBWH2V3DPo_pvhkQbe2nvHI-PamyfSKPXP2RJ57dACs,1068
+ dtlpy/assets/__pycache__/main.cpython-37.pyc,sha256=BnjE5oj43tqYyuzWMe-IUC3WlvYXsRFVsKtYuptD_C8,1719
+ dtlpy/assets/__pycache__/main_partial.cpython-37.pyc,sha256=OcaZK7mBjHp0QTwgyY3p2rZtKOfkQc9ucePdZGtfdGo,648
+ dtlpy/assets/__pycache__/model_adapter.cpython-37.pyc,sha256=y9f0gs-R193pPIp9PZOBG7rYfK1eGSmJwqK4tDSVrg4,6376
+-dtlpy/assets/code_server/installation.sh,sha256=1y7OqvWlLwTfqpeOemcbQW6p79VtgaSa7s-Z31G14Pw,561
++dtlpy/assets/code_server/config.yaml,sha256=TZqkKBnpkDdi7g4Zy3lpoio9uFDltC_hr1eitKjFTO8,50
++dtlpy/assets/code_server/installation.sh,sha256=kDC6T5KMS_Rx8vJ9tT8v5WLKsldhRq7LQjsGnbiNTvc,862
+ dtlpy/assets/code_server/launch.json,sha256=Stq7OBIgI_34fsdZBwY_pyat7Tbc3NYN9kcr6dbeSDk,344
+ dtlpy/assets/code_server/settings.json,sha256=LCiQpqk7kK-AQo9xQK9b4jT6NWpT8MVbJD00BddmR5c,66
+ dtlpy/assets/service_runners/__init__.py,sha256=Zwmc-x14tSXSJ8ZGOUsLVG3eBjrqSAAv-DgWgnZsJnI,1676
+ dtlpy/assets/service_runners/converter.py,sha256=CX3gQR0tEfDZe67rGZqNgyLOrfO0O30B3SURM4BZl5o,2915
+ dtlpy/assets/service_runners/multi_method.py,sha256=WSrTJ9l-gjldCSms3issxIsJUZj7FzIrbEOQkvJUD0U,1249
+ dtlpy/assets/service_runners/multi_method_annotation.py,sha256=LE7vEodGIsb3_TCHLq5nuD-tCN8CC7eXWwkDkiDQFPU,1602
+ dtlpy/assets/service_runners/multi_method_dataset.py,sha256=XFft9Y8DjYCpEtsSMwbLGqqZnuNXHHXZhhPmeyjsY0w,1647
+@@ -56,22 +57,22 @@
+ dtlpy/dlp/command_executor.py,sha256=WmSv1RO8W5mLaTbUKjfo_GizWupQK9Pr_1IavmnwW0k,32280
+ dtlpy/dlp/dlp,sha256=R99eKZP_pZ7egsYawtuw2lRL_6b0P7spq7JpGAY3H7Y,11
+ dtlpy/dlp/dlp.bat,sha256=2V2sDEhvV2Tm7nMoyFdIxo5ODq-msgt9LJesLoPVmX0,38
+ dtlpy/dlp/dlp.py,sha256=MBtdqt1XbWtZmafolUiFa5j2Wi41Y5fMtMy-Xntu0aE,4406
+ dtlpy/dlp/parser.py,sha256=GqgF4UMFTjTQH382ZpXME3NfW7rAq4Dq544BvUfm6rA,31202
+ dtlpy/entities/__init__.py,sha256=Lhh3e5qBXk_CxLmWSTK6koTo-n0J_U3eyQcfu0_9nRU,4335
+ dtlpy/entities/analytic.py,sha256=qQCmJlijDYGIXvvmLAjb1zWTNKn8rXMLQS_34wZyw4I,11665
+-dtlpy/entities/annotation.py,sha256=VrIKa8K4O2k1q52PLN5J0wOqRu9E8hpfZBjwtIv0j8A,69115
++dtlpy/entities/annotation.py,sha256=cOmSp-6ApkeQ93pM87Z7668yxCG-shu8rZXaCodV0AQ,67925
+ dtlpy/entities/annotation_collection.py,sha256=XoXfPkD6SyZzYyv1j62w_kLlYhmeYjpx-OxPrtrqdo0,30245
+ dtlpy/entities/app.py,sha256=iA1E4iFEUrwaZPcdZvz1zTfk1w_z1PSueXSK_EHoHAE,4999
+ dtlpy/entities/artifact.py,sha256=s23DzZpVc6QMAGvNRAuN4K3U2nKuSrY8gVD49XdyUhw,5885
+ dtlpy/entities/assignment.py,sha256=Glpn91Eo6zBYt-iugcR0vxNujcu9FYlX37aoWGJFUvI,14739
+ dtlpy/entities/base_entity.py,sha256=DJjT5aaGnpmy_YKPO_FzfCRRh4axifL4qK10imaDqM8,7642
+ dtlpy/entities/bot.py,sha256=dfuw0CkGzcwjb1Ov0KpIs0mIW5d6piHHzI0ZHjL7Vek,3932
+-dtlpy/entities/codebase.py,sha256=yphi1dPOMjAxC8XVNt98HLGHZVbWzZH9obfC_EV-5WM,9280
++dtlpy/entities/codebase.py,sha256=fGt8KQVc1nASxsDXdIyQ7vCtfZNbxAdZvTy6zXdXpso,9295
+ dtlpy/entities/command.py,sha256=n1cDEkoKPRAnU15YCwXUuZf-Qut_FP-2rvf7ephAGJ0,5138
+ dtlpy/entities/dataset.py,sha256=3EJcTW5TO7qDHIJBL1ZcK7iZ02a22kCY5D2Osl0UHU4,45150
+ dtlpy/entities/directory_tree.py,sha256=j0-kIa--HBaAZKE14b-SoI3JaZkmYnvtpkBt4vSo8_Q,1230
+ dtlpy/entities/dpk.py,sha256=4LQBqOmu8xTqAs42esMXZfuFbN3t-UhjAo3omDk7zv0,10737
+ dtlpy/entities/driver.py,sha256=iExPMC-PO8B0gWluYEOXTKWYsfgAL0AvFrbGnd1gI-Y,7032
+ dtlpy/entities/execution.py,sha256=HZRM1SVi9gXe6CEAJckRD8nRbIcSmAXcD-7jo014AOc,12747
+ dtlpy/entities/feature.py,sha256=vyhxlWrCjFmG_cJtp7eaLg8c_AC7yDkFgJzllwpeDy8,4518
+@@ -88,16 +89,16 @@
+ dtlpy/entities/package.py,sha256=Taw_bR28a1gNnE06On4mFPNbA78DGshBrJUqjBCMwwA,26681
+ dtlpy/entities/package_defaults.py,sha256=HGrGoZmtWVV4K8746BOrmqwmLV8gqbJfo-eQg5KHKcQ,216
+ dtlpy/entities/package_function.py,sha256=GxEeRltHZtSXLh9SKC3K4dwoLD0yOgQfsV_W2mCod7o,5947
+ dtlpy/entities/package_module.py,sha256=XGtKftRP0Z4fziygZx7dWYemQkBsF4ANc7GqF1NMMGs,4134
+ dtlpy/entities/package_slot.py,sha256=lvnwGAOENDGBMKRMHTSfYqXWhqoW7JqgrO9ieKQ-mPw,5867
+ dtlpy/entities/paged_entities.py,sha256=WFJmhspJHlW4GYa1IFaUn_QoyqV0TQo6w0pxSCPvff4,6041
+ dtlpy/entities/pipeline.py,sha256=d24RvMNoJzZku4azZD2y1g2fLoDvjow6gTBQdwZ5EOc,18072
+-dtlpy/entities/pipeline_execution.py,sha256=giogxCWtETuDpINmxWFwWoI78aR_8kxBslbSebukG84,7916
+-dtlpy/entities/project.py,sha256=NKj8dd0eKciGzS0H_K24za8x4Ogocc4z0tsMjEd61KE,14592
++dtlpy/entities/pipeline_execution.py,sha256=HiHLejgd6kP-tN3_AwNfDUgvJfxOvneV6ao2ZNVBivQ,7417
++dtlpy/entities/project.py,sha256=Emjbp-2Gvq8YNO-dz29Uee93aDAf47pMxEdCvq92wOQ,14686
+ dtlpy/entities/recipe.py,sha256=NbB0TN0YtQzqPMXApR8dUi7-0s9od4P7sbmk9dB_5l0,9793
+ dtlpy/entities/reflect_dict.py,sha256=11pCUyRsTfwSRP2vErSvhq-CdUMMEwfkGUvcDxek94k,3375
+ dtlpy/entities/resource_execution.py,sha256=93Knb8xZXTOvEWks4BZSXz7ROnheNdIsD2tQ-iF3m14,5171
+ dtlpy/entities/service.py,sha256=qaGDhqoQsZ6R5ijVRZKMTrDJbOEEMB9itirRVI-rnSE,28019
+ dtlpy/entities/setting.py,sha256=A0sdmJ_2lDPhUcLTUfu8Uw9P8cZoUymAyS2TES3OYAc,8911
+ dtlpy/entities/similarity.py,sha256=wcdwvDdGCWr5e9P0ZMD-X4vOlV2ILCWxeRs76kLM7sI,6318
+ dtlpy/entities/task.py,sha256=fB74q2Yq6vhylKGZi-vx4I4X0ioIcPuQtVMYP1UXy_o,19245
+@@ -145,37 +146,37 @@
+ dtlpy/examples/upload_batch_of_items.py,sha256=6effjb1rehrZebPYiHvi6RGVD26YE-U6OZLcgch_iPs,691
+ dtlpy/examples/upload_items_and_custom_format_annotations.py,sha256=82te9XKBwqkq0wrc7Fepfj-UkIdPyf-tUhnMtPB0Ceg,2363
+ dtlpy/examples/upload_items_with_modalities.py,sha256=bdZal2tApnlaEmHOORFkPKTylhwQmf2WuIbwWwAF2bU,1891
+ dtlpy/examples/upload_segmentation_annotations_from_mask_image.py,sha256=w4KuK7Q554AxAP3-ZHn9fHP_-_Jl0n1meOo-5ArMV0s,1432
+ dtlpy/examples/upload_yolo_format_annotations.py,sha256=0bQWtWgve1zqXkalnVOGWG7e_lAyIaev4_TmITPUkss,2680
+ dtlpy/miscellaneous/__init__.py,sha256=Wi71lvQ7lqKd34QykWZ2NAP-bfcpMzImJaPso-EMTWM,849
+ dtlpy/miscellaneous/dict_differ.py,sha256=ZVQrgj2X3yjutu9X2J84YP7eDp__erglPXWaUUPY-9g,3584
+-dtlpy/miscellaneous/git_utils.py,sha256=G223qKQmQ61XHHWUVqNv-Qq9PGsHqoX0B8f9_-Ezmks,7611
++dtlpy/miscellaneous/git_utils.py,sha256=qU9RM6H794331A9_kMSgzhOqFuTMSqUaOnItTyEWJ6E,8188
+ dtlpy/miscellaneous/json_utils.py,sha256=meDnMsOtGZlhUfogrCsg-RKd5FLCfeKgji_pdAyi2vY,442
+ dtlpy/miscellaneous/list_print.py,sha256=xopFGpg20HrEuicUZQDFLwQdh7qHAn-vyAQqFXMS0Kk,4913
+ dtlpy/miscellaneous/zipping.py,sha256=OHROy2huF1Rf1IERC0tZwn6DzmNlQ1529lyQICxuoZM,5245
+ dtlpy/ml/__init__.py,sha256=coDyt1yOZrmc3FIFPnQ_GGUVtcr2U1OqBAcP2u8p63U,819
+ dtlpy/ml/base_model_adapter.py,sha256=6DAw1nMm20NzF9c6NUaDDUUItBYSXFRjn8IO-heI8Mk,35225
+-dtlpy/ml/metrics.py,sha256=7G8yCgvNIKwm2d8XnGQjaojn5gasXC98dmqoM9E8d7M,20336
+-dtlpy/ml/predictions_utils.py,sha256=qnoUxK1s7JY5219-XXCgq1QxN7DbXHWoc_0QoX3EzN8,12018
++dtlpy/ml/metrics.py,sha256=CEavVQ9FoF_iHHaQCs2tPOdA2QvRvVSY11by4wIpeyA,20498
++dtlpy/ml/predictions_utils.py,sha256=eNUaReXLDCex1y1TAxuFfQV_sCGk4iT77UJFMHMw6zI,12758
+ dtlpy/ml/summary_writer.py,sha256=JuFlqJsUqTBfLlRI1HtffiJA5tcCqDbarAKuoRPnZew,2841
+ dtlpy/ml/train_utils.py,sha256=uMPBxaGluJwVm5l6QwzV11K73DHA2Wr_SbcwaI7ctmM,3545
+ dtlpy/repositories/__init__.py,sha256=q9W7VZunScJcMVyd6gqA_aMkAf5l8n4-cx17w5iXu2Q,1893
+ dtlpy/repositories/analytics.py,sha256=s9_VULCtbMmAylB21rnUvyc2VWc6th8Z9ZZe_zS00rs,3051
+ dtlpy/repositories/annotations.py,sha256=RBNW6rxxbcqvmZ4L8r6Utidgn9CTb_iX8bNaIEL2Jhk,35948
+ dtlpy/repositories/apps.py,sha256=_DokYeVRYi4TLEg9tOy4fA48fkaeKak6rUYmLrINY08,10396
+ dtlpy/repositories/artifacts.py,sha256=iADx6boe75yu1Ne600BvTcxQhtb3fMPwxA0CFuh7gVQ,19986
+ dtlpy/repositories/assignments.py,sha256=QCoYZudCRveDqR8Tm2V4OjEeJeq2JthnepqDO3u9Xok,26008
+ dtlpy/repositories/bots.py,sha256=Wx-L6uGK4x94SaYdHmGKSIZLO-91ohayn6gKoZvkzTY,8408
+-dtlpy/repositories/codebases.py,sha256=RK_g2OLzvWkTmWEzbtLttBp76KrY9ZzLPRqKkJXHgCw,24566
+-dtlpy/repositories/commands.py,sha256=LFEyK7bXKY26vG6GCZYmW6epjo3yVnPerbnY4kSFZIQ,5576
+-dtlpy/repositories/datasets.py,sha256=7NsSfo9bG2zjxHGSP9VyK2SI6QiztdR6el_iUU7caHs,43208
++dtlpy/repositories/codebases.py,sha256=gwj7ofYGSVJjnrIbTgm8ZSRNIzSFZKYnTAL3Ik-AxdY,25740
++dtlpy/repositories/commands.py,sha256=mePaVTMs9e7aMGanmHn8g4wR0nF4ipEt4JafMSD039I,5374
++dtlpy/repositories/datasets.py,sha256=iA_qO23FrYGGJCSiBipOteLxv1xgto3dezvExa10Dls,43380
+ dtlpy/repositories/downloader.py,sha256=MoK1uIecwB2w2SuH3FH8hoGviCBj59Spr_6vEnlrnPw,41923
+ dtlpy/repositories/dpks.py,sha256=pKqdwKp3wr_2qb_agFpXL3qIPeEH-BiBEsJbqKXm2Kc,15357
+-dtlpy/repositories/drivers.py,sha256=F11LeE_NoIPlzKt7A7IQTRMa08-lJi84Z-5MC2mzApg,10441
++dtlpy/repositories/drivers.py,sha256=_scPrgJxMD9kQX3o3224jRtYJwpqMqFmlCEIgUlgBuM,10454
+ dtlpy/repositories/executions.py,sha256=zuXddpHxwXJDJEzlTFcdtmaJgHRS4tG5x2oSmJSymFU,30968
+ dtlpy/repositories/feature_sets.py,sha256=kTDhq53DQ6G4oLIW3lGa9oqsxBuMXbSCHv7DOj80EN8,7724
+ dtlpy/repositories/features.py,sha256=Vb5hG_rLtXPkmMg4hSoqg7XNDSgsS_v7OgUpK_uy4BQ,9919
+ dtlpy/repositories/integrations.py,sha256=N5vMPmSjzm1rOgLVZ5MDQ078yjWS_W0KTetIQTUBLhc,10118
+ dtlpy/repositories/items.py,sha256=pjBRcp9MRF10BXCMDlr-YZPxSZOL6Ry5nYhcQ1r8jKo,38664
+ dtlpy/repositories/models.py,sha256=lPIz67LZXkSwUO9bNxqet1iZzvlT_sLERIk6XbYm8vU,23472
+ dtlpy/repositories/nodes.py,sha256=wvn8sqqkmLNkGl_ob1lZPt9afzDebA-QVvs1hvJCelM,3141
+@@ -185,15 +186,15 @@
+ dtlpy/repositories/pipeline_executions.py,sha256=vYZo8LfggbFxc8cS9Ch36byVGNSOUumnbgV3BPNgBQE,12067
+ dtlpy/repositories/pipelines.py,sha256=KvbmoqmL1swUh-vFYaQwuYGaZtbd1z2mIiwZGJt5KLo,22927
+ dtlpy/repositories/projects.py,sha256=qccKbfLHR0e9LPDsOWS_BvcJ1XyAFQjv7Hy0dwgop80,22418
+ dtlpy/repositories/recipes.py,sha256=3ver_U82kso6GiVdETr55G_9b0wZaMhNO56vLC9PlN4,15746
+ dtlpy/repositories/resource_executions.py,sha256=dFhSo1IxehzUND97GCRRLdA70jPm8XY3g9Hl8VIXfg0,5511
+ dtlpy/repositories/services.py,sha256=TBBO8bkyVTljLsjs2gvNJKvARBufQG16wu3HG0kIy2U,65527
+ dtlpy/repositories/settings.py,sha256=vMjVIGnlA6_h6pm71PhCt_79PeL2iRU2vUsfAPaktZg,12648
+-dtlpy/repositories/tasks.py,sha256=XT2iAeFATzp1w24gMz8VXpHF2umMevM3KmHoKm0DJYo,47174
++dtlpy/repositories/tasks.py,sha256=Tt8eaB1oR2CYTkkqS7Abz11JQ-wGvHWhk0P3ob1wuBY,47331
+ dtlpy/repositories/times_series.py,sha256=xpbs3H3FTUolPy157xxOSlI7KHfqATtENVOGMhGw5KM,11698
+ dtlpy/repositories/triggers.py,sha256=C5rPM_IUDO8zj_WY9Ky4HkYfLKKt0eeUehKtltfJxUk,22432
+ dtlpy/repositories/upload_element.py,sha256=3wIaPHT9Ieu2xgsTZyFJin8YcGAEa5EhMCzifof4WJ0,9476
+ dtlpy/repositories/uploader.py,sha256=KttmroBQrXmdR6CmOhduX8luTSTLJu2C_yoTXlq7myA,31308
+ dtlpy/repositories/webhooks.py,sha256=rdjsqt8geo1Dp-xMIAtk3SRe7uAWw9JZ-FjS45v2C30,9282
+ dtlpy/services/__init__.py,sha256=BA5Wr0xWhBqSy8ayz1lu0aQnhH1JP6LA8e2UokJPP4M,926
+ dtlpy/services/aihttp_retry.py,sha256=k27de_S2sKAWTGjOm6qfiipwLDh0iislksbzTE2voaw,5153
+@@ -221,18 +222,18 @@
+ dtlpy/utilities/local_development/local_session.py,sha256=uO10jFfO1hEMorSqnQK2AwSjkyhZjCyZS1jFcNwegZo,6630
+ dtlpy/utilities/reports/__init__.py,sha256=-Cw_3KGxX2s7oJv_5IOhOgdBah8uIEyDKsAIYVNVre4,126
+ dtlpy/utilities/reports/figures.py,sha256=huuHvslytzT_DHCeztJDPAMamEirJPxMNBPYbqW3TX0,6103
+ dtlpy/utilities/reports/report.py,sha256=zer2AqDmmuuu_A31TjHI9yS4RnjAlIeQZ5xWzOM6djc,2710
+ dtlpy/utilities/videos/__init__.py,sha256=erjgtnnSJYk3k9j4PGzJwu3Ohv7H7DMnKySvJUQoaQs,751
+ dtlpy/utilities/videos/video_player.py,sha256=KJiMcrGo17qwaSnOF-SsccAR8BVChC_HMgTV6zW1bJ8,24670
+ dtlpy/utilities/videos/videos.py,sha256=PjPx_2hwAxctoz96XBd407ds8JZpzur4Z54rtJlVO-8,22345
+-dtlpy-1.74.14.data/scripts/dlp,sha256=R99eKZP_pZ7egsYawtuw2lRL_6b0P7spq7JpGAY3H7Y,11
+-dtlpy-1.74.14.data/scripts/dlp.bat,sha256=2V2sDEhvV2Tm7nMoyFdIxo5ODq-msgt9LJesLoPVmX0,38
+-dtlpy-1.74.14.data/scripts/dlp.py,sha256=MBtdqt1XbWtZmafolUiFa5j2Wi41Y5fMtMy-Xntu0aE,4406
++dtlpy-1.75.8.data/scripts/dlp,sha256=R99eKZP_pZ7egsYawtuw2lRL_6b0P7spq7JpGAY3H7Y,11
++dtlpy-1.75.8.data/scripts/dlp.bat,sha256=2V2sDEhvV2Tm7nMoyFdIxo5ODq-msgt9LJesLoPVmX0,38
++dtlpy-1.75.8.data/scripts/dlp.py,sha256=MBtdqt1XbWtZmafolUiFa5j2Wi41Y5fMtMy-Xntu0aE,4406
+ tests/features/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ tests/features/environment.py,sha256=IknISJDbjati9A9gIcmNGh8De3llxp6-mjALpnVe1mc,8810
+-dtlpy-1.74.14.dist-info/LICENSE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+-dtlpy-1.74.14.dist-info/METADATA,sha256=BS2RJrTA64eLMEKJFVvM69GLq4DG4x5iqb1TPEAGE9I,2867
+-dtlpy-1.74.14.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+-dtlpy-1.74.14.dist-info/entry_points.txt,sha256=l6nDiLzvGNTQgFsKbEbd9_9rETJwki14EupJCnfrhn4,44
+-dtlpy-1.74.14.dist-info/top_level.txt,sha256=ZWuLmQGUOtWAdgTf4Fbx884w1o0vBYq9dEc1zLv9Mig,12
+-dtlpy-1.74.14.dist-info/RECORD,,
++dtlpy-1.75.8.dist-info/LICENSE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
++dtlpy-1.75.8.dist-info/METADATA,sha256=lar6EzdbEbMA3d4_qikVz9mJ_Wcjxg9trjmq4E7lnmk,2867
++dtlpy-1.75.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
++dtlpy-1.75.8.dist-info/entry_points.txt,sha256=l6nDiLzvGNTQgFsKbEbd9_9rETJwki14EupJCnfrhn4,44
++dtlpy-1.75.8.dist-info/top_level.txt,sha256=ZWuLmQGUOtWAdgTf4Fbx884w1o0vBYq9dEc1zLv9Mig,12
++dtlpy-1.75.8.dist-info/RECORD,,
+```
+

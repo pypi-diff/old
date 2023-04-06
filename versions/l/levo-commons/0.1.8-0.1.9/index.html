@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/usr/bin/diffoscope --no-progress tmp/levo_commons-0.1.8.tar.gz tmp/levo_commons-0.1.9.tar.gz --html versions/l/levo-commons/0.1.8-0.1.9/index.html --text versions/l/levo-commons/0.1.8-0.1.9/diff.txt --markdown versions/l/levo-commons/0.1.8-0.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.5 KB</span></div>
+  <div><span class="source">tmp/levo_commons-0.1.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/levo_commons-0.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">396 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;/home/runner/work/levo-commons/levo-commons/dist/tmp<del>2jz33qtf</del>/levo_commons-0.1.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span>Oct<span class="dp">·</span><del><span class="dp">·</span>6</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del><span class="dp">·</span>2021,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;/home/runner/work/levo-commons/levo-commons/dist/tmp<ins>ohtrxuej</ins>/levo_commons-0.1.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Tue</ins><span class="dp">·</span>Oct<span class="dp">·</span><ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins><span class="dp">·</span>2021,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.0 KB</span></div>
+    <div><span class="source">levo_commons-0.1.8.tar</span> vs.</div>
+    <div id="levo_commons--.-.-.tar"><span class="source">levo_commons-0.1.9.tar</span>
+      <a class="anchor" href="#levo_commons--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.51 KB</span></div>
+      <div id="levo_commons--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>603<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>603<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>104<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/pyproject.toml</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>104<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/setup.cfg</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>996<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/setup.py</td><td class="diffline">6 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>996<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>69<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>69<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1218<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/config.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1218<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2687<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/events.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2687<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/events.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3570<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/failures.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3570<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/failures.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<del>3</del>3<del>7</del><span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/models.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<ins>4</ins>3<ins>5</ins><span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/models.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>161<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/status.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>161<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/status.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>622<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/types.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>622<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/types.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4513<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons/utils.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4513<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons.egg-info/</td><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>603<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons.egg-info/PKG-INFO</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>603<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons.egg-info/SOURCES.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons.egg-info/dependency_links.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>71<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons.egg-info/requires.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>71<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/src/levo_commons.egg-info/top_level.txt</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/src/levo_commons.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>42</del>:<del>05</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/test/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>54</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/test/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>762<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/test/test_config.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>762<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/test/test_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>416<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/test/test_sanity.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>416<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/test/test_sanity.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>682<span class="dp">·</span>2021-10-<del>06</del><span class="dp">·</span>1<del>9</del>:<del>41</del>:<del>57</del>.000000<span class="dp">·</span>levo_commons-0.1.<del>8</del>/test/test_utils.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>682<span class="dp">·</span>2021-10-<ins>12</ins><span class="dp">·</span>1<ins>5</ins>:<ins>54</ins>:<ins>43</ins>.000000<span class="dp">·</span>levo_commons-0.1.<ins>9</ins>/test/test_utils.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">447 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/PKG-INFO</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--PKG-INFO"><span class="source">levo_commons-0.1.9/PKG-INFO</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>levo_commons</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>levo_commons</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Common<span class="dp">·</span>code<span class="dp">·</span>between<span class="dp">·</span>Levo<span class="dp">·</span>CLI<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>plans.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Common<span class="dp">·</span>code<span class="dp">·</span>between<span class="dp">·</span>Levo<span class="dp">·</span>CLI<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>plans.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/levoai/levo-commons</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/levoai/levo-commons</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Levo<span class="dp">·</span>Inc</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Levo<span class="dp">·</span>Inc</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@levo.ai</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@levo.ai</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/levo/levo-commons/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/levo/levo-commons/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">608 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/setup.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--setup.py"><span class="source">levo_commons-0.1.9/setup.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 15 lines modified</td><td colspan="2">Offset 6, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;attrs&gt;=20.3&quot;,<span class="dp">·</span>&quot;grpcio&gt;=1.37.0,&lt;2.0.0&quot;,<span class="dp">·</span>&quot;requests&gt;=2.25.1&quot;]</td><td class="diffline">7 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;attrs&gt;=20.3&quot;,<span class="dp">·</span>&quot;grpcio&gt;=1.37.0,&lt;2.0.0&quot;,<span class="dp">·</span>&quot;requests&gt;=2.25.1&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">setuptools.setup(</td><td class="diffline">8 </td><td class="diffpresent">setuptools.setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;levo_commons&quot;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;levo_commons&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.1.<del>8</del>&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.1.<ins>9</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Levo<span class="dp">·</span>Inc&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Levo<span class="dp">·</span>Inc&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;info@levo.ai&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;info@levo.ai&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Common<span class="dp">·</span>code<span class="dp">·</span>between<span class="dp">·</span>Levo<span class="dp">·</span>CLI<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>plans.&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Common<span class="dp">·</span>code<span class="dp">·</span>between<span class="dp">·</span>Levo<span class="dp">·</span>CLI<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>plans.&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/levoai/levo-commons&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/levoai/levo-commons&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>project_urls={</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>project_urls={</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons/config.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-config.py"><span class="source">levo_commons-0.1.9/src/levo_commons/config.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons/events.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-events.py"><span class="source">levo_commons-0.1.9/src/levo_commons/events.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-events.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons/failures.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-failures.py"><span class="source">levo_commons-0.1.9/src/levo_commons/failures.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-failures.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.1 KB</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons/models.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-models.py"><span class="source">levo_commons-0.1.9/src/levo_commons/models.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-models.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 277, 14 lines modified</td><td colspan="2">Offset 277, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">277 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>attributes:<span class="dp">·</span>dict<span class="dp">·</span>=<span class="dp">·</span>attr.ib(factory=dict)</td><td class="diffline">277 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>attributes:<span class="dp">·</span>dict<span class="dp">·</span>=<span class="dp">·</span>attr.ib(factory=dict)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">278 </td><td class="diffpresent">@attr.s(slots=True)</td><td class="diffline">278 </td><td class="diffpresent">@attr.s(slots=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">279 </td><td class="diffpresent">class<span class="dp">·</span>BeforeTestSuiteExecutionPayload(Payload):</td><td class="diffline">279 </td><td class="diffpresent">class<span class="dp">·</span>BeforeTestSuiteExecutionPayload(Payload):</td></tr>
+<tr class="diffunmodified"><td class="diffline">280 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">280 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">281 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite_id:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td><td class="diffline">281 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite_id:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">282 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>modules:<span class="dp">·</span>List[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(factory=list)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">282 </td><td class="diffpresent">@attr.s(slots=True)</td><td class="diffline">283 </td><td class="diffpresent">@attr.s(slots=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">283 </td><td class="diffpresent">class<span class="dp">·</span>AfterTestSuiteExecutionPayload(Payload):</td><td class="diffline">284 </td><td class="diffpresent">class<span class="dp">·</span>AfterTestSuiteExecutionPayload(Payload):</td></tr>
+<tr class="diffunmodified"><td class="diffline">284 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">285 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">285 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite_id:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td><td class="diffline">286 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite_id:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td></tr>
+<tr class="diffunmodified"><td class="diffline">286 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>errored:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=False)</td><td class="diffline">287 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>errored:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=False)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 300, 14 lines modified</td><td colspan="2">Offset 301, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">300 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>relative_path:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">301 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>relative_path:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">301 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite_id:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td><td class="diffline">302 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite_id:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td></tr>
+<tr class="diffunmodified"><td class="diffline">302 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td><td class="diffline">303 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">303 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>The<span class="dp">·</span>current<span class="dp">·</span>level<span class="dp">·</span>of<span class="dp">·</span>recursion<span class="dp">·</span>during<span class="dp">·</span>stateful<span class="dp">·</span>testing</td><td class="diffline">304 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>The<span class="dp">·</span>current<span class="dp">·</span>level<span class="dp">·</span>of<span class="dp">·</span>recursion<span class="dp">·</span>during<span class="dp">·</span>stateful<span class="dp">·</span>testing</td></tr>
+<tr class="diffunmodified"><td class="diffline">304 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>recursion_level:<span class="dp">·</span>int<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=0)</td><td class="diffline">305 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>recursion_level:<span class="dp">·</span>int<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=0)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">306 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>module:<span class="dp">·</span>Optional[str]<span class="dp">·</span>=<span class="dp">·</span>attr.ib(default=None)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">305 </td><td class="diffpresent">@attr.s(slots=True)</td><td class="diffline">307 </td><td class="diffpresent">@attr.s(slots=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">306 </td><td class="diffpresent">class<span class="dp">·</span>AfterTestExecutionPayload(Payload):</td><td class="diffline">308 </td><td class="diffpresent">class<span class="dp">·</span>AfterTestExecutionPayload(Payload):</td></tr>
+<tr class="diffunmodified"><td class="diffline">307 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_case_id:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">309 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_case_id:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">308 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">310 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">309 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>method:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">311 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>method:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">310 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>path:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">312 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>path:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons/types.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-types.py"><span class="source">levo_commons-0.1.9/src/levo_commons/types.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-types.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons/utils.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-utils.py"><span class="source">levo_commons-0.1.9/src/levo_commons/utils.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">499 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/src/levo_commons.egg-info/PKG-INFO</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons.egg-info-PKG-INFO"><span class="source">levo_commons-0.1.9/src/levo_commons.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--src-levo_commons.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>levo-commons</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>levo-commons</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Common<span class="dp">·</span>code<span class="dp">·</span>between<span class="dp">·</span>Levo<span class="dp">·</span>CLI<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>plans.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Common<span class="dp">·</span>code<span class="dp">·</span>between<span class="dp">·</span>Levo<span class="dp">·</span>CLI<span class="dp">·</span>and<span class="dp">·</span>test<span class="dp">·</span>plans.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/levoai/levo-commons</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/levoai/levo-commons</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Levo<span class="dp">·</span>Inc</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Levo<span class="dp">·</span>Inc</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@levo.ai</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@levo.ai</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/levo/levo-commons/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/levo/levo-commons/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/test/test_config.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--test-test_config.py"><span class="source">levo_commons-0.1.9/test/test_config.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--test-test_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">levo_commons-0.1.8/test/test_utils.py</span> vs.</div>
+      <div id="levo_commons--.-.-.tar---levo_commons--.-.--test-test_utils.py"><span class="source">levo_commons-0.1.9/test/test_utils.py</span>
+        <a class="anchor" href="#levo_commons--.-.-.tar---levo_commons--.-.--test-test_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

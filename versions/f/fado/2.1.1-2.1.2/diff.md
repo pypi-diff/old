@@ -1,0 +1,1051 @@
+# Comparing `tmp/fado-2.1.1.tar.gz` & `tmp/fado-2.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fado-2.1.1.tar", max compression
++gzip compressed data, was "fado-2.1.2.tar", max compression
+```
+
+## Comparing `fado-2.1.1.tar` & `fado-2.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,28 @@
+--rw-r--r--   0        0        0     1587 2023-03-26 14:03:39.196659 fado-2.1.1/FAdo/__init__.py
+--rw-r--r--   0        0        0     1992 2023-01-06 09:38:40.153711 fado-2.1.1/FAdo/automata_grammar.lark
+--rw-r--r--   0        0        0    21249 2023-01-06 09:39:16.942907 fado-2.1.1/FAdo/cfg.py
+--rw-r--r--   0        0        0    39132 2023-01-06 09:39:16.943239 fado-2.1.1/FAdo/codes.py
+--rw-r--r--   0        0        0    17630 2023-01-06 09:38:40.155195 fado-2.1.1/FAdo/comboperations.py
+--rw-r--r--   0        0        0    26137 2023-01-30 10:18:37.269644 fado-2.1.1/FAdo/common.py
+--rw-r--r--   0        0        0    39059 2023-01-06 09:38:40.155618 fado-2.1.1/FAdo/conversions.py
+--rw-r--r--   0        0        0   221823 2023-01-30 10:19:43.216362 fado-2.1.1/FAdo/fa.py
+--rw-r--r--   0        0        0     1120 2023-01-06 09:37:44.494862 fado-2.1.1/FAdo/families.py
+--rw-r--r--   0        0        0    20645 2023-01-30 10:19:43.216535 fado-2.1.1/FAdo/fio.py
+--rw-r--r--   0        0        0    46442 2023-01-30 10:18:37.272680 fado-2.1.1/FAdo/fl.py
+--rw-r--r--   0        0        0     5034 2023-01-06 09:37:44.496073 fado-2.1.1/FAdo/graphs.py
+--rw-r--r--   0        0        0    12908 2023-01-30 10:19:43.216703 fado-2.1.1/FAdo/prax.py
+--rw-r--r--   0        0        0   179231 2023-01-30 10:19:43.217240 fado-2.1.1/FAdo/reex.py
+--rw-r--r--   0        0        0     1620 2023-01-06 09:39:16.946414 fado-2.1.1/FAdo/regexp_grammar.lark
+--rw-r--r--   0        0        0    10645 2023-01-06 09:38:40.158702 fado-2.1.1/FAdo/rndadfa.py
+--rw-r--r--   0        0        0     5584 2023-01-06 09:37:44.498441 fado-2.1.1/FAdo/rndfap.py
+--rw-r--r--   0        0        0    16941 2023-01-06 09:39:01.226047 fado-2.1.1/FAdo/ska.py
+--rw-r--r--   0        0        0     1932 2023-01-06 09:37:44.499818 fado-2.1.1/FAdo/smwc.py
+--rw-r--r--   0        0        0     3606 2023-01-06 09:38:40.160172 fado-2.1.1/FAdo/ssemigroup.py
+--rw-r--r--   0        0        0    22725 2023-01-06 09:37:44.500079 fado-2.1.1/FAdo/sst.py
+--rw-r--r--   0        0        0     5559 2023-01-06 09:38:40.160286 fado-2.1.1/FAdo/tfa.py
+--rw-r--r--   0        0        0    46337 2023-01-06 09:39:16.946537 fado-2.1.1/FAdo/transducers.py
+--rw-r--r--   0        0        0     3676 2023-01-06 09:38:40.160870 fado-2.1.1/FAdo/unionFind.py
+--rw-r--r--   0        0        0    59804 2023-01-30 10:19:43.217485 fado-2.1.1/FAdo/witness.py
+--rw-r--r--   0        0        0     3093 2023-01-06 09:38:40.164173 fado-2.1.1/README.rst
+--rw-r--r--   0        0        0     1959 2023-03-26 14:34:41.460633 fado-2.1.1/pyproject.toml
+--rw-r--r--   0        0        0     4322 1970-01-01 00:00:00.000000 fado-2.1.1/PKG-INFO
++-rw-r--r--   0        0        0     1587 2023-03-26 14:46:07.054413 fado-2.1.2/FAdo/__init__.py
++-rw-r--r--   0        0        0     2069 2023-04-06 07:40:03.282453 fado-2.1.2/FAdo/automata_grammar.lark
++-rw-r--r--   0        0        0    21249 2023-01-06 09:39:16.942907 fado-2.1.2/FAdo/cfg.py
++-rw-r--r--   0        0        0    39132 2023-01-06 09:39:16.943239 fado-2.1.2/FAdo/codes.py
++-rw-r--r--   0        0        0    17630 2023-01-06 09:38:40.155195 fado-2.1.2/FAdo/comboperations.py
++-rw-r--r--   0        0        0    24810 2023-04-06 07:36:31.364197 fado-2.1.2/FAdo/common.py
++-rw-r--r--   0        0        0    39059 2023-01-06 09:38:40.155618 fado-2.1.2/FAdo/conversions.py
++-rw-r--r--   0        0        0   217634 2023-04-06 07:45:15.888846 fado-2.1.2/FAdo/fa.py
++-rw-r--r--   0        0        0     1120 2023-01-06 09:37:44.494862 fado-2.1.2/FAdo/families.py
++-rw-r--r--   0        0        0    20747 2023-04-06 07:40:03.282738 fado-2.1.2/FAdo/fio.py
++-rw-r--r--   0        0        0    46442 2023-01-30 10:18:37.272680 fado-2.1.2/FAdo/fl.py
++-rw-r--r--   0        0        0     5034 2023-01-06 09:37:44.496073 fado-2.1.2/FAdo/graphs.py
++-rw-r--r--   0        0        0    12885 2023-04-03 20:40:37.314906 fado-2.1.2/FAdo/prax.py
++-rw-r--r--   0        0        0   179231 2023-01-30 10:19:43.217240 fado-2.1.2/FAdo/reex.py
++-rw-r--r--   0        0        0     1620 2023-01-06 09:39:16.946414 fado-2.1.2/FAdo/regexp_grammar.lark
++-rw-r--r--   0        0        0    10645 2023-01-06 09:38:40.158702 fado-2.1.2/FAdo/rndadfa.py
++-rw-r--r--   0        0        0     5584 2023-01-06 09:37:44.498441 fado-2.1.2/FAdo/rndfap.py
++-rw-r--r--   0        0        0    16941 2023-01-06 09:39:01.226047 fado-2.1.2/FAdo/ska.py
++-rw-r--r--   0        0        0     1932 2023-01-06 09:37:44.499818 fado-2.1.2/FAdo/smwc.py
++-rw-r--r--   0        0        0     3616 2023-04-03 20:40:37.169177 fado-2.1.2/FAdo/ssemigroup.py
++-rw-r--r--   0        0        0    22725 2023-01-06 09:37:44.500079 fado-2.1.2/FAdo/sst.py
++-rw-r--r--   0        0        0     5559 2023-01-06 09:38:40.160286 fado-2.1.2/FAdo/tfa.py
++-rw-r--r--   0        0        0    46337 2023-01-06 09:39:16.946537 fado-2.1.2/FAdo/transducers.py
++-rw-r--r--   0        0        0     3676 2023-01-06 09:38:40.160870 fado-2.1.2/FAdo/unionFind.py
++-rw-r--r--   0        0        0    59804 2023-01-30 10:19:43.217485 fado-2.1.2/FAdo/witness.py
++-rw-r--r--   0        0        0     3093 2023-01-06 09:38:40.164173 fado-2.1.2/README.rst
++-rw-r--r--   0        0        0     1959 2023-04-06 07:34:50.924451 fado-2.1.2/pyproject.toml
++-rw-r--r--   0        0        0     4322 1970-01-01 00:00:00.000000 fado-2.1.2/PKG-INFO
+```
+
+### Comparing `fado-2.1.1/FAdo/__init__.py` & `fado-2.1.2/FAdo/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/automata_grammar.lark` & `fado-2.1.2/FAdo/automata_grammar.lark`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -6,17 +6,19 @@
+     nfa: "@NFA" finals [(star initials)] [alphabeti] eol transitions
+     transducer: "@Transducer" finals [(star initials)] [(alphabeti [(alphabeto)])] eol ttransitions
+     sstransducer: "@SST" finals [(star initials)] alphabeti eol ssttransitions
+     ssfa: "@SSFA" finals [(star initials)] [alphabeti] eol ssatransitions
+ 
+     ?alphabet: [var (var)* ]
+ 
+-    ?var: name
++    ?var: name |  quoted_str
+     name: /[a-zA-Z0-9]+/
+     number: /[0-9]+/
++    quoted_str : /\"\S+\"/
++
+ 
+     finals: [(var)+]
+     alphabeti: "$" alphabet
+     alphabeto: "$" alphabet
+ 
+     transitions: [(strule eol)+]
+     ?strule: statedecl | transition
+@@ -66,10 +68,14 @@
+     epsilon: "@epsilon"
+     initials: [var (var)* ]
+     star: "*"
+     dollar: /\$/
+     AMPERSAND: /&/
+     SLASH: /\//
+     eol: /[\n\r]+/
+-    %ignore /[ \t\f\"]+/
++    %ignore /[ \t\f]+/
+     %ignore /#[^\n]*\n/
+     %ignore /#[^\r\n]*/
++
++    %import common.STRING
++
++    // \"
+```
+
+### Comparing `fado-2.1.1/FAdo/cfg.py` & `fado-2.1.2/FAdo/cfg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/codes.py` & `fado-2.1.2/FAdo/codes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/comboperations.py` & `fado-2.1.2/FAdo/comboperations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/common.py` & `fado-2.1.2/FAdo/common.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -21,28 +21,14 @@
+    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+    for more details.
+ 
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    675 Mass Ave, Cambridge, MA 02139, USA."""
+ 
+-#  Copyright (c) 2022-2023. Rogério Reis <rogerio.reis@fc.up.pt> and Nelma Moreira <nelma.moreira@fc.up.pt>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-
+ import os
+ import random
+ from copy import deepcopy
+ from abc import abstractmethod
+ import functools
+ import tempfile
+ import subprocess
+@@ -58,15 +44,15 @@
+     PyPy = False
+ 
+ try:
+     from IPython.display import display, SVG  # , get_ipython
+ except ImportError:
+     pass
+ 
+-FAdoVersion = "2.0.4"
++FAdoVersion = "2.1.2"
+ __version__ = FAdoVersion
+ 
+ 
+ def run_from_ipython_notebook():
+     try:
+         cfg = get_ipython().config
+         if 'IPKernelApp' in cfg:
+@@ -529,15 +515,15 @@
+         else:
+             return self
+ 
+     def copy(self):
+         return lbl(deepcopy(self.val()))
+ 
+ 
+-class memoized(object):
++class Memoized(object):
+     """Decorator that caches a function's return value each time it is called.
+ 
+     If called later with the same arguments, the cached value is returned, and not re-evaluated."""
+ 
+     def __init__(self, func):
+         self.func = func
+         self.cache = {}
+@@ -600,15 +586,15 @@
+ 
+     memo.__name__ = method_name
+     setattr(cls, method_name, memo)
+     return True
+ 
+ 
+ def dememoize(cls, method_name):
+-    """Restore method of given class from memoized state. Stored attributes will be removed."""
++    """Restore method of given class from Memoized state. Stored attributes will be removed."""
+     saved_name = "memoize_" + method_name + "_original"
+     if not hasattr(cls, saved_name):
+         return False
+     method = getattr(cls, saved_name)
+     delattr(cls, saved_name)
+     setattr(cls, method_name, method)
+     for instance in cls.memoized_instances[method_name]:
+@@ -622,40 +608,40 @@
+ try:
+     from itertools import product as cartesianproduct
+ except ImportError:
+     def cartesianproduct(x, y):
+         return [(a, b) for a in x for b in y]
+ 
+ 
+-def uSet(s):
++def uSet(s: set):
+     """returns the first element of a set
+ 
+     :param set s: the set
+     :return: the first element of s"""
+     return list(s)[0]
+ 
+ 
+-def lSet(s):
++def lSet(s: set):
+     """returns the last element of a set
+ 
+     :param set s: the set
+     :return: the last element of the set
+ 
+     .. versionadded:: 1.3.3"""
+     return list(s)[-1]
+ 
+ 
+-def tmpFileName():
++def tmpFileName() -> str:
+     i = os.getpid()
+     r = random.randint(0, 1000000)
+     return "/var/tmp/F%d-%d" % (i, r)
+ 
+ 
+ def forceIterable(x):
+-    """Forces a non iterable object into a list, otherwise returns itself
++    """Forces a non-iterable object into a list, otherwise returns itself
+ 
+     :param list x: the object
+     :return: object as a list
+     :rtype: list"""
+     if not getattr(x, '__iter__', False):
+         return list([x])
+     else:
+@@ -739,15 +725,15 @@
+ class Drawable(object):
+     """Any FAdo object that is drawable"""
+ 
+     def display(self, filename=None, size="30,20", strict=False, maxlblsz=6):
+         """ Display automata using dot
+ 
+         :arg size: size of representation
+-        :arg fileName: filename to use for the graphic representation (default a os tmpfile
++        :arg filename: filename to use for the graphic representation (default a os tmpfile)
+         :arg int maxlblsz: max size of labels before getting removed
+         :arg bool strict: use limitations of label sizes
+ 
+         .. versionchanged:: 1.2.1"""
+         if filename is not None:
+             fname_gv = filename + ".gv"
+             if run_from_ipython_notebook():
+@@ -812,15 +798,15 @@
+         """ Label string
+ 
+         """
+         if type(lbl0) == tuple:
+             return "({0:s}, {1:s})".format(self.dotLabel(lbl0[0]), self.dotLabel(lbl0[1]))
+         elif type(lbl0) == set or type(lbl0) == list:
+             lbl0 = list(lbl0)
+-            if  len(lbl0) == 0:
++            if len(lbl0) == 0:
+                 return str(lbl0)
+             if len(lbl0) == 1:
+                 return "{0:s}".format(self.dotLabel(lbl0[0]))
+             stl = "{0:s}".format(self.dotLabel(lbl0[0]))
+             for s in lbl0[1:]:
+                 stl += ", {0:s}".format(self.dotLabel(s))
+             return stl
+@@ -1016,15 +1002,15 @@
+     f = l[0]
+     for i in l[1:]:
+         if i != f:
+             return False
+     return True
+ 
+ 
+-class twDict(object):
++class TwDict(object):
+     """A class for dictionaries 'both ways' """
+ 
+     def __init__(self, fw=None):
+         if fw is None:
+             fw = {}
+         self.fw, self.bw, self.mult = dict(), dict(), dict()
+         for k in fw:
+@@ -1064,20 +1050,22 @@
+     if x == Epsilon:
+         return y
+     elif y == Epsilon:
+         return x
+     else:
+         return x + y
+ 
++
+ def binom(n, k):
+     v = 1
+     for i in range(k):
+         v *= (n - i) / (i + 1)
+     return v
+ 
+-def zeta(s :int|float, t=100)->float|complex:
++
++def zeta(s: int | float, t=100) -> float | complex:
+     """Implementation of Riemman's zeta function"""
+-    if s == 1: return complex("inf")
++    if s == 1:
++        return complex("inf")
+     term = (1 / 2 ** (n + 1) * sum((-1) ** k * binom(n, k) * (k + 1) ** -s
+                                    for k in range(n + 1)) for n in count(0))
+     return sum(islice(term, t)) / (1 - 2 ** (1 - s))
+-
+```
+
+### Comparing `fado-2.1.1/FAdo/conversions.py` & `fado-2.1.2/FAdo/conversions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/fa.py` & `fado-2.1.2/FAdo/fa.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,67 +18,29 @@
+    but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+    for more details.
+ 
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    675 Mass Ave, Cambridge, MA 02139, USA."""
+-#  Copyright (c) 2022-2023. Rogério Reis <rogerio.reis@fc.up.pt> and Nelma Moreira <nelma.moreira@fc.up.pt>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+-#
+-#  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+-#
+-#  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+-#
+-#  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+ 
+ from copy import copy
+ from functools import cmp_to_key
+ from collections import deque
+ import deprecation
++import typing
++
++#import FAdo.fa
+ from .common import *
+ from .ssemigroup import SSemiGroup
+ from .unionFind import UnionFind
+ from . import graphs
+ 
++if typing.TYPE_CHECKING:
++    import FAdo.fa as fa
+ 
+ class SemiDFA(Drawable):
+     # noinspection PyUnresolvedReferences
+     """Class of automata without initial or final states
+ 
+     :ivar list States: set of states.
+     :ivar set sigma: alphabet set.
+@@ -242,28 +204,28 @@
+         Returns:
+             list:"""
+         if sti not in self.delta:
+             return []
+         else:
+             return list(self.delta[sti].keys())
+ 
+-    def images(self, sti, c):
++    def images(self, sti :int , c):
+         """The set of images of a state by a symbol
+ 
+         Args:
+             sti (int): state
+             c (object): symbol
+         Returns:
+             iterable:"""
+         if sti not in self.delta or c not in self.delta[sti]:
+             return []
+         else:
+             return self.delta[sti][c]
+ 
+-    def dotDrawState(self, sti, sep="\n", _strict=False, _maxlblsz=6):
++    def dotDrawState(self, sti :int, sep="\n", _strict=False, _maxlblsz=6):
+         """ Draw a state in dot format
+ 
+         Args:
+             sti (int): index of the state.
+             sep (:obj:`str`, optional): separator.
+             _maxlblsz (:obj:`int`, optional): max size of labels before getting removed
+             _strict (:obj:`bool`, optional): use limitations of label size
+@@ -272,15 +234,15 @@
+         if sti in self.Final:
+             return "node [shape = doublecircle]; \"{0:s}\";".format(graphvizTranslate(self.dotLabel(self.States[sti])),
+                                                                     sep)
+         else:
+             return "node [shape = circle]; \"{0:s}\";{1:s}".format(graphvizTranslate(self.dotLabel(self.States[sti])),
+                                                                    sep)
+ 
+-    def same_nullability(self, s1: int, s2: int) -> bool:
++    def same_nullability(self, s1 :int, s2 :int) -> bool:
+         """Tests if this two states have the same nullability
+ 
+         Args:
+             s1 (int): state index.
+             s2 (int): state index.
+         Returns:
+             bool: have the states the same nullability?"""
+@@ -746,15 +708,15 @@
+ 
+         Returns:
+             int: the number of transitions
+ 
+         .. versionchanged:: 1.0"""
+         return sum([len(self.delta[i]) for i in self.delta])
+ 
+-    def inputS(self, i):
++    def inputS(self, i) -> set[str]:
+         """Input labels coming out of state i
+ 
+         Args:
+             i (int): state
+         Returns:
+             set of str: set of input labels
+ 
+@@ -1069,15 +1031,15 @@
+     :ivar set sigma: alphabet set.
+     :ivar set Initial: initial state indexes.
+     :ivar set Final: set of final states indexes.
+     :ivar dict delta: the transition function.
+ 
+     .. inheritance-diagram:: NFA"""
+ 
+-    def uniqueRepr(self):
++    def uniqueRepr(self) -> tuple:
+         """Dummy representation. Used DFA.uniqueRepr()
+ 
+         Returns:
+             tuple:"""
+         return self.toDFA().uniqueRepr()
+ 
+     def __init__(self):
+@@ -1151,15 +1113,15 @@
+             si = new.stateIndex((0, s))
+             new.addTransition(si, Epsilon, fin)
+         for s in par2.Final:
+             si = new.stateIndex((1, s))
+             new.addTransition(si, Epsilon, fin)
+         return new
+ 
+-    def __and__(self, other):
++    def __and__(self, other :FA):
+         """Conjunction of automata
+ 
+         Args:
+             other (FA): the right-hand operand
+         Returns:
+             NFA:
+         Raises:
+@@ -1180,15 +1142,15 @@
+         """Complement of the NFA (through conversion to DFA)
+ 
+         Returns:
+             NFA:"""
+         foo = self.toDFA()
+         return foo.__invert__().toNFA()
+ 
+-    def _getTags(self):
++    def _getTags(self) -> list[str]:
+         """returns Tags for dump
+ 
+         Returns:
+             list:"""
+         return ["NFA"]
+ 
+     def concat(self, other, middle="middle"):
+@@ -1211,15 +1173,15 @@
+             new.addTransition(new.stateIndex((0, i)), Epsilon, m)
+         for i in par2.Initial:
+             new.addTransition(m, Epsilon, new.stateIndex((1, i)))
+         for i in par2.Final:
+             new.addFinal(new.stateIndex((1, i)))
+         return new
+ 
+-    def computeFollowNames(self):
++    def computeFollowNames(self) -> list:
+         """ Computes the follow set to use in names
+ 
+         Returns:
+              list:"""
+         l = []
+         for i in range(len(self.States)):
+             l1 = []
+@@ -1541,15 +1503,15 @@
+         if sti1 not in self.delta:
+             self.delta[sti1] = {sym: {sti2}}
+         elif sym not in self.delta[sti1]:
+             self.delta[sti1][sym] = {sti2}
+         else:
+             self.delta[sti1][sym].add(sti2)
+ 
+-    def addTransitionStar(self, sti1, sti2, exception=[]):
++    def addTransitionStar(self, sti1, sti2, exception=()):
+         """Adds a new transition from sti1 to sti2 consuming any symbol
+ 
+         Args:
+             sti1 (int): state index of departure
+             sti2 (int): state index of arrival
+             exception (list): letters to excluded from the pattern
+ 
+@@ -2422,15 +2384,15 @@
+                                     break
+                             if pair in marked:
+                                 break
+         undecided_pairs.difference_update(marked)
+         return undecided_pairs
+ 
+     # noinspection PyUnusedLocal
+-    def autobisimulation2(self):
++    def autobisimulation2(self) -> list:
+         """Alternative space-efficient definition of NFA.autobisimulation.
+ 
+         Returns:
+             list: Incomplete equivalence relation (reflexivity, symmetry, and transitivity not calculated) as a set of
+             pairs of states"""
+         n_states = len(self.States)
+         marked = set()
+@@ -2468,15 +2430,15 @@
+                         changed_marked = True
+                         continue
+         return [(i, j)
+                 for i in range(n_states)
+                 for j in range(i + 1, n_states)
+                 if (i, j) not in marked]
+ 
+-    def equivReduced(self, equiv_classes):
++    def equivReduced(self, equiv_classes :UnionFind):
+         """Equivalent NFA reduced according to given equivalence classes.
+ 
+         Args:
+             equiv_classes (UnionFind): Equivalence classes
+         Returns:
+             NFA: Equivalent NFA"""
+         nfa = NFA()
+@@ -2556,15 +2518,15 @@
+         .. note::
+            returns copy of self if autobisimulations render no equivalent states."""
+         l_nfa = self.lEquivNFA()
+         lr_nfa = l_nfa.rEquivNFA()
+         del l_nfa
+         return lr_nfa
+ 
+-    def epsilonPaths(self, start, end):
++    def epsilonPaths(self, start :int, end :int) -> set[int]:
+         """All states in all paths (DFS) through empty words from a given starting state to a given ending state.
+ 
+         Args:
+             start (int): start state
+             end (int): end state
+         Returns:
+             set: states in epsilon paths from start to end"""
+@@ -2604,38 +2566,38 @@
+         nfa_r.States = list(self.States)
+         for source in self.delta:
+             for symbol in self.delta[source]:
+                 for target in self.delta[source][symbol]:
+                     nfa_r.addTransition(source, symbol, target)
+         return nfa_r
+ 
+-    def homogeneousFinalityP(self):
++    def homogeneousFinalityP(self) -> bool:
+         """ Tests if states have incoming transitions froms states with different finalities
+ 
+         Returns:
+             bool:"""
+         sr = self.toNFAr()
+         for i in sr.stateIndexes():
+             l = []
+             for c in sr.deltaReverse.get(i, []):
+                 for j in sr.deltaReverse[i][c]:
+                     l.append(j in sr.Final)
+             if not homogeneousP(l):
+                 return False
+         return True
+ 
+-    def countTransitions(self):
++    def countTransitions(self) -> int:
+         """Count the number of transitions of a NFA
+ 
+         Returns:
+             int:"""
+         return sum([sum(map(len, iter(self.delta[t].values())))
+                     for t in self.delta])
+ 
+-    def stateChildren(self, state, strict=False):
++    def stateChildren(self, state :int, strict=False) -> set[int]:
+         """Set of children of a state
+ 
+         Args:
+             state (int): state id queried
+             strict (bool): if not strict a state is never its own child even if a self loop is in place
+         Returns:
+             set: children states"""
+@@ -4322,15 +4284,15 @@
+                         sets.union(r1, r2)
+                         stack.append((r1, r2))
+             if equiv:
+                 return False
+         return True
+ 
+     def minimalIncremental(self, minimal_test=False):
+-        """Minimizes the DFA with an incremental method using the Union-Find algorithm and memoized non-equivalence
++        """Minimizes the DFA with an incremental method using the Union-Find algorithm and Memoized non-equivalence
+         intermediate results
+ 
+         :param bool minimal_test: starts by verifying that the automaton is not minimal?
+         :returns: equivalent minimal DFA
+         :rtype: DFA
+ 
+         .. seealso::
+@@ -6241,15 +6203,15 @@
+                 if j in self.aut.delta and w[i - 1] in self.aut.delta[j]:
+                     for q in self.aut.delta[j][w[i - 1]]:
+                         if self.iCompleteP(n - i, q):
+                             s.add(q)
+             if len(s) != 0:
+                 self.stack.appendleft(s)
+ 
+-    def nextWord(self, w):
++    def nextWord(self, w :str):
+         """Given an word, returns next word in the the nth cross-section of L(aut)
+         according to the radix order
+ 
+         :param str w: word"""
+         n = len(w)
+         for i in range(n, 0, -1):
+             if len(self.stack) == 0:
+@@ -6321,15 +6283,15 @@
+ #             cs = self.fa.Initial
+ #             while True:
+ #                 cn = len(self.fa.delta[cn])
+ #                 c = self.fa.Sigma[random.randint(0,cn-1)]
+ #                 w.append(self.Sigma[r])
+ 
+ 
+-def stringToDFA(s, f, n, k):
++def stringToDFA(s :list, f :list, n :int, k :int) -> DFA:
+     """ Converts a string icdfa's representation to dfa.
+ 
+     :param list s: canonical string representation
+     :param list f: bit map of final states
+     :param int n: number of states
+     :param int k: number of symbols
+     :returns: a complete dfa with sigma [``k``], States [``n``]
+@@ -6434,15 +6396,15 @@
+     foo = _spp(state)
+     if len(foo) > 1:
+         return '"' + foo + '"'
+     else:
+         return foo
+ 
+ 
+-def saveToString(aut, sep="&"):
++def saveToString(aut :FA, sep="&") -> str:
+     """Finite automata definition as a string using the input format.
+ 
+     .. versionadded:: 0.9.5
+     .. versionchanged:: 0.9.6 Names are now used instead of indexes.
+     .. versionchanged:: 0.9.7 New format with quotes and alphabet
+ 
+     :param FA aut: the FA
+@@ -6481,15 +6443,15 @@
+                     buff += ("{0:>s} {1:>s} {2:>s}{3:>s}".format(statePP(aut.States[s]), str(a),
+                                                                  statePP(aut.States[aut.delta[s][a]]), sep))
+         else:
+             buff += "{0:>s} {1:>s}".format(statePP(aut.States[s]), sep)
+     return buff
+ 
+ 
+-def sigmaStarDFA(sigma=None):
++def sigmaStarDFA(sigma=None) -> DFA:
+     """Given a alphabet s returns the minimal DFA for s*
+ 
+     :param set sigma: set of simbols
+     :rtype: DFA
+ 
+     .. versionadded:: 1.2"""
+     if sigma is None:
+@@ -6517,15 +6479,15 @@
+     d.setSigma(sigma)
+     i = d.addState()
+     d.setInitial(i)
+     for a in d.Sigma:
+         d.addTransition(i, a, i)
+     return d
+ 
+-def symbolDFA(sym, sigma=None):
++def symbolDFA(sym, sigma=None) -> DFA:
+     """Given  symbol and an alphabet returns the minimal DFA that aceepts that symbol
+ 
+         :param sym: symbol
+         :param set sigma: set of symbols
+         :rtype: DFA
+ 
+         .. versionadded 2.1"""
+@@ -6537,25 +6499,25 @@
+         new.setSigma(sym)
+     else:
+         new.setSigma(sigma)
+     new.setFinal([s1])
+     new.addTransition(s0, sym, s1)
+     return new
+ 
+-def _addPool(pool, done, val):
++def _addPool(pool :set, done :set, val):
+     """ Adds to a pool with exception list
+ 
+     :param set pool: pool to be added
+     :param set done: exception list
+     :param val: value"""
+     if val in done:
+         return
+     else:
+         pool.add(val)
+ 
+ 
+-def _initPool():
++def _initPool() -> tuple:
+     """Initialize pool structure
+ 
+     :return: pool and done objects
+     :rtype: tuple"""
+     return set(), set()
+```
+
+### Comparing `fado-2.1.1/FAdo/families.py` & `fado-2.1.2/FAdo/families.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/fio.py` & `fado-2.1.2/FAdo/fio.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -553,14 +553,18 @@
+     def alphabet(self, s):
+         return s
+ 
+     def name(self, xxx_todo_changeme):
+         (s,) = xxx_todo_changeme
+         return s[:]
+ 
++    def quoted_str(self, xxx_todo_changeme):
++        (s,) = xxx_todo_changeme
++        return s[1:-1]
++
+     def transitions(self, s):
+         self.Transitions = [x for x in s if x is not None]
+         return "Transitions"
+ 
+     def ttransitions(self, s):
+         self.Transitions = [x for x in s if x is not None]
+         return "Transitions"
+```
+
+### Comparing `fado-2.1.1/FAdo/fl.py` & `fado-2.1.2/FAdo/fl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/graphs.py` & `fado-2.1.2/FAdo/graphs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/prax.py` & `fado-2.1.2/FAdo/prax.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -28,15 +28,14 @@
+ #
+ #  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ #
+ #  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ #
+ #  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+ 
+-from . common import *
+ from .codes import *
+ from .fl import dfa_block
+ from random import random, randint
+ from math import ceil, pow
+ import multiprocessing as mp
+```
+
+### Comparing `fado-2.1.1/FAdo/reex.py` & `fado-2.1.2/FAdo/reex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/regexp_grammar.lark` & `fado-2.1.2/FAdo/regexp_grammar.lark`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/rndadfa.py` & `fado-2.1.2/FAdo/rndadfa.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/rndfap.py` & `fado-2.1.2/FAdo/rndfap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/ska.py` & `fado-2.1.2/FAdo/ska.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/smwc.py` & `fado-2.1.2/FAdo/smwc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/ssemigroup.py` & `fado-2.1.2/FAdo/ssemigroup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ # coding=utf-8
+ """**Syntactic SemiGroup.**
+ 
+ Deterministic and non-deterministic automata manipulation, conversion and evaluation.
+ 
+ .. *Authors:* Rogério Reis & Nelma Moreira
+ 
+-.. *This is part of FAdo project*   http://fado.dcc.fc.up.pt.
++.. *This is part of FAdo project*   https://fado.dcc.fc.up.pt.
+ 
+ .. *Copyright:* 1999-2018 Rogério Reis & Nelma Moreira {rvr,nam}@dcc.fc.up.pt
+ 
+ .. This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License as published
+    by the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+@@ -29,15 +29,15 @@
+ # noinspection PyTypeChecker
+ class SSemiGroup(object):
+     """Class support for the Syntactic SemiGroup.
+ 
+     :var elements: list of tuples representing the transformations
+     :var words: a list of pairs (index of the prefix transformation, index of the suffix char)
+     :var gen: a list of the max index of each generation
+-    :var sigma: set of symbols
++    :var Sigma: set of symbols
+     """
+ 
+     def __init__(self):
+         """
+ 
+         """
+         self.elements = []
+@@ -58,15 +58,15 @@
+ 
+         :rtype: str"""
+         foo = "Semigroup:\n"
+         for s in self.elements:
+             foo += "%s \n" % str(s)
+         return foo
+ 
+-    def WordI(self, i):
++    def WordI(self, i) -> str:
+         """Representative of an element given as index
+ 
+         :arg int i: index of the element
+         :returns: the first word originating the element
+         :rtype: str"""
+         return self.WordPS(self.words[i][0], self.words[i][1])
+ 
+@@ -81,34 +81,34 @@
+             if sym is None:
+                 return []
+             else:
+                 return [sym]
+         else:
+             return self.WordPS(self.words[pref][0], self.words[pref][1]) + [sym]
+ 
+-    def add(self, tr, pref, sym, tmpLists):
++    def add(self, tr, pref, sym, tmplists):
+         """Try to add a new transformation to the monoid
+ 
+         :arg tr: transformation
+         :type tr: tuple of int
+         :arg pref: prefix of the generating word
+         :type pref: int or None
+         :arg int sym: suffix symbol
+-        :arg tmpLists: this generation lists
+-        :type tmpLists: pairs of lists as (elements,words)"""
+-        if tr not in self.elements and tr not in tmpLists[0]:
+-            tmpLists[0].append(tr)
+-            tmpLists[1].append((pref, sym))
+-        return tmpLists
++        :arg tmplists: this generation lists
++        :type tmplists: pairs of lists as (elements,words)"""
++        if tr not in self.elements and tr not in tmplists[0]:
++            tmplists[0].append(tr)
++            tmplists[1].append((pref, sym))
++        return tmplists
+ 
+-    def addGen(self, tmpLists):
++    def addGen(self, tmplist) -> None:
+         """Add a new generation to the monoid
+ 
+-        :arg tmpLists: the new generation data
+-        :type tmpLists: pair of lists as (elements, words)"""
+-        gn = len(tmpLists[0])
+-        self.elements += tmpLists[0]
+-        self.words += tmpLists[1]
++        :arg tmplist: the new generation data
++        :type tmplist: pair of lists as (elements, words)"""
++        gn = len(tmplist[0])
++        self.elements += tmplist[0]
++        self.words += tmplist[1]
+         if len(self.gen) > 1:
+             self.gen.append(self.gen[-1] + gn)
+         else:
+             self.gen.append(gn)
+```
+
+### Comparing `fado-2.1.1/FAdo/sst.py` & `fado-2.1.2/FAdo/sst.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/tfa.py` & `fado-2.1.2/FAdo/tfa.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/transducers.py` & `fado-2.1.2/FAdo/transducers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/unionFind.py` & `fado-2.1.2/FAdo/unionFind.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/FAdo/witness.py` & `fado-2.1.2/FAdo/witness.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/README.rst` & `fado-2.1.2/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `fado-2.1.1/pyproject.toml` & `fado-2.1.2/pyproject.toml`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "FAdo"
+-version = "2.1.1"
++version = "2.1.2"
+ packages = [{ include = "FAdo" }]
+ description = "A library of tools to manipulate formal languages' representations  mainly automata and regular expressions."
+ authors = ["Rogerio Reis <rogerio.reis@fc.up.pt>", "Nelma Moreira <nelma.moreira@fc.up.pt"]
+ license = "GPL-3.0-or-later"
+ readme = "README.rst"
+ homepage = "https://fado.dcc.fc.up.pt"
+ documentation = "https://www.dcc.fc.up.pt/~rvr/FAdoDoc"
+```
+
+### Comparing `fado-2.1.1/PKG-INFO` & `fado-2.1.2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fado
+-Version: 2.1.1
++Version: 2.1.2
+ Summary: A library of tools to manipulate formal languages' representations  mainly automata and regular expressions.
+ Home-page: https://fado.dcc.fc.up.pt
+ License: GPL-3.0-or-later
+ Keywords: automata theory,formal languages,regular expressions,transducers
+ Author: Rogerio Reis
+ Author-email: rogerio.reis@fc.up.pt
+ Requires-Python: >=3.10,<4.0
+```
+

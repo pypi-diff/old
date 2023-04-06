@@ -1,0 +1,84 @@
+# Comparing `tmp/clean_copy-0.1.1.tar.gz` & `tmp/clean_copy-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "clean_copy-0.1.1.tar", max compression
++gzip compressed data, was "clean_copy-0.1.2.tar", max compression
+```
+
+## Comparing `clean_copy-0.1.1.tar` & `clean_copy-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rw-r--r--   0        0        0      169 2023-04-05 07:12:48.047596 clean_copy-0.1.1/README.md
+--rw-r--r--   0        0        0       77 2023-04-05 06:50:26.960311 clean_copy-0.1.1/clean_copy/__init__.py
+--rw-r--r--   0        0        0     2444 2023-04-05 07:08:05.181322 clean_copy-0.1.1/clean_copy/clean_copy.py
+--rw-r--r--   0        0        0     1329 2023-04-05 07:08:05.169322 clean_copy-0.1.1/clean_copy/cli.py
+--rw-r--r--   0        0        0      508 2023-04-06 08:03:48.708188 clean_copy-0.1.1/pyproject.toml
+--rw-r--r--   0        0        0      684 1970-01-01 00:00:00.000000 clean_copy-0.1.1/PKG-INFO
++-rw-r--r--   0        0        0      169 2023-04-05 07:12:48.047596 clean_copy-0.1.2/README.md
++-rw-r--r--   0        0        0       77 2023-04-05 06:50:26.960311 clean_copy-0.1.2/clean_copy/__init__.py
++-rw-r--r--   0        0        0     2444 2023-04-05 07:08:05.181322 clean_copy-0.1.2/clean_copy/clean_copy.py
++-rw-r--r--   0        0        0     1325 2023-04-06 08:11:10.282774 clean_copy-0.1.2/clean_copy/cli.py
++-rw-r--r--   0        0        0      508 2023-04-06 08:11:18.198760 clean_copy-0.1.2/pyproject.toml
++-rw-r--r--   0        0        0      684 1970-01-01 00:00:00.000000 clean_copy-0.1.2/PKG-INFO
+```
+
+### Comparing `clean_copy-0.1.1/clean_copy/clean_copy.py` & `clean_copy-0.1.2/clean_copy/clean_copy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clean_copy-0.1.1/clean_copy/cli.py` & `clean_copy-0.1.2/clean_copy/cli.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -20,21 +20,21 @@
+         logging.basicConfig(level=logging.DEBUG)
+ 
+     source = Path(source)
+     destination = Path(destination)
+ 
+     parent_rules = []
+     if include_parent_ignore:
+-        parent_rules = get_gitignore_rules(source.parent / ".copyignore")
++        parent_rules = get_gitignore_rules(source.parent / ignore_spec)
+ 
+     unignored_files = get_unignored_files(
+         root_path=source,
+         folder_path=None,
+         parent_rules=parent_rules,
+-        ignore_spec=".copyignore",
++        ignore_spec=ignore_spec,
+     )
+     copy_count, file_size = copy_files(source, destination, unignored_files=unignored_files)
+     click.echo(f"Copied {copy_count} files ({file_size} MB) from {source} to {destination}")
+ 
+ 
+ if __name__ == "__main__":
+     clean_copy_cli()
+```
+
+### Comparing `clean_copy-0.1.1/PKG-INFO` & `clean_copy-0.1.2/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: clean-copy
+-Version: 0.1.1
++Version: 0.1.2
+ Summary: 
+ Author: Yulin Li
+ Author-email: liyulin@pku.edu.cn
+ Requires-Python: >=3.8,<4.0
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+```
+
