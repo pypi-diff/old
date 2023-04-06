@@ -1,0 +1,939 @@
+# Comparing `tmp/merfi-1.3.4.tar.gz` & `tmp/merfi-1.3.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/merfi-1.3.4.tar", last modified: Mon Mar 19 17:39:08 2018, max compression
++gzip compressed data, was "merfi-1.3.5.tar", last modified: Thu Apr  6 19:02:19 2023, max compression
+```
+
+## Comparing `merfi-1.3.4.tar` & `merfi-1.3.5.tar`
+
+### file list
+
+```diff
+@@ -1,69 +1,69 @@
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     4042 2018-03-19 17:39:08.000000 merfi-1.3.4/PKG-INFO
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1203 2017-11-20 23:23:53.000000 merfi-1.3.4/setup.py
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi.egg-info/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     4042 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi.egg-info/PKG-INFO
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       46 2015-10-22 23:54:29.000000 merfi-1.3.4/merfi.egg-info/pbr.json
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        6 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi.egg-info/top_level.txt
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        1 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi.egg-info/dependency_links.txt
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        1 2015-09-18 00:24:12.000000 merfi-1.3.4/merfi.egg-info/not-zip-safe
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       13 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi.egg-info/requires.txt
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1145 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi.egg-info/SOURCES.txt
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1080 2015-09-25 17:50:50.000000 merfi-1.3.4/LICENSE
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     2684 2017-11-07 20:39:48.000000 merfi-1.3.4/README.rst
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       38 2018-03-19 17:39:08.000000 merfi-1.3.4/setup.cfg
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      129 2015-09-25 17:47:07.000000 merfi-1.3.4/tox.ini
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      234 2015-09-16 20:14:31.000000 merfi-1.3.4/.gitignore
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1792 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/iso.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      991 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/base.py
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/backends/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      472 2017-09-19 11:29:13.000000 merfi-1.3.4/merfi/backends/base.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1958 2018-03-15 15:44:05.000000 merfi-1.3.4/merfi/backends/gpg.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       27 2015-09-17 19:33:36.000000 merfi-1.3.4/merfi/backends/__init__.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     5309 2018-03-19 17:09:52.000000 merfi-1.3.4/merfi/backends/rpm_sign.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1827 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/main.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1875 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/decorators.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     6310 2015-09-30 15:59:40.000000 merfi-1.3.4/merfi/util.py
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/backends/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     4330 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/backends/test_rpm_sign.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2015-09-30 15:59:11.000000 merfi-1.3.4/merfi/tests/backends/__init__.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1056 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/backends/test_gpg.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       81 2015-09-24 16:48:45.000000 merfi-1.3.4/merfi/tests/test_main.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      232 2015-10-15 22:41:20.000000 merfi-1.3.4/merfi/tests/util.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1258 2015-09-25 17:47:07.000000 merfi-1.3.4/merfi/tests/test_util.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      307 2018-03-15 15:44:05.000000 merfi-1.3.4/merfi/tests/conftest.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2015-09-30 15:59:11.000000 merfi-1.3.4/merfi/tests/__init__.py
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/trusty/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7604 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/trusty/Release
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/xenial/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7628 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/xenial/Release
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/pool/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/pool/main/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/pool/main/c/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/pool/main/c/ceph/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/pool/main/c/ceph/ceph.deb
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/trusty/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7604 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/trusty/Release
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/xenial/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7628 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/xenial/Release
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/pool/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/pool/main/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/pool/main/c/
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/pool/main/c/ceph/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2017-11-07 20:39:48.000000 merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/pool/main/c/ceph/ceph.deb
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1951 2015-10-19 15:14:39.000000 merfi-1.3.4/merfi/tests/test_iso.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     2035 2018-03-15 15:44:05.000000 merfi-1.3.4/merfi/tests/test_repocollector.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      463 2015-09-25 17:47:07.000000 merfi-1.3.4/merfi/tests/test_base.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       54 2018-03-19 17:10:34.000000 merfi-1.3.4/merfi/__init__.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     2206 2015-09-17 19:33:36.000000 merfi-1.3.4/merfi/logger.py
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     2015 2018-03-15 15:44:05.000000 merfi-1.3.4/merfi/collector.py
+-drwxrwxr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2018-03-19 17:39:08.000000 merfi-1.3.4/bin/
+--rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       92 2015-09-16 20:14:31.000000 merfi-1.3.4/bin/merfi
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      234 2015-09-16 20:14:31.000000 merfi-1.3.5/.gitignore
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1080 2015-09-25 17:50:50.000000 merfi-1.3.5/LICENSE
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     3616 2023-04-06 19:02:19.530819 merfi-1.3.5/PKG-INFO
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     2901 2019-01-22 21:54:32.000000 merfi-1.3.5/README.rst
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.529819 merfi-1.3.5/bin/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       92 2015-09-16 20:14:31.000000 merfi-1.3.5/bin/merfi
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.529819 merfi-1.3.5/merfi/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       54 2023-04-06 19:00:55.000000 merfi-1.3.5/merfi/__init__.py
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.529819 merfi-1.3.5/merfi/backends/
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)      133 2023-04-06 18:31:37.000000 merfi-1.3.5/merfi/backends/__init__.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      472 2017-09-19 11:29:13.000000 merfi-1.3.5/merfi/backends/base.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     1958 2023-04-06 18:31:25.000000 merfi-1.3.5/merfi/backends/gpg.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     5536 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/backends/rpm_sign.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      991 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/base.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     2015 2023-04-06 18:31:25.000000 merfi-1.3.5/merfi/collector.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1875 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/decorators.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1792 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/iso.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     2282 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/logger.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1827 2017-11-07 20:39:48.000000 merfi-1.3.5/merfi/main.py
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2015-09-30 15:59:11.000000 merfi-1.3.5/merfi/tests/__init__.py
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/backends/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2015-09-30 15:59:11.000000 merfi-1.3.5/merfi/tests/backends/__init__.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     1121 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/tests/backends/test_gpg.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     4334 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/tests/backends/test_rpm_sign.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)      307 2023-04-06 18:31:25.000000 merfi-1.3.5/merfi/tests/conftest.py
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/trusty/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7604 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/trusty/Release
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/xenial/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7628 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/xenial/Release
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/pool/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/pool/main/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/pool/main/c/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/pool/main/c/ceph/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/pool/main/c/ceph/ceph.deb
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/trusty/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7604 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/trusty/Release
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/xenial/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     7628 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/xenial/Release
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/pool/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/pool/main/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.528819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/pool/main/c/
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.530819 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/pool/main/c/ceph/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        0 2018-09-14 16:59:17.000000 merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/pool/main/c/ceph/ceph.deb
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      463 2015-09-25 17:47:07.000000 merfi-1.3.5/merfi/tests/test_base.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     1946 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/tests/test_iso.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)       74 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/tests/test_main.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     2035 2023-04-06 18:31:25.000000 merfi-1.3.5/merfi/tests/test_repocollector.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1258 2015-09-25 17:47:07.000000 merfi-1.3.5/merfi/tests/test_util.py
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)      232 2015-10-15 22:41:20.000000 merfi-1.3.5/merfi/tests/util.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     6264 2023-04-06 19:00:07.000000 merfi-1.3.5/merfi/util.py
++drwxr-xr-x   0 kdreyer   (1000) kdreyer   (1000)        0 2023-04-06 19:02:19.529819 merfi-1.3.5/merfi.egg-info/
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     3616 2023-04-06 19:02:19.000000 merfi-1.3.5/merfi.egg-info/PKG-INFO
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)     1145 2023-04-06 19:02:19.000000 merfi-1.3.5/merfi.egg-info/SOURCES.txt
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        1 2023-04-06 19:02:19.000000 merfi-1.3.5/merfi.egg-info/dependency_links.txt
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        1 2015-09-18 00:24:12.000000 merfi-1.3.5/merfi.egg-info/not-zip-safe
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       46 2015-10-22 23:54:29.000000 merfi-1.3.5/merfi.egg-info/pbr.json
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)       13 2023-04-06 19:02:19.000000 merfi-1.3.5/merfi.egg-info/requires.txt
++-rw-rw-r--   0 kdreyer   (1000) kdreyer   (1000)        6 2023-04-06 19:02:19.000000 merfi-1.3.5/merfi.egg-info/top_level.txt
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)       38 2023-04-06 19:02:19.530819 merfi-1.3.5/setup.cfg
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)     1176 2023-04-06 18:31:02.000000 merfi-1.3.5/setup.py
++-rw-r--r--   0 kdreyer   (1000) kdreyer   (1000)      219 2023-04-06 18:47:34.000000 merfi-1.3.5/tox.ini
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `merfi-1.3.4/PKG-INFO` & `merfi-1.3.5/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,97 +1,100 @@
+-Metadata-Version: 1.1
++Metadata-Version: 2.1
+ Name: merfi
+-Version: 1.3.4
++Version: 1.3.5
+ Summary: Signs release files
+ Home-page: http://github.com/alfredodeza/merfi
+ Author: Alfredo Deza
+ Author-email: alfredo@deza.pe
+ License: MIT
+-Description-Content-Type: UNKNOWN
+-Description: `merfi`
+-        =======
+-        A helper tool to quickly crawl a file system and sign commonly used files for
+-        repositories, with gpg, rpm-sign, and any other similar tool.
+-        
+-        *"a tool called "merfi" ... what could possibly go wrong?"*
+-        
+-        rpm-sign
+-        --------
+-        For ``rpm-sign``, the default operation will just crawl the filesystem looking
+-        for Debian repositories containing  ``Release`` files. When the proper
+-        ``Release`` file is found, merfi will proceed to sign the file like::
+-        
+-            $ merfi rpm-sign --key "mykey"
+-            --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
+-        
+-        Like all the other supported backends, it will crawl from the current working
+-        directory unless a path is specified::
+-        
+-            $ merfi rpm-sign --key "mykey" /opt/packages
+-        
+-        What is really doing behind the scenes is using ``rpm-sign`` like this::
+-        
+-            rpm-sign --key "mykey" --detachsign Release --output Release.gpg
+-            rpm-sign --key "mykey" --clearsign Release > InRelease
+-        
+-        You can also specify a ``--keyfile`` argument to ``rpm-sign``. This will cause
+-        merfi to copy this GPG public key as ``release.asc`` to the root of each
+-        repository::
+-        
+-            $ merfi rpm-sign --key "mykey" --keyfile /etc/RPM-GPG-KEY-testing /opt/packages
+-        
+-        This feature is designed for Ceph's ISO installer (ceph-ansible), because it
+-        expects the GPG public key to be present in this location.
+-        
+-        If you are running the ``rpm-sign`` command  on a computer that is behind a
+-        NAT, you must pass the ``--nat`` argument, like so::
+-        
+-            $ merfi rpm-sign --nat --key "mykey"
+-        
+-        gpg
+-        ---
+-        GPG support is similar to ``rpm-sign`` in that merfi will crawl a path
+-        (defaults to the current working directory) looking for Debian repositories,
+-        and sign the appropriate ``Release`` files:
+-        
+-            $ merfi gpg
+-            --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
+-        
+-        Behind the scenes the tool is running ``gpg`` like::
+-        
+-            gpg --armor --detach-sig --output Release.gpg Release
+-            gpg --clearsign --output InRelease Release
+-        
+-        iso
+-        ---
+-        merfi can generate an ISO from a tree of package repositories::
+-        
+-            $ merfi iso /opt/packages --output my-dvd.iso
+-        
+-        This will generate two files, ``my-dvd.iso`` and ``my-dvd.iso.SHA256SUM``. You
+-        can verify the ISO file's integrity by passing the checksum file to the
+-        ``sha256sum -c`` command::
+-        
+-            $ sha256sum -c my-dvd.iso.SHA256SUM
+-            my-dvd.iso: OK
+-        
+-        About the name
+-        --------------
+-        *"Firme"* is the Spanish word for "sign" and *"merfi"* is the Peruvian slang
+-        for it.
+-        
+ Keywords: rpm-sign,gpg,release,binaries
+-Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Topic :: Software Development :: Build Tools
+ Classifier: Topic :: Utilities
+ Classifier: Operating System :: MacOS :: MacOS X
+ Classifier: Operating System :: POSIX
+ Classifier: Programming Language :: Python :: 2.6
+ Classifier: Programming Language :: Python :: 2.7
+ Classifier: Programming Language :: Python :: 3.3
++License-File: LICENSE
++
++`merfi`
++=======
++A helper tool to quickly crawl a file system and sign commonly used files for
++repositories, with gpg or rpm-sign (Red Hat's signing internal tool).
++
++*"a tool called "merfi" ... what could possibly go wrong?"*
++
++rpm-sign
++--------
++Note: this sub-command tells merfi to use Red Hat's internal signing tool
++inconveniently named ``rpm-sign``, not the ``rpmsign(8)`` command that is a
++part of the `rpm <http://rpm.org>`_ open-source project.
++
++For ``rpm-sign``, the default operation will just crawl the filesystem looking
++for Debian repositories containing  ``Release`` files. When the proper
++``Release`` file is found, merfi will proceed to sign the file like::
++
++    $ merfi rpm-sign --key "mykey"
++    --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
++
++Like all the other supported backends, it will crawl from the current working
++directory unless a path is specified::
++
++    $ merfi rpm-sign --key "mykey" /opt/packages
++
++What is really doing behind the scenes is using ``rpm-sign`` like this::
++
++    rpm-sign --key "mykey" --detachsign Release --output Release.gpg
++    rpm-sign --key "mykey" --clearsign Release > InRelease
++
++You can also specify a ``--keyfile`` argument to ``rpm-sign``. This will cause
++merfi to copy this GPG public key as ``release.asc`` to the root of each
++repository::
++
++    $ merfi rpm-sign --key "mykey" --keyfile /etc/RPM-GPG-KEY-testing /opt/packages
++
++This feature is designed for Ceph's ISO installer (ceph-ansible), because it
++expects the GPG public key to be present in this location.
++
++If you are running the ``rpm-sign`` command  on a computer that is behind a
++NAT, you must pass the ``--nat`` argument, like so::
++
++    $ merfi rpm-sign --nat --key "mykey"
++
++gpg
++---
++GPG support is similar to ``rpm-sign`` in that merfi will crawl a path
++(defaults to the current working directory) looking for Debian repositories,
++and sign the appropriate ``Release`` files::
++
++    $ merfi gpg
++    --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
++
++Behind the scenes the tool is running ``gpg`` like::
++
++    gpg --armor --detach-sig --output Release.gpg Release
++    gpg --clearsign --output InRelease Release
++
++iso
++---
++merfi can generate an ISO from a tree of package repositories::
++
++    $ merfi iso /opt/packages --output my-dvd.iso
++
++This will generate two files, ``my-dvd.iso`` and ``my-dvd.iso.SHA256SUM``. You
++can verify the ISO file's integrity by passing the checksum file to the
++``sha256sum -c`` command::
++
++    $ sha256sum -c my-dvd.iso.SHA256SUM
++    my-dvd.iso: OK
++
++About the name
++--------------
++*"Firme"* is the Spanish word for "sign" and *"merfi"* is the Peruvian slang
++for it.
+```
+
+### Comparing `merfi-1.3.4/merfi.egg-info/PKG-INFO` & `merfi-1.3.5/merfi.egg-info/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,97 +1,100 @@
+-Metadata-Version: 1.1
++Metadata-Version: 2.1
+ Name: merfi
+-Version: 1.3.4
++Version: 1.3.5
+ Summary: Signs release files
+ Home-page: http://github.com/alfredodeza/merfi
+ Author: Alfredo Deza
+ Author-email: alfredo@deza.pe
+ License: MIT
+-Description-Content-Type: UNKNOWN
+-Description: `merfi`
+-        =======
+-        A helper tool to quickly crawl a file system and sign commonly used files for
+-        repositories, with gpg, rpm-sign, and any other similar tool.
+-        
+-        *"a tool called "merfi" ... what could possibly go wrong?"*
+-        
+-        rpm-sign
+-        --------
+-        For ``rpm-sign``, the default operation will just crawl the filesystem looking
+-        for Debian repositories containing  ``Release`` files. When the proper
+-        ``Release`` file is found, merfi will proceed to sign the file like::
+-        
+-            $ merfi rpm-sign --key "mykey"
+-            --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
+-        
+-        Like all the other supported backends, it will crawl from the current working
+-        directory unless a path is specified::
+-        
+-            $ merfi rpm-sign --key "mykey" /opt/packages
+-        
+-        What is really doing behind the scenes is using ``rpm-sign`` like this::
+-        
+-            rpm-sign --key "mykey" --detachsign Release --output Release.gpg
+-            rpm-sign --key "mykey" --clearsign Release > InRelease
+-        
+-        You can also specify a ``--keyfile`` argument to ``rpm-sign``. This will cause
+-        merfi to copy this GPG public key as ``release.asc`` to the root of each
+-        repository::
+-        
+-            $ merfi rpm-sign --key "mykey" --keyfile /etc/RPM-GPG-KEY-testing /opt/packages
+-        
+-        This feature is designed for Ceph's ISO installer (ceph-ansible), because it
+-        expects the GPG public key to be present in this location.
+-        
+-        If you are running the ``rpm-sign`` command  on a computer that is behind a
+-        NAT, you must pass the ``--nat`` argument, like so::
+-        
+-            $ merfi rpm-sign --nat --key "mykey"
+-        
+-        gpg
+-        ---
+-        GPG support is similar to ``rpm-sign`` in that merfi will crawl a path
+-        (defaults to the current working directory) looking for Debian repositories,
+-        and sign the appropriate ``Release`` files:
+-        
+-            $ merfi gpg
+-            --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
+-            --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
+-        
+-        Behind the scenes the tool is running ``gpg`` like::
+-        
+-            gpg --armor --detach-sig --output Release.gpg Release
+-            gpg --clearsign --output InRelease Release
+-        
+-        iso
+-        ---
+-        merfi can generate an ISO from a tree of package repositories::
+-        
+-            $ merfi iso /opt/packages --output my-dvd.iso
+-        
+-        This will generate two files, ``my-dvd.iso`` and ``my-dvd.iso.SHA256SUM``. You
+-        can verify the ISO file's integrity by passing the checksum file to the
+-        ``sha256sum -c`` command::
+-        
+-            $ sha256sum -c my-dvd.iso.SHA256SUM
+-            my-dvd.iso: OK
+-        
+-        About the name
+-        --------------
+-        *"Firme"* is the Spanish word for "sign" and *"merfi"* is the Peruvian slang
+-        for it.
+-        
+ Keywords: rpm-sign,gpg,release,binaries
+-Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Topic :: Software Development :: Build Tools
+ Classifier: Topic :: Utilities
+ Classifier: Operating System :: MacOS :: MacOS X
+ Classifier: Operating System :: POSIX
+ Classifier: Programming Language :: Python :: 2.6
+ Classifier: Programming Language :: Python :: 2.7
+ Classifier: Programming Language :: Python :: 3.3
++License-File: LICENSE
++
++`merfi`
++=======
++A helper tool to quickly crawl a file system and sign commonly used files for
++repositories, with gpg or rpm-sign (Red Hat's signing internal tool).
++
++*"a tool called "merfi" ... what could possibly go wrong?"*
++
++rpm-sign
++--------
++Note: this sub-command tells merfi to use Red Hat's internal signing tool
++inconveniently named ``rpm-sign``, not the ``rpmsign(8)`` command that is a
++part of the `rpm <http://rpm.org>`_ open-source project.
++
++For ``rpm-sign``, the default operation will just crawl the filesystem looking
++for Debian repositories containing  ``Release`` files. When the proper
++``Release`` file is found, merfi will proceed to sign the file like::
++
++    $ merfi rpm-sign --key "mykey"
++    --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
++
++Like all the other supported backends, it will crawl from the current working
++directory unless a path is specified::
++
++    $ merfi rpm-sign --key "mykey" /opt/packages
++
++What is really doing behind the scenes is using ``rpm-sign`` like this::
++
++    rpm-sign --key "mykey" --detachsign Release --output Release.gpg
++    rpm-sign --key "mykey" --clearsign Release > InRelease
++
++You can also specify a ``--keyfile`` argument to ``rpm-sign``. This will cause
++merfi to copy this GPG public key as ``release.asc`` to the root of each
++repository::
++
++    $ merfi rpm-sign --key "mykey" --keyfile /etc/RPM-GPG-KEY-testing /opt/packages
++
++This feature is designed for Ceph's ISO installer (ceph-ansible), because it
++expects the GPG public key to be present in this location.
++
++If you are running the ``rpm-sign`` command  on a computer that is behind a
++NAT, you must pass the ``--nat`` argument, like so::
++
++    $ merfi rpm-sign --nat --key "mykey"
++
++gpg
++---
++GPG support is similar to ``rpm-sign`` in that merfi will crawl a path
++(defaults to the current working directory) looking for Debian repositories,
++and sign the appropriate ``Release`` files::
++
++    $ merfi gpg
++    --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
++    --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
++
++Behind the scenes the tool is running ``gpg`` like::
++
++    gpg --armor --detach-sig --output Release.gpg Release
++    gpg --clearsign --output InRelease Release
++
++iso
++---
++merfi can generate an ISO from a tree of package repositories::
++
++    $ merfi iso /opt/packages --output my-dvd.iso
++
++This will generate two files, ``my-dvd.iso`` and ``my-dvd.iso.SHA256SUM``. You
++can verify the ISO file's integrity by passing the checksum file to the
++``sha256sum -c`` command::
++
++    $ sha256sum -c my-dvd.iso.SHA256SUM
++    my-dvd.iso: OK
++
++About the name
++--------------
++*"Firme"* is the Spanish word for "sign" and *"merfi"* is the Peruvian slang
++for it.
+```
+
+### Comparing `merfi-1.3.4/merfi.egg-info/SOURCES.txt` & `merfi-1.3.5/merfi.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/LICENSE` & `merfi-1.3.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/README.rst` & `merfi-1.3.5/README.rst`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,16 +1,20 @@
+ `merfi`
+ =======
+ A helper tool to quickly crawl a file system and sign commonly used files for
+-repositories, with gpg, rpm-sign, and any other similar tool.
++repositories, with gpg or rpm-sign (Red Hat's signing internal tool).
+ 
+ *"a tool called "merfi" ... what could possibly go wrong?"*
+ 
+ rpm-sign
+ --------
++Note: this sub-command tells merfi to use Red Hat's internal signing tool
++inconveniently named ``rpm-sign``, not the ``rpmsign(8)`` command that is a
++part of the `rpm <http://rpm.org>`_ open-source project.
++
+ For ``rpm-sign``, the default operation will just crawl the filesystem looking
+ for Debian repositories containing  ``Release`` files. When the proper
+ ``Release`` file is found, merfi will proceed to sign the file like::
+ 
+     $ merfi rpm-sign --key "mykey"
+     --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
+     --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
+@@ -40,15 +44,15 @@
+ 
+     $ merfi rpm-sign --nat --key "mykey"
+ 
+ gpg
+ ---
+ GPG support is similar to ``rpm-sign`` in that merfi will crawl a path
+ (defaults to the current working directory) looking for Debian repositories,
+-and sign the appropriate ``Release`` files:
++and sign the appropriate ``Release`` files::
+ 
+     $ merfi gpg
+     --> signing: /Users/alfredo/repos/debian/dists/trusty/Release
+     --> signed: /Users/alfredo/repos/debian/dists/trusty/Release.gpg
+     --> signed: /Users/alfredo/repos/debian/dists/trusty/InRelease
+ 
+ Behind the scenes the tool is running ``gpg`` like::
+```
+
+### Comparing `merfi-1.3.4/merfi/iso.py` & `merfi-1.3.5/merfi/iso.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/base.py` & `merfi-1.3.5/merfi/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/backends/gpg.py` & `merfi-1.3.5/merfi/backends/gpg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/backends/rpm_sign.py` & `merfi-1.3.5/merfi/backends/rpm_sign.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -9,14 +9,18 @@
+ 
+ 
+ class RpmSign(base.BaseBackend):
+     help_menu = 'rpm-sign handler for signing files'
+     _help = """
+ Signs files with rpm-sign. Crawls a given path looking for Debian repos.
+ 
++Note: this sub-command tells merfi to use Red Hat's internal signing tool
++inconveniently named "rpm-sign", not the rpmsign(8) command that is a part of
++the http://rpm.org open-source project.
++
+ %s
+ 
+ Options
+ 
+ --key         Name of the key to use (see rpm-sign --list-keys)
+ --keyfile     File path location of the public keyfile, for example
+               /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+@@ -83,16 +87,18 @@
+         logger.info('Starting path collection, looking for files to sign')
+         repos = RepoCollector(self.path)
+ 
+         if repos:
+             logger.info('%s repos found' % len(repos))
+             # FIXME: this should spit the actual verified command
+             logger.info('will sign with the following commands:')
+-            logger.info('rpm-sign --key "%s" --detachsign Release --output Release.gpg' % self.key)
+-            logger.info('rpm-sign --key "%s" --clearsign Release --output InRelease' % self.key)
++            logger.info(
++                'rpm-sign --key "%s" --detachsign Release --output Release.gpg' % self.key)
++            logger.info(
++                'rpm-sign --key "%s" --clearsign Release --output InRelease' % self.key)
+         else:
+             logger.warning('No paths found that matched')
+ 
+         for repo in repos:
+             # Debian "Release" files:
+             for path in repo.releases:
+                 self.sign_release(path)
+```
+
+### Comparing `merfi-1.3.4/merfi/main.py` & `merfi-1.3.5/merfi/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/decorators.py` & `merfi-1.3.5/merfi/decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/util.py` & `merfi-1.3.5/merfi/util.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -95,21 +95,21 @@
+     def make_color(self, color):
+         if not self.isatty or self.is_windows:
+             return self
+         return color + self + '\033[0m' + self.appends
+ 
+     @property
+     def __colors__(self):
+-        return  dict(
+-                blue   = '\033[34m',
+-                green  = '\033[92m',
+-                yellow = '\033[33m',
+-                red    = '\033[91m',
+-                bold   = '\033[1m',
+-                ends   = '\033[0m'
++        return dict(
++            blue='\033[34m',
++            green='\033[92m',
++            yellow='\033[33m',
++            red='\033[91m',
++            bold='\033[1m',
++            ends='\033[0m',
+         )
+ 
+     @property
+     def is_windows(self):
+         if sys.platform == 'win32':
+             return True
+         return False
+@@ -121,14 +121,15 @@
+         the str object doesn't allow extra arguments passed in to the
+         constructor
+         """
+         obj = cls(string)
+         obj._set_attributes()
+         return obj
+ 
++
+ #
+ # Common string manipulations
+ #
+ red_arrow = colorize.make('-->').red
+ blue_arrow = colorize.make('-->').blue
+ 
+ 
+@@ -213,8 +214,7 @@
+     if returncode != 0:
+         if stop_on_nonzero:
+             raise RuntimeError(
+                 "command returned non-zero exit status: %s" % returncode
+             )
+         else:
+             logger.warning("command returned non-zero exit status: %s" % returncode)
+-
+```
+
+### Comparing `merfi-1.3.4/merfi/tests/backends/test_rpm_sign.py` & `merfi-1.3.5/merfi/tests/backends/test_rpm_sign.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -2,21 +2,23 @@
+ from merfi.tests.util import CallRecorder
+ from filecmp import cmp
+ import os
+ from shutil import copytree
+ import pytest
+ from tambo import Transport
+ 
++
+ @pytest.fixture
+ def rpmsign(request):
+     backend = rpm_sign.RpmSign([])
+     backend.detached = CallRecorder()
+     backend.clear_sign = CallRecorder()
+     return backend
+ 
++
+ class RpmSign(object):
+ 
+     def setup(self):
+         self.backend = rpm_sign.RpmSign([])
+         self.backend.detached = CallRecorder()
+         self.backend.clear_sign = CallRecorder()
+         # fake command-line args
+@@ -76,14 +78,15 @@
+     def test_sign_two_files_path(self, deb_repotree):
+         self.sign(deb_repotree)
+         first_path = self.backend.clear_sign.calls[0][0][0]
+         second_path = self.backend.clear_sign.calls[1][0][0]
+         assert first_path.endswith('/Release')
+         assert second_path.endswith('/Release')
+ 
++
+ class TestRpmSignKeyfile(RpmSign):
+ 
+     def test_keyfile_path(self, deb_repotree, rpmsign, tmpdir):
+         backend = rpmsign
+         # fake keyfile
+         keyfile = tmpdir.join('RPM-GPG-KEY-testing')
+         keyfile.write('-----BEGIN PGP PUBLIC KEY BLOCK-----')
+@@ -96,14 +99,15 @@
+         backend.parser.parse_args()
+         backend.path = str(tmpdir.join('repo'))
+         backend.sign()
+ 
+         release_key = tmpdir.join('repo').join('release.asc')
+         assert cmp(str(keyfile), str(release_key))
+ 
++
+ class TestRpmSignNat(RpmSign):
+ 
+     def test_keyfile_path(self, deb_repotree, rpmsign):
+         backend = rpmsign
+         # fake command-line args
+         argv = ['merfi', '--key', 'mykey', '--nat']
+         backend.parser = Transport(argv, options=backend.options)
+```
+
+### Comparing `merfi-1.3.4/merfi/tests/backends/test_gpg.py` & `merfi-1.3.5/merfi/tests/backends/test_gpg.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,11 +1,14 @@
+-from mock import call, patch
+-import pytest
++try:
++    from unittest.mock import call, patch
++except ImportError:  # PY2
++    from mock import call, patch
+ from merfi.backends import gpg
+ 
++
+ class TestGpg(object):
+ 
+     backend = gpg.Gpg([])
+ 
+     # args to merfi.backends.gpg.util's run()
+     detached = ['gpg', '--batch', '--yes', '--armor', '--detach-sig', '--output', 'Release.gpg', 'Release']
+     clearsign = ['gpg', '--batch', '--yes', '--clearsign', '--output', 'InRelease', 'Release']
+```
+
+### Comparing `merfi-1.3.4/merfi/tests/test_util.py` & `merfi-1.3.5/merfi/tests/test_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/trusty/Release` & `merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/trusty/Release`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/tests/fixtures/debrepos/jewel/dists/xenial/Release` & `merfi-1.3.5/merfi/tests/fixtures/debrepos/jewel/dists/xenial/Release`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/trusty/Release` & `merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/trusty/Release`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/tests/fixtures/debrepos/luminous/dists/xenial/Release` & `merfi-1.3.5/merfi/tests/fixtures/debrepos/luminous/dists/xenial/Release`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/tests/test_iso.py` & `merfi-1.3.5/merfi/tests/test_iso.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ import os
+ import pytest
+ import subprocess
+ from merfi.iso import Iso
+ from merfi.util import which
+ 
++
+ class TestIso(object):
+ 
+     def create_fake_iso(self, output_dir):
+         """ Create a fake ISO file, without genisoimage """
+         iso = Iso([])
+         f = output_dir.join('test.iso')
+         f.write('ISOCONTENTS')
+@@ -42,9 +43,9 @@
+     def test_sha256sum_command(self, tmpdir):
+         iso = self.create_fake_iso(tmpdir)
+         os.chdir(os.path.dirname(iso.output_checksum))
+         assert subprocess.call(['sha256sum', '-c', iso.output_checksum]) == 0
+ 
+     @pytest.mark.skipif(which('genisoimage') is None, reason='genisoimage is not installed')
+     def test_make_iso(self, tmpdir):
+-        iso = self.create_real_iso(tmpdir)
++        self.create_real_iso(tmpdir)
+         assert os.path.isfile(str(tmpdir.join('my-test-contents-dvd.iso')))
+```
+
+### Comparing `merfi-1.3.4/merfi/tests/test_repocollector.py` & `merfi-1.3.5/merfi/tests/test_repocollector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `merfi-1.3.4/merfi/logger.py` & `merfi-1.3.5/merfi/logger.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -6,30 +6,30 @@
+ CRITICAL = 5
+ ERROR = 4
+ WARNING = 3
+ INFO = 2
+ DEBUG = 1
+ 
+ _level_names = {
+-    CRITICAL : 'critical',
+-    WARNING  : 'warning',
+-    INFO     : 'info',
+-    ERROR    : 'error',
+-    DEBUG    : 'debug'
++    CRITICAL: 'critical',
++    WARNING: 'warning',
++    INFO: 'info',
++    ERROR: 'error',
++    DEBUG: 'debug'
+ }
+ 
+ _reverse_level_names = dict((v, k) for (k, v) in _level_names.items())
+ 
+ _level_colors = {
+-    'remote'   : 'bold',
+-    'critical' : 'red',
+-    'warning'  : 'yellow',
+-    'info'     : 'blue',
+-    'debug'    : 'blue',
+-    'error'    : 'red'
++    'remote': 'bold',
++    'critical': 'red',
++    'warning': 'yellow',
++    'info': 'blue',
++    'debug': 'blue',
++    'error': 'red'
+ }
+ 
+ 
+ class LogMessage(object):
+ 
+     def __init__(self, level_name, message, writer=None, config_level=None):
+         self.level_name = level_name
+@@ -60,15 +60,18 @@
+         return _reverse_level_names.get(self.level_name, 4)
+ 
+     @property
+     def level_color(self):
+         return _level_colors.get(self.level_name, 'info')
+ 
+     def line(self):
+-        msg = self.message.rstrip('\n')
++        message = self.message
++        if isinstance(message, bytes):
++            message = message.decode('utf-8')
++        msg = message.rstrip('\n')
+         return "%s %s\n" % (self.header(), msg)
+ 
+     def write(self):
+         if not self.skip():
+             self.writer.write(self.line())
+ 
+     def get_config_level(self):
+```
+
+### Comparing `merfi-1.3.4/merfi/collector.py` & `merfi-1.3.5/merfi/collector.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,293 @@
+# Comparing `tmp/cmdint-3.0.3.tar.gz` & `tmp/cmdint-3.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "cmdint-3.0.3.tar", last modified: Thu Sep 29 13:25:31 2022, max compression
++gzip compressed data, was "cmdint-3.0.4.tar", last modified: Thu Apr  6 19:07:32 2023, max compression
+```
+
+## Comparing `cmdint-3.0.3.tar` & `cmdint-3.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxrwxr-x   0 neher     (1000) neher     (1000)        0 2022-09-29 13:25:31.899397 cmdint-3.0.3/
+--rw-rw-r--   0 neher     (1000) neher     (1000)    10172 2022-09-28 07:02:18.000000 cmdint-3.0.3/LICENSE
+--rw-rw-r--   0 neher     (1000) neher     (1000)       37 2022-09-28 07:02:18.000000 cmdint-3.0.3/MANIFEST.in
+--rw-rw-r--   0 neher     (1000) neher     (1000)      772 2022-09-29 13:25:31.899397 cmdint-3.0.3/PKG-INFO
+--rw-rw-r--   0 neher     (1000) neher     (1000)     5890 2022-09-28 07:02:18.000000 cmdint-3.0.3/Readme.md
+-drwxrwxr-x   0 neher     (1000) neher     (1000)        0 2022-09-29 13:25:31.899397 cmdint-3.0.3/cmdint/
+--rw-rw-r--   0 neher     (1000) neher     (1000)    46362 2022-09-28 07:03:48.000000 cmdint-3.0.3/cmdint/CmdInterface.py
+--rw-rw-r--   0 neher     (1000) neher     (1000)     3723 2022-09-28 07:02:18.000000 cmdint-3.0.3/cmdint/MessageLogger.py
+--rw-rw-r--   0 neher     (1000) neher     (1000)     6727 2022-09-28 07:09:09.000000 cmdint-3.0.3/cmdint/Utils.py
+--rw-rw-r--   0 neher     (1000) neher     (1000)      201 2022-09-28 07:13:01.000000 cmdint-3.0.3/cmdint/__init__.py
+-drwxrwxr-x   0 neher     (1000) neher     (1000)        0 2022-09-29 13:25:31.899397 cmdint-3.0.3/cmdint.egg-info/
+--rw-rw-r--   0 neher     (1000) neher     (1000)      772 2022-09-29 13:25:31.000000 cmdint-3.0.3/cmdint.egg-info/PKG-INFO
+--rw-rw-r--   0 neher     (1000) neher     (1000)      298 2022-09-29 13:25:31.000000 cmdint-3.0.3/cmdint.egg-info/SOURCES.txt
+--rw-rw-r--   0 neher     (1000) neher     (1000)        1 2022-09-29 13:25:31.000000 cmdint-3.0.3/cmdint.egg-info/dependency_links.txt
+--rw-rw-r--   0 neher     (1000) neher     (1000)        1 2022-09-29 13:25:31.000000 cmdint-3.0.3/cmdint.egg-info/not-zip-safe
+--rw-rw-r--   0 neher     (1000) neher     (1000)       67 2022-09-29 13:25:31.000000 cmdint-3.0.3/cmdint.egg-info/requires.txt
+--rw-rw-r--   0 neher     (1000) neher     (1000)        7 2022-09-29 13:25:31.000000 cmdint-3.0.3/cmdint.egg-info/top_level.txt
+--rw-rw-r--   0 neher     (1000) neher     (1000)       38 2022-09-29 13:25:31.899397 cmdint-3.0.3/setup.cfg
+--rw-rw-r--   0 neher     (1000) neher     (1000)     1078 2022-09-28 07:13:01.000000 cmdint-3.0.3/setup.py
++drwxrwxr-x   0 neher     (1000) neher     (1000)        0 2023-04-06 19:07:32.327518 cmdint-3.0.4/
++-rw-rw-r--   0 neher     (1000) neher     (1000)    10172 2022-09-28 07:02:18.000000 cmdint-3.0.4/LICENSE
++-rw-rw-r--   0 neher     (1000) neher     (1000)       37 2022-09-28 07:02:18.000000 cmdint-3.0.4/MANIFEST.in
++-rw-rw-r--   0 neher     (1000) neher     (1000)      772 2023-04-06 19:07:32.327518 cmdint-3.0.4/PKG-INFO
++-rw-rw-r--   0 neher     (1000) neher     (1000)     5890 2022-09-28 07:02:18.000000 cmdint-3.0.4/Readme.md
++drwxrwxr-x   0 neher     (1000) neher     (1000)        0 2023-04-06 19:07:32.327518 cmdint-3.0.4/cmdint/
++-rw-rw-r--   0 neher     (1000) neher     (1000)    46797 2023-04-06 18:57:45.000000 cmdint-3.0.4/cmdint/CmdInterface.py
++-rw-rw-r--   0 neher     (1000) neher     (1000)     3723 2022-09-28 07:02:18.000000 cmdint-3.0.4/cmdint/MessageLogger.py
++-rw-rw-r--   0 neher     (1000) neher     (1000)     6727 2022-09-28 07:09:09.000000 cmdint-3.0.4/cmdint/Utils.py
++-rw-rw-r--   0 neher     (1000) neher     (1000)      201 2023-04-06 19:07:24.000000 cmdint-3.0.4/cmdint/__init__.py
++drwxrwxr-x   0 neher     (1000) neher     (1000)        0 2023-04-06 19:07:32.327518 cmdint-3.0.4/cmdint.egg-info/
++-rw-rw-r--   0 neher     (1000) neher     (1000)      772 2023-04-06 19:07:32.000000 cmdint-3.0.4/cmdint.egg-info/PKG-INFO
++-rw-rw-r--   0 neher     (1000) neher     (1000)      298 2023-04-06 19:07:32.000000 cmdint-3.0.4/cmdint.egg-info/SOURCES.txt
++-rw-rw-r--   0 neher     (1000) neher     (1000)        1 2023-04-06 19:07:32.000000 cmdint-3.0.4/cmdint.egg-info/dependency_links.txt
++-rw-rw-r--   0 neher     (1000) neher     (1000)        1 2022-09-29 13:25:31.000000 cmdint-3.0.4/cmdint.egg-info/not-zip-safe
++-rw-rw-r--   0 neher     (1000) neher     (1000)       67 2023-04-06 19:07:32.000000 cmdint-3.0.4/cmdint.egg-info/requires.txt
++-rw-rw-r--   0 neher     (1000) neher     (1000)        7 2023-04-06 19:07:32.000000 cmdint-3.0.4/cmdint.egg-info/top_level.txt
++-rw-rw-r--   0 neher     (1000) neher     (1000)       38 2023-04-06 19:07:32.327518 cmdint-3.0.4/setup.cfg
++-rw-rw-r--   0 neher     (1000) neher     (1000)     1078 2023-04-06 19:07:24.000000 cmdint-3.0.4/setup.py
+```
+
+### Comparing `cmdint-3.0.3/LICENSE` & `cmdint-3.0.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `cmdint-3.0.3/PKG-INFO` & `cmdint-3.0.4/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cmdint
+-Version: 3.0.3
++Version: 3.0.4
+ Summary: Enables detailed logging of command line calls in a very lightweight manner.
+ Home-page: https://github.com/MIC-DKFZ/cmdint/
+ Author: Peter F. Neher
+ Author-email: p.neher@dkfz.de
+ License: Apache 2.0
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `cmdint-3.0.3/Readme.md` & `cmdint-3.0.4/Readme.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cmdint-3.0.3/cmdint/CmdInterface.py` & `cmdint-3.0.4/cmdint/CmdInterface.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -532,14 +532,15 @@
+         minutes, seconds = divmod(remainder, 60)
+         duration_formatted = '%d:%02d:%02d' % (hours, minutes, seconds)
+         self.__log['time']['duration'] = duration_formatted
+ 
+         # log end messages & return code
+         CmdInterface.log_message(self.__log['name'] + ' END')
+         if (CmdInterface.__throw_on_error or CmdInterface.__exit_on_error) and return_code <= 0:
++            print('EXCEPTION:', self.__log['name'], self.__log['description'])
+             CmdInterface.log_message('Exiting due to error: ' + self.__return_code_meanings[return_code])
+         self.__log['return_code'] = return_code
+         self.update_log()
+ 
+         if not self.__silent and \
+                 CmdInterface.__message_log_level > MessageLogLevel.ONLY_ERRORS or \
+                 (CmdInterface.__message_log_level == MessageLogLevel.ONLY_ERRORS and return_code <= 0):
+@@ -730,18 +731,33 @@
+             return None
+ 
+         if len(CmdInterface.__run_id) == 0:
+             CmdInterface.__run_id = str(uuid.uuid4())
+ 
+         run_logs = []
+         if os.path.isfile(CmdInterface.__logfile_name):
+-            with open(CmdInterface.__logfile_name) as f:
+-                run_logs = json.load(f)
++            try:
++                with open(CmdInterface.__logfile_name) as f:
++                    run_logs = json.load(f)
++
++                if CmdInterface.__logfile_access_lost:
++                    CmdInterface.log_message('Logfile access regained: ' + CmdInterface.__logfile_name, True)
++                CmdInterface.__logfile_access_lost = False
+ 
+-        if len(run_logs) == 0 or run_logs[-1]['run_id'] != CmdInterface.__run_id:
++            except Exception as err:
++                if not CmdInterface.__logfile_access_lost:
++                    error_string = 'Error accessing logfile: ' + CmdInterface.__logfile_name
++                    error_string += '\n\nException: ' + str(err)
++                    error_string += '\n\nArgs: ' + str(err.args)
++                    error_string += '\nProceeding ...'
++                    CmdInterface.log_message(error_string, True)
++                CmdInterface.__logfile_access_lost = True
++                run_logs = None
++
++        if run_logs is not None and (len(run_logs) == 0 or run_logs[-1]['run_id'] != CmdInterface.__run_id):
+             run_logs.append(RunLog(run_id=CmdInterface.__run_id))
+ 
+         return run_logs
+ 
+     def update_log(self):
+         """
+         Replace last entry of the command log list in the current run log and write to json.
+@@ -761,32 +777,27 @@
+ 
+         try:
+             if len(run_logs[-1]['commands']) == 0:
+                 run_logs[-1]['commands'].append(self.__log)
+             else:
+                 run_logs[-1]['commands'][-1] = self.__log
+             with open(CmdInterface.__logfile_name, 'w') as f:
+-                json.dump(run_logs, f, indent=2, sort_keys=False)
++                j = json.dumps(run_logs, indent=2, sort_keys=False)
++                f.write(j)
+             CmdInterface.__cmdint_text_output = []
+             if CmdInterface.__logfile_access_lost:
+-                lm = CmdInterface.__print_messages
+-                CmdInterface.__print_messages = False
+                 CmdInterface.log_message('Logfile access regained: ' + CmdInterface.__logfile_name, True)
+-                CmdInterface.__print_messages = lm
+             CmdInterface.__logfile_access_lost = False
+         except Exception as err:
+             if not CmdInterface.__logfile_access_lost:
+                 error_string = 'Error accessing logfile: ' + CmdInterface.__logfile_name
+                 error_string += '\n\nException: ' + str(err)
+                 error_string += '\n\nArgs: ' + str(err.args)
+                 error_string += '\nProceeding ...'
+-                lm = CmdInterface.__print_messages
+-                CmdInterface.__print_messages = False
+                 CmdInterface.log_message(error_string, True)
+-                CmdInterface.__print_messages = lm
+             CmdInterface.__logfile_access_lost = True
+ 
+     def append_log(self):
+         """
+         Append command log to the list held in the run log and write to file. Creates new json if it does not exist.
+         """
+         run_logs = self.get_runlogs()
+@@ -801,32 +812,27 @@
+         self.__log['return_code_meaning'] = self.__return_code_meanings[self.__log['return_code']]
+         self.__log['options']['no_key'] = CmdInterface.__jsonable(self.__no_key_options[1:])
+         self.__log['options']['key_val'] = CmdInterface.__jsonable(self.__options)
+ 
+         try:
+             run_logs[-1]['commands'].append(self.__log)
+             with open(CmdInterface.__logfile_name, 'w') as f:
+-                json.dump(run_logs, f, indent=2, sort_keys=False)
++                j = json.dumps(run_logs, indent=2, sort_keys=False)
++                f.write(j)
+             CmdInterface.__cmdint_text_output = []
+             if CmdInterface.__logfile_access_lost:
+-                lm = CmdInterface.__print_messages
+-                CmdInterface.__print_messages = False
+                 CmdInterface.log_message('Logfile access regained: ' + CmdInterface.__logfile_name, True)
+-                CmdInterface.__print_messages = lm
+             CmdInterface.__logfile_access_lost = False
+         except Exception as err:
+             if not CmdInterface.__logfile_access_lost:
+                 error_string = 'Error accessing logfile: ' + CmdInterface.__logfile_name
+                 error_string += '\n\nException: ' + str(err)
+                 error_string += '\n\nArgs: ' + str(err.args)
+                 error_string += '\nProceeding ...'
+-                lm = CmdInterface.__print_messages
+-                CmdInterface.__print_messages = False
+                 CmdInterface.log_message(error_string, True)
+-                CmdInterface.__print_messages = lm
+             CmdInterface.__logfile_access_lost = True
+ 
+     @staticmethod
+     def load_log(logfile_name: str = None) -> list:
+         """
+         Load the current or the specified json logfile and return as list of dicts.
+         """
+@@ -904,15 +910,16 @@
+                 for cmd_log in to_remove:
+                     run_log['commands'].remove(cmd_log)
+                 # remove personal environment data
+                 del run_log['environment']['platform']['node']
+                 if 'ip' in run_log['environment']['platform'].keys():
+                     del run_log['environment']['platform']['ip']
+             with open(out_log_name, 'w') as f:
+-                json.dump(data, f, indent=2, sort_keys=False)
++                j = json.dumps(data, indent=2, sort_keys=False)
++                f.write(j)
+         except Exception as err:
+             print('Exception: ' + str(err))
+             print(err.args)
+ 
+         for file in files_to_clear:
+             if os.path.isfile(file):
+                 print('Anonymizing ' + file)
+@@ -1087,13 +1094,13 @@
+ 
+         self.__log = CmdLog()
+         if (CmdInterface.__throw_on_error or CmdInterface.__exit_on_error) and return_code <= 0:
+             if CmdInterface.__throw_on_error or self.__nested:
+                 if exception is not None:
+                     raise exception
+                 else:
++                    print('EXCEPTION:', self.__log['name'], self.__log['description'])
+                     raise Exception('Exiting due to error: ' + self.__return_code_meanings[return_code])
+             elif CmdInterface.__exit_on_error:
+                 exit()
+ 
+         return return_code
+-
+```
+
+### Comparing `cmdint-3.0.3/cmdint/MessageLogger.py` & `cmdint-3.0.4/cmdint/MessageLogger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cmdint-3.0.3/cmdint/Utils.py` & `cmdint-3.0.4/cmdint/Utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cmdint-3.0.3/cmdint.egg-info/PKG-INFO` & `cmdint-3.0.4/cmdint.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cmdint
+-Version: 3.0.3
++Version: 3.0.4
+ Summary: Enables detailed logging of command line calls in a very lightweight manner.
+ Home-page: https://github.com/MIC-DKFZ/cmdint/
+ Author: Peter F. Neher
+ Author-email: p.neher@dkfz.de
+ License: Apache 2.0
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `cmdint-3.0.3/setup.py` & `cmdint-3.0.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ from setuptools import setup
+ 
+ setup(name='cmdint',
+-      version='3.0.3',
++      version='3.0.4',
+       description='Enables detailed logging of command line calls in a very lightweight manner.',
+       long_description='CmdInterface enables detailed logging of command line and python experiments in a very lightweight manner (coding wise). It wraps your command line or python function calls in a few lines of code and logs everything you might need to reproduce the experiment later on or to simply check what you did a couple of years ago.',
+       url='https://github.com/MIC-DKFZ/cmdint/',
+       author='Peter F. Neher',
+       author_email='p.neher@dkfz.de',
+       license='Apache 2.0',
+       packages=['cmdint'],
+```
+
