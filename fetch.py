@@ -237,7 +237,6 @@ def processPackages(args, jclient, p):
             timeout=180,  # 2 minutes timeout
             capture_output=True,
         )
-        log.info(exe.stdout.decode())
     except subprocess.TimeoutExpired:
         log.error("%s Timeout during execution of pkgdiff", p.name)
         try:
