@@ -1,0 +1,1457 @@
+--- tmp/pyclowder-2.7.0.tar.gz
++++ tmp/pyclowder-3.0.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/pyclowder-2.7.0.tar", last modified: Mon Feb 20 15:16:15 2023, max compression
+│ +gzip compressed data, was "dist/pyclowder-3.0.0.tar", last modified: Thu Apr  6 18:05:10 2023, max compression
+│   --- pyclowder-2.7.0.tar
+├── +++ pyclowder-3.0.0.tar
+│ ├── file list
+│ │ @@ -1,26 +1,36 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-02-20 15:16:15.000000 pyclowder-2.7.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1719 2023-02-20 15:16:07.000000 pyclowder-2.7.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       34 2023-02-20 15:16:07.000000 pyclowder-2.7.0/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2303 2023-02-20 15:16:15.000000 pyclowder-2.7.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    13230 2023-02-20 15:16:07.000000 pyclowder-2.7.0/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1362 2023-02-20 15:16:07.000000 pyclowder-2.7.0/description.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        0 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    11421 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/client.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     8906 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/collections.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    50752 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/connectors.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    15116 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/datasets.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    23843 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/extractors.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    15503 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/files.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     9175 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/geostreams.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2723 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/sections.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     4281 2023-02-20 15:16:07.000000 pyclowder-2.7.0/pyclowder/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2303 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      475 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        1 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       39 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       78 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       10 2023-02-20 15:16:15.000000 pyclowder-2.7.0/pyclowder.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       38 2023-02-20 15:16:15.000000 pyclowder-2.7.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1843 2023-02-20 15:16:07.000000 pyclowder-2.7.0/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:10.000000 pyclowder-3.0.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1719 2023-04-06 18:05:00.000000 pyclowder-3.0.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       34 2023-04-06 18:05:00.000000 pyclowder-3.0.0/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2303 2023-04-06 18:05:10.000000 pyclowder-3.0.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13230 2023-04-06 18:05:00.000000 pyclowder-3.0.0/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-04-06 18:05:00.000000 pyclowder-3.0.0/description.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder/api/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder/api/v1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/v1/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15120 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/v1/datasets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15840 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/v1/files.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder/api/v2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/v2/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8974 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/v2/datasets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14141 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/api/v2/files.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2358 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/client.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8906 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/collections.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    48150 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/connectors.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10299 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/datasets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25366 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/extractors.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15203 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/files.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9175 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/geostreams.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2723 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/sections.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4281 2023-04-06 18:05:00.000000 pyclowder-3.0.0/pyclowder/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2303 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      669 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       39 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       78 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 18:05:10.000000 pyclowder-3.0.0/pyclowder.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 18:05:10.000000 pyclowder-3.0.0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1843 2023-04-06 18:05:00.000000 pyclowder-3.0.0/setup.py
+│ │   --- pyclowder-2.7.0/LICENSE
+│ ├── +++ pyclowder-3.0.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/PKG-INFO
+│ ├── +++ pyclowder-3.0.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pyclowder
+│ │ -Version: 2.7.0
+│ │ +Version: 3.0.0
+│ │  Summary: Python SDK for the Clowder Data Management System
+│ │  Home-page: https://clowderframework.org
+│ │  Author: Rob Kooper
+│ │  Author-email: kooper@illinois.edu
+│ │  License: BSD
+│ │  Project-URL: Bug Reports, https://github.com/clowder-framework/pyclowder/issues
+│ │  Project-URL: Source, https://github.com/clowder-framework/pyclowder
+│ │   --- pyclowder-2.7.0/README.md
+│ ├── +++ pyclowder-3.0.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/description.rst
+│ ├── +++ pyclowder-3.0.0/description.rst
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/pyclowder/collections.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/collections.py
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/pyclowder/connectors.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/connectors.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -12,15 +12,14 @@
+│ │  
+│ │  The RabbitMQ connector connects to a RabbitMQ instance, creates a queue and
+│ │  binds itself to that queue. Any message in the queue will be fetched and
+│ │  passed to the check_message and process_message. This connector takesthree
+│ │  parameters:
+│ │  
+│ │  * rabbitmq_uri [REQUIRED] : the uri of the RabbitMQ server
+│ │ -* rabbitmq_exchange [OPTIONAL] : the exchange to which to bind the queue
+│ │  * rabbitmq_key [OPTIONAL] : the key that binds the queue to the exchange
+│ │  
+│ │  HPCConnector
+│ │  
+│ │  The HPC connector will run extractions based on the pickle files that are
+│ │  passed in to the constructor as an argument. Once all pickle files are
+│ │  processed the extractor will stop. The pickle file is assumed to have one
+│ │ @@ -59,16 +58,14 @@
+│ │  class Connector(object):
+│ │      """ Class that will listen for messages.
+│ │  
+│ │       Once a message is received this will start the extraction process. It is assumed
+│ │      that there is only one Connector per thread.
+│ │      """
+│ │  
+│ │ -    registered_clowder = list()
+│ │ -
+│ │      def __init__(self, extractor_name, extractor_info, check_message=None, process_message=None, ssl_verify=True,
+│ │                   mounted_paths=None, clowder_url=None, max_retry=10):
+│ │          self.extractor_name = extractor_name
+│ │          self.extractor_info = extractor_info
+│ │          self.check_message = check_message
+│ │          self.process_message = process_message
+│ │          self.ssl_verify = ssl_verify
+│ │ @@ -130,15 +127,15 @@
+│ │           """
+│ │          pass
+│ │  
+│ │      def alive(self):
+│ │          """Return whether connection is still alive or not."""
+│ │          return True
+│ │  
+│ │ -    def _build_resource(self, body, host, secret_key):
+│ │ +    def _build_resource(self, body, host, secret_key, clowder_version):
+│ │          """Examine message body and create resource object based on message type.
+│ │  
+│ │          Example FILE message -- *.file.#
+│ │          {   "filename":         name of the triggering file without path,
+│ │              "id":               UUID of the triggering file
+│ │              "intermediateId":   UUID of the triggering file (deprecated)
+│ │              "datasetId":        UUID of dataset that holds the file
+│ │ @@ -233,23 +230,34 @@
+│ │                      "id": datasetid
+│ │                  }
+│ │                  self.message_error(resource)
+│ │                  return None
+│ │  
+│ │          elif resource_type == "file":
+│ │              ext = os.path.splitext(filename)[1]
+│ │ -            return {
+│ │ -                "type": "file",
+│ │ -                "id": fileid,
+│ │ -                "intermediate_id": intermediatefileid,
+│ │ -                "name": filename,
+│ │ -                "file_ext": ext,
+│ │ -                "parent": {"type": "dataset",
+│ │ -                           "id": datasetid}
+│ │ -            }
+│ │ +            if clowder_version == 2:
+│ │ +                return {
+│ │ +                    "type": "file",
+│ │ +                    "id": fileid,
+│ │ +                    "intermediate_id": intermediatefileid,
+│ │ +                    "name": filename,
+│ │ +                    "file_ext": ext,
+│ │ +                    "parent": {"type": "dataset",
+│ │ +                               "id": datasetid}
+│ │ +                }
+│ │ +            else:
+│ │ +                return {
+│ │ +                    "type": "file",
+│ │ +                    "id": fileid,
+│ │ +                    "intermediate_id": intermediatefileid,
+│ │ +                    "name": filename,
+│ │ +                    "file_ext": ext,
+│ │ +                    "parent": {"type": "dataset",
+│ │ +                               "id": datasetid}
+│ │ +                }
+│ │  
+│ │          elif resource_type == "metadata":
+│ │              return {
+│ │                  "type": "metadata",
+│ │                  "id": body['resourceId'],
+│ │                  "parent": {"type": body['resourceType'],
+│ │                             "id": body['resourceId']},
+│ │ @@ -367,16 +375,15 @@
+│ │  
+│ │          return (file_paths, tmp_files_created, tmp_dirs_created)
+│ │  
+│ │      # pylint: disable=too-many-branches,too-many-statements
+│ │      def _process_message(self, body):
+│ │          """The actual processing of the message.
+│ │  
+│ │ -        This will register the extractor with the clowder instance that the message came from.
+│ │ -        Next it will call check_message to see if the message should be processed and if the
+│ │ +        This will call check_message to see if the message should be processed and if the
+│ │          file should be downloaded. Finally it will call the actual process_message function.
+│ │          """
+│ │  
+│ │          logger = logging.getLogger(__name__)
+│ │          emailaddrlist = None
+│ │          if body.get('notifies'):
+│ │              emailaddrlist = body.get('notifies')
+│ │ @@ -387,25 +394,20 @@
+│ │          if host == '' or source_host == '':
+│ │              logging.error("Host is empty, this is bad.")
+│ │              return
+│ │          if not source_host.endswith('/'): source_host += '/'
+│ │          if not host.endswith('/'): host += '/'
+│ │          secret_key = body.get('secretKey', '')
+│ │          retry_count = 0 if 'retry_count' not in body else body['retry_count']
+│ │ -        resource = self._build_resource(body, host, secret_key)
+│ │ +        clowder_version = int(body.get('clowderVersion', os.getenv('CLOWDER_VERSION', '1')))
+│ │ +        resource = self._build_resource(body, host, secret_key, clowder_version)
+│ │          if not resource:
+│ │              logging.error("No resource found, this is bad.")
+│ │              return
+│ │  
+│ │ -        # register extractor
+│ │ -        url = "%sapi/extractors" % source_host
+│ │ -        if url not in Connector.registered_clowder:
+│ │ -            Connector.registered_clowder.append(url)
+│ │ -            self.register_extractor("%s?key=%s" % (url, secret_key))
+│ │ -
+│ │          # tell everybody we are starting to process the file
+│ │          self.status_update(pyclowder.utils.StatusMessage.start, resource, "Started processing.")
+│ │  
+│ │          # checks whether to process the file in this message or not
+│ │          # pylint: disable=too-many-nested-blocks
+│ │          try:
+│ │              check_result = pyclowder.utils.CheckMessage.download
+│ │ @@ -500,42 +502,14 @@
+│ │              logger.exception("[%s] %s", resource['id'], message)
+│ │              if retry_count < self.max_retry:
+│ │                  message = "(#%s) %s" % (retry_count+1, message)
+│ │                  self.message_resubmit(resource, retry_count+1, message)
+│ │              else:
+│ │                  self.message_error(resource, message)
+│ │  
+│ │ -    def register_extractor(self, endpoints):
+│ │ -        """Register extractor info with Clowder.
+│ │ -
+│ │ -        This assumes a file called extractor_info.json to be located in either the
+│ │ -        current working directory, or the folder where the main program is started.
+│ │ -        """
+│ │ -
+│ │ -        # don't do any work if we wont register the endpoint
+│ │ -        if not endpoints or endpoints == "":
+│ │ -            return
+│ │ -
+│ │ -        logger = logging.getLogger(__name__)
+│ │ -
+│ │ -        headers = {'Content-Type': 'application/json'}
+│ │ -        data = self.extractor_info
+│ │ -
+│ │ -        for url in endpoints.split(','):
+│ │ -            if url not in Connector.registered_clowder:
+│ │ -                Connector.registered_clowder.append(url)
+│ │ -                try:
+│ │ -                    result = requests.post(url.strip(), headers=headers,
+│ │ -                                           data=json.dumps(data),
+│ │ -                                           verify=self.ssl_verify)
+│ │ -                    result.raise_for_status()
+│ │ -                    logger.debug("Registering extractor with %s : %s", url, result.text)
+│ │ -                except Exception as exc:  # pylint: disable=broad-except
+│ │ -                    logger.exception('Error in registering extractor: ' + str(exc))
+│ │ -
+│ │      # pylint: disable=no-self-use
+│ │      def status_update(self, status, resource, message):
+│ │          """Sends a status message.
+│ │  
+│ │          These messages, unlike logger messages, will often be send back to clowder to let
+│ │          the instance know the progress of the extractor.
+│ │  
+│ │ @@ -623,29 +597,25 @@
+│ │          return response
+│ │  
+│ │  
+│ │  # pylint: disable=too-many-instance-attributes
+│ │  class RabbitMQConnector(Connector):
+│ │      """Listens for messages on RabbitMQ.
+│ │  
+│ │ -    This will connect to rabbitmq and register the extractor with a queue. If the exchange
+│ │ -    and key are specified it will bind the exchange to the queue. If an exchange is
+│ │ -    specified it will always try to bind the special key extractors.<extractor_info[name]> to the
+│ │ -    exchange and queue.
+│ │ +    This will connect to rabbitmq and register the extractor with a queue.
+│ │      """
+│ │  
+│ │      # pylint: disable=too-many-arguments
+│ │      def __init__(self, extractor_name, extractor_info,
+│ │ -                 rabbitmq_uri, rabbitmq_exchange=None, rabbitmq_key=None, rabbitmq_queue=None,
+│ │ +                 rabbitmq_uri, rabbitmq_key=None, rabbitmq_queue=None,
+│ │                   check_message=None, process_message=None, ssl_verify=True, mounted_paths=None,
+│ │                   heartbeat=5*60, clowder_url=None, max_retry=10):
+│ │          super(RabbitMQConnector, self).__init__(extractor_name, extractor_info, check_message, process_message,
+│ │                                                  ssl_verify, mounted_paths, clowder_url, max_retry)
+│ │          self.rabbitmq_uri = rabbitmq_uri
+│ │ -        self.rabbitmq_exchange = rabbitmq_exchange
+│ │          self.rabbitmq_key = rabbitmq_key
+│ │          if rabbitmq_queue is None:
+│ │              self.rabbitmq_queue = extractor_info['name']
+│ │          else:
+│ │              self.rabbitmq_queue = rabbitmq_queue
+│ │          self.channel = None
+│ │          self.connection = None
+│ │ @@ -667,36 +637,14 @@
+│ │          # so other extractors of the same type can take the next message.
+│ │          self.channel.basic_qos(prefetch_count=1)
+│ │  
+│ │          # declare the queue in case it does not exist
+│ │          self.channel.queue_declare(queue=self.rabbitmq_queue, durable=True)
+│ │          self.channel.queue_declare(queue='error.'+self.rabbitmq_queue, durable=True)
+│ │  
+│ │ -        # register with an exchange
+│ │ -        if self.rabbitmq_exchange:
+│ │ -            # declare the exchange in case it does not exist
+│ │ -            self.channel.exchange_declare(exchange=self.rabbitmq_exchange, exchange_type='topic',
+│ │ -                                          durable=True)
+│ │ -
+│ │ -            # connect queue and exchange
+│ │ -            if self.rabbitmq_key:
+│ │ -                if isinstance(self.rabbitmq_key, str):
+│ │ -                    self.channel.queue_bind(queue=self.rabbitmq_queue,
+│ │ -                                            exchange=self.rabbitmq_exchange,
+│ │ -                                            routing_key=self.rabbitmq_key)
+│ │ -                else:
+│ │ -                    for key in self.rabbitmq_key:
+│ │ -                        self.channel.queue_bind(queue=self.rabbitmq_queue,
+│ │ -                                                exchange=self.rabbitmq_exchange,
+│ │ -                                                routing_key=key)
+│ │ -
+│ │ -            self.channel.queue_bind(queue=self.rabbitmq_queue,
+│ │ -                                    exchange=self.rabbitmq_exchange,
+│ │ -                                    routing_key="extractors." + self.extractor_name)
+│ │ -
+│ │          # start the extractor announcer
+│ │          self.announcer = RabbitMQBroadcast(self.rabbitmq_uri, self.extractor_info, self.rabbitmq_queue, self.heartbeat)
+│ │          self.announcer.start_thread()
+│ │  
+│ │      def listen(self):
+│ │          """Listen for messages coming from RabbitMQ"""
+│ │  
+│ │ @@ -772,18 +720,20 @@
+│ │          """
+│ │  
+│ │          try:
+│ │              json_body = json.loads(self._decode_body(body))
+│ │              if 'routing_key' not in json_body and method.routing_key:
+│ │                  json_body['routing_key'] = method.routing_key
+│ │  
+│ │ -            if 'jobid' not in json_body:
+│ │ -                job_id = None
+│ │ -            else:
+│ │ +            if 'jobid' in json_body:
+│ │                  job_id = json_body['jobid']
+│ │ +            elif 'job_id' in json_body:
+│ │ +                job_id = json_body['job_id']
+│ │ +            else:
+│ │ +                job_id = None
+│ │  
+│ │              self.worker = RabbitMQHandler(self.extractor_name, self.extractor_info, job_id, self.check_message,
+│ │                                            self.process_message, self.ssl_verify, self.mounted_paths, self.clowder_url,
+│ │                                            method, header, body)
+│ │              self.worker.start_thread(json_body)
+│ │  
+│ │          except ValueError:
+│ │ @@ -924,16 +874,14 @@
+│ │                  with self.lock:
+│ │                      self.finished = True
+│ │  
+│ │              # RESUBMITTING - Extractor encountered error and message is resubmitted to same queue
+│ │              elif msg["type"] == 'resubmit':
+│ │                  jbody = json.loads(self.body)
+│ │                  jbody['retry_count'] = msg['retry_count']
+│ │ -                if 'exchange' not in jbody and self.method.exchange:
+│ │ -                    jbody['exchange'] = self.method.exchange
+│ │                  if 'routing_key' not in jbody and self.method.routing_key and self.method.routing_key != rabbitmq_queue:
+│ │                      jbody['routing_key'] = self.method.routing_key
+│ │  
+│ │                  properties = pika.BasicProperties(delivery_mode=2, reply_to=self.header.reply_to)
+│ │                  channel.basic_publish(exchange='',
+│ │                                        routing_key=rabbitmq_queue,
+│ │                                        properties=properties,
+│ │   --- pyclowder-2.7.0/pyclowder/datasets.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/api/v1/datasets.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,40 +1,34 @@
+│ │ -"""Clowder API
+│ │ -
+│ │ -This module provides simple wrappers around the clowder Datasets API
+│ │ -"""
+│ │ -
+│ │  import json
+│ │  import logging
+│ │  import os
+│ │  import tempfile
+│ │  
+│ │  import requests
+│ │ -
+│ │ +import pyclowder.api.v2.datasets as v2datasets
+│ │ +import pyclowder.api.v1.datasets as v1datasets
+│ │  from pyclowder.client import ClowderClient
+│ │  from pyclowder.collections import get_datasets, get_child_collections, delete as delete_collection
+│ │  from pyclowder.utils import StatusMessage
+│ │  
+│ │  
+│ │ -def create_empty(connector, host, key, datasetname, description, parentid=None, spaceid=None):
+│ │ +def create_empty(connector, client, datasetname, description, parentid=None, spaceid=None):
+│ │      """Create a new dataset in Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetname -- name of new dataset to create
+│ │      description -- description of new dataset
+│ │      parentid -- id of parent collection
+│ │      spaceid -- id of the space to add dataset to
+│ │      """
+│ │ -
+│ │      logger = logging.getLogger(__name__)
+│ │  
+│ │ -    url = '%sapi/datasets/createempty?key=%s' % (host, key)
+│ │ +    url = '%s/api/datasets/createempty?key=%s' % (client.host, client.key)
+│ │  
+│ │      if parentid:
+│ │          if spaceid:
+│ │              result = requests.post(url, headers={"Content-Type": "application/json"},
+│ │                                     data=json.dumps({"name": datasetname, "description": description,
+│ │                                                      "collection": [parentid], "space": [spaceid]}),
+│ │                                     verify=connector.ssl_verify if connector else True)
+│ │ @@ -57,249 +51,236 @@
+│ │      result.raise_for_status()
+│ │  
+│ │      datasetid = result.json()['id']
+│ │      logger.debug("dataset id = [%s]", datasetid)
+│ │  
+│ │      return datasetid
+│ │  
+│ │ -
+│ │ -def delete(connector, host, key, datasetid):
+│ │ +def delete(connector, client, datasetid):
+│ │      """Delete dataset from Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset to delete
+│ │      """
+│ │ -    url = "%sapi/datasets/%s?key=%s" % (host, datasetid, key)
+│ │ +    headers = {"Authorization": "Bearer " + client.key}
+│ │ +
+│ │ +    url = "%s/api/v2/datasets/%s" % (client.host, datasetid)
+│ │  
+│ │      result = requests.delete(url, verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │      return json.loads(result.text)
+│ │  
+│ │ -
+│ │ -def delete_by_collection(connector, host, key, collectionid, recursive=True, delete_colls=False):
+│ │ +# TODO collection not implemented yet in v2
+│ │ +def delete_by_collection(connector, client, collectionid, recursive=True, delete_colls=False):
+│ │      """Delete datasets from Clowder by iterating through collection.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      collectionid -- the collection to walk
+│ │      recursive -- whether to also iterate across child collections
+│ │      delete_colls -- whether to also delete collections containing the datasets
+│ │      """
+│ │ -    dslist = get_datasets(connector, host, key, collectionid)
+│ │ +    dslist = get_datasets(connector, client.host, client.key, collectionid)
+│ │      for ds in dslist:
+│ │ -        delete(connector, host, key, ds['id'])
+│ │ +        delete(connector, client.host, client.key, ds['id'])
+│ │  
+│ │      if recursive:
+│ │ -        childcolls = get_child_collections(connector, host, key, collectionid)
+│ │ +        childcolls = get_child_collections(connector, client.host, client.key, collectionid)
+│ │          for coll in childcolls:
+│ │ -            delete_by_collection(connector, host, key, coll['id'], recursive, delete_colls)
+│ │ +            delete_by_collection(connector, client.host, client.key, coll['id'], recursive, delete_colls)
+│ │  
+│ │      if delete_colls:
+│ │ -        delete_collection(connector, host, key, collectionid)
+│ │ -
+│ │ +        delete_collection(connector, client.host, client.key, collectionid)
+│ │  
+│ │ -def download(connector, host, key, datasetid):
+│ │ +def download(connector, client, datasetid):
+│ │      """Download dataset to be processed from Clowder as zip file.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the file that is currently being processed
+│ │      """
+│ │ -
+│ │      connector.message_process({"type": "dataset", "id": datasetid}, "Downloading dataset.")
+│ │  
+│ │      # fetch dataset zipfile
+│ │ -    url = '%sapi/datasets/%s/download?key=%s' % (host, datasetid, key)
+│ │ +    url = '%s/api/datasets/%s/download?key=%s' % (client.host, datasetid,client.key)
+│ │      result = requests.get(url, stream=True,
+│ │                            verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │      (filedescriptor, zipfile) = tempfile.mkstemp(suffix=".zip")
+│ │      with os.fdopen(filedescriptor, "wb") as outfile:
+│ │          for chunk in result.iter_content(chunk_size=10 * 1024):
+│ │              outfile.write(chunk)
+│ │  
+│ │      return zipfile
+│ │  
+│ │ -
+│ │ -def download_metadata(connector, host, key, datasetid, extractor=None):
+│ │ +def download_metadata(connector, client, datasetid, extractor=None):
+│ │      """Download dataset JSON-LD metadata from Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset to fetch metadata of
+│ │      extractor -- extractor name to filter results (if only one extractor's metadata is desired)
+│ │      """
+│ │ +    headers = {"Authorization": "Bearer " + client.key}
+│ │  
+│ │      filterstring = "" if extractor is None else "&extractor=%s" % extractor
+│ │ -    url = '%sapi/datasets/%s/metadata.jsonld?key=%s%s' % (host, datasetid, key, filterstring)
+│ │ +    url = '%s/api/v2/datasets/%s/metadata' % (client.host, datasetid)
+│ │  
+│ │      # fetch data
+│ │ -    result = requests.get(url, stream=True,
+│ │ +    result = requests.get(url, stream=True, headers=headers,
+│ │                            verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │      return result.json()
+│ │  
+│ │ -
+│ │ -def get_info(connector, host, key, datasetid):
+│ │ +def get_info(connector, client, datasetid):
+│ │      """Get basic dataset information from UUID.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset to get info of
+│ │      """
+│ │ +    headers = {"Authorization": "Bearer " + client.key}
+│ │  
+│ │ -    url = "%sapi/datasets/%s?key=%s" % (host, datasetid, key)
+│ │ +    url = "%s/api/v2/datasets/%s" % (client.host, datasetid)
+│ │  
+│ │ -    result = requests.get(url,
+│ │ +    result = requests.get(url, headers=headers,
+│ │                            verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │      return json.loads(result.text)
+│ │  
+│ │ -
+│ │ -def get_file_list(connector, host, key, datasetid):
+│ │ +def get_file_list(connector, client, datasetid):
+│ │      """Get list of files in a dataset as JSON object.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset to get filelist of
+│ │      """
+│ │ +    headers = {"Authorization": "Bearer " + client.key}
+│ │  
+│ │ -    url = "%sapi/datasets/%s/files?key=%s" % (host, datasetid, key)
+│ │ +    url = "%s/api/v2/datasets/%s/files" % (client.host, datasetid)
+│ │  
+│ │ -    result = requests.get(url, verify=connector.ssl_verify if connector else True)
+│ │ +    result = requests.get(url, headers=headers, verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │      return json.loads(result.text)
+│ │  
+│ │ -
+│ │ -def remove_metadata(connector, host, key, datasetid, extractor=None):
+│ │ +def remove_metadata(connector, client, datasetid, extractor=None):
+│ │      """Delete dataset JSON-LD metadata from Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset to fetch metadata of
+│ │      extractor -- extractor name to filter deletion
+│ │                      !!! ALL JSON-LD METADATA WILL BE REMOVED IF NO extractor PROVIDED !!!
+│ │      """
+│ │ +    headers = {"Authorization": "Bearer " + client.key}
+│ │  
+│ │      filterstring = "" if extractor is None else "&extractor=%s" % extractor
+│ │ -    url = '%sapi/datasets/%s/metadata.jsonld?key=%s%s' % (host, datasetid, key, filterstring)
+│ │ +    url = '%s/api/v2/datasets/%s/metadata' % (client.host, datasetid)
+│ │  
+│ │      # fetch data
+│ │ -    result = requests.delete(url, stream=True,
+│ │ +    result = requests.delete(url, stream=True, headers=headers,
+│ │                               verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │ -
+│ │ -def submit_extraction(connector, host, key, datasetid, extractorname):
+│ │ +def submit_extraction(connector, client, datasetid, extractorname):
+│ │      """Submit dataset for extraction by given extractor.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset UUID to submit
+│ │      extractorname -- registered name of extractor to trigger
+│ │      """
+│ │ +    headers = {'Content-Type': 'application/json',
+│ │ +               "Authorization": "Bearer " + client.key}
+│ │  
+│ │ -    url = "%sapi/datasets/%s/extractions?key=%s" % (host, datasetid, key)
+│ │ +    url = "%s/api/v2/datasets/%s/extractions?key=%s" % (client.host, datasetid)
+│ │  
+│ │      result = requests.post(url,
+│ │ -                           headers={'Content-Type': 'application/json'},
+│ │ +                           headers=headers,
+│ │                             data=json.dumps({"extractor": extractorname}),
+│ │                             verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │      return result.status_code
+│ │  
+│ │ -
+│ │ -def submit_extractions_by_collection(connector, host, key, collectionid, extractorname, recursive=True):
+│ │ +def submit_extractions_by_collection(connector, client, collectionid, extractorname, recursive=True):
+│ │      """Manually trigger an extraction on all datasets in a collection.
+│ │  
+│ │          This will iterate through all datasets in the given collection and submit them to
+│ │          the provided extractor.
+│ │  
+│ │          Keyword arguments:
+│ │          connector -- connector information, used to get missing parameters and send status updates
+│ │ -        host -- the clowder host, including http and port, should end with a /
+│ │ -        key -- the secret key to login to clowder
+│ │ +        client -- ClowderClient containing authentication credentials
+│ │          datasetid -- the dataset UUID to submit
+│ │          extractorname -- registered name of extractor to trigger
+│ │          recursive -- whether to also submit child collection datasets recursively (defaults to True)
+│ │      """
+│ │ -
+│ │ -    dslist = get_datasets(connector, host, key, collectionid)
+│ │ +    dslist = get_datasets(connector, client.host, client.key, collectionid)
+│ │  
+│ │      for ds in dslist:
+│ │ -        submit_extraction(connector, host, key, ds['id'], extractorname)
+│ │ +        submit_extraction(connector, client.host, client.key, ds['id'], extractorname)
+│ │  
+│ │      if recursive:
+│ │ -        childcolls = get_child_collections(connector, host, key, collectionid)
+│ │ +        childcolls = get_child_collections(connector, client.host, client.key, collectionid)
+│ │          for coll in childcolls:
+│ │ -            submit_extractions_by_collection(connector, host, key, coll['id'], extractorname, recursive)
+│ │ +            submit_extractions_by_collection(connector, client.host, client.key, coll['id'], extractorname, recursive)
+│ │  
+│ │ -
+│ │ -def upload_tags(connector, host, key, datasetid, tags):
+│ │ +# TODO tags not implemented in v2
+│ │ +def upload_tags(connector, client, datasetid, tags):
+│ │      """Upload dataset tag to Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset that is currently being processed
+│ │      tags -- the tags to be uploaded
+│ │      """
+│ │ -
+│ │      connector.status_update(StatusMessage.processing, {"type": "dataset", "id": datasetid}, "Uploading dataset tags.")
+│ │  
+│ │      headers = {'Content-Type': 'application/json'}
+│ │ -    url = '%sapi/datasets/%s/tags?key=%s' % (host, datasetid, key)
+│ │ +    url = '%s/api/datasets/%s/tags?key=%s' % (client.host, datasetid, client.key)
+│ │      result = connector.post(url, headers=headers, data=json.dumps(tags),
+│ │                              verify=connector.ssl_verify if connector else True)
+│ │  
+│ │  
+│ │ -def upload_metadata(connector, host, key, datasetid, metadata):
+│ │ +def upload_metadata(connector, client, datasetid, metadata):
+│ │      """Upload dataset JSON-LD metadata to Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │ -    host -- the clowder host, including http and port, should end with a /
+│ │ -    key -- the secret key to login to clowder
+│ │ +    client -- ClowderClient containing authentication credentials
+│ │      datasetid -- the dataset that is currently being processed
+│ │      metadata -- the metadata to be uploaded
+│ │      """
+│ │ -
+│ │ +    headers = {'Content-Type': 'application/json',
+│ │ +               "Authorization": "Bearer " + client.key}
+│ │      connector.message_process({"type": "dataset", "id": datasetid}, "Uploading dataset metadata.")
+│ │  
+│ │ -    headers = {'Content-Type': 'application/json'}
+│ │ -    url = '%sapi/datasets/%s/metadata.jsonld?key=%s' % (host, datasetid, key)
+│ │ +    url = '%s/api/v2/datasets/%s/metadata' % (client.host, datasetid)
+│ │      result = requests.post(url, headers=headers, data=json.dumps(metadata),
+│ │                             verify=connector.ssl_verify if connector else True)
+│ │      result.raise_for_status()
+│ │  
+│ │  
+│ │ +# TODO not done yet, need more testing
+│ │  class DatasetsApi(object):
+│ │      """
+│ │          API to manage the REST CRUD endpoints for datasets.
+│ │      """
+│ │  
+│ │      def __init__(self, client=None, host=None, key=None,
+│ │                   username=None, password=None):
+│ │ @@ -383,8 +364,8 @@
+│ │          :rtype: `requests.Response`
+│ │          """
+│ │  
+│ │          logging.debug("Update metadata of dataset %s" % dataset_id)
+│ │          try:
+│ │              return self.client.post("/datasets/%s/metadata" % dataset_id, metadata)
+│ │          except Exception as e:
+│ │ -            logging.error("Error upload to dataset %s: %s" % (dataset_id, str(e)))
+│ │ +            logging.error("Error upload to dataset %s: %s" % (dataset_id, str(e)))
+│ │   --- pyclowder-2.7.0/pyclowder/extractors.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/extractors.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -19,15 +19,17 @@
+│ │  import re
+│ │  import time
+│ │  
+│ │  from pyclowder.connectors import RabbitMQConnector, HPCConnector, LocalConnector
+│ │  from pyclowder.utils import CheckMessage, setup_logging
+│ │  import pyclowder.files
+│ │  import pyclowder.datasets
+│ │ +from functools import reduce
+│ │  
+│ │ +clowder_version = int(os.getenv('CLOWDER_VERSION', '1'))
+│ │  
+│ │  class Extractor(object):
+│ │      """Basic extractor.
+│ │  
+│ │      Most extractors will want to override at least the process_message
+│ │      function. To control if the file should be downloaded (and if the
+│ │      process_message function should be called) the check_message
+│ │ @@ -47,27 +49,27 @@
+│ │  
+│ │          if not os.path.isfile(filename):
+│ │              print("Could not find extractor_info.json")
+│ │              sys.exit(-1)
+│ │          try:
+│ │              with open(filename) as info_file:
+│ │                  self.extractor_info = json.load(info_file)
+│ │ +                new_info = self._get_extractor_info_v2()
+│ │          except Exception:  # pylint: disable=broad-except
+│ │              print("Error loading extractor_info.json")
+│ │              traceback.print_exc()
+│ │              sys.exit(-1)
+│ │  
+│ │          # read values from environment variables, otherwise use defaults
+│ │          # this is the specific setup for the extractor
+│ │          # use RABBITMQ_QUEUE env to overwrite extractor's queue name
+│ │          rabbitmq_queuename = os.getenv('RABBITMQ_QUEUE')
+│ │          if not rabbitmq_queuename:
+│ │              rabbitmq_queuename = self.extractor_info['name']
+│ │          rabbitmq_uri = os.getenv('RABBITMQ_URI', "amqp://guest:guest@127.0.0.1/%2f")
+│ │ -        rabbitmq_exchange = os.getenv('RABBITMQ_EXCHANGE', "")
+│ │          clowder_url = os.getenv("CLOWDER_URL", "")
+│ │          registration_endpoints = os.getenv('REGISTRATION_ENDPOINTS', "")
+│ │          logging_config = os.getenv("LOGGING")
+│ │          mounted_paths = os.getenv("MOUNTED_PATHS", "{}")
+│ │          input_file_path = os.getenv("INPUT_FILE_PATH")
+│ │          output_file_path = os.getenv("OUTPUT_FILE_PATH")
+│ │          connector_default = "RabbitMQ"
+│ │ @@ -84,24 +86,19 @@
+│ │          self.parser.add_argument('--logging', '-l', nargs='?', default=logging_config,
+│ │                                   help='file or url or logging coonfiguration (default=None)')
+│ │          self.parser.add_argument('--pickle', nargs='*', dest="hpc_picklefile",
+│ │                                   default=None, action='append',
+│ │                                   help='pickle file that needs to be processed (only needed for HPC)')
+│ │          self.parser.add_argument('--clowderURL', nargs='?', dest='clowder_url', default=clowder_url,
+│ │                                   help='Clowder host URL')
+│ │ -        self.parser.add_argument('--register', '-r', nargs='?', dest="registration_endpoints",
+│ │ -                                 default=registration_endpoints,
+│ │ -                                 help='Clowder registration URL (default=%s)' % registration_endpoints)
+│ │          self.parser.add_argument('--rabbitmqURI', nargs='?', dest='rabbitmq_uri', default=rabbitmq_uri,
+│ │                                   help='rabbitMQ URI (default=%s)' % rabbitmq_uri.replace("%", "%%"))
+│ │          self.parser.add_argument('--rabbitmqQUEUE', nargs='?', dest='rabbitmq_queuename',
+│ │                                   default=rabbitmq_queuename,
+│ │                                   help='rabbitMQ queue name (default=%s)' % rabbitmq_queuename)
+│ │ -        self.parser.add_argument('--rabbitmqExchange', nargs='?', dest="rabbitmq_exchange", default=rabbitmq_exchange,
+│ │ -                                 help='rabbitMQ exchange (default=%s)' % rabbitmq_exchange)
+│ │          self.parser.add_argument('--mounts', '-m', dest="mounted_paths", default=mounted_paths,
+│ │                                   help="dictionary of {'remote path':'local path'} mount mappings")
+│ │          self.parser.add_argument('--input-file-path', '-ifp', dest="input_file_path", default=input_file_path,
+│ │                                   help="Full path to local input file to be processed (used by Big Data feature)")
+│ │          self.parser.add_argument('--output-file-path', '-ofp', dest="output_file_path", default=output_file_path,
+│ │                                   help="Full path to local output JSON file to store metadata "
+│ │                                        "(used by Big Data feature)")
+│ │ @@ -163,37 +160,34 @@
+│ │                                      rabbitmq_key.append("*.%s.%s" % (key, mt.replace("/", ".")))
+│ │  
+│ │                  connector = RabbitMQConnector(self.args.rabbitmq_queuename,
+│ │                                                self.extractor_info,
+│ │                                                check_message=self.check_message,
+│ │                                                process_message=self.process_message,
+│ │                                                rabbitmq_uri=self.args.rabbitmq_uri,
+│ │ -                                              rabbitmq_exchange=self.args.rabbitmq_exchange,
+│ │                                                rabbitmq_key=rabbitmq_key,
+│ │                                                rabbitmq_queue=self.args.rabbitmq_queuename,
+│ │                                                mounted_paths=json.loads(self.args.mounted_paths),
+│ │                                                clowder_url=self.args.clowder_url,
+│ │                                                max_retry=self.args.max_retry,
+│ │                                                heartbeat=self.args.heartbeat)
+│ │                  connector.connect()
+│ │ -                connector.register_extractor(self.args.registration_endpoints)
+│ │                  threading.Thread(target=connector.listen, name="RabbitMQConnector").start()
+│ │  
+│ │          elif self.args.connector == "HPC":
+│ │              if 'hpc_picklefile' not in self.args:
+│ │                  logger.error("Missing hpc_picklefile for HPCExtractor")
+│ │              else:
+│ │                  connector = HPCConnector(self.extractor_info['name'],
+│ │                                           self.extractor_info,
+│ │                                           check_message=self.check_message,
+│ │                                           process_message=self.process_message,
+│ │                                           picklefile=self.args.hpc_picklefile,
+│ │                                           mounted_paths=json.loads(self.args.mounted_paths),
+│ │                                           max_retry=self.args.max_retry)
+│ │ -                connector.register_extractor(self.args.registration_endpoints)
+│ │                  threading.Thread(target=connector.listen, name="HPCConnector").start()
+│ │  
+│ │          elif self.args.connector == "Local":
+│ │              if self.args.input_file_path is None:
+│ │                  logger.error("Environment variable INPUT_FILE_PATH or parameter "
+│ │                               "--input-file-path is not set. Please try again after "
+│ │                               "setting one of these")
+│ │ @@ -217,15 +211,30 @@
+│ │                  time.sleep(1)
+│ │          except KeyboardInterrupt:
+│ │              pass
+│ │          except BaseException:
+│ │              logger.exception("Error while consuming messages.")
+│ │          connector.stop()
+│ │  
+│ │ -    def get_metadata(self, content, resource_type, resource_id, server=None):
+│ │ +    def _get_extractor_info_v2(self):
+│ │ +        current_extractor_info = self.extractor_info.copy()
+│ │ +        old_repository = self.extractor_info['repository']
+│ │ +        new_repository_list = []
+│ │ +        for repo in old_repository:
+│ │ +            repo_type = repo['repType']
+│ │ +            repo_url = repo['repUrl']
+│ │ +            new_repo = dict()
+│ │ +            new_repo['repository_url'] = repo_url
+│ │ +            new_repo['repository_type'] = repo_type
+│ │ +            new_repository_list.append(new_repo)
+│ │ +        current_extractor_info['repository'] = new_repository_list
+│ │ +        return current_extractor_info
+│ │ +
+│ │ +
+│ │ +    def get_metadata(self, content, resource_type, resource_id, server=None, contexts=None):
+│ │          """Generate a metadata field.
+│ │  
+│ │          This will return a metadata dict that is valid JSON-LD. This will use the results as well as the information
+│ │          in extractor_info.json to create the metadata record.
+│ │  
+│ │          This does a simple check for validity, and prints to debug any issues it finds (i.e. a key in conent is not
+│ │          defined in the context).
+│ │ @@ -241,31 +250,62 @@
+│ │          context_url = 'https://clowder.ncsa.illinois.edu/contexts/metadata.jsonld'
+│ │  
+│ │          # simple check to see if content is in context
+│ │          if logger.isEnabledFor(logging.DEBUG):
+│ │              for k in content:
+│ │                  if not self._check_key(k, self.extractor_info['contexts']):
+│ │                      logger.debug("Simple check could not find %s in contexts" % k)
+│ │ -
+│ │ -        return {
+│ │ -            '@context': [context_url] + self.extractor_info['contexts'],
+│ │ -            'attachedTo': {
+│ │ -                'resourceType': resource_type,
+│ │ -                'id': resource_id
+│ │ -            },
+│ │ -            'agent': {
+│ │ -                '@type': 'cat:extractor',
+│ │ -                'extractor_id': '%sextractors/%s/%s' %
+│ │ -                                (server, self.extractor_info['name'], self.extractor_info['version']),
+│ │ -                'version': self.extractor_info['version'],
+│ │ -                'name': self.extractor_info['name']
+│ │ -            },
+│ │ -            'content': content
+│ │ -        }
+│ │ -
+│ │ +        # TODO generate clowder2.0 extractor info
+│ │ +        if clowder_version == 2.0:
+│ │ +            new_extractor_info = self._get_extractor_info_v2()
+│ │ +            md = dict()
+│ │ +            md["file_version"] = 1
+│ │ +            if contexts is not None:
+│ │ +                md["context"] = [context_url] + contexts
+│ │ +            md["context_url"] = context_url
+│ │ +            md["content"] = content
+│ │ +            md["contents"] = content
+│ │ +            md["extractor_info"] = new_extractor_info
+│ │ +            return md
+│ │ +        else:
+│ │ +            # TODO handle cases where contexts are either not available or are dynamnically generated
+│ │ +            if contexts is not None:
+│ │ +                md = {
+│ │ +                    '@context': [context_url] + contexts,
+│ │ +                    'attachedTo': {
+│ │ +                        'resourceType': resource_type,
+│ │ +                        'id': resource_id
+│ │ +                    },
+│ │ +                    'agent': {
+│ │ +                        '@type': 'cat:extractor',
+│ │ +                        'extractor_id': '%sextractors/%s/%s' %
+│ │ +                                        (server, self.extractor_info['name'], self.extractor_info['version']),
+│ │ +                        'version': self.extractor_info['version'],
+│ │ +                        'name': self.extractor_info['name']
+│ │ +                    },
+│ │ +                    'content': content
+│ │ +                }
+│ │ +                return md
+│ │ +            else:
+│ │ +                md = {
+│ │ +                    '@context': [context_url] + self.extractor_info['contexts'],
+│ │ +                    'attachedTo': {
+│ │ +                        'resourceType': resource_type,
+│ │ +                        'id': resource_id
+│ │ +                    },
+│ │ +                    'agent': {
+│ │ +                        '@type': 'cat:extractor',
+│ │ +                        'extractor_id': '%sextractors/%s/%s' %
+│ │ +                                        (server, self.extractor_info['name'], self.extractor_info['version']),
+│ │ +                        'version': self.extractor_info['version'],
+│ │ +                        'name': self.extractor_info['name']
+│ │ +                    },
+│ │ +                    'content': content
+│ │ +                }
+│ │ +                return md
+│ │      def _check_key(self, key, obj):
+│ │          if key in obj:
+│ │              return True
+│ │  
+│ │          if isinstance(obj, dict):
+│ │              for x in obj.values():
+│ │                  if self._check_key(key, x):
+│ │ @@ -285,15 +325,15 @@
+│ │          - download : the input file will be downloaded and process_message is called
+│ │          - bypass : the file is NOT downloaded but process_message is still called
+│ │  
+│ │          Args:
+│ │              connector (Connector): the connector that received the message
+│ │              parameters (dict): the message received
+│ │          """
+│ │ -
+│ │ +        print(clowder_version)
+│ │          logging.getLogger(__name__).debug("default check message : " + str(parameters))
+│ │          return CheckMessage.download
+│ │  
+│ │      # pylint: disable=no-self-use,unused-argument
+│ │      def process_message(self, connector, host, secret_key, resource, parameters):
+│ │          """Process the message and send results back to clowder.
+│ │   --- pyclowder-2.7.0/pyclowder/files.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/files.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -7,118 +7,108 @@
+│ │  import logging
+│ │  import os
+│ │  import tempfile
+│ │  
+│ │  import requests
+│ │  from requests_toolbelt.multipart.encoder import MultipartEncoder
+│ │  from urllib3.filepost import encode_multipart_formdata
+│ │ -
+│ │ +from pyclowder.client import ClowderClient
+│ │  from pyclowder.datasets import get_file_list
+│ │  from pyclowder.collections import get_datasets, get_child_collections
+│ │ +import pyclowder.api.v2.files as v2files
+│ │ +import pyclowder.api.v1.files as v1files
+│ │ +
+│ │ +clowder_version = int(os.getenv('CLOWDER_VERSION', '1'))
+│ │  
+│ │  # Some sources of urllib3 support warning suppression, but not all
+│ │  try:
+│ │      from urllib3 import disable_warnings
+│ │      from requests.packages.urllib3.exceptions import InsecureRequestWarning
+│ │      requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+│ │  except:
+│ │      pass
+│ │  
+│ │ +def get_download_url(connector, host, key, fileid, intermediatefileid=None, ext=""):
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        download_url = v2files.get_download_url(connector, client, fileid, intermediatefileid, ext)
+│ │ +    else:
+│ │ +        download_url = v1files.get_download_url(connector, client, fileid, intermediatefileid, ext)
+│ │ +    return download_url
+│ │  
+│ │  # pylint: disable=too-many-arguments
+│ │  def download(connector, host, key, fileid, intermediatefileid=None, ext="", tracking=True):
+│ │      """Download file to be processed from Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file that is currently being processed
+│ │      intermediatefileid -- either same as fileid, or the intermediate file to be used
+│ │      ext -- the file extension, the downloaded file will end with this extension
+│ │      tracking -- should the download action be tracked
+│ │      """
+│ │ -
+│ │ -    connector.message_process({"type": "file", "id": fileid}, "Downloading file.")
+│ │ -
+│ │ -    # TODO: intermediateid doesn't really seem to be used here, can we remove entirely?
+│ │ -    if not intermediatefileid:
+│ │ -        intermediatefileid = fileid
+│ │ -
+│ │ -    url = '%sapi/files/%s?key=%s&tracking=%s' % (host, intermediatefileid, key, str(tracking).lower())
+│ │ -    result = connector.get(url, stream=True, verify=connector.ssl_verify if connector else True)
+│ │ -
+│ │ -    (inputfile, inputfilename) = tempfile.mkstemp(suffix=ext)
+│ │ -
+│ │ -    try:
+│ │ -        with os.fdopen(inputfile, "wb") as outputfile:
+│ │ -            for chunk in result.iter_content(chunk_size=10*1024):
+│ │ -                outputfile.write(chunk)
+│ │ -        return inputfilename
+│ │ -    except Exception:
+│ │ -        os.remove(inputfilename)
+│ │ -        raise
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        inputfilename = v2files.download(connector, client, fileid, intermediatefileid, ext)
+│ │ +    else:
+│ │ +        inputfilename = v1files.download(connector, client, fileid, intermediatefileid, ext)
+│ │ +    return inputfilename
+│ │  
+│ │  def download_info(connector, host, key, fileid):
+│ │      """Download file summary metadata from Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file to fetch metadata of
+│ │      """
+│ │ -
+│ │ -    url = '%sapi/files/%s/metadata?key=%s' % (host, fileid, key)
+│ │ -
+│ │ -    # fetch data
+│ │ -    result = connector.get(url, stream=True, verify=connector.ssl_verify if connector else True)
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        result = v2files.download_info(connector, client, fileid)
+│ │ +    else:
+│ │ +        result = v1files.download_info(connector, client, fileid)
+│ │      return result.json()
+│ │  
+│ │  
+│ │  def download_metadata(connector, host, key, fileid, extractor=None):
+│ │      """Download file JSON-LD metadata from Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file to fetch metadata of
+│ │      extractor -- extractor name to filter results (if only one extractor's metadata is desired)
+│ │      """
+│ │ -
+│ │ -    filterstring = "" if extractor is None else "&extractor=%s" % extractor
+│ │ -    url = '%sapi/files/%s/metadata.jsonld?key=%s%s' % (host, fileid, key, filterstring)
+│ │ -
+│ │ -    # fetch data
+│ │ -    result = connector.get(url, stream=True, verify=connector.ssl_verify if connector else True)
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        result = v2files.download_metadata(connector, client, fileid, extractor)
+│ │ +    else:
+│ │ +        result = v1files.download_metadata(connector, client, fileid, extractor)
+│ │      return result.json()
+│ │  
+│ │  
+│ │  def submit_extraction(connector, host, key, fileid, extractorname):
+│ │      """Submit file for extraction by given extractor.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file UUID to submit
+│ │      extractorname -- registered name of extractor to trigger
+│ │      """
+│ │ -
+│ │ -    url = "%sapi/files/%s/extractions?key=%s" % (host, fileid, key)
+│ │ -
+│ │ -    result = connector.post(url,
+│ │ -                            headers={'Content-Type': 'application/json'},
+│ │ -                            data=json.dumps({"extractor": extractorname}),
+│ │ -                            verify=connector.ssl_verify if connector else True)
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        result = v2files.submit_extraction(connector, client, fileid, extractorname)
+│ │ +    else:
+│ │ +        result = v1files.submit_extraction(connector, client, fileid, extractorname)
+│ │      return result.json()
+│ │  
+│ │  
+│ │  def submit_extractions_by_dataset(connector, host, key, datasetid, extractorname, ext=False):
+│ │      """Manually trigger an extraction on all files in a dataset.
+│ │  
+│ │          This will iterate through all files in the given dataset and submit them to
+│ │ @@ -128,16 +118,16 @@
+│ │          connector -- connector information, used to get missing parameters and send status updates
+│ │          host -- the clowder host, including http and port, should end with a /
+│ │          key -- the secret key to login to clowder
+│ │          datasetid -- the dataset UUID to submit
+│ │          extractorname -- registered name of extractor to trigger
+│ │          ext -- extension to filter. e.g. 'tif' will only submit TIFF files for extraction.
+│ │      """
+│ │ -
+│ │ -    filelist = get_file_list(connector, host, key, datasetid)
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    filelist = get_file_list(connector, client, datasetid)
+│ │  
+│ │      for f in filelist:
+│ │          # Only submit files that end with given extension, if specified
+│ │          if ext and not f['filename'].endswith(ext):
+│ │              continue
+│ │  
+│ │          submit_extraction(connector, host, key, f['id'], extractorname)
+│ │ @@ -176,21 +166,19 @@
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file that is currently being processed
+│ │      metadata -- the metadata to be uploaded
+│ │      """
+│ │ -
+│ │ -    connector.message_process({"type": "file", "id": fileid}, "Uploading file metadata.")
+│ │ -
+│ │ -    headers = {'Content-Type': 'application/json'}
+│ │ -    url = '%sapi/files/%s/metadata.jsonld?key=%s' % (host, fileid, key)
+│ │ -    result = connector.post(url, headers=headers, data=json.dumps(metadata),
+│ │ -                            verify=connector.ssl_verify if connector else True)
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        v2files.upload_metadata(connector, client, fileid, metadata)
+│ │ +    else:
+│ │ +        v1files.upload_metadata(connector, client, fileid, metadata)
+│ │  
+│ │  
+│ │  # pylint: disable=too-many-arguments
+│ │  def upload_preview(connector, host, key, fileid, previewfile, previewmetadata=None, preview_mimetype=None):
+│ │      """Upload preview to Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │ @@ -200,42 +188,42 @@
+│ │      fileid -- the file that is currently being processed
+│ │      previewfile -- the file containing the preview
+│ │      previewmetadata -- any metadata to be associated with preview, can contain a section_id
+│ │                      to indicate the section this preview should be associated with.
+│ │      preview_mimetype -- (optional) MIME type of the preview file. By default, this is obtained from the
+│ │                      file itself and this parameter can be ignored. E.g. 'application/vnd.clowder+custom+xml'
+│ │      """
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │      connector.message_process({"type": "file", "id": fileid}, "Uploading file preview.")
+│ │  
+│ │      logger = logging.getLogger(__name__)
+│ │      headers = {'Content-Type': 'application/json'}
+│ │  
+│ │      # upload preview
+│ │ -    url = '%sapi/previews?key=%s' % (host, key)
+│ │ +    url = '%sapi/previews?key=%s' % (client.host, client.key)
+│ │      with open(previewfile, 'rb') as filebytes:
+│ │          # If a custom preview file MIME type is provided, use it to generate the preview file object.
+│ │          if preview_mimetype is not None:
+│ │              result = connector.post(url, files={"File": (os.path.basename(previewfile), filebytes, preview_mimetype)},
+│ │                                      verify=connector.ssl_verify if connector else True)
+│ │          else:
+│ │              result = connector.post(url, files={"File": filebytes}, verify=connector.ssl_verify if connector else True)
+│ │  
+│ │      previewid = result.json()['id']
+│ │      logger.debug("preview id = [%s]", previewid)
+│ │  
+│ │      # associate uploaded preview with orginal file
+│ │      if fileid and not (previewmetadata and 'section_id' in previewmetadata and previewmetadata['section_id']):
+│ │ -        url = '%sapi/files/%s/previews/%s?key=%s' % (host, fileid, previewid, key)
+│ │ +        url = '%sapi/files/%s/previews/%s?key=%s' % (client.host, fileid, previewid, client.key)
+│ │          result = connector.post(url, headers=headers, data=json.dumps({}),
+│ │                                  verify=connector.ssl_verify if connector else True)
+│ │  
+│ │      # associate metadata with preview
+│ │      if previewmetadata is not None:
+│ │ -        url = '%sapi/previews/%s/metadata?key=%s' % (host, previewid, key)
+│ │ +        url = '%sapi/previews/%s/metadata?key=%s' % (client.host, previewid, client.key)
+│ │          result = connector.post(url, headers=headers, data=json.dumps(previewmetadata),
+│ │                                  verify=connector.ssl_verify if connector else True)
+│ │  
+│ │      return previewid
+│ │  
+│ │  
+│ │  def upload_tags(connector, host, key, fileid, tags):
+│ │ @@ -244,47 +232,47 @@
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file that is currently being processed
+│ │      tags -- the tags to be uploaded
+│ │      """
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │      connector.message_process({"type": "file", "id": fileid}, "Uploading file tags.")
+│ │  
+│ │      headers = {'Content-Type': 'application/json'}
+│ │ -    url = '%sapi/files/%s/tags?key=%s' % (host, fileid, key)
+│ │ +    url = '%sapi/files/%s/tags?key=%s' % (client.host, fileid, client.key)
+│ │      result = connector.post(url, headers=headers, data=json.dumps(tags),
+│ │                              verify=connector.ssl_verify if connector else True)
+│ │  
+│ │  
+│ │  def upload_thumbnail(connector, host, key, fileid, thumbnail):
+│ │      """Upload thumbnail to Clowder.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      fileid -- the file that the thumbnail should be associated with
+│ │      thumbnail -- the file containing the thumbnail
+│ │      """
+│ │ -
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │      logger = logging.getLogger(__name__)
+│ │ -    url = host + 'api/fileThumbnail?key=' + key
+│ │ +    url = client.host + 'api/fileThumbnail?key=' + client.key
+│ │  
+│ │      # upload preview
+│ │      with open(thumbnail, 'rb') as inputfile:
+│ │          result = connector.post(url, files={"File": inputfile}, verify=connector.ssl_verify if connector else True)
+│ │      thumbnailid = result.json()['id']
+│ │      logger.debug("thumbnail id = [%s]", thumbnailid)
+│ │  
+│ │      # associate uploaded preview with orginal file/dataset
+│ │      if fileid:
+│ │          headers = {'Content-Type': 'application/json'}
+│ │ -        url = host + 'api/files/' + fileid + '/thumbnails/' + thumbnailid + '?key=' + key
+│ │ +        url = client.host + 'api/files/' + fileid + '/thumbnails/' + thumbnailid + '?key=' + client.key
+│ │          connector.post(url, headers=headers, data=json.dumps({}), verify=connector.ssl_verify if connector else True)
+│ │  
+│ │      return thumbnailid
+│ │  
+│ │  
+│ │  def upload_to_dataset(connector, host, key, datasetid, filepath, check_duplicate=False):
+│ │      """Upload file to existing Clowder dataset.
+│ │ @@ -293,74 +281,58 @@
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      datasetid -- the dataset that the file should be associated with
+│ │      filepath -- path to file
+│ │      check_duplicate -- check if filename already exists in dataset and skip upload if so
+│ │      """
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        v2files.upload_to_dataset(connector, client, datasetid, filepath, check_duplicate)
+│ │ +    else:
+│ │ +        logger = logging.getLogger(__name__)
+│ │  
+│ │ -    logger = logging.getLogger(__name__)
+│ │ +        if check_duplicate:
+│ │ +            ds_files = get_file_list(connector, client, datasetid)
+│ │ +            for f in ds_files:
+│ │ +                if f['filename'] == os.path.basename(filepath):
+│ │ +                    logger.debug("found %s in dataset %s; not re-uploading" % (f['filename'], datasetid))
+│ │ +                    return None
+│ │  
+│ │ -    if check_duplicate:
+│ │ -        ds_files = get_file_list(connector, host, key, datasetid)
+│ │ -        for f in ds_files:
+│ │ -            if f['filename'] == os.path.basename(filepath):
+│ │ -                logger.debug("found %s in dataset %s; not re-uploading" % (f['filename'], datasetid))
+│ │ -                return None
+│ │ -
+│ │ -    for source_path in connector.mounted_paths:
+│ │ -        if filepath.startswith(connector.mounted_paths[source_path]):
+│ │ -            return _upload_to_dataset_local(connector, host, key, datasetid, filepath)
+│ │ -
+│ │ -    url = '%sapi/uploadToDataset/%s?key=%s' % (host, datasetid, key)
+│ │ -
+│ │ -    if os.path.exists(filepath):
+│ │ -        filename = os.path.basename(filepath)
+│ │ -        m = MultipartEncoder(
+│ │ -            fields={'file': (filename, open(filepath, 'rb'))}
+│ │ -        )
+│ │ -        result = connector.post(url, data=m, headers={'Content-Type': m.content_type},
+│ │ -                                verify=connector.ssl_verify if connector else True)
+│ │ +        for source_path in connector.mounted_paths:
+│ │ +            if filepath.startswith(connector.mounted_paths[source_path]):
+│ │ +                return _upload_to_dataset_local(connector, client.host, client.key, datasetid, filepath)
+│ │  
+│ │ -        uploadedfileid = result.json()['id']
+│ │ -        logger.debug("uploaded file id = [%s]", uploadedfileid)
+│ │ +        url = '%sapi/uploadToDataset/%s?key=%s' % (client.host, datasetid, client.key)
+│ │  
+│ │ -        return uploadedfileid
+│ │ -    else:
+│ │ -        logger.error("unable to upload file %s (not found)", filepath)
+│ │ +        if os.path.exists(filepath):
+│ │ +            filename = os.path.basename(filepath)
+│ │ +            m = MultipartEncoder(
+│ │ +                fields={'file': (filename, open(filepath, 'rb'))}
+│ │ +            )
+│ │ +            result = connector.post(url, data=m, headers={'Content-Type': m.content_type},
+│ │ +                                    verify=connector.ssl_verify if connector else True)
+│ │ +
+│ │ +            uploadedfileid = result.json()['id']
+│ │ +            logger.debug("uploaded file id = [%s]", uploadedfileid)
+│ │ +
+│ │ +            return uploadedfileid
+│ │ +        else:
+│ │ +            logger.error("unable to upload file %s (not found)", filepath)
+│ │  
+│ │  
+│ │  def _upload_to_dataset_local(connector, host, key, datasetid, filepath):
+│ │      """Upload file POINTER to existing Clowder dataset. Does not copy actual file bytes.
+│ │  
+│ │      Keyword arguments:
+│ │      connector -- connector information, used to get missing parameters and send status updates
+│ │      host -- the clowder host, including http and port, should end with a /
+│ │      key -- the secret key to login to clowder
+│ │      datasetid -- the dataset that the file should be associated with
+│ │      filepath -- path to file
+│ │      """
+│ │ -
+│ │ -    logger = logging.getLogger(__name__)
+│ │ -    url = '%sapi/uploadToDataset/%s?key=%s' % (host, datasetid, key)
+│ │ -
+│ │ -    if os.path.exists(filepath):
+│ │ -        # Replace local path with remote path before uploading
+│ │ -        for source_path in connector.mounted_paths:
+│ │ -            if filepath.startswith(connector.mounted_paths[source_path]):
+│ │ -                filepath = filepath.replace(connector.mounted_paths[source_path],
+│ │ -                                            source_path)
+│ │ -                break
+│ │ -
+│ │ -        filename = os.path.basename(filepath)
+│ │ -        m = MultipartEncoder(
+│ │ -            fields={'file': (filename, open(filepath, 'rb'))}
+│ │ -        )
+│ │ -        result = connector.post(url, data=m, headers={'Content-Type': m.content_type},
+│ │ -                                verify=connector.ssl_verify if connector else True)
+│ │ -
+│ │ -        uploadedfileid = result.json()['id']
+│ │ -        logger.debug("uploaded file id = [%s]", uploadedfileid)
+│ │ -
+│ │ -        return uploadedfileid
+│ │ +    client = ClowderClient(host=host, key=key)
+│ │ +    if clowder_version == 2:
+│ │ +        uploadedfileid = v2files._upload_to_dataset_local(connector, client, datasetid, filepath)
+│ │      else:
+│ │ -        logger.error("unable to upload local file %s (not found)", filepath)
+│ │ +        uploadedfileid = v1files._upload_to_dataset_local(connector, client, datasetid, filepath)
+│ │ +    return uploadedfileid
+│ │   --- pyclowder-2.7.0/pyclowder/geostreams.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/geostreams.py
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/pyclowder/sections.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/sections.py
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/pyclowder/utils.py
+│ ├── +++ pyclowder-3.0.0/pyclowder/utils.py
+│ │┄ Files identical despite different names
+│ │   --- pyclowder-2.7.0/pyclowder.egg-info/PKG-INFO
+│ ├── +++ pyclowder-3.0.0/pyclowder.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pyclowder
+│ │ -Version: 2.7.0
+│ │ +Version: 3.0.0
+│ │  Summary: Python SDK for the Clowder Data Management System
+│ │  Home-page: https://clowderframework.org
+│ │  Author: Rob Kooper
+│ │  Author-email: kooper@illinois.edu
+│ │  License: BSD
+│ │  Project-URL: Bug Reports, https://github.com/clowder-framework/pyclowder/issues
+│ │  Project-URL: Source, https://github.com/clowder-framework/pyclowder
+│ │   --- pyclowder-2.7.0/setup.py
+│ ├── +++ pyclowder-3.0.0/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  here = pathlib.Path(__file__).parent.resolve()
+│ │  
+│ │  # Get the long description from the README file
+│ │  long_description = (here / 'description.rst').read_text(encoding='utf-8')
+│ │  
+│ │  setup(
+│ │      name='pyclowder',
+│ │ -    version='2.7.0',
+│ │ +    version='3.0.0',
+│ │      description='Python SDK for the Clowder Data Management System',
+│ │      long_description=long_description,
+│ │  
+│ │      author='Rob Kooper',
+│ │      author_email='kooper@illinois.edu',
+│ │  
+│ │      url='https://clowderframework.org',

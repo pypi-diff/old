@@ -1,0 +1,517 @@
+--- tmp/amino.fix-2.3.5.4.tar.gz
++++ tmp/amino.fix-2.3.5.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "amino.fix-2.3.5.4.tar", last modified: Thu Jan 26 19:54:22 2023, max compression
+│ +gzip compressed data, was "amino.fix-2.3.5.5.tar", last modified: Thu Apr  6 18:06:10 2023, max compression
+│   --- amino.fix-2.3.5.4.tar
+├── +++ amino.fix-2.3.5.5.tar
+│ ├── file list
+│ │ @@ -1,32 +1,32 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-01-26 19:54:22.247561 amino.fix-2.3.5.4/
+│ │ --rw-rw-rw-   0        0        0     1089 2023-01-20 11:16:36.000000 amino.fix-2.3.5.4/LICENSE
+│ │ --rw-rw-rw-   0        0        0      620 2023-01-26 19:54:22.248561 amino.fix-2.3.5.4/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      212 2022-03-19 07:48:20.000000 amino.fix-2.3.5.4/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-01-26 19:54:22.078269 amino.fix-2.3.5.4/amino.fix.egg-info/
+│ │ --rw-rw-rw-   0        0        0      620 2023-01-26 19:54:21.000000 amino.fix-2.3.5.4/amino.fix.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      615 2023-01-26 19:54:21.000000 amino.fix-2.3.5.4/amino.fix.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-01-26 19:54:21.000000 amino.fix-2.3.5.4/amino.fix.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       79 2023-01-26 19:54:21.000000 amino.fix-2.3.5.4/amino.fix.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-01-26 19:54:21.000000 amino.fix-2.3.5.4/amino.fix.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-01-26 19:54:22.138849 amino.fix-2.3.5.4/aminofix/
+│ │ --rw-rw-rw-   0        0        0      715 2023-01-26 19:52:54.000000 amino.fix-2.3.5.4/aminofix/__init__.py
+│ │ --rw-rw-rw-   0        0        0    12887 2023-01-20 09:14:27.000000 amino.fix-2.3.5.4/aminofix/acm.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-01-26 19:54:22.193199 amino.fix-2.3.5.4/aminofix/asyncfix/
+│ │ --rw-rw-rw-   0        0        0      256 2023-01-20 07:25:50.000000 amino.fix-2.3.5.4/aminofix/asyncfix/__init__.py
+│ │ --rw-rw-rw-   0        0        0    13760 2023-01-20 07:25:50.000000 amino.fix-2.3.5.4/aminofix/asyncfix/acm.py
+│ │ --rw-rw-rw-   0        0        0    98032 2023-01-20 10:04:40.000000 amino.fix-2.3.5.4/aminofix/asyncfix/client.py
+│ │ --rw-rw-rw-   0        0        0    13192 2023-01-20 09:24:56.000000 amino.fix-2.3.5.4/aminofix/asyncfix/socket.py
+│ │ --rw-rw-rw-   0        0        0   110106 2023-01-20 10:04:15.000000 amino.fix-2.3.5.4/aminofix/asyncfix/sub_client.py
+│ │ --rw-rw-rw-   0        0        0   100219 2023-01-26 19:52:08.000000 amino.fix-2.3.5.4/aminofix/client.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-01-26 19:54:22.211010 amino.fix-2.3.5.4/aminofix/lib/
+│ │ --rw-rw-rw-   0        0        0        0 2023-01-20 07:25:50.000000 amino.fix-2.3.5.4/aminofix/lib/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-01-26 19:54:22.246651 amino.fix-2.3.5.4/aminofix/lib/util/
+│ │ --rw-rw-rw-   0        0        0       99 2023-01-20 09:15:29.000000 amino.fix-2.3.5.4/aminofix/lib/util/__init__.py
+│ │ --rw-rw-rw-   0        0        0    31646 2023-01-20 07:25:50.000000 amino.fix-2.3.5.4/aminofix/lib/util/exceptions.py
+│ │ --rw-rw-rw-   0        0        0     3884 2023-01-23 16:21:31.000000 amino.fix-2.3.5.4/aminofix/lib/util/headers.py
+│ │ --rw-rw-rw-   0        0        0     1215 2023-01-20 09:10:25.000000 amino.fix-2.3.5.4/aminofix/lib/util/helpers.py
+│ │ --rw-rw-rw-   0        0        0   198051 2023-01-20 07:25:50.000000 amino.fix-2.3.5.4/aminofix/lib/util/objects.py
+│ │ --rw-rw-rw-   0        0        0    13190 2023-01-20 09:13:24.000000 amino.fix-2.3.5.4/aminofix/socket.py
+│ │ --rw-rw-rw-   0        0        0   116826 2023-01-22 12:05:26.000000 amino.fix-2.3.5.4/aminofix/sub_client.py
+│ │ --rw-rw-rw-   0        0        0       42 2023-01-26 19:54:22.248561 amino.fix-2.3.5.4/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      920 2023-01-26 19:53:06.000000 amino.fix-2.3.5.4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 18:06:10.073481 amino.fix-2.3.5.5/
+│ │ +-rw-rw-rw-   0        0        0     1089 2023-01-20 11:16:36.000000 amino.fix-2.3.5.5/LICENSE
+│ │ +-rw-rw-rw-   0        0        0      620 2023-04-06 18:06:10.073481 amino.fix-2.3.5.5/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      212 2022-03-19 07:48:20.000000 amino.fix-2.3.5.5/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 18:06:09.889481 amino.fix-2.3.5.5/amino.fix.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      620 2023-04-06 18:06:09.000000 amino.fix-2.3.5.5/amino.fix.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      615 2023-04-06 18:06:09.000000 amino.fix-2.3.5.5/amino.fix.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 18:06:09.000000 amino.fix-2.3.5.5/amino.fix.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       79 2023-04-06 18:06:09.000000 amino.fix-2.3.5.5/amino.fix.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-06 18:06:09.000000 amino.fix-2.3.5.5/amino.fix.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 18:06:09.963482 amino.fix-2.3.5.5/aminofix/
+│ │ +-rw-rw-rw-   0        0        0      715 2023-04-06 18:03:23.000000 amino.fix-2.3.5.5/aminofix/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    12887 2023-01-20 09:14:27.000000 amino.fix-2.3.5.5/aminofix/acm.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 18:06:10.015482 amino.fix-2.3.5.5/aminofix/asyncfix/
+│ │ +-rw-rw-rw-   0        0        0      256 2023-01-20 07:25:50.000000 amino.fix-2.3.5.5/aminofix/asyncfix/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    13760 2023-01-20 07:25:50.000000 amino.fix-2.3.5.5/aminofix/asyncfix/acm.py
+│ │ +-rw-rw-rw-   0        0        0    98032 2023-01-20 10:04:40.000000 amino.fix-2.3.5.5/aminofix/asyncfix/client.py
+│ │ +-rw-rw-rw-   0        0        0    13192 2023-01-20 09:24:56.000000 amino.fix-2.3.5.5/aminofix/asyncfix/socket.py
+│ │ +-rw-rw-rw-   0        0        0   110680 2023-04-06 18:02:18.000000 amino.fix-2.3.5.5/aminofix/asyncfix/sub_client.py
+│ │ +-rw-rw-rw-   0        0        0   100219 2023-01-26 19:52:08.000000 amino.fix-2.3.5.5/aminofix/client.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 18:06:10.018481 amino.fix-2.3.5.5/aminofix/lib/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-01-20 07:25:50.000000 amino.fix-2.3.5.5/aminofix/lib/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 18:06:10.070482 amino.fix-2.3.5.5/aminofix/lib/util/
+│ │ +-rw-rw-rw-   0        0        0       99 2023-01-20 09:15:29.000000 amino.fix-2.3.5.5/aminofix/lib/util/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    31646 2023-01-20 07:25:50.000000 amino.fix-2.3.5.5/aminofix/lib/util/exceptions.py
+│ │ +-rw-rw-rw-   0        0        0     3884 2023-01-23 16:21:31.000000 amino.fix-2.3.5.5/aminofix/lib/util/headers.py
+│ │ +-rw-rw-rw-   0        0        0     1215 2023-01-20 09:10:25.000000 amino.fix-2.3.5.5/aminofix/lib/util/helpers.py
+│ │ +-rw-rw-rw-   0        0        0   198051 2023-01-20 07:25:50.000000 amino.fix-2.3.5.5/aminofix/lib/util/objects.py
+│ │ +-rw-rw-rw-   0        0        0    13190 2023-01-20 09:13:24.000000 amino.fix-2.3.5.5/aminofix/socket.py
+│ │ +-rw-rw-rw-   0        0        0   117552 2023-04-06 18:02:18.000000 amino.fix-2.3.5.5/aminofix/sub_client.py
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 18:06:10.074482 amino.fix-2.3.5.5/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      920 2023-04-06 18:05:08.000000 amino.fix-2.3.5.5/setup.py
+│ │   --- amino.fix-2.3.5.4/LICENSE
+│ ├── +++ amino.fix-2.3.5.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/PKG-INFO
+│ ├── +++ amino.fix-2.3.5.5/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: amino.fix
+│ │ -Version: 2.3.5.4
+│ │ +Version: 2.3.5.5
+│ │  Summary: Library for Amino. Discord - https://discord.gg/Bf3dpBRJHj
+│ │  Home-page: https://github.com/Minori100/Amino.fix
+│ │  Author: Minori
+│ │  Author-email: minorigithub@gmail.com
+│ │  License: MIT
+│ │  Keywords: aminoapps,amino.fix,amino,amino-bot,narvii,api,python,python3,python3.x,minori
+│ │  Platform: UNKNOWN
+│ │   --- amino.fix-2.3.5.4/amino.fix.egg-info/PKG-INFO
+│ ├── +++ amino.fix-2.3.5.5/amino.fix.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: amino.fix
+│ │ -Version: 2.3.5.4
+│ │ +Version: 2.3.5.5
+│ │  Summary: Library for Amino. Discord - https://discord.gg/Bf3dpBRJHj
+│ │  Home-page: https://github.com/Minori100/Amino.fix
+│ │  Author: Minori
+│ │  Author-email: minorigithub@gmail.com
+│ │  License: MIT
+│ │  Keywords: aminoapps,amino.fix,amino,amino-bot,narvii,api,python,python3,python3.x,minori
+│ │  Platform: UNKNOWN
+│ │   --- amino.fix-2.3.5.4/amino.fix.egg-info/SOURCES.txt
+│ ├── +++ amino.fix-2.3.5.5/amino.fix.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/__init__.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/__init__.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  __title__ = 'Amino.fix'
+│ │  __author__ = 'Minori'
+│ │  __license__ = 'MIT'
+│ │  __copyright__ = 'Copyright 2021-2023 Minori'
+│ │ -__version__ = '2.3.5.4'
+│ │ +__version__ = '2.3.5.5'
+│ │  
+│ │  from .acm import ACM
+│ │  from .client import Client
+│ │  from .sub_client import SubClient
+│ │  from .lib.util import exceptions, helpers, objects, headers
+│ │  from .asyncfix import acm, client, sub_client, socket
+│ │  from .socket import Callbacks, SocketHandler
+│ │   --- amino.fix-2.3.5.4/aminofix/acm.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/acm.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/asyncfix/acm.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/asyncfix/acm.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/asyncfix/client.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/asyncfix/client.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/asyncfix/socket.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/asyncfix/socket.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/asyncfix/sub_client.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/asyncfix/sub_client.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -27,16 +27,16 @@
+│ │          }
+│ │  
+│ │          if data: vc_headers["Content-Length"] = str(len(data))
+│ │          self.vc_headers = vc_headers
+│ │  
+│ │  
+│ │  class SubClient(client.Client):
+│ │ -    def __init__(self, comId: str = None, aminoId: str = None, *, profile: objects.UserProfile, deviceId: str = None):
+│ │ -        client.Client.__init__(self, deviceId=deviceId, sub=True)
+│ │ +    def __init__(self, comId: str = None, aminoId: str = None, *, profile: objects.UserProfile, deviceId: str = None, proxies: dict = None, certificatePath: str = None):
+│ │ +        client.Client.__init__(self, deviceId=deviceId, sub=True, proxies=proxies, certificatePath=certificatePath)
+│ │          self.vc_connect = False
+│ │          self.comId = comId
+│ │          self.aminoId = aminoId
+│ │          self.profile: objects.UserProfile = profile
+│ │          self.community: objects.Community
+│ │  
+│ │      def __await__(self):
+│ │ @@ -85,14 +85,21 @@
+│ │              else: return objects.InviteCode(json.loads(await response.text())["communityInvitation"]).InviteCode
+│ │  
+│ │      async def delete_invite_code(self, inviteId: str):
+│ │          async with self.session.delete(f"{self.api}/g/s-x{self.comId}/community/invitation/{inviteId}", headers=self.parse_headers()) as response:
+│ │              if response.status != 200: return exceptions.CheckException(await response.text())
+│ │              else: return response.status
+│ │  
+│ │ +    async def get_vip_users(self) -> objects.UserProfileList:
+│ │ +        async with self.session.get(f"{self.api}/{self.comId}/s/influencer", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath) as response:
+│ │ +            if response.status != 200:
+│ │ +                return exceptions.CheckException(await response.text())
+│ │ +            else: return objects.UserProfileList(json.loads(await response.text())["userProfileList"]).UserProfileList 
+│ │ +
+│ │ +
+│ │      async def post_blog(self, title: str, content: str, imageList: list = None, captionList: list = None, categoriesList: list = None, backgroundColor: str = None, fansOnly: bool = False, extensions: dict = None):
+│ │          mediaList = []
+│ │  
+│ │          if captionList is not None:
+│ │              for image, caption in zip(imageList, captionList):
+│ │                  mediaList.append([100, self.upload_media(image, "image"), caption])
+│ │   --- amino.fix-2.3.5.4/aminofix/client.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/client.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/lib/util/exceptions.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/lib/util/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/lib/util/headers.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/lib/util/headers.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/lib/util/helpers.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/lib/util/helpers.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/lib/util/objects.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/lib/util/objects.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/socket.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/socket.py
+│ │┄ Files identical despite different names
+│ │   --- amino.fix-2.3.5.4/aminofix/sub_client.py
+│ ├── +++ amino.fix-2.3.5.5/aminofix/sub_client.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -29,16 +29,16 @@
+│ │          }
+│ │  
+│ │          if data: vc_headers["Content-Length"] = str(len(data))
+│ │          self.vc_headers = vc_headers
+│ │  
+│ │  
+│ │  class SubClient(client.Client):
+│ │ -    def __init__(self, comId: str = None, aminoId: str = None, *, profile: objects.UserProfile, deviceId: str = None, autoDevice: bool = False):
+│ │ -        client.Client.__init__(self, deviceId=deviceId, sub=True)
+│ │ +    def __init__(self, comId: str = None, aminoId: str = None, *, profile: objects.UserProfile, deviceId: str = None, autoDevice: bool = False, proxies: dict = None, certificatePath: str = None):
+│ │ +        client.Client.__init__(self, deviceId=deviceId, sub=True, proxies=proxies, certificatePath=certificatePath)
+│ │          self.vc_connect = False
+│ │  
+│ │          if comId is not None:
+│ │              self.comId = comId
+│ │              self.community: objects.Community = self.get_community_info(comId)
+│ │  
+│ │          if aminoId is not None:
+│ │ @@ -48,42 +48,48 @@
+│ │  
+│ │          if comId is None and aminoId is None: raise exceptions.NoCommunity()
+│ │  
+│ │          try: self.profile: objects.UserProfile = self.get_user_info(userId=profile.userId)
+│ │          except AttributeError: raise exceptions.FailedLogin()
+│ │          except exceptions.UserUnavailable: pass
+│ │  
+│ │ -    def parse_headers(self, data: str = None, type: str = None):
+│ │ +    def parse_headers(self, data: str = None, type: str = None) -> dict:
+│ │          return headers.ApisHeaders(deviceId=gen_deviceId() if self.autoDevice else self.device_id, data=data, type=type).headers
+│ │  
+│ │ -    def get_invite_codes(self, status: str = "normal", start: int = 0, size: int = 25):
+│ │ +    def get_invite_codes(self, status: str = "normal", start: int = 0, size: int = 25) -> objects.InviteCodeList:
+│ │          response = self.session.get(f"{self.api}/g/s-x{self.comId}/community/invitation?status={status}&start={start}&size={size}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return objects.InviteCodeList(json.loads(response.text)["communityInvitationList"]).InviteCodeList
+│ │  
+│ │ -    def generate_invite_code(self, duration: int = 0, force: bool = True):
+│ │ +    def generate_invite_code(self, duration: int = 0, force: bool = True) -> objects.InviteCode:
+│ │          data = json.dumps({
+│ │              "duration": duration,
+│ │              "force": force,
+│ │              "timestamp": int(timestamp() * 1000)
+│ │          })
+│ │          
+│ │          response = self.session.post(f"{self.api}/g/s-x{self.comId}/community/invitation", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return objects.InviteCode(json.loads(response.text)["communityInvitation"]).InviteCode
+│ │  
+│ │ -    def delete_invite_code(self, inviteId: str):
+│ │ +    def get_vip_users(self) -> objects.UserProfileList:
+│ │ +        response = self.session.get(f"{self.api}/{self.comId}/s/influencer", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │ +        if response.status_code != 200:
+│ │ +            return exceptions.CheckException(response.text)
+│ │ +        else: return objects.UserProfileList(json.loads(response.text)["userProfileList"]).UserProfileList
+│ │ +
+│ │ +    def delete_invite_code(self, inviteId: str) -> int:
+│ │          response = self.session.delete(f"{self.api}/g/s-x{self.comId}/community/invitation/{inviteId}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def post_blog(self, title: str, content: str, imageList: list = None, captionList: list = None, categoriesList: list = None, backgroundColor: str = None, fansOnly: bool = False, extensions: dict = None, crash: bool = False):
+│ │ +    def post_blog(self, title: str, content: str, imageList: list = None, captionList: list = None, categoriesList: list = None, backgroundColor: str = None, fansOnly: bool = False, extensions: dict = None, crash: bool = False) -> int:
+│ │          mediaList = []
+│ │  
+│ │          if captionList is not None:
+│ │              for image, caption in zip(imageList, captionList):
+│ │                  mediaList.append([100, self.upload_media(image, "image"), caption])
+│ │  
+│ │          else:
+│ │ @@ -111,15 +117,15 @@
+│ │          data = json.dumps(data)
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/blog", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def post_wiki(self, title: str, content: str, icon: str = None, imageList: list = None, keywords: str = None, backgroundColor: str = None, fansOnly: bool = False):
+│ │ +    def post_wiki(self, title: str, content: str, icon: str = None, imageList: list = None, keywords: str = None, backgroundColor: str = None, fansOnly: bool = False) -> int:
+│ │          mediaList = []
+│ │  
+│ │          for image in imageList:
+│ │              mediaList.append([100, self.upload_media(image, "image"), None])
+│ │  
+│ │          data = {
+│ │              "label": title,
+│ │ @@ -136,15 +142,15 @@
+│ │          data = json.dumps(data)
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/item", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def edit_blog(self, blogId: str, title: str = None, content: str = None, imageList: list = None, categoriesList: list = None, backgroundColor: str = None, fansOnly: bool = False):
+│ │ +    def edit_blog(self, blogId: str, title: str = None, content: str = None, imageList: list = None, categoriesList: list = None, backgroundColor: str = None, fansOnly: bool = False) -> int:
+│ │          mediaList = []
+│ │  
+│ │          for image in imageList:
+│ │              mediaList.append([100, self.upload_media(image, "image"), None])
+│ │  
+│ │          data = {
+│ │              "address": None,
+│ │ @@ -163,27 +169,27 @@
+│ │          data = json.dumps(data)
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/blog/{blogId}", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def delete_blog(self, blogId: str):
+│ │ +    def delete_blog(self, blogId: str) -> int:
+│ │          response = self.session.delete(f"{self.api}/x{self.comId}/s/blog/{blogId}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def delete_wiki(self, wikiId: str):
+│ │ +    def delete_wiki(self, wikiId: str) -> int:
+│ │          response = self.session.delete(f"{self.api}/x{self.comId}/s/item/{wikiId}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def repost_blog(self, content: str = None, blogId: str = None, wikiId: str = None):
+│ │ +    def repost_blog(self, content: str = None, blogId: str = None, wikiId: str = None) -> int:
+│ │          if blogId is not None: refObjectId, refObjectType = blogId, 1
+│ │          elif wikiId is not None: refObjectId, refObjectType = wikiId, 2
+│ │          else: raise exceptions.SpecifyType()
+│ │  
+│ │          data = json.dumps({
+│ │              "content": content,
+│ │              "refObjectId": refObjectId,
+│ │ @@ -193,49 +199,49 @@
+│ │          })
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/blog", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def check_in(self, tz: int = -timezone // 1000):
+│ │ +    def check_in(self, tz: int = -timezone // 1000) -> int:
+│ │          data = json.dumps({
+│ │              "timezone": tz,
+│ │              "timestamp": int(timestamp() * 1000)
+│ │          })
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/check-in", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def repair_check_in(self, method: int = 0):
+│ │ +    def repair_check_in(self, method: int = 0) -> int:
+│ │          data = {"timestamp": int(timestamp() * 1000)}
+│ │          if method == 0: data["repairMethod"] = "1"  # Coins
+│ │          if method == 1: data["repairMethod"] = "2"  # Amino+
+│ │  
+│ │          data = json.dumps(data)
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/check-in/repair", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def lottery(self, tz: int = -timezone // 1000):
+│ │ +    def lottery(self, tz: int = -timezone // 1000) -> objects.LotteryLog:
+│ │          data = json.dumps({
+│ │              "timezone": tz,
+│ │              "timestamp": int(timestamp() * 1000)
+│ │          })
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/check-in/lottery", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return objects.LotteryLog(json.loads(response.text)["lotteryLog"]).LotteryLog
+│ │  
+│ │ -    def edit_profile(self, nickname: str = None, content: str = None, icon: BinaryIO = None, chatRequestPrivilege: str = None, imageList: list = None, captionList: list = None, backgroundImage: str = None, backgroundColor: str = None, titles: list = None, colors: list = None, defaultBubbleId: str = None):
+│ │ +    def edit_profile(self, nickname: str = None, content: str = None, icon: BinaryIO = None, chatRequestPrivilege: str = None, imageList: list = None, captionList: list = None, backgroundImage: str = None, backgroundColor: str = None, titles: list = None, colors: list = None, defaultBubbleId: str = None) -> int:
+│ │          mediaList = []
+│ │  
+│ │          data = {"timestamp": int(timestamp() * 1000)}
+│ │  
+│ │          if captionList is not None:
+│ │              for image, caption in zip(imageList, captionList):
+│ │                  mediaList.append([100, self.upload_media(image, "image"), caption])
+│ │ @@ -267,27 +273,27 @@
+│ │          data = json.dumps(data)
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/user-profile/{self.profile.userId}", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def vote_poll(self, blogId: str, optionId: str):
+│ │ +    def vote_poll(self, blogId: str, optionId: str) -> int:
+│ │          data = json.dumps({
+│ │              "value": 1,
+│ │              "eventSource": "PostDetailView",
+│ │              "timestamp": int(timestamp() * 1000)
+│ │          })
+│ │          
+│ │          response = self.session.post(f"{self.api}/x{self.comId}/s/blog/{blogId}/poll/option/{optionId}/vote", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def comment(self, message: str, userId: str = None, blogId: str = None, wikiId: str = None, replyTo: str = None, isGuest: bool = False):
+│ │ +    def comment(self, message: str, userId: str = None, blogId: str = None, wikiId: str = None, replyTo: str = None, isGuest: bool = False) -> int:
+│ │          data = {
+│ │              "content": message,
+│ │              "stickerId": None,
+│ │              "type": 0,
+│ │              "timestamp": int(timestamp() * 1000)
+│ │          }
+│ │  
+│ │ @@ -315,25 +321,25 @@
+│ │              response = self.session.post(f"{self.api}/x{self.comId}/s/item/{wikiId}/{comType}", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │  
+│ │          else: raise exceptions.SpecifyType()
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def delete_comment(self, commentId: str, userId: str = None, blogId: str = None, wikiId: str = None):
+│ │ +    def delete_comment(self, commentId: str, userId: str = None, blogId: str = None, wikiId: str = None) -> int:
+│ │          if userId: response = self.session.delete(f"{self.api}/x{self.comId}/s/user-profile/{userId}/comment/{commentId}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          elif blogId: response = self.session.delete(f"{self.api}/x{self.comId}/s/blog/{blogId}/comment/{commentId}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          elif wikiId: response = self.session.delete(f"{self.api}/x{self.comId}/s/item/{wikiId}/comment/{commentId}", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          else: raise exceptions.SpecifyType()
+│ │  
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def like_blog(self, blogId: Union[str, list] = None, wikiId: str = None):
+│ │ +    def like_blog(self, blogId: Union[str, list] = None, wikiId: str = None) -> int:
+│ │          """
+│ │          Like a Blog, Multiple Blogs or a Wiki.
+│ │  
+│ │          **Parameters**
+│ │              - **blogId** : ID of the Blog or List of IDs of the Blogs. (for Blogs)
+│ │              - **wikiId** : ID of the Wiki. (for Wikis)
+│ │  
+│ │ @@ -369,24 +375,24 @@
+│ │              response = self.session.post(f"{self.api}/x{self. comId}/s/item/{wikiId}/vote?cv=1.2", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │  
+│ │          else: raise exceptions.SpecifyType()
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def unlike_blog(self, blogId: str = None, wikiId: str = None):
+│ │ +    def unlike_blog(self, blogId: str = None, wikiId: str = None) -> int:
+│ │          if blogId: response = self.session.delete(f"{self.api}/x{self.comId}/s/blog/{blogId}/vote?eventSource=UserProfileView", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          elif wikiId: response = self.session.delete(f"{self.api}/x{self.comId}/s/item/{wikiId}/vote?eventSource=PostDetailView", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          else: raise exceptions.SpecifyType()
+│ │  
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def like_comment(self, commentId: str, userId: str = None, blogId: str = None, wikiId: str = None):
+│ │ +    def like_comment(self, commentId: str, userId: str = None, blogId: str = None, wikiId: str = None) -> int:
+│ │          data = {
+│ │              "value": 1,
+│ │              "timestamp": int(timestamp() * 1000)
+│ │          }
+│ │  
+│ │          if userId:
+│ │              data["eventSource"] = "UserProfileView"
+│ │ @@ -407,15 +413,15 @@
+│ │              response = self.session.post(f"{self.api}/x{self.comId}/s/item/{wikiId}/comment/{commentId}/g-vote?cv=1.2&value=1", headers=self.parse_headers(data=data), data=data, proxies=self.proxies, verify=self.certificatePath)
+│ │  
+│ │          else: raise exceptions.SpecifyType()
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │          else: return response.status_code
+│ │  
+│ │ -    def unlike_comment(self, commentId: str, userId: str = None, blogId: str = None, wikiId: str = None):
+│ │ +    def unlike_comment(self, commentId: str, userId: str = None, blogId: str = None, wikiId: str = None) -> int:
+│ │          if userId: response = self.session.delete(f"{self.api}/x{self.comId}/s/user-profile/{userId}/comment/{commentId}/g-vote?eventSource=UserProfileView", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          elif blogId: response = self.session.delete(f"{self.api}/x{self.comId}/s/blog/{blogId}/comment/{commentId}/g-vote?eventSource=PostDetailView", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          elif wikiId: response = self.session.delete(f"{self.api}/x{self.comId}/s/item/{wikiId}/comment/{commentId}/g-vote?eventSource=PostDetailView", headers=self.parse_headers(), proxies=self.proxies, verify=self.certificatePath)
+│ │          else: raise exceptions.SpecifyType()
+│ │  
+│ │          if response.status_code != 200: 
+│ │              return exceptions.CheckException(response.text)
+│ │   --- amino.fix-2.3.5.4/setup.py
+│ ├── +++ amino.fix-2.3.5.5/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -13,15 +13,15 @@
+│ │  with open("README.md", "r") as stream:
+│ │      long_description = stream.read()
+│ │  
+│ │  setup(
+│ │      name="amino.fix",
+│ │      license="MIT",
+│ │      author="Minori",
+│ │ -    version="2.3.5.4",
+│ │ +    version="2.3.5.5",
+│ │      author_email="minorigithub@gmail.com",
+│ │      description="Library for Amino. Discord - https://discord.gg/Bf3dpBRJHj",
+│ │      url="https://github.com/Minori100/Amino.fix",
+│ │      packages=find_packages(),
+│ │      long_description=long_description,
+│ │      install_requires=requirements,
+│ │      keywords=[

@@ -1,0 +1,161 @@
+# Comparing `tmp/rewards-0.0.4.tar.gz` & `tmp/rewards-0.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rewards-0.0.4.tar", max compression
++gzip compressed data, was "rewards-0.0.5.tar", max compression
+```
+
+## Comparing `rewards-0.0.4.tar` & `rewards-0.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+--rw-r--r--   0        0        0    15251 2023-04-06 14:35:37.598050 rewards-0.0.4/README.md
+--rw-r--r--   0        0        0      457 2023-04-06 15:42:44.330493 rewards-0.0.4/pyproject.toml
+--rw-r--r--   0        0        0        5 2023-04-06 15:42:38.058461 rewards-0.0.4/rewards/VERSION
+--rw-r--r--   0        0        0      247 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/__init__.py
+--rw-r--r--   0        0        0     3867 2023-04-01 03:47:55.173271 rewards-0.0.4/rewards/agent.py
+--rw-r--r--   0        0        0       18 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/assets/CarRace/__init__.py
+--rw-r--r--   0        0        0    79384 2023-03-31 17:19:59.957981 rewards-0.0.4/rewards/assets/CarRace/car.png
+--rw-r--r--   0        0        0    60297 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/assets/CarRace/track-1.png
+--rw-r--r--   0        0        0    42293 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/assets/CarRace/track-2.png
+--rw-r--r--   0        0        0    49467 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/assets/CarRace/track-3.png
+--rw-r--r--   0        0        0       18 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/assets/__init__.py
+--rw-r--r--   0        0        0        0 2023-04-02 06:50:32.365576 rewards-0.0.4/rewards/envs/__init__.py
+--rw-r--r--   0        0        0    15306 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/envs/car.py
+--rw-r--r--   0        0        0     2634 2023-04-01 03:47:55.173271 rewards-0.0.4/rewards/models.py
+--rw-r--r--   0        0        0     5936 2023-04-06 14:35:37.602050 rewards-0.0.4/rewards/trainer.py
+--rw-r--r--   0        0        0     6109 2023-04-06 15:42:25.954399 rewards-0.0.4/rewards/workflow.py
+--rw-r--r--   0        0        0    15940 1970-01-01 00:00:00.000000 rewards-0.0.4/PKG-INFO
++-rw-r--r--   0        0        0    15251 2023-04-06 14:35:37.598050 rewards-0.0.5/README.md
++-rw-r--r--   0        0        0      457 2023-04-06 18:04:16.041532 rewards-0.0.5/pyproject.toml
++-rw-r--r--   0        0        0        5 2023-04-06 15:42:38.058461 rewards-0.0.5/rewards/VERSION
++-rw-r--r--   0        0        0      247 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/__init__.py
++-rw-r--r--   0        0        0     3867 2023-04-01 03:47:55.173271 rewards-0.0.5/rewards/agent.py
++-rw-r--r--   0        0        0       18 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/assets/CarRace/__init__.py
++-rw-r--r--   0        0        0    79384 2023-03-31 17:19:59.957981 rewards-0.0.5/rewards/assets/CarRace/car.png
++-rw-r--r--   0        0        0    60297 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/assets/CarRace/track-1.png
++-rw-r--r--   0        0        0    42293 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/assets/CarRace/track-2.png
++-rw-r--r--   0        0        0    49467 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/assets/CarRace/track-3.png
++-rw-r--r--   0        0        0       18 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/assets/__init__.py
++-rw-r--r--   0        0        0        0 2023-04-02 06:50:32.365576 rewards-0.0.5/rewards/envs/__init__.py
++-rw-r--r--   0        0        0    15306 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/envs/car.py
++-rw-r--r--   0        0        0     2679 2023-04-06 17:59:58.902994 rewards-0.0.5/rewards/models.py
++-rw-r--r--   0        0        0     5936 2023-04-06 14:35:37.602050 rewards-0.0.5/rewards/trainer.py
++-rw-r--r--   0        0        0     6150 2023-04-06 18:01:07.763831 rewards-0.0.5/rewards/workflow.py
++-rw-r--r--   0        0        0    15940 1970-01-01 00:00:00.000000 rewards-0.0.5/PKG-INFO
+```
+
+### Comparing `rewards-0.0.4/README.md` & `rewards-0.0.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/agent.py` & `rewards-0.0.5/rewards/agent.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/assets/CarRace/car.png` & `rewards-0.0.5/rewards/assets/CarRace/car.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/assets/CarRace/track-1.png` & `rewards-0.0.5/rewards/assets/CarRace/track-1.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/assets/CarRace/track-2.png` & `rewards-0.0.5/rewards/assets/CarRace/track-2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/assets/CarRace/track-3.png` & `rewards-0.0.5/rewards/assets/CarRace/track-3.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/envs/car.py` & `rewards-0.0.5/rewards/envs/car.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/models.py` & `rewards-0.0.5/rewards/models.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ import os
++import datetime 
+ from typing import List, Optional
+ 
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
+ import torch.optim as optim
+ 
+@@ -12,15 +13,15 @@
+     Base Class for all the models that will be added from here and inherited from this class.
+     """
+ 
+     def __init__(self) -> None:
+         super(DeepNet, self).__init__()
+ 
+     def save(
+-        self, filename: str = "model.pth", folder_path: Optional[str] = None
++        self, filename: str = f"model_{datetime.datetime.now()}_.pth", folder_path: Optional[str] = None
+     ) -> None:
+         """
+         Save the model to a file.
+ 
+         Args:
+             filename (str, optional): The file name. Defaults to "model.pth".
+             folder_path (str, optional): The folder path to save the model. Defaults to "None".
+```
+
+### Comparing `rewards-0.0.4/rewards/trainer.py` & `rewards-0.0.5/rewards/trainer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.4/rewards/workflow.py` & `rewards-0.0.5/rewards/workflow.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -161,15 +161,15 @@
+ 
+                 if done:
+                     self.game.initialize()
+                     self.agent.n_games += 1
+                     self.agent.train_long_memory()
+ 
+                     if score > record:
+-                        self.agent.model.save()
++                        self.agent.model.save(folder_path = self.config.CHECKPOINT_PATH)
+                         record = score
+ 
+                     total_score += score
+ 
+                     if self.agent.n_games != 0 and self.config.ENABLE_WANDB:
+                         self.run.log(
+                             {
+```
+
+### Comparing `rewards-0.0.4/PKG-INFO` & `rewards-0.0.5/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rewards
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: Start learning about RL and make model and envs in minutes in just few lines of code
+ License: MIT
+ Author: rewards.ai
+ Requires-Python: >=3.10,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.10
+```
+

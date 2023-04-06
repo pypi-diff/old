@@ -1,0 +1,305 @@
+--- tmp/galaxy_importer-0.4.8.tar.gz
++++ tmp/galaxy_importer-0.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "galaxy_importer-0.4.8.tar", last modified: Thu Apr  6 18:03:10 2023, max compression
+│ +gzip compressed data, was "galaxy_importer-0.5.0.tar", last modified: Mon Apr  3 14:21:12 2023, max compression
+│   --- galaxy_importer-0.4.8.tar
+├── +++ galaxy_importer-0.5.0.tar
+│ ├── file list
+│ │ @@ -1,51 +1,51 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2590 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2130 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.490329 galaxy_importer-0.4.8/galaxy_importer/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer/ansible_test/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4297 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/local_image_build.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1234 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/Dockerfile
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1699 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/entrypoint.sh
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      727 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/job_template.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1214 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1338 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2713 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/local_ansible_test.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2285 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/local_image.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7395 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/openshift_job.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5981 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/collection.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2948 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3509 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2085 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4534 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/finder.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer/loaders/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      421 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/loaders/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14010 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/loaders/collection.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8926 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/loaders/content.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5601 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/loaders/doc_string.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2462 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/loaders/runtime_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3999 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/main.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14933 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/schema.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1997 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/chksums.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4182 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/markup.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      532 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/requires_ansible_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20873 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/spdx_licenses.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1191 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/spdx_licenses.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      252 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/galaxy_importer/utils/string_utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:03:10.494329 galaxy_importer-0.4.8/galaxy_importer.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2590 2023-04-06 18:03:10.000000 galaxy_importer-0.4.8/galaxy_importer.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1477 2023-04-06 18:03:10.000000 galaxy_importer-0.4.8/galaxy_importer.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:03:10.000000 galaxy_importer-0.4.8/galaxy_importer.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      360 2023-04-06 18:03:10.000000 galaxy_importer-0.4.8/galaxy_importer.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       16 2023-04-06 18:03:10.000000 galaxy_importer-0.4.8/galaxy_importer.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      252 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1135 2023-04-06 18:03:10.498329 galaxy_importer-0.4.8/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      171 2023-04-06 18:03:01.000000 galaxy_importer-0.4.8/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.843355 galaxy_importer-0.5.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2590 2023-04-03 14:21:12.843355 galaxy_importer-0.5.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2130 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.839355 galaxy_importer-0.5.0/galaxy_importer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.839355 galaxy_importer-0.5.0/galaxy_importer/ansible_test/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.839355 galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4297 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/local_image_build.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.839355 galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1234 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/Dockerfile
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1699 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/entrypoint.sh
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      727 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/job_template.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.839355 galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1214 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1338 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2713 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/local_ansible_test.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2285 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/local_image.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7395 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/openshift_job.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5981 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/collection.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2948 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3509 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2085 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4534 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/finder.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.843355 galaxy_importer-0.5.0/galaxy_importer/loaders/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      421 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/loaders/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13933 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/loaders/collection.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8926 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/loaders/content.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5601 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/loaders/doc_string.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2462 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/loaders/runtime_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3999 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/main.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14934 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/schema.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.843355 galaxy_importer-0.5.0/galaxy_importer/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      679 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1997 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/chksums.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4182 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/markup.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      532 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/requires_ansible_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20873 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/spdx_licenses.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1191 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/spdx_licenses.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      252 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/galaxy_importer/utils/string_utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 14:21:12.839355 galaxy_importer-0.5.0/galaxy_importer.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2590 2023-04-03 14:21:12.000000 galaxy_importer-0.5.0/galaxy_importer.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1477 2023-04-03 14:21:12.000000 galaxy_importer-0.5.0/galaxy_importer.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 14:21:12.000000 galaxy_importer-0.5.0/galaxy_importer.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      360 2023-04-03 14:21:12.000000 galaxy_importer-0.5.0/galaxy_importer.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       16 2023-04-03 14:21:12.000000 galaxy_importer-0.5.0/galaxy_importer.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      252 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1135 2023-04-03 14:21:12.843355 galaxy_importer-0.5.0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      171 2023-04-03 14:21:01.000000 galaxy_importer-0.5.0/setup.py
+│ │   --- galaxy_importer-0.4.8/LICENSE
+│ ├── +++ galaxy_importer-0.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/PKG-INFO
+│ ├── +++ galaxy_importer-0.5.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: galaxy_importer
+│ │ -Version: 0.4.8
+│ │ +Version: 0.5.0
+│ │  Summary: Galaxy content importer
+│ │  Home-page: https://github.com/ansible/galaxy-importer
+│ │  Author: Red Hat, Inc.
+│ │  Author-email: info@ansible.com
+│ │  License: Apache-2.0
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- galaxy_importer-0.4.8/README.md
+│ ├── +++ galaxy_importer-0.5.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/__init__.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/__init__.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/local_image_build.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/local_image_build.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/Dockerfile
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/Dockerfile
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/entrypoint.sh
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/entrypoint.sh
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/job_template.yaml
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/job_template.yaml
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/__init__.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/base.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/base.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/local_ansible_test.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/local_ansible_test.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/local_image.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/local_image.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/openshift_job.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/openshift_job.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/collection.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/collection.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/config.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/config.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/constants.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/constants.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/exceptions.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/finder.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/finder.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/loaders/collection.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/loaders/collection.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -15,18 +15,15 @@
+│ │  # You should have received a copy of the Apache License
+│ │  # along with Galaxy.  If not, see <http://www.apache.org/licenses/>.
+│ │  
+│ │  import logging
+│ │  import os
+│ │  import re
+│ │  
+│ │ -try:
+│ │ -    from ansible_builder import introspect
+│ │ -except ImportError:
+│ │ -    from ansible_builder._target_scripts import introspect
+│ │ +import ansible_builder.introspect
+│ │  
+│ │  from galaxy_importer import exceptions as exc
+│ │  from galaxy_importer.finder import ContentFinder, FileWalker
+│ │  from galaxy_importer import loaders
+│ │  from galaxy_importer import schema
+│ │  from galaxy_importer.utils import markup as markup_utils
+│ │  from galaxy_importer.utils import chksums
+│ │ @@ -141,15 +138,15 @@
+│ │          """Check for python deps file and system deps file if they are listed in
+│ │          meta/execution-environment.yml, and log if listed files are not found
+│ │  
+│ │          Method excluded from pytest coverage, test exist outside repo via iqe.
+│ │          """
+│ │  
+│ │          try:
+│ │ -            python_deps, system_deps = introspect.process_collection(self.path)
+│ │ +            python_deps, system_deps = ansible_builder.introspect.process_collection(self.path)
+│ │          except FileNotFoundError as e:
+│ │              self.log.error(
+│ │                  f"Error when checking meta/execution-environment.yml for dependency files: {e}"
+│ │              )
+│ │  
+│ │      def _load_manifest(self):
+│ │          manifest_file = os.path.join(self.path, "MANIFEST.json")
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/loaders/content.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/loaders/content.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/loaders/doc_string.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/loaders/doc_string.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/loaders/runtime_file.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/loaders/runtime_file.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/main.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/main.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/schema.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/schema.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -61,14 +61,15 @@
+│ │  _FILENAME_RE = re.compile(
+│ │      r"^(?P<namespace>\w+)-(?P<name>\w+)-" r"(?P<version>[0-9a-zA-Z.+-]+)\.tar\.gz$"
+│ │  )
+│ │  
+│ │  
+│ │  @attr.s(slots=True)
+│ │  class CollectionFilename(object):
+│ │ +
+│ │      namespace = attr.ib()
+│ │      name = attr.ib()
+│ │      version = attr.ib(converter=semantic_version.Version)
+│ │  
+│ │      def __str__(self):
+│ │          return f"{self.namespace}-{self.name}-{self.version}.tar.gz"
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/utils/__init__.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/utils/chksums.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/utils/chksums.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/utils/markup.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/utils/markup.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/utils/requires_ansible_version.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/utils/requires_ansible_version.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/utils/spdx_licenses.json
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/utils/spdx_licenses.json
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer/utils/spdx_licenses.py
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer/utils/spdx_licenses.py
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/galaxy_importer.egg-info/PKG-INFO
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: galaxy-importer
+│ │ -Version: 0.4.8
+│ │ +Version: 0.5.0
+│ │  Summary: Galaxy content importer
+│ │  Home-page: https://github.com/ansible/galaxy-importer
+│ │  Author: Red Hat, Inc.
+│ │  Author-email: info@ansible.com
+│ │  License: Apache-2.0
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- galaxy_importer-0.4.8/galaxy_importer.egg-info/SOURCES.txt
+│ ├── +++ galaxy_importer-0.5.0/galaxy_importer.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- galaxy_importer-0.4.8/setup.cfg
+│ ├── +++ galaxy_importer-0.5.0/setup.cfg
+│ │┄ Files 8% similar despite different names
+│ │ @@ -41,14 +41,14 @@
+│ │  galaxy_importer = 
+│ │  	utils/spdx_licenses.json
+│ │  	ansible_test/job_template.yaml
+│ │  	ansible_test/container/Dockerfile
+│ │  	ansible_test/container/entrypoint.sh
+│ │  
+│ │  [coverage:report]
+│ │ -fail_under = 95.50
+│ │ +fail_under = 95.57
+│ │  precision = 2
+│ │  
+│ │  [egg_info]
+│ │  tag_build = 
+│ │  tag_date = 0

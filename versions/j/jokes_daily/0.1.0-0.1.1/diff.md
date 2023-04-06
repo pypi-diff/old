@@ -1,0 +1,116 @@
+# Comparing `tmp/jokes_daily-0.1.0.tar.gz` & `tmp/jokes_daily-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jokes_daily-0.1.0.tar", last modified: Thu Apr  6 17:54:23 2023, max compression
++gzip compressed data, was "jokes_daily-0.1.1.tar", last modified: Thu Apr  6 18:01:37 2023, max compression
+```
+
+## Comparing `jokes_daily-0.1.0.tar` & `jokes_daily-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+--rw-r--r--   0        0        0     1078 2023-04-02 11:19:30.759600 jokes_daily-0.1.0/LICENSE
+--rw-r--r--   0        0        0      634 2023-04-02 13:36:03.447449 jokes_daily-0.1.0/docs/Makefile
+--rw-r--r--   0        0        0       32 2023-04-02 13:53:22.369921 jokes_daily-0.1.0/docs/cli.rst
+--rw-r--r--   0        0        0     1252 2023-04-02 13:52:56.663718 jokes_daily-0.1.0/docs/conf.py
+--rw-r--r--   0        0        0       33 2023-04-02 13:53:26.860605 jokes_daily-0.1.0/docs/core.rst
+--rw-r--r--   0        0        0      470 2023-04-02 14:02:07.259560 jokes_daily-0.1.0/docs/index.rst
+--rw-r--r--   0        0        0      800 2023-04-02 13:36:03.449124 jokes_daily-0.1.0/docs/make.bat
+--rw-r--r--   0        0        0      596 2023-04-02 14:18:20.616636 jokes_daily-0.1.0/docs/quickstart.rst
+--rw-r--r--   0        0        0      175 2023-04-02 11:03:34.505091 jokes_daily-0.1.0/jokes_daily/__init__.py
+--rw-r--r--   0        0        0      552 2023-04-02 11:30:44.960506 jokes_daily-0.1.0/jokes_daily/cli.py
+--rw-r--r--   0        0        0     1305 2023-04-02 11:03:10.492725 jokes_daily-0.1.0/jokes_daily/core.py
+--rw-r--r--   0        0        0      497 2023-04-06 17:54:14.200559 jokes_daily-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0      509 2023-04-06 17:54:12.278810 jokes_daily-0.1.0/readme.md
+--rw-r--r--   0        0        0      906 1970-01-01 00:00:00.000000 jokes_daily-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1078 2023-04-02 11:19:30.759600 jokes_daily-0.1.1/LICENSE
++-rw-r--r--   0        0        0      634 2023-04-02 13:36:03.447449 jokes_daily-0.1.1/docs/Makefile
++-rw-r--r--   0        0        0       32 2023-04-02 13:53:22.369921 jokes_daily-0.1.1/docs/cli.rst
++-rw-r--r--   0        0        0     1252 2023-04-02 13:52:56.663718 jokes_daily-0.1.1/docs/conf.py
++-rw-r--r--   0        0        0       33 2023-04-02 13:53:26.860605 jokes_daily-0.1.1/docs/core.rst
++-rw-r--r--   0        0        0      470 2023-04-02 14:02:07.259560 jokes_daily-0.1.1/docs/index.rst
++-rw-r--r--   0        0        0      800 2023-04-02 13:36:03.449124 jokes_daily-0.1.1/docs/make.bat
++-rw-r--r--   0        0        0      596 2023-04-02 14:18:20.616636 jokes_daily-0.1.1/docs/quickstart.rst
++-rw-r--r--   0        0        0      160 2023-04-06 17:58:48.805269 jokes_daily-0.1.1/jokes_daily/__init__.py
++-rw-r--r--   0        0        0      552 2023-04-02 11:30:44.960506 jokes_daily-0.1.1/jokes_daily/cli.py
++-rw-r--r--   0        0        0     1305 2023-04-02 11:03:10.492725 jokes_daily-0.1.1/jokes_daily/core.py
++-rw-r--r--   0        0        0      497 2023-04-06 17:58:55.190287 jokes_daily-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0      689 2023-04-06 18:00:33.730243 jokes_daily-0.1.1/readme.md
++-rw-r--r--   0        0        0     1071 1970-01-01 00:00:00.000000 jokes_daily-0.1.1/PKG-INFO
+```
+
+### Comparing `jokes_daily-0.1.0/LICENSE` & `jokes_daily-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/docs/Makefile` & `jokes_daily-0.1.1/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/docs/conf.py` & `jokes_daily-0.1.1/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/docs/make.bat` & `jokes_daily-0.1.1/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/docs/quickstart.rst` & `jokes_daily-0.1.1/docs/quickstart.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/jokes_daily/cli.py` & `jokes_daily-0.1.1/jokes_daily/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/jokes_daily/core.py` & `jokes_daily-0.1.1/jokes_daily/core.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jokes_daily-0.1.0/PKG-INFO` & `jokes_daily-0.1.1/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: jokes_daily
+-Version: 0.1.0
+-Summary: jokes_daily is a python package for generate jokes everytime you open your terminal
++Version: 0.1.1
++Summary: jokes_daily is a python cli app to generate jokes from your terminal
+ Author-email: Nikhil Akki <nikhil.akki@outlook.com>
+ Description-Content-Type: text/markdown
+ Classifier: License :: OSI Approved :: MIT License
+ Project-URL: Home, https://github.com/nikhilakki/nikhilakki.in-blog-code-examples/tree/main/jokes_daily
+ 
+ # Jokes Daily is a simple CLI app 
+ 
+@@ -18,12 +18,21 @@
+ $ jokes_daily # default - two part jokes
+ # Q) What do you call a pile of kittens?
+ # A) A meowntain.
+ $ jokes_daily -s 1 # one line jokes
+ # I have a joke about trickle down economics, but 99% of you will never get it.
+ ```
+ 
++**Configure jokes_daily to generate a joke everytime you open your terminal**
++
++```bash
++# For BASH
++$ echo "jokes_daily" >> ~/.bashrc
++# For ZSH
++$ echo "jokes_daily" >> ~/.zshrc
++```
++
+ - Feel free to fork and tweak it to your liking.
+ - PRs are welcome! 
+ 
+ > Author - [Nikhil Akki](https://nikhilakki.in)
+```
+

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/galaxy_importer-0.4.8.tar.gz tmp/galaxy_importer-0.5.0.tar.gz --html versions/g/galaxy-importer/0.4.8-0.5.0/index.html --text versions/g/galaxy-importer/0.4.8-0.5.0/diff.txt --markdown versions/g/galaxy-importer/0.4.8-0.5.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">22.4 KB</span></div>
+  <div><span class="source">tmp/galaxy_importer-0.4.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/galaxy_importer-0.5.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">280 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;galaxy_importer-0.<del>4</del>.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;galaxy_importer-0.<ins>5</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Mon</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">22.1 KB</span></div>
+    <div><span class="source">galaxy_importer-0.4.8.tar</span> vs.</div>
+    <div id="galaxy_importer--.-.-.tar"><span class="source">galaxy_importer-0.5.0.tar</span>
+      <a class="anchor" href="#galaxy_importer--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">14.2 KB</span></div>
+      <div id="galaxy_importer--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 51 lines modified</td><td colspan="2">Offset 1, 51 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>843</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11356<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11356<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2590<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2590<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>843</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2130<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2130<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>490</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>839</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>839</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>679<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>679<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/builders/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>839</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/builders/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>679<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/builders/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>679<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/builders/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4297<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/builders/local_image_build.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4297<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/builders/local_image_build.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/container/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>839</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/container/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1234<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/container/Dockerfile</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1234<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/container/Dockerfile</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1699<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/container/entrypoint.sh</td><td class="diffline">14 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1699<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/container/entrypoint.sh</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>727<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/job_template.yaml</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>727<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/job_template.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/runners/</td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>839</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/runners/</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1214<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/runners/__init__.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1214<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/runners/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1338<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/runners/base.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1338<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/runners/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2713<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/runners/local_ansible_test.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2713<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/runners/local_ansible_test.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2285<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/runners/local_image.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2285<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/runners/local_image.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7395<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/ansible_test/runners/openshift_job.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7395<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/ansible_test/runners/openshift_job.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5981<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/collection.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5981<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/collection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2948<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/config.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2948<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3509<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/constants.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3509<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2085<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/exceptions.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2085<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4534<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/finder.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4534<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/finder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/loaders/</td><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>843</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/loaders/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>421<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/loaders/__init__.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>421<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/loaders/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>4010</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/loaders/collection.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>3933</ins><span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/loaders/collection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8926<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/loaders/content.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8926<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/loaders/content.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5601<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/loaders/doc_string.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5601<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/loaders/doc_string.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2462<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/loaders/runtime_file.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2462<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/loaders/runtime_file.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3999<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/main.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3999<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1493<del>3</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/schema.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1493<ins>4</ins><span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/schema.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/</td><td class="diffline">35 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>843</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>679<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/__init__.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>679<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1997<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/chksums.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1997<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/chksums.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4182<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/markup.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4182<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/markup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>532<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/requires_ansible_version.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>532<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/requires_ansible_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20873<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/spdx_licenses.json</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20873<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/spdx_licenses.json</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1191<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/spdx_licenses.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1191<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/spdx_licenses.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>252<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer/utils/string_utils.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>252<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer/utils/string_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>494</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer.egg-info/</td><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>839</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2590<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer.egg-info/PKG-INFO</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2590<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1477<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer.egg-info/SOURCES.txt</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1477<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer.egg-info/dependency_links.txt</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>360<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer.egg-info/requires.txt</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>360<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/galaxy_importer.egg-info/top_level.txt</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/galaxy_importer.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>252<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/pyproject.toml</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>252<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1135<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:1<del>0</del>.<del>498</del>3<del>29</del><span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/setup.cfg</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1135<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:1<ins>2</ins>.<ins>843</ins>3<ins>55</ins><span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>1<del>8</del>:<del>03</del>:01.000000<span class="dp">·</span>galaxy_importer-0.<del>4</del>.<del>8</del>/setup.py</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-0<ins>3</ins><span class="dp">·</span>1<ins>4</ins>:<ins>21</ins>:01.000000<span class="dp">·</span>galaxy_importer-0.<ins>5</ins>.<ins>0</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/LICENSE</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--LICENSE"><span class="source">galaxy_importer-0.5.0/LICENSE</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">473 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/PKG-INFO</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--PKG-INFO"><span class="source">galaxy_importer-0.5.0/PKG-INFO</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>galaxy_importer</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>galaxy_importer</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>4</del>.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>5</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Galaxy<span class="dp">·</span>content<span class="dp">·</span>importer</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Galaxy<span class="dp">·</span>content<span class="dp">·</span>importer</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/ansible/galaxy-importer</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/ansible/galaxy-importer</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Red<span class="dp">·</span>Hat,<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Red<span class="dp">·</span>Hat,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@ansible.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@ansible.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/README.md</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--README.md"><span class="source">galaxy_importer-0.5.0/README.md</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/__init__.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-__init__.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/__init__.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/__init__.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-builders-__init__.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/__init__.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-builders-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">199 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/builders/local_image_build.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-builders-local_image_build.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/builders/local_image_build.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-builders-local_image_build.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/Dockerfile</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-container-Dockerfile"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/Dockerfile</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-container-Dockerfile">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">187 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/container/entrypoint.sh</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-container-entrypoint.sh"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/container/entrypoint.sh</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-container-entrypoint.sh">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/job_template.yaml</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-job_template.yaml"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/job_template.yaml</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-job_template.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/__init__.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-__init__.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/__init__.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/base.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-base.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/base.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">199 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/local_ansible_test.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-local_ansible_test.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/local_ansible_test.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-local_ansible_test.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">185 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/local_image.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-local_image.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/local_image.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-local_image.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/ansible_test/runners/openshift_job.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-openshift_job.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/ansible_test/runners/openshift_job.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-ansible_test-runners-openshift_job.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/collection.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-collection.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/collection.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-collection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/config.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-config.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/config.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/constants.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-constants.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/constants.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/exceptions.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-exceptions.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/exceptions.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-exceptions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/finder.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-finder.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/finder.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-finder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.51 KB</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/loaders/collection.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-collection.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/loaders/collection.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-collection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 18 lines modified</td><td colspan="2">Offset 15, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>You<span class="dp">·</span>should<span class="dp">·</span>have<span class="dp">·</span>received<span class="dp">·</span>a<span class="dp">·</span>copy<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Apache<span class="dp">·</span>License</td><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>You<span class="dp">·</span>should<span class="dp">·</span>have<span class="dp">·</span>received<span class="dp">·</span>a<span class="dp">·</span>copy<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Apache<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">#<span class="dp">·</span>along<span class="dp">·</span>with<span class="dp">·</span>Galaxy.<span class="dp">·</span><span class="dp">·</span>If<span class="dp">·</span>not,<span class="dp">·</span>see<span class="dp">·</span>&lt;http://www.apache.org/licenses/&gt;.</td><td class="diffline">16 </td><td class="diffpresent">#<span class="dp">·</span>along<span class="dp">·</span>with<span class="dp">·</span>Galaxy.<span class="dp">·</span><span class="dp">·</span>If<span class="dp">·</span>not,<span class="dp">·</span>see<span class="dp">·</span>&lt;http://www.apache.org/licenses/&gt;.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">import<span class="dp">·</span>logging</td><td class="diffline">17 </td><td class="diffpresent">import<span class="dp">·</span>logging</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">18 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">import<span class="dp">·</span>re</td><td class="diffline">19 </td><td class="diffpresent">import<span class="dp">·</span>re</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">20 </td><td class="diffpresent">import<span class="dp">·</span>ansible_builder.introspect</td></tr>
+<tr class="diffdeleted"><td class="diffline">20 </td><td class="diffpresent">try:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>ansible_builder<span class="dp">·</span>import<span class="dp">·</span>introspect</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">22 </td><td class="diffpresent">except<span class="dp">·</span>ImportError:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>ansible_builder._target_scripts<span class="dp">·</span>import<span class="dp">·</span>introspect</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer<span class="dp">·</span>import<span class="dp">·</span>exceptions<span class="dp">·</span>as<span class="dp">·</span>exc</td><td class="diffline">21 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer<span class="dp">·</span>import<span class="dp">·</span>exceptions<span class="dp">·</span>as<span class="dp">·</span>exc</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer.finder<span class="dp">·</span>import<span class="dp">·</span>ContentFinder,<span class="dp">·</span>FileWalker</td><td class="diffline">22 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer.finder<span class="dp">·</span>import<span class="dp">·</span>ContentFinder,<span class="dp">·</span>FileWalker</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer<span class="dp">·</span>import<span class="dp">·</span>loaders</td><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer<span class="dp">·</span>import<span class="dp">·</span>loaders</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer<span class="dp">·</span>import<span class="dp">·</span>schema</td><td class="diffline">24 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer<span class="dp">·</span>import<span class="dp">·</span>schema</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer.utils<span class="dp">·</span>import<span class="dp">·</span>markup<span class="dp">·</span>as<span class="dp">·</span>markup_utils</td><td class="diffline">25 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer.utils<span class="dp">·</span>import<span class="dp">·</span>markup<span class="dp">·</span>as<span class="dp">·</span>markup_utils</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer.utils<span class="dp">·</span>import<span class="dp">·</span>chksums</td><td class="diffline">26 </td><td class="diffpresent">from<span class="dp">·</span>galaxy_importer.utils<span class="dp">·</span>import<span class="dp">·</span>chksums</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 141, 15 lines modified</td><td colspan="2">Offset 138, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Check<span class="dp">·</span>for<span class="dp">·</span>python<span class="dp">·</span>deps<span class="dp">·</span>file<span class="dp">·</span>and<span class="dp">·</span>system<span class="dp">·</span>deps<span class="dp">·</span>file<span class="dp">·</span>if<span class="dp">·</span>they<span class="dp">·</span>are<span class="dp">·</span>listed<span class="dp">·</span>in</td><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Check<span class="dp">·</span>for<span class="dp">·</span>python<span class="dp">·</span>deps<span class="dp">·</span>file<span class="dp">·</span>and<span class="dp">·</span>system<span class="dp">·</span>deps<span class="dp">·</span>file<span class="dp">·</span>if<span class="dp">·</span>they<span class="dp">·</span>are<span class="dp">·</span>listed<span class="dp">·</span>in</td></tr>
+<tr class="diffunmodified"><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>meta/execution-environment.yml,<span class="dp">·</span>and<span class="dp">·</span>log<span class="dp">·</span>if<span class="dp">·</span>listed<span class="dp">·</span>files<span class="dp">·</span>are<span class="dp">·</span>not<span class="dp">·</span>found</td><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>meta/execution-environment.yml,<span class="dp">·</span>and<span class="dp">·</span>log<span class="dp">·</span>if<span class="dp">·</span>listed<span class="dp">·</span>files<span class="dp">·</span>are<span class="dp">·</span>not<span class="dp">·</span>found</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Method<span class="dp">·</span>excluded<span class="dp">·</span>from<span class="dp">·</span>pytest<span class="dp">·</span>coverage,<span class="dp">·</span>test<span class="dp">·</span>exist<span class="dp">·</span>outside<span class="dp">·</span>repo<span class="dp">·</span>via<span class="dp">·</span>iqe.</td><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Method<span class="dp">·</span>excluded<span class="dp">·</span>from<span class="dp">·</span>pytest<span class="dp">·</span>coverage,<span class="dp">·</span>test<span class="dp">·</span>exist<span class="dp">·</span>outside<span class="dp">·</span>repo<span class="dp">·</span>via<span class="dp">·</span>iqe.</td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffchanged"><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_deps,<span class="dp">·</span>system_deps<span class="dp">·</span>=<span class="dp">·</span>introspect.process_collection(self.path)</td><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_deps,<span class="dp">·</span>system_deps<span class="dp">·</span>=<span class="dp">·</span><ins>ansible_builder.</ins>introspect.process_collection(self.path)</td></tr>
+<tr class="diffunmodified"><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>FileNotFoundError<span class="dp">·</span>as<span class="dp">·</span>e:</td><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>FileNotFoundError<span class="dp">·</span>as<span class="dp">·</span>e:</td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.log.error(</td><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.log.error(</td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;Error<span class="dp">·</span>when<span class="dp">·</span>checking<span class="dp">·</span>meta/execution-environment.yml<span class="dp">·</span>for<span class="dp">·</span>dependency<span class="dp">·</span>files:<span class="dp">·</span>{e}&quot;</td><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;Error<span class="dp">·</span>when<span class="dp">·</span>checking<span class="dp">·</span>meta/execution-environment.yml<span class="dp">·</span>for<span class="dp">·</span>dependency<span class="dp">·</span>files:<span class="dp">·</span>{e}&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_load_manifest(self):</td><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_load_manifest(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>manifest_file<span class="dp">·</span>=<span class="dp">·</span>os.path.join(self.path,<span class="dp">·</span>&quot;MANIFEST.json&quot;)</td><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>manifest_file<span class="dp">·</span>=<span class="dp">·</span>os.path.join(self.path,<span class="dp">·</span>&quot;MANIFEST.json&quot;)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/loaders/content.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-content.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/loaders/content.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-content.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/loaders/doc_string.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-doc_string.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/loaders/doc_string.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-doc_string.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/loaders/runtime_file.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-runtime_file.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/loaders/runtime_file.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-loaders-runtime_file.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/main.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-main.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/main.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">538 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/schema.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-schema.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/schema.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-schema.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 61, 14 lines modified</td><td colspan="2">Offset 61, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">_FILENAME_RE<span class="dp">·</span>=<span class="dp">·</span>re.compile(</td><td class="diffline">61 </td><td class="diffpresent">_FILENAME_RE<span class="dp">·</span>=<span class="dp">·</span>re.compile(</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>r&quot;^(?P&lt;namespace&gt;\w+)-(?P&lt;name&gt;\w+)-&quot;<span class="dp">·</span>r&quot;(?P&lt;version&gt;[0-9a-zA-Z.+-]+)\.tar\.gz$&quot;</td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>r&quot;^(?P&lt;namespace&gt;\w+)-(?P&lt;name&gt;\w+)-&quot;<span class="dp">·</span>r&quot;(?P&lt;version&gt;[0-9a-zA-Z.+-]+)\.tar\.gz$&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">)</td><td class="diffline">63 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">@attr.s(slots=True)</td><td class="diffline">64 </td><td class="diffpresent">@attr.s(slots=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">class<span class="dp">·</span>CollectionFilename(object):</td><td class="diffline">65 </td><td class="diffpresent">class<span class="dp">·</span>CollectionFilename(object):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>namespace<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>namespace<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>attr.ib()</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>attr.ib(converter=semantic_version.Version)</td><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>attr.ib(converter=semantic_version.Version)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__str__(self):</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__str__(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>f&quot;{self.namespace}-{self.name}-{self.version}.tar.gz&quot;</td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>f&quot;{self.namespace}-{self.name}-{self.version}.tar.gz&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/utils/__init__.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-__init__.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/utils/__init__.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/utils/chksums.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-chksums.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/utils/chksums.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-chksums.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/utils/markup.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-markup.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/utils/markup.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-markup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/utils/requires_ansible_version.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-requires_ansible_version.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/utils/requires_ansible_version.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-requires_ansible_version.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/utils/spdx_licenses.json</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-spdx_licenses.json"><span class="source">galaxy_importer-0.5.0/galaxy_importer/utils/spdx_licenses.json</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-spdx_licenses.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer/utils/spdx_licenses.py</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-spdx_licenses.py"><span class="source">galaxy_importer-0.5.0/galaxy_importer/utils/spdx_licenses.py</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer-utils-spdx_licenses.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">523 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer.egg-info/PKG-INFO</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer.egg-info-PKG-INFO"><span class="source">galaxy_importer-0.5.0/galaxy_importer.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>galaxy-importer</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>galaxy-importer</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>4</del>.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>5</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Galaxy<span class="dp">·</span>content<span class="dp">·</span>importer</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Galaxy<span class="dp">·</span>content<span class="dp">·</span>importer</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/ansible/galaxy-importer</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/ansible/galaxy-importer</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Red<span class="dp">·</span>Hat,<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Red<span class="dp">·</span>Hat,<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@ansible.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@ansible.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/galaxy_importer.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer.egg-info-SOURCES.txt"><span class="source">galaxy_importer-0.5.0/galaxy_importer.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--galaxy_importer.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">397 B</span></div>
+      <div><span class="source">galaxy_importer-0.4.8/setup.cfg</span> vs.</div>
+      <div id="galaxy_importer--.-.-.tar---galaxy_importer--.-.--setup.cfg"><span class="source">galaxy_importer-0.5.0/setup.cfg</span>
+        <a class="anchor" href="#galaxy_importer--.-.-.tar---galaxy_importer--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 41, 14 lines modified</td><td colspan="2">Offset 41, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">galaxy_importer<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">41 </td><td class="diffpresent">galaxy_importer<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent"><span class="dp">»</span>       utils/spdx_licenses.json</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">»</span>       utils/spdx_licenses.json</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent"><span class="dp">»</span>       ansible_test/job_template.yaml</td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">»</span>       ansible_test/job_template.yaml</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent"><span class="dp">»</span>       ansible_test/container/Dockerfile</td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">»</span>       ansible_test/container/Dockerfile</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent"><span class="dp">»</span>       ansible_test/container/entrypoint.sh</td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">»</span>       ansible_test/container/entrypoint.sh</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">[coverage:report]</td><td class="diffline">46 </td><td class="diffpresent">[coverage:report]</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">fail_under<span class="dp">·</span>=<span class="dp">·</span>95.5<del>0</del></td><td class="diffline">47 </td><td class="diffpresent">fail_under<span class="dp">·</span>=<span class="dp">·</span>95.5<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">precision<span class="dp">·</span>=<span class="dp">·</span>2</td><td class="diffline">48 </td><td class="diffpresent">precision<span class="dp">·</span>=<span class="dp">·</span>2</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">[egg_info]</td><td class="diffline">49 </td><td class="diffpresent">[egg_info]</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">tag_build<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">50 </td><td class="diffpresent">tag_build<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">tag_date<span class="dp">·</span>=<span class="dp">·</span>0</td><td class="diffline">51 </td><td class="diffpresent">tag_date<span class="dp">·</span>=<span class="dp">·</span>0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
