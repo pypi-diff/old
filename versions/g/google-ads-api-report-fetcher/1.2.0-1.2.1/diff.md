@@ -1,0 +1,365 @@
+# Comparing `tmp/google-ads-api-report-fetcher-1.2.0.tar.gz` & `tmp/google-ads-api-report-fetcher-1.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "google-ads-api-report-fetcher-1.2.0.tar", last modified: Fri Mar 17 10:34:32 2023, max compression
++gzip compressed data, was "google-ads-api-report-fetcher-1.2.1.tar", last modified: Thu Apr  6 10:38:21 2023, max compression
+```
+
+## Comparing `google-ads-api-report-fetcher-1.2.0.tar` & `google-ads-api-report-fetcher-1.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,48 +1,48 @@
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     4222 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/PKG-INFO
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3489 2023-03-16 20:20:32.000000 google-ads-api-report-fetcher-1.2.0/README.md
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.788093 google-ads-api-report-fetcher-1.2.0/gaarf/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.0/gaarf/__init__.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     7756 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.0/gaarf/api_clients.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)      916 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.0/gaarf/base_query.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3525 2023-03-09 07:10:15.000000 google-ads-api-report-fetcher-1.2.0/gaarf/bq_executor.py
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.788093 google-ads-api-report-fetcher-1.2.0/gaarf/cli/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.0/gaarf/cli/__init__.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3671 2023-02-20 08:49:55.000000 google-ads-api-report-fetcher-1.2.0/gaarf/cli/bq.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     6811 2023-03-15 07:15:34.000000 google-ads-api-report-fetcher-1.2.0/gaarf/cli/gaarf.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3238 2023-01-30 21:09:38.000000 google-ads-api-report-fetcher-1.2.0/gaarf/cli/simulator.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)    10241 2023-03-09 07:19:16.000000 google-ads-api-report-fetcher-1.2.0/gaarf/cli/utils.py
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/gaarf/io/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.0/gaarf/io/__init__.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     1842 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.0/gaarf/io/formatter.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     1870 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.0/gaarf/io/reader.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     9991 2023-03-16 19:54:17.000000 google-ads-api-report-fetcher-1.2.0/gaarf/io/writer.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     9666 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.0/gaarf/parsers.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     9680 2023-03-10 13:35:15.000000 google-ads-api-report-fetcher-1.2.0/gaarf/query_editor.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)    10649 2023-03-15 07:18:06.000000 google-ads-api-report-fetcher-1.2.0/gaarf/query_executor.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3159 2023-03-16 18:38:12.000000 google-ads-api-report-fetcher-1.2.0/gaarf/report.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     4088 2023-03-06 16:43:36.000000 google-ads-api-report-fetcher-1.2.0/gaarf/simulation.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     1974 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.0/gaarf/utils.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)      158 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.0/gaarf/wip.py
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     4222 2023-03-17 10:34:32.000000 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/PKG-INFO
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     1033 2023-03-17 10:34:32.000000 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/SOURCES.txt
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)        1 2023-03-17 10:34:32.000000 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/dependency_links.txt
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)      120 2023-03-17 10:34:32.000000 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/entry_points.txt
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)      183 2023-03-17 10:34:32.000000 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/requires.txt
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)       12 2023-03-17 10:34:32.000000 google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/top_level.txt
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)       63 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/setup.cfg
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     1577 2023-03-16 20:14:52.000000 google-ads-api-report-fetcher-1.2.0/setup.py
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/tests/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.0/tests/__init__.py
+-drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-03-17 10:34:32.792092 google-ads-api-report-fetcher-1.2.0/tests/unit/
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/__init__.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)      748 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_base_query.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     1400 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_bq_executor.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)    10446 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_cli_utils.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     7168 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_parsers.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3890 2023-02-24 15:33:44.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_query_editor.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)      891 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_reader.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3929 2023-03-16 18:53:22.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_report.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     2487 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_simulation.py
+--rw-r-----   0 amarkin  (454256) primarygroup (89939)     3864 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.0/tests/unit/test_writer.py
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.803089 google-ads-api-report-fetcher-1.2.1/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     4222 2023-04-06 10:38:21.803089 google-ads-api-report-fetcher-1.2.1/PKG-INFO
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     3489 2023-03-16 20:20:32.000000 google-ads-api-report-fetcher-1.2.1/README.md
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.799089 google-ads-api-report-fetcher-1.2.1/gaarf/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.1/gaarf/__init__.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     7756 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.1/gaarf/api_clients.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)      916 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.1/gaarf/base_query.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     3525 2023-03-09 07:10:15.000000 google-ads-api-report-fetcher-1.2.1/gaarf/bq_executor.py
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.799089 google-ads-api-report-fetcher-1.2.1/gaarf/cli/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.1/gaarf/cli/__init__.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     3671 2023-02-20 08:49:55.000000 google-ads-api-report-fetcher-1.2.1/gaarf/cli/bq.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     6860 2023-04-06 08:52:28.000000 google-ads-api-report-fetcher-1.2.1/gaarf/cli/gaarf.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     3238 2023-01-30 21:09:38.000000 google-ads-api-report-fetcher-1.2.1/gaarf/cli/simulator.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)    10241 2023-03-09 07:19:16.000000 google-ads-api-report-fetcher-1.2.1/gaarf/cli/utils.py
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.799089 google-ads-api-report-fetcher-1.2.1/gaarf/io/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.1/gaarf/io/__init__.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     1842 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.1/gaarf/io/formatter.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     1870 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.1/gaarf/io/reader.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     9991 2023-03-16 19:54:17.000000 google-ads-api-report-fetcher-1.2.1/gaarf/io/writer.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     9666 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.1/gaarf/parsers.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     9680 2023-03-10 13:35:15.000000 google-ads-api-report-fetcher-1.2.1/gaarf/query_editor.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)    10649 2023-03-15 07:18:06.000000 google-ads-api-report-fetcher-1.2.1/gaarf/query_executor.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     4944 2023-03-22 21:20:48.000000 google-ads-api-report-fetcher-1.2.1/gaarf/report.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     4088 2023-03-06 16:43:36.000000 google-ads-api-report-fetcher-1.2.1/gaarf/simulation.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     1974 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.1/gaarf/utils.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)      158 2023-02-13 15:07:14.000000 google-ads-api-report-fetcher-1.2.1/gaarf/wip.py
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.799089 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     4222 2023-04-06 10:38:21.000000 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/PKG-INFO
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     1033 2023-04-06 10:38:21.000000 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/SOURCES.txt
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)        1 2023-04-06 10:38:21.000000 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/dependency_links.txt
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)      120 2023-04-06 10:38:21.000000 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/entry_points.txt
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)      183 2023-04-06 10:38:21.000000 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/requires.txt
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)       12 2023-04-06 10:38:21.000000 google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/top_level.txt
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)       63 2023-04-06 10:38:21.803089 google-ads-api-report-fetcher-1.2.1/setup.cfg
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     1577 2023-04-06 10:38:07.000000 google-ads-api-report-fetcher-1.2.1/setup.py
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.799089 google-ads-api-report-fetcher-1.2.1/tests/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2022-10-03 10:44:40.000000 google-ads-api-report-fetcher-1.2.1/tests/__init__.py
++drwxr-x---   0 amarkin  (454256) primarygroup (89939)        0 2023-04-06 10:38:21.799089 google-ads-api-report-fetcher-1.2.1/tests/unit/
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)        0 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/__init__.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)      748 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_base_query.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     1400 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_bq_executor.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)    10446 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_cli_utils.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     7168 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_parsers.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     3890 2023-02-24 15:33:44.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_query_editor.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)      891 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_reader.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     5495 2023-03-22 21:22:55.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_report.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     2487 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_simulation.py
++-rw-r-----   0 amarkin  (454256) primarygroup (89939)     3864 2023-02-13 15:07:42.000000 google-ads-api-report-fetcher-1.2.1/tests/unit/test_writer.py
+```
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/PKG-INFO` & `google-ads-api-report-fetcher-1.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: google-ads-api-report-fetcher
+-Version: 1.2.0
++Version: 1.2.1
+ Summary: Library for fetching reports from Google Ads API and saving them locally / BigQuery.
+ Home-page: https://github.com/google/ads-api-reports-fetcher
+ Author: Google Inc. (gTech gPS CSE team)
+ Author-email: no-reply@google.com
+ License: Apache 2.0
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/README.md` & `google-ads-api-report-fetcher-1.2.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/api_clients.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/api_clients.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/base_query.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/base_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/bq_executor.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/bq_executor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/cli/bq.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/cli/bq.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/cli/gaarf.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/cli/gaarf.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -80,20 +80,21 @@
+ 
+     with open(main_args.config, "r", encoding="utf-8") as f:
+         google_ads_config_dict = yaml.safe_load(f)
+ 
+     config = GaarfConfigBuilder(args).build()
+     if account := main_args.customer_id:
+         config.account = account
+-    elif mcc := google_ads_config_dict.get("login_customer_id"):
+-        config.account = str(mcc)
+-    else:
+-        raise ValueError(
+-            "No account found, please specify via --account CLI flag"
+-            "or add as login_customer_id in google-ads.yaml")
++    if not config.account:
++        if mcc := google_ads_config_dict.get("login_customer_id"):
++            config.account = str(mcc)
++        else:
++            raise ValueError(
++                "No account found, please specify via --account CLI flag"
++                "or add as login_customer_id in google-ads.yaml")
+     logger.debug("config: %s", config)
+ 
+     if main_args.save_config and not main_args.gaarf_config:
+         ConfigSaver(main_args.save_config_dest).save(config)
+     if main_args.dry_run:
+         exit()
+```
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/cli/simulator.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/cli/simulator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/cli/utils.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/cli/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/io/formatter.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/io/formatter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/io/reader.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/io/reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/io/writer.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/io/writer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/parsers.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/parsers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/query_editor.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/query_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/query_executor.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/query_executor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/simulation.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/simulation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/gaarf/utils.py` & `google-ads-api-report-fetcher-1.2.1/gaarf/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/PKG-INFO` & `google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: google-ads-api-report-fetcher
+-Version: 1.2.0
++Version: 1.2.1
+ Summary: Library for fetching reports from Google Ads API and saving them locally / BigQuery.
+ Home-page: https://github.com/google/ads-api-reports-fetcher
+ Author: Google Inc. (gTech gPS CSE team)
+ Author-email: no-reply@google.com
+ License: Apache 2.0
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/google_ads_api_report_fetcher.egg-info/SOURCES.txt` & `google-ads-api-report-fetcher-1.2.1/google_ads_api_report_fetcher.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/setup.py` & `google-ads-api-report-fetcher-1.2.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+     "sqlalchemy": ["sqlalchemy"],
+     "simulator": ["Faker"]
+ }
+ EXTRAS_REQUIRE['full'] = list(set(chain(*EXTRAS_REQUIRE.values())))
+ 
+ setup(
+     name="google-ads-api-report-fetcher",
+-    version="1.2.0",
++    version="1.2.1",
+     description=
+     "Library for fetching reports from Google Ads API and saving them locally / BigQuery.",
+     long_description=README,
+     long_description_content_type="text/markdown",
+     url="https://github.com/google/ads-api-reports-fetcher",
+     author="Google Inc. (gTech gPS CSE team)",
+     author_email="no-reply@google.com",
+```
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_base_query.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_base_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_bq_executor.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_bq_executor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_cli_utils.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_cli_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_parsers.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_parsers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_query_editor.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_query_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_reader.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_report.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_report.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -117,7 +117,51 @@
+         multi_column_report + single_element_report
+ 
+ 
+ def test_iteration_over_fake_report_returns_empty_list(multi_column_report):
+     multi_column_report.is_fake = True
+     results = [row for row in multi_column_report]
+     assert results == []
++
++
++def test_slicing_multi_column_gaarf_report_returns_gaarf_report(
++        multi_column_report):
++    new_report = multi_column_report[0:2]
++    assert new_report == GaarfReport(
++        results=[[1, 2], [2, 3]], column_names=["campaign_id", "ad_group_id"])
++
++
++def test_indexing_multi_column_gaarf_report_by_index_returns_gaarf_report(
++        multi_column_report):
++    new_report = multi_column_report[0]
++    assert new_report == GaarfReport(
++        results=[[1, 2]], column_names=["campaign_id", "ad_group_id"])
++
++
++def test_indexing_multi_column_gaarf_report_by_one_column_returns_gaarf_report(
++        multi_column_report):
++    new_report = multi_column_report["campaign_id"]
++    assert new_report == GaarfReport(results=[[1], [2], [3]],
++                                     column_names=["campaign_id"])
++
++
++def test_indexing_multi_column_gaarf_report_by_several_columns_returns_gaarf_report(
++        multi_column_report):
++    new_report = multi_column_report[["campaign_id", "ad_group_id"]]
++    assert new_report == multi_column_report
++
++
++def test_indexing_multi_column_gaarf_report_by_non_existing_column_raises_type_error(
++        multi_column_report):
++    with pytest.raises(TypeError):
++        multi_column_report[["campaign_id", "ad_group"]]
++
++
++def test_slicing_multi_column_gaarf_report_returns_slice(single_column_report):
++    new_report = single_column_report[0:2]
++    assert new_report == [1, 2]
++
++
++def test_slicing_multi_column_gaarf_report_returns_element(
++        single_column_report):
++    new_report = single_column_report[0]
++    assert new_report == [1]
+```
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_simulation.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_simulation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-ads-api-report-fetcher-1.2.0/tests/unit/test_writer.py` & `google-ads-api-report-fetcher-1.2.1/tests/unit/test_writer.py`
+
+ * *Files identical despite different names*
+

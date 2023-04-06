@@ -1,0 +1,345 @@
+# Comparing `tmp/prefect-gcp-0.3.0.tar.gz` & `tmp/prefect-gcp-0.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/home/runner/work/prefect-gcp/prefect-gcp/dist/.tmp-05o6ajqq/prefect-gcp-0.3.0.tar", last modified: Tue Feb 28 16:29:16 2023, max compression
++gzip compressed data, was "/home/runner/work/prefect-gcp/prefect-gcp/dist/.tmp-4xgiama3/prefect-gcp-0.4.0.tar", last modified: Thu Apr  6 10:40:55 2023, max compression
+```
+
+## Comparing `prefect-gcp-0.3.0.tar` & `prefect-gcp-0.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,34 +1,37 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/
+--rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      318 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     3032 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1974 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp/
+--rw-r--r--   0 runner    (1001) docker     (123)      362 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      497 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp/_version.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15903 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/aiplatform.py
+--rw-r--r--   0 runner    (1001) docker     (123)    33862 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/bigquery.py
+--rw-r--r--   0 runner    (1001) docker     (123)    27556 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/cloud_run.py
+--rw-r--r--   0 runner    (1001) docker     (123)    45728 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/cloud_storage.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16725 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/credentials.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13455 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/prefect_gcp/secret_manager.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     3032 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      706 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       48 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      701 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       12 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/prefect_gcp.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      190 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/requirements-dev.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       47 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      755 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2067 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 16:29:16.000000 prefect-gcp-0.3.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     5837 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_aiplatform.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9608 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_bigquery.py
+--rw-r--r--   0 runner    (1001) docker     (123)      670 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_block_standards.py
+--rw-r--r--   0 runner    (1001) docker     (123)    29062 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_cloud_run.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19695 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_cloud_storage.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8122 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_credentials.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2941 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/tests/test_secret_manager.py
+--rw-r--r--   0 runner    (1001) docker     (123)    80049 2023-02-28 16:27:42.000000 prefect-gcp-0.3.0/versioneer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/
++-rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      318 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     3032 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1974 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp/
++-rw-r--r--   0 runner    (1001) docker     (123)      362 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp/_version.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15903 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/aiplatform.py
++-rw-r--r--   0 runner    (1001) docker     (123)    33862 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/bigquery.py
++-rw-r--r--   0 runner    (1001) docker     (123)    27556 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/cloud_run.py
++-rw-r--r--   0 runner    (1001) docker     (123)    45746 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/cloud_storage.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16725 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/credentials.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp/projects/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/projects/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7890 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/projects/steps.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13455 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/prefect_gcp/secret_manager.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3032 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      769 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      729 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/prefect_gcp.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      190 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/requirements-dev.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      755 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2067 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:40:55.000000 prefect-gcp-0.4.0/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     5837 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_aiplatform.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9608 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_bigquery.py
++-rw-r--r--   0 runner    (1001) docker     (123)      670 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_block_standards.py
++-rw-r--r--   0 runner    (1001) docker     (123)    29062 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_cloud_run.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19695 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_cloud_storage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8122 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_credentials.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2941 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/tests/test_secret_manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)    80049 2023-04-06 10:39:09.000000 prefect-gcp-0.4.0/versioneer.py
+```
+
+### Comparing `prefect-gcp-0.3.0/LICENSE` & `prefect-gcp-0.4.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/PKG-INFO` & `prefect-gcp-0.4.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: prefect-gcp
+-Version: 0.3.0
++Version: 0.4.0
+ Summary: Prefect tasks and subflows for interacting with Google Cloud Platform.
+ Home-page: https://github.com/PrefectHQ/prefect-gcp
+ Author: Prefect Technologies, Inc.
+ Author-email: help@prefect.io
+ License: Apache License 2.0
+ Keywords: prefect
+ Classifier: Natural Language :: English
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: prefect-gcp Version: 0.3.0 Summary: Prefect tasks
++Metadata-Version: 2.1 Name: prefect-gcp Version: 0.4.0 Summary: Prefect tasks
+ and subflows for interacting with Google Cloud Platform. Home-page: https://
+ github.com/PrefectHQ/prefect-gcp Author: Prefect Technologies, Inc. Author-
+ email: help@prefect.io License: Apache License 2.0 Keywords: prefect
+ Classifier: Natural Language :: English Classifier: Intended Audience ::
+ Developers Classifier: Intended Audience :: System Administrators Classifier:
+ License :: OSI Approved :: Apache Software License Classifier: Programming
+ Language :: Python :: 3 :: Only Classifier: Programming Language :: Python ::
+```
+
+### Comparing `prefect-gcp-0.3.0/README.md` & `prefect-gcp-0.4.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp/aiplatform.py` & `prefect-gcp-0.4.0/prefect_gcp/aiplatform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp/bigquery.py` & `prefect-gcp-0.4.0/prefect_gcp/bigquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp/cloud_run.py` & `prefect-gcp-0.4.0/prefect_gcp/cloud_run.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp/cloud_storage.py` & `prefect-gcp-0.4.0/prefect_gcp/cloud_storage.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -498,17 +498,17 @@
+     CSV = ("csv", None, "text/csv", ".csv")
+     CSV_GZIP = ("csv", "gzip", "application/x-gzip", ".csv.gz")
+     PARQUET = ("parquet", None, "application/octet-stream", ".parquet")
+     PARQUET_SNAPPY = (
+         "parquet",
+         "snappy",
+         "application/octet-stream",
+-        ".parquet.snappy",
++        ".snappy.parquet",
+     )
+-    PARQUET_GZIP = ("parquet", "gzip", "application/octet-stream", ".parquet.gz")
++    PARQUET_GZIP = ("parquet", "gzip", "application/octet-stream", ".gz.parquet")
+ 
+     @property
+     def format(self) -> str:
+         """The file format of the current instance."""
+         return self.value[0]
+ 
+     @property
+@@ -1269,16 +1269,16 @@
+         .parquet.snappy, and .parquet.gz.
+ 
+         Args:
+             df: The Pandas DataFrame to be uploaded.
+             to_path: The destination path for the uploaded DataFrame.
+             serialization_format: The format to serialize the DataFrame into.
+                 When passed as a `str`, the valid options are:
+-                'csv', 'csv_gzip',  'parquet', 'parquet_snappy', 'parquet_gz'.
+-                Defaults to `OutputFormat.CSV_GZIP`.
++                'csv', 'csv_gzip',  'parquet', 'parquet_snappy', 'parquet_gzip'.
++                Defaults to `DataFrameSerializationFormat.CSV_GZIP`.
+             **upload_kwargs: Additional keyword arguments to pass to the underlying
+             `Blob.upload_from_dataframe` method.
+ 
+         Returns:
+             The path that the object was uploaded to.
+         """
+         if isinstance(serialization_format, str):
+```
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp/credentials.py` & `prefect-gcp-0.4.0/prefect_gcp/credentials.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp/secret_manager.py` & `prefect-gcp-0.4.0/prefect_gcp/secret_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp.egg-info/PKG-INFO` & `prefect-gcp-0.4.0/prefect_gcp.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: prefect-gcp
+-Version: 0.3.0
++Version: 0.4.0
+ Summary: Prefect tasks and subflows for interacting with Google Cloud Platform.
+ Home-page: https://github.com/PrefectHQ/prefect-gcp
+ Author: Prefect Technologies, Inc.
+ Author-email: help@prefect.io
+ License: Apache License 2.0
+ Keywords: prefect
+ Classifier: Natural Language :: English
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: prefect-gcp Version: 0.3.0 Summary: Prefect tasks
++Metadata-Version: 2.1 Name: prefect-gcp Version: 0.4.0 Summary: Prefect tasks
+ and subflows for interacting with Google Cloud Platform. Home-page: https://
+ github.com/PrefectHQ/prefect-gcp Author: Prefect Technologies, Inc. Author-
+ email: help@prefect.io License: Apache License 2.0 Keywords: prefect
+ Classifier: Natural Language :: English Classifier: Intended Audience ::
+ Developers Classifier: Intended Audience :: System Administrators Classifier:
+ License :: OSI Approved :: Apache Software License Classifier: Programming
+ Language :: Python :: 3 :: Only Classifier: Programming Language :: Python ::
+```
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp.egg-info/SOURCES.txt` & `prefect-gcp-0.4.0/prefect_gcp.egg-info/SOURCES.txt`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -16,14 +16,16 @@
+ prefect_gcp/secret_manager.py
+ prefect_gcp.egg-info/PKG-INFO
+ prefect_gcp.egg-info/SOURCES.txt
+ prefect_gcp.egg-info/dependency_links.txt
+ prefect_gcp.egg-info/entry_points.txt
+ prefect_gcp.egg-info/requires.txt
+ prefect_gcp.egg-info/top_level.txt
++prefect_gcp/projects/__init__.py
++prefect_gcp/projects/steps.py
+ tests/test_aiplatform.py
+ tests/test_bigquery.py
+ tests/test_block_standards.py
+ tests/test_cloud_run.py
+ tests/test_cloud_storage.py
+ tests/test_credentials.py
+ tests/test_secret_manager.py
+```
+
+### Comparing `prefect-gcp-0.3.0/prefect_gcp.egg-info/requires.txt` & `prefect-gcp-0.4.0/prefect_gcp.egg-info/requires.txt`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,9 +1,10 @@
+ prefect>=2.7.2
+ google-api-python-client>=2.20.0
++google-cloud-storage>=2.0.0
+ 
+ [aiplatform]
+ google-cloud-aiplatform
+ 
+ [all_extras]
+ google-cloud-aiplatform
+ google-cloud-bigquery
+```
+
+### Comparing `prefect-gcp-0.3.0/setup.cfg` & `prefect-gcp-0.4.0/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/setup.py` & `prefect-gcp-0.4.0/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/tests/test_aiplatform.py` & `prefect-gcp-0.4.0/tests/test_aiplatform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/tests/test_bigquery.py` & `prefect-gcp-0.4.0/tests/test_bigquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/tests/test_block_standards.py` & `prefect-gcp-0.4.0/tests/test_block_standards.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/tests/test_cloud_run.py` & `prefect-gcp-0.4.0/tests/test_cloud_run.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/tests/test_cloud_storage.py` & `prefect-gcp-0.4.0/tests/test_cloud_storage.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -491,26 +491,26 @@
+     ):
+         to_path = "to_path"
+         output_to_path = gcs_bucket_with_bucket_folder.upload_from_dataframe(
+             df=pandas_dataframe,
+             to_path=to_path,
+             serialization_format="parquet_snappy",
+         )
+-        assert output_to_path == "base_folder/to_path.parquet.snappy"
++        assert output_to_path == "base_folder/to_path.snappy.parquet"
+ 
+     def test_upload_from_dataframe_with_parquet_gzip_output(
+         self, gcs_bucket_with_bucket_folder, pandas_dataframe
+     ):
+         to_path = "to_path"
+         output_to_path = gcs_bucket_with_bucket_folder.upload_from_dataframe(
+             df=pandas_dataframe,
+             to_path=to_path,
+             serialization_format="parquet_gzip",
+         )
+-        assert output_to_path == "base_folder/to_path.parquet.gz"
++        assert output_to_path == "base_folder/to_path.gz.parquet"
+ 
+     def test_upload_from_dataframe_with_csv_output(
+         self, gcs_bucket_with_bucket_folder, pandas_dataframe
+     ):
+         to_path = "to_path"
+         output_to_path = gcs_bucket_with_bucket_folder.upload_from_dataframe(
+             df=pandas_dataframe, to_path=to_path, serialization_format="csv"
+```
+
+### Comparing `prefect-gcp-0.3.0/tests/test_credentials.py` & `prefect-gcp-0.4.0/tests/test_credentials.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/tests/test_secret_manager.py` & `prefect-gcp-0.4.0/tests/test_secret_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-gcp-0.3.0/versioneer.py` & `prefect-gcp-0.4.0/versioneer.py`
+
+ * *Files identical despite different names*
+

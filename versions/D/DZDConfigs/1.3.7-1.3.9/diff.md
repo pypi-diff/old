@@ -1,0 +1,263 @@
+# Comparing `tmp/DZDConfigs-1.3.7.tar.gz` & `tmp/DZDConfigs-1.3.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "DZDConfigs-1.3.7.tar", last modified: Fri Aug 12 09:27:05 2022, max compression
++gzip compressed data, was "DZDConfigs-1.3.9.tar", last modified: Thu Apr  6 10:46:43 2023, max compression
+```
+
+## Comparing `DZDConfigs-1.3.7.tar` & `DZDConfigs-1.3.9.tar`
+
+### file list
+
+```diff
+@@ -1,25 +1,28 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-12 09:27:05.909268 DZDConfigs-1.3.7/
+--rw-rw-rw-   0 root         (0) root         (0)     1669 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/.gitignore
+--rw-rw-rw-   0 root         (0) root         (0)      632 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/.gitlab-ci.yml
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-12 09:27:05.905268 DZDConfigs-1.3.7/Configs/
+--rw-rw-rw-   0 root         (0) root         (0)       47 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/Configs/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     7851 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/Configs/config_base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-12 09:27:05.909268 DZDConfigs-1.3.7/DZDConfigs.egg-info/
+--rw-r--r--   0 root         (0) root         (0)     5701 2022-08-12 09:27:05.000000 DZDConfigs-1.3.7/DZDConfigs.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      409 2022-08-12 09:27:05.000000 DZDConfigs-1.3.7/DZDConfigs.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2022-08-12 09:27:05.000000 DZDConfigs-1.3.7/DZDConfigs.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2022-08-12 09:27:04.000000 DZDConfigs-1.3.7/DZDConfigs.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0) root         (0)       14 2022-08-12 09:27:05.000000 DZDConfigs-1.3.7/DZDConfigs.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)        8 2022-08-12 09:27:05.000000 DZDConfigs-1.3.7/DZDConfigs.egg-info/top_level.txt
+--rw-rw-rw-   0 root         (0) root         (0)     1080 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/LICENSE.md
+--rw-r--r--   0 root         (0) root         (0)     5701 2022-08-12 09:27:05.909268 DZDConfigs-1.3.7/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)     5281 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/README.md
+--rw-r--r--   0 root         (0) root         (0)       38 2022-08-12 09:27:05.909268 DZDConfigs-1.3.7/setup.cfg
+--rw-rw-rw-   0 root         (0) root         (0)      976 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/setup.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-12 09:27:05.909268 DZDConfigs-1.3.7/smoketest/
+--rw-rw-rw-   0 root         (0) root         (0)      506 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/smoketest/config.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-12 09:27:05.909268 DZDConfigs-1.3.7/smoketest/env/
+--rw-rw-rw-   0 root         (0) root         (0)      125 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/smoketest/env/DEFAULT.env
+--rw-rw-rw-   0 root         (0) root         (0)       24 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/smoketest/env/DEV.env
+--rw-rw-rw-   0 root         (0) root         (0)       24 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/smoketest/env/PROD.env
+--rw-rw-rw-   0 root         (0) root         (0)     1133 2022-08-12 09:26:51.000000 DZDConfigs-1.3.7/smoketest/main.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.746965 DZDConfigs-1.3.9/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/.github/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)     1099 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/.github/workflows/python-publish.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1678 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/.gitignore
++-rw-r--r--   0 runner    (1001) docker     (123)      632 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/.gitlab-ci.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/Configs/
++-rw-r--r--   0 runner    (1001) docker     (123)       47 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/Configs/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8340 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/Configs/config_base.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/DZDConfigs.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     5701 2023-04-06 10:46:43.000000 DZDConfigs-1.3.9/DZDConfigs.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      446 2023-04-06 10:46:43.000000 DZDConfigs-1.3.9/DZDConfigs.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:46:43.000000 DZDConfigs-1.3.9/DZDConfigs.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:46:43.000000 DZDConfigs-1.3.9/DZDConfigs.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-06 10:46:43.000000 DZDConfigs-1.3.9/DZDConfigs.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 10:46:43.000000 DZDConfigs-1.3.9/DZDConfigs.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)     1080 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/LICENSE.md
++-rw-r--r--   0 runner    (1001) docker     (123)     5701 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     5281 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 10:46:43.746965 DZDConfigs-1.3.9/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      976 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/smoketest/
++-rw-r--r--   0 runner    (1001) docker     (123)      506 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/smoketest/config.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:46:43.742965 DZDConfigs-1.3.9/smoketest/env/
++-rw-r--r--   0 runner    (1001) docker     (123)      125 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/smoketest/env/DEFAULT.env
++-rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/smoketest/env/DEV.env
++-rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/smoketest/env/PROD.env
++-rw-r--r--   0 runner    (1001) docker     (123)     1133 2023-04-06 10:46:33.000000 DZDConfigs-1.3.9/smoketest/main.py
+```
+
+### Comparing `DZDConfigs-1.3.7/.gitignore` & `DZDConfigs-1.3.9/.gitignore`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -93,16 +93,14 @@
+ 
+ # celery beat schedule file
+ celerybeat-schedule
+ 
+ # SageMath parsed files
+ *.sage.py
+ 
+-
+-
+ # Spyder project settings
+ .spyderproject
+ .spyproject
+ 
+ # Rope project settings
+ .ropeproject
+ 
+@@ -112,7 +110,8 @@
+ # mypy
+ .mypy_cache/
+ .dmypy.json
+ dmypy.json
+ 
+ # Pyre type checker
+ .pyre/
++version.py
+```
+
+### Comparing `DZDConfigs-1.3.7/.gitlab-ci.yml` & `DZDConfigs-1.3.9/.gitlab-ci.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `DZDConfigs-1.3.7/Configs/config_base.py` & `DZDConfigs-1.3.9/Configs/config_base.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -2,19 +2,23 @@
+ import sys
+ import logging
+ import json
+ import inspect
+ import importlib.util
+ from dotenv import load_dotenv
+ from typing import Type, List
++from types import ModuleType
++from pathlib import Path
++import importlib
++
+ 
+ log = logging.getLogger(__name__)
+ 
+ 
+-class ConfigBase(object):
++class ConfigBase:
+ 
+     ## Some default variables every config should have
+     # only bump up version numbers when merging/commiting into/to master
+     MAJOR_VERSION = 0
+ 
+     # Change this if you make breaking changes that will break compatibility to olde versions
+     MINOR_VERSION = 0
+@@ -30,15 +34,14 @@
+ 
+     def __init__(
+         self,
+         envvars_prefix="CONFIGS_",
+         dotenv_files_base_path="./env/",
+         env_file_vars_override_system_env_vars=False,
+     ):
+-
+         self.env_file_vars_override_system_env_vars = (
+             env_file_vars_override_system_env_vars
+         )
+         self._envvars_prefix = envvars_prefix
+         self._load_env_files(dotenv_files_base_path)
+         self.refresh_config_from_env_var()
+ 
+@@ -141,39 +144,50 @@
+ 
+ def getConfig(
+     dotenv_files_dir_path=None,
+     config_classes_pathes=None,
+     env_file_vars_override_system_env_vars=False,
+     config_classes: List[Type[ConfigBase]] = None,
+ ):
++    def find_caller_project_base() -> Path:
++        frm = inspect.stack()[2]
++        module_info: ModuleType = inspect.getmodule(frm[0])
++        if module_info:
++            mod_name: str = module_info.__name__.split(".")
++            package_name: str = mod_name[0]
++        package = importlib.import_module(package_name)
++        return Path(os.path.dirname(package.__file__))
++
++    project_base = find_caller_project_base()
+ 
+-    project_base = os.path.dirname(sys.argv[0])
++    # project_base = os.path.dirname(sys.argv[0])
+     if dotenv_files_dir_path is None:
+         dotenv_files_dir_path = os.path.join(project_base, "env/")
+     if config_classes_pathes is None:
+         config_classes_pathes = [os.path.join(project_base, "config.py")]
+     config_class_name = ConfigBase._get_environment_name()
+     if config_classes:
+         for cls in config_classes:
++
+             if cls.__name__ == config_class_name:
++
+                 return cls(
+                     dotenv_files_base_path=dotenv_files_dir_path,
+                     env_file_vars_override_system_env_vars=env_file_vars_override_system_env_vars,
+                 )
+         return next([cls for cls in config_classes if cls.__name__ == "DEFAULT"])(
+             dotenv_files_base_path=dotenv_files_dir_path,
+             env_file_vars_override_system_env_vars=env_file_vars_override_system_env_vars,
+         )
+     for confclass_path in config_classes_pathes:
+         if os.path.isdir(confclass_path):
+             raise NotImplementedError(
+                 "Directories with config class files are not supported yet. please use only one file named config.py"
+             )
+         elif os.path.isfile(confclass_path):
+-
+             spec = importlib.util.spec_from_file_location(
+                 config_class_name, confclass_path
+             )
+             config_class_module = importlib.util.module_from_spec(spec)
+             spec.loader.exec_module(config_class_module)
+             for name, obj in inspect.getmembers(config_class_module):
+                 if inspect.isclass(obj) and name == config_class_name:
+```
+
+### Comparing `DZDConfigs-1.3.7/DZDConfigs.egg-info/PKG-INFO` & `DZDConfigs-1.3.9/DZDConfigs.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: DZDConfigs
+-Version: 1.3.7
++Version: 1.3.9
+ Summary: A tiny framework for config management in different environments. Supports configs as classes, .env files, environemt variables
+ Home-page: https://git.connect.dzd-ev.de/dzdpythonmodules/configs
+ Author: TB
+ Author-email: tim.bleimehl@helmholtz-muenchen.de
+ License: MIT
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+```
+
+### Comparing `DZDConfigs-1.3.7/LICENSE.md` & `DZDConfigs-1.3.9/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `DZDConfigs-1.3.7/PKG-INFO` & `DZDConfigs-1.3.9/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: DZDConfigs
+-Version: 1.3.7
++Version: 1.3.9
+ Summary: A tiny framework for config management in different environments. Supports configs as classes, .env files, environemt variables
+ Home-page: https://git.connect.dzd-ev.de/dzdpythonmodules/configs
+ Author: TB
+ Author-email: tim.bleimehl@helmholtz-muenchen.de
+ License: MIT
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+```
+
+### Comparing `DZDConfigs-1.3.7/README.md` & `DZDConfigs-1.3.9/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `DZDConfigs-1.3.7/setup.py` & `DZDConfigs-1.3.9/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `DZDConfigs-1.3.7/smoketest/main.py` & `DZDConfigs-1.3.9/smoketest/main.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,258 @@
+--- tmp/rushex-0.10.tar.gz
++++ tmp/rushex-0.11.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "rushex-0.10.tar", last modified: Thu Apr  6 10:36:24 2023, max compression
+│ +gzip compressed data, was "rushex-0.11.tar", last modified: Thu Apr  6 10:46:07 2023, max compression
+│   --- rushex-0.10.tar
+├── +++ rushex-0.11.tar
+│ ├── file list
+│ │ @@ -1,19 +1,19 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:36:24.808034 rushex-0.10/
+│ │ --rw-rw-rw-   0        0        0     1148 2023-04-06 10:36:19.000000 rushex-0.10/LICENSE.rst
+│ │ --rw-rw-rw-   0        0        0      113 2023-04-06 10:36:18.000000 rushex-0.10/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0    20223 2023-04-06 10:36:24.809032 rushex-0.10/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0    19167 2023-04-06 10:34:24.000000 rushex-0.10/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:36:24.805043 rushex-0.10/rushex/
+│ │ --rw-rw-rw-   0        0        0     1090 2023-03-31 02:03:52.000000 rushex-0.10/rushex/LICENSE
+│ │ --rw-rw-rw-   0        0        0    19167 2023-04-06 10:34:24.000000 rushex-0.10/rushex/README.MD
+│ │ --rw-rw-rw-   0        0        0   280414 2023-04-06 10:16:12.000000 rushex-0.10/rushex/__init__.py
+│ │ --rw-rw-rw-   0        0        0      156 2023-04-06 10:36:24.000000 rushex-0.10/rushex/requirements.txt
+│ │ --rw-rw-rw-   0        0        0    71155 2023-04-06 10:36:24.000000 rushex-0.10/rushex/thirdparty.json
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:36:24.808034 rushex-0.10/rushex.egg-info/
+│ │ --rw-rw-rw-   0        0        0    20223 2023-04-06 10:36:24.000000 rushex-0.10/rushex.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      299 2023-04-06 10:36:24.000000 rushex-0.10/rushex.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 10:36:24.000000 rushex-0.10/rushex.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0      146 2023-04-06 10:36:24.000000 rushex-0.10/rushex.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        7 2023-04-06 10:36:24.000000 rushex-0.10/rushex.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      115 2023-04-06 10:36:24.809032 rushex-0.10/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1648 2023-04-06 10:36:24.000000 rushex-0.10/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:46:07.069045 rushex-0.11/
+│ │ +-rw-rw-rw-   0        0        0     1148 2023-04-06 10:46:00.000000 rushex-0.11/LICENSE.rst
+│ │ +-rw-rw-rw-   0        0        0      113 2023-04-06 10:46:00.000000 rushex-0.11/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0    20390 2023-04-06 10:46:07.069045 rushex-0.11/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0    19332 2023-04-06 10:44:44.000000 rushex-0.11/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:46:07.065056 rushex-0.11/rushex/
+│ │ +-rw-rw-rw-   0        0        0     1090 2023-03-31 02:03:52.000000 rushex-0.11/rushex/LICENSE
+│ │ +-rw-rw-rw-   0        0        0    19332 2023-04-06 10:44:44.000000 rushex-0.11/rushex/README.MD
+│ │ +-rw-rw-rw-   0        0        0   280414 2023-04-06 10:16:12.000000 rushex-0.11/rushex/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      156 2023-04-06 10:46:06.000000 rushex-0.11/rushex/requirements.txt
+│ │ +-rw-rw-rw-   0        0        0    71155 2023-04-06 10:46:06.000000 rushex-0.11/rushex/thirdparty.json
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:46:07.068048 rushex-0.11/rushex.egg-info/
+│ │ +-rw-rw-rw-   0        0        0    20390 2023-04-06 10:46:06.000000 rushex-0.11/rushex.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      299 2023-04-06 10:46:07.000000 rushex-0.11/rushex.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 10:46:06.000000 rushex-0.11/rushex.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0      146 2023-04-06 10:46:06.000000 rushex-0.11/rushex.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        7 2023-04-06 10:46:06.000000 rushex-0.11/rushex.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      115 2023-04-06 10:46:07.070043 rushex-0.11/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1648 2023-04-06 10:46:06.000000 rushex-0.11/setup.py
+│ │   --- rushex-0.10/LICENSE.rst
+│ ├── +++ rushex-0.11/LICENSE.rst
+│ │┄ Files identical despite different names
+│ │   --- rushex-0.10/PKG-INFO
+│ ├── +++ rushex-0.11/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: rushex
+│ │ -Version: 0.10
+│ │ +Version: 0.11
+│ │  Summary: Search files using the fastest Regex Engine ever - ripgrep - Replacement is also supported!
+│ │  Home-page: https://github.com/hansalemaos/rushex
+│ │  Author: Johannes Fischer
+│ │  Author-email: <aulasparticularesdealemaosp@gmail.com>
+│ │  License: MIT
+│ │  Keywords: ripgrep,grep,search,replace,regex,regular expressions,re
+│ │  Classifier: Development Status :: 4 - Beta
+│ │ @@ -19,14 +19,16 @@
+│ │  
+│ │  # Search files using the fastest Regex Engine ever - ripgrep - replacement is also supported!
+│ │  
+│ │  Uses https://github.com/BurntSushi/ripgrep and parses the regular expression output into a pandas DataFrame.
+│ │  It is much faster than the first version: https://github.com/hansalemaos/PYRipGREP due to more efficient parsing, and substitution is 
+│ │  also supported (BACK UP YOUR DATA BEFORE!). Check out the examples 
+│ │  
+│ │ +### Tested against Windows 10 / Python 3.10 / Anaconda 
+│ │ +
+│ │  
+│ │  ## pip install rushex
+│ │  
+│ │  ```python
+│ │  import random
+│ │  
+│ │  from rushex import FullBore
+│ │ @@ -136,16 +138,16 @@
+│ │  
+│ │  
+│ │  # You can search and replace with rushex
+│ │  
+│ │  # Get a DataFrame
+│ │  df7 = monsterregex.find_all_in_folders(
+│ │      folders=[r"C:\grepte\homepagesavetest13", r"C:\grepte\homepagesavetest14"],
+│ │ -    regular_expressions=[r"der|die|das"],
+│ │ -    allowed_extensions=(".txt", ".html"),
+│ │ +    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!! More than one might corrupt your data!
+│ │ +    allowed_extensions=(".txt", ".html"), 
+│ │      ignore_case=True,
+│ │      maxsubfolders=-1,
+│ │      binary=True,
+│ │      dfa_size="100M",
+│ │      multiline=True,
+│ │      multiline_dotall=False,
+│ │      field_match_separator="ÇÇÇÇÇ",
+│ │   --- rushex-0.10/README.md
+│ ├── +++ rushex-0.11/README.md
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,15 @@
+│ │  # Search files using the fastest Regex Engine ever - ripgrep - replacement is also supported!
+│ │  
+│ │  Uses https://github.com/BurntSushi/ripgrep and parses the regular expression output into a pandas DataFrame.
+│ │  It is much faster than the first version: https://github.com/hansalemaos/PYRipGREP due to more efficient parsing, and substitution is 
+│ │  also supported (BACK UP YOUR DATA BEFORE!). Check out the examples 
+│ │  
+│ │ +### Tested against Windows 10 / Python 3.10 / Anaconda 
+│ │ +
+│ │  
+│ │  ## pip install rushex
+│ │  
+│ │  ```python
+│ │  import random
+│ │  
+│ │  from rushex import FullBore
+│ │ @@ -117,16 +119,16 @@
+│ │  
+│ │  
+│ │  # You can search and replace with rushex
+│ │  
+│ │  # Get a DataFrame
+│ │  df7 = monsterregex.find_all_in_folders(
+│ │      folders=[r"C:\grepte\homepagesavetest13", r"C:\grepte\homepagesavetest14"],
+│ │ -    regular_expressions=[r"der|die|das"],
+│ │ -    allowed_extensions=(".txt", ".html"),
+│ │ +    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!! More than one might corrupt your data!
+│ │ +    allowed_extensions=(".txt", ".html"), 
+│ │      ignore_case=True,
+│ │      maxsubfolders=-1,
+│ │      binary=True,
+│ │      dfa_size="100M",
+│ │      multiline=True,
+│ │      multiline_dotall=False,
+│ │      field_match_separator="ÇÇÇÇÇ",
+│ │   --- rushex-0.10/rushex/LICENSE
+│ ├── +++ rushex-0.11/rushex/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- rushex-0.10/rushex/README.MD
+│ ├── +++ rushex-0.11/rushex/README.MD
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,15 @@
+│ │  # Search files using the fastest Regex Engine ever - ripgrep - replacement is also supported!
+│ │  
+│ │  Uses https://github.com/BurntSushi/ripgrep and parses the regular expression output into a pandas DataFrame.
+│ │  It is much faster than the first version: https://github.com/hansalemaos/PYRipGREP due to more efficient parsing, and substitution is 
+│ │  also supported (BACK UP YOUR DATA BEFORE!). Check out the examples 
+│ │  
+│ │ +### Tested against Windows 10 / Python 3.10 / Anaconda 
+│ │ +
+│ │  
+│ │  ## pip install rushex
+│ │  
+│ │  ```python
+│ │  import random
+│ │  
+│ │  from rushex import FullBore
+│ │ @@ -117,16 +119,16 @@
+│ │  
+│ │  
+│ │  # You can search and replace with rushex
+│ │  
+│ │  # Get a DataFrame
+│ │  df7 = monsterregex.find_all_in_folders(
+│ │      folders=[r"C:\grepte\homepagesavetest13", r"C:\grepte\homepagesavetest14"],
+│ │ -    regular_expressions=[r"der|die|das"],
+│ │ -    allowed_extensions=(".txt", ".html"),
+│ │ +    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!! More than one might corrupt your data!
+│ │ +    allowed_extensions=(".txt", ".html"), 
+│ │      ignore_case=True,
+│ │      maxsubfolders=-1,
+│ │      binary=True,
+│ │      dfa_size="100M",
+│ │      multiline=True,
+│ │      multiline_dotall=False,
+│ │      field_match_separator="ÇÇÇÇÇ",
+│ │   --- rushex-0.10/rushex/__init__.py
+│ ├── +++ rushex-0.11/rushex/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- rushex-0.10/rushex/thirdparty.json
+│ ├── +++ rushex-0.11/rushex/thirdparty.json
+│ │┄ Files identical despite different names
+│ │   --- rushex-0.10/rushex.egg-info/PKG-INFO
+│ ├── +++ rushex-0.11/rushex.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: rushex
+│ │ -Version: 0.10
+│ │ +Version: 0.11
+│ │  Summary: Search files using the fastest Regex Engine ever - ripgrep - Replacement is also supported!
+│ │  Home-page: https://github.com/hansalemaos/rushex
+│ │  Author: Johannes Fischer
+│ │  Author-email: <aulasparticularesdealemaosp@gmail.com>
+│ │  License: MIT
+│ │  Keywords: ripgrep,grep,search,replace,regex,regular expressions,re
+│ │  Classifier: Development Status :: 4 - Beta
+│ │ @@ -19,14 +19,16 @@
+│ │  
+│ │  # Search files using the fastest Regex Engine ever - ripgrep - replacement is also supported!
+│ │  
+│ │  Uses https://github.com/BurntSushi/ripgrep and parses the regular expression output into a pandas DataFrame.
+│ │  It is much faster than the first version: https://github.com/hansalemaos/PYRipGREP due to more efficient parsing, and substitution is 
+│ │  also supported (BACK UP YOUR DATA BEFORE!). Check out the examples 
+│ │  
+│ │ +### Tested against Windows 10 / Python 3.10 / Anaconda 
+│ │ +
+│ │  
+│ │  ## pip install rushex
+│ │  
+│ │  ```python
+│ │  import random
+│ │  
+│ │  from rushex import FullBore
+│ │ @@ -136,16 +138,16 @@
+│ │  
+│ │  
+│ │  # You can search and replace with rushex
+│ │  
+│ │  # Get a DataFrame
+│ │  df7 = monsterregex.find_all_in_folders(
+│ │      folders=[r"C:\grepte\homepagesavetest13", r"C:\grepte\homepagesavetest14"],
+│ │ -    regular_expressions=[r"der|die|das"],
+│ │ -    allowed_extensions=(".txt", ".html"),
+│ │ +    regular_expressions=[r"der|die|das"], # Pass only one regular expression when you want to edit files!!! More than one might corrupt your data!
+│ │ +    allowed_extensions=(".txt", ".html"), 
+│ │      ignore_case=True,
+│ │      maxsubfolders=-1,
+│ │      binary=True,
+│ │      dfa_size="100M",
+│ │      multiline=True,
+│ │      multiline_dotall=False,
+│ │      field_match_separator="ÇÇÇÇÇ",
+│ │   --- rushex-0.10/setup.py
+│ ├── +++ rushex-0.11/setup.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  
+│ │  #change to dict
+│ │  here = os.path.abspath(os.path.dirname(__file__))
+│ │  
+│ │  with codecs.open(os.path.join(os.path.abspath(os.path.dirname(__file__)),'README.md'), encoding="utf-8") as fh:
+│ │      long_description = "\n" + fh.read()
+│ │  
+│ │ -VERSION = '0.10'
+│ │ +VERSION = '0.11'
+│ │  DESCRIPTION = "Search files using the fastest Regex Engine ever - ripgrep - Replacement is also supported!"
+│ │  
+│ │  # Setting up
+│ │  setup(
+│ │      name="rushex",
+│ │      version=VERSION,
+│ │      license='MIT',

@@ -1,0 +1,1082 @@
+# Comparing `tmp/tudais-0.2.tar.gz` & `tmp/tudais-0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\tudais-0.2.tar", last modified: Wed Mar 23 13:56:18 2022, max compression
++gzip compressed data, was "tudais-0.3.tar", last modified: Thu Apr  6 10:38:02 2023, max compression
+```
+
+## Comparing `tudais-0.2.tar` & `tudais-0.3.tar`
+
+### file list
+
+```diff
+@@ -1,138 +1,147 @@
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:18.000000 tudais-0.2/
+--rw-rw-rw-   0        0        0       24 2022-03-23 13:35:40.000000 tudais-0.2/MANIFEST.in
+--rw-rw-rw-   0        0        0      328 2022-03-23 13:56:18.000000 tudais-0.2/PKG-INFO
+--rw-rw-rw-   0        0        0     3685 2022-03-23 13:35:40.000000 tudais-0.2/README.md
+--rw-rw-rw-   0        0        0       42 2022-03-23 13:56:18.000000 tudais-0.2/setup.cfg
+--rw-rw-rw-   0        0        0      838 2022-03-23 13:44:25.000000 tudais-0.2/setup.py
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:40.000000 tudais-0.2/tudais/__init__.py
+--rw-rw-rw-   0        0        0     5076 2022-03-23 13:35:40.000000 tudais-0.2/tudais/__main__.py
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Titanic/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/.include_in_submission
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Titanic/.ipynb_checkpoints/
+--rw-rw-rw-   0        0        0    14549 2022-03-23 09:46:27.000000 tudais-0.2/tudais/notebooks/classification/Titanic/.ipynb_checkpoints/Untergang der Titanic-checkpoint.ipynb
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Data/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Data/.include_in_submission
+--rw-rw-rw-   0        0        0    39719 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Data/titanic.csv
+--rw-rw-rw-   0        0        0     4402 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Data/titanic_test.csv
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/.include_in_submission
+--rw-rw-rw-   0        0        0  1044738 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Banner.gif
+--rw-rw-rw-   0        0        0   222471 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Footer.jpg
+--rw-rw-rw-   0        0        0   173311 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-White-Star-Line.jpg
+--rw-rw-rw-   0        0        0      907 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-alert.png
+--rw-rw-rw-   0        0        0    14230 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-blush.png
+--rw-rw-rw-   0        0        0      764 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-broom.png
+--rw-rw-rw-   0        0        0    13030 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-crying.png
+--rw-rw-rw-   0        0        0      652 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-csv-in.png
+--rw-rw-rw-   0        0        0      674 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-csv-out.png
+--rw-rw-rw-   0        0        0      744 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-csv.png
+--rw-rw-rw-   0        0        0     8357 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-diagonal-arrow.png
+--rw-rw-rw-   0        0        0      753 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-diagram.png
+--rw-rw-rw-   0        0        0     1062 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-gears.png
+--rw-rw-rw-   0        0        0    11475 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-hourglass.png
+--rw-rw-rw-   0        0        0      395 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-left-arrow.png
+--rw-rw-rw-   0        0        0      761 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-magnifying-glass.png
+--rw-rw-rw-   0        0        0      765 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-report.png
+--rw-rw-rw-   0        0        0      391 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-right-arrow.png
+--rw-rw-rw-   0        0        0    14850 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Titanic/Untergang der Titanic.ipynb
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/
+--rw-rw-rw-   0        0        0    85799 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/winequality-red.csv
+--rw-rw-rw-   0        0        0   269325 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/winequality-white.csv
+--rw-rw-rw-   0        0        0     3305 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/winequality.names
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/
+--rw-rw-rw-   0        0        0    57169 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.png
+--rw-rw-rw-   0        0        0    89722 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.svg
+--rw-rw-rw-   0        0        0      907 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-alert.png
+--rw-rw-rw-   0        0        0      764 2022-03-23 13:35:40.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-broom.png
+--rw-rw-rw-   0        0        0   840109 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-cheers.gif
+--rw-rw-rw-   0        0        0      652 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-in.png
+--rw-rw-rw-   0        0        0      674 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-out.png
+--rw-rw-rw-   0        0        0      744 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv.png
+--rw-rw-rw-   0        0        0      753 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-diagram.png
+--rw-rw-rw-   0        0        0     1062 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-gears.png
+--rw-rw-rw-   0        0        0      395 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-left-arrow.png
+--rw-rw-rw-   0        0        0      761 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-magnifying-glass.png
+--rw-rw-rw-   0        0        0     1495 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file-out.png
+--rw-rw-rw-   0        0        0      481 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file.png
+--rw-rw-rw-   0        0        0      765 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-report.png
+--rw-rw-rw-   0        0        0      391 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-right-arrow.png
+--rw-rw-rw-   0        0        0    19946 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-sklearn-logo.png
+--rw-rw-rw-   0        0        0    45239 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/classification/Wine-Quality/Klassifikation von Wein.ipynb
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/preprocessing/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Data/
+--rw-rw-rw-   0        0        0 18360029 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Data/lego_sets.csv
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/
+--rw-rw-rw-   0        0        0      764 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-broom.png
+--rw-rw-rw-   0        0        0      652 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-in.png
+--rw-rw-rw-   0        0        0      674 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-out.png
+--rw-rw-rw-   0        0        0      744 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv.png
+--rw-rw-rw-   0        0        0    35094 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-dirty-data.jpg
+--rw-rw-rw-   0        0        0      395 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-left-arrow.png
+--rw-rw-rw-   0        0        0     5494 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-logo.svg
+--rw-rw-rw-   0        0        0   561717 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy-to-tidy.png
+--rw-rw-rw-   0        0        0   136362 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy.jpg
+--rw-rw-rw-   0        0        0   828073 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-tidy.jpg
+--rw-rw-rw-   0        0        0      761 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-magnifying-glass.png
+--rw-rw-rw-   0        0        0      391 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-right-arrow.png
+--rw-rw-rw-   0        0        0    42922 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Lego Sets Preprocessing.ipynb
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/regression/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/.include_in_submission
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Data/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Data/.include_in_submission
+--rw-rw-rw-   0        0        0    31444 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Data/houses.csv
+--rw-rw-rw-   0        0        0     7815 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Data/houses_test.csv
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/
+--rw-rw-rw-   0        0        0        0 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/.include_in_submission
+--rw-rw-rw-   0        0        0    17916 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Go.png
+--rw-rw-rw-   0        0        0     6932 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Go.svg
+--rw-rw-rw-   0        0        0    64885 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Monopoly-Tokens.jpg
+--rw-rw-rw-   0        0        0    65892 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.png
+--rw-rw-rw-   0        0        0    81855 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.svg
+--rw-rw-rw-   0        0        0      764 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-broom.png
+--rw-rw-rw-   0        0        0      652 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-csv-in.png
+--rw-rw-rw-   0        0        0      674 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-csv-out.png
+--rw-rw-rw-   0        0        0      744 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-csv.png
+--rw-rw-rw-   0        0        0      753 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-diagram.png
+--rw-rw-rw-   0        0        0      747 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-euro.png
+--rw-rw-rw-   0        0        0    13520 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-houses.png
+--rw-rw-rw-   0        0        0      395 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-left-arrow.png
+--rw-rw-rw-   0        0        0      761 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-magnifying-glass.png
+--rw-rw-rw-   0        0        0      391 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-right-arrow.png
+--rw-rw-rw-   0        0        0    15349 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/House-Prices/Vorhersage von Immobilienpreisen.ipynb
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/
+--rw-rw-rw-   0        0        0    85799 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-red.csv
+--rw-rw-rw-   0        0        0   269325 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-white.csv
+--rw-rw-rw-   0        0        0     3305 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/winequality.names
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:18.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/
+--rw-rw-rw-   0        0        0    91044 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.png
+--rw-rw-rw-   0        0        0   110608 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.svg
+--rw-rw-rw-   0        0        0      907 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-alert.png
+--rw-rw-rw-   0        0        0      764 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-broom.png
+--rw-rw-rw-   0        0        0      652 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-in.png
+--rw-rw-rw-   0        0        0      674 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-out.png
+--rw-rw-rw-   0        0        0      744 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv.png
+--rw-rw-rw-   0        0        0      753 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-diagram.png
+--rw-rw-rw-   0        0        0     1062 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-gears.png
+--rw-rw-rw-   0        0        0      395 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-left-arrow.png
+--rw-rw-rw-   0        0        0      761 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-magnifying-glass.png
+--rw-rw-rw-   0        0        0     1495 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-new-file-out.png
+--rw-rw-rw-   0        0        0      481 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-new-file.png
+--rw-rw-rw-   0        0        0      765 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-report.png
+--rw-rw-rw-   0        0        0      391 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-right-arrow.png
+--rw-rw-rw-   0        0        0    19946 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-sklearn-logo.png
+--rw-rw-rw-   0        0        0    93525 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-xkcd-ballmer.png
+--rw-rw-rw-   0        0        0    44998 2022-03-23 13:35:41.000000 tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Vorhersage des Alkoholgehalts von Wein.ipynb
+-drwxrwxrwx   0        0        0        0 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/
+--rw-rw-rw-   0        0        0      328 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     7098 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0      136 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       41 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        7 2022-03-23 13:56:17.000000 tudais-0.2/tudais.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.931511 tudais-0.3/
++-rw-rw-rw-   0        0        0     1138 2023-03-28 12:40:23.000000 tudais-0.3/LICENSE
++-rw-rw-rw-   0        0        0       24 2023-03-28 12:40:23.000000 tudais-0.3/MANIFEST.in
++-rw-rw-rw-   0        0        0      350 2023-04-06 10:38:02.931511 tudais-0.3/PKG-INFO
++-rw-rw-rw-   0        0        0     3697 2023-03-30 16:04:41.000000 tudais-0.3/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-06 10:38:02.932365 tudais-0.3/setup.cfg
++-rw-rw-rw-   0        0        0      900 2023-03-29 07:51:04.000000 tudais-0.3/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.747238 tudais-0.3/tudais/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:23.000000 tudais-0.3/tudais/__init__.py
++-rw-rw-rw-   0        0        0     5076 2023-03-28 12:40:23.000000 tudais-0.3/tudais/__main__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.682253 tudais-0.3/tudais/notebooks/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.678345 tudais-0.3/tudais/notebooks/classification/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.759385 tudais-0.3/tudais/notebooks/classification/Titanic/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/.include_in_submission
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.759700 tudais-0.3/tudais/notebooks/classification/Titanic/.ipynb_checkpoints/
++-rw-rw-rw-   0        0        0    14250 2023-03-30 15:53:35.000000 tudais-0.3/tudais/notebooks/classification/Titanic/.ipynb_checkpoints/Untergang der Titanic-checkpoint.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.764258 tudais-0.3/tudais/notebooks/classification/Titanic/Data/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Data/.include_in_submission
++-rw-rw-rw-   0        0        0    39719 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Data/titanic.csv
++-rw-rw-rw-   0        0        0     4402 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Data/titanic_test.csv
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.796646 tudais-0.3/tudais/notebooks/classification/Titanic/Images/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/.include_in_submission
++-rw-rw-rw-   0        0        0  1044738 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Banner.gif
++-rw-rw-rw-   0        0        0   222471 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Footer.jpg
++-rw-rw-rw-   0        0        0   173311 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-White-Star-Line.jpg
++-rw-rw-rw-   0        0        0      907 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-alert.png
++-rw-rw-rw-   0        0        0    14230 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-blush.png
++-rw-rw-rw-   0        0        0      764 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-broom.png
++-rw-rw-rw-   0        0        0    13030 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-crying.png
++-rw-rw-rw-   0        0        0      652 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-csv-in.png
++-rw-rw-rw-   0        0        0      674 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-csv-out.png
++-rw-rw-rw-   0        0        0      744 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-csv.png
++-rw-rw-rw-   0        0        0     8357 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-diagonal-arrow.png
++-rw-rw-rw-   0        0        0      753 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-diagram.png
++-rw-rw-rw-   0        0        0     1062 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-gears.png
++-rw-rw-rw-   0        0        0    11475 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-hourglass.png
++-rw-rw-rw-   0        0        0      395 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-left-arrow.png
++-rw-rw-rw-   0        0        0      761 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-magnifying-glass.png
++-rw-rw-rw-   0        0        0      765 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-report.png
++-rw-rw-rw-   0        0        0      391 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-right-arrow.png
++-rw-rw-rw-   0        0        0    14250 2023-03-30 15:53:35.000000 tudais-0.3/tudais/notebooks/classification/Titanic/Untergang der Titanic.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.798313 tudais-0.3/tudais/notebooks/classification/Wine-Quality/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.799710 tudais-0.3/tudais/notebooks/classification/Wine-Quality/.ipynb_checkpoints/
++-rw-rw-rw-   0        0        0    43995 2023-03-30 15:44:14.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/.ipynb_checkpoints/Klassifikation von Wein-checkpoint.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.807652 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/
++-rw-rw-rw-   0        0        0    85799 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/winequality-red.csv
++-rw-rw-rw-   0        0        0   269325 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/winequality-white.csv
++-rw-rw-rw-   0        0        0     3305 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/winequality.names
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.832528 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/
++-rw-rw-rw-   0        0        0    57169 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.png
++-rw-rw-rw-   0        0        0    89722 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.svg
++-rw-rw-rw-   0        0        0      907 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-alert.png
++-rw-rw-rw-   0        0        0      764 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-broom.png
++-rw-rw-rw-   0        0        0   840109 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-cheers.gif
++-rw-rw-rw-   0        0        0      652 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-in.png
++-rw-rw-rw-   0        0        0      674 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-out.png
++-rw-rw-rw-   0        0        0      744 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv.png
++-rw-rw-rw-   0        0        0      753 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-diagram.png
++-rw-rw-rw-   0        0        0     1062 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-gears.png
++-rw-rw-rw-   0        0        0      395 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-left-arrow.png
++-rw-rw-rw-   0        0        0      761 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-magnifying-glass.png
++-rw-rw-rw-   0        0        0     1495 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file-out.png
++-rw-rw-rw-   0        0        0      481 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file.png
++-rw-rw-rw-   0        0        0      765 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-report.png
++-rw-rw-rw-   0        0        0      391 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-right-arrow.png
++-rw-rw-rw-   0        0        0    19946 2023-03-28 12:40:23.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-sklearn-logo.png
++-rw-rw-rw-   0        0        0    43995 2023-03-30 15:44:14.000000 tudais-0.3/tudais/notebooks/classification/Wine-Quality/Klassifikation von Wein.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.680320 tudais-0.3/tudais/notebooks/preprocessing/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.833631 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.834003 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/.ipynb_checkpoints/
++-rw-rw-rw-   0        0        0    41890 2023-03-30 15:39:53.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/.ipynb_checkpoints/Lego Sets Preprocessing-checkpoint.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.834759 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Data/
++-rw-rw-rw-   0        0        0 18360029 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Data/lego_sets.csv
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.873881 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/
++-rw-rw-rw-   0        0        0      764 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-broom.png
++-rw-rw-rw-   0        0        0      652 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-in.png
++-rw-rw-rw-   0        0        0      674 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-out.png
++-rw-rw-rw-   0        0        0      744 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv.png
++-rw-rw-rw-   0        0        0    35094 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-dirty-data.jpg
++-rw-rw-rw-   0        0        0      395 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-left-arrow.png
++-rw-rw-rw-   0        0        0     5494 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-logo.svg
++-rw-rw-rw-   0        0        0   561717 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy-to-tidy.png
++-rw-rw-rw-   0        0        0   136362 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy.jpg
++-rw-rw-rw-   0        0        0   828073 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-tidy.jpg
++-rw-rw-rw-   0        0        0      761 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-magnifying-glass.png
++-rw-rw-rw-   0        0        0      391 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-right-arrow.png
++-rw-rw-rw-   0        0        0    41890 2023-03-30 15:39:53.000000 tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Lego Sets Preprocessing.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.734381 tudais-0.3/tudais/notebooks/regression/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.875251 tudais-0.3/tudais/notebooks/regression/House-Prices/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/.include_in_submission
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.876282 tudais-0.3/tudais/notebooks/regression/House-Prices/.ipynb_checkpoints/
++-rw-rw-rw-   0        0        0    14731 2023-03-30 15:52:08.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/.ipynb_checkpoints/Vorhersage von Immobilienpreisen-checkpoint.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.879275 tudais-0.3/tudais/notebooks/regression/House-Prices/Data/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Data/.include_in_submission
++-rw-rw-rw-   0        0        0    31444 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Data/houses.csv
++-rw-rw-rw-   0        0        0     7815 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Data/houses_test.csv
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.900852 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/
++-rw-rw-rw-   0        0        0        0 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/.include_in_submission
++-rw-rw-rw-   0        0        0    17916 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Go.png
++-rw-rw-rw-   0        0        0     6932 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Go.svg
++-rw-rw-rw-   0        0        0    64885 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Monopoly-Tokens.jpg
++-rw-rw-rw-   0        0        0    65892 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.png
++-rw-rw-rw-   0        0        0    81855 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.svg
++-rw-rw-rw-   0        0        0      764 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-broom.png
++-rw-rw-rw-   0        0        0      652 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-csv-in.png
++-rw-rw-rw-   0        0        0      674 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-csv-out.png
++-rw-rw-rw-   0        0        0      744 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-csv.png
++-rw-rw-rw-   0        0        0      753 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-diagram.png
++-rw-rw-rw-   0        0        0      747 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-euro.png
++-rw-rw-rw-   0        0        0    13520 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-houses.png
++-rw-rw-rw-   0        0        0      395 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-left-arrow.png
++-rw-rw-rw-   0        0        0      761 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-magnifying-glass.png
++-rw-rw-rw-   0        0        0      391 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-right-arrow.png
++-rw-rw-rw-   0        0        0    14731 2023-03-30 15:52:08.000000 tudais-0.3/tudais/notebooks/regression/House-Prices/Vorhersage von Immobilienpreisen.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.904950 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.906944 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/.ipynb_checkpoints/
++-rw-rw-rw-   0        0        0    43773 2023-03-30 15:45:56.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/.ipynb_checkpoints/Vorhersage des Alkoholgehalts von Wein-checkpoint.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.911863 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/
++-rw-rw-rw-   0        0        0    85799 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-red.csv
++-rw-rw-rw-   0        0        0   269325 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-white.csv
++-rw-rw-rw-   0        0        0     3305 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/winequality.names
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.930683 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/
++-rw-rw-rw-   0        0        0    91044 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.png
++-rw-rw-rw-   0        0        0   110608 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.svg
++-rw-rw-rw-   0        0        0      907 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-alert.png
++-rw-rw-rw-   0        0        0      764 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-broom.png
++-rw-rw-rw-   0        0        0      652 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-in.png
++-rw-rw-rw-   0        0        0      674 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-out.png
++-rw-rw-rw-   0        0        0      744 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv.png
++-rw-rw-rw-   0        0        0      753 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-diagram.png
++-rw-rw-rw-   0        0        0     1062 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-gears.png
++-rw-rw-rw-   0        0        0      395 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-left-arrow.png
++-rw-rw-rw-   0        0        0      761 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-magnifying-glass.png
++-rw-rw-rw-   0        0        0     1495 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-new-file-out.png
++-rw-rw-rw-   0        0        0      481 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-new-file.png
++-rw-rw-rw-   0        0        0      765 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-report.png
++-rw-rw-rw-   0        0        0      391 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-right-arrow.png
++-rw-rw-rw-   0        0        0    19946 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-sklearn-logo.png
++-rw-rw-rw-   0        0        0    93525 2023-03-28 12:40:24.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-xkcd-ballmer.png
++-rw-rw-rw-   0        0        0    43773 2023-03-30 15:45:56.000000 tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Vorhersage des Alkoholgehalts von Wein.ipynb
++drwxrwxrwx   0        0        0        0 2023-04-06 10:38:02.757829 tudais-0.3/tudais.egg-info/
++-rw-rw-rw-   0        0        0      350 2023-04-06 10:38:02.000000 tudais-0.3/tudais.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     7538 2023-04-06 10:38:02.000000 tudais-0.3/tudais.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 10:38:02.000000 tudais-0.3/tudais.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0      135 2023-04-06 10:38:02.000000 tudais-0.3/tudais.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       49 2023-04-06 10:38:02.000000 tudais-0.3/tudais.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        7 2023-04-06 10:38:02.000000 tudais-0.3/tudais.egg-info/top_level.txt
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `tudais-0.2/README.md` & `tudais-0.3/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -71,15 +71,15 @@
+    ```
+    tud-ais-prepare-submission
+    ```
+    When prompted, enter your personal information. This will create a ZIP archive 
+    with all required files.
+ 3. Send the ZIP archive to your lab supervisor via email.
+ 
+-If you run into any problems in this process, contact [Simon Stone](mailto:simon.stone@tu-dresden.de?subject=Praktikum%20AIS) for 
++If you run into any problems in this process, contact [Christian Kleiner](mailto:christian.kleiner@tu-dresden.de?subject=Praktikum%20AIS) for 
+ assistance.
+```
+
+### Comparing `tudais-0.2/setup.py` & `tudais-0.3/setup.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,26 +1,27 @@
+ """ Setup script for tudais """
+ 
+ from setuptools import setup
+ 
+ setup(name='tudais',
+-      version='0.2',
++      version='0.3',
+       description='Supplemental material for the lecture Angewandte '
+                   'Intelligente Signalverarbeitung at TU Dresden',
+       url='http://github.com/TUD-STKS/tud-ais-package',
+-      author='Simon Stone',
+-      author_email='simon.stone@tu-dresden.de',
++      author='Simon Stone, Christian Kleiner, Peter Steiner',
++      author_email='christian.kleiner@tu-dresden.de',
+       license='MIT',
+       packages=['tudais'],
+       include_package_data=True,
+       install_requires=[
+           'jupyterlab',
+           'pandas',
+           'scikit-learn',
+-          'tudthemes'
++          'tudthemes',
++          'seaborn'
+       ],
+       entry_points={
+           'console_scripts': [
+               'tud-ais-start = tudais.__main__:start_jupyter_server',
+               'tud-ais-prepare-submission = tudais.__main__:prepare_submission'
+           ]
+       }
+```
+
+### Comparing `tudais-0.2/tudais/__main__.py` & `tudais-0.3/tudais/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/.ipynb_checkpoints/Untergang der Titanic-checkpoint.ipynb` & `tudais-0.3/tudais/notebooks/classification/Titanic/.ipynb_checkpoints/Untergang der Titanic-checkpoint.ipynb`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9969362745098039%*
+
+ * *Differences: {"'cells'": "{14: {'source': ['Mit Ihrer Vorhersagen können Sie an einem kleinen Wettbewerb "*
+
+ * *            'teilnehmen: Wir berechnen die Klassifikationsgenauigkeit Ihres Modells auf den '*
+
+ * *            'ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der '*
+
+ * *            'Vorlesungszeit im Kurs bekannt geben werden. Optional können Sie uns auch ein '*
+
+ * *            'Pseudonym mitteilen, unter dem Sie auf der Liste geführt werden, wenn Sie nicht '*
+
+ * *            "namentlich dort erschein […]*
+
+```diff
+@@ -257,15 +257,15 @@
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+                 "editable": false
+             },
+             "source": [
+-                "Wenn Sie m\u00f6chten, k\u00f6nnen Sie die CSV-Datei mit Ihren Vorhersagen an <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Vorhersagen%20zu%20Jupyter%20Notebook%20Titanic\" target=\"_top\">Simon Stone</a> schicken und so an einem kleinen Wettbewerb teilnehmen: Wir berechnen die Klassifikationsgenauigkeit Ihres Modells auf den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der Vorlesungszeit im Kurs bekannt geben werden. Optional k\u00f6nnen Sie uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste gef\u00fchrt werden, wenn Sie nicht namentlich dort erscheinen wollen. Viel Erfolg!"
++                "Mit Ihrer Vorhersagen k\u00f6nnen Sie an einem kleinen Wettbewerb teilnehmen: Wir berechnen die Klassifikationsgenauigkeit Ihres Modells auf den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der Vorlesungszeit im Kurs bekannt geben werden. Optional k\u00f6nnen Sie uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste gef\u00fchrt werden, wenn Sie nicht namentlich dort erscheinen wollen. Viel Erfolg!"
+             ]
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+                 "editable": false
+             },
+@@ -280,15 +280,15 @@
+             },
+             "source": [
+                 "---\n",
+                 "<div>Passenger data from <a href=\"https://www.encyclopedia-titanica.org/\">Encyclopedia Titanica</a></div>\n",
+                 "<div>Header background swiped from <a href=\"https://titanicsound.wordpress.com/\">Titanic Movie blog</a></div>\n",
+                 "<div>Icons made by <a href=\"https://www.flaticon.com/authors/swifticons\" title=\"Swifticons\">Swifticons</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>\n",
+                 "<div>Footer image by Karl Beutel, licensed under <a href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.en\">Creative Commons Attribution-Share Alike 3.0 Unported</a></div>\n",
+-                "<div>Notebook erstellt von <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Frage%20zu%20Jupyter%20Notebook%20Titanic\" target=\"_top\">Simon Stone</a></div>"
++                "<div>Notebook erstellt von Simon Stone</div>"
+             ]
+         }
+     ],
+     "metadata": {
+         "celltoolbar": "Edit Metadata",
+         "kernelspec": {
+             "display_name": "Python 3 (ipykernel)",
+@@ -301,13 +301,13 @@
+                 "version": 3
+             },
+             "file_extension": ".py",
+             "mimetype": "text/x-python",
+             "name": "python",
+             "nbconvert_exporter": "python",
+             "pygments_lexer": "ipython3",
+-            "version": "3.7.2"
++            "version": "3.10.4"
+         }
+     },
+     "nbformat": 4,
+     "nbformat_minor": 2
+ }
+```
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Data/titanic.csv` & `tudais-0.3/tudais/notebooks/classification/Titanic/Data/titanic.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Data/titanic_test.csv` & `tudais-0.3/tudais/notebooks/classification/Titanic/Data/titanic_test.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Banner.gif` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Banner.gif`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Footer.jpg` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-Titanic-Footer.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-White-Star-Line.jpg` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-White-Star-Line.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-alert.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-alert.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-blush.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-blush.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-broom.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-broom.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-crying.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-crying.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-csv-in.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-csv-in.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-csv-out.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-csv-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-csv.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-csv.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-diagonal-arrow.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-diagonal-arrow.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-diagram.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-diagram.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-gears.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-gears.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-hourglass.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-hourglass.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-magnifying-glass.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-magnifying-glass.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Images/IMG-report.png` & `tudais-0.3/tudais/notebooks/classification/Titanic/Images/IMG-report.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Titanic/Untergang der Titanic.ipynb` & `tudais-0.3/tudais/notebooks/classification/Titanic/Untergang der Titanic.ipynb`
+
+ * *Files 16% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9934640522875817%*
+
+ * *Differences: {"'cells'": "{14: {'source': ['Mit Ihrer Vorhersagen können Sie an einem kleinen Wettbewerb "*
+
+ * *            'teilnehmen: Wir berechnen die Klassifikationsgenauigkeit Ihres Modells auf den '*
+
+ * *            'ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der '*
+
+ * *            'Vorlesungszeit im Kurs bekannt geben werden. Optional können Sie uns auch ein '*
+
+ * *            'Pseudonym mitteilen, unter dem Sie auf der Liste geführt werden, wenn Sie nicht '*
+
+ * *            "namentlich dort erschein […]*
+
+```diff
+@@ -257,15 +257,15 @@
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+                 "editable": false
+             },
+             "source": [
+-                "Wenn Sie m\u00f6chten, k\u00f6nnen Sie die CSV-Datei mit Ihren Vorhersagen an <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Vorhersagen%20zu%20Jupyter%20Notebook%20Titanic\" target=\"_top\">Simon Stone</a> schicken und so an einem kleinen Wettbewerb teilnehmen: Wir berechnen die Klassifikationsgenauigkeit Ihres Modells auf den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der Vorlesungszeit im Kurs bekannt geben werden. Optional k\u00f6nnen Sie uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste gef\u00fchrt werden, wenn Sie nicht namentlich dort erscheinen wollen. Viel Erfolg!"
++                "Mit Ihrer Vorhersagen k\u00f6nnen Sie an einem kleinen Wettbewerb teilnehmen: Wir berechnen die Klassifikationsgenauigkeit Ihres Modells auf den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der Vorlesungszeit im Kurs bekannt geben werden. Optional k\u00f6nnen Sie uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste gef\u00fchrt werden, wenn Sie nicht namentlich dort erscheinen wollen. Viel Erfolg!"
+             ]
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+                 "editable": false
+             },
+@@ -280,34 +280,34 @@
+             },
+             "source": [
+                 "---\n",
+                 "<div>Passenger data from <a href=\"https://www.encyclopedia-titanica.org/\">Encyclopedia Titanica</a></div>\n",
+                 "<div>Header background swiped from <a href=\"https://titanicsound.wordpress.com/\">Titanic Movie blog</a></div>\n",
+                 "<div>Icons made by <a href=\"https://www.flaticon.com/authors/swifticons\" title=\"Swifticons\">Swifticons</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>\n",
+                 "<div>Footer image by Karl Beutel, licensed under <a href=\"https://creativecommons.org/licenses/by-sa/3.0/deed.en\">Creative Commons Attribution-Share Alike 3.0 Unported</a></div>\n",
+-                "<div>Notebook erstellt von <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Frage%20zu%20Jupyter%20Notebook%20Titanic\" target=\"_top\">Simon Stone</a></div>"
++                "<div>Notebook erstellt von Simon Stone</div>"
+             ]
+         }
+     ],
+     "metadata": {
+         "celltoolbar": "Edit Metadata",
+         "kernelspec": {
+-            "display_name": "Python 3",
++            "display_name": "Python 3 (ipykernel)",
+             "language": "python",
+             "name": "python3"
+         },
+         "language_info": {
+             "codemirror_mode": {
+                 "name": "ipython",
+                 "version": 3
+             },
+             "file_extension": ".py",
+             "mimetype": "text/x-python",
+             "name": "python",
+             "nbconvert_exporter": "python",
+             "pygments_lexer": "ipython3",
+-            "version": "3.7.3"
++            "version": "3.10.4"
+         }
+     },
+     "nbformat": 4,
+     "nbformat_minor": 2
+ }
+```
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/winequality-red.csv` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/winequality-red.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/winequality-white.csv` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/winequality-white.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Data/winequality.names` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Data/winequality.names`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.svg` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-alert.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-alert.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-broom.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-broom.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-cheers.gif` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-cheers.gif`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-in.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-in.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-out.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-csv.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-diagram.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-diagram.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-gears.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-gears.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-magnifying-glass.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-magnifying-glass.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file-out.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-report.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-report.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Images/IMG-sklearn-logo.png` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/Images/IMG-sklearn-logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/classification/Wine-Quality/Klassifikation von Wein.ipynb` & `tudais-0.3/tudais/notebooks/classification/Wine-Quality/.ipynb_checkpoints/Klassifikation von Wein-checkpoint.ipynb`
+
+ * *Files 22% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9529485271672772%*
+
+ * *Differences: {"'cells'": "{24: {'source': {insert: [(8, 'Es empfiehlt sich sehr, die Hyperparameteroptimierung "*
+
+ * *            'auf einem parallen Rechner auszuführen! Da jede Hyperparameterkonfiguration und jede '*
+
+ * *            'Kreuzvalidierung unabhängig voneinander berechnet werden können, ist hier ein nahezu '*
+
+ * *            'perfekter paralleler [Speedup](https://de.wikipedia.org/wiki/Speedup) möglich. Ein '*
+
+ * *            "einfaches Beispiel:\\n'), (10, 'Sie wollen prüfen, welche Zahl zwischen 1 und 10 die "*
+
+ * *            'b […]*
+
+```diff
+@@ -460,17 +460,17 @@
+                 "\n",
+                 "Zur Optimierung der Hyperparameter (\"Tuning des Modells\") basierend auf Kreuzvalidierung bietet uns ```sklearn``` im Modul ```model_selection```(neben einigen anderen Varianten) das Objekt [```GridSearchCV```](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) an. Dieses Objekt f\u00fchrt eine Gittersuche (engl. _grid search_) auf einem vorgebenen Parametergitter aus und \u00fcberpr\u00fcft an jedem Gitterknoten die Performance des so parametrisierten Modells mit Hilfe von Kreuzvalidierung (engl. _crossvalidation_, CV). Dazu ben\u00f6tigt es den zu tunenden Klassifikator, das Parametergitter und weitere optionale Steuerparameter, wie die Anzahl der Folds in der Kreuzvalidierung.\n",
+                 "\n",
+                 "Die Werte der Hyperparameter, die ausprobiert werden sollen, werden in Form einer Liste von [Dictionary](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) \u00fcbergeben. Jedes Dictionary enth\u00e4lt ein Gitter, das abgesucht wird. \n",
+                 "\n",
+                 "Am Ende wird das Modell mit dem als optimal identifizierten Hyperparametersatz auf allen Folds trainiert, so dass der R\u00fcckgabewert der Methode ```fit()``` einen auch im Sinne der Hyperparameter optimalen Klassifikator darstellt.\n",
+                 "\n",
+-                "**Es empfiehlt sich sehr, die Hyperparameteroptimierung auf einem parallen Rechner auszuf\u00fchren!*** Da jede Hyperparameterkonfiguration und jede Kreuzvalidierung unabh\u00e4ngig voneinander berechnet werden k\u00f6nnen, ist hier ein nahezu perfekter paralleler [Speedup](https://de.wikipedia.org/wiki/Speedup) m\u00f6glich. Ein einfaches Beispiel:\n",
++                "Es empfiehlt sich sehr, die Hyperparameteroptimierung auf einem parallen Rechner auszuf\u00fchren! Da jede Hyperparameterkonfiguration und jede Kreuzvalidierung unabh\u00e4ngig voneinander berechnet werden k\u00f6nnen, ist hier ein nahezu perfekter paralleler [Speedup](https://de.wikipedia.org/wiki/Speedup) m\u00f6glich. Ein einfaches Beispiel:\n",
+                 "\n",
+-                "Sie wollen pr\u00fcfen, welche Zahl zwischen 1 und 10 die beste Zahl von Nachbarn in dem $k$ N\u00e4chste Nachbarn Klassifikator darstellt. Dazu m\u00fcssen Sie also 10 Modelle mit 10 verschiedenen Werten f\u00fcr $k$ berechnen und diese miteinander vergleichen. Zum Vergleich wollen Sie jedes Modell mit 4 Folds validieren. Dazu m\u00fcssen Sie also f\u00fcr jeden der 10 Werte von $k$ schon 4 Modell berechnen, also insgesamt 40 Trainingsvorg\u00e4nge. Auf einem Single-CPU Rechner dauert dies dann zum Beispiel eine Minute. Da alle Berechnungen getrennt voneinander gemacht werden k\u00f6nnen, kann das exakt gleiche Training auf einem Parallelrechner mit z.B. 20 CPUs in 1/20 der Zeit gerechnet werden, also in diesem Beispiel in nur 3 Sekunden. Wenn noch weitere Hyperparameter optimiert oder mehr Werte ausprobiert werden sollen, explodiert der Rechenaufwand entsprechend durch die kombinatorische Vielfalt des Gitters. Parallele Ausf\u00fchrung ist hier also enorm wichtig. ***Wir empfehlen daher nachdr\u00fccklich das Arbeiten auf dem HPC (siehe [Einf\u00fchrung ins Praktikum](https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/23165501449/CourseNode/101490883666782))!***\n"
++                "Sie wollen pr\u00fcfen, welche Zahl zwischen 1 und 10 die beste Zahl von Nachbarn in dem $k$ N\u00e4chste Nachbarn Klassifikator darstellt. Dazu m\u00fcssen Sie also 10 Modelle mit 10 verschiedenen Werten f\u00fcr $k$ berechnen und diese miteinander vergleichen. Zum Vergleich wollen Sie jedes Modell mit 4 Folds validieren. Dazu m\u00fcssen Sie also f\u00fcr jeden der 10 Werte von $k$ schon 4 Modell berechnen, also insgesamt 40 Trainingsvorg\u00e4nge. Auf einem Single-CPU Rechner dauert dies dann zum Beispiel eine Minute. Da alle Berechnungen getrennt voneinander gemacht werden k\u00f6nnen, kann das exakt gleiche Training auf einem Parallelrechner mit z.B. 20 CPUs in 1/20 der Zeit gerechnet werden, also in diesem Beispiel in nur 3 Sekunden. Wenn noch weitere Hyperparameter optimiert oder mehr Werte ausprobiert werden sollen, explodiert der Rechenaufwand entsprechend durch die kombinatorische Vielfalt des Gitters. Parallele Ausf\u00fchrung ist hier also enorm wichtig.\n"
+             ]
+         },
+         {
+             "cell_type": "code",
+             "execution_count": null,
+             "metadata": {},
+             "outputs": [],
+@@ -905,41 +905,41 @@
+                 "\n",
+                 "<img src=\"Images/IMG-cheers.gif\" alt=\"Footer\" style=\"display: block; margin-left: auto; margin-right: auto; width: 100%\">\n"
+             ]
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+-                "deletable": false,
+-                "editable": false
++                "deletable": false
+             },
+             "source": [
+                 "---\n",
+                 "<div>Wine data from <a href=\"http://archive.ics.uci.edu/ml/datasets/Wine\">UCI Machine Learning Repository</a></div>\n",
+                 "<div>Footer via <a href=\"https://media.giphy.com/media/BNjLM5WNcVyM0/giphy.gif\">Giphy</a></div>\n",
+                 "<div>Icons made by <a href=\"https://www.flaticon.com/authors/swifticons\" title=\"Swifticons\">Swifticons</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>\n",
+-                "<div>Notebook erstellt von Yifei Li und <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Frage%20zu%20Jupyter%20Notebook%20Titanic\" target=\"_top\">Simon Stone</a></div>"
++                "<div>Notebook erstellt von Yifei Li und Simon Stone</div>"
+             ]
+         }
+     ],
+     "metadata": {
++        "celltoolbar": "Edit Metadata",
+         "kernelspec": {
+-            "display_name": "Python 3",
++            "display_name": "Python 3 (ipykernel)",
+             "language": "python",
+             "name": "python3"
+         },
+         "language_info": {
+             "codemirror_mode": {
+                 "name": "ipython",
+                 "version": 3
+             },
+             "file_extension": ".py",
+             "mimetype": "text/x-python",
+             "name": "python",
+             "nbconvert_exporter": "python",
+             "pygments_lexer": "ipython3",
+-            "version": "3.7.3"
++            "version": "3.10.4"
+         }
+     },
+     "nbformat": 4,
+     "nbformat_minor": 2
+ }
+```
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Data/lego_sets.csv` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Data/lego_sets.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-broom.png` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-broom.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-in.png` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-in.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-out.png` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv.png` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-dirty-data.jpg` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-dirty-data.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-logo.svg` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-logo.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy-to-tidy.png` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy-to-tidy.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy.jpg` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-tidy.jpg` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-tidy.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-magnifying-glass.png` & `tudais-0.3/tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-magnifying-glass.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Data/houses.csv` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Data/houses.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Data/houses_test.csv` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Data/houses_test.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Go.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Go.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Go.svg` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Go.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Monopoly-Tokens.jpg` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Monopoly-Tokens.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.svg` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-Regression.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-broom.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-broom.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-csv-in.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-csv-in.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-csv-out.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-csv-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-csv.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-csv.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-diagram.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-diagram.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-euro.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-euro.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-houses.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-houses.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Images/IMG-magnifying-glass.png` & `tudais-0.3/tudais/notebooks/regression/House-Prices/Images/IMG-magnifying-glass.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/House-Prices/Vorhersage von Immobilienpreisen.ipynb` & `tudais-0.3/tudais/notebooks/regression/House-Prices/.ipynb_checkpoints/Vorhersage von Immobilienpreisen-checkpoint.ipynb`
+
+ * *Files 22% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.993405695611578%*
+
+ * *Differences: {"'cells'": "{14: {'source': ['Mit Ihrer Vorhersagen können Sie an einem kleinen Wettbewerb "*
+
+ * *            'teilnehmen: Wir berechnen die mittlere Abweichung der Vorhersagen Ihres Modells auf '*
+
+ * *            'den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende '*
+
+ * *            'der Vorlesungszeit im Kurs bekannt geben werden. Optional können Sie dem '*
+
+ * *            'widersprechen, oder uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste '*
+
+ * *            "geführt werden, wenn S […]*
+
+```diff
+@@ -282,15 +282,15 @@
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+                 "editable": false
+             },
+             "source": [
+-                "Wenn Sie m\u00f6chten, k\u00f6nnen Sie die CSV-Datei mit Ihren Vorhersagen an <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Vorhersagen%20zu%20Jupyter%20Notebook%20Immobilienpreise\" target=\"_top\">Simon Stone</a> schicken und so an einem kleinen Wettbewerb teilnehmen: Wir berechnen die mittlere Abweichung der Vorhersagen Ihres Modells auf den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der Vorlesungszeit im Kurs bekannt geben werden. Optional k\u00f6nnen Sie uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste gef\u00fchrt werden, wenn Sie nicht namentlich dort erscheinen wollen. Viel Erfolg!"
++                "Mit Ihrer Vorhersagen k\u00f6nnen Sie an einem kleinen Wettbewerb teilnehmen: Wir berechnen die mittlere Abweichung der Vorhersagen Ihres Modells auf den ungesehenen Daten und stellen so ein Kurs-internes Ranking auf, das wir am Ende der Vorlesungszeit im Kurs bekannt geben werden. Optional k\u00f6nnen Sie dem widersprechen, oder uns auch ein Pseudonym mitteilen, unter dem Sie auf der Liste gef\u00fchrt werden, wenn Sie nicht namentlich dort erscheinen wollen. Viel Erfolg!"
+             ]
+         },
+         {
+             "cell_type": "markdown",
+             "metadata": {
+                 "editable": false
+             },
+@@ -304,34 +304,34 @@
+                 "editable": false
+             },
+             "source": [
+                 "---\n",
+                 "<div>Housing data in the public domain. Source: Harrison, D. and Rubinfeld, D.L. \"Hedonic prices and the demand for clean air\", J. Environ. Economics & Management, vol.5, 81-102, 1978.</div>\n",
+                 "<div>Icons made by <a href=\"https://www.flaticon.com/authors/swifticons\" title=\"Swifticons\">Swifticons</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a></div>\n",
+                 "<div>Monopoly tokens image based on <a href=\"https://monopoly.fandom.com/wiki/Tokens?file=Monopoly_1946-tokens.jpg\">Monopoly Wiki</a></div>\n",
+-                "<div>Notebook erstellt von <a href=\"mailto:simon.stone@tu-dresden.de?Subject=Frage%20zu%20Jupyter%20Notebook%20Immobilienpreise\" target=\"_top\">Simon Stone</a></div>"
++                "<div>Notebook erstellt von Simon Stone</div>"
+             ]
+         }
+     ],
+     "metadata": {
+         "celltoolbar": "Edit Metadata",
+         "kernelspec": {
+-            "display_name": "Python 3",
++            "display_name": "Python 3 (ipykernel)",
+             "language": "python",
+             "name": "python3"
+         },
+         "language_info": {
+             "codemirror_mode": {
+                 "name": "ipython",
+                 "version": 3
+             },
+             "file_extension": ".py",
+             "mimetype": "text/x-python",
+             "name": "python",
+             "nbconvert_exporter": "python",
+             "pygments_lexer": "ipython3",
+-            "version": "3.7.3"
++            "version": "3.10.4"
+         }
+     },
+     "nbformat": 4,
+     "nbformat_minor": 2
+ }
+```
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-red.csv` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-red.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-white.csv` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/winequality-white.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Data/winequality.names` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Data/winequality.names`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.svg` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-alert.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-alert.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-broom.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-broom.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-in.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-in.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-out.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-csv.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-diagram.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-diagram.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-gears.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-gears.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-magnifying-glass.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-magnifying-glass.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-new-file-out.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-new-file-out.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-report.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-report.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-sklearn-logo.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-sklearn-logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-xkcd-ballmer.png` & `tudais-0.3/tudais/notebooks/regression/Wine-Alcohol/Images/IMG-xkcd-ballmer.png`
+
+ * *Files identical despite different names*
+
+### Comparing `tudais-0.2/tudais.egg-info/SOURCES.txt` & `tudais-0.3/tudais.egg-info/SOURCES.txt`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,7 +1,8 @@
++LICENSE
+ MANIFEST.in
+ README.md
+ setup.py
+ tudais/__init__.py
+ tudais/__main__.py
+ tudais.egg-info/PKG-INFO
+ tudais.egg-info/SOURCES.txt
+@@ -31,14 +32,15 @@
+ tudais/notebooks/classification/Titanic/Images/IMG-gears.png
+ tudais/notebooks/classification/Titanic/Images/IMG-hourglass.png
+ tudais/notebooks/classification/Titanic/Images/IMG-left-arrow.png
+ tudais/notebooks/classification/Titanic/Images/IMG-magnifying-glass.png
+ tudais/notebooks/classification/Titanic/Images/IMG-report.png
+ tudais/notebooks/classification/Titanic/Images/IMG-right-arrow.png
+ tudais/notebooks/classification/Wine-Quality/Klassifikation von Wein.ipynb
++tudais/notebooks/classification/Wine-Quality/.ipynb_checkpoints/Klassifikation von Wein-checkpoint.ipynb
+ tudais/notebooks/classification/Wine-Quality/Data/winequality-red.csv
+ tudais/notebooks/classification/Wine-Quality/Data/winequality-white.csv
+ tudais/notebooks/classification/Wine-Quality/Data/winequality.names
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-Wine-Quality_Banner.svg
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-alert.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-broom.png
+@@ -52,14 +54,15 @@
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-magnifying-glass.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file-out.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-new-file.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-report.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-right-arrow.png
+ tudais/notebooks/classification/Wine-Quality/Images/IMG-sklearn-logo.png
+ tudais/notebooks/preprocessing/Lego-Sets/Lego Sets Preprocessing.ipynb
++tudais/notebooks/preprocessing/Lego-Sets/.ipynb_checkpoints/Lego Sets Preprocessing-checkpoint.ipynb
+ tudais/notebooks/preprocessing/Lego-Sets/Data/lego_sets.csv
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-broom.png
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-in.png
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv-out.png
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-csv.png
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-dirty-data.jpg
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-left-arrow.png
+@@ -67,14 +70,15 @@
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy-to-tidy.png
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-messy.jpg
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-lego-tidy.jpg
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-magnifying-glass.png
+ tudais/notebooks/preprocessing/Lego-Sets/Images/IMG-right-arrow.png
+ tudais/notebooks/regression/House-Prices/.include_in_submission
+ tudais/notebooks/regression/House-Prices/Vorhersage von Immobilienpreisen.ipynb
++tudais/notebooks/regression/House-Prices/.ipynb_checkpoints/Vorhersage von Immobilienpreisen-checkpoint.ipynb
+ tudais/notebooks/regression/House-Prices/Data/.include_in_submission
+ tudais/notebooks/regression/House-Prices/Data/houses.csv
+ tudais/notebooks/regression/House-Prices/Data/houses_test.csv
+ tudais/notebooks/regression/House-Prices/Images/.include_in_submission
+ tudais/notebooks/regression/House-Prices/Images/IMG-Go.png
+ tudais/notebooks/regression/House-Prices/Images/IMG-Go.svg
+ tudais/notebooks/regression/House-Prices/Images/IMG-Monopoly-Tokens.jpg
+@@ -87,14 +91,15 @@
+ tudais/notebooks/regression/House-Prices/Images/IMG-diagram.png
+ tudais/notebooks/regression/House-Prices/Images/IMG-euro.png
+ tudais/notebooks/regression/House-Prices/Images/IMG-houses.png
+ tudais/notebooks/regression/House-Prices/Images/IMG-left-arrow.png
+ tudais/notebooks/regression/House-Prices/Images/IMG-magnifying-glass.png
+ tudais/notebooks/regression/House-Prices/Images/IMG-right-arrow.png
+ tudais/notebooks/regression/Wine-Alcohol/Vorhersage des Alkoholgehalts von Wein.ipynb
++tudais/notebooks/regression/Wine-Alcohol/.ipynb_checkpoints/Vorhersage des Alkoholgehalts von Wein-checkpoint.ipynb
+ tudais/notebooks/regression/Wine-Alcohol/Data/winequality-red.csv
+ tudais/notebooks/regression/Wine-Alcohol/Data/winequality-white.csv
+ tudais/notebooks/regression/Wine-Alcohol/Data/winequality.names
+ tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.png
+ tudais/notebooks/regression/Wine-Alcohol/Images/IMG-Wine-Alcohol_Banner.svg
+ tudais/notebooks/regression/Wine-Alcohol/Images/IMG-alert.png
+ tudais/notebooks/regression/Wine-Alcohol/Images/IMG-broom.png
+```
+

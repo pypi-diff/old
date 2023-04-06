@@ -1,0 +1,92 @@
+# Comparing `tmp/master_dac-2023.4.6.post2.tar.gz` & `tmp/master_dac-2023.4.6.post3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "master_dac-2023.4.6.post2.tar", last modified: Thu Apr  6 10:08:43 2023, max compression
++gzip compressed data, was "master_dac-2023.4.6.post3.tar", last modified: Thu Apr  6 10:41:20 2023, max compression
+```
+
+## Comparing `master_dac-2023.4.6.post2.tar` & `master_dac-2023.4.6.post3.tar`
+
+### file list
+
+```diff
+@@ -1,27 +1,27 @@
+-drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:08:43.554062 master_dac-2023.4.6.post2/
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       46 2022-09-17 15:37:53.000000 master_dac-2023.4.6.post2/.gitignore
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       37 2022-09-17 12:55:51.000000 master_dac-2023.4.6.post2/MANIFEST.in
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       63 2023-04-06 10:08:43.554062 master_dac-2023.4.6.post2/PKG-INFO
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      127 2022-09-16 15:50:48.000000 master_dac-2023.4.6.post2/README.md
+-drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:08:43.550062 master_dac-2023.4.6.post2/master_dac/
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)        0 2022-09-16 09:57:44.000000 master_dac-2023.4.6.post2/master_dac/__init__.py
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     1974 2023-04-06 09:38:42.000000 master_dac-2023.4.6.post2/master_dac/__main__.py
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      838 2022-10-11 07:17:36.000000 master_dac-2023.4.6.post2/master_dac/configuration.py
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     1202 2023-04-06 10:08:23.000000 master_dac-2023.4.6.post2/master_dac/datasets.py
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     2591 2023-04-06 09:40:44.000000 master_dac-2023.4.6.post2/master_dac/install.py
+-drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:08:43.554062 master_dac-2023.4.6.post2/master_dac/requirements/
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      464 2023-01-16 15:28:40.000000 master_dac-2023.4.6.post2/master_dac/requirements/amal.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      362 2022-12-11 19:26:16.000000 master_dac-2023.4.6.post2/master_dac/requirements/deep.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       32 2023-04-06 09:39:46.000000 master_dac-2023.4.6.post2/master_dac/requirements/rital.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       98 2023-01-24 18:50:34.000000 master_dac-2023.4.6.post2/master_dac/requirements/rld.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     1325 2022-09-17 15:35:57.000000 master_dac-2023.4.6.post2/master_dac/utils.py
+-drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:08:43.554062 master_dac-2023.4.6.post2/master_dac.egg-info/
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       63 2023-04-06 10:08:43.000000 master_dac-2023.4.6.post2/master_dac.egg-info/PKG-INFO
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      543 2023-04-06 10:08:43.000000 master_dac-2023.4.6.post2/master_dac.egg-info/SOURCES.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)        1 2023-04-06 10:08:43.000000 master_dac-2023.4.6.post2/master_dac.egg-info/dependency_links.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       56 2023-04-06 10:08:43.000000 master_dac-2023.4.6.post2/master_dac.egg-info/entry_points.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      140 2023-04-06 10:08:43.000000 master_dac-2023.4.6.post2/master_dac.egg-info/requires.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       11 2023-04-06 10:08:43.000000 master_dac-2023.4.6.post2/master_dac.egg-info/top_level.txt
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       80 2022-09-16 09:56:30.000000 master_dac-2023.4.6.post2/pyproject.toml
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      391 2023-04-06 10:08:43.554062 master_dac-2023.4.6.post2/setup.cfg
+--rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      485 2022-11-04 12:15:58.000000 master_dac-2023.4.6.post2/setup.py
++drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:41:20.379979 master_dac-2023.4.6.post3/
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       46 2022-09-17 15:37:53.000000 master_dac-2023.4.6.post3/.gitignore
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       37 2022-09-17 12:55:51.000000 master_dac-2023.4.6.post3/MANIFEST.in
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       63 2023-04-06 10:41:20.379979 master_dac-2023.4.6.post3/PKG-INFO
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      127 2022-09-16 15:50:48.000000 master_dac-2023.4.6.post3/README.md
++drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:41:20.379979 master_dac-2023.4.6.post3/master_dac/
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)        0 2022-09-16 09:57:44.000000 master_dac-2023.4.6.post3/master_dac/__init__.py
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     1974 2023-04-06 09:38:42.000000 master_dac-2023.4.6.post3/master_dac/__main__.py
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      838 2022-10-11 07:17:36.000000 master_dac-2023.4.6.post3/master_dac/configuration.py
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     1560 2023-04-06 10:38:10.000000 master_dac-2023.4.6.post3/master_dac/datasets.py
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     2591 2023-04-06 09:40:44.000000 master_dac-2023.4.6.post3/master_dac/install.py
++drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:41:20.379979 master_dac-2023.4.6.post3/master_dac/requirements/
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      464 2023-01-16 15:28:40.000000 master_dac-2023.4.6.post3/master_dac/requirements/amal.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      362 2022-12-11 19:26:16.000000 master_dac-2023.4.6.post3/master_dac/requirements/deep.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       32 2023-04-06 10:40:47.000000 master_dac-2023.4.6.post3/master_dac/requirements/rital.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       98 2023-01-24 18:50:34.000000 master_dac-2023.4.6.post3/master_dac/requirements/rld.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)     1325 2022-09-17 15:35:57.000000 master_dac-2023.4.6.post3/master_dac/utils.py
++drwxrwxr-x   0 bpiwowar  (1000) bpiwowar  (1000)        0 2023-04-06 10:41:20.379979 master_dac-2023.4.6.post3/master_dac.egg-info/
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       63 2023-04-06 10:41:20.000000 master_dac-2023.4.6.post3/master_dac.egg-info/PKG-INFO
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      543 2023-04-06 10:41:20.000000 master_dac-2023.4.6.post3/master_dac.egg-info/SOURCES.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)        1 2023-04-06 10:41:20.000000 master_dac-2023.4.6.post3/master_dac.egg-info/dependency_links.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       56 2023-04-06 10:41:20.000000 master_dac-2023.4.6.post3/master_dac.egg-info/entry_points.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      140 2023-04-06 10:41:20.000000 master_dac-2023.4.6.post3/master_dac.egg-info/requires.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       11 2023-04-06 10:41:20.000000 master_dac-2023.4.6.post3/master_dac.egg-info/top_level.txt
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)       80 2022-09-16 09:56:30.000000 master_dac-2023.4.6.post3/pyproject.toml
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      391 2023-04-06 10:41:20.379979 master_dac-2023.4.6.post3/setup.cfg
++-rw-rw-r--   0 bpiwowar  (1000) bpiwowar  (1000)      485 2022-11-04 12:15:58.000000 master_dac-2023.4.6.post3/setup.py
+```
+
+### Comparing `master_dac-2023.4.6.post2/master_dac/__main__.py` & `master_dac-2023.4.6.post3/master_dac/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `master_dac-2023.4.6.post2/master_dac/configuration.py` & `master_dac-2023.4.6.post3/master_dac/configuration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `master_dac-2023.4.6.post2/master_dac/install.py` & `master_dac-2023.4.6.post3/master_dac/install.py`
+
+ * *Files identical despite different names*
+
+### Comparing `master_dac-2023.4.6.post2/master_dac/utils.py` & `master_dac-2023.4.6.post3/master_dac/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `master_dac-2023.4.6.post2/master_dac.egg-info/SOURCES.txt` & `master_dac-2023.4.6.post3/master_dac.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

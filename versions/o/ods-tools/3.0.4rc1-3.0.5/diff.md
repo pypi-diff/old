@@ -1,0 +1,854 @@
+# Comparing `tmp/ods_tools-3.0.4rc1.tar.gz` & `tmp/ods_tools-3.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ods_tools-3.0.4rc1.tar", last modified: Mon Mar 13 12:12:15 2023, max compression
++gzip compressed data, was "ods_tools-3.0.5.tar", last modified: Thu Apr  6 10:45:21 2023, max compression
+```
+
+## Comparing `ods_tools-3.0.4rc1.tar` & `ods_tools-3.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 12:12:15.574605 ods_tools-3.0.4rc1/
+--rw-r--r--   0 runner    (1001) docker     (123)     8421 2023-03-13 12:12:15.574605 ods_tools-3.0.4rc1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     8119 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 12:12:15.570605 ods_tools-3.0.4rc1/ods_tools/
+--rw-r--r--   0 runner    (1001) docker     (123)      120 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4793 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/main.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 12:12:15.574605 ods_tools-3.0.4rc1/ods_tools/oed/
+--rw-r--r--   0 runner    (1001) docker     (123)      765 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2350 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/common.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8981 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/exposure.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11177 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/forex.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6059 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/oed_schema.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8444 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/setting_schema.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16808 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/source.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14663 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/ods_tools/oed/validator.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 12:12:15.574605 ods_tools-3.0.4rc1/ods_tools.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     8421 2023-03-13 12:12:15.000000 ods_tools-3.0.4rc1/ods_tools.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      468 2023-03-13 12:12:15.000000 ods_tools-3.0.4rc1/ods_tools.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-13 12:12:15.000000 ods_tools-3.0.4rc1/ods_tools.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       51 2023-03-13 12:12:15.000000 ods_tools-3.0.4rc1/ods_tools.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       26 2023-03-13 12:12:15.000000 ods_tools-3.0.4rc1/ods_tools.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       10 2023-03-13 12:12:15.000000 ods_tools-3.0.4rc1/ods_tools.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-13 12:12:15.574605 ods_tools-3.0.4rc1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     3804 2023-03-13 12:12:01.000000 ods_tools-3.0.4rc1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:21.084897 ods_tools-3.0.5/
++-rw-r--r--   0 runner    (1001) docker     (123)     8418 2023-04-06 10:45:21.084897 ods_tools-3.0.5/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     8119 2023-04-06 10:45:05.000000 ods_tools-3.0.5/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:21.084897 ods_tools-3.0.5/ods_tools/
++-rw-r--r--   0 runner    (1001) docker     (123)      117 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4793 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/main.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:21.084897 ods_tools-3.0.5/ods_tools/oed/
++-rw-r--r--   0 runner    (1001) docker     (123)      765 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2404 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/common.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8981 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/exposure.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11177 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/forex.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6059 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/oed_schema.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9321 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/setting_schema.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20875 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/source.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14764 2023-04-06 10:45:05.000000 ods_tools-3.0.5/ods_tools/oed/validator.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:21.084897 ods_tools-3.0.5/ods_tools.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     8418 2023-04-06 10:45:21.000000 ods_tools-3.0.5/ods_tools.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      468 2023-04-06 10:45:21.000000 ods_tools-3.0.5/ods_tools.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:45:21.000000 ods_tools-3.0.5/ods_tools.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       51 2023-04-06 10:45:21.000000 ods_tools-3.0.5/ods_tools.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-06 10:45:21.000000 ods_tools-3.0.5/ods_tools.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 10:45:21.000000 ods_tools-3.0.5/ods_tools.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 10:45:21.084897 ods_tools-3.0.5/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     3798 2023-04-06 10:45:05.000000 ods_tools-3.0.5/setup.py
+```
+
+### Comparing `ods_tools-3.0.4rc1/PKG-INFO` & `ods_tools-3.0.5/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ods_tools
+-Version: 3.0.4rc1
++Version: 3.0.5
+ Summary: Tools to manage ODS files
+ Home-page: https://github.com/OasisLMF/OpenDataStandards
+ Author: Oasis LMF
+ Author-email: support@oasislmf.org
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Requires-Python: >=3.7
+```
+
+### Comparing `ods_tools-3.0.4rc1/README.md` & `ods_tools-3.0.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/main.py` & `ods_tools-3.0.5/ods_tools/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/__init__.py` & `ods_tools-3.0.5/ods_tools/oed/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/common.py` & `ods_tools-3.0.5/ods_tools/oed/common.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ """
+ common static variable and ods_tools exceptions
+ """
+ from urllib.parse import urlparse
+ from pathlib import Path
++import numpy as np
+ 
+ 
+ class OdsException(Exception):
+     pass
+ 
+ 
+ def is_relative(filepath):
+@@ -86,7 +87,9 @@
+     {'name': 'occupancy_code', 'on_error': 'raise'},
+     {'name': 'construction_code', 'on_error': 'raise'},
+     {'name': 'country_and_area_code', 'on_error': 'raise'},
+ ]
+ 
+ OED_PERIL_COLUMNS = ['AccPeril', 'PolPerilsCovered', 'PolPeril', 'CondPeril', 'LocPerilsCovered', 'LocPeril',
+                      'ReinsPeril']
++
++BLANK_VALUES = {np.nan, '', None}
+```
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/exposure.py` & `ods_tools-3.0.5/ods_tools/oed/exposure.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/forex.py` & `ods_tools-3.0.5/ods_tools/oed/forex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/oed_schema.py` & `ods_tools-3.0.5/ods_tools/oed/oed_schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/setting_schema.py` & `ods_tools-3.0.5/ods_tools/oed/setting_schema.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,16 +1,22 @@
+ import json
++import jsonschema
++import jsonref
++import logging
+ import os
++
++from collections import namedtuple
+ from pathlib import Path
++from packaging import version as ver
+ 
+ from .common import OdsException
+ 
+-import jsonschema
+ 
+ DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
++CompatibilityMap = namedtuple("CompatibilityMap", "keys updated ver ")
+ 
+ 
+ class SettingSchema:
+     """
+     A class for managing and validating JSON settings.
+ 
+     Args:
+@@ -56,14 +62,15 @@
+             inst = self.from_json(os.path.join(DATA_PATH, self.SCHEMA_FILE))
+             self.json_path = inst.json_path
+             self.schema = inst.schema
+         else:
+             self.json_path = json_path
+             self.schema = schema
+         self.settings_type = settings_type
++        self.logger = logging.getLogger(__name__)
+ 
+     @property
+     def info(self):
+         """
+         Returns the path to the loaded JSON file.
+ 
+         Returns:
+@@ -83,46 +90,55 @@
+ 
+         Returns:
+             SettingSchema: A new instance of the `SettingSchema` class.
+ 
+         """
+         filepath = Path(setting_json)
+         with filepath.open(encoding="UTF-8") as f:
+-            schema = json.load(f)
++            schema = jsonref.load(f)
+             return cls(schema, setting_json)
+ 
++    def _remap_key(self, obj, key_new, key_old):
++        """
++        Replaces the dictionary value of key with replace_value in the obj dictionary.
++        """
++        if not isinstance(obj, (dict, list)):
++            return None  # base case exit
++
++        if key_old in obj:
++            obj[key_new] = obj.pop(key_old)
++
++        if isinstance(obj, dict):
++            for k, v in obj.items():
++                self._remap_key(v, key_new, key_old)
++        else:
++            for v in obj:
++                self._remap_key(v, key_new, key_old)
++
+     def compatibility(self, settings_data):
+         """
+         Updates the loaded JSON data to account for deprecated keys.
+ 
+         Args:
+             settings_data (dict): The loaded JSON data.
+ 
+         Returns:
+             dict: The updated JSON data.
+ 
+         """
++        if ver.parse(settings_data.get('version', '0')) >= ver.parse('3'):
++            return settings_data
++
+         if getattr(self, 'compatibility_profile', None):
+-            obsolete_keys = set(self.compatibility_profile) & set(settings_data)
+-            if obsolete_keys:
+-                logger = logging.getLogger(__name__)
+-                logger.warning(f'WARNING: Deprecated key(s) in {self.settings_type} JSON')
+-                for key in obsolete_keys:
+-                    # warn user
+-                    logger.warning('   {} : {}'.format(
+-                        key,
+-                        self.compatibility_profile[key],
+-                    ))
+-                    # Update settings, if newer key not found
+-                    updated_key = self.compatibility_profile[key]['updated_to']
+-                    if updated_key not in settings_data:
+-                        settings_data[updated_key] = settings_data[key]
+-                    del settings_data[key]
++            for compat_map in self.compatibility_profile:
++                old_key = compat_map.keys.split('.')[-1]
++                new_key = compat_map.updated.split('.')[-1]
++                self._remap_key(settings_data, new_key, old_key)
++                self.logger.warning(f'Deprecated key in {self.settings_type}.json, "{old_key}" updated to "{new_key}"')
+ 
+-                logger.warning('   These keys have been automatically updated, but should be fixed in the original file.\n')
+         return settings_data
+ 
+     def load(self, settings_fp):
+         """
+         Loads the JSON data from a file path.
+ 
+         Args:
+@@ -146,14 +162,15 @@
+ 
+     def validate(self, setting_data, raise_error=True):
+         """
+         Validates the loaded JSON data against the schema.
+ 
+         Args:
+             setting_data (dict): The loaded JSON data.
++            raise_error (bool): raise execption on validation failuer
+ 
+         Returns:
+             tuple: A tuple containing a boolean indicating whether the JSON data is valid
+             and a dictionary containing any validation errors.
+ 
+         """
+         validator = jsonschema.Draft4Validator(self.schema)
+@@ -178,14 +195,29 @@
+         if not is_valid and raise_error:
+             raise OdsException("\nJSON Validation error in '{}.json': {}".format(
+                 self.settings_type,
+                 json.dumps(exception_msgs, indent=4)
+             ))
+         return is_valid, exception_msgs
+ 
++    def validate_file(self, settings_fp, raise_error=True):
++        """
++        Validates the loaded JSON file against the schema.
++
++        Args:
++            settings_fp (str): The file path to the settings file.
++            raise_error (bool): raise execption on validation failuer
++
++        Returns:
++            tuple: A tuple containing a boolean indicating whether the JSON data is valid
++            and a dictionary containing any validation errors.
++        """
++        settings_data = self.load(settings_fp)
++        return self.validate(settings_data, raise_error=raise_error)
++
+     def get(self, settings_fp, key=None, validate=True):
+         """
+         Returns the settings data for a given settings file path, and optionally a specific key.
+ 
+         Args:
+             settings_fp (str): The file path to the settings file.
+             key (str, optional): The key for which the value is desired. Defaults to None.
+@@ -210,18 +242,12 @@
+         super(ModelSettingSchema, self).__init__(schema, json_path, 'model_settings')
+ 
+ 
+ class AnalysisSettingSchema(SettingSchema):
+ 
+     def __init__(self, schema=None, json_path=None):
+         self.SCHEMA_FILE = 'analysis_settings_schema.json'
+-        self.compatibility_profile = {
+-            "module_supplier_id": {
+-                "from_ver": "1.23.0",
+-                "updated_to": "model_supplier_id"
+-            },
+-            "model_version_id": {
+-                "from_ver": "1.23.0",
+-                "updated_to": "model_name_id"
+-            },
+-        }
++        self.compatibility_profile = [
++            CompatibilityMap(keys='module_supplier_id', updated='model_supplier_id', ver='1.23.0'),
++            CompatibilityMap(keys='model_version_id', updated='model_name_id', ver='1.23.0'),
++        ]
+         super(AnalysisSettingSchema, self).__init__(schema, json_path, 'analysis_settings')
+```
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/source.py` & `ods_tools-3.0.5/ods_tools/oed/source.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,14 +1,15 @@
+ from pathlib import Path
++import mimetypes
+ 
+ import pandas as pd
+ import numpy as np
+ from chardet.universaldetector import UniversalDetector
+ 
+-from .common import OED_TYPE_TO_NAME, OdsException, PANDAS_COMPRESSION_MAP, PANDAS_DEFAULT_NULL_VALUES, is_relative
++from .common import OED_TYPE_TO_NAME, OdsException, PANDAS_COMPRESSION_MAP, PANDAS_DEFAULT_NULL_VALUES, is_relative, BLANK_VALUES
+ from .forex import convert_currency
+ from .oed_schema import OedSchema
+ 
+ try:
+     from functools import cached_property
+ except ImportError:  # support for python < 3.8
+     _missing = object()
+@@ -71,14 +72,75 @@
+             detector.feed(line)
+             if detector.done:
+                 break
+     detector.close()
+     return detector.result
+ 
+ 
++def detect_stream_type(stream_obj):
++    """
++    Given a file object try to inferr if its holding
++    `csv` or `parquet` data from its attributes
++    If unknown return ""
++
++    Note: content types matching compressed formats
++     'gzip', 'x-bzip2', 'zip' and 'x-bzip2'
++     are assumed to be compressed csv
++
++    Args:
++        stream_obj: object with a read() method
++
++    Returns:
++        stream_type (str): 'csv' or 'parquet'
++    """
++    type_map = {
++        'csv': [
++            'csv',
++            '.csv',
++            'text/csv',
++            'application/gzip',
++            'application/x-bzip2',
++            'application/zip',
++            'application/x-bzip2',
++        ],
++        'parquet': [
++            'parquet',
++            '.parquet',
++            'application/octet-stream',
++        ]
++    }
++    filename = getattr(stream_obj, 'name', None)
++    content_type = getattr(stream_obj, 'content_type', None)
++
++    # detect by filename
++    if isinstance(filename, str):
++        extention = Path(filename).suffix.lower()
++        mimetype = mimetypes.MimeTypes().guess_type(filename)[0]
++        for filetype in type_map:
++            # check by extention exact match
++            if extention in type_map[filetype]:
++                return filetype
++            # check by mimetype match
++            if mimetype in type_map[filetype]:
++                return filetype
++
++    # detect by content_type
++    if isinstance(content_type, str):
++        for filetype in type_map:
++            if content_type.lower() in type_map[filetype]:
++                return filetype
++
++    # Format unknown, default to csv
++    return 'csv'
++
++
++def is_readable(obj):
++    return hasattr(obj, 'read') and callable(getattr(obj, 'read'))
++
++
+ class OedSource:
+     """
+     Class to represent and manage oed source (location, account, ...)
+     """
+ 
+     def __init__(self, exposure, oed_type, cur_version_name, sources):
+         """
+@@ -109,15 +171,15 @@
+         information of source to be able to trace its different version and reload it if necessary
+         Returns:
+             info dict
+         """
+         return {'cur_version_name': self.cur_version_name, 'sources': self.sources}
+ 
+     @classmethod
+-    def from_oed_info(cls, exposure, oed_type: str, oed_info):
++    def from_oed_info(cls, exposure, oed_type: str, oed_info, **kwargs):
+         """
+         Convert data in oed_info to an OedSource
+ 
+         Args:
+             exposure (OedExposure): Exposure the source is part of
+             oed_type (str): type of oed file (Loc, Acc, ...)
+             oed_info: info to create OedSource, can be:
+@@ -126,39 +188,130 @@
+                 - OedSource same object is returned
+                 - DataFrame no source file just oed data is path and can be saved after
+ 
+         Returns:
+             OedSource (or None if  oed_info is None)
+         """
+         if isinstance(oed_info, (str, Path)):
+-            return OedSource.from_filepath(exposure, oed_type, filepath=oed_info)
++            return cls.from_filepath(exposure, oed_type, filepath=oed_info, **kwargs)
+         elif isinstance(oed_info, dict):
+-            return OedSource(exposure, oed_type, **oed_info)
++            if oed_info.get('sources'):
++                return cls(exposure, oed_type, **oed_info)
++            else:
++                return cls.from_oed_info(exposure, oed_type, **oed_info)
+         elif isinstance(oed_info, OedSource):
+             return oed_info
+         elif isinstance(oed_info, pd.DataFrame):
+-            return OedSource.from_dataframe(exposure, oed_type, oed_info)
++            return cls.from_dataframe(exposure, oed_type, oed_info)
+         elif oed_info is None:
+             return None
++        elif is_readable(oed_info):
++            return cls.from_stream_obj(exposure, oed_type, stream_obj=oed_info, **kwargs)
+         else:
+             raise OdsException(f'{oed_info} is not a supported format to convert to OedSource')
+ 
+     @classmethod
+-    def from_filepath(cls, exposure, oed_type, filepath):
++    def from_dataframe(cls, exposure, oed_type, oed_df: pd.DataFrame):
++        """
++        OedSource Constructor from a filepath
++        Args:
++            exposure (OedExposure): Exposure the oed source is part of
++            oed_type (str): type of file (Loc, Acc, ..)
++            oed_df (pd.DataFrame): DataFrame that represent the Oed Source
++
++        Returns:
++            OedSource
++        """
++        oed_source = cls(exposure, oed_type, 'orig', {'orig': {'source_type': 'DataFrame'}})
++
++        ods_fields = exposure.get_input_fields(oed_type)
++        column_to_field = OedSchema.column_to_field(oed_df.columns, ods_fields)
++        oed_df = cls.as_oed_type(oed_df, column_to_field)
++        oed_df = cls.prepare_df(oed_df, column_to_field, ods_fields)
++        if exposure.use_field:
++            oed_df = OedSchema.use_field(oed_df, ods_fields)
++        oed_source.dataframe = oed_df
++        oed_source.loaded = True
++        return oed_source
++
++    @classmethod
++    def from_filepath(cls, exposure, oed_type, filepath, read_param=None):
+         """
+         OedSource Constructor from a filepath
+         Args:
+             exposure (OedExposure): Exposure the oed source is part of
+             oed_type (str): type of file (Loc, Acc, ..)
+             filepath (str): path to the oed source file
++            read_param (dict): extra parameters to use when reading the file
+ 
+         Returns:
+             OedSource
+         """
+-        return cls(exposure, oed_type, 'orig', {'orig': {'source_type': 'filepath', 'filepath': filepath}})
++        if read_param is None:
++            read_param = {}
++        return cls(exposure, oed_type, 'orig', {'orig': {'source_type': 'filepath', 'filepath': filepath, 'read_param': read_param}})
++
++    @classmethod
++    def from_stream_obj(cls, exposure, oed_type, stream_obj, format=None, read_param=None):
++        """
++        OedSource Constructor from a filepath
++        Args:
++            exposure (OedExposure): Exposure the oed source is part of
++            oed_type (str): type of file (Loc, Acc, ..)
++            stream_obj: object with a read() method
++
++        Returns:
++            OedSource
++        """
++        if read_param is None:
++            read_param = {}
++        oed_source = cls(exposure, oed_type, 'orig', {'orig': {'source_type': 'stream', 'format': format}})
++
++        if not format:
++            format = detect_stream_type(stream_obj)
++
++        try:
++            if format == 'csv':
++                oed_df = pd.read_csv(stream_obj, **read_param)
++                ods_fields = exposure.get_input_fields(oed_type)
++                column_to_field = OedSchema.column_to_field(oed_df.columns, ods_fields)
++                oed_df = cls.as_oed_type(oed_df, column_to_field)
++                oed_df = cls.prepare_df(oed_df, column_to_field, ods_fields)
++
++                if exposure.use_field:
++                    oed_df = OedSchema.use_field(oed_df, ods_fields)
++            elif format == 'parquet':
++                oed_df = pd.read_parquet(stream_obj, **read_param)
++            else:
++                raise OdsException(f'Unsupported stream format {format}')
++        except Exception as e:
++            raise OdsException('Failed to read stream data') from e
++
++        oed_source.dataframe = oed_df
++        oed_source.loaded = True
++        return oed_source
++
++    @classmethod
++    def as_oed_type(cls, oed_df, column_to_field):
++        pd_dtype = {}
++        to_tmp_dtype = {}
++        for column in oed_df.columns:
++            if column in column_to_field:
++                pd_dtype[column] = column_to_field[column]['pd_dtype']
++            else:
++                pd_dtype[column] = 'category'
++            if pd_dtype[column] == 'category':  # we need to convert to str first
++                to_tmp_dtype[column] = 'str'
++                if oed_df[column].dtype.name == 'category':
++                    oed_df[column] = oed_df[column].cat.add_categories('')
++                oed_df.loc[oed_df[column].isin(BLANK_VALUES), column] = ''
++            elif pd_dtype[column].startswith('Int'):
++                to_tmp_dtype[column] = 'float'
++
++        return oed_df.astype(to_tmp_dtype).astype(pd_dtype)
+ 
+     @classmethod
+     def prepare_df(cls, df, column_to_field, ods_fields):
+         """
+         Complete the Oed Dataframe with default valued and required column
+         Args:
+             df: oed dataframe
+@@ -191,49 +344,14 @@
+                     else:
+                         df[col] = np.nan
+                         df[col] = df[col].astype(field_info['pd_dtype'])
+                         if field_info['Default'] != 'n/a':
+                             df[col] = df[col].fillna(df[col].dtype.type(field_info['Default'])).astype(field_info['pd_dtype'])
+         return df
+ 
+-    @classmethod
+-    def from_dataframe(cls, exposure, oed_type, oed_df: pd.DataFrame):
+-        """
+-        OedSource Constructor from a filepath
+-        Args:
+-            exposure (OedExposure): Exposure the oed source is part of
+-            oed_type (str): type of file (Loc, Acc, ..)
+-            oed_df (pd.DataFrame): DataFrame that represent the Oed Source
+-
+-        Returns:
+-            OedSource
+-        """
+-        oed_source = cls(exposure, oed_type, 'orig', {'orig': {'source_type': 'DataFrame'}})
+-        ods_fields = exposure.get_input_fields(oed_type)
+-        pd_dtype = {}
+-        to_tmp_dtype = {}
+-        column_to_field = OedSchema.column_to_field(oed_df.columns, ods_fields)
+-        for column in oed_df.columns:
+-            if column in column_to_field:
+-                pd_dtype[column] = column_to_field[column]['pd_dtype']
+-            else:
+-                pd_dtype[column] = 'category'
+-            if pd_dtype[column] == 'category':  # we need to convert to str first
+-                to_tmp_dtype[column] = 'str'
+-            elif pd_dtype[column].startswith('Int'):
+-                to_tmp_dtype[column] = 'float'
+-
+-        oed_df = oed_df.astype(to_tmp_dtype).astype(pd_dtype)
+-        oed_df = cls.prepare_df(oed_df, column_to_field, ods_fields)
+-        if exposure.use_field:
+-            oed_df = OedSchema.use_field(oed_df, ods_fields)
+-        oed_source.dataframe = oed_df
+-        oed_source.loaded = True
+-        return oed_source
+-
+     @cached_property
+     def dataframe(self):
+         """Dataframe view of the OedSource, loaded once"""
+         self.loaded = True
+         df = self.load_dataframe()
+         if self.exposure.use_field:
+             df = OedSchema.use_field(df, self.exposure.get_input_fields(self.oed_type))
+@@ -347,28 +465,23 @@
+ 
+     @classmethod
+     def read_csv(cls, filepath, ods_fields, df_engine=pd, **kwargs):
+         """
+         the function read_csv will load a csv file as a DataFrame
+         with all the columns converted to the correct dtype and having the correct default.
+         it will also try to save space by converting string dtype into categories
+-
+         By default, it uses pandas to create the DataFrame. In that case you will need to have pandas installed.
+         You can use other options such as Dask or modin using the parameter df_engine.
+-
+         Args:
+             filepath (str): path to the csv file
+             df_engine: engine that will convert csv to a dataframe object (default to pandas if installed)
+             kwargs: extra argument that will be passed to the df_engine
+         Returns:
+             df_engine dataframe of the file with correct dtype and default
+-
+         Raises:
+-
+-
+         """
+ 
+         def read_or_try_encoding_read(df_engine, filepath, **read_kwargs):
+             #  try to read, if fail try to detect the encoding and update the top function kwargs for future read
+             try:
+                 return df_engine.read_csv(filepath, **kwargs)
+             except UnicodeDecodeError as e:
+```
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools/oed/validator.py` & `ods_tools-3.0.5/ods_tools/oed/validator.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,17 @@
+ import functools
+ import json
+ import logging
+ 
+-import numpy as np
+ import pandas as pd
+ from pathlib import Path
+ from collections.abc import Iterable
+ 
+ from .common import (OdsException, OED_PERIL_COLUMNS, OED_IDENTIFIER_FIELDS, DEFAULT_VALIDATION_CONFIG,
+-                     VALIDATOR_ON_ERROR_ACTION)
++                     VALIDATOR_ON_ERROR_ACTION, BLANK_VALUES)
+ from .oed_schema import OedSchema
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ class Validator:
+     def __init__(self, exposure):
+@@ -132,15 +131,15 @@
+                                              'msg': f"missing required column {field_info['Input Field Name']}"})
+                     continue
+                 columns = field_to_columns[field_info['Input Field Name']]
+                 if isinstance(columns, str):
+                     columns = [columns]
+                 for column in columns:
+                     if field_info.get("Allow blanks?").upper() == 'NO':
+-                        missing_value_df = oed_source.dataframe[oed_source.dataframe[column].isin({np.nan, ''})]
++                        missing_value_df = oed_source.dataframe[oed_source.dataframe[column].isin(BLANK_VALUES)]
+                         if not missing_value_df.empty:
+                             invalid_data.append({'name': oed_source.oed_name, 'source': oed_source.current_source,
+                                                  'msg': f"column '{column}' has missing values in \n"
+                                                         f"{missing_value_df[identifier_field + [column]]}"})
+         return invalid_data
+ 
+     def check_unknown_column(self):
+@@ -190,15 +189,17 @@
+         """
+         invalid_data = []
+         for oed_source in self.exposure.get_oed_sources():
+             identifier_field = self.identifier_field_maps[oed_source]
+             for column in oed_source.dataframe.columns.intersection(set(OED_PERIL_COLUMNS)):
+                 peril_values = oed_source.dataframe[column].str.split(';').apply(pd.Series, 1).stack()
+                 invalid_perils = oed_source.dataframe.iloc[
+-                    peril_values[~peril_values.isin(self.exposure.oed_schema.schema['perils']['info'])].index.droplevel(-1)]
++                    peril_values[~peril_values.isin(
++                        set(self.exposure.oed_schema.schema['perils']['info']) | BLANK_VALUES
++                    )].index.droplevel(-1)]
+                 if not invalid_perils.empty:
+                     invalid_data.append({'name': oed_source.oed_name, 'source': oed_source.current_source,
+                                          'msg': f"{column} has invalid perils.\n"
+                                                 f"{invalid_perils[identifier_field + [column]]}"})
+         return invalid_data
+ 
+     def check_occupancy_code(self):
+@@ -209,16 +210,16 @@
+         """
+         invalid_data = []
+         for oed_source in self.exposure.get_oed_sources():
+             occupancy_code_column = self.field_to_column_maps[oed_source].get('OccupancyCode')
+             if occupancy_code_column is None:
+                 continue
+             identifier_field = self.identifier_field_maps[oed_source]
+-            invalid_occupancy_code = oed_source.dataframe[
+-                ~oed_source.dataframe[occupancy_code_column].astype(str).isin(self.exposure.oed_schema.schema['occupancy'])]
++            invalid_occupancy_code = oed_source.dataframe[~oed_source.dataframe[occupancy_code_column].astype(str).isin(
++                set(self.exposure.oed_schema.schema['occupancy']) | BLANK_VALUES)]
+             if not invalid_occupancy_code.empty:
+                 invalid_data.append({'name': oed_source.oed_name, 'source': oed_source.current_source,
+                                      'msg': f"invalid OccupancyCode.\n"
+                                             f"{invalid_occupancy_code[identifier_field + [occupancy_code_column]]}"})
+         return invalid_data
+ 
+     def check_construction_code(self):
+@@ -229,16 +230,16 @@
+         """
+         invalid_data = []
+         for oed_source in self.exposure.get_oed_sources():
+             construction_code_column = self.field_to_column_maps[oed_source].get('ConstructionCode')
+             if construction_code_column is None:
+                 continue
+             identifier_field = self.identifier_field_maps[oed_source]
+-            invalid_construction_code = oed_source.dataframe[
+-                ~oed_source.dataframe[construction_code_column].astype(str).isin(self.exposure.oed_schema.schema['construction'])]
++            invalid_construction_code = oed_source.dataframe[~oed_source.dataframe[construction_code_column].astype(str).isin(
++                set(self.exposure.oed_schema.schema['construction']) | BLANK_VALUES)]
+             if not invalid_construction_code.empty:
+                 invalid_data.append({'name': oed_source.oed_name, 'source': oed_source.current_source,
+                                      'msg': f"invalid ConstructionCode.\n"
+                                             f"{invalid_construction_code[identifier_field + [construction_code_column]]}"})
+         return invalid_data
+ 
+     def check_country_and_area_code(self):
+@@ -252,28 +253,28 @@
+         for oed_source in self.exposure.get_oed_sources():
+             country_code_column = self.field_to_column_maps[oed_source].get('CountryCode')
+             if country_code_column is None:
+                 continue
+             identifier_field = self.identifier_field_maps[oed_source]
+             area_code_column = self.field_to_column_maps[oed_source].get('AreaCode')
+             if area_code_column is not None:
+-                country_only_df = oed_source.dataframe[oed_source.dataframe[area_code_column].isin([np.nan, ''])]
+-                country_area_df = oed_source.dataframe[~oed_source.dataframe[area_code_column].isin([np.nan, ''])]
++                country_only_df = oed_source.dataframe[oed_source.dataframe[area_code_column].isin(BLANK_VALUES)]
++                country_area_df = oed_source.dataframe[~oed_source.dataframe[area_code_column].isin(BLANK_VALUES)]
+                 invalid_country_area = (country_area_df[
+                     ~(country_area_df[[country_code_column, area_code_column]]
+                       .apply(tuple, axis=1)
+                       .isin(self.exposure.oed_schema.schema['country_area'])
+                       )]
+                 )
+                 if not invalid_country_area.empty:
+                     invalid_data.append({'name': oed_source.oed_name, 'source': oed_source.current_source,
+                                          'msg': f"invalid CountryCode AreaCode pair.\n"
+                                                 f"{invalid_country_area[identifier_field + [country_code_column, area_code_column]]}"})
+             else:
+                 country_only_df = oed_source.dataframe
+             invalid_country = (country_only_df[~country_only_df[country_code_column]
+-                                               .isin(set(self.exposure.oed_schema.schema['country']) | {np.nan, ''})])
++                                               .isin(set(self.exposure.oed_schema.schema['country']) | BLANK_VALUES)])
+             if not invalid_country.empty:
+                 invalid_data.append({'name': oed_source.oed_name, 'source': oed_source.current_source,
+                                      'msg': f"invalid CountryCode.\n"
+                                             f"{invalid_country[identifier_field + [country_code_column]]}"})
+         return invalid_data
+```
+
+### Comparing `ods_tools-3.0.4rc1/ods_tools.egg-info/PKG-INFO` & `ods_tools-3.0.5/ods_tools.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ods-tools
+-Version: 3.0.4rc1
++Version: 3.0.5
+ Summary: Tools to manage ODS files
+ Home-page: https://github.com/OasisLMF/OpenDataStandards
+ Author: Oasis LMF
+ Author-email: support@oasislmf.org
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Requires-Python: >=3.7
+```
+
+### Comparing `ods_tools-3.0.4rc1/setup.py` & `ods_tools-3.0.5/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -45,15 +45,14 @@
+     user_options = orig.install.user_options + [
+         ('local-oed-spec=', None, 'Override to build package with extracted spec (filepath)'),
+     ]
+ 
+     def __init__(self, *args, **kwargs):
+         self.filename = 'OpenExposureData_Spec.json'
+         self.ods_repo = 'OasisLMF/ODS_OpenExposureData'
+-        self.download_path = os.path.join(SCRIPT_DIR, 'ods_tools', 'data', self.filename)
+         self.oed_version = OED_VERSION
+         self.url = f'https://github.com/{self.ods_repo}/releases/download/{self.oed_version}/{self.filename}'
+         orig.install.__init__(self, *args, **kwargs)
+ 
+     def initialize_options(self):
+         orig.install.initialize_options(self)
+         self.local_oed_spec = None
+@@ -77,15 +76,16 @@
+             # Install from relalse URL
+             print(f'OED Version: {OED_VERSION}')
+             print(f'Install from url: {self.url}')
+             response = urllib.request.urlopen(self.url)
+             data = json.loads(response.read())
+             data['version'] = OED_VERSION
+ 
+-        with open(self.download_path, 'w+') as f:
++        download_path = os.path.join(self.build_lib, 'ods_tools', 'data', self.filename)
++        with open(download_path, 'w+') as f:
+             json.dump(data, f)
+         orig.install.run(self)
+ 
+ 
+ version = get_version()
+ readme = get_readme()
+ reqs = get_install_requirements()
+```
+
