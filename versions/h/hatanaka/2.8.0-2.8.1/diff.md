@@ -1,0 +1,375 @@
+# Comparing `tmp/hatanaka-2.8.0.tar.gz` & `tmp/hatanaka-2.8.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "hatanaka-2.8.0.tar", last modified: Thu Jan 27 21:51:10 2022, max compression
++gzip compressed data, was "hatanaka-2.8.1.tar", last modified: Thu Apr  6 20:52:03 2023, max compression
+```
+
+## Comparing `hatanaka-2.8.0.tar` & `hatanaka-2.8.1.tar`
+
+### file list
+
+```diff
+@@ -1,45 +1,46 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/
+--rw-r--r--   0 runner    (1001) docker     (121)     2278 2022-01-27 21:50:56.000000 hatanaka-2.8.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)       48 2022-01-27 21:50:56.000000 hatanaka-2.8.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (121)     4175 2022-01-27 21:51:10.766277 hatanaka-2.8.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)     3526 2022-01-27 21:50:56.000000 hatanaka-2.8.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/hatanaka/
+--rw-r--r--   0 runner    (1001) docker     (121)      107 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/hatanaka/bin/
+--rw-r--r--   0 runner    (1001) docker     (121)      124 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/bin/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     5469 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/cli.py
+--rw-r--r--   0 runner    (1001) docker     (121)    14441 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/general_compression.py
+--rw-r--r--   0 runner    (1001) docker     (121)     5217 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/hatanaka.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/hatanaka/test/
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     2722 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/conftest.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/hatanaka/test/data/
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1346 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.crx
+--rw-r--r--   0 runner    (1001) docker     (121)      735 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.crx.Z
+--rw-r--r--   0 runner    (1001) docker     (121)      593 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.crx.bz2
+--rw-r--r--   0 runner    (1001) docker     (121)      544 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.crx.gz
+--rw-r--r--   0 runner    (1001) docker     (121)      690 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.crx.zip
+--rw-r--r--   0 runner    (1001) docker     (121)     1228 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.rnx
+--rw-r--r--   0 runner    (1001) docker     (121)      649 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.rnx.Z
+--rw-r--r--   0 runner    (1001) docker     (121)      520 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.rnx.bz2
+--rw-r--r--   0 runner    (1001) docker     (121)      506 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.rnx.gz
+--rw-r--r--   0 runner    (1001) docker     (121)      647 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/data/sample.rnx.zip
+--rw-r--r--   0 runner    (1001) docker     (121)     4073 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/test_cli.py
+--rw-r--r--   0 runner    (1001) docker     (121)     2974 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/test_general_compression.py
+--rw-r--r--   0 runner    (1001) docker     (121)     3187 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/test_hatanaka.py
+--rw-r--r--   0 runner    (1001) docker     (121)     5087 2022-01-27 21:50:56.000000 hatanaka-2.8.0/hatanaka/test/test_on_disk_functions.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/hatanaka.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     4175 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      984 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      171 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (121)       60 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        9 2022-01-27 21:51:10.000000 hatanaka-2.8.0/hatanaka.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.762277 hatanaka-2.8.0/rnxcmp/
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-27 21:51:10.766277 hatanaka-2.8.0/rnxcmp/source/
+--rw-r--r--   0 runner    (1001) docker     (121)    38029 2022-01-27 21:50:56.000000 hatanaka-2.8.0/rnxcmp/source/crx2rnx.c
+--rw-r--r--   0 runner    (1001) docker     (121)    39077 2022-01-27 21:50:56.000000 hatanaka-2.8.0/rnxcmp/source/rnx2crx.c
+--rw-r--r--   0 runner    (1001) docker     (121)     1055 2022-01-27 21:51:10.770278 hatanaka-2.8.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (121)     3498 2022-01-27 21:50:56.000000 hatanaka-2.8.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.592394 hatanaka-2.8.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     2278 2023-04-06 20:51:44.000000 hatanaka-2.8.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-06 20:51:44.000000 hatanaka-2.8.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     4242 2023-04-06 20:52:03.592394 hatanaka-2.8.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3630 2023-04-06 20:51:44.000000 hatanaka-2.8.1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.588394 hatanaka-2.8.1/hatanaka/
++-rw-r--r--   0 runner    (1001) docker     (123)      107 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.588394 hatanaka-2.8.1/hatanaka/bin/
++-rw-r--r--   0 runner    (1001) docker     (123)      124 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/bin/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5469 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/cli.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14441 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/general_compression.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5206 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/hatanaka.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.588394 hatanaka-2.8.1/hatanaka/test/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2722 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/conftest.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.592394 hatanaka-2.8.1/hatanaka/test/data/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1346 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.crx
++-rw-r--r--   0 runner    (1001) docker     (123)      735 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.crx.Z
++-rw-r--r--   0 runner    (1001) docker     (123)      593 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.crx.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)      544 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.crx.gz
++-rw-r--r--   0 runner    (1001) docker     (123)      690 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.crx.zip
++-rw-r--r--   0 runner    (1001) docker     (123)     1228 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.rnx
++-rw-r--r--   0 runner    (1001) docker     (123)      649 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.rnx.Z
++-rw-r--r--   0 runner    (1001) docker     (123)      520 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.rnx.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)      506 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.rnx.gz
++-rw-r--r--   0 runner    (1001) docker     (123)      647 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/data/sample.rnx.zip
++-rw-r--r--   0 runner    (1001) docker     (123)     4073 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/test_cli.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2974 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/test_general_compression.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3187 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/test_hatanaka.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5087 2023-04-06 20:51:44.000000 hatanaka-2.8.1/hatanaka/test/test_on_disk_functions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.588394 hatanaka-2.8.1/hatanaka.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4242 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      999 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      170 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       60 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-06 20:52:03.000000 hatanaka-2.8.1/hatanaka.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      412 2023-04-06 20:51:44.000000 hatanaka-2.8.1/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.584394 hatanaka-2.8.1/rnxcmp/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:52:03.592394 hatanaka-2.8.1/rnxcmp/source/
++-rw-r--r--   0 runner    (1001) docker     (123)    38029 2023-04-06 20:51:44.000000 hatanaka-2.8.1/rnxcmp/source/crx2rnx.c
++-rw-r--r--   0 runner    (1001) docker     (123)    39077 2023-04-06 20:51:44.000000 hatanaka-2.8.1/rnxcmp/source/rnx2crx.c
++-rw-r--r--   0 runner    (1001) docker     (123)     1053 2023-04-06 20:52:03.592394 hatanaka-2.8.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2143 2023-04-06 20:51:44.000000 hatanaka-2.8.1/setup.py
+```
+
+### Comparing `hatanaka-2.8.0/LICENSE` & `hatanaka-2.8.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/PKG-INFO` & `hatanaka-2.8.1/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,29 +1,27 @@
+ Metadata-Version: 2.1
+ Name: hatanaka
+-Version: 2.8.0
++Version: 2.8.1
+ Summary: Effortlessly compress / decompress any RINEX file
+ Home-page: https://github.com/valgur/hatanaka
+ Author: Martin Valgur
+ Author-email: martin.valgur@gmail.com
+-License: UNKNOWN
+ Keywords: RINEX,Hatanaka compression,GNSS
+-Platform: UNKNOWN
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Environment :: Console
+ Classifier: Topic :: Scientific/Engineering
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ Provides-Extra: tests
+ Provides-Extra: dev
+ License-File: LICENSE
+ 
+-# Hatanaka [![Build](https://github.com/valgur/hatanaka/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/valgur/hatanaka/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/valgur/hatanaka/branch/master/graph/badge.svg?token=7TBLMZ8Wi9)](https://codecov.io/gh/valgur/hatanaka) [![PyPI](https://img.shields.io/pypi/v/hatanaka)](https://pypi.org/project/hatanaka/)
++# Hatanaka [![Build](https://github.com/valgur/hatanaka/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/valgur/hatanaka/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/valgur/hatanaka/branch/master/graph/badge.svg?token=7TBLMZ8Wi9)](https://codecov.io/gh/valgur/hatanaka) [![PyPI](https://img.shields.io/pypi/v/hatanaka)](https://pypi.org/project/hatanaka/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/hatanaka)](https://pypistats.org/packages/hatanaka)
+ 
+ Effortless compression / decompression of RINEX files in Python and on the command line.
+ 
+ Supports all compression formats allowed by the RINEX 2, 3 and 4 standards:
+ 
+ * Hatanaka compression for Observation Data Files,
+ * LZW (.Z), gzip (.gz), bzip2 (.bz2) and .zip.
+@@ -118,9 +116,7 @@
+ Authority of Japan, 55, 21-30.
+ (available at https://www.gsi.go.jp/ENGLISH/Bulletin55.html)
+ 
+ ## License
+ 
+ This library is provided under the MIT license. Additional license terms apply for the included RNXCMP software –
+ see [LICENSE](LICENSE).
+-
+-
+```
+
+### Comparing `hatanaka-2.8.0/README.md` & `hatanaka-2.8.1/README.md`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-# Hatanaka [![Build](https://github.com/valgur/hatanaka/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/valgur/hatanaka/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/valgur/hatanaka/branch/master/graph/badge.svg?token=7TBLMZ8Wi9)](https://codecov.io/gh/valgur/hatanaka) [![PyPI](https://img.shields.io/pypi/v/hatanaka)](https://pypi.org/project/hatanaka/)
++# Hatanaka [![Build](https://github.com/valgur/hatanaka/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/valgur/hatanaka/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/valgur/hatanaka/branch/master/graph/badge.svg?token=7TBLMZ8Wi9)](https://codecov.io/gh/valgur/hatanaka) [![PyPI](https://img.shields.io/pypi/v/hatanaka)](https://pypi.org/project/hatanaka/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/hatanaka)](https://pypistats.org/packages/hatanaka)
+ 
+ Effortless compression / decompression of RINEX files in Python and on the command line.
+ 
+ Supports all compression formats allowed by the RINEX 2, 3 and 4 standards:
+ 
+ * Hatanaka compression for Observation Data Files,
+ * LZW (.Z), gzip (.gz), bzip2 (.bz2) and .zip.
+```
+
+### Comparing `hatanaka-2.8.0/hatanaka/cli.py` & `hatanaka-2.8.1/hatanaka/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/general_compression.py` & `hatanaka-2.8.1/hatanaka/general_compression.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/hatanaka.py` & `hatanaka-2.8.1/hatanaka/hatanaka.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -142,9 +142,9 @@
+ 
+ executables = importlib_resources.files(hatanaka.bin)
+ 
+ 
+ def _popen(program, args, **kwargs):
+     if platform.system() == 'Windows':
+         program += '.exe'
+-    with executables.joinpath(program) as executable:
+-        return subprocess.Popen([str(executable)] + args, **kwargs)
++    executable = executables.joinpath(program)
++    return subprocess.Popen([str(executable)] + args, **kwargs)
+```
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/conftest.py` & `hatanaka-2.8.1/hatanaka/test/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.crx` & `hatanaka-2.8.1/hatanaka/test/data/sample.crx`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.crx.Z` & `hatanaka-2.8.1/hatanaka/test/data/sample.crx.Z`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.crx.bz2` & `hatanaka-2.8.1/hatanaka/test/data/sample.crx.bz2`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.crx.gz` & `hatanaka-2.8.1/hatanaka/test/data/sample.crx.gz`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.crx.zip` & `hatanaka-2.8.1/hatanaka/test/data/sample.crx.zip`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.rnx` & `hatanaka-2.8.1/hatanaka/test/data/sample.rnx`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.rnx.Z` & `hatanaka-2.8.1/hatanaka/test/data/sample.rnx.Z`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.rnx.bz2` & `hatanaka-2.8.1/hatanaka/test/data/sample.rnx.bz2`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/data/sample.rnx.zip` & `hatanaka-2.8.1/hatanaka/test/data/sample.rnx.zip`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/test_cli.py` & `hatanaka-2.8.1/hatanaka/test/test_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/test_general_compression.py` & `hatanaka-2.8.1/hatanaka/test/test_general_compression.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/test_hatanaka.py` & `hatanaka-2.8.1/hatanaka/test/test_hatanaka.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka/test/test_on_disk_functions.py` & `hatanaka-2.8.1/hatanaka/test/test_on_disk_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/hatanaka.egg-info/PKG-INFO` & `hatanaka-2.8.1/hatanaka.egg-info/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,29 +1,27 @@
+ Metadata-Version: 2.1
+ Name: hatanaka
+-Version: 2.8.0
++Version: 2.8.1
+ Summary: Effortlessly compress / decompress any RINEX file
+ Home-page: https://github.com/valgur/hatanaka
+ Author: Martin Valgur
+ Author-email: martin.valgur@gmail.com
+-License: UNKNOWN
+ Keywords: RINEX,Hatanaka compression,GNSS
+-Platform: UNKNOWN
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Environment :: Console
+ Classifier: Topic :: Scientific/Engineering
+ Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ Provides-Extra: tests
+ Provides-Extra: dev
+ License-File: LICENSE
+ 
+-# Hatanaka [![Build](https://github.com/valgur/hatanaka/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/valgur/hatanaka/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/valgur/hatanaka/branch/master/graph/badge.svg?token=7TBLMZ8Wi9)](https://codecov.io/gh/valgur/hatanaka) [![PyPI](https://img.shields.io/pypi/v/hatanaka)](https://pypi.org/project/hatanaka/)
++# Hatanaka [![Build](https://github.com/valgur/hatanaka/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/valgur/hatanaka/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/valgur/hatanaka/branch/master/graph/badge.svg?token=7TBLMZ8Wi9)](https://codecov.io/gh/valgur/hatanaka) [![PyPI](https://img.shields.io/pypi/v/hatanaka)](https://pypi.org/project/hatanaka/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/hatanaka)](https://pypistats.org/packages/hatanaka)
+ 
+ Effortless compression / decompression of RINEX files in Python and on the command line.
+ 
+ Supports all compression formats allowed by the RINEX 2, 3 and 4 standards:
+ 
+ * Hatanaka compression for Observation Data Files,
+ * LZW (.Z), gzip (.gz), bzip2 (.bz2) and .zip.
+@@ -118,9 +116,7 @@
+ Authority of Japan, 55, 21-30.
+ (available at https://www.gsi.go.jp/ENGLISH/Bulletin55.html)
+ 
+ ## License
+ 
+ This library is provided under the MIT license. Additional license terms apply for the included RNXCMP software –
+ see [LICENSE](LICENSE).
+-
+-
+```
+
+### Comparing `hatanaka-2.8.0/hatanaka.egg-info/SOURCES.txt` & `hatanaka-2.8.1/hatanaka.egg-info/SOURCES.txt`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ LICENSE
+ MANIFEST.in
+ README.md
++pyproject.toml
+ setup.cfg
+ setup.py
+ hatanaka/__init__.py
+ hatanaka/cli.py
+ hatanaka/general_compression.py
+ hatanaka/hatanaka.py
+ hatanaka.egg-info/PKG-INFO
+```
+
+### Comparing `hatanaka-2.8.0/rnxcmp/source/crx2rnx.c` & `hatanaka-2.8.1/rnxcmp/source/crx2rnx.c`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/rnxcmp/source/rnx2crx.c` & `hatanaka-2.8.1/rnxcmp/source/rnx2crx.c`
+
+ * *Files identical despite different names*
+
+### Comparing `hatanaka-2.8.0/setup.cfg` & `hatanaka-2.8.1/setup.cfg`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = hatanaka
+-version = 2.8.0
++version = 2.8.1
+ author = Martin Valgur
+ author_email = martin.valgur@gmail.com
+ url = https://github.com/valgur/hatanaka
+ description = Effortlessly compress / decompress any RINEX file
+ long_description = file: README.md
+ long_description_content_type = text/markdown
+ license_files = LICENSE
+@@ -26,16 +26,15 @@
+ packages = find:
+ install_requires = 
+ 	importlib_resources
+ 	ncompress
+ 
+ [options.extras_require]
+ tests = pytest
+-dev = 
+-	pytest
++dev = pytest
+ 
+ [options.package_data]
+ hatanaka.bin = *
+ hatanaka.test.data = *
+ 
+ [options.entry_points]
+ console_scripts =
+```
+

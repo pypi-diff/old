@@ -1,0 +1,928 @@
+# Comparing `tmp/streamline_trp-0.1.1.tar.gz` & `tmp/streamline_trp-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "streamline_trp-0.1.1.tar", max compression
++gzip compressed data, was "streamline_trp-0.1.2.tar", max compression
+```
+
+## Comparing `streamline_trp-0.1.1.tar` & `streamline_trp-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,68 @@
+--rw-r--r--   0        0        0    10299 2023-03-17 18:20:00.432705 streamline_trp-0.1.1/README.md
+--rw-r--r--   0        0        0      345 2023-03-18 21:19:15.420408 streamline_trp-0.1.1/pyproject.toml
+--rw-r--r--   0        0        0    20527 2023-03-17 18:20:00.485275 streamline_trp-0.1.1/trp/__init__.py
+--rw-r--r--   0        0        0     6239 2023-03-17 18:20:00.485515 streamline_trp-0.1.1/trp/t_pipeline.py
+--rw-r--r--   0        0        0     5162 2023-03-17 18:20:00.485679 streamline_trp-0.1.1/trp/t_tables.py
+--rw-r--r--   0        0        0    37798 2023-03-17 18:20:00.485990 streamline_trp-0.1.1/trp/trp2.py
+--rw-r--r--   0        0        0     7760 2023-03-17 21:23:00.745848 streamline_trp-0.1.1/trp/trp2_analyzeid.py
+--rw-r--r--   0        0        0    14321 2023-03-18 18:14:44.147115 streamline_trp-0.1.1/trp/trp2_expense.py
+--rw-r--r--   0        0        0     8225 2023-03-17 21:23:08.680500 streamline_trp-0.1.1/trp/trp2_lending.py
+--rw-r--r--   0        0        0    10827 1970-01-01 00:00:00.000000 streamline_trp-0.1.1/PKG-INFO
++-rw-r--r--   0        0        0    10142 2023-03-17 18:20:00.409140 streamline_trp-0.1.2/LICENSE
++-rw-r--r--   0        0        0     2384 2023-03-17 18:20:00.409292 streamline_trp-0.1.2/README.md
++-rw-r--r--   0        0        0      352 2023-04-06 21:20:34.836696 streamline_trp-0.1.2/pyproject.toml
++-rw-r--r--   0        0        0      111 2023-03-17 18:20:00.432328 streamline_trp-0.1.2/src-python/.style.yapf
++-rw-r--r--   0        0        0        0 2023-03-17 18:20:00.432439 streamline_trp-0.1.2/src-python/.yapfignore
++-rw-r--r--   0        0        0    10299 2023-03-17 18:20:00.432705 streamline_trp-0.1.2/src-python/README.md
++-rw-r--r--   0        0        0     3320 2023-03-17 18:20:00.432973 streamline_trp-0.1.2/src-python/a2i/README.md
++-rw-r--r--   0        0        0      109 2023-03-17 18:20:00.433116 streamline_trp-0.1.2/src-python/a2i/__init__.py
++-rw-r--r--   0        0        0   136560 2023-03-17 18:20:00.433874 streamline_trp-0.1.2/src-python/a2i/a2i-response.json
++-rw-r--r--   0        0        0     7188 2023-03-17 18:20:00.434100 streamline_trp-0.1.2/src-python/a2i/a2irp.py
++-rw-r--r--   0        0        0     1355 2023-03-17 18:20:00.434257 streamline_trp-0.1.2/src-python/a2i/a2irptest.py
++-rwxr-xr-x   0        0        0     1696 2023-03-17 18:20:00.434451 streamline_trp-0.1.2/src-python/bin/amazon-textract-pipeline
++-rw-r--r--   0        0        0        7 2023-03-17 18:20:00.434627 streamline_trp-0.1.2/src-python/extras/dev.txt
++-rw-r--r--   0        0        0      467 2023-03-17 18:20:00.434789 streamline_trp-0.1.2/src-python/setup.cfg
++-rw-r--r--   0        0        0     1950 2023-03-17 18:20:00.434905 streamline_trp-0.1.2/src-python/setup.py
++-rw-r--r--   0        0        0   487699 2023-03-17 18:20:00.436858 streamline_trp-0.1.2/src-python/tests/data/180-degree-roation.json
++-rw-r--r--   0        0        0   997174 2023-03-17 18:20:00.446648 streamline_trp-0.1.2/src-python/tests/data/all_features_with_floating_title_header.json
++-rw-r--r--   0        0        0   158398 2023-03-17 18:20:00.447057 streamline_trp-0.1.2/src-python/tests/data/employment-application.json
++-rw-r--r--   0        0        0   359047 2023-03-17 18:20:00.448928 streamline_trp-0.1.2/src-python/tests/data/gib.json
++-rw-r--r--   0        0        0   263699 2023-03-17 18:20:00.450496 streamline_trp-0.1.2/src-python/tests/data/gib1.json
++-rw-r--r--   0        0        0   160332 2023-03-17 18:20:00.451354 streamline_trp-0.1.2/src-python/tests/data/gib_10_degrees.json
++-rw-r--r--   0        0        0   160332 2023-03-17 18:20:00.452342 streamline_trp-0.1.2/src-python/tests/data/gib__10_degrees.json
++-rw-r--r--   0        0        0   155889 2023-03-17 18:20:00.453178 streamline_trp-0.1.2/src-python/tests/data/gib__15_degrees.json
++-rw-r--r--   0        0        0   165128 2023-03-17 18:20:00.453954 streamline_trp-0.1.2/src-python/tests/data/gib__180_degrees.json
++-rw-r--r--   0        0        0   144206 2023-03-17 18:20:00.454733 streamline_trp-0.1.2/src-python/tests/data/gib__25_degrees.json
++-rw-r--r--   0        0        0   162677 2023-03-17 18:20:00.455545 streamline_trp-0.1.2/src-python/tests/data/gib__270_degrees.json
++-rw-r--r--   0        0        0   157929 2023-03-17 18:20:00.456286 streamline_trp-0.1.2/src-python/tests/data/gib__90_degrees.json
++-rw-r--r--   0        0        0   164235 2023-03-17 18:20:00.457149 streamline_trp-0.1.2/src-python/tests/data/gib__minus_10_degrees.json
++-rw-r--r--   0        0        0   602412 2023-03-17 18:20:00.459657 streamline_trp-0.1.2/src-python/tests/data/gib_multi_page_table_merge.json
++-rw-r--r--   0        0        0   257271 2023-03-17 18:20:00.460834 streamline_trp-0.1.2/src-python/tests/data/gib_multi_page_tables.json
++-rw-r--r--   0        0        0    90704 2023-03-17 18:20:00.461305 streamline_trp-0.1.2/src-python/tests/data/gib_multi_tables_multi_page_sample.json
++-rw-r--r--   0        0        0   805976 2023-03-17 18:20:00.462288 streamline_trp-0.1.2/src-python/tests/data/in-table-footer.json
++-rw-r--r--   0        0        0   244517 2023-03-17 18:20:00.463197 streamline_trp-0.1.2/src-python/tests/data/in-table-title.json
++-rw-r--r--   0        0        0  1653784 2023-03-17 18:20:00.465824 streamline_trp-0.1.2/src-python/tests/data/lending-doc-output.json
++-rw-r--r--   0        0        0    45693 2023-03-17 18:20:00.466215 streamline_trp-0.1.2/src-python/tests/data/lending-package-no-signature.json
++-rw-r--r--   0        0        0   256534 2023-03-17 18:20:00.467446 streamline_trp-0.1.2/src-python/tests/data/multi-page-forms-samples-2-page.json
++-rw-r--r--   0        0        0    90704 2023-03-17 18:20:00.467958 streamline_trp-0.1.2/src-python/tests/data/multi-tables-multi-page-sample.json
++-rw-r--r--   0        0        0   336672 2023-03-17 18:20:00.468664 streamline_trp-0.1.2/src-python/tests/data/patient_intake_form_sample.json
++-rw-r--r--   0        0        0   631429 2023-03-17 18:20:00.472547 streamline_trp-0.1.2/src-python/tests/data/paystub_with_signature.json
++-rw-r--r--   0        0        0   411216 2023-03-17 18:20:00.474475 streamline_trp-0.1.2/src-python/tests/data/queries_sample.json
++-rw-r--r--   0        0        0   186485 2023-03-17 18:20:00.475154 streamline_trp-0.1.2/src-python/tests/data/tables_with_headers_and_merged_cells.json
++-rw-r--r--   0        0        0   471384 2023-03-17 18:20:00.477328 streamline_trp-0.1.2/src-python/tests/data/tables_with_headers_out_of_order_cells.json
++-rw-r--r--   0        0        0   276147 2023-03-17 18:20:00.478786 streamline_trp-0.1.2/src-python/tests/data/tables_with_merged_cells_sample1.json
++-rw-r--r--   0        0        0   287678 2023-03-17 18:20:00.479298 streamline_trp-0.1.2/src-python/tests/data/tables_with_merged_cells_sample2.json
++-rw-r--r--   0        0        0     5022 2023-03-17 18:20:00.479473 streamline_trp-0.1.2/src-python/tests/data/test-trp2-analyzeid_sample_multi_page.json
++-rw-r--r--   0        0        0     6523 2023-03-17 18:20:00.479637 streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample1.json
++-rw-r--r--   0        0        0   138932 2023-03-17 18:20:00.481085 streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample1_with_OCR.json
++-rw-r--r--   0        0        0       90 2023-03-17 18:20:00.481230 streamline_trp-0.1.2/src-python/tests/data/test-trp2_analyzeid_sample2.json
++-rw-r--r--   0        0        0   160326 2023-03-17 18:20:00.482007 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample1.json
++-rw-r--r--   0        0        0    57770 2023-03-17 18:20:00.482330 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample2.json
++-rw-r--r--   0        0        0    95331 2023-03-17 18:20:00.482686 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample3.json
++-rw-r--r--   0        0        0   137121 2023-03-17 18:20:00.482986 streamline_trp-0.1.2/src-python/tests/data/test_trp2_expense_sample4.json
++-rw-r--r--   0        0        0   186483 2023-03-17 18:20:00.483584 streamline_trp-0.1.2/src-python/tests/data/textract-new-tables-api.json
++-rw-r--r--   0        0        0   142156 2023-03-17 18:20:00.483950 streamline_trp-0.1.2/src-python/tests/test-response.json
++-rw-r--r--   0        0        0     1970 2023-03-17 18:20:00.484208 streamline_trp-0.1.2/src-python/tests/test_base_trp2.py
++-rw-r--r--   0        0        0     5466 2023-03-17 18:20:00.484359 streamline_trp-0.1.2/src-python/tests/test_trp.py
++-rw-r--r--   0        0        0    37316 2023-03-17 18:20:00.484530 streamline_trp-0.1.2/src-python/tests/test_trp2.py
++-rw-r--r--   0        0        0     2668 2023-03-17 18:20:00.484674 streamline_trp-0.1.2/src-python/tests/test_trp2_analyzeid.py
++-rw-r--r--   0        0        0     1041 2023-03-17 18:20:00.484808 streamline_trp-0.1.2/src-python/tests/test_trp2_expense.py
++-rw-r--r--   0        0        0      786 2023-03-17 18:20:00.484928 streamline_trp-0.1.2/src-python/tests/test_trp2_lending.py
++-rw-r--r--   0        0        0    20527 2023-03-17 18:20:00.485275 streamline_trp-0.1.2/src-python/trp/__init__.py
++-rw-r--r--   0        0        0     6239 2023-03-17 18:20:00.485515 streamline_trp-0.1.2/src-python/trp/t_pipeline.py
++-rw-r--r--   0        0        0     5162 2023-03-17 18:20:00.485679 streamline_trp-0.1.2/src-python/trp/t_tables.py
++-rw-r--r--   0        0        0    38970 2023-04-06 21:01:51.032924 streamline_trp-0.1.2/src-python/trp/trp2.py
++-rw-r--r--   0        0        0     7760 2023-04-06 20:57:51.510628 streamline_trp-0.1.2/src-python/trp/trp2_analyzeid.py
++-rw-r--r--   0        0        0    14321 2023-04-06 20:57:51.511146 streamline_trp-0.1.2/src-python/trp/trp2_expense.py
++-rw-r--r--   0        0        0     8225 2023-04-06 20:57:51.511745 streamline_trp-0.1.2/src-python/trp/trp2_lending.py
++-rw-r--r--   0        0        0     2912 1970-01-01 00:00:00.000000 streamline_trp-0.1.2/PKG-INFO
+```
+
+### Comparing `streamline_trp-0.1.1/README.md` & `streamline_trp-0.1.2/src-python/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `streamline_trp-0.1.1/trp/__init__.py` & `streamline_trp-0.1.2/src-python/trp/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `streamline_trp-0.1.1/trp/t_pipeline.py` & `streamline_trp-0.1.2/src-python/trp/t_pipeline.py`
+
+ * *Files identical despite different names*
+
+### Comparing `streamline_trp-0.1.1/trp/t_tables.py` & `streamline_trp-0.1.2/src-python/trp/t_tables.py`
+
+ * *Files identical despite different names*
+
+### Comparing `streamline_trp-0.1.1/trp/trp2.py` & `streamline_trp-0.1.2/src-python/trp/trp2.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -133,15 +133,16 @@
+ 
+     @property
+     def points(self) -> List[TPoint]:
+         points: List[TPoint] = list()
+         points.append(TPoint(x=self.left, y=self.top))
+         points.append(TPoint(x=self.left + self.width, y=self.top))
+         points.append(TPoint(x=self.left, y=self.top + self.height))
+-        points.append(TPoint(x=self.left + self.width, y=self.top + self.height))
++        points.append(TPoint(x=self.left + self.width,
++                      y=self.top + self.height))
+         return points
+ 
+     @property
+     def bottom(self) -> float:
+         return self.top + self.height
+ 
+     @property
+@@ -156,15 +157,15 @@
+         return TPoint(x=self.left + self.width / 2.0, y=self.top + self.height / 2.0)
+ 
+     def to_list(self) -> List[float]:
+         '''
+         Convert the bounding box definition to a list of floats, i.e only standard 
+         Python types. The bounding box definition is [width, height, left, top].
+         '''
+-        #TODO: cannot we use some overloading on the dump method of marshmallow?
++        # TODO: cannot we use some overloading on the dump method of marshmallow?
+         bbox_list: List[float] = [self.width, self.height, self.left, self.top]
+         return bbox_list
+ 
+     def union(self, bbox: TBoundingBox) -> TBoundingBox:
+         '''
+         Compute the union between two TBoundingBox objects. The union bounding box 
+         is the smallest bounding box which contains the N source bounding boxes. In  
+@@ -174,15 +175,15 @@
+         -----
+         union_bbox = self.union(bbox)
+ 
+         Arguments
+         ---------
+         bbox:
+             A TBoundingBox object
+-        
++
+         Returns
+         -------
+         union_bbox
+             A TBoundingBox object representing the union between self and bbox
+         '''
+         new_top = min(self.top, bbox.top)
+         new_bottom = max(self.bottom, bbox.bottom)
+@@ -198,15 +199,16 @@
+ 
+     def rotate(self, origin: TPoint = TPoint(0, 0), degrees: float = 180) -> TBoundingBox:
+         """
+         rotate bounding box
+         a bounding box sides are always parallel to x and y axis
+         """
+         points = []
+-        points.append(TPoint(x=self.left, y=self.top).rotate(origin_x=origin.x, origin_y=origin.y, degrees=degrees))
++        points.append(TPoint(x=self.left, y=self.top).rotate(
++            origin_x=origin.x, origin_y=origin.y, degrees=degrees))
+         points.append(
+             TPoint(x=self.left + self.width, y=self.top).rotate(origin_x=origin.x, origin_y=origin.y, degrees=degrees))
+         points.append(
+             TPoint(x=self.left, y=self.top + self.height).rotate(origin_x=origin.x, origin_y=origin.y, degrees=degrees))
+         points.append(
+             TPoint(x=self.left + self.width, y=self.top + self.height).rotate(origin_x=origin.x,
+                                                                               origin_y=origin.y,
+@@ -225,15 +227,16 @@
+         self.left = new_left
+         self.top = new_top
+         return self
+ 
+ 
+ class TBoundingBoxSchema(BaseSchema):
+     width = m.fields.Float(data_key="Width", required=False, allow_none=False)
+-    height = m.fields.Float(data_key="Height", required=False, allow_none=False)
++    height = m.fields.Float(
++        data_key="Height", required=False, allow_none=False)
+     left = m.fields.Float(data_key="Left", required=False, allow_none=False)
+     top = m.fields.Float(data_key="Top", required=False, allow_none=False)
+ 
+     @post_load
+     def make_tbounding_box(self, data, **kwargs):
+         return TBoundingBox(**data)
+ 
+@@ -250,28 +253,32 @@
+ @dataclass(eq=True, init=True, repr=True, order=True, unsafe_hash=True)
+ class TGeometry():
+     bounding_box: TBoundingBox
+     polygon: List[TPoint]
+ 
+     def ratio(self, doc_width=None, doc_height=None):
+         self.bounding_box.ratio(doc_width=doc_width, doc_height=doc_height)
+-        [x.ratio(doc_width=doc_width, doc_height=doc_height) for x in self.polygon]
++        [x.ratio(doc_width=doc_width, doc_height=doc_height)
++         for x in self.polygon]
+ 
+     def rotate(self, origin: TPoint = TPoint(0, 0), degrees: float = 180.0):
+         self.bounding_box.rotate(origin=origin, degrees=degrees)
+         [p.rotate(origin_x=origin.x, origin_y=origin.y) for p in self.polygon]
+ 
+     def scale(self, doc_width=None, doc_height=None):
+         self.bounding_box.scale(doc_width=doc_width, doc_height=doc_height)
+-        [x.scale(doc_width=doc_width, doc_height=doc_height) for x in self.polygon]
++        [x.scale(doc_width=doc_width, doc_height=doc_height)
++         for x in self.polygon]
+ 
+ 
+ class TGeometrySchema(BaseSchema):
+-    bounding_box = m.fields.Nested(TBoundingBoxSchema, data_key="BoundingBox", required=False, allow_none=False)
+-    polygon = m.fields.List(m.fields.Nested(TPointSchema), data_key="Polygon", required=False, allow_none=False)
++    bounding_box = m.fields.Nested(
++        TBoundingBoxSchema, data_key="BoundingBox", required=False, allow_none=False)
++    polygon = m.fields.List(m.fields.Nested(
++        TPointSchema), data_key="Polygon", required=False, allow_none=False)
+ 
+     @post_load
+     def make_tgeometry(self, data, **kwargs):
+         return TGeometry(**data)
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+@@ -287,49 +294,50 @@
+     @post_load
+     def make_tquery(self, data, **kwargs):
+         return TQuery(**data)
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+ class TRelationship():
+-    type: str = field(default=None)    #type: ignore
+-    ids: List[str] = field(default=None)    #type: ignore
++    type: str = field(default=None)  # type: ignore
++    ids: List[str] = field(default=None)  # type: ignore
+ 
+ 
+ class TRelationshipSchema(BaseSchema):
+     type = m.fields.String(data_key="Type", required=False, allow_none=False)
+-    ids = m.fields.List(m.fields.String, data_key="Ids", required=False, allow_none=False)
++    ids = m.fields.List(m.fields.String, data_key="Ids",
++                        required=False, allow_none=False)
+ 
+     @post_load
+     def make_trelationship(self, data, **kwargs):
+         return TRelationship(**data)
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True, order=True)
+ class TBlock():
+     """
+     https://docs.aws.amazon.com/textract/latest/dg/API_Block.html
+     as per this documentation none of the values is actually required
+     """
+-    geometry: TGeometry = field(default=None)    #type: ignore
+-    id: str = field(default=None)    #type: ignore
+-    block_type: str = field(default="")    #type: ignore
+-    relationships: List[TRelationship] = field(default=None)    #type: ignore
+-    confidence: float = field(default=None)    #type: ignore
+-    text: str = field(default=None)    #type: ignore
+-    column_index: int = field(default=None)    #type: ignore
+-    column_span: int = field(default=None)    #type: ignore
+-    entity_types: List[str] = field(default=None)    #type: ignore
+-    page: int = field(default=None)    #type: ignore
+-    row_index: int = field(default=None)    #type: ignore
+-    row_span: int = field(default=None)    #type: ignore
+-    selection_status: str = field(default=None)    #type: ignore
+-    text_type: str = field(default=None)    #type: ignore
+-    custom: dict = field(default=None)    #type: ignore
+-    query: TQuery = field(default=None)    #type: ignore
++    geometry: TGeometry = field(default=None)  # type: ignore
++    id: str = field(default=None)  # type: ignore
++    block_type: str = field(default="")  # type: ignore
++    relationships: List[TRelationship] = field(default=None)  # type: ignore
++    confidence: float = field(default=None)  # type: ignore
++    text: str = field(default=None)  # type: ignore
++    column_index: int = field(default=None)  # type: ignore
++    column_span: int = field(default=None)  # type: ignore
++    entity_types: List[str] = field(default=None)  # type: ignore
++    page: int = field(default=None)  # type: ignore
++    row_index: int = field(default=None)  # type: ignore
++    row_span: int = field(default=None)  # type: ignore
++    selection_status: str = field(default=None)  # type: ignore
++    text_type: str = field(default=None)  # type: ignore
++    custom: dict = field(default=None)  # type: ignore
++    query: TQuery = field(default=None)  # type: ignore
+ 
+     def __eq__(self, o: object) -> bool:
+         if isinstance(o, TBlock):
+             return o.id == self.id
+         return False
+ 
+     def __hash__(self) -> int:
+@@ -341,114 +349,130 @@
+             for r in self.relationships:
+                 if r.type == relationship_type:
+                     return r
+         return None
+ 
+     def add_ids_to_relationships(self, ids: List[str], relationships_type: str = "CHILD"):
+         """Only adds id if not already existing"""
+-        relationship = self.get_relationships_for_type(relationship_type=relationships_type)
++        relationship = self.get_relationships_for_type(
++            relationship_type=relationships_type)
+         if relationship:
+             if not relationship.ids:
+                 relationship.ids = list()
+                 relationship.ids.extend(ids)
+             else:
+-                relationship.ids.extend(x for x in ids if x not in relationship.ids)
++                relationship.ids.extend(
++                    x for x in ids if x not in relationship.ids)
+         else:
+             # empty, set base
+             if not self.relationships:
+                 self.relationships = list()
+-            self.relationships.append(TRelationship(type=relationships_type, ids=ids))
++            self.relationships.append(TRelationship(
++                type=relationships_type, ids=ids))
+ 
+     def rotate(self, origin=TPoint(0.5, 0.5), degrees: float = 180):
+         self.geometry.rotate(origin=origin, degrees=degrees)
+ 
+ 
+ class TBlockSchema(BaseSchema):
+     block_type = m.fields.String(data_key="BlockType", allow_none=False)
+-    geometry = m.fields.Nested(TGeometrySchema, data_key="Geometry", allow_none=False)
++    geometry = m.fields.Nested(
++        TGeometrySchema, data_key="Geometry", allow_none=False)
+     id = m.fields.String(data_key="Id", allow_none=False)
+-    relationships = m.fields.List(m.fields.Nested(TRelationshipSchema), data_key="Relationships", allow_none=False)
+-    confidence = m.fields.Float(data_key="Confidence", required=False, allow_none=False)
++    relationships = m.fields.List(m.fields.Nested(
++        TRelationshipSchema), data_key="Relationships", allow_none=False)
++    confidence = m.fields.Float(
++        data_key="Confidence", required=False, allow_none=False)
+     text = m.fields.String(data_key="Text", required=False, allow_none=False)
+-    column_index = m.fields.Int(data_key="ColumnIndex", required=False, allow_none=False)
+-    column_span = m.fields.Int(data_key="ColumnSpan", required=False, allow_none=False)
+-    entity_types = m.fields.List(m.fields.String, data_key="EntityTypes", required=False, allow_none=False)
++    column_index = m.fields.Int(
++        data_key="ColumnIndex", required=False, allow_none=False)
++    column_span = m.fields.Int(
++        data_key="ColumnSpan", required=False, allow_none=False)
++    entity_types = m.fields.List(
++        m.fields.String, data_key="EntityTypes", required=False, allow_none=False)
+     page = m.fields.Int(data_key="Page", required=False, allow_none=False)
+-    row_index = m.fields.Int(data_key="RowIndex", required=False, allow_none=False)
+-    row_span = m.fields.Int(data_key="RowSpan", required=False, allow_none=False)
+-    selection_status = m.fields.String(data_key="SelectionStatus", required=False, allow_none=False)
+-    text_type = m.fields.String(data_key="TextType", required=False, allow_none=False)
++    row_index = m.fields.Int(
++        data_key="RowIndex", required=False, allow_none=False)
++    row_span = m.fields.Int(
++        data_key="RowSpan", required=False, allow_none=False)
++    selection_status = m.fields.String(
++        data_key="SelectionStatus", required=False, allow_none=False)
++    text_type = m.fields.String(
++        data_key="TextType", required=False, allow_none=False)
+     custom = m.fields.Dict(data_key="Custom", required=False, allow_none=False)
+     query = m.fields.Nested(TQuerySchema, data_key="Query")
+ 
+     @post_load
+     def make_tblock(self, data, **kwargs):
+         return TBlock(**data)
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+ class TDocumentMetadata():
+-    pages: int = field(default=None)    #type: ignore
++    pages: int = field(default=None)  # type: ignore
+ 
+ 
+ class TDocumentMetadataSchema(BaseSchema):
+     pages = m.fields.Int(data_key="Pages", required=False)
+ 
+     @post_load
+     def make_tdocument_metadat(self, data, **kwargs):
+         return TDocumentMetadata(**data)
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+ class TWarnings():
+-    error_code: str = field(default=None)    #type: ignore
+-    pages: List[int] = field(default=None)    #type: ignore
++    error_code: str = field(default=None)  # type: ignore
++    pages: List[int] = field(default=None)  # type: ignore
+ 
+ 
+ class TWarningsSchema(BaseSchema):
+-    pages = m.fields.List(m.fields.Int, data_key="Pages", required=False, allow_none=False)
+-    error_code = m.fields.String(data_key="ErrorCode", required=False, allow_none=False)
++    pages = m.fields.List(m.fields.Int, data_key="Pages",
++                          required=False, allow_none=False)
++    error_code = m.fields.String(
++        data_key="ErrorCode", required=False, allow_none=False)
+ 
+     @post_load
+     def make_twarnings(self, data, **kwargs):
+         return TWarnings(**data)
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+ class THttpHeaders():
+-    x_amzn_request_id: str = field(default=None)    #type: ignore
+-    content_type: str = field(default=None)    #type: ignore
+-    content_length: int = field(default=None)    #type: ignore
+-    connection: str = field(default=None)    #type: ignore
+-    date: str = field(default=None)    #type: ignore
++    x_amzn_request_id: str = field(default=None)  # type: ignore
++    content_type: str = field(default=None)  # type: ignore
++    content_length: int = field(default=None)  # type: ignore
++    connection: str = field(default=None)  # type: ignore
++    date: str = field(default=None)  # type: ignore
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+ class TResponseMetadata():
+-    request_id: str = field(default=None)    #type: ignore
+-    http_status_code: int = field(default=None)    #type: ignore
+-    retry_attempts: int = field(default=None)    #type: ignore
+-    http_headers: THttpHeaders = field(default=None)    #type: ignore
++    request_id: str = field(default=None)  # type: ignore
++    http_status_code: int = field(default=None)  # type: ignore
++    retry_attempts: int = field(default=None)  # type: ignore
++    http_headers: THttpHeaders = field(default=None)  # type: ignore
+ 
+ 
+ @dataclass(eq=True, init=True, repr=True)
+ class TDocument():
+-    document_metadata: TDocumentMetadata = field(default=None)    #type: ignore
+-    blocks: List[TBlock] = field(default=None)    #type: ignore
+-    analyze_document_model_version: str = field(default=None)    #type: ignore
+-    detect_document_text_model_version: str = field(default=None)    #type: ignore
+-    status_message: str = field(default=None)    #type: ignore
+-    warnings: TWarnings = field(default=None)    #type: ignore
+-    job_status: str = field(default=None)    #type: ignore
+-    response_metadata: TResponseMetadata = field(default=None)    #type: ignore
+-    custom: dict = field(default=None)    #type: ignore
+-    next_token: str = field(default=None)    #type: ignore
++    document_metadata: TDocumentMetadata = field(default=None)  # type: ignore
++    blocks: List[TBlock] = field(default=None)  # type: ignore
++    analyze_document_model_version: str = field(default=None)  # type: ignore
++    detect_document_text_model_version: str = field(
++        default=None)  # type: ignore
++    status_message: str = field(default=None)  # type: ignore
++    warnings: TWarnings = field(default=None)  # type: ignore
++    job_status: str = field(default=None)  # type: ignore
++    response_metadata: TResponseMetadata = field(default=None)  # type: ignore
++    custom: dict = field(default=None)  # type: ignore
++    next_token: str = field(default=None)  # type: ignore
+     id: UUID = field(default_factory=uuid4)
+ 
+-    def __post_init__(self):    #this is a dataclass method
++    def __post_init__(self):  # this is a dataclass method
+         '''
+         Build several hashmaps (signature: Dict[str, int]) with 
+         the block ID as key and the block index in self.blocks as value. As Textract 
+         identifies blocks by their ID, the goal of this data structure is to access
+         blocks by their ID and type at O(1) time complexity.The new hashmaps are 
+         stored self._block_id_maps.
+ 
+@@ -489,55 +513,62 @@
+         Return a hashmap  with the block ID as key and the block as value.
+         '''
+         if block_type:
+             return {k: self.blocks[v] for k, v in self._block_id_maps[block_type.name].items()}
+         else:
+             return {k: self.blocks[v] for k, v in self._block_id_maps['ALL'].items()}
+ 
+-    def add_block(self, block: TBlock, page: TBlock = None):    #type: ignore
++    def add_block(self, block: TBlock, page: TBlock = None):  # type: ignore
+         '''
+         Add a block to the document at a give page. If the page is None, the block is 
+         added to the first page
+         '''
+         if not block.id:
+             block.id = str(uuid4())
+         if not self.blocks:
+             self.blocks = list()
+         if not self.find_block_by_id(block.id):
+             self.blocks.append(block)
+             self._block_id_maps['ALL'][block.id] = len(self.blocks) - 1
+             if block.block_type != '':
+                 try:
+-                    self._block_id_maps[block.block_type][block.id] = len(self.blocks) - 1
++                    self._block_id_maps[block.block_type][block.id] = len(
++                        self.blocks) - 1
+                 except KeyError:
+                     self._block_id_maps[block.block_type] = dict()
+-                    self._block_id_maps[block.block_type][block.id] = len(self.blocks) - 1
++                    self._block_id_maps[block.block_type][block.id] = len(
++                        self.blocks) - 1
+         if not page:
+             page = self.pages[0]
+         page.add_ids_to_relationships(ids=[block.id])
+         self.relationships_recursive.cache_clear()
+ 
+     @staticmethod
+     def create_geometry_from_blocks(values: List[TBlock]) -> TGeometry:
+         all_points = [p.geometry.bounding_box.points for p in values]
+         all_points = [i for sublist in all_points for i in sublist]
+         ymin = min([p.y for p in all_points])
+         xmin = min([p.x for p in all_points])
+         ymax = max([p.y for p in all_points])
+         xmax = max([p.x for p in all_points])
+-        new_bb = TBoundingBox(width=ymax - ymin, height=xmax - xmin, top=ymin, left=xmin)
+-        new_poly = [TPoint(x=xmin, y=ymin), TPoint(x=xmax, y=ymin), TPoint(x=xmax, y=ymax), TPoint(x=xmin, y=ymax)]
++        new_bb = TBoundingBox(
++            width=ymax - ymin, height=xmax - xmin, top=ymin, left=xmin)
++        new_poly = [TPoint(x=xmin, y=ymin), TPoint(x=xmax, y=ymin), TPoint(
++            x=xmax, y=ymax), TPoint(x=xmin, y=ymax)]
+         return TGeometry(bounding_box=new_bb, polygon=new_poly)
+ 
+     @staticmethod
+     def create_value_block(values: List[TBlock]) -> TBlock:
+-        value_block = TBlock(id=str(uuid4()), block_type="KEY_VALUE_SET", entity_types=["VALUE"])
++        value_block = TBlock(
++            id=str(uuid4()), block_type="KEY_VALUE_SET", entity_types=["VALUE"])
+         value_block.add_ids_to_relationships([b.id for b in values])
+-        value_block.geometry = TDocument.create_geometry_from_blocks(values=values)
+-        value_block.confidence = statistics.mean([b.confidence for b in values])
++        value_block.geometry = TDocument.create_geometry_from_blocks(
++            values=values)
++        value_block.confidence = statistics.mean(
++            [b.confidence for b in values])
+         return value_block
+ 
+     def add_virtual_block(self, text: str, page_block: TBlock, text_type="VIRTUAL") -> TBlock:
+         tblock = TBlock(id=str(uuid4()),
+                         block_type="WORD",
+                         text=text,
+                         geometry=TGeometry(bounding_box=TBoundingBox(width=0, height=0, left=0, top=0),
+@@ -556,51 +587,57 @@
+             logger.warning(
+                 f"no existing_key or not block_type='KEY_VALUE_SET' or 'KEY' not in entity_type: {existing_key}")
+ 
+     def add_key_values(self, key_name: str, values: List[TBlock], page_block: TBlock) -> TBlock:
+         if not key_name:
+             raise ValueError("need values and key_name")
+         if not values:
+-            logger.debug(f"add_key_values: empty values for key: {key_name}, will create virtual empty block")
++            logger.debug(
++                f"add_key_values: empty values for key: {key_name}, will create virtual empty block")
+             values = [self.add_virtual_block(text="", page_block=page_block)]
+         for value_block in values:
+             if not value_block.id or not self.get_block_by_id(value_block.id):
+-                raise ValueError("value blocks to add have to already exist. Use add_word_block for new ones.")
++                raise ValueError(
++                    "value blocks to add have to already exist. Use add_word_block for new ones.")
+ 
+         if values[0].page:
+             page_block = self.pages[values[0].page - 1]
+         else:
+             page_block = self.pages[0]
+ 
+         value_block = TDocument.create_value_block(values=values)
+         self.add_block(value_block, page=page_block)
+ 
+-        virtual_block = self.add_virtual_block(text=key_name, page_block=page_block)
++        virtual_block = self.add_virtual_block(
++            text=key_name, page_block=page_block)
+         id = str(uuid4())
+         key_block = TBlock(id=id,
+                            block_type="KEY_VALUE_SET",
+                            entity_types=["KEY"],
+                            confidence=99,
+                            geometry=TGeometry(bounding_box=TBoundingBox(width=0, height=0, left=0, top=0),
+                                               polygon=[TPoint(x=0, y=0), TPoint(x=0, y=0)]),
+                            page=page_block.page)
+-        key_block.add_ids_to_relationships(relationships_type="VALUE", ids=[value_block.id])
+-        key_block.add_ids_to_relationships(relationships_type="CHILD", ids=[virtual_block.id])
++        key_block.add_ids_to_relationships(
++            relationships_type="VALUE", ids=[value_block.id])
++        key_block.add_ids_to_relationships(
++            relationships_type="CHILD", ids=[virtual_block.id])
+         logger.debug(f"add key with id: {id} and key_name: {key_name}")
+         self.add_block(key_block, page=page_block)
+         return key_block
+ 
+     def rotate(self, page: TBlock, degrees: float, origin: TPoint = TPoint(x=0.5, y=0.5)) -> None:
+         # FIXME: add dimension. the relative scale messes up the new coordinates, have to use the actual image scale
+         """atm no way to get back from Block to list of other blocks, hence get_block_by_id is only available on document level and quite some processing has to be here"""
+         if not page:
+             raise ValueError("need a page to rotate")
+         if not degrees:
+             raise ValueError("need degrees to rotate")
+-        [b.rotate(origin=origin, degrees=float(degrees)) for b in self.relationships_recursive(block=page)]
++        [b.rotate(origin=origin, degrees=float(degrees))
++         for b in self.relationships_recursive(block=page)]
+         self.relationships_recursive.cache_clear()
+ 
+     def find_block_by_id(self, id: str) -> Optional[TBlock]:
+         '''Find a block by its ID. Returns None if not found'''
+         idx = self.block_id_map().get(id, None)
+         if idx:
+             return self.blocks[idx]
+@@ -608,19 +645,30 @@
+ 
+     def get_block_by_id(self, id: str) -> TBlock:
+         for b in self.blocks:
+             if b.id == id:
+                 return b
+         raise ValueError(f"no block for id: {id}")
+ 
++    # Sometimes Textract returns a block with an id in "Relationships" that is not present in the flattened list of blocks.
++    # This is a Textract bug upstream of TRP workaround for that.
++    # See "dd615b1f-dad5-487d-8702-8db7c16e8a9a" in "test-jamie-python.pdf" for org "spirals"
++    def try_get_block_by_id(self, id: str) -> TBlock:
++        try:
++            return self.get_block_by_id(id)
++        except:
++            return None
++
+     def __relationships_recursive(self, block: TBlock) -> Iterator[TBlock]:
+         import itertools
+         if block and block.relationships:
+-            all_relations = list(itertools.chain(*[r.ids for r in block.relationships if r and r.ids]))
+-            all_block = [self.get_block_by_id(id) for id in all_relations if id]
++            all_relations = list(itertools.chain(
++                *[r.ids for r in block.relationships if r and r.ids]))
++            all_block = [self.try_get_block_by_id(
++                id) for id in all_relations if id]
+             for b in all_block:
+                 if b:
+                     yield b
+                     for child in self.__relationships_recursive(block=b):
+                         yield child
+ 
+     @lru_cache()
+@@ -631,15 +679,15 @@
+     def pages(self) -> List[TBlock]:
+         page_blocks = self.block_map(TextractBlockTypes.PAGE).values()
+         page_blocks = sorted(page_blocks, key=lambda item: item.page)
+         return page_blocks
+ 
+     @staticmethod
+     def filter_blocks_by_type(block_list: List[TBlock],
+-                              textract_block_type: list[TextractBlockTypes] = None) -> List[TBlock]:    #type: ignore
++                              textract_block_type: list[TextractBlockTypes] = None) -> List[TBlock]:  # type: ignore
+         if textract_block_type:
+             block_type_names = [x.name for x in textract_block_type]
+             return [b for b in block_list if b.block_type in block_type_names]
+         else:
+             return list()
+ 
+     # TODO: this is more generic and not limited to page, should change the parameter from "page" to "block"
+@@ -648,16 +696,16 @@
+ 
+     # TODO: not ideal imho. customers want pages.tables or pages.forms like the current trp
+     def tables(self, page: TBlock) -> List[TBlock]:
+         return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.TABLE)
+ 
+     def get_blocks_by_type(
+             self,
+-            block_type_enum: TextractBlockTypes = None,    #type: ignore
+-            page: TBlock = None) -> List[TBlock]:    #type: ignore
++            block_type_enum: TextractBlockTypes = None,  # type: ignore
++            page: TBlock = None) -> List[TBlock]:  # type: ignore
+         table_list: List[TBlock] = list()
+         if page and page.relationships:
+             block_list = list(self.relationships_recursive(page))
+             if block_type_enum:
+                 return self.filter_blocks_by_type(block_list=block_list, textract_block_type=[block_type_enum])
+             else:
+                 return block_list
+@@ -668,18 +716,18 @@
+                         table_list.append(b)
+                     if not block_type_enum:
+                         table_list.append(b)
+                 return table_list
+             else:
+                 return list()
+ 
+-    def forms(self, page: TBlock = None) -> List[TBlock]:    #type: ignore
++    def forms(self, page: TBlock = None) -> List[TBlock]:  # type: ignore
+         return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.KEY_VALUE_SET)
+ 
+-    def keys(self, page: TBlock = None) -> List[TBlock]:    #type: ignore
++    def keys(self, page: TBlock = None) -> List[TBlock]:  # type: ignore
+         return [x for x in self.forms(page=page) if TextractEntityTypes.KEY.name in x.entity_types]
+         # for key_entities in self.forms(page=page):
+         #     if TextractEntityTypes.KEY.name in key_entities.entity_types:
+         #         yield key_entities
+ 
+     def queries(self, page: TBlock) -> List[TBlock]:
+         return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.QUERY)
+@@ -694,15 +742,16 @@
+ 
+     def get_query_answers(self, page: TBlock) -> List[List[str]]:
+         result_list: List[List[str]] = list()
+         for query in self.queries(page=page):
+             answers = [x for x in self.get_answers_for_query(block=query)]
+             if answers:
+                 for answer in answers:
+-                    result_list.append([query.query.text, query.query.alias, answer.text])
++                    result_list.append(
++                        [query.query.text, query.query.alias, answer.text])
+             else:
+                 result_list.append([query.query.text, query.query.alias, ""])
+         return result_list
+ 
+     def get_key_by_name(self, key_name: str) -> List[TBlock]:
+         result_blocks: List[TBlock] = list()
+         for key in self.keys():
+@@ -710,37 +759,39 @@
+             if keys_text_blocks:
+                 key_name_text: str = TDocument.get_text_for_tblocks(
+                     [self.get_block_by_id(x) for x in keys_text_blocks.ids])
+                 if key_name == key_name_text:
+                     result_blocks.append(key)
+         return result_blocks
+ 
+-    def get_blocks_for_relationships(self, relationship: TRelationship = None) -> List[TBlock]:    #type: ignore
++    # type: ignore
++    def get_blocks_for_relationships(self, relationship: TRelationship = None) -> List[TBlock]:
+         all_blocks: List[TBlock] = list()
+         if relationship and relationship.ids:
+             for id in relationship.ids:
+                 all_blocks.append(self.get_block_by_id(id))
+         return all_blocks
+ 
+     def value_for_key(self, key: TBlock) -> List[TBlock]:
+         return_value_for_key: List[TBlock] = list()
+         if TextractEntityTypes.KEY.name in key.entity_types:
+             if key and key.relationships:
+                 value_blocks = self.get_blocks_for_relationships(
+-                    relationship=key.get_relationships_for_type("VALUE"))    #type: ignore
++                    relationship=key.get_relationships_for_type("VALUE"))  # type: ignore
+                 for block in value_blocks:
+                     return_value_for_key.extend(self.get_blocks_for_relationships(
+-                        block.get_relationships_for_type()))    #type: ignore
++                        block.get_relationships_for_type()))  # type: ignore
+ 
+         return return_value_for_key
+ 
+     @staticmethod
+     def get_text_for_tblocks(tblocks: List[TBlock]) -> str:
+         return_value = ' '.join([x.text for x in tblocks if x and x.text])
+-        return_value += ' '.join([x.selection_status for x in tblocks if x and x.selection_status])
++        return_value += ' '.join(
++            [x.selection_status for x in tblocks if x and x.selection_status])
+         return return_value
+ 
+     def lines(self, page: TBlock) -> List[TBlock]:
+         return self.get_blocks_by_type(page=page, block_type_enum=TextractBlockTypes.LINE)
+ 
+     def delete_blocks(self, block_id: List[str]):
+         for b in block_id:
+@@ -751,23 +802,24 @@
+                 logger.warning(f"delete_blocks: did not get block for id: {b}")
+         self.__post_init__()
+         self.relationships_recursive.cache_clear()
+ 
+     # combine any tables with overlapping ids
+     def combine_tables(self, table_array_ids: List[List[str]]):
+         head, *tail = table_array_ids
+-        if(len(tail) == 0):
++        if (len(tail) == 0):
+             return [head]
+-        if(head[-1] == tail[0][0]):
++        if (head[-1] == tail[0][0]):
+             return self.combine_tables([head + tail[0][1:]] + tail[1:])
+         else:
+             return [head] + self.combine_tables(tail)
+ 
+     def merge_tables(self, table_array_ids: List[List[str]]):
+-        table_array_ids = [] if len(table_array_ids) == 0 else self.combine_tables(table_array_ids)
++        table_array_ids = [] if len(
++            table_array_ids) == 0 else self.combine_tables(table_array_ids)
+         for table_ids in table_array_ids:
+             if len(table_ids) < 2:
+                 raise ValueError("no parent and child tables given")
+             parent_table = self.get_block_by_id(table_ids[0])
+             if type(parent_table) is not TBlock:
+                 raise ValueError("parent table is invalid")
+             table_ids.pop(0)
+@@ -775,15 +827,16 @@
+             if parent_table.relationships:
+                 for r in parent_table.relationships:
+                     if r.type == "CHILD":
+                         parent_relationships = r
+             for table_id in table_ids:
+                 if parent_relationships and parent_relationships.ids:
+                     parent_last_row = None
+-                    parent_last_row_block = self.get_block_by_id(parent_relationships.ids[-1])
++                    parent_last_row_block = self.get_block_by_id(
++                        parent_relationships.ids[-1])
+                     if parent_last_row_block:
+                         parent_last_row = parent_last_row_block.row_index
+                     child_table = self.get_block_by_id(table_id)
+                     if child_table and child_table.relationships:
+                         for r in child_table.relationships:
+                             if r.type == "CHILD" and r.ids:
+                                 for cell_id in r.ids:
+@@ -793,15 +846,16 @@
+                                         # This is to make sure the child table's headers are merged
+                                         # as regular rows into the parent.
+                                         if cell_block.entity_types and len(cell_block.entity_types) > 0:
+                                             cell_block.entity_types = [
+                                                 entity_type for entity_type in cell_block.entity_types if entity_type != TextractEntityTypes.COLUMN_HEADER.name]
+ 
+                                         if parent_relationships.ids and cell_id not in parent_relationships.ids:
+-                                            parent_relationships.ids.append(cell_id)
++                                            parent_relationships.ids.append(
++                                                cell_id)
+                     self.delete_blocks([table_id])
+ 
+     def link_tables(self, table_array_ids: List[List[str]]):
+         for table_ids in table_array_ids:
+             if len(table_ids) < 2:
+                 raise ValueError("no parent and child tables given")
+             for i in range(0, len(table_ids)):
+@@ -821,55 +875,68 @@
+ 
+ class THttpHeadersSchema(BaseSchema):
+ 
+     class Meta:
+         unknown = m.EXCLUDE
+ 
+     date = m.fields.String(data_key="date", required=False)
+-    x_amzn_request_id = m.fields.String(data_key="x-amzn-requestid", required=False, allow_none=False)
+-    content_type = m.fields.String(data_key="content-type", required=False, allow_none=False)
+-    content_length = m.fields.Int(data_key="content-length", required=False, allow_none=False)
+-    connection = m.fields.String(data_key="connection", required=False, allow_none=False)
++    x_amzn_request_id = m.fields.String(
++        data_key="x-amzn-requestid", required=False, allow_none=False)
++    content_type = m.fields.String(
++        data_key="content-type", required=False, allow_none=False)
++    content_length = m.fields.Int(
++        data_key="content-length", required=False, allow_none=False)
++    connection = m.fields.String(
++        data_key="connection", required=False, allow_none=False)
+ 
+     @post_load
+     def make_thttp_headers(self, data, **kwargs):
+         return THttpHeaders(**data)
+ 
+ 
+ class TResponseMetadataSchema(BaseSchema):
+ 
+     class Meta:
+         unknown = m.EXCLUDE
+ 
+-    request_id = m.fields.String(data_key="RequestId", required=False, allow_none=False)
+-    http_status_code = m.fields.Int(data_key="HTTPStatusCode", required=False, allow_none=False)
+-    retry_attempts = m.fields.Int(data_key="RetryAttempts", required=False, allow_none=False)
+-    http_headers = m.fields.Nested(THttpHeadersSchema, data_key="HTTPHeaders", required=False, allow_none=False)
++    request_id = m.fields.String(
++        data_key="RequestId", required=False, allow_none=False)
++    http_status_code = m.fields.Int(
++        data_key="HTTPStatusCode", required=False, allow_none=False)
++    retry_attempts = m.fields.Int(
++        data_key="RetryAttempts", required=False, allow_none=False)
++    http_headers = m.fields.Nested(
++        THttpHeadersSchema, data_key="HTTPHeaders", required=False, allow_none=False)
+ 
+     @post_load
+     def make_tresponse_metadata(self, data, **kwargs):
+         return TResponseMetadata(**data)
+ 
+ 
+ class TDocumentSchema(BaseSchema):
+     document_metadata = m.fields.Nested(TDocumentMetadataSchema,
+                                         data_key="DocumentMetadata",
+                                         required=False,
+                                         allow_none=False)
+-    blocks = m.fields.List(m.fields.Nested(TBlockSchema), data_key="Blocks", required=False, allow_none=False)
++    blocks = m.fields.List(m.fields.Nested(TBlockSchema),
++                           data_key="Blocks", required=False, allow_none=False)
+     analyze_document_model_version = m.fields.String(data_key="AnalyzeDocumentModelVersion",
+                                                      required=False,
+                                                      allow_none=False)
+     detect_document_text_model_version = m.fields.String(data_key="DetectDocumentTextModelVersion",
+                                                          required=False,
+                                                          allow_none=False)
+-    status_message = m.fields.String(data_key="StatusMessage", required=False, allow_none=False)
+-    warnings = m.fields.Nested(TWarningsSchema, data_key="Warnings", required=False, allow_none=False)
+-    job_status = m.fields.String(data_key="JobStatus", required=False, allow_none=False)
+-    next_token = m.fields.String(data_key="NextToken", required=False, allow_none=False)
++    status_message = m.fields.String(
++        data_key="StatusMessage", required=False, allow_none=False)
++    warnings = m.fields.Nested(
++        TWarningsSchema, data_key="Warnings", required=False, allow_none=False)
++    job_status = m.fields.String(
++        data_key="JobStatus", required=False, allow_none=False)
++    next_token = m.fields.String(
++        data_key="NextToken", required=False, allow_none=False)
+     response_metadata = m.fields.Nested(TResponseMetadataSchema,
+                                         data_key="ResponseMetadata",
+                                         required=False,
+                                         allow_none=False)
+     custom = m.fields.Dict(data_key="Custom", required=False, allow_none=False)
+ 
+     @post_load
+```
+
+### Comparing `streamline_trp-0.1.1/trp/trp2_analyzeid.py` & `streamline_trp-0.1.2/src-python/trp/trp2_analyzeid.py`
+
+ * *Files identical despite different names*
+
+### Comparing `streamline_trp-0.1.1/trp/trp2_expense.py` & `streamline_trp-0.1.2/src-python/trp/trp2_expense.py`
+
+ * *Files identical despite different names*
+
+### Comparing `streamline_trp-0.1.1/trp/trp2_lending.py` & `streamline_trp-0.1.2/src-python/trp/trp2_lending.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,169 @@
+--- tmp/raysecretsproxy-0.0.2.tar.gz
++++ tmp/raysecretsproxy-0.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "raysecretsproxy-0.0.2.tar", last modified: Mon Apr  3 22:54:07 2023, max compression
+│ +gzip compressed data, was "raysecretsproxy-0.0.3.tar", last modified: Thu Apr  6 21:25:38 2023, max compression
+│   --- raysecretsproxy-0.0.2.tar
+├── +++ raysecretsproxy-0.0.3.tar
+│ ├── file list
+│ │ @@ -1,22 +1,22 @@
+│ │ -drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-03 22:54:07.302091 raysecretsproxy-0.0.2/
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)    11357 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/LICENSE
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)    15863 2023-04-03 22:54:07.301774 raysecretsproxy-0.0.2/PKG-INFO
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     2429 2023-03-30 23:32:42.000000 raysecretsproxy-0.0.2/README.md
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)      687 2023-04-03 22:47:15.000000 raysecretsproxy-0.0.2/pyproject.toml
+│ │ -drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-03 22:54:07.300249 raysecretsproxy-0.0.2/raysecretsproxy/
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)      203 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/raysecretsproxy/__init__.py
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     2990 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/raysecretsproxy/aws_secret_operator.py
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     2508 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/raysecretsproxy/gcp_secret_operator.py
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     1174 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/raysecretsproxy/ray_secret.py
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     1033 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/raysecretsproxy/ray_secret_operator.py
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     2134 2023-04-03 22:20:51.000000 raysecretsproxy-0.0.2/raysecretsproxy/ray_secret_proxy.py
+│ │ -drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-03 22:54:07.301301 raysecretsproxy-0.0.2/raysecretsproxy.egg-info/
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)    15863 2023-04-03 22:54:07.000000 raysecretsproxy-0.0.2/raysecretsproxy.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)      485 2023-04-03 22:54:07.000000 raysecretsproxy-0.0.2/raysecretsproxy.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)        1 2023-04-03 22:54:07.000000 raysecretsproxy-0.0.2/raysecretsproxy.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)       58 2023-04-03 22:54:07.000000 raysecretsproxy-0.0.2/raysecretsproxy.egg-info/requires.txt
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)       16 2023-04-03 22:54:07.000000 raysecretsproxy-0.0.2/raysecretsproxy.egg-info/top_level.txt
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)       77 2023-04-01 19:00:37.000000 raysecretsproxy-0.0.2/requirements.txt
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)       38 2023-04-03 22:54:07.302155 raysecretsproxy-0.0.2/setup.cfg
+│ │ -drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-03 22:54:07.301479 raysecretsproxy-0.0.2/tests/
+│ │ --rw-r--r--   0 ilr        (501) staff       (20)     1989 2023-04-03 22:41:09.000000 raysecretsproxy-0.0.2/tests/test_ray_secret_proxy.py
+│ │ +drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-06 21:25:38.155130 raysecretsproxy-0.0.3/
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)    11357 2023-04-06 21:13:29.000000 raysecretsproxy-0.0.3/LICENSE
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)    15863 2023-04-06 21:25:38.154749 raysecretsproxy-0.0.3/PKG-INFO
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     2429 2023-03-30 23:32:42.000000 raysecretsproxy-0.0.3/README.md
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)      818 2023-04-06 21:25:27.000000 raysecretsproxy-0.0.3/pyproject.toml
+│ │ +drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-06 21:25:38.152538 raysecretsproxy-0.0.3/raysecretsproxy/
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)        0 2023-04-06 21:16:33.000000 raysecretsproxy-0.0.3/raysecretsproxy/__init__.py
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     1854 2023-04-06 21:16:33.000000 raysecretsproxy-0.0.3/raysecretsproxy/aws_secret_operator.py
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     2474 2023-04-06 21:16:33.000000 raysecretsproxy-0.0.3/raysecretsproxy/gcp_secret_operator.py
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     1174 2023-04-06 21:13:29.000000 raysecretsproxy-0.0.3/raysecretsproxy/ray_secret.py
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     1033 2023-04-06 21:13:29.000000 raysecretsproxy-0.0.3/raysecretsproxy/ray_secret_operator.py
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     2101 2023-04-06 21:16:33.000000 raysecretsproxy-0.0.3/raysecretsproxy/ray_secret_proxy.py
+│ │ +drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-06 21:25:38.154106 raysecretsproxy-0.0.3/raysecretsproxy.egg-info/
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)    15863 2023-04-06 21:25:38.000000 raysecretsproxy-0.0.3/raysecretsproxy.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)      485 2023-04-06 21:25:38.000000 raysecretsproxy-0.0.3/raysecretsproxy.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)        1 2023-04-06 21:25:38.000000 raysecretsproxy-0.0.3/raysecretsproxy.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)       51 2023-04-06 21:25:38.000000 raysecretsproxy-0.0.3/raysecretsproxy.egg-info/requires.txt
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)       16 2023-04-06 21:25:38.000000 raysecretsproxy-0.0.3/raysecretsproxy.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)       51 2023-04-06 21:23:31.000000 raysecretsproxy-0.0.3/requirements.txt
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)       38 2023-04-06 21:25:38.155225 raysecretsproxy-0.0.3/setup.cfg
+│ │ +drwxr-xr-x   0 ilr        (501) staff       (20)        0 2023-04-06 21:25:38.154287 raysecretsproxy-0.0.3/tests/
+│ │ +-rw-r--r--   0 ilr        (501) staff       (20)     1989 2023-04-06 21:13:29.000000 raysecretsproxy-0.0.3/tests/test_ray_secret_proxy.py
+│ │   --- raysecretsproxy-0.0.2/LICENSE
+│ ├── +++ raysecretsproxy-0.0.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- raysecretsproxy-0.0.2/PKG-INFO
+│ ├── +++ raysecretsproxy-0.0.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: raysecretsproxy
+│ │ -Version: 0.0.2
+│ │ +Version: 0.0.3
+│ │  Summary: A Ray native mechanism of interacting with cloud-provider secrets management.
+│ │  Author-email: Dominic Catalano <dominic@anyscale.com>, Ian Rodney <ilr@anyscale.com>
+│ │  License:                                  Apache License
+│ │                                     Version 2.0, January 2004
+│ │                                  http://www.apache.org/licenses/
+│ │          
+│ │             TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+│ │   --- raysecretsproxy-0.0.2/README.md
+│ ├── +++ raysecretsproxy-0.0.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- raysecretsproxy-0.0.2/pyproject.toml
+│ ├── +++ raysecretsproxy-0.0.3/pyproject.toml
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,24 +1,36 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "raysecretsproxy"
+│ │ -version = "0.0.2"
+│ │ +version = "0.0.3"
+│ │  authors = [
+│ │ -  { name="Dominic Catalano", email="dominic@anyscale.com"},
+│ │ +  {name="Dominic Catalano", email="dominic@anyscale.com"},
+│ │    {name="Ian Rodney", email="ilr@anyscale.com" },
+│ │  ]
+│ │  description = "A Ray native mechanism of interacting with cloud-provider secrets management."
+│ │  license = {file = "LICENSE"}
+│ │  readme = "README.md"
+│ │  classifiers = [
+│ │      "Programming Language :: Python :: 3",
+│ │      "Operating System :: OS Independent",
+│ │  ]
+│ │  dynamic = ["dependencies"]
+│ │  [tool.setuptools.dynamic]
+│ │  dependencies = {file = ["requirements.txt"]}
+│ │  
+│ │  [project.urls]
+│ │ -"Home Page" = "https://github.com/anyscale/ray-secrets-proxy"
+│ │ +"Home Page" = "https://github.com/anyscale/ray-secrets-proxy"
+│ │ +
+│ │ +
+│ │ +
+│ │ +# Linting
+│ │ +[tool.ruff]
+│ │ +target-version = "py37"
+│ │ +required-version = "0.0.261"
+│ │ +
+│ │ +fix = true
+│ │ +ignore = [
+│ │ +    "E501", # Line too long
+│ │ +]
+│ │   --- raysecretsproxy-0.0.2/raysecretsproxy/gcp_secret_operator.py
+│ ├── +++ raysecretsproxy-0.0.3/raysecretsproxy/gcp_secret_operator.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,9 @@
+│ │  from typing import Dict, List, Optional, Tuple
+│ │  from ray.util.annotations import PublicAPI
+│ │ -from .ray_secret import RaySecret
+│ │  from .ray_secret_operator import  RaySecretOperator
+│ │  
+│ │  import google.auth
+│ │  from google.auth.credentials import Credentials
+│ │  from google.cloud import secretmanager
+│ │  from google.api_core.exceptions import ClientError, exception_class_for_http_status
+│ │   --- raysecretsproxy-0.0.2/raysecretsproxy/ray_secret.py
+│ ├── +++ raysecretsproxy-0.0.3/raysecretsproxy/ray_secret.py
+│ │┄ Files identical despite different names
+│ │   --- raysecretsproxy-0.0.2/raysecretsproxy/ray_secret_operator.py
+│ ├── +++ raysecretsproxy-0.0.3/raysecretsproxy/ray_secret_operator.py
+│ │┄ Files identical despite different names
+│ │   --- raysecretsproxy-0.0.2/raysecretsproxy/ray_secret_proxy.py
+│ ├── +++ raysecretsproxy-0.0.3/raysecretsproxy/ray_secret_proxy.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,9 +1,8 @@
+│ │ -from typing import Any, List, Dict
+│ │ -from time import time
+│ │ +from typing import List
+│ │  import logging
+│ │  import ray
+│ │  
+│ │  from .ray_secret import RaySecret
+│ │  from .ray_secret_operator import RaySecretOperator
+│ │  
+│ │  logger = logging.getLogger(__file__)
+│ │   --- raysecretsproxy-0.0.2/raysecretsproxy.egg-info/PKG-INFO
+│ ├── +++ raysecretsproxy-0.0.3/raysecretsproxy.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: raysecretsproxy
+│ │ -Version: 0.0.2
+│ │ +Version: 0.0.3
+│ │  Summary: A Ray native mechanism of interacting with cloud-provider secrets management.
+│ │  Author-email: Dominic Catalano <dominic@anyscale.com>, Ian Rodney <ilr@anyscale.com>
+│ │  License:                                  Apache License
+│ │                                     Version 2.0, January 2004
+│ │                                  http://www.apache.org/licenses/
+│ │          
+│ │             TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+│ │   --- raysecretsproxy-0.0.2/tests/test_ray_secret_proxy.py
+│ ├── +++ raysecretsproxy-0.0.3/tests/test_ray_secret_proxy.py
+│ │┄ Files identical despite different names

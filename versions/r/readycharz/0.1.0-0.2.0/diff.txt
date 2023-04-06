@@ -1,0 +1,36 @@
+--- tmp/readycharz-0.1.0.tar.gz
++++ tmp/readycharz-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "readycharz-0.1.0.tar", last modified: Thu Apr  6 20:35:03 2023, max compression
+│ +gzip compressed data, was "readycharz-0.2.0.tar", last modified: Thu Apr  6 21:24:37 2023, max compression
+│   --- readycharz-0.1.0.tar
+├── +++ readycharz-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 20:35:03.983455 readycharz-0.1.0/
+│ │ --rw-rw-rw-   0        0        0      273 2023-04-06 20:35:03.983455 readycharz-0.1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       16 2023-04-04 20:52:05.000000 readycharz-0.1.0/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 20:35:03.967822 readycharz-0.1.0/readycharz/
+│ │ --rw-rw-rw-   0        0        0    71010 2023-04-04 22:20:13.000000 readycharz-0.1.0/readycharz/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 20:35:03.983455 readycharz-0.1.0/readycharz.egg-info/
+│ │ --rw-rw-rw-   0        0        0      273 2023-04-06 20:35:03.000000 readycharz-0.1.0/readycharz.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      220 2023-04-06 20:35:03.000000 readycharz-0.1.0/readycharz.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 20:35:03.000000 readycharz-0.1.0/readycharz.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-04-06 20:35:03.000000 readycharz-0.1.0/readycharz.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       11 2023-04-06 20:35:03.000000 readycharz-0.1.0/readycharz.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      416 2023-04-06 20:35:03.983455 readycharz-0.1.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      243 2023-04-06 20:34:52.000000 readycharz-0.1.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:24:37.754652 readycharz-0.2.0/
+│ │ +-rw-rw-rw-   0        0        0      273 2023-04-06 21:24:37.754652 readycharz-0.2.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0       16 2023-04-04 20:52:05.000000 readycharz-0.2.0/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:24:37.707798 readycharz-0.2.0/readycharz/
+│ │ +-rw-rw-rw-   0        0        0   289550 2023-04-06 21:23:10.000000 readycharz-0.2.0/readycharz/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:24:37.739104 readycharz-0.2.0/readycharz.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      273 2023-04-06 21:24:37.000000 readycharz-0.2.0/readycharz.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      220 2023-04-06 21:24:37.000000 readycharz-0.2.0/readycharz.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 21:24:37.000000 readycharz-0.2.0/readycharz.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-06 21:24:37.000000 readycharz-0.2.0/readycharz.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       11 2023-04-06 21:24:37.000000 readycharz-0.2.0/readycharz.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      416 2023-04-06 21:24:37.754652 readycharz-0.2.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      243 2023-04-06 21:24:27.000000 readycharz-0.2.0/setup.py

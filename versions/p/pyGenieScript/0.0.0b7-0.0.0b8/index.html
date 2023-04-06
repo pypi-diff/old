@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pyGenieScript-0.0.0b7.tar.gz tmp/pyGenieScript-0.0.0b8.tar.gz --html versions/p/pyGenieScript/0.0.0b7-0.0.0b8/index.html --text versions/p/pyGenieScript/0.0.0b7-0.0.0b8/diff.txt --markdown versions/p/pyGenieScript/0.0.0b7-0.0.0b8/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.54 KB</span></div>
+  <div><span class="source">tmp/pyGenieScript-0.0.0b7.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pyGenieScript-0.0.0b8.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">280 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pyGenieScript-0.0.0b<del>7</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pyGenieScript-0.0.0b<ins>8</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.21 KB</span></div>
+    <div><span class="source">pyGenieScript-0.0.0b7.tar</span> vs.</div>
+    <div id="pyGenieScript--.-.-b-.tar"><span class="source">pyGenieScript-0.0.0b8.tar</span>
+      <a class="anchor" href="#pyGenieScript--.-.-b-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.14 KB</span></div>
+      <div id="pyGenieScript--.-.-b-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.<del>4547</del>2<del>1</del><span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.<ins>6990</ins>2<ins>5</ins><span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1560<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1560<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3770<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.<del>4507</del>2<del>1</del><span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3770<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.<ins>6990</ins>2<ins>5</ins><span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3254<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3254<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.<del>4507</del>2<del>1</del><span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.<ins>6990</ins>2<ins>5</ins><span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1607<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1607<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18031<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/geniescript.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18031<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/geniescript.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>288<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/package.json</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>288<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/package.json</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.<del>4507</del>2<del>1</del><span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/tests/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.<ins>6990</ins>2<ins>5</ins><span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1607<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/tests/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1607<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1308<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript/tests/test_setup.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1308<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript/tests/test_setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.<del>4507</del>2<del>1</del><span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript.egg-info/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.<ins>6990</ins>2<ins>5</ins><span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3770<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript.egg-info/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3770<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>373<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript.egg-info/SOURCES.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>373<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript.egg-info/dependency_links.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript.egg-info/requires.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyGenieScript.egg-info/top_level.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyGenieScript.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2192<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/pyproject.toml</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2192<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:5<del>5</del>.<del>4547</del>2<del>1</del><span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/setup.cfg</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:5<ins>8</ins>.<ins>6990</ins>2<ins>5</ins><span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2035<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>00</del>:<del>12</del>:<del>29</del>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<del>7</del>/setup.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2035<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>21</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>pyGenieScript-0.0.0b<ins>8</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/LICENSE</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--LICENSE"><span class="source">pyGenieScript-0.0.0b8/LICENSE</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">576 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/PKG-INFO</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--PKG-INFO"><span class="source">pyGenieScript-0.0.0b8/PKG-INFO</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyGenieScript</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyGenieScript</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0b<del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0b<ins>8</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>packaged<span class="dp">·</span>GenieScript<span class="dp">·</span>in<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>packaged<span class="dp">·</span>GenieScript<span class="dp">·</span>in<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Stanford<span class="dp">·</span>University<span class="dp">·</span>Open<span class="dp">·</span>Virtual<span class="dp">·</span>Assistant<span class="dp">·</span>Lab</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Stanford<span class="dp">·</span>University<span class="dp">·</span>Open<span class="dp">·</span>Virtual<span class="dp">·</span>Assistant<span class="dp">·</span>Lab</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Shicheng<span class="dp">·</span>Liu<span class="dp">·</span>&lt;shicheng@cs.stanford.edu&gt;</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Shicheng<span class="dp">·</span>Liu<span class="dp">·</span>&lt;shicheng@cs.stanford.edu&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/stanford-oval/pyGenieScript.git</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/stanford-oval/pyGenieScript.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/README.md</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--README.md"><span class="source">pyGenieScript-0.0.0b8/README.md</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/pyGenieScript/__init__.py</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-__init__.py"><span class="source">pyGenieScript-0.0.0b8/pyGenieScript/__init__.py</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/pyGenieScript/geniescript.py</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-geniescript.py"><span class="source">pyGenieScript-0.0.0b8/pyGenieScript/geniescript.py</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-geniescript.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/pyGenieScript/tests/__init__.py</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-tests-__init__.py"><span class="source">pyGenieScript-0.0.0b8/pyGenieScript/tests/__init__.py</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-tests-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/pyGenieScript/tests/test_setup.py</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-tests-test_setup.py"><span class="source">pyGenieScript-0.0.0b8/pyGenieScript/tests/test_setup.py</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript-tests-test_setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">622 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/pyGenieScript.egg-info/PKG-INFO</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript.egg-info-PKG-INFO"><span class="source">pyGenieScript-0.0.0b8/pyGenieScript.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyGenieScript.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyGenieScript</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyGenieScript</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0b<del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.0b<ins>8</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>packaged<span class="dp">·</span>GenieScript<span class="dp">·</span>in<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>packaged<span class="dp">·</span>GenieScript<span class="dp">·</span>in<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Stanford<span class="dp">·</span>University<span class="dp">·</span>Open<span class="dp">·</span>Virtual<span class="dp">·</span>Assistant<span class="dp">·</span>Lab</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>Stanford<span class="dp">·</span>University<span class="dp">·</span>Open<span class="dp">·</span>Virtual<span class="dp">·</span>Assistant<span class="dp">·</span>Lab</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Shicheng<span class="dp">·</span>Liu<span class="dp">·</span>&lt;shicheng@cs.stanford.edu&gt;</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Shicheng<span class="dp">·</span>Liu<span class="dp">·</span>&lt;shicheng@cs.stanford.edu&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/stanford-oval/pyGenieScript.git</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/stanford-oval/pyGenieScript.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">544 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/pyproject.toml</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyproject.toml"><span class="source">pyGenieScript-0.0.0b8/pyproject.toml</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 28, 15 lines modified</td><td colspan="2">Offset 28, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">#<span class="dp">·</span>OF<span class="dp">·</span>THIS<span class="dp">·</span>SOFTWARE,<span class="dp">·</span>EVEN<span class="dp">·</span>IF<span class="dp">·</span>ADVISED<span class="dp">·</span>OF<span class="dp">·</span>THE<span class="dp">·</span>POSSIBILITY<span class="dp">·</span>OF<span class="dp">·</span>SUCH<span class="dp">·</span>DAMAGE.</td><td class="diffline">28 </td><td class="diffpresent">#<span class="dp">·</span>OF<span class="dp">·</span>THIS<span class="dp">·</span>SOFTWARE,<span class="dp">·</span>EVEN<span class="dp">·</span>IF<span class="dp">·</span>ADVISED<span class="dp">·</span>OF<span class="dp">·</span>THE<span class="dp">·</span>POSSIBILITY<span class="dp">·</span>OF<span class="dp">·</span>SUCH<span class="dp">·</span>DAMAGE.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">[build-system]</td><td class="diffline">29 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;setuptools&gt;=61.0&quot;,<span class="dp">·</span>&quot;wheel&quot;,<span class="dp">·</span>&quot;npm&quot;]</td><td class="diffline">30 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;setuptools&gt;=61.0&quot;,<span class="dp">·</span>&quot;wheel&quot;,<span class="dp">·</span>&quot;npm&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">[project]</td><td class="diffline">31 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pyGenieScript&quot;</td><td class="diffline">32 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pyGenieScript&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.0b<del>7</del>&quot;</td><td class="diffline">33 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.0b<ins>8</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">34 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Shicheng<span class="dp">·</span>Liu&quot;,<span class="dp">·</span>email=&quot;shicheng@cs.stanford.edu&quot;<span class="dp">·</span>},</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Shicheng<span class="dp">·</span>Liu&quot;,<span class="dp">·</span>email=&quot;shicheng@cs.stanford.edu&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">]</td><td class="diffline">36 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>packaged<span class="dp">·</span>GenieScript<span class="dp">·</span>in<span class="dp">·</span>Python&quot;</td><td class="diffline">37 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>packaged<span class="dp">·</span>GenieScript<span class="dp">·</span>in<span class="dp">·</span>Python&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">38 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td><td class="diffline">39 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">40 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">586 B</span></div>
+      <div><span class="source">pyGenieScript-0.0.0b7/setup.py</span> vs.</div>
+      <div id="pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--setup.py"><span class="source">pyGenieScript-0.0.0b8/setup.py</span>
+        <a class="anchor" href="#pyGenieScript--.-.-b-.tar---pyGenieScript--.-.-b--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 14 lines modified</td><td colspan="2">Offset 30, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td><td class="diffline">30 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">from<span class="dp">·</span>setuptools.command.install<span class="dp">·</span>import<span class="dp">·</span>install<span class="dp">·</span>as<span class="dp">·</span>_install</td><td class="diffline">31 </td><td class="diffpresent">from<span class="dp">·</span>setuptools.command.install<span class="dp">·</span>import<span class="dp">·</span>install<span class="dp">·</span>as<span class="dp">·</span>_install</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">from<span class="dp">·</span>setuptools.command.sdist<span class="dp">·</span>import<span class="dp">·</span>sdist<span class="dp">·</span>as<span class="dp">·</span>_sdist</td><td class="diffline">32 </td><td class="diffpresent">from<span class="dp">·</span>setuptools.command.sdist<span class="dp">·</span>import<span class="dp">·</span>sdist<span class="dp">·</span>as<span class="dp">·</span>_sdist</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">setup(</td><td class="diffline">34 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;pyGenieScript&#x27;,</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;pyGenieScript&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Stanford<span class="dp">·</span>University<span class="dp">·</span>Open<span class="dp">·</span>Virtual<span class="dp">·</span>Assistant<span class="dp">·</span>Lab&quot;,</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Stanford<span class="dp">·</span>University<span class="dp">·</span>Open<span class="dp">·</span>Virtual<span class="dp">·</span>Assistant<span class="dp">·</span>Lab&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.0.0-b<del>7</del>&#x27;,</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.0.0-b<ins>8</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(),</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>package_data={&#x27;pyGenieScript&#x27;:<span class="dp">·</span>[&#x27;package.json&#x27;]},</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>package_data={&#x27;pyGenieScript&#x27;:<span class="dp">·</span>[&#x27;package.json&#x27;]},</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">)</td><td class="diffline">43 </td><td class="diffpresent">)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
