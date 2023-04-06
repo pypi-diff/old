@@ -1,0 +1,800 @@
+# Comparing `tmp/posym-0.4.0.tar.gz` & `tmp/posym-0.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "posym-0.4.0.tar", last modified: Tue Mar 21 17:05:15 2023, max compression
++gzip compressed data, was "posym-0.5.0.tar", last modified: Thu Apr  6 10:47:14 2023, max compression
+```
+
+## Comparing `posym-0.4.0.tar` & `posym-0.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,30 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-21 17:05:15.554832 posym-0.4.0/
+--rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-03-21 17:05:08.000000 posym-0.4.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)    13717 2023-03-21 17:05:15.554832 posym-0.4.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    13452 2023-03-21 17:05:08.000000 posym-0.4.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-21 17:05:15.550832 posym-0.4.0/c/
+--rw-r--r--   0 runner    (1001) docker     (123)    12679 2023-03-21 17:05:08.000000 posym-0.4.0/c/integrals.c
+--rw-r--r--   0 runner    (1001) docker     (123)     7282 2023-03-21 17:05:08.000000 posym-0.4.0/c/permutations.c
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-21 17:05:15.550832 posym-0.4.0/posym/
+--rw-r--r--   0 runner    (1001) docker     (123)    26781 2023-03-21 17:05:08.000000 posym-0.4.0/posym/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      972 2023-03-21 17:05:08.000000 posym-0.4.0/posym/algebra.py
+--rw-r--r--   0 runner    (1001) docker     (123)    30004 2023-03-21 17:05:08.000000 posym-0.4.0/posym/basis.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28249 2023-03-21 17:05:08.000000 posym-0.4.0/posym/generate_tables.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12338 2023-03-21 17:05:08.000000 posym-0.4.0/posym/ir_tables.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-21 17:05:15.554832 posym-0.4.0/posym/operations/
+--rw-r--r--   0 runner    (1001) docker     (123)     3116 2023-03-21 17:05:08.000000 posym-0.4.0/posym/operations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1268 2023-03-21 17:05:08.000000 posym-0.4.0/posym/operations/identity.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2692 2023-03-21 17:05:08.000000 posym-0.4.0/posym/operations/inversion.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5888 2023-03-21 17:05:08.000000 posym-0.4.0/posym/operations/irotation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3575 2023-03-21 17:05:08.000000 posym-0.4.0/posym/operations/reflection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5261 2023-03-21 17:05:08.000000 posym-0.4.0/posym/operations/rotation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2989 2023-03-21 17:05:08.000000 posym-0.4.0/posym/pointgroup.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6131 2023-03-21 17:05:08.000000 posym-0.4.0/posym/tools.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-21 17:05:15.554832 posym-0.4.0/posym.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    13717 2023-03-21 17:05:15.000000 posym-0.4.0/posym.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      508 2023-03-21 17:05:15.000000 posym-0.4.0/posym.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-21 17:05:15.000000 posym-0.4.0/posym.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       26 2023-03-21 17:05:15.000000 posym-0.4.0/posym.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        6 2023-03-21 17:05:15.000000 posym-0.4.0/posym.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-21 17:05:15.554832 posym-0.4.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1846 2023-03-21 17:05:08.000000 posym-0.4.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:47:14.377541 posym-0.5.0/
++-rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-04-06 10:47:03.000000 posym-0.5.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)    13717 2023-04-06 10:47:14.377541 posym-0.5.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    13452 2023-04-06 10:47:03.000000 posym-0.5.0/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:47:14.377541 posym-0.5.0/c/
++-rw-r--r--   0 runner    (1001) docker     (123)    12679 2023-04-06 10:47:03.000000 posym-0.5.0/c/integrals.c
++-rw-r--r--   0 runner    (1001) docker     (123)     7282 2023-04-06 10:47:03.000000 posym-0.5.0/c/permutations.c
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:47:14.377541 posym-0.5.0/posym/
++-rw-r--r--   0 runner    (1001) docker     (123)    27131 2023-04-06 10:47:03.000000 posym-0.5.0/posym/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      972 2023-04-06 10:47:03.000000 posym-0.5.0/posym/algebra.py
++-rw-r--r--   0 runner    (1001) docker     (123)    30004 2023-04-06 10:47:03.000000 posym-0.5.0/posym/basis.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28249 2023-04-06 10:47:03.000000 posym-0.5.0/posym/generate_tables.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12339 2023-04-06 10:47:03.000000 posym-0.5.0/posym/ir_tables.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:47:14.377541 posym-0.5.0/posym/operations/
++-rw-r--r--   0 runner    (1001) docker     (123)     4537 2023-04-06 10:47:03.000000 posym-0.5.0/posym/operations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1346 2023-04-06 10:47:03.000000 posym-0.5.0/posym/operations/identity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2810 2023-04-06 10:47:03.000000 posym-0.5.0/posym/operations/inversion.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6006 2023-04-06 10:47:03.000000 posym-0.5.0/posym/operations/irotation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3693 2023-04-06 10:47:03.000000 posym-0.5.0/posym/operations/reflection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5386 2023-04-06 10:47:03.000000 posym-0.5.0/posym/operations/rotation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3001 2023-04-06 10:47:03.000000 posym-0.5.0/posym/pointgroup.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6114 2023-04-06 10:47:03.000000 posym-0.5.0/posym/tools.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:47:14.377541 posym-0.5.0/posym.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    13717 2023-04-06 10:47:14.000000 posym-0.5.0/posym.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      508 2023-04-06 10:47:14.000000 posym-0.5.0/posym.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:47:14.000000 posym-0.5.0/posym.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 10:47:14.000000 posym-0.5.0/posym.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 10:47:14.000000 posym-0.5.0/posym.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 10:47:14.377541 posym-0.5.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1846 2023-04-06 10:47:03.000000 posym-0.5.0/setup.py
+```
+
+### Comparing `posym-0.4.0/LICENSE` & `posym-0.5.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/PKG-INFO` & `posym-0.5.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: posym
+-Version: 0.4.0
++Version: 0.5.0
+ Summary: posym module
+ Home-page: https://github.com/abelcarreras/posym
+ Author: Abel Carreras
+ Author-email: abelcarreras83@gmail.com
+ License: MIT License
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `posym-0.4.0/README.md` & `posym-0.5.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/c/integrals.c` & `posym-0.5.0/c/integrals.c`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/c/permutations.c` & `posym-0.5.0/c/permutations.c`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/posym/__init__.py` & `posym-0.5.0/posym/__init__.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,17 +1,18 @@
+ __author__ = 'Abel Carreras'
+-__version__ = '0.4.0'
++__version__ = '0.5.0'
+ 
+ from posym.tools import list_round
+ from posym.pointgroup import PointGroup
+ from posym.basis import BasisFunction
+ from scipy.spatial.transform import Rotation as R
+-from scipy.optimize import minimize
++from scipy.optimize import minimize, basinhopping
+ import numpy as np
+ import pandas as pd
++import itertools
+ 
+ cache_orientation = {}
+ def get_hash(coordinates, symbols, group):
+     return hash((np.array2string(coordinates, precision=2),
+                  tuple(symbols),
+                  group))
+ 
+@@ -122,122 +123,133 @@
+ 
+             return SymmetryBase(self._group, mul_rep)
+         else:
+             raise Exception('Symmetry operation not possible')
+ 
+ 
+ class SymmetryMoleculeBase(SymmetryBase):
+-    def __init__(self, group, coordinates, symbols, total_state=None, orientation_angles=None, center=None):
++    def __init__(self, group, coordinates, symbols, total_state=None, orientation_angles=None, center=None,
++                 fast_optimization=True):
+ 
+-        self._setup_structure(coordinates, symbols, group, center, orientation_angles)
++        self._setup_structure(coordinates, symbols, group, center, orientation_angles, fast_optimization=fast_optimization)
+ 
+         if total_state is None:
+-            rotmol = R.from_euler('zyx', self._angles, degrees=True).inv()
++            rotmol = R.from_euler('zyx', self._angles, degrees=True)
++            geom_center = np.average(coordinates, axis=0)
++            centered_coor = np.subtract(coordinates, geom_center)
++
+             self._operator_measures = []
+             for operation in self._pg.operations:
+-                operations_dic = self._pg.get_all_operations()
+                 operator_measures = []
+-                for op in operations_dic[operation.label]:
+-                    overlap = op.get_measure_pos(np.array(coordinates), symbols, orientation=rotmol)
+-                    geom_center = np.average(coordinates, axis=0)
+-                    measure_norm = np.average(np.linalg.norm(np.subtract(coordinates, geom_center), axis=1))
+-                    operator_measures.append(1-overlap/measure_norm)
++                for op in self._pg.get_sub_operations(operation.label):
++                    overlap = op.get_measure_pos(centered_coor, symbols, orientation=rotmol)
++                    operator_measures.append(overlap)
+ 
+                 self._operator_measures.append(np.array(operator_measures))
+ 
+             total_state = pd.Series(self._operator_measures, index=self._pg.op_labels)
+ 
+         super().__init__(group, total_state)
+ 
+-    def _setup_structure(self, coordinates, symbols, group, center, orientation_angles):
++    def _setup_structure(self, coordinates, symbols, group, center, orientation_angles, fast_optimization=True):
+ 
+         self._coordinates = np.array(coordinates)
+         self._symbols = symbols
+         self._pg = PointGroup(group)
+ 
+         if '_center' not in self.__dir__():
+             self._center = center
+             if self._center is None:
+                 self._center = np.average(self._coordinates, axis=0)
+ 
+             self._coordinates = np.array([c - self._center for c in self._coordinates])
+ 
+         if orientation_angles is None:
+-            self._angles = self.get_orientation()
++            self._angles = self.get_orientation(fast_optimization=fast_optimization)
+         else:
+             self._angles = orientation_angles
+ 
+-    def get_orientation(self):
++    def get_orientation(self, fast_optimization=True):
++        """
++        get orientation angles for optimum orientation.
++        Use full=False to orient perfect symmetric molecules. Use full=True to orient quasi symmetric molecules
++
++        :param fast_optimization: if True use only a subset of symmetry elements (for exact symmetry objets)
++        :return:
++        """
+ 
+         hash_num = get_hash(self._coordinates, self._symbols, self._pg.label)
+         if hash_num in cache_orientation:
+             return cache_orientation[hash_num]
+ 
+-        def optimization_function(angles):
++        def optimization_function_simple(angles):
+ 
+             rotmol = R.from_euler('zyx', angles, degrees=True)
+ 
+             coor_measures = []
+             for operation in self._pg.operations:
+-                coor_m = operation.get_measure_pos(self._coordinates, self._symbols, orientation=rotmol)
++                coor_m = operation.get_measure_pos(self._coordinates, self._symbols, orientation=rotmol, normalized=False)
+                 coor_measures.append(coor_m)
+ 
+             # definition group measure
+-            return np.linalg.norm(coor_measures)
++            return -np.sum(coor_measures)
++
++        def optimization_function_full(angles):
++
++            rotmol = R.from_euler('zyx', angles, degrees=True)
++
++            coor_measures = []
++            for operation in self._pg.operations:
++                for sub_operation in self._pg.get_sub_operations(operation.label):
++                    coor_m = sub_operation.get_measure_pos(self._coordinates, self._symbols, orientation=rotmol, normalized=False)
++                    coor_measures.append(coor_m)
++
++            # definition group measure
++            return -np.sum(coor_measures)
++
++        optimization_function = optimization_function_simple if fast_optimization else optimization_function_full
+ 
+         # preliminary scan
+-        list_m = []
+-        list_a = []
+-        for i in np.arange(0, 180, 10):
+-            for j in np.arange(0, 180, 10):
+-                for k in np.arange(0, 180, 10):
+-                    list_m.append(optimization_function([i, j, k]))
+-                    list_a.append([i, j, k])
+-
+-        initial = np.array(list_a[np.nanargmin(list_m)])
+-        result = minimize(optimization_function, initial, method='CG',
+-                       # bounds=((0, 360), (0, 360), (0, 360)),
+-                       # tol=1e-20
+-                       )
++        guess_angles = ref_value = None
++        for angles in itertools.product(np.arange(0, 180, 10), np.arange(0, 180, 10), np.arange(0, 180, 10)):
++            value = optimization_function(angles)
++            if ref_value is None or value < ref_value:
++                ref_value = value
++                guess_angles = angles
++
++        result = minimize(optimization_function, guess_angles, method='CG',)
++
+         cache_orientation[hash_num] = result.x
+         return cache_orientation[hash_num]
+ 
+     def get_oriented_operations(self):
+         import copy
+-        rotmol = R.from_euler('zyx', self.orientation_angles, degrees=True).inv()
++        rotmol = R.from_euler('zyx', self.orientation_angles, degrees=True)
+ 
+         operations_list = []
+-        operations_dic = self._pg.get_all_operations()
+         for operation in self._pg.operations:
+-            for operation in operations_dic[operation.label]:
+-                operation = copy.deepcopy(operation)
+-                operation.apply_rotation(rotmol)
+-                operations_list.append(operation)
++            for sub_operation in self._pg.get_sub_operations(operation.label):
++                sub_operation = copy.deepcopy(sub_operation)
++                sub_operation.apply_rotation(rotmol)
++                operations_list.append(sub_operation)
+ 
+         return operations_list
+ 
+     @property
+     def measure_pos(self):
+-        def get_measure_pos_total(angles):
+ 
+-            rotmol = R.from_euler('zyx', angles, degrees=True)
++        rotmol = R.from_euler('zyx', self._angles, degrees=True)
+ 
+-            coor_measures = []
+-            for operation in self._pg.operations:
+-                coor_m = operation.get_measure_pos(self._coordinates, self._symbols, orientation=rotmol)
++        coor_measures = []
++        for operation in self._pg.operations:
++            for sub_operation in self._pg.get_sub_operations(operation.label):
++                coor_m = sub_operation.get_measure_pos(self._coordinates, self._symbols, orientation=rotmol)
+                 coor_measures.append(coor_m)
+ 
+-            # definition group measure
+-            geom_center = np.average(self._coordinates, axis=0)
+-            measure_norm = np.average(np.linalg.norm(np.subtract(self._coordinates, geom_center), axis=1))
+-
+-            return np.linalg.norm(coor_measures)/measure_norm
+-
+-        coor_measures = get_measure_pos_total(self._angles)
+-        return np.product(coor_measures)
++        return 1-np.average(coor_measures)
+ 
+     @property
+     def opt_coordinates(self):
+         rotmol = R.from_euler('zyx', self._angles, degrees=True)
+         return rotmol.apply(self._coordinates)
+ 
+     @property
+@@ -253,20 +265,19 @@
+     def __init__(self, group, coordinates, modes, symbols, orientation_angles=None):
+ 
+         self._setup_structure(coordinates, symbols, group, None, orientation_angles)
+ 
+         self._modes = modes
+ 
+         rotmol = R.from_euler('zyx', self._angles, degrees=True)
+-        operations_dic = self._pg.get_all_operations()
+ 
+         self._mode_measures = []
+         for operation in self._pg.operations:
+             mode_measures = []
+-            for op in operations_dic[operation.label]:
++            for op in self._pg.get_sub_operations(operation.label):
+                 mode_m = op.get_measure_modes(self._coordinates, self._modes, self._symbols, orientation=rotmol)
+                 mode_measures.append(mode_m)
+ 
+             mode_measures = np.array(mode_measures)
+             self._mode_measures.append(mode_measures)
+ 
+         mode_measures_total = []
+@@ -294,26 +305,25 @@
+ 
+ class SymmetryModesFull(SymmetryMoleculeBase):
+     def __init__(self, group, coordinates, symbols, orientation_angles=None):
+ 
+         self._setup_structure(coordinates, symbols, group, None, orientation_angles)
+ 
+         rotmol = R.from_euler('zyx', self._angles, degrees=True)
+-        operations_dic = self._pg.get_all_operations()
+ 
+         trans_rots = []
+         for label in self._pg.ir_table.rotations + self._pg.ir_table.translations:
+             trans_rots.append(self._pg.ir_table[label].values)
+ 
+         trans_rots = np.sum(trans_rots, axis=0)
+ 
+         self._mode_measures = []
+         for operation in self._pg.operations:
+             mode_measures = []
+-            for op in operations_dic[operation.label]:
++            for op in self._pg.get_sub_operations(operation.label):
+                 measure_xyz = op.get_measure_xyz(orientation=rotmol)
+                 measure_atom = op.get_measure_atom(self._coordinates, self._symbols, orientation=rotmol)
+ 
+                 mode_measures.append(measure_xyz * measure_atom)
+ 
+             mode_measures = np.array(mode_measures)
+             self._mode_measures.append(mode_measures)
+@@ -335,17 +345,16 @@
+ 
+         rotmol = R.from_euler('zyx', self._angles, degrees=True)
+ 
+         self._self_similarity = (self._function * self._function).integrate
+ 
+         self._operator_measures = []
+         for operation in self._pg.operations:
+-            operations_dic = self._pg.get_all_operations()
+             operator_measures = []
+-            for op in operations_dic[operation.label]:
++            for op in self._pg.get_sub_operations(operation.label):
+                 overlap = op.get_overlap_func(self._function, self._function, orientation=rotmol)
+                 operator_measures.append(overlap/self._self_similarity)
+ 
+             self._operator_measures.append(np.array(operator_measures))
+ 
+         total_state = pd.Series(self._operator_measures, index=self._pg.op_labels)
+         super().__init__(group, self._coordinates, self._symbols, total_state, self._angles, [0,0,0])
+@@ -384,18 +393,16 @@
+             for i, a_orb in enumerate(orbitals):
+                 overlap_row = []
+                 for j, b_orb in enumerate(orbitals):
+                     self_similarity = (a_orb*a_orb).integrate * (b_orb*b_orb).integrate
+ 
+                     overlaps_list = []
+                     for operation in self._pg.operations:
+-                        operations_dic = self._pg.get_all_operations()
+                         operator_overlaps = []
+-
+-                        for op in operations_dic[operation.label]:
++                        for op in self._pg.get_sub_operations(operation.label):
+                             overlap = op.get_overlap_func(a_orb, b_orb, orientation=rotmol)
+                             operator_overlaps.append(overlap/self_similarity)
+ 
+                         operator_overlaps = np.array(operator_overlaps)
+                         # operator_overlaps = np.average(operator_overlaps, axis=0)
+                         overlaps_list.append(operator_overlaps)
+ 
+@@ -490,17 +497,16 @@
+             for i, a_orb in enumerate(orbitals):
+                 overlap_row = []
+                 for j, b_orb in enumerate(orbitals):
+                     self_similarity = (a_orb*a_orb).integrate * (b_orb*b_orb).integrate
+ 
+                     overlaps_list = []
+                     for operation in self._pg.operations:
+-                        operations_dic = self._pg.get_all_operations()
+                         operator_overlaps = []
+-                        for op in operations_dic[operation.label]:
++                        for op in self._pg.get_sub_operations(operation.label):
+                             overlap = op.get_overlap_func(a_orb, b_orb, orientation=rotmol)
+                             operator_overlaps.append(overlap/self_similarity)
+ 
+                         operator_overlaps = np.array(operator_overlaps)
+                         # operator_overlaps = np.average(operator_overlaps, axis=0)
+                         overlaps_list.append(operator_overlaps)
+```
+
+### Comparing `posym-0.4.0/posym/algebra.py` & `posym-0.5.0/posym/algebra.py`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/posym/basis.py` & `posym-0.5.0/posym/basis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/posym/generate_tables.py` & `posym-0.5.0/posym/generate_tables.py`
+
+ * *Files identical despite different names*
+
+### Comparing `posym-0.4.0/posym/ir_tables.py` & `posym-0.5.0/posym/ir_tables.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -307,10 +307,10 @@
+ 
+     print(0, 0, 0)
+     print(0, 0, 1)
+     print(np.sqrt(8 / 9), 0, -1 / 3)
+     print(0, 1, 0)
+     exit()
+ 
+-    #[Identity(label='E'), Rotation(label='C3', axis=[0, 0, 1], order=3),
++    # [Identity(label='E'), Rotation(label='C3', axis=[0, 0, 1], order=3),
+     # Rotation(label='C2', axis=[np.sqrt(8 / 9), 0, -1 / 3], order=2),
+     # ImproperRotation(label='S4', axis=[np.sqrt(8 / 9), 0, -1 / 3], order=4),
+```
+
+### Comparing `posym-0.4.0/posym/operations/__init__.py` & `posym-0.5.0/posym/operations/__init__.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -56,27 +56,65 @@
+         return [list(perm).index(j) for j in range(len(perm))]
+ 
+     # print('-->\n', np.round(distance_table, decimals=3))
+     # print(np.round(np.diag(distance_table), decimals=3))
+     return inverse_perm(perm)
+ 
+ 
++def get_permutation_hungarian(distance_table, symbols):
++    """
++    This function takes distance_table and returns the permutation vector
++    that minimizes its trace, using the Hungarian method.
++    """
++    from scipy.optimize import linear_sum_assignment
++
++    def get_perm_submatrix(sub_matrix):
++        row_ind, col_ind = linear_sum_assignment(sub_matrix)
++        perm = np.zeros_like(row_ind)
++        perm[row_ind] = col_ind
++        return perm
++
++    # return get_perm_submatrix(distance_table)
++
++    # separate distance_table in submatrices corresponding to a single symbol
++    submatrices_indices = []
++    for s in np.unique(symbols):
++        submatrices_indices.append([j for j, s2 in enumerate(symbols) if s2 == s])
++
++    # determine the permutation for each submatrix
++    perm_submatrices = []
++    for index in submatrices_indices:
++        submatrix = np.array(distance_table)[index, :][:, index]
++        perm_sub = get_perm_submatrix(submatrix)
++        perm_submatrices.append(perm_sub)
++
++    # restore global permutation by joining permutations of submatrices
++    global_permutation = np.zeros(len(distance_table), dtype=int)
++    for index, perm in zip(submatrices_indices, perm_submatrices):
++        index = np.array(index)
++        global_permutation[index] = index[perm]
++
++    return global_permutation
++
++
+ class Operation:
+     def __init__(self, label):
+         self._label = label
+ 
+     def get_permutation(self, operation, coordinates, symbols):
+         operated_coor = np.dot(operation, coordinates.T).T
+ 
+         symbols = [int.from_bytes(num.encode(), 'big') for num in symbols]
+         distance_table = get_cross_distance_table(coordinates, operated_coor)
+-        perm = get_permutation_simple(distance_table, symbols)
++        # perm = get_permutation_simple(distance_table, symbols)
++        perm = get_permutation_hungarian(distance_table, symbols)
+         permu_coor = operated_coor[list(perm)]
+ 
+-        measure = np.average(np.linalg.norm(np.subtract(coordinates, permu_coor), axis=1))
++        measure = np.einsum('ij, ij -> ', coordinates, permu_coor)
++        # measure = np.trace(np.dot(coordinates, permu_coor.T))
+ 
+         return measure, list(perm)
+ 
+     def get_normalization(self, coordinates):
+ 
+         sum_list = []
+         for r1 in coordinates:
+```
+
+### Comparing `posym-0.4.0/posym/operations/identity.py` & `posym-0.5.0/posym/operations/identity.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -22,18 +22,19 @@
+ 
+     def get_measure_xyz(self, orientation=None):
+         return 3
+ 
+     def get_overlap_func(self, op_function1, op_function2, orientation=None):
+         return (op_function1*op_function2).integrate
+ 
+-    def get_measure_pos(self, coordinates, symbols, orientation=None):
+-        self._measure_coor = 0.0
+-
+-        return self._measure_coor
++    def get_measure_pos(self, coordinates, symbols, orientation=None, normalized=True):
++        if normalized:
++            return 1.0
++        else:
++            return np.einsum('ij, ij -> ', coordinates, coordinates)
+ 
+     def apply_rotation(self, orientation):
+         pass
+ 
+     @property
+     def operation_matrix_list(self):
+         return [np.identity(3)]
+```
+
+### Comparing `posym-0.4.0/posym/operations/inversion.py` & `posym-0.5.0/posym/operations/inversion.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -56,19 +56,22 @@
+         measure_mode = []
+         for axis in [[1, 0, 0], [0, 1, 0], [0, 0, 1]]:
+             operated_axis = np.dot(operation, axis)
+             measure_mode.append(np.dot(axis, operated_axis))
+ 
+         return np.sum(measure_mode)
+ 
+-    def get_measure_pos(self, coordinates, symbols, orientation=None):
++    def get_measure_pos(self, coordinates, symbols, orientation=None, normalized=True):
+ 
+         operation = inversion()
+         mesure_coor, permu = self.get_permutation(operation, coordinates, symbols)
+ 
++        if normalized:
++            mesure_coor /= np.einsum('ij, ij -> ', coordinates, coordinates)
++
+         return mesure_coor
+ 
+     def get_overlap_func(self, op_function1, op_function2, orientation=None):
+ 
+         operation = inversion()
+ 
+         op_function_i = op_function1.copy()
+```
+
+### Comparing `posym-0.4.0/posym/operations/irotation.py` & `posym-0.5.0/posym/operations/irotation.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -92,15 +92,15 @@
+ 
+             measure_mode.append(measure_mode_list)
+ 
+         measure_mode_total = np.average(measure_mode, axis=0)
+ 
+         return np.sum(measure_mode_total)
+ 
+-    def get_measure_pos(self, coordinates, symbols, orientation=None):
++    def get_measure_pos(self, coordinates, symbols, orientation=None, normalized=True):
+ 
+         rotated_axis = self._axis if orientation is None else orientation.apply(self._axis)
+ 
+         measure_coor = []
+         for angle in [2 * np.pi / self._order * self._exp, -2 * np.pi / self._order * self._exp]:
+         # for angle in np.arange(2*np.pi/self._order, 2*np.pi, 2*np.pi/self._order)[::2]:
+             operation1 = rotation(angle, rotated_axis)
+@@ -109,14 +109,17 @@
+ 
+             mesure_coor, permu = self.get_permutation(operation, coordinates, symbols)
+ 
+             measure_coor.append(mesure_coor)
+ 
+         measure_coor_total = np.average(measure_coor)
+ 
++        if normalized:
++            mesure_coor /= np.einsum('ij, ij -> ', coordinates, coordinates)
++
+         return measure_coor_total
+ 
+     def get_overlap_func(self, op_function1, op_function2, orientation=None):
+ 
+         rotated_axis = self._axis if orientation is None else orientation.apply(self._axis)
+ 
+         angle = 2 * np.pi / self._order * self._exp
+```
+
+### Comparing `posym-0.4.0/posym/operations/reflection.py` & `posym-0.5.0/posym/operations/reflection.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -63,21 +63,24 @@
+         measure_mode = []
+         for axis in [[1, 0, 0], [0, 1 ,0], [0, 0, 1]]:
+             operated_axis = np.dot(operation, axis)
+             measure_mode.append(np.dot(axis, operated_axis))
+ 
+         return np.sum(measure_mode)
+ 
+-    def get_measure_pos(self, coordinates, symbols, orientation=None):
++    def get_measure_pos(self, coordinates, symbols, orientation=None, normalized=True):
+ 
+         rotated_axis = self._axis if orientation is None else orientation.apply(self._axis)
+ 
+         operation = reflection(rotated_axis)
+         mesure_coor, permu = self.get_permutation(operation, coordinates, symbols)
+ 
++        if normalized:
++            mesure_coor /= np.einsum('ij, ij -> ', coordinates, coordinates)
++
+         return mesure_coor
+ 
+     def get_overlap_func(self, op_function1, op_function2, orientation=None):
+ 
+         rotated_axis = self._axis if orientation is None else orientation.apply(self._axis)
+ 
+         operation = reflection(rotated_axis)
+```
+
+### Comparing `posym-0.4.0/posym/operations/rotation.py` & `posym-0.5.0/posym/operations/rotation.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -91,28 +91,31 @@
+ 
+             measure_mode.append(measure_mode_list)
+ 
+         measure_mode_total = np.average(measure_mode, axis=0)
+ 
+         return np.sum(measure_mode_total)
+ 
+-    def get_measure_pos(self, coordinates, symbols, orientation=None):
++    def get_measure_pos(self, coordinates, symbols, orientation=None, normalized=True):
+ 
+         rotated_axis = self._axis if orientation is None else orientation.apply(self._axis)
+ 
+         measure_coor = []
+         # for angle in np.linspace(2*np.pi/self._order, 2*np.pi, self._order)[:-1]:
+         for angle in [2 * np.pi / self._order * self._exp, -2 * np.pi / self._order * self._exp]:
+             operation = rotation(angle, rotated_axis)
+ 
+             mesure_coor, permu = self.get_permutation(operation, coordinates, symbols)
+             measure_coor.append(mesure_coor)
+ 
+         measure_coor_total = np.average(measure_coor)
+ 
++        if normalized:
++            measure_coor_total /= np.einsum('ij, ij -> ', coordinates, coordinates)
++
+         return measure_coor_total
+ 
+     def get_overlap_func(self, op_function1, op_function2, orientation=None):
+ 
+         rotated_axis = self._axis if orientation is None else orientation.apply(self._axis)
+ 
+         angle = 2 * np.pi / self._order * self._exp
+```
+
+### Comparing `posym-0.4.0/posym/pointgroup.py` & `posym-0.5.0/posym/pointgroup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ import numpy as np
+ from posym.generate_tables import get_table_from_label
+ 
+ 
+-class PointGroup():
++class PointGroup:
+     """
+     Basic class to basically handle IR-table.
+ 
+     """
+     def __init__(self, group):
+         self._group = group.lower()
+ 
+@@ -23,16 +23,16 @@
+ 
+     def __eq__(self, other):
+         return self.label == other.label
+ 
+     def __str__(self):
+         return '{}\n{}'.format(self._table.name, self._table)
+ 
+-    def get_all_operations(self):
+-        return self._table.get_all_operations()
++    def get_sub_operations(self, label):
++        return self._table.get_all_operations()[label]
+ 
+     @property
+     def group(self):
+         return self._group
+ 
+     @property
+     def operations(self):
+```
+
+### Comparing `posym-0.4.0/posym/tools.py` & `posym-0.5.0/posym/tools.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+-from itertools import combinations
+ from copy import deepcopy
+ import numpy as np
+ from posym.basis import BasisFunction, PrimitiveGaussian
+ 
+ 
+-def list_round(list, decimals=2):
++def list_round(elements_list, decimals=2):
+     r_list = []
+-    for element in list:
++    for element in elements_list:
+         if abs(np.round(element) - element) < 10**(-decimals):
+             r_list.append(int(np.round(element)))
+         else:
+             r_list.append(np.round(element, decimals))
+ 
+     return r_list
+```
+
+### Comparing `posym-0.4.0/posym.egg-info/PKG-INFO` & `posym-0.5.0/posym.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: posym
+-Version: 0.4.0
++Version: 0.5.0
+ Summary: posym module
+ Home-page: https://github.com/abelcarreras/posym
+ Author: Abel Carreras
+ Author-email: abelcarreras83@gmail.com
+ License: MIT License
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `posym-0.4.0/setup.py` & `posym-0.5.0/setup.py`
+
+ * *Files identical despite different names*
+

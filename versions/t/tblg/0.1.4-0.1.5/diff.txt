@@ -1,0 +1,258 @@
+--- tmp/tblg-0.1.4.tar.gz
++++ tmp/tblg-0.1.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "tblg-0.1.4.tar", last modified: Mon Apr  3 13:00:44 2023, max compression
+│ +gzip compressed data, was "tblg-0.1.5.tar", last modified: Thu Apr  6 12:01:49 2023, max compression
+│   --- tblg-0.1.4.tar
+├── +++ tblg-0.1.5.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 13:00:44.696712 tblg-0.1.4/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1074 2023-04-03 13:00:32.000000 tblg-0.1.4/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-04-03 13:00:44.696712 tblg-0.1.4/PKG-INFO
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4608 2023-04-03 13:00:32.000000 tblg-0.1.4/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-03 13:00:44.696712 tblg-0.1.4/setup.cfg
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1886 2023-04-03 13:00:32.000000 tblg-0.1.4/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 13:00:44.696712 tblg-0.1.4/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 13:00:44.696712 tblg-0.1.4/src/tblg/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      187 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1980 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/__main__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     7847 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/barcoding.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 13:00:44.696712 tblg-0.1.4/src/tblg/data/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4688 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/data/levels.tsv
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1974 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/levels.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     6331 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/utils.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4554 2023-04-03 13:00:32.000000 tblg-0.1.4/src/tblg/vcf.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 13:00:44.696712 tblg-0.1.4/src/tblg.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-04-03 13:00:44.000000 tblg-0.1.4/src/tblg.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      362 2023-04-03 13:00:44.000000 tblg-0.1.4/src/tblg.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 13:00:44.000000 tblg-0.1.4/src/tblg.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-03 13:00:44.000000 tblg-0.1.4/src/tblg.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      115 2023-04-03 13:00:44.000000 tblg-0.1.4/src/tblg.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-03 13:00:44.000000 tblg-0.1.4/src/tblg.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:01:49.354988 tblg-0.1.5/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1074 2023-04-06 12:01:34.000000 tblg-0.1.5/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-04-06 12:01:49.354988 tblg-0.1.5/PKG-INFO
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4608 2023-04-06 12:01:34.000000 tblg-0.1.5/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 12:01:49.354988 tblg-0.1.5/setup.cfg
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1886 2023-04-06 12:01:34.000000 tblg-0.1.5/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:01:49.350988 tblg-0.1.5/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:01:49.354988 tblg-0.1.5/src/tblg/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      187 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1980 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/__main__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     7847 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/barcoding.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:01:49.354988 tblg-0.1.5/src/tblg/data/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4688 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/data/levels.tsv
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1974 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/levels.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     7706 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/utils.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4554 2023-04-06 12:01:34.000000 tblg-0.1.5/src/tblg/vcf.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:01:49.354988 tblg-0.1.5/src/tblg.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-04-06 12:01:49.000000 tblg-0.1.5/src/tblg.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      362 2023-04-06 12:01:49.000000 tblg-0.1.5/src/tblg.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 12:01:49.000000 tblg-0.1.5/src/tblg.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-06 12:01:49.000000 tblg-0.1.5/src/tblg.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      115 2023-04-06 12:01:49.000000 tblg-0.1.5/src/tblg.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 12:01:49.000000 tblg-0.1.5/src/tblg.egg-info/top_level.txt
+│ │   --- tblg-0.1.4/LICENSE
+│ ├── +++ tblg-0.1.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/PKG-INFO
+│ ├── +++ tblg-0.1.5/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: tblg
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.5
+│ │  Summary: A command-line tool to genotype Mycobacterium tuberculosis lineage from a VCF file
+│ │  Home-page: https://github.com/dbespiatykh/tblg
+│ │  Author: Dmitry Bespiatykh
+│ │  Author-email: d.bespiatykh@gmail.com
+│ │  License: MIT
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Environment :: Console
+│ │   --- tblg-0.1.4/README.md
+│ ├── +++ tblg-0.1.5/README.md
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/setup.py
+│ ├── +++ tblg-0.1.5/setup.py
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/src/tblg/__main__.py
+│ ├── +++ tblg-0.1.5/src/tblg/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/src/tblg/barcoding.py
+│ ├── +++ tblg-0.1.5/src/tblg/barcoding.py
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/src/tblg/data/levels.tsv
+│ ├── +++ tblg-0.1.5/src/tblg/data/levels.tsv
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/src/tblg/levels.py
+│ ├── +++ tblg-0.1.5/src/tblg/levels.py
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/src/tblg/utils.py
+│ ├── +++ tblg-0.1.5/src/tblg/utils.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,13 +1,14 @@
+│ │  """Various helper functions"""
+│ │  import codecs
+│ │  import datetime
+│ │  import logging
+│ │  import os
+│ │  import os.path
+│ │ +import signal
+│ │  
+│ │  import pandas as pd
+│ │  import rich_click as click
+│ │  from rich import print as rprint
+│ │  from rich.logging import RichHandler
+│ │  from rich.prompt import Prompt
+│ │  from tabulate import tabulate
+│ │ @@ -36,62 +37,111 @@
+│ │      results = results.sort_values(
+│ │          by=["level_1", "level_2", "level_3", "level_4", "level_5"]
+│ │      ).reset_index(drop=True)
+│ │  
+│ │      return results
+│ │  
+│ │  
+│ │ +class TimeoutException(Exception):
+│ │ +    """
+│ │ +    A custom exception class that is raised when a timeout occurs.
+│ │ +    """
+│ │ +
+│ │ +    pass
+│ │ +
+│ │ +
+│ │ +def handle_timeout(signum, frame):
+│ │ +    """
+│ │ +    A function that raises a TimeoutException exception when a timeout occurs.
+│ │ +    """
+│ │ +    raise TimeoutException()
+│ │ +
+│ │ +
+│ │ +def get_new_output_path(output):
+│ │ +    """
+│ │ +    A function that generates a new output path with a timestamp in the filename.
+│ │ +
+│ │ +    Args:
+│ │ +        output (str): The original output path.
+│ │ +
+│ │ +    Returns:
+│ │ +        str: The new output path with a timestamp in the filename.
+│ │ +    """
+│ │ +    now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+│ │ +    basename = os.path.basename(output)
+│ │ +    new_basename = f"{now}_{basename}"
+│ │ +    directory = os.path.dirname(output) if os.path.dirname(output) else os.getcwd()
+│ │ +    new_output = os.path.join(directory, new_basename)
+│ │ +    return os.path.splitext(new_output)[0] + ".tsv"
+│ │ +
+│ │ +
+│ │  def write_results_to_file(results, output):
+│ │      """
+│ │ -    Write a dataframe containing results to a file in CSV or TSV format
+│ │ +    A function that writes a dataframe containing results to a file in CSV or TSV format.
+│ │ +
+│ │ +    Args:
+│ │ +        results (pandas.DataFrame): The dataframe containing the results to be written to a file.
+│ │ +        output (str): The path of the output file.
+│ │ +
+│ │ +    Raises:
+│ │ +        ValueError: If the output file extension is not '.csv', '.tsv', or '.txt'.
+│ │ +        OSError: If the output file cannot be created due to an operating system error.
+│ │ +
+│ │ +    Returns:
+│ │ +        None
+│ │      """
+│ │      if not output:
+│ │          return
+│ │  
+│ │ -    if not os.path.dirname(output):
+│ │ -        output = os.path.join(os.getcwd(), output)
+│ │ +    output = os.path.abspath(output)
+│ │ +    output_dir = os.path.dirname(output)
+│ │  
+│ │ -    try:
+│ │ -        if os.path.exists(output):
+│ │ -            while True:
+│ │ +    if os.path.exists(output):
+│ │ +        while True:
+│ │ +            try:
+│ │ +                signal.signal(signal.SIGALRM, handle_timeout)
+│ │ +                signal.alarm(60)
+│ │                  user_input = Prompt.ask(
+│ │                      f"[yellow bold]File[/] [cyan italic]{output}[/] [yellow bold]already exists.\n"
+│ │ -                    f"Do you want to overwrite it? (y/n) [dim] Press [italic]ENTER[/] to exit",
+│ │ +                    f"Do you want to overwrite it? [cyan bold]\[y/n][/] [dim]Press [italic]ENTER[/] to exit",
+│ │                  )
+│ │ +                signal.alarm(0)
+│ │ +
+│ │                  if user_input.lower() == "y":
+│ │                      rprint(f"[yellow bold]Overwriting[/] [italic]{output}")
+│ │                      break
+│ │                  elif user_input.lower() == "n":
+│ │ -                    now = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+│ │ -                    new_output = f"{now}_{os.path.basename(output)}"
+│ │ -                    output_dir = os.path.dirname(output)
+│ │ -                    if not output_dir:
+│ │ -                        output_dir = os.getcwd()
+│ │ -                    new_output = os.path.join(output_dir, new_output)
+│ │ -                    new_output = os.path.splitext(new_output)[0] + ".tsv"
+│ │ +                    new_output = get_new_output_path(output)
+│ │                      results.to_csv(new_output, index=False, sep="\t")
+│ │                      rprint(f"[yellow bold]Saving as[/] [italic]{new_output}")
+│ │                      return
+│ │ -                elif user_input == "":
+│ │ +                elif not user_input.strip():
+│ │                      raise KeyboardInterrupt
+│ │                  else:
+│ │                      rprint(
+│ │                          "[red bold]Invalid input.[/] [yellow]Please enter [italic]'y'[/] or [italic]'n'[/]."
+│ │                      )
+│ │  
+│ │ -        os.makedirs(os.path.dirname(output), exist_ok=True)
+│ │ +            except TimeoutException:
+│ │ +                rprint("\n[red bold]Timeout exceeded.[/]")
+│ │ +                new_output = get_new_output_path(output)
+│ │ +                results.to_csv(new_output, index=False, sep="\t")
+│ │ +                rprint(f"[yellow bold]Saving as[/] [italic]{new_output}")
+│ │ +                return
+│ │ +
+│ │ +    try:
+│ │ +        os.makedirs(output_dir, exist_ok=True)
+│ │  
+│ │          ext = os.path.splitext(output)[1]
+│ │          if ext == ".csv":
+│ │              results.to_csv(output, index=False)
+│ │          elif ext == ".tsv" or ext == ".txt":
+│ │              results.to_csv(output, index=False, sep="\t")
+│ │          else:
+│ │ -            raise SystemExit("Output file must have 'txt', 'tsv', or 'csv' extension")
+│ │ -
+│ │ +            raise ValueError("Output file must have 'txt', 'tsv', or 'csv' extension")
+│ │      except OSError as e:
+│ │          if e.errno == 30:
+│ │              log.error(
+│ │                  "File cannot be created at this path. Read-only file system. Please check your file system permissions."
+│ │              )
+│ │          else:
+│ │              raise e
+│ │   --- tblg-0.1.4/src/tblg/vcf.py
+│ ├── +++ tblg-0.1.5/src/tblg/vcf.py
+│ │┄ Files identical despite different names
+│ │   --- tblg-0.1.4/src/tblg.egg-info/PKG-INFO
+│ ├── +++ tblg-0.1.5/src/tblg.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: tblg
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.5
+│ │  Summary: A command-line tool to genotype Mycobacterium tuberculosis lineage from a VCF file
+│ │  Home-page: https://github.com/dbespiatykh/tblg
+│ │  Author: Dmitry Bespiatykh
+│ │  Author-email: d.bespiatykh@gmail.com
+│ │  License: MIT
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Environment :: Console

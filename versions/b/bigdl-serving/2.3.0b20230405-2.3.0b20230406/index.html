@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/bigdl_serving-2.3.0b20230405-py2.py3-none-any.whl.zip tmp/bigdl_serving-2.3.0b20230406-py2.py3-none-any.whl.zip --html versions/b/bigdl-serving/2.3.0b20230405-2.3.0b20230406/index.html --text versions/b/bigdl-serving/2.3.0b20230405-2.3.0b20230406/diff.txt --markdown versions/b/bigdl-serving/2.3.0b20230405-2.3.0b20230406/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.81 KB</span></div>
+  <div><span class="source">tmp/bigdl_serving-2.3.0b20230405-py2.py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/bigdl_serving-2.3.0b20230406-py2.py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">3.43 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>2160<del>4</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>20</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>2160<ins>3</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>20</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>940<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>940<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9965<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/client.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9965<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/client.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2268<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/env.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2268<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/env.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1375<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/log4Error.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1375<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/log4Error.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4990<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/schema.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4990<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/schema.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4980<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/kafka/client.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4980<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/kafka/client.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1864<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/kafka/kafka_example.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1864<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/serving/kafka/kafka_example.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/share/serving/cluster-serving-py-setup.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/share/serving/cluster-serving-py-setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4970<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/share/serving/perf-benchmark/e2e_throughput.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4970<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl/share/serving/perf-benchmark/e2e_throughput.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-init</td><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-init</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span>1<del>1</del>:0<del>8</del><span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-py-setup.py</td><td class="diffline">12 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>6</ins><span class="dp">·</span>1<ins>2</ins>:0<ins>2</ins><span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-py-setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>155<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-shutdown</td><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>155<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-shutdown</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3177<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-start</td><td class="diffline">14 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3177<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-start</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5103<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-with-numactl.sh</td><td class="diffline">15 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5103<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-with-numactl.sh</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1300<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/config.yaml</td><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1300<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/config.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2425<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/download-serving-jar.sh</td><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2425<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Oct-25<span class="dp">·</span>01:39<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/download-serving-jar.sh</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span>1<del>1</del>:0<del>8</del><span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/METADATA</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>6</ins><span class="dp">·</span>1<ins>2</ins>:0<ins>2</ins><span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span>1<del>1</del>:0<del>8</del><span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/WHEEL</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>6</ins><span class="dp">·</span>1<ins>2</ins>:0<ins>2</ins><span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span>1<del>1</del>:0<del>8</del><span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/top_level.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>6</ins><span class="dp">·</span>1<ins>2</ins>:0<ins>2</ins><span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1979<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span>1<del>1</del>:0<del>8</del><span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/RECORD</td><td class="diffline">21 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1979<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>6</ins><span class="dp">·</span>1<ins>2</ins>:0<ins>2</ins><span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">20<span class="dp">·</span>files,<span class="dp">·</span>47477<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1825<del>4</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>61.6%</td><td class="diffline">22 </td><td class="diffpresent">20<span class="dp">·</span>files,<span class="dp">·</span>47477<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1825<ins>3</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>61.6%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.84 KB</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 21, 41 lines modified</td><td colspan="2">Offset 21, 41 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl/share/serving/cluster-serving-py-setup.py</td><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl/share/serving/cluster-serving-py-setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl/share/serving/perf-benchmark/e2e_throughput.py</td><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl/share/serving/perf-benchmark/e2e_throughput.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-init</td><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-init</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-py-setup.py</td><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-py-setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-shutdown</td><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-shutdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-start</td><td class="diffline">31 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-start</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">32 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-with-numactl.sh</td><td class="diffline">33 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-with-numactl.sh</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">34 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/config.yaml</td><td class="diffline">35 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/config.yaml</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">36 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/download-serving-jar.sh</td><td class="diffline">37 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/download-serving-jar.sh</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">38 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/METADATA</td><td class="diffline">39 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">40 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/WHEEL</td><td class="diffline">41 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">42 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/top_level.txt</td><td class="diffline">43 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">44 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/RECORD</td><td class="diffline">45 </td><td class="diffpresent">Filename:<span class="dp">·</span>bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">46 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">47 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">163 B</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.data/scripts/cluster-serving-init</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.data-scripts-cluster-serving-init"><span class="source">bigdl_serving-2.3.0b20230406.data/scripts/cluster-serving-init</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.data-scripts-cluster-serving-init">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">165 B</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.data/scripts/cluster-serving-start</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.data-scripts-cluster-serving-start"><span class="source">bigdl_serving-2.3.0b20230406.data/scripts/cluster-serving-start</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.data-scripts-cluster-serving-start">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">169 B</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.data/scripts/cluster-with-numactl.sh</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.data-scripts-cluster-with-numactl.sh"><span class="source">bigdl_serving-2.3.0b20230406.data/scripts/cluster-with-numactl.sh</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.data-scripts-cluster-with-numactl.sh">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">145 B</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.data/scripts/config.yaml</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.data-scripts-config.yaml"><span class="source">bigdl_serving-2.3.0b20230406.data/scripts/config.yaml</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.data-scripts-config.yaml">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">169 B</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.data/scripts/download-serving-jar.sh</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.data-scripts-download-serving-jar.sh"><span class="source">bigdl_serving-2.3.0b20230406.data/scripts/download-serving-jar.sh</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.data-scripts-download-serving-jar.sh">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">526 B</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.dist-info/METADATA</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.dist-info-METADATA"><span class="source">bigdl_serving-2.3.0b20230406.dist-info/METADATA</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 1% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>bigdl-serving</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>bigdl-serving</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.3.0b2023040<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.3.0b2023040<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Distributed<span class="dp">·</span>and<span class="dp">·</span>Automated<span class="dp">·</span>Model<span class="dp">·</span>Inference<span class="dp">·</span>on<span class="dp">·</span>Big<span class="dp">·</span>Data<span class="dp">·</span>Streaming<span class="dp">·</span>Frameworks</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Distributed<span class="dp">·</span>and<span class="dp">·</span>Automated<span class="dp">·</span>Model<span class="dp">·</span>Inference<span class="dp">·</span>on<span class="dp">·</span>Big<span class="dp">·</span>Data<span class="dp">·</span>Streaming<span class="dp">·</span>Frameworks</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/intel-analytics/BigDL</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/intel-analytics/BigDL</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>BigDL<span class="dp">·</span>Authors</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>BigDL<span class="dp">·</span>Authors</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>bigdl-user-group@googlegroups.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>bigdl-user-group@googlegroups.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License,<span class="dp">·</span>Version<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License,<span class="dp">·</span>Version<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>mac</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>mac</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>linux</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>linux</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">3.12 KB</span></div>
+    <div><span class="source">bigdl_serving-2.3.0b20230405.dist-info/RECORD</span> vs.</div>
+    <div id="bigdl_serving--.-.-b--------.dist-info-RECORD"><span class="source">bigdl_serving-2.3.0b20230406.dist-info/RECORD</span>
+      <a class="anchor" href="#bigdl_serving--.-.-b--------.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 12% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 3, 18 lines modified</td><td colspan="2">Offset 3, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">bigdl/serving/env.py,sha256=wtYtsQvSsoOn2mm2Pkf0HM97_NdQgXB9EOFGVu2S4tQ,2268</td><td class="diffline">3 </td><td class="diffpresent">bigdl/serving/env.py,sha256=wtYtsQvSsoOn2mm2Pkf0HM97_NdQgXB9EOFGVu2S4tQ,2268</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">bigdl/serving/log4Error.py,sha256=qyCRx-Ab829_qBuh788-9BAnMcwNAkYwmxRCX0N8ZGE,1375</td><td class="diffline">4 </td><td class="diffpresent">bigdl/serving/log4Error.py,sha256=qyCRx-Ab829_qBuh788-9BAnMcwNAkYwmxRCX0N8ZGE,1375</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">bigdl/serving/schema.py,sha256=JfNnYFI5wcKo5oyPYLG-1hWLpWrm-LiGZphYHHuUz1k,4990</td><td class="diffline">5 </td><td class="diffpresent">bigdl/serving/schema.py,sha256=JfNnYFI5wcKo5oyPYLG-1hWLpWrm-LiGZphYHHuUz1k,4990</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">bigdl/serving/kafka/client.py,sha256=nZU4-Ppgtj_rElPXFPBmuPEmLWFK7lnj0GbFGWxxvVc,4980</td><td class="diffline">6 </td><td class="diffpresent">bigdl/serving/kafka/client.py,sha256=nZU4-Ppgtj_rElPXFPBmuPEmLWFK7lnj0GbFGWxxvVc,4980</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">bigdl/serving/kafka/kafka_example.py,sha256=SogG-jPKX-PyWxeVoyaEEcqmkrSkoE-esAKZIJlirlY,1864</td><td class="diffline">7 </td><td class="diffpresent">bigdl/serving/kafka/kafka_example.py,sha256=SogG-jPKX-PyWxeVoyaEEcqmkrSkoE-esAKZIJlirlY,1864</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">bigdl/share/serving/cluster-serving-py-setup.py,sha256=GF6KNG_IFhJuHkoJJmHhJH9Mky9N2QXbQjsNT5ggauE,92</td><td class="diffline">8 </td><td class="diffpresent">bigdl/share/serving/cluster-serving-py-setup.py,sha256=GF6KNG_IFhJuHkoJJmHhJH9Mky9N2QXbQjsNT5ggauE,92</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">bigdl/share/serving/perf-benchmark/e2e_throughput.py,sha256=tx0tniyFYDrKjRRuSzOKCiVFcLn_xJVW3l_OD_zWIk4,4970</td><td class="diffline">9 </td><td class="diffpresent">bigdl/share/serving/perf-benchmark/e2e_throughput.py,sha256=tx0tniyFYDrKjRRuSzOKCiVFcLn_xJVW3l_OD_zWIk4,4970</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-init,sha256=i_ts4WZhBE5BS90wrKIJ5rWJ9dEdz6AcIk2wnSVo4NQ,644</td><td class="diffline">10 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-init,sha256=i_ts4WZhBE5BS90wrKIJ5rWJ9dEdz6AcIk2wnSVo4NQ,644</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-py-setup.py,sha256=_6fOziD-sOP7BErTziDyZtJ0BfkfiJlqK6OSAzX3LDQ,82</td><td class="diffline">11 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-py-setup.py,sha256=_6fOziD-sOP7BErTziDyZtJ0BfkfiJlqK6OSAzX3LDQ,82</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-shutdown,sha256=otaPFBrbMqAasN-7XnoLR_FmIc9xZzRSVH2ocHxual4,155</td><td class="diffline">12 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-shutdown,sha256=otaPFBrbMqAasN-7XnoLR_FmIc9xZzRSVH2ocHxual4,155</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-serving-start,sha256=MSnBLkZh1ZYyDrzPk-u8ZamjqGlgeJ6esic86FDnSbw,3177</td><td class="diffline">13 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-serving-start,sha256=MSnBLkZh1ZYyDrzPk-u8ZamjqGlgeJ6esic86FDnSbw,3177</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/cluster-with-numactl.sh,sha256=bTNz-uI4Bygo4Qe-1wvjE7wn3YgdCln6rxE6Oq--5OI,5103</td><td class="diffline">14 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/cluster-with-numactl.sh,sha256=bTNz-uI4Bygo4Qe-1wvjE7wn3YgdCln6rxE6Oq--5OI,5103</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/config.yaml,sha256=z9SWfSY8iLSeI4ddF9gTCQj89bLqjjGiy7EHHIXKEwk,1300</td><td class="diffline">15 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/config.yaml,sha256=z9SWfSY8iLSeI4ddF9gTCQj89bLqjjGiy7EHHIXKEwk,1300</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.data/scripts/download-serving-jar.sh,sha256=LGiI3_6c2oqyGCsEcIlvi-K91QT9yv-REwgCniT3gEI,2425</td><td class="diffline">16 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.data/scripts/download-serving-jar.sh,sha256=LGiI3_6c2oqyGCsEcIlvi-K91QT9yv-REwgCniT3gEI,2425</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/METADATA,sha256=<del>t9pryh</del>s<del>RoEho3aTz</del>F-<del>P</del>H<del>F</del><del>GjnRIcDzeNVfec</del>w<del>1CUKD</del>H<del>4</del>,1051</td><td class="diffline">17 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/METADATA,sha256=<ins>KmangK</ins>s<ins>x</ins><ins>WvHINtFhC</ins>F-H<ins>XulUuzLZ2WjrCi</ins>w<ins>r7PRJ</ins>H<ins>R</ins><ins>I</ins>,1051</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110</td><td class="diffline">18 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/top_level.txt,sha256=cBagmJYb6wgwvnIPkoHIjt6ZCR0nXudViJidCXcTXnQ,7</td><td class="diffline">19 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/top_level.txt,sha256=cBagmJYb6wgwvnIPkoHIjt6ZCR0nXudViJidCXcTXnQ,7</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<del>5</del>.dist-info/RECORD,,</td><td class="diffline">20 </td><td class="diffpresent">bigdl_serving-2.3.0b2023040<ins>6</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

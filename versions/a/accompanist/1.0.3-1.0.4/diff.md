@@ -1,0 +1,219 @@
+# Comparing `tmp/accompanist-1.0.3-py3-none-any.whl.zip` & `tmp/accompanist-1.0.4-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,18 +1,18 @@
+-Zip file size: 36797 bytes, number of entries: 16
++Zip file size: 37147 bytes, number of entries: 16
+ -rw-r--r--  2.0 unx     3685 b- defN 23-Mar-23 16:21 accompanist/draw_histgram.py
+ -rw-r--r--  2.0 unx     2545 b- defN 23-Mar-23 16:23 accompanist/draw_pi_chart.py
+ -rw-r--r--  2.0 unx     2317 b- defN 23-Mar-26 07:38 accompanist/draw_table.py
+ -rw-r--r--  2.0 unx     3350 b- defN 23-Mar-29 13:55 accompanist/listen.py
+ -rw-r--r--  2.0 unx      204 b- defN 23-Mar-26 10:13 accompanist/main.py
+ -rw-r--r--  2.0 unx     1551 b- defN 23-Apr-03 05:18 accompanist/play.py
+ -rw-r--r--  2.0 unx     3450 b- defN 23-Apr-03 05:20 accompanist/utility_module.py
+ -rw-r--r--  2.0 unx      742 b- defN 23-Apr-03 05:37 accompanist/write_front_cover.py
+ -rw-r--r--  2.0 unx    19193 b- defN 23-Mar-26 08:39 accompanist/resource/logo_trans.png
+ -rw-r--r--  2.0 unx     6761 b- defN 23-Mar-26 08:25 accompanist/resource/logo_trans_small.png
+--rw-r--r--  2.0 unx     1063 b- defN 23-Apr-03 05:40 accompanist-1.0.3.dist-info/LICENSE
+--rw-r--r--  2.0 unx     1370 b- defN 23-Apr-03 05:40 accompanist-1.0.3.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-03 05:40 accompanist-1.0.3.dist-info/WHEEL
+--rw-r--r--  2.0 unx       53 b- defN 23-Apr-03 05:40 accompanist-1.0.3.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx       12 b- defN 23-Apr-03 05:40 accompanist-1.0.3.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx     1351 b- defN 23-Apr-03 05:40 accompanist-1.0.3.dist-info/RECORD
+-16 files, 47739 bytes uncompressed, 34559 bytes compressed:  27.6%
++-rw-r--r--  2.0 unx     1063 b- defN 23-Apr-06 11:59 accompanist-1.0.4.dist-info/LICENSE
++-rw-r--r--  2.0 unx     2182 b- defN 23-Apr-06 11:59 accompanist-1.0.4.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 11:59 accompanist-1.0.4.dist-info/WHEEL
++-rw-r--r--  2.0 unx       53 b- defN 23-Apr-06 11:59 accompanist-1.0.4.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx       12 b- defN 23-Apr-06 11:59 accompanist-1.0.4.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx     1351 b- defN 23-Apr-06 11:59 accompanist-1.0.4.dist-info/RECORD
++16 files, 48551 bytes uncompressed, 34909 bytes compressed:  28.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -24,26 +24,26 @@
+ 
+ Filename: accompanist/resource/logo_trans.png
+ Comment: 
+ 
+ Filename: accompanist/resource/logo_trans_small.png
+ Comment: 
+ 
+-Filename: accompanist-1.0.3.dist-info/LICENSE
++Filename: accompanist-1.0.4.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: accompanist-1.0.3.dist-info/METADATA
++Filename: accompanist-1.0.4.dist-info/METADATA
+ Comment: 
+ 
+-Filename: accompanist-1.0.3.dist-info/WHEEL
++Filename: accompanist-1.0.4.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: accompanist-1.0.3.dist-info/entry_points.txt
++Filename: accompanist-1.0.4.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: accompanist-1.0.3.dist-info/top_level.txt
++Filename: accompanist-1.0.4.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: accompanist-1.0.3.dist-info/RECORD
++Filename: accompanist-1.0.4.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `accompanist-1.0.3.dist-info/LICENSE` & `accompanist-1.0.4.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `accompanist-1.0.3.dist-info/METADATA` & `accompanist-1.0.4.dist-info/METADATA`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,44 +1,54 @@
+ Metadata-Version: 2.1
+ Name: accompanist
+-Version: 1.0.3
++Version: 1.0.4
+ Summary: AWS WAF log analysis report generator
+ Author: itsuki
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ Requires-Dist: click
+ Requires-Dist: boto3
+ Requires-Dist: datetime
+ Requires-Dist: pandas
+ Requires-Dist: matplotlib
+ Requires-Dist: PdfPages
+ 
+ 
+-# About
++# Introduction
+ 
+-Accomapnist - It's an accompanist on WAF log analysis.
++Accomapnist - It's an accompanist on AWS WAF log analysis.
+ 
+-You can generate WAF log analysis report with only 2 CLI commands.
++You can analysis AWS WAF log and generate analysis report with only 2 CLI commands.
+ 
+-# Prerequisition
++- The feature & Report Item
++    - Histgram of requests
++    - Top 5 of below items
++        - Blocked or counted rule group
++        - URI path
++        - IP address
++        - Country code
++    - The number of requests on specific URI
++    - Comment (written by you if you have any comments))
+ 
+-- WAF
++# Note
++
++- Target WAF
+     - AWS WAFv2
+         - Logging: CloudWatch Logs
+         - Action: BLOCK or COUNT
+     - Third Party WAF
+         - Logging: CloudWatch Logs
+         - Action: BLOCK or COUNT
+ 
+-- Client Environment
+-    - OS: macOS
+-    - IAM Role/User: including permissions to execute
++- Requirement of Client Environment
++    - IAM Role/User: including permissions to execute as follows
+         - (1) `start_query` of Logs Insights
+         - (2) `get_query_result` of Logs Insights
++        - The example role is noted the last
+ 
+ # Install
+ 
+ ```bash
+ pip install accompanist
+ ```
+ 
+@@ -62,14 +72,15 @@
+     "-"
+   ]
+ }
+ ```
+ 
+ 2. Get query result
+ 
++(e.g.) To get BLOCK log for 3 days
+ ```bash
+ accompanist listen --action BLOCK --days 3
+ ```
+ 
+ 3. Generate report (PDF format)
+ 
+ ```bash
+@@ -78,8 +89,29 @@
+ 
+ # Uninstall
+ 
+ ```bash
+ pip uninstall accompanist
+ ```
+ 
++# Index
++
++IAM Role with minimum permissions
++
++```json
++{
++    "Version": "2012-10-17",
++    "Statement": [
++        {
++            "Sid": "CWLI",
++            "Effect": "Allow",
++            "Action": [
++                "logs:StartQuery",
++                "logs:GetQueryResults"
++            ],
++            "Resource": "*"
++        }
++    ]
++}
++```
++In the "Resource", you should consider to squeeze only needed ARNs as well.
+```
+
+## Comparing `accompanist-1.0.3.dist-info/RECORD` & `accompanist-1.0.4.dist-info/RECORD`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -4,13 +4,13 @@
+ accompanist/listen.py,sha256=uDtJs8ghrO2v9TLCank7UsyKCx52QxPmL2-X3l8YQqM,3350
+ accompanist/main.py,sha256=KRXs-yQ7uIVllRk6haxqm-GbHIQOeeVpqJ3h9ZuPMfM,204
+ accompanist/play.py,sha256=CzQDeRLUXGjXYTB4CwFN3cwOeliMlCEEPWCmvdLCogQ,1551
+ accompanist/utility_module.py,sha256=UqtI_P2I2hdL5AwSCf9ISn7vkp5uWuV25PRB6YCeGXU,3450
+ accompanist/write_front_cover.py,sha256=u6s6jA_qTBKG8rzKnOpeSU1tZ8oZSdDp70V5pzoyQuQ,742
+ accompanist/resource/logo_trans.png,sha256=IbkfTLMa9qzSifN32YocbOdpDRecelHA7k8cLrBVK_4,19193
+ accompanist/resource/logo_trans_small.png,sha256=SS9AlZGL3Ce-6BbD4EW5rbn7zuDcje7HkEXW_lHE2zs,6761
+-accompanist-1.0.3.dist-info/LICENSE,sha256=EHImwl3uAjnXzz33MkVgnfcyDByFp0t6O-H4QaGLs4M,1063
+-accompanist-1.0.3.dist-info/METADATA,sha256=Hl8-Dhw4qY_L0WOPOrhDTXyCgdLwM5vozPieVt3xArc,1370
+-accompanist-1.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+-accompanist-1.0.3.dist-info/entry_points.txt,sha256=gLZwXDl7kf85kYQ1HNQZSxCe81vLub8Eb8wWqrThDeM,53
+-accompanist-1.0.3.dist-info/top_level.txt,sha256=HMR4fV8gkGDO-4DjMdWJYDM6NtMypoCtBRNUiLC6Jpc,12
+-accompanist-1.0.3.dist-info/RECORD,,
++accompanist-1.0.4.dist-info/LICENSE,sha256=EHImwl3uAjnXzz33MkVgnfcyDByFp0t6O-H4QaGLs4M,1063
++accompanist-1.0.4.dist-info/METADATA,sha256=-LivK1MKR5elP7zKKR_kBi3sRL_KrQLu5JXcGFSYcjo,2182
++accompanist-1.0.4.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++accompanist-1.0.4.dist-info/entry_points.txt,sha256=gLZwXDl7kf85kYQ1HNQZSxCe81vLub8Eb8wWqrThDeM,53
++accompanist-1.0.4.dist-info/top_level.txt,sha256=HMR4fV8gkGDO-4DjMdWJYDM6NtMypoCtBRNUiLC6Jpc,12
++accompanist-1.0.4.dist-info/RECORD,,
+```
+
