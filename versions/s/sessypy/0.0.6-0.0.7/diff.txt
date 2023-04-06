@@ -1,0 +1,127 @@
+--- tmp/sessypy-0.0.6.tar.gz
++++ tmp/sessypy-0.0.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "sessypy-0.0.6.tar", last modified: Mon Mar 13 21:04:24 2023, max compression
+│ +gzip compressed data, was "sessypy-0.0.7.tar", last modified: Thu Apr  6 18:33:13 2023, max compression
+│   --- sessypy-0.0.6.tar
+├── +++ sessypy-0.0.7.tar
+│ ├── file list
+│ │ @@ -1,19 +1,19 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 21:04:24.231650 sessypy-0.0.6/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35148 2023-03-13 21:04:14.000000 sessypy-0.0.6/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      782 2023-03-13 21:04:24.231650 sessypy-0.0.6/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      486 2023-03-13 21:04:14.000000 sessypy-0.0.6/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      298 2023-03-13 21:04:14.000000 sessypy-0.0.6/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      355 2023-03-13 21:04:24.231650 sessypy-0.0.6/setup.cfg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 21:04:24.231650 sessypy-0.0.6/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 21:04:24.231650 sessypy-0.0.6/src/sessypy/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       27 2023-03-13 21:04:14.000000 sessypy-0.0.6/src/sessypy/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1518 2023-03-13 21:04:14.000000 sessypy-0.0.6/src/sessypy/api.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1674 2023-03-13 21:04:14.000000 sessypy-0.0.6/src/sessypy/const.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2763 2023-03-13 21:04:14.000000 sessypy-0.0.6/src/sessypy/devices.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      155 2023-03-13 21:04:14.000000 sessypy-0.0.6/src/sessypy/util.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-13 21:04:24.231650 sessypy-0.0.6/src/sessypy.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      782 2023-03-13 21:04:24.000000 sessypy-0.0.6/src/sessypy.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      323 2023-03-13 21:04:24.000000 sessypy-0.0.6/src/sessypy.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-13 21:04:24.000000 sessypy-0.0.6/src/sessypy.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        8 2023-03-13 21:04:24.000000 sessypy-0.0.6/src/sessypy.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        8 2023-03-13 21:04:24.000000 sessypy-0.0.6/src/sessypy.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:33:13.028389 sessypy-0.0.7/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35148 2023-04-06 18:33:01.000000 sessypy-0.0.7/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      782 2023-04-06 18:33:13.028389 sessypy-0.0.7/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      486 2023-04-06 18:33:01.000000 sessypy-0.0.7/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      298 2023-04-06 18:33:01.000000 sessypy-0.0.7/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      355 2023-04-06 18:33:13.028389 sessypy-0.0.7/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:33:13.020389 sessypy-0.0.7/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:33:13.024389 sessypy-0.0.7/src/sessypy/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-06 18:33:01.000000 sessypy-0.0.7/src/sessypy/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1518 2023-04-06 18:33:01.000000 sessypy-0.0.7/src/sessypy/api.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2059 2023-04-06 18:33:01.000000 sessypy-0.0.7/src/sessypy/const.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2763 2023-04-06 18:33:01.000000 sessypy-0.0.7/src/sessypy/devices.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      155 2023-04-06 18:33:01.000000 sessypy-0.0.7/src/sessypy/util.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:33:13.028389 sessypy-0.0.7/src/sessypy.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      782 2023-04-06 18:33:13.000000 sessypy-0.0.7/src/sessypy.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-06 18:33:13.000000 sessypy-0.0.7/src/sessypy.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:33:13.000000 sessypy-0.0.7/src/sessypy.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 18:33:13.000000 sessypy-0.0.7/src/sessypy.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 18:33:13.000000 sessypy-0.0.7/src/sessypy.egg-info/top_level.txt
+│ │   --- sessypy-0.0.6/LICENSE
+│ ├── +++ sessypy-0.0.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- sessypy-0.0.6/PKG-INFO
+│ ├── +++ sessypy-0.0.7/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: sessypy
+│ │ -Version: 0.0.6
+│ │ +Version: 0.0.7
+│ │  Summary: Python wrapper for Sessy REST API
+│ │  Home-page: https://github.com/PimDoos/sessypy
+│ │  Author: PimDoos
+│ │  License: GNU GPLv3
+│ │  Project-URL: Homepage, https://github.com/PimDoos/sessypy
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │   --- sessypy-0.0.6/src/sessypy/api.py
+│ ├── +++ sessypy-0.0.7/src/sessypy/api.py
+│ │┄ Files identical despite different names
+│ │   --- sessypy-0.0.6/src/sessypy/const.py
+│ ├── +++ sessypy-0.0.7/src/sessypy/const.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -9,14 +9,15 @@
+│ │      OTA_STATUS = f"{API_VERSION_1}/ota/status"
+│ │      
+│ │      POWER_SETPOINT = f"{API_VERSION_1}/power/setpoint"
+│ │      POWER_STATUS = f"{API_VERSION_1}/power/status"
+│ │      POWER_STRATEGY = f"{API_VERSION_1}/power/active_strategy"
+│ │      P1_STATUS = f"{API_VERSION_1}/p1/status"
+│ │      SYSTEM_SETTINGS = f"{API_VERSION_1}/system/settings"
+│ │ +    SYSTEM_INFO = f"{API_VERSION_1}/system/info"
+│ │  
+│ │  
+│ │  class SessyPowerStrategy(str, Enum):
+│ │      API = "POWER_STRATEGY_API"
+│ │      NOM = "POWER_STRATEGY_NOM"
+│ │      ROI = "POWER_STRATEGY_ROI"
+│ │      IDLE = "POWER_STRATEGY_IDLE"
+│ │ @@ -24,14 +25,20 @@
+│ │  class SessySystemState(str, Enum):
+│ │      RUNNING_SAFE = "SYSTEM_STATE_RUNNING_SAFE"
+│ │      STANDBY = "SYSTEM_STATE_STANDBY"
+│ │      WAITING_FOR_SAFE = "SYSTEM_STATE_WAITING_FOR_SAFE_SITUATION"
+│ │      WAITING_SAFE = "SYSTEM_STATE_WAITING_IN_SAFE_SITUATION"
+│ │      WAITING_PERIPHERALS = "SYSTEM_STATE_WAIT_FOR_PERIPHERALS"
+│ │      ERROR = "SYSTEM_STATE_ERROR"
+│ │ +    INITIALIZING = "SYSTEM_STATE_INIT", 
+│ │ +    OVERRIDE_OVER_FREQUENCY = "SYSTEM_STATE_OVERRIDE_OVERFREQUENCY", 
+│ │ +    OVERRIDE_UNDER_FREQUENCY = "SYSTEM_STATE_OVERRIDE_UNDERFREQUENCY", 
+│ │ +    DISCONNECT = "SYSTEM_STATE_DISCONNECT", 
+│ │ +    RECONNECT = "SYSTEM_STATE_RECONNECT", 
+│ │ +    BATTERY_EMPTY_OR_FULL = "SYSTEM_STATE_BATTERY_EMPTY_OR_FULL"
+│ │  
+│ │  class SessyP1State(str, Enum):
+│ │      NOT_CONNECTED = "P1_NOT_CONNECTED"
+│ │      DATA_VALIDITY_ERROR = "P1_DATAVALIDITY_ERR"
+│ │      VERSION_ERROR = "P1_VERSION_ERR"
+│ │      PARSE_ERROR = "P1_PARSE_ERR"
+│ │      OK = "P1_OK"
+│ │   --- sessypy-0.0.6/src/sessypy/devices.py
+│ ├── +++ sessypy-0.0.7/src/sessypy/devices.py
+│ │┄ Files identical despite different names
+│ │   --- sessypy-0.0.6/src/sessypy.egg-info/PKG-INFO
+│ ├── +++ sessypy-0.0.7/src/sessypy.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: sessypy
+│ │ -Version: 0.0.6
+│ │ +Version: 0.0.7
+│ │  Summary: Python wrapper for Sessy REST API
+│ │  Home-page: https://github.com/PimDoos/sessypy
+│ │  Author: PimDoos
+│ │  License: GNU GPLv3
+│ │  Project-URL: Homepage, https://github.com/PimDoos/sessypy
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE

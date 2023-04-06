@@ -1,0 +1,1189 @@
+--- tmp/duit-0.1.6.1-py3-none-any.whl.zip
++++ tmp/duit-0.1.7-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,97 +1,101 @@
+│ -Zip file size: 47168 bytes, number of entries: 95
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/__init__.py
+│ --rw-r--r--  2.0 unx      193 b- defN 23-Apr-05 15:08 duit/annotation/Annotation.py
+│ --rw-r--r--  2.0 unx      371 b- defN 23-Apr-05 15:08 duit/annotation/AnnotationList.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/annotation/__init__.py
+│ --rw-r--r--  2.0 unx     1068 b- defN 23-Apr-05 15:08 duit/arguments/Argument.py
+│ --rw-r--r--  2.0 unx     4015 b- defN 23-Apr-05 15:08 duit/arguments/Arguments.py
+│ --rw-r--r--  2.0 unx       67 b- defN 23-Apr-05 15:08 duit/arguments/__init__.py
+│ --rw-r--r--  2.0 unx      478 b- defN 23-Apr-05 15:08 duit/arguments/adapters/BaseTypeAdapter.py
+│ --rw-r--r--  2.0 unx      561 b- defN 23-Apr-05 15:08 duit/arguments/adapters/DefaultTypeAdapter.py
+│ --rw-r--r--  2.0 unx      920 b- defN 23-Apr-05 15:08 duit/arguments/adapters/EnumTypeAdapter.py
+│ --rw-r--r--  2.0 unx      607 b- defN 23-Apr-05 15:08 duit/arguments/adapters/PathTypeAdapter.py
+│ --rw-r--r--  2.0 unx     1059 b- defN 23-Apr-05 15:08 duit/arguments/adapters/VectorTypeAdapter.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/arguments/adapters/__init__.py
+│ --rw-r--r--  2.0 unx      389 b- defN 23-Apr-05 15:08 duit/collections/Stack.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/collections/__init__.py
+│ --rw-r--r--  2.0 unx      796 b- defN 23-Apr-05 15:08 duit/event/Event.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/event/__init__.py
+│ --rw-r--r--  2.0 unx     1890 b- defN 23-Apr-05 15:08 duit/model/DataField.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/model/__init__.py
+│ --rw-r--r--  2.0 unx      650 b- defN 23-Apr-05 15:08 duit/settings/Setting.py
+│ --rw-r--r--  2.0 unx     5777 b- defN 23-Apr-05 15:08 duit/settings/Settings.py
+│ --rw-r--r--  2.0 unx       65 b- defN 23-Apr-05 15:08 duit/settings/__init__.py
+│ --rw-r--r--  2.0 unx      361 b- defN 23-Apr-05 15:08 duit/settings/serialiser/BaseSerializer.py
+│ --rw-r--r--  2.0 unx      377 b- defN 23-Apr-05 15:08 duit/settings/serialiser/DefaultSerializer.py
+│ --rw-r--r--  2.0 unx      560 b- defN 23-Apr-05 15:08 duit/settings/serialiser/EnumSerializer.py
+│ --rw-r--r--  2.0 unx      428 b- defN 23-Apr-05 15:08 duit/settings/serialiser/PathSerializer.py
+│ --rw-r--r--  2.0 unx      988 b- defN 23-Apr-05 15:08 duit/settings/serialiser/VectorSerializer.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/settings/serialiser/__init__.py
+│ --rw-r--r--  2.0 unx      482 b- defN 23-Apr-05 15:08 duit/ui/BaseProperty.py
+│ --rw-r--r--  2.0 unx      439 b- defN 23-Apr-05 15:08 duit/ui/BasePropertyPanel.py
+│ --rw-r--r--  2.0 unx     1490 b- defN 23-Apr-05 15:08 duit/ui/ContainerHelper.py
+│ --rw-r--r--  2.0 unx      195 b- defN 23-Apr-05 15:08 duit/ui/PropertyRegistry.py
+│ --rw-r--r--  2.0 unx     1033 b- defN 23-Apr-05 15:08 duit/ui/__init__.py
+│ --rw-r--r--  2.0 unx      371 b- defN 23-Apr-05 15:08 duit/ui/annotations/ActionAnnotation.py
+│ --rw-r--r--  2.0 unx      227 b- defN 23-Apr-05 15:08 duit/ui/annotations/BooleanAnnotation.py
+│ --rw-r--r--  2.0 unx      243 b- defN 23-Apr-05 15:08 duit/ui/annotations/EnumAnnotation.py
+│ --rw-r--r--  2.0 unx      559 b- defN 23-Apr-05 15:08 duit/ui/annotations/NumberAnnotation.py
+│ --rw-r--r--  2.0 unx      303 b- defN 23-Apr-05 15:08 duit/ui/annotations/OptionsAnnotation.py
+│ --rw-r--r--  2.0 unx      838 b- defN 23-Apr-05 15:08 duit/ui/annotations/PathAnnotation.py
+│ --rw-r--r--  2.0 unx      307 b- defN 23-Apr-05 15:08 duit/ui/annotations/SliderAnnotation.py
+│ --rw-r--r--  2.0 unx      387 b- defN 23-Apr-05 15:08 duit/ui/annotations/TextAnnotation.py
+│ --rw-r--r--  2.0 unx     1298 b- defN 23-Apr-05 15:08 duit/ui/annotations/UIAnnotation.py
+│ --rw-r--r--  2.0 unx      699 b- defN 23-Apr-05 15:08 duit/ui/annotations/VectorAnnotation.py
+│ --rw-r--r--  2.0 unx      569 b- defN 23-Apr-05 15:08 duit/ui/annotations/__init__.py
+│ --rw-r--r--  2.0 unx      157 b- defN 23-Apr-05 15:08 duit/ui/annotations/container/EndSectionAnnotation.py
+│ --rw-r--r--  2.0 unx      230 b- defN 23-Apr-05 15:08 duit/ui/annotations/container/StartSectionAnnotation.py
+│ --rw-r--r--  2.0 unx      215 b- defN 23-Apr-05 15:08 duit/ui/annotations/container/SubSectionAnnotation.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/annotations/container/__init__.py
+│ --rw-r--r--  2.0 unx      170 b- defN 23-Apr-05 15:08 duit/ui/open3d/Open3dContext.py
+│ --rw-r--r--  2.0 unx      972 b- defN 23-Apr-05 15:08 duit/ui/open3d/Open3dFieldProperty.py
+│ --rw-r--r--  2.0 unx      382 b- defN 23-Apr-05 15:08 duit/ui/open3d/Open3dProperty.py
+│ --rw-r--r--  2.0 unx     3893 b- defN 23-Apr-05 15:08 duit/ui/open3d/Open3dPropertyPanel.py
+│ --rw-r--r--  2.0 unx     1793 b- defN 23-Apr-05 15:08 duit/ui/open3d/Open3dPropertyRegistry.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/open3d/__init__.py
+│ --rw-r--r--  2.0 unx     1281 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/ActionProperty.py
+│ --rw-r--r--  2.0 unx      966 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/BooleanProperty.py
+│ --rw-r--r--  2.0 unx      337 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/EnumProperty.py
+│ --rw-r--r--  2.0 unx     1358 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/NumberProperty.py
+│ --rw-r--r--  2.0 unx     1530 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/OptionsProperty.py
+│ --rw-r--r--  2.0 unx     2988 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/PathProperty.py
+│ --rw-r--r--  2.0 unx     1270 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/SliderProperty.py
+│ --rw-r--r--  2.0 unx     1552 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/TextProperty.py
+│ --rw-r--r--  2.0 unx     2666 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/VectorProperty.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/open3d/properties/__init__.py
+│ --rw-r--r--  2.0 unx      492 b- defN 23-Apr-05 15:08 duit/ui/open3d/widgets/CopyToClipboardButton.py
+│ --rw-r--r--  2.0 unx      760 b- defN 23-Apr-05 15:08 duit/ui/open3d/widgets/ImageButton.py
+│ --rw-r--r--  2.0 unx     2133 b- defN 23-Apr-05 15:08 duit/ui/open3d/widgets/SelectionBox.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/open3d/widgets/__init__.py
+│ --rw-r--r--  2.0 unx      917 b- defN 23-Apr-05 15:08 duit/ui/tk/TkFieldProperty.py
+│ --rw-r--r--  2.0 unx      378 b- defN 23-Apr-05 15:08 duit/ui/tk/TkProperty.py
+│ --rw-r--r--  2.0 unx     2878 b- defN 23-Apr-05 15:08 duit/ui/tk/TkPropertyPanel.py
+│ --rw-r--r--  2.0 unx     1575 b- defN 23-Apr-05 15:08 duit/ui/tk/TkPropertyRegistry.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/tk/__init__.py
+│ --rw-r--r--  2.0 unx     1126 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/ActionProperty.py
+│ --rw-r--r--  2.0 unx      878 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/BooleanProperty.py
+│ --rw-r--r--  2.0 unx      333 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/EnumProperty.py
+│ --rw-r--r--  2.0 unx     1031 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/NumberProperty.py
+│ --rw-r--r--  2.0 unx     1212 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/OptionsProperty.py
+│ --rw-r--r--  2.0 unx     1800 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/SliderProperty.py
+│ --rw-r--r--  2.0 unx      787 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/TextProperty.py
+│ --rw-r--r--  2.0 unx     3001 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/VectorProperty.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/tk/properties/__init__.py
+│ --rw-r--r--  2.0 unx     1386 b- defN 23-Apr-05 15:08 duit/ui/tk/widgets/CTkNumberEntry.py
+│ --rw-r--r--  2.0 unx      838 b- defN 23-Apr-05 15:08 duit/ui/tk/widgets/CTkTextEntry.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/ui/tk/widgets/__init__.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/utils/__init__.py
+│ --rw-r--r--  2.0 unx      331 b- defN 23-Apr-05 15:08 duit/utils/_vector.py
+│ --rw-r--r--  2.0 unx      666 b- defN 23-Apr-05 15:08 duit/vision/ImagePreview.py
+│ --rw-r--r--  2.0 unx     1657 b- defN 23-Apr-05 15:08 duit/vision/Open3dImagePreview.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 15:08 duit/vision/__init__.py
+│ --rw-r--r--  2.0 unx     1074 b- defN 23-Apr-05 15:08 duit-0.1.6.1.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx     3042 b- defN 23-Apr-05 15:08 duit-0.1.6.1.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 15:08 duit-0.1.6.1.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        5 b- defN 23-Apr-05 15:08 duit-0.1.6.1.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 unx     8533 b- defN 23-Apr-05 15:08 duit-0.1.6.1.dist-info/RECORD
+│ -95 files, 89745 bytes uncompressed, 33378 bytes compressed:  62.8%
+│ +Zip file size: 50389 bytes, number of entries: 99
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/__init__.py
+│ +-rw-r--r--  2.0 unx      239 b- defN 23-Apr-06 18:35 duit/annotation/Annotation.py
+│ +-rw-r--r--  2.0 unx      371 b- defN 23-Apr-06 18:35 duit/annotation/AnnotationList.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/annotation/__init__.py
+│ +-rw-r--r--  2.0 unx     1107 b- defN 23-Apr-06 18:35 duit/arguments/Argument.py
+│ +-rw-r--r--  2.0 unx     4015 b- defN 23-Apr-06 18:35 duit/arguments/Arguments.py
+│ +-rw-r--r--  2.0 unx       67 b- defN 23-Apr-06 18:35 duit/arguments/__init__.py
+│ +-rw-r--r--  2.0 unx      478 b- defN 23-Apr-06 18:35 duit/arguments/adapters/BaseTypeAdapter.py
+│ +-rw-r--r--  2.0 unx      561 b- defN 23-Apr-06 18:35 duit/arguments/adapters/DefaultTypeAdapter.py
+│ +-rw-r--r--  2.0 unx      920 b- defN 23-Apr-06 18:35 duit/arguments/adapters/EnumTypeAdapter.py
+│ +-rw-r--r--  2.0 unx      607 b- defN 23-Apr-06 18:35 duit/arguments/adapters/PathTypeAdapter.py
+│ +-rw-r--r--  2.0 unx     1059 b- defN 23-Apr-06 18:35 duit/arguments/adapters/VectorTypeAdapter.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/arguments/adapters/__init__.py
+│ +-rw-r--r--  2.0 unx      389 b- defN 23-Apr-06 18:35 duit/collections/Stack.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/collections/__init__.py
+│ +-rw-r--r--  2.0 unx      796 b- defN 23-Apr-06 18:35 duit/event/Event.py
+│ +-rw-r--r--  2.0 unx      587 b- defN 23-Apr-06 18:35 duit/event/__init__.py
+│ +-rw-r--r--  2.0 unx     1902 b- defN 23-Apr-06 18:35 duit/model/DataField.py
+│ +-rw-r--r--  2.0 unx     2052 b- defN 23-Apr-06 18:35 duit/model/DataList.py
+│ +-rw-r--r--  2.0 unx     1184 b- defN 23-Apr-06 18:35 duit/model/SelectableDataList.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/model/__init__.py
+│ +-rw-r--r--  2.0 unx      689 b- defN 23-Apr-06 18:35 duit/settings/Setting.py
+│ +-rw-r--r--  2.0 unx     5777 b- defN 23-Apr-06 18:35 duit/settings/Settings.py
+│ +-rw-r--r--  2.0 unx       65 b- defN 23-Apr-06 18:35 duit/settings/__init__.py
+│ +-rw-r--r--  2.0 unx      361 b- defN 23-Apr-06 18:35 duit/settings/serialiser/BaseSerializer.py
+│ +-rw-r--r--  2.0 unx      377 b- defN 23-Apr-06 18:35 duit/settings/serialiser/DefaultSerializer.py
+│ +-rw-r--r--  2.0 unx      560 b- defN 23-Apr-06 18:35 duit/settings/serialiser/EnumSerializer.py
+│ +-rw-r--r--  2.0 unx      428 b- defN 23-Apr-06 18:35 duit/settings/serialiser/PathSerializer.py
+│ +-rw-r--r--  2.0 unx      988 b- defN 23-Apr-06 18:35 duit/settings/serialiser/VectorSerializer.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/settings/serialiser/__init__.py
+│ +-rw-r--r--  2.0 unx      511 b- defN 23-Apr-06 18:35 duit/ui/BaseProperty.py
+│ +-rw-r--r--  2.0 unx      439 b- defN 23-Apr-06 18:35 duit/ui/BasePropertyPanel.py
+│ +-rw-r--r--  2.0 unx     1490 b- defN 23-Apr-06 18:35 duit/ui/ContainerHelper.py
+│ +-rw-r--r--  2.0 unx      195 b- defN 23-Apr-06 18:35 duit/ui/PropertyRegistry.py
+│ +-rw-r--r--  2.0 unx     1096 b- defN 23-Apr-06 18:35 duit/ui/__init__.py
+│ +-rw-r--r--  2.0 unx      371 b- defN 23-Apr-06 18:35 duit/ui/annotations/ActionAnnotation.py
+│ +-rw-r--r--  2.0 unx      227 b- defN 23-Apr-06 18:35 duit/ui/annotations/BooleanAnnotation.py
+│ +-rw-r--r--  2.0 unx      243 b- defN 23-Apr-06 18:35 duit/ui/annotations/EnumAnnotation.py
+│ +-rw-r--r--  2.0 unx      211 b- defN 23-Apr-06 18:35 duit/ui/annotations/ListAnnotation.py
+│ +-rw-r--r--  2.0 unx      559 b- defN 23-Apr-06 18:35 duit/ui/annotations/NumberAnnotation.py
+│ +-rw-r--r--  2.0 unx      303 b- defN 23-Apr-06 18:35 duit/ui/annotations/OptionsAnnotation.py
+│ +-rw-r--r--  2.0 unx      838 b- defN 23-Apr-06 18:35 duit/ui/annotations/PathAnnotation.py
+│ +-rw-r--r--  2.0 unx      390 b- defN 23-Apr-06 18:35 duit/ui/annotations/SliderAnnotation.py
+│ +-rw-r--r--  2.0 unx      387 b- defN 23-Apr-06 18:35 duit/ui/annotations/TextAnnotation.py
+│ +-rw-r--r--  2.0 unx     1355 b- defN 23-Apr-06 18:35 duit/ui/annotations/UIAnnotation.py
+│ +-rw-r--r--  2.0 unx      699 b- defN 23-Apr-06 18:35 duit/ui/annotations/VectorAnnotation.py
+│ +-rw-r--r--  2.0 unx      569 b- defN 23-Apr-06 18:35 duit/ui/annotations/__init__.py
+│ +-rw-r--r--  2.0 unx      157 b- defN 23-Apr-06 18:35 duit/ui/annotations/container/EndSectionAnnotation.py
+│ +-rw-r--r--  2.0 unx      230 b- defN 23-Apr-06 18:35 duit/ui/annotations/container/StartSectionAnnotation.py
+│ +-rw-r--r--  2.0 unx      215 b- defN 23-Apr-06 18:35 duit/ui/annotations/container/SubSectionAnnotation.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/annotations/container/__init__.py
+│ +-rw-r--r--  2.0 unx      170 b- defN 23-Apr-06 18:35 duit/ui/open3d/Open3dContext.py
+│ +-rw-r--r--  2.0 unx      994 b- defN 23-Apr-06 18:35 duit/ui/open3d/Open3dFieldProperty.py
+│ +-rw-r--r--  2.0 unx      383 b- defN 23-Apr-06 18:35 duit/ui/open3d/Open3dProperty.py
+│ +-rw-r--r--  2.0 unx     3893 b- defN 23-Apr-06 18:35 duit/ui/open3d/Open3dPropertyPanel.py
+│ +-rw-r--r--  2.0 unx     1975 b- defN 23-Apr-06 18:35 duit/ui/open3d/Open3dPropertyRegistry.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/open3d/__init__.py
+│ +-rw-r--r--  2.0 unx     1292 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/ActionProperty.py
+│ +-rw-r--r--  2.0 unx      977 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/BooleanProperty.py
+│ +-rw-r--r--  2.0 unx      337 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/EnumProperty.py
+│ +-rw-r--r--  2.0 unx     1808 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/ListProperty.py
+│ +-rw-r--r--  2.0 unx     1369 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/NumberProperty.py
+│ +-rw-r--r--  2.0 unx     1541 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/OptionsProperty.py
+│ +-rw-r--r--  2.0 unx     2815 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/PathProperty.py
+│ +-rw-r--r--  2.0 unx     2078 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/SliderProperty.py
+│ +-rw-r--r--  2.0 unx     1475 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/TextProperty.py
+│ +-rw-r--r--  2.0 unx     2677 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/VectorProperty.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/open3d/properties/__init__.py
+│ +-rw-r--r--  2.0 unx      492 b- defN 23-Apr-06 18:35 duit/ui/open3d/widgets/CopyToClipboardButton.py
+│ +-rw-r--r--  2.0 unx      760 b- defN 23-Apr-06 18:35 duit/ui/open3d/widgets/ImageButton.py
+│ +-rw-r--r--  2.0 unx     2660 b- defN 23-Apr-06 18:35 duit/ui/open3d/widgets/SelectionBox.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/open3d/widgets/__init__.py
+│ +-rw-r--r--  2.0 unx      950 b- defN 23-Apr-06 18:35 duit/ui/tk/TkFieldProperty.py
+│ +-rw-r--r--  2.0 unx      379 b- defN 23-Apr-06 18:35 duit/ui/tk/TkProperty.py
+│ +-rw-r--r--  2.0 unx     2878 b- defN 23-Apr-06 18:35 duit/ui/tk/TkPropertyPanel.py
+│ +-rw-r--r--  2.0 unx     1575 b- defN 23-Apr-06 18:35 duit/ui/tk/TkPropertyRegistry.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/tk/__init__.py
+│ +-rw-r--r--  2.0 unx     1137 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/ActionProperty.py
+│ +-rw-r--r--  2.0 unx      932 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/BooleanProperty.py
+│ +-rw-r--r--  2.0 unx      333 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/EnumProperty.py
+│ +-rw-r--r--  2.0 unx     1085 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/NumberProperty.py
+│ +-rw-r--r--  2.0 unx     1266 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/OptionsProperty.py
+│ +-rw-r--r--  2.0 unx     1854 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/SliderProperty.py
+│ +-rw-r--r--  2.0 unx      841 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/TextProperty.py
+│ +-rw-r--r--  2.0 unx     3012 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/VectorProperty.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/tk/properties/__init__.py
+│ +-rw-r--r--  2.0 unx     1386 b- defN 23-Apr-06 18:35 duit/ui/tk/widgets/CTkNumberEntry.py
+│ +-rw-r--r--  2.0 unx      838 b- defN 23-Apr-06 18:35 duit/ui/tk/widgets/CTkTextEntry.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/ui/tk/widgets/__init__.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/utils/__init__.py
+│ +-rw-r--r--  2.0 unx      331 b- defN 23-Apr-06 18:35 duit/utils/_vector.py
+│ +-rw-r--r--  2.0 unx      666 b- defN 23-Apr-06 18:35 duit/vision/ImagePreview.py
+│ +-rw-r--r--  2.0 unx     1657 b- defN 23-Apr-06 18:35 duit/vision/Open3dImagePreview.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 18:35 duit/vision/__init__.py
+│ +-rw-r--r--  2.0 unx     1074 b- defN 23-Apr-06 18:35 duit-0.1.7.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx     3040 b- defN 23-Apr-06 18:35 duit-0.1.7.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 18:35 duit-0.1.7.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 18:35 duit-0.1.7.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx     8884 b- defN 23-Apr-06 18:35 duit-0.1.7.dist-info/RECORD
+│ +99 files, 97975 bytes uncompressed, 36051 bytes compressed:  63.2%
+├── zipnote {}
+│ @@ -48,14 +48,20 @@
+│  
+│  Filename: duit/event/__init__.py
+│  Comment: 
+│  
+│  Filename: duit/model/DataField.py
+│  Comment: 
+│  
+│ +Filename: duit/model/DataList.py
+│ +Comment: 
+│ +
+│ +Filename: duit/model/SelectableDataList.py
+│ +Comment: 
+│ +
+│  Filename: duit/model/__init__.py
+│  Comment: 
+│  
+│  Filename: duit/settings/Setting.py
+│  Comment: 
+│  
+│  Filename: duit/settings/Settings.py
+│ @@ -102,14 +108,17 @@
+│  
+│  Filename: duit/ui/annotations/BooleanAnnotation.py
+│  Comment: 
+│  
+│  Filename: duit/ui/annotations/EnumAnnotation.py
+│  Comment: 
+│  
+│ +Filename: duit/ui/annotations/ListAnnotation.py
+│ +Comment: 
+│ +
+│  Filename: duit/ui/annotations/NumberAnnotation.py
+│  Comment: 
+│  
+│  Filename: duit/ui/annotations/OptionsAnnotation.py
+│  Comment: 
+│  
+│  Filename: duit/ui/annotations/PathAnnotation.py
+│ @@ -165,14 +174,17 @@
+│  
+│  Filename: duit/ui/open3d/properties/BooleanProperty.py
+│  Comment: 
+│  
+│  Filename: duit/ui/open3d/properties/EnumProperty.py
+│  Comment: 
+│  
+│ +Filename: duit/ui/open3d/properties/ListProperty.py
+│ +Comment: 
+│ +
+│  Filename: duit/ui/open3d/properties/NumberProperty.py
+│  Comment: 
+│  
+│  Filename: duit/ui/open3d/properties/OptionsProperty.py
+│  Comment: 
+│  
+│  Filename: duit/ui/open3d/properties/PathProperty.py
+│ @@ -264,23 +276,23 @@
+│  
+│  Filename: duit/vision/Open3dImagePreview.py
+│  Comment: 
+│  
+│  Filename: duit/vision/__init__.py
+│  Comment: 
+│  
+│ -Filename: duit-0.1.6.1.dist-info/LICENSE
+│ +Filename: duit-0.1.7.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: duit-0.1.6.1.dist-info/METADATA
+│ +Filename: duit-0.1.7.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: duit-0.1.6.1.dist-info/WHEEL
+│ +Filename: duit-0.1.7.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: duit-0.1.6.1.dist-info/top_level.txt
+│ +Filename: duit-0.1.7.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: duit-0.1.6.1.dist-info/RECORD
+│ +Filename: duit-0.1.7.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── duit/annotation/Annotation.py
+│ @@ -1,10 +1,13 @@
+│  from abc import ABC, abstractmethod
+│ +from typing import TypeVar
+│  
+│  from duit.model.DataField import DataField
+│  
+│ +M = TypeVar("M", bound=DataField)
+│ +
+│  
+│  class Annotation(ABC):
+│  
+│      @abstractmethod
+│ -    def __ror__(self, model: DataField) -> DataField:
+│ +    def __ror__(self, model: M) -> M:
+│          pass
+├── duit/arguments/Argument.py
+│ @@ -1,24 +1,26 @@
+│ -from typing import Optional
+│ +from typing import Optional, TypeVar
+│  
+│  from duit.annotation.Annotation import Annotation
+│  from duit.arguments import ARGUMENT_ANNOTATION_ATTRIBUTE_NAME
+│  from duit.model.DataField import DataField
+│  
+│ +M = TypeVar("M", bound=DataField)
+│ +
+│  
+│  class Argument(Annotation):
+│      def __init__(self, dest: Optional[str] = None, *args, group: Optional[str] = None,
+│                   auto_params: bool = True, **kwargs):
+│          self.dest = dest
+│          self.group = group
+│          self.args = args
+│          self.kwargs = kwargs
+│          self.auto_params = auto_params
+│  
+│ -    def __ror__(self, model) -> DataField:
+│ +    def __ror__(self, model: M) -> M:
+│          if not isinstance(model, DataField):
+│              raise Exception(f"UIAnnotation can not be applied to {type(model).__name__}")
+│  
+│          # read model parameter
+│          if self.auto_params:
+│              if "type" not in self.kwargs:
+│                  self.kwargs["type"] = type(model.value)
+├── duit/event/__init__.py
+│ @@ -0,0 +1,37 @@
+│ +00000000: 696d 706f 7274 206c 6f67 6769 6e67 0a66  import logging.f
+│ +00000010: 726f 6d20 7479 7069 6e67 2069 6d70 6f72  rom typing impor
+│ +00000020: 7420 416e 792c 204f 7074 696f 6e61 6c2c  t Any, Optional,
+│ +00000030: 2043 616c 6c61 626c 652c 2054 7970 6556   Callable, TypeV
+│ +00000040: 6172 0a0a 5420 3d20 5479 7065 5661 7228  ar..T = TypeVar(
+│ +00000050: 2254 2229 0a0a 0a64 6566 2065 7665 6e74  "T")...def event
+│ +00000060: 5f6d 6170 7069 6e67 286f 626a 3a20 416e  _mapping(obj: An
+│ +00000070: 792c 206b 6579 3a20 7374 722c 2074 7261  y, key: str, tra
+│ +00000080: 6e73 666f 726d 3a20 4f70 7469 6f6e 616c  nsform: Optional
+│ +00000090: 5b43 616c 6c61 626c 655b 5b54 5d2c 2054  [Callable[[T], T
+│ +000000a0: 5d5d 203d 204e 6f6e 6529 202d 3e20 4361  ]] = None) -> Ca
+│ +000000b0: 6c6c 6162 6c65 5b5b 416e 795d 2c20 4e6f  llable[[Any], No
+│ +000000c0: 6e65 5d3a 0a20 2020 2069 6620 6e6f 7420  ne]:.    if not 
+│ +000000d0: 6861 7361 7474 7228 6f62 6a2c 206b 6579  hasattr(obj, key
+│ +000000e0: 293a 0a20 2020 2020 2020 206c 6f67 6769  ):.        loggi
+│ +000000f0: 6e67 2e77 6172 6e69 6e67 2866 224f 626a  ng.warning(f"Obj
+│ +00000100: 6563 7420 7b6f 626a 7d20 646f 6573 206e  ect {obj} does n
+│ +00000110: 6f74 2068 6176 6520 616e 2061 7474 7269  ot have an attri
+│ +00000120: 6275 7465 2063 616c 6c65 6420 7b6b 6579  bute called {key
+│ +00000130: 7d2e 2229 0a0a 2020 2020 6465 6620 5f68  }.")..    def _h
+│ +00000140: 616e 646c 6572 2876 616c 7565 3a20 416e  andler(value: An
+│ +00000150: 7929 3a0a 2020 2020 2020 2020 6966 206e  y):.        if n
+│ +00000160: 6f74 2068 6173 6174 7472 286f 626a 2c20  ot hasattr(obj, 
+│ +00000170: 6b65 7929 3a0a 2020 2020 2020 2020 2020  key):.          
+│ +00000180: 2020 7261 6973 6520 4578 6365 7074 696f    raise Exceptio
+│ +00000190: 6e28 6622 4f62 6a65 6374 207b 6f62 6a7d  n(f"Object {obj}
+│ +000001a0: 2064 6f65 7320 6e6f 7420 6861 7665 2061   does not have a
+│ +000001b0: 6e20 6174 7472 6962 7574 6520 6361 6c6c  n attribute call
+│ +000001c0: 6564 207b 6b65 797d 2e22 290a 0a20 2020  ed {key}.")..   
+│ +000001d0: 2020 2020 2069 6620 7472 616e 7366 6f72       if transfor
+│ +000001e0: 6d20 6973 206e 6f74 204e 6f6e 653a 0a20  m is not None:. 
+│ +000001f0: 2020 2020 2020 2020 2020 2076 616c 7565             value
+│ +00000200: 203d 2074 7261 6e73 666f 726d 2876 616c   = transform(val
+│ +00000210: 7565 290a 0a20 2020 2020 2020 2073 6574  ue)..        set
+│ +00000220: 6174 7472 286f 626a 2c20 6b65 792c 2076  attr(obj, key, v
+│ +00000230: 616c 7565 290a 0a20 2020 2072 6574 7572  alue)..    retur
+│ +00000240: 6e20 5f68 616e 646c 6572 0a              n _handler.
+├── duit/model/DataField.py
+│ @@ -50,15 +50,15 @@
+│          self.on_changed.append(on_change)
+│  
+│      def bind_bidirectional(self, model: "DataField[T]") -> None:
+│          self.bind_to(model)
+│          model.bind_to(self)
+│  
+│      def __repr__(self) -> str:
+│ -        return f"DataModel[{type(self._value).__name__}] ({self._value})"
+│ +        return f"{type(self).__name__}[{type(self._value).__name__}] ({self._value})"
+│  
+│      def __str__(self):
+│          return self.__repr__()
+│  
+│      def __eq__(self, other: object) -> bool:
+│          if isinstance(other, DataField):
+│              return self.value == other.value
+├── duit/settings/Setting.py
+│ @@ -1,19 +1,21 @@
+│ -from typing import Optional
+│ +from typing import Optional, TypeVar
+│  
+│  from duit.annotation.Annotation import Annotation
+│  from duit.model.DataField import DataField
+│  from duit.settings import SETTING_ANNOTATION_ATTRIBUTE_NAME
+│  
+│ +M = TypeVar("M", bound=DataField)
+│ +
+│  
+│  class Setting(Annotation):
+│      def __init__(self, name: Optional[str] = None, exposed: bool = True):
+│          self.name = name
+│          self.exposed = exposed
+│  
+│ -    def __ror__(self, model) -> DataField:
+│ +    def __ror__(self, model: M) -> M:
+│          if not isinstance(model, DataField):
+│              raise Exception(f"UIAnnotation can not be applied to {type(model).__name__}")
+│  
+│          # add ui attribute to data model
+│          model.__setattr__(SETTING_ANNOTATION_ATTRIBUTE_NAME, self)
+│          return model
+├── duit/ui/BaseProperty.py
+│ @@ -1,17 +1,18 @@
+│  from abc import ABC, abstractmethod
+│  from typing import Optional, Any, Iterable, TypeVar, Generic
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations import UIAnnotation
+│  
+│  T = TypeVar("T", bound=UIAnnotation)
+│ +M = TypeVar("M", bound=DataField)
+│  
+│  
+│ -class BaseProperty(Generic[T], ABC):
+│ -    def __init__(self, annotation: T, model: Optional[DataField] = None):
+│ +class BaseProperty(Generic[T, M], ABC):
+│ +    def __init__(self, annotation: T, model: Optional[M] = None):
+│          self.annotation = annotation
+│          self.model = model
+│  
+│      @abstractmethod
+│      def create_widgets(self) -> Iterable[Any]:
+│          pass
+├── duit/ui/__init__.py
+│ @@ -3,14 +3,15 @@
+│  from .annotations.EnumAnnotation import EnumAnnotation as Enum
+│  from .annotations.NumberAnnotation import NumberAnnotation as Number
+│  from .annotations.OptionsAnnotation import OptionsAnnotation as Options
+│  from .annotations.SliderAnnotation import SliderAnnotation as Slider
+│  from .annotations.TextAnnotation import TextAnnotation as Text
+│  from .annotations.VectorAnnotation import VectorAnnotation as Vector
+│  from .annotations.PathAnnotation import PathAnnotation as Path
+│ +from .annotations.ListAnnotation import ListAnnotation as List
+│  
+│  from .annotations.container.StartSectionAnnotation import StartSectionAnnotation as StartSection
+│  from .annotations.container.EndSectionAnnotation import EndSectionAnnotation as EndSection
+│  from .annotations.container.SubSectionAnnotation import SubSectionAnnotation as SubSection
+│  
+│  
+│  def setup_open3d():
+├── duit/ui/annotations/SliderAnnotation.py
+│ @@ -1,7 +1,8 @@
+│  from duit.ui.annotations import NumberAnnotation
+│  
+│  
+│  class SliderAnnotation(NumberAnnotation):
+│      def __init__(self, name: str, limit_min: float = 0, limit_max: float = 1,
+│ -                 tooltip: str = "", readonly: bool = False):
+│ +                 tooltip: str = "", readonly: bool = False, show_number_field: bool = True):
+│          super().__init__(name, limit_min, limit_max, 3, tooltip, readonly)
+│ +        self.show_number_field = show_number_field
+├── duit/ui/annotations/UIAnnotation.py
+│ @@ -1,25 +1,28 @@
+│  from abc import ABC
+│  from functools import total_ordering
+│ +from typing import TypeVar
+│  
+│  from duit.annotation.Annotation import Annotation
+│  from duit.model.DataField import DataField
+│  
+│  UI_ANNOTATION_ATTRIBUTE_NAME = "__duit_ui_annotation"
+│  
+│ +T = TypeVar('T', bound=DataField)
+│ +
+│  
+│  @total_ordering
+│  class UIAnnotation(Annotation, ABC):
+│      def __init__(self, name: str, tooltip: str = "", read_only: bool = False, importance: int = 10):
+│          self.name = name
+│          self.tooltip = tooltip
+│          self.read_only = read_only
+│          self._importance = importance
+│  
+│ -    def __ror__(self, model) -> DataField:
+│ +    def __ror__(self, model: T) -> T:
+│          if not isinstance(model, DataField):
+│              raise Exception(f"UIAnnotation can not be applied to {type(model).__name__}")
+│  
+│          # add ui attribute to data model
+│          if hasattr(model, UI_ANNOTATION_ATTRIBUTE_NAME):
+│              model.__getattribute__(UI_ANNOTATION_ATTRIBUTE_NAME).append(self)
+│          else:
+├── duit/ui/open3d/Open3dFieldProperty.py
+│ @@ -1,21 +1,22 @@
+│  from abc import ABC, abstractmethod
+│  from typing import Optional, Iterable, Generic
+│  
+│  from open3d.visualization import gui
+│  from open3d.visualization.gui import Widget
+│  
+│ -from duit.model.DataField import DataField, T
+│ +from duit.model.DataField import T
+│ +from duit.ui.BaseProperty import M
+│  from duit.ui.annotations import UIAnnotation
+│  from duit.ui.open3d import Open3dContext
+│  from duit.ui.open3d.Open3dProperty import Open3dProperty
+│  
+│  
+│ -class Open3dFieldProperty(Generic[T], Open3dProperty[T], ABC):
+│ -    def __init__(self, annotation: UIAnnotation, model: Optional[DataField] = None, hide_label: bool = False):
+│ +class Open3dFieldProperty(Generic[T, M], Open3dProperty[T, M], ABC):
+│ +    def __init__(self, annotation: UIAnnotation, model: Optional[M] = None, hide_label: bool = False):
+│          super().__init__(annotation, model)
+│          self.hide_label = hide_label
+│  
+│      def create_widgets(self) -> Iterable[Widget]:
+│          if self.hide_label:
+│              return gui.Widget(), self.create_field()
+├── duit/ui/open3d/Open3dProperty.py
+│ @@ -1,11 +1,11 @@
+│  from abc import ABC
+│  from typing import Optional, Generic
+│  
+│  from duit.model.DataField import DataField
+│ -from duit.ui.BaseProperty import BaseProperty, T
+│ +from duit.ui.BaseProperty import BaseProperty, T, M
+│  from duit.ui.annotations import UIAnnotation
+│  
+│  
+│ -class Open3dProperty(Generic[T], BaseProperty[T], ABC):
+│ -    def __init__(self, annotation: UIAnnotation, model: Optional[DataField] = None):
+│ +class Open3dProperty(Generic[T, M], BaseProperty[T, M], ABC):
+│ +    def __init__(self, annotation: UIAnnotation, model: Optional[M] = None):
+│          super().__init__(annotation, model)
+├── duit/ui/open3d/Open3dPropertyRegistry.py
+│ @@ -1,17 +1,19 @@
+│  from duit.ui.PropertyRegistry import UI_PROPERTY_REGISTRY
+│  from duit.ui.annotations import NumberAnnotation
+│  from duit.ui.annotations.ActionAnnotation import ActionAnnotation
+│  from duit.ui.annotations.BooleanAnnotation import BooleanAnnotation
+│  from duit.ui.annotations.EnumAnnotation import EnumAnnotation
+│ +from duit.ui.annotations.ListAnnotation import ListAnnotation
+│  from duit.ui.annotations.OptionsAnnotation import OptionsAnnotation
+│  from duit.ui.annotations.PathAnnotation import PathAnnotation
+│  from duit.ui.annotations.SliderAnnotation import SliderAnnotation
+│  from duit.ui.annotations.TextAnnotation import TextAnnotation
+│  from duit.ui.annotations.VectorAnnotation import VectorAnnotation
+│ +from duit.ui.open3d.properties.ListProperty import ListProperty
+│  from duit.ui.open3d.properties.ActionProperty import ActionProperty
+│  from duit.ui.open3d.properties.EnumProperty import EnumProperty
+│  from duit.ui.open3d.properties.OptionsProperty import OptionsProperty
+│  from duit.ui.open3d.properties.BooleanProperty import BooleanProperty
+│  from duit.ui.open3d.properties.NumberProperty import NumberProperty
+│  from duit.ui.open3d.properties.PathProperty import PathProperty
+│  from duit.ui.open3d.properties.SliderProperty import SliderProperty
+│ @@ -25,7 +27,8 @@
+│      UI_PROPERTY_REGISTRY[SliderAnnotation] = SliderProperty
+│      UI_PROPERTY_REGISTRY[OptionsAnnotation] = OptionsProperty
+│      UI_PROPERTY_REGISTRY[EnumAnnotation] = EnumProperty
+│      UI_PROPERTY_REGISTRY[TextAnnotation] = TextProperty
+│      UI_PROPERTY_REGISTRY[ActionAnnotation] = ActionProperty
+│      UI_PROPERTY_REGISTRY[VectorAnnotation] = VectorProperty
+│      UI_PROPERTY_REGISTRY[PathAnnotation] = PathProperty
+│ +    UI_PROPERTY_REGISTRY[ListAnnotation] = ListProperty
+├── duit/ui/open3d/properties/ActionProperty.py
+│ @@ -6,15 +6,15 @@
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.ActionAnnotation import ActionAnnotation
+│  from duit.ui.open3d import Open3dContext
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  
+│  
+│ -class ActionProperty(Open3dFieldProperty[ActionAnnotation]):
+│ +class ActionProperty(Open3dFieldProperty[ActionAnnotation, DataField]):
+│      def __init__(self, annotation: ActionAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model, hide_label=not annotation.show_label)
+│  
+│      def create_field(self) -> Widget:
+│          field = gui.Button(self.annotation.text)
+│          field.horizontal_padding_em = 0.01 * Open3dContext.OPEN3D_FONT_EM
+│          field.vertical_padding_em = 0.01 * Open3dContext.OPEN3D_FONT_EM
+├── duit/ui/open3d/properties/BooleanProperty.py
+│ @@ -4,15 +4,15 @@
+│  from open3d.visualization import gui
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.BooleanAnnotation import BooleanAnnotation
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  
+│  
+│ -class BooleanProperty(Open3dFieldProperty[BooleanAnnotation]):
+│ +class BooleanProperty(Open3dFieldProperty[BooleanAnnotation, DataField]):
+│      def __init__(self, annotation: BooleanAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          field = gui.Checkbox("")
+│          field.enabled = not self.annotation.read_only
+│          field.tooltip = self.annotation.tooltip
+├── duit/ui/open3d/properties/NumberProperty.py
+│ @@ -4,15 +4,15 @@
+│  from open3d.visualization import gui
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations import NumberAnnotation
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  
+│  
+│ -class NumberProperty(Open3dFieldProperty[NumberAnnotation]):
+│ +class NumberProperty(Open3dFieldProperty[NumberAnnotation, DataField]):
+│      def __init__(self, annotation: NumberAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          edit_type = gui.NumberEdit.INT if isinstance(self.model.value, int) else gui.NumberEdit.DOUBLE
+│          field = gui.NumberEdit(edit_type)
+│          field.set_limits(self.annotation.limit_min, self.annotation.limit_max)
+├── duit/ui/open3d/properties/OptionsProperty.py
+│ @@ -6,15 +6,15 @@
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.OptionsAnnotation import OptionsAnnotation
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  from duit.ui.open3d.widgets.SelectionBox import SelectionBox
+│  
+│  
+│ -class OptionsProperty(Open3dFieldProperty[OptionsAnnotation]):
+│ +class OptionsProperty(Open3dFieldProperty[OptionsAnnotation, DataField]):
+│      def __init__(self, annotation: OptionsAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          # workaround for issue https://github.com/isl-org/Open3D/issues/6024
+│          if sys.platform == "darwin":
+│              field = SelectionBox()
+├── duit/ui/open3d/properties/PathProperty.py
+│ @@ -1,23 +1,20 @@
+│  from pathlib import Path
+│  from typing import Optional
+│  
+│ -import open3d.cpu.pybind.visualization.gui
+│  from open3d.cpu.pybind.visualization.gui import Widget
+│  from open3d.visualization import gui
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.PathAnnotation import PathAnnotation, DialogType
+│ -from duit.ui.annotations.TextAnnotation import TextAnnotation
+│  from duit.ui.open3d import Open3dContext
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│ -from duit.ui.open3d.widgets.CopyToClipboardButton import CopyToClipboardButton
+│  
+│  
+│ -class PathProperty(Open3dFieldProperty[PathAnnotation]):
+│ +class PathProperty(Open3dFieldProperty[PathAnnotation, DataField]):
+│      def __init__(self, annotation: PathAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          field = gui.TextEdit()
+│          field.placeholder_text = self.annotation.placeholder_text
+│          field.enabled = not self.annotation.read_only
+├── duit/ui/open3d/properties/SliderProperty.py
+│ @@ -4,32 +4,51 @@
+│  from open3d.visualization import gui
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.SliderAnnotation import SliderAnnotation
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  
+│  
+│ -class SliderProperty(Open3dFieldProperty[SliderAnnotation]):
+│ +class SliderProperty(Open3dFieldProperty[SliderAnnotation, DataField]):
+│      def __init__(self, annotation: SliderAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          slider_type = gui.Slider.INT if isinstance(self.model.value, int) else gui.Slider.DOUBLE
+│          field = gui.Slider(slider_type)
+│          field.set_limits(self.annotation.limit_min, self.annotation.limit_max)
+│          field.enabled = not self.annotation.read_only
+│          field.tooltip = self.annotation.tooltip
+│  
+│ +        number_type = gui.NumberEdit.INT if isinstance(self.model.value, int) else gui.NumberEdit.DOUBLE
+│ +        number_field = gui.NumberEdit(number_type)
+│ +        number_field.set_limits(self.annotation.limit_min, self.annotation.limit_max)
+│ +        number_field.enabled = not self.annotation.read_only
+│ +        number_field.tooltip = self.annotation.tooltip
+│ +
+│          def on_dm_changed(value):
+│              if slider_type == gui.Slider.INT:
+│                  field.int_value = round(value)
+│ +                number_field.int_value = round(value)
+│              else:
+│                  field.double_value = value
+│ +                number_field.double_value = value
+│ +
+│ +        def on_number_ui_changed(value):
+│ +            self.model.value = value
+│  
+│          def on_ui_changed(value):
+│              self.model.value = value
+│  
+│          self.model.on_changed.append(on_dm_changed)
+│          field.set_on_value_changed(on_ui_changed)
+│ +        number_field.set_on_value_changed(on_number_ui_changed)
+│  
+│          self.model.fire_latest()
+│ -        return field
+│ +
+│ +        if not self.annotation.show_number_field:
+│ +            return field
+│ +
+│ +        container = gui.Horiz(4)
+│ +        container.add_child(field)
+│ +        container.add_child(number_field)
+│ +        return container
+├── duit/ui/open3d/properties/TextProperty.py
+│ @@ -1,21 +1,19 @@
+│  from typing import Optional
+│  
+│ -import pyperclip
+│ -from open3d.cpu.pybind.visualization.gui import Widget, MouseEvent
+│ +from open3d.cpu.pybind.visualization.gui import Widget
+│  from open3d.visualization import gui
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.TextAnnotation import TextAnnotation
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  from duit.ui.open3d.widgets.CopyToClipboardButton import CopyToClipboardButton
+│ -from duit.ui.open3d.widgets.ImageButton import ImageButton
+│  
+│  
+│ -class TextProperty(Open3dFieldProperty[TextAnnotation]):
+│ +class TextProperty(Open3dFieldProperty[TextAnnotation, DataField]):
+│      def __init__(self, annotation: TextAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          field = gui.TextEdit()
+│          field.placeholder_text = self.annotation.placeholder_text
+│          field.enabled = not self.annotation.read_only
+├── duit/ui/open3d/properties/VectorProperty.py
+│ @@ -6,15 +6,15 @@
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.VectorAnnotation import VectorAnnotation
+│  from duit.ui.open3d import Open3dContext
+│  from duit.ui.open3d.Open3dFieldProperty import Open3dFieldProperty
+│  from duit.utils import _vector
+│  
+│  
+│ -class VectorProperty(Open3dFieldProperty[VectorAnnotation]):
+│ +class VectorProperty(Open3dFieldProperty[VectorAnnotation, DataField]):
+│      def __init__(self, annotation: VectorAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self) -> Widget:
+│          vector_attributes = _vector.get_vector_attributes(self.model.value)
+│          attribute_widgets: Dict[str, gui.NumberEdit] = {}
+├── duit/ui/open3d/widgets/SelectionBox.py
+│ @@ -1,11 +1,13 @@
+│  from typing import List, Callable, Optional
+│  
+│  from open3d.cpu.pybind.visualization import gui
+│  
+│ +from duit.ui.open3d import Open3dContext
+│ +
+│  
+│  class SelectionBox(gui.Vert):
+│      def __init__(self):
+│          super().__init__()
+│  
+│          self.list_size: int = 200
+│  
+│ @@ -14,53 +16,62 @@
+│  
+│          self._open_button = gui.Button("¬")
+│          self._open_button.vertical_padding_em = 0
+│          self._open_button.horizontal_padding_em = 0
+│          self._open_button.set_on_clicked(self._on_button_clicked)
+│  
+│          self._list = gui.ListView()
+│ -        self._list.background_color.set_color(1.0, 0.0, 0.0)
+│          self._list.set_on_selection_changed(self._on_list_selection_changed)
+│ -        self._list.visible = False
+│ +
+│ +        self._list_panel = gui.StackedWidget()
+│ +        self._list_panel.visible = False
+│ +        self._list_panel.background_color = gui.Color(1.0, 0.0, 0.0, 1.0)
+│ +        self._list_panel.add_child(self._list)
+│  
+│          container = gui.Horiz(4)
+│          container.add_child(self._preview_text)
+│          container.add_child(self._open_button)
+│  
+│          self.add_child(container)
+│ -        self.add_child(self._list)
+│ +        self.add_child(self._list_panel)
+│  
+│          self._on_selection_changed_handler: Optional[Callable[[str, int], None]] = None
+│  
+│          self._items: List[str] = []
+│  
+│          self.background_color = gui.Color(255, 0, 0, 1)
+│  
+│      def _on_button_clicked(self):
+│          rect: gui.Rect = self.frame
+│ -
+│ +        # moving the widget is currently not supported
+│ +        # gui.Rect(rect.x, rect.y + rect.height, rect.width, self.list_size)
+│ +        self._list_panel.frame = gui.Rect(rect.x, rect.y + rect.height, rect.width, self.list_size)
+│          self._list.frame = gui.Rect(rect.x, rect.y + rect.height, rect.width, self.list_size)
+│ -        self._list.visible = True
+│ +        self._list_panel.visible = not self._list_panel.visible
+│  
+│      def _on_list_selection_changed(self, new_val, is_double_click):
+│          index = self._items.index(new_val)
+│          self.selected_index = index
+│ -        self._list.visible = False
+│ +        self._list_panel.visible = False
+│  
+│          if self._on_selection_changed_handler is not None:
+│              self._on_selection_changed_handler(new_val, self.selected_index)
+│  
+│      def add_item(self, item: str):
+│          self._items.append(item)
+│          self._list.set_items(self._items)
+│  
+│ +    def clear_items(self):
+│ +        self._items.clear()
+│ +        self._list.set_items(self._items)
+│ +
+│      @property
+│      def selected_index(self) -> int:
+│          return self._list.selected_index
+│  
+│      @selected_index.setter
+│ -    def selected_index(self, value: int):
+│ -        self._list.selected_index = value
+│ -        self._preview_text.text_value = self._items[value]
+│ +    def selected_index(self, index: int):
+│ +        self._list.selected_index = index
+│ +        self._preview_text.text_value = self._items[index]
+│  
+│      def set_on_selection_changed(self, callback: Callable[[str, int], None]):
+│          self._on_selection_changed_handler = callback
+├── duit/ui/tk/TkFieldProperty.py
+│ @@ -1,21 +1,22 @@
+│  from abc import ABC, abstractmethod
+│  from typing import Generic, Optional, Iterable
+│  
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│  from duit.model.DataField import DataField, T
+│ +from duit.ui.BaseProperty import M
+│  from duit.ui.annotations import UIAnnotation
+│  import customtkinter as ctk
+│  
+│  from duit.ui.tk.TkProperty import TkProperty
+│  
+│  
+│ -class TkFieldProperty(Generic[T], TkProperty[T], ABC):
+│ -    def __init__(self, annotation: UIAnnotation, model: Optional[DataField] = None, hide_label: bool = False):
+│ +class TkFieldProperty(Generic[T, M], TkProperty[T, M], ABC):
+│ +    def __init__(self, annotation: UIAnnotation, model: Optional[M] = None, hide_label: bool = False):
+│          super().__init__(annotation, model)
+│          self.hide_label = hide_label
+│  
+│      def create_widgets(self, master) -> Iterable[CTkBaseClass]:
+│          if self.hide_label:
+│              return CTkBaseClass(master), self.create_field(master)
+├── duit/ui/tk/TkProperty.py
+│ @@ -1,11 +1,11 @@
+│  from abc import ABC
+│  from typing import Generic, Optional
+│  
+│  from duit.model.DataField import T, DataField
+│ -from duit.ui.BaseProperty import BaseProperty
+│ +from duit.ui.BaseProperty import BaseProperty, M
+│  from duit.ui.annotations import UIAnnotation
+│  
+│  
+│ -class TkProperty(Generic[T], BaseProperty[T], ABC):
+│ -    def __init__(self, annotation: UIAnnotation, model: Optional[DataField] = None):
+│ +class TkProperty(Generic[T, M], BaseProperty[T, M], ABC):
+│ +    def __init__(self, annotation: UIAnnotation, model: Optional[M] = None):
+│          super().__init__(annotation, model)
+├── duit/ui/tk/properties/ActionProperty.py
+│ @@ -5,15 +5,15 @@
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│  from duit.model.DataField import DataField
+│  from duit.ui.annotations.ActionAnnotation import ActionAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  
+│  
+│ -class ActionProperty(TkFieldProperty[ActionAnnotation]):
+│ +class ActionProperty(TkFieldProperty[ActionAnnotation, DataField]):
+│      def __init__(self, annotation: ActionAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model, hide_label=not annotation.show_label)
+│  
+│      def create_field(self, master) -> CTkBaseClass:
+│          field = CTkButton(master, text=self.annotation.text)
+│          field.tooltip = self.annotation.tooltip
+├── duit/ui/tk/properties/BooleanProperty.py
+│ @@ -1,17 +1,18 @@
+│  import tkinter
+│  
+│  import customtkinter as ctk
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│ +from duit.model.DataField import DataField
+│  from duit.ui.annotations.BooleanAnnotation import BooleanAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  
+│  
+│ -class BooleanProperty(TkFieldProperty[BooleanAnnotation]):
+│ +class BooleanProperty(TkFieldProperty[BooleanAnnotation, DataField]):
+│      def create_field(self, master) -> CTkBaseClass:
+│          check_var = tkinter.BooleanVar()
+│  
+│          field = ctk.CTkSwitch(master, text="", variable=check_var)
+│          field.tooltip = self.annotation.tooltip
+│          field.enabled = not self.annotation.read_only
+├── duit/ui/tk/properties/NumberProperty.py
+│ @@ -1,15 +1,16 @@
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│ +from duit.model.DataField import DataField
+│  from duit.ui.annotations import NumberAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  from duit.ui.tk.widgets.CTkNumberEntry import CTkNumberEntry
+│  
+│  
+│ -class NumberProperty(TkFieldProperty[NumberAnnotation]):
+│ +class NumberProperty(TkFieldProperty[NumberAnnotation, DataField]):
+│      def create_field(self, master) -> CTkBaseClass:
+│          field = CTkNumberEntry(master,
+│                                 self.model.value,
+│                                 self.annotation.limit_min,
+│                                 self.annotation.limit_max,
+│                                 self.annotation.decimal_precision)
+├── duit/ui/tk/properties/OptionsProperty.py
+│ @@ -1,17 +1,18 @@
+│  from typing import List, Any
+│  
+│  import customtkinter as ctk
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│ +from duit.model.DataField import DataField
+│  from duit.ui.annotations.BooleanAnnotation import BooleanAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  
+│  
+│ -class OptionsProperty(TkFieldProperty[BooleanAnnotation]):
+│ +class OptionsProperty(TkFieldProperty[BooleanAnnotation, DataField]):
+│      def create_field(self, master) -> CTkBaseClass:
+│          option_var = ctk.StringVar(value="")
+│  
+│          field = ctk.CTkOptionMenu(master, variable=option_var)
+│          field.enabled = not self.annotation.read_only
+│          field.tooltip = self.annotation.tooltip
+├── duit/ui/tk/properties/SliderProperty.py
+│ @@ -1,16 +1,17 @@
+│  import customtkinter as ctk
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│ +from duit.model.DataField import DataField
+│  from duit.ui.annotations.SliderAnnotation import SliderAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  from duit.ui.tk.widgets.CTkNumberEntry import CTkNumberEntry
+│  
+│  
+│ -class SliderProperty(TkFieldProperty[SliderAnnotation]):
+│ +class SliderProperty(TkFieldProperty[SliderAnnotation, DataField]):
+│      def create_field(self, master) -> CTkBaseClass:
+│          frame = ctk.CTkFrame(master,
+│                               fg_color="transparent",
+│                               corner_radius=0)
+│          frame.grid_columnconfigure(0, weight=1)
+│  
+│          data_variable = ctk.IntVar() if isinstance(self.model.value, int) else ctk.DoubleVar()
+├── duit/ui/tk/properties/TextProperty.py
+│ @@ -1,15 +1,16 @@
+│  from customtkinter.windows.widgets.core_widget_classes import CTkBaseClass
+│  
+│ +from duit.model.DataField import DataField
+│  from duit.ui.annotations.TextAnnotation import TextAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  from duit.ui.tk.widgets.CTkTextEntry import CTkTextEntry
+│  
+│  
+│ -class TextProperty(TkFieldProperty[TextAnnotation]):
+│ +class TextProperty(TkFieldProperty[TextAnnotation, DataField]):
+│      def create_field(self, master) -> CTkBaseClass:
+│          field = CTkTextEntry(master, placeholder_text=self.annotation.placeholder_text)
+│          field.readonly = self.annotation.read_only
+│  
+│          def on_dm_changed(value):
+│              field.text = value
+├── duit/ui/tk/properties/VectorProperty.py
+│ @@ -6,15 +6,15 @@
+│  from duit.ui.annotations.VectorAnnotation import VectorAnnotation
+│  from duit.ui.tk.TkFieldProperty import TkFieldProperty
+│  from duit.ui.tk.widgets.CTkNumberEntry import CTkNumberEntry
+│  from duit.utils import _vector
+│  import customtkinter as ctk
+│  
+│  
+│ -class VectorProperty(TkFieldProperty[VectorAnnotation]):
+│ +class VectorProperty(TkFieldProperty[VectorAnnotation, DataField]):
+│      def __init__(self, annotation: VectorAnnotation, model: Optional[DataField] = None):
+│          super().__init__(annotation, model)
+│  
+│      def create_field(self, master) -> CTkBaseClass:
+│          vector_attributes = _vector.get_vector_attributes(self.model.value)
+│          attribute_widgets: Dict[str, CTkNumberEntry] = {}
+│   --- duit-0.1.6.1.dist-info/LICENSE
+├── +++ duit-0.1.7.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- duit-0.1.6.1.dist-info/METADATA
+├── +++ duit-0.1.7.dist-info/METADATA
+│┄ Files 2% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: duit
+│ -Version: 0.1.6.1
+│ +Version: 0.1.7
+│  Summary: Duit is a toolkit to create simple user-interfaces for python.
+│  Home-page: https://github.com/cansik/duit
+│  Author: Florian Bruggisser
+│  Author-email: github@broox.ch
+│  License: MIT License
+│  Platform: UNKNOWN
+│  Description-Content-Type: text/markdown
+│ @@ -96,10 +96,10 @@
+│  
+│  ```bash
+│  # in the duit directory
+│  pip install -e ".[all]"
+│  ```
+│  
+│  ## About
+│ -MIT License - Copyright (c) 2022 Florian Bruggisser
+│ +MIT License - Copyright (c) 2023 Florian Bruggisser
+│   --- duit-0.1.6.1.dist-info/RECORD
+├── +++ duit-0.1.7.dist-info/RECORD
+│┄ Files 4% similar despite different names
+│ @@ -1,95 +1,99 @@
+│  duit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/annotation/Annotation.py,sha256=yBmahYMbFjREj-Cd_ivRLFO4t-fQNuDZNxPoKf_RekQ,193
+│ +duit/annotation/Annotation.py,sha256=yy3z3jHEjzbggWOiApNbzboJxdhVVqt28GzVt-mfOpg,239
+│  duit/annotation/AnnotationList.py,sha256=eTyaLSupDpYgRQGSkWonLybH6kCUN423k0RTUy1cCf8,371
+│  duit/annotation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/arguments/Argument.py,sha256=JQNr-LTejw2bMO8TG-4PgLHGomvEX8cfM7gaRK5Q4E0,1068
+│ +duit/arguments/Argument.py,sha256=x0FGit6vdb-oKz4FBlBEMc8BzAHgwsZowuDc3g-LUQc,1107
+│  duit/arguments/Arguments.py,sha256=Ewj_dy8v0n0k90Q0s02vzn5gq3o48prffxgQjPjz8sE,4015
+│  duit/arguments/__init__.py,sha256=12f19Uqmjlfo9LryZKgV-SwWCuyrF47IPHb3_s18y-Y,67
+│  duit/arguments/adapters/BaseTypeAdapter.py,sha256=GVXBJGuVD779f2GYo9eahIQ1qTrrjbaOTRxX-BjChBw,478
+│  duit/arguments/adapters/DefaultTypeAdapter.py,sha256=zrLIhc8oiiK4x4awgHbSDznT9-pmNUL5om7qStlvkiY,561
+│  duit/arguments/adapters/EnumTypeAdapter.py,sha256=MEQOG2jeQsyRCkq5IFkoyMuYY0-5wRjtaa6ksaZfP6A,920
+│  duit/arguments/adapters/PathTypeAdapter.py,sha256=4RRiub91WdCgFoZgQr7v2FH1Z3o0_U0Qx_0GZtBk54c,607
+│  duit/arguments/adapters/VectorTypeAdapter.py,sha256=vPJDbAZvcRXsF_4roXmL-Wr2jh0Y7CQeGAal0lA7eaQ,1059
+│  duit/arguments/adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/collections/Stack.py,sha256=Kpgku-c9f5WlZgtL7fjDZLQsdwBteGMqdwAzW9iTc6o,389
+│  duit/collections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/event/Event.py,sha256=v7RHX3v_JB2l_X9fMzxuNyDu8EtfKLPcBHzdGybLiAA,796
+│ -duit/event/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/model/DataField.py,sha256=vc3cu9bdz6v6eIy2ccjy04vls3_iJ3_p45EkIbBJkvA,1890
+│ +duit/event/__init__.py,sha256=4FJOxgPDmSnVTrq2tiRDf_z0eCXUcFd2pMiqiQ9dQsU,587
+│ +duit/model/DataField.py,sha256=0vPJCx_7v9ISDmkJVWa8QKLH-joVWfSCu12UhBb_1gk,1902
+│ +duit/model/DataList.py,sha256=-KoPyzmAgN1f0xA39R2LANV2OprktEG4rVlnN14yUFI,2052
+│ +duit/model/SelectableDataList.py,sha256=6t1ljlRD6Inh-9PAEeRHQNEPn0iikMgwb8sF6K8nL7I,1184
+│  duit/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/settings/Setting.py,sha256=7kX-UiQ67QAhBeXVTdyBKoUdqLm16UmaMFM2EA8Ctj4,650
+│ +duit/settings/Setting.py,sha256=eyqIG5K0vxJ0k3bsyaEQqqTS1Or9GqBVKxPm61PJrhM,689
+│  duit/settings/Settings.py,sha256=EJjJf7jkH870H8OVITqKp5ImU8TNogadCyfaeRDLZWI,5777
+│  duit/settings/__init__.py,sha256=vdR2gS49FqZkwbWRio8O_R27uwgV8CchNcgspqPA_V0,65
+│  duit/settings/serialiser/BaseSerializer.py,sha256=PC5_3de6AWD5OiGJDhzmcKr1YldgJMs_oep1wVV1OQQ,361
+│  duit/settings/serialiser/DefaultSerializer.py,sha256=91_jzSKhQVUwHfEDzGfaHUh-pCcQqcVCgs-Vyt-CX54,377
+│  duit/settings/serialiser/EnumSerializer.py,sha256=Cl0u_anbPtpWPWTvHf-E_PQYky3pODhlfLnUprGGUwg,560
+│  duit/settings/serialiser/PathSerializer.py,sha256=QJI-bN_lC3N4snIq_jaQdv6zpIJmMnjQhdfseQufrtM,428
+│  duit/settings/serialiser/VectorSerializer.py,sha256=YXY9xhy-4TKbCBHHnjPmL_t_Mf5T03aCT2MeBsgGpOs,988
+│  duit/settings/serialiser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/ui/BaseProperty.py,sha256=-xJ9w2JPtPcB0Sf1QC_NNvO3ZeBvrKYsA_RT161Qces,482
+│ +duit/ui/BaseProperty.py,sha256=A2UJEDfTyYkxBKK-RoIdHLoErwQFdxD8Ex4X469mDOs,511
+│  duit/ui/BasePropertyPanel.py,sha256=kpJW1DeKHxAADjAYuwj2IgXXm2g8ZeiyQfiIrwAJ5dU,439
+│  duit/ui/ContainerHelper.py,sha256=9jGOHcsmy5JLhHQ_jT0GoMzf0x86LkfnHS-lSqXt3Mk,1490
+│  duit/ui/PropertyRegistry.py,sha256=QUfN2PSF_uNzAc2tepjTFgYgDpdka3oiljDDZBmgNSk,195
+│ -duit/ui/__init__.py,sha256=hRcjvTrGK-pqepsuc79yA5-W-muSsNsROlKgOL2A3dk,1033
+│ +duit/ui/__init__.py,sha256=5WQdKlzHC9I9PnRR2ewp7eLtz24UZ010u6mVZnsjajM,1096
+│  duit/ui/annotations/ActionAnnotation.py,sha256=tZHOh7VTMfQrJioasOtAArWwm25frY2Afp_ANlrZAZA,371
+│  duit/ui/annotations/BooleanAnnotation.py,sha256=oS6W8-9PHvuowk8LnpNF5mJBgI_w6F88Qt4XS00GCXw,227
+│  duit/ui/annotations/EnumAnnotation.py,sha256=yfwqhF4yBvVEiEM3a5_kegDBtMTHT9u2xm8oZI0X3bs,243
+│ +duit/ui/annotations/ListAnnotation.py,sha256=LqkatZ3HPfySduwXshek9LjBrmS7vq1Ptyfdo4K0PtU,211
+│  duit/ui/annotations/NumberAnnotation.py,sha256=lK0fs7IomotHe9vNpuJxtI_pRZU3A0Tw2nNHRmCK1_o,559
+│  duit/ui/annotations/OptionsAnnotation.py,sha256=tP2NNd_pR2pqFVb09tXPbDh1pWW1E5aXDcPqYoxs4SU,303
+│  duit/ui/annotations/PathAnnotation.py,sha256=YPIUVRf0xY274xoHpnDmivb2e0Fpt1-lz1sG977g4Ec,838
+│ -duit/ui/annotations/SliderAnnotation.py,sha256=dFi8NtjF4SgPmcxWUsa4kcMgwfmxwJkl7y6Sq_3vOYE,307
+│ +duit/ui/annotations/SliderAnnotation.py,sha256=wPjyp4uzY2D66DAZaX7n922gFSxgZQNgzrN4mY_Yhyw,390
+│  duit/ui/annotations/TextAnnotation.py,sha256=G-tsbYPPc8P_N84XTBHfK5oG0vncyb7H77ICgFOF31I,387
+│ -duit/ui/annotations/UIAnnotation.py,sha256=ba0OU5eay4cZPxotu1-EpU_SawOTxMnyCxxhKFnV60s,1298
+│ +duit/ui/annotations/UIAnnotation.py,sha256=UU31ZQr2sVA8K_2H3IZybeDpxuhzT56JG44sDO330Zw,1355
+│  duit/ui/annotations/VectorAnnotation.py,sha256=siEZK6286zjMllJRx3F_5r38VuGdN2_KkBFu08VJMo4,699
+│  duit/ui/annotations/__init__.py,sha256=CMKmmsxPWYJF2f8iIROLj49xbXlUNk75L9CnQ-F7YsQ,569
+│  duit/ui/annotations/container/EndSectionAnnotation.py,sha256=QIsuPgSCNXXEumADyE8fkU9n9jA-58B73_jD0z9Iwt8,157
+│  duit/ui/annotations/container/StartSectionAnnotation.py,sha256=c-o9_Rho5CJ2tdRW93s2yixjf9C_GYQnpj192x1d9MA,230
+│  duit/ui/annotations/container/SubSectionAnnotation.py,sha256=jp4368U12AnK7URXGoLtu2_hEiGZofkTxyGx--tjrHw,215
+│  duit/ui/annotations/container/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/ui/open3d/Open3dContext.py,sha256=0W2N0kmG7tp5LitzRXpkSYhXaItaL2pWff-26v3JHy8,170
+│ -duit/ui/open3d/Open3dFieldProperty.py,sha256=yO7bHh9GQcABtv66QSYppatwgUG4go55r8CZuPaD580,972
+│ -duit/ui/open3d/Open3dProperty.py,sha256=vDtyRRaHeTxmPqwbbhH6SyPHjjRYctZazhvlEXhKZ3U,382
+│ +duit/ui/open3d/Open3dFieldProperty.py,sha256=E2DsaWwktQ0BzZceKYIw4zP_IODUrNm0M5GdNlj64bU,994
+│ +duit/ui/open3d/Open3dProperty.py,sha256=3Kpo7vQ5iOPrGidGnsadhIVMbVMIBanCY4PNplBg-V0,383
+│  duit/ui/open3d/Open3dPropertyPanel.py,sha256=8xkH85YSy7f_yecRqxoEU4u5DvzQWqGO6g-mE7xJqG8,3893
+│ -duit/ui/open3d/Open3dPropertyRegistry.py,sha256=PNz3VEj9m32pqK3OmWjy9_n2T2Ukroot9ubCl60B5W8,1793
+│ +duit/ui/open3d/Open3dPropertyRegistry.py,sha256=3sQqCnbpW1CVLkmHE2UsMzBtWfTi6Pz9diiHcydjXfk,1975
+│  duit/ui/open3d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/ui/open3d/properties/ActionProperty.py,sha256=9OakFdlPPmcV9dDo4nuN7Nz-xtV3FdNkO0rcyGB3kBs,1281
+│ -duit/ui/open3d/properties/BooleanProperty.py,sha256=iQHGrNTKOiwfMRVPeZUqAdu9Ws2LxLrF8MWmth_76dE,966
+│ +duit/ui/open3d/properties/ActionProperty.py,sha256=X42DOUh-T2eRKoMVz7gUDwiUW0UpaM9ubrvqfueGPys,1292
+│ +duit/ui/open3d/properties/BooleanProperty.py,sha256=PQZAt5MSACys4fkgc_AP2VK-9O0Yi41yYO_Sg7k8OSQ,977
+│  duit/ui/open3d/properties/EnumProperty.py,sha256=eAIjXKRokaPsuTPk3HhuZcYnpHLY9dLxJSmOw3oGGTU,337
+│ -duit/ui/open3d/properties/NumberProperty.py,sha256=_8LPzVt04573y8_ByC1PXNTmVrNqSAYiKifST7fsSP8,1358
+│ -duit/ui/open3d/properties/OptionsProperty.py,sha256=mknuxVL2g5oi1b6VuRDaNtEUTSASpalPLj6NBEy0gQY,1530
+│ -duit/ui/open3d/properties/PathProperty.py,sha256=AHRAOUU6HQjDzDQdHWp11eQTH1UYvZ_2mFGH3dhfpnQ,2988
+│ -duit/ui/open3d/properties/SliderProperty.py,sha256=-EttSxBlBY1kDN-IVDsnWcFRbkGRrioJoIOhXGBYNRk,1270
+│ -duit/ui/open3d/properties/TextProperty.py,sha256=pUOqS_2NTS5oTTeqiROv6EzQxqrxr12GePFbTygm6Z4,1552
+│ -duit/ui/open3d/properties/VectorProperty.py,sha256=qdEgH31N64FKK75PX-A6RDoyb5vho7YeBnTRB9AVZME,2666
+│ +duit/ui/open3d/properties/ListProperty.py,sha256=GbuqguUi_THsupXa_ikn5v4JzouL4vSrjuI8VpqDWWw,1808
+│ +duit/ui/open3d/properties/NumberProperty.py,sha256=MajoetX9BjqutIrUrpRh_xLJ8uZdja-Rapw_MYMV72Q,1369
+│ +duit/ui/open3d/properties/OptionsProperty.py,sha256=yBeVRPr4oaEFKWbKtQ2LrCuHgaitcy9lYk0hJp0rTWo,1541
+│ +duit/ui/open3d/properties/PathProperty.py,sha256=mort69uq-RO7TZN6tIP18PCtrwyYkEatE6DlUw4avNE,2815
+│ +duit/ui/open3d/properties/SliderProperty.py,sha256=U7-L7scuQne-EVbtCxWDjcShnyRNnq5ZGw_V7MmL7XM,2078
+│ +duit/ui/open3d/properties/TextProperty.py,sha256=T1uI7L2anjs_jWC7bMmoqwExF6FRZhgkXOYiDtlDX_o,1475
+│ +duit/ui/open3d/properties/VectorProperty.py,sha256=bGjUo6F7M3r9MnnFLX8A7BhJPmhkkELxvoxgVelG-6E,2677
+│  duit/ui/open3d/properties/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/ui/open3d/widgets/CopyToClipboardButton.py,sha256=LEVdVbz1aGu9N8WPGsm-P7kEv4vBzrAVe6oY0VOoANA,492
+│  duit/ui/open3d/widgets/ImageButton.py,sha256=ujMhS8xbefXqI8uxDOYEUskOZSJzxaUVrtiyDR5GMJ0,760
+│ -duit/ui/open3d/widgets/SelectionBox.py,sha256=s0DqWiB8pBLPSqEVIkrZzDM5b3Xqsg8el-DayKrYJY0,2133
+│ +duit/ui/open3d/widgets/SelectionBox.py,sha256=vNX_fTJBMHGcJ2Rs87-UffotWKJcxwD5vV5dFuHL50c,2660
+│  duit/ui/open3d/widgets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/ui/tk/TkFieldProperty.py,sha256=6f-X4hye8kC9cXuP2sGY_XqMcshzPChxfs7IiFU7AF8,917
+│ -duit/ui/tk/TkProperty.py,sha256=KNAUK9Zz9GHhZ4bgizQw8DdnBzLir6m2RIWdxGIR5Lw,378
+│ +duit/ui/tk/TkFieldProperty.py,sha256=AEUhIb8E5UlbgCjI0XS9nRaASKK31uTtgH_RH5FeL-g,950
+│ +duit/ui/tk/TkProperty.py,sha256=uneJgkYolopASkpUQRUVKzfhDYfJZnn-sJlZg-3J890,379
+│  duit/ui/tk/TkPropertyPanel.py,sha256=j3XbT01F9OJjOiey74LIYeNU6ZW0-_UGK3j2k3v7t4Q,2878
+│  duit/ui/tk/TkPropertyRegistry.py,sha256=6CXok_esOhxzDLfSpKFQX0bxSjLPl1LYe2_1PycRKPc,1575
+│  duit/ui/tk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit/ui/tk/properties/ActionProperty.py,sha256=K5QpZs7BEI9e9unY5KXSUzPteZLbjJu5vWTicUks02c,1126
+│ -duit/ui/tk/properties/BooleanProperty.py,sha256=4Q5z8pq74amBAWuwUirtaMulqwx-zlc7qB0TcRzPzGQ,878
+│ +duit/ui/tk/properties/ActionProperty.py,sha256=yQm0Z9GoSz4tqxVpWcBoL_K2AlbDr6offSgDlO3musw,1137
+│ +duit/ui/tk/properties/BooleanProperty.py,sha256=3gDK5r95-h6jyAUxadp8ZZdzcMTYmrfAP3W_FgjWyQU,932
+│  duit/ui/tk/properties/EnumProperty.py,sha256=_CmuyW9Zor1TPoAV9t2iXZlVn2P7IV2r8y0nw18n6F4,333
+│ -duit/ui/tk/properties/NumberProperty.py,sha256=4K386pMgU0Y6QX9FeSV1Rn6Gaw8a2j9HrXzOWsT0_-Y,1031
+│ -duit/ui/tk/properties/OptionsProperty.py,sha256=zk-7p7HgawTIkx4fQl7NxiLfFwQ2uOJeygCtz03at4k,1212
+│ -duit/ui/tk/properties/SliderProperty.py,sha256=AhJkSGx7NcHGqfaU61jYqwwgRACq3E8qWi6ARWDmmLw,1800
+│ -duit/ui/tk/properties/TextProperty.py,sha256=JehAE6Q9Xt5xvS4LjipVB2I_qYgCbqE9qyoDzsZf_yA,787
+│ -duit/ui/tk/properties/VectorProperty.py,sha256=mvaQTTtYKWKrI7zvqbrehDOsH9GSC6gubwAAU4vHa2c,3001
+│ +duit/ui/tk/properties/NumberProperty.py,sha256=sn5R51BsOA_IMFXNZP4b4WE8LPPm3YKlwqGBsDqdf7A,1085
+│ +duit/ui/tk/properties/OptionsProperty.py,sha256=zj-2-HXZeBaFV5eDiiWnIixNuqz5vCu5lSgV6IiQpzo,1266
+│ +duit/ui/tk/properties/SliderProperty.py,sha256=DDj1C425nKFXznXcUeaiWHM0Q2x9bgq94hC7YhOKOO0,1854
+│ +duit/ui/tk/properties/TextProperty.py,sha256=SDBpqk6G0A3qVhIIox-KIEpEobkETwt_EPKkurKzATw,841
+│ +duit/ui/tk/properties/VectorProperty.py,sha256=ck7R0S2jwjRlKhkqeqkkFX_WdDyhOQ_uAjR7OL1UOZA,3012
+│  duit/ui/tk/properties/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/ui/tk/widgets/CTkNumberEntry.py,sha256=4pyEqbDl2TBzSlvML-xsW4OhZPYmmeLix-AChlRC_TE,1386
+│  duit/ui/tk/widgets/CTkTextEntry.py,sha256=nSDy9lGfqJPNMTRvrL87y3EaYOQpQ50EmFPSweUveoc,838
+│  duit/ui/tk/widgets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  duit/utils/_vector.py,sha256=vTRACXaaiAKGlHC8IEA3CTdZ-wgP_z3S_cDYM4GVfaA,331
+│  duit/vision/ImagePreview.py,sha256=vzQs_Xdbs4IYIkVAWJH9RmzVKd43SzNjIGCX2mhthA0,666
+│  duit/vision/Open3dImagePreview.py,sha256=XBmKYaZswFiyNifhBweIKQAaFG5muIQnAQQ6lL6dy6Q,1657
+│  duit/vision/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -duit-0.1.6.1.dist-info/LICENSE,sha256=rwtrh0ZKKwwYMSQuIo_Co3ibOY0UspgibhGYCaKR5Hs,1074
+│ -duit-0.1.6.1.dist-info/METADATA,sha256=tDKuEZk_L_LHoqF7RtUIhSwzRZboAEP1w_vR9OnXCNs,3042
+│ -duit-0.1.6.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -duit-0.1.6.1.dist-info/top_level.txt,sha256=zZBiv5Wb4maS1WiYRVNtXxxXofsuSmoeqQkvO8p_9Fo,5
+│ -duit-0.1.6.1.dist-info/RECORD,,
+│ +duit-0.1.7.dist-info/LICENSE,sha256=rwtrh0ZKKwwYMSQuIo_Co3ibOY0UspgibhGYCaKR5Hs,1074
+│ +duit-0.1.7.dist-info/METADATA,sha256=HfXQTlz1li0F9UN6sl3VrDzUA8el_Iw-N6i3yMMDV5Q,3040
+│ +duit-0.1.7.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +duit-0.1.7.dist-info/top_level.txt,sha256=zZBiv5Wb4maS1WiYRVNtXxxXofsuSmoeqQkvO8p_9Fo,5
+│ +duit-0.1.7.dist-info/RECORD,,

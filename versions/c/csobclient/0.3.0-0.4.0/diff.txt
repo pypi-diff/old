@@ -1,0 +1,426 @@
+--- tmp/csobclient-0.3.0.tar.gz
++++ tmp/csobclient-0.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "csobclient-0.3.0.tar", max compression
+│ +gzip compressed data, was "csobclient-0.4.0.tar", max compression
+│   --- csobclient-0.3.0.tar
+├── +++ csobclient-0.4.0.tar
+│ ├── file list
+│ │ @@ -1,27 +1,27 @@
+│ │ --rw-r--r--   0        0        0     1072 2023-04-03 12:35:16.748380 csobclient-0.3.0/LICENSE
+│ │ --rw-r--r--   0        0        0     2367 2023-04-03 12:35:16.748380 csobclient-0.3.0/README.md
+│ │ --rw-r--r--   0        0        0      439 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/__init__.py
+│ │ --rw-r--r--   0        0        0      541 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/__init__.py
+│ │ --rw-r--r--   0        0        0     1549 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/cart.py
+│ │ --rw-r--r--   0        0        0     6774 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/client.py
+│ │ --rw-r--r--   0        0        0      227 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/currency.py
+│ │ --rw-r--r--   0        0        0      142 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/customer/__init__.py
+│ │ --rw-r--r--   0        0        0     1257 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/customer/account.py
+│ │ --rw-r--r--   0        0        0     1166 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/customer/data.py
+│ │ --rw-r--r--   0        0        0      678 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/customer/login.py
+│ │ --rw-r--r--   0        0        0      740 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/dttm.py
+│ │ --rw-r--r--   0        0        0     1888 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/fields.py
+│ │ --rw-r--r--   0        0        0      219 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/http/__init__.py
+│ │ --rw-r--r--   0        0        0     1031 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/http/client.py
+│ │ --rw-r--r--   0        0        0     1047 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/http/requests_client.py
+│ │ --rw-r--r--   0        0        0      748 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/key.py
+│ │ --rw-r--r--   0        0        0      829 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/merchant.py
+│ │ --rw-r--r--   0        0        0      195 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/order/__init__.py
+│ │ --rw-r--r--   0        0        0      921 2023-04-03 12:35:16.748380 csobclient-0.3.0/csobclient/v19/order/address.py
+│ │ --rw-r--r--   0        0        0     2043 2023-04-03 12:35:16.752380 csobclient-0.3.0/csobclient/v19/order/data.py
+│ │ --rw-r--r--   0        0        0      779 2023-04-03 12:35:16.752380 csobclient-0.3.0/csobclient/v19/order/delivery.py
+│ │ --rw-r--r--   0        0        0     2706 2023-04-03 12:35:16.752380 csobclient-0.3.0/csobclient/v19/payment.py
+│ │ --rw-r--r--   0        0        0     2565 2023-04-03 12:35:16.752380 csobclient-0.3.0/csobclient/v19/signature.py
+│ │ --rw-r--r--   0        0        0      844 2023-04-03 12:35:16.752380 csobclient-0.3.0/csobclient/v19/webpage.py
+│ │ --rw-r--r--   0        0        0     1237 2023-04-03 12:35:16.752380 csobclient-0.3.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     3760 1970-01-01 00:00:00.000000 csobclient-0.3.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1072 2023-04-06 18:25:35.936068 csobclient-0.4.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     2478 2023-04-06 18:25:35.936068 csobclient-0.4.0/README.md
+│ │ +-rw-r--r--   0        0        0       27 2023-04-06 18:25:35.936068 csobclient-0.4.0/csobclient/__init__.py
+│ │ +-rw-r--r--   0        0        0      541 2023-04-06 18:25:35.936068 csobclient-0.4.0/csobclient/v19/__init__.py
+│ │ +-rw-r--r--   0        0        0     1682 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/cart.py
+│ │ +-rw-r--r--   0        0        0     7644 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/client.py
+│ │ +-rw-r--r--   0        0        0      227 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/currency.py
+│ │ +-rw-r--r--   0        0        0      142 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/customer/__init__.py
+│ │ +-rw-r--r--   0        0        0     1257 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/customer/account.py
+│ │ +-rw-r--r--   0        0        0     1166 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/customer/data.py
+│ │ +-rw-r--r--   0        0        0      678 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/customer/login.py
+│ │ +-rw-r--r--   0        0        0      740 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/dttm.py
+│ │ +-rw-r--r--   0        0        0     1888 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/fields.py
+│ │ +-rw-r--r--   0        0        0      219 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/http/__init__.py
+│ │ +-rw-r--r--   0        0        0     1031 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/http/client.py
+│ │ +-rw-r--r--   0        0        0     1047 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/http/requests_client.py
+│ │ +-rw-r--r--   0        0        0      748 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/key.py
+│ │ +-rw-r--r--   0        0        0      829 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/merchant.py
+│ │ +-rw-r--r--   0        0        0      195 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/order/__init__.py
+│ │ +-rw-r--r--   0        0        0      921 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/order/address.py
+│ │ +-rw-r--r--   0        0        0     2043 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/order/data.py
+│ │ +-rw-r--r--   0        0        0      779 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/order/delivery.py
+│ │ +-rw-r--r--   0        0        0     2706 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/payment.py
+│ │ +-rw-r--r--   0        0        0     2565 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/signature.py
+│ │ +-rw-r--r--   0        0        0      844 2023-04-06 18:25:35.940068 csobclient-0.4.0/csobclient/v19/webpage.py
+│ │ +-rw-r--r--   0        0        0     1237 2023-04-06 18:25:35.940068 csobclient-0.4.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3871 1970-01-01 00:00:00.000000 csobclient-0.4.0/PKG-INFO
+│ │   --- csobclient-0.3.0/LICENSE
+│ ├── +++ csobclient-0.4.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/README.md
+│ ├── +++ csobclient-0.4.0/README.md
+│ │┄ Files 20% similar despite different names
+│ │ @@ -9,22 +9,22 @@
+│ │  pip install csobclient
+│ │  ```
+│ │  
+│ │  ## Basic usage
+│ │  
+│ │  ### Client initialization
+│ │  ```python
+│ │ -from csobclient import Client
+│ │ +from csobclient.v19 import Client
+│ │  
+│ │  client = Client("merchantId", "merch_private.key", "csob.pub")
+│ │  ```
+│ │  
+│ │  ### Payment initialization
+│ │  ```python
+│ │ -from csobclient import Cart, CartItem
+│ │ +from csobclient.v19 import Cart, CartItem
+│ │  
+│ │  response = client.init_payment(
+│ │      order_no="2233823251",
+│ │      total_amount=100,
+│ │      return_url="http://127.0.0.1:5000/",
+│ │      cart=Cart([CartItem("Apples", 1, 100)]),
+│ │      merchant_data=b"Hello, World!",
+│ │ @@ -47,17 +47,22 @@
+│ │  ```
+│ │  
+│ │  ### Reverse payment
+│ │  ```python
+│ │  response = client.reverse_payment(pay_id)
+│ │  ```
+│ │  
+│ │ +### Refund payment
+│ │ +```python
+│ │ +response = client.refund_payment(pay_id, amount=100)
+│ │ +```
+│ │ +
+│ │  ### Exceptions handling
+│ │  ```python
+│ │ -from csobclient import APIError, HTTPRequestError
+│ │ +from csobclient.v19 import APIError, HTTPRequestError
+│ │  
+│ │  try:
+│ │      response = client.operation(...)
+│ │      response.raise_for_result_code()
+│ │  except APIError as exc:
+│ │      # handle API error
+│ │  except HTTPRequestError as exc:
+│ │ @@ -73,32 +78,32 @@
+│ │      # handle
+│ │  ```
+│ │  
+│ │  ### RSA keys management
+│ │  The simples way to pass RSA keys is to pass their file paths:
+│ │  
+│ │  ```python
+│ │ -from csobclient import Client
+│ │ +from csobclient.v19 import Client
+│ │  
+│ │  client = Client("merchantId", "merch_private.key", "csob.pub")
+│ │  ```
+│ │  
+│ │  The library will read the private key from the file when needed. The public key will be cached into the RAM.
+│ │  
+│ │  If you want to change it, use special classes:
+│ │  
+│ │  ```python
+│ │ -from csobclient import Client, FileRSAKey, CachedRSAKey
+│ │ +from csobclient.v19 import Client, FileRSAKey, CachedRSAKey
+│ │  
+│ │  client = Client("merchantId", FileRSAKey("merch_private.key"), FileRSAKey("csob.pub"))
+│ │  ```
+│ │  
+│ │  You may also override the base RSAKey class to define your own key access strategy:
+│ │  
+│ │  ```python
+│ │ -from csobclient import RSAKey
+│ │ +from csobclient.v19 import RSAKey
+│ │  
+│ │  class MyRSAKey(RSAKey):
+│ │  
+│ │      def __str__(self) -> str:
+│ │          return "my key"
+│ │  ```
+│ │   --- csobclient-0.3.0/csobclient/v19/__init__.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/cart.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/cart.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -22,14 +22,16 @@
+│ │          description: Optional[str] = None,
+│ │      ) -> None:
+│ │          self.name = name
+│ │          self.quantity = quantity
+│ │          self.amount = amount
+│ │          self.description = description
+│ │  
+│ │ +        self.total_amount = self.amount * self.quantity
+│ │ +
+│ │      def as_json(self) -> OrderedDict:
+│ │          """Return cart item as JSON."""
+│ │          item = OrderedDict(
+│ │              [
+│ │                  ("name", self.name),
+│ │                  ("quantity", self.quantity),
+│ │                  ("amount", self.amount),
+│ │ @@ -50,10 +52,12 @@
+│ │  
+│ │          :param items: cart items. Please note that 1 or 2 items are allowed
+│ │          """
+│ │          if len(items) not in (1, 2):
+│ │              raise ValueError("Cart can only hold 1 or 2 items")
+│ │          self._items = items
+│ │  
+│ │ +        self.total_amount = sum(item.total_amount for item in self._items)
+│ │ +
+│ │      def as_json(self) -> List[OrderedDict]:
+│ │          """Return cart as a JSON array."""
+│ │          return [item.as_json() for item in self._items]
+│ │   --- csobclient-0.3.0/csobclient/v19/client.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/client.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -27,15 +27,15 @@
+│ │      """API client."""
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          merchant_id: str,
+│ │          private_key: Union[str, RSAKey],
+│ │          public_key: Union[str, RSAKey],
+│ │ -        base_url: str = "https://iapi.iplatebnibrana.csob.cz/api/v1.9",
+│ │ +        base_url: str = "https://api.platebnibrana.csob.cz/api/v1.9",
+│ │          http_client: HTTPClient = RequestsHTTPClient(),
+│ │      ) -> None:
+│ │          # pylint:disable=too-many-arguments
+│ │          self.merchant_id = merchant_id
+│ │          self.base_url = base_url.rstrip("/")
+│ │  
+│ │          if isinstance(private_key, str):
+│ │ @@ -75,17 +75,24 @@
+│ │              raise ValueError('"ttl_sec" must be in [300, 1800]')
+│ │          if len(order_no) > 10:
+│ │              raise ValueError('"order_no" must be up to 10 chars')
+│ │          if len(return_url) > 300:
+│ │              raise ValueError('"return_url" must be up to 300 chars')
+│ │          if customer_id and len(customer_id) > 50:
+│ │              raise ValueError('"customer_id" must be up to 50 chars')
+│ │ +        if total_amount <= 0:
+│ │ +            raise ValueError('"total_amount" must be > 0')
+│ │  
+│ │          cart = cart or Cart([CartItem("Payment", 1, total_amount)])
+│ │  
+│ │ +        if cart.total_amount != total_amount:
+│ │ +            raise ValueError(
+│ │ +                "Cart's total amount does not match the requested total amount"
+│ │ +            )
+│ │ +
+│ │          payload = mk_payload(
+│ │              str(self.private_key),
+│ │              pairs=(
+│ │                  ("merchantId", self.merchant_id),
+│ │                  ("orderNo", order_no),
+│ │                  ("dttm", get_dttm()),
+│ │                  ("payOperation", payment_operation.value),
+│ │ @@ -182,12 +189,29 @@
+│ │          """
+│ │          payload = self._build_payload(pay_id)
+│ │          response = self._http_client.request(
+│ │              f"{self.base_url}/payment/reverse", "put", payload
+│ │          )
+│ │          return self._get_payment_info(response)
+│ │  
+│ │ +    def refund_payment(
+│ │ +        self, pay_id: str, amount: Optional[int] = None
+│ │ +    ) -> PaymentInfo:
+│ │ +        """Refund payment.
+│ │ +
+│ │ +        :param pay_id: payment ID
+│ │ +        :param amount: amount to refund. It must be less or equal to the
+│ │ +          original amount and provided in hundredths of the base currency.
+│ │ +          If not provided, the full amount will be refunded.
+│ │ +        """
+│ │ +        response = self._http_client.request(
+│ │ +            f"{self.base_url}/payment/refund",
+│ │ +            "put",
+│ │ +            self._build_payload(pay_id, amount=amount),
+│ │ +        )
+│ │ +        return self._get_payment_info(response)
+│ │ +
+│ │      def _get_payment_info(self, response: HTTPResponse) -> PaymentInfo:
+│ │          if response.http_success:
+│ │              verify(response.data, str(self.public_key))
+│ │  
+│ │          return PaymentInfo.from_response(response.data)
+│ │   --- csobclient-0.3.0/csobclient/v19/customer/account.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/customer/account.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/customer/data.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/customer/data.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/customer/login.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/customer/login.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/dttm.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/dttm.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/fields.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/fields.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/http/client.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/http/client.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/http/requests_client.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/http/requests_client.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/key.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/key.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/merchant.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/merchant.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/order/address.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/order/address.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/order/data.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/order/data.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/order/delivery.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/order/delivery.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/payment.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/payment.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/signature.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/signature.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/csobclient/v19/webpage.py
+│ ├── +++ csobclient-0.4.0/csobclient/v19/webpage.py
+│ │┄ Files identical despite different names
+│ │   --- csobclient-0.3.0/pyproject.toml
+│ ├── +++ csobclient-0.4.0/pyproject.toml
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "csobclient"
+│ │ -version = "0.3.0"
+│ │ +version = "0.4.0"
+│ │  description = "Library for communication with ČSOB API"
+│ │  authors = ["Andrii Nechaiev <andrewnech@gmail.com>"]
+│ │  license = "MIT"
+│ │  readme = "README.md"
+│ │  repository = "https://github.com/litteratum/csobclient"
+│ │  classifiers=[
+│ │      "Development Status :: 1 - Planning",
+│ │   --- csobclient-0.3.0/PKG-INFO
+│ ├── +++ csobclient-0.4.0/PKG-INFO
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: csobclient
+│ │ -Version: 0.3.0
+│ │ +Version: 0.4.0
+│ │  Summary: Library for communication with ČSOB API
+│ │  Home-page: https://github.com/litteratum/csobclient
+│ │  License: MIT
+│ │  Author: Andrii Nechaiev
+│ │  Author-email: andrewnech@gmail.com
+│ │  Requires-Python: >=3.7,<3.11
+│ │  Classifier: Development Status :: 1 - Planning
+│ │ @@ -42,22 +42,22 @@
+│ │  pip install csobclient
+│ │  ```
+│ │  
+│ │  ## Basic usage
+│ │  
+│ │  ### Client initialization
+│ │  ```python
+│ │ -from csobclient import Client
+│ │ +from csobclient.v19 import Client
+│ │  
+│ │  client = Client("merchantId", "merch_private.key", "csob.pub")
+│ │  ```
+│ │  
+│ │  ### Payment initialization
+│ │  ```python
+│ │ -from csobclient import Cart, CartItem
+│ │ +from csobclient.v19 import Cart, CartItem
+│ │  
+│ │  response = client.init_payment(
+│ │      order_no="2233823251",
+│ │      total_amount=100,
+│ │      return_url="http://127.0.0.1:5000/",
+│ │      cart=Cart([CartItem("Apples", 1, 100)]),
+│ │      merchant_data=b"Hello, World!",
+│ │ @@ -80,17 +80,22 @@
+│ │  ```
+│ │  
+│ │  ### Reverse payment
+│ │  ```python
+│ │  response = client.reverse_payment(pay_id)
+│ │  ```
+│ │  
+│ │ +### Refund payment
+│ │ +```python
+│ │ +response = client.refund_payment(pay_id, amount=100)
+│ │ +```
+│ │ +
+│ │  ### Exceptions handling
+│ │  ```python
+│ │ -from csobclient import APIError, HTTPRequestError
+│ │ +from csobclient.v19 import APIError, HTTPRequestError
+│ │  
+│ │  try:
+│ │      response = client.operation(...)
+│ │      response.raise_for_result_code()
+│ │  except APIError as exc:
+│ │      # handle API error
+│ │  except HTTPRequestError as exc:
+│ │ @@ -106,33 +111,33 @@
+│ │      # handle
+│ │  ```
+│ │  
+│ │  ### RSA keys management
+│ │  The simples way to pass RSA keys is to pass their file paths:
+│ │  
+│ │  ```python
+│ │ -from csobclient import Client
+│ │ +from csobclient.v19 import Client
+│ │  
+│ │  client = Client("merchantId", "merch_private.key", "csob.pub")
+│ │  ```
+│ │  
+│ │  The library will read the private key from the file when needed. The public key will be cached into the RAM.
+│ │  
+│ │  If you want to change it, use special classes:
+│ │  
+│ │  ```python
+│ │ -from csobclient import Client, FileRSAKey, CachedRSAKey
+│ │ +from csobclient.v19 import Client, FileRSAKey, CachedRSAKey
+│ │  
+│ │  client = Client("merchantId", FileRSAKey("merch_private.key"), FileRSAKey("csob.pub"))
+│ │  ```
+│ │  
+│ │  You may also override the base RSAKey class to define your own key access strategy:
+│ │  
+│ │  ```python
+│ │ -from csobclient import RSAKey
+│ │ +from csobclient.v19 import RSAKey
+│ │  
+│ │  class MyRSAKey(RSAKey):
+│ │  
+│ │      def __str__(self) -> str:
+│ │          return "my key"
+│ │  ```

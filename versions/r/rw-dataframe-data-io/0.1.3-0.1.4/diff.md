@@ -1,0 +1,143 @@
+# Comparing `tmp/rw_dataframe_data_io-0.1.3.tar.gz` & `tmp/rw_dataframe_data_io-0.1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rw_dataframe_data_io-0.1.3.tar", last modified: Fri Mar 31 01:25:03 2023, max compression
++gzip compressed data, was "rw_dataframe_data_io-0.1.4.tar", last modified: Thu Apr  6 18:32:33 2023, max compression
+```
+
+## Comparing `rw_dataframe_data_io-0.1.3.tar` & `rw_dataframe_data_io-0.1.4.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+-drwxrwxrwx   0        0        0        0 2023-03-31 01:25:03.968476 rw_dataframe_data_io-0.1.3/
+--rw-rw-rw-   0        0        0     1093 2023-03-30 22:51:24.000000 rw_dataframe_data_io-0.1.3/LICENSE.txt
+--rw-rw-rw-   0        0        0      480 2023-03-31 01:25:03.968476 rw_dataframe_data_io-0.1.3/PKG-INFO
+--rw-rw-rw-   0        0        0     2409 2023-03-30 23:51:33.000000 rw_dataframe_data_io-0.1.3/README.md
+-drwxrwxrwx   0        0        0        0 2023-03-31 01:25:03.950965 rw_dataframe_data_io-0.1.3/dependence/
+--rw-rw-rw-   0        0        0        0 2023-03-16 22:26:42.000000 rw_dataframe_data_io-0.1.3/dependence/__init__.py
+--rw-rw-rw-   0        0        0      208 2023-03-16 21:46:56.000000 rw_dataframe_data_io-0.1.3/dependence/control_folder_exist.py
+--rw-rw-rw-   0        0        0      519 2023-03-31 01:12:32.000000 rw_dataframe_data_io-0.1.3/dependence/function_read.py
+--rw-rw-rw-   0        0        0      492 2023-03-31 01:05:10.000000 rw_dataframe_data_io-0.1.3/dependence/function_write.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 01:25:03.962935 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/
+--rw-rw-rw-   0        0        0      480 2023-03-31 01:25:03.000000 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      465 2023-03-31 01:25:03.000000 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-31 01:25:03.000000 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       78 2023-03-31 01:25:03.000000 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       62 2023-03-31 01:25:03.000000 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       17 2023-03-31 01:25:03.000000 rw_dataframe_data_io-0.1.3/rw_dataframe_data_io.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-03-31 01:25:03.968476 rw_dataframe_data_io-0.1.3/setup.cfg
+--rw-rw-rw-   0        0        0      923 2023-03-31 01:24:58.000000 rw_dataframe_data_io-0.1.3/setup.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 01:25:03.963934 rw_dataframe_data_io-0.1.3/tests/
+--rw-rw-rw-   0        0        0      728 2023-03-30 23:01:03.000000 rw_dataframe_data_io-0.1.3/tests/test_utils.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 01:25:03.966481 rw_dataframe_data_io-0.1.3/utils/
+--rw-rw-rw-   0        0        0     3133 2023-03-30 22:35:27.000000 rw_dataframe_data_io-0.1.3/utils/DataIO.py
+--rw-rw-rw-   0        0        0        0 2023-03-30 21:48:53.000000 rw_dataframe_data_io-0.1.3/utils/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 18:32:33.550710 rw_dataframe_data_io-0.1.4/
++-rw-rw-rw-   0        0        0     1093 2023-03-30 22:51:24.000000 rw_dataframe_data_io-0.1.4/LICENSE.txt
++-rw-rw-rw-   0        0        0      480 2023-04-06 18:32:33.550710 rw_dataframe_data_io-0.1.4/PKG-INFO
++-rw-rw-rw-   0        0        0     2409 2023-03-30 23:51:33.000000 rw_dataframe_data_io-0.1.4/README.md
++drwxrwxrwx   0        0        0        0 2023-04-06 18:32:33.531785 rw_dataframe_data_io-0.1.4/dependence/
++-rw-rw-rw-   0        0        0        0 2023-03-16 22:26:42.000000 rw_dataframe_data_io-0.1.4/dependence/__init__.py
++-rw-rw-rw-   0        0        0      208 2023-03-16 21:46:56.000000 rw_dataframe_data_io-0.1.4/dependence/control_folder_exist.py
++-rw-rw-rw-   0        0        0      515 2023-04-06 18:26:26.000000 rw_dataframe_data_io-0.1.4/dependence/function_read.py
++-rw-rw-rw-   0        0        0      490 2023-04-06 18:23:10.000000 rw_dataframe_data_io-0.1.4/dependence/function_write.py
++drwxrwxrwx   0        0        0        0 2023-04-06 18:32:33.543728 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/
++-rw-rw-rw-   0        0        0      480 2023-04-06 18:32:33.000000 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      465 2023-04-06 18:32:33.000000 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 18:32:33.000000 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       78 2023-04-06 18:32:33.000000 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       62 2023-04-06 18:32:33.000000 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       17 2023-04-06 18:32:33.000000 rw_dataframe_data_io-0.1.4/rw_dataframe_data_io.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-06 18:32:33.550710 rw_dataframe_data_io-0.1.4/setup.cfg
++-rw-rw-rw-   0        0        0      923 2023-04-06 18:05:43.000000 rw_dataframe_data_io-0.1.4/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 18:32:33.545723 rw_dataframe_data_io-0.1.4/tests/
++-rw-rw-rw-   0        0        0     1012 2023-04-06 18:09:47.000000 rw_dataframe_data_io-0.1.4/tests/test_utils.py
++drwxrwxrwx   0        0        0        0 2023-04-06 18:32:33.548716 rw_dataframe_data_io-0.1.4/utils/
++-rw-rw-rw-   0        0        0     3134 2023-04-06 18:04:53.000000 rw_dataframe_data_io-0.1.4/utils/DataIO.py
++-rw-rw-rw-   0        0        0        0 2023-03-30 21:48:53.000000 rw_dataframe_data_io-0.1.4/utils/__init__.py
+```
+
+### Comparing `rw_dataframe_data_io-0.1.3/LICENSE.txt` & `rw_dataframe_data_io-0.1.4/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `rw_dataframe_data_io-0.1.3/README.md` & `rw_dataframe_data_io-0.1.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `rw_dataframe_data_io-0.1.3/dependence/function_read.py` & `rw_dataframe_data_io-0.1.4/dependence/function_read.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,19 +1,19 @@
+ import pickle
+-
++import json
+ import pandas as pd
+ 
+ 
+ def read_csv(file_path, sep=',', column_names=None, use_cols=None, squeeze=False):
+     return pd.read_csv(file_path, sep=sep, header=None, names=column_names, usecols=use_cols, squeeze=squeeze)
+ 
+ 
+ def read_json(file_path):
+     with open(file_path, 'r') as file:
+-        return pd.read_json(file, lines=True)
++        return json.load(file)
+ 
+ 
+ def read_pickle(file_path):
+     with open(file_path, 'rb') as file:
+         return pickle.load(file)
+```
+
+### Comparing `rw_dataframe_data_io-0.1.3/setup.py` & `rw_dataframe_data_io-0.1.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import setup, find_packages
+ 
+ setup(
+     name='rw_dataframe_data_io',
+-    version='0.1.3',
++    version='0.1.4',
+     description='A function to read or write data to a file. Supports CSV, JSON, and Pickle file formats.',
+     url='https://github.com/dicesare/data_io.git',
+     author='antony coco',
+     author_email='antony.coco.pro@gmail.com',
+     packages=find_packages(),
+     install_requires=[
+         'pandas>=1.3.0',
+```
+
+### Comparing `rw_dataframe_data_io-0.1.3/utils/DataIO.py` & `rw_dataframe_data_io-0.1.4/utils/DataIO.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -65,14 +65,14 @@
+             return read_pickle(file_path)
+         else:
+             print("error extension file")
+     elif mode == 'write':
+         if file_extension == 'csv':
+             return write_csv(file_path, data=data, sep=sep, column_names=column_name)
+         elif file_extension == 'json':
+-            return write_csv(file_path, data=data)
++            return write_json(file_path, data=data)
+         elif file_extension == 'pkl':
+             return write_pickle(file_path, data=data)
+         else:
+             print("error extension file")
+     else:
+         raise ValueError("'mode' must be either 'read' or 'write'")
+```
+
