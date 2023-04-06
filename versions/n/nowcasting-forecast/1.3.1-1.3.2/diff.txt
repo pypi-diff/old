@@ -1,0 +1,140 @@
+--- tmp/nowcasting_forecast-1.3.1.tar.gz
++++ tmp/nowcasting_forecast-1.3.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nowcasting_forecast-1.3.1.tar", last modified: Wed Apr  5 12:06:25 2023, max compression
+│ +gzip compressed data, was "nowcasting_forecast-1.3.2.tar", last modified: Thu Apr  6 13:50:30 2023, max compression
+│   --- nowcasting_forecast-1.3.1.tar
+├── +++ nowcasting_forecast-1.3.2.tar
+│ ├── file list
+│ │ @@ -1,29 +1,29 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1073 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5142 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4779 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/nowcasting_forecast/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       53 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7243 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/app.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2711 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/batch.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1671 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/dataloader.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/nowcasting_forecast/models/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/models/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4862 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/models/hub.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2141 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/models/nwp_solar_simple.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4100 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/models/sun.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9548 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/models/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      558 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/nowcasting_forecast/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5142 2023-04-05 12:06:25.000000 nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      648 2023-04-05 12:06:25.000000 nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 12:06:25.000000 nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      257 2023-04-05 12:06:25.000000 nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-05 12:06:25.000000 nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      257 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 12:06:25.465550 nowcasting_forecast-1.3.1/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4656 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/tests/test_app.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5241 2023-04-05 12:06:14.000000 nowcasting_forecast-1.3.1/tests/test_batch.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:50:30.488797 nowcasting_forecast-1.3.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1073 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5142 2023-04-06 13:50:30.488797 nowcasting_forecast-1.3.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4779 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:50:30.484797 nowcasting_forecast-1.3.2/nowcasting_forecast/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       53 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7243 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2711 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/batch.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1671 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/dataloader.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:50:30.488797 nowcasting_forecast-1.3.2/nowcasting_forecast/models/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/models/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4862 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/models/hub.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2141 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/models/nwp_solar_simple.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4100 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/models/sun.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9548 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/models/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      558 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/nowcasting_forecast/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:50:30.484797 nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5142 2023-04-06 13:50:30.000000 nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      648 2023-04-06 13:50:30.000000 nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:50:30.000000 nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      257 2023-04-06 13:50:30.000000 nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 13:50:30.000000 nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      257 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:50:30.488797 nowcasting_forecast-1.3.2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:50:30.488797 nowcasting_forecast-1.3.2/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4656 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/tests/test_app.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5241 2023-04-06 13:50:17.000000 nowcasting_forecast-1.3.2/tests/test_batch.py
+│ │   --- nowcasting_forecast-1.3.1/LICENSE
+│ ├── +++ nowcasting_forecast-1.3.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/PKG-INFO
+│ ├── +++ nowcasting_forecast-1.3.2/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nowcasting_forecast
+│ │ -Version: 1.3.1
+│ │ +Version: 1.3.2
+│ │  Summary: Live forecast for the OCF nowcasting project
+│ │  Home-page: https://github.com/openclimatefix/nowcasting_forecast
+│ │  Author: Peter Dudfield
+│ │  Author-email: peter@openclimatefix.org
+│ │  License: MIT
+│ │  Keywords: artificial intelligence,forecast
+│ │  Description-Content-Type: text/markdown
+│ │   --- nowcasting_forecast-1.3.1/README.md
+│ ├── +++ nowcasting_forecast-1.3.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/app.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/app.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/batch.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/batch.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/dataloader.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/dataloader.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/models/hub.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/models/hub.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/models/nwp_solar_simple.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/models/nwp_solar_simple.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/models/sun.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/models/sun.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/models/utils.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/models/utils.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast/utils.py
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast/utils.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/PKG-INFO
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nowcasting-forecast
+│ │ -Version: 1.3.1
+│ │ +Version: 1.3.2
+│ │  Summary: Live forecast for the OCF nowcasting project
+│ │  Home-page: https://github.com/openclimatefix/nowcasting_forecast
+│ │  Author: Peter Dudfield
+│ │  Author-email: peter@openclimatefix.org
+│ │  License: MIT
+│ │  Keywords: artificial intelligence,forecast
+│ │  Description-Content-Type: text/markdown
+│ │   --- nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/SOURCES.txt
+│ ├── +++ nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/setup.py
+│ ├── +++ nowcasting_forecast-1.3.2/setup.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/tests/test_app.py
+│ ├── +++ nowcasting_forecast-1.3.2/tests/test_app.py
+│ │┄ Files identical despite different names
+│ │   --- nowcasting_forecast-1.3.1/tests/test_batch.py
+│ ├── +++ nowcasting_forecast-1.3.2/tests/test_batch.py
+│ │┄ Files identical despite different names

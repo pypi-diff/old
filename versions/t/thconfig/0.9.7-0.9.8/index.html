@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/thconfig-0.9.7.tar.gz tmp/thconfig-0.9.8.tar.gz --html versions/t/thconfig/0.9.7-0.9.8/index.html --text versions/t/thconfig/0.9.7-0.9.8/diff.txt --markdown versions/t/thconfig/0.9.7-0.9.8/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.69 KB</span></div>
+  <div><span class="source">tmp/thconfig-0.9.7.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/thconfig-0.9.8.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">184 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;thconfig-0.9.<del>7</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;thconfig-0.9.<ins>8</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.46 KB</span></div>
+    <div><span class="source">thconfig-0.9.7.tar</span> vs.</div>
+    <div id="thconfig--.-.-.tar"><span class="source">thconfig-0.9.8.tar</span>
+      <a class="anchor" href="#thconfig--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.72 KB</span></div>
+      <div id="thconfig--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>38151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>80362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5912<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>38151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5912<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>80362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>181</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>39151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>223</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>81362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>40151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>759<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>40151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/config.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>759<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>40151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/error.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/error.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>40151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/file/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/file/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2968<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>40151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/file/file_config.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2968<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/file/file_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>41151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/http/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/http/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6799<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>41151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/http/couch_config.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6799<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/http/couch_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2153<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>41151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/http/etcd_config.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2153<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/http/etcd_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>17</del>:<del>5</del>8.1<del>41151</del><span class="dp">·</span>thconfig-0.9.<del>7</del>/thconfig/http/http_config.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>44</ins>:<ins>4</ins>8.1<ins>82362</ins><span class="dp">·</span>thconfig-0.9.<ins>8</ins>/thconfig/http/http_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>71<del>59</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>thconfig-0.9.<del>7</del>/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>71<ins>41</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>thconfig-0.9.<ins>8</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">thconfig-0.9.7/LICENSE</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--LICENSE"><span class="source">thconfig-0.9.8/LICENSE</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">thconfig-0.9.7/README.md</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--README.md"><span class="source">thconfig-0.9.8/README.md</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">919 B</span></div>
+      <div><span class="source">thconfig-0.9.7/pyproject.toml</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--pyproject.toml"><span class="source">thconfig-0.9.8/pyproject.toml</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>Refference:<span class="dp">·</span>https://python-poetry.org/docs/pyproject/</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>Refference:<span class="dp">·</span>https://python-poetry.org/docs/pyproject/</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">2 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;thconfig&quot;</td><td class="diffline">3 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;thconfig&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<del>7</del>&quot;</td><td class="diffline">4 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<ins>8</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter&quot;</td><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD<span class="dp">·</span>3-clause&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD<span class="dp">·</span>3-clause&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;TangledHub<span class="dp">·</span>&lt;info@tangledgroup.com&gt;&quot;]</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;TangledHub<span class="dp">·</span>&lt;info@tangledgroup.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://gitlab.com/tangledlabs/thconfig&quot;</td><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://gitlab.com/tangledlabs/thconfig&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;tangled&quot;,<span class="dp">·</span>&quot;tangledhub&quot;,<span class="dp">·</span>&quot;tangledlabs&quot;,<span class="dp">·</span>&quot;thconfig&quot;]</td><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;tangled&quot;,<span class="dp">·</span>&quot;tangledhub&quot;,<span class="dp">·</span>&quot;tangledlabs&quot;,<span class="dp">·</span>&quot;thconfig&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>Classifiers<span class="dp">·</span>reference:<span class="dp">·</span>https://pypi.org/classifiers/</td><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>Classifiers<span class="dp">·</span>reference:<span class="dp">·</span>https://pypi.org/classifiers/</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 24, 15 lines modified</td><td colspan="2">Offset 24, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">24 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.10&quot;</td><td class="diffline">25 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.10&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">thresult<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.9.25&quot;</td><td class="diffline">26 </td><td class="diffpresent">thresult<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.9.25&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">aiohttp<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.8.3&quot;</td><td class="diffline">27 </td><td class="diffpresent">aiohttp<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.8.3&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">toml<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.10.2&quot;</td><td class="diffline">28 </td><td class="diffpresent">toml<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.10.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">json5<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.9.10&quot;</td><td class="diffline">29 </td><td class="diffpresent">json5<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.9.10&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">PyYAML<span class="dp">·</span>=<span class="dp">·</span>&quot;^6.0&quot;</td><td class="diffline">30 </td><td class="diffpresent">PyYAML<span class="dp">·</span>=<span class="dp">·</span>&quot;^6.0&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">aetcd<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.0a2&quot;</td><td class="diffline">31 </td><td class="diffpresent"><ins>#<span class="dp">·</span></ins>aetcd<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.0a2&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">[tool.poetry.extras]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">aetcd<span class="dp">·</span>=<span class="dp">·</span>[&quot;aetcd&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td><td class="diffline">34 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">#pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^6.2.5&quot;</td><td class="diffline">35 </td><td class="diffpresent">#pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^6.2.5&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">#coverage<span class="dp">·</span>=&quot;^6.2&quot;</td><td class="diffline">36 </td><td class="diffpresent">#coverage<span class="dp">·</span>=&quot;^6.2&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">#[tool.poetry.scripts]</td><td class="diffline">37 </td><td class="diffpresent">#[tool.poetry.scripts]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">thconfig-0.9.7/thconfig/config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-config.py"><span class="source">thconfig-0.9.8/thconfig/config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">thconfig-0.9.7/thconfig/file/file_config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-file-file_config.py"><span class="source">thconfig-0.9.8/thconfig/file/file_config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-file-file_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">thconfig-0.9.7/thconfig/http/couch_config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-http-couch_config.py"><span class="source">thconfig-0.9.8/thconfig/http/couch_config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-http-couch_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">thconfig-0.9.7/thconfig/http/etcd_config.py</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--thconfig-http-etcd_config.py"><span class="source">thconfig-0.9.8/thconfig/http/etcd_config.py</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--thconfig-http-etcd_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.17 KB</span></div>
+      <div><span class="source">thconfig-0.9.7/PKG-INFO</span> vs.</div>
+      <div id="thconfig--.-.-.tar---thconfig--.-.--PKG-INFO"><span class="source">thconfig-0.9.8/PKG-INFO</span>
+        <a class="anchor" href="#thconfig--.-.-.tar---thconfig--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>thconfig</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>thconfig</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<ins>8</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>TangledHub<span class="dp">·</span>Config<span class="dp">·</span>reader/writter</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/tangledlabs/thconfig</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/tangledlabs/thconfig</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>3-clause</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>BSD<span class="dp">·</span>3-clause</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tangled,tangledhub,tangledlabs,thconfig</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tangled,tangledhub,tangledlabs,thconfig</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>TangledHub</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>TangledHub</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@tangledgroup.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@tangledgroup.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 16 lines modified</td><td colspan="2">Offset 16, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">17 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">18 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>aetcd</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>PyYAML<span class="dp">·</span>(&gt;=6.0,&lt;7.0)</td><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>PyYAML<span class="dp">·</span>(&gt;=6.0,&lt;7.0)</td></tr>
+<tr class="diffdeleted"><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>aetcd<span class="dp">·</span>(&gt;=1.0.0a2,&lt;2.0.0)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>aiohttp<span class="dp">·</span>(&gt;=3.8.3,&lt;4.0.0)</td><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>aiohttp<span class="dp">·</span>(&gt;=3.8.3,&lt;4.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>json5<span class="dp">·</span>(&gt;=0.9.10,&lt;0.10.0)</td><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>json5<span class="dp">·</span>(&gt;=0.9.10,&lt;0.10.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>thresult<span class="dp">·</span>(&gt;=0.9.25,&lt;0.10.0)</td><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>thresult<span class="dp">·</span>(&gt;=0.9.25,&lt;0.10.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>toml<span class="dp">·</span>(&gt;=0.10.2,&lt;0.11.0)</td><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>toml<span class="dp">·</span>(&gt;=0.10.2,&lt;0.11.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://gitlab.com/tangledlabs/thconfig</td><td class="diffline">29 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://gitlab.com/tangledlabs/thconfig</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">30 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

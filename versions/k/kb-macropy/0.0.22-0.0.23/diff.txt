@@ -1,0 +1,571 @@
+--- tmp/kb_macropy-0.0.22.tar.gz
++++ tmp/kb_macropy-0.0.23.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "kb_macropy-0.0.22.tar", last modified: Wed Apr  5 20:43:55 2023, max compression
+│ +gzip compressed data, was "kb_macropy-0.0.23.tar", last modified: Thu Apr  6 13:46:16 2023, max compression
+│   --- kb_macropy-0.0.22.tar
+├── +++ kb_macropy-0.0.23.tar
+│ ├── file list
+│ │ @@ -1,49 +1,50 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:55.122722 kb_macropy-0.0.22/
+│ │ --rw-rw-rw-   0        0        0     1087 2023-04-05 09:24:24.000000 kb_macropy-0.0.22/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0     7355 2023-04-05 20:43:55.127727 kb_macropy-0.0.22/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     6330 2023-04-05 20:35:09.000000 kb_macropy-0.0.22/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.884722 kb_macropy-0.0.22/kb_macropy.egg-info/
+│ │ --rw-rw-rw-   0        0        0     7355 2023-04-05 20:43:54.000000 kb_macropy-0.0.22/kb_macropy.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1619 2023-04-05 20:43:54.000000 kb_macropy-0.0.22/kb_macropy.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-05 20:43:54.000000 kb_macropy-0.0.22/kb_macropy.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       51 2023-04-05 20:43:54.000000 kb_macropy-0.0.22/kb_macropy.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0        2 2023-04-05 20:42:09.000000 kb_macropy-0.0.22/kb_macropy.egg-info/not-zip-safe
+│ │ --rw-rw-rw-   0        0        0      101 2023-04-05 20:43:54.000000 kb_macropy-0.0.22/kb_macropy.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        8 2023-04-05 20:43:54.000000 kb_macropy-0.0.22/kb_macropy.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.888723 kb_macropy-0.0.22/macropy/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.759730 kb_macropy-0.0.22/macropy/Images/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.946724 kb_macropy-0.0.22/macropy/Images/static/
+│ │ --rw-rw-rw-   0        0        0    13856 2023-01-16 23:51:30.000000 kb_macropy-0.0.22/macropy/Images/static/keyboard (0.5).png
+│ │ --rw-rw-rw-   0        0        0    18377 2023-01-16 23:44:52.000000 kb_macropy-0.0.22/macropy/Images/static/keyboard.png
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:55.113724 kb_macropy-0.0.22/macropy/SFX/
+│ │ --rw-rw-rw-   0        0        0   335238 2022-12-17 00:05:30.000000 kb_macropy-0.0.22/macropy/SFX/achievement-message-tone.wav
+│ │ --rw-rw-rw-   0        0        0    45114 2022-12-17 00:05:30.000000 kb_macropy-0.0.22/macropy/SFX/coins-497.wav
+│ │ --rw-rw-rw-   0        0        0    88806 2022-12-17 00:05:31.000000 kb_macropy-0.0.22/macropy/SFX/connection-sound.wav
+│ │ --rw-rw-rw-   0        0        0   197886 2022-12-17 08:24:56.000000 kb_macropy-0.0.22/macropy/SFX/crack_the_whip.wav
+│ │ --rw-rw-rw-   0        0        0   184398 2022-12-17 08:24:57.000000 kb_macropy-0.0.22/macropy/SFX/denied.wav
+│ │ --rw-rw-rw-   0        0        0    22646 2022-12-17 00:05:32.000000 kb_macropy-0.0.22/macropy/SFX/knob-458.wav
+│ │ --rw-rw-rw-   0        0        0    49952 2022-12-17 00:05:33.000000 kb_macropy-0.0.22/macropy/SFX/no-trespassing-368.wav
+│ │ --rw-rw-rw-   0        0        0    27600 2022-12-17 00:05:33.000000 kb_macropy-0.0.22/macropy/SFX/pedantic-490.wav
+│ │ --rw-rw-rw-   0        0        0    13245 2023-01-07 09:42:37.000000 kb_macropy-0.0.22/macropy/SFX/record-scratch-2.mp3
+│ │ --rw-rw-rw-   0        0        0   917818 2023-03-25 12:01:01.000000 kb_macropy-0.0.22/macropy/SFX/tts_temp1.wav
+│ │ --rw-rw-rw-   0        0        0   119886 2022-12-17 08:16:14.000000 kb_macropy-0.0.22/macropy/SFX/wrong.swf.wav
+│ │ --rw-rw-rw-   0        0        0     1092 2023-04-05 20:00:23.000000 kb_macropy-0.0.22/macropy/__main__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.753746 kb_macropy-0.0.22/macropy/cython_extensions/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.894723 kb_macropy-0.0.22/macropy/cython_extensions/common/
+│ │ --rw-rw-rw-   0        0        0    25561 2023-04-05 10:52:48.000000 kb_macropy-0.0.22/macropy/cython_extensions/common/common.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.897724 kb_macropy-0.0.22/macropy/cython_extensions/eventListeners/
+│ │ --rw-rw-rw-   0        0        0    20902 2023-04-05 12:06:52.000000 kb_macropy-0.0.22/macropy/cython_extensions/eventListeners/eventListeners.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.900724 kb_macropy-0.0.22/macropy/cython_extensions/explorerHelper/
+│ │ --rw-rw-rw-   0        0        0    19847 2023-04-05 10:53:51.000000 kb_macropy-0.0.22/macropy/cython_extensions/explorerHelper/explorerHelper.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.927724 kb_macropy-0.0.22/macropy/cython_extensions/imageInverter/
+│ │ --rw-rw-rw-   0        0        0    18589 2023-04-05 10:53:58.000000 kb_macropy-0.0.22/macropy/cython_extensions/imageInverter/imageInverter.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.930723 kb_macropy-0.0.22/macropy/cython_extensions/keyboardHelper/
+│ │ --rw-rw-rw-   0        0        0    10728 2023-04-05 10:54:03.000000 kb_macropy-0.0.22/macropy/cython_extensions/keyboardHelper/keyboardHelper.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.933722 kb_macropy-0.0.22/macropy/cython_extensions/scriptController/
+│ │ --rw-rw-rw-   0        0        0     6654 2023-04-05 19:59:23.000000 kb_macropy-0.0.22/macropy/cython_extensions/scriptController/scriptController.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.935723 kb_macropy-0.0.22/macropy/cython_extensions/systemHelper/
+│ │ --rw-rw-rw-   0        0        0    11634 2023-04-05 10:54:15.000000 kb_macropy-0.0.22/macropy/cython_extensions/systemHelper/systemHelper.pyx
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 20:43:54.938722 kb_macropy-0.0.22/macropy/cython_extensions/windowHelper/
+│ │ --rw-rw-rw-   0        0        0     9595 2023-04-05 10:54:22.000000 kb_macropy-0.0.22/macropy/cython_extensions/windowHelper/windowHelper.pyx
+│ │ --rw-rw-rw-   0        0        0       86 2023-04-05 20:43:55.155724 kb_macropy-0.0.22/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     4409 2023-04-05 20:40:40.000000 kb_macropy-0.0.22/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.647287 kb_macropy-0.0.23/
+│ │ +-rw-rw-rw-   0        0        0     1087 2023-04-05 09:24:24.000000 kb_macropy-0.0.23/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0     7556 2023-04-06 13:46:16.647287 kb_macropy-0.0.23/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     6531 2023-04-05 21:06:34.000000 kb_macropy-0.0.23/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.463284 kb_macropy-0.0.23/kb_macropy.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     7556 2023-04-06 13:46:15.000000 kb_macropy-0.0.23/kb_macropy.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1645 2023-04-06 13:46:15.000000 kb_macropy-0.0.23/kb_macropy.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 13:46:15.000000 kb_macropy-0.0.23/kb_macropy.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       51 2023-04-06 13:46:15.000000 kb_macropy-0.0.23/kb_macropy.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0        2 2023-04-06 13:44:42.000000 kb_macropy-0.0.23/kb_macropy.egg-info/not-zip-safe
+│ │ +-rw-rw-rw-   0        0        0      101 2023-04-06 13:46:15.000000 kb_macropy-0.0.23/kb_macropy.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2023-04-06 13:46:15.000000 kb_macropy-0.0.23/kb_macropy.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.477285 kb_macropy-0.0.23/macropy/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.292285 kb_macropy-0.0.23/macropy/Images/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.534285 kb_macropy-0.0.23/macropy/Images/static/
+│ │ +-rw-rw-rw-   0        0        0    13856 2023-01-16 23:51:30.000000 kb_macropy-0.0.23/macropy/Images/static/keyboard (0.5).png
+│ │ +-rw-rw-rw-   0        0        0    18377 2023-01-16 23:44:52.000000 kb_macropy-0.0.23/macropy/Images/static/keyboard.png
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.632285 kb_macropy-0.0.23/macropy/SFX/
+│ │ +-rw-rw-rw-   0        0        0   335238 2022-12-17 00:05:30.000000 kb_macropy-0.0.23/macropy/SFX/achievement-message-tone.wav
+│ │ +-rw-rw-rw-   0        0        0    45114 2022-12-17 00:05:30.000000 kb_macropy-0.0.23/macropy/SFX/coins-497.wav
+│ │ +-rw-rw-rw-   0        0        0    88806 2022-12-17 00:05:31.000000 kb_macropy-0.0.23/macropy/SFX/connection-sound.wav
+│ │ +-rw-rw-rw-   0        0        0   197886 2022-12-17 08:24:56.000000 kb_macropy-0.0.23/macropy/SFX/crack_the_whip.wav
+│ │ +-rw-rw-rw-   0        0        0   184398 2022-12-17 08:24:57.000000 kb_macropy-0.0.23/macropy/SFX/denied.wav
+│ │ +-rw-rw-rw-   0        0        0    22646 2022-12-17 00:05:32.000000 kb_macropy-0.0.23/macropy/SFX/knob-458.wav
+│ │ +-rw-rw-rw-   0        0        0    49952 2022-12-17 00:05:33.000000 kb_macropy-0.0.23/macropy/SFX/no-trespassing-368.wav
+│ │ +-rw-rw-rw-   0        0        0    27600 2022-12-17 00:05:33.000000 kb_macropy-0.0.23/macropy/SFX/pedantic-490.wav
+│ │ +-rw-rw-rw-   0        0        0    13245 2023-01-07 09:42:37.000000 kb_macropy-0.0.23/macropy/SFX/record-scratch-2.mp3
+│ │ +-rw-rw-rw-   0        0        0   917818 2023-03-25 12:01:01.000000 kb_macropy-0.0.23/macropy/SFX/tts_temp1.wav
+│ │ +-rw-rw-rw-   0        0        0   119886 2022-12-17 08:16:14.000000 kb_macropy-0.0.23/macropy/SFX/wrong.swf.wav
+│ │ +-rw-rw-rw-   0        0        0     1092 2023-04-05 20:00:23.000000 kb_macropy-0.0.23/macropy/__main__.py
+│ │ +-rw-rw-rw-   0        0        0     1143 2023-04-06 08:33:55.000000 kb_macropy-0.0.23/macropy/configurations.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.288285 kb_macropy-0.0.23/macropy/cython_extensions/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.480288 kb_macropy-0.0.23/macropy/cython_extensions/common/
+│ │ +-rw-rw-rw-   0        0        0    24632 2023-04-06 13:41:38.000000 kb_macropy-0.0.23/macropy/cython_extensions/common/common.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.483282 kb_macropy-0.0.23/macropy/cython_extensions/eventListeners/
+│ │ +-rw-rw-rw-   0        0        0    20902 2023-04-05 12:06:52.000000 kb_macropy-0.0.23/macropy/cython_extensions/eventListeners/eventListeners.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.492283 kb_macropy-0.0.23/macropy/cython_extensions/explorerHelper/
+│ │ +-rw-rw-rw-   0        0        0    19847 2023-04-05 10:53:51.000000 kb_macropy-0.0.23/macropy/cython_extensions/explorerHelper/explorerHelper.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.496284 kb_macropy-0.0.23/macropy/cython_extensions/imageInverter/
+│ │ +-rw-rw-rw-   0        0        0    18589 2023-04-05 10:53:58.000000 kb_macropy-0.0.23/macropy/cython_extensions/imageInverter/imageInverter.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.501284 kb_macropy-0.0.23/macropy/cython_extensions/keyboardHelper/
+│ │ +-rw-rw-rw-   0        0        0    10728 2023-04-05 10:54:03.000000 kb_macropy-0.0.23/macropy/cython_extensions/keyboardHelper/keyboardHelper.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.509290 kb_macropy-0.0.23/macropy/cython_extensions/scriptController/
+│ │ +-rw-rw-rw-   0        0        0     6654 2023-04-05 19:59:23.000000 kb_macropy-0.0.23/macropy/cython_extensions/scriptController/scriptController.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.514283 kb_macropy-0.0.23/macropy/cython_extensions/systemHelper/
+│ │ +-rw-rw-rw-   0        0        0    11634 2023-04-05 10:54:15.000000 kb_macropy-0.0.23/macropy/cython_extensions/systemHelper/systemHelper.pyx
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:46:16.521283 kb_macropy-0.0.23/macropy/cython_extensions/windowHelper/
+│ │ +-rw-rw-rw-   0        0        0     9595 2023-04-05 10:54:22.000000 kb_macropy-0.0.23/macropy/cython_extensions/windowHelper/windowHelper.pyx
+│ │ +-rw-rw-rw-   0        0        0       86 2023-04-06 13:46:16.664286 kb_macropy-0.0.23/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     4411 2023-04-05 21:27:58.000000 kb_macropy-0.0.23/setup.py
+│ │   --- kb_macropy-0.0.22/LICENSE.txt
+│ ├── +++ kb_macropy-0.0.23/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/PKG-INFO
+│ ├── +++ kb_macropy-0.0.23/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kb_macropy
+│ │ -Version: 0.0.22
+│ │ +Version: 0.0.23
+│ │  Summary: Keyboard listener and automation script.
+│ │  Home-page: https://github.com/Ryen-042/macropy
+│ │  Author: Ahmed Tarek
+│ │  Author-email: ahmedtarek4377@gmail.com
+│ │  License: MIT
+│ │  Keywords: keyboard automation script
+│ │  Platform: UNKNOWN
+│ │ @@ -24,30 +24,36 @@
+│ │  Classifier: Topic :: Utilities
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE.txt
+│ │  
+│ │  # Macropy
+│ │  Keyboard listener, hotkey manager, word expander, task automation, and more!
+│ │  
+│ │ -![Terminal Output](https://github.com/Ryen-042/Macropy/blob/main/Images/Changing_Opacity.gif?raw=true)
+│ │ +![Terminal Output](https://github.com/Ryen-042/Macropy/blob/main/Images/Output.png?raw=true)
+│ │  
+│ │  ## Big Update - Cython
+│ │ -Cython is used to compile python code and make it faster. Cython creates `.c` files that can be compiled into python binary extension modules.
+│ │ +Cython is used to compile python source code and make it faster. Cython creates `.c` files that can be compiled into python binary extension modules.
+│ │  
+│ │ -The `macropy/cython_extensions` directory contains all the cython code for all the script module. For each module, there are two files:
+│ │ +The `macropy/cython_extensions` directory contains all the Cython code for all the script modules. For each module, there are two files:
+│ │  - `xxx.pyx`: Python source code written in Cython, which can later be compiled into a `.c` file.
+│ │ -- `xxx.c`: The compiled version of the cython extension module, which can later be compiled into `.pyd` binary source files.
+│ │ +- `xxx.c`: The compiled version of the Cython extension module, which can later be compiled into `.pyd` binary source files.
+│ │  
+│ │  The actual files that are imported and used are the `.pyd` files. I have uploaded the `.c` files that were generated with Cython, so it is not necessary to have Cython to recompile the existing extension modules. To build the Cython extensions, run:
+│ │  
+│ │      python setup.py build_ext --inplace
+│ │  
+│ │  By default, `setup.py` builds the extension from the `.pyx` files and falls back to the `.c` files if Cython is not installed. If you wish to build using the `.c` files (for example, to ensure that the build doesn't fail due to particular Cython version issues), you must set `USE_CYTHON=False` in `setup.py`.
+│ │  
+│ │ -To use this script, you can simply run the `__main__.py` file, or install it by running:
+│ │ +To use this script, you can pip install it as follows:
+│ │ +
+│ │ +    pip install kb_macropy
+│ │ +
+│ │ +Note that the package name for download is kb_macropy. However, to start the script, run `macropy`.
+│ │ +
+│ │ +You can also clone this repository and simply run the `__main__.py` file, or install it by running:
+│ │  
+│ │      python setup.py install
+│ │  
+│ │  ## Why did I write this script?
+│ │  A lot of times I found myself repeating one or more tasks. Some of these tasks are tedious and may be performed more than one time a day. Other tasks may be faster if they are performed without interacting with GUI elements. Combine all this with my low-performance laptop and you can see why I have written this script.
+│ │  
+│ │  ## Description
+│ │ @@ -123,11 +129,12 @@
+│ │  
+│ │  - To make sure the script is running (by displaying a toast notification), press the hotkey -> `FN + /`.
+│ │  
+│ │  - To clear the terminal, press the hotkey -> `Ctrl + FN + C`.
+│ │  
+│ │  - To suppress/silence the terminal output, press the hotkey -> `FN + Alt + S`.
+│ │  
+│ │ -- To suppress keyboard keys (hotkeys still works), press the hotkey -> `Ctrl + Alt + D`.
+│ │ +- To suppress keyboard keys (hotkeys still work), press the hotkey -> `Ctrl + Alt + D`.
+│ │  
+│ │  - The script will not allow more than one active instance at a time.
+│ │  
+│ │ +
+│ │   --- kb_macropy-0.0.22/README.md
+│ ├── +++ kb_macropy-0.0.23/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,26 +1,32 @@
+│ │  # Macropy
+│ │  Keyboard listener, hotkey manager, word expander, task automation, and more!
+│ │  
+│ │ -![Terminal Output](https://github.com/Ryen-042/Macropy/blob/main/Images/Changing_Opacity.gif?raw=true)
+│ │ +![Terminal Output](https://github.com/Ryen-042/Macropy/blob/main/Images/Output.png?raw=true)
+│ │  
+│ │  ## Big Update - Cython
+│ │ -Cython is used to compile python code and make it faster. Cython creates `.c` files that can be compiled into python binary extension modules.
+│ │ +Cython is used to compile python source code and make it faster. Cython creates `.c` files that can be compiled into python binary extension modules.
+│ │  
+│ │ -The `macropy/cython_extensions` directory contains all the cython code for all the script module. For each module, there are two files:
+│ │ +The `macropy/cython_extensions` directory contains all the Cython code for all the script modules. For each module, there are two files:
+│ │  - `xxx.pyx`: Python source code written in Cython, which can later be compiled into a `.c` file.
+│ │ -- `xxx.c`: The compiled version of the cython extension module, which can later be compiled into `.pyd` binary source files.
+│ │ +- `xxx.c`: The compiled version of the Cython extension module, which can later be compiled into `.pyd` binary source files.
+│ │  
+│ │  The actual files that are imported and used are the `.pyd` files. I have uploaded the `.c` files that were generated with Cython, so it is not necessary to have Cython to recompile the existing extension modules. To build the Cython extensions, run:
+│ │  
+│ │      python setup.py build_ext --inplace
+│ │  
+│ │  By default, `setup.py` builds the extension from the `.pyx` files and falls back to the `.c` files if Cython is not installed. If you wish to build using the `.c` files (for example, to ensure that the build doesn't fail due to particular Cython version issues), you must set `USE_CYTHON=False` in `setup.py`.
+│ │  
+│ │ -To use this script, you can simply run the `__main__.py` file, or install it by running:
+│ │ +To use this script, you can pip install it as follows:
+│ │ +
+│ │ +    pip install kb_macropy
+│ │ +
+│ │ +Note that the package name for download is kb_macropy. However, to start the script, run `macropy`.
+│ │ +
+│ │ +You can also clone this repository and simply run the `__main__.py` file, or install it by running:
+│ │  
+│ │      python setup.py install
+│ │  
+│ │  ## Why did I write this script?
+│ │  A lot of times I found myself repeating one or more tasks. Some of these tasks are tedious and may be performed more than one time a day. Other tasks may be faster if they are performed without interacting with GUI elements. Combine all this with my low-performance laptop and you can see why I have written this script.
+│ │  
+│ │  ## Description
+│ │ @@ -96,10 +102,10 @@
+│ │  
+│ │  - To make sure the script is running (by displaying a toast notification), press the hotkey -> `FN + /`.
+│ │  
+│ │  - To clear the terminal, press the hotkey -> `Ctrl + FN + C`.
+│ │  
+│ │  - To suppress/silence the terminal output, press the hotkey -> `FN + Alt + S`.
+│ │  
+│ │ -- To suppress keyboard keys (hotkeys still works), press the hotkey -> `Ctrl + Alt + D`.
+│ │ +- To suppress keyboard keys (hotkeys still work), press the hotkey -> `Ctrl + Alt + D`.
+│ │  
+│ │ -- The script will not allow more than one active instance at a time.
+│ │ +- The script will not allow more than one active instance at a time.
+│ │   --- kb_macropy-0.0.22/kb_macropy.egg-info/PKG-INFO
+│ ├── +++ kb_macropy-0.0.23/kb_macropy.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kb-macropy
+│ │ -Version: 0.0.22
+│ │ +Version: 0.0.23
+│ │  Summary: Keyboard listener and automation script.
+│ │  Home-page: https://github.com/Ryen-042/macropy
+│ │  Author: Ahmed Tarek
+│ │  Author-email: ahmedtarek4377@gmail.com
+│ │  License: MIT
+│ │  Keywords: keyboard automation script
+│ │  Platform: UNKNOWN
+│ │ @@ -24,30 +24,36 @@
+│ │  Classifier: Topic :: Utilities
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE.txt
+│ │  
+│ │  # Macropy
+│ │  Keyboard listener, hotkey manager, word expander, task automation, and more!
+│ │  
+│ │ -![Terminal Output](https://github.com/Ryen-042/Macropy/blob/main/Images/Changing_Opacity.gif?raw=true)
+│ │ +![Terminal Output](https://github.com/Ryen-042/Macropy/blob/main/Images/Output.png?raw=true)
+│ │  
+│ │  ## Big Update - Cython
+│ │ -Cython is used to compile python code and make it faster. Cython creates `.c` files that can be compiled into python binary extension modules.
+│ │ +Cython is used to compile python source code and make it faster. Cython creates `.c` files that can be compiled into python binary extension modules.
+│ │  
+│ │ -The `macropy/cython_extensions` directory contains all the cython code for all the script module. For each module, there are two files:
+│ │ +The `macropy/cython_extensions` directory contains all the Cython code for all the script modules. For each module, there are two files:
+│ │  - `xxx.pyx`: Python source code written in Cython, which can later be compiled into a `.c` file.
+│ │ -- `xxx.c`: The compiled version of the cython extension module, which can later be compiled into `.pyd` binary source files.
+│ │ +- `xxx.c`: The compiled version of the Cython extension module, which can later be compiled into `.pyd` binary source files.
+│ │  
+│ │  The actual files that are imported and used are the `.pyd` files. I have uploaded the `.c` files that were generated with Cython, so it is not necessary to have Cython to recompile the existing extension modules. To build the Cython extensions, run:
+│ │  
+│ │      python setup.py build_ext --inplace
+│ │  
+│ │  By default, `setup.py` builds the extension from the `.pyx` files and falls back to the `.c` files if Cython is not installed. If you wish to build using the `.c` files (for example, to ensure that the build doesn't fail due to particular Cython version issues), you must set `USE_CYTHON=False` in `setup.py`.
+│ │  
+│ │ -To use this script, you can simply run the `__main__.py` file, or install it by running:
+│ │ +To use this script, you can pip install it as follows:
+│ │ +
+│ │ +    pip install kb_macropy
+│ │ +
+│ │ +Note that the package name for download is kb_macropy. However, to start the script, run `macropy`.
+│ │ +
+│ │ +You can also clone this repository and simply run the `__main__.py` file, or install it by running:
+│ │  
+│ │      python setup.py install
+│ │  
+│ │  ## Why did I write this script?
+│ │  A lot of times I found myself repeating one or more tasks. Some of these tasks are tedious and may be performed more than one time a day. Other tasks may be faster if they are performed without interacting with GUI elements. Combine all this with my low-performance laptop and you can see why I have written this script.
+│ │  
+│ │  ## Description
+│ │ @@ -123,11 +129,12 @@
+│ │  
+│ │  - To make sure the script is running (by displaying a toast notification), press the hotkey -> `FN + /`.
+│ │  
+│ │  - To clear the terminal, press the hotkey -> `Ctrl + FN + C`.
+│ │  
+│ │  - To suppress/silence the terminal output, press the hotkey -> `FN + Alt + S`.
+│ │  
+│ │ -- To suppress keyboard keys (hotkeys still works), press the hotkey -> `Ctrl + Alt + D`.
+│ │ +- To suppress keyboard keys (hotkeys still work), press the hotkey -> `Ctrl + Alt + D`.
+│ │  
+│ │  - The script will not allow more than one active instance at a time.
+│ │  
+│ │ +
+│ │   --- kb_macropy-0.0.22/kb_macropy.egg-info/SOURCES.txt
+│ ├── +++ kb_macropy-0.0.23/kb_macropy.egg-info/SOURCES.txt
+│ │┄ Files 4% similar despite different names
+│ │ @@ -6,14 +6,15 @@
+│ │  kb_macropy.egg-info/SOURCES.txt
+│ │  kb_macropy.egg-info/dependency_links.txt
+│ │  kb_macropy.egg-info/entry_points.txt
+│ │  kb_macropy.egg-info/not-zip-safe
+│ │  kb_macropy.egg-info/requires.txt
+│ │  kb_macropy.egg-info/top_level.txt
+│ │  macropy/__main__.py
+│ │ +macropy/configurations.py
+│ │  macropy/cython_extensions/common/common.pyx
+│ │  macropy/cython_extensions/eventListeners/eventListeners.pyx
+│ │  macropy/cython_extensions/explorerHelper/explorerHelper.pyx
+│ │  macropy/cython_extensions/imageInverter/imageInverter.pyx
+│ │  macropy/cython_extensions/keyboardHelper/keyboardHelper.pyx
+│ │  macropy/cython_extensions/scriptController/scriptController.pyx
+│ │  macropy/cython_extensions/systemHelper/systemHelper.pyx
+│ │   --- kb_macropy-0.0.22/macropy/Images/static/keyboard (0.5).png
+│ ├── +++ kb_macropy-0.0.23/macropy/Images/static/keyboard (0.5).png
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/Images/static/keyboard.png
+│ ├── +++ kb_macropy-0.0.23/macropy/Images/static/keyboard.png
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/achievement-message-tone.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/achievement-message-tone.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/coins-497.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/coins-497.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/connection-sound.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/connection-sound.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/crack_the_whip.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/crack_the_whip.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/denied.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/denied.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/knob-458.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/knob-458.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/no-trespassing-368.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/no-trespassing-368.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/pedantic-490.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/pedantic-490.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/record-scratch-2.mp3
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/record-scratch-2.mp3
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/tts_temp1.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/tts_temp1.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/SFX/wrong.swf.wav
+│ ├── +++ kb_macropy-0.0.23/macropy/SFX/wrong.swf.wav
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/__main__.py
+│ ├── +++ kb_macropy-0.0.23/macropy/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/common/common.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/common/common.pyx
+│ │┄ Files 3% similar despite different names
+│ │ @@ -10,15 +10,15 @@
+│ │  import  windowHelper as winHelper
+│ │  from traceback import format_tb, format_exc
+│ │  from pynput.keyboard import Controller as kbController
+│ │  from pynput.mouse import Controller as mController
+│ │  from time import time
+│ │  from collections import deque
+│ │  from pyWinhook.HookManager import KeyboardEvent
+│ │ -
+│ │ +from macropy import configurations
+│ │  
+│ │  cpdef enum KB_Con:
+│ │      # """
+│ │      # Description:
+│ │      #     An enum class for storing keyboard `keyID` and `scancode` constants that are not present in the `win32con` module.
+│ │      # ---
+│ │      # Naming Scheme:
+│ │ @@ -247,31 +247,19 @@
+│ │      CAPITAL = 0b100
+│ │      SCROLL = 0b10
+│ │      NUMLOCK = 0b1
+│ │      
+│ │      # Holds the pressed character keys for the key expansion events.
+│ │      pressed_chars = ""
+│ │      
+│ │ -    # A dictionary of abbreviations and their corresponding expansions.
+│ │ -    abbreviations = {":py"    : "python",
+│ │ -                    ":ahmed" : "Ahmed Tarek Sayed Abbas",
+│ │ -                    ":gmail" : "ahmedsonic38@gmail.com"}
+│ │ -    
+│ │ -    # A dictionary of abbreviations and their corresponding paths.
+│ │ -    locations = {"!cca":   r"E:\UnKnown\Programming\Python\Year 22\Automation",
+│ │ -                "!cck":   r"E:\UnKnown\Programming\Python\Year 22\Automation\Macropy\pyCom",
+│ │ -                "!ccp":   r"E:\UnKnown\Programming\Python\Year 22\Automation\PyTube\The Refactored\Downloads",
+│ │ -                "!ccm":   r"E:\UnKnown\Programming\Python\Year 22\Automation\Manga Downloader\items\images",
+│ │ -                "!cmm":   r"E:\UnKnown\Anime\@-@\Booxi\_Manga",
+│ │ -                "!alias": r"E:\UnKnown\Programming\Python\Year 22\Automation\Manga Downloader\aliases.txt",
+│ │ -                "!vss": r"E:\UnKnown\Programming\Python\Files\Very Imoprtant\Backup\Important.txt",
+│ │ -                "!asu":   r"E:\UnKnown\Faculty\Senior 2 - CSE",
+│ │ -                "!fact":  r"E:\UnKnown\Faculty\Senior 2 - CSE",
+│ │ -                "!downs": r"C:\Users\Admin\Downloads",
+│ │ -                "!progs": r"E:\Programs"}
+│ │ +    # A dictionary of abbreviations and their corresponding path address.
+│ │ +    locations = configurations.locations
+│ │ +    
+│ │ +    # A dictionary of abbreviations and their corresponding expansion.
+│ │ +    abbreviations = configurations.abbreviations
+│ │      
+│ │      # https://nitratine.net/blog/post/simulate-keypresses-in-python/
+│ │      pynput_kb = kbController()
+│ │      pynput_mouse = mController()
+│ │      keyboard_send = keyboard.send
+│ │      keyboard_write = keyboard.write
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/eventListeners/eventListeners.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/eventListeners/eventListeners.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/explorerHelper/explorerHelper.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/explorerHelper/explorerHelper.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/imageInverter/imageInverter.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/imageInverter/imageInverter.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/keyboardHelper/keyboardHelper.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/keyboardHelper/keyboardHelper.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/scriptController/scriptController.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/scriptController/scriptController.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/systemHelper/systemHelper.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/systemHelper/systemHelper.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/macropy/cython_extensions/windowHelper/windowHelper.pyx
+│ ├── +++ kb_macropy-0.0.23/macropy/cython_extensions/windowHelper/windowHelper.pyx
+│ │┄ Files identical despite different names
+│ │   --- kb_macropy-0.0.22/setup.py
+│ ├── +++ kb_macropy-0.0.23/setup.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,49 +1,49 @@
+│ │ +import sys
+│ │ +from setuptools import setup, Extension
+│ │ +
+│ │  USE_CYTHON = True
+│ │  """
+│ │  Specify whether to use Cython to build the extensions or use the C files (that were previously generated with Cython):
+│ │  
+│ │ -- Set this to True to enable building extensions using Cython.
+│ │ -- Set it to False to build extensions from the C files (that were previously generated with Cython).
+│ │ -- Set it to 'auto' to build with Cython if available, otherwise from the C file.
+│ │ +- Set it to `True` to enable building extensions using Cython.
+│ │ +- Set it to `False` to build extensions from the C files (that were previously generated with Cython).
+│ │ +- Set it to `auto` to build with Cython if available, otherwise from the C file.
+│ │  """
+│ │ -import sys
+│ │ -from setuptools import setup, Extension
+│ │  
+│ │  if USE_CYTHON:
+│ │      try:
+│ │          from Cython.Distutils import build_ext
+│ │      except ImportError:
+│ │ -        if USE_CYTHON=='auto':
+│ │ +        if USE_CYTHON=="auto":
+│ │              USE_CYTHON=False
+│ │          else:
+│ │              raise
+│ │  
+│ │  cmdclass = { }
+│ │  """Dictionary of commands to pass to setuptools.setup()"""
+│ │  
+│ │  ext_modules = [ ]
+│ │  """List of extension modules to pass to setuptools.setup()"""
+│ │  
+│ │  if sys.version_info[0] == 2:
+│ │ -    raise Exception('Python 2.x is not supported')
+│ │ -
+│ │ +    raise Exception("Python 2.x is not supported")
+│ │  
+│ │  if USE_CYTHON:
+│ │      ext_modules += [
+│ │          Extension("macropy.common",  ["macropy/cython_extensions/common/common.pyx"]),
+│ │          Extension("macropy.eventListeners",  ["macropy/cython_extensions/eventListeners/eventListeners.pyx"]),
+│ │          Extension("macropy.explorerHelper",  ["macropy/cython_extensions/explorerHelper/explorerHelper.pyx"]),
+│ │          Extension("macropy.imageInverter",  ["macropy/cython_extensions/imageInverter/imageInverter.pyx"]),
+│ │          Extension("macropy.keyboardHelper",  ["macropy/cython_extensions/keyboardHelper/keyboardHelper.pyx"]),
+│ │          Extension("macropy.scriptController",  ["macropy/cython_extensions/scriptController/scriptController.pyx"]),
+│ │          Extension("macropy.systemHelper",  ["macropy/cython_extensions/systemHelper/systemHelper.pyx"]),
+│ │          Extension("macropy.windowHelper",  ["macropy/cython_extensions/windowHelper/windowHelper.pyx"])
+│ │      ]
+│ │ -    cmdclass.update({ 'build_ext': build_ext })
+│ │ +    cmdclass.update({ "build_ext": build_ext })
+│ │  else:
+│ │      ext_modules += [
+│ │          Extension("macropy.common",  ["macropy/cython_extensions/common/common.c"]),
+│ │          Extension("macropy.eventListeners",  ["macropy/cython_extensions/eventListeners/eventListeners.c"]),
+│ │          Extension("macropy.explorerHelper",  ["macropy/cython_extensions/explorerHelper/explorerHelper.c"]),
+│ │          Extension("macropy.imageInverter",  ["macropy/cython_extensions/imageInverter/imageInverter.c"]),
+│ │          Extension("macropy.keyboardHelper",  ["macropy/cython_extensions/keyboardHelper/keyboardHelper.c"]),
+│ │ @@ -51,47 +51,47 @@
+│ │          Extension("macropy.systemHelper",  ["macropy/cython_extensions/systemHelper/systemHelper.c"]),
+│ │          Extension("macropy.windowHelper",  ["macropy/cython_extensions/windowHelper/windowHelper.c"])
+│ │      ]
+│ │  
+│ │  requirements = [ ]
+│ │  """List of requirements to pass to setuptools.setup()"""
+│ │  
+│ │ -with open('requirements.txt', 'r') as f:
+│ │ +with open("requirements.txt", "r") as f:
+│ │      for line in f.read().split():
+│ │          requirements.append(line.split(">=")[0])
+│ │  
+│ │  # https://stackoverflow.com/questions/58533084/what-keyword-arguments-does-setuptools-setup-accept
+│ │  setup(
+│ │      name="kb_macropy",
+│ │ -    version="0.0.22",
+│ │ +    version="0.0.23",
+│ │      description="Keyboard listener and automation script.",
+│ │      author="Ahmed Tarek",
+│ │      author_email="ahmedtarek4377@gmail.com",
+│ │      url="https://github.com/Ryen-042/macropy",
+│ │      packages=["macropy"],
+│ │      package_data={"macropy": ["Images/static/*", "SFX/*"],},
+│ │      cmdclass = cmdclass,
+│ │      ext_modules=ext_modules,
+│ │ -    long_description=open('README.md').read(),
+│ │ -    entry_points ={'console_scripts': ['macropy = macropy.__main__:main']},
+│ │ +    long_description=open("README.md").read(),
+│ │ +    entry_points ={"console_scripts": ["macropy = macropy.__main__:main"]},
+│ │      long_description_content_type="text/markdown",
+│ │      license="MIT",
+│ │      install_requires=requirements,
+│ │      zip_safe = False,
+│ │      classifiers=[
+│ │ -        'Development Status :: 5 - Production/Stable',
+│ │ +        "Development Status :: 5 - Production/Stable",
+│ │          "Environment :: Console",
+│ │          "Environment :: Win32 (MS Windows)",
+│ │ -        'Intended Audience :: Developers',
+│ │ -        'License :: OSI Approved :: MIT License',
+│ │ -        'Programming Language :: Python',
+│ │ -        'Programming Language :: Python :: 3',
+│ │ -        'Programming Language :: Python :: 3.6',
+│ │ -        'Programming Language :: Python :: 3.7',
+│ │ -        'Programming Language :: Python :: 3.8',
+│ │ -        'Programming Language :: Python :: 3.9',
+│ │ +        "Intended Audience :: Developers",
+│ │ +        "License :: OSI Approved :: MIT License",
+│ │ +        "Programming Language :: Python",
+│ │ +        "Programming Language :: Python :: 3",
+│ │ +        "Programming Language :: Python :: 3.6",
+│ │ +        "Programming Language :: Python :: 3.7",
+│ │ +        "Programming Language :: Python :: 3.8",
+│ │ +        "Programming Language :: Python :: 3.9",
+│ │          "Programming Language :: Python :: 3.10",
+│ │ -        'Programming Language :: Cython',
+│ │ +        "Programming Language :: Cython",
+│ │          "Topic :: Utilities",
+│ │      ],
+│ │ -    keywords='keyboard automation script',
+│ │ +    keywords="keyboard automation script",
+│ │  )

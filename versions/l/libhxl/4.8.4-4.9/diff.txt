@@ -1,0 +1,307 @@
+--- tmp/libhxl-4.8.4.tar.gz
++++ tmp/libhxl-4.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/libhxl-4.8.4.tar", last modified: Thu Jun 14 18:07:18 2018, max compression
+│ +gzip compressed data, was "dist/libhxl-4.9.tar", last modified: Fri Jun 29 14:07:55 2018, max compression
+│   --- libhxl-4.8.4.tar
+├── +++ libhxl-4.9.tar
+│ ├── file list
+│ │ @@ -1,25 +1,25 @@
+│ │ -drwxrwxr-x   0 david     (1000) david     (1000)        0 2018-06-14 18:07:18.000000 libhxl-4.8.4/
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)       28 2018-05-31 15:34:50.000000 libhxl-4.8.4/MANIFEST.in
+│ │ -drwxrwxr-x   0 david     (1000) david     (1000)        0 2018-06-14 18:07:18.000000 libhxl-4.8.4/hxl/
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)    61324 2018-06-05 23:32:24.000000 libhxl-4.8.4/hxl/validation.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)    29663 2018-06-14 18:00:10.000000 libhxl-4.8.4/hxl/io.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)    89803 2018-06-14 18:00:10.000000 libhxl-4.8.4/hxl/filters.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)     7365 2018-06-14 18:00:10.000000 libhxl-4.8.4/hxl/datatypes.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)    38405 2018-06-14 18:00:10.000000 libhxl-4.8.4/hxl/model.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)     6242 2018-05-02 15:51:22.000000 libhxl-4.8.4/hxl/converters.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)     1983 2018-05-31 13:01:57.000000 libhxl-4.8.4/hxl/hxl-default-schema.json
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)     4561 2018-03-29 19:42:28.000000 libhxl-4.8.4/hxl/geo.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)     2901 2018-06-14 18:00:10.000000 libhxl-4.8.4/hxl/__init__.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)    27370 2018-05-02 15:51:22.000000 libhxl-4.8.4/hxl/scripts.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)     7410 2018-05-02 15:51:22.000000 libhxl-4.8.4/README.md
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)      269 2018-06-14 18:07:18.000000 libhxl-4.8.4/PKG-INFO
+│ │ -drwxrwxr-x   0 david     (1000) david     (1000)        0 2018-06-14 18:07:18.000000 libhxl-4.8.4/libhxl.egg-info/
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)      467 2018-06-14 18:07:17.000000 libhxl-4.8.4/libhxl.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)      398 2018-06-14 18:07:18.000000 libhxl-4.8.4/libhxl.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)      269 2018-06-14 18:07:17.000000 libhxl-4.8.4/libhxl.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)        4 2018-06-14 18:07:17.000000 libhxl-4.8.4/libhxl.egg-info/top_level.txt
+│ │ --rw-r--r--   0 david     (1000) david     (1000)       47 2015-10-13 15:28:48.000000 libhxl-4.8.4/libhxl.egg-info/pbr.json
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)       70 2018-06-14 18:07:17.000000 libhxl-4.8.4/libhxl.egg-info/requires.txt
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)        1 2018-06-14 18:07:17.000000 libhxl-4.8.4/libhxl.egg-info/dependency_links.txt
+│ │ --rwxrwxr-x   0 david     (1000) david     (1000)     1382 2018-06-14 18:00:10.000000 libhxl-4.8.4/setup.py
+│ │ --rw-rw-r--   0 david     (1000) david     (1000)       38 2018-06-14 18:07:18.000000 libhxl-4.8.4/setup.cfg
+│ │ +drwxrwxr-x   0 david     (1000) david     (1000)        0 2018-06-29 14:07:55.000000 libhxl-4.9/
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)       28 2018-05-31 15:34:50.000000 libhxl-4.9/MANIFEST.in
+│ │ +drwxrwxr-x   0 david     (1000) david     (1000)        0 2018-06-29 14:07:55.000000 libhxl-4.9/hxl/
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)    61324 2018-06-05 23:32:24.000000 libhxl-4.9/hxl/validation.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)    30621 2018-06-29 14:04:15.000000 libhxl-4.9/hxl/io.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)    89899 2018-06-29 14:04:15.000000 libhxl-4.9/hxl/filters.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)     7365 2018-06-14 18:00:10.000000 libhxl-4.9/hxl/datatypes.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)    39332 2018-06-29 14:04:15.000000 libhxl-4.9/hxl/model.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)     6242 2018-05-02 15:51:22.000000 libhxl-4.9/hxl/converters.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)     1983 2018-05-31 13:01:57.000000 libhxl-4.9/hxl/hxl-default-schema.json
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)     4561 2018-03-29 19:42:28.000000 libhxl-4.9/hxl/geo.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)     2899 2018-06-29 14:04:15.000000 libhxl-4.9/hxl/__init__.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)    27370 2018-05-02 15:51:22.000000 libhxl-4.9/hxl/scripts.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)     7410 2018-05-02 15:51:22.000000 libhxl-4.9/README.md
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)      267 2018-06-29 14:07:55.000000 libhxl-4.9/PKG-INFO
+│ │ +drwxrwxr-x   0 david     (1000) david     (1000)        0 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)      467 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)      398 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)      267 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)        4 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 david     (1000) david     (1000)       47 2015-10-13 15:28:48.000000 libhxl-4.9/libhxl.egg-info/pbr.json
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)       70 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)        1 2018-06-29 14:07:55.000000 libhxl-4.9/libhxl.egg-info/dependency_links.txt
+│ │ +-rwxrwxr-x   0 david     (1000) david     (1000)     1380 2018-06-29 14:04:15.000000 libhxl-4.9/setup.py
+│ │ +-rw-rw-r--   0 david     (1000) david     (1000)       38 2018-06-29 14:07:55.000000 libhxl-4.9/setup.cfg
+│ │   --- libhxl-4.8.4/hxl/validation.py
+│ ├── +++ libhxl-4.9/hxl/validation.py
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/hxl/io.py
+│ ├── +++ libhxl-4.9/hxl/io.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -431,26 +431,54 @@
+│ │      def __exit__(self, value, type, traceback):
+│ │          pass
+│ │  
+│ │  
+│ │  class CSVInput(AbstractInput):
+│ │      """Read raw CSV input from a URL or filename."""
+│ │  
+│ │ +    DELIMITERS = {",", "\t", ";", ":", "|"}
+│ │ +    """Field delimiters allowed"""
+│ │ +
+│ │      def __init__(self, input, encoding='utf-8'):
+│ │          super().__init__()
+│ │ +
+│ │ +        # guess the delimiter
+│ │ +        delimiter = CSVInput.detect_delimiter(input, encoding)
+│ │ +        
+│ │          self._input = io.TextIOWrapper(input, encoding=encoding)
+│ │ -        self._reader = csv.reader(self._input)
+│ │ +        self._reader = csv.reader(self._input, delimiter=delimiter)
+│ │  
+│ │      def __exit__(self, value, type, traceback):
+│ │          self._input.close()
+│ │  
+│ │      def __iter__(self):
+│ │          return self._reader
+│ │  
+│ │ +    @staticmethod
+│ │ +    def detect_delimiter(input, encoding):
+│ │ +        """Detect the CSV delimiter in use
+│ │ +        @param input: the input byte stream (with a peek() method)
+│ │ +        @param encoding: the character encoding to use
+│ │ +        @returns a \L{csv.Dialect} object or string.
+│ │ +        """
+│ │ +        delimiter = ","
+│ │ +        counts = dict()
+│ │ +        max_count = -1
+│ │ +        sample = input.peek(1024).decode(encoding)
+│ │ +        for c in sample:
+│ │ +            if c in CSVInput.DELIMITERS:
+│ │ +                counts[c] = counts.setdefault(c, 0) + 1
+│ │ +                if counts[c] > max_count:
+│ │ +                    max_count = counts[c]
+│ │ +        for c, count in counts.items():
+│ │ +            if count == max_count:
+│ │ +                delimiter = c
+│ │ +        return delimiter
+│ │  
+│ │ +    
+│ │  class JSONInput(AbstractInput):
+│ │      """Iterable: Read raw CSV input from an input stream.
+│ │      The iterable values will be arrays usable as raw input for HXL.
+│ │      """
+│ │  
+│ │      def __init__(self, input, encoding='utf-8', selector=None):
+│ │          """Constructor
+│ │   --- libhxl-4.8.4/hxl/filters.py
+│ ├── +++ libhxl-4.9/hxl/filters.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1978,15 +1978,18 @@
+│ │              """
+│ │              @param original: a string (case- and space-insensitive) or regular expression (sensitive) to replace
+│ │              @param replacement: the replacement string or regular expression substitution
+│ │              @param patterns: (optional) a list of tag patterns to limit the replacement to specific columns
+│ │              @param is_regex: (optional) True to use regular-expression processing (defaults to False)
+│ │              """
+│ │              self.original = original
+│ │ -            self.replacement = replacement
+│ │ +            if replacement is None:
+│ │ +                self.replacement = ''
+│ │ +            else:
+│ │ +                self.replacement = replacement
+│ │              if patterns:
+│ │                  self.patterns = hxl.model.TagPattern.parse_list(patterns)
+│ │              else:
+│ │                  self.patterns = None
+│ │              self.is_regex = is_regex
+│ │              if not self.is_regex:
+│ │                  self.original = hxl.datatypes.normalise_string(self.original)
+│ │   --- libhxl-4.8.4/hxl/datatypes.py
+│ ├── +++ libhxl-4.9/hxl/datatypes.py
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/hxl/model.py
+│ ├── +++ libhxl-4.9/hxl/model.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -19,25 +19,33 @@
+│ │      #tag matches #tag with any attributes
+│ │      #tag+foo matches #tag with foo among its attributes
+│ │      #tag-foo matches #tag with foo *not* among its attributes
+│ │      #tag+foo-bar matches #tag with foo but not bar
+│ │      """
+│ │  
+│ │      # Regular expression to match a HXL tag pattern (including '-' to exclude attributes)
+│ │ -    PATTERN = r'^\s*#?({token}|\*)((?:\s*[+-]{token})*)\s*$'.format(token=hxl.datatypes.TOKEN_PATTERN)
+│ │ +    PATTERN = r'^\s*#?({token}|\*)((?:\s*[+-]{token})*)\s*(!)?\s*$'.format(token=hxl.datatypes.TOKEN_PATTERN)
+│ │  
+│ │ -    def __init__(self, tag, include_attributes=[], exclude_attributes=[]):
+│ │ +    def __init__(self, tag, include_attributes=[], exclude_attributes=[], is_absolute=False):
+│ │          """Like a column, but has a whitelist and a blacklist.
+│ │          @param tag: the basic hashtag (without attributes)
+│ │          @param include_attributes: a list of attributes that must be present
+│ │          @param exclude_attributes: a list of attributes that must not be present
+│ │          """
+│ │ -        self.tag = tag.lower()
+│ │ -        self.include_attributes = [a.lower() for a in include_attributes]
+│ │ -        self.exclude_attributes = [a.lower() for a in exclude_attributes]
+│ │ +        self.tag = tag
+│ │ +        """HXL hashtag, or "#*" for a wildcard"""
+│ │ +
+│ │ +        self.include_attributes = set(include_attributes)
+│ │ +        """Set of all attributes that must be present"""
+│ │ +        
+│ │ +        self.exclude_attributes = set(exclude_attributes)
+│ │ +        """Set of all attributes that must not be present"""
+│ │ +        
+│ │ +        self.is_absolute = is_absolute
+│ │ +        """True if this pattern is absolute (no extra attributes allowed)"""
+│ │  
+│ │      def is_wildcard(self):
+│ │          return self.tag == '#*'
+│ │  
+│ │      def match(self, column):
+│ │          """Check whether a Column matches this pattern.
+│ │          @param column: the column to check
+│ │ @@ -50,14 +58,19 @@
+│ │                      if attribute not in column.attributes:
+│ │                          return False
+│ │              # all exclude_attributes must be absent
+│ │              if self.exclude_attributes:
+│ │                  for attribute in self.exclude_attributes:
+│ │                      if attribute in column.attributes:
+│ │                          return False
+│ │ +            # if absolute, then only specified attributes may be present
+│ │ +            if self.is_absolute:
+│ │ +                for attribute in column.attributes:
+│ │ +                    if attribute not in self.include_attributes:
+│ │ +                        return False
+│ │              return True
+│ │          else:
+│ │              return False
+│ │  
+│ │      def get_matching_columns(self, columns):
+│ │          """Return a list of columns that match the pattern.
+│ │          @param columns: a list of L{hxl.model.Column} objects
+│ │ @@ -107,24 +120,35 @@
+│ │              raise hxl.HXLException('Attempt to parse empty tag pattern')
+│ │          elif isinstance(s, TagPattern):
+│ │              # edge case: already parsed
+│ │              return s
+│ │  
+│ │          result = re.match(TagPattern.PATTERN, s)
+│ │          if result:
+│ │ -            tag = '#' + result.group(1)
+│ │ -            include_attributes = []
+│ │ -            exclude_attributes = []
+│ │ +            tag = '#' + result.group(1).lower()
+│ │ +            include_attributes = set()
+│ │ +            exclude_attributes = set()
+│ │              attribute_specs = re.split(r'\s*([+-])', result.group(2))
+│ │              for i in range(1, len(attribute_specs), 2):
+│ │                  if attribute_specs[i] == '+':
+│ │ -                    include_attributes.append(attribute_specs[i + 1])
+│ │ +                    include_attributes.add(attribute_specs[i + 1].lower())
+│ │                  else:
+│ │ -                    exclude_attributes.append(attribute_specs[i + 1])
+│ │ -            return TagPattern(tag, include_attributes=include_attributes, exclude_attributes=exclude_attributes)
+│ │ +                    exclude_attributes.add(attribute_specs[i + 1].lower())
+│ │ +            if result.group(3) == '!':
+│ │ +                is_absolute = True
+│ │ +                if exclude_attributes:
+│ │ +                    raise ValueError('Exclusions not allowed in absolute patterns')
+│ │ +            else:
+│ │ +                is_absolute = False
+│ │ +            return TagPattern(
+│ │ +                tag,
+│ │ +                include_attributes=include_attributes,
+│ │ +                exclude_attributes=exclude_attributes,
+│ │ +                is_absolute=is_absolute
+│ │ +            )
+│ │          else:
+│ │              raise hxl.HXLException('Malformed tag: ' + s)
+│ │  
+│ │      @staticmethod
+│ │      def parse_list(specs):
+│ │          """
+│ │          Normalise a list of tag specs.
+│ │   --- libhxl-4.8.4/hxl/converters.py
+│ ├── +++ libhxl-4.9/hxl/converters.py
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/hxl/hxl-default-schema.json
+│ ├── +++ libhxl-4.9/hxl/hxl-default-schema.json
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/hxl/geo.py
+│ ├── +++ libhxl-4.9/hxl/geo.py
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/hxl/__init__.py
+│ ├── +++ libhxl-4.9/hxl/__init__.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -41,15 +41,15 @@
+│ │  """
+│ │  
+│ │  import sys
+│ │  
+│ │  if sys.version_info < (3,):
+│ │      raise RuntimeError("libhxl requires Python 3 or higher")
+│ │  
+│ │ -__version__="4.8.4"
+│ │ +__version__="4.9"
+│ │  """Module version number
+│ │  see https://www.python.org/dev/peps/pep-0396/
+│ │  """
+│ │  
+│ │  # Flatten out common items for easier access
+│ │  
+│ │  class HXLException(Exception):
+│ │   --- libhxl-4.8.4/hxl/scripts.py
+│ ├── +++ libhxl-4.9/hxl/scripts.py
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/README.md
+│ ├── +++ libhxl-4.9/README.md
+│ │┄ Files identical despite different names
+│ │   --- libhxl-4.8.4/setup.py
+│ ├── +++ libhxl-4.9/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │  from setuptools import setup
+│ │  import sys
+│ │  
+│ │  if sys.version_info < (3,):
+│ │      raise RuntimeError("libhxl requires Python 3 or higher")
+│ │  
+│ │  setup(name='libhxl',
+│ │ -      version="4.8.4",
+│ │ +      version="4.9",
+│ │        description='Python support for the Humanitarian Exchange Language (HXL).',
+│ │        author='David Megginson',
+│ │        author_email='contact@megginson.com',
+│ │        url='http://hxlproject.org',
+│ │        install_requires=['python-dateutil', 'xlrd', 'requests', 'unidecode', 'python-io-wrapper', 'jsonpath_rw'],
+│ │        packages=['hxl'],
+│ │        package_data={'hxl': ['*.json']},

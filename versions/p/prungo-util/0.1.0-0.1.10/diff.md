@@ -1,0 +1,118 @@
+# Comparing `tmp/prungo_util-0.1.0.tar.gz` & `tmp/prungo_util-0.1.10.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "prungo_util-0.1.0.tar", max compression
++gzip compressed data, was "prungo_util-0.1.10.tar", max compression
+```
+
+## Comparing `prungo_util-0.1.0.tar` & `prungo_util-0.1.10.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rwxr-xr-x   0        0        0     1497 2023-04-06 11:17:49.949655 prungo_util-0.1.0/LICENSE
+--rwxr-xr-x   0        0        0       58 2023-04-06 09:17:54.605173 prungo_util-0.1.0/README.md
+--rwxr-xr-x   0        0        0        0 2023-04-06 11:29:13.811938 prungo_util-0.1.0/prungo_util/__init__.py
+--rwxr-xr-x   0        0        0      631 2023-04-06 11:28:51.102800 prungo_util-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0      628 1970-01-01 00:00:00.000000 prungo_util-0.1.0/setup.py
+--rw-r--r--   0        0        0      681 1970-01-01 00:00:00.000000 prungo_util-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1497 2023-04-06 13:45:34.587236 prungo_util-0.1.10/LICENSE
++-rw-r--r--   0        0        0       58 2023-04-06 13:45:34.587236 prungo_util-0.1.10/README.md
++-rw-r--r--   0        0        0        0 2023-04-06 13:45:34.587236 prungo_util-0.1.10/prungo_util/__init__.py
++-rw-r--r--   0        0        0      683 2023-04-06 13:45:51.087496 prungo_util-0.1.10/pyproject.toml
++-rw-r--r--   0        0        0      629 1970-01-01 00:00:00.000000 prungo_util-0.1.10/setup.py
++-rw-r--r--   0        0        0      682 1970-01-01 00:00:00.000000 prungo_util-0.1.10/PKG-INFO
+```
+
+### Comparing `prungo_util-0.1.0/LICENSE` & `prungo_util-0.1.10/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `prungo_util-0.1.0/pyproject.toml` & `prungo_util-0.1.10/pyproject.toml`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,26 +1,29 @@
+ [tool.poetry]
+ name = "prungo-util"
+-version = "0.1.0"
++version = "0.1.10"
+ description = "A package for basic utility functions/classes"
+ authors = ["c-prungo"]
+ packages = [{include = "prungo_util"}]
+ license = "MIT"
+ readme = "README.md"
+ homepage = "https://github.com/c-prungo/prungo-util"
+ repository = "https://github.com/c-prungo/prungo-util"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: MIT License",
+     "Operating System :: OS Independent",
+ ]
+-include = [
+-    "LICENSE",
+-]
++include = ["LICENSE"]
++
+ 
+ [tool.poetry.dependencies]
+ python = "^3.10"
+ 
+ 
++[tool.poetry.group.dev.dependencies]
++pytest = "^7.2.2"
++
++
+ [build-system]
+ requires = ["poetry-core"]
+ build-backend = "poetry.core.masonry.api"
+```
+
+### Comparing `prungo_util-0.1.0/setup.py` & `prungo_util-0.1.10/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -5,15 +5,15 @@
+ ['prungo_util']
+ 
+ package_data = \
+ {'': ['*']}
+ 
+ setup_kwargs = {
+     'name': 'prungo-util',
+-    'version': '0.1.0',
++    'version': '0.1.10',
+     'description': 'A package for basic utility functions/classes',
+     'long_description': '# prungo-util\nutility package for importing into projects\n',
+     'author': 'c-prungo',
+     'author_email': 'None',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/c-prungo/prungo-util',
+```
+
+### Comparing `prungo_util-0.1.0/PKG-INFO` & `prungo_util-0.1.10/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: prungo-util
+-Version: 0.1.0
++Version: 0.1.10
+ Summary: A package for basic utility functions/classes
+ Home-page: https://github.com/c-prungo/prungo-util
+ License: MIT
+ Author: c-prungo
+ Requires-Python: >=3.10,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+

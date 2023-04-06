@@ -1,0 +1,185 @@
+# Comparing `tmp/broker_grpc_lib-0.3.2.tar.gz` & `tmp/broker_grpc_lib-0.3.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "broker_grpc_lib-0.3.2.tar", last modified: Thu Apr  6 13:41:13 2023, max compression
++gzip compressed data, was "broker_grpc_lib-0.3.3.tar", last modified: Thu Apr  6 13:48:54 2023, max compression
+```
+
+## Comparing `broker_grpc_lib-0.3.2.tar` & `broker_grpc_lib-0.3.3.tar`
+
+### file list
+
+```diff
+@@ -1,34 +1,34 @@
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.487827 broker_grpc_lib-0.3.2/
+--rw-r--r--   0 evgenykond   (501) staff       (20)      462 2023-04-06 13:41:13.487666 broker_grpc_lib-0.3.2/PKG-INFO
+--rw-r--r--   0 evgenykond   (501) staff       (20)      578 2023-04-06 07:45:45.000000 broker_grpc_lib-0.3.2/README.md
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.482834 broker_grpc_lib-0.3.2/broker_grpc_lib/
+--rw-r--r--   0 evgenykond   (501) staff       (20)      284 2023-04-03 07:54:32.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/__init__.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.484202 broker_grpc_lib-0.3.2/broker_grpc_lib/exc/
+--rw-r--r--   0 evgenykond   (501) staff       (20)      152 2023-03-31 07:43:54.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/exc/__init__.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)      153 2023-03-31 07:43:54.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/exc/no_queue_exception.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.485200 broker_grpc_lib-0.3.2/broker_grpc_lib/lib/
+--rw-r--r--   0 evgenykond   (501) staff       (20)      205 2023-04-03 07:50:47.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/lib/__init__.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)     1521 2023-04-03 08:03:27.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/lib/broker_handler.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)      808 2023-04-05 08:36:30.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/lib/grpc_client.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)     5983 2023-04-06 13:41:12.000000 broker_grpc_lib-0.3.2/broker_grpc_lib/lib/rabbitmq_handler.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.483766 broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/
+--rw-r--r--   0 evgenykond   (501) staff       (20)      462 2023-04-06 13:41:13.000000 broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/PKG-INFO
+--rw-r--r--   0 evgenykond   (501) staff       (20)      726 2023-04-06 13:41:13.000000 broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/SOURCES.txt
+--rw-r--r--   0 evgenykond   (501) staff       (20)        1 2023-04-06 13:41:13.000000 broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/dependency_links.txt
+--rw-r--r--   0 evgenykond   (501) staff       (20)       48 2023-04-06 13:41:13.000000 broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/requires.txt
+--rw-r--r--   0 evgenykond   (501) staff       (20)       22 2023-04-06 13:41:13.000000 broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/top_level.txt
+--rw-r--r--   0 evgenykond   (501) staff       (20)       38 2023-04-06 13:41:13.487877 broker_grpc_lib-0.3.2/setup.cfg
+--rw-r--r--   0 evgenykond   (501) staff       (20)      687 2023-04-06 13:41:12.000000 broker_grpc_lib-0.3.2/setup.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.485355 broker_grpc_lib-0.3.2/tests/
+--rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-03-31 08:10:22.000000 broker_grpc_lib-0.3.2/tests/__init__.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.485595 broker_grpc_lib-0.3.2/tests/functional/
+--rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 07:09:07.000000 broker_grpc_lib-0.3.2/tests/functional/__init__.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 07:12:35.000000 broker_grpc_lib-0.3.2/tests/functional/test_rabbitmq_handler.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.486188 broker_grpc_lib-0.3.2/tests/helpers/
+--rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 06:23:34.000000 broker_grpc_lib-0.3.2/tests/helpers/__init__.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)      323 2023-04-06 07:11:07.000000 broker_grpc_lib-0.3.2/tests/helpers/async_iterator.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 09:03:49.000000 broker_grpc_lib-0.3.2/tests/helpers/grpc_stub.py
+-drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:41:13.486952 broker_grpc_lib-0.3.2/tests/units/
+--rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-04 08:55:35.000000 broker_grpc_lib-0.3.2/tests/units/__init__.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)     2255 2023-04-05 11:45:02.000000 broker_grpc_lib-0.3.2/tests/units/test_grpc_client.py
+--rw-r--r--   0 evgenykond   (501) staff       (20)    19569 2023-04-06 07:11:07.000000 broker_grpc_lib-0.3.2/tests/units/test_rabbitmq_handler.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.408432 broker_grpc_lib-0.3.3/
++-rw-r--r--   0 evgenykond   (501) staff       (20)      462 2023-04-06 13:48:54.408280 broker_grpc_lib-0.3.3/PKG-INFO
++-rw-r--r--   0 evgenykond   (501) staff       (20)      578 2023-04-06 07:45:45.000000 broker_grpc_lib-0.3.3/README.md
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.403944 broker_grpc_lib-0.3.3/broker_grpc_lib/
++-rw-r--r--   0 evgenykond   (501) staff       (20)      284 2023-04-03 07:54:32.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/__init__.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.405269 broker_grpc_lib-0.3.3/broker_grpc_lib/exc/
++-rw-r--r--   0 evgenykond   (501) staff       (20)      152 2023-03-31 07:43:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/exc/__init__.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)      153 2023-03-31 07:43:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/exc/no_queue_exception.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.406312 broker_grpc_lib-0.3.3/broker_grpc_lib/lib/
++-rw-r--r--   0 evgenykond   (501) staff       (20)      205 2023-04-03 07:50:47.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/lib/__init__.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)     1521 2023-04-03 08:03:27.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/lib/broker_handler.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)      808 2023-04-05 08:36:30.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/lib/grpc_client.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)     6008 2023-04-06 13:48:51.000000 broker_grpc_lib-0.3.3/broker_grpc_lib/lib/rabbitmq_handler.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.404827 broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/
++-rw-r--r--   0 evgenykond   (501) staff       (20)      462 2023-04-06 13:48:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/PKG-INFO
++-rw-r--r--   0 evgenykond   (501) staff       (20)      726 2023-04-06 13:48:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/SOURCES.txt
++-rw-r--r--   0 evgenykond   (501) staff       (20)        1 2023-04-06 13:48:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/dependency_links.txt
++-rw-r--r--   0 evgenykond   (501) staff       (20)       48 2023-04-06 13:48:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/requires.txt
++-rw-r--r--   0 evgenykond   (501) staff       (20)       22 2023-04-06 13:48:54.000000 broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/top_level.txt
++-rw-r--r--   0 evgenykond   (501) staff       (20)       38 2023-04-06 13:48:54.408476 broker_grpc_lib-0.3.3/setup.cfg
++-rw-r--r--   0 evgenykond   (501) staff       (20)      687 2023-04-06 13:48:51.000000 broker_grpc_lib-0.3.3/setup.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.406477 broker_grpc_lib-0.3.3/tests/
++-rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-03-31 08:10:22.000000 broker_grpc_lib-0.3.3/tests/__init__.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.406724 broker_grpc_lib-0.3.3/tests/functional/
++-rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 07:09:07.000000 broker_grpc_lib-0.3.3/tests/functional/__init__.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 07:12:35.000000 broker_grpc_lib-0.3.3/tests/functional/test_rabbitmq_handler.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.407242 broker_grpc_lib-0.3.3/tests/helpers/
++-rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 06:23:34.000000 broker_grpc_lib-0.3.3/tests/helpers/__init__.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)      323 2023-04-06 07:11:07.000000 broker_grpc_lib-0.3.3/tests/helpers/async_iterator.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-06 09:03:49.000000 broker_grpc_lib-0.3.3/tests/helpers/grpc_stub.py
++drwxr-xr-x   0 evgenykond   (501) staff       (20)        0 2023-04-06 13:48:54.407758 broker_grpc_lib-0.3.3/tests/units/
++-rw-r--r--   0 evgenykond   (501) staff       (20)        0 2023-04-04 08:55:35.000000 broker_grpc_lib-0.3.3/tests/units/__init__.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)     2255 2023-04-05 11:45:02.000000 broker_grpc_lib-0.3.3/tests/units/test_grpc_client.py
++-rw-r--r--   0 evgenykond   (501) staff       (20)    19569 2023-04-06 07:11:07.000000 broker_grpc_lib-0.3.3/tests/units/test_rabbitmq_handler.py
+```
+
+### Comparing `broker_grpc_lib-0.3.2/README.md` & `broker_grpc_lib-0.3.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `broker_grpc_lib-0.3.2/broker_grpc_lib/lib/broker_handler.py` & `broker_grpc_lib-0.3.3/broker_grpc_lib/lib/broker_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `broker_grpc_lib-0.3.2/broker_grpc_lib/lib/grpc_client.py` & `broker_grpc_lib-0.3.3/broker_grpc_lib/lib/grpc_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `broker_grpc_lib-0.3.2/broker_grpc_lib/lib/rabbitmq_handler.py` & `broker_grpc_lib-0.3.3/broker_grpc_lib/lib/rabbitmq_handler.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -62,14 +62,21 @@
+     async def __init_pools(self) -> bool:
+         self._connection_pool = Pool(self.__get_connection, max_size=self._max_connections, loop=self._loop)
+         self._channel_pool = Pool(self.__get_channel, max_size=self._max_channels, loop=self._loop)
+ 
+         return True
+ 
+     async def __init_queues(self) -> bool:
++        while True:
++            if not self._channel_pool:
++                logging.error("Channel pool is not initialized yet. Retrying in 5 sec.")
++                await asyncio.sleep(5)
++                continue
++            break
++
+         for _ in range(self._max_channels):
+             async with self._channel_pool.acquire() as channel:
+                 if self._read_queue_name:
+                     await channel.declare_queue(self._read_queue_name)
+                 if self._write_queue_name:
+                     await channel.declare_queue(self._write_queue_name)
+                 if self._callback_queue_name:
+@@ -98,21 +105,16 @@
+ 
+                 return connection
+         except AMQPConnectionError:
+             logging.error("Failed to connect to RabbitMQ. Retrying in 5 sec.")
+             await asyncio.sleep(5)
+ 
+     async def __get_channel(self) -> Channel:
+-        while True:
+-            if not self._connection_pool:
+-                logging.error("No connection pool. Retrying in 5 sec.")
+-                await asyncio.sleep(5)
+-                continue
+-            async with self._connection_pool.acquire() as connection:
+-                return await connection.channel()
++        async with self._connection_pool.acquire() as connection:
++            return await connection.channel()
+ 
+     async def start(self):
+         if not self._read_queue_name:
+             raise NoReadQueueException("No read queue")
+ 
+         async with self._channel_pool.acquire() as channel:
+             queue = await channel.get_queue(self._read_queue_name)
+```
+
+### Comparing `broker_grpc_lib-0.3.2/broker_grpc_lib.egg-info/SOURCES.txt` & `broker_grpc_lib-0.3.3/broker_grpc_lib.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `broker_grpc_lib-0.3.2/setup.py` & `broker_grpc_lib-0.3.3/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ from setuptools import setup, find_packages
+ 
+ 
+ setup(
+     name="broker_grpc_lib",
+-    version="0.3.2",
++    version="0.3.3",
+     description="Python package for easier use message brokers with gRPC application",
+     author="multiadmin_optimus_prime",
+     author_email="evgenykond@gmail.com",
+     packages=find_packages(),
+     install_requires=[
+         "pydantic>=1.10.4",
+         "aio-pika>=9.0.5",
+```
+
+### Comparing `broker_grpc_lib-0.3.2/tests/units/test_grpc_client.py` & `broker_grpc_lib-0.3.3/tests/units/test_grpc_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `broker_grpc_lib-0.3.2/tests/units/test_rabbitmq_handler.py` & `broker_grpc_lib-0.3.3/tests/units/test_rabbitmq_handler.py`
+
+ * *Files identical despite different names*
+

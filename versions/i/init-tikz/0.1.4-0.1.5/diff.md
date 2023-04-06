@@ -1,0 +1,56 @@
+# Comparing `tmp/init_tikz-0.1.4.tar.gz` & `tmp/init_tikz-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "init_tikz-0.1.4.tar", max compression
++gzip compressed data, was "init_tikz-0.1.5.tar", max compression
+```
+
+## Comparing `init_tikz-0.1.4.tar` & `init_tikz-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,7 +1,7 @@
+--rw-r--r--   0        0        0        0 2023-04-05 14:55:28.543442 init_tikz-0.1.4/README.md
+--rw-r--r--   0        0        0        0 2023-04-05 14:55:28.543377 init_tikz-0.1.4/init_tikz/__init__.py
+--rw-r--r--   0        0        0       51 2023-04-05 14:56:28.216356 init_tikz-0.1.4/init_tikz/__main__.py
+--rw-r--r--   0        0        0     2017 2023-04-05 16:07:00.465294 init_tikz-0.1.4/init_tikz/functions_tex.py
+--rw-r--r--   0        0        0     1840 2023-04-05 18:22:33.676909 init_tikz-0.1.4/init_tikz/main.py
+--rw-r--r--   0        0        0      368 2023-04-05 18:22:47.214671 init_tikz-0.1.4/pyproject.toml
+--rw-r--r--   0        0        0      293 1970-01-01 00:00:00.000000 init_tikz-0.1.4/PKG-INFO
++-rw-r--r--   0        0        0        0 2023-04-05 14:55:28.543442 init_tikz-0.1.5/README.md
++-rw-r--r--   0        0        0        0 2023-04-05 14:55:28.543377 init_tikz-0.1.5/init_tikz/__init__.py
++-rw-r--r--   0        0        0       51 2023-04-05 14:56:28.216356 init_tikz-0.1.5/init_tikz/__main__.py
++-rw-r--r--   0        0        0     2017 2023-04-05 16:07:00.465294 init_tikz-0.1.5/init_tikz/functions_tex.py
++-rw-r--r--   0        0        0     1872 2023-04-06 04:07:05.439820 init_tikz-0.1.5/init_tikz/main.py
++-rw-r--r--   0        0        0      368 2023-04-06 04:08:17.969951 init_tikz-0.1.5/pyproject.toml
++-rw-r--r--   0        0        0      293 1970-01-01 00:00:00.000000 init_tikz-0.1.5/PKG-INFO
+```
+
+### Comparing `init_tikz-0.1.4/init_tikz/functions_tex.py` & `init_tikz-0.1.5/init_tikz/functions_tex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `init_tikz-0.1.4/init_tikz/main.py` & `init_tikz-0.1.5/init_tikz/main.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -50,15 +50,15 @@
+         file.write(f'\\end{{center}}\n')
+         file.write(f'\\vspace*{{\\fill}}\n')
+ 
+         file.write(f'\\pagebreak\n')
+ 
+         
+         file.write(f'\\vspace*{{\\fill}}\n')
+-        file.write(f'\\inputminted[tabsize=4, breaklines]{{tex}}{{tikz-1.tex}}\n')
++        file.write(f'\\inputminted[tabsize=4, breaklines, linenos=true, fontsize=\\small]{{tex}}{{tikz-1.tex}}\n')
+         file.write(f'\\vspace*{{\\fill}}\n')
+ 
+         file.write(f'\\end{{document}}')
+```
+

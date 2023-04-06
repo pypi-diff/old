@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/nowcasting_forecast-1.3.1.tar.gz tmp/nowcasting_forecast-1.3.2.tar.gz --html versions/n/nowcasting-forecast/1.3.1-1.3.2/index.html --text versions/n/nowcasting-forecast/1.3.1-1.3.2/diff.txt --markdown versions/n/nowcasting-forecast/1.3.1-1.3.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.2 KB</span></div>
+  <div><span class="source">tmp/nowcasting_forecast-1.3.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/nowcasting_forecast-1.3.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">288 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nowcasting_forecast-1.3.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nowcasting_forecast-1.3.<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.9 KB</span></div>
+    <div><span class="source">nowcasting_forecast-1.3.1.tar</span> vs.</div>
+    <div id="nowcasting_forecast--.-.-.tar"><span class="source">nowcasting_forecast-1.3.2.tar</span>
+      <a class="anchor" href="#nowcasting_forecast--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">7.85 KB</span></div>
+      <div id="nowcasting_forecast--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 29 lines modified</td><td colspan="2">Offset 1, 29 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>88797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5142<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5142<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>88797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4779<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4779<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>84797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7243<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/app.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7243<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2711<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/batch.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2711<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/batch.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1671<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/dataloader.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1671<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/dataloader.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/models/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>88797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/models/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/models/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4862<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/models/hub.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4862<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/models/hub.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2141<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/models/nwp_solar_simple.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2141<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/models/nwp_solar_simple.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4100<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/models/sun.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4100<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/models/sun.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9548<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/models/utils.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9548<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/models/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>558<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast/utils.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>558<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast.egg-info/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>84797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5142<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast.egg-info/PKG-INFO</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5142<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>648<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast.egg-info/SOURCES.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>648<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast.egg-info/dependency_links.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>257<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast.egg-info/requires.txt</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>257<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/nowcasting_forecast.egg-info/top_level.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/nowcasting_forecast.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>257<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/requirements.txt</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>257<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/setup.cfg</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>88797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/setup.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:<del>25</del>.4<del>65550</del><span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/tests/</td><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:<ins>30</ins>.4<ins>88797</ins><span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4656<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/tests/test_app.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4656<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/tests/test_app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5241<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>1<del>2</del>:<del>06</del>:1<del>4</del>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<del>1</del>/tests/test_batch.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5241<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>1<ins>3</ins>:<ins>50</ins>:1<ins>7</ins>.000000<span class="dp">·</span>nowcasting_forecast-1.3.<ins>2</ins>/tests/test_batch.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/LICENSE</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--LICENSE"><span class="source">nowcasting_forecast-1.3.2/LICENSE</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">492 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/PKG-INFO</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--PKG-INFO"><span class="source">nowcasting_forecast-1.3.2/PKG-INFO</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting_forecast</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting_forecast</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.3.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.3.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Live<span class="dp">·</span>forecast<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Live<span class="dp">·</span>forecast<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_forecast</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_forecast</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,forecast</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,forecast</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/README.md</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--README.md"><span class="source">nowcasting_forecast-1.3.2/README.md</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/app.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-app.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/app.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/batch.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-batch.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/batch.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-batch.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/dataloader.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-dataloader.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/dataloader.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-dataloader.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/models/hub.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-hub.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/models/hub.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-hub.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">183 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/models/nwp_solar_simple.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-nwp_solar_simple.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/models/nwp_solar_simple.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-nwp_solar_simple.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/models/sun.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-sun.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/models/sun.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-sun.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/models/utils.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-utils.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/models/utils.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-models-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast/utils.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-utils.py"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast/utils.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">550 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/PKG-INFO</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast.egg-info-PKG-INFO"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting-forecast</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nowcasting-forecast</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.3.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.3.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Live<span class="dp">·</span>forecast<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Live<span class="dp">·</span>forecast<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>OCF<span class="dp">·</span>nowcasting<span class="dp">·</span>project</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_forecast</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/openclimatefix/nowcasting_forecast</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Peter<span class="dp">·</span>Dudfield</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>peter@openclimatefix.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,forecast</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,forecast</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">10 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/nowcasting_forecast.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast.egg-info-SOURCES.txt"><span class="source">nowcasting_forecast-1.3.2/nowcasting_forecast.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--nowcasting_forecast.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/setup.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--setup.py"><span class="source">nowcasting_forecast-1.3.2/setup.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/tests/test_app.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--tests-test_app.py"><span class="source">nowcasting_forecast-1.3.2/tests/test_app.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--tests-test_app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">nowcasting_forecast-1.3.1/tests/test_batch.py</span> vs.</div>
+      <div id="nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--tests-test_batch.py"><span class="source">nowcasting_forecast-1.3.2/tests/test_batch.py</span>
+        <a class="anchor" href="#nowcasting_forecast--.-.-.tar---nowcasting_forecast--.-.--tests-test_batch.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,209 @@
+# Comparing `tmp/odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2-py3-none-any.whl.zip` & `tmp/odoo14_addon_account_cash_discount_payment-14.0.1.0.2-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,27 +1,27 @@
+-Zip file size: 31612 bytes, number of entries: 25
+--rw-r--r--  2.0 unx     3342 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/README.rst
+--rw-r--r--  2.0 unx       43 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/__init__.py
+--rw-r--r--  2.0 unx      576 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/__manifest__.py
+--rw-r--r--  2.0 unx     6287 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/i18n/account_cash_discount_payment.pot
+--rw-r--r--  2.0 unx     4985 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/i18n/fr.po
+--rw-r--r--  2.0 unx       94 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/models/__init__.py
+--rw-r--r--  2.0 unx      938 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/models/account_move.py
+--rw-r--r--  2.0 unx      950 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/models/account_move_line.py
+--rw-r--r--  2.0 unx     5327 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/models/account_payment_line.py
+--rw-r--r--  2.0 unx      230 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx      460 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx     9455 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/static/description/icon.png
+--rw-r--r--  2.0 unx    12752 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/static/description/index.html
+--rw-r--r--  2.0 unx       70 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/tests/__init__.py
+--rw-r--r--  2.0 unx     2060 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/tests/common.py
+--rw-r--r--  2.0 unx     3111 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/tests/test_account_cash_discount_payment.py
+--rw-r--r--  2.0 unx      939 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/views/account_move_line.xml
+--rw-r--r--  2.0 unx     3154 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/views/account_payment_line.xml
+--rw-r--r--  2.0 unx       42 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/wizards/__init__.py
+--rw-r--r--  2.0 unx     1325 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.py
+--rw-r--r--  2.0 unx     1418 b- defN 21-Oct-31 11:44 odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.xml
+--rw-r--r--  2.0 unx     4013 b- defN 21-Oct-31 11:44 odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 21-Oct-31 11:44 odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 21-Oct-31 11:44 odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3053 b- defN 21-Oct-31 11:44 odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/RECORD
+-25 files, 64721 bytes uncompressed, 26290 bytes compressed:  59.4%
++Zip file size: 31600 bytes, number of entries: 25
++-rw-r--r--  2.0 unx     3342 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/README.rst
++-rw-r--r--  2.0 unx       43 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/__init__.py
++-rw-r--r--  2.0 unx      591 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/__manifest__.py
++-rw-r--r--  2.0 unx     6287 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/i18n/account_cash_discount_payment.pot
++-rw-r--r--  2.0 unx     4985 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/i18n/fr.po
++-rw-r--r--  2.0 unx       94 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/models/__init__.py
++-rw-r--r--  2.0 unx      938 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/models/account_move.py
++-rw-r--r--  2.0 unx      950 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/models/account_move_line.py
++-rw-r--r--  2.0 unx     5327 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/models/account_payment_line.py
++-rw-r--r--  2.0 unx      230 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx      460 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx     9455 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/static/description/icon.png
++-rw-r--r--  2.0 unx    12752 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/static/description/index.html
++-rw-r--r--  2.0 unx       70 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/tests/__init__.py
++-rw-r--r--  2.0 unx     2101 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/tests/common.py
++-rw-r--r--  2.0 unx     3111 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/tests/test_account_cash_discount_payment.py
++-rw-r--r--  2.0 unx      939 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/views/account_move_line.xml
++-rw-r--r--  2.0 unx     3154 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/views/account_payment_line.xml
++-rw-r--r--  2.0 unx       42 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/wizards/__init__.py
++-rw-r--r--  2.0 unx     1325 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.py
++-rw-r--r--  2.0 unx     1418 b- defN 23-Apr-06 13:51 odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.xml
++-rw-r--r--  2.0 unx     4023 b- defN 23-Apr-06 13:51 odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 13:51 odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 13:51 odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3033 b- defN 23-Apr-06 13:51 odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/RECORD
++25 files, 64767 bytes uncompressed, 26318 bytes compressed:  59.4%
+```
+
+## zipnote {}
+
+```diff
+@@ -57,20 +57,20 @@
+ 
+ Filename: odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.py
+ Comment: 
+ 
+ Filename: odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.xml
+ Comment: 
+ 
+-Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/METADATA
++Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/WHEEL
++Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/top_level.txt
++Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/RECORD
++Filename: odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/account_cash_discount_payment/__manifest__.py
+
+```diff
+@@ -1,17 +1,17 @@
+ # Copyright 2018 ACSONE SA/NV
+ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+ 
+ {
+     "name": "Account Cash Discount Payment",
+-    "version": "14.0.1.0.0",
++    "version": "14.0.1.0.2",
+     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
+     "website": "https://github.com/OCA/account-payment",
+     "license": "AGPL-3",
+     "category": "Accounting",
+-    "depends": ["account_cash_discount_base", "account_payment_order"],
++    "depends": ["account_cash_discount_base", "account_payment_order_grouped_output"],
+     "data": [
+         "views/account_move_line.xml",
+         "views/account_payment_line.xml",
+         "wizards/account_payment_line_create.xml",
+     ],
+ }
+```
+
+## odoo/addons/account_cash_discount_payment/tests/common.py
+
+```diff
+@@ -36,14 +36,15 @@
+ 
+         invoice_form = Form(
+             self.AccountMove.with_context(
+                 default_move_type="in_invoice",
+                 default_company_id=self.company.id,
+                 default_journal_id=self.purchase_journal.id,
+                 default_payment_mode_id=payment_mode.id,
++                default_ref="reference",
+             )
+         )
+         invoice_form.partner_id = self.partner_agrolait
+         invoice_form.invoice_date = date
+         invoice_form.discount_due_date = date
+         invoice_form.discount_percent = discount_percent
+```
+
+## Comparing `odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/METADATA` & `odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/METADATA`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,23 +1,23 @@
+ Metadata-Version: 2.1
+ Name: odoo14-addon-account-cash-discount-payment
+-Version: 14.0.1.0.1.dev2
++Version: 14.0.1.0.2
+ Summary: Account Cash Discount Payment
+ Home-page: https://github.com/OCA/account-payment
+ Author: ACSONE SA/NV,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+ Classifier: Framework :: Odoo
+ Classifier: Framework :: Odoo :: 14.0
+ Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+ Requires-Python: >=3.6
+ Requires-Dist: odoo14-addon-account-cash-discount-base
+-Requires-Dist: odoo14-addon-account-payment-order
++Requires-Dist: odoo14-addon-account-payment-order-grouped-output
+ Requires-Dist: odoo (<14.1dev,>=14.0a)
+ 
+ =============================
+ Account Cash Discount Payment
+ =============================
+ 
+ .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+```
+
+## Comparing `odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/RECORD` & `odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/RECORD`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,25 +1,25 @@
+ odoo/addons/account_cash_discount_payment/README.rst,sha256=zbZMV8gHRGDWlC3j8shLhTxMrUnxTlskF5wg-rpfoDY,3342
+ odoo/addons/account_cash_discount_payment/__init__.py,sha256=0XNpxETgFdVxFDEw03O8oL3NtTSk3we-HEZW2sPKzIU,43
+-odoo/addons/account_cash_discount_payment/__manifest__.py,sha256=tN04fmCJhkzxbfZejRlDXr1PZr_l3W2JmUszBc5P_vI,576
++odoo/addons/account_cash_discount_payment/__manifest__.py,sha256=KZIMQps2oAZU-pQ9UAqdQYW-lxK2SzP6qsrHjfFRhI0,591
+ odoo/addons/account_cash_discount_payment/i18n/account_cash_discount_payment.pot,sha256=8IUcN0XZokzBxq_Vqw3Yx7qLjhEUOaPKND9QG5gZzP4,6287
+ odoo/addons/account_cash_discount_payment/i18n/fr.po,sha256=1_Ja4fIoWlsE36rBvGT3zjFEx8RiCgFCxIzQgq-eyuE,4985
+ odoo/addons/account_cash_discount_payment/models/__init__.py,sha256=iqg0Va5K7aOJXF2_YkpE_SMCKHxpJzux6R0GC_67EtA,94
+ odoo/addons/account_cash_discount_payment/models/account_move.py,sha256=tfnoZcgSpbpQlND2hhFJVZk7Y9XmgWEL-Mo-eDyLkpw,938
+ odoo/addons/account_cash_discount_payment/models/account_move_line.py,sha256=p_A_Y28XnL5x57bcAGAsL91U2WFtosuYSbhugD7F-Y8,950
+ odoo/addons/account_cash_discount_payment/models/account_payment_line.py,sha256=b3nyBLj8iscckTZEJy4YD3IXZheaXZFBvdXVgZHqAFo,5327
+ odoo/addons/account_cash_discount_payment/readme/CONTRIBUTORS.rst,sha256=6CvR5kz70AQYeyPdh6iJQ8uF3hQ2S6SSijLhjxSrJ8o,230
+ odoo/addons/account_cash_discount_payment/readme/DESCRIPTION.rst,sha256=DCM4NOGhEb5TquayY9qjnWPIeG1vDZ0ffs_jT_LUx68,460
+ odoo/addons/account_cash_discount_payment/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+ odoo/addons/account_cash_discount_payment/static/description/index.html,sha256=V0Td2PBLI4a9SSdzLbYD4mm20-UySF3yTBnmW9uao2Q,12752
+ odoo/addons/account_cash_discount_payment/tests/__init__.py,sha256=0t9JNJ7M-Bvc8IuL8ncA_7liTGUgvzw03G2EW7MENUE,70
+-odoo/addons/account_cash_discount_payment/tests/common.py,sha256=oTF0NJvJqJpYfyIa29w3jehdlguMnkSIsfJlvB2lZjE,2060
++odoo/addons/account_cash_discount_payment/tests/common.py,sha256=mkchihjgXFzAugL2jJG6QyIj5_lN4Ov-tZBmmGggwjw,2101
+ odoo/addons/account_cash_discount_payment/tests/test_account_cash_discount_payment.py,sha256=hnICf4OoR7GgJvJpDxOFRS1lmAfV01IfHnWo2wUp3nQ,3111
+ odoo/addons/account_cash_discount_payment/views/account_move_line.xml,sha256=drB4d9dy9Hl59KhkynDdy7bUyDCoXTOjbivLcD9RbbE,939
+ odoo/addons/account_cash_discount_payment/views/account_payment_line.xml,sha256=W_BDEfaoVOUFbUh6fMSyGpUdAOkzFc736HZfqNuD_LM,3154
+ odoo/addons/account_cash_discount_payment/wizards/__init__.py,sha256=KguSY1J-kUIRelmIbppkn5MUzd8gF07aj82rYrs9vbI,42
+ odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.py,sha256=rdEN0WZBQQoCU_J1zgpcDe2_2niQs5TVyfUC081iaI4,1325
+ odoo/addons/account_cash_discount_payment/wizards/account_payment_line_create.xml,sha256=lrIk5s7GcW51AzCU_GKzVPhLksg5KU20puppKI0EO-4,1418
+-odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/METADATA,sha256=IC6IyYEB0Mx6kwUMQ5iwlGuchBX7l8vdJhB7ZdJPmWk,4013
+-odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+-odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo14_addon_account_cash_discount_payment-14.0.1.0.1.dev2.dist-info/RECORD,,
++odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/METADATA,sha256=S9S6V80SC_2rvytOh0qNGwR0ldEnmRmCcz3vdSVNoFU,4023
++odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo14_addon_account_cash_discount_payment-14.0.1.0.2.dist-info/RECORD,,
+```
+
