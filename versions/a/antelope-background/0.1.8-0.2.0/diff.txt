@@ -1,0 +1,658 @@
+--- tmp/antelope_background-0.1.8.tar.gz
++++ tmp/antelope_background-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "antelope_background-0.1.8.tar", last modified: Fri Apr  8 20:04:03 2022, max compression
+│ +gzip compressed data, was "antelope_background-0.2.0.tar", last modified: Thu Apr  6 23:20:17 2023, max compression
+│   --- antelope_background-0.1.8.tar
+├── +++ antelope_background-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,31 +1,31 @@
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.770870 antelope_background-0.1.8/
+│ │ --rw-r--r--   0 b          (500) b          (506)     1520 2020-09-29 23:44:37.000000 antelope_background-0.1.8/LICENSE
+│ │ --rw-r--r--   0 b          (500) b          (506)     4478 2022-04-08 20:04:03.770870 antelope_background-0.1.8/PKG-INFO
+│ │ --rw-r--r--   0 b          (500) b          (506)     3471 2021-03-10 07:59:31.000000 antelope_background-0.1.8/README.md
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.764203 antelope_background-0.1.8/antelope_background/
+│ │ --rw-r--r--   0 b          (500) b          (506)     2069 2020-09-27 08:37:50.000000 antelope_background-0.1.8/antelope_background/__init__.py
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.767537 antelope_background-0.1.8/antelope_background/background/
+│ │ --rw-r--r--   0 b          (500) b          (506)      115 2020-09-29 23:50:36.000000 antelope_background-0.1.8/antelope_background/background/__init__.py
+│ │ --rw-r--r--   0 b          (500) b          (506)    23681 2021-09-21 18:51:33.000000 antelope_background-0.1.8/antelope_background/background/flat_background.py
+│ │ --rw-r--r--   0 b          (500) b          (506)    10546 2021-09-21 18:51:33.000000 antelope_background-0.1.8/antelope_background/background/implementation.py
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.767537 antelope_background-0.1.8/antelope_background/background/tests/
+│ │ --rw-r--r--   0 b          (500) b          (506)        0 2018-07-20 18:48:36.000000 antelope_background-0.1.8/antelope_background/background/tests/__init__.py
+│ │ --rw-r--r--   0 b          (500) b          (506)     1621 2020-09-29 23:57:25.000000 antelope_background-0.1.8/antelope_background/background/tests/test_flat_background.py
+│ │ --rw-r--r--   0 b          (500) b          (506)      145 2021-03-10 07:42:08.000000 antelope_background-0.1.8/antelope_background/background/tests/test_implementation.py
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.770870 antelope_background-0.1.8/antelope_background/engine/
+│ │ --rw-r--r--   0 b          (500) b          (506)      346 2020-03-30 08:22:53.000000 antelope_background-0.1.8/antelope_background/engine/__init__.py
+│ │ --rw-r--r--   0 b          (500) b          (506)    29699 2021-09-21 18:51:33.000000 antelope_background-0.1.8/antelope_background/engine/background_engine.py
+│ │ --rw-r--r--   0 b          (500) b          (506)     2217 2021-01-29 21:46:30.000000 antelope_background-0.1.8/antelope_background/engine/emission.py
+│ │ --rw-r--r--   0 b          (500) b          (506)     4656 2021-09-21 18:51:33.000000 antelope_background-0.1.8/antelope_background/engine/product_flow.py
+│ │ --rw-r--r--   0 b          (500) b          (506)    10150 2018-07-20 18:48:36.000000 antelope_background-0.1.8/antelope_background/engine/tarjan_stack.py
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.770870 antelope_background-0.1.8/antelope_background/providers/
+│ │ --rw-r--r--   0 b          (500) b          (506)      135 2020-09-27 08:46:57.000000 antelope_background-0.1.8/antelope_background/providers/__init__.py
+│ │ --rw-r--r--   0 b          (500) b          (506)     2785 2021-09-21 18:51:33.000000 antelope_background-0.1.8/antelope_background/providers/bm_static.py
+│ │ -drwxr-xr-x   0 b          (500) b          (506)        0 2022-04-08 20:04:03.764203 antelope_background-0.1.8/antelope_background.egg-info/
+│ │ --rw-r--r--   0 b          (500) b          (506)     4478 2022-04-08 20:04:03.000000 antelope_background-0.1.8/antelope_background.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 b          (500) b          (506)      881 2022-04-08 20:04:03.000000 antelope_background-0.1.8/antelope_background.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 b          (500) b          (506)        1 2022-04-08 20:04:03.000000 antelope_background-0.1.8/antelope_background.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 b          (500) b          (506)       44 2022-04-08 20:04:03.000000 antelope_background-0.1.8/antelope_background.egg-info/requires.txt
+│ │ --rw-r--r--   0 b          (500) b          (506)       20 2022-04-08 20:04:03.000000 antelope_background-0.1.8/antelope_background.egg-info/top_level.txt
+│ │ --rw-r--r--   0 b          (500) b          (506)       38 2022-04-08 20:04:03.770870 antelope_background-0.1.8/setup.cfg
+│ │ --rw-r--r--   0 b          (500) b          (506)     1190 2022-04-08 20:03:48.000000 antelope_background-0.1.8/setup.py
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.265422 antelope_background-0.2.0/
+│ │ +-rw-r--r--   0 b          (500) b          (506)     1520 2020-09-29 23:44:37.000000 antelope_background-0.2.0/LICENSE
+│ │ +-rw-r--r--   0 b          (500) b          (506)     3732 2023-04-06 23:20:17.265422 antelope_background-0.2.0/PKG-INFO
+│ │ +-rw-r--r--   0 b          (500) b          (506)     3471 2021-03-10 07:59:31.000000 antelope_background-0.2.0/README.md
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.262089 antelope_background-0.2.0/antelope_background/
+│ │ +-rw-r--r--   0 b          (500) b          (506)     2069 2020-09-27 08:37:50.000000 antelope_background-0.2.0/antelope_background/__init__.py
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.265422 antelope_background-0.2.0/antelope_background/background/
+│ │ +-rw-r--r--   0 b          (500) b          (506)      115 2020-09-29 23:50:36.000000 antelope_background-0.2.0/antelope_background/background/__init__.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)    23792 2023-04-05 07:40:09.000000 antelope_background-0.2.0/antelope_background/background/flat_background.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)    10673 2023-04-05 07:40:09.000000 antelope_background-0.2.0/antelope_background/background/implementation.py
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.265422 antelope_background-0.2.0/antelope_background/background/tests/
+│ │ +-rw-r--r--   0 b          (500) b          (506)        0 2018-07-20 18:48:36.000000 antelope_background-0.2.0/antelope_background/background/tests/__init__.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)     1621 2020-09-29 23:57:25.000000 antelope_background-0.2.0/antelope_background/background/tests/test_flat_background.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)      145 2021-03-10 07:42:08.000000 antelope_background-0.2.0/antelope_background/background/tests/test_implementation.py
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.265422 antelope_background-0.2.0/antelope_background/engine/
+│ │ +-rw-r--r--   0 b          (500) b          (506)      346 2020-03-30 08:22:53.000000 antelope_background-0.2.0/antelope_background/engine/__init__.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)    29699 2021-09-21 18:51:33.000000 antelope_background-0.2.0/antelope_background/engine/background_engine.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)     2217 2021-01-29 21:46:30.000000 antelope_background-0.2.0/antelope_background/engine/emission.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)     4656 2021-09-21 18:51:33.000000 antelope_background-0.2.0/antelope_background/engine/product_flow.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)    10150 2018-07-20 18:48:36.000000 antelope_background-0.2.0/antelope_background/engine/tarjan_stack.py
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.265422 antelope_background-0.2.0/antelope_background/providers/
+│ │ +-rw-r--r--   0 b          (500) b          (506)      136 2022-08-25 07:41:55.000000 antelope_background-0.2.0/antelope_background/providers/__init__.py
+│ │ +-rw-r--r--   0 b          (500) b          (506)     2785 2021-09-21 18:51:33.000000 antelope_background-0.2.0/antelope_background/providers/bm_static.py
+│ │ +drwxr-xr-x   0 b          (500) b          (506)        0 2023-04-06 23:20:17.262089 antelope_background-0.2.0/antelope_background.egg-info/
+│ │ +-rw-r--r--   0 b          (500) b          (506)     3732 2023-04-06 23:20:17.000000 antelope_background-0.2.0/antelope_background.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 b          (500) b          (506)      881 2023-04-06 23:20:17.000000 antelope_background-0.2.0/antelope_background.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 b          (500) b          (506)        1 2023-04-06 23:20:17.000000 antelope_background-0.2.0/antelope_background.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 b          (500) b          (506)       44 2023-04-06 23:20:17.000000 antelope_background-0.2.0/antelope_background.egg-info/requires.txt
+│ │ +-rw-r--r--   0 b          (500) b          (506)       20 2023-04-06 23:20:17.000000 antelope_background-0.2.0/antelope_background.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 b          (500) b          (506)       38 2023-04-06 23:20:17.265422 antelope_background-0.2.0/setup.cfg
+│ │ +-rw-r--r--   0 b          (500) b          (506)     1382 2023-04-06 22:45:36.000000 antelope_background-0.2.0/setup.py
+│ │   --- antelope_background-0.1.8/LICENSE
+│ ├── +++ antelope_background-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/PKG-INFO
+│ ├── +++ antelope_background-0.2.0/antelope_background.egg-info/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,101 +1,100 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: antelope_background
+│ │ -Version: 0.1.8
+│ │ -Summary: UNKNOWN
+│ │ +Name: antelope-background
+│ │ +Version: 0.2.0
+│ │  Home-page: https://github.com/AntelopeLCA/background
+│ │  Author: Brandon Kuczenski
+│ │  Author-email: bkuczenski@ucsb.edu
+│ │  License: BSD 3-clause
+│ │ -Description: # background
+│ │ -        Background LCI implementation including Tarjan Ordering.
+│ │ -        
+│ │ -        This is kept as a separate repo because it is the only place `numpy/scipy` is required.  The 
+│ │ -        idea is to enable people to run LCI/A computations without having the background data on their 
+│ │ -        machine or having to perform matrix construction and inversion (i.e. only using foreground 
+│ │ -        computations, like GaBi does).
+│ │ -        
+│ │ -        ## Partial Ordering
+│ │ -        The default implementation performs an ordering of the LCI database using Tarjan's algorithm 
+│ │ -        for detecting strongly-connected components (see [Partial Ordering of Life Cycle Inventory 
+│ │ -        Databases](https://doi.org/10.1007/s11367-015-0972-x))
+│ │ -        
+│ │ -        It performs the ordering, and then builds and stores a static LCI database (A and B matrices).  
+│ │ -        This code is a bit convoluted, but it works.
+│ │ -        
+│ │ -        #### (Muttered question from the audience)
+│ │ -        
+│ │ -        No, it isn't tested. Tests have been performed (and passed).
+│ │ -        
+│ │ -        #### (indistinct grumbling)
+│ │ -        
+│ │ -        I know. I'm sorry.
+│ │ -        
+│ │ -        ## Installing
+│ │ -        
+│ │ -        Installation should be straightforward-- `lxml` is required here to access a local copy of ecoinvent.
+│ │ -        
+│ │ -            user@host$ pip install antelope_background lxml
+│ │ -        
+│ │ -        ### Setting up a catalog with ecoinvent data
+│ │ -        
+│ │ -            >>> from antelope_core import LcCatalog
+│ │ -            >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+│ │ -            >>> cat = LcCatalog('/home/user/my_catalog')
+│ │ -            Loading JSON data from /home/b/my_catalog/reference-quantities.json:
+│ │ -            local.qdb: /home/b/my_catalog/reference-quantities.json
+│ │ -            local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+│ │ -            25 new quantity entities added (25 total)
+│ │ -            6 new flow entities added (6 total)
+│ │ -             
+│ │ -            >>> ec = EcoinventConfig('/path/to/ecoinvent')
+│ │ -            >>> for res in ec.make_resources('local.ecoinvent.3.7.1.cutoff'):
+│ │ -                    cat.add_resource(res)
+│ │ -             
+│ │ -            >>> cat.show_interfaces()
+│ │ -            local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ -            local.qdb [basic, index, quantity]
+│ │ -             
+│ │ -            >>>
+│ │ -        
+│ │ -        When the background is installed, new interface methods are available for catalog queries. In
+│ │ -        order to access them, the background matrix must be constructed, which is done through
+│ │ -        traversal of the LCI network using Tarjan's algorithm.  This is triggered automatically
+│ │ -        any time you request a background interface method.  But it can also be triggered explicitly:
+│ │ -        
+│ │ -        
+│ │ -            >>> q = cat.query('local.ecoinvent.3.7.1.cutoff')
+│ │ -            >>> q.check_bg()
+│ │ -            ... # several minutes pass 
+│ │ -             Loaded 17400 processes (t=158.06 s)
+│ │ -             Loaded 17495 processes (t=158.69 s)
+│ │ -            20 new quantity entities added (20 total)
+│ │ -            5333 new flow entities added (5333 total)
+│ │ -            17495 new process entities added (17495 total)
+│ │ -            ...
+│ │ -            Creating flat background
+│ │ -            ...
+│ │ -             True
+│ │ -             
+│ │ -            >>> cat.show_interfaces()
+│ │ -            local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ -            local.ecoinvent.3.7.1.cutoff.index.20210205 [background, basic, index]
+│ │ -            local.qdb [basic, index, quantity]
+│ │ -             
+│ │ -            >>>
+│ │ -        
+│ │ -        The `check_bg()` route is slow because it requires indexing the database and traversing all exchanges,
+│ │ -        both of which require loading all XML files.  Fortunately, if the two steps are done during 
+│ │ -        the same python session, then the inventory remains in memory and each file only has to be 
+│ │ -        loaded once. 
+│ │ -        
+│ │ -        Once the background matrix and index are created, the XML files do not need to be individually 
+│ │ -        loaded except to access details about a specific process.  
+│ │ -        
+│ │ -        Now that the background interface exists, background queries can be conducted.
+│ │ -        
+│ │ -        # Contributing
+│ │ -        
+│ │ -        Please do!
+│ │ -        
+│ │ -Platform: UNKNOWN
+│ │  Description-Content-Type: text/markdown
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +# background
+│ │ +Background LCI implementation including Tarjan Ordering.
+│ │ +
+│ │ +This is kept as a separate repo because it is the only place `numpy/scipy` is required.  The 
+│ │ +idea is to enable people to run LCI/A computations without having the background data on their 
+│ │ +machine or having to perform matrix construction and inversion (i.e. only using foreground 
+│ │ +computations, like GaBi does).
+│ │ +
+│ │ +## Partial Ordering
+│ │ +The default implementation performs an ordering of the LCI database using Tarjan's algorithm 
+│ │ +for detecting strongly-connected components (see [Partial Ordering of Life Cycle Inventory 
+│ │ +Databases](https://doi.org/10.1007/s11367-015-0972-x))
+│ │ +
+│ │ +It performs the ordering, and then builds and stores a static LCI database (A and B matrices).  
+│ │ +This code is a bit convoluted, but it works.
+│ │ +
+│ │ +#### (Muttered question from the audience)
+│ │ +
+│ │ +No, it isn't tested. Tests have been performed (and passed).
+│ │ +
+│ │ +#### (indistinct grumbling)
+│ │ +
+│ │ +I know. I'm sorry.
+│ │ +
+│ │ +## Installing
+│ │ +
+│ │ +Installation should be straightforward-- `lxml` is required here to access a local copy of ecoinvent.
+│ │ +
+│ │ +    user@host$ pip install antelope_background lxml
+│ │ +
+│ │ +### Setting up a catalog with ecoinvent data
+│ │ +
+│ │ +    >>> from antelope_core import LcCatalog
+│ │ +    >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+│ │ +    >>> cat = LcCatalog('/home/user/my_catalog')
+│ │ +    Loading JSON data from /home/b/my_catalog/reference-quantities.json:
+│ │ +    local.qdb: /home/b/my_catalog/reference-quantities.json
+│ │ +    local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+│ │ +    25 new quantity entities added (25 total)
+│ │ +    6 new flow entities added (6 total)
+│ │ +     
+│ │ +    >>> ec = EcoinventConfig('/path/to/ecoinvent')
+│ │ +    >>> for res in ec.make_resources('local.ecoinvent.3.7.1.cutoff'):
+│ │ +            cat.add_resource(res)
+│ │ +     
+│ │ +    >>> cat.show_interfaces()
+│ │ +    local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ +    local.qdb [basic, index, quantity]
+│ │ +     
+│ │ +    >>>
+│ │ +
+│ │ +When the background is installed, new interface methods are available for catalog queries. In
+│ │ +order to access them, the background matrix must be constructed, which is done through
+│ │ +traversal of the LCI network using Tarjan's algorithm.  This is triggered automatically
+│ │ +any time you request a background interface method.  But it can also be triggered explicitly:
+│ │ +
+│ │ +
+│ │ +    >>> q = cat.query('local.ecoinvent.3.7.1.cutoff')
+│ │ +    >>> q.check_bg()
+│ │ +    ... # several minutes pass 
+│ │ +     Loaded 17400 processes (t=158.06 s)
+│ │ +     Loaded 17495 processes (t=158.69 s)
+│ │ +    20 new quantity entities added (20 total)
+│ │ +    5333 new flow entities added (5333 total)
+│ │ +    17495 new process entities added (17495 total)
+│ │ +    ...
+│ │ +    Creating flat background
+│ │ +    ...
+│ │ +     True
+│ │ +     
+│ │ +    >>> cat.show_interfaces()
+│ │ +    local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ +    local.ecoinvent.3.7.1.cutoff.index.20210205 [background, basic, index]
+│ │ +    local.qdb [basic, index, quantity]
+│ │ +     
+│ │ +    >>>
+│ │ +
+│ │ +The `check_bg()` route is slow because it requires indexing the database and traversing all exchanges,
+│ │ +both of which require loading all XML files.  Fortunately, if the two steps are done during 
+│ │ +the same python session, then the inventory remains in memory and each file only has to be 
+│ │ +loaded once. 
+│ │ +
+│ │ +Once the background matrix and index are created, the XML files do not need to be individually 
+│ │ +loaded except to access details about a specific process.  
+│ │ +
+│ │ +Now that the background interface exists, background queries can be conducted.
+│ │ +
+│ │ +# Contributing
+│ │ +
+│ │ +Please do!
+│ │   --- antelope_background-0.1.8/README.md
+│ ├── +++ antelope_background-0.2.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/__init__.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/background/flat_background.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/background/flat_background.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,12 @@
+│ │  """
+│ │  class for storing static results of a tarjan ordering
+│ │  """
+│ │  
+│ │ -from scipy.sparse.csc import csc_matrix
+│ │ -from scipy.sparse.csr import csr_matrix
+│ │ +from scipy.sparse import csc_matrix, csr_matrix
+│ │  from scipy.sparse.linalg import inv, factorized, spsolve
+│ │  from scipy.sparse import eye
+│ │  from scipy.io import savemat, loadmat
+│ │  
+│ │  import os
+│ │  from collections import namedtuple, defaultdict
+│ │  
+│ │ @@ -587,16 +586,19 @@
+│ │      def sys_lci(self, demand, quiet=None, **kwargs):
+│ │          """
+│ │  
+│ │          :param demand: an iterable of exchanges, each of which must be mapped to a foreground, interior, or exterior
+│ │          TermRef
+│ │          :return:
+│ │          """
+│ │ +        node_ref = None
+│ │          data = defaultdict(list)
+│ │          for x in demand:
+│ │ +            if node_ref is None:  # just take the first one
+│ │ +                node_ref = x.process.external_ref
+│ │              if isinstance(x.termination, Context):
+│ │                  key = ('; '.join(x.termination.as_list()), x.flow.external_ref, comp_dir(x.direction))
+│ │                  try:
+│ │                      ind = self._ex_index[key]
+│ │                      data['ex_ind'].append(ind)
+│ │                      data['ex_val'].append(x.value * self._check_dirn(self._ex[ind], x))
+│ │                  except KeyError:
+│ │ @@ -629,19 +631,19 @@
+│ │          # compute b
+│ │          bx = self._compute_bg_lci(ad_tilde, quiet=quiet, **kwargs) + bf_tilde
+│ │  
+│ │          # consolidate direct emissions
+│ │          for i in range(len(data['ex_ind'])):
+│ │              bx[data['ex_ind'][i]] += data['ex_val'][i]
+│ │  
+│ │ -        for x in self._generate_em_defs(None, csr_matrix(bx)):
+│ │ +        for x in self._generate_em_defs(node_ref, csr_matrix(bx)):
+│ │              yield x
+│ │  
+│ │          for x in data['missed']:
+│ │ -            yield ExchDef(None, x.flow, x.direction, x.termination, x.value)
+│ │ +            yield ExchDef(x.process, x.flow, x.direction, x.termination, x.value)
+│ │  
+│ │      def _write_ordering(self, filename):
+│ │          if not filename.endswith(ORDERING_SUFFIX):
+│ │              filename += ORDERING_SUFFIX
+│ │  
+│ │          ordr = {'foreground': [tuple(f) for f in self._fg],
+│ │                  'background': [tuple(f) for f in self._bg],
+│ │   --- antelope_background-0.1.8/antelope_background/background/implementation.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/background/implementation.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -88,15 +88,15 @@
+│ │      def _check_ref(self, arg, opt_arg):
+│ │          """
+│ │          Do argument handling.  Valid argument patterns:
+│ │          _check_ref(exchange) -> require is_reference, use process_ref and flow_ref
+│ │          _check_ref(process, <anything>) -> obtain process.reference(<anything>) and fall back to above
+│ │          :param arg:
+│ │          :param opt_arg:
+│ │ -        :return:
+│ │ +        :return: two strings which are valid external refs: process_ref, flow_ref
+│ │          """
+│ │          self.check_bg()
+│ │          try:
+│ │              if isinstance(arg, str):
+│ │                  process_ref = arg
+│ │                  flow_ref = self.get(process_ref).reference(opt_arg).flow.external_ref
+│ │              elif hasattr(arg, 'entity_type'):
+│ │ @@ -172,14 +172,16 @@
+│ │          :return:
+│ │          """
+│ │          for x in x_iter:
+│ │              if context is True:
+│ │                  term = self._index.get_context(x.term)
+│ │              else:
+│ │                  term = x.term
+│ │ +            if node is None:
+│ │ +                node = self[x.process]
+│ │              yield ExchangeValue(node, self[x.flow], x.direction, termination=term, value=x.value)
+│ │  
+│ │      def consumers(self, process, ref_flow=None, **kwargs):
+│ │          process, ref_flow = self._check_ref(process, ref_flow)
+│ │          for x in self._flat.consumers(process, ref_flow):
+│ │              yield self._exchange_from_term_ref(x)
+│ │  
+│ │ @@ -238,17 +240,17 @@
+│ │  
+│ │      def lci(self, process, ref_flow=None, **kwargs):
+│ │          process, ref_flow = self._check_ref(process, ref_flow)
+│ │          node = self[process]
+│ │          for x in self._direct_exchanges(node, self._flat.lci(process, ref_flow, **kwargs), context=True):
+│ │              yield x
+│ │  
+│ │ -    def sys_lci(self, node, demand, **kwargs):
+│ │ +    def sys_lci(self, demand, **kwargs):
+│ │          self.check_bg()
+│ │ -        for x in self._direct_exchanges(node, self._flat.sys_lci(demand), context=True):
+│ │ +        for x in self._direct_exchanges(None, self._flat.sys_lci(demand), context=True):
+│ │              yield x
+│ │  
+│ │  
+│ │  class TarjanConfigureImplementation(CoreConfigureImplementation):
+│ │      _config_options = ('prefer_provider',)
+│ │  
+│ │      def prefer_provider(self, flow_ref, process_ref=None):
+│ │   --- antelope_background-0.1.8/antelope_background/background/tests/test_flat_background.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/background/tests/test_flat_background.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/engine/background_engine.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/engine/background_engine.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/engine/emission.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/engine/emission.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/engine/product_flow.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/engine/product_flow.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/engine/tarjan_stack.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/engine/tarjan_stack.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background/providers/bm_static.py
+│ ├── +++ antelope_background-0.2.0/antelope_background/providers/bm_static.py
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/antelope_background.egg-info/PKG-INFO
+│ ├── +++ antelope_background-0.2.0/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,101 +1,100 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: antelope-background
+│ │ -Version: 0.1.8
+│ │ -Summary: UNKNOWN
+│ │ +Name: antelope_background
+│ │ +Version: 0.2.0
+│ │  Home-page: https://github.com/AntelopeLCA/background
+│ │  Author: Brandon Kuczenski
+│ │  Author-email: bkuczenski@ucsb.edu
+│ │  License: BSD 3-clause
+│ │ -Description: # background
+│ │ -        Background LCI implementation including Tarjan Ordering.
+│ │ -        
+│ │ -        This is kept as a separate repo because it is the only place `numpy/scipy` is required.  The 
+│ │ -        idea is to enable people to run LCI/A computations without having the background data on their 
+│ │ -        machine or having to perform matrix construction and inversion (i.e. only using foreground 
+│ │ -        computations, like GaBi does).
+│ │ -        
+│ │ -        ## Partial Ordering
+│ │ -        The default implementation performs an ordering of the LCI database using Tarjan's algorithm 
+│ │ -        for detecting strongly-connected components (see [Partial Ordering of Life Cycle Inventory 
+│ │ -        Databases](https://doi.org/10.1007/s11367-015-0972-x))
+│ │ -        
+│ │ -        It performs the ordering, and then builds and stores a static LCI database (A and B matrices).  
+│ │ -        This code is a bit convoluted, but it works.
+│ │ -        
+│ │ -        #### (Muttered question from the audience)
+│ │ -        
+│ │ -        No, it isn't tested. Tests have been performed (and passed).
+│ │ -        
+│ │ -        #### (indistinct grumbling)
+│ │ -        
+│ │ -        I know. I'm sorry.
+│ │ -        
+│ │ -        ## Installing
+│ │ -        
+│ │ -        Installation should be straightforward-- `lxml` is required here to access a local copy of ecoinvent.
+│ │ -        
+│ │ -            user@host$ pip install antelope_background lxml
+│ │ -        
+│ │ -        ### Setting up a catalog with ecoinvent data
+│ │ -        
+│ │ -            >>> from antelope_core import LcCatalog
+│ │ -            >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+│ │ -            >>> cat = LcCatalog('/home/user/my_catalog')
+│ │ -            Loading JSON data from /home/b/my_catalog/reference-quantities.json:
+│ │ -            local.qdb: /home/b/my_catalog/reference-quantities.json
+│ │ -            local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+│ │ -            25 new quantity entities added (25 total)
+│ │ -            6 new flow entities added (6 total)
+│ │ -             
+│ │ -            >>> ec = EcoinventConfig('/path/to/ecoinvent')
+│ │ -            >>> for res in ec.make_resources('local.ecoinvent.3.7.1.cutoff'):
+│ │ -                    cat.add_resource(res)
+│ │ -             
+│ │ -            >>> cat.show_interfaces()
+│ │ -            local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ -            local.qdb [basic, index, quantity]
+│ │ -             
+│ │ -            >>>
+│ │ -        
+│ │ -        When the background is installed, new interface methods are available for catalog queries. In
+│ │ -        order to access them, the background matrix must be constructed, which is done through
+│ │ -        traversal of the LCI network using Tarjan's algorithm.  This is triggered automatically
+│ │ -        any time you request a background interface method.  But it can also be triggered explicitly:
+│ │ -        
+│ │ -        
+│ │ -            >>> q = cat.query('local.ecoinvent.3.7.1.cutoff')
+│ │ -            >>> q.check_bg()
+│ │ -            ... # several minutes pass 
+│ │ -             Loaded 17400 processes (t=158.06 s)
+│ │ -             Loaded 17495 processes (t=158.69 s)
+│ │ -            20 new quantity entities added (20 total)
+│ │ -            5333 new flow entities added (5333 total)
+│ │ -            17495 new process entities added (17495 total)
+│ │ -            ...
+│ │ -            Creating flat background
+│ │ -            ...
+│ │ -             True
+│ │ -             
+│ │ -            >>> cat.show_interfaces()
+│ │ -            local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ -            local.ecoinvent.3.7.1.cutoff.index.20210205 [background, basic, index]
+│ │ -            local.qdb [basic, index, quantity]
+│ │ -             
+│ │ -            >>>
+│ │ -        
+│ │ -        The `check_bg()` route is slow because it requires indexing the database and traversing all exchanges,
+│ │ -        both of which require loading all XML files.  Fortunately, if the two steps are done during 
+│ │ -        the same python session, then the inventory remains in memory and each file only has to be 
+│ │ -        loaded once. 
+│ │ -        
+│ │ -        Once the background matrix and index are created, the XML files do not need to be individually 
+│ │ -        loaded except to access details about a specific process.  
+│ │ -        
+│ │ -        Now that the background interface exists, background queries can be conducted.
+│ │ -        
+│ │ -        # Contributing
+│ │ -        
+│ │ -        Please do!
+│ │ -        
+│ │ -Platform: UNKNOWN
+│ │  Description-Content-Type: text/markdown
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +# background
+│ │ +Background LCI implementation including Tarjan Ordering.
+│ │ +
+│ │ +This is kept as a separate repo because it is the only place `numpy/scipy` is required.  The 
+│ │ +idea is to enable people to run LCI/A computations without having the background data on their 
+│ │ +machine or having to perform matrix construction and inversion (i.e. only using foreground 
+│ │ +computations, like GaBi does).
+│ │ +
+│ │ +## Partial Ordering
+│ │ +The default implementation performs an ordering of the LCI database using Tarjan's algorithm 
+│ │ +for detecting strongly-connected components (see [Partial Ordering of Life Cycle Inventory 
+│ │ +Databases](https://doi.org/10.1007/s11367-015-0972-x))
+│ │ +
+│ │ +It performs the ordering, and then builds and stores a static LCI database (A and B matrices).  
+│ │ +This code is a bit convoluted, but it works.
+│ │ +
+│ │ +#### (Muttered question from the audience)
+│ │ +
+│ │ +No, it isn't tested. Tests have been performed (and passed).
+│ │ +
+│ │ +#### (indistinct grumbling)
+│ │ +
+│ │ +I know. I'm sorry.
+│ │ +
+│ │ +## Installing
+│ │ +
+│ │ +Installation should be straightforward-- `lxml` is required here to access a local copy of ecoinvent.
+│ │ +
+│ │ +    user@host$ pip install antelope_background lxml
+│ │ +
+│ │ +### Setting up a catalog with ecoinvent data
+│ │ +
+│ │ +    >>> from antelope_core import LcCatalog
+│ │ +    >>> from antelope_core.data_sources.ecoinvent import EcoinventConfig
+│ │ +    >>> cat = LcCatalog('/home/user/my_catalog')
+│ │ +    Loading JSON data from /home/b/my_catalog/reference-quantities.json:
+│ │ +    local.qdb: /home/b/my_catalog/reference-quantities.json
+│ │ +    local.qdb: /data/GitHub/lca-tools/lcatools/qdb/data/elcd_reference_quantities.json
+│ │ +    25 new quantity entities added (25 total)
+│ │ +    6 new flow entities added (6 total)
+│ │ +     
+│ │ +    >>> ec = EcoinventConfig('/path/to/ecoinvent')
+│ │ +    >>> for res in ec.make_resources('local.ecoinvent.3.7.1.cutoff'):
+│ │ +            cat.add_resource(res)
+│ │ +     
+│ │ +    >>> cat.show_interfaces()
+│ │ +    local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ +    local.qdb [basic, index, quantity]
+│ │ +     
+│ │ +    >>>
+│ │ +
+│ │ +When the background is installed, new interface methods are available for catalog queries. In
+│ │ +order to access them, the background matrix must be constructed, which is done through
+│ │ +traversal of the LCI network using Tarjan's algorithm.  This is triggered automatically
+│ │ +any time you request a background interface method.  But it can also be triggered explicitly:
+│ │ +
+│ │ +
+│ │ +    >>> q = cat.query('local.ecoinvent.3.7.1.cutoff')
+│ │ +    >>> q.check_bg()
+│ │ +    ... # several minutes pass 
+│ │ +     Loaded 17400 processes (t=158.06 s)
+│ │ +     Loaded 17495 processes (t=158.69 s)
+│ │ +    20 new quantity entities added (20 total)
+│ │ +    5333 new flow entities added (5333 total)
+│ │ +    17495 new process entities added (17495 total)
+│ │ +    ...
+│ │ +    Creating flat background
+│ │ +    ...
+│ │ +     True
+│ │ +     
+│ │ +    >>> cat.show_interfaces()
+│ │ +    local.ecoinvent.3.7.1.cutoff [basic, exchange]
+│ │ +    local.ecoinvent.3.7.1.cutoff.index.20210205 [background, basic, index]
+│ │ +    local.qdb [basic, index, quantity]
+│ │ +     
+│ │ +    >>>
+│ │ +
+│ │ +The `check_bg()` route is slow because it requires indexing the database and traversing all exchanges,
+│ │ +both of which require loading all XML files.  Fortunately, if the two steps are done during 
+│ │ +the same python session, then the inventory remains in memory and each file only has to be 
+│ │ +loaded once. 
+│ │ +
+│ │ +Once the background matrix and index are created, the XML files do not need to be individually 
+│ │ +loaded except to access details about a specific process.  
+│ │ +
+│ │ +Now that the background interface exists, background queries can be conducted.
+│ │ +
+│ │ +# Contributing
+│ │ +
+│ │ +Please do!
+│ │   --- antelope_background-0.1.8/antelope_background.egg-info/SOURCES.txt
+│ ├── +++ antelope_background-0.2.0/antelope_background.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- antelope_background-0.1.8/setup.py
+│ ├── +++ antelope_background-0.2.0/setup.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,32 +1,35 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  requires = [
+│ │ -    "antelope_core>=0.1.6",
+│ │ +    "antelope_core>=0.2.0",
+│ │      "scipy>=1.5",
+│ │      "numpy>=1.19"
+│ │  ]
+│ │  
+│ │  """
+│ │  Change Log
+│ │ +0.2.0 - 2023-04-06 - Redefine sys_lci to omit spurious node argument. sync with virtualize branches upstream.
+│ │ +                     TODO: get rid of tail recursion in background Tarjan engine
+│ │ +
+│ │  0.1.8 - 2022-04-08 - version bump release to match core 0.1.8
+│ │   - Normalize how contexts are serialized and deserialized
+│ │   - add 'emitters' API route
+│ │   - preferred provider catch-all config
+│ │   - rename bg ordering file suffix to '.ordering.json.gz' and expose as a constant
+│ │  
+│ │  0.1.6 - 2021-03-09 - compartment manager rework -> pass contexts as tuples
+│ │  0.1.5 - 2021-02-05 - bump version to keep pace with antelope_core 
+│ │  0.1.4 - 2021-01-29 - bugfixes to get CI passing.  match consistent versions with other packages.
+│ │  
+│ │  0.1.0 - 2021-01-06 - first published release
+│ │  """
+│ │  
+│ │  
+│ │ -VERSION = '0.1.8'
+│ │ +VERSION = '0.2.0'
+│ │  
+│ │  setup(
+│ │      name="antelope_background",
+│ │      version=VERSION,
+│ │      author="Brandon Kuczenski",
+│ │      author_email="bkuczenski@ucsb.edu",
+│ │      license="BSD 3-clause",

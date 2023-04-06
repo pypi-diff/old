@@ -1,0 +1,163 @@
+# Comparing `tmp/nextcloudtalkbot-0.0.2.tar.gz` & `tmp/nextcloudtalkbot-0.0.3.tar.gz`
+
+## Comparing `nextcloudtalkbot-0.0.2.tar` & `nextcloudtalkbot-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,21 @@
+--rw-r--r--   0        0        0     1430 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/docs/NextcloudFileOperations.rst
+--rw-r--r--   0        0        0     2200 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/docs/NextcloudTalkExtractor.rst
+--rw-r--r--   0        0        0       93 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/__init__.py
+--rw-r--r--   0        0        0      957 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/check_local_user_enviroment.py
+--rw-r--r--   0        0        0      309 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/constants.py
+--rw-r--r--   0        0        0     7716 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/first_run_setup.py
+--rw-r--r--   0        0        0      560 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/headers.py
+--rw-r--r--   0        0        0     1801 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_activities.py
+--rw-r--r--   0        0        0     4881 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_file_operations.py
+--rw-r--r--   0        0        0     3818 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_talk_extractor.py
+--rw-r--r--   0        0        0     1272 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_user.py
+--rw-r--r--   0        0        0      379 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloudtalkbot.py
+--rw-r--r--   0        0        0     1758 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/read_data.py
+--rw-r--r--   0        0        0     1228 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/send_message.py
+--rw-r--r--   0        0        0      178 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/nextcloud_talk_bot/translations.py
+--rw-r--r--   0        0        0      924 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/tests/test_encrypt_password
+--rw-r--r--   0        0        0       55 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/.gitignore
+--rw-r--r--   0        0        0    35149 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/LICENSE
+--rw-r--r--   0        0        0      700 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/README.md
+--rw-r--r--   0        0        0      692 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/pyproject.toml
+--rw-r--r--   0        0        0     1290 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.2/PKG-INFO
++-rw-r--r--   0        0        0     1430 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/docs/NextcloudFileOperations.rst
++-rw-r--r--   0        0        0     2200 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/docs/NextcloudTalkExtractor.rst
++-rw-r--r--   0        0        0       93 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/__init__.py
++-rw-r--r--   0        0        0      957 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/check_local_user_enviroment.py
++-rw-r--r--   0        0        0      309 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/constants.py
++-rw-r--r--   0        0        0     7716 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/first_run_setup.py
++-rw-r--r--   0        0        0      560 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/headers.py
++-rw-r--r--   0        0        0     1801 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_activities.py
++-rw-r--r--   0        0        0     4881 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_file_operations.py
++-rw-r--r--   0        0        0     3818 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_talk_extractor.py
++-rw-r--r--   0        0        0     1272 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_user.py
++-rw-r--r--   0        0        0      379 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloudtalkbot.py
++-rw-r--r--   0        0        0     1758 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/read_data.py
++-rw-r--r--   0        0        0     1228 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/send_message.py
++-rw-r--r--   0        0        0      178 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/nextcloud_talk_bot/translations.py
++-rw-r--r--   0        0        0      924 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/tests/test_encrypt_password
++-rw-r--r--   0        0        0       55 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/.gitignore
++-rw-r--r--   0        0        0    35149 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/LICENSE
++-rw-r--r--   0        0        0      700 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/README.md
++-rw-r--r--   0        0        0      690 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/pyproject.toml
++-rw-r--r--   0        0        0     1290 2020-02-02 00:00:00.000000 nextcloudtalkbot-0.0.3/PKG-INFO
+```
+
+### Comparing `nextcloudtalkbot-0.0.2/docs/NextcloudFileOperations.rst` & `nextcloudtalkbot-0.0.3/docs/NextcloudFileOperations.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/docs/NextcloudTalkExtractor.rst` & `nextcloudtalkbot-0.0.3/docs/NextcloudTalkExtractor.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/check_local_user_enviroment.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/check_local_user_enviroment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/first_run_setup.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/first_run_setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/headers.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/headers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_activities.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_activities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_file_operations.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_file_operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_talk_extractor.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_talk_extractor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/nextcloud_user.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/nextcloud_user.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/read_data.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/read_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/nextcloud_talk_bot/send_message.py` & `nextcloudtalkbot-0.0.3/nextcloud_talk_bot/send_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/tests/test_encrypt_password` & `nextcloudtalkbot-0.0.3/tests/test_encrypt_password`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/LICENSE` & `nextcloudtalkbot-0.0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/README.md` & `nextcloudtalkbot-0.0.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `nextcloudtalkbot-0.0.2/pyproject.toml` & `nextcloudtalkbot-0.0.3/pyproject.toml`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,26 +1,25 @@
+ [build-system]
+ requires = ["hatchling"]
+ build-backend = "hatchling.build"
+ 
+ 
+ [project]
+ name = "nextcloudtalkbot"
+-version = "0.0.2"
++version = "0.0.3"
+ authors = [
+-  { name="Massoud Ahmed", email="okko@okxo.de" },
++  { name="Massoud Ahmed", email="okko@okxo.de", homepage="https://okxo.de"},
+ ]
+ description = "Python3 library for creating a Nextcloud Talk bot."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: MIT License",
+     "Operating System :: OS Independent",
+ ]
+ 
+-homepage = "https://okxo.de"
+ keywords = ["nextcloud", "nextcloud talk", "bot"]
+ 
+ [project.urls]
+ "Homepage" = "https://github.com/sowoi/nextcloud-cloud-talk-bot"
+ "Bug Tracker" = "https://github.com/sowoi/nextcloud-cloud-talk-bot/issues"
+```
+
+### Comparing `nextcloudtalkbot-0.0.2/PKG-INFO` & `nextcloudtalkbot-0.0.3/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: nextcloudtalkbot
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Python3 library for creating a Nextcloud Talk bot.
+ Project-URL: Homepage, https://github.com/sowoi/nextcloud-cloud-talk-bot
+ Project-URL: Bug Tracker, https://github.com/sowoi/nextcloud-cloud-talk-bot/issues
+ Author-email: Massoud Ahmed <okko@okxo.de>
+ License-File: LICENSE
+ Keywords: bot,nextcloud,nextcloud talk
+ Classifier: License :: OSI Approved :: MIT License
+```
+
