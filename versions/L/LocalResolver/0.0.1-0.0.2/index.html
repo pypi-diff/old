@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/LocalResolver-0.0.1.tar.gz tmp/LocalResolver-0.0.2.tar.gz --html versions/L/LocalResolver/0.0.1-0.0.2/index.html --text versions/L/LocalResolver/0.0.1-0.0.2/diff.txt --markdown versions/L/LocalResolver/0.0.1-0.0.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.78 KB</span></div>
+  <div><span class="source">tmp/LocalResolver-0.0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/LocalResolver-0.0.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">281 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;<del>dist\</del>LocalResolver-0.0.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span><del>Jan</del><span class="dp">·</span><del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0<span class="dp">·</span>202<del>1</del>,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;LocalResolver-0.0.<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span><ins>Apr</ins><span class="dp">·</span><ins><span class="dp">·</span>6</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0<span class="dp">·</span>202<ins>3</ins>,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.44 KB</span></div>
+    <div><span class="source">LocalResolver-0.0.1.tar</span> vs.</div>
+    <div id="LocalResolver--.-.-.tar"><span class="source">LocalResolver-0.0.2.tar</span>
+      <a class="anchor" href="#LocalResolver--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.77 KB</span></div>
+      <div id="LocalResolver--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#LocalResolver--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr<del>w</del>xr<del>w</del>x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.<del>792</del>7<del>14</del><span class="dp">·</span>LocalResolver-0.0.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr<ins>-</ins>xr<ins>-</ins>x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.<ins>946</ins>7<ins>42</ins><span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>18</del><span class="dp">·</span>1<del>5</del>:<del>4</del>7:<del>25</del>.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LICENSE.txt</td><td class="diffline">2 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>9</ins>:<ins>2</ins>7:<ins>34</ins>.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LICENSE.txt</td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-01-19<span class="dp">·</span>16:24:20.712585<span class="dp">·</span>LocalResolver-0.0.1/LocalResolver/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3470<span class="dp">·</span>2021-01-19<span class="dp">·</span>15:52:30.000000<span class="dp">·</span>LocalResolver-0.0.1/LocalResolver/NetbiosResolver.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1384<span class="dp">·</span>2021-01-19<span class="dp">·</span>16:11:16.000000<span class="dp">·</span>LocalResolver-0.0.1/LocalResolver/__init__.py</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4318<span class="dp">·</span>2021-01-19<span class="dp">·</span>16:22:11.000000<span class="dp">·</span>LocalResolver-0.0.1/LocalResolver/__main__.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr<del>w</del>xr<del>w</del>x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.<del>772665</del><span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/</td><td class="diffline">3 </td><td class="diffpresent">drwxr<ins>-</ins>xr<ins>-</ins>x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.<ins>946742</ins><span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>1845</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2371</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>351</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/SOURCES.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>276</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/dependency_links.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>60</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/entry_points.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>59</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/requires.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/LocalResolver.egg-info/top_level.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/LocalResolver.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>18</del><span class="dp">·</span>1<del>5</del>:<del>4</del>7:<del>25</del>.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/MANIFEST.in</td><td class="diffline">10 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>9</ins>:<ins>2</ins>7:<ins>34</ins>.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>1845</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.<del>782877</del><span class="dp">·</span>LocalResolver-0.0.<del>1</del>/PKG-INFO</td><td class="diffline">11 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2371</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.<ins>946742</ins><span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>800</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:12:0<del>4</del>.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/README.md</td><td class="diffline">12 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1174</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:12:0<ins>8</ins>.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>42</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>24</del>:<del>2</del>0.<del>792</del>7<del>14</del><span class="dp">·</span>LocalResolver-0.0.<del>1</del>/setup.cfg</td><td class="diffline">13 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>38</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>4</ins>0.<ins>946</ins>7<ins>42</ins><span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r<del>w</del>-r<del>w</del>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>051</del><span class="dp">·</span>202<del>1</del>-0<del>1</del>-<del>19</del><span class="dp">·</span><del>16</del>:<del>11</del>:<del>4</del>6.000000<span class="dp">·</span>LocalResolver-0.0.<del>1</del>/setup.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r<ins>-</ins>-r<ins>-</ins>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><ins>kali</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(10</ins><ins>0</ins>0<ins>)</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>619</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>40</ins>:<ins>3</ins>6.000000<span class="dp">·</span>LocalResolver-0.0.<ins>2</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">LocalResolver-0.0.1/LICENSE.txt</span> vs.</div>
+      <div id="LocalResolver--.-.-.tar---LocalResolver--.-.--LICENSE.txt"><span class="source">LocalResolver-0.0.2/LICENSE.txt</span>
+        <a class="anchor" href="#LocalResolver--.-.-.tar---LocalResolver--.-.--LICENSE.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.53 KB</span></div>
+      <div><span class="source">LocalResolver-0.0.1/README.md</span> vs.</div>
+      <div id="LocalResolver--.-.-.tar---LocalResolver--.-.--README.md"><span class="source">LocalResolver-0.0.2/README.md</span>
+        <a class="anchor" href="#LocalResolver--.-.-.tar---LocalResolver--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 26% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 39 lines modified</td><td colspan="2">Offset 1, 52 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><del>#</del><span class="dp">·</span><del>H</del>ostnam<del>e</del>Resolver</td><td class="diffline">1 </td><td class="diffpresent"><ins>![LocalResolve</ins><ins>r</ins><span class="dp">·</span><ins>lo</ins><ins>g</ins>o<ins>](http</ins>s<ins>://mauricelambert.github.io/info/py</ins>t<ins>ho</ins>n<ins>/code/Loc</ins>a<ins>lResolver_s</ins>m<ins>all.png<span class="dp">·</span>&quot;Loca</ins><ins>l</ins>Resolver<ins><span class="dp">·</span>logo&quot;)</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">#<span class="dp">·</span>LocalResolver</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>Description</td><td class="diffline">3 </td><td class="diffpresent">##<span class="dp">·</span>Description</td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>implement<span class="dp">·</span>netbios<span class="dp">·</span>and<span class="dp">·</span>LLMNR<span class="dp">·</span>query<span class="dp">·</span>tool<span class="dp">·</span>in<span class="dp">·</span>python<span class="dp">·</span>and<span class="dp">·</span>HostnameResolver<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>tool.</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>implements<span class="dp">·</span>local<span class="dp">·</span>hostname<span class="dp">·</span>resolver<span class="dp">·</span>tool<span class="dp">·</span>with<span class="dp">·</span>scapy<span class="dp">·</span>(using<span class="dp">·</span>netbios<span class="dp">·</span>and<span class="dp">·</span>LLMNR<span class="dp">·</span>query).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">##<span class="dp">·</span>Requirements</td><td class="diffline">5 </td><td class="diffpresent">##<span class="dp">·</span>Requirements</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>require<del><span class="dp">·</span></del>:<span class="dp">·</span></td><td class="diffline">6 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>require:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>python3</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>python3</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>python3<span class="dp">·</span>Standard<span class="dp">·</span>Library</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>python3<span class="dp">·</span>Standard<span class="dp">·</span>Library</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>Scapy</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>Scapy</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">10 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">```bash</td><td class="diffline">11 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>LocalResolver<span class="dp">·</span></td><td class="diffline">12 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>LocalResolver<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">```</td><td class="diffline">13 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">##<span class="dp">·</span>Examples</td><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Examples</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">###<span class="dp">·</span>Command<span class="dp">·</span>lines</td><td class="diffline">15 </td><td class="diffpresent">###<span class="dp">·</span>Command<span class="dp">·</span>lines</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">```bash</td><td class="diffline">16 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">HostnameResolver<span class="dp">·</span>-h</td><td class="diffline">17 </td><td class="diffpresent">HostnameResolver<span class="dp">·</span>-h</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">HostnameResolver<span class="dp">·</span>192.168.1.2</td><td class="diffline">18 </td><td class="diffpresent">HostnameResolver<span class="dp">·</span>192.168.1.2</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">HostnameResolver<span class="dp">·</span>192.168.1.3,192.168.1.2,WIN10,HOMEPC,example.com</td><td class="diffline">19 </td><td class="diffpresent">HostnameResolver<span class="dp">·</span>192.168.1.3,192.168.1.2,WIN10,HOMEPC,example.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">```</td><td class="diffline">20 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">###<span class="dp">·</span>Python3</td><td class="diffline">21 </td><td class="diffpresent">###<span class="dp">·</span>Python3</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">```python</td><td class="diffline">22 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">from<span class="dp">·</span>LocalResolver<span class="dp">·</span>import<span class="dp">·</span>LocalResolver</td><td class="diffline">23 </td><td class="diffpresent">from<span class="dp">·</span>LocalResolver<span class="dp">·</span>import<span class="dp">·</span>LocalResolver</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">localResolver<span class="dp">·</span>=<span class="dp">·</span>LocalResolver(&quot;192.168.1.45&quot;,<span class="dp">·</span>timeout=3)</td><td class="diffline">24 </td><td class="diffpresent">localResolver<span class="dp">·</span>=<span class="dp">·</span>LocalResolver(&quot;192.168.1.45&quot;,<span class="dp">·</span>timeout=3)</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">hostname<span class="dp">·</span>=<span class="dp">·</span>localResolver.resolve_NBTNS()</td><td class="diffline">25 </td><td class="diffpresent">hostname<span class="dp">·</span>=<span class="dp">·</span>localResolver.resolve_NBTNS()</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">hostname<span class="dp">·</span>=<span class="dp">·</span>localResolver.resolve_LLMNR()</td><td class="diffline">26 </td><td class="diffpresent">hostname<span class="dp">·</span>=<span class="dp">·</span>localResolver.resolve_LLMNR()</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">```</td><td class="diffline">27 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">##<span class="dp">·</span>Link</td><td class="diffline">28 </td><td class="diffpresent">##<span class="dp">·</span>Link<ins>s</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">[Github<span class="dp">·</span>Page](https://github.com/mauricelambert/LocalResolver)</td><td class="diffline">29 </td><td class="diffpresent"><ins><span class="dp">·</span>-<span class="dp">·</span></ins>[Github<span class="dp">·</span>Page](https://github.com/mauricelambert/LocalResolver)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>[Documentation](https://mauricelambert.github.io/info/python/code/LocalResolver.html)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>[Download<span class="dp">·</span>as<span class="dp">·</span>python<span class="dp">·</span>executable](https://mauricelambert.github.io/info/python/code/LocalResolver.pyz)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span>-<span class="dp">·</span>[Pypi<span class="dp">·</span>package](https://pypi.org/project/LocalResolver/)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">##<span class="dp">·</span>Licence</td><td class="diffline">33 </td><td class="diffpresent">##<span class="dp">·</span>Licence</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Licensed<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>[GPL,<span class="dp">·</span>version<span class="dp">·</span>3](https://www.gnu.org/licenses/).</td><td class="diffline">34 </td><td class="diffpresent">Licensed<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>[GPL,<span class="dp">·</span>version<span class="dp">·</span>3](https://www.gnu.org/licenses/).</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

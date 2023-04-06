@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/dash-auth-external-1.0.0.tar.gz tmp/dash-auth-external-1.0.1.tar.gz --html versions/d/dash-auth-external/1.0.0-1.0.1/index.html --text versions/d/dash-auth-external/1.0.0-1.0.1/diff.txt --markdown versions/d/dash-auth-external/1.0.0-1.0.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.95 KB</span></div>
+  <div><span class="source">tmp/dash-auth-external-1.0.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/dash-auth-external-1.0.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">286 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dash-auth-external-1.0.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>20:<del>2</del>3:<del>59</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dash-auth-external-1.0.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.61 KB</span></div>
+    <div><span class="source">dash-auth-external-1.0.0.tar</span> vs.</div>
+    <div id="dash-auth-external--.-.-.tar"><span class="source">dash-auth-external-1.0.1.tar</span>
+      <a class="anchor" href="#dash-auth-external--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.85 KB</span></div>
+      <div id="dash-auth-external--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.<del>2</del>7<del>84</del>73<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.7<ins>25</ins>7<ins>0</ins>3<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1071<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1071<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>399</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.<del>2</del>7<del>84</del>73<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>400</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.7<ins>25</ins>7<ins>0</ins>3<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2135<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2135<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.<del>2</del>7<del>84</del>73<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.7<ins>25</ins>7<ins>0</ins>3<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6527<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/auth.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6527<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/auth.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/config.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>111<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/exceptions.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>111<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3666<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/routes.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3666<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/routes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>480<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external/token.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>480<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external/token.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.<del>2</del>7<del>84</del>73<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external.egg-info/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.7<ins>25</ins>7<ins>0</ins>3<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>399</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external.egg-info/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>400</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>535<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external.egg-info/SOURCES.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>535<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external.egg-info/dependency_links.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external.egg-info/requires.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/dash_auth_external.egg-info/top_level.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/dash_auth_external.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>103<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/pyproject.toml</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>103<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>79<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.<del>2</del><del>8</del>2<del>4</del>73<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/setup.cfg</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>79<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.<ins>7</ins>2<ins>9</ins>7<ins>0</ins>3<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<del>1</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/setup.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<ins>2</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>59</del>.<del>2</del>7<del>84</del>73<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/tests/</td><td class="diffline">21 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>30</ins>.7<ins>25</ins>7<ins>0</ins>3<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/tests/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4444<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/tests/test_app.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4444<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/tests/test_app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3291<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/tests/test_auth.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3291<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/tests/test_auth.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>85<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/tests/test_config.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>85<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/tests/test_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>132<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<del>2</del>3:<del>48</del>.000000<span class="dp">·</span>dash-auth-external-1.0.<del>0</del>/tests/test_context.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>132<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:<ins>3</ins>3:<ins>19</ins>.000000<span class="dp">·</span>dash-auth-external-1.0.<ins>1</ins>/tests/test_context.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/LICENSE</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--LICENSE"><span class="source">dash-auth-external-1.0.1/LICENSE</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/README.md</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--README.md"><span class="source">dash-auth-external-1.0.1/README.md</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/dash_auth_external/auth.py</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--dash_auth_external-auth.py"><span class="source">dash-auth-external-1.0.1/dash_auth_external/auth.py</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--dash_auth_external-auth.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/dash_auth_external/routes.py</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--dash_auth_external-routes.py"><span class="source">dash-auth-external-1.0.1/dash_auth_external/routes.py</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--dash_auth_external-routes.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/dash_auth_external.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--dash_auth_external.egg-info-SOURCES.txt"><span class="source">dash-auth-external-1.0.1/dash_auth_external.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--dash_auth_external.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">834 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/setup.py</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--setup.py"><span class="source">dash-auth-external-1.0.1/setup.py</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 16% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 8, 17 lines modified</td><td colspan="2">Offset 8, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>(</td><td class="diffline">8 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Integrate<span class="dp">·</span>your<span class="dp">·</span>dashboards<span class="dp">·</span>with<span class="dp">·</span>3rd<span class="dp">·</span>party<span class="dp">·</span>APIs<span class="dp">·</span>and<span class="dp">·</span>external<span class="dp">·</span>OAuth<span class="dp">·</span>providers.&quot;</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Integrate<span class="dp">·</span>your<span class="dp">·</span>dashboards<span class="dp">·</span>with<span class="dp">·</span>3rd<span class="dp">·</span>party<span class="dp">·</span>APIs<span class="dp">·</span>and<span class="dp">·</span>external<span class="dp">·</span>OAuth<span class="dp">·</span>providers.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">)</td><td class="diffline">10 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;dash<span class="dp">·</span>&gt;=<span class="dp">·</span>2.0.0&quot;,<span class="dp">·</span>&quot;requests<span class="dp">·</span>&gt;=<span class="dp">·</span>1.0.0&quot;,<span class="dp">·</span>&quot;requests-oauthlib<span class="dp">·</span>&gt;=<span class="dp">·</span>0.3.0&quot;]</td><td class="diffline">11 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;dash<span class="dp">·</span>&gt;=<span class="dp">·</span>2.0.0&quot;,<span class="dp">·</span>&quot;requests<span class="dp">·</span>&gt;=<span class="dp">·</span>1.0.0&quot;,<span class="dp">·</span>&quot;requests-oauthlib<span class="dp">·</span>&gt;=<span class="dp">·</span>0.3.0&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">setup(</td><td class="diffline">12 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=NAME,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=NAME,</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;1.0.<del>0</del>&quot;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;1.0.<ins>1</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Integrate<span class="dp">·</span>Dash<span class="dp">·</span>with<span class="dp">·</span>3rd<span class="dp">·</span>Parties<span class="dp">·</span>and<span class="dp">·</span>external<span class="dp">·</span>providers&quot;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Integrate<span class="dp">·</span>Dash<span class="dp">·</span>with<span class="dp">·</span>3rd<span class="dp">·</span>Parties<span class="dp">·</span>and<span class="dp">·</span>external<span class="dp">·</span>providers&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&quot;&gt;3.7&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python_requires=&quot;&gt;<ins>=</ins>3.7&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;jholcombe@hotmail.co.uk&quot;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;jholcombe@hotmail.co.uk&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/jamesholcombe/dash-auth-external&quot;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/jamesholcombe/dash-auth-external&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=[&quot;Dash&quot;,<span class="dp">·</span>&quot;Plotly&quot;,<span class="dp">·</span>&quot;Authentication&quot;,<span class="dp">·</span>&quot;Auth&quot;,<span class="dp">·</span>&quot;External&quot;],</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=[&quot;Dash&quot;,<span class="dp">·</span>&quot;Plotly&quot;,<span class="dp">·</span>&quot;Authentication&quot;,<span class="dp">·</span>&quot;Auth&quot;,<span class="dp">·</span>&quot;External&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=requires,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=requires,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(),</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/tests/test_app.py</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--tests-test_app.py"><span class="source">dash-auth-external-1.0.1/tests/test_app.py</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--tests-test_app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">dash-auth-external-1.0.0/tests/test_auth.py</span> vs.</div>
+      <div id="dash-auth-external--.-.-.tar---dash-auth-external--.-.--tests-test_auth.py"><span class="source">dash-auth-external-1.0.1/tests/test_auth.py</span>
+        <a class="anchor" href="#dash-auth-external--.-.-.tar---dash-auth-external--.-.--tests-test_auth.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

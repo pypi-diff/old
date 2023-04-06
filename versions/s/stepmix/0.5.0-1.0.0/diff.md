@@ -1,0 +1,668 @@
+# Comparing `tmp/stepmix-0.5.0.tar.gz` & `tmp/stepmix-1.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "stepmix-0.5.0.tar", last modified: Thu Mar  9 22:23:31 2023, max compression
++gzip compressed data, was "stepmix-1.0.0.tar", last modified: Thu Apr  6 20:42:12 2023, max compression
+```
+
+## Comparing `stepmix-0.5.0.tar` & `stepmix-1.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,39 +1,40 @@
+--rw-r--r--   0        0        0      954 2023-01-11 22:01:14.079040 stepmix-0.5.0/.github/workflows/pytest.yaml
+--rw-r--r--   0        0        0       54 2023-01-11 22:01:14.079040 stepmix-0.5.0/.gitignore
+--rw-r--r--   0        0        0      309 2023-01-11 22:01:14.079040 stepmix-0.5.0/.readthedocs.yaml
+--rw-r--r--   0        0        0     1068 2023-01-11 22:01:14.079040 stepmix-0.5.0/LICENSE
+--rw-r--r--   0        0        0     2427 2023-01-11 22:01:14.079040 stepmix-0.5.0/README-dev.md
+--rw-r--r--   0        0        0     4389 2023-03-09 18:24:49.769774 stepmix-0.5.0/README.md
+--rw-r--r--   0        0        0      638 2023-01-11 22:01:14.079040 stepmix-0.5.0/docs/Makefile
+--rw-r--r--   0        0        0      764 2023-01-11 22:01:14.079040 stepmix-0.5.0/docs/make.bat
+--rw-r--r--   0        0        0      929 2023-01-11 22:01:14.079040 stepmix-0.5.0/docs/source/api.rst
+--rw-r--r--   0        0        0     1016 2023-03-09 22:19:26.676204 stepmix-0.5.0/docs/source/conf.py
+--rw-r--r--   0        0        0      955 2023-01-11 22:01:14.083040 stepmix-0.5.0/docs/source/index.rst
+--rw-r--r--   0        0        0      179 2023-01-11 22:01:14.083040 stepmix-0.5.0/docs/source/installation.rst
+--rw-r--r--   0        0        0     2814 2023-01-11 22:01:14.083040 stepmix-0.5.0/docs/source/tutorials.rst
+--rw-r--r--   0        0        0     1872 2023-03-09 22:19:26.676204 stepmix-0.5.0/pyproject.toml
+--rwxr-xr-x   0        0        0     5603 2023-03-09 18:24:49.769774 stepmix-0.5.0/scripts/run_bakk_simulation.py
+--rwxr-xr-x   0        0        0     4996 2023-03-09 22:19:26.676204 stepmix-0.5.0/scripts/run_bakk_simulation_complete.py
+--rw-r--r--   0        0        0      174 2023-03-09 22:19:26.676204 stepmix-0.5.0/stepmix/__init__.py
+--rw-r--r--   0        0        0     8113 2023-01-11 22:01:14.083040 stepmix-0.5.0/stepmix/bootstrap.py
+--rw-r--r--   0        0        0     2033 2023-01-11 22:01:14.083040 stepmix-0.5.0/stepmix/corrections.py
+--rw-r--r--   0        0        0    11630 2023-03-09 22:19:26.676204 stepmix-0.5.0/stepmix/datasets.py
+--rw-r--r--   0        0        0        0 2023-01-11 22:01:14.083040 stepmix-0.5.0/stepmix/emission/__init__.py
+--rw-r--r--   0        0        0     1660 2023-01-11 22:01:14.083040 stepmix-0.5.0/stepmix/emission/build_emission.py
+--rw-r--r--   0        0        0     6283 2023-03-09 22:19:26.676204 stepmix-0.5.0/stepmix/emission/categorical.py
+--rw-r--r--   0        0        0     4831 2023-03-09 21:04:30.147441 stepmix-0.5.0/stepmix/emission/covariate.py
+--rw-r--r--   0        0        0     6031 2023-01-11 22:01:14.083040 stepmix-0.5.0/stepmix/emission/emission.py
+--rw-r--r--   0        0        0    15489 2023-01-12 20:57:50.331048 stepmix-0.5.0/stepmix/emission/gaussian.py
+--rw-r--r--   0        0        0     4681 2023-03-09 22:19:26.676204 stepmix-0.5.0/stepmix/emission/nested.py
+--rw-r--r--   0        0        0    52639 2023-03-09 18:24:49.769774 stepmix-0.5.0/stepmix/stepmix.py
+--rw-r--r--   0        0        0    17894 2023-03-09 22:19:26.676204 stepmix-0.5.0/stepmix/utils.py
+--rw-r--r--   0        0        0     4074 2023-03-09 22:19:26.676204 stepmix-0.5.0/test/conftest.py
+--rw-r--r--   0        0        0     3608 2023-03-09 22:19:26.676204 stepmix-0.5.0/test/test_benchmarks.py
+--rw-r--r--   0        0        0     4499 2023-01-11 22:01:14.083040 stepmix-0.5.0/test/test_bootstrap.py
+--rw-r--r--   0        0        0     8163 2023-03-09 22:19:26.676204 stepmix-0.5.0/test/test_emission.py
+--rw-r--r--   0        0        0     1479 2023-01-11 22:01:14.083040 stepmix-0.5.0/test/test_fiml.py
+--rw-r--r--   0        0        0     1001 2023-01-11 22:01:14.083040 stepmix-0.5.0/test/test_inputs.py
+--rw-r--r--   0        0        0     4284 2023-03-09 18:24:49.769774 stepmix-0.5.0/test/test_random_state.py
+--rw-r--r--   0        0        0      795 2023-01-11 22:01:14.083040 stepmix-0.5.0/test/test_sklearn.py
+--rw-r--r--   0        0        0     4570 2023-01-11 22:01:14.083040 stepmix-0.5.0/test/test_steps.py
+--rw-r--r--   0        0        0     5653 1970-01-01 00:00:00.000000 stepmix-0.5.0/PKG-INFO
++-rw-r--r--   0        0        0      954 2023-01-11 22:01:14.079040 stepmix-1.0.0/.github/workflows/pytest.yaml
++-rw-r--r--   0        0        0       54 2023-01-11 22:01:14.079040 stepmix-1.0.0/.gitignore
++-rw-r--r--   0        0        0      309 2023-01-11 22:01:14.079040 stepmix-1.0.0/.readthedocs.yaml
++-rw-r--r--   0        0        0     1068 2023-01-11 22:01:14.079040 stepmix-1.0.0/LICENSE
++-rw-r--r--   0        0        0     2428 2023-04-06 20:40:02.587187 stepmix-1.0.0/README-dev.md
++-rw-r--r--   0        0        0     4831 2023-03-31 15:18:45.991430 stepmix-1.0.0/README.md
++-rw-r--r--   0        0        0      638 2023-01-11 22:01:14.079040 stepmix-1.0.0/docs/Makefile
++-rw-r--r--   0        0        0      764 2023-01-11 22:01:14.079040 stepmix-1.0.0/docs/make.bat
++-rw-r--r--   0        0        0      929 2023-01-11 22:01:14.079040 stepmix-1.0.0/docs/source/api.rst
++-rw-r--r--   0        0        0     1016 2023-04-06 20:41:49.179379 stepmix-1.0.0/docs/source/conf.py
++-rw-r--r--   0        0        0      955 2023-01-11 22:01:14.083040 stepmix-1.0.0/docs/source/index.rst
++-rw-r--r--   0        0        0      283 2023-03-31 15:25:56.504322 stepmix-1.0.0/docs/source/installation.rst
++-rw-r--r--   0        0        0     2814 2023-01-11 22:01:14.083040 stepmix-1.0.0/docs/source/tutorials.rst
++-rw-r--r--   0        0        0     1872 2023-04-06 20:41:49.179379 stepmix-1.0.0/pyproject.toml
++-rw-r--r--   0        0        0      579 2023-04-03 16:48:45.082884 stepmix-1.0.0/scripts/README.md
++-rwxr-xr-x   0        0        0     5603 2023-03-09 18:24:49.769774 stepmix-1.0.0/scripts/run_bakk_simulation.py
++-rwxr-xr-x   0        0        0     4996 2023-03-09 22:19:26.676204 stepmix-1.0.0/scripts/run_bakk_simulation_complete.py
++-rw-r--r--   0        0        0      174 2023-04-06 20:41:49.179379 stepmix-1.0.0/stepmix/__init__.py
++-rw-r--r--   0        0        0     8113 2023-01-11 22:01:14.083040 stepmix-1.0.0/stepmix/bootstrap.py
++-rw-r--r--   0        0        0     2033 2023-01-11 22:01:14.083040 stepmix-1.0.0/stepmix/corrections.py
++-rw-r--r--   0        0        0    11630 2023-03-09 22:19:26.676204 stepmix-1.0.0/stepmix/datasets.py
++-rw-r--r--   0        0        0        0 2023-01-11 22:01:14.083040 stepmix-1.0.0/stepmix/emission/__init__.py
++-rw-r--r--   0        0        0     1660 2023-01-11 22:01:14.083040 stepmix-1.0.0/stepmix/emission/build_emission.py
++-rw-r--r--   0        0        0     6283 2023-03-09 22:19:26.676204 stepmix-1.0.0/stepmix/emission/categorical.py
++-rw-r--r--   0        0        0     4831 2023-03-09 21:04:30.147441 stepmix-1.0.0/stepmix/emission/covariate.py
++-rw-r--r--   0        0        0     6031 2023-01-11 22:01:14.083040 stepmix-1.0.0/stepmix/emission/emission.py
++-rw-r--r--   0        0        0    15489 2023-01-12 20:57:50.331048 stepmix-1.0.0/stepmix/emission/gaussian.py
++-rw-r--r--   0        0        0     4681 2023-03-09 22:19:26.676204 stepmix-1.0.0/stepmix/emission/nested.py
++-rw-r--r--   0        0        0    52639 2023-03-09 18:24:49.769774 stepmix-1.0.0/stepmix/stepmix.py
++-rw-r--r--   0        0        0    17894 2023-03-09 22:19:26.676204 stepmix-1.0.0/stepmix/utils.py
++-rw-r--r--   0        0        0     4074 2023-03-09 22:19:26.676204 stepmix-1.0.0/test/conftest.py
++-rw-r--r--   0        0        0     3608 2023-03-09 22:19:26.676204 stepmix-1.0.0/test/test_benchmarks.py
++-rw-r--r--   0        0        0     4499 2023-01-11 22:01:14.083040 stepmix-1.0.0/test/test_bootstrap.py
++-rw-r--r--   0        0        0     8163 2023-03-09 22:19:26.676204 stepmix-1.0.0/test/test_emission.py
++-rw-r--r--   0        0        0     1479 2023-01-11 22:01:14.083040 stepmix-1.0.0/test/test_fiml.py
++-rw-r--r--   0        0        0     1001 2023-01-11 22:01:14.083040 stepmix-1.0.0/test/test_inputs.py
++-rw-r--r--   0        0        0     4284 2023-03-09 18:24:49.769774 stepmix-1.0.0/test/test_random_state.py
++-rw-r--r--   0        0        0      795 2023-01-11 22:01:14.083040 stepmix-1.0.0/test/test_sklearn.py
++-rw-r--r--   0        0        0     4570 2023-01-11 22:01:14.083040 stepmix-1.0.0/test/test_steps.py
++-rw-r--r--   0        0        0     6095 1970-01-01 00:00:00.000000 stepmix-1.0.0/PKG-INFO
+```
+
+### Comparing `stepmix-0.5.0/.github/workflows/pytest.yaml` & `stepmix-1.0.0/.github/workflows/pytest.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/LICENSE` & `stepmix-1.0.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/README-dev.md` & `stepmix-1.0.0/README-dev.md`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -42,15 +42,15 @@
+ StepMix uses the [Black](https://github.com/psf/black) formatting tool. Simply run
+ ```
+ black .
+ ``` 
+ in the project directory to reformat Python files.
+ 
+ # Bump versions
+-We use ```bumpver``` and the ```MAJOR.MINOR.PATCH``` convention. Use on of
++We use ```bumpver``` and the ```MAJOR.MINOR.PATCH``` convention. Use one of
+ ```
+ bumpver update --patch 
+ bumpver update --minor 
+ bumpver update --major 
+ ```
+ to update all files in the project. Add the ```--dry``` flag to 
+ see changes without committing them.
+```
+
+### Comparing `stepmix-0.5.0/README.md` & `stepmix-1.0.0/README.md`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,45 +1,49 @@
+ StepMix
+ ==============================
+ <a href="https://pypi.org/project/stepmix/"><img src="https://badge.fury.io/py/stepmix.svg" alt="PyPI version"></a>
+ [![Build](https://github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml/badge.svg)](https://github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml)
+ [![Documentation Status](https://readthedocs.org/projects/stepmix/badge/?version=latest)](https://stepmix.readthedocs.io/en/latest/index.html)
+ <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
++[![Downloads](https://static.pepy.tech/badge/stepmix)](https://pepy.tech/project/stepmix)
++[![Downloads](https://static.pepy.tech/badge/stepmix/month)](https://pepy.tech/project/stepmix)
++
++*For StepMixR, please refer to <a href="https://github.com/Labo-Lacourse/stepmixr">this repository.</a>*
+ 
+ A Python package following the scikit-learn API for model-based clustering and generalized mixture modeling (latent class/profile analysis) of continuous and categorical data. 
+ StepMix handles missing values through Full Information Maximum Likelihood (FIML) and provides multiple stepwise Expectation-Maximization (EM) estimation methods based on pseudolikelihood theory. 
+ Additional features include support for covariates and distal outcomes, various simulation utilities, and non-parametric bootstrapping, which allows inference
+ in semi-supervised and unsupervised settings.
+ 
+ 
+ # Install
+ You can install StepMix with pip, preferably in a virtual environment : 
+ ```
+ pip install stepmix
+ ``` 
+ # Tutorials
+ Detailed tutorials are available in notebooks : 
+-1. [Latent Class Analysis with StepMix](https://colab.research.google.com/drive/1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing) : 
++1. [Generalized Mixture Models with StepMix](https://colab.research.google.com/drive/1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing) : 
+ an in-depth look at how latent class models can be defined with StepMix. The tutorial uses the Iris Dataset as an example
+ and covers :
+-   1. Continuous LCA models;
++   1. Continuous LCA models (latent profile analysis/gaussian mixture model);
+    2. Binary LCA models;
+    3. Categorical LCA models;
+-   3. Mixed LCA models (continuous and categorical data);
+-   5. Missing Values.
++   3. Mixed variables mixture models (continuous and categorical data);
++   5. Missing Values through Full-Information Maximum Likelihood.
+ 2. [Stepwise Estimation with StepMix](https://colab.research.google.com/drive/1T_UObkN5Y-iFTKiun0zOkKk7LjtMeV25?usp=sharing) :
+     a tutorial demonstrating how to define measurement and structural models. The tutorial discusses:
+-   1. LCA models with response variables;
++   1. LCA models with distal outcomes;
+    2. LCA models with covariates; 
+    3. 1-step, 2-step and 3-step estimation;
+-   4. Corrections and other options for 3-step estimation.
++   4. Corrections (BCH or ML) and other options for 3-step estimation.
+ 3. [Model Selection](https://colab.research.google.com/drive/1iyFTD-D2wn88_vd-qxXkovIuWHRtU7V8?usp=sharing) :
+    a short tutorial discussing:
+-    1. Selecting the number of latent classes (```n_components```);
+-    2. Comparing models with AIC and BIC.
++    1. Selecting the number of components in a mixture model (```n_components```);
++    2. Comparing models with fit indices: AIC and BIC.
+ 4. [Parameters, Bootstrapping and CI](https://colab.research.google.com/drive/14Ir08HXQ3svydbVV4jlvi1HjGnfc4fc0?usp=sharing) :
+    a tutorial discussing how to:
+    1. Access StepMix parameters;
+    2. Bootstrap StepMix estimators;
+    2. Quickly plot confidence intervals.
+ 
+ # Quickstart
+@@ -65,14 +69,15 @@
+ ```
+ 1-step and 2-step estimation are simply a matter of changing of the `n_steps` argument. Additionally, some bias correction
+ methods are available for 3-step estimation.
+ 
+ # References
+ - Bolck, A., Croon, M., and Hagenaars, J. Estimating latent structure models with categorical variables: One-step
+ versus three-step estimators. Political analysis, 12(1): 3–27, 2004.
++
+ - Vermunt, J. K. Latent class modeling with covariates: Two improved three-step approaches. Political analysis,
+ 18 (4):450–469, 2010.
+ 
+ - Bakk, Z., Tekle, F. B., and Vermunt, J. K. Estimating the association between latent class membership and external
+ variables using bias-adjusted three-step approaches. Sociological Methodology, 43(1):272–311, 2013.
+ 
+ - Bakk, Z. and Kuha, J. Two-step estimation of models between latent classes and external variables. Psychometrika,
+```
+
+#### html2text {}
+
+```diff
+@@ -1,47 +1,53 @@
+ StepMix ============================== [PyPI_version] [![Build](https://
+ github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml/badge.svg)]
+ (https://github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml) [!
+ [Documentation Status](https://readthedocs.org/projects/stepmix/badge/
+ ?version=latest)](https://stepmix.readthedocs.io/en/latest/index.html) [Code
+-style:_black] A Python package following the scikit-learn API for model-based
+-clustering and generalized mixture modeling (latent class/profile analysis) of
+-continuous and categorical data. StepMix handles missing values through Full
+-Information Maximum Likelihood (FIML) and provides multiple stepwise
+-Expectation-Maximization (EM) estimation methods based on pseudolikelihood
+-theory. Additional features include support for covariates and distal outcomes,
+-various simulation utilities, and non-parametric bootstrapping, which allows
+-inference in semi-supervised and unsupervised settings. # Install You can
+-install StepMix with pip, preferably in a virtual environment : ``` pip install
+-stepmix ``` # Tutorials Detailed tutorials are available in notebooks : 1.
+-[Latent Class Analysis with StepMix](https://colab.research.google.com/drive/
+-1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing) : an in-depth look at how latent
+-class models can be defined with StepMix. The tutorial uses the Iris Dataset as
+-an example and covers : 1. Continuous LCA models; 2. Binary LCA models; 3.
+-Categorical LCA models; 3. Mixed LCA models (continuous and categorical data);
+-5. Missing Values. 2. [Stepwise Estimation with StepMix](https://
++style:_black] [![Downloads](https://static.pepy.tech/badge/stepmix)](https://
++pepy.tech/project/stepmix) [![Downloads](https://static.pepy.tech/badge/
++stepmix/month)](https://pepy.tech/project/stepmix) *For StepMixR, please refer
++to this_repository.* A Python package following the scikit-learn API for model-
++based clustering and generalized mixture modeling (latent class/profile
++analysis) of continuous and categorical data. StepMix handles missing values
++through Full Information Maximum Likelihood (FIML) and provides multiple
++stepwise Expectation-Maximization (EM) estimation methods based on
++pseudolikelihood theory. Additional features include support for covariates and
++distal outcomes, various simulation utilities, and non-parametric
++bootstrapping, which allows inference in semi-supervised and unsupervised
++settings. # Install You can install StepMix with pip, preferably in a virtual
++environment : ``` pip install stepmix ``` # Tutorials Detailed tutorials are
++available in notebooks : 1. [Generalized Mixture Models with StepMix](https://
++colab.research.google.com/drive/1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing)
++: an in-depth look at how latent class models can be defined with StepMix. The
++tutorial uses the Iris Dataset as an example and covers : 1. Continuous LCA
++models (latent profile analysis/gaussian mixture model); 2. Binary LCA models;
++3. Categorical LCA models; 3. Mixed variables mixture models (continuous and
++categorical data); 5. Missing Values through Full-Information Maximum
++Likelihood. 2. [Stepwise Estimation with StepMix](https://
+ colab.research.google.com/drive/1T_UObkN5Y-iFTKiun0zOkKk7LjtMeV25?usp=sharing)
+ : a tutorial demonstrating how to define measurement and structural models. The
+-tutorial discusses: 1. LCA models with response variables; 2. LCA models with
+-covariates; 3. 1-step, 2-step and 3-step estimation; 4. Corrections and other
+-options for 3-step estimation. 3. [Model Selection](https://
++tutorial discusses: 1. LCA models with distal outcomes; 2. LCA models with
++covariates; 3. 1-step, 2-step and 3-step estimation; 4. Corrections (BCH or ML)
++and other options for 3-step estimation. 3. [Model Selection](https://
+ colab.research.google.com/drive/1iyFTD-D2wn88_vd-qxXkovIuWHRtU7V8?usp=sharing)
+-: a short tutorial discussing: 1. Selecting the number of latent classes
+-(```n_components```); 2. Comparing models with AIC and BIC. 4. [Parameters,
+-Bootstrapping and CI](https://colab.research.google.com/drive/
+-14Ir08HXQ3svydbVV4jlvi1HjGnfc4fc0?usp=sharing) : a tutorial discussing how to:
+-1. Access StepMix parameters; 2. Bootstrap StepMix estimators; 2. Quickly plot
+-confidence intervals. # Quickstart A simple example for 3-step estimation on
+-simulated data : ```python from stepmix.datasets import data_bakk_response from
+-stepmix.stepmix import StepMix # Soft 3-step X, Y, _ = data_bakk_response
+-(n_samples=1000, sep_level=.9, random_state=42) model = StepMix(n_components=3,
+-n_steps=3, measurement='bernoulli', structural='gaussian_unit',
+-assignment='soft', random_state=42) model.fit(X, Y) print(model.score(X, Y)) #
+-Average log-likelihood # Equivalently, each step can be performed individually.
+-See the code of the fit method for details. model = StepMix(n_components=3,
++: a short tutorial discussing: 1. Selecting the number of components in a
++mixture model (```n_components```); 2. Comparing models with fit indices: AIC
++and BIC. 4. [Parameters, Bootstrapping and CI](https://
++colab.research.google.com/drive/14Ir08HXQ3svydbVV4jlvi1HjGnfc4fc0?usp=sharing)
++: a tutorial discussing how to: 1. Access StepMix parameters; 2. Bootstrap
++StepMix estimators; 2. Quickly plot confidence intervals. # Quickstart A simple
++example for 3-step estimation on simulated data : ```python from
++stepmix.datasets import data_bakk_response from stepmix.stepmix import StepMix
++# Soft 3-step X, Y, _ = data_bakk_response(n_samples=1000, sep_level=.9,
++random_state=42) model = StepMix(n_components=3, n_steps=3,
++measurement='bernoulli', structural='gaussian_unit', assignment='soft',
++random_state=42) model.fit(X, Y) print(model.score(X, Y)) # Average log-
++likelihood # Equivalently, each step can be performed individually. See the
++code of the fit method for details. model = StepMix(n_components=3,
+ measurement='bernoulli', structural='gaussian_unit', random_state=42) model.em
+ (X) # Step 1 probs = model.predict_proba(X) # Step 2 model.m_step_structural
+ (probs, Y) # Step 3 print(model.score(X, Y)) ``` 1-step and 2-step estimation
+ are simply a matter of changing of the `n_steps` argument. Additionally, some
+ bias correction methods are available for 3-step estimation. # References -
+ Bolck, A., Croon, M., and Hagenaars, J. Estimating latent structure models with
+ categorical variables: One-step versus three-step estimators. Political
+```
+
+### Comparing `stepmix-0.5.0/docs/Makefile` & `stepmix-1.0.0/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/docs/make.bat` & `stepmix-1.0.0/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/docs/source/api.rst` & `stepmix-1.0.0/docs/source/api.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/docs/source/conf.py` & `stepmix-1.0.0/docs/source/conf.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ sys.path.insert(0, os.path.abspath("../.."))
+ 
+ project = "StepMix"
+ copyright = "2022, Labo-Lacourse"
+ author = "Sacha Morin, Robin Legault"
+ 
+ release = "0.0"
+-version = "0.5.0"
++version = "1.0.0"
+ 
+ 
+ # -- General configuration
+ 
+ extensions = [
+     "sphinx.ext.napoleon",
+     # 'numpydoc',
+```
+
+### Comparing `stepmix-0.5.0/docs/source/index.rst` & `stepmix-1.0.0/docs/source/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/docs/source/tutorials.rst` & `stepmix-1.0.0/docs/source/tutorials.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/pyproject.toml` & `stepmix-1.0.0/pyproject.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -37,15 +37,15 @@
+ [project.optional-dependencies]
+ dev = ["black", "bumpver", "flit", "pytest", "sphinx", "sphinx-rtd-theme"]
+ 
+ [project.urls]
+ Homepage = "https://stepmix.readthedocs.io/en/latest/"
+ 
+ [tool.bumpver]
+-current_version = "0.5.0"
++current_version = "1.0.0"
+ version_pattern = "MAJOR.MINOR.PATCH"
+ commit_message = "bump version {old_version} -> {new_version}"
+ commit = true
+ tag = true
+ push = true
+ 
+ [tool.bumpver.file_patterns]
+```
+
+### Comparing `stepmix-0.5.0/scripts/run_bakk_simulation.py` & `stepmix-1.0.0/scripts/run_bakk_simulation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/scripts/run_bakk_simulation_complete.py` & `stepmix-1.0.0/scripts/run_bakk_simulation_complete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/bootstrap.py` & `stepmix-1.0.0/stepmix/bootstrap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/corrections.py` & `stepmix-1.0.0/stepmix/corrections.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/datasets.py` & `stepmix-1.0.0/stepmix/datasets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/emission/build_emission.py` & `stepmix-1.0.0/stepmix/emission/build_emission.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/emission/categorical.py` & `stepmix-1.0.0/stepmix/emission/categorical.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/emission/covariate.py` & `stepmix-1.0.0/stepmix/emission/covariate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/emission/emission.py` & `stepmix-1.0.0/stepmix/emission/emission.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/emission/gaussian.py` & `stepmix-1.0.0/stepmix/emission/gaussian.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/emission/nested.py` & `stepmix-1.0.0/stepmix/emission/nested.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/stepmix.py` & `stepmix-1.0.0/stepmix/stepmix.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/stepmix/utils.py` & `stepmix-1.0.0/stepmix/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/conftest.py` & `stepmix-1.0.0/test/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_benchmarks.py` & `stepmix-1.0.0/test/test_benchmarks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_bootstrap.py` & `stepmix-1.0.0/test/test_bootstrap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_emission.py` & `stepmix-1.0.0/test/test_emission.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_fiml.py` & `stepmix-1.0.0/test/test_fiml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_inputs.py` & `stepmix-1.0.0/test/test_inputs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_random_state.py` & `stepmix-1.0.0/test/test_random_state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_sklearn.py` & `stepmix-1.0.0/test/test_sklearn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/test/test_steps.py` & `stepmix-1.0.0/test/test_steps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `stepmix-0.5.0/PKG-INFO` & `stepmix-1.0.0/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: stepmix
+-Version: 0.5.0
++Version: 1.0.0
+ Summary: A Python package for stepwise estimation of latent class models with measurement and structural components. The package can also be used to fit mixture models with various observed random variables.
+ Keywords: clustering,mixtures,lca,em,latent-class-analysis,expectation–maximization
+ Author-email: Sacha Morin <sacha.morin@mila.quebec>, Robin Legault <robin.legault@umontreal.ca>, Charles-Édouard Giguère <ce.giguere@gmail.com>, Éric Lacourse <eric.lacourse@umontreal.ca>, Roxane de la Sablonnière <roxane.de.la.sablonniere@umontreal.ca>
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+@@ -25,46 +25,50 @@
+ 
+ StepMix
+ ==============================
+ <a href="https://pypi.org/project/stepmix/"><img src="https://badge.fury.io/py/stepmix.svg" alt="PyPI version"></a>
+ [![Build](https://github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml/badge.svg)](https://github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml)
+ [![Documentation Status](https://readthedocs.org/projects/stepmix/badge/?version=latest)](https://stepmix.readthedocs.io/en/latest/index.html)
+ <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
++[![Downloads](https://static.pepy.tech/badge/stepmix)](https://pepy.tech/project/stepmix)
++[![Downloads](https://static.pepy.tech/badge/stepmix/month)](https://pepy.tech/project/stepmix)
++
++*For StepMixR, please refer to <a href="https://github.com/Labo-Lacourse/stepmixr">this repository.</a>*
+ 
+ A Python package following the scikit-learn API for model-based clustering and generalized mixture modeling (latent class/profile analysis) of continuous and categorical data. 
+ StepMix handles missing values through Full Information Maximum Likelihood (FIML) and provides multiple stepwise Expectation-Maximization (EM) estimation methods based on pseudolikelihood theory. 
+ Additional features include support for covariates and distal outcomes, various simulation utilities, and non-parametric bootstrapping, which allows inference
+ in semi-supervised and unsupervised settings.
+ 
+ 
+ # Install
+ You can install StepMix with pip, preferably in a virtual environment : 
+ ```
+ pip install stepmix
+ ``` 
+ # Tutorials
+ Detailed tutorials are available in notebooks : 
+-1. [Latent Class Analysis with StepMix](https://colab.research.google.com/drive/1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing) : 
++1. [Generalized Mixture Models with StepMix](https://colab.research.google.com/drive/1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing) : 
+ an in-depth look at how latent class models can be defined with StepMix. The tutorial uses the Iris Dataset as an example
+ and covers :
+-   1. Continuous LCA models;
++   1. Continuous LCA models (latent profile analysis/gaussian mixture model);
+    2. Binary LCA models;
+    3. Categorical LCA models;
+-   3. Mixed LCA models (continuous and categorical data);
+-   5. Missing Values.
++   3. Mixed variables mixture models (continuous and categorical data);
++   5. Missing Values through Full-Information Maximum Likelihood.
+ 2. [Stepwise Estimation with StepMix](https://colab.research.google.com/drive/1T_UObkN5Y-iFTKiun0zOkKk7LjtMeV25?usp=sharing) :
+     a tutorial demonstrating how to define measurement and structural models. The tutorial discusses:
+-   1. LCA models with response variables;
++   1. LCA models with distal outcomes;
+    2. LCA models with covariates; 
+    3. 1-step, 2-step and 3-step estimation;
+-   4. Corrections and other options for 3-step estimation.
++   4. Corrections (BCH or ML) and other options for 3-step estimation.
+ 3. [Model Selection](https://colab.research.google.com/drive/1iyFTD-D2wn88_vd-qxXkovIuWHRtU7V8?usp=sharing) :
+    a short tutorial discussing:
+-    1. Selecting the number of latent classes (```n_components```);
+-    2. Comparing models with AIC and BIC.
++    1. Selecting the number of components in a mixture model (```n_components```);
++    2. Comparing models with fit indices: AIC and BIC.
+ 4. [Parameters, Bootstrapping and CI](https://colab.research.google.com/drive/14Ir08HXQ3svydbVV4jlvi1HjGnfc4fc0?usp=sharing) :
+    a tutorial discussing how to:
+    1. Access StepMix parameters;
+    2. Bootstrap StepMix estimators;
+    2. Quickly plot confidence intervals.
+ 
+ # Quickstart
+@@ -90,14 +94,15 @@
+ ```
+ 1-step and 2-step estimation are simply a matter of changing of the `n_steps` argument. Additionally, some bias correction
+ methods are available for 3-step estimation.
+ 
+ # References
+ - Bolck, A., Croon, M., and Hagenaars, J. Estimating latent structure models with categorical variables: One-step
+ versus three-step estimators. Political analysis, 12(1): 3–27, 2004.
++
+ - Vermunt, J. K. Latent class modeling with covariates: Two improved three-step approaches. Political analysis,
+ 18 (4):450–469, 2010.
+ 
+ - Bakk, Z., Tekle, F. B., and Vermunt, J. K. Estimating the association between latent class membership and external
+ variables using bias-adjusted three-step approaches. Sociological Methodology, 43(1):272–311, 2013.
+ 
+ - Bakk, Z. and Kuha, J. Two-step estimation of models between latent classes and external variables. Psychometrika,
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: stepmix Version: 0.5.0 Summary: A Python package
++Metadata-Version: 2.1 Name: stepmix Version: 1.0.0 Summary: A Python package
+ for stepwise estimation of latent class models with measurement and structural
+ components. The package can also be used to fit mixture models with various
+ observed random variables. Keywords: clustering,mixtures,lca,em,latent-class-
+ analysis,expectationâmaximization Author-email: Sacha Morin
+ morin@mila.quebec>, Robin Legault
+ legault@umontreal.ca>, Charles-Ãdouard GiguÃ¨re
+ giguere@gmail.com>, Ãric Lacourse
+@@ -17,57 +17,62 @@
+ sphinx ; extra == "dev" Requires-Dist: sphinx-rtd-theme ; extra == "dev"
+ Project-URL: Homepage, https://stepmix.readthedocs.io/en/latest/ Provides-
+ Extra: dev StepMix ============================== [PyPI_version] [![Build]
+ (https://github.com/Labo-Lacourse/stepmix/actions/workflows/pytest.yaml/
+ badge.svg)](https://github.com/Labo-Lacourse/stepmix/actions/workflows/
+ pytest.yaml) [![Documentation Status](https://readthedocs.org/projects/stepmix/
+ badge/?version=latest)](https://stepmix.readthedocs.io/en/latest/index.html)
+-[Code_style:_black] A Python package following the scikit-learn API for model-
+-based clustering and generalized mixture modeling (latent class/profile
++[Code_style:_black] [![Downloads](https://static.pepy.tech/badge/stepmix)]
++(https://pepy.tech/project/stepmix) [![Downloads](https://static.pepy.tech/
++badge/stepmix/month)](https://pepy.tech/project/stepmix) *For StepMixR, please
++refer to this_repository.* A Python package following the scikit-learn API for
++model-based clustering and generalized mixture modeling (latent class/profile
+ analysis) of continuous and categorical data. StepMix handles missing values
+ through Full Information Maximum Likelihood (FIML) and provides multiple
+ stepwise Expectation-Maximization (EM) estimation methods based on
+ pseudolikelihood theory. Additional features include support for covariates and
+ distal outcomes, various simulation utilities, and non-parametric
+ bootstrapping, which allows inference in semi-supervised and unsupervised
+ settings. # Install You can install StepMix with pip, preferably in a virtual
+ environment : ``` pip install stepmix ``` # Tutorials Detailed tutorials are
+-available in notebooks : 1. [Latent Class Analysis with StepMix](https://
++available in notebooks : 1. [Generalized Mixture Models with StepMix](https://
+ colab.research.google.com/drive/1KAxcvxjL_vB2lAG9e47we7hrf_2fR1eK?usp=sharing)
+ : an in-depth look at how latent class models can be defined with StepMix. The
+ tutorial uses the Iris Dataset as an example and covers : 1. Continuous LCA
+-models; 2. Binary LCA models; 3. Categorical LCA models; 3. Mixed LCA models
+-(continuous and categorical data); 5. Missing Values. 2. [Stepwise Estimation
+-with StepMix](https://colab.research.google.com/drive/1T_UObkN5Y-
+-iFTKiun0zOkKk7LjtMeV25?usp=sharing) : a tutorial demonstrating how to define
+-measurement and structural models. The tutorial discusses: 1. LCA models with
+-response variables; 2. LCA models with covariates; 3. 1-step, 2-step and 3-step
+-estimation; 4. Corrections and other options for 3-step estimation. 3. [Model
+-Selection](https://colab.research.google.com/drive/1iyFTD-D2wn88_vd-
+-qxXkovIuWHRtU7V8?usp=sharing) : a short tutorial discussing: 1. Selecting the
+-number of latent classes (```n_components```); 2. Comparing models with AIC and
+-BIC. 4. [Parameters, Bootstrapping and CI](https://colab.research.google.com/
+-drive/14Ir08HXQ3svydbVV4jlvi1HjGnfc4fc0?usp=sharing) : a tutorial discussing
+-how to: 1. Access StepMix parameters; 2. Bootstrap StepMix estimators; 2.
+-Quickly plot confidence intervals. # Quickstart A simple example for 3-step
+-estimation on simulated data : ```python from stepmix.datasets import
+-data_bakk_response from stepmix.stepmix import StepMix # Soft 3-step X, Y, _ =
+-data_bakk_response(n_samples=1000, sep_level=.9, random_state=42) model =
+-StepMix(n_components=3, n_steps=3, measurement='bernoulli',
+-structural='gaussian_unit', assignment='soft', random_state=42) model.fit(X, Y)
+-print(model.score(X, Y)) # Average log-likelihood # Equivalently, each step can
+-be performed individually. See the code of the fit method for details. model =
+-StepMix(n_components=3, measurement='bernoulli', structural='gaussian_unit',
+-random_state=42) model.em(X) # Step 1 probs = model.predict_proba(X) # Step 2
+-model.m_step_structural(probs, Y) # Step 3 print(model.score(X, Y)) ``` 1-step
+-and 2-step estimation are simply a matter of changing of the `n_steps`
+-argument. Additionally, some bias correction methods are available for 3-step
+-estimation. # References - Bolck, A., Croon, M., and Hagenaars, J. Estimating
+-latent structure models with categorical variables: One-step versus three-step
+-estimators. Political analysis, 12(1): 3â27, 2004. - Vermunt, J. K. Latent
+-class modeling with covariates: Two improved three-step approaches. Political
+-analysis, 18 (4):450â469, 2010. - Bakk, Z., Tekle, F. B., and Vermunt, J. K.
+-Estimating the association between latent class membership and external
+-variables using bias-adjusted three-step approaches. Sociological Methodology,
+-43(1):272â311, 2013. - Bakk, Z. and Kuha, J. Two-step estimation of models
+-between latent classes and external variables. Psychometrika, 83(4):871â892,
+-2018
++models (latent profile analysis/gaussian mixture model); 2. Binary LCA models;
++3. Categorical LCA models; 3. Mixed variables mixture models (continuous and
++categorical data); 5. Missing Values through Full-Information Maximum
++Likelihood. 2. [Stepwise Estimation with StepMix](https://
++colab.research.google.com/drive/1T_UObkN5Y-iFTKiun0zOkKk7LjtMeV25?usp=sharing)
++: a tutorial demonstrating how to define measurement and structural models. The
++tutorial discusses: 1. LCA models with distal outcomes; 2. LCA models with
++covariates; 3. 1-step, 2-step and 3-step estimation; 4. Corrections (BCH or ML)
++and other options for 3-step estimation. 3. [Model Selection](https://
++colab.research.google.com/drive/1iyFTD-D2wn88_vd-qxXkovIuWHRtU7V8?usp=sharing)
++: a short tutorial discussing: 1. Selecting the number of components in a
++mixture model (```n_components```); 2. Comparing models with fit indices: AIC
++and BIC. 4. [Parameters, Bootstrapping and CI](https://
++colab.research.google.com/drive/14Ir08HXQ3svydbVV4jlvi1HjGnfc4fc0?usp=sharing)
++: a tutorial discussing how to: 1. Access StepMix parameters; 2. Bootstrap
++StepMix estimators; 2. Quickly plot confidence intervals. # Quickstart A simple
++example for 3-step estimation on simulated data : ```python from
++stepmix.datasets import data_bakk_response from stepmix.stepmix import StepMix
++# Soft 3-step X, Y, _ = data_bakk_response(n_samples=1000, sep_level=.9,
++random_state=42) model = StepMix(n_components=3, n_steps=3,
++measurement='bernoulli', structural='gaussian_unit', assignment='soft',
++random_state=42) model.fit(X, Y) print(model.score(X, Y)) # Average log-
++likelihood # Equivalently, each step can be performed individually. See the
++code of the fit method for details. model = StepMix(n_components=3,
++measurement='bernoulli', structural='gaussian_unit', random_state=42) model.em
++(X) # Step 1 probs = model.predict_proba(X) # Step 2 model.m_step_structural
++(probs, Y) # Step 3 print(model.score(X, Y)) ``` 1-step and 2-step estimation
++are simply a matter of changing of the `n_steps` argument. Additionally, some
++bias correction methods are available for 3-step estimation. # References -
++Bolck, A., Croon, M., and Hagenaars, J. Estimating latent structure models with
++categorical variables: One-step versus three-step estimators. Political
++analysis, 12(1): 3â27, 2004. - Vermunt, J. K. Latent class modeling with
++covariates: Two improved three-step approaches. Political analysis, 18 (4):
++450â469, 2010. - Bakk, Z., Tekle, F. B., and Vermunt, J. K. Estimating the
++association between latent class membership and external variables using bias-
++adjusted three-step approaches. Sociological Methodology, 43(1):272â311,
++2013. - Bakk, Z. and Kuha, J. Two-step estimation of models between latent
++classes and external variables. Psychometrika, 83(4):871â892, 2018
+```
+

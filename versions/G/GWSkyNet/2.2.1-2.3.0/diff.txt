@@ -1,0 +1,174 @@
+--- tmp/GWSkyNet-2.2.1.tar.gz
++++ tmp/GWSkyNet-2.3.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "GWSkyNet-2.2.1.tar", last modified: Sat Dec 17 02:00:03 2022, max compression
+│ +gzip compressed data, was "GWSkyNet-2.3.0.tar", last modified: Thu Apr  6 20:19:26 2023, max compression
+│   --- GWSkyNet-2.2.1.tar
+├── +++ GWSkyNet-2.3.0.tar
+│ ├── file list
+│ │ @@ -1,28 +1,24 @@
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.111874 GWSkyNet-2.2.1/
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)    18073 2022-08-30 22:06:01.000000 GWSkyNet-2.2.1/LICENSE
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)      190 2022-08-30 22:07:54.000000 GWSkyNet-2.2.1/MANIFEST.in
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)     2969 2022-12-17 02:00:03.112044 GWSkyNet-2.2.1/PKG-INFO
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)     2212 2022-12-02 01:01:02.000000 GWSkyNet-2.2.1/README.md
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)     1683 2022-12-17 01:59:40.000000 GWSkyNet-2.2.1/pyproject.toml
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)       38 2022-12-17 02:00:03.112528 GWSkyNet-2.2.1/setup.cfg
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.094941 GWSkyNet-2.2.1/src/
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.099998 GWSkyNet-2.2.1/src/GWSkyNet/
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)    11135 2022-12-17 01:44:41.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet.py
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.095667 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.106132 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/models/
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)    91944 2022-11-19 00:09:14.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.h5
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)    16461 2022-11-19 00:08:55.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.json
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)      228 2022-11-19 21:35:32.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/models/training_norms.txt
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.106880 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/rates/
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)   360048 2022-11-19 00:06:01.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/rates/GWSkyNet_v4_rates.txt
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.111147 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_utils/
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)        0 2022-09-01 21:08:13.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_utils/__init__.py
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)     7113 2022-09-01 19:46:58.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_utils/gen_summary.py
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)     2981 2022-09-01 22:04:49.000000 GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_utils/log.py
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)      189 2022-12-17 01:59:45.000000 GWSkyNet-2.2.1/src/GWSkyNet/__init__.py
+│ │ -drwxr-xr-x   0 mervync    (502) staff       (20)        0 2022-12-17 02:00:03.102599 GWSkyNet-2.2.1/src/GWSkyNet.egg-info/
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)     2969 2022-12-17 02:00:03.000000 GWSkyNet-2.2.1/src/GWSkyNet.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)      609 2022-12-17 02:00:03.000000 GWSkyNet-2.2.1/src/GWSkyNet.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)        1 2022-12-17 02:00:03.000000 GWSkyNet-2.2.1/src/GWSkyNet.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)       98 2022-12-17 02:00:03.000000 GWSkyNet-2.2.1/src/GWSkyNet.egg-info/requires.txt
+│ │ --rw-r--r--   0 mervync    (502) staff       (20)       22 2022-12-17 02:00:03.000000 GWSkyNet-2.2.1/src/GWSkyNet.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.672544 GWSkyNet-2.3.0/
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)    18072 2023-04-06 20:02:55.000000 GWSkyNet-2.3.0/LICENSE
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)      190 2022-08-30 22:07:54.000000 GWSkyNet-2.3.0/MANIFEST.in
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)     3978 2023-04-06 20:19:26.672719 GWSkyNet-2.3.0/PKG-INFO
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)     3221 2023-04-06 20:12:28.000000 GWSkyNet-2.3.0/README.md
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)     1683 2023-04-06 20:15:49.000000 GWSkyNet-2.3.0/pyproject.toml
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)       38 2023-04-06 20:19:26.673227 GWSkyNet-2.3.0/setup.cfg
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.663272 GWSkyNet-2.3.0/src/
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.666156 GWSkyNet-2.3.0/src/GWSkyNet/
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)    11135 2023-04-06 20:05:53.000000 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet.py
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.663847 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.670615 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/models/
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)    91944 2022-11-19 00:09:14.000000 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.h5
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)    16461 2022-11-19 00:08:55.000000 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.json
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)      228 2022-11-19 21:35:32.000000 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/models/training_norms.txt
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.671086 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/rates/
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)   360048 2022-11-19 00:06:01.000000 GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/rates/GWSkyNet_v4_rates.txt
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)      148 2023-04-06 20:15:49.000000 GWSkyNet-2.3.0/src/GWSkyNet/__init__.py
+│ │ +drwxr-xr-x   0 mervync    (502) staff       (20)        0 2023-04-06 20:19:26.668704 GWSkyNet-2.3.0/src/GWSkyNet.egg-info/
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)     3978 2023-04-06 20:19:26.000000 GWSkyNet-2.3.0/src/GWSkyNet.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)      491 2023-04-06 20:19:26.000000 GWSkyNet-2.3.0/src/GWSkyNet.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)        1 2023-04-06 20:19:26.000000 GWSkyNet-2.3.0/src/GWSkyNet.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)       98 2023-04-06 20:19:26.000000 GWSkyNet-2.3.0/src/GWSkyNet.egg-info/requires.txt
+│ │ +-rw-r--r--   0 mervync    (502) staff       (20)       22 2023-04-06 20:19:26.000000 GWSkyNet-2.3.0/src/GWSkyNet.egg-info/top_level.txt
+│ │   --- GWSkyNet-2.2.1/LICENSE
+│ ├── +++ GWSkyNet-2.3.0/LICENSE
+│ │┄ Files 0% similar despite different names
+│ │ @@ -333,8 +333,7 @@
+│ │    Ty Coon, President of Vice
+│ │  
+│ │  This General Public License does not permit incorporating your program into
+│ │  proprietary programs.  If your program is a subroutine library, you may
+│ │  consider it more useful to permit linking proprietary applications with the
+│ │  library.  If this is what you want to do, use the GNU Lesser General
+│ │  Public License instead of this License.
+│ │ -
+│ │   --- GWSkyNet-2.2.1/README.md
+│ ├── +++ GWSkyNet-2.3.0/README.md
+│ │┄ Files 20% similar despite different names
+│ │ @@ -2,14 +2,16 @@
+│ │  
+│ │  [GWSkyNet](https://iopscience.iop.org/article/10.3847/2041-8213/abc5b5), developed by Cabero et al 2020, is a machine learning classifier capable of distinguishing between astrophysical events and instrumental artifacts. Designed to facilitate potential EM follow-up observations, the classifier can be operated in low-latency and provide information complementary to what has previously been released in an Open Public Alert(OPA) seconds after an alert is published. A unique feature of the classifier is that it needs only the publicly available information from the OPA system. The classifier can also be expanded easily to intake other information such as the SNRs of a GW candidate in each detector in the network.
+│ │  
+│ │  GWSkyNet is now being developed as a low-latency annotation pipeline for the fourth observing run of the LIGO Scientific and Virgo Collaboration (O4).
+│ │  
+│ │  For more detail, please refer to the following document 
+│ │  
+│ │ +- [GWSkyNet design doc](https://dcc.ligo.org/LIGO-T2200100)	
+│ │ +- [Presentation to the low latency group](https://dcc.ligo.org/LIGO-G2200610)
+│ │  - [Paper on GWSkyNet](https://iopscience.iop.org/article/10.3847/2041-8213/abc5b5)
+│ │  
+│ │  ## Getting started
+│ │  
+│ │  The current version of GWSkyNet uses the following libaries:
+│ │  
+│ │  - numpy       1.23.2
+│ │ @@ -31,7 +33,14 @@
+│ │  model       = G.load_GWSkyNet_model()
+│ │  data        = G.prepare_data('S190421ar.fits')
+│ │  class_score = G.predict(model, data)
+│ │  FAR, FNR    = G.get_rates(class_score[0])
+│ │  ```
+│ │  Running the above code will output a class score equal to 0.995. A class_score closer to 1 indicates the origin is more likely to be astrophysical.
+│ │  FAR and FNR stand for False Alarm Rate and False Negative Rate respectively.
+│ │ +
+│ │ +### Architecture    
+│ │ +GWSkyNet architecture. The first two branches are convolutional neural networks with residual connections for image data. The shape of the input data is indicated in parenthesis, with N the number of examples in the training set. The numbers in the SeparableConv2D (SepConv) and MaxPool layers indicate the kernel size in pixels and the number of filters (when applicable). The number in the Dense layers indicates the number of units.    
+│ │ +![](figs/CNN_architecture.png)    
+│ │ +### Performance    
+│ │ +False Positive Rate (FPR) and False Negative Rate (FNR) as functions of the Real-Noise (RN) score threshold. At a score threshold RN>=0.5, GWSkyNet yields 5.3% FNR and 3.8% FPR. Lowering the threshold to RN>=0.1 reduces the FNR to 2.4%, with FPR increased to 9.3%. The intersection is at RN=0.39, with FPR=FNR=4.5%.    
+│ │ +![](figs/FNR-FPRvsthreshold.png)
+│ │   --- GWSkyNet-2.2.1/pyproject.toml
+│ ├── +++ GWSkyNet-2.3.0/pyproject.toml
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,45 +1,44 @@
+│ │  [build-system]
+│ │  requires        = ['setuptools>=60.6.0', 'wheel']
+│ │  build-backend   = 'setuptools.build_meta'
+│ │  
+│ │  [project]
+│ │  name            = 'GWSkyNet'
+│ │ -version         = '2.2.1'
+│ │ +version         = '2.3.0'
+│ │  description     = 'GWSkyNet : a machine learning algorithm used for estimating the probabiliy that a gravitational wave candidate is of astrophysical origin'
+│ │ +readme          = 'README.md'
+│ │  authors         = [{ name = 'Man Leong (Mervyn) Chan, Jess McIver, Ashish Mahabal, Daryl Haggard, Nayyer Raza', email = 'mervync@phas.ubc.ca'},
+│ │                     { name = 'Jess McIver', email = 'mciver@phas.ubc.ca'},
+│ │                     { name = 'Ashish Mahabal', email = 'aam@astro.caltech.edu'},
+│ │                     { name = 'Daryl Haggard', email = 'daryl.haggard@mcgill.ca'},
+│ │                     { name = 'Nayyer Raza', email = 'nayyer.raza@mail.mcgill.ca'}]
+│ │ -readme          = 'README.md'
+│ │  license         = { text = 'GPL-2.0+' }
+│ │  classifiers     = [
+│ │      'License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)',
+│ │      'Programming Language :: Python',
+│ │      'Programming Language :: Python :: 3',
+│ │  ]
+│ │  dependencies    = ['numpy>=1.23.2',
+│ │                     'tensorflow-cpu>=2.9.1',
+│ │                     'ligo.skymap>=1.0.2',
+│ │                     'astropy>=5.1.1',
+│ │                     'reproject>=0.8',
+│ │                     'scipy>=1.8.0']
+│ │  requires-python = '>=3.8'
+│ │ -
+│ │   
+│ │  [tool.bumpver]
+│ │ -current_version = '2.2.1'
+│ │ +current_version = '2.3.0'
+│ │  version_pattern = 'MAJOR.MINOR.PATCH'
+│ │  commit_message  = 'bump version {old_version} -> {new_version}'
+│ │  commit = true
+│ │  tag = true
+│ │  push = true
+│ │  
+│ │  [tool.bumpver.file_patterns]
+│ │  'pyproject.toml' = [
+│ │      "current_version = '{version}'",
+│ │      "version         = '{version}'"       
+│ │  ]
+│ │  'src/GWSkyNet/__init__.py' = [
+│ │      "__version__ = '{version}'"
+│ │ -]
+│ │ +]
+│ │   --- GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet.py
+│ ├── +++ GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet.py
+│ │┄ Files identical despite different names
+│ │   --- GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.h5
+│ ├── +++ GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.h5
+│ │┄ Files identical despite different names
+│ │   --- GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.json
+│ ├── +++ GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/models/GWSkyNet_v4.json
+│ │┄ Files identical despite different names
+│ │   --- GWSkyNet-2.2.1/src/GWSkyNet/GWSkyNet_data/rates/GWSkyNet_v4_rates.txt
+│ ├── +++ GWSkyNet-2.3.0/src/GWSkyNet/GWSkyNet_data/rates/GWSkyNet_v4_rates.txt
+│ │┄ Files identical despite different names

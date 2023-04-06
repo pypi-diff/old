@@ -1,0 +1,172 @@
+--- tmp/systool-0.6.2.tar.gz
++++ tmp/systool-0.6.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "systool-0.6.2.tar", last modified: Thu Mar 30 18:49:53 2023, max compression
+│ +gzip compressed data, was "systool-0.6.3.tar", last modified: Thu Apr  6 20:34:54 2023, max compression
+│   --- systool-0.6.2.tar
+├── +++ systool-0.6.3.tar
+│ ├── file list
+│ │ @@ -1,32 +1,32 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 18:49:53.661304 systool-0.6.2/
+│ │ --rw-rw-rw-   0        0        0     1096 2022-11-03 18:10:48.000000 systool-0.6.2/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0      415 2023-03-30 18:49:53.658798 systool-0.6.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1429 2023-03-30 18:48:40.000000 systool-0.6.2/README.rst
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 18:49:53.601397 systool-0.6.2/main/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 18:49:53.620126 systool-0.6.2/main/systool/
+│ │ --rw-rw-rw-   0        0        0      139 2022-11-03 18:18:45.000000 systool-0.6.2/main/systool/__init__.py
+│ │ --rw-rw-rw-   0        0        0    11431 2023-03-30 18:45:26.000000 systool-0.6.2/main/systool/data.py
+│ │ --rw-rw-rw-   0        0        0     9550 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/distribution.py
+│ │ --rw-rw-rw-   0        0        0     9483 2023-03-30 18:45:51.000000 systool-0.6.2/main/systool/geo.py
+│ │ --rw-rw-rw-   0        0        0     8438 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/linreg.py
+│ │ --rw-rw-rw-   0        0        0    21201 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/plot.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 18:49:53.657401 systool-0.6.2/main/systool/utils/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-30 17:55:14.000000 systool-0.6.2/main/systool/utils/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7656 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/charts.py
+│ │ --rw-rw-rw-   0        0        0     4261 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/flatt_geom.py
+│ │ --rw-rw-rw-   0        0        0    10125 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/get_ftp_data.py
+│ │ --rw-rw-rw-   0        0        0    31483 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/get_socioEconomic_data.py
+│ │ --rw-rw-rw-   0        0        0    16335 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/linear_regression_make.py
+│ │ --rw-rw-rw-   0        0        0    23299 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/linear_regression_plot.py
+│ │ --rw-rw-rw-   0        0        0     1538 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/maps.py
+│ │ --rw-rw-rw-   0        0        0     4810 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/miscFunctions.py
+│ │ --rw-rw-rw-   0        0        0     8601 2023-03-29 20:06:36.000000 systool-0.6.2/main/systool/utils/readWrite.py
+│ │ --rw-rw-rw-   0        0        0     5925 2022-11-03 18:10:48.000000 systool-0.6.2/main/systool/utils/report.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 18:49:53.630142 systool-0.6.2/main/systool.egg-info/
+│ │ --rw-rw-rw-   0        0        0      415 2023-03-30 18:49:53.000000 systool-0.6.2/main/systool.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      736 2023-03-30 18:49:53.000000 systool-0.6.2/main/systool.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-30 18:49:53.000000 systool-0.6.2/main/systool.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0      116 2023-03-30 18:49:53.000000 systool-0.6.2/main/systool.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        8 2023-03-30 18:49:53.000000 systool-0.6.2/main/systool.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-30 18:49:53.661304 systool-0.6.2/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1321 2023-03-30 18:46:52.000000 systool-0.6.2/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:34:54.025861 systool-0.6.3/
+│ │ +-rw-rw-rw-   0        0        0     1096 2022-11-03 18:10:48.000000 systool-0.6.3/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0      415 2023-04-06 20:34:54.021868 systool-0.6.3/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1429 2023-04-06 20:33:17.000000 systool-0.6.3/README.rst
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:34:53.885306 systool-0.6.3/main/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:34:53.928537 systool-0.6.3/main/systool/
+│ │ +-rw-rw-rw-   0        0        0      139 2022-11-03 18:18:45.000000 systool-0.6.3/main/systool/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    11431 2023-03-30 18:45:26.000000 systool-0.6.3/main/systool/data.py
+│ │ +-rw-rw-rw-   0        0        0     9550 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/distribution.py
+│ │ +-rw-rw-rw-   0        0        0     9483 2023-03-30 18:45:51.000000 systool-0.6.3/main/systool/geo.py
+│ │ +-rw-rw-rw-   0        0        0     8438 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/linreg.py
+│ │ +-rw-rw-rw-   0        0        0    21201 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/plot.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:34:54.009777 systool-0.6.3/main/systool/utils/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-30 17:55:14.000000 systool-0.6.3/main/systool/utils/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     7656 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/charts.py
+│ │ +-rw-rw-rw-   0        0        0     4261 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/flatt_geom.py
+│ │ +-rw-rw-rw-   0        0        0    10125 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/get_ftp_data.py
+│ │ +-rw-rw-rw-   0        0        0    31483 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/get_socioEconomic_data.py
+│ │ +-rw-rw-rw-   0        0        0    16329 2023-04-06 19:42:29.000000 systool-0.6.3/main/systool/utils/linear_regression_make.py
+│ │ +-rw-rw-rw-   0        0        0    23299 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/linear_regression_plot.py
+│ │ +-rw-rw-rw-   0        0        0     1538 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/maps.py
+│ │ +-rw-rw-rw-   0        0        0     4810 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/miscFunctions.py
+│ │ +-rw-rw-rw-   0        0        0     8601 2023-03-29 20:06:36.000000 systool-0.6.3/main/systool/utils/readWrite.py
+│ │ +-rw-rw-rw-   0        0        0     5925 2022-11-03 18:10:48.000000 systool-0.6.3/main/systool/utils/report.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:34:53.951200 systool-0.6.3/main/systool.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      415 2023-04-06 20:34:53.000000 systool-0.6.3/main/systool.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      736 2023-04-06 20:34:53.000000 systool-0.6.3/main/systool.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 20:34:53.000000 systool-0.6.3/main/systool.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0      227 2023-04-06 20:34:53.000000 systool-0.6.3/main/systool.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2023-04-06 20:34:53.000000 systool-0.6.3/main/systool.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 20:34:54.025861 systool-0.6.3/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1458 2023-04-06 20:34:46.000000 systool-0.6.3/setup.py
+│ │   --- systool-0.6.2/LICENSE.txt
+│ ├── +++ systool-0.6.3/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/README.rst
+│ ├── +++ systool-0.6.3/README.rst
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SysTool v.0.6.2
+│ │ +# SysTool v.0.6.3
+│ │  
+│ │  Reune funções úteis para o tratamento e visualização de dados. 
+│ │  Uso particular em Engenharia de Transportes.
+│ │  
+│ │  Módulos já utilizáveis:
+│ │  
+│ │  - systool.data
+│ │   --- systool-0.6.2/main/systool/data.py
+│ ├── +++ systool-0.6.3/main/systool/data.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/distribution.py
+│ ├── +++ systool-0.6.3/main/systool/distribution.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/geo.py
+│ ├── +++ systool-0.6.3/main/systool/geo.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/linreg.py
+│ ├── +++ systool-0.6.3/main/systool/linreg.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/plot.py
+│ ├── +++ systool-0.6.3/main/systool/plot.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/charts.py
+│ ├── +++ systool-0.6.3/main/systool/utils/charts.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/flatt_geom.py
+│ ├── +++ systool-0.6.3/main/systool/utils/flatt_geom.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/get_ftp_data.py
+│ ├── +++ systool-0.6.3/main/systool/utils/get_ftp_data.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/get_socioEconomic_data.py
+│ ├── +++ systool-0.6.3/main/systool/utils/get_socioEconomic_data.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/linear_regression_make.py
+│ ├── +++ systool-0.6.3/main/systool/utils/linear_regression_make.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -203,15 +203,15 @@
+│ │          
+│ │      return model_out, dfR, Xoutlier, Youtlier, fightml  
+│ │  
+│ │  #def mapa_zn_out(shp_zonas, dfR)
+│ │  
+│ │  def corr_mtx(df):
+│ │      fig, ax = plt.subplots()
+│ │ -    mask = np.zeros_like(df.corr(), dtype=np.bool)
+│ │ +    mask = np.zeros_like(df.corr(), dtype=bool)
+│ │      mask[np.triu_indices_from(mask)] = True
+│ │      sns.heatmap(df.corr(), mask = mask, annot=True,vmin=-1, vmax=1, center=0, cmap='RdBu')
+│ │      return
+│ │           
+│ │  
+│ │  def linear_harvey_collier(model):
+│ │      ''' Test fot linearity unsing Harvey-Collier teory
+│ │ @@ -291,15 +291,15 @@
+│ │      # get correlation values
+│ │      corr = df[Xcols].corr()
+│ │      # filter diagonal
+│ │      mask_diagonal = np.eye(len(Xcols), dtype = bool)
+│ │      # filter ultra correlated values
+│ │      mask_correlated = corr > LIMIT
+│ │      # filter upper triangle
+│ │ -    mask_upperTriangle = np.zeros_like(corr, dtype=np.bool)
+│ │ +    mask_upperTriangle = np.zeros_like(corr, dtype=bool)
+│ │      mask_upperTriangle[np.triu_indices_from(mask_upperTriangle)] = True
+│ │      
+│ │      # get True/False for ultra correlated
+│ │      corr = (~mask_diagonal) & mask_correlated & mask_upperTriangle
+│ │  
+│ │      # get names that are REALLY correlated
+│ │      corr = corr.reset_index().melt(id_vars='index').query('value == True')
+│ │   --- systool-0.6.2/main/systool/utils/linear_regression_plot.py
+│ ├── +++ systool-0.6.3/main/systool/utils/linear_regression_plot.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/maps.py
+│ ├── +++ systool-0.6.3/main/systool/utils/maps.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/miscFunctions.py
+│ ├── +++ systool-0.6.3/main/systool/utils/miscFunctions.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/readWrite.py
+│ ├── +++ systool-0.6.3/main/systool/utils/readWrite.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool/utils/report.py
+│ ├── +++ systool-0.6.3/main/systool/utils/report.py
+│ │┄ Files identical despite different names
+│ │   --- systool-0.6.2/main/systool.egg-info/SOURCES.txt
+│ ├── +++ systool-0.6.3/main/systool.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

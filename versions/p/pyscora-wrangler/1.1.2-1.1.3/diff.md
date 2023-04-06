@@ -1,0 +1,185 @@
+# Comparing `tmp/pyscora_wrangler-1.1.2.tar.gz` & `tmp/pyscora_wrangler-1.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pyscora_wrangler-1.1.2.tar", max compression
++gzip compressed data, was "pyscora_wrangler-1.1.3.tar", max compression
+```
+
+## Comparing `pyscora_wrangler-1.1.2.tar` & `pyscora_wrangler-1.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+--rw-r--r--   0        0        0     1049 2023-04-06 20:21:03.663100 pyscora_wrangler-1.1.2/LICENSE
+--rw-r--r--   0        0        0      659 2023-04-06 20:21:03.663100 pyscora_wrangler-1.1.2/README.md
+--rw-r--r--   0        0        0     1116 2023-04-06 20:21:03.663100 pyscora_wrangler-1.1.2/pyproject.toml
+--rw-r--r--   0        0        0       51 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/__init__.py
+--rw-r--r--   0        0        0    14201 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/README.md
+--rw-r--r--   0        0        0       85 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/__init__.py
+--rw-r--r--   0        0        0     7114 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/athena/__init__.py
+--rw-r--r--   0        0        0    15796 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/cognito/__init__.py
+--rw-r--r--   0        0        0       88 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/constants.py
+--rw-r--r--   0        0        0     6685 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/dynamodb/__init__.py
+--rw-r--r--   0        0        0      671 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/aws/utils.py
+--rw-r--r--   0        0        0      165 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/constants.py
+--rw-r--r--   0        0        0      504 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/ldap/README.md
+--rw-r--r--   0        0        0       60 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/ldap/__init__.py
+--rw-r--r--   0        0        0     7512 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/ldap/service/__init__.py
+--rw-r--r--   0        0        0       22 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/ldap/utils.py
+--rw-r--r--   0        0        0     2692 2023-04-06 20:21:03.667100 pyscora_wrangler-1.1.2/pyscora_wrangler/utils.py
+--rw-r--r--   0        0        0     1998 1970-01-01 00:00:00.000000 pyscora_wrangler-1.1.2/PKG-INFO
++-rw-r--r--   0        0        0     1049 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/LICENSE
++-rw-r--r--   0        0        0      659 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/README.md
++-rw-r--r--   0        0        0     1116 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyproject.toml
++-rw-r--r--   0        0        0       51 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/__init__.py
++-rw-r--r--   0        0        0    14201 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/README.md
++-rw-r--r--   0        0        0       85 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/__init__.py
++-rw-r--r--   0        0        0     7114 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/athena/__init__.py
++-rw-r--r--   0        0        0    15796 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/cognito/__init__.py
++-rw-r--r--   0        0        0       88 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/constants.py
++-rw-r--r--   0        0        0     6697 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/dynamodb/__init__.py
++-rw-r--r--   0        0        0      671 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/aws/utils.py
++-rw-r--r--   0        0        0      165 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/constants.py
++-rw-r--r--   0        0        0      504 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/ldap/README.md
++-rw-r--r--   0        0        0       60 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/ldap/__init__.py
++-rw-r--r--   0        0        0     7512 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/ldap/service/__init__.py
++-rw-r--r--   0        0        0       22 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/ldap/utils.py
++-rw-r--r--   0        0        0     2692 2023-04-06 20:40:05.934980 pyscora_wrangler-1.1.3/pyscora_wrangler/utils.py
++-rw-r--r--   0        0        0     1998 1970-01-01 00:00:00.000000 pyscora_wrangler-1.1.3/PKG-INFO
+```
+
+### Comparing `pyscora_wrangler-1.1.2/LICENSE` & `pyscora_wrangler-1.1.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/README.md` & `pyscora_wrangler-1.1.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/pyproject.toml` & `pyscora_wrangler-1.1.3/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pyscora-wrangler"
+-version = "1.1.2"
++version = "1.1.3"
+ description = "Python lib for DE"
+ authors = ["Oncase <suporte@oncase.com.br>"]
+ maintainers = ["Guilherme Morone <guilherme.morone@oncase.com.br>"]
+ license = "MIT"
+ readme = "README.md"
+ homepage = "https://github.com/oncase/pyscora-wrangler"
+ repository = "https://github.com/oncase/pyscora-wrangler"
+```
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/aws/README.md` & `pyscora_wrangler-1.1.3/pyscora_wrangler/aws/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/aws/athena/__init__.py` & `pyscora_wrangler-1.1.3/pyscora_wrangler/aws/athena/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/aws/cognito/__init__.py` & `pyscora_wrangler-1.1.3/pyscora_wrangler/aws/cognito/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/aws/dynamodb/__init__.py` & `pyscora_wrangler-1.1.3/pyscora_wrangler/aws/dynamodb/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -94,19 +94,19 @@
+         boto3_session (Session | None, optional): Custom boto3 session. Defaults to None.
+ 
+     Returns:
+         Dict[str, Any] | None: A dict of item attributes that match the query criteria. Returns None if no data was found.
+     """
+ 
+     session = get_boto3_session(boto3_session)
+-    client = session.client(DYNAMODB_SERVICE_NAME)
++    resource = session.resource(DYNAMODB_SERVICE_NAME)
+ 
+     data = None
+ 
+-    dynamo_table = client.Table(table_name)
++    dynamo_table = resource.Table(table_name)
+     response = dynamo_table.query(KeyConditionExpression=Key(key).eq(value))
+     response = response.get("Items", [])
+ 
+     if len(response) > 0:
+         data = get_data_decoded(response[0]) if decode_data else response[0]
+ 
+     if fields != None and data:
+@@ -163,14 +163,14 @@
+         Additional args can be found at https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb/client/put_item.html
+ 
+     Returns:
+         Dict[str, Any]: Return the attributes and other outputs of the `PutItem` operation.
+     """
+ 
+     session = get_boto3_session(boto3_session)
+-    client = session.client(DYNAMODB_SERVICE_NAME)
++    resource = session.resource(DYNAMODB_SERVICE_NAME)
+ 
+-    table = client.Table(table_name)
++    table = resource.Table(table_name)
+     encoded_data = get_data_encoded(data) if encode_data else data
+     item = table.put_item(Item=encoded_data, *dynamodb_additional_args, **dynamodb_additional_kwargs)
+ 
+     return item
+```
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/aws/utils.py` & `pyscora_wrangler-1.1.3/pyscora_wrangler/aws/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/ldap/service/__init__.py` & `pyscora_wrangler-1.1.3/pyscora_wrangler/ldap/service/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/pyscora_wrangler/utils.py` & `pyscora_wrangler-1.1.3/pyscora_wrangler/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyscora_wrangler-1.1.2/PKG-INFO` & `pyscora_wrangler-1.1.3/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyscora-wrangler
+-Version: 1.1.2
++Version: 1.1.3
+ Summary: Python lib for DE
+ Home-page: https://github.com/oncase/pyscora-wrangler
+ License: MIT
+ Keywords: wrapper,scora,python,data_engineering
+ Author: Oncase
+ Author-email: suporte@oncase.com.br
+ Maintainer: Guilherme Morone
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: pyscora-wrangler Version: 1.1.2 Summary: Python lib
++Metadata-Version: 2.1 Name: pyscora-wrangler Version: 1.1.3 Summary: Python lib
+ for DE Home-page: https://github.com/oncase/pyscora-wrangler License: MIT
+ Keywords: wrapper,scora,python,data_engineering Author: Oncase Author-email:
+ suporte@oncase.com.br Maintainer: Guilherme Morone Maintainer-email:
+ guilherme.morone@oncase.com.br Requires-Python: >=3.8,<4.0 Classifier: Intended
+ Audience :: Developers Classifier: License :: OSI Approved :: MIT License
+ Classifier: Natural Language :: English Classifier: Programming Language ::
+ Python :: 3 Classifier: Programming Language :: Python :: 3.8 Classifier:
+```
+
