@@ -1,0 +1,3539 @@
+# Comparing `tmp/structlog-22.3.0.tar.gz` & `tmp/structlog-23.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, last modified: Sun Feb  2 00:00:00 2020, max compression
++gzip compressed data, last modified: Thu Apr  6 09:03:04 2023, max compression
+```
+
+## Comparing `structlog-22.3.0.tar` & `structlog-23.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,101 +1,104 @@
+--rw-r--r--   0        0        0      997 2020-02-02 00:00:00.000000 structlog-22.3.0/.pre-commit-config.yaml
+--rw-r--r--   0        0        0    36862 2020-02-02 00:00:00.000000 structlog-22.3.0/CHANGELOG.md
+--rw-r--r--   0        0        0      407 2020-02-02 00:00:00.000000 structlog-22.3.0/COPYRIGHT
+--rw-r--r--   0        0        0     6573 2020-02-02 00:00:00.000000 structlog-22.3.0/README.md
+--rw-r--r--   0        0        0      237 2020-02-02 00:00:00.000000 structlog-22.3.0/readthedocs.yml
+--rw-r--r--   0        0        0      817 2020-02-02 00:00:00.000000 structlog-22.3.0/show_off.py
+--rw-r--r--   0        0        0     2638 2020-02-02 00:00:00.000000 structlog-22.3.0/tox.ini
+--rw-r--r--   0        0        0    10510 2020-02-02 00:00:00.000000 structlog-22.3.0/typing_examples.py
+--rw-r--r--   0        0        0     5483 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/CODE_OF_CONDUCT.md
+--rw-r--r--   0        0        0     8489 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/CONTRIBUTING.md
+--rw-r--r--   0        0        0       61 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/FUNDING.yml
+--rw-r--r--   0        0        0     1943 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/PULL_REQUEST_TEMPLATE.md
+--rw-r--r--   0        0        0     1017 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/SECURITY.md
+--rw-r--r--   0        0        0      119 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/dependabot.yml
+--rw-r--r--   0        0        0     5189 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/sponsors/FilePreviews.svg
+--rw-r--r--   0        0        0     1901 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/sponsors/Sentry.svg
+--rw-r--r--   0        0        0     2082 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/sponsors/Tidelift.svg
+--rw-r--r--   0        0        0     1932 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/sponsors/Variomedia.svg
+--rw-r--r--   0        0        0      905 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/workflows/build-docset.yml
+--rw-r--r--   0        0        0     5369 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/workflows/ci.yml
+--rw-r--r--   0        0        0     1067 2020-02-02 00:00:00.000000 structlog-22.3.0/.github/workflows/codeql-analysis.yml
+--rw-r--r--   0        0        0     5579 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/Makefile
+--rw-r--r--   0        0        0    10178 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/api.rst
+--rw-r--r--   0        0        0     8702 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/bound-loggers.md
+--rw-r--r--   0        0        0       33 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/changelog.md
+--rw-r--r--   0        0        0     4693 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/conf.py
+--rw-r--r--   0        0        0     4928 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/configuration.md
+--rw-r--r--   0        0        0     2614 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/console-output.md
+--rw-r--r--   0        0        0     6507 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/contextvars.md
+--rw-r--r--   0        0        0     4372 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/frameworks.md
+--rw-r--r--   0        0        0    10437 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/getting-started.md
+--rw-r--r--   0        0        0     2015 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/index.md
+--rw-r--r--   0        0        0     1038 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/license.md
+--rw-r--r--   0        0        0     4797 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/logging-best-practices.md
+--rw-r--r--   0        0        0     5102 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/make.bat
+--rw-r--r--   0        0        0     4307 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/performance.md
+--rw-r--r--   0        0        0     5990 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/processors.md
+--rw-r--r--   0        0        0     7100 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/recipes.md
+--rw-r--r--   0        0        0    21063 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/standard-library.md
+--rw-r--r--   0        0        0     2506 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/testing.md
+--rw-r--r--   0        0        0     7173 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/thread-local.md
+--rw-r--r--   0        0        0     4306 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/twisted.md
+--rw-r--r--   0        0        0     1903 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/typing.md
+--rw-r--r--   0        0        0     4591 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/why.md
+--rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/.keep
+--rw-r--r--   0        0        0    55985 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/BoundLogger.svg
+--rw-r--r--   0        0        0   319196 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/console_renderer.png
+--rw-r--r--   0        0        0      441 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/custom.css
+--rw-r--r--   0        0        0     1389 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/docset-icon.png
+--rw-r--r--   0        0        0     3021 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/docset-icon@2x.png
+--rw-r--r--   0        0        0    98810 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/structlog_logo.png
+--rw-r--r--   0        0        0    49112 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/structlog_logo_small.png
+--rw-r--r--   0        0        0    26266 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/structlog_logo_small_transparent.png
+--rw-r--r--   0        0        0    79862 2020-02-02 00:00:00.000000 structlog-22.3.0/docs/_static/structlog_logo_transparent.png
+--rw-r--r--   0        0        0     2910 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/__init__.py
+--rw-r--r--   0        0        0     7239 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_base.py
+--rw-r--r--   0        0        0    13395 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_config.py
+--rw-r--r--   0        0        0     1764 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_frames.py
+--rw-r--r--   0        0        0     1636 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_generic.py
+--rw-r--r--   0        0        0     1186 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_greenlets.py
+--rw-r--r--   0        0        0     7363 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_log_levels.py
+--rw-r--r--   0        0        0     9268 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_output.py
+--rw-r--r--   0        0        0     1434 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/_utils.py
+--rw-r--r--   0        0        0     5141 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/contextvars.py
+--rw-r--r--   0        0        0    15071 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/dev.py
+--rw-r--r--   0        0        0      503 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/exceptions.py
+--rw-r--r--   0        0        0    26895 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/processors.py
+--rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/py.typed
+--rw-r--r--   0        0        0    33091 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/stdlib.py
+--rw-r--r--   0        0        0     5242 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/testing.py
+--rw-r--r--   0        0        0     9144 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/threadlocal.py
+--rw-r--r--   0        0        0     7549 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/tracebacks.py
+--rw-r--r--   0        0        0    10222 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/twisted.py
+--rw-r--r--   0        0        0      760 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/types.py
+--rw-r--r--   0        0        0     8033 2020-02-02 00:00:00.000000 structlog-22.3.0/src/structlog/typing.py
+--rw-r--r--   0        0        0      226 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/__init__.py
+--rw-r--r--   0        0        0      488 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/additional_frame.py
+--rw-r--r--   0        0        0     1365 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/conftest.py
+--rw-r--r--   0        0        0     7195 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_base.py
+--rw-r--r--   0        0        0    12382 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_config.py
+--rw-r--r--   0        0        0     8691 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_contextvars.py
+--rw-r--r--   0        0        0    14472 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_dev.py
+--rw-r--r--   0        0        0     4828 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_frames.py
+--rw-r--r--   0        0        0     2010 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_generic.py
+--rw-r--r--   0        0        0     7876 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_log_levels.py
+--rw-r--r--   0        0        0     9357 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_output.py
+--rw-r--r--   0        0        0     1577 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_packaging.py
+--rw-r--r--   0        0        0    34528 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_processors.py
+--rw-r--r--   0        0        0    36387 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_stdlib.py
+--rw-r--r--   0        0        0     4882 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_testing.py
+--rw-r--r--   0        0        0    13256 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_threadlocal.py
+--rw-r--r--   0        0        0    14972 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_tracebacks.py
+--rw-r--r--   0        0        0     9686 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_twisted.py
+--rw-r--r--   0        0        0     2924 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/test_utils.py
+--rw-r--r--   0        0        0      376 2020-02-02 00:00:00.000000 structlog-22.3.0/tests/utils.py
+--rw-r--r--   0        0        0      171 2020-02-02 00:00:00.000000 structlog-22.3.0/.gitignore
+--rw-r--r--   0        0        0    10174 2020-02-02 00:00:00.000000 structlog-22.3.0/LICENSE-APACHE
+--rw-r--r--   0        0        0     1113 2020-02-02 00:00:00.000000 structlog-22.3.0/LICENSE-MIT
+--rw-r--r--   0        0        0       72 2020-02-02 00:00:00.000000 structlog-22.3.0/NOTICE
+--rw-r--r--   0        0        0     4430 2020-02-02 00:00:00.000000 structlog-22.3.0/pyproject.toml
+--rw-r--r--   0        0        0     8422 2020-02-02 00:00:00.000000 structlog-22.3.0/PKG-INFO
++-rw-r--r--   0        0        0       56 2023-04-06 09:03:04.000000 structlog-23.1.0/.flake8
++-rw-r--r--   0        0        0      125 2023-04-06 09:03:04.000000 structlog-23.1.0/.git_archival.txt
++-rw-r--r--   0        0        0      143 2023-04-06 09:03:04.000000 structlog-23.1.0/.gitattributes
++-rw-r--r--   0        0        0      996 2023-04-06 09:03:04.000000 structlog-23.1.0/.pre-commit-config.yaml
++-rw-r--r--   0        0        0      274 2023-04-06 09:03:04.000000 structlog-23.1.0/.readthedocs.yaml
++-rw-r--r--   0        0        0    38282 2023-04-06 09:03:04.000000 structlog-23.1.0/CHANGELOG.md
++-rw-r--r--   0        0        0      407 2023-04-06 09:03:04.000000 structlog-23.1.0/COPYRIGHT
++-rw-r--r--   0        0        0     6719 2023-04-06 09:03:04.000000 structlog-23.1.0/README.md
++-rw-r--r--   0        0        0      817 2023-04-06 09:03:04.000000 structlog-23.1.0/show_off.py
++-rw-r--r--   0        0        0     2322 2023-04-06 09:03:04.000000 structlog-23.1.0/tox.ini
++-rw-r--r--   0        0        0    10972 2023-04-06 09:03:04.000000 structlog-23.1.0/typing_examples.py
++-rw-r--r--   0        0        0     5483 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/CODE_OF_CONDUCT.md
++-rw-r--r--   0        0        0     7968 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/CONTRIBUTING.md
++-rw-r--r--   0        0        0       43 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/FUNDING.yml
++-rw-r--r--   0        0        0     1943 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/PULL_REQUEST_TEMPLATE.md
++-rw-r--r--   0        0        0     1017 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/SECURITY.md
++-rw-r--r--   0        0        0      119 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/dependabot.yml
++-rw-r--r--   0        0        0     5189 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/sponsors/FilePreviews.svg
++-rw-r--r--   0        0        0     1901 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/sponsors/Sentry.svg
++-rw-r--r--   0        0        0     2082 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/sponsors/Tidelift.svg
++-rw-r--r--   0        0        0     1932 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/sponsors/Variomedia.svg
++-rw-r--r--   0        0        0      724 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/workflows/build-docset.yml
++-rw-r--r--   0        0        0     6138 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/workflows/ci.yml
++-rw-r--r--   0        0        0      761 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/workflows/codeql-analysis.yml
++-rw-r--r--   0        0        0     1748 2023-04-06 09:03:04.000000 structlog-23.1.0/.github/workflows/pypi-package.yml
++-rw-r--r--   0        0        0     5579 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/Makefile
++-rw-r--r--   0        0        0    10240 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/api.rst
++-rw-r--r--   0        0        0     8606 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/bound-loggers.md
++-rw-r--r--   0        0        0       33 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/changelog.md
++-rw-r--r--   0        0        0     4670 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/conf.py
++-rw-r--r--   0        0        0     4928 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/configuration.md
++-rw-r--r--   0        0        0     3174 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/console-output.md
++-rw-r--r--   0        0        0     6323 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/contextvars.md
++-rw-r--r--   0        0        0     4372 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/frameworks.md
++-rw-r--r--   0        0        0    10338 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/getting-started.md
++-rw-r--r--   0        0        0     1916 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/index.md
++-rw-r--r--   0        0        0     1038 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/license.md
++-rw-r--r--   0        0        0     4719 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/logging-best-practices.md
++-rw-r--r--   0        0        0     5102 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/make.bat
++-rw-r--r--   0        0        0     4307 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/performance.md
++-rw-r--r--   0        0        0     5990 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/processors.md
++-rw-r--r--   0        0        0     6990 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/recipes.md
++-rw-r--r--   0        0        0    21428 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/standard-library.md
++-rw-r--r--   0        0        0     2375 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/testing.md
++-rw-r--r--   0        0        0     6782 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/thread-local.md
++-rw-r--r--   0        0        0     4306 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/twisted.md
++-rw-r--r--   0        0        0     1903 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/typing.md
++-rw-r--r--   0        0        0     4591 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/why.md
++-rw-r--r--   0        0        0        0 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/.keep
++-rw-r--r--   0        0        0    55985 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/BoundLogger.svg
++-rw-r--r--   0        0        0   319196 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/console_renderer.png
++-rw-r--r--   0        0        0     1389 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/docset-icon.png
++-rw-r--r--   0        0        0     3021 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/docset-icon@2x.png
++-rw-r--r--   0        0        0    98810 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/structlog_logo.png
++-rw-r--r--   0        0        0    49112 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/structlog_logo_small.png
++-rw-r--r--   0        0        0    26266 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/structlog_logo_small_transparent.png
++-rw-r--r--   0        0        0    79862 2023-04-06 09:03:04.000000 structlog-23.1.0/docs/_static/structlog_logo_transparent.png
++-rw-r--r--   0        0        0     2909 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/__init__.py
++-rw-r--r--   0        0        0     7137 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_base.py
++-rw-r--r--   0        0        0    13590 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_config.py
++-rw-r--r--   0        0        0     1764 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_frames.py
++-rw-r--r--   0        0        0     1636 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_generic.py
++-rw-r--r--   0        0        0     1186 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_greenlets.py
++-rw-r--r--   0        0        0     7552 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_log_levels.py
++-rw-r--r--   0        0        0     9262 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_output.py
++-rw-r--r--   0        0        0     1445 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/_utils.py
++-rw-r--r--   0        0        0     5141 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/contextvars.py
++-rw-r--r--   0        0        0    15144 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/dev.py
++-rw-r--r--   0        0        0      503 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/exceptions.py
++-rw-r--r--   0        0        0    26841 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/processors.py
++-rw-r--r--   0        0        0        0 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/py.typed
++-rw-r--r--   0        0        0    35868 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/stdlib.py
++-rw-r--r--   0        0        0     5225 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/testing.py
++-rw-r--r--   0        0        0     9119 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/threadlocal.py
++-rw-r--r--   0        0        0     7493 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/tracebacks.py
++-rw-r--r--   0        0        0    10205 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/twisted.py
++-rw-r--r--   0        0        0      760 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/types.py
++-rw-r--r--   0        0        0     8033 2023-04-06 09:03:04.000000 structlog-23.1.0/src/structlog/typing.py
++-rw-r--r--   0        0        0      226 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/__init__.py
++-rw-r--r--   0        0        0      488 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/additional_frame.py
++-rw-r--r--   0        0        0     1365 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/conftest.py
++-rw-r--r--   0        0        0     7195 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_base.py
++-rw-r--r--   0        0        0    12382 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_config.py
++-rw-r--r--   0        0        0     8691 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_contextvars.py
++-rw-r--r--   0        0        0    15949 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_dev.py
++-rw-r--r--   0        0        0     4828 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_frames.py
++-rw-r--r--   0        0        0     2010 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_generic.py
++-rw-r--r--   0        0        0     8426 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_log_levels.py
++-rw-r--r--   0        0        0     9357 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_output.py
++-rw-r--r--   0        0        0     1577 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_packaging.py
++-rw-r--r--   0        0        0    34528 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_processors.py
++-rw-r--r--   0        0        0    37992 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_stdlib.py
++-rw-r--r--   0        0        0     4882 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_testing.py
++-rw-r--r--   0        0        0    13256 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_threadlocal.py
++-rw-r--r--   0        0        0    14972 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_tracebacks.py
++-rw-r--r--   0        0        0     9686 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_twisted.py
++-rw-r--r--   0        0        0     2924 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/test_utils.py
++-rw-r--r--   0        0        0      376 2023-04-06 09:03:04.000000 structlog-23.1.0/tests/utils.py
++-rw-r--r--   0        0        0      171 2023-04-06 09:03:04.000000 structlog-23.1.0/.gitignore
++-rw-r--r--   0        0        0    10174 2023-04-06 09:03:04.000000 structlog-23.1.0/LICENSE-APACHE
++-rw-r--r--   0        0        0     1113 2023-04-06 09:03:04.000000 structlog-23.1.0/LICENSE-MIT
++-rw-r--r--   0        0        0       72 2023-04-06 09:03:04.000000 structlog-23.1.0/NOTICE
++-rw-r--r--   0        0        0     4549 2023-04-06 09:03:04.000000 structlog-23.1.0/pyproject.toml
++-rw-r--r--   0        0        0     9351 2023-04-06 09:03:04.000000 structlog-23.1.0/PKG-INFO
+```
+
+### Comparing `structlog-22.3.0/.pre-commit-config.yaml` & `structlog-23.1.0/.pre-commit-config.yaml`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -3,48 +3,48 @@
+   autoupdate_schedule: monthly
+ 
+ default_language_version:
+   python: python3.10
+ 
+ repos:
+   - repo: https://github.com/psf/black
+-    rev: 22.10.0
++    rev: 23.3.0
+     hooks:
+       - id: black
+ 
+   - repo: https://github.com/asottile/pyupgrade
+-    rev: v3.2.2
++    rev: v3.3.1
+     hooks:
+       - id: pyupgrade
+         args: [--py37-plus]
+ 
+   - repo: https://github.com/PyCQA/isort
+-    rev: 5.10.1
++    rev: 5.12.0
+     hooks:
+       - id: isort
+         additional_dependencies: [toml]
+ 
+   - repo: https://github.com/asottile/yesqa
+     rev: v1.4.0
+     hooks:
+       - id: yesqa
+ 
+   - repo: https://github.com/PyCQA/flake8
+-    rev: 5.0.4
++    rev: 6.0.0
+     hooks:
+     - id: flake8
+       exclude: docs/code_examples
+ 
+   - repo: https://github.com/codespell-project/codespell
+-    rev: v2.2.2
++    rev: v2.2.4
+     hooks:
+       - id: codespell
+         args: [-L, alog]
+ 
+   - repo: https://github.com/pre-commit/pre-commit-hooks
+-    rev: v4.3.0
++    rev: v4.4.0
+     hooks:
+       - id: trailing-whitespace
+       - id: end-of-file-fixer
+       - id: debug-statements
+       - id: check-toml
+       - id: check-yaml
+```
+
+### Comparing `structlog-22.3.0/CHANGELOG.md` & `structlog-23.1.0/CHANGELOG.md`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -9,20 +9,46 @@
+ The **third number** is for emergencies when we need to start branches for older releases.
+ 
+ You can find out backwards-compatibility policy [here](https://github.com/hynek/structlog/blob/main/.github/SECURITY.md).
+ 
+ <!-- changelog follows -->
+ 
+ 
++## [23.1.0](https://github.com/hynek/structlog/compare/22.3.0...23.1.0) - 2023-04-06
++
++### Added
++
++- `structlog.stdlib.BoundLogger` now has, analogously to our native logger, a full set of async log methods prefixed with an `a`: `await log.ainfo("event!")`
++  [#502](https://github.com/hynek/structlog/issues/502)
++
++- The default configuration now respects the presence of `FORCE_COLOR` (regardless of its value, unless an empty string).
++  This disables all heuristics whether it makes sense to use colors.
++  [#503](https://github.com/hynek/structlog/issues/503)
++
++- The default configuration now respects the presence of [`NO_COLOR`](https://no-color.org) (regardless of its value, unless an empty string).
++  This disables all heuristics whether it makes sense to use colors and overrides `FORCE_COLOR`.
++  [#504](https://github.com/hynek/structlog/issues/504)
++
++
++### Fixed
++
++- ConsoleRenderer now reuses the `_figure_out_exc_info` to process the `exc_info` argument like `ExceptionRenderer` does.
++  This prevents crashes if the actual Exception is passed for the *exc_info* argument instead of a tuple or `True`.
++  [#482](https://github.com/hynek/structlog/issues/482)
++
++- `FilteringBoundLogger.aexception()` now extracts the exception info using `sys.exc_info()` before passing control to the asyncio executor (where original exception info is no longer available).
++  [#488](https://github.com/hynek/structlog/issues/488)
++
++
+ ## [22.3.0](https://github.com/hynek/structlog/compare/22.2.0...22.3.0) - 2022-11-24
+ 
+ ### Changed
+ 
+ - String interpolation in `FilteringBoundLogger` (used by default) is now only attempted if positional arguments are passed.
+-This prevents crashes if something different than a string is passed for the *event* argument.
++  This prevents crashes if something different than a string is passed for the *event* argument.
+   [#475](https://github.com/hynek/structlog/pull/475)
+ 
+ 
+ ### Fixed
+ 
+ - String interpolation doesn't cause crashes in filtered log call anymore.
+   [#478](https://github.com/hynek/structlog/pull/478)
+```
+
+### Comparing `structlog-22.3.0/README.md` & `structlog-23.1.0/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -15,14 +15,17 @@
+    </a>
+    <a href="https://bestpractices.coreinfrastructure.org/projects/6560">
+     <img src="https://bestpractices.coreinfrastructure.org/projects/6560/badge">
+     </a>
+    <a href="https://pypi.org/project/structlog/">
+       <img src="https://img.shields.io/pypi/v/structlog" alt="PyPI release" />
+    </a>
++   <a href="https://doi.org/10.5281/zenodo.7353739">
++      <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7353739.svg" alt="DOI">
++    </a>
+    <a href="https://pepy.tech/project/structlog">
+       <img src="https://static.pepy.tech/personalized-badge/structlog?period=month&units=international_system&left_color=grey&right_color=blue&left_text=Downloads%20/%20Month" alt="Downloads per month" />
+    </a>
+ </p>
+ 
+ <p align="center"><em>Simple. Powerful. Fast. Pick three.</em></p>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,11 +1,11 @@
+ # structlog: Structured Logging for Python
+                                   [structlog]
+              [Documentation] [License:_MIT_/_Apache_2.0] [https://
+-   bestpractices.coreinfrastructure.org/projects/6560/badge] [PyPI_release]
++bestpractices.coreinfrastructure.org/projects/6560/badge] [PyPI_release] [DOI]
+                              [Downloads_per_month]
+                       Simple. Powerful. Fast. Pick three.
+  *structlog* is *the* production-ready logging solution for Python: -
+ **Simple**: At its core, everything is about **functions** that take and return
+ **dictionaries** â all hidden behind **familiar APIs**. - **Powerful**:
+ Functions and dictionaries arenât just simple, theyâre also powerful.
+ *structlog* leaves *you* in control. - **Fast**: *structlog* is not hamstrung
+```
+
+### Comparing `structlog-22.3.0/show_off.py` & `structlog-23.1.0/show_off.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tox.ini` & `structlog-23.1.0/tox.ini`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,104 +1,92 @@
+-[flake8]
+-ignore = E203,W503,W504
+-
+-# Keep docs in sync with docs env and .readthedocs.yml.
+-# We don't run pre-commit in CI, because we use pre-commit.ci.
+-[gh-actions]
+-python =
+-    3.7: py37
+-    3.8: py38
+-    3.9: py39
+-    3.10: py310
+-    3.11: py311
+-
+-
+ [tox]
+-envlist = pre-commit,mypy,py37,py38,py39,py310,py39-colorama,py310-be,py310-rich,py311,docs,pypi-description,coverage-report
+-isolated_build = True
++min_version = 4
++env_list =
++    pre-commit,
++    mypy,
++    py37,
++    py38,
++    py39{,-colorama},
++    py310,
++    py311{,-be,-rich},
++    docs,
++    coverage-report
+ 
+ 
+ [testenv:docs]
+-# Keep basepython in sync with ci.yml/docs and .readthedocs.yml.
+-basepython = python3.10
++# Keep basepython in sync with ci.yml/docs and .readthedocs.yaml.
++base_python = python3.11
+ extras = docs
+-passenv = TERM
++pass_env = TERM
+ commands =
+     sphinx-build -n -T -W -b html -d {envtmpdir}/doctrees docs docs/_build/html
+     sphinx-build -n -T -W -b doctest -d {envtmpdir}/doctrees docs docs/_build/html
+ 
+ 
+ [testenv:pre-commit]
+ skip_install = true
+ deps = pre-commit
+-commands = pre-commit run --all-files --show-diff-on-failure
++commands = pre-commit run --all-files
+ 
+ 
+ [testenv:mypy]
+ description = Check types
+ extras = typing
+ commands = mypy src typing_examples.py
+ 
+ 
+ [testenv]
+ extras = tests
+-setenv = PYTHONHASHSEED = 0
+-commands = python -m pytest {posargs}
++set_env = PYTHONHASHSEED = 0
++commands = pytest {posargs}
+ 
+ 
+ # For missing types we get from typing-extensions
+-[testenv:py37]
+-deps = twisted
+-commands = python -m coverage run -m pytest {posargs}
+-
+-
+-[testenv:py310]
++[testenv:py3{7,11}]
+ deps = twisted
+-commands = {[testenv:py37]commands}
++commands = coverage run -m pytest {posargs}
+ 
+ 
+ [testenv:py39-colorama]
+ deps = colorama
+-commands = python -m coverage run -m pytest tests/test_dev.py {posargs}
++commands = coverage run -m pytest tests/test_dev.py {posargs}
+ 
+ 
+-[testenv:py310-be]
++[testenv:py311-be]
+ deps = better-exceptions
+ commands = {[testenv:py39-colorama]commands}
+ 
+ 
+-[testenv:py310-rich]
++[testenv:py311-rich]
+ deps = rich
+ commands = {[testenv:py39-colorama]commands}
+ 
+ 
+ [testenv:coverage-report]
+-basepython = python3.10
++# Keep in sync with ci.yml/PYTHON_LATEST
++basepython = python3.11
+ deps = coverage[toml]
+ skip_install = true
+ parallel_show_output = true
+-depends = py37,py310,py39-colorama,py310-be,py310-rich
++depends = py37,py39-colorama,py311{,-be,-rich}
+ commands =
+-    python -m coverage combine
+-    python -m coverage report
++    coverage combine
++    coverage report
+ 
+ 
+-[testenv:pypi-description]
+-basepython = python3.10
+-skip_install = true
+-deps =
+-    twine
+-    pip >= 18.0.0
+-# Needs to run last, otherwise we have a race condition about coverage files
+-# lying around.
+-depends = coverage-report
+-commands =
+-    pip install --upgrade pip
+-    pip wheel -w {envtmpdir}/build --no-deps .
+-    twine check {envtmpdir}/build/*
++[testenv:color-force]
++help = A visual check that FORCE_COLOR is working.
++set_env = FORCE_COLOR=1
++commands = python -c "import structlog; structlog.get_logger().warning('should be colorful')"
++
++
++[testenv:color-no]
++help = A visual check that NO_COLOR is working.
++set_env = NO_COLOR=1
++commands = python -c "import structlog; structlog.get_logger().warning('should be plain')"
+ 
+ 
+ [testenv:docset]
+ deps = doc2dash
+ extras = docs
+ allowlist_externals =
+     rm
+```
+
+### Comparing `structlog-22.3.0/typing_examples.py` & `structlog-23.1.0/typing_examples.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -305,14 +305,26 @@
+     await fblogger.afatal("fatal error")
+     await fblogger.aexception("async exception")
+     await fblogger.acritical("async critical")
+     await fblogger.amsg("async msg")
+     await fblogger.alog(logging.CRITICAL, "async log")
+ 
+ 
++async def typecheck_stdlib_async() -> None:
++    logger: structlog.stdlib.BoundLogger = structlog.get_logger(__name__)
++    await logger.adebug("async debug")
++    await logger.ainfo("async info")
++    await logger.awarning("async warning")
++    await logger.aerror("async error")
++    await logger.afatal("fatal error")
++    await logger.aexception("async exception")
++    await logger.acritical("async critical")
++    await logger.alog(logging.CRITICAL, "async log")
++
++
+ # Structured tracebacks and ExceptionRenderer with ExceptionDictTransformer
+ struct_tb: structlog.tracebacks.Trace = structlog.tracebacks.extract(
+     ValueError, ValueError("onoes"), None
+ )
+ try:
+     raise ValueError("onoes")
+ except ValueError as e:
+```
+
+### Comparing `structlog-22.3.0/.github/CODE_OF_CONDUCT.md` & `structlog-23.1.0/.github/CODE_OF_CONDUCT.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/CONTRIBUTING.md` & `structlog-23.1.0/.github/CONTRIBUTING.md`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -20,15 +20,15 @@
+ 
+ 
+ ## Workflow
+ 
+ - No contribution is too small!
+   Please submit as many fixes for typos and grammar bloopers as you can!
+ - Try to limit each pull request to *one* change only.
+-- Since we squash on merge, it's up to you how you handle updates to the `main branch.
++- Since we squash on merge, it's up to you how you handle updates to the `main` branch.
+   Whether you prefer to rebase on `main` or merge `main` into your branch, do whatever is more comfortable for you.
+ - *Always* add tests and docs for your code.
+   This is a hard rule; patches with missing tests or documentation won't be merged.
+ - Make sure your changes pass our [CI].
+   You won't get any feedback until it's green unless you ask for it.
+   For the CI to pass, the coverage must be 100%.
+   If you have problems to test something, open anyway and ask for advice.
+@@ -39,34 +39,31 @@
+ 
+ ## Local Development Environment
+ 
+ You can (and should) run our test suite using [*tox*].
+ However, you’ll probably want a more traditional environment as well.
+ We highly recommend to develop using the latest Python release because we try to take advantage of modern features whenever possible.
+ 
+-First create a [virtual environment](https://virtualenv.pypa.io/) so you don't break your system-wide Python installation.
+-It’s out of scope for this document to list all the ways to manage virtual environments in Python, but if you don’t already have a pet way, take some time to look at tools like [*direnv*](https://hynek.me/til/python-project-local-venvs/), [*virtualfish*](https://virtualfish.readthedocs.io/), and [*virtualenvwrapper*](https://virtualenvwrapper.readthedocs.io/).
+-
+-Next, get an up to date checkout of the *structlog* repository:
++Clone the *structlog* repository:
+ 
+ ```console
+ $ git clone git@github.com:hynek/structlog.git
+ ```
+ 
+-or if you prefer to use *Git* via `https`:
++Or if you prefer to use Git via HTTPS:
+ 
+ ```console
+ $ git clone https://github.com/hynek/structlog.git
+ ```
+ 
+-Change into the newly created directory and **after activating your virtual environment** install an editable version of *structlog* along with its tests and docs requirements:
++Change into the newly created directory and after activating a virtual environment install an editable version of *structlog* along with its tests and docs requirements:
+ 
+ ```console
+ $ cd structlog
+-$ pip install --upgrade pip wheel setuptools  # PLEASE don't skip this step
++$ pip install --upgrade pip wheel  # PLEASE don't skip this step
+ $ pip install -e '.[dev]'
+ ```
+ 
+ At this point,
+ 
+ ```console
+ $ python -m pytest
+@@ -92,15 +89,15 @@
+ This is not strictly necessary, because our [*tox*] file contains an environment that runs:
+ 
+ ```console
+ $ pre-commit run --all-files
+ ```
+ 
+ and our CI has integration with [pre-commit.ci](https://pre-commit.ci).
+-But it's way more comfortable to run it locally and *git* catching avoidable errors.
++But it's way more comfortable to run it locally and catch avoidable errors before pushing them to GitHub.
+ 
+ 
+ ## Code
+ 
+ - Obey [PEP 8](https://www.python.org/dev/peps/pep-0008/) and [PEP 257](https://www.python.org/dev/peps/pep-0257/).
+   We use the `"""`-on-separate-lines style for docstrings:
+```
+
+### Comparing `structlog-22.3.0/.github/PULL_REQUEST_TEMPLATE.md` & `structlog-23.1.0/.github/PULL_REQUEST_TEMPLATE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/SECURITY.md` & `structlog-23.1.0/.github/SECURITY.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/sponsors/FilePreviews.svg` & `structlog-23.1.0/.github/sponsors/FilePreviews.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/sponsors/Sentry.svg` & `structlog-23.1.0/.github/sponsors/Sentry.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/sponsors/Tidelift.svg` & `structlog-23.1.0/.github/sponsors/Tidelift.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/sponsors/Variomedia.svg` & `structlog-23.1.0/.github/sponsors/Variomedia.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/.github/workflows/build-docset.yml` & `structlog-23.1.0/.github/workflows/build-docset.yml`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -13,19 +13,14 @@
+ permissions:  # added using https://github.com/step-security/secure-workflows
+   contents: read
+ 
+ jobs:
+   docset:
+     runs-on: ubuntu-latest
+     steps:
+-      - name: Harden Runner
+-        uses: step-security/harden-runner@v1
+-        with:
+-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+-
+       - uses: actions/checkout@v3
+         with:
+           fetch-depth: 0  # get correct version
+       - uses: actions/setup-python@v4
+         with:
+           python-version: "3.10"
+```
+
+### Comparing `structlog-22.3.0/.github/workflows/codeql-analysis.yml` & `structlog-23.1.0/.github/workflows/codeql-analysis.yml`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -22,25 +22,14 @@
+ 
+     strategy:
+       fail-fast: false
+       matrix:
+         language: ["python"]
+ 
+     steps:
+-      - name: Harden Runner
+-        uses: step-security/harden-runner@v1
+-        with:
+-          egress-policy: block
+-          allowed-endpoints: >
+-            api.github.com:443
+-            bootstrap.pypa.io:443
+-            files.pythonhosted.org:443
+-            github.com:443
+-            pypi.org:443
+-
+       - name: Checkout repository
+         uses: actions/checkout@v3
+ 
+       - name: Initialize CodeQL
+         uses: github/codeql-action/init@v2
+         with:
+           languages: ${{ matrix.language }}
+```
+
+### Comparing `structlog-22.3.0/docs/Makefile` & `structlog-23.1.0/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/api.rst` & `structlog-23.1.0/docs/api.rst`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -273,15 +273,15 @@
+ .. automodule:: structlog.stdlib
+ 
+ .. autofunction:: recreate_defaults
+ 
+ .. autofunction:: get_logger
+ 
+ .. autoclass:: BoundLogger
+-   :members: bind, unbind, try_unbind, new, debug, info, warning, warn, error, critical, exception, log
++   :members: bind, unbind, try_unbind, new, debug, info, warning, warn, error, critical, exception, log, adebug, ainfo, awarning, aerror, acritical, aexception, alog
+ 
+ .. autoclass:: AsyncBoundLogger
+ 
+ .. autoclass:: LoggerFactory
+    :members: __call__
+ 
+ .. autofunction:: render_to_log_kwargs
+```
+
+### Comparing `structlog-22.3.0/docs/bound-loggers.md` & `structlog-23.1.0/docs/bound-loggers.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -153,38 +153,36 @@
+ 
+ However, in some rare cases you may not want to do that.
+ For example because you don't control how you get the logger that you would like to wrap (famous example: *Celery*).
+ For that times there is the {func}`structlog.wrap_logger` function that can be used to wrap a logger -- optionally without any global state (i.e. configuration):
+ 
+ (proc)=
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> import structlog
+-   >>> class CustomPrintLogger:
+-   ...     def msg(self, message):
+-   ...         print(message)
+-   >>> def proc(logger, method_name, event_dict):
+-   ...     print("I got called with", event_dict)
+-   ...     return repr(event_dict)
+-   >>> log = structlog.wrap_logger(
+-   ...     CustomPrintLogger(),
+-   ...     wrapper_class=structlog.BoundLogger,
+-   ...     processors=[proc],
+-   ... )
+-   >>> log2 = log.bind(x=42)
+-   >>> log == log2
+-   False
+-   >>> log.msg("hello world")
+-   I got called with {'event': 'hello world'}
+-   {'event': 'hello world'}
+-   >>> log2.msg("hello world")
+-   I got called with {'x': 42, 'event': 'hello world'}
+-   {'x': 42, 'event': 'hello world'}
+-   >>> log3 = log2.unbind("x")
+-   >>> log == log3
+-   True
+-   >>> log3.msg("nothing bound anymore", foo="but you can structure the event too")
+-   I got called with {'foo': 'but you can structure the event too', 'event': 'nothing bound anymore'}
+-   {'foo': 'but you can structure the event too', 'event': 'nothing bound anymore'}
++```{doctest}
++>>> import structlog
++>>> class CustomPrintLogger:
++...     def msg(self, message):
++...         print(message)
++>>> def proc(logger, method_name, event_dict):
++...     print("I got called with", event_dict)
++...     return repr(event_dict)
++>>> log = structlog.wrap_logger(
++...     CustomPrintLogger(),
++...     wrapper_class=structlog.BoundLogger,
++...     processors=[proc],
++... )
++>>> log2 = log.bind(x=42)
++>>> log == log2
++False
++>>> log.msg("hello world")
++I got called with {'event': 'hello world'}
++{'event': 'hello world'}
++>>> log2.msg("hello world")
++I got called with {'x': 42, 'event': 'hello world'}
++{'x': 42, 'event': 'hello world'}
++>>> log3 = log2.unbind("x")
++>>> log == log3
++True
++>>> log3.msg("nothing bound anymore", foo="but you can structure the event too")
++I got called with {'foo': 'but you can structure the event too', 'event': 'nothing bound anymore'}
++{'foo': 'but you can structure the event too', 'event': 'nothing bound anymore'}
+ ```
+```
+
+### Comparing `structlog-22.3.0/docs/conf.py` & `structlog-23.1.0/docs/conf.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -29,15 +29,15 @@
+     "deflist",
+ ]
+ 
+ # Add any paths that contain templates here, relative to this directory.
+ templates_path = ["_templates"]
+ 
+ # The suffix of source filenames.
+-source_suffix = ".rst"
++source_suffix = [".rst", ".md"]
+ 
+ # The master toctree document.
+ master_doc = "index"
+ 
+ # General information about the project.
+ project = "structlog"
+ author = "Hynek Schlawack"
+@@ -88,15 +88,14 @@
+ 
+ # The theme to use for HTML and HTML Help pages.  See the documentation for
+ # a list of builtin themes.
+ html_theme = "furo"
+ html_theme_options = {}
+ html_logo = "_static/structlog_logo_small_transparent.png"
+ html_static_path = ["_static"]
+-html_css_files = ["custom.css"]
+ 
+ htmlhelp_basename = "structlogdoc"
+ 
+ _logo = (
+     "https://www.structlog.org/en/latest/_static/"
+     "structlog_logo_small_transparent.png"
+ )
+```
+
+### Comparing `structlog-22.3.0/docs/configuration.md` & `structlog-23.1.0/docs/configuration.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/console-output.md` & `structlog-23.1.0/docs/console-output.md`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -43,10 +43,21 @@
+     logger_factory=structlog.stdlib.LoggerFactory(),
+     wrapper_class=structlog.stdlib.BoundLogger,
+     cache_logger_on_first_use=True,
+ )
+ ```
+ 
+ 
++## Standard Environment Variables
++
++*structlog*'s default configuration uses colors if standard out is a TTY (i.e. an interactive session).
++
++It's possible to override this behavior by setting two standard environment variables to any value except an empty string:
++
++- `FORCE_COLOR` *activates* colors, regardless of where output is going.
++- [`NO_COLOR`](https://no-color.org) *disables* colors, regardless of where the output is going and regardless the value of `FORCE_COLOR`.
++  Please note that `NO_COLOR` disables _all_ styling, including bold and italics.
++
++
+ ## Disabling Exception Pretty-Printing
+ 
+ If you prefer the default terse Exception rendering, but still want *Rich* installed, you can disable the pretty-printing by instantiating {class}`structlog.dev.ConsoleRenderer()` yourself and passing `exception_formatter=structlog.dev.plain_traceback`.
+```
+
+### Comparing `structlog-22.3.0/docs/contextvars.md` & `structlog-23.1.0/docs/contextvars.md`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,22 +1,18 @@
+ (contextvars)=
+ 
+ # Context Variables
+ 
+-```{eval-rst}
+-.. testsetup:: *
+-
+-   import structlog
++```{testsetup}
++import structlog
+ ```
+ 
+-```{eval-rst}
+-.. testcleanup:: *
+-
+-   import structlog
+-   structlog.reset_defaults()
++```{testcleanup}
++import structlog
++structlog.reset_defaults()
+ ```
+ 
+ The {mod}`contextvars` module in the Python standard library allows having a global *structlog* context that is local to the current execution context.
+ The execution context can be thread-local if using threads, or using primitives based on {mod}`asyncio`, or [*greenlet*](https://greenlet.readthedocs.io/) respectively.
+ 
+ For example, you may want to bind certain values like a request ID or the peer's IP address at the beginning of a web request and have them logged out along with the local contexts you build within our views.
+ 
+@@ -31,59 +27,57 @@
+   You can also use the {func}`structlog.contextvars.bound_contextvars` context manager / decorator.
+ - Use *structlog* as normal.
+   Loggers act as they always do, but the {func}`structlog.contextvars.merge_contextvars` processor ensures that any context-local binds get included in all of your log messages.
+ - If you want to access the context-local storage, you use {func}`structlog.contextvars.get_contextvars` and {func}`structlog.contextvars.get_merged_contextvars`.
+ 
+ We're sorry the word *context* means three different things in this itemization depending on ... context.
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> from structlog.contextvars import (
+-   ...     bind_contextvars,
+-   ...     bound_contextvars,
+-   ...     clear_contextvars,
+-   ...     merge_contextvars,
+-   ...     unbind_contextvars,
+-   ... )
+-   >>> from structlog import configure
+-   >>> configure(
+-   ...     processors=[
+-   ...         merge_contextvars,
+-   ...         structlog.processors.KeyValueRenderer(key_order=["event", "a"]),
+-   ...     ]
+-   ... )
+-   >>> log = structlog.get_logger()
+-   >>> # At the top of your request handler (or, ideally, some general
+-   >>> # middleware), clear the contextvars-local context and bind some common
+-   >>> # values:
+-   >>> clear_contextvars()
+-   >>> bind_contextvars(a=1, b=2)
+-   {'a': <Token var=<ContextVar name='structlog_a' default=Ellipsis at ...> at ...>, 'b': <Token var=<ContextVar name='structlog_b' default=Ellipsis at ...> at ...>}
+-   >>> # Then use loggers as per normal
+-   >>> # (perhaps by using structlog.get_logger() to create them).
+-   >>> log.info("hello")
+-   event='hello' a=1 b=2
+-   >>> # Use unbind_contextvars to remove a variable from the context.
+-   >>> unbind_contextvars("b")
+-   >>> log.info("world")
+-   event='world' a=1
+-   >>> # You can also bind key-value pairs temporarily.
+-   >>> with bound_contextvars(b=2):
+-   ...    log.info("hi")
+-   event='hi' a=1 b=2
+-   >>> # Now it's gone again.
+-   >>> log.info("hi")
+-   event='hi' a=1
+-   >>> # And when we clear the contextvars state again, it goes away.
+-   >>> # a=None is printed due to the key_order argument passed to
+-   >>> # KeyValueRenderer, but it is NOT present anymore.
+-   >>> clear_contextvars()
+-   >>> log.info("hi there")
+-   event='hi there' a=None
++```{doctest}
++>>> from structlog.contextvars import (
++...     bind_contextvars,
++...     bound_contextvars,
++...     clear_contextvars,
++...     merge_contextvars,
++...     unbind_contextvars,
++... )
++>>> from structlog import configure
++>>> configure(
++...     processors=[
++...         merge_contextvars,
++...         structlog.processors.KeyValueRenderer(key_order=["event", "a"]),
++...     ]
++... )
++>>> log = structlog.get_logger()
++>>> # At the top of your request handler (or, ideally, some general
++>>> # middleware), clear the contextvars-local context and bind some common
++>>> # values:
++>>> clear_contextvars()
++>>> bind_contextvars(a=1, b=2)
++{'a': <Token var=<ContextVar name='structlog_a' default=Ellipsis at ...> at ...>, 'b': <Token var=<ContextVar name='structlog_b' default=Ellipsis at ...> at ...>}
++>>> # Then use loggers as per normal
++>>> # (perhaps by using structlog.get_logger() to create them).
++>>> log.info("hello")
++event='hello' a=1 b=2
++>>> # Use unbind_contextvars to remove a variable from the context.
++>>> unbind_contextvars("b")
++>>> log.info("world")
++event='world' a=1
++>>> # You can also bind key-value pairs temporarily.
++>>> with bound_contextvars(b=2):
++...    log.info("hi")
++event='hi' a=1 b=2
++>>> # Now it's gone again.
++>>> log.info("hi")
++event='hi' a=1
++>>> # And when we clear the contextvars state again, it goes away.
++>>> # a=None is printed due to the key_order argument passed to
++>>> # KeyValueRenderer, but it is NOT present anymore.
++>>> clear_contextvars()
++>>> log.info("hi there")
++event='hi there' a=None
+ ```
+ 
+ 
+ ## Support for `contextvars.Token`
+ 
+ If e.g. your request handler calls a helper function that needs to temporarily override some contextvars before restoring them back to their original values, you can use the {class}`~contextvars.Token`s returned by {func}`~structlog.contextvars.bind_contextvars` along with {func}`~structlog.contextvars.reset_contextvars` to accomplish this (much like how {meth}`contextvars.ContextVar.reset` works):
+```
+
+### Comparing `structlog-22.3.0/docs/frameworks.md` & `structlog-23.1.0/docs/frameworks.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/getting-started.md` & `structlog-23.1.0/docs/getting-started.md`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -17,21 +17,19 @@
+ 
+ 
+ ## Your First Log Entry
+ 
+ A lot of effort went into making *structlog* accessible without reading pages of documentation.
+ As a result, the simplest possible usage looks like this:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> import structlog
+-   >>> log = structlog.get_logger()
+-   >>> log.info("hello, %s!", "world", key="value!", more_than_strings=[1, 2, 3])  # doctest: +SKIP
+-   2022-10-07 10:41:29 [info     ] hello, world!   key=value! more_than_strings=[1, 2, 3]
++```{doctest}
++>>> import structlog
++>>> log = structlog.get_logger()
++>>> log.info("hello, %s!", "world", key="value!", more_than_strings=[1, 2, 3])  # doctest: +SKIP
++2022-10-07 10:41:29 [info     ] hello, world!   key=value! more_than_strings=[1, 2, 3]
+ ```
+ 
+ Here, *structlog* takes advantage of its default settings:
+ 
+ - Output is sent to **[standard out](https://en.wikipedia.org/wiki/Standard_out#Standard_output_.28stdout.29)** instead doing nothing.
+ - It **imitates** standard library {mod}`logging`'s **log level names** for familiarity.
+   By default, no level-based filtering is done, but it comes with a **very fast [filtering machinery](filtering)**.
+@@ -176,51 +174,45 @@
+ To facilitate that, *structlog* has the concept of {doc}`processor chains <processors>`.
+ A processor is a function that receives the event dictionary along with two other arguments and returns a new event dictionary that may or may not differ from the one it got passed.
+ The next processor in the chain receives that returned dictionary instead of the original one.
+ 
+ Let's assume you wanted to add a timestamp to every event dict.
+ The processor would look like this:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-  >>> import datetime
+-  >>> def timestamper(_, __, event_dict):
+-  ...     event_dict["time"] = datetime.datetime.now().isoformat()
+-  ...     return event_dict
++```{doctest}
++>>> import datetime
++>>> def timestamper(_, __, event_dict):
++...     event_dict["time"] = datetime.datetime.now().isoformat()
++...     return event_dict
+ ```
+ 
+ Plain Python, plain dictionaries.
+ Now you have to tell *structlog* about your processor by {doc}`configuring <configuration>` it:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-  >>> structlog.configure(processors=[timestamper, structlog.processors.KeyValueRenderer()])
+-  >>> structlog.get_logger().info("hi")  # doctest: +SKIP
+-  event='hi' time='2018-01-21T09:37:36.976816'
++```{doctest}
++>>> structlog.configure(processors=[timestamper, structlog.processors.KeyValueRenderer()])
++>>> structlog.get_logger().info("hi")  # doctest: +SKIP
++event='hi' time='2018-01-21T09:37:36.976816'
+ ```
+ 
+ 
+ ## Rendering
+ 
+ Finally you want to have control over the actual format of your log entries.
+ 
+ As you may have noticed in the previous section, renderers are just processors too.
+ The type of the return value that is required from the renderer depends on the input that the *logger* that is wrapped by *structlog* needs.
+ While usually it's a string or bytes, there's no rule saying it _has_ to be a string!
+ 
+ So assuming you want to follow [best practices](logging-best-practices.md) and render your event dictionary to JSON that is picked up by a log aggregation system like ELK or Graylog, *structlog* comes with batteries included -- you just have to tell it to use its {class}`~structlog.processors.JSONRenderer`:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-  >>> structlog.configure(processors=[structlog.processors.JSONRenderer()])
+-  >>> structlog.get_logger().info("hi")
+-  {"event": "hi"}
++```{doctest}
++>>> structlog.configure(processors=[structlog.processors.JSONRenderer()])
++>>> structlog.get_logger().info("hi")
++{"event": "hi"}
+ ```
+ 
+ 
+ ## *structlog* and Standard Library's `logging`
+ 
+ While *structlog*'s loggers are very fast and sufficient for the majority of our users, you're not bound to them.
+ Instead, it's been designed from day one to wrap your *existing* loggers and **add** *structure* and *incremental context building* to them.
+@@ -229,33 +221,30 @@
+ To make this common case as simple as possible, *structlog* comes with [some tools](standard-library.md) to help you.
+ 
+ As noted before, the fastest way to transform *structlog* into a `logging`-friendly package is calling {func}`structlog.stdlib.recreate_defaults()`.
+ 
+ 
+ ## asyncio
+ 
+-*structlog* comes with two approaches to support asynchronous logging.
+-
+-The default *bound logger* that you get back from {func}`structlog.get_logger()` doesn't have just the familiar log methods like `debug()` or `info()`, but also their async cousins, that simply prefix the name with an a:
++The default *bound logger* that you get back from {func}`structlog.get_logger()` and standard library's {class}`structlog.stdlib.BoundLogger` don't have just the familiar log methods like `debug()` or `info()`, but also their async cousins, that simply prefix the name with an a:
+ 
+ ```pycon
+ >>> import asyncio
+ >>> logger = structlog.get_logger()
+ >>> async def f():
+-...     await logger.ainfo("hi!")
++...     await logger.ainfo("async hi!")
+ ...
++>>> logger.info("Loop isn't running yet, but we can log!")
++2023-04-06 07:25:48 [info     ] Loop isn't running yet, but we can log!
+ >>> asyncio.run(f())
+-2022-10-18 13:23:37 [info     ] hi!
++2023-04-06 07:26:08 [info     ] async hi!
+ ```
+ 
+ You can use the sync and async logging methods interchangeably within the same application.
+ 
+----
+-
+-The standard library integration on the other hand offers an asynchronous wrapper class {class}`structlog.stdlib.AsyncBoundLogger`.
+ 
+ ## Liked what you saw?
+ 
+ Now you're all set for the rest of the user's guide and can start reading about [bound loggers](bound-loggers.md) -- the heart of *structlog*.
+ 
+ 
+ [*better-exceptions*]: https://github.com/qix-/better-exceptions
+```
+
+### Comparing `structlog-22.3.0/docs/index.md` & `structlog-23.1.0/docs/index.md`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -2,21 +2,20 @@
+ 
+ *Simple. Powerful. Fast. Pick three.*
+ 
+ Release **{sub-ref}`release`**  ([What's new?](changelog))
+ 
+ ---
+ 
+-```{eval-rst}
+-.. include:: ../README.md
+-   :parser: myst_parser.sphinx_
+-   :start-after: <!-- begin-short -->
+-   :end-before: <!-- end-short -->
++```{include} ../README.md
++:start-after: <!-- begin-short -->
++:end-before: <!-- end-short -->
+ ```
+ 
++
+ If you’d like more information on why structured logging in general – and *structlog* in particular – are good ideas, we’ve prepared a [summary](why.md) just for you.
+ 
+ Otherwise, let’s dive right in!
+ 
+ ```{toctree}
+ :hidden: true
+ 
+@@ -99,19 +98,16 @@
+ 
+ api
+ ```
+ 
+ 
+ ## Project Information
+ 
+-```{eval-rst}
+-.. include:: ../README.md
+-   :parser: myst_parser.sphinx_
+-   :start-after: ## Project Information
+-
++```{include} ../README.md
++:start-after: "## Project Information"
+ ```
+ 
+ % stop Sphinx from complaining about orphaned docs, we link them elsewhere
+ 
+ ```{toctree}
+ :hidden: true
+```
+
+### Comparing `structlog-22.3.0/docs/license.md` & `structlog-23.1.0/docs/license.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/logging-best-practices.md` & `structlog-23.1.0/docs/logging-best-practices.md`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -32,38 +32,36 @@
+ However, in production you should emit structured output (like JSON) which is a lot easier to parse by log aggregators.
+ Since you already log in a structured way, writing JSON output with *structlog* comes naturally.
+ You can even generate structured exception tracebacks.
+ This makes analyzing errors easier, since log aggregators can render JSON much better than multiline strings with a lot escaped quotation marks.
+ 
+ Here is a simple example of how you can have pretty logs during development and JSON output when your app is running in a production context:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> import sys
+-   >>> import structlog
+-   >>>
+-   >>> shared_processors = [
+-   ...     # Processors that have nothing to do with output,
+-   ...     # e.g., add timestamps or log level names.
+-   ... ]
+-   >>> if sys.stderr.isatty():
+-   ...     # Pretty printing when we run in a terminal session.
+-   ...     # Automatically prints pretty tracebacks when "rich" is installed
+-   ...     processors = shared_processors + [
+-   ...         structlog.dev.ConsoleRenderer(),
+-   ...     ]
+-   ... else:
+-   ...     # Print JSON when we run, e.g., in a Docker container.
+-   ...     # Also print structured tracebacks.
+-   ...     processors = shared_processors + [
+-   ...         structlog.processors.dict_tracebacks,
+-   ...         structlog.processors.JSONRenderer(),
+-   ...     ]
+-   >>> structlog.configure(processors)
++```{doctest}
++>>> import sys
++>>> import structlog
++>>>
++>>> shared_processors = [
++...     # Processors that have nothing to do with output,
++...     # e.g., add timestamps or log level names.
++... ]
++>>> if sys.stderr.isatty():
++...     # Pretty printing when we run in a terminal session.
++...     # Automatically prints pretty tracebacks when "rich" is installed
++...     processors = shared_processors + [
++...         structlog.dev.ConsoleRenderer(),
++...     ]
++... else:
++...     # Print JSON when we run, e.g., in a Docker container.
++...     # Also print structured tracebacks.
++...     processors = shared_processors + [
++...         structlog.processors.dict_tracebacks,
++...         structlog.processors.JSONRenderer(),
++...     ]
++>>> structlog.configure(processors)
+ 
+ ```
+ 
+ 
+ ## Centralized Logging
+ 
+ Nowadays you usually don't want your log files in compressed archives distributed over dozens -- if not thousands -- of servers or cluster nodes.
+```
+
+### Comparing `structlog-22.3.0/docs/make.bat` & `structlog-23.1.0/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/performance.md` & `structlog-23.1.0/docs/performance.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/processors.md` & `structlog-23.1.0/docs/processors.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/recipes.md` & `structlog-23.1.0/docs/recipes.md`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -76,29 +76,24 @@
+ Pick the data you're interested in from the {class}`structlog.processors.CallsiteParameter` {class}`~enum.Enum`.
+ 
+ 
+ (custom-wrappers)=
+ 
+ ## Custom Wrappers
+ 
+-```{eval-rst}
+-.. testsetup:: *
+-
+-   import structlog
+-   structlog.configure(
+-       processors=[structlog.processors.KeyValueRenderer()],
+-   )
++```{testsetup}
++import structlog
++structlog.configure(
++    processors=[structlog.processors.KeyValueRenderer()],
++)
+ ```
+ 
+-```{eval-rst}
+-.. testcleanup:: *
+-
+-   import structlog
+-   structlog.reset_defaults()
+-
++```{testcleanup}
++import structlog
++structlog.reset_defaults()
+ ```
+ 
+ The type of the *bound loggers* that are returned by {func}`structlog.get_logger()` is called the *wrapper class*, because it wraps the original logger that takes care of the output.
+ This wrapper class is [configurable](configuration.md).
+ 
+ Originally, *structlog* used a generic wrapper class {class}`structlog.BoundLogger` by default.
+ That class still ships with *structlog* and can wrap *any* logger class by intercepting unknown method names and proxying them to the wrapped logger.
+@@ -114,31 +109,29 @@
+ 
+ (wrapper-class-example)=
+ 
+ ### Example
+ 
+ It’s easiest to demonstrate with an example:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> from structlog import BoundLoggerBase, PrintLogger, wrap_logger
+-   >>> class SemanticLogger(BoundLoggerBase):
+-   ...    def info(self, event, **kw):
+-   ...        if not "status" in kw:
+-   ...            return self._proxy_to_logger("info", event, status="ok", **kw)
+-   ...        else:
+-   ...            return self._proxy_to_logger("info", event, **kw)
+-   ...
+-   ...    def user_error(self, event, **kw):
+-   ...        self.info(event, status="user_error", **kw)
+-   >>> log = wrap_logger(PrintLogger(), wrapper_class=SemanticLogger)
+-   >>> log = log.bind(user="fprefect")
+-   >>> log.user_error("user.forgot_towel")
+-   user='fprefect' status='user_error' event='user.forgot_towel'
++```{doctest}
++>>> from structlog import BoundLoggerBase, PrintLogger, wrap_logger
++>>> class SemanticLogger(BoundLoggerBase):
++...    def info(self, event, **kw):
++...        if not "status" in kw:
++...            return self._proxy_to_logger("info", event, status="ok", **kw)
++...        else:
++...            return self._proxy_to_logger("info", event, **kw)
++...
++...    def user_error(self, event, **kw):
++...        self.info(event, status="user_error", **kw)
++>>> log = wrap_logger(PrintLogger(), wrapper_class=SemanticLogger)
++>>> log = log.bind(user="fprefect")
++>>> log.user_error("user.forgot_towel")
++user='fprefect' status='user_error' event='user.forgot_towel'
+ ```
+ 
+ You can observe the following:
+ 
+ - The wrapped logger can be found in the instance variable {attr}`structlog.BoundLoggerBase._logger`.
+ - The helper method {meth}`structlog.BoundLoggerBase._proxy_to_logger` that is a [DRY] convenience function that runs the processor chain, handles possible {class}`structlog.DropEvent`s and calls a named function on `_logger`.
+ - You can run the chain by hand through using {meth}`structlog.BoundLoggerBase._process_event` .
+```
+
+### Comparing `structlog-22.3.0/docs/standard-library.md` & `structlog-23.1.0/docs/standard-library.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -44,21 +44,37 @@
+ It will call `structlog.get_logger()` just like if you would've called it -- the only difference are the type hints.
+ 
+ See also {doc}`typing`.
+ 
+ 
+ ### `asyncio`
+ 
+-For `asyncio` applications, you may not want your whole application to block while your processor chain is formatting your log entries.
+-For that use case *structlog* comes with {class}`structlog.stdlib.AsyncBoundLogger` that will do all processing in a thread pool executor.
++For `asyncio` applications, you may not want your whole application to block while the processor chain is formatting your log entries.
+ 
+-This means an increased computational cost per log entry but your application will never block because of logging.
++For that use case *structlog* comes with a set of non-standard methods that will do all processing in a thread pool executor.
++They have the same names as the regular methods, except they are prefixed by an `a`.
++So instead of `logger.info("event!")` you write `await logger.ainfo("event!)`.
++No extra configuration is necessary and you can mix-and-match both types of methods within the same application.
++
++This means an increased computational cost per log entry, but your application will not block because of logging.
++
++```{versionadded} 23.1.0
++```
++
++---
++
++
++*structlog* also comes with {class}`structlog.stdlib.AsyncBoundLogger` that blankly makes all logging methods asynchronous (i.e. `await log.info()`).
+ 
+ To use it, {doc}`configure <configuration>` *structlog* to use `AsyncBoundLogger` as `wrapper_class`.
+ 
++```{versionadded} 20.2.0
++```
++
++
+ 
+ ## Processors
+ 
+ *structlog* comes with a few standard library-specific processors:
+ 
+ {func}`~structlog.stdlib.render_to_log_kwargs`:
+ 
+@@ -130,29 +146,28 @@
+ 
+ 
+ ### Rendering Within *structlog*
+ 
+ This is the simplest approach where *structlog* does all the heavy lifting and passes a fully-formatted string to `logging`.
+ Chances are, this is all you need.
+ 
+-```{eval-rst}
+-.. mermaid::
+-   :align: center
+-
+-   flowchart TD
+-      %%{ init: {'theme': 'neutral'} }%%
+-      User
+-      structlog
+-      stdlib[Standard Library\ne.g. logging.StreamHandler]
+-
+-      User --> |"structlog.get_logger().info('foo')"| structlog
+-      User --> |"logging.getLogger().info('foo')"| stdlib
+-      structlog --> |"logging.getLogger().info(#quot;{'event': 'foo'}#quot;)"| stdlib ==> Output
++```{mermaid}
++:align: center
++
++flowchart TD
++    %%{ init: {'theme': 'neutral'} }%%
++    User
++    structlog
++    stdlib[Standard Library\ne.g. logging.StreamHandler]
++
++    User --> |"structlog.get_logger().info('foo')"| structlog
++    User --> |"logging.getLogger().info('foo')"| stdlib
++    structlog --> |"logging.getLogger().info(#quot;{'event': 'foo'}#quot;)"| stdlib ==> Output
+ 
+-      Output
++    Output
+ ```
+ 
+ A basic configuration to output structured logs in JSON format looks like this:
+ 
+ ```python
+ import structlog
+ 
+@@ -226,30 +241,28 @@
+ ```
+ 
+ 
+ ### Rendering Using `logging`-based Formatters
+ 
+ You can choose to use *structlog* only for building the event dictionary and leave all formatting -- additionally to the output -- to the standard library.
+ 
+-```{eval-rst}
+-.. mermaid::
+-   :align: center
+-
+-   flowchart TD
+-      %%{ init: {'theme': 'neutral'} }%%
+-      User
+-      structlog
+-      stdlib[Standard Library\ne.g. logging.StreamHandler]
+-
+-      User --> |"structlog.get_logger().info('foo', bar=42)"| structlog
+-      User --> |"logging.getLogger().info('foo')"| stdlib
+-      structlog --> |"logging.getLogger().info('foo', extra={&quot;bar&quot;: 42})"| stdlib ==> Output
++```{mermaid}
++:align: center
+ 
+-      Output
++flowchart TD
++    %%{ init: {'theme': 'neutral'} }%%
++    User
++    structlog
++    stdlib[Standard Library\ne.g. logging.StreamHandler]
++
++    User --> |"structlog.get_logger().info('foo', bar=42)"| structlog
++    User --> |"logging.getLogger().info('foo')"| stdlib
++    structlog --> |"logging.getLogger().info('foo', extra={&quot;bar&quot;: 42})"| stdlib ==> Output
+ 
++    Output
+ ```
+ 
+ ```python
+ import structlog
+ 
+ structlog.configure(
+     processors=[
+@@ -310,34 +323,32 @@
+ ### Rendering Using *structlog*-based Formatters Within `logging`
+ 
+ Finally, the most ambitious approach.
+ Here, you use *structlog*'s {class}`~structlog.stdlib.ProcessorFormatter` as a {any}`logging.Formatter` for both `logging` as well as *structlog* log entries.
+ 
+ Consequently, the output is the duty of the standard library too.
+ 
+-```{eval-rst}
+-.. mermaid::
+-   :align: center
+-
+-   flowchart TD
+-      %%{ init: {'theme': 'neutral'} }%%
+-      User
+-      structlog
+-      structlog2[structlog]
+-      stdlib["Standard Library"]
+-
+-      User --> |"structlog.get_logger().info(#quot;foo#quot;, bar=42)"| structlog
+-      User --> |"logging.getLogger().info(#quot;foo#quot;)"| stdlib
+-      structlog --> |"logging.getLogger().info(event_dict, {#quot;extra#quot;: {#quot;_logger#quot;: logger, #quot;_name#quot;: name})"| stdlib
++```{mermaid}
++:align: center
+ 
+-      stdlib --> |"structlog.stdlib.ProcessorFormatter.format(logging.Record)"| structlog2
+-      structlog2 --> |"Returns a string that is passed into logging handlers.\nThis flow is controlled by the logging configuration."| stdlib2
++flowchart TD
++    %%{ init: {'theme': 'neutral'} }%%
++    User
++    structlog
++    structlog2[structlog]
++    stdlib["Standard Library"]
++
++    User --> |"structlog.get_logger().info(#quot;foo#quot;, bar=42)"| structlog
++    User --> |"logging.getLogger().info(#quot;foo#quot;)"| stdlib
++    structlog --> |"logging.getLogger().info(event_dict, {#quot;extra#quot;: {#quot;_logger#quot;: logger, #quot;_name#quot;: name})"| stdlib
+ 
+-      stdlib2[Standard Library\ne.g. logging.StreamHandler] ==> Output
++    stdlib --> |"structlog.stdlib.ProcessorFormatter.format(logging.Record)"| structlog2
++    structlog2 --> |"Returns a string that is passed into logging handlers.\nThis flow is controlled by the logging configuration."| stdlib2
+ 
++    stdlib2[Standard Library\ne.g. logging.StreamHandler] ==> Output
+ ```
+ 
+ {class}`~structlog.stdlib.ProcessorFormatter` has two parts to its API:
+ 
+ 1. On the *structlog* side, the {doc}`processor chain <processors>` must be configured to end with {func}`structlog.stdlib.ProcessorFormatter.wrap_for_formatter` as the renderer.
+    It converts the processed event dictionary into something that `ProcessorFormatter` understands.
+```
+
+### Comparing `structlog-22.3.0/docs/testing.md` & `structlog-23.1.0/docs/testing.md`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,22 +1,20 @@
+ # Testing
+ 
+ *structlog* comes with tools for testing the logging behavior of your application.
+ 
+ If you need functionality similar to {meth}`unittest.TestCase.assertLogs`, or you want to capture all logs for some other reason, you can use the {func}`structlog.testing.capture_logs` context manager:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> from structlog import get_logger
+-   >>> from structlog.testing import capture_logs
+-   >>> with capture_logs() as cap_logs:
+-   ...    get_logger().bind(x="y").info("hello")
+-   >>> cap_logs
+-   [{'x': 'y', 'event': 'hello', 'log_level': 'info'}]
++```{doctest}
++>>> from structlog import get_logger
++>>> from structlog.testing import capture_logs
++>>> with capture_logs() as cap_logs:
++...    get_logger().bind(x="y").info("hello")
++>>> cap_logs
++[{'x': 'y', 'event': 'hello', 'log_level': 'info'}]
+ ```
+ 
+ Note that inside the context manager all configured processors are disabled.
+ 
+ :::{note}
+ `capture_logs()` relies on changing the configuration.
+ If you have *cache_logger_on_first_use* enabled for {doc}`performance <performance>`, any cached loggers will not be affected, so it’s recommended you do not enable it during tests.
+@@ -41,42 +39,36 @@
+     assert log_output.entries == [...]
+ ```
+ 
+ ---
+ 
+ You can also use {class}`structlog.testing.CapturingLogger` (directly, or via {class}`~structlog.testing.CapturingLoggerFactory` that always returns the same logger) that is more low-level and great for unit tests:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> import structlog
+-   >>> cf = structlog.testing.CapturingLoggerFactory()
+-   >>> structlog.configure(logger_factory=cf, processors=[structlog.processors.JSONRenderer()])
+-   >>> log = get_logger()
+-   >>> log.info("test!")
+-   >>> cf.logger.calls
+-   [CapturedCall(method_name='info', args=('{"event": "test!"}',), kwargs={})]
++```{doctest}
++>>> import structlog
++>>> cf = structlog.testing.CapturingLoggerFactory()
++>>> structlog.configure(logger_factory=cf, processors=[structlog.processors.JSONRenderer()])
++>>> log = get_logger()
++>>> log.info("test!")
++>>> cf.logger.calls
++[CapturedCall(method_name='info', args=('{"event": "test!"}',), kwargs={})]
+ ```
+ 
+-```{eval-rst}
+-.. testcleanup:: *
+-
+-   import structlog
+-   structlog.reset_defaults()
++```{testcleanup}
++import structlog
++structlog.reset_defaults()
+ ```
+ 
+ ---
+ 
+ Additionally *structlog* also ships with a logger that just returns whatever it gets passed into it: {class}`structlog.testing.ReturnLogger`.
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> from structlog import ReturnLogger
+-   >>> ReturnLogger().info(42) == 42
+-   True
+-   >>> obj = ["hi"]
+-   >>> ReturnLogger().info(obj) is obj
+-   True
+-   >>> ReturnLogger().info("hello", when="again")
+-   (('hello',), {'when': 'again'})
++```{doctest}
++>>> from structlog import ReturnLogger
++>>> ReturnLogger().info(42) == 42
++True
++>>> obj = ["hi"]
++>>> ReturnLogger().info(obj) is obj
++True
++>>> ReturnLogger().info("hello", when="again")
++(('hello',), {'when': 'again'})
+ ```
+```
+
+### Comparing `structlog-22.3.0/docs/thread-local.md` & `structlog-23.1.0/docs/thread-local.md`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -4,29 +4,24 @@
+ The `structlog.threadlocal` module is deprecated as of *structlog* 22.1.0 in favor of {doc}`contextvars`.
+ 
+ The standard library {mod}`contextvars` module provides a more feature-rich superset of the thread-local APIs and works with thread-local data, async code, and greenlets.
+ 
+ Therefore, as of 22.1.0, the `structlog.threadlocal` module is frozen and will be removed after May 2023.
+ :::
+ 
+-```{eval-rst}
+-.. testsetup:: *
+-
+-   import structlog
+-   structlog.configure(
+-       processors=[structlog.processors.KeyValueRenderer()],
+-   )
++```{testsetup} *
++import structlog
++structlog.configure(
++      processors=[structlog.processors.KeyValueRenderer()],
++)
+ ```
+ 
+-```{eval-rst}
+-.. testcleanup:: *
+-
+-   import structlog
+-   structlog.reset_defaults()
+-
++```{testcleanup} *
++import structlog
++structlog.reset_defaults()
+ ```
+ 
+ 
+ ## The `merge_threadlocal` Processor
+ 
+ *structlog* provides a simple set of functions that allow explicitly binding certain fields to a global (thread-local) context and merge them later using a processor into the event dict.
+ 
+@@ -58,30 +53,27 @@
+ 
+ ### Wrapped Dicts
+ 
+ In order to make your context thread-local, *structlog* ships with a function that can wrap any dict-like class to make it usable for thread-local storage: {func}`structlog.threadlocal.wrap_dict`.
+ 
+ Within one thread, every instance of the returned class will have a *common* instance of the wrapped dict-like class:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> from structlog.threadlocal import wrap_dict
+-   >>> WrappedDictClass = wrap_dict(dict)
+-   >>> d1 = WrappedDictClass({"a": 1})
+-   >>> d2 = WrappedDictClass({"b": 2})
+-   >>> d3 = WrappedDictClass()
+-   >>> d3["c"] = 3
+-   >>> d1 is d3
+-   False
+-   >>> d1 == d2 == d3 == WrappedDictClass()
+-   True
+-   >>> d3  # doctest: +ELLIPSIS
+-   <WrappedDict-...({'a': 1, 'b': 2, 'c': 3})>
+-
++```{doctest}
++>>> from structlog.threadlocal import wrap_dict
++>>> WrappedDictClass = wrap_dict(dict)
++>>> d1 = WrappedDictClass({"a": 1})
++>>> d2 = WrappedDictClass({"b": 2})
++>>> d3 = WrappedDictClass()
++>>> d3["c"] = 3
++>>> d1 is d3
++False
++>>> d1 == d2 == d3 == WrappedDictClass()
++True
++>>> d3  # doctest: +ELLIPSIS
++<WrappedDict-...({'a': 1, 'b': 2, 'c': 3})>
+ ```
+ 
+ To enable thread-local context use the generated class as the context class:
+ 
+ ```python
+ configure(context_class=WrappedDictClass)
+ ```
+@@ -89,52 +81,45 @@
+ :::{note}
+ Creation of a new `BoundLogger` initializes the logger's context as `context_class(initial_values)`, and then adds any values passed via `.bind()`.
+ As all instances of a wrapped dict-like class share the same data, in the case above, the new logger's context will contain all previously bound values in addition to the new ones.
+ :::
+ 
+ `structlog.threadlocal.wrap_dict` returns always a completely *new* wrapped class:
+ 
+-```{eval-rst}
+-.. doctest::
+-
+-   >>> from structlog.threadlocal import wrap_dict
+-   >>> WrappedDictClass = wrap_dict(dict)
+-   >>> AnotherWrappedDictClass = wrap_dict(dict)
+-   >>> WrappedDictClass() != AnotherWrappedDictClass()
+-   True
+-   >>> WrappedDictClass.__name__  # doctest: +SKIP
+-   WrappedDict-41e8382d-bee5-430e-ad7d-133c844695cc
+-   >>> AnotherWrappedDictClass.__name__   # doctest: +SKIP
+-   WrappedDict-e0fc330e-e5eb-42ee-bcec-ffd7bd09ad09
+-
++```{doctest}
++>>> from structlog.threadlocal import wrap_dict
++>>> WrappedDictClass = wrap_dict(dict)
++>>> AnotherWrappedDictClass = wrap_dict(dict)
++>>> WrappedDictClass() != AnotherWrappedDictClass()
++True
++>>> WrappedDictClass.__name__  # doctest: +SKIP
++WrappedDict-41e8382d-bee5-430e-ad7d-133c844695cc
++>>> AnotherWrappedDictClass.__name__   # doctest: +SKIP
++WrappedDict-e0fc330e-e5eb-42ee-bcec-ffd7bd09ad09
+ ```
+ 
+ In order to be able to bind values temporarily to a logger, `structlog.threadlocal` comes with a [context manager](https://docs.python.org/2/library/stdtypes.html#context-manager-types): {func}`structlog.threadlocal.tmp_bind`:
+ 
+-```{eval-rst}
+-.. testsetup:: ctx
+-
+-   from structlog import PrintLogger, wrap_logger
+-   from structlog.threadlocal import tmp_bind, wrap_dict
+-   WrappedDictClass = wrap_dict(dict)
+-   log = wrap_logger(PrintLogger(), context_class=WrappedDictClass)
+-```
+-
+-```{eval-rst}
+-.. doctest:: ctx
+-
+-   >>> log.bind(x=42)  # doctest: +ELLIPSIS
+-   <BoundLoggerFilteringAtNotset(context=<WrappedDict-...({'x': 42})>, ...)>
+-   >>> log.msg("event!")
+-   x=42 event='event!'
+-   >>> with tmp_bind(log, x=23, y="foo") as tmp_log:
+-   ...     tmp_log.msg("another event!")
+-   x=23 y='foo' event='another event!'
+-   >>> log.msg("one last event!")
+-   x=42 event='one last event!'
++```{testsetup} ctx
++from structlog import PrintLogger, wrap_logger
++from structlog.threadlocal import tmp_bind, wrap_dict
++WrappedDictClass = wrap_dict(dict)
++log = wrap_logger(PrintLogger(), context_class=WrappedDictClass)
++```
++
++```{doctest} ctx
++>>> log.bind(x=42)  # doctest: +ELLIPSIS
++<BoundLoggerFilteringAtNotset(context=<WrappedDict-...({'x': 42})>, ...)>
++>>> log.msg("event!")
++x=42 event='event!'
++>>> with tmp_bind(log, x=23, y="foo") as tmp_log:
++...     tmp_log.msg("another event!")
++x=23 y='foo' event='another event!'
++>>> log.msg("one last event!")
++x=42 event='one last event!'
+ ```
+ 
+ The state before the `with` statement is saved and restored once it's left.
+ 
+ If you want to detach a logger from thread-local data, there's {func}`structlog.threadlocal.as_immutable`.
+ 
+ 
+@@ -171,48 +156,28 @@
+ :::
+ 
+ 
+ ## API
+ 
+ ```{eval-rst}
+ .. module:: structlog.threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: bind_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: unbind_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: bound_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: get_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: get_merged_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: merge_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: clear_threadlocal
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: wrap_dict
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: tmp_bind(logger, **tmp_values)
+-```
+ 
+-```{eval-rst}
+ .. autofunction:: as_immutable
+ ```
+```
+
+### Comparing `structlog-22.3.0/docs/twisted.md` & `structlog-23.1.0/docs/twisted.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/typing.md` & `structlog-23.1.0/docs/typing.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/why.md` & `structlog-23.1.0/docs/why.md`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/BoundLogger.svg` & `structlog-23.1.0/docs/_static/BoundLogger.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/console_renderer.png` & `structlog-23.1.0/docs/_static/console_renderer.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/docset-icon.png` & `structlog-23.1.0/docs/_static/docset-icon.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/docset-icon@2x.png` & `structlog-23.1.0/docs/_static/docset-icon@2x.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/structlog_logo.png` & `structlog-23.1.0/docs/_static/structlog_logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/structlog_logo_small.png` & `structlog-23.1.0/docs/_static/structlog_logo_small.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/structlog_logo_small_transparent.png` & `structlog-23.1.0/docs/_static/structlog_logo_small_transparent.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/docs/_static/structlog_logo_transparent.png` & `structlog-23.1.0/docs/_static/structlog_logo_transparent.png`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/src/structlog/__init__.py` & `structlog-23.1.0/src/structlog/__init__.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -117,11 +117,12 @@
+         stacklevel=2,
+     )
+ 
+     meta = metadata("structlog")
+ 
+     if name == "__uri__":
+         return meta["Project-URL"].split(" ", 1)[-1]
+-    elif name == "__email__":
++
++    if name == "__email__":
+         return meta["Author-email"].split("<", 1)[1].rstrip(">")
+ 
+     return meta[dunder_to_metadata[name]]
+```
+
+### Comparing `structlog-22.3.0/src/structlog/_base.py` & `structlog-23.1.0/src/structlog/_base.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -53,18 +53,15 @@
+     def __repr__(self) -> str:
+         return "<{}(context={!r}, processors={!r})>".format(
+             self.__class__.__name__, self._context, self._processors
+         )
+ 
+     def __eq__(self, other: Any) -> bool:
+         try:
+-            if self._context == other._context:
+-                return True
+-            else:
+-                return False
++            return self._context == other._context
+         except AttributeError:
+             return False
+ 
+     def __ne__(self, other: Any) -> bool:
+         return not self.__eq__(other)
+ 
+     def bind(self, **new_values: Any) -> BoundLoggerBase:
+@@ -159,26 +156,28 @@
+         if event is not None:
+             event_dict["event"] = event
+         for proc in self._processors:
+             event_dict = proc(self._logger, method_name, event_dict)
+ 
+         if isinstance(event_dict, (str, bytes, bytearray)):
+             return (event_dict,), {}
+-        elif isinstance(event_dict, tuple):
++
++        if isinstance(event_dict, tuple):
+             # In this case we assume that the last processor returned a tuple
+             # of ``(args, kwargs)`` and pass it right through.
+             return event_dict  # type: ignore[return-value]
+-        elif isinstance(event_dict, dict):
++
++        if isinstance(event_dict, dict):
+             return (), event_dict
+-        else:
+-            raise ValueError(
+-                "Last processor didn't return an appropriate value.  Valid "
+-                "return values are a dict, a tuple of (args, kwargs), bytes, "
+-                "or a str."
+-            )
++
++        raise ValueError(
++            "Last processor didn't return an appropriate value.  Valid "
++            "return values are a dict, a tuple of (args, kwargs), bytes, "
++            "or a str."
++        )
+ 
+     def _proxy_to_logger(
+         self, method_name: str, event: str | None = None, **event_kw: Any
+     ) -> Any:
+         """
+         Run processor chain on event & call *method_name* on wrapped logger.
+ 
+@@ -201,15 +200,15 @@
+ 
+             See also `custom-wrappers`.
+         """
+         try:
+             args, kw = self._process_event(method_name, event, event_kw)
+             return getattr(self._logger, method_name)(*args, **kw)
+         except DropEvent:
+-            return
++            return None
+ 
+ 
+ def get_context(bound_logger: BindableLogger) -> Context:
+     """
+     Return *bound_logger*'s context.
+ 
+     The type of *bound_logger* and the type returned depend on your
+```
+
+### Comparing `structlog-22.3.0/src/structlog/_config.py` & `structlog-23.1.0/src/structlog/_config.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -5,23 +5,24 @@
+ 
+ """
+ Global state department.  Don't reload this module or everything breaks.
+ """
+ 
+ from __future__ import annotations
+ 
++import os
+ import sys
+ import warnings
+ 
+ from typing import Any, Callable, Iterable, Sequence, Type, cast
+ 
+ from ._log_levels import make_filtering_bound_logger
+ from ._output import PrintLoggerFactory
+ from .contextvars import merge_contextvars
+-from .dev import ConsoleRenderer, _use_colors, set_exc_info
++from .dev import ConsoleRenderer, _has_colors, set_exc_info
+ from .processors import StackInfoRenderer, TimeStamper, add_log_level
+ from .typing import BindableLogger, Context, Processor, WrappedLogger
+ 
+ 
+ """
+    Any changes to these defaults must be reflected in:
+ 
+@@ -31,18 +32,24 @@
+ _BUILTIN_DEFAULT_PROCESSORS: Sequence[Processor] = [
+     merge_contextvars,
+     add_log_level,
+     StackInfoRenderer(),
+     set_exc_info,
+     TimeStamper(fmt="%Y-%m-%d %H:%M:%S", utc=False),
+     ConsoleRenderer(
+-        colors=_use_colors
+-        and sys.stdout is not None
+-        and hasattr(sys.stdout, "isatty")
+-        and sys.stdout.isatty()
++        colors=os.environ.get("NO_COLOR", "") == ""
++        and (
++            os.environ.get("FORCE_COLOR", "") != ""
++            or (
++                _has_colors
++                and sys.stdout is not None
++                and hasattr(sys.stdout, "isatty")
++                and sys.stdout.isatty()
++            )
++        )
+     ),
+ ]
+ _BUILTIN_DEFAULT_CONTEXT_CLASS = cast(Type[Context], dict)
+ _BUILTIN_DEFAULT_WRAPPER_CLASS = make_filtering_bound_logger(0)
+ _BUILTIN_DEFAULT_LOGGER_FACTORY = PrintLoggerFactory()
+ _BUILTIN_CACHE_LOGGER_ON_FIRST_USE = False
+ 
+@@ -251,15 +258,17 @@
+             processors=processors,
+             wrapper_class=wrapper_class,
+             context_class=context_class,
+             logger_factory=logger_factory,
+             cache_logger_on_first_use=cache_logger_on_first_use,
+         )
+     else:
+-        warnings.warn("Repeated configuration attempted.", RuntimeWarning)
++        warnings.warn(
++            "Repeated configuration attempted.", RuntimeWarning, stacklevel=2
++        )
+ 
+ 
+ def reset_defaults() -> None:
+     """
+     Resets global default values to builtin defaults.
+ 
+     `is_configured` starts returning `False` afterwards.
+@@ -342,22 +351,22 @@
+ 
+         def finalized_bind(**new_values: Any) -> BindableLogger:
+             """
+             Use cached assembled logger to bind potentially new values.
+             """
+             if new_values:
+                 return logger.bind(**new_values)
+-            else:
+-                return logger
++
++            return logger
+ 
+         if self._cache_logger_on_first_use is True or (
+             self._cache_logger_on_first_use is None
+             and _CONFIG.cache_logger_on_first_use is True
+         ):
+-            self.bind = finalized_bind  # type: ignore[assignment]
++            self.bind = finalized_bind  # type: ignore[method-assign]
+ 
+         return finalized_bind(**new_values)
+ 
+     def unbind(self, *keys: str) -> BindableLogger:
+         """
+         Same as bind, except unbind *keys* first.
+ 
+@@ -373,17 +382,15 @@
+         Clear context, then bind.
+         """
+         if self._context_class:
+             self._context_class().clear()
+         else:
+             _CONFIG.default_context_class().clear()
+ 
+-        bl = self.bind(**new_values)
+-
+-        return bl
++        return self.bind(**new_values)
+ 
+     def __getattr__(self, name: str) -> Any:
+         """
+         If a logging method if called on a lazy proxy, we have to create an
+         ephemeral BoundLogger first.
+         """
+         if name == "__isabstractmethod__":
+```
+
+### Comparing `structlog-22.3.0/src/structlog/_frames.py` & `structlog-23.1.0/src/structlog/_frames.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/src/structlog/_generic.py` & `structlog-23.1.0/src/structlog/_generic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/src/structlog/_greenlets.py` & `structlog-23.1.0/src/structlog/_greenlets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/src/structlog/_log_levels.py` & `structlog-23.1.0/src/structlog/_log_levels.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,14 +8,15 @@
+ """
+ 
+ from __future__ import annotations
+ 
+ import asyncio
+ import contextvars
+ import logging
++import sys
+ 
+ from typing import Any, Callable
+ 
+ from ._base import BoundLoggerBase
+ from .typing import EventDict, FilteringBoundLogger
+ 
+ 
+@@ -82,15 +83,18 @@
+ def exception(self: FilteringBoundLogger, event: str, **kw: Any) -> Any:
+     kw.setdefault("exc_info", True)
+ 
+     return self.error(event, **kw)
+ 
+ 
+ async def aexception(self: FilteringBoundLogger, event: str, **kw: Any) -> Any:
+-    kw.setdefault("exc_info", True)
++    # Exception info has to be extracted this early, because it is no longer
++    # available once control is passed to the executor.
++    if kw.get("exc_info", True) is True:
++        kw["exc_info"] = sys.exc_info()
+ 
+     ctx = contextvars.copy_context()
+     return await asyncio.get_running_loop().run_in_executor(
+         None,
+         lambda: ctx.run(lambda: self.error(event, **kw)),
+     )
+```
+
+### Comparing `structlog-22.3.0/src/structlog/_output.py` & `structlog-23.1.0/src/structlog/_output.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -63,15 +63,15 @@
+     def __getstate__(self) -> str:
+         """
+         Our __getattr__ magic makes this necessary.
+         """
+         if self._file is stdout:
+             return "stdout"
+ 
+-        elif self._file is stderr:
++        if self._file is stderr:
+             return "stderr"
+ 
+         raise PicklingError(
+             "Only PrintLoggers to sys.stdout and sys.stderr can be pickled."
+         )
+ 
+     def __setstate__(self, state: Any) -> None:
+@@ -167,15 +167,15 @@
+     def __getstate__(self) -> str:
+         """
+         Our __getattr__ magic makes this necessary.
+         """
+         if self._file is stdout:
+             return "stdout"
+ 
+-        elif self._file is stderr:
++        if self._file is stderr:
+             return "stderr"
+ 
+         raise PicklingError(
+             "Only WriteLoggers to sys.stdout and sys.stderr can be pickled."
+         )
+ 
+     def __setstate__(self, state: Any) -> None:
+@@ -267,15 +267,15 @@
+     def __getstate__(self) -> str:
+         """
+         Our __getattr__ magic makes this necessary.
+         """
+         if self._file is sys.stdout.buffer:
+             return "stdout"
+ 
+-        elif self._file is sys.stderr.buffer:
++        if self._file is sys.stderr.buffer:
+             return "stderr"
+ 
+         raise PicklingError(
+             "Only BytesLoggers to sys.stdout and sys.stderr can be pickled."
+         )
+ 
+     def __setstate__(self, state: Any) -> None:
+```
+
+### Comparing `structlog-22.3.0/src/structlog/_utils.py` & `structlog-23.1.0/src/structlog/_utils.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -8,14 +8,15 @@
+ """
+ 
+ from __future__ import annotations
+ 
+ import errno
+ import sys
+ 
++from contextlib import suppress
+ from typing import Any, Callable
+ 
+ 
+ def until_not_interrupted(f: Callable[..., Any], *args: Any, **kw: Any) -> Any:
+     """
+     Retry until *f* succeeds or an exception that isn't caused by EINTR occurs.
+ 
+@@ -37,12 +38,11 @@
+     # https://github.com/python/cpython/blob/313f92a57bc3887026ec16adb536bb2b7580ce47/Lib/logging/__init__.py#L342-L352
+     processname = "n/a"
+     mp: Any = sys.modules.get("multiprocessing")
+     if mp is not None:
+         # Errors may occur if multiprocessing has not finished loading
+         # yet - e.g. if a custom import hook causes third-party code
+         # to run when multiprocessing calls import.
+-        try:
++        with suppress(Exception):
+             processname = mp.current_process().name
+-        except Exception:
+-            pass
++
+     return processname
+```
+
+### Comparing `structlog-22.3.0/src/structlog/contextvars.py` & `structlog-23.1.0/src/structlog/contextvars.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/src/structlog/dev.py` & `structlog-23.1.0/src/structlog/dev.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -14,14 +14,15 @@
+ import sys
+ import warnings
+ 
+ from io import StringIO
+ from typing import Any, Iterable, TextIO, Type, Union
+ 
+ from ._frames import _format_exception
++from .processors import _figure_out_exc_info
+ from .typing import EventDict, ExceptionRenderer, ExcInfo, WrappedLogger
+ 
+ 
+ if sys.version_info >= (3, 8):
+     from typing import Protocol
+ else:
+     from typing_extensions import Protocol
+@@ -93,18 +94,21 @@
+     YELLOW = "\033[33m"
+     GREEN = "\033[32m"
+     RED_BACK = "\033[41m"
+ 
+ 
+ if _IS_WINDOWS:  # pragma: no cover
+     # On Windows, use colors by default only if Colorama is installed.
+-    _use_colors = colorama is not None
++    _has_colors = colorama is not None
+ else:
+     # On other OSes, use colors by default.
+-    _use_colors = True
++    _has_colors = True
++
++# Prevent breakage of packages that used the old name of the variable.
++_use_colors = _has_colors
+ 
+ 
+ class _Styles(Protocol):
+     reset: str
+     bright: str
+     level_critical: str
+     level_exception: str
+@@ -273,15 +277,15 @@
+     .. versionadded:: 21.3.0 *sort_keys*
+     .. versionadded:: 22.1 *event_key*
+     """
+ 
+     def __init__(
+         self,
+         pad_event: int = _EVENT_WIDTH,
+-        colors: bool = _use_colors,
++        colors: bool = _has_colors,
+         force_colors: bool = False,
+         repr_native_str: bool = False,
+         level_styles: Styles | None = None,
+         exception_formatter: ExceptionRenderer = default_exception_formatter,
+         sort_keys: bool = True,
+         event_key: str = "event",
+     ):
+@@ -313,15 +317,15 @@
+         self._pad_event = pad_event
+ 
+         if level_styles is None:
+             self._level_to_color = self.get_default_level_styles(colors)
+         else:
+             self._level_to_color = level_styles
+ 
+-        for key in self._level_to_color.keys():
++        for key in self._level_to_color:
+             self._level_to_color[key] += styles.bright
+         self._longest_level = len(
+             max(self._level_to_color.keys(), key=lambda e: len(e))
+         )
+ 
+         self._repr_native_str = repr_native_str
+         self._exception_formatter = exception_formatter
+@@ -334,21 +338,20 @@
+         self._repr_native_str.
+         """
+         if self._repr_native_str is True:
+             return repr(val)
+ 
+         if isinstance(val, str):
+             return val
+-        else:
+-            return repr(val)
++
++        return repr(val)
+ 
+     def __call__(
+         self, logger: WrappedLogger, name: str, event_dict: EventDict
+     ) -> str:
+-
+         sio = StringIO()
+ 
+         ts = event_dict.pop("timestamp", None)
+         if ts is not None:
+             sio.write(
+                 # can be a number if timestamp is UNIXy
+                 self._styles.timestamp
+@@ -414,23 +417,23 @@
+ 
+         if stack is not None:
+             sio.write("\n" + stack)
+             if exc_info or exc is not None:
+                 sio.write("\n\n" + "=" * 79 + "\n")
+ 
+         if exc_info:
+-            if not isinstance(exc_info, tuple):
+-                exc_info = sys.exc_info()
++            exc_info = _figure_out_exc_info(exc_info)
+ 
+             self._exception_formatter(sio, exc_info)
+         elif exc is not None:
+             if self._exception_formatter is not plain_traceback:
+                 warnings.warn(
+                     "Remove `format_exc_info` from your processor chain "
+-                    "if you want pretty exceptions."
++                    "if you want pretty exceptions.",
++                    stacklevel=2,
+                 )
+             sio.write("\n" + exc)
+ 
+         return sio.getvalue()
+ 
+     @staticmethod
+     def get_default_level_styles(colors: bool = True) -> Any:
+@@ -445,18 +448,15 @@
+             my_styles["EVERYTHING_IS_ON_FIRE"] = my_styles["critical"]
+             renderer = ConsoleRenderer(level_styles=my_styles)
+ 
+         :param colors: Whether to use colorful styles. This must match the
+             *colors* parameter to `ConsoleRenderer`. Default: `True`.
+         """
+         styles: Styles
+-        if colors:
+-            styles = _ColorfulStyles
+-        else:
+-            styles = _PlainStyles
++        styles = _ColorfulStyles if colors else _PlainStyles
+         return {
+             "critical": styles.level_critical,
+             "exception": styles.level_exception,
+             "error": styles.level_error,
+             "warn": styles.level_warn,
+             "warning": styles.level_warn,
+             "info": styles.level_info,
+@@ -467,15 +467,14 @@
+ 
+ _SENTINEL = object()
+ 
+ 
+ def set_exc_info(
+     logger: WrappedLogger, method_name: str, event_dict: EventDict
+ ) -> EventDict:
+-
+     """
+     Set ``event_dict["exc_info"] = True`` if *method_name* is ``"exception"``.
+ 
+     Do nothing if the name is different or ``exc_info`` is already set.
+     """
+     if (
+         method_name != "exception"
+```
+
+### Comparing `structlog-22.3.0/src/structlog/processors.py` & `structlog-23.1.0/src/structlog/processors.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -91,16 +91,16 @@
+         if repr_native_str is True:
+             self._repr = repr
+         else:
+ 
+             def _repr(inst: Any) -> str:
+                 if isinstance(inst, str):
+                     return inst
+-                else:
+-                    return repr(inst)
++
++                return repr(inst)
+ 
+             self._repr = _repr
+ 
+     def __call__(
+         self, _: WrappedLogger, __: str, event_dict: EventDict
+     ) -> str:
+         return " ".join(
+@@ -138,15 +138,14 @@
+     ):
+         self._ordered_items = _items_sorter(sort_keys, key_order, drop_missing)
+         self.bool_as_flag = bool_as_flag
+ 
+     def __call__(
+         self, _: WrappedLogger, __: str, event_dict: EventDict
+     ) -> str:
+-
+         elements: list[str] = []
+         for key, value in self._ordered_items(event_dict):
+             if any(c <= " " for c in key):
+                 raise ValueError(f'Invalid key: "{key}"')
+ 
+             if value is None:
+                 elements.append(f"{key}=")
+@@ -333,19 +332,19 @@
+     Serialize custom datatypes and pass the rest to __structlog__ & repr().
+     """
+     # circular imports :(
+     from structlog.threadlocal import _ThreadLocalDictWrapper
+ 
+     if isinstance(obj, _ThreadLocalDictWrapper):
+         return obj._dict
+-    else:
+-        try:
+-            return obj.__structlog__()
+-        except AttributeError:
+-            return repr(obj)
++
++    try:
++        return obj.__structlog__()
++    except AttributeError:
++        return repr(obj)
+ 
+ 
+ class ExceptionRenderer:
+     """
+     Replace an ``exc_info`` field with an ``exception`` field which is rendered
+     by *exception_formatter*.
+ 
+@@ -489,15 +488,16 @@
+ 
+         def stamper_unix(event_dict: EventDict) -> EventDict:
+             event_dict[key] = time.time()
+ 
+             return event_dict
+ 
+         return stamper_unix
+-    elif fmt.upper() == "ISO":
++
++    if fmt.upper() == "ISO":
+ 
+         def stamper_iso_local(event_dict: EventDict) -> EventDict:
+             event_dict[key] = now().isoformat()
+             return event_dict
+ 
+         def stamper_iso_utc(event_dict: EventDict) -> EventDict:
+             event_dict[key] = now().isoformat() + "Z"
+@@ -519,17 +519,19 @@
+ def _figure_out_exc_info(v: Any) -> ExcInfo:
+     """
+     Depending on the Python version will try to do the smartest thing possible
+     to transform *v* into an ``exc_info`` tuple.
+     """
+     if isinstance(v, BaseException):
+         return (v.__class__, v, v.__traceback__)
+-    elif isinstance(v, tuple):
++
++    if isinstance(v, tuple):
+         return v  # type: ignore[return-value]
+-    elif v:
++
++    if v:
+         return sys.exc_info()  # type: ignore[return-value]
+ 
+     return v
+ 
+ 
+ class ExceptionPrettyPrinter:
+     """
+```
+
+### Comparing `structlog-22.3.0/src/structlog/stdlib.py` & `structlog-23.1.0/src/structlog/stdlib.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -110,18 +110,15 @@
+         Finds the first caller frame outside of structlog so that the caller
+         info is populated for wrapping stdlib.
+ 
+         This logger gets set as the default one when using LoggerFactory.
+         """
+         sinfo: str | None
+         f, name = _find_first_app_frame_and_name(["logging"])
+-        if stack_info:
+-            sinfo = _format_stack(f)
+-        else:
+-            sinfo = None
++        sinfo = _format_stack(f) if stack_info else None
+ 
+         return f.f_code.co_filename, f.f_lineno, f.f_code.co_name, sinfo
+ 
+ 
+ class BoundLogger(BoundLoggerBase):
+     """
+     Python Standard Library version of `structlog.BoundLogger`.
+@@ -133,14 +130,17 @@
+ 
+         structlog.configure(
+             wrapper_class=structlog.stdlib.BoundLogger,
+         )
+ 
+     It also contains a bunch of properties that pass-through to the wrapped
+     `logging.Logger` which should make it work as a drop-in replacement.
++
++    .. versionadded:: 23.1.0
++       Async variants `alog()`, `adebug()`, `ainfo()`, and so forth.
+     """
+ 
+     _logger: logging.Logger
+ 
+     def bind(self, **new_values: Any) -> BoundLogger:
+         """
+         Return a new logger with *new_values* added to the existing ones.
+@@ -371,14 +371,97 @@
+ 
+     def getChild(self, suffix: str) -> logging.Logger:
+         """
+         Calls :meth:`logging.Logger.getChild` with unmodified arguments.
+         """
+         return self._logger.getChild(suffix)
+ 
++    # Non-Standard Async
++    async def _dispatch_to_sync(
++        self,
++        meth: Callable[..., Any],
++        event: str,
++        args: tuple[Any, ...],
++        kw: dict[str, Any],
++    ) -> None:
++        """
++        Merge contextvars and log using the sync logger in a thread pool.
++        """
++        ctx = contextvars.copy_context()
++
++        await asyncio.get_running_loop().run_in_executor(
++            None,
++            lambda: ctx.run(lambda: meth(event, *args, **kw)),
++        )
++
++    async def adebug(self, event: str, *args: Any, **kw: Any) -> None:
++        """
++        Log using `debug()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        await self._dispatch_to_sync(self.debug, event, args, kw)
++
++    async def ainfo(self, event: str, *args: Any, **kw: Any) -> None:
++        """
++        Log using `info()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        await self._dispatch_to_sync(self.info, event, args, kw)
++
++    async def awarning(self, event: str, *args: Any, **kw: Any) -> None:
++        """
++        Log using `warning()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        await self._dispatch_to_sync(self.warning, event, args, kw)
++
++    async def aerror(self, event: str, *args: Any, **kw: Any) -> None:
++        """
++        Log using `error()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        await self._dispatch_to_sync(self.error, event, args, kw)
++
++    async def acritical(self, event: str, *args: Any, **kw: Any) -> None:
++        """
++        Log using `critical()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        await self._dispatch_to_sync(self.critical, event, args, kw)
++
++    afatal = acritical
++
++    async def aexception(self, event: str, *args: Any, **kw: Any) -> None:
++        """
++        Log using `exception()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        # To make `log.exception("foo") work, we have to check if the user
++        # passed an explicit exc_info and if not, supply our own.
++        if kw.get("exc_info", True) is True and kw.get("exception") is None:
++            kw["exc_info"] = sys.exc_info()
++
++        await self._dispatch_to_sync(self.exception, event, args, kw)
++
++    async def alog(
++        self, level: Any, event: str, *args: Any, **kw: Any
++    ) -> None:
++        """
++        Log using `log()`, but asynchronously in a separate thread.
++
++        .. versionadded:: 23.1.0
++        """
++        await self._dispatch_to_sync(partial(self.log, level), event, args, kw)
++
+ 
+ def get_logger(*args: Any, **initial_values: Any) -> BoundLogger:
+     """
+     Only calls `structlog.get_logger`, but has the correct type hints.
+ 
+     .. warning::
+ 
+@@ -698,15 +781,15 @@
+         event_dict["logger"] = logger.name
+     else:
+         event_dict["logger"] = record.name
+     return event_dict
+ 
+ 
+ _LOG_RECORD_KEYS = logging.LogRecord(
+-    "name", 0, "pathname", 0, "msg", tuple(), None
++    "name", 0, "pathname", 0, "msg", (), None
+ ).__dict__.keys()
+ 
+ 
+ class ExtraAdder:
+     """
+     Add extra attributes of `logging.LogRecord` objects to the event
+     dictionary.
+@@ -908,17 +991,17 @@
+          type isn't quite right.
+         """
+         # Make a shallow copy of the record to let other handlers/formatters
+         # process the original one
+         record = logging.makeLogRecord(record.__dict__)
+ 
+         logger = getattr(record, "_logger", _SENTINEL)
+-        meth_name = getattr(record, "_name", _SENTINEL)
++        meth_name = getattr(record, "_name", "__structlog_sentinel__")
+ 
+-        if logger is not _SENTINEL and meth_name is not _SENTINEL:
++        if logger is not _SENTINEL and meth_name != "__structlog_sentinel__":
+             # Both attached by wrap_for_formatter
+             if self.logger is not None:
+                 logger = self.logger
+             meth_name = record._name  # type: ignore[attr-defined]
+ 
+             # We need to copy because it's possible that the same record gets
+             # processed by multiple logging formatters.  LogRecord.getMessage
+```
+
+### Comparing `structlog-22.3.0/src/structlog/testing.py` & `structlog-23.1.0/src/structlog/testing.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -104,16 +104,16 @@
+     def msg(self, *args: Any, **kw: Any) -> Any:
+         """
+         Return tuple of ``args, kw`` or just ``args[0]`` if only one arg passed
+         """
+         # Slightly convoluted for backwards compatibility.
+         if len(args) == 1 and not kw:
+             return args[0]
+-        else:
+-            return args, kw
++
++        return args, kw
+ 
+     log = debug = info = warn = warning = msg
+     fatal = failure = err = error = critical = exception = msg
+ 
+ 
+ class ReturnLoggerFactory:
+     r"""
+```
+
+### Comparing `structlog-22.3.0/src/structlog/threadlocal.py` & `structlog-23.1.0/src/structlog/threadlocal.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -212,17 +212,15 @@
+     def __delitem__(self, key: str) -> None:
+         self._dict.__delitem__(key)
+ 
+     def __len__(self) -> int:
+         return self._dict.__len__()
+ 
+     def __getattr__(self, name: str) -> Any:
+-        method = getattr(self._dict, name)
+-
+-        return method
++        return getattr(self._dict, name)
+ 
+ 
+ _CONTEXT = threading.local()
+ 
+ 
+ def get_threadlocal() -> Context:
+     """
+```
+
+### Comparing `structlog-22.3.0/src/structlog/tracebacks.py` & `structlog-23.1.0/src/structlog/tracebacks.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -198,21 +198,20 @@
+             traceback = cause.__traceback__
+             is_cause = False
+             continue
+ 
+         # No cover, code is reached but coverage doesn't recognize it.
+         break  # pragma: no cover
+ 
+-    trace = Trace(stacks=stacks)
+-    return trace
++    return Trace(stacks=stacks)
+ 
+ 
+ class ExceptionDictTransformer:
+     """
+-    Return a list of exception stack dictionaries for for an exception.
++    Return a list of exception stack dictionaries for an exception.
+ 
+     These dictionaries are based on :class:`Stack` instances generated by
+     :func:`extract()` and can be dumped to JSON.
+ 
+     :param show_locals: Whether or not to include the values of a stack frame's
+         local variables.
+     :param locals_max_string: The maximum length after which long string
+@@ -262,9 +261,8 @@
+             )
+             stack.frames[:] = [
+                 *stack.frames[:half],
+                 fake_frame,
+                 *stack.frames[-half:],
+             ]
+ 
+-        stack_dicts = [asdict(stack) for stack in trace.stacks]
+-        return stack_dicts
++        return [asdict(stack) for stack in trace.stacks]
+```
+
+### Comparing `structlog-22.3.0/src/structlog/twisted.py` & `structlog-23.1.0/src/structlog/twisted.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -320,9 +320,9 @@
+             return (
+                 (),
+                 {
+                     "_stuff": _stuff,
+                     "_why": self._dictRenderer(logger, name, eventDict),
+                 },
+             )
+-        else:
+-            return self._dictRenderer(logger, name, eventDict)
++
++        return self._dictRenderer(logger, name, eventDict)
+```
+
+### Comparing `structlog-22.3.0/src/structlog/types.py` & `structlog-23.1.0/src/structlog/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/src/structlog/typing.py` & `structlog-23.1.0/src/structlog/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/conftest.py` & `structlog-23.1.0/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_base.py` & `structlog-23.1.0/tests/test_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_config.py` & `structlog-23.1.0/tests/test_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_contextvars.py` & `structlog-23.1.0/tests/test_contextvars.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_dev.py` & `structlog-23.1.0/tests/test_dev.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -26,15 +26,15 @@
+         """
+         assert len("test") == len(dev._pad("test", 2))
+ 
+ 
+ @pytest.fixture(name="cr")
+ def _cr():
+     return dev.ConsoleRenderer(
+-        colors=dev._use_colors, exception_formatter=dev.plain_traceback
++        colors=dev._has_colors, exception_formatter=dev.plain_traceback
+     )
+ 
+ 
+ @pytest.fixture(name="styles")
+ def _styles(cr):
+     return cr._styles
+ 
+@@ -131,19 +131,19 @@
+         ) == rv
+ 
+     def test_init_accepts_overriding_levels(self, styles, padded):
+         """
+         Stdlib levels are rendered aligned, in brackets, and color coded.
+         """
+         my_styles = dev.ConsoleRenderer.get_default_level_styles(
+-            colors=dev._use_colors
++            colors=dev._has_colors
+         )
+         my_styles["MY_OH_MY"] = my_styles["critical"]
+         cr = dev.ConsoleRenderer(
+-            colors=dev._use_colors, level_styles=my_styles
++            colors=dev._has_colors, level_styles=my_styles
+         )
+ 
+         # this would blow up if the level_styles override failed
+         rv = cr(
+             None, None, {"event": "test", "level": "MY_OH_MY", "foo": "bar"}
+         )
+ 
+@@ -279,19 +279,66 @@
+         Stack traces are rendered after a new line.
+         """
+         stack = "fake stack"
+         rv = cr(None, None, {"event": "test", "stack": stack})
+ 
+         assert (padded + "\n" + stack) == rv
+ 
++    def test_exc_info_tuple(self, cr, padded):
++        """
++        If exc_info is a tuple, it is used.
++        """
++
++        try:
++            0 / 0
++        except ZeroDivisionError:
++            ei = sys.exc_info()
++
++        rv = cr(None, None, {"event": "test", "exc_info": ei})
++
++        exc = dev._format_exception(ei)
++
++        assert (padded + "\n" + exc) == rv
++
++    def test_exc_info_bool(self, cr, padded):
++        """
++        If exc_info is True, it is obtained using sys.exc_info().
++        """
++
++        try:
++            0 / 0
++        except ZeroDivisionError:
++            ei = sys.exc_info()
++            rv = cr(None, None, {"event": "test", "exc_info": True})
++
++        exc = dev._format_exception(ei)
++
++        assert (padded + "\n" + exc) == rv
++
++    def test_exc_info_exception(self, cr, padded):
++        """
++        If exc_info is an exception, it is used by converting to a tuple.
++        """
++
++        try:
++            0 / 0
++        except ZeroDivisionError as e:
++            ei = e
++
++        rv = cr(None, None, {"event": "test", "exc_info": ei})
++
++        exc = dev._format_exception((ei.__class__, ei, ei.__traceback__))
++
++        assert (padded + "\n" + exc) == rv
++
+     def test_pad_event_param(self, styles):
+         """
+         `pad_event` parameter works.
+         """
+-        rv = dev.ConsoleRenderer(42, dev._use_colors)(
++        rv = dev.ConsoleRenderer(42, dev._has_colors)(
+             None, None, {"event": "test", "foo": "bar"}
+         )
+ 
+         assert (
+             styles.bright
+             + dev._pad("test", 42)
+             + styles.reset
+@@ -301,24 +348,29 @@
+             + styles.reset
+             + "="
+             + styles.kv_value
+             + "bar"
+             + styles.reset
+         ) == rv
+ 
+-    @pytest.mark.parametrize("explicit_ei", [True, False])
++    @pytest.mark.parametrize("explicit_ei", ["tuple", "exception", False])
+     def test_everything(self, cr, styles, padded, explicit_ei):
+         """
+         Put all cases together.
+         """
+         if explicit_ei:
+             try:
+                 0 / 0
+-            except ZeroDivisionError:
+-                ei = sys.exc_info()
++            except ZeroDivisionError as e:
++                if explicit_ei == "tuple":
++                    ei = sys.exc_info()
++                elif explicit_ei == "exception":
++                    ei = e
++                else:
++                    raise ValueError()
+         else:
+             ei = True
+ 
+         stack = "fake stack trace"
+         ed = {
+             "event": "test",
+             "exc_info": ei,
+@@ -335,14 +387,17 @@
+         else:
+             try:
+                 0 / 0
+             except ZeroDivisionError:
+                 rv = cr(None, None, ed)
+                 ei = sys.exc_info()
+ 
++        if isinstance(ei, BaseException):
++            ei = (ei.__class__, ei, ei.__traceback__)
++
+         exc = dev._format_exception(ei)
+ 
+         assert (
+             styles.timestamp
+             + "13:13"
+             + styles.reset
+             + " ["
+@@ -396,15 +451,15 @@
+         assert "[info     ] event                          foo=bar" == rv
+ 
+     def test_colorama_force_colors(self, styles, padded):
+         """
+         If force_colors is True, use colors even if the destination is non-tty.
+         """
+         cr = dev.ConsoleRenderer(
+-            colors=dev._use_colors, force_colors=dev._use_colors
++            colors=dev._has_colors, force_colors=dev._has_colors
+         )
+ 
+         rv = cr(
+             None, None, {"event": "test", "level": "critical", "foo": "bar"}
+         )
+ 
+         assert (
+@@ -420,15 +475,15 @@
+             + styles.reset
+             + "="
+             + styles.kv_value
+             + "bar"
+             + styles.reset
+         ) == rv
+ 
+-        assert not dev._use_colors or dev._ColorfulStyles is cr._styles
++        assert not dev._has_colors or dev._ColorfulStyles is cr._styles
+ 
+     @pytest.mark.parametrize("rns", [True, False])
+     def test_repr_native_str(self, rns):
+         """
+         repr_native_str=False doesn't repr on native strings.  "event" is
+         never repr'ed.
+         """
+```
+
+### Comparing `structlog-22.3.0/tests/test_frames.py` & `structlog-23.1.0/tests/test_frames.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_generic.py` & `structlog-23.1.0/tests/test_generic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_log_levels.py` & `structlog-23.1.0/tests/test_log_levels.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -11,24 +11,18 @@
+ from structlog import make_filtering_bound_logger
+ from structlog._log_levels import _LEVEL_TO_NAME
+ from structlog.contextvars import (
+     bind_contextvars,
+     clear_contextvars,
+     merge_contextvars,
+ )
+-from structlog.testing import CapturingLogger
+-
+-
+-@pytest.fixture(name="cl")
+-def fixture_cl():
+-    return CapturingLogger()
+ 
+ 
+ @pytest.fixture(name="bl")
+-def fixture_bl(cl):
++def _bl(cl):
+     return make_filtering_bound_logger(logging.INFO)(cl, [], {})
+ 
+ 
+ class TestFilteringLogger:
+     def test_exact_level(self, bl, cl):
+         """
+         if log level is exactly the min_level, log.
+@@ -75,25 +69,25 @@
+         """
+         await bl.adebug("hello %s!", "world")
+ 
+         assert [] == cl.calls
+ 
+     def test_no_args(self, bl, cl):
+         """
+-        If no args are passed, don't attempt intepolation.
++        If no args are passed, don't attempt interpolation.
+ 
+         See also #473
+         """
+         bl.info(42)
+ 
+         assert 42 == cl.calls[0][2]["event"]
+ 
+     async def test_async_no_args(self, bl, cl):
+         """
+-        If no args are passed, don't attempt intepolation.
++        If no args are passed, don't attempt interpolation.
+ 
+         See also #473
+         """
+         await bl.ainfo(42)
+ 
+         assert 42 == cl.calls[0][2]["event"]
+ 
+@@ -184,32 +178,54 @@
+         """
+         bl.exception("boom")
+ 
+         assert [("error", (), {"event": "boom", "exc_info": True})] == cl.calls
+ 
+     async def test_async_exception(self, bl, cl):
+         """
+-        exception ensures that exc_info is set to True, unless it's already
++        aexception sets exc_info to current exception info, if it's not already
+         set.
+         """
+-        await bl.aexception("boom")
+-
+-        assert [("error", (), {"event": "boom", "exc_info": True})] == cl.calls
++        try:
++            raise Exception("boom")
++        except Exception as e:
++            await bl.aexception("foo")
++            exc = e
++
++        assert 1 == len(cl.calls)
++        assert isinstance(cl.calls[0][2]["exc_info"], tuple)
++        assert exc == cl.calls[0][2]["exc_info"][1]
++
++    async def test_async_exception_true(self, bl, cl):
++        """
++        aexception replaces exc_info with current exception info, if exc_info
++        is True.
++        """
++        try:
++            raise Exception("boom")
++        except Exception as e:
++            await bl.aexception("foo", exc_info=True)
++            exc = e
++
++        assert 1 == len(cl.calls)
++        assert isinstance(cl.calls[0][2]["exc_info"], tuple)
++        assert exc is cl.calls[0][2]["exc_info"][1]
+ 
+     def test_exception_passed(self, bl, cl):
+         """
+         exception if exc_info has a value, exception doesn't tamper with it.
+         """
+         bl.exception("boom", exc_info=42)
+ 
+         assert [("error", (), {"event": "boom", "exc_info": 42})] == cl.calls
+ 
+     async def test_async_exception_passed(self, bl, cl):
+         """
+-        exception if exc_info has a value, exception doesn't tamper with it.
++        exception if exc_info has a value (other than True), exception doesn't
++        tamper with it.
+         """
+         await bl.aexception("boom", exc_info=42)
+ 
+         assert [("error", (), {"event": "boom", "exc_info": 42})] == cl.calls
+ 
+     def test_exception_pass_exception(self, bl, cl):
+         """
+```
+
+### Comparing `structlog-22.3.0/tests/test_output.py` & `structlog-23.1.0/tests/test_output.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_packaging.py` & `structlog-23.1.0/tests/test_packaging.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_processors.py` & `structlog-23.1.0/tests/test_processors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_stdlib.py` & `structlog-23.1.0/tests/test_stdlib.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -336,14 +336,74 @@
+         """
+         try_unbind calls the correct try_unbind.
+         """
+         bl = build_bl().bind(a=42).try_unbind("a", "b")
+ 
+         assert {} == get_context(bl)
+ 
++    @pytest.mark.parametrize(
++        "meth", ["debug", "info", "warning", "error", "critical"]
++    )
++    async def test_async_log_methods(self, meth, cl):
++        """
++        Async methods log async.
++        """
++        bl = build_bl(cl, processors=[])
++
++        await getattr(bl, f"a{meth}")("Async!")
++
++        assert [
++            CapturedCall(method_name=meth, args=(), kwargs={"event": "Async!"})
++        ] == cl.calls
++
++    async def test_alog(self, cl):
++        """
++        Alog logs async at the correct level.
++        """
++        bl = build_bl(cl, processors=[])
++
++        await bl.alog(logging.INFO, "foo %s", "bar")
++
++        assert [
++            CapturedCall(
++                method_name="info",
++                args=(),
++                kwargs={"positional_args": ("bar",), "event": "foo %s"},
++            )
++        ] == cl.calls
++
++    async def test_aexception_exc_info_true(self, cl):
++        """
++        aexception passes current exc_info into dispatch.
++        """
++        bl = build_bl(cl, processors=[])
++
++        try:
++            raise ValueError(42)
++        except ValueError as e:
++            await bl.aexception("oops")
++            exc = e
++
++        (cc,) = cl.calls
++
++        assert isinstance(cc[2]["exc_info"], tuple)
++        assert exc == cc[2]["exc_info"][1]
++
++    async def test_aexception_exc_info_explicit(self, cl):
++        """
++        In aexception, if exc_info isn't missing or True, leave it be.
++        """
++        bl = build_bl(cl, processors=[])
++
++        obj = object()
++
++        await bl.aexception("ooops", exc_info=obj)
++
++        assert obj is cl.calls[0].kwargs["exc_info"]
++
+ 
+ class TestPositionalArgumentsFormatter:
+     def test_formats_tuple(self):
+         """
+         Positional arguments as simple types are rendered.
+         """
+         formatter = PositionalArgumentsFormatter()
+```
+
+### Comparing `structlog-22.3.0/tests/test_testing.py` & `structlog-23.1.0/tests/test_testing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_threadlocal.py` & `structlog-23.1.0/tests/test_threadlocal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_tracebacks.py` & `structlog-23.1.0/tests/test_tracebacks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_twisted.py` & `structlog-23.1.0/tests/test_twisted.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/tests/test_utils.py` & `structlog-23.1.0/tests/test_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/LICENSE-APACHE` & `structlog-23.1.0/LICENSE-APACHE`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/LICENSE-MIT` & `structlog-23.1.0/LICENSE-MIT`
+
+ * *Files identical despite different names*
+
+### Comparing `structlog-22.3.0/pyproject.toml` & `structlog-23.1.0/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -40,15 +40,14 @@
+ [project.urls]
+ Documentation = "https://www.structlog.org/"
+ Changelog = "https://www.structlog.org/en/stable/changelog.html"
+ "Bug Tracker" = "https://github.com/hynek/structlog/issues"
+ "Source Code" = "https://github.com/hynek/structlog"
+ Funding = "https://github.com/sponsors/hynek"
+ Tidelift = "https://tidelift.com/subscription/pkg/pypi-structlog?utm_source=pypi-structlog&utm_medium=pypi"
+-Ko-fi = "https://ko-fi.com/the_hynek"
+ 
+ 
+ [project.optional-dependencies]
+ tests = [
+     "coverage[toml]",
+     "freezegun>=0.2.8",
+     "pretend",
+@@ -68,15 +67,15 @@
+     "twisted",
+ ]
+ dev = ["structlog[tests,typing,docs]"]
+ 
+ 
+ [tool.hatch.version]
+ source = "vcs"
+-raw-options = { version_scheme = "no-guess-dev" }
++raw-options = { local_scheme = "no-local-version" }
+ 
+ 
+ [tool.pytest.ini_options]
+ addopts = ["-ra", "--strict-markers", "--strict-config"]
+ testpaths = "tests"
+ xfail_strict = true
+ filterwarnings = ["once::Warning"]
+@@ -85,15 +84,15 @@
+ 
+ [tool.coverage.run]
+ parallel = true
+ branch = true
+ source = ["structlog"]
+ 
+ [tool.coverage.paths]
+-source = ["src", ".tox/*/site-packages"]
++source = ["src", ".tox/py*/**/site-packages"]
+ 
+ [tool.coverage.report]
+ show_missing = true
+ skip_covered = true
+ omit = ["src/structlog/_greenlets.py"]
+ exclude_lines = [
+     # a more strict default pragma
+@@ -166,10 +165,19 @@
+ 
+ [[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
+ path = "CHANGELOG.md"
+ start-after = "<!-- changelog follows -->"
+ pattern = "\n(###.+?\n)## "
+ 
+ [[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
++text = """
++---
++
++[Full changelog](https://www.structlog.org/en/stable/changelog.html)
++
++
++"""
++
++[[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
+ path = "README.md"
+ start-at = "## Credits"
+ end-before = "<!-- begin-meta -->"
+```
+
+### Comparing `structlog-22.3.0/PKG-INFO` & `structlog-23.1.0/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,18 +1,17 @@
+ Metadata-Version: 2.1
+ Name: structlog
+-Version: 22.3.0
++Version: 23.1.0
+ Summary: Structured Logging for Python
+ Project-URL: Documentation, https://www.structlog.org/
+ Project-URL: Changelog, https://www.structlog.org/en/stable/changelog.html
+ Project-URL: Bug Tracker, https://github.com/hynek/structlog/issues
+ Project-URL: Source Code, https://github.com/hynek/structlog
+ Project-URL: Funding, https://github.com/sponsors/hynek
+ Project-URL: Tidelift, https://tidelift.com/subscription/pkg/pypi-structlog?utm_source=pypi-structlog&utm_medium=pypi
+-Project-URL: Ko-fi, https://ko-fi.com/the_hynek
+ Author-email: Hynek Schlawack <hs@ox.cx>
+ License: Licensed under either of
+         
+         - Apache License, Version 2.0 (LICENSE-APACHE or <https://choosealicense.com/licenses/apache/>)
+         - or MIT license (LICENSE-MIT or <https://choosealicense.com/licenses/mit/>)
+         
+         at your option.
+@@ -139,25 +138,41 @@
+ Available as part of the Tidelift Subscription.
+ 
+ The maintainers of *structlog* and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use. [Learn more.](https://tidelift.com/subscription/pkg/pypi-structlog?utm_source=pypi-structlog&utm_medium=referral&utm_campaign=readme)
+ 
+ 
+ ## Release Information
+ 
+-### Changed
++### Added
+ 
+-- String interpolation in `FilteringBoundLogger` (used by default) is now only attempted if positional arguments are passed.
+-This prevents crashes if something different than a string is passed for the *event* argument.
+-  [#475](https://github.com/hynek/structlog/pull/475)
++- `structlog.stdlib.BoundLogger` now has, analogously to our native logger, a full set of async log methods prefixed with an `a`: `await log.ainfo("event!")`
++  [#502](https://github.com/hynek/structlog/issues/502)
++
++- The default configuration now respects the presence of `FORCE_COLOR` (regardless of its value, unless an empty string).
++  This disables all heuristics whether it makes sense to use colors.
++  [#503](https://github.com/hynek/structlog/issues/503)
++
++- The default configuration now respects the presence of [`NO_COLOR`](https://no-color.org) (regardless of its value, unless an empty string).
++  This disables all heuristics whether it makes sense to use colors and overrides `FORCE_COLOR`.
++  [#504](https://github.com/hynek/structlog/issues/504)
+ 
+ 
+ ### Fixed
+ 
+-- String interpolation doesn't cause crashes in filtered log call anymore.
+-  [#478](https://github.com/hynek/structlog/pull/478)
++- ConsoleRenderer now reuses the `_figure_out_exc_info` to process the `exc_info` argument like `ExceptionRenderer` does.
++  This prevents crashes if the actual Exception is passed for the *exc_info* argument instead of a tuple or `True`.
++  [#482](https://github.com/hynek/structlog/issues/482)
++
++- `FilteringBoundLogger.aexception()` now extracts the exception info using `sys.exc_info()` before passing control to the asyncio executor (where original exception info is no longer available).
++  [#488](https://github.com/hynek/structlog/issues/488)
++
++
++---
++
++[Full changelog](https://www.structlog.org/en/stable/changelog.html)
+ 
+ 
+ ## Credits
+ 
+ *structlog* is written and maintained by [Hynek Schlawack](https://hynek.me/).
+ The idea of bound loggers is inspired by previous work by [Jean-Paul Calderone](https://github.com/exarkun) and [David Reid](https://github.com/dreid).
+```
+

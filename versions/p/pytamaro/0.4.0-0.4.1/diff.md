@@ -1,0 +1,286 @@
+# Comparing `tmp/pytamaro-0.4.0.tar.gz` & `tmp/pytamaro-0.4.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pytamaro-0.4.0.tar", max compression
++gzip compressed data, was "pytamaro-0.4.1.tar", max compression
+```
+
+## Comparing `pytamaro-0.4.0.tar` & `pytamaro-0.4.1.tar`
+
+### file list
+
+```diff
+@@ -1,37 +1,37 @@
+--rw-r--r--   0        0        0     1103 2022-03-04 16:39:39.043278 pytamaro-0.4.0/LICENSE
+--rw-r--r--   0        0        0      817 2023-02-27 12:52:18.260958 pytamaro-0.4.0/pyproject.toml
+--rw-r--r--   0        0        0      472 2023-02-27 12:52:37.076304 pytamaro-0.4.0/pytamaro/__init__.py
+--rw-r--r--   0        0        0     3659 2023-02-22 08:41:39.205095 pytamaro-0.4.0/pytamaro/checks.py
+--rw-r--r--   0        0        0      962 2023-02-22 08:41:39.205396 pytamaro-0.4.0/pytamaro/color.py
+--rw-r--r--   0        0        0     4641 2023-02-22 08:41:39.205575 pytamaro-0.4.0/pytamaro/color_functions.py
+--rw-r--r--   0        0        0      799 2023-02-22 08:41:39.205817 pytamaro-0.4.0/pytamaro/color_names.py
+--rw-r--r--   0        0        0      456 2023-02-22 08:41:39.206302 pytamaro-0.4.0/pytamaro/de/__init__.py
+--rw-r--r--   0        0        0     3948 2023-02-22 08:41:39.206548 pytamaro-0.4.0/pytamaro/de/color.py
+--rw-r--r--   0        0        0     1093 2022-03-04 16:39:39.049297 pytamaro-0.4.0/pytamaro/de/color_names.py
+--rw-r--r--   0        0        0      445 2023-02-23 08:26:49.306810 pytamaro-0.4.0/pytamaro/de/graphic.py
+--rw-r--r--   0        0        0     2574 2023-02-23 11:06:58.664370 pytamaro-0.4.0/pytamaro/de/io.py
+--rw-r--r--   0        0        0     4206 2023-02-27 12:47:39.259296 pytamaro-0.4.0/pytamaro/de/operations.py
+--rw-r--r--   0        0        0      119 2023-02-23 08:26:49.307771 pytamaro-0.4.0/pytamaro/de/point.py
+--rw-r--r--   0        0        0     1364 2023-02-23 08:26:49.307941 pytamaro-0.4.0/pytamaro/de/point_names.py
+--rw-r--r--   0        0        0     4626 2023-02-27 12:50:58.787439 pytamaro-0.4.0/pytamaro/de/primitives.py
+--rw-r--r--   0        0        0     2643 2023-02-27 12:46:33.247971 pytamaro-0.4.0/pytamaro/debug.py
+--rw-r--r--   0        0        0     8147 2023-02-22 08:41:39.208522 pytamaro-0.4.0/pytamaro/graphic.py
+--rw-r--r--   0        0        0     6386 2023-02-23 11:08:28.556769 pytamaro-0.4.0/pytamaro/io.py
+--rw-r--r--   0        0        0      457 2023-02-22 08:41:39.209092 pytamaro-0.4.0/pytamaro/it/__init__.py
+--rw-r--r--   0        0        0     3370 2023-02-22 08:41:39.209390 pytamaro-0.4.0/pytamaro/it/color.py
+--rw-r--r--   0        0        0      923 2022-11-30 08:45:09.899740 pytamaro-0.4.0/pytamaro/it/color_names.py
+--rw-r--r--   0        0        0      459 2023-02-22 08:41:39.209756 pytamaro-0.4.0/pytamaro/it/graphic.py
+--rw-r--r--   0        0        0     2320 2023-02-23 11:08:04.994342 pytamaro-0.4.0/pytamaro/it/io.py
+--rw-r--r--   0        0        0     4512 2023-02-27 12:47:51.133298 pytamaro-0.4.0/pytamaro/it/operations.py
+--rw-r--r--   0        0        0      111 2023-02-23 08:26:49.308452 pytamaro-0.4.0/pytamaro/it/point.py
+--rw-r--r--   0        0        0     1626 2023-02-23 08:29:53.240474 pytamaro-0.4.0/pytamaro/it/point_names.py
+--rw-r--r--   0        0        0     4636 2023-02-27 12:48:12.253395 pytamaro-0.4.0/pytamaro/it/primitives.py
+--rw-r--r--   0        0        0     5786 2023-02-23 08:26:49.308669 pytamaro-0.4.0/pytamaro/localization.py
+--rw-r--r--   0        0        0     5834 2023-02-27 12:46:53.053090 pytamaro-0.4.0/pytamaro/operations.py
+--rw-r--r--   0        0        0     1900 2023-02-23 10:59:14.648375 pytamaro-0.4.0/pytamaro/point.py
+--rw-r--r--   0        0        0     1233 2023-02-23 08:29:56.624394 pytamaro-0.4.0/pytamaro/point_names.py
+--rw-r--r--   0        0        0     4997 2023-02-27 12:47:11.307549 pytamaro-0.4.0/pytamaro/primitives.py
+--rw-r--r--   0        0        0        0 2022-10-31 08:45:16.764275 pytamaro-0.4.0/pytamaro/py.typed
+--rw-r--r--   0        0        0     1137 2022-03-04 16:39:39.051265 pytamaro-0.4.0/pytamaro/utils.py
+--rw-r--r--   0        0        0      718 1970-01-01 00:00:00.000000 pytamaro-0.4.0/setup.py
+--rw-r--r--   0        0        0      594 1970-01-01 00:00:00.000000 pytamaro-0.4.0/PKG-INFO
++-rw-r--r--   0        0        0     1103 2022-03-04 16:39:39.043278 pytamaro-0.4.1/LICENSE
++-rw-r--r--   0        0        0      817 2023-04-06 12:18:49.527231 pytamaro-0.4.1/pyproject.toml
++-rw-r--r--   0        0        0      472 2023-04-06 12:19:23.593798 pytamaro-0.4.1/pytamaro/__init__.py
++-rw-r--r--   0        0        0     3659 2023-02-27 12:54:43.437950 pytamaro-0.4.1/pytamaro/checks.py
++-rw-r--r--   0        0        0      962 2023-02-27 12:54:43.438236 pytamaro-0.4.1/pytamaro/color.py
++-rw-r--r--   0        0        0     4641 2023-02-27 12:54:43.438488 pytamaro-0.4.1/pytamaro/color_functions.py
++-rw-r--r--   0        0        0      799 2023-02-27 12:54:43.438694 pytamaro-0.4.1/pytamaro/color_names.py
++-rw-r--r--   0        0        0      456 2023-02-27 12:54:43.439015 pytamaro-0.4.1/pytamaro/de/__init__.py
++-rw-r--r--   0        0        0     3948 2023-02-27 12:54:43.439329 pytamaro-0.4.1/pytamaro/de/color.py
++-rw-r--r--   0        0        0     1093 2022-03-04 16:39:39.049297 pytamaro-0.4.1/pytamaro/de/color_names.py
++-rw-r--r--   0        0        0      445 2023-02-27 12:54:43.439701 pytamaro-0.4.1/pytamaro/de/graphic.py
++-rw-r--r--   0        0        0     2574 2023-02-27 12:54:43.440104 pytamaro-0.4.1/pytamaro/de/io.py
++-rw-r--r--   0        0        0     4206 2023-02-27 12:54:43.440314 pytamaro-0.4.1/pytamaro/de/operations.py
++-rw-r--r--   0        0        0      119 2023-02-27 12:54:43.440547 pytamaro-0.4.1/pytamaro/de/point.py
++-rw-r--r--   0        0        0     1364 2023-02-27 12:54:43.440806 pytamaro-0.4.1/pytamaro/de/point_names.py
++-rw-r--r--   0        0        0     4626 2023-02-27 12:54:43.441003 pytamaro-0.4.1/pytamaro/de/primitives.py
++-rw-r--r--   0        0        0     2643 2023-02-27 12:54:43.441184 pytamaro-0.4.1/pytamaro/debug.py
++-rw-r--r--   0        0        0     8147 2023-02-27 12:54:43.441456 pytamaro-0.4.1/pytamaro/graphic.py
++-rw-r--r--   0        0        0     6386 2023-02-27 12:54:43.441700 pytamaro-0.4.1/pytamaro/io.py
++-rw-r--r--   0        0        0      457 2023-02-27 12:54:43.441979 pytamaro-0.4.1/pytamaro/it/__init__.py
++-rw-r--r--   0        0        0     3370 2023-02-27 12:54:43.442282 pytamaro-0.4.1/pytamaro/it/color.py
++-rw-r--r--   0        0        0      923 2022-11-30 08:45:09.899740 pytamaro-0.4.1/pytamaro/it/color_names.py
++-rw-r--r--   0        0        0      459 2023-02-27 12:54:43.442558 pytamaro-0.4.1/pytamaro/it/graphic.py
++-rw-r--r--   0        0        0     2320 2023-02-27 12:54:43.442718 pytamaro-0.4.1/pytamaro/it/io.py
++-rw-r--r--   0        0        0     4512 2023-02-27 12:54:43.442887 pytamaro-0.4.1/pytamaro/it/operations.py
++-rw-r--r--   0        0        0      111 2023-02-27 12:54:43.443014 pytamaro-0.4.1/pytamaro/it/point.py
++-rw-r--r--   0        0        0     1626 2023-02-27 12:54:43.443240 pytamaro-0.4.1/pytamaro/it/point_names.py
++-rw-r--r--   0        0        0     4636 2023-02-27 12:54:43.443425 pytamaro-0.4.1/pytamaro/it/primitives.py
++-rw-r--r--   0        0        0     5786 2023-02-27 12:54:43.443621 pytamaro-0.4.1/pytamaro/localization.py
++-rw-r--r--   0        0        0     5834 2023-02-27 12:54:43.443786 pytamaro-0.4.1/pytamaro/operations.py
++-rw-r--r--   0        0        0     1900 2023-02-27 12:54:43.443994 pytamaro-0.4.1/pytamaro/point.py
++-rw-r--r--   0        0        0     1233 2023-02-27 12:54:43.444184 pytamaro-0.4.1/pytamaro/point_names.py
++-rw-r--r--   0        0        0     4997 2023-02-27 12:54:43.444392 pytamaro-0.4.1/pytamaro/primitives.py
++-rw-r--r--   0        0        0        0 2022-10-31 08:45:16.764275 pytamaro-0.4.1/pytamaro/py.typed
++-rw-r--r--   0        0        0     1032 2023-04-06 12:16:34.179637 pytamaro-0.4.1/pytamaro/utils.py
++-rw-r--r--   0        0        0      718 1970-01-01 00:00:00.000000 pytamaro-0.4.1/setup.py
++-rw-r--r--   0        0        0      594 1970-01-01 00:00:00.000000 pytamaro-0.4.1/PKG-INFO
+```
+
+### Comparing `pytamaro-0.4.0/LICENSE` & `pytamaro-0.4.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pyproject.toml` & `pytamaro-0.4.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pytamaro"
+-version = "0.4.0"
++version = "0.4.1"
+ description = "Educational library for teaching problem decompositon using graphics"
+ authors = ["Luca Chiodini <luca@chiodini.org>"]
+ 
+ [tool.poetry.dependencies]
+ python = "^3.7"
+ Pillow = "^9.0.0"
+ skia-python = "^87.4"
+```
+
+### Comparing `pytamaro-0.4.0/pytamaro/checks.py` & `pytamaro-0.4.1/pytamaro/checks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/color.py` & `pytamaro-0.4.1/pytamaro/color.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/color_functions.py` & `pytamaro-0.4.1/pytamaro/color_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/color_names.py` & `pytamaro-0.4.1/pytamaro/color_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/de/color.py` & `pytamaro-0.4.1/pytamaro/de/color.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/de/color_names.py` & `pytamaro-0.4.1/pytamaro/de/color_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/de/io.py` & `pytamaro-0.4.1/pytamaro/de/io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/de/operations.py` & `pytamaro-0.4.1/pytamaro/de/operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/de/point_names.py` & `pytamaro-0.4.1/pytamaro/de/point_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/de/primitives.py` & `pytamaro-0.4.1/pytamaro/de/primitives.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/debug.py` & `pytamaro-0.4.1/pytamaro/debug.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/graphic.py` & `pytamaro-0.4.1/pytamaro/graphic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/io.py` & `pytamaro-0.4.1/pytamaro/io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/it/color.py` & `pytamaro-0.4.1/pytamaro/it/color.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/it/color_names.py` & `pytamaro-0.4.1/pytamaro/it/color_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/it/io.py` & `pytamaro-0.4.1/pytamaro/it/io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/it/operations.py` & `pytamaro-0.4.1/pytamaro/it/operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/it/point_names.py` & `pytamaro-0.4.1/pytamaro/it/point_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/it/primitives.py` & `pytamaro-0.4.1/pytamaro/it/primitives.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/localization.py` & `pytamaro-0.4.1/pytamaro/localization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/operations.py` & `pytamaro-0.4.1/pytamaro/operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/point.py` & `pytamaro-0.4.1/pytamaro/point.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/point_names.py` & `pytamaro-0.4.1/pytamaro/point_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/primitives.py` & `pytamaro-0.4.1/pytamaro/primitives.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytamaro-0.4.0/pytamaro/utils.py` & `pytamaro-0.4.1/pytamaro/utils.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -25,15 +25,16 @@
+     Checks whether we are running inside a Jupyter notebook.
+     Adapted from
+     https://stackoverflow.com/questions/15411967/how-can-i-check-if-code-is-executed-in-the-ipython-notebook/24937408
+ 
+     :returns: True if running inside a notebook, False otherwise
+     """
+     try:
+-        shell = get_ipython().__class__.__name__  # type: ignore[name-defined]
+-        if shell == 'ZMQInteractiveShell':
+-            return True   # Jupyter notebook or qtconsole
+-        if shell == 'TerminalInteractiveShell':
+-            return False  # Terminal running IPython
+-        return False  # Other type (?)
+-    except NameError:
+-        return False      # Probably standard Python interpreter
++        # pylint: disable=import-outside-toplevel
++        from IPython import get_ipython  # type: ignore[import]
++        if 'IPKernelApp' not in get_ipython().config:
++            return False
++    except ImportError:
++        return False
++    except AttributeError:
++        return False
++    return True
+```
+
+### Comparing `pytamaro-0.4.0/setup.py` & `pytamaro-0.4.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['Pillow>=9.0.0,<10.0.0', 'skia-python>=87.4,<88.0']
+ 
+ setup_kwargs = {
+     'name': 'pytamaro',
+-    'version': '0.4.0',
++    'version': '0.4.1',
+     'description': 'Educational library for teaching problem decompositon using graphics',
+     'long_description': 'None',
+     'author': 'Luca Chiodini',
+     'author_email': 'luca@chiodini.org',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
+### Comparing `pytamaro-0.4.0/PKG-INFO` & `pytamaro-0.4.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pytamaro
+-Version: 0.4.0
++Version: 0.4.1
+ Summary: Educational library for teaching problem decompositon using graphics
+ Author: Luca Chiodini
+ Author-email: luca@chiodini.org
+ Requires-Python: >=3.7,<4.0
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+```
+

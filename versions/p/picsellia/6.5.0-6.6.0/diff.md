@@ -1,0 +1,3084 @@
+# Comparing `tmp/picsellia-6.5.0.tar.gz` & `tmp/picsellia-6.6.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "picsellia-6.5.0.tar", max compression
++gzip compressed data, was "picsellia-6.6.0.tar", max compression
+```
+
+## Comparing `picsellia-6.5.0.tar` & `picsellia-6.6.0.tar`
+
+### file list
+
+```diff
+@@ -1,58 +1,59 @@
+--rw-r--r--   0        0        0     7560 2023-03-15 14:42:12.240710 picsellia-6.5.0/CHANGELOG.md
+--rw-r--r--   0        0        0     1074 2023-01-31 15:29:48.632677 picsellia-6.5.0/LICENSE
+--rw-r--r--   0        0        0     2005 2023-01-31 15:29:48.632677 picsellia-6.5.0/README.md
+--rw-r--r--   0        0        0     2590 2023-03-15 14:42:12.240710 picsellia-6.5.0/picsellia/__init__.py
+--rw-r--r--   0        0        0    35949 2023-03-15 10:53:41.197847 picsellia-6.5.0/picsellia/client.py
+--rw-r--r--   0        0        0      267 2022-10-18 10:06:13.118336 picsellia-6.5.0/picsellia/colors.py
+--rw-r--r--   0        0        0     1706 2023-03-15 10:53:41.197847 picsellia-6.5.0/picsellia/decorators.py
+--rw-r--r--   0        0        0     4681 2023-03-15 13:01:23.367720 picsellia-6.5.0/picsellia/exceptions.py
+--rw-r--r--   0        0        0     3410 2023-03-15 10:53:41.197847 picsellia-6.5.0/picsellia/pxl_multithreading.py
+--rw-r--r--   0        0        0        0 2022-08-09 13:11:44.816343 picsellia-6.5.0/picsellia/sdk/__init__.py
+--rw-r--r--   0        0        0    21739 2023-02-15 15:02:26.920860 picsellia-6.5.0/picsellia/sdk/annotation.py
+--rw-r--r--   0        0        0     3777 2023-03-15 10:53:41.201847 picsellia-6.5.0/picsellia/sdk/artifact.py
+--rw-r--r--   0        0        0    15959 2023-03-15 10:53:41.201847 picsellia-6.5.0/picsellia/sdk/asset.py
+--rw-r--r--   0        0        0     2509 2023-01-31 15:29:48.636678 picsellia-6.5.0/picsellia/sdk/classification.py
+--rw-r--r--   0        0        0    19892 2023-03-15 14:38:46.464462 picsellia-6.5.0/picsellia/sdk/connexion.py
+--rw-r--r--   0        0        0     1986 2023-01-31 15:29:48.636678 picsellia-6.5.0/picsellia/sdk/dao.py
+--rw-r--r--   0        0        0     9088 2023-03-15 10:53:41.201847 picsellia-6.5.0/picsellia/sdk/data.py
+--rw-r--r--   0        0        0    16671 2023-03-15 13:01:23.367720 picsellia-6.5.0/picsellia/sdk/datalake.py
+--rw-r--r--   0        0        0     7127 2023-02-06 09:37:18.275104 picsellia-6.5.0/picsellia/sdk/dataset.py
+--rw-r--r--   0        0        0    55578 2023-03-15 13:01:14.423624 picsellia-6.5.0/picsellia/sdk/dataset_version.py
+--rw-r--r--   0        0        0     2113 2023-01-31 15:29:48.636678 picsellia-6.5.0/picsellia/sdk/datasource.py
+--rw-r--r--   0        0        0    27080 2023-03-10 14:02:30.496668 picsellia-6.5.0/picsellia/sdk/deployment.py
+--rw-r--r--   0        0        0    33268 2023-03-14 10:55:46.709299 picsellia-6.5.0/picsellia/sdk/experiment.py
+--rw-r--r--   0        0        0     8130 2023-03-15 14:38:46.464462 picsellia-6.5.0/picsellia/sdk/job.py
+--rw-r--r--   0        0        0     2096 2023-01-31 15:29:48.636678 picsellia-6.5.0/picsellia/sdk/label.py
+--rw-r--r--   0        0        0     2871 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/line.py
+--rw-r--r--   0        0        0     3473 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/log.py
+--rw-r--r--   0        0        0     3225 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/sdk/logging_file.py
+--rw-r--r--   0        0        0     7097 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/model.py
+--rw-r--r--   0        0        0     5061 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/model_context.py
+--rw-r--r--   0        0        0     2756 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/sdk/model_file.py
+--rw-r--r--   0        0        0    11668 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/sdk/model_version.py
+--rw-r--r--   0        0        0     4453 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/multi_object.py
+--rw-r--r--   0        0        0     3024 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/point.py
+--rw-r--r--   0        0        0     2926 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/polygon.py
+--rw-r--r--   0        0        0    16760 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/project.py
+--rw-r--r--   0        0        0     3403 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/rectangle.py
+--rw-r--r--   0        0        0     5374 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/run.py
+--rw-r--r--   0        0        0     6864 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/scan.py
+--rw-r--r--   0        0        0     3451 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/sdk/scan_file.py
+--rw-r--r--   0        0        0     4417 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/tag.py
+--rw-r--r--   0        0        0     2959 2023-02-06 09:37:18.275104 picsellia-6.5.0/picsellia/sdk/taggable.py
+--rw-r--r--   0        0        0     1492 2023-01-31 15:29:48.640678 picsellia-6.5.0/picsellia/sdk/worker.py
+--rw-r--r--   0        0        0        0 2023-02-16 15:59:54.381359 picsellia-6.5.0/picsellia/services/__init__.py
+--rw-r--r--   0        0        0     5988 2023-03-14 10:55:46.709299 picsellia-6.5.0/picsellia/services/coco_file_builder.py
+--rw-r--r--   0        0        0     3558 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/services/coco_importer.py
+--rw-r--r--   0        0        0     1941 2023-02-16 15:59:54.381359 picsellia-6.5.0/picsellia/services/datasource.py
+--rw-r--r--   0        0        0      798 2023-03-15 13:01:23.371721 picsellia-6.5.0/picsellia/services/error_manager.py
+--rw-r--r--   0        0        0     2658 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/services/voc_importer.py
+--rw-r--r--   0        0        0     8268 2023-03-15 13:01:14.423624 picsellia-6.5.0/picsellia/services/yolo_importer.py
+--rw-r--r--   0        0        0        0 2022-08-09 13:11:44.820343 picsellia-6.5.0/picsellia/types/__init__.py
+--rw-r--r--   0        0        0     4285 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/types/enums.py
+--rw-r--r--   0        0        0     4018 2023-03-15 14:38:46.464462 picsellia-6.5.0/picsellia/types/schemas.py
+--rw-r--r--   0        0        0     3638 2023-01-10 13:41:47.953172 picsellia-6.5.0/picsellia/types/schemas_prediction.py
+--rw-r--r--   0        0        0     8498 2023-03-15 10:53:41.205847 picsellia-6.5.0/picsellia/utils.py
+--rw-r--r--   0        0        0     1368 2023-03-15 14:42:12.240710 picsellia-6.5.0/pyproject.toml
+--rw-r--r--   0        0        0     3112 1970-01-01 00:00:00.000000 picsellia-6.5.0/setup.py
+--rw-r--r--   0        0        0     3498 1970-01-01 00:00:00.000000 picsellia-6.5.0/PKG-INFO
++-rw-r--r--   0        0        0     8562 2023-04-06 12:19:37.409909 picsellia-6.6.0/CHANGELOG.md
++-rw-r--r--   0        0        0     1074 2023-01-12 16:30:19.323635 picsellia-6.6.0/LICENSE
++-rw-r--r--   0        0        0     1660 2023-04-03 08:29:20.904735 picsellia-6.6.0/README.md
++-rw-r--r--   0        0        0     2590 2023-04-06 12:19:37.410211 picsellia-6.6.0/picsellia/__init__.py
++-rw-r--r--   0        0        0    36033 2023-04-04 18:32:38.389566 picsellia-6.6.0/picsellia/client.py
++-rw-r--r--   0        0        0      267 2022-12-27 14:36:57.989829 picsellia-6.6.0/picsellia/colors.py
++-rw-r--r--   0        0        0     1706 2023-03-14 20:30:26.541657 picsellia-6.6.0/picsellia/decorators.py
++-rw-r--r--   0        0        0     4805 2023-04-03 08:29:46.246452 picsellia-6.6.0/picsellia/exceptions.py
++-rw-r--r--   0        0        0     3410 2023-03-14 10:34:40.324186 picsellia-6.6.0/picsellia/pxl_multithreading.py
++-rw-r--r--   0        0        0        0 2022-02-27 20:17:17.529743 picsellia-6.6.0/picsellia/sdk/__init__.py
++-rw-r--r--   0        0        0    21739 2023-02-22 18:00:24.947168 picsellia-6.6.0/picsellia/sdk/annotation.py
++-rw-r--r--   0        0        0     3086 2023-04-03 08:29:46.246763 picsellia-6.6.0/picsellia/sdk/artifact.py
++-rw-r--r--   0        0        0    16419 2023-04-03 08:29:46.246961 picsellia-6.6.0/picsellia/sdk/asset.py
++-rw-r--r--   0        0        0     2509 2023-02-22 18:00:24.947763 picsellia-6.6.0/picsellia/sdk/classification.py
++-rw-r--r--   0        0        0    19375 2023-04-03 08:29:46.247345 picsellia-6.6.0/picsellia/sdk/connexion.py
++-rw-r--r--   0        0        0     1986 2023-02-22 18:00:24.947871 picsellia-6.6.0/picsellia/sdk/dao.py
++-rw-r--r--   0        0        0     8470 2023-04-03 08:29:46.247535 picsellia-6.6.0/picsellia/sdk/data.py
++-rw-r--r--   0        0        0    16868 2023-04-03 08:29:20.905885 picsellia-6.6.0/picsellia/sdk/datalake.py
++-rw-r--r--   0        0        0     7127 2023-02-22 18:00:24.948727 picsellia-6.6.0/picsellia/sdk/dataset.py
++-rw-r--r--   0        0        0    55723 2023-04-03 08:29:46.247881 picsellia-6.6.0/picsellia/sdk/dataset_version.py
++-rw-r--r--   0        0        0     2113 2023-02-22 18:00:24.949197 picsellia-6.6.0/picsellia/sdk/datasource.py
++-rw-r--r--   0        0        0    30514 2023-04-03 08:29:20.906404 picsellia-6.6.0/picsellia/sdk/deployment.py
++-rw-r--r--   0        0        0     3480 2023-04-03 08:29:46.248107 picsellia-6.6.0/picsellia/sdk/downloadable.py
++-rw-r--r--   0        0        0     4219 2023-04-04 18:32:38.389828 picsellia-6.6.0/picsellia/sdk/evaluation.py
++-rw-r--r--   0        0        0    40686 2023-04-04 18:32:38.390254 picsellia-6.6.0/picsellia/sdk/experiment.py
++-rw-r--r--   0        0        0     8130 2023-03-15 14:14:18.181467 picsellia-6.6.0/picsellia/sdk/job.py
++-rw-r--r--   0        0        0     2096 2023-02-22 18:00:24.949930 picsellia-6.6.0/picsellia/sdk/label.py
++-rw-r--r--   0        0        0     2871 2023-02-22 18:00:24.950036 picsellia-6.6.0/picsellia/sdk/line.py
++-rw-r--r--   0        0        0     3473 2023-02-22 18:00:24.950135 picsellia-6.6.0/picsellia/sdk/log.py
++-rw-r--r--   0        0        0     2720 2023-04-03 08:29:46.248342 picsellia-6.6.0/picsellia/sdk/logging_file.py
++-rw-r--r--   0        0        0     7097 2023-02-22 18:00:24.950717 picsellia-6.6.0/picsellia/sdk/model.py
++-rw-r--r--   0        0        0     5061 2023-02-22 18:00:24.950847 picsellia-6.6.0/picsellia/sdk/model_context.py
++-rw-r--r--   0        0        0     2163 2023-04-03 08:29:46.248517 picsellia-6.6.0/picsellia/sdk/model_file.py
++-rw-r--r--   0        0        0    11668 2023-03-10 16:25:34.204784 picsellia-6.6.0/picsellia/sdk/model_version.py
++-rw-r--r--   0        0        0     4453 2023-01-12 16:30:19.325619 picsellia-6.6.0/picsellia/sdk/multi_object.py
++-rw-r--r--   0        0        0     3024 2023-02-22 18:00:24.951455 picsellia-6.6.0/picsellia/sdk/point.py
++-rw-r--r--   0        0        0     2926 2023-02-22 18:00:24.951556 picsellia-6.6.0/picsellia/sdk/polygon.py
++-rw-r--r--   0        0        0    16760 2023-02-22 18:00:24.951727 picsellia-6.6.0/picsellia/sdk/project.py
++-rw-r--r--   0        0        0     3403 2023-02-22 18:00:24.951872 picsellia-6.6.0/picsellia/sdk/rectangle.py
++-rw-r--r--   0        0        0     5374 2023-02-22 18:00:24.951983 picsellia-6.6.0/picsellia/sdk/run.py
++-rw-r--r--   0        0        0     6864 2023-02-22 18:00:24.952106 picsellia-6.6.0/picsellia/sdk/scan.py
++-rw-r--r--   0        0        0     2957 2023-04-03 08:29:46.248678 picsellia-6.6.0/picsellia/sdk/scan_file.py
++-rw-r--r--   0        0        0     4417 2023-02-22 18:00:24.952304 picsellia-6.6.0/picsellia/sdk/tag.py
++-rw-r--r--   0        0        0     2959 2023-02-22 18:00:24.952399 picsellia-6.6.0/picsellia/sdk/taggable.py
++-rw-r--r--   0        0        0     1492 2023-02-22 18:00:24.952484 picsellia-6.6.0/picsellia/sdk/worker.py
++-rw-r--r--   0        0        0        0 2023-02-22 18:00:24.952511 picsellia-6.6.0/picsellia/services/__init__.py
++-rw-r--r--   0        0        0     5988 2023-03-10 10:48:31.499966 picsellia-6.6.0/picsellia/services/coco_file_builder.py
++-rw-r--r--   0        0        0     3558 2023-03-14 17:44:09.190594 picsellia-6.6.0/picsellia/services/coco_importer.py
++-rw-r--r--   0        0        0     1941 2023-02-22 18:00:24.952711 picsellia-6.6.0/picsellia/services/datasource.py
++-rw-r--r--   0        0        0      798 2023-03-15 14:13:21.588639 picsellia-6.6.0/picsellia/services/error_manager.py
++-rw-r--r--   0        0        0     2658 2023-03-14 17:44:09.190754 picsellia-6.6.0/picsellia/services/voc_importer.py
++-rw-r--r--   0        0        0     8268 2023-03-15 14:13:21.588900 picsellia-6.6.0/picsellia/services/yolo_importer.py
++-rw-r--r--   0        0        0        0 2022-02-27 20:17:17.531530 picsellia-6.6.0/picsellia/types/__init__.py
++-rw-r--r--   0        0        0     4363 2023-04-04 18:32:38.390686 picsellia-6.6.0/picsellia/types/enums.py
++-rw-r--r--   0        0        0     4344 2023-04-04 18:32:38.391325 picsellia-6.6.0/picsellia/types/schemas.py
++-rw-r--r--   0        0        0     3638 2022-12-27 14:36:57.996751 picsellia-6.6.0/picsellia/types/schemas_prediction.py
++-rw-r--r--   0        0        0     8498 2023-03-15 10:31:12.587373 picsellia-6.6.0/picsellia/utils.py
++-rw-r--r--   0        0        0     1368 2023-04-06 12:19:37.412124 picsellia-6.6.0/pyproject.toml
++-rw-r--r--   0        0        0     3153 1970-01-01 00:00:00.000000 picsellia-6.6.0/PKG-INFO
+```
+
+### Comparing `picsellia-6.5.0/CHANGELOG.md` & `picsellia-6.6.0/CHANGELOG.md`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -2,14 +2,29 @@
+ # Changelog
+ 
+ Picsellia SDK Python is a library that allows users to connect to Picsellia backend.
+ 
+ All notable changes to this project will be documented in this file.
+ 
+ 
++
++## [6.5.0] - 2023-04-06
++
++### Added
++- `list_data` and `list_assets` have a new parameter `q` that can be used the same way the query language is used in the web platform
++- Deployment has new methods: `set_training_data`, `check_training_data_metrics_status` and `disable_training_data_reference`, that can be used for monitoring and unsupervised metrics.
++- `as_multidata` of MultiAsset can now be called with parameter
++- Artifact, Data, Asset, LoggingFile, ScanFile, ModelFile are now inheriting from Downloadable, and have `url` property that can be used to download files. These urls are presigned and expired at some point in the future.
++- Methods `add_evaluation`, `list_evaluations` and `compute_evaluations_metrics` of Experiment can be used to add, list and compute evaluation of an Experiment
++
++### Changed
++- Deployment Feedback Loop dataset is now only used as a recipient for new assets submitted after review in the predictions dashboard
++- bbox of COCO annotation cannot be a tuple anymore
++
++
+ ## [6.5.0] - 2023-03-15
+ 
+ ### Added
+ - Jobs are now handled differently in Picsellia platform
+ - `get_dataset_version_by_id` can be done in Client
+ - `get_model_version_by_id` can be done in Client
+ - `get_experiment_by_id` can be done in Client
+```
+
+### Comparing `picsellia-6.5.0/LICENSE` & `picsellia-6.6.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/__init__.py` & `picsellia-6.6.0/picsellia/__init__.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-__version__ = "6.5.0"
++__version__ = "6.6.0"
+ 
+ import logging.config
+ import os
+ 
+ from picsellia.client import Client
+ from picsellia.sdk.annotation import Annotation
+ from picsellia.sdk.artifact import Artifact
+```
+
+### Comparing `picsellia-6.5.0/picsellia/client.py` & `picsellia-6.6.0/picsellia/client.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -6,25 +6,25 @@
+ from uuid import UUID
+ 
+ import orjson
+ from beartype import beartype
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ import picsellia
+-from picsellia.sdk.job import Job
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.exceptions import PicselliaError
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.datalake import Datalake
+ from picsellia.sdk.dataset import Dataset
+ from picsellia.sdk.dataset_version import DatasetVersion
+ from picsellia.sdk.datasource import DataSource
+ from picsellia.sdk.deployment import Deployment
+ from picsellia.sdk.experiment import Experiment
++from picsellia.sdk.job import Job
+ from picsellia.sdk.model import Model
+ from picsellia.sdk.model_version import ModelVersion
+ from picsellia.sdk.project import Project
+ from picsellia.sdk.tag import Tag
+ from picsellia.services.datasource import DataSourceService
+ from picsellia.types.enums import Framework, InferenceType, TagTarget
+ from picsellia.types.schemas import OrganizationSchema
+@@ -32,47 +32,42 @@
+ 
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ logger = logging.getLogger("picsellia")
+ 
+ 
+ class Client:
+-    """
+-    Picsellia SDK Client shall be used to communicate with Picsellia services.
+-
+-    You need an API Token, available on web platform.
++    """Picsellia SDK Client can be used to communicate with Picsellia services.
++    You need an API Token, available on web platform in Profile Settings > Token.
++    From this client object, you will be able to retrieve python objects representing your data in the platform.
+ 
+     Examples:
+         ```python
+-        client = Client(api_token="a0c9f3bbf7e8bc175494fc44bfc6f89aae3eb9d0", host="https://app.picsellia.com")
++        client = Client(api_token="a0c9f3bbf7e8bc175494fc44bfc6f89aae3eb9d0")
+         ```
++
++    Arguments:
++        api_token (str, optional): your api token, that can be found on the web platform.
++            Defaults to None, client will try to find it into your environment variable as 'PICSELLIA_TOKEN'
++        organization_id: (str or UUID, optional): Specify an organization to connect to by giving its id.
++            Defaults to None, you will be connected to your main Organization.
++        organization_name: (str, optional): Specify an organization to connect to by giving its name.
++            If id is also given, client will use organization_id.
++            Defaults to None, you will be connected to your main Organization.
++        host (str, optional): Define a custom host used for platform.
++            Defaults to our Picsellia environment "https://app.picsellia.com".
+     """
+ 
+     def __init__(
+         self,
+         api_token: Optional[str] = None,
+-        organization_id: Optional[UUID] = None,
++        organization_id: Union[str, UUID, None] = None,
+         organization_name: Optional[str] = None,
+         host: str = "https://app.picsellia.com",
+     ):
+-        """Initialize a connexion to Picsellia platform.
+-
+-        Arguments:
+-            api_token (uuid4): Your API token accessible in Profile Page.
+-                               Defaults to None, Client will try to read environment variable PICSELLIA_TOKEN.
+-            organization_id (str, optional): Specify an organization id.
+-                                          Defaults to None, you will be connected to your main Organization.
+-            organization_name (str, optional): Specify an organization name, when organization_id is None.
+-                                          Defaults to None, you will be connected to your main Organization if organ.
+-            host (str, optional): Define a custom host used for platform.
+-                                  Defaults to "https://app.picsellia.com".
+-
+-        Raises:
+-            exceptions.NetworkError: If Picsellia platform is not responding
+-        """
+         if api_token is None:
+             if "PICSELLIA_TOKEN" in os.environ:
+                 token = os.environ["PICSELLIA_TOKEN"]
+             else:
+                 raise Exception(
+                     "Please set up the PICSELLIA_TOKEN environment variable or specify your token"
+                 )
+@@ -97,14 +92,16 @@
+                 f"\033[93mYou are using an outdated version of the picsellia package ({picsellia.__version__})\033[0m"
+             )
+             logger.warning(
+                 f"\033[93mPlease consider upgrading to {sdk_version} with pip install picsellia --upgrade\033[0m"
+             )
+ 
+         if organization_id is not None:
++            if isinstance(organization_id, str):
++                organization_id = UUID(organization_id)
+             self._id = organization_id
+             self.sync()
+         elif organization_name is not None:
+             r = self.connexion.get(
+                 path="/sdk/organizations/find", params={"name": organization_name}
+             ).json()
+             self._id = r["id"]
+```
+
+### Comparing `picsellia-6.5.0/picsellia/decorators.py` & `picsellia-6.6.0/picsellia/decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/exceptions.py` & `picsellia-6.6.0/picsellia/exceptions.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -221,7 +221,13 @@
+     pass
+ 
+ 
+ class NotSupportedJobVersionError(PicselliaError):
+     """Raised when you try to use an unsupported job version"""
+ 
+     pass
++
++
++class NoUrlAvailable(PicselliaError):
++    """Raised on download when no url could be retrieved from platform"""
++
++    pass
+```
+
+### Comparing `picsellia-6.5.0/picsellia/pxl_multithreading.py` & `picsellia-6.6.0/picsellia/pxl_multithreading.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/annotation.py` & `picsellia-6.6.0/picsellia/sdk/annotation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/artifact.py` & `picsellia-6.6.0/picsellia/sdk/log.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,130 +1,119 @@
+ import logging
+-import os
+ import warnings
+-from pathlib import Path
+-from typing import Optional, Union
++from typing import Optional
+ 
+ import orjson
+ from beartype import beartype
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
++from picsellia.exceptions import BadRequestError
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+-from picsellia.types.schemas import ArtifactSchema
++from picsellia.types.enums import LogType
++from picsellia.types.schemas import LogDataType, LogSchema
+ from picsellia.utils import filter_payload
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Artifact(Dao):
++class Log(Dao):
+     def __init__(self, connexion: Connexion, data: dict):
+         Dao.__init__(self, connexion, data)
+ 
+-    def __str__(self):
+-        return f"{Colors.GREEN}Artifact {self.name}{Colors.ENDC} (id: {self.id})"
+-
+-    @property
+-    def filename(self) -> str:
+-        """Filename of this (Artifact)"""
+-        return self._filename
+-
+-    @property
+-    def large(self) -> bool:
+-        """If true, this (Artifact) has a large size"""
+-        return self._large
+-
+     @property
+     def name(self) -> str:
+-        """(Artifact) name"""
++        """Name of this (Log)"""
+         return self._name
+ 
+     @property
+-    def object_name(self) -> str:
+-        """(Artifact) object name stored in storage"""
+-        return self._object_name
++    def data(self) -> LogDataType:
++        """Data of this (Log)"""
++        return self._data
+ 
+-    @exception_handler
+-    @beartype
+-    def refresh(self, data: dict) -> ArtifactSchema:
+-        schema = ArtifactSchema(**data)
+-        self._name = schema.name
+-        self._object_name = schema.object_name
+-        self._large = schema.large
+-        self._filename = schema.filename
+-        return schema
++    @property
++    def type(self) -> LogType:
++        """Type of this (Log)"""
++        return self._type
++
++    def __str__(self):
++        return f"{Colors.GREEN}Log {self.name}{Colors.ENDC} (id: {self.id})"
+ 
+     @exception_handler
+     @beartype
+     def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/artifact/{self.id}").json()
++        r = self.connexion.get(f"/sdk/log/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
++    def refresh(self, data: dict):
++        schema = LogSchema(**data)
++        self._name = schema.name
++        self._data = schema.data
++        self._type = schema.type
++        return schema
++
++    @exception_handler
++    @beartype
+     def update(
+-        self,
+-        name: Optional[str] = None,
+-        filename: Optional[str] = None,
+-        object_name: Optional[str] = None,
+-        large: Optional[bool] = None,
++        self, name: Optional[str] = None, data: Optional[LogDataType] = None
+     ) -> None:
+-        """Update this artifact.
++        """Update this log with a new name or new data
++
++        You cannot change the type of this Log.
+ 
+         Examples:
+             ```python
+-            this_artifact.update(object_name="another-path-to-artifact")
++            my_log.update(name="new_name", data={"key": "value"})
+             ```
++        Arguments:
++            name (str, optional): New name of the log. Defaults to None.
++            data (LogDataType, optional): New data of the log. Defaults to None.
+         """
+-        payload = {
+-            "name": name,
+-            "filename": filename,
+-            "object_name": object_name,
+-            "large": large,
+-        }
++        if self.type == LogType.IMAGE and data:
++            raise BadRequestError(
++                "You cannot update data of a log image this way, use experiment.log() method instead."
++            )
++
++        payload = {"name": name, "data": data}
+         filtered_payload = filter_payload(payload)
+         r = self.connexion.patch(
+-            f"/sdk/artifact/{self.id}", data=orjson.dumps(filtered_payload)
++            f"/sdk/log/{self.id}", data=orjson.dumps(filtered_payload)
+         ).json()
+         self.refresh(r)
++        logger.info(f"{self} updated.")
+ 
+     @exception_handler
+     @beartype
+     def delete(self) -> None:
+-        """Delete this artifact
++        """Delete this log
+ 
+         Examples:
+             ```python
+-            this_artifact.delete()
++            my_log.delete()
+             ```
+         """
+-        self.connexion.delete(f"/sdk/artifact/{self.id}")
++        self.connexion.delete(f"/sdk/log/{self.id}")
+ 
+     @exception_handler
+     @beartype
+-    def download(
+-        self, target_path: Union[str, Path] = "./", force_replace: bool = False
+-    ) -> None:
+-        """Download an experiment's artifact to a given target_path.
++    def append(self, data: LogDataType) -> None:
++        """Appends value to log with given name.
++
++        You can only append log on Line logs.
+ 
+-        Examples:
+-            ```python
+-            this_artifact.download("myDir")
+-            file_list = os.path.listdir("myDir")
+-            print(file_list)
+-            >>> ["saved_model.zip"]
+-            ```
+         Arguments:
+-            target_path (str or Path, optional): Path to download the file to, default to cwd. Defaults to './'.
+-            force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
++            data (Union[list, dict, float, int, str]): data to append
+ 
+         """
+-        self.sync()
+-        path = os.path.join(target_path, self.filename)
+-        self.connexion.download_file(
+-            self.object_name, path, self.large, force_replace=force_replace
+-        )
+-        logger.info(f"{self.filename} downloaded successfully")
++        assert self.type == LogType.LINE, "You can only append log on Line logs"
++        payload = {"data": data}
++        r = self.connexion.post(
++            f"/sdk/log/{self.id}/append", data=orjson.dumps(payload)
++        ).json()
++        self.refresh(r)
++        logger.info(f"Append {data} on {self}.")
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/asset.py` & `picsellia-6.6.0/picsellia/sdk/asset.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,9 +1,8 @@
+ import logging
+-import os
+ import warnings
+ from functools import partial
+ from operator import countOf
+ from pathlib import Path
+ from typing import List, Optional, Tuple, Union
+ from uuid import UUID
+ 
+@@ -15,28 +14,30 @@
+ from picsellia import pxl_multithreading as mlt
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.sdk.annotation import Annotation
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+ from picsellia.sdk.data import Data, MultiData
++from picsellia.sdk.downloadable import Downloadable
+ from picsellia.sdk.multi_object import MultiObject
+ from picsellia.sdk.tag import Tag
+ from picsellia.sdk.taggable import Taggable
+ from picsellia.sdk.worker import Worker
+ from picsellia.types.enums import DataType, TagTarget
+-from picsellia.types.schemas import AssetSchema
++from picsellia.types.schemas import AssetSchema, ImageMetaSchema, ImageSchema
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Asset(Dao, Taggable):
++class Asset(Dao, Downloadable, Taggable):
+     def __init__(self, connexion: Connexion, dataset_version_id: UUID, data: dict):
+         Dao.__init__(self, connexion, data)
++        Downloadable.__init__(self)
+         Taggable.__init__(self, TagTarget.ASSET)
+         self._dataset_version_id = dataset_version_id
+ 
+     @property
+     def dataset_version_id(self) -> UUID:
+         """UUID of (DatasetVersion) where this (Asset) is"""
+         return self._dataset_version_id
+@@ -53,14 +54,19 @@
+ 
+     @property
+     def filename(self) -> str:
+         """Filename of this (Asset)"""
+         return self._filename
+ 
+     @property
++    def large(self) -> bool:
++        """If true, this (Asset) file is considered large"""
++        return True
++
++    @property
+     def type(self) -> DataType:
+         """Type of this (Asset)"""
+         return self._type
+ 
+     @property
+     def width(self) -> int:
+         """Width of this (Asset) if this is an Image."""
+@@ -89,16 +95,20 @@
+         return f"{Colors.YELLOW}Asset '{self.filename}' ({self.type}) {Colors.ENDC} (id: {self.id})"
+ 
+     @exception_handler
+     @beartype
+     def refresh(self, data: dict) -> AssetSchema:
+         schema = AssetSchema(**data)
+         self._data_id = schema.data.id
+-        self._filename = schema.data.filename
++
++        # Downloadable properties
+         self._object_name = schema.data.object_name
++        self._filename = schema.data.filename
++        self._url = schema.data.url
++
+         self._type = schema.data.type
+         if self._type == DataType.IMAGE:
+             self._height = schema.data.meta.height
+             self._width = schema.data.meta.width
+         elif self._type == DataType.VIDEO:
+             self._duration = schema.data.meta.duration
+         return schema
+@@ -108,14 +118,35 @@
+     def sync(self) -> dict:
+         r = self.connexion.get(f"/sdk/asset/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
++    def reset_url(self) -> str:
++        self.sync()
++        return self._url
++
++    @exception_handler
++    @beartype
++    def to_data_schema(self) -> ImageSchema:
++        if self.type != DataType.IMAGE:  # pragma: no cover
++            raise NotImplementedError()
++
++        return ImageSchema(
++            id=self.data_id,
++            object_name=self.object_name,
++            filename=self.filename,
++            type=self.type,
++            url=self._url,
++            meta=ImageMetaSchema(height=self.height, width=self.width),
++        )
++
++    @exception_handler
++    @beartype
+     def get_tags(self) -> List[Tag]:
+         """Retrieve the tags of your asset.
+ 
+         Examples:
+             ```python
+             tags = asset.get_tags()
+             assert tags[0].name == "bicycle"
+@@ -266,40 +297,14 @@
+             ```python
+             one_asset.delete()
+             ```
+         """
+         self.connexion.delete(f"/sdk/asset/{self.id}")
+         logger.info(f"{self} removed from dataset")
+ 
+-    @exception_handler
+-    @beartype
+-    def download(
+-        self, target_path: Union[str, Path] = "./", force_replace: bool = False
+-    ) -> None:
+-        """Download this asset into given target path
+-
+-        Examples:
+-            ```python
+-            pic.download('./assets/')
+-            ```
+-
+-        Arguments:
+-            target_path (str, optional): Target path where assets will be downloaded. Defaults to './'.
+-            force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
+-        """
+-        data = self.sync()
+-        path = os.path.join(target_path, self.filename)
+-        self.connexion.do_download_file(
+-            path,
+-            data["data"]["presigned_url"],
+-            is_large=True,
+-            force_replace=force_replace,
+-        )
+-        logger.info(f"{self.filename} downloaded successfully")
+-
+ 
+ class MultiAsset(MultiObject[Asset], Taggable):
+     @beartype
+     def __init__(
+         self, connexion: Connexion, dataset_version_id: UUID, items: List[Asset]
+     ):
+         MultiObject.__init__(self, connexion, items)
+@@ -386,22 +391,15 @@
+         Arguments:
+             target_path (str or Path, optional): Target path where to download. Defaults to './'.
+             max_workers (int, optional): Number of max workers used to download. Defaults to os.cpu_count() + 4.
+             force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
+         """
+ 
+         def download_one_data(item: Asset):
+-            data = item.sync()
+-            path = os.path.join(target_path, item.filename)
+-            return self.connexion.do_download_file(
+-                path,
+-                data["data"]["presigned_url"],
+-                is_large=True,
+-                force_replace=force_replace,
+-            )
++            return item._do_download(target_path, force_replace)
+ 
+         results = mlt.do_mlt_function(
+             self.items, download_one_data, lambda item: item.id, max_workers=max_workers
+         )
+         downloaded = countOf(results.values(), True)
+ 
+         logger.info(
+@@ -437,35 +435,45 @@
+     def as_list_of_data(self) -> List[Data]:
+         """
+             Convert a MultiAsset into a List of Data. Assets can come from different Datalake.
+             This is slower than calling .as_multidata(), so if you know that all your data are coming
+             from the same datalake, you should call .as_multidata instead
+ 
+         Returns:
+-            a list of (Asset) object
++            a list of (Data) object
+         """
+-        if not self.items:
++        if not self.items:  # pragma: no cover
+             raise exceptions.NoDataError("There is no data into this MultiAsset")
+ 
+         return [asset.get_data() for asset in self.items]
+ 
+     @exception_handler
+     @beartype
+-    def as_multidata(self) -> MultiData:
++    def as_multidata(self, force_refresh: bool = True) -> MultiData:
+         """
+             Convert a MultiAsset into a MultiData.
+             Assets must all be in the same datalake to be retrieved.
+             In case of a dataset with multiple datalake source, you can use .as_list_of_data() that will return a list of data but slower
+ 
++        Args:
++            force_refresh (bool, optional): when False, will not refresh data by calling platform.
++
+         Returns:
+             a (MultiData) object
+         """
+-        if not self.items:
++        if not self.items:  # pragma: no cover
+             raise exceptions.NoDataError("There is no data into this MultiAsset")
+ 
++        if force_refresh:
++            data_list = self._retrieve_all_data_with_refresh()
++        else:
++            data_list = self._retrieve_all_data_without_refresh()
++        return MultiData(self.connexion, data_list[0].datalake_id, data_list)
++
++    def _retrieve_all_data_with_refresh(self):
+         def _do_list_data_of_datalake(
+             datalake_id: UUID,
+             ids: List[UUID],
+             limit: int,
+             offset: int,
+         ) -> Tuple[List[Data], int]:
+             data = {"limit": limit, "offset": offset, "ids": ids}
+@@ -474,23 +482,31 @@
+             ).json()
+             return (
+                 list(map(partial(Data, self.connexion, datalake_id), r["items"])),
+                 r["count"],
+             )
+ 
+         first_data = self.items[0].get_data()
++        if len(self.items) == 1:
++            return [first_data]
+ 
+-        if len(self.items) > 1:
+-            datas = mlt.do_paginate(
+-                limit=None,
+-                offset=None,
+-                page_size=None,
+-                f=partial(
+-                    _do_list_data_of_datalake,
+-                    first_data.datalake_id,
+-                    [asset.data_id for asset in self],
+-                ),
+-            )
+-        else:
+-            datas = [first_data]
++        return mlt.do_paginate(
++            limit=None,
++            offset=None,
++            page_size=None,
++            f=partial(
++                _do_list_data_of_datalake,
++                first_data.datalake_id,
++                [asset.data_id for asset in self.items],
++            ),
++        )
+ 
+-        return MultiData(self.connexion, first_data.datalake_id, datas)
++    def _retrieve_all_data_without_refresh(self):
++        first_data = self.items[0].get_data()
++        return [
++            Data(
++                self.connexion,
++                first_data.datalake_id,
++                data=asset.to_data_schema().dict(),
++            )
++            for asset in self.items
++        ]
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/classification.py` & `picsellia-6.6.0/picsellia/sdk/classification.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/connexion.py` & `picsellia-6.6.0/picsellia/sdk/connexion.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -509,38 +509,21 @@
+         return response
+ 
+     ##############################################################
+     # ------------------------ DOWNLOAD ------------------------ #
+     ##############################################################
+     @exception_handler
+     @beartype
+-    def download_file(
+-        self,
+-        object_name: str,
+-        path: Union[str, Path],
+-        is_large: bool,
+-        force_replace: bool = False,
+-        connector_id: Optional[UUID] = None,
+-        retry_count: int = 1,
+-    ) -> bool:
+-        if os.path.exists(path) and not force_replace:
+-            return False
+-
++    def init_download(
++        self, object_name: str, connector_id: Optional[UUID] = None
++    ) -> str:
++        """Retrieve a presigned url of this object name in order to download it"""
+         if connector_id is None:
+             connector_id = self.connector_id
+ 
+-        presigned_url = self._init_download(object_name, connector_id)
+-        return self.do_download_file(
+-            path, presigned_url, is_large, force_replace, retry_count
+-        )
+-
+-    @exception_handler
+-    @beartype
+-    def _init_download(self, object_name: str, connector_id: UUID) -> str:
+-        """Retrieve a presigned url of this object name in order to download it"""
+         payload = {"object_name": object_name}
+         r = self.post(
+             path=f"/sdk/connector/{connector_id}/retrieve_presigned_url",
+             data=orjson.dumps(payload),
+         )
+ 
+         if r.status_code != 200:
+@@ -555,55 +538,59 @@
+         return r["presigned_url"]
+ 
+     @exception_handler
+     @beartype
+     def do_download_file(
+         self,
+         path: Union[str, Path],
+-        presigned_url: str,
++        url: str,
+         is_large: bool,
+         force_replace: bool,
+         retry_count: int = 1,
+     ) -> bool:
+         try:
+-            return self._do_download_file(path, presigned_url, is_large, force_replace)
++            return self._do_download_file(path, url, is_large, force_replace)
+         except (exceptions.NetworkError, ConnectionError) as e:
+             if retry_count <= 0:
+                 raise exceptions.DownloadError(
+-                    f"Could not download {presigned_url} into {path}"
++                    f"Could not download {url} into {path}"
+                 ) from e
+             logger.error(
+                 f"Could not download because of a NetworkError. Retrying to download {path}"
+             )
+             return self.do_download_file(
+-                path, presigned_url, is_large, force_replace, retry_count - 1
++                path,
++                url,
++                is_large,
++                force_replace,
++                retry_count=retry_count - 1,
+             )
+ 
+     @exception_handler
+     @beartype
+     def _do_download_file(
+         self,
+         path: Union[str, Path],
+-        presigned_url: str,
++        url: str,
+         is_large: bool,
+         force_replace: bool,
+     ) -> bool:
+         """Retrieve a presigned url of this object name in order to download it"""
+         if os.path.exists(path) and not force_replace:
+             return False
+ 
+         parent_path = Path(path).parent.absolute()
+         if not os.path.exists(parent_path):
+             os.makedirs(parent_path)
+ 
+-        response = requests.get(presigned_url, stream=is_large)
++        response = requests.get(url, stream=is_large)
+ 
+         if response.status_code == 429 or (500 <= response.status_code < 600):
+             raise exceptions.NetworkError(
+-                f"Response status code is {response.status_code}. Could not get {presigned_url}"
++                f"Response status code is {response.status_code}. Could not get {url}"
+             )
+ 
+         response.raise_for_status()
+ 
+         total_length = response.headers.get("content-length")
+         if total_length is None:
+             raise exceptions.NetworkError(
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/dao.py` & `picsellia-6.6.0/picsellia/sdk/dao.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/data.py` & `picsellia-6.6.0/picsellia/sdk/data.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,9 +1,8 @@
+ import logging
+-import os
+ import warnings
+ from functools import partial
+ from operator import countOf
+ from pathlib import Path
+ from typing import List, Optional, Union
+ from uuid import UUID
+ 
+@@ -12,30 +11,32 @@
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia import exceptions as exceptions
+ from picsellia import pxl_multithreading as mlt
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.sdk.connexion import Connexion
+-from picsellia.sdk.dao import Dao
+ from picsellia.sdk.multi_object import MultiObject
+ from picsellia.sdk.tag import Tag, TagTarget
+ from picsellia.sdk.taggable import Taggable
+ from picsellia.types.enums import DataType
+ from picsellia.types.schemas import DataSchema, ImageSchema, VideoSchema
+ 
++from .dao import Dao
+ from .datasource import DataSource
++from .downloadable import Downloadable
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Data(Dao, Taggable):
++class Data(Dao, Downloadable, Taggable):
+     def __init__(self, connexion: Connexion, datalake_id: UUID, data: dict):
+         Dao.__init__(self, connexion, data)
++        Downloadable.__init__(self)
+         Taggable.__init__(self, TagTarget.DATA)
+         self._datalake_id = datalake_id
+ 
+     def __str__(self):
+         return f"{Colors.GREEN}Data{Colors.ENDC} object (id: {self.id})"
+ 
+     @property
+@@ -50,14 +51,19 @@
+ 
+     @property
+     def filename(self) -> str:
+         """Filename of this (Data)"""
+         return self._filename
+ 
+     @property
++    def large(self) -> bool:
++        """If true, this (Data) file is considered large"""
++        return True
++
++    @property
+     def type(self) -> DataType:
+         """Type of this (Data)"""
+         return self._type
+ 
+     @property
+     def width(self) -> int:
+         """Width of this (Data)"""
+@@ -81,25 +87,28 @@
+             return self._duration
+         else:
+             return 0
+ 
+     @exception_handler
+     @beartype
+     def refresh(self, data: dict):
+-        if data["type"] == DataType.IMAGE.value:
++        data_type = data["type"]
++        if data_type in [DataType.IMAGE, DataType.IMAGE.value]:
+             schema = ImageSchema(**data)
+-        elif data["type"] == DataType.VIDEO.value:
++        elif data_type in [DataType.VIDEO, DataType.VIDEO.value]:
+             schema = VideoSchema(**data)
+         else:
+             schema = DataSchema(**data)
+ 
++        # Downloadable properties
+         self._object_name = schema.object_name
+         self._filename = schema.filename
+-        self._type = schema.type
++        self._url = schema.url
+ 
++        self._type = schema.type
+         if schema.type == DataType.IMAGE:
+             self._height = schema.meta.height
+             self._width = schema.meta.width
+         elif schema.type == DataType.VIDEO:
+             self._duration = schema.meta.duration
+ 
+         return schema
+@@ -109,14 +118,20 @@
+     def sync(self) -> dict:
+         r = self.connexion.get(f"/sdk/data/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
++    def reset_url(self) -> str:
++        self.sync()
++        return self._url
++
++    @exception_handler
++    @beartype
+     def get_tags(self) -> List[Tag]:
+         """Retrieve the tags of your data.
+ 
+         Examples:
+             ```python
+             tags = data.get_tags()
+             assert tags[0].name == "bicycle"
+@@ -151,38 +166,14 @@
+             data.delete()
+             ```
+         """
+         response = self.connexion.delete(f"/sdk/data/{self.id}")
+         assert response.status_code == 204
+         logger.info(f"1 data (id: {self.id}) deleted from datalake {self.datalake_id}.")
+ 
+-    @exception_handler
+-    @beartype
+-    def download(
+-        self, target_path: Union[str, Path] = "./", force_replace: bool = False
+-    ) -> None:
+-        """Download this data file into given target_path
+-
+-        Examples:
+-            ```python
+-            data = clt.get_datalake().fetch_data(1)
+-            data.download('./data/')
+-            ```
+-
+-        Arguments:
+-            target_path (str, optional): Target path where data will be downloaded. Defaults to './'.
+-            force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
+-        """
+-        data = self.sync()
+-        path = os.path.join(target_path, self.filename)
+-        self.connexion.do_download_file(
+-            path, data["presigned_url"], is_large=True, force_replace=force_replace
+-        )
+-        logger.info(f"{self.filename} downloaded successfully")
+-
+ 
+ class MultiData(MultiObject[Data], Taggable):
+     @beartype
+     def __init__(self, connexion: Connexion, datalake_id: UUID, items: List[Data]):
+         MultiObject.__init__(self, connexion, items)
+         Taggable.__init__(self, TagTarget.DATA)
+         self.datalake_id = datalake_id
+@@ -248,15 +239,15 @@
+         )
+         logger.info(f"{len(self.items)} data deleted from datalake {self.datalake_id}.")
+ 
+     @exception_handler
+     @beartype
+     def download(
+         self,
+-        target_path: Union[Path, str] = "./",
++        target_path: Union[str, Path] = "./",
+         force_replace: bool = False,
+         max_workers: Optional[int] = None,
+     ) -> None:
+         """Download this multi data in given target path
+ 
+ 
+         Examples:
+@@ -267,19 +258,15 @@
+         Arguments:
+             target_path (str or Path, optional): Target path where to download. Defaults to './'.
+             force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
+             max_workers (int, optional): Number of max workers used to download. Defaults to os.cpu_count() + 4.
+         """
+ 
+         def download_one_data(item: Data):
+-            data = item.sync()
+-            path = os.path.join(target_path, item.filename)
+-            return self.connexion.do_download_file(
+-                path, data["presigned_url"], is_large=True, force_replace=force_replace
+-            )
++            return item._do_download(target_path, force_replace)
+ 
+         results = mlt.do_mlt_function(
+             self.items, download_one_data, lambda item: item.id, max_workers=max_workers
+         )
+         downloaded = countOf(results.values(), True)
+ 
+         logger.info(
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/datalake.py` & `picsellia-6.6.0/picsellia/sdk/datalake.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -28,14 +28,15 @@
+ from picsellia.sdk.datasource import DataSource
+ from picsellia.sdk.tag import Tag
+ from picsellia.services.datasource import DataSourceService
+ from picsellia.services.error_manager import ErrorManager
+ from picsellia.types.enums import DataType, TagTarget
+ from picsellia.types.schemas import DatalakeSchema
+ from picsellia.utils import (
++    combine_two_ql,
+     convert_tag_list_to_query_language,
+     filter_payload,
+     get_image_shape_with_exif_transpose,
+ )
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+@@ -284,14 +285,15 @@
+         offset: Optional[int] = None,
+         page_size: Optional[int] = None,
+         order_by: Optional[List[str]] = None,
+         tags: Union[str, Tag, List[Union[str, Tag]], None] = None,
+         filenames: Optional[List[str]] = None,
+         intersect_tags: Optional[bool] = False,
+         object_names: Optional[List[str]] = None,
++        q: Optional[str] = None,
+     ) -> MultiData:
+         """List data of this datalake.
+ 
+         If there is no data, raise a NoDataError exception.
+ 
+         Returned object is a MultiData. An object that allows manipulation of a bunch of data.
+         You can add tags on them or feed a dataset with them.
+@@ -309,31 +311,32 @@
+             page_size (int, optional): page size when returning data paginated, can change performance
+             order_by (list[str], optional): if not empty, will order data by fields given in this parameter
+             filenames (list[str], optional): if given, will return data that have filename equals to one of given filenames
+             object_names (list[str], optional): if  given, will return data that have object name equals to one of given object names
+             tags (str, (Tag), list[(Tag) or str], optional): if given, will return data that have one of given tags
+                                                             by default. if `intersect_tags` is True, it will return data
+                                                             that have all the given tags
+-
+             intersect_tags (bool, optional): if True, and a list of tags is given, will return data that have
+                                              all the given tags. Defaults to False.
++            q (str, optional): if given, will filter data with given query. Defaults to None.
+ 
+         Raises:
+             NoDataError: When datalake has no data, raise this exception.
+ 
+         Returns:
+             A (MultiData) object that wraps a list of (Data).
+         """
+-        q = convert_tag_list_to_query_language(tags, intersect_tags)
++        tags_q = convert_tag_list_to_query_language(tags, intersect_tags)
++        query = combine_two_ql(q, tags_q)
+ 
+         datas = mlt.do_paginate(
+             limit,
+             offset,
+             page_size,
+-            partial(self._do_list_data, q, order_by, filenames, object_names),
++            partial(self._do_list_data, query, order_by, filenames, object_names),
+         )
+ 
+         if len(datas) == 0:
+             raise NoDataError("No data found in this datalake with this query")
+ 
+         return MultiData(self.connexion, self.id, datas)
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/dataset.py` & `picsellia-6.6.0/picsellia/sdk/dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/dataset_version.py` & `picsellia-6.6.0/picsellia/sdk/dataset_version.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -337,14 +337,15 @@
+         data_tags: Union[Tag, List[Tag], str, List[str], None] = None,
+         intersect_tags: bool = False,
+         intersect_data_tags: bool = False,
+         filenames: Optional[List[str]] = None,
+         object_names: Optional[List[str]] = None,
+         ids: Optional[List[Union[str, UUID]]] = None,
+         filenames_startswith: Optional[List[str]] = None,
++        q: Optional[str] = None,
+     ) -> MultiAsset:
+         """List assets of this dataset version
+ 
+         It will retrieve all assets object of this dataset.
+         You will then be able to manipulate them or add them to another dataset.
+ 
+         Examples:
+@@ -367,30 +368,32 @@
+                                                             it will return assets that have all the given data tags
+             intersect_data_tags (bool, optional): if True, and a list of data tags is given, will return assets that have
+                                              all the given data tags. Defaults to False.
+             filenames (list[str], optional): if given, will return assets that have filename equals to one of given filenames
+             filenames_startswith (list[str], optional): if given, will return assets that have filename starting with to one of given filenames
+             object_names (list[str], optional): if  given, will return assets that have object name equals to one of given object names
+             ids: (List[UUID]): ids of the assets you're looking for. Defaults to None.
++            q (str, optional): if given, will filter data with given query. Defaults to None.
++
+         Returns:
+             A (MultiAsset) object that wraps some (Asset) that you can manipulate.
+         """
+         qt = convert_tag_list_to_query_language(tags, intersect_tags)
+         qd = convert_tag_list_to_query_language(
+             data_tags, intersect_data_tags, prefix="data."
+         )
+-        q = combine_two_ql(qt, qd)
++        query = combine_two_ql(qt, combine_two_ql(q, qd))
+ 
+         assets = mlt.do_paginate(
+             limit,
+             offset,
+             page_size,
+             partial(
+                 self._do_list_assets,
+-                q,
++                query,
+                 order_by,
+                 filenames,
+                 object_names,
+                 ids,
+                 filenames_startswith,
+             ),
+         )
+@@ -810,15 +813,15 @@
+             f"/sdk/dataset/version/{self.id}/annotations/export",
+             data=orjson.dumps(payload),
+         ).json()
+ 
+         path = os.path.join(target_path, r["object_name"])
+         self.connexion.do_download_file(
+             path=path,
+-            presigned_url=r["presigned_url"],
++            url=r["presigned_url"],
+             is_large=True,
+             force_replace=force_replace,
+         )
+         return path
+ 
+     @exception_handler
+     @beartype
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/datasource.py` & `picsellia-6.6.0/picsellia/sdk/datasource.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/deployment.py` & `picsellia-6.6.0/picsellia/sdk/deployment.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -5,14 +5,15 @@
+ from functools import partial
+ from pathlib import Path
+ from typing import List, Optional, Union
+ 
+ import orjson
+ from beartype import beartype
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
++from deprecation import deprecated
+ from picsellia_connexion_services import JwtServiceConnexion
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.exceptions import (
+     BadConfigurationContinuousTrainingError,
+     BadRequestError,
+@@ -341,15 +342,15 @@
+ 
+             return resp.json()
+ 
+     @exception_handler
+     @beartype
+     def setup_feedback_loop(self, dataset_version: DatasetVersion) -> None:
+         """Set up the Feedback Loop for a Deployment.
+-        This way, you will be able to attached reviewed predictions to the Dataset.
++        This way, you will be able to push reviewed predictions to given Dataset.
+         This is a great option to increase your training set with quality data.
+ 
+         Examples:
+             ```python
+             dataset_version = client.get_dataset("my-dataset").get_version("latest")
+             deployment = client.get_deployment(
+                 name="awesome-deploy"
+@@ -368,14 +369,18 @@
+         )
+         logger.info(
+             f"Feedback loop set for {self}, now you will be able to add predictions to {dataset_version}"
+         )
+ 
+     @exception_handler
+     @beartype
++    @deprecated(
++        deprecated_in="6.6.0",
++        details="check_feedback_loop_status method will be removed in the future",
++    )
+     def check_feedback_loop_status(self) -> None:
+         """Refresh feedback loop status of this deployment.
+ 
+         Examples:
+             ```python
+             deployment = client.get_deployment(
+                 name="awesome-deploy"
+@@ -385,14 +390,18 @@
+         """
+         r = self.connexion.get(f"/sdk/deployment/{self.id}/pipeline/fl/check").json()
+         feedback_loop_status = r["feedback_loop_status"]
+         logger.info(f"Feedback loop status is {feedback_loop_status}")
+ 
+     @exception_handler
+     @beartype
++    @deprecated(
++        deprecated_in="6.6.0",
++        details="disable_feedback_loop method will be removed in the future",
++    )
+     def disable_feedback_loop(self) -> None:
+         """Disable the Feedback Loop for a Deployment.
+ 
+         Examples:
+             ```python
+             deployment = client.get_deployment(
+                 name="awesome-deploy"
+@@ -401,14 +410,102 @@
+             ```
+         """
+         self.connexion.put(f"/sdk/deployment/{self.id}/pipeline/fl/disable")
+         logger.info(f"Feedback loop for {self} is disabled.")
+ 
+     @exception_handler
+     @beartype
++    def toggle_feedback_loop(self, active: bool) -> None:
++        """Toggle feedback loop for this deployment
++
++        Examples:
++            ```python
++            deployment = client.get_deployment(
++                name="awesome-deploy"
++            )
++            deployment.toggle_feedback_loop(
++                dataset
++            )
++            ```
++        Arguments:
++            active (bool): (des)activate feedback loop
++        """
++        payload = {"active": active}
++        self.connexion.put(
++            f"/sdk/deployment/{self.id}/pipeline/fl",
++            data=orjson.dumps(payload),
++        )
++        logger.info(
++            f"Feedback loop for {self} is now {'active' if active else 'deactivated'}"
++        )
++
++    @exception_handler
++    @beartype
++    def set_training_data(self, dataset_version: DatasetVersion) -> None:
++        """This will give the training data reference to the deployment,
++         so we can compute metrics based on this training data distribution in our Monitoring service
++
++        Examples:
++            ```python
++            dataset_version = client.get_dataset("my-dataset").get_version("latest")
++            deployment = client.get_deployment(
++                name="awesome-deploy"
++            )
++            deployment.set_training_data(dataset_version)
++            ```
++        Arguments:
++            dataset_version (DatasetVersion): a connected (DatasetVersion)
++        """
++        payload = {
++            "dataset_version_id": dataset_version.id,
++        }
++        self.connexion.post(
++            f"/sdk/deployment/{self.id}/pipeline/td/setup",
++            data=orjson.dumps(payload),
++        )
++        logger.info(f"Training Data set for {self} from {dataset_version}")
++
++    @exception_handler
++    @beartype
++    def check_training_data_metrics_status(self) -> str:
++        """Refresh the status of the metrics compute over the training data distribution.
++        Set up can take some time, so you can check current state with this method.
++
++        Examples:
++            ```python
++            deployment = client.get_deployment(
++                name="awesome-deploy"
++            )
++            deployment.check_training_data_metrics_status()
++            ```
++        """
++        r = self.connexion.get(f"/sdk/deployment/{self.id}/pipeline/td/check").json()
++        training_data_status = r["training_data_status"]
++        logger.info(f"Training Data status is {training_data_status}")
++        return training_data_status
++
++    @exception_handler
++    @beartype
++    def disable_training_data_reference(self) -> None:
++        """Disable the reference to the training data in this Deployment.
++        This means that you will not be able to see supervised metrics from the dashboard anymore.
++
++        Examples:
++            ```python
++            deployment = client.get_deployment(
++                name="awesome-deploy"
++            )
++            deployment.disable_training_data_reference()
++            ```
++        """
++        self.connexion.put(f"/sdk/deployment/{self.id}/pipeline/td/disable")
++        logger.info(f"Training Data for {self} is disabled.")
++
++    @exception_handler
++    @beartype
+     def setup_continuous_training(
+         self,
+         project: Project,
+         dataset_version: DatasetVersion,
+         model_version: ModelVersion,
+         trigger: Union[str, ContinuousTrainingTrigger] = None,
+         threshold: Optional[int] = None,
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/experiment.py` & `picsellia-6.6.0/picsellia/sdk/experiment.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,36 +1,49 @@
+ import logging
+ import os
+ from functools import partial
+ from pathlib import Path
+ from typing import Any, Dict, List, Optional, Tuple, Union
++from uuid import UUID
+ 
+ import orjson
+ from beartype import beartype
+ from deprecation import deprecated
+ 
+ from picsellia import exceptions, utils
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.exceptions import (
+     BadRequestError,
++    NoDataError,
+     ResourceConflictError,
+     ResourceNotFoundError,
+ )
++from picsellia.pxl_multithreading import do_paginate
+ from picsellia.sdk.artifact import Artifact
+-from picsellia.sdk.asset import MultiAsset
++from picsellia.sdk.asset import Asset, MultiAsset
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+ from picsellia.sdk.dataset_version import DatasetVersion
++from picsellia.sdk.evaluation import Evaluation, MultiEvaluation
++from picsellia.sdk.job import Job
+ from picsellia.sdk.label import Label
+ from picsellia.sdk.log import Log, LogType
+ from picsellia.sdk.logging_file import LoggingFile
+ from picsellia.sdk.model import Model
+ from picsellia.sdk.model_version import ModelVersion
+-from picsellia.types.enums import ExperimentStatus, JobStatus, ObjectDataType
++from picsellia.sdk.worker import Worker
++from picsellia.types.enums import (
++    AddEvaluationType,
++    AnnotationStatus,
++    ExperimentStatus,
++    InferenceType,
++    JobStatus,
++    ObjectDataType,
++)
+ from picsellia.types.schemas import ExperimentSchema, LogDataType
+ 
+ logger = logging.getLogger("picsellia")
+ 
+ 
+ class Experiment(Dao):
+     def __init__(self, connexion: Connexion, data: dict) -> None:
+@@ -993,7 +1006,188 @@
+             eval_assets,
+             train_label_count,
+             eval_label_count,
+             labels,
+         ) = dataset.train_test_split(prop, random_seed)
+         # TODO: Log those values
+         return train_assets, eval_assets, train_label_count, eval_label_count, labels
++
++    @exception_handler
++    @beartype
++    def add_evaluation(
++        self,
++        asset: Asset,
++        add_type: Union[str, AddEvaluationType] = AddEvaluationType.REPLACE,
++        rectangles: Optional[List[Tuple[int, int, int, int, Label, float]]] = None,
++        polygons: Optional[List[Tuple[List[List[int]], Label, float]]] = None,
++        classifications: Optional[List[Tuple[Label, float]]] = None,
++    ):
++        """Add an evaluation of the asset by this experiment.
++
++        By default, if given asset had already been evaluated, evaluation will be replaced.
++        You can add different shapes but will only be able to compute evaluation metrics on one kind of inference type.
++
++        Examples:
++            ```python
++            asset = dataset_version.find_asset(filename="asset-1.png")
++            experiment.add_evaluation(asset, rectangles=[(10, 20, 30, 40, label_cat, 0.8), (50, 60, 20, 30, label_dog, 0.7)])
++            job = experiment.compute_evaluations_metrics(InferenceType.OBJECT_DETECTION)
++            job.wait_for_done()
++            ```
++        Args:
++            asset (Asset): asset to add evaluation on
++            add_type (str ou AddEvaluationType): replace or keep old evaluation, defaults to
++            rectangles (optional): list of tuples representing rectangles with scores
++            polygons  (optional): list of tuples representing polygons with scores
++            classifications (optional): list of tuples representing classifications with scores
++        """
++        if not rectangles and not classifications and not polygons:
++            raise ValueError(
++                "Please give parameter 'rectangles', 'classifications' or 'polygons'"
++            )
++
++        import_type = AddEvaluationType.validate(add_type)
++        payload = {"import_type": import_type}
++        payload_evaluation = {"asset_id": asset.id}
++        if rectangles:
++            payload_evaluation["rectangles"] = [
++                {
++                    "x": rectangle[0],
++                    "y": rectangle[1],
++                    "w": rectangle[2],
++                    "h": rectangle[3],
++                    "label_id": rectangle[4].id,
++                    "score": rectangle[5],
++                }
++                for rectangle in rectangles
++            ]
++
++        if polygons:
++            payload_evaluation["polygons"] = [
++                {"polygon": polygon[0], "label_id": polygon[1].id, "score": polygon[2]}
++                for polygon in polygons
++            ]
++        if classifications:
++            payload_evaluation["classifications"] = [
++                {"label_id": classification[0].id, "score": classification[1]}
++                for classification in classifications
++            ]
++        payload["evaluations"] = [payload_evaluation]
++
++        self.connexion.post(
++            f"/sdk/experiment/{self.id}/evaluations", data=orjson.dumps(payload)
++        )
++
++    @exception_handler
++    @beartype
++    def list_evaluations(
++        self,
++        limit: Optional[int] = None,
++        offset: Optional[int] = None,
++        page_size: Optional[int] = None,
++        order_by: Optional[List[str]] = None,
++        q: Optional[str] = None,
++    ) -> MultiEvaluation:
++        """List evaluations of this experiment.
++        It will retrieve all evaluations made by this experiment.
++        You will then be able to manipulate them.
++
++         Args:
++            q (str, optional): if given, will try to apply query to filter evaluations
++            limit (int, optional): if given, will limit the number of evaluations returned
++            offset (int, optional): if given, will return evaluations that would have been returned
++                                    after this offset in given order
++            page_size (int, optional): page size when returning evaluations paginated, can change performance
++            order_by (list[str], optional): if not empty, will order evaluations by fields given in this parameter
++
++        Returns:
++            A (MultiEvaluation)
++        """
++        evaluations = do_paginate(
++            limit,
++            offset,
++            page_size,
++            partial(self._do_list_evaluations, q, order_by),
++        )
++
++        if len(evaluations) == 0:
++            raise NoDataError(
++                "No evaluation done by this experiment found with this query"
++            )
++
++        return MultiEvaluation(self.connexion, self.id, evaluations)
++
++    @exception_handler
++    @beartype
++    def _do_list_evaluations(
++        self,
++        q: Optional[str],
++        order_by: Optional[List[str]],
++        limit: int,
++        offset: int,
++    ) -> Tuple[List[Evaluation], int]:
++        params = {"limit": limit, "offset": offset}
++        if order_by is not None:
++            params["order_by"] = order_by
++        if q is not None:
++            params["q"] = q
++
++        r = self.connexion.get(
++            f"/sdk/experiment/{self.id}/evaluations", params=params
++        ).json()
++        return (
++            list(map(partial(Evaluation, self.connexion, self.id), r["items"])),
++            r["count"],
++        )
++
++    @exception_handler
++    @beartype
++    def compute_evaluations_metrics(
++        self,
++        inference_type: InferenceType,
++        evaluations: Union[
++            List[Union[str, UUID]], List[Evaluation], MultiEvaluation, None
++        ] = None,
++        worker: Optional[Worker] = None,
++        status: Optional[AnnotationStatus] = None,
++    ) -> Job:
++        """Compute evaluation metrics across evaluations added to this experiment.
++        Picsellia will compute coco metrics on each evaluation and compare to existing annotations.
++
++        Examples:
++            ```python
++            experiment.add_evaluation(rectangles=[(10, 20, 30, 40, label_cat, 0.8), (50, 60, 20, 30, label_dog, 0.7)])
++            experiment.compute_evaluations_metrics(InferenceType.OBJECT_DETECTION)
++            ```
++
++        Args:
++            inference_type (InferenceType): Type of shapes pushed as evaluations.
++            evaluations (MultiEvaluation or list of UUID or Evaluation, optional): Run coco evaluation on only given ids
++            worker (Worker, optional): Existing annotations will be filtered to only retrieve those done by this worker
++            status (AnnotationStatus, optional): Existing annotations will be filtered to only retrieve those that have this status.
++
++        Returns:
++            A (Job) that you can wait for done.
++        """
++
++        payload = {"inference_type": inference_type}
++
++        if evaluations:
++            evaluation_ids = []
++            for evaluation in evaluations:
++                if isinstance(evaluation, Evaluation):
++                    evaluation_ids.append(evaluation.id)
++                else:
++                    evaluation_ids.append(evaluation)
++
++            payload["evaluation_ids"] = evaluation_ids
++
++        if worker:
++            payload["worker"] = worker.id
++
++        if status:
++            payload["status"] = status
++
++        r = self.connexion.post(
++            f"/sdk/experiment/{self.id}/evaluate", data=orjson.dumps(payload)
++        ).json()
++        return Job(self.connexion, r, version=1)
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/job.py` & `picsellia-6.6.0/picsellia/sdk/job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/label.py` & `picsellia-6.6.0/picsellia/sdk/label.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/line.py` & `picsellia-6.6.0/picsellia/sdk/line.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/log.py` & `picsellia-6.6.0/picsellia/sdk/point.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,119 +1,104 @@
+ import logging
+ import warnings
+-from typing import Optional
++from typing import List, Optional
++from uuid import UUID
+ 
+ import orjson
+ from beartype import beartype
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+-from picsellia.exceptions import BadRequestError
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+-from picsellia.types.enums import LogType
+-from picsellia.types.schemas import LogDataType, LogSchema
+-from picsellia.utils import filter_payload
++from picsellia.sdk.label import Label
++from picsellia.types.schemas import PointSchema
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Log(Dao):
+-    def __init__(self, connexion: Connexion, data: dict):
++class Point(Dao):
++    def __init__(self, connexion: Connexion, annotation_id: UUID, data: dict) -> None:
+         Dao.__init__(self, connexion, data)
++        self._annotation_id = annotation_id
+ 
+     @property
+-    def name(self) -> str:
+-        """Name of this (Log)"""
+-        return self._name
++    def annotation_id(self) -> UUID:
++        """UUID of the (Annotation) holding this (Point)"""
++        return self._annotation_id
+ 
+     @property
+-    def data(self) -> LogDataType:
+-        """Data of this (Log)"""
+-        return self._data
++    def coords(self) -> List[List[int]]:
++        """Coords of this (Point)"""
++        return self._coords
+ 
+     @property
+-    def type(self) -> LogType:
+-        """Type of this (Log)"""
+-        return self._type
++    def order(self) -> int:
++        """Order of this (Point)"""
++        return self._order
++
++    @property
++    def label(self) -> Label:
++        """(Label) of this (Point)"""
++        return self._label
+ 
+     def __str__(self):
+-        return f"{Colors.GREEN}Log {self.name}{Colors.ENDC} (id: {self.id})"
++        return f"{Colors.BLUE}Point ({self.coords}, order: {self.order}) with label {self.label.name} on annotation {self.annotation_id} {Colors.ENDC} (id: {self.id})"
+ 
+     @exception_handler
+     @beartype
+     def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/log/{self.id}").json()
++        r = self.connexion.get(f"/sdk/point/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
+-    def refresh(self, data: dict):
+-        schema = LogSchema(**data)
+-        self._name = schema.name
+-        self._data = schema.data
+-        self._type = schema.type
++    def refresh(self, data: dict) -> PointSchema:
++        schema = PointSchema(**data)
++        self._coords = schema.coords
++        self._order = schema.order
++        self._label = Label(self.connexion, schema.label.dict())
+         return schema
+ 
+     @exception_handler
+     @beartype
+     def update(
+-        self, name: Optional[str] = None, data: Optional[LogDataType] = None
++        self,
++        coords: Optional[List] = None,
++        label: Optional[Label] = None,
+     ) -> None:
+-        """Update this log with a new name or new data
+-
+-        You cannot change the type of this Log.
++        """Update this point with new coords or new label.
+ 
+         Examples:
+             ```python
+-            my_log.update(name="new_name", data={"key": "value"})
++            point.update(coords=[0, 0])
+             ```
+-        Arguments:
+-            name (str, optional): New name of the log. Defaults to None.
+-            data (LogDataType, optional): New data of the log. Defaults to None.
+         """
+-        if self.type == LogType.IMAGE and data:
+-            raise BadRequestError(
+-                "You cannot update data of a log image this way, use experiment.log() method instead."
+-            )
+-
+-        payload = {"name": name, "data": data}
+-        filtered_payload = filter_payload(payload)
++        payload = {}
++        if coords is not None:
++            payload["point"] = coords
++        if label is not None:
++            payload["label_id"] = label.id
++        assert payload != {}, "You can't update this point with no data to update"
+         r = self.connexion.patch(
+-            f"/sdk/log/{self.id}", data=orjson.dumps(filtered_payload)
++            f"/sdk/point/{self.id}", data=orjson.dumps(payload)
+         ).json()
+         self.refresh(r)
+-        logger.info(f"{self} updated.")
++        logger.info(f"{self} updated")
+ 
+     @exception_handler
+     @beartype
+     def delete(self) -> None:
+-        """Delete this log
++        """Delete this point from the platform.
++
++        :warning: **DANGER ZONE**: Be very careful here!
+ 
+         Examples:
+             ```python
+-            my_log.delete()
++            point.delete()
+             ```
+         """
+-        self.connexion.delete(f"/sdk/log/{self.id}")
+-
+-    @exception_handler
+-    @beartype
+-    def append(self, data: LogDataType) -> None:
+-        """Appends value to log with given name.
+-
+-        You can only append log on Line logs.
+-
+-        Arguments:
+-            data (Union[list, dict, float, int, str]): data to append
+-
+-        """
+-        assert self.type == LogType.LINE, "You can only append log on Line logs"
+-        payload = {"data": data}
+-        r = self.connexion.post(
+-            f"/sdk/log/{self.id}/append", data=orjson.dumps(payload)
+-        ).json()
+-        self.refresh(r)
+-        logger.info(f"Append {data} on {self}.")
++        self.connexion.delete(f"/sdk/point/{self.id}")
++        logger.info(f"{self} deleted.")
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/logging_file.py` & `picsellia-6.6.0/picsellia/sdk/scan_file.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,108 +1,108 @@
+ import logging
+-import os
+ import warnings
+-from pathlib import Path
+-from typing import Optional, Union
++from typing import Optional
+ 
+ import orjson
+ from beartype import beartype
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+-from picsellia.types.schemas import LoggingFileSchema
++from picsellia.sdk.downloadable import Downloadable
++from picsellia.types.schemas import ScanFileSchema
+ from picsellia.utils import filter_payload
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class LoggingFile(Dao):
++class ScanFile(Dao, Downloadable):
+     def __init__(self, connexion: Connexion, data: dict):
+         Dao.__init__(self, connexion, data)
+-        self.text = ""
++        Downloadable.__init__(self)
+ 
+     def __str__(self):
+-        return f"{Colors.GREEN}Logging file {self.object_name}{Colors.ENDC} (id: {self.id})"
++        return f"{Colors.GREEN}ScanFile {self.name}{Colors.ENDC} (id: {self.id})"
++
++    @property
++    def name(self) -> str:
++        """Name of this (ScanFile)"""
++        return self._name
+ 
+     @property
+     def object_name(self) -> str:
+-        """Object name of this (LoggingFile)"""
++        """Object name of this (ScanFile)"""
+         return self._object_name
+ 
++    @property
++    def large(self) -> bool:
++        """If True, this (ScanFile) is considered large"""
++        return self._large
++
++    @property
++    def filename(self) -> str:
++        """Filename of this (ScanFile)"""
++        return self._name
++
+     @exception_handler
+     @beartype
+-    def refresh(self, data: dict) -> LoggingFileSchema:
+-        schema = LoggingFileSchema(**data)
++    def refresh(self, data: dict) -> ScanFileSchema:
++        schema = ScanFileSchema(**data)
++        self._name = schema.name
+         self._object_name = schema.object_name
++        self._large = schema.large
++        self._url = schema.url
+         return schema
+ 
+     @exception_handler
+     @beartype
+     def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/logging/file/{self.id}").json()
++        r = self.connexion.get(f"/sdk/scan/file/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
++    def reset_url(self) -> str:
++        self._url = self.connexion.init_download(self.object_name)
++        return self._url
++
++    @exception_handler
++    @beartype
+     def update(
+         self,
++        name: Optional[str] = None,
+         object_name: Optional[str] = None,
++        large: Optional[bool] = None,
+     ) -> None:
+-        """Update this artifact.
++        """Update this scan file.
+ 
+         Examples:
+             ```python
+-            this_artifact.update(object_name="another-path-to-artifact")
++            script.update(object_name="another-path-to-script")
+             ```
+         """
+         payload = {
++            "name": name,
+             "object_name": object_name,
++            "large": large,
+         }
+         filtered_payload = filter_payload(payload)
+         r = self.connexion.patch(
+-            f"/sdk/logging/file/{self.id}", data=orjson.dumps(filtered_payload)
++            f"/sdk/scan/file/{self.id}", data=orjson.dumps(filtered_payload)
+         ).json()
+         self.refresh(r)
+ 
+     @exception_handler
+     @beartype
+     def delete(self) -> None:
+-        """Delete this artifact
++        """Delete this scan file
+ 
+         Examples:
+             ```python
+-            this_artifact.delete()
++            script.delete()
+             ```
+         """
+-        self.connexion.delete(f"/sdk/logging/file/{self.id}")
+-
+-    @exception_handler
+-    @beartype
+-    def download(
+-        self, target_path: Union[str, Path] = "./", force_replace: bool = False
+-    ) -> None:
+-        """Download an experiment logging file to a given target_path.
+-
+-        Examples:
+-            ```python
+-            logging_file.download("myDir")
+-            file_list = os.path.listdir("myDir")
+-            print(file_list)
+-            >>> ["saved_model.zip"]
+-            ```
+-        Arguments:
+-            force_replace: (bool, optional): If true, force replacement of existing disk file. Defaults to false.
+-            target_path (str or Path, optional): Path to download the file to, default to cwd. Defaults to './'.
+-
+-        """
+-        self.sync()
+-        filename = self.object_name.split("/")[-1]
+-        path = os.path.join(target_path, filename)
+-        self.connexion.download_file(
+-            self.object_name, path, False, force_replace=force_replace
+-        )
+-        logger.info(f"{filename} downloaded successfully")
++        self.connexion.delete(f"/sdk/scan/file/{self.id}")
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/model.py` & `picsellia-6.6.0/picsellia/sdk/model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/model_context.py` & `picsellia-6.6.0/picsellia/sdk/model_context.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/model_file.py` & `picsellia-6.6.0/picsellia/sdk/artifact.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,97 +1,111 @@
+ import logging
+-import os
+-from pathlib import Path
+-from typing import Union
++import warnings
++from typing import Optional
+ 
++import orjson
+ from beartype import beartype
++from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+-from picsellia.types.schemas import ModelFileSchema
++from picsellia.sdk.downloadable import Downloadable
++from picsellia.types.schemas import ArtifactSchema
++from picsellia.utils import filter_payload
+ 
+ logger = logging.getLogger("picsellia")
++warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class ModelFile(Dao):
++class Artifact(Dao, Downloadable):
+     def __init__(self, connexion: Connexion, data: dict):
+         Dao.__init__(self, connexion, data)
++        Downloadable.__init__(self)
+ 
+-    @property
+-    def name(self) -> str:
+-        """Name of this (ModelFile)"""
+-        return self._name
+-
+-    @property
+-    def object_name(self) -> str:
+-        """Object name of this (ModelFile)"""
+-        return self._object_name
++    def __str__(self):
++        return f"{Colors.GREEN}Artifact {self.name}{Colors.ENDC} (id: {self.id})"
+ 
+     @property
+     def filename(self) -> str:
+-        """Filename of this (ModelFile)"""
++        """Filename of this (Artifact)"""
+         return self._filename
+ 
+     @property
+     def large(self) -> bool:
+-        """If True, this (ModelFile) is considered having a large size"""
++        """If true, this (Artifact) has a large size"""
+         return self._large
+ 
+-    def __str__(self):
+-        return (
+-            f"{Colors.BLUE}Model file named '{self.name}'{Colors.ENDC} (id: {self.id})"
+-        )
++    @property
++    def name(self) -> str:
++        """(Artifact) name"""
++        return self._name
++
++    @property
++    def object_name(self) -> str:
++        """(Artifact) object name stored in storage"""
++        return self._object_name
++
++    @exception_handler
++    @beartype
++    def refresh(self, data: dict) -> ArtifactSchema:
++        schema = ArtifactSchema(**data)
++        self._name = schema.name
++        self._object_name = schema.object_name
++        self._large = schema.large
++        self._filename = schema.filename
++        self._url = schema.url
++        return schema
+ 
+     @exception_handler
+     @beartype
+     def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/model/file/{self.id}").json()
++        r = self.connexion.get(f"/sdk/artifact/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
+-    def refresh(self, data: dict) -> ModelFileSchema:
+-        schema = ModelFileSchema(**data)
+-        self._name = schema.name
+-        self._object_name = schema.object_name
+-        self._filename = schema.filename
+-        self._large = schema.large
+-        return schema
++    def reset_url(self) -> str:
++        self._url = self.connexion.init_download(self.object_name)
++        return self._url
+ 
+     @exception_handler
+     @beartype
+-    def download(
+-        self, target_path: Union[str, Path] = "./", force_replace: bool = False
++    def update(
++        self,
++        name: Optional[str] = None,
++        filename: Optional[str] = None,
++        object_name: Optional[str] = None,
++        large: Optional[bool] = None,
+     ) -> None:
+-        """Download file stored.
++        """Update this artifact.
+ 
+         Examples:
+             ```python
+-            latest_cp = model.get_file("model-latest")
+-            latest_cp.download("./files/")
++            this_artifact.update(object_name="another-path-to-artifact")
+             ```
+-        Arguments:
+-            target_path (str or Path, optional): Directory path where file will be downloaded
+-            force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
+         """
+-        self.sync()
+-        path = os.path.join(target_path, self.filename)
+-        self.connexion.download_file(
+-            self.object_name, path, self.large, force_replace=force_replace
+-        )
+-        logger.info(f"{self.filename} downloaded successfully")
++        payload = {
++            "name": name,
++            "filename": filename,
++            "object_name": object_name,
++            "large": large,
++        }
++        filtered_payload = filter_payload(payload)
++        r = self.connexion.patch(
++            f"/sdk/artifact/{self.id}", data=orjson.dumps(filtered_payload)
++        ).json()
++        self.refresh(r)
+ 
+     @exception_handler
+     @beartype
+     def delete(self) -> None:
+-        """Delete this file
++        """Delete this artifact
+ 
+         Examples:
+             ```python
+-            model_file.delete()
++            this_artifact.delete()
+             ```
+         """
+-        self.connexion.delete(f"/sdk/model/file/{self.id}")
+-        logger.info(f"{self} deleted from platform.")
++        self.connexion.delete(f"/sdk/artifact/{self.id}")
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/model_version.py` & `picsellia-6.6.0/picsellia/sdk/model_version.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/multi_object.py` & `picsellia-6.6.0/picsellia/sdk/multi_object.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/point.py` & `picsellia-6.6.0/picsellia/sdk/polygon.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -8,97 +8,91 @@
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+ from picsellia.sdk.label import Label
+-from picsellia.types.schemas import PointSchema
++from picsellia.types.schemas import PolygonSchema
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Point(Dao):
++class Polygon(Dao):
+     def __init__(self, connexion: Connexion, annotation_id: UUID, data: dict) -> None:
+         Dao.__init__(self, connexion, data)
+         self._annotation_id = annotation_id
+ 
+     @property
+     def annotation_id(self) -> UUID:
+-        """UUID of the (Annotation) holding this (Point)"""
++        """UUID of the (Annotation) holding this (Polygon)"""
+         return self._annotation_id
+ 
+     @property
+     def coords(self) -> List[List[int]]:
+-        """Coords of this (Point)"""
++        """Coords of this (Polygon)"""
+         return self._coords
+ 
+     @property
+-    def order(self) -> int:
+-        """Order of this (Point)"""
+-        return self._order
+-
+-    @property
+     def label(self) -> Label:
+-        """(Label) of this (Point)"""
++        """Label of this (Polygon)"""
+         return self._label
+ 
+     def __str__(self):
+-        return f"{Colors.BLUE}Point ({self.coords}, order: {self.order}) with label {self.label.name} on annotation {self.annotation_id} {Colors.ENDC} (id: {self.id})"
++        return f"{Colors.BLUE}Polygon ({len(self.coords)} points) with label {self.label.name} on annotation {self.annotation_id} {Colors.ENDC} (id: {self.id})"
+ 
+     @exception_handler
+     @beartype
+     def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/point/{self.id}").json()
++        r = self.connexion.get(f"/sdk/polygon/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
+-    def refresh(self, data: dict) -> PointSchema:
+-        schema = PointSchema(**data)
++    def refresh(self, data: dict) -> PolygonSchema:
++        schema = PolygonSchema(**data)
+         self._coords = schema.coords
+-        self._order = schema.order
+         self._label = Label(self.connexion, schema.label.dict())
+         return schema
+ 
+     @exception_handler
+     @beartype
+     def update(
+         self,
+         coords: Optional[List] = None,
+         label: Optional[Label] = None,
+     ) -> None:
+-        """Update this point with new coords or new label.
++        """Update this polygon with new coords or new label.
+ 
+         Examples:
+             ```python
+-            point.update(coords=[0, 0])
++            poly.update(coords=[[0, 0], [0, 1], [1, 1], [0, 0]])
+             ```
+         """
+         payload = {}
+         if coords is not None:
+-            payload["point"] = coords
++            payload["polygon"] = coords
+         if label is not None:
+             payload["label_id"] = label.id
+-        assert payload != {}, "You can't update this point with no data to update"
++        assert payload != {}, "You can't update this polygon with no data to update"
+         r = self.connexion.patch(
+-            f"/sdk/point/{self.id}", data=orjson.dumps(payload)
++            f"/sdk/polygon/{self.id}", data=orjson.dumps(payload)
+         ).json()
+         self.refresh(r)
+         logger.info(f"{self} updated")
+ 
+     @exception_handler
+     @beartype
+     def delete(self) -> None:
+-        """Delete this point from the platform.
++        """Delete this polygon from the platform.
+ 
+         :warning: **DANGER ZONE**: Be very careful here!
+ 
+         Examples:
+             ```python
+-            point.delete()
++            poly.delete()
+             ```
+         """
+-        self.connexion.delete(f"/sdk/point/{self.id}")
++        self.connexion.delete(f"/sdk/polygon/{self.id}")
+         logger.info(f"{self} deleted.")
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/polygon.py` & `picsellia-6.6.0/picsellia/sdk/rectangle.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,98 +1,118 @@
+ import logging
+ import warnings
+-from typing import List, Optional
++from typing import Optional
+ from uuid import UUID
+ 
+ import orjson
+ from beartype import beartype
+ from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+ from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
+ from picsellia.sdk.connexion import Connexion
+ from picsellia.sdk.dao import Dao
+ from picsellia.sdk.label import Label
+-from picsellia.types.schemas import PolygonSchema
++from picsellia.types.schemas import RectangleSchema
++from picsellia.utils import filter_payload
+ 
+ logger = logging.getLogger("picsellia")
+ warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Polygon(Dao):
++class Rectangle(Dao):
+     def __init__(self, connexion: Connexion, annotation_id: UUID, data: dict) -> None:
+         Dao.__init__(self, connexion, data)
+         self._annotation_id = annotation_id
+ 
+     @property
+     def annotation_id(self) -> UUID:
+-        """UUID of the (Annotation) holding this (Polygon)"""
++        """UUID of the (Annotation) holding this (Rectangle)"""
+         return self._annotation_id
+ 
+     @property
+-    def coords(self) -> List[List[int]]:
+-        """Coords of this (Polygon)"""
+-        return self._coords
++    def x(self) -> int:
++        """Coordinates x of this (Rectangle)"""
++        return self._x
++
++    @property
++    def y(self) -> int:
++        """Coordinates y of this (Rectangle)"""
++        return self._y
++
++    @property
++    def w(self) -> int:
++        """Width of this (Rectangle)"""
++        return self._w
++
++    @property
++    def h(self) -> int:
++        """Height of this (Rectangle)"""
++        return self._h
+ 
+     @property
+     def label(self) -> Label:
+-        """Label of this (Polygon)"""
++        """(Label) of this (Rectangle)"""
+         return self._label
+ 
+     def __str__(self):
+-        return f"{Colors.BLUE}Polygon ({len(self.coords)} points) with label {self.label.name} on annotation {self.annotation_id} {Colors.ENDC} (id: {self.id})"
++        return f"{Colors.BLUE}Rectangle (x:{self.x},y:{self.y},w:{self.w},h:{self.h}) with label {self.label.name} on annotation {self.annotation_id} {Colors.ENDC} (id: {self.id})"
+ 
+     @exception_handler
+     @beartype
+     def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/polygon/{self.id}").json()
++        r = self.connexion.get(f"/sdk/rectangle/{self.id}").json()
+         self.refresh(r)
+         return r
+ 
+     @exception_handler
+     @beartype
+-    def refresh(self, data: dict) -> PolygonSchema:
+-        schema = PolygonSchema(**data)
+-        self._coords = schema.coords
++    def refresh(self, data: dict) -> RectangleSchema:
++        schema = RectangleSchema(**data)
++        self._x = schema.x
++        self._y = schema.y
++        self._w = schema.w
++        self._h = schema.h
+         self._label = Label(self.connexion, schema.label.dict())
+         return schema
+ 
+     @exception_handler
+     @beartype
+     def update(
+         self,
+-        coords: Optional[List] = None,
++        x: Optional[int] = None,
++        y: Optional[int] = None,
++        w: Optional[int] = None,
++        h: Optional[int] = None,
+         label: Optional[Label] = None,
+     ) -> None:
+-        """Update this polygon with new coords or new label.
++        """Update this rectangle with new coordinates or new label.
+ 
+         Examples:
+             ```python
+-            poly.update(coords=[[0, 0], [0, 1], [1, 1], [0, 0]])
++            rect.update(x=10, label=label_car)
+             ```
+         """
+-        payload = {}
+-        if coords is not None:
+-            payload["polygon"] = coords
++        payload = {"x": x, "y": y, "w": w, "h": h}
++        filtered_payload = filter_payload(payload)
+         if label is not None:
+-            payload["label_id"] = label.id
+-        assert payload != {}, "You can't update this polygon with no data to update"
++            filtered_payload["label_id"] = label.id
+         r = self.connexion.patch(
+-            f"/sdk/polygon/{self.id}", data=orjson.dumps(payload)
++            f"/sdk/rectangle/{self.id}", data=orjson.dumps(filtered_payload)
+         ).json()
+         self.refresh(r)
+         logger.info(f"{self} updated")
+ 
+     @exception_handler
+     @beartype
+     def delete(self) -> None:
+-        """Delete this polygon from the platform.
++        """Delete this rectangle from the platform.
+ 
+         :warning: **DANGER ZONE**: Be very careful here!
+ 
+         Examples:
+             ```python
+-            poly.delete()
++            rect.delete()
+             ```
+         """
+-        self.connexion.delete(f"/sdk/polygon/{self.id}")
++        self.connexion.delete(f"/sdk/rectangle/{self.id}")
+         logger.info(f"{self} deleted.")
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/project.py` & `picsellia-6.6.0/picsellia/sdk/project.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/rectangle.py` & `picsellia-6.6.0/picsellia/sdk/downloadable.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,118 +1,121 @@
+ import logging
+-import warnings
+-from typing import Optional
+-from uuid import UUID
++import os
++from abc import ABC, abstractmethod
++from pathlib import Path
++from typing import Union
+ 
+-import orjson
++import requests
+ from beartype import beartype
+-from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+ 
+-from picsellia.colors import Colors
+ from picsellia.decorators import exception_handler
++from picsellia.exceptions import NoUrlAvailable
+ from picsellia.sdk.connexion import Connexion
+-from picsellia.sdk.dao import Dao
+-from picsellia.sdk.label import Label
+-from picsellia.types.schemas import RectangleSchema
+-from picsellia.utils import filter_payload
+ 
+ logger = logging.getLogger("picsellia")
+-warnings.filterwarnings("ignore", category=BeartypeDecorHintPep585DeprecationWarning)
+ 
+ 
+-class Rectangle(Dao):
+-    def __init__(self, connexion: Connexion, annotation_id: UUID, data: dict) -> None:
+-        Dao.__init__(self, connexion, data)
+-        self._annotation_id = annotation_id
++class Downloadable(ABC):
++    def __init__(self):
++        self._url = None
+ 
+     @property
+-    def annotation_id(self) -> UUID:
+-        """UUID of the (Annotation) holding this (Rectangle)"""
+-        return self._annotation_id
++    @abstractmethod
++    def connexion(self) -> Connexion:
++        pass
+ 
+     @property
+-    def x(self) -> int:
+-        """Coordinates x of this (Rectangle)"""
+-        return self._x
+-
+-    @property
+-    def y(self) -> int:
+-        """Coordinates y of this (Rectangle)"""
+-        return self._y
++    def url(self) -> str:
++        """Url
++        This is generated by backend and expires after 1 hour. So this property might be out of date.
++        Calling `sync()` method will retrieve a new url when expired.
++        """
++        if not self._url:
++            self.reset_url()
++        return self._url
+ 
+     @property
+-    def w(self) -> int:
+-        """Width of this (Rectangle)"""
+-        return self._w
++    @abstractmethod
++    def object_name(self) -> str:
++        """Object name"""
++        pass
+ 
+     @property
+-    def h(self) -> int:
+-        """Height of this (Rectangle)"""
+-        return self._h
++    @abstractmethod
++    def filename(self) -> str:
++        """Filename"""
++        pass
+ 
+     @property
+-    def label(self) -> Label:
+-        """(Label) of this (Rectangle)"""
+-        return self._label
+-
+-    def __str__(self):
+-        return f"{Colors.BLUE}Rectangle (x:{self.x},y:{self.y},w:{self.w},h:{self.h}) with label {self.label.name} on annotation {self.annotation_id} {Colors.ENDC} (id: {self.id})"
++    @abstractmethod
++    def large(self) -> bool:
++        """If true, this (Object) has a large size"""
++        pass
+ 
+-    @exception_handler
+-    @beartype
+-    def sync(self) -> dict:
+-        r = self.connexion.get(f"/sdk/rectangle/{self.id}").json()
+-        self.refresh(r)
+-        return r
+-
+-    @exception_handler
+-    @beartype
+-    def refresh(self, data: dict) -> RectangleSchema:
+-        schema = RectangleSchema(**data)
+-        self._x = schema.x
+-        self._y = schema.y
+-        self._w = schema.w
+-        self._h = schema.h
+-        self._label = Label(self.connexion, schema.label.dict())
+-        return schema
++    @abstractmethod
++    def reset_url(self) -> str:
++        """Reset url of this object"""
++        pass
+ 
+     @exception_handler
+     @beartype
+-    def update(
+-        self,
+-        x: Optional[int] = None,
+-        y: Optional[int] = None,
+-        w: Optional[int] = None,
+-        h: Optional[int] = None,
+-        label: Optional[Label] = None,
++    def download(
++        self, target_path: Union[str, Path] = "./", force_replace: bool = False
+     ) -> None:
+-        """Update this rectangle with new coordinates or new label.
++        """Download this object into given target_path
+ 
+         Examples:
+             ```python
+-            rect.update(x=10, label=label_car)
++            data = clt.get_datalake().fetch_data(1)
++            data.download('./data/')
+             ```
++
++        Arguments:
++            target_path (str, optional): Target path where data will be downloaded. Defaults to './'.
++            force_replace: (bool, optional): Replace an existing file if exists. Defaults to False.
+         """
+-        payload = {"x": x, "y": y, "w": w, "h": h}
+-        filtered_payload = filter_payload(payload)
+-        if label is not None:
+-            filtered_payload["label_id"] = label.id
+-        r = self.connexion.patch(
+-            f"/sdk/rectangle/{self.id}", data=orjson.dumps(filtered_payload)
+-        ).json()
+-        self.refresh(r)
+-        logger.info(f"{self} updated")
++        if self._do_download(target_path, force_replace):
++            logger.info(f"{self.filename} downloaded successfully.")
++        else:
++            logger.info(f"{self.filename} was already downloaded.")
+ 
+     @exception_handler
+     @beartype
+-    def delete(self) -> None:
+-        """Delete this rectangle from the platform.
+-
+-        :warning: **DANGER ZONE**: Be very careful here!
+-
+-        Examples:
+-            ```python
+-            rect.delete()
+-            ```
+-        """
+-        self.connexion.delete(f"/sdk/rectangle/{self.id}")
+-        logger.info(f"{self} deleted.")
++    def _do_download(self, target_path: Union[str, Path], force_replace: bool):
++        path = os.path.join(target_path, self.filename)
++        url = self.url
++        if not url:
++            raise NoUrlAvailable(
++                "Could not retrieve an url to download this file: you might not have rights to download it."
++            )
++
++        try:
++            return self.connexion.do_download_file(
++                path,
++                url,
++                is_large=self.large,
++                force_replace=force_replace,
++                retry_count=1,
++            )
++        except requests.exceptions.HTTPError as e:
++            # Handle presigned url expired
++            if (
++                e.response is None
++                or e.response.status_code is None
++                or e.response.status_code != 403
++            ):
++                raise
++
++            logger.debug("url might have expired, regenerating it")
++            url = self.reset_url()
++            if not url:
++                raise NoUrlAvailable(
++                    "Could not retrieve an url to download this file: you might not have rights to download it."
++                )
++
++            return self.connexion.do_download_file(
++                path,
++                url,
++                is_large=self.large,
++                force_replace=force_replace,
++                retry_count=0,
++            )
+```
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/run.py` & `picsellia-6.6.0/picsellia/sdk/run.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/scan.py` & `picsellia-6.6.0/picsellia/sdk/scan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/tag.py` & `picsellia-6.6.0/picsellia/sdk/tag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/taggable.py` & `picsellia-6.6.0/picsellia/sdk/taggable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/sdk/worker.py` & `picsellia-6.6.0/picsellia/sdk/worker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/services/coco_file_builder.py` & `picsellia-6.6.0/picsellia/services/coco_file_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/services/coco_importer.py` & `picsellia-6.6.0/picsellia/services/coco_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/services/datasource.py` & `picsellia-6.6.0/picsellia/services/datasource.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/services/error_manager.py` & `picsellia-6.6.0/picsellia/services/error_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/services/voc_importer.py` & `picsellia-6.6.0/picsellia/services/voc_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/services/yolo_importer.py` & `picsellia-6.6.0/picsellia/services/yolo_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/types/enums.py` & `picsellia-6.6.0/picsellia/types/enums.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -126,14 +126,19 @@
+ 
+ class ImportAnnotationMode(StrEnum):
+     REPLACE = "REPLACE"
+     KEEP = "KEEP"
+     CONCATENATE = "CONCATENATE"
+ 
+ 
++class AddEvaluationType(StrEnum):
++    KEEP = "KEEP"
++    REPLACE = "REPLACE"
++
++
+ class ContinuousTrainingType(StrEnum):
+     SCAN = "SCAN"
+     EXPERIMENT = "EXPERIMENT"
+ 
+ 
+ class ContinuousTrainingTrigger(StrEnum):
+     FEEDBACK_LOOP = "FEEDBACK_LOOP"
+```
+
+### Comparing `picsellia-6.5.0/picsellia/types/schemas.py` & `picsellia-6.6.0/picsellia/types/schemas.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -69,14 +69,15 @@
+ 
+ 
+ class ModelFileSchema(DaoSchema):
+     name: str
+     object_name: str
+     filename: str
+     large: bool
++    url: Optional[str] = Field(alias="presigned_url")
+ 
+ 
+ class ProjectSchema(DaoSchema):
+     name: str
+ 
+ 
+ class DeploymentSchema(DaoSchema):
+@@ -94,14 +95,15 @@
+     duration: int
+ 
+ 
+ class DataSchema(DaoSchema):
+     object_name: str
+     filename: str
+     type: DataType
++    url: Optional[str] = Field(alias="presigned_url")
+ 
+ 
+ class ImageSchema(DataSchema):
+     meta: ImageMetaSchema
+ 
+ 
+ class VideoSchema(DataSchema):
+@@ -117,14 +119,18 @@
+ 
+ 
+ class ExperimentSchema(DaoSchema):
+     name: str
+     status: ExperimentStatus
+ 
+ 
++class EvaluationSchema(DaoSchema):
++    asset_id: UUID
++
++
+ class UserSchema(DaoSchema):
+     username: str
+ 
+ 
+ class CollaboratorSchema(DaoSchema):
+     user: UserSchema
+     organization_id: UUID
+@@ -150,25 +156,28 @@
+     experiment_id: UUID
+ 
+ 
+ class ScanFileSchema(DaoSchema):
+     name: str
+     object_name: str
+     large: bool
++    url: Optional[str] = Field(alias="presigned_url")
+ 
+ 
+ class ArtifactSchema(DaoSchema):
+     name: str
+     object_name: str
+     filename: str
+     large: bool
++    url: Optional[str] = Field(alias="presigned_url")
+ 
+ 
+ class LoggingFileSchema(DaoSchema):
+     object_name: str
++    url: Optional[str] = Field(alias="presigned_url")
+ 
+ 
+ LogDataType = Union[list, dict, float, int, str]
+ 
+ 
+ class LogSchema(DaoSchema):
+     name: str
+```
+
+### Comparing `picsellia-6.5.0/picsellia/types/schemas_prediction.py` & `picsellia-6.6.0/picsellia/types/schemas_prediction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/picsellia/utils.py` & `picsellia-6.6.0/picsellia/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `picsellia-6.5.0/pyproject.toml` & `picsellia-6.6.0/pyproject.toml`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ src_paths = ["picsellia", "tests"]
+ 
+ [tool.pycln]
+ all = true
+ 
+ [tool.poetry]
+ name = "picsellia"
+-version = "6.5.0"
++version = "6.6.0"
+ description = "Python SDK package for Picsellia MLOps platform"
+ authors = ["Pierre-Nicolas Tiffreau <pierre-nicolas@picsellia.com>", "Thomas Darget <thomas.darget@picsellia.com>"]
+ maintainers = ["Pierre-Nicolas Tiffreau <pierre-nicolas@picsellia.com>", "Thomas Darget <thomas.darget@picsellia.com>", "Lucien Haurat <lucien.haurat@picsellia.com>"]
+ license = "MIT"
+ readme = "README.md"
+ homepage = "https://www.picsellia.com/"
+ documentation = "https://documentation.picsellia.com/reference/client"
+@@ -24,15 +24,15 @@
+ ]
+ 
+ [tool.poetry.dependencies]
+ python = ">= 3.7, <4.0.0"
+ requests = "^2.28.1"
+ pydantic = "^1.9.1"
+ tdqm = "^0.0.1"
+-picsellia-annotations = "^0.5.0"
++picsellia-annotations = "^0.6.0"
+ orjson = "^3.7.11"
+ Pillow = "^9.2.0"
+ beartype = "^0.11.0"
+ picsellia-connexion-services = "^0.2.0"
+ deprecation = "^2.1.0"
+ pyyaml = "^6.0"
+```
+
+### Comparing `picsellia-6.5.0/setup.py` & `picsellia-6.6.0/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,39 +1,77 @@
+-# -*- coding: utf-8 -*-
+-from setuptools import setup
++Metadata-Version: 2.1
++Name: picsellia
++Version: 6.6.0
++Summary: Python SDK package for Picsellia MLOps platform
++Home-page: https://www.picsellia.com/
++License: MIT
++Keywords: ai,picsellia,sdk,cvops
++Author: Pierre-Nicolas Tiffreau
++Author-email: pierre-nicolas@picsellia.com
++Maintainer: Pierre-Nicolas Tiffreau
++Maintainer-email: pierre-nicolas@picsellia.com
++Requires-Python: >=3.7,<4.0.0
++Classifier: Development Status :: 5 - Production/Stable
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Programming Language :: Python :: 3
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
++Classifier: Topic :: Software Development :: Libraries :: Python Modules
++Requires-Dist: Pillow (>=9.2.0,<10.0.0)
++Requires-Dist: beartype (>=0.11.0,<0.12.0)
++Requires-Dist: deprecation (>=2.1.0,<3.0.0)
++Requires-Dist: orjson (>=3.7.11,<4.0.0)
++Requires-Dist: picsellia-annotations (>=0.6.0,<0.7.0)
++Requires-Dist: picsellia-connexion-services (>=0.2.0,<0.3.0)
++Requires-Dist: pydantic (>=1.9.1,<2.0.0)
++Requires-Dist: pyyaml (>=6.0,<7.0)
++Requires-Dist: requests (>=2.28.1,<3.0.0)
++Requires-Dist: tdqm (>=0.0.1,<0.0.2)
++Project-URL: Documentation, https://documentation.picsellia.com/reference/client
++Description-Content-Type: text/markdown
++
++# Picsellia SDK
++
++Picsellia Python SDK is a python library that allows connecting to Picsellia platform.
++
++## Documentation
++
++Reference of the SDK can be found at [reference](https://documentation.picsellia.com/reference/client)
++
++## Getting started
++Documentation can be found at [docs](https://documentation.picsellia.com/docs/getting-started).
++Start by installing the Picsellia python package in your environment.
++```
++pip install picsellia
++```
++
++Then, initialize a client
++```python
++from picsellia import Client
++client = Client(api_token=<your api token>)
++```
++
++Now, use it to upload data and create a dataset !
++```python
++lake = client.get_datalake()
++uploaded_data = lake.upload_data(filepaths=["pics/twingo.png", "pics/ferrari.png"], tags=["tag_car"])
++
++dataset = client.create_dataset("cars").create_version("first")
++dataset.add_data(uploaded_data)
++```
++
++## What is Picsellia ?
++
++Our mission is to give you all the necessary tools to relieve the burden of AI projects off of your shoulders. As a data scientist / ML engineer / Researcher, you shouldn't have to worry about the following topics :
++
++- [💾 Data Management](https://documentation.picsellia.com/docs/data-management)
++- [📈 Experiment Tracking](https://documentation.picsellia.com/docs/experiment-tracking)
++- [📘 Model Management](https://documentation.picsellia.com/docs/export-an-experiment)
++- [🚀 Model Deployment](https://documentation.picsellia.com/docs/serverless)
++- [👀 Model Monitoring](https://documentation.picsellia.com/docs/monitor-model)
+ 
+-packages = \
+-['picsellia', 'picsellia.sdk', 'picsellia.services', 'picsellia.types']
++Picsellia is the one-stop place for all the life-cycle of your Computer Vision projects, from ideation to production in a single platform 🚀.
+ 
+-package_data = \
+-{'': ['*']}
+-
+-install_requires = \
+-['Pillow>=9.2.0,<10.0.0',
+- 'beartype>=0.11.0,<0.12.0',
+- 'deprecation>=2.1.0,<3.0.0',
+- 'orjson>=3.7.11,<4.0.0',
+- 'picsellia-annotations>=0.5.0,<0.6.0',
+- 'picsellia-connexion-services>=0.2.0,<0.3.0',
+- 'pydantic>=1.9.1,<2.0.0',
+- 'pyyaml>=6.0,<7.0',
+- 'requests>=2.28.1,<3.0.0',
+- 'tdqm>=0.0.1,<0.0.2']
+-
+-setup_kwargs = {
+-    'name': 'picsellia',
+-    'version': '6.5.0',
+-    'description': 'Python SDK package for Picsellia MLOps platform',
+-    'long_description': '# Picsellia SDK\n\nPicsellia Python SDK is a python library that allows connecting to Picsellia platform.\n\n## Documentation\n\nDocumentation of Picsellia SDK Python can be found at [docs](https://documentation.picsellia.com/docs/getting-started).\n\n## Getting started\nStart by installing the Picsellia python package in your environment.\n```\npip install picsellia\n```\n\nThen, initialize a client\n```python\nfrom picsellia import Client\nclient = Client(api_token=<your api token>)\n```\n\nNow, use it to upload data and create a dataset !\n```python\nlake = client.get_datalake()\nuploaded_data = lake.upload_data(filepaths=["pics/twingo.png", "pics/ferrari.png"], tags=["tag_car"])\n\ndataset = client.create_dataset("cars").create_version("first")\ndataset.add_data(uploaded_data)\n```\n\n## What is Picsellia ?\n\nOur mission is to give you all the necessary tools to relieve the burden of AI projects off of your shoulders. As a data scientist / ML engineer / Researcher, you shouldn\'t have to worry about the following topics :\n\n- [💾 Data Management](https://documentation.picsellia.com/docs/data-management)\n- [📈 Experiment Tracking](https://documentation.picsellia.com/docs/experiment-tracking)\n- [📘 Model Management](https://documentation.picsellia.com/docs/export-an-experiment)\n- [🚀 Model Deployment](https://documentation.picsellia.com/docs/serverless)\n- [👀 Model Monitoring](https://documentation.picsellia.com/docs/monitor-model)\n\nPicsellia is the one-stop place for all the life-cycle of your Computer Vision projects, from ideation to production in a single platform 🚀.\n\n\n\n## How to update documentation on readme\n- Clone picsellia-mkgendocs repository somewhere\n- `poetry shell` in this repository\n- Set yourself into picsellia-sdk-python repository\n- Run `../picsellia-mkgendocs/picsellia_mkgendocs/gendocs.py --config docs/mkgendocs.yml`\n- Ensures everything is good\n- `export README_TOKEN=<your_readme_token>`\n- Run `python .github/scripts/update_docs.py --upload --doc sdk --version v2.0`\n',
+-    'author': 'Pierre-Nicolas Tiffreau',
+-    'author_email': 'pierre-nicolas@picsellia.com',
+-    'maintainer': 'Pierre-Nicolas Tiffreau',
+-    'maintainer_email': 'pierre-nicolas@picsellia.com',
+-    'url': 'https://www.picsellia.com/',
+-    'packages': packages,
+-    'package_data': package_data,
+-    'install_requires': install_requires,
+-    'python_requires': '>=3.7,<4.0.0',
+-}
+-
+-
+-setup(**setup_kwargs)
+```
+

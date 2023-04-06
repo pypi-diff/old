@@ -1,0 +1,293 @@
+--- tmp/mq-misc-0.0.1.tar.gz
++++ tmp/mq-misc-0.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist\mq-misc-0.0.1.tar", last modified: Fri Feb 26 11:47:40 2021, max compression
+│ +gzip compressed data, was "dist\mq-misc-0.0.2.tar", last modified: Mon Mar  1 15:10:28 2021, max compression
+│   --- mq-misc-0.0.1.tar
+├── +++ mq-misc-0.0.2.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxrwxrwx   0        0        0        0 2021-02-26 11:47:40.878229 mq-misc-0.0.1/
+│ │ --rw-rw-rw-   0        0        0     2058 2021-02-26 11:47:40.877230 mq-misc-0.0.1/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1171 2021-02-25 10:31:08.000000 mq-misc-0.0.1/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2021-02-26 11:47:40.803228 mq-misc-0.0.1/mq_misc/
+│ │ --rw-rw-rw-   0        0        0        0 2021-02-25 07:26:08.000000 mq-misc-0.0.1/mq_misc/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8788 2021-02-25 07:39:09.000000 mq-misc-0.0.1/mq_misc/amqp.py
+│ │ --rw-rw-rw-   0        0        0       69 2021-02-05 10:51:53.000000 mq-misc-0.0.1/mq_misc/errors.py
+│ │ -drwxrwxrwx   0        0        0        0 2021-02-26 11:47:40.875227 mq-misc-0.0.1/mq_misc/publish/
+│ │ --rw-rw-rw-   0        0        0        0 2021-02-25 07:39:04.000000 mq-misc-0.0.1/mq_misc/publish/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1597 2021-02-25 10:29:09.000000 mq-misc-0.0.1/mq_misc/publish/__main__.py
+│ │ -drwxrwxrwx   0        0        0        0 2021-02-26 11:47:40.861229 mq-misc-0.0.1/mq_misc.egg-info/
+│ │ --rw-rw-rw-   0        0        0     2058 2021-02-26 11:47:40.000000 mq-misc-0.0.1/mq_misc.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      282 2021-02-26 11:47:40.000000 mq-misc-0.0.1/mq_misc.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2021-02-26 11:47:40.000000 mq-misc-0.0.1/mq_misc.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0      119 2021-02-26 11:47:40.000000 mq-misc-0.0.1/mq_misc.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        8 2021-02-26 11:47:40.000000 mq-misc-0.0.1/mq_misc.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2021-02-26 11:47:40.878229 mq-misc-0.0.1/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1223 2021-02-25 08:27:47.000000 mq-misc-0.0.1/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.891760 mq-misc-0.0.2/
+│ │ +-rw-rw-rw-   0        0        0     2058 2021-03-01 15:10:28.890760 mq-misc-0.0.2/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1171 2021-02-25 10:31:08.000000 mq-misc-0.0.2/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.873765 mq-misc-0.0.2/mq_misc/
+│ │ +-rw-rw-rw-   0        0        0        0 2021-02-25 07:26:08.000000 mq-misc-0.0.2/mq_misc/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     9576 2021-03-01 14:56:31.000000 mq-misc-0.0.2/mq_misc/amqp.py
+│ │ +-rw-rw-rw-   0        0        0       69 2021-02-05 10:51:53.000000 mq-misc-0.0.2/mq_misc/errors.py
+│ │ +drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.888760 mq-misc-0.0.2/mq_misc/publish/
+│ │ +-rw-rw-rw-   0        0        0        0 2021-02-25 07:39:04.000000 mq-misc-0.0.2/mq_misc/publish/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1597 2021-02-25 10:29:09.000000 mq-misc-0.0.2/mq_misc/publish/__main__.py
+│ │ +drwxrwxrwx   0        0        0        0 2021-03-01 15:10:28.885760 mq-misc-0.0.2/mq_misc.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     2058 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      282 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0      119 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2021-03-01 15:10:28.000000 mq-misc-0.0.2/mq_misc.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2021-03-01 15:10:28.891760 mq-misc-0.0.2/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1223 2021-03-01 15:07:46.000000 mq-misc-0.0.2/setup.py
+│ │   --- mq-misc-0.0.1/PKG-INFO
+│ ├── +++ mq-misc-0.0.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mq-misc
+│ │ -Version: 0.0.1
+│ │ +Version: 0.0.2
+│ │  Summary: Utility package for working with rabbitmq
+│ │  Home-page: UNKNOWN
+│ │  Author: Anton Gorinenko
+│ │  Author-email: anton.gorinenko@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: # Р‘Р°Р·РѕРІРѕРµ API РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ RabbitMQ
+│ │          ``BaseConsumer`` - Р±Р°Р·РѕРІС‹Р№ РїРѕС‚СЂРµР±РёС‚РµР»СЊ РѕС‡РµСЂРµРґРё СЃРѕРѕР±С‰РµРЅРёР№
+│ │   --- mq-misc-0.0.1/README.md
+│ ├── +++ mq-misc-0.0.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- mq-misc-0.0.1/mq_misc/amqp.py
+│ ├── +++ mq-misc-0.0.2/mq_misc/amqp.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -2,17 +2,18 @@
+│ │  Базовое API для работы с RabbitMQ
+│ │  """
+│ │  import asyncio
+│ │  import json
+│ │  import logging
+│ │  import uuid
+│ │  from abc import ABC, abstractmethod
+│ │ -from typing import Any, Optional, Union
+│ │ +from typing import Any, Optional, Union, Callable, Dict, Awaitable
+│ │  
+│ │  import aio_pika
+│ │ +
+│ │  from mq_misc.errors import AdapterError
+│ │  
+│ │  
+│ │  def encode_message(message: Union[str, dict]) -> bytes:
+│ │      """
+│ │      Кодирование сообщения
+│ │      """
+│ │ @@ -35,15 +36,14 @@
+│ │      """
+│ │      Базовый адаптер очереди сообщений
+│ │      """
+│ │  
+│ │      def __init__(self, url: str,
+│ │                   queue_name: Optional[str] = None,
+│ │                   loop: Optional[asyncio.AbstractEventLoop] = asyncio.get_event_loop()):
+│ │ -
+│ │          if loop is None:
+│ │              loop = asyncio.get_event_loop()
+│ │  
+│ │          self.loop = loop
+│ │          self.url = url
+│ │          self.queue_name = queue_name
+│ │  
+│ │ @@ -125,21 +125,14 @@
+│ │      @abstractmethod
+│ │      async def process_message(self, body: dict, raw_message: aio_pika.IncomingMessage) -> None:
+│ │          """
+│ │          Обработка подготовленного и провалидированного Json сообщения
+│ │          """
+│ │          raise NotImplementedError("Not implemented process_message method")
+│ │  
+│ │ -    @abstractmethod
+│ │ -    async def validate_message(self, message_json: Any) -> bool:
+│ │ -        """
+│ │ -        Валидация сообщения на основе схемы
+│ │ -        """
+│ │ -        raise NotImplementedError("Not implemented validate_message method")
+│ │ -
+│ │      async def create_consume_connection(self, robust: Optional[bool] = True,
+│ │                                          prefetch_count: Optional[int] = 0,
+│ │                                          **kwargs) -> aio_pika.Connection:
+│ │          """
+│ │          Создание подключения для потребителя
+│ │          """
+│ │          await self.create_connection(robust=robust, prefetch_count=prefetch_count)
+│ │ @@ -160,33 +153,44 @@
+│ │          """
+│ │          Обработка полученного сообщения
+│ │          """
+│ │          async with message.process():
+│ │              try:
+│ │                  message_json = decode_message(message)
+│ │  
+│ │ -                validate_message_result = await self.validate_message(message_json)
+│ │ -                if not validate_message_result:
+│ │ -                    raise AdapterError("Message did not pass validation")
+│ │ -
+│ │                  await self.process_message(message_json, message)
+│ │              except Exception as ex:
+│ │                  await self._on_handle_delivery_error(ex, message)
+│ │  
+│ │      async def _on_handle_delivery_error(self, ex: Exception,
+│ │                                          raw_message: aio_pika.IncomingMessage) -> None:
+│ │          """
+│ │          Произошла ошибка при обработке полученного сообщения
+│ │          """
+│ │          self.logger.error(ex, exc_info=True)
+│ │  
+│ │ +    async def publish_response(self, incoming_message: aio_pika.IncomingMessage, message: Union[str, dict]):
+│ │ +        if self.channel is None:
+│ │ +            raise AdapterError("Connection is not established: channel is none")
+│ │ +
+│ │ +        message_body = encode_message(message)
+│ │ +
+│ │ +        await self.channel.default_exchange.publish(
+│ │ +            aio_pika.Message(
+│ │ +                message_body,
+│ │ +                content_type="application/json",
+│ │ +                correlation_id=incoming_message.correlation_id
+│ │ +            ),
+│ │ +            routing_key=incoming_message.reply_to,
+│ │ +        )
+│ │ +
+│ │  
+│ │  class Publisher(BaseAdapter):
+│ │      """
+│ │ -    Базовый издатель очереди сообщений
+│ │ +    Издатель очереди сообщений
+│ │      """
+│ │  
+│ │      async def publish(self, message: Union[str, dict], **kwargs) -> None:
+│ │          """
+│ │          Создание подключения для издателя
+│ │          """
+│ │          if self.channel is None:
+│ │ @@ -202,15 +206,16 @@
+│ │              ),
+│ │              routing_key=self.queue_name,
+│ │          )
+│ │  
+│ │  
+│ │  class ReplyToConsumer(BaseConsumer, ABC):
+│ │      """
+│ │ -    Reply-To потребитель
+│ │ +    Reply-To потребитель,
+│ │ +    который может пудликовать сообщение в произвольную очередь с указанием того, куда нужно вернуть ответ
+│ │      """
+│ │      futures = None
+│ │  
+│ │      @property
+│ │      def timeout(self) -> Optional[Union[int, float]]:
+│ │          """
+│ │          Таймаут ожидания выполнения future на получения ответа в секундах.
+│ │ @@ -218,43 +223,53 @@
+│ │          Если таймаут None, то ожидание длится до выполнения future.
+│ │          """
+│ │          return None
+│ │  
+│ │      async def declare_queue(self, **kwargs) -> aio_pika.Queue:
+│ │          """
+│ │          Определение очереди
+│ │ +        :param kwargs:
+│ │ +        :return:
+│ │          """
+│ │          if self.channel is None:
+│ │              raise AdapterError("Connection is not established: channel is none")
+│ │  
+│ │          self.futures = dict()
+│ │          self.queue = await self.channel.declare_queue(exclusive=True)
+│ │  
+│ │          return self.queue
+│ │  
+│ │ -    async def publish(self, message: dict):
+│ │ +    async def publish(self, message: dict, publisher: Publisher):
+│ │          """
+│ │ -        После начала чтения очереди вызываем publish сообщения
+│ │ +        Публикация сообщения в очередь
+│ │ +        :param message: сообщение
+│ │ +        :param publisher: издатель
+│ │ +        :return:
+│ │          """
+│ │          correlation_id = str(uuid.uuid4())
+│ │  
+│ │          future = self.loop.create_future()
+│ │  
+│ │          self.futures[correlation_id] = future, message
+│ │  
+│ │ -        await self._publish(message, correlation_id)
+│ │ +        await self._publish(message, correlation_id, publisher)
+│ │  
+│ │          return await asyncio.wait_for(future, timeout=self.timeout)
+│ │  
+│ │ -    @abstractmethod
+│ │ -    async def _publish(self, message: dict, correlation_id: str) -> Any:
+│ │ -        """
+│ │ -        После начала чтения очереди вызываем publish сообщения
+│ │ +    async def _publish(self, message: dict, correlation_id: str, publisher: Publisher) -> None:
+│ │          """
+│ │ -        raise NotImplementedError("Not implemented after_consume method")
+│ │ +        Публикация сообщения в произвольную очередь с указанием reply_to очереди для ответа
+│ │ +        :param message: сообщение
+│ │ +        :param correlation_id: идентификатор сообщения
+│ │ +        :param publisher: издатель
+│ │ +        :return:
+│ │ +        """
+│ │ +        await publisher.publish(message,
+│ │ +                                correlation_id=correlation_id,
+│ │ +                                reply_to=self.queue.name)
+│ │  
+│ │      async def _handle_delivery(self, message: aio_pika.IncomingMessage) -> None:
+│ │          correlation_id = message.correlation_id
+│ │          if correlation_id not in self.futures:
+│ │              raise AdapterError(f"Correlation id '{correlation_id}' is not trusted")
+│ │  
+│ │          await super()._handle_delivery(message)
+│ │   --- mq-misc-0.0.1/mq_misc/publish/__main__.py
+│ ├── +++ mq-misc-0.0.2/mq_misc/publish/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- mq-misc-0.0.1/mq_misc.egg-info/PKG-INFO
+│ ├── +++ mq-misc-0.0.2/mq_misc.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mq-misc
+│ │ -Version: 0.0.1
+│ │ +Version: 0.0.2
+│ │  Summary: Utility package for working with rabbitmq
+│ │  Home-page: UNKNOWN
+│ │  Author: Anton Gorinenko
+│ │  Author-email: anton.gorinenko@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: # Р‘Р°Р·РѕРІРѕРµ API РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ RabbitMQ
+│ │          ``BaseConsumer`` - Р±Р°Р·РѕРІС‹Р№ РїРѕС‚СЂРµР±РёС‚РµР»СЊ РѕС‡РµСЂРµРґРё СЃРѕРѕР±С‰РµРЅРёР№
+│ │   --- mq-misc-0.0.1/setup.py
+│ ├── +++ mq-misc-0.0.2/setup.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -7,15 +7,15 @@
+│ │  python -m twine upload dist/*
+│ │  """
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="mq-misc",
+│ │ -    version="0.0.1",
+│ │ +    version="0.0.2",
+│ │      author="Anton Gorinenko",
+│ │      author_email="anton.gorinenko@gmail.com",
+│ │      description="Utility package for working with rabbitmq",
+│ │      long_description=long_description,
+│ │      keywords='python, asyncio, utils, mq, aio_pika, rabbit mq, rabbit',
+│ │      long_description_content_type="text/markdown",
+│ │      packages=setuptools.find_packages(exclude=['tests']),

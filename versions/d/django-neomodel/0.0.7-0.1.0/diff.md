@@ -1,0 +1,1509 @@
+# Comparing `tmp/django_neomodel-0.0.7.tar.gz` & `tmp/django_neomodel-0.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/django_neomodel-0.0.7.tar", last modified: Tue Jul  6 13:19:57 2021, max compression
++gzip compressed data, was "django_neomodel-0.1.0.tar", last modified: Thu Apr  6 12:20:54 2023, max compression
+```
+
+## Comparing `django_neomodel-0.0.7.tar` & `django_neomodel-0.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,42 +1,59 @@
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/
+--rw-r--r--   0 cristinae   (501) staff       (20)       92 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/AUTHORS.txt
+--rw-r--r--   0 cristinae   (501) staff       (20)      910 2021-07-06 13:08:43.000000 django_neomodel-0.0.7/Changelog
+--rw-r--r--   0 cristinae   (501) staff       (20)     1099 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/LICENSE
+--rw-r--r--   0 cristinae   (501) staff       (20)       73 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/MANIFEST.in
+--rw-r--r--   0 cristinae   (501) staff       (20)     9169 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/PKG-INFO
+--rw-r--r--   0 cristinae   (501) staff       (20)     6702 2021-06-24 23:05:23.000000 django_neomodel-0.0.7/README.rst
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel/
+--rw-r--r--   0 cristinae   (501) staff       (20)     8518 2021-06-24 23:05:23.000000 django_neomodel-0.0.7/django_neomodel/__init__.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      110 2021-06-24 23:05:23.000000 django_neomodel-0.0.7/django_neomodel/admin.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      624 2021-01-26 18:29:08.000000 django_neomodel-0.0.7/django_neomodel/apps.py
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel/management/
+--rw-r--r--   0 cristinae   (501) staff       (20)        0 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/django_neomodel/management/__init__.py
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel/management/commands/
+--rw-r--r--   0 cristinae   (501) staff       (20)        0 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/django_neomodel/management/commands/__init__.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      341 2021-01-20 21:31:11.000000 django_neomodel-0.0.7/django_neomodel/management/commands/clear_neo4j.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      342 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/django_neomodel/management/commands/install_labels.py
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel.egg-info/
+--rw-r--r--   0 cristinae   (501) staff       (20)     9169 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel.egg-info/PKG-INFO
+--rw-r--r--   0 cristinae   (501) staff       (20)      949 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel.egg-info/SOURCES.txt
+--rw-r--r--   0 cristinae   (501) staff       (20)        1 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel.egg-info/dependency_links.txt
+--rw-r--r--   0 cristinae   (501) staff       (20)       41 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel.egg-info/requires.txt
+--rw-r--r--   0 cristinae   (501) staff       (20)       22 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/django_neomodel.egg-info/top_level.txt
+--rw-r--r--   0 cristinae   (501) staff       (20)        1 2020-11-19 18:40:29.000000 django_neomodel-0.0.7/django_neomodel.egg-info/zip-safe
+--rw-r--r--   0 cristinae   (501) staff       (20)       38 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/setup.cfg
+--rw-r--r--   0 cristinae   (501) staff       (20)     1175 2021-07-06 13:08:58.000000 django_neomodel-0.0.7/setup.py
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/tests/
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/tests/someapp/
+--rw-r--r--   0 cristinae   (501) staff       (20)        0 2020-08-26 15:34:23.000000 django_neomodel-0.0.7/tests/someapp/__init__.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      503 2021-06-25 00:04:58.000000 django_neomodel-0.0.7/tests/someapp/admin.py
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/tests/someapp/migrations/
+--rw-r--r--   0 cristinae   (501) staff       (20)      484 2021-01-20 21:31:11.000000 django_neomodel-0.0.7/tests/someapp/migrations/0001_initial.py
+--rw-r--r--   0 cristinae   (501) staff       (20)        0 2021-01-20 21:31:11.000000 django_neomodel-0.0.7/tests/someapp/migrations/__init__.py
+--rw-r--r--   0 cristinae   (501) staff       (20)     1023 2021-06-25 00:04:58.000000 django_neomodel-0.0.7/tests/someapp/models.py
+-drwxr-xr-x   0 cristinae   (501) staff       (20)        0 2021-07-06 13:19:57.000000 django_neomodel-0.0.7/tests/someapp/tests/
+--rw-r--r--   0 cristinae   (501) staff       (20)        0 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/tests/__init__.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      881 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/tests/test_atomicity.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      590 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/tests/test_commands.py
+--rw-r--r--   0 cristinae   (501) staff       (20)     2793 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/tests/test_model_form.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      292 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/tests/test_sanity.py
+--rw-r--r--   0 cristinae   (501) staff       (20)     1499 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/tests/test_signals.py
+--rw-r--r--   0 cristinae   (501) staff       (20)      192 2021-06-25 00:09:29.000000 django_neomodel-0.0.7/tests/someapp/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.508027 django_neomodel-0.1.0/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.500027 django_neomodel-0.1.0/.github/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)     2448 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/.github/workflows/codeql-analysis.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1214 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/.github/workflows/integration-tests.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1084 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/.github/workflows/python-publish.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      161 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/.gitignore
++-rw-r--r--   0 runner    (1001) docker     (123)       92 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/AUTHORS.txt
++-rw-r--r--   0 runner    (1001) docker     (123)     1234 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/Changelog
++-rw-r--r--   0 runner    (1001) docker     (123)     1099 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     7934 2023-04-06 12:20:54.508027 django_neomodel-0.1.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     7012 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/README.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/TODO
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/django_neomodel/
++-rw-r--r--   0 runner    (1001) docker     (123)     8739 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      110 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/admin.py
++-rw-r--r--   0 runner    (1001) docker     (123)      624 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/django_neomodel/management/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/management/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/django_neomodel/management/commands/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/management/commands/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      341 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/management/commands/clear_neo4j.py
++-rw-r--r--   0 runner    (1001) docker     (123)      342 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/django_neomodel/management/commands/install_labels.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/django_neomodel.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     7934 2023-04-06 12:20:54.000000 django_neomodel-0.1.0/django_neomodel.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1230 2023-04-06 12:20:54.000000 django_neomodel-0.1.0/django_neomodel.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 12:20:54.000000 django_neomodel-0.1.0/django_neomodel.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 12:20:54.000000 django_neomodel-0.1.0/django_neomodel.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-06 12:20:54.000000 django_neomodel-0.1.0/django_neomodel.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)     1370 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/scripts/
++-rw-r--r--   0 runner    (1001) docker     (123)      122 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/scripts/docker-neo4j.sh
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 12:20:54.508027 django_neomodel-0.1.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)   143360 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/test.db
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.504027 django_neomodel-0.1.0/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/.env
++-rw-r--r--   0 runner    (1001) docker     (123)      153 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/Dockerfile
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      971 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/docker-compose.yml
++-rwxr-xr-x   0 runner    (1001) docker     (123)      512 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/docker-entrypoint.sh
++-rwxr-xr-x   0 runner    (1001) docker     (123)      167 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/manage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1728 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/settings.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.508027 django_neomodel-0.1.0/tests/someapp/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      503 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/admin.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.508027 django_neomodel-0.1.0/tests/someapp/migrations/
++-rw-r--r--   0 runner    (1001) docker     (123)      484 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/migrations/0001_initial.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/migrations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1023 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/models.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:54.508027 django_neomodel-0.1.0/tests/someapp/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      881 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/tests/test_atomicity.py
++-rw-r--r--   0 runner    (1001) docker     (123)      595 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/tests/test_commands.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2793 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/tests/test_model_form.py
++-rw-r--r--   0 runner    (1001) docker     (123)      292 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/tests/test_sanity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1499 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/tests/test_signals.py
++-rw-r--r--   0 runner    (1001) docker     (123)      192 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/someapp/views.py
++-rw-r--r--   0 runner    (1001) docker     (123)      259 2023-04-06 12:20:41.000000 django_neomodel-0.1.0/tests/urls.py
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `django_neomodel-0.0.7/LICENSE` & `django_neomodel-0.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `django_neomodel-0.0.7/PKG-INFO` & `django_neomodel-0.1.0/PKG-INFO`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,228 +1,243 @@
+-Metadata-Version: 1.1
++Metadata-Version: 2.1
+ Name: django_neomodel
+-Version: 0.0.7
++Version: 0.1.0
+ Summary: Use Neo4j with Django!
+-Home-page: http://github.com/robinedwards/django-neomodel
+-Author: Robin Edwards
+-Author-email: robin.ge@gmail.com
++Author-email: Robin Edwards <robin.ge@gmail.com>
++Maintainer: Cristina Escalante
++Maintainer-email: Athanasios Anastasiou <athanastasiou@gmail.com>, Marius Conjeaud <marius.conjeaud@outlook.com>
+ License: MIT
+-Description: Django Neomodel (beta!)
+-        =======================
+-        
+-        .. image:: https://raw.githubusercontent.com/robinedwards/neomodel/master/doc/source/_static/neomodel-300.png
+-           :alt: neomodel
+-        
+-        This module allows you to use the neo4j_ graph database with Django using neomodel_
+-        
+-        .. _neo4j: https://www.neo4j.org
+-        .. _neomodel: http://neomodel.readthedocs.org
+-        
+-        .. image:: https://secure.travis-ci.org/neo4j-contrib/django-neomodel.png
+-            :target: https://secure.travis-ci.org/neo4j-contrib/django-neomodel/
+-        
+-        Getting started
+-        ===============
+-        
+-        Install the module::
+-        
+-            $ pip install django_neomodel
+-        
+-        Add the following settings to your `settings.py`::
+-        
+-            NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:test@localhost:7687')
+-        
+-            # Make sure django_neomodel comes before your own apps
+-            INSTALLED_APPS = (
+-                # django.contrib.auth etc
+-                'django_neomodel',
+-                'yourapp'
+-            )
+-        
+-        Write your first node definition in `yourapp/models.py`::
+-        
+-            from neomodel import StructuredNode, StringProperty, DateProperty
+-        
+-            class Book(StructuredNode):
+-                title = StringProperty(unique_index=True)
+-                published = DateProperty()
+-        
+-        Create any constraints or indexes for your labels. This needs to be done after you change your node definitions
+-        much like `manage.py migrate`::
+-        
+-            $ python manage.py install_labels
+-        
+-        Now in a view `yourapp/views.py`::
+-        
+-            from .models import Book
+-        
+-            def get_books(request):
+-                return render('yourapp/books.html', request, {'books': Book.nodes.all()})
+-        
+-        And you're ready to go. Don't forget to check the neomodel_ documentation.
+-        
+-        Model forms
+-        ===========
+-        
+-        Switch the base class from `StructuredNode` to `DjangoNode` and add a 'Meta' class::
+-        
+-            from datetime import datetime
+-            from django_neomodel import DjangoNode
+-            from neomodel import StructuredNode, StringProperty, DateTimeProperty, UniqueIdProperty
+-        
+-            class Book(DjangoNode):
+-                uid = UniqueIdProperty()
+-                title = StringProperty(unique_index=True)
+-                status = StringProperty(choices=(
+-                        ('Available', 'A'),
+-                        ('On loan', 'L'),
+-                        ('Damaged', 'D'),
+-                    ), default='Available')
+-                created = DateTimeProperty(default=datetime.utcnow)
+-        
+-                class Meta:
+-                    app_label = 'library'
+-        
+-        Create a model form class for your `DjangoNode`::
+-        
+-            class BookForm(ModelForm):
+-                class Meta:
+-                    model = Book
+-                    fields = ['title', 'status']
+-        
+-        This class may now be used just like any other Django form.
+-        
+-        Settings
+-        ========
+-        The following config options are available in django settings (default values shown).
+-        These are mapped to neomodel.config as django is started::
+-        
+-            NEOMODEL_NEO4J_BOLT_URL = 'bolt://neo4j:neo4j@localhost:7687'
+-            NEOMODEL_SIGNALS = True
+-            NEOMODEL_FORCE_TIMEZONE = False
+-            NEOMODEL_MAX_CONNECTION_POOL_SIZE = 50
+-        
+-        Signals
+-        =======
+-        Signals work with `DjangoNode` sub-classes::
+-        
+-            from django.db.models import signals
+-            from django_neomodel import DjangoNode
+-            from neomodel import StringProperty
+-        
+-            class Book(DjangoNode):
+-              title = StringProperty(unique_index=True)
+-        
+-            def your_signal_func(sender, instance, signal, created):
+-                pass
+-        
+-            signals.post_save.connect(your_signal_func, sender=Book)
+-        
+-        The following are supported: `pre_save`, `post_save`, `pre_delete`, `post_delete`.
+-        On freshly created nodes `created=True` in the `post_save` signal argument.
+-        
+-        Testing
+-        =======
+-        
+-        You can create a setup method which clears the database before executing each test::
+-        
+-            from neomodel import db, clear_neo4j_database
+-        
+-            class YourTestClass(DjangoTestCase):
+-                def setUp(self):
+-                    clear_neo4j_database(db)
+-        
+-                def test_something(self):
+-                    pass
+-        
+-        Management Commands
+-        ===================
+-        
+-        The following django management commands have been included.
+-        
+-        install_labels
+-        --------------
+-        Setup constraints and indexes on labels for your node definitions. This should be executed after any schema changes::
+-        
+-            $ python manage.py install_labels
+-            Setting up labels and constraints...
+-        
+-            Found tests.someapp.models.Book
+-            + Creating unique constraint for title on label Book for class tests.someapp.models.Book
+-            Finished 1 class(es).
+-        
+-        clear_neo4j
+-        -----------
+-        Delete all nodes in your database, warning there is no confirmation!
+-        
+-        Requirements
+-        ============
+-        
+-        - Python 3.6+
+-        - neo4j 3.5+
+-        
+-        .. image:: https://badges.gitter.im/Join%20Chat.svg
+-           :alt: Join the chat at https://gitter.im/robinedwards/neomodel
+-           :target: https://gitter.im/robinedwards/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+-        
+-        Docker Example
+-        ===================
+-        
+-        
+-        Using Docker Compose.
+-        
+-        Commands to setup Docker Container docker-entrypoint.sh::
+-        
+-            # Go to tests
+-            $ cd tests/
+-            # Docker Command (Make sure Docker is running and up to date)
+-            $ docker-compose up
+-            # login in admin with username=admin password=1234
+-        
+-        Go to http://localhost:7474/browser/
+-        
+-        Go to http://localhost:8000/admin/
+-        
+-        
+-        
+-        To Contribute
+-        ===================
+-        
+-        Setup neo4j Desktop with a local database with password 'foobar' and version 4.1.2 (current version when this was written).
+-        
+-        Commands to run tests::
+-        
+-            # create local venv and install dependencies.
+-            $ python3 -m venv venv; source venv/bin/activate; python setup.py develop; export DJANGO_SETTINGS_MODULE=tests.settings;
+-            # Go to tests
+-            $ cd tests/
+-            $ ./manage.py install_labels
+-            $ ./manage.py migrate
+-            $ pytest
+-        
+-            # example output:
+-        
+-            platform darwin -- Python 3.9.0, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
+-            pick 0900469 Neo4J-update-t-4.1
+-            collected 16 items
+-        
+-            someapp/tests/test_atomicity.py .                                                                                                                                                                                                                      [  6%]
+-            someapp/tests/test_commands.py ..                                                                                                                                                                                                                      [ 18%]
+-            someapp/tests/test_model_form.py ...........                                                                                                                                                                                                           [ 87%]
+-            someapp/tests/test_sanity.py .                                                                                                                                                                                                                         [ 93%]
+-            someapp/tests/test_signals.py .
+-            16 passed, 11 warnings in 1.62s
+-        
+-        
+-Keywords: neo4j django plugin neomodel
+-Platform: UNKNOWN
++Project-URL: repository, http://github.com/robinedwards/django-neomodel
++Keywords: graph,neo4j,django,plugin,neomodel
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+-Classifier: Programming Language :: Python :: 3.6
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3
+ Classifier: Topic :: Database
++Requires-Python: >=3.7
++Description-Content-Type: text/x-rst
++Provides-Extra: dev
++License-File: LICENSE
++License-File: AUTHORS.txt
++
++Django Neomodel (beta!)
++=======================
++
++.. image:: https://raw.githubusercontent.com/robinedwards/neomodel/master/doc/source/_static/neomodel-300.png
++   :alt: neomodel
++
++This module allows you to use the neo4j_ graph database with Django using neomodel_
++
++.. _neo4j: https://www.neo4j.org
++.. _neomodel: http://neomodel.readthedocs.org
++
++Warnings
++=======================
++
++* Admin functionality is very experimental. `Please see todos / issues here <https://github.com/neo4j-contrib/django-neomodel/projects/1>`_
++
++Live Examples (add yours here)
++===============================
++
++* `ResoTrack <https://resotrack.herokuapp.com/>`_
++
++Getting started
++===============
++
++Install the module::
++
++    $ pip install django_neomodel
++
++Add the following settings to your `settings.py`::
++
++    NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:foobarbaz@localhost:7687')
++
++    # Make sure django_neomodel comes before your own apps
++    INSTALLED_APPS = (
++        # django.contrib.auth etc
++        'django_neomodel',
++        'yourapp'
++    )
++
++Write your first node definition in `yourapp/models.py`::
++
++    from neomodel import StructuredNode, StringProperty, DateProperty
++
++    class Book(StructuredNode):
++        title = StringProperty(unique_index=True)
++        published = DateProperty()
++
++Create any constraints or indexes for your labels. This needs to be done after you change your node definitions
++much like `manage.py migrate`::
++
++    $ python manage.py install_labels
++
++Now in a view `yourapp/views.py`::
++
++    from .models import Book
++
++    def get_books(request):
++        return render('yourapp/books.html', request, {'books': Book.nodes.all()})
++
++In your `yourapp/admin.py`::
++
++    from django_neomodel import admin as neo_admin
++    from .models import Book
++
++    class BookAdmin(dj_admin.ModelAdmin):
++        list_display = ("title", "created")
++    neo_admin.register(Book, BookAdmin)
++
++And you're ready to go. Don't forget to check the neomodel_ documentation.
++
++Model forms
++===========
++
++Switch the base class from `StructuredNode` to `DjangoNode` and add a 'Meta' class::
++
++    from datetime import datetime
++    from django_neomodel import DjangoNode
++    from neomodel import StructuredNode, StringProperty, DateTimeProperty, UniqueIdProperty
++
++    class Book(DjangoNode):
++        uid = UniqueIdProperty()
++        title = StringProperty(unique_index=True)
++        status = StringProperty(choices=(
++                ('Available', 'A'),
++                ('On loan', 'L'),
++                ('Damaged', 'D'),
++            ), default='Available')
++        created = DateTimeProperty(default=datetime.utcnow)
++
++        class Meta:
++            app_label = 'library'
++
++Create a model form class for your `DjangoNode`::
++
++    class BookForm(ModelForm):
++        class Meta:
++            model = Book
++            fields = ['title', 'status']
++
++This class may now be used just like any other Django form.
++
++Settings
++========
++The following config options are available in django settings (default values shown).
++These are mapped to neomodel.config as django is started::
++
++    NEOMODEL_NEO4J_BOLT_URL = 'bolt://neo4j:neo4j@localhost:7687'
++    NEOMODEL_SIGNALS = True
++    NEOMODEL_FORCE_TIMEZONE = False
++    NEOMODEL_MAX_CONNECTION_POOL_SIZE = 50
++
++Signals
++=======
++Signals work with `DjangoNode` sub-classes::
++
++    from django.db.models import signals
++    from django_neomodel import DjangoNode
++    from neomodel import StringProperty
++
++    class Book(DjangoNode):
++      title = StringProperty(unique_index=True)
++
++    def your_signal_func(sender, instance, signal, created):
++        pass
++
++    signals.post_save.connect(your_signal_func, sender=Book)
++
++The following are supported: `pre_save`, `post_save`, `pre_delete`, `post_delete`.
++On freshly created nodes `created=True` in the `post_save` signal argument.
++
++Testing
++=======
++
++You can create a setup method which clears the database before executing each test::
++
++    from neomodel import db, clear_neo4j_database
++
++    class YourTestClass(DjangoTestCase):
++        def setUp(self):
++            clear_neo4j_database(db)
++
++        def test_something(self):
++            pass
++
++Management Commands
++===================
++
++The following django management commands have been included.
++
++install_labels
++--------------
++Setup constraints and indexes on labels for your node definitions. This should be executed after any schema changes::
++
++    $ python manage.py install_labels
++    Setting up labels and constraints...
++
++    Found tests.someapp.models.Book
++    + Creating unique constraint for title on label Book for class tests.someapp.models.Book
++    Finished 1 class(es).
++
++clear_neo4j
++-----------
++Delete all nodes in your database, warning there is no confirmation!
++
++Requirements
++============
++
++- Python 3.7+
++- neo4j 5.x, 4.4 (LTS)
++
++.. image:: https://badges.gitter.im/Join%20Chat.svg
++   :alt: Join the chat at https://gitter.im/robinedwards/neomodel
++   :target: https://gitter.im/robinedwards/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
++
++Docker Example
++===================
++
++
++Using Docker Compose.
++
++Commands to setup Docker Container docker-entrypoint.sh::
++
++    # Go to tests
++    $ cd tests/
++    # Docker Command (Make sure Docker is running and up to date)
++    $ docker-compose up
++    # login in admin with username=admin password=1234
++
++Go to http://localhost:7474/browser/
++
++Go to http://localhost:8000/admin/
++
++
++Running Tests
++===================
++
++Setup Neo4j Desktop with a local database with password 'foobarbaz' and version 5.x or 4.4.x (Neo4j LTS version).
++
++Commands to run tests::
++
++    # create local venv and install dependencies.
++    $ pip install -e '.[dev]'; export DJANGO_SETTINGS_MODULE=tests.settings;
++    $ tests/manage.py install_labels
++    $ tests/manage.py migrate
++    $ pytest
++
++    # example output:
++
++    platform darwin -- Python 3.9.0, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
++    pick 0900469 Neo4J-update-t-4.1
++    collected 16 items
++
++    someapp/tests/test_atomicity.py .                                                                                                                                                                                                                      [  6%]
++    someapp/tests/test_commands.py ..                                                                                                                                                                                                                      [ 18%]
++    someapp/tests/test_model_form.py ...........                                                                                                                                                                                                           [ 87%]
++    someapp/tests/test_sanity.py .                                                                                                                                                                                                                         [ 93%]
++    someapp/tests/test_signals.py .
++    16 passed, 11 warnings in 1.62s
++
+```
+
+### Comparing `django_neomodel-0.0.7/README.rst` & `django_neomodel-0.1.0/README.rst`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -5,27 +5,34 @@
+    :alt: neomodel
+ 
+ This module allows you to use the neo4j_ graph database with Django using neomodel_
+ 
+ .. _neo4j: https://www.neo4j.org
+ .. _neomodel: http://neomodel.readthedocs.org
+ 
+-.. image:: https://secure.travis-ci.org/neo4j-contrib/django-neomodel.png
+-    :target: https://secure.travis-ci.org/neo4j-contrib/django-neomodel/
++Warnings
++=======================
++
++* Admin functionality is very experimental. `Please see todos / issues here <https://github.com/neo4j-contrib/django-neomodel/projects/1>`_
++
++Live Examples (add yours here)
++===============================
++
++* `ResoTrack <https://resotrack.herokuapp.com/>`_
+ 
+ Getting started
+ ===============
+ 
+ Install the module::
+ 
+     $ pip install django_neomodel
+ 
+ Add the following settings to your `settings.py`::
+ 
+-    NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:test@localhost:7687')
++    NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:foobarbaz@localhost:7687')
+ 
+     # Make sure django_neomodel comes before your own apps
+     INSTALLED_APPS = (
+         # django.contrib.auth etc
+         'django_neomodel',
+         'yourapp'
+     )
+@@ -46,14 +53,23 @@
+ Now in a view `yourapp/views.py`::
+ 
+     from .models import Book
+ 
+     def get_books(request):
+         return render('yourapp/books.html', request, {'books': Book.nodes.all()})
+ 
++In your `yourapp/admin.py`::
++
++    from django_neomodel import admin as neo_admin
++    from .models import Book
++
++    class BookAdmin(dj_admin.ModelAdmin):
++        list_display = ("title", "created")
++    neo_admin.register(Book, BookAdmin)
++
+ And you're ready to go. Don't forget to check the neomodel_ documentation.
+ 
+ Model forms
+ ===========
+ 
+ Switch the base class from `StructuredNode` to `DjangoNode` and add a 'Meta' class::
+ 
+@@ -145,16 +161,16 @@
+ clear_neo4j
+ -----------
+ Delete all nodes in your database, warning there is no confirmation!
+ 
+ Requirements
+ ============
+ 
+-- Python 3.6+
+-- neo4j 3.5+
++- Python 3.7+
++- neo4j 5.x, 4.4 (LTS)
+ 
+ .. image:: https://badges.gitter.im/Join%20Chat.svg
+    :alt: Join the chat at https://gitter.im/robinedwards/neomodel
+    :target: https://gitter.im/robinedwards/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+ 
+ Docker Example
+ ===================
+@@ -171,28 +187,25 @@
+     # login in admin with username=admin password=1234
+ 
+ Go to http://localhost:7474/browser/
+ 
+ Go to http://localhost:8000/admin/
+ 
+ 
+-
+-To Contribute
++Running Tests
+ ===================
+ 
+-Setup neo4j Desktop with a local database with password 'foobar' and version 4.1.2 (current version when this was written).
++Setup Neo4j Desktop with a local database with password 'foobarbaz' and version 5.x or 4.4.x (Neo4j LTS version).
+ 
+ Commands to run tests::
+ 
+     # create local venv and install dependencies.
+-    $ python3 -m venv venv; source venv/bin/activate; python setup.py develop; export DJANGO_SETTINGS_MODULE=tests.settings;
+-    # Go to tests
+-    $ cd tests/
+-    $ ./manage.py install_labels
+-    $ ./manage.py migrate
++    $ pip install -e '.[dev]'; export DJANGO_SETTINGS_MODULE=tests.settings;
++    $ tests/manage.py install_labels
++    $ tests/manage.py migrate
+     $ pytest
+ 
+     # example output:
+ 
+     platform darwin -- Python 3.9.0, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
+     pick 0900469 Neo4J-update-t-4.1
+     collected 16 items
+```
+
+### Comparing `django_neomodel-0.0.7/django_neomodel/__init__.py` & `django_neomodel-0.1.0/django_neomodel/__init__.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -8,39 +8,41 @@
+ from django.core.exceptions import ValidationError
+ 
+ from neomodel import RequiredProperty, DeflateError, StructuredNode, UniqueIdProperty
+ from neomodel.core import NodeMeta
+ from neomodel.match import NodeSet
+ 
+ 
+-__author__ = 'Robin Edwards'
+-__email__ = 'robin.ge@gmail.com'
+-__license__ = 'MIT'
+-__package__ = 'django_neomodel'
+-__version__ = '0.0.6'
++__author__ = "Robin Edwards"
++__email__ = "robin.ge@gmail.com"
++__license__ = "MIT"
++__package__ = "django_neomodel"
++__version__ = "0.1.0"
+ 
+ 
+-default_app_config = 'django_neomodel.apps.NeomodelConfig'
++default_app_config = "django_neomodel.apps.NeomodelConfig"
+ 
+ 
+ def classproperty(f):
+     class cpf(object):
+         def __init__(self, getter):
+             self.getter = getter
+ 
+         def __get__(self, obj, type=None):
+             return self.getter(type)
++
+     return cpf(f)
+ 
+ 
+ @total_ordering
+ class DjangoField(object):
+     """
+     Fake Django model field object which wraps a neomodel Property
+     """
++
+     is_relation = False
+     concrete = True
+     editable = True
+     creation_counter = 0
+     unique = False
+     primary_key = False
+     auto_created = False
+@@ -48,31 +50,31 @@
+     def __init__(self, prop, name):
+         self.prop = prop
+ 
+         self.name = name
+         self.remote_field = name
+         self.attname = name
+         self.verbose_name = name
+-        self.help_text = getattr(prop, 'help_text', '')
++        self.help_text = getattr(prop, "help_text", "")
+ 
+         if isinstance(prop, UniqueIdProperty):
+             # this seems that can be implemented in neomodel
+             # django-neomodel does have the needed code already but neomodel does not support
+             prop.primary_key = True
+ 
+-        self.primary_key = getattr(prop, 'primary_key', False)
++        self.primary_key = getattr(prop, "primary_key", False)
+         self.label = prop.label if prop.label else name
+ 
+-        form_cls = getattr(prop, 'form_field_class', 'Field')  # get field string
++        form_cls = getattr(prop, "form_field_class", "Field")  # get field string
+         self.form_class = getattr(form_fields, form_cls, form_fields.CharField)
+ 
+         self._has_default = prop.has_default
+         self.required = prop.required
+         self.blank = not self.required
+-        self.choices = getattr(prop, 'choices', None)
++        self.choices = getattr(prop, "choices", None)
+ 
+         self.creation_counter = DjangoField.creation_counter
+         DjangoField.creation_counter += 1
+ 
+     def __eq__(self, other):
+         # Needed for @total_ordering
+         if isinstance(other, DjangoField):
+@@ -95,35 +97,47 @@
+         return getattr(instance, self.name)
+ 
+     def formfield(self, **kwargs):
+         """
+         Returns a django.forms.Field instance for this database Property.
+ 
+         """
+-        defaults = {'required': self.required,
+-                    'label': self.label or self.name,
+-                    'help_text': self.help_text}
++        defaults = {
++            "required": self.required,
++            "label": self.label or self.name,
++            "help_text": self.help_text,
++        }
+ 
+         if self.has_default():
+-                defaults['initial'] = self.prop.default_value()
++            defaults["initial"] = self.prop.default_value()
+ 
+         if self.choices:
+             # Fields with choices get special treatment.
+-            include_blank = (not self.required or
+-                             not (self.has_default() or 'initial' in kwargs))
+-            defaults['choices'] = self.get_choices(include_blank=include_blank)
+-            defaults['coerce'] = self.to_python
++            include_blank = not self.required or not (
++                self.has_default() or "initial" in kwargs
++            )
++            defaults["choices"] = self.get_choices(include_blank=include_blank)
++            defaults["coerce"] = self.to_python
+ 
+             # Many of the subclass-specific formfield arguments (min_value,
+             # max_value) don't apply for choice fields, so be sure to only pass
+             # the values that TypedChoiceField will understand.
+             for k in list(kwargs):
+-                if k not in ('coerce', 'empty_value', 'choices', 'required',
+-                             'widget', 'label', 'initial', 'help_text',
+-                             'error_messages', 'show_hidden_initial'):
++                if k not in (
++                    "coerce",
++                    "empty_value",
++                    "choices",
++                    "required",
++                    "widget",
++                    "label",
++                    "initial",
++                    "help_text",
++                    "error_messages",
++                    "show_hidden_initial",
++                ):
+                     del kwargs[k]
+ 
+         defaults.update(kwargs)
+ 
+         return self.form_class(**defaults)
+ 
+     def to_python(self, value):
+@@ -134,26 +148,25 @@
+         blank_choice = BLANK_CHOICE_DASH
+         choices = list(self.choices) if self.choices else []
+ 
+         if issubclass(type(self.choices), dict):
+             choices = list(enumerate(self.choices))
+ 
+         for choice, __ in choices:
+-            if choice in ('', None):
++            if choice in ("", None):
+                 blank_defined = True
+                 break
+ 
+-        first_choice = (blank_choice if include_blank and
+-                        not blank_defined else [])
++        first_choice = blank_choice if include_blank and not blank_defined else []
+         return first_choice + choices
+ 
+ 
+ class Query:
+     select_related = False
+-    order_by = ['pk']
++    order_by = ["pk"]
+ 
+ 
+ class NeoNodeSet(NodeSet):
+     query = Query()
+ 
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+@@ -183,22 +196,24 @@
+ 
+ 
+ class DjangoNode(StructuredNode, metaclass=MetaClass):
+     __abstract_node__ = True
+ 
+     @classproperty
+     def _meta(self):
+-        if hasattr(self.Meta, 'unique_together'):
+-            raise NotImplementedError('unique_together property not supported by neomodel')
++        if hasattr(self.Meta, "unique_together"):
++            raise NotImplementedError(
++                "unique_together property not supported by neomodel"
++            )
+ 
+         opts = Options(self.Meta, app_label=self.Meta.app_label)
+         opts.contribute_to_class(self, self.__name__)
+ 
+         for key, prop in self.__all_properties__:
+-            opts.add_field(DjangoField(prop, key), getattr(prop, 'private', False))
++            opts.add_field(DjangoField(prop, key), getattr(prop, "private", False))
+             if getattr(prop, "primary_key", False):
+                 self.pk = prop
+                 self.pk.auto_created = True
+ 
+         return opts
+ 
+     def full_clean(self, exclude, validate_unique=False):
+@@ -212,51 +227,55 @@
+ 
+         # validate against neomodel
+         try:
+             self.deflate(self.__properties__, self)
+         except DeflateError as e:
+             raise ValidationError({e.property_name: e.msg})
+         except RequiredProperty as e:
+-            raise ValidationError({e.property_name: 'is required'})
++            raise ValidationError({e.property_name: "is required"})
+ 
+     def validate_unique(self, exclude):
+         # get unique indexed properties
+         unique_props = []
+-        for k, p in self.__class__.defined_properties(aliases=False, rels=False).items():
++        for k, p in self.__class__.defined_properties(
++            aliases=False, rels=False
++        ).items():
+             if k not in exclude and p.unique_index:
+                 unique_props.append(k)
+         cls = self.__class__
+ 
+         props = self.__properties__
+ 
+         # see if any nodes already exist with each property
+         for key in unique_props:
+-            if key == 'pk' and getattr(self.__class__, key).auto_created:
++            if key == "pk" and getattr(self.__class__, key).auto_created:
+                 continue
+             val = getattr(self.__class__, key).deflate(props[key])
+             node = cls.nodes.get_or_none(**{key: val})
+ 
+             # if exists and not this node
+-            if node and node.id != getattr(self, 'id', None):
+-                raise ValidationError({key, 'already exists'})
++            if node and node.id != getattr(self, "id", None):
++                raise ValidationError({key, "already exists"})
+ 
+     def pre_save(self):
+-        if getattr(settings, 'NEOMODEL_SIGNALS', True):
+-            self._creating_node = getattr(self, 'id', None) is None
++        if getattr(settings, "NEOMODEL_SIGNALS", True):
++            self._creating_node = getattr(self, "id", None) is None
+             signals.pre_save.send(sender=self.__class__, instance=self)
+ 
+     def post_save(self):
+-        if getattr(settings, 'NEOMODEL_SIGNALS', True):
++        if getattr(settings, "NEOMODEL_SIGNALS", True):
+             created = self._creating_node
+-            delattr(self, '_creating_node')
+-            signals.post_save.send(sender=self.__class__, instance=self, created=created)
++            delattr(self, "_creating_node")
++            signals.post_save.send(
++                sender=self.__class__, instance=self, created=created
++            )
+ 
+     def pre_delete(self):
+-        if getattr(settings, 'NEOMODEL_SIGNALS', True):
++        if getattr(settings, "NEOMODEL_SIGNALS", True):
+             signals.pre_delete.send(sender=self.__class__, instance=self)
+ 
+     def post_delete(self):
+-        if getattr(settings, 'NEOMODEL_SIGNALS', True):
++        if getattr(settings, "NEOMODEL_SIGNALS", True):
+             signals.post_delete.send(sender=self.__class__, instance=self)
+ 
+     def serializable_value(self, attr):
+         return str(getattr(self, attr))
+```
+
+### Comparing `django_neomodel-0.0.7/django_neomodel/apps.py` & `django_neomodel-0.1.0/django_neomodel/apps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_neomodel-0.0.7/django_neomodel.egg-info/PKG-INFO` & `django_neomodel-0.1.0/django_neomodel.egg-info/PKG-INFO`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,228 +1,243 @@
+-Metadata-Version: 1.1
++Metadata-Version: 2.1
+ Name: django-neomodel
+-Version: 0.0.7
++Version: 0.1.0
+ Summary: Use Neo4j with Django!
+-Home-page: http://github.com/robinedwards/django-neomodel
+-Author: Robin Edwards
+-Author-email: robin.ge@gmail.com
++Author-email: Robin Edwards <robin.ge@gmail.com>
++Maintainer: Cristina Escalante
++Maintainer-email: Athanasios Anastasiou <athanastasiou@gmail.com>, Marius Conjeaud <marius.conjeaud@outlook.com>
+ License: MIT
+-Description: Django Neomodel (beta!)
+-        =======================
+-        
+-        .. image:: https://raw.githubusercontent.com/robinedwards/neomodel/master/doc/source/_static/neomodel-300.png
+-           :alt: neomodel
+-        
+-        This module allows you to use the neo4j_ graph database with Django using neomodel_
+-        
+-        .. _neo4j: https://www.neo4j.org
+-        .. _neomodel: http://neomodel.readthedocs.org
+-        
+-        .. image:: https://secure.travis-ci.org/neo4j-contrib/django-neomodel.png
+-            :target: https://secure.travis-ci.org/neo4j-contrib/django-neomodel/
+-        
+-        Getting started
+-        ===============
+-        
+-        Install the module::
+-        
+-            $ pip install django_neomodel
+-        
+-        Add the following settings to your `settings.py`::
+-        
+-            NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:test@localhost:7687')
+-        
+-            # Make sure django_neomodel comes before your own apps
+-            INSTALLED_APPS = (
+-                # django.contrib.auth etc
+-                'django_neomodel',
+-                'yourapp'
+-            )
+-        
+-        Write your first node definition in `yourapp/models.py`::
+-        
+-            from neomodel import StructuredNode, StringProperty, DateProperty
+-        
+-            class Book(StructuredNode):
+-                title = StringProperty(unique_index=True)
+-                published = DateProperty()
+-        
+-        Create any constraints or indexes for your labels. This needs to be done after you change your node definitions
+-        much like `manage.py migrate`::
+-        
+-            $ python manage.py install_labels
+-        
+-        Now in a view `yourapp/views.py`::
+-        
+-            from .models import Book
+-        
+-            def get_books(request):
+-                return render('yourapp/books.html', request, {'books': Book.nodes.all()})
+-        
+-        And you're ready to go. Don't forget to check the neomodel_ documentation.
+-        
+-        Model forms
+-        ===========
+-        
+-        Switch the base class from `StructuredNode` to `DjangoNode` and add a 'Meta' class::
+-        
+-            from datetime import datetime
+-            from django_neomodel import DjangoNode
+-            from neomodel import StructuredNode, StringProperty, DateTimeProperty, UniqueIdProperty
+-        
+-            class Book(DjangoNode):
+-                uid = UniqueIdProperty()
+-                title = StringProperty(unique_index=True)
+-                status = StringProperty(choices=(
+-                        ('Available', 'A'),
+-                        ('On loan', 'L'),
+-                        ('Damaged', 'D'),
+-                    ), default='Available')
+-                created = DateTimeProperty(default=datetime.utcnow)
+-        
+-                class Meta:
+-                    app_label = 'library'
+-        
+-        Create a model form class for your `DjangoNode`::
+-        
+-            class BookForm(ModelForm):
+-                class Meta:
+-                    model = Book
+-                    fields = ['title', 'status']
+-        
+-        This class may now be used just like any other Django form.
+-        
+-        Settings
+-        ========
+-        The following config options are available in django settings (default values shown).
+-        These are mapped to neomodel.config as django is started::
+-        
+-            NEOMODEL_NEO4J_BOLT_URL = 'bolt://neo4j:neo4j@localhost:7687'
+-            NEOMODEL_SIGNALS = True
+-            NEOMODEL_FORCE_TIMEZONE = False
+-            NEOMODEL_MAX_CONNECTION_POOL_SIZE = 50
+-        
+-        Signals
+-        =======
+-        Signals work with `DjangoNode` sub-classes::
+-        
+-            from django.db.models import signals
+-            from django_neomodel import DjangoNode
+-            from neomodel import StringProperty
+-        
+-            class Book(DjangoNode):
+-              title = StringProperty(unique_index=True)
+-        
+-            def your_signal_func(sender, instance, signal, created):
+-                pass
+-        
+-            signals.post_save.connect(your_signal_func, sender=Book)
+-        
+-        The following are supported: `pre_save`, `post_save`, `pre_delete`, `post_delete`.
+-        On freshly created nodes `created=True` in the `post_save` signal argument.
+-        
+-        Testing
+-        =======
+-        
+-        You can create a setup method which clears the database before executing each test::
+-        
+-            from neomodel import db, clear_neo4j_database
+-        
+-            class YourTestClass(DjangoTestCase):
+-                def setUp(self):
+-                    clear_neo4j_database(db)
+-        
+-                def test_something(self):
+-                    pass
+-        
+-        Management Commands
+-        ===================
+-        
+-        The following django management commands have been included.
+-        
+-        install_labels
+-        --------------
+-        Setup constraints and indexes on labels for your node definitions. This should be executed after any schema changes::
+-        
+-            $ python manage.py install_labels
+-            Setting up labels and constraints...
+-        
+-            Found tests.someapp.models.Book
+-            + Creating unique constraint for title on label Book for class tests.someapp.models.Book
+-            Finished 1 class(es).
+-        
+-        clear_neo4j
+-        -----------
+-        Delete all nodes in your database, warning there is no confirmation!
+-        
+-        Requirements
+-        ============
+-        
+-        - Python 3.6+
+-        - neo4j 3.5+
+-        
+-        .. image:: https://badges.gitter.im/Join%20Chat.svg
+-           :alt: Join the chat at https://gitter.im/robinedwards/neomodel
+-           :target: https://gitter.im/robinedwards/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+-        
+-        Docker Example
+-        ===================
+-        
+-        
+-        Using Docker Compose.
+-        
+-        Commands to setup Docker Container docker-entrypoint.sh::
+-        
+-            # Go to tests
+-            $ cd tests/
+-            # Docker Command (Make sure Docker is running and up to date)
+-            $ docker-compose up
+-            # login in admin with username=admin password=1234
+-        
+-        Go to http://localhost:7474/browser/
+-        
+-        Go to http://localhost:8000/admin/
+-        
+-        
+-        
+-        To Contribute
+-        ===================
+-        
+-        Setup neo4j Desktop with a local database with password 'foobar' and version 4.1.2 (current version when this was written).
+-        
+-        Commands to run tests::
+-        
+-            # create local venv and install dependencies.
+-            $ python3 -m venv venv; source venv/bin/activate; python setup.py develop; export DJANGO_SETTINGS_MODULE=tests.settings;
+-            # Go to tests
+-            $ cd tests/
+-            $ ./manage.py install_labels
+-            $ ./manage.py migrate
+-            $ pytest
+-        
+-            # example output:
+-        
+-            platform darwin -- Python 3.9.0, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
+-            pick 0900469 Neo4J-update-t-4.1
+-            collected 16 items
+-        
+-            someapp/tests/test_atomicity.py .                                                                                                                                                                                                                      [  6%]
+-            someapp/tests/test_commands.py ..                                                                                                                                                                                                                      [ 18%]
+-            someapp/tests/test_model_form.py ...........                                                                                                                                                                                                           [ 87%]
+-            someapp/tests/test_sanity.py .                                                                                                                                                                                                                         [ 93%]
+-            someapp/tests/test_signals.py .
+-            16 passed, 11 warnings in 1.62s
+-        
+-        
+-Keywords: neo4j django plugin neomodel
+-Platform: UNKNOWN
++Project-URL: repository, http://github.com/robinedwards/django-neomodel
++Keywords: graph,neo4j,django,plugin,neomodel
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: Operating System :: OS Independent
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+-Classifier: Programming Language :: Python :: 3.6
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3
+ Classifier: Topic :: Database
++Requires-Python: >=3.7
++Description-Content-Type: text/x-rst
++Provides-Extra: dev
++License-File: LICENSE
++License-File: AUTHORS.txt
++
++Django Neomodel (beta!)
++=======================
++
++.. image:: https://raw.githubusercontent.com/robinedwards/neomodel/master/doc/source/_static/neomodel-300.png
++   :alt: neomodel
++
++This module allows you to use the neo4j_ graph database with Django using neomodel_
++
++.. _neo4j: https://www.neo4j.org
++.. _neomodel: http://neomodel.readthedocs.org
++
++Warnings
++=======================
++
++* Admin functionality is very experimental. `Please see todos / issues here <https://github.com/neo4j-contrib/django-neomodel/projects/1>`_
++
++Live Examples (add yours here)
++===============================
++
++* `ResoTrack <https://resotrack.herokuapp.com/>`_
++
++Getting started
++===============
++
++Install the module::
++
++    $ pip install django_neomodel
++
++Add the following settings to your `settings.py`::
++
++    NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://neo4j:foobarbaz@localhost:7687')
++
++    # Make sure django_neomodel comes before your own apps
++    INSTALLED_APPS = (
++        # django.contrib.auth etc
++        'django_neomodel',
++        'yourapp'
++    )
++
++Write your first node definition in `yourapp/models.py`::
++
++    from neomodel import StructuredNode, StringProperty, DateProperty
++
++    class Book(StructuredNode):
++        title = StringProperty(unique_index=True)
++        published = DateProperty()
++
++Create any constraints or indexes for your labels. This needs to be done after you change your node definitions
++much like `manage.py migrate`::
++
++    $ python manage.py install_labels
++
++Now in a view `yourapp/views.py`::
++
++    from .models import Book
++
++    def get_books(request):
++        return render('yourapp/books.html', request, {'books': Book.nodes.all()})
++
++In your `yourapp/admin.py`::
++
++    from django_neomodel import admin as neo_admin
++    from .models import Book
++
++    class BookAdmin(dj_admin.ModelAdmin):
++        list_display = ("title", "created")
++    neo_admin.register(Book, BookAdmin)
++
++And you're ready to go. Don't forget to check the neomodel_ documentation.
++
++Model forms
++===========
++
++Switch the base class from `StructuredNode` to `DjangoNode` and add a 'Meta' class::
++
++    from datetime import datetime
++    from django_neomodel import DjangoNode
++    from neomodel import StructuredNode, StringProperty, DateTimeProperty, UniqueIdProperty
++
++    class Book(DjangoNode):
++        uid = UniqueIdProperty()
++        title = StringProperty(unique_index=True)
++        status = StringProperty(choices=(
++                ('Available', 'A'),
++                ('On loan', 'L'),
++                ('Damaged', 'D'),
++            ), default='Available')
++        created = DateTimeProperty(default=datetime.utcnow)
++
++        class Meta:
++            app_label = 'library'
++
++Create a model form class for your `DjangoNode`::
++
++    class BookForm(ModelForm):
++        class Meta:
++            model = Book
++            fields = ['title', 'status']
++
++This class may now be used just like any other Django form.
++
++Settings
++========
++The following config options are available in django settings (default values shown).
++These are mapped to neomodel.config as django is started::
++
++    NEOMODEL_NEO4J_BOLT_URL = 'bolt://neo4j:neo4j@localhost:7687'
++    NEOMODEL_SIGNALS = True
++    NEOMODEL_FORCE_TIMEZONE = False
++    NEOMODEL_MAX_CONNECTION_POOL_SIZE = 50
++
++Signals
++=======
++Signals work with `DjangoNode` sub-classes::
++
++    from django.db.models import signals
++    from django_neomodel import DjangoNode
++    from neomodel import StringProperty
++
++    class Book(DjangoNode):
++      title = StringProperty(unique_index=True)
++
++    def your_signal_func(sender, instance, signal, created):
++        pass
++
++    signals.post_save.connect(your_signal_func, sender=Book)
++
++The following are supported: `pre_save`, `post_save`, `pre_delete`, `post_delete`.
++On freshly created nodes `created=True` in the `post_save` signal argument.
++
++Testing
++=======
++
++You can create a setup method which clears the database before executing each test::
++
++    from neomodel import db, clear_neo4j_database
++
++    class YourTestClass(DjangoTestCase):
++        def setUp(self):
++            clear_neo4j_database(db)
++
++        def test_something(self):
++            pass
++
++Management Commands
++===================
++
++The following django management commands have been included.
++
++install_labels
++--------------
++Setup constraints and indexes on labels for your node definitions. This should be executed after any schema changes::
++
++    $ python manage.py install_labels
++    Setting up labels and constraints...
++
++    Found tests.someapp.models.Book
++    + Creating unique constraint for title on label Book for class tests.someapp.models.Book
++    Finished 1 class(es).
++
++clear_neo4j
++-----------
++Delete all nodes in your database, warning there is no confirmation!
++
++Requirements
++============
++
++- Python 3.7+
++- neo4j 5.x, 4.4 (LTS)
++
++.. image:: https://badges.gitter.im/Join%20Chat.svg
++   :alt: Join the chat at https://gitter.im/robinedwards/neomodel
++   :target: https://gitter.im/robinedwards/neomodel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
++
++Docker Example
++===================
++
++
++Using Docker Compose.
++
++Commands to setup Docker Container docker-entrypoint.sh::
++
++    # Go to tests
++    $ cd tests/
++    # Docker Command (Make sure Docker is running and up to date)
++    $ docker-compose up
++    # login in admin with username=admin password=1234
++
++Go to http://localhost:7474/browser/
++
++Go to http://localhost:8000/admin/
++
++
++Running Tests
++===================
++
++Setup Neo4j Desktop with a local database with password 'foobarbaz' and version 5.x or 4.4.x (Neo4j LTS version).
++
++Commands to run tests::
++
++    # create local venv and install dependencies.
++    $ pip install -e '.[dev]'; export DJANGO_SETTINGS_MODULE=tests.settings;
++    $ tests/manage.py install_labels
++    $ tests/manage.py migrate
++    $ pytest
++
++    # example output:
++
++    platform darwin -- Python 3.9.0, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
++    pick 0900469 Neo4J-update-t-4.1
++    collected 16 items
++
++    someapp/tests/test_atomicity.py .                                                                                                                                                                                                                      [  6%]
++    someapp/tests/test_commands.py ..                                                                                                                                                                                                                      [ 18%]
++    someapp/tests/test_model_form.py ...........                                                                                                                                                                                                           [ 87%]
++    someapp/tests/test_sanity.py .                                                                                                                                                                                                                         [ 93%]
++    someapp/tests/test_signals.py .
++    16 passed, 11 warnings in 1.62s
++
+```
+
+### Comparing `django_neomodel-0.0.7/tests/someapp/models.py` & `django_neomodel-0.1.0/tests/someapp/models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_neomodel-0.0.7/tests/someapp/tests/test_atomicity.py` & `django_neomodel-0.1.0/tests/someapp/tests/test_atomicity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_neomodel-0.0.7/tests/someapp/tests/test_commands.py` & `django_neomodel-0.1.0/tests/someapp/tests/test_commands.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -7,13 +7,13 @@
+ 
+ 
+ class TestCommands(TestCase):
+ 
+     def test_install_labels_command(self):
+         out = StringIO()
+         call_command('install_labels', stdout=out)
+-        self.assertIn('Creating unique constraint for title on label Book for class tests.someapp.models.Book', out.getvalue())
++        self.assertIn('Creating node unique constraint for title on label Book for class tests.someapp.models.Book', out.getvalue())
+ 
+     def test_clear_neo4j_command(self):
+         out = StringIO()
+         call_command('clear_neo4j', stdout=out)
+         self.assertIn('Done', out.getvalue())
+```
+
+### Comparing `django_neomodel-0.0.7/tests/someapp/tests/test_model_form.py` & `django_neomodel-0.1.0/tests/someapp/tests/test_model_form.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django_neomodel-0.0.7/tests/someapp/tests/test_signals.py` & `django_neomodel-0.1.0/tests/someapp/tests/test_signals.py`
+
+ * *Files identical despite different names*
+

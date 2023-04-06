@@ -1,0 +1,1414 @@
+# Comparing `tmp/fastapi-integration-0.0.6.tar.gz` & `tmp/fastapi-integration-0.0.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fastapi-integration-0.0.6.tar", last modified: Tue Apr  4 14:20:11 2023, max compression
++gzip compressed data, was "fastapi-integration-0.0.7.tar", last modified: Thu Apr  6 12:20:41 2023, max compression
+```
+
+## Comparing `fastapi-integration-0.0.6.tar` & `fastapi-integration-0.0.7.tar`
+
+### file list
+
+```diff
+@@ -1,44 +1,46 @@
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.473823 fastapi-integration-0.0.6/
+--rw-rw-rw-   0        0        0      301 2023-04-04 14:20:11.473823 fastapi-integration-0.0.6/PKG-INFO
+--rw-rw-rw-   0        0        0     7605 2023-04-03 23:01:15.000000 fastapi-integration-0.0.6/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.453823 fastapi-integration-0.0.6/fastapi_integration/
+--rw-rw-rw-   0        0        0     3695 2023-04-04 14:18:51.000000 fastapi-integration-0.0.6/fastapi_integration/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.465822 fastapi-integration-0.0.6/fastapi_integration/admin/
+--rw-rw-rw-   0        0        0        0 2023-04-01 15:15:54.000000 fastapi-integration-0.0.6/fastapi_integration/admin/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.467822 fastapi-integration-0.0.6/fastapi_integration/auth/
+--rw-rw-rw-   0        0        0        0 2023-04-01 15:15:52.000000 fastapi-integration-0.0.6/fastapi_integration/auth/__init__.py
+--rw-rw-rw-   0        0        0     2267 2023-04-04 13:45:36.000000 fastapi-integration-0.0.6/fastapi_integration/auth/routers.py
+--rw-rw-rw-   0        0        0      188 2023-04-01 13:45:49.000000 fastapi-integration-0.0.6/fastapi_integration/auth/schemas.py
+--rw-rw-rw-   0        0        0      111 2023-03-25 22:34:15.000000 fastapi-integration-0.0.6/fastapi_integration/auth/security.py
+--rw-rw-rw-   0        0        0     3582 2023-04-04 13:45:08.000000 fastapi-integration-0.0.6/fastapi_integration/auth/utils.py
+--rw-rw-rw-   0        0        0      154 2023-04-01 20:26:07.000000 fastapi-integration-0.0.6/fastapi_integration/common.py
+--rw-rw-rw-   0        0        0     1428 2023-04-01 15:38:04.000000 fastapi-integration-0.0.6/fastapi_integration/config.py
+--rw-rw-rw-   0        0        0     2958 2023-04-04 11:49:28.000000 fastapi-integration-0.0.6/fastapi_integration/db.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.468822 fastapi-integration-0.0.6/fastapi_integration/generic/
+--rw-rw-rw-   0        0        0        0 2023-04-01 15:15:50.000000 fastapi-integration-0.0.6/fastapi_integration/generic/__init__.py
+--rw-rw-rw-   0        0        0     5932 2023-04-04 13:45:15.000000 fastapi-integration-0.0.6/fastapi_integration/generic/crud.py
+--rw-rw-rw-   0        0        0        0 2023-04-01 12:17:01.000000 fastapi-integration-0.0.6/fastapi_integration/generic/views.py
+--rw-rw-rw-   0        0        0     1292 2023-04-04 13:46:38.000000 fastapi-integration-0.0.6/fastapi_integration/models.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.471822 fastapi-integration-0.0.6/fastapi_integration/orm/
+--rw-rw-rw-   0        0        0        0 2023-04-01 15:15:48.000000 fastapi-integration-0.0.6/fastapi_integration/orm/__init__.py
+--rw-rw-rw-   0        0        0     5095 2023-04-04 13:42:22.000000 fastapi-integration-0.0.6/fastapi_integration/orm/base.py
+--rw-rw-rw-   0        0        0      334 2023-04-04 13:46:52.000000 fastapi-integration-0.0.6/fastapi_integration/orm/models.py
+--rw-rw-rw-   0        0        0    10722 2023-04-04 13:43:12.000000 fastapi-integration-0.0.6/fastapi_integration/orm/queries.py
+--rw-rw-rw-   0        0        0     1226 2023-04-04 13:39:28.000000 fastapi-integration-0.0.6/fastapi_integration/orm/signals.py
+--rw-rw-rw-   0        0        0        0 2023-04-04 13:39:29.000000 fastapi-integration-0.0.6/fastapi_integration/orm/transaction.py
+--rw-rw-rw-   0        0        0        0 2023-04-01 12:23:41.000000 fastapi-integration-0.0.6/fastapi_integration/schema.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.471822 fastapi-integration-0.0.6/fastapi_integration/utils/
+--rw-rw-rw-   0        0        0        0 2023-04-01 15:15:47.000000 fastapi-integration-0.0.6/fastapi_integration/utils/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.464822 fastapi-integration-0.0.6/fastapi_integration.egg-info/
+--rw-rw-rw-   0        0        0      301 2023-04-04 14:20:11.000000 fastapi-integration-0.0.6/fastapi_integration.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     1061 2023-04-04 14:20:11.000000 fastapi-integration-0.0.6/fastapi_integration.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-04 14:20:11.000000 fastapi-integration-0.0.6/fastapi_integration.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       33 2023-04-04 14:20:11.000000 fastapi-integration-0.0.6/fastapi_integration.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       26 2023-04-04 14:20:11.000000 fastapi-integration-0.0.6/fastapi_integration.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-04 14:20:11.473823 fastapi-integration-0.0.6/setup.cfg
+--rw-rw-rw-   0        0        0      477 2023-04-04 14:19:05.000000 fastapi-integration-0.0.6/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-04 14:20:11.473823 fastapi-integration-0.0.6/tests/
+--rw-rw-rw-   0        0        0        0 2023-04-02 07:30:32.000000 fastapi-integration-0.0.6/tests/__init__.py
+--rw-rw-rw-   0        0        0     9052 2023-04-04 13:34:05.000000 fastapi-integration-0.0.6/tests/complex_query.py
+--rw-rw-rw-   0        0        0     4481 2023-04-04 11:58:22.000000 fastapi-integration-0.0.6/tests/query.py
+--rw-rw-rw-   0        0        0     1303 2023-04-03 19:30:06.000000 fastapi-integration-0.0.6/tests/start.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.485032 fastapi-integration-0.0.7/
++-rw-rw-rw-   0        0        0      301 2023-04-06 12:20:41.485032 fastapi-integration-0.0.7/PKG-INFO
++-rw-rw-rw-   0        0        0     7054 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/README.md
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.472029 fastapi-integration-0.0.7/fastapi_integration/
++-rw-rw-rw-   0        0        0     3968 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.476029 fastapi-integration-0.0.7/fastapi_integration/admin/
++-rw-rw-rw-   0        0        0        0 2023-04-01 15:15:54.000000 fastapi-integration-0.0.7/fastapi_integration/admin/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.478030 fastapi-integration-0.0.7/fastapi_integration/auth/
++-rw-rw-rw-   0        0        0        0 2023-04-01 15:15:52.000000 fastapi-integration-0.0.7/fastapi_integration/auth/__init__.py
++-rw-rw-rw-   0        0        0     2428 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/auth/routers.py
++-rw-rw-rw-   0        0        0      188 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/auth/schemas.py
++-rw-rw-rw-   0        0        0      117 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/auth/security.py
++-rw-rw-rw-   0        0        0     3794 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/auth/utils.py
++-rw-rw-rw-   0        0        0       97 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/common.py
++-rw-rw-rw-   0        0        0     1415 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/config.py
++-rw-rw-rw-   0        0        0     2897 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/db.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.479030 fastapi-integration-0.0.7/fastapi_integration/generic/
++-rw-rw-rw-   0        0        0        0 2023-04-01 15:15:50.000000 fastapi-integration-0.0.7/fastapi_integration/generic/__init__.py
++-rw-rw-rw-   0        0        0     6684 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/generic/crud.py
++-rw-rw-rw-   0        0        0        0 2023-04-01 12:17:01.000000 fastapi-integration-0.0.7/fastapi_integration/generic/views.py
++-rw-rw-rw-   0        0        0     1285 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/models.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.482029 fastapi-integration-0.0.7/fastapi_integration/orm/
++-rw-rw-rw-   0        0        0        0 2023-04-01 15:15:48.000000 fastapi-integration-0.0.7/fastapi_integration/orm/__init__.py
++-rw-rw-rw-   0        0        0     9460 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/orm/base.py
++-rw-rw-rw-   0        0        0      334 2023-04-04 22:18:10.000000 fastapi-integration-0.0.7/fastapi_integration/orm/models.py
++-rw-rw-rw-   0        0        0    13317 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/orm/queries.py
++-rw-rw-rw-   0        0        0     1308 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/orm/signals.py
++-rw-rw-rw-   0        0        0        0 2023-04-04 13:39:29.000000 fastapi-integration-0.0.7/fastapi_integration/orm/transaction.py
++-rw-rw-rw-   0        0        0      981 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/fastapi_integration/orm/utils.py
++-rw-rw-rw-   0        0        0        0 2023-04-01 12:23:41.000000 fastapi-integration-0.0.7/fastapi_integration/schema.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.483029 fastapi-integration-0.0.7/fastapi_integration/utils/
++-rw-rw-rw-   0        0        0        0 2023-04-01 15:15:47.000000 fastapi-integration-0.0.7/fastapi_integration/utils/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.475029 fastapi-integration-0.0.7/fastapi_integration.egg-info/
++-rw-rw-rw-   0        0        0      301 2023-04-06 12:20:41.000000 fastapi-integration-0.0.7/fastapi_integration.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     1116 2023-04-06 12:20:41.000000 fastapi-integration-0.0.7/fastapi_integration.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 12:20:41.000000 fastapi-integration-0.0.7/fastapi_integration.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       33 2023-04-06 12:20:41.000000 fastapi-integration-0.0.7/fastapi_integration.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       26 2023-04-06 12:20:41.000000 fastapi-integration-0.0.7/fastapi_integration.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-06 12:20:41.485032 fastapi-integration-0.0.7/setup.cfg
++-rw-rw-rw-   0        0        0      477 2023-04-06 12:19:57.000000 fastapi-integration-0.0.7/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:20:41.484029 fastapi-integration-0.0.7/tests/
++-rw-rw-rw-   0        0        0        0 2023-04-06 11:11:49.000000 fastapi-integration-0.0.7/tests/__init__.py
++-rw-rw-rw-   0        0        0    10833 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/tests/complex_query.py
++-rw-rw-rw-   0        0        0     7021 2023-04-06 12:07:46.000000 fastapi-integration-0.0.7/tests/query.py
++-rw-rw-rw-   0        0        0      162 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/tests/resolve_path.py
++-rw-rw-rw-   0        0        0      979 2023-04-06 12:07:44.000000 fastapi-integration-0.0.7/tests/start.py
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/__init__.py` & `fastapi-integration-0.0.7/fastapi_integration/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,118 +1,118 @@
+-__version__ = "0.0.2"
+-
++from typing import Any, Callable, Dict, List, Tuple, Type, Union
+ from fastapi import FastAPI, HTTPException, routing
+ from fastapi.exceptions import RequestValidationError
+ from starlette.middleware.cors import CORSMiddleware
+ from starlette.requests import Request
+ from starlette.responses import JSONResponse
+ from starlette.status import HTTP_422_UNPROCESSABLE_ENTITY
+-from typing import Callable, Type, Union, List, Tuple, Dict, Any
+-from .config import FastApiConfig
+ from pydantic import ValidationError
++from sqlalchemy.orm import declarative_base
++from .config import FastApiConfig
+ from .db import Engine
+-from sqlalchemy.ext.asyncio import AsyncSession
+ from .auth.routers import create_auth_router
+ from .orm.models import AbstractModel
+-from sqlalchemy.orm import declarative_base
+-
+-
+-
+ 
+ 
+ class FastAPIExtended(FastAPI):
+-    settings: Type[FastApiConfig] 
+-    _routers: list = list()
++    settings: Type[FastApiConfig]
++    _routers: List[Tuple[routing.APIRouter, str]] = list()
+     add_auth_router: bool = True
+     i = 0
+     Users: AbstractModel
+ 
+-    
+-    
+-
+     @property
+     def routers(self) -> List[Tuple[routing.APIRouter, str]]:
+         return self._routers
+ 
+-
+     @routers.setter
+     def routers(self, value):
+         setattr(self, '_routers', value)
+ 
+-
+-
+     def __init__(self, Users=None, *args, **kwargs):
+         user_config = self.get_user_config()
+         self.Base = declarative_base()
+-        super().__init__(*args, **{**kwargs, **user_config})
+-
++        super().__init__(
++            *args,
++            **{**kwargs, **user_config}
++        )
+         self.settings = self.settings()
+         self.db_engine = Engine(self.settings)
+         self.add_middleware(
+             CORSMiddleware,
+             allow_origins=self.settings.allowed_hosts,
+             allow_credentials=True,
+             allow_methods=["*"],
+             allow_headers=["*"],
+         )
+-
+-        self.add_event_handler("startup", self.create_start_app_handler())
+-        self.add_event_handler("shutdown", self.create_stop_app_handler())
+-        self.add_exception_handler(HTTPException, self.http_error_handler)
+-        self.add_exception_handler(RequestValidationError, self.http422_error_handler)
+-
++        self.add_event_handler(
++            "startup", self.create_start_app_handler()
++        )
++        self.add_event_handler(
++            "shutdown", self.create_stop_app_handler()
++        )
++        self.add_exception_handler(
++            HTTPException, self.http_error_handler
++        )
++        self.add_exception_handler(
++            RequestValidationError, self.http422_error_handler
++        )
+ 
+         for router in self.routers:
+-            self.include_router(router[0], prefix=router[1])
+-        
+-
++            self.include_router(
++                router[0],
++                prefix=router[1]
++            )
+ 
+         if Users:
+             class Users(Users, self.Base):
+                 __tablename__ = "users"
+ 
+             if self.add_auth_router:
+-                auth_router = create_auth_router(self.db_engine, self.settings, Users)
+-                self.include_router(auth_router, prefix="/auth")
+-        
+-        
+-
+-
++                auth_router = create_auth_router(
++                    self.db_engine,
++                    self.settings,
++                    Users
++                )
++                self.include_router(
++                    auth_router,
++                    prefix="/auth"
++                )
+ 
+     def get_user_config(self) -> Dict[str, Any]:
+         if issubclass(self.settings, FastApiConfig):
+             user_config_instance = self.settings()
+             config_dict = user_config_instance.fastapi_kwargs
+             return config_dict
+         else:
+-            raise ValueError("The provided class does not inherit from FastApiConfig")
+-
+-
++            raise ValueError(
++                "The provided class does not inherit from FastApiConfig"
++            )
+ 
+     def create_start_app_handler(self) -> Callable:
+         async def start_app() -> None:
+             await self.db_engine.create_database(self.Base)
+             self.db_engine.get_redis_db().test()
+         return start_app
+ 
+-
+-
+     def create_stop_app_handler(self) -> Callable:
+         async def stop_app() -> None:
+             async with self.db_engine.engine.connect() as conn:
+                 await conn.close()
+                 await self.db_engine.engine.dispose()
+         return stop_app
+ 
+-
+-
+     async def http422_error_handler(
+         _: Request,
+         exc: Union[RequestValidationError, ValidationError],
+     ) -> JSONResponse:
+         return JSONResponse(
+             {"errors": exc.errors()},
+             status_code=HTTP_422_UNPROCESSABLE_ENTITY,
+         )
+ 
+-    async def http_error_handler(self, _: Request, exc: HTTPException) -> JSONResponse:
+-        return JSONResponse({"errors": [exc.detail]}, status_code=exc.status_code)
++    async def http_error_handler(
++        self, _: Request, exc: HTTPException
++    ) -> JSONResponse:
++        return JSONResponse(
++            {"errors": [exc.detail]}, status_code=exc.status_code
++        )
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/auth/routers.py` & `fastapi-integration-0.0.7/fastapi_integration/auth/routers.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,48 +1,65 @@
+ from fastapi import Depends, HTTPException, APIRouter, Header
+ from sqlalchemy.ext.asyncio import AsyncSession
+ from starlette.status import HTTP_422_UNPROCESSABLE_ENTITY
+-from .utils import manager_create_access_token, manager_get_current_user, manager_delete_access_token
++from .utils import (
++    manager_create_access_token,
++    manager_get_current_user,
++    manager_delete_access_token
++)
+ from fastapi.security import OAuth2PasswordRequestForm
+ from .security import pwd_context
+ from .schemas import AuthModel, UserOut
+ from ..common import Status
+ from ..db import Engine
+ from ..config import FastApiConfig
+ from ..orm.models import AbstractModel
+ 
+ 
+-def create_auth_router(db_engine: Engine, config: FastApiConfig, User: AbstractModel) -> APIRouter:
++def create_auth_router(
++        db_engine: Engine, config: FastApiConfig, User: AbstractModel
++) -> APIRouter:
+     auth_router = APIRouter()
+     get_current_user = manager_get_current_user(db_engine, config, User)
+ 
+     @auth_router.post("/token", response_model=AuthModel)
+     async def login_for_access_token(
+         form_data: OAuth2PasswordRequestForm = Depends(),
+         db_session: AsyncSession = Depends(db_engine.get_pg_db),
+     ):
+-        user = await User.objects.get(db_session=db_session, email=form_data.username)
+-        if not (user and pwd_context.verify(form_data.password, user.password)):
++        user = await User.objects.get(
++            db_session=db_session, email=form_data.username
++        )
++        if not (
++            user and pwd_context.verify(form_data.password, user.password)
++        ):
+             raise HTTPException(
+                 status_code=HTTP_422_UNPROCESSABLE_ENTITY,
+                 detail="Incorrect email or password",
+             )
+ 
+-        create_access_token = manager_create_access_token(db_session, config, User)
++        create_access_token = manager_create_access_token(
++            db_session, config, User
++        )
+         access_token = create_access_token(data={"sub": user.id})
+         return {"access_token": access_token, "token_type": "bearer"}
+ 
+     @auth_router.get("/users/me", response_model=UserOut)
+     async def read_users_me(current_user: User = Depends(get_current_user)):
+         return current_user
+ 
+     @auth_router.delete("/logout", response_model=Status)
+-    async def logout(current_user: User = Depends(get_current_user), authorization: str = Header(None)):
++    async def logout(
++        current_user: User = Depends(get_current_user),
++        authorization: str = Header(None)
++    ):
+         token_parts = authorization.split("Bearer ")
+         if len(token_parts) != 2:
+             return Status(message="Already logged out", status="ok")
+         else:
+-            delete_access_token = manager_delete_access_token(db_engine, config)
++            delete_access_token = manager_delete_access_token(
++                db_engine, config
++            )
+             delete_access_token(token_parts[1])
+             return Status(message="Logged Out", status="ok")
+ 
+     return auth_router
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/auth/utils.py` & `fastapi-integration-0.0.7/fastapi_integration/auth/utils.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -17,24 +17,30 @@
+ 
+ is_not_superuser_exception = HTTPException(
+     status_code=status.HTTP_401_UNAUTHORIZED,
+     detail="Could not validate administration access",
+     headers={"WWW-Authenticate": "Bearer"},
+ )
+ 
++
+ class TokenData(BaseModel):
+     user_id: int
+ 
+-def manager_get_current_user(db_engine: Engine, config: FastApiConfig, User: AbstractModel) -> Callable:
++
++def manager_get_current_user(
++        db_engine: Engine, config: FastApiConfig, User: AbstractModel
++) -> Callable:
+     async def get_current_user(
+         db: AsyncSession = Depends(db_engine.get_pg_db),
+         token: str = Depends(config.oauth2_scheme),
+     ) -> Any:
+         try:
+-            payload = jwt.decode(token, config.secret_key, algorithms=[config.algorithm])
++            payload = jwt.decode(
++                token, config.secret_key, algorithms=[config.algorithm]
++            )
+             user_id = payload.get("sub")
+ 
+             if user_id is None:
+                 raise credentials_exception
+ 
+             token_data = TokenData(user_id=user_id)
+         except Exception as e:
+@@ -49,52 +55,71 @@
+         if user is None:
+             raise credentials_exception
+ 
+         return user
+ 
+     return get_current_user
+ 
+-def manager_get_admin_user(db_engine: Engine, config: FastApiConfig, User: AbstractModel) -> Callable:
++
++def manager_get_admin_user(
++    db_engine: Engine, config: FastApiConfig, User: AbstractModel
++) -> Callable:
+     async def get_admin_user(
+         db: AsyncSession = Depends(db_engine.get_pg_db),
+         token: str = Depends(config.oauth2_scheme),
+     ) -> Any:
+         try:
+-            payload = jwt.decode(token, config.secret_key, algorithms=[config.algorithm])
++            payload = jwt.decode(
++                token, config.secret_key, algorithms=[config.algorithm]
++            )
+             user_id = payload.get("sub")
+ 
+             if user_id is None:
+                 raise credentials_exception
+ 
+             token_data = TokenData(user_id=user_id)
+         except Exception as e:
+             print(e)
+             raise credentials_exception
+ 
+         token = db_engine.get_redis_db().get_connection().get(token)
+         if token is None:
+             raise credentials_exception
+ 
+-        user = await User.objects.get(db_session=db, id=token_data.user_id, is_admin=True)
++        user = await User.objects.get(
++            db_session=db, id=token_data.user_id, is_admin=True
++        )
+         if user is None:
+             raise is_not_superuser_exception
+ 
+         return user
+ 
+     return get_admin_user
+ 
+-def manager_create_access_token(db_engine: Engine, config: FastApiConfig) -> Callable:
++
++def manager_create_access_token(
++        db_engine: Engine, config: FastApiConfig
++) -> Callable:
+     def create_access_token(*, data: dict) -> str:
+         to_encode = data.copy()
+-        expire = datetime.utcnow() + timedelta(minutes=config.access_token_expire_minutes)
++        expire = datetime.utcnow() + timedelta(
++            minutes=config.access_token_expire_minutes
++        )
+         to_encode.update({"exp": expire})
+-        encoded_jwt = jwt.encode(to_encode, config.secret_key, algorithm=config.algorithm)
+-        db_engine.get_redis_db().get_connection().set(encoded_jwt, value=1, ex=config.access_token_expire_minutes * 60)
++        encoded_jwt = jwt.encode(
++            to_encode, config.secret_key, algorithm=config.algorithm
++        )
++        db_engine.get_redis_db().get_connection().set(
++            encoded_jwt, value=1, ex=config.access_token_expire_minutes * 60
++        )
+         return encoded_jwt
+ 
+     return create_access_token
+ 
+-def manager_delete_access_token(db_engine: Engine, config: FastApiConfig) -> Callable:
++
++def manager_delete_access_token(
++    db_engine: Engine, config: FastApiConfig
++) -> Callable:
+     def delete_access_token(token) -> None:
+         db_engine.get_redis_db().get_connection().set(token, value=0, ex=1)
+ 
+-    return delete_access_token
++    return delete_access_token
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/config.py` & `fastapi-integration-0.0.7/fastapi_integration/config.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,50 +1,48 @@
+ import logging
+ from typing import Any, Dict, List, Tuple
++
+ from fastapi.security import OAuth2PasswordBearer
+-from pydantic import PostgresDsn, RedisDsn
+-from pydantic import BaseSettings
++from pydantic import BaseSettings, PostgresDsn, RedisDsn
+ 
+ 
+ class FastApiConfig(BaseSettings):
+-    debug: bool 
++    debug: bool
+     docs_url: str = "/docs"
+     openapi_prefix: str = ""
+     openapi_url: str = "/openapi.json"
+     redoc_url: str = "/redoc"
+     title: str
+     version: str = "0.0.0"
+     algorithm: str = "HS256"
+     access_token_expire_minutes: int = 180
+-    oauth2_scheme:OAuth2PasswordBearer = OAuth2PasswordBearer(tokenUrl="api/auth/token")
++    oauth2_scheme: OAuth2PasswordBearer = OAuth2PasswordBearer(
++        tokenUrl="api/auth/token"
++    )
+     default_pagination: int = 20
+     max_pagination: int = 100
+ 
+-
+     database_url: PostgresDsn
+     redis_url: RedisDsn
+     redis_max_connections: int = 100
+-    
+ 
+     secret_key: str
+     api_prefix: str = "/api"
+     jwt_token_prefix: str = "Token"
+     allowed_hosts: List[str] = ["*"]
+     logging_level: int = logging.INFO
+     loggers: Tuple[str, str] = ("uvicorn.asgi", "uvicorn.access")
+ 
+-
+     class Config:
+         validate_assignment = True
+ 
+-
+     @property
+     def fastapi_kwargs(self) -> Dict[str, Any]:
+         return {
+             "debug": self.debug,
+             "docs_url": self.docs_url,
+             "openapi_prefix": self.openapi_prefix,
+             "openapi_url": self.openapi_url,
+             "redoc_url": self.redoc_url,
+             "title": self.title,
+             "version": self.version,
+-        }
++        }
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/db.py` & `fastapi-integration-0.0.7/fastapi_integration/db.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,93 +1,81 @@
+ from collections.abc import AsyncGenerator
+-
+ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+-from sqlalchemy.orm import sessionmaker, declarative_base
++from sqlalchemy.orm import sessionmaker
+ import redis
+ import logging
+ from .config import FastApiConfig
+ from contextlib import asynccontextmanager
+ 
+ 
+-
+ class RedisDb:
+-    def __init__(self, setting:FastApiConfig) -> None:
++    def __init__(self, setting: FastApiConfig) -> None:
+         self.redis_pool = redis.ConnectionPool(
+             host=setting.redis_url.host,
+             port=setting.redis_url.port,
+             db=int(setting.redis_url.path[1:]),
+             username=setting.redis_url.user,
+             password=setting.redis_url.password,
+             max_connections=setting.redis_max_connections,
+         )
+-        
+-    
++
+     def test(self):
+         logging.info("Connecting to Redis")
+         redis_conn = redis.Redis(connection_pool=self.redis_pool)
+         redis_conn.set('test', 'test', ex=1)
+         logging.info("Connection established")
+-    
+ 
+     def get_connection(self) -> redis.Redis:
+         return redis.Redis(connection_pool=self.redis_pool)
+ 
+ 
+-
+ class Engine:
+-    def __init__(self, setting:FastApiConfig, **kwagrs) -> None:
++    def __init__(self, setting: FastApiConfig, **kwargs) -> None:
+         self.setting = setting
+         self.engine = create_async_engine(
+             setting.database_url,
+             future=True,
+             echo=False,
+-            **kwagrs
++            **kwargs
+         )
+-
+         self.async_session_factory = sessionmaker(
+-            self.engine, autoflush=False, expire_on_commit=False, class_=AsyncSession
++            self.engine, autoflush=False, expire_on_commit=False,
++            class_=AsyncSession
+         )
+ 
+-
+     async def get_pg_db(self) -> AsyncGenerator:
+         self.async_session_factory = sessionmaker(
+-            self.engine, autoflush=False, expire_on_commit=False, class_=AsyncSession
++            self.engine, autoflush=False, expire_on_commit=False,
++            class_=AsyncSession
+         )
+         async with self.async_session_factory() as session:
+             logging.info(f"ASYNC Pool: {self.engine.pool.status()}")
+             yield session
+-    
+ 
+-    
+     async def create_database(self, Base):
+         logging.info("Connecting to  PostgreSQL")
+         async with AsyncSession(self.engine) as session:
+             async with session.begin():
+                 pass
+-        
++
+         async with self.engine.begin() as conn:
+             await conn.run_sync(Base.metadata.create_all)
+         logging.info("Connection established")
+ 
+-
+     async def drop_database(self, Base):
+         logging.info("Dropping Database")
+         async with self.engine.begin() as conn:
+             await conn.run_sync(Base.metadata.drop_all)
+         logging.info("Database Dropped")
+ 
+-
+-
+     @asynccontextmanager
+     async def get_pg_db_with_async(self) -> AsyncSession:
+         async with self.async_session_factory() as session:
+             logging.info(f"ASYNC Pool: {self.engine.pool.status()}")
+             yield session
+ 
+-         
+-    def get_redis_db (self) -> RedisDb:
++    def get_redis_db(self) -> RedisDb:
+         return RedisDb(setting=self.setting)
+-    
+ 
+ 
+-def create_engine(settings:FastApiConfig, **kwargs) -> Engine:
+-    return Engine(settings, **kwargs)
++def create_engine(settings: FastApiConfig, **kwargs) -> Engine:
++    return Engine(settings, **kwargs)
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/generic/crud.py` & `fastapi-integration-0.0.7/fastapi_integration/generic/crud.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ from pydantic import BaseModel, HttpUrl, Field
+-from fastapi import HTTPException, status, Depends
++from fastapi import HTTPException, status
+ from sqlalchemy.ext.asyncio import AsyncSession
+ from ..orm.models import AbstractModel
+-from typing import Union, Optional, Tuple, Generic, List, TypeVar, Any
++from typing import Union, Optional, Tuple, Generic, List, TypeVar
+ from urllib.parse import urlencode
+ from ..config import FastApiConfig
+ 
+ 
+ T = TypeVar("T")
+ 
+ 
+@@ -14,15 +14,17 @@
+     page: int = Field(1, ge=1)
+     per_page: int = Field(20, le=100)
+ 
+ 
+ def get_pagination_class(config: FastApiConfig):
+     class PaginationQuery(BaseModel):
+         page: int = Field(1, ge=1)
+-        per_page: int = Field(config.default_pagination, le=config.max_pagination)
++        per_page: int = Field(
++            config.default_pagination, le=config.max_pagination
++        )
+ 
+     return PaginationQuery
+ 
+ 
+ class PaginatedObjects(BaseModel, Generic[T]):
+     results: List[T]
+     page: Union[None, int]
+@@ -31,40 +33,48 @@
+     previous_page: Union[None, HttpUrl]
+ 
+ 
+ class BaseCRUD:
+     verbose_name: str
+     order_by_fields: Union[None, Tuple, str]
+ 
+-    def __init__(self, model: AbstractModel, in_schema: BaseModel, update_schema: BaseModel, name: str):
++    def __init__(
++            self, model: AbstractModel,
++            in_schema: BaseModel,
++            update_schema: BaseModel,
++            name: str
++    ):
+         self.model = model
+         self.in_schema = in_schema
+         self.update_schema = update_schema
+ 
+     @property
+     def _order_by_fields(self):
+         cached_order_by_fields = getattr(self, "order_by_fields", None)
+         if cached_order_by_fields in ["__all__", ("__all__")]:
+             return self.model.__table__.columns.keys()
+         else:
+             return cached_order_by_fields
+ 
+-
+     @_order_by_fields.setter
+     def _order_by_fields(self, value):
+-        if (isinstance(value, str) or isinstance(value, tuple)) and self.init_order_by(value):
++        if (
++            isinstance(value, str) or isinstance(value, tuple)
++        ) and self.init_order_by(value):
+             self._order_by_fields = value
+         else:
+             raise ValueError("order_by_fields is not a valid string/tuple")
+ 
+     def init_order_by(self, order_by: str):
+         fields = [field.strip("-") for field in order_by.split(",")]
+         invalid_fields = set(fields) - set(self.model.__table__.columns.keys())
+         if invalid_fields:
+-            raise ValueError(f"order_by contains invalid fields: {', '.join(invalid_fields)}")
++            raise ValueError(
++                f"order_by include invalid fields: {', '.join(invalid_fields)}"
++            )
+         return True
+ 
+     def is_order_by_valid(self, order_by):
+         fields = [field.strip("-") for field in order_by.split(",")]
+         return all(field in self._order_by_fields for field in fields)
+ 
+ 
+@@ -78,65 +88,110 @@
+     async def pre_delete_check(self, db_session: AsyncSession):
+         pass
+ 
+ 
+ class CRUD(BaseCRUD, ConstructorMixin):
+     async def create(self, db_session: AsyncSession, data: dict):
+         await self.pre_save_check(db_session, data)
+-        instance = await self.model.objects.create(db_session=db_session, **data)
++        instance = await self.model.objects.create(
++            db_session=db_session, **data
++        )
+         return instance
+ 
+     async def delete(self, db_session: AsyncSession, joins=None, **kwargs):
+         await self.pre_delete_check(db_session)
+-        deleted_rows = await self.model.objects.delete(db_session=db_session, joins=joins, **kwargs)
++        deleted_rows = await self.model.objects.delete(
++            db_session=db_session, joins=joins, **kwargs
++        )
+         return deleted_rows
+ 
+-
+-
+-    async def read_all(self, db_session: AsyncSession, joins=None, order_by: Optional[str] = None, skip: int = None, per_page: int = None, **kwargs):
++    async def read_all(
++            self, db_session: AsyncSession,
++            joins=None,
++            order_by: Optional[str] = None,
++            skip: int = None,
++            per_page: int = None, **kwargs
++    ):
+         if order_by:
+             if not self.is_order_by_valid(order_by):
+-                raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+-                                    detail=f"{self.verbose_name} with the specified field for order_by is not found, please use one of these fields: {self._order_by_fields}")
++                raise HTTPException(
++                    status_code=status.HTTP_400_BAD_REQUEST,
++                    detail=f"""{self.verbose_name} with the specified field
++                    for order_by is not found, please use one of these fields:
++                    {self._order_by_fields}
++                    """
++                )
+             else:
+                 order_by = tuple(order_by.split(","))
+ 
+-        result = await self.model.objects.filter(db_session=db_session, joins=joins, order_by=order_by, skip=skip, limit=per_page, **kwargs)
++        result = await self.model.objects.filter(
++            db_session=db_session, joins=joins, order_by=order_by,
++            skip=skip, limit=per_page, **kwargs
++        )
+         return result
+ 
+-    async def paginated_read_all(self, db_session: AsyncSession, query_params: dict, joins=None, order_by: Optional[str] = None, base_url=None, **kwargs):
++    async def paginated_read_all(
++            self, db_session: AsyncSession, query_params: dict, joins=None,
++            order_by: Optional[str] = None, base_url=None, **kwargs
++    ):
+         per_page = query_params.get('per_page')
+         page_num = query_params.get('page')
+ 
+         if order_by:
+             query_params.update(order_by=order_by)
+ 
+         skip = (page_num - 1) * per_page
+-        results, count = await self.read_all(db_session, order_by=order_by, skip=skip, per_page=per_page, joins=joins, get_count=True, **kwargs)
++        results, count = await self.read_all(
++            db_session, order_by=order_by, skip=skip, per_page=per_page,
++            joins=joins, get_count=True, **kwargs
++        )
+         next_page, previous_page = None, None
+ 
+         if (page_num * per_page) < count:
+-            next_query_params = urlencode({**query_params, "page": page_num + 1})
++            next_query_params = urlencode(
++                {**query_params, "page": page_num + 1}
++            )
+             next_page = f"{base_url}?{next_query_params}"
+ 
+-        if (page_num - 1) > 0 and 0 < ((page_num-1) * per_page) < count+per_page:
+-            prev_query_params = urlencode({**query_params, "page": page_num - 1})
++        if (page_num - 1) > 0 and 0 < (
++            (page_num-1) * per_page
++        ) < count+per_page:
++            prev_query_params = urlencode(
++                {**query_params, "page": page_num - 1}
++            )
+             previous_page = f"{base_url}?{prev_query_params}"
+ 
+-        return dict(results=results, page=page_num, count=count, previous_page=previous_page, next_page=next_page)
+-        
+-
+-
+-    async def read_single(self, db_session: AsyncSession, joins=None, **kwargs):
+-        result = await self.model.objects.get(db_session=db_session, joins=joins, **kwargs)
++        return dict(
++            results=results, page=page_num, count=count,
++            previous_page=previous_page, next_page=next_page
++        )
++
++    async def read_single(
++            self, db_session: AsyncSession, joins=None, **kwargs
++    ):
++        result = await self.model.objects.get(
++            db_session=db_session, joins=joins, **kwargs
++        )
+         if not result:
+-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+-                                detail=f"{self.verbose_name} with the specified filters is not found")
++            raise HTTPException(
++                status_code=status.HTTP_404_NOT_FOUND,
++                detail=f"""
++                {self.verbose_name} with the specified filters is not found
++                """
++            )
+         return result
+ 
+-    async def update(self, db_session: AsyncSession, data: dict, joins=None, **kwargs):
++    async def update(
++            self, db_session: AsyncSession, data: dict, joins=None, **kwargs
++    ):
+         await self.pre_update_check(db_session, data)
+-        updated_instance = await self.model.objects.update(db_session=db_session, data=data, joins=None, **kwargs)
++        updated_instance = await self.model.objects.update(
++            db_session=db_session, data=data, joins=None, **kwargs
++        )
+         if updated_instance is None:
+-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+-                                detail=f"{self.verbose_name} with the specified filters is not found")
+-        return updated_instance
++            raise HTTPException(
++                status_code=status.HTTP_404_NOT_FOUND,
++                detail=f"""
++                {self.verbose_name} with the specified filters is not found
++                """
++            )
++        return updated_instance
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration/orm/signals.py` & `fastapi-integration-0.0.7/fastapi_integration/orm/signals.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -2,36 +2,44 @@
+ 
+ from sqlalchemy.ext.asyncio import AsyncSession
+ from sqlalchemy.sql.selectable import TypedReturnsRows
+ 
+ 
+ class SignalMixin:
+ 
+-    async def _pre_save(self, db_session: AsyncSession, instance=None, **kwargs):
+-        _instance = await self.pre_save(db_session, instance=instance, **kwargs)
++    async def _pre_save(
++        self, db_session: AsyncSession, instance=None, **kwargs
++    ):
++        _instance = await self.pre_save(
++            db_session, instance=instance, **kwargs
++        )
+         if _instance is not None:
+             return _instance
+         else:
+             return instance
+ 
+-    async def _pre_update(self, db_session: AsyncSession, stmt=None, **kwargs) -> TypedReturnsRows:
++    async def _pre_update(
++            self, db_session: AsyncSession, stmt=None, **kwargs
++    ) -> TypedReturnsRows:
+         _stmt = await self.pre_update(db_session, stmt=stmt, **kwargs)
+         if _stmt is not None:
+             return _stmt
+         else:
+             return stmt
+ 
+-    async def _pre_delete(self, db_session: AsyncSession, stmt=None, **kwargs) -> TypedReturnsRows:
++    async def _pre_delete(
++            self, db_session: AsyncSession, stmt=None, **kwargs
++    ) -> TypedReturnsRows:
+         _stmt = await self.pre_delete(db_session, stmt=stmt, **kwargs)
+         if _stmt is not None:
+             return _stmt
+         else:
+             return stmt
+ 
+     async def pre_save(self, db_session: AsyncSession, **kwargs):
+         pass
+ 
+     async def pre_update(self, db_session: AsyncSession, stmt=None, **kwargs):
+         pass
+ 
+     async def pre_delete(self, db_session: AsyncSession, stmt=None, **kwargs):
+-        pass
++        pass
+```
+
+### Comparing `fastapi-integration-0.0.6/fastapi_integration.egg-info/SOURCES.txt` & `fastapi-integration-0.0.7/fastapi_integration.egg-info/SOURCES.txt`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -22,12 +22,14 @@
+ fastapi_integration/generic/views.py
+ fastapi_integration/orm/__init__.py
+ fastapi_integration/orm/base.py
+ fastapi_integration/orm/models.py
+ fastapi_integration/orm/queries.py
+ fastapi_integration/orm/signals.py
+ fastapi_integration/orm/transaction.py
++fastapi_integration/orm/utils.py
+ fastapi_integration/utils/__init__.py
+ tests/__init__.py
+ tests/complex_query.py
+ tests/query.py
++tests/resolve_path.py
+ tests/start.py
+```
+
+### Comparing `fastapi-integration-0.0.6/tests/complex_query.py` & `fastapi-integration-0.0.7/tests/complex_query.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,242 +1,284 @@
+-import sys, os
+-current_dir = os.path.abspath('.')
+-sys.path.insert(0, current_dir)
++import resolve_path
++import random
++import string
++import unittest
++import time
++from statistics import mean
+ 
++from sqlalchemy import Column, Integer, String, ForeignKey, Table, select
++from sqlalchemy.orm import relationship
+ from sqlalchemy.orm import declarative_base
++
+ from fastapi_integration.db import Engine
+-from tests.start import MyConfig
+-import random, string, unittest
+ from fastapi_integration.models import AbstractModel
+-from sqlalchemy import Column, Integer, String, ForeignKey, Table
+-from sqlalchemy.orm import relationship
+-import time
+-from sqlalchemy import select
+-from statistics import mean
++
++from tests.start import MyConfig
++
+ 
+ class TestQueryMixin(unittest.IsolatedAsyncioTestCase):
+     async def asyncSetUp(self):
+         await db_engine.drop_database(Base)
+         await db_engine.create_database(Base)
+-        
+ 
+-            
+-    async def asyncTearDown(self):  
+-                           
++    async def asyncTearDown(self):
+         async with db_engine.engine.connect() as conn:
+             await conn.close()
+             await db_engine.engine.dispose()
+ 
+-
+-
+-
+-    async def test_double_underline_notation_and_perfomance(self):  
++    async def test_double_underline_notation_and_perfomance(self):
+         async def test_case1():
+             async with db_engine.get_pg_db_with_async() as session:
+                 model1 = Model1(name=random_chars)
+                 session.add(model1)
+                 model3 = Model3(model1=model1)
+                 session.add(model3)
+                 await session.flush()
+-                stmt = select(Model3).join(Model1).filter(Model1.name == random_chars).limit(20)
++
++                stmt = select(Model3).join(Model1).filter(
++                    Model1.name == random_chars
++                ).limit(20)
+                 result = await session.execute(stmt)
+                 query = result.scalars().all()
++
+                 await session.commit()
+                 await session.delete(model3)
+                 await session.delete(model1)
+                 await session.commit()
+-            return query
+ 
++            return query
+ 
+         async def test_case2(test_contains=False):
+             async with db_engine.get_pg_db_with_async() as session:
+-                model1 = await Model1.objects.create(session, name=random_chars)
++                model1 = await Model1.objects.create(
++                    session, name=random_chars
++                )
+                 await Model3.objects.create(session, model1=model1)
+-                query = await Model3.objects.filter(session, model1__name=random_chars)
++                query = await Model3.objects.filter(
++                    session, model1__name=random_chars
++                )
++
+                 if test_contains:
+-                    query2 = await Model3.objects.filter(session, model1__name__contains=random_chars[:5])
+-                    query3 = await Model3.objects.filter(session, model1__name__icontains=random_chars[:5].upper())
++                    query2 = await Model3.objects.filter(
++                        session, model1__name__contains=random_chars[:5]
++                    )
++                    query3 = await Model3.objects.filter(
++                        session,
++                        model1__name__icontains=random_chars[:5].upper()
++                    )
+                 else:
+-                    query2,query3 = None, None
+-                    
++                    query2 = None
++                    query3 = None
+ 
+                 await Model3.objects.delete(session, model1__id=model1.id)
+                 await Model1.objects.delete(session, name=random_chars)
+-            return query, query2, query3
+-
+ 
++            return query, query2, query3
+ 
+-        num_runs = 1 # For larger numbers, SQLAlchemy is caching and having low response times better than mine.
++        num_runs = 1
++        # For larger numbers, SQLAlchemy is caching and having low response
++        # times better than mine.
+         elapsed_times1 = []
+         elapsed_times2 = []
+-    
+ 
+         for _ in range(num_runs):
+-            random_chars = ''.join(random.choices(string.ascii_letters + string.digits, k=9))
++            random_chars = ''.join(random.choices(
++                string.ascii_letters + string.digits, k=9
++            ))
++
+             start_time = time.perf_counter()
+             await test_case1()
+             elapsed_time1 = time.perf_counter() - start_time
+             elapsed_times1.append(elapsed_time1)
+ 
+             start_time = time.perf_counter()
+             await test_case2()
+             elapsed_time2 = time.perf_counter() - start_time
+             elapsed_times2.append(elapsed_time2)
+ 
+         avg_elapsed_time1 = mean(elapsed_times1)
+         avg_elapsed_time2 = mean(elapsed_times2)
+ 
+-
+-
+-        random_chars = ''.join(random.choices(string.ascii_letters + string.digits, k=9))
++        random_chars = ''.join(
++            random.choices(string.ascii_letters + string.digits, k=9)
++        )
+         query, query2, query3 = await test_case2(test_contains=True)
++
+         self.assertEqual(len(query), 1)
+         self.assertEqual(query[0].id, query2[0].id)
+         self.assertEqual(query2[0].id, query3[0].id)
+         self.assertGreater(avg_elapsed_time1, avg_elapsed_time2)
+ 
+-
+-
+-
+     async def test_distinct(self):
+         async with db_engine.get_pg_db_with_async() as session:
+             model1 = await Model4.objects.create(session, name="Test5")
+             model2 = await Model4.objects.create(session, name="Test6")
+             model3 = await Model4.objects.create(session, name="Test5")
+ 
+-            distinct_query = await Model4.objects.filter(session, distinct_fields=["name"], order_by="name")
++            distinct_query = await Model4.objects.filter(
++                session, distinct_fields=["name"], order_by="name"
++            )
+             self.assertEqual(len(distinct_query), 2)
+ 
+             await Model4.objects.delete(session, id=model1.id)
+             await Model4.objects.delete(session, id=model2.id)
+             await Model4.objects.delete(session, id=model3.id)
+ 
+-
+-
+-
+-
+     async def test_aggregations(self):
+         async with db_engine.get_pg_db_with_async() as session:
+             model1 = await Model1.objects.create(session, name="Test1")
+             model2 = await Model1.objects.create(session, name="Test2")
+             model3 = await Model1.objects.create(session, name="Test3")
+ 
+-            sum_query = await Model1.objects.aggregate(session, field="id", agg_func="sum")
+-            self.assertEqual(sum_query, model1.id + model2.id + model3.id)
++            sum_query = await Model1.objects.aggregate(
++                session, field="id", agg_func="sum"
++            )
++            self.assertEqual(
++                sum_query, model1.id + model2.id + model3.id
++            )
+ 
+-            min_query = await Model1.objects.aggregate(session, field="id", agg_func="min")
+-            self.assertEqual(min_query, min(model1.id, model2.id, model3.id))
++            min_query = await Model1.objects.aggregate(
++                session, field="id", agg_func="min"
++            )
++            self.assertEqual(
++                min_query, min(model1.id, model2.id, model3.id)
++            )
+ 
+-            max_query = await Model1.objects.aggregate(session, field="id", agg_func="max")
+-            self.assertEqual(max_query, max(model1.id, model2.id, model3.id))
++            max_query = await Model1.objects.aggregate(
++                session, field="id", agg_func="max"
++            )
++            self.assertEqual(
++                max_query, max(model1.id, model2.id, model3.id)
++            )
+ 
+-            count_query = await Model1.objects.aggregate(session, field="id", agg_func="count")
++            count_query = await Model1.objects.aggregate(
++                session, field="id", agg_func="count"
++            )
+             self.assertEqual(count_query, 3)
+ 
+-            avg_query = await Model1.objects.aggregate(session, field="id", agg_func="avg")
+-            self.assertEqual(avg_query, mean([model1.id, model2.id, model3.id]))
++            avg_query = await Model1.objects.aggregate(
++                session, field="id", agg_func="avg"
++            )
++            self.assertEqual(
++                avg_query, mean([model1.id, model2.id, model3.id])
++            )
+ 
+             await Model1.objects.delete(session, id=model1.id)
+             await Model1.objects.delete(session, id=model2.id)
+             await Model1.objects.delete(session, id=model3.id)
+ 
++    async def test_bulk_methods(self):
++        async with db_engine.get_pg_db_with_async() as session:
++            obj = [{"name": "name1"}, {"name": "name2"}]
++            await Model2.objects.bulk_create(session, obj)
++            result = await Model2.objects.filter(session, name="name2")
++            self.assertEqual(len(result), 1)
++            self.assertEqual(result[0].name, "name2")
++
++            # update_data = [
++            #     ({"name": "name1"}, {"name": "name3"}),
++            #     ({"name": "name2"}, {"name": "name4"}),
++            # ]
++            # await Model2.objects.bulk_update(session, update_data)
++            # result1 = await Model2.objects.filter(session, name="name3")
++            # result2 = await Model2.objects.filter(session, name="name4")
++            # self.assertEqual(len(result1)+len(result2), 2)
++            # self.assertEqual(result1[0].name, "name3")
++            # self.assertEqual(result1[0].name, "name4")
+ 
+-
+-
+-
+-
+-    async def test_where_and_join_and_selects_and_m2m(self):        
++    async def test_where_and_join_and_selects_and_m2m(self):
+         async with db_engine.get_pg_db_with_async() as session:
+-            random_char = ''.join(random.choices(string.ascii_letters + string.digits, k=9))
+-            model2 = await Model2.objects.create(session, name=f"{random_char}_part2") 
++            random_char = ''.join(
++                random.choices(string.ascii_letters + string.digits, k=9)
++            )
++            model2 = await Model2.objects.create(
++                session, name=f"{random_char}_part2"
++            )
+             obj_manager = Model1.objects
+             await obj_manager.create(session, name=f"{random_char}")
+             await obj_manager.add_m2m(session, model2)
++            # result2 = await Model1.objects.all(session)
++            # result = await Model1.objects.prefetch_related(Model2).all(
++            #   session
++            # )
+ 
+-
+-            ## My way
++            # My way
+             query = await Model1.objects.filter(
+                 session,
+                 limit=20,
+-                select_models=[Model2,],
+-                where=( 
+-                    (Model1.name + Model2.name).icontains(random_char), 
++                select_models=[Model2, ],
++                where=(
++                    (Model1.name + Model2.name).icontains(random_char),
+                 ),
+                 joins=[Model1.id == Model2.id],
+                 id__gte=0
+             )
+ 
+-
+-            ## SQLAlchemy Way
++            # SQLAlchemy Way
+             query2 = select(
+                 Model1, Model2
+             ).select_from(
+                 Model1
+             ).join(
+                 Model2, Model1.id == Model2.id
+             ).where(
+                 (Model1.name + Model2.name).icontains(random_char) &
+                 (Model1.id >= 0)
+             ).limit(
+                 20
+             )
+             items2 = await session.execute(query2)
+             results = items2.all()
+-
+-
+             self.assertEqual(len(results), len(query))
+-            assert len(results) > 0, "Query did not found the correspanding models, please check the DB."
++            assert len(results) > 0, """
++                Query did not found the correspanding models,
++                please check the DB.
++            """
+             self.assertEqual(len(results[0]), len(query[0]))
+             self.assertEqual(results[0][0].id, query[0][0].id)
+             self.assertEqual(results[0][1].id, query[0][1].id)
+ 
+ 
+-
+-
+-    
+-
+-
+ if __name__ == "__main__":
++    resolve_path
+     Base = declarative_base()
+     association_table = Table(
+         'association', Base.metadata,
+         Column('model1_id', Integer, ForeignKey('model1.id')),
+         Column('model2_id', Integer, ForeignKey('model2.id'))
+     )
+ 
+-
+     class Model1(AbstractModel, Base):
+         __tablename__ = 'model1'
+         id = Column(Integer, primary_key=True, index=True)
+         name = Column(String(50), nullable=True)
+ 
+-        model2s = relationship("Model2", secondary=association_table, back_populates="model1s")
++        model2s = relationship(
++            "Model2",
++            secondary=association_table, back_populates="model1s"
++        )
+         model3s = relationship("Model3", back_populates="model1")
+ 
+-
+-
+     class Model2(AbstractModel, Base):
+         __tablename__ = 'model2'
+         id = Column(Integer, primary_key=True, index=True)
+         name = Column(String(50), nullable=True)
+ 
+-        model1s = relationship("Model1", secondary=association_table, back_populates="model2s")
+-    
+-
++        model1s = relationship(
++            "Model1",
++            secondary=association_table, back_populates="model2s"
++        )
+ 
+     class Model3(AbstractModel, Base):
+         __tablename__ = 'model3'
+         id = Column(Integer, primary_key=True, index=True)
+         name = Column(String(50), nullable=True)
+         model1_id = Column(Integer, ForeignKey('model1.id'))
+         model1 = relationship("Model1", back_populates="model3s")
+ 
+-
+-
+     class Model4(AbstractModel, Base):
+         __tablename__ = 'model4'
+         id = Column(Integer, primary_key=True, index=True)
+         name = Column(String(50), nullable=True)
+ 
+-
+     db_engine = Engine(MyConfig())
+-    unittest.main()
++    unittest.main()
+```
+
+### Comparing `fastapi-integration-0.0.6/tests/start.py` & `fastapi-integration-0.0.7/tests/start.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,47 +1,35 @@
+-import sys, os
+-current_dir = os.path.abspath('.')
+-sys.path.insert(0, current_dir)
++import resolve_path
++import uvicorn
++import logging
+ 
+-from fastapi_integration import FastAPIExtended, FastApiConfig
+ from pydantic import PostgresDsn, RedisDsn
+-import uvicorn, traceback
+-import logging
+-from fastapi_integration.models import AbstractBaseUser
+ 
++from fastapi_integration import FastAPIExtended, FastApiConfig
++from fastapi_integration.models import AbstractBaseUser
+ 
+ 
+ class MyConfig(FastApiConfig):
+     debug = True
+-    database_url:PostgresDsn = "postgresql+asyncpg://postgres:12345@127.0.0.1:5432/test"   # Postgres Database URL
+-    secret_key = "2129df71b280f0768a80efcb7bf5259928f259399fd91e5b3e19991ce8806gp2"        # A Random Secret Key
+-    redis_url:RedisDsn = "redis://127.0.0.1:6382/0"                                        # Redis Database URL
+-    title = "Test"  
+-                                                                           # Website Title
++    database_url: PostgresDsn = "postgresql+asyncpg://postgres:12345@127.0.0.1:5432/test"   # Postgres Database URL
++    secret_key = "2129df71b280f0768a80efcb7bf5"        # A Random Secret Key
++    redis_url: RedisDsn = "redis://127.0.0.1:6382/0"   # Redis Database URL
++    title = "Test"                                     # Website Title
+ 
+ 
+ class User(AbstractBaseUser):
+-    ## Add Your Desired Fields Here. You may load them in a .
+-    pass
+-
++    """Add Your Desired Fields Here."""
+ 
+ 
+-settings = MyConfig
+-
+ class MyApp(FastAPIExtended):
+-    settings = settings
+-
+-    
++    settings = MyConfig
+ 
+ 
+ app = MyApp(Users=User)
+ 
+ 
+ if __name__ == "__main__":
+-    try:
+-        
+-        logging.basicConfig(level=logging.INFO)
+-        
+-        uvicorn.run("start:app", host="localhost", port=8000, reload=True, workers=1)
+-        
+-    except Exception as e:
+-        traceback.print_exc()
++    resolve_path
++    logging.basicConfig(level=logging.INFO)
++    uvicorn.run(
++        "start:app", host="localhost", port=8000, reload=True, workers=1
++    )
+```
+
