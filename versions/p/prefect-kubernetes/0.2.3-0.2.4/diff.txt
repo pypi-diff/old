@@ -1,0 +1,342 @@
+--- tmp/prefect-kubernetes-0.2.3.tar.gz
++++ tmp/prefect-kubernetes-0.2.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "/home/runner/work/prefect-kubernetes/prefect-kubernetes/dist/.tmp-r_4uj4ym/prefect-kubernetes-0.2.3.tar", last modified: Sat Apr  1 21:30:44 2023, max compression
+│ +gzip compressed data, was "/home/runner/work/prefect-kubernetes/prefect-kubernetes/dist/.tmp-35dpud7r/prefect-kubernetes-0.2.4.tar", last modified: Thu Apr  6 21:56:24 2023, max compression
+│   --- prefect-kubernetes-0.2.3.tar
+├── +++ prefect-kubernetes-0.2.4.tar
+│ ├── file list
+│ │ @@ -1,41 +1,41 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7618 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6702 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      352 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4487 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/credentials.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15378 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/custom_objects.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10242 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/deployments.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      630 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1281 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/flows.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19500 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/jobs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12076 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/pods.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9722 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/services.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6554 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/utilities.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26561 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/prefect_kubernetes/worker.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7618 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      965 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      228 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       19 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      180 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/requirements-dev.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      813 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1669 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 21:30:44.000000 prefect-kubernetes-0.2.3/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      677 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_block_standards.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_credentials.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9652 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_custom_objects.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5100 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_deployments.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4201 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_flows.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5343 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_jobs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6775 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_pods.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4254 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_services.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6751 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_utilities.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    71880 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/tests/test_worker.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    80049 2023-04-01 21:29:26.000000 prefect-kubernetes-0.2.3/versioneer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7618 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6702 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      352 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4487 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/credentials.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15378 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/custom_objects.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10242 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/deployments.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      630 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1281 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/flows.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19500 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/jobs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12076 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/pods.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9722 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/services.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6554 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/utilities.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29178 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/prefect_kubernetes/worker.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7618 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      965 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      228 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       19 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      180 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/requirements-dev.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      813 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1669 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 21:56:24.000000 prefect-kubernetes-0.2.4/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      677 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_block_standards.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_credentials.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9652 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_custom_objects.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5100 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_deployments.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4201 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_flows.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5343 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_jobs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6775 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_pods.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4254 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_services.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6751 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_utilities.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    71880 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/tests/test_worker.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    80049 2023-04-06 21:55:00.000000 prefect-kubernetes-0.2.4/versioneer.py
+│ │   --- prefect-kubernetes-0.2.3/LICENSE
+│ ├── +++ prefect-kubernetes-0.2.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/PKG-INFO
+│ ├── +++ prefect-kubernetes-0.2.4/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: prefect-kubernetes
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: Prefect integrations for interacting with Kubernetes.
+│ │  Home-page: https://github.com/PrefectHQ/prefect-kubernetes
+│ │  Author: Prefect Technologies, Inc.
+│ │  Author-email: help@prefect.io
+│ │  License: Apache License 2.0
+│ │  Keywords: prefect
+│ │  Classifier: Natural Language :: English
+│ │   --- prefect-kubernetes-0.2.3/README.md
+│ ├── +++ prefect-kubernetes-0.2.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/credentials.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/credentials.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/custom_objects.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/custom_objects.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/deployments.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/deployments.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/exceptions.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/flows.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/flows.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/jobs.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/jobs.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/pods.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/pods.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/services.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/services.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/utilities.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/utilities.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes/worker.py
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes/worker.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,51 +1,133 @@
+│ │  """
+│ │ -<span class="badge-api experimental"/>
+│ │ +<span class="badge-api beta"/>
+│ │  
+│ │  Module containing the Kubernetes worker used for executing flow runs as Kubernetes jobs.
+│ │  
+│ │ -Note this module is **experimental**. The interfaces within may change without notice.
+│ │ +Note this module is in **beta**. The interfaces within may change without notice.
+│ │  
+│ │  To start a Kubernetes worker, run the following command:
+│ │  
+│ │  ```bash
+│ │  prefect worker start --pool 'my-work-pool' --type kubernetes
+│ │  ```
+│ │  
+│ │  Replace `my-work-pool` with the name of the work pool you want the worker
+│ │  to poll for flow runs.
+│ │  
+│ │ +!!! example "Using a custom Kubernetes job manifest template"
+│ │ +    The default template used for Kubernetes job manifests looks like this:
+│ │ +    ```yaml
+│ │ +    ---
+│ │ +    apiVersion: batch/v1
+│ │ +    kind: Job
+│ │ +    metadata:
+│ │ +    labels: "{{ labels }}"
+│ │ +    namespace: "{{ namespace }}"
+│ │ +    generateName: "{{ name }}-"
+│ │ +    spec:
+│ │ +    ttlSecondsAfterFinished: "{{ finished_job_ttl }}"
+│ │ +    template:
+│ │ +        spec:
+│ │ +        parallelism: 1
+│ │ +        completions: 1
+│ │ +        restartPolicy: Never
+│ │ +        serviceAccountName: "{{ service_account_name }}"
+│ │ +        containers:
+│ │ +        - name: prefect-job
+│ │ +            env: "{{ env }}"
+│ │ +            image: "{{ image }}"
+│ │ +            imagePullPolicy: "{{ image_pull_policy }}"
+│ │ +            args: "{{ command }}"
+│ │ +    ```
+│ │ +
+│ │ +    Each values enclosed in `{{ }}` is a placeholder that will be replaced with
+│ │ +    a value at runtime. The values that can be used a placeholders are defined
+│ │ +    by the `variables` schema defined in the base job template.
+│ │ +
+│ │ +    The default job manifest and available variables can be customized on a work pool
+│ │ +    by work pool basis. These customizations can be made via the Prefect UI when
+│ │ +    creating or editing a work pool.
+│ │ +
+│ │ +    For example, if you wanted to allow custom memory requests for a Kubernetes work
+│ │ +    pool you could update the job manifest template to look like this:
+│ │ +
+│ │ +    ```yaml
+│ │ +    ---
+│ │ +    apiVersion: batch/v1
+│ │ +    kind: Job
+│ │ +    metadata:
+│ │ +    labels: "{{ labels }}"
+│ │ +    namespace: "{{ namespace }}"
+│ │ +    generateName: "{{ name }}-"
+│ │ +    spec:
+│ │ +    ttlSecondsAfterFinished: "{{ finished_job_ttl }}"
+│ │ +    template:
+│ │ +        spec:
+│ │ +        parallelism: 1
+│ │ +        completions: 1
+│ │ +        restartPolicy: Never
+│ │ +        serviceAccountName: "{{ service_account_name }}"
+│ │ +        containers:
+│ │ +        - name: prefect-job
+│ │ +            env: "{{ env }}"
+│ │ +            image: "{{ image }}"
+│ │ +            imagePullPolicy: "{{ image_pull_policy }}"
+│ │ +            args: "{{ command }}"
+│ │ +            resources:
+│ │ +                requests:
+│ │ +                    memory: "{{ memory }}Mi"
+│ │ +                limits:
+│ │ +                    memory: 128Mi
+│ │ +    ```
+│ │ +
+│ │ +    In this new template, the `memory` placeholder allows customization of the memory
+│ │ +    allocated to Kubernetes jobs created by workers in this work pool, but the limit
+│ │ +    is hard-coded and cannot be changed by deployments.
+│ │ +
+│ │  For more information about work pools and workers,
+│ │  checkout out the [Prefect docs](https://docs.prefect.io/concepts/work-pools/).
+│ │  """
+│ │  import enum
+│ │  import math
+│ │  import os
+│ │  import time
+│ │  from contextlib import contextmanager
+│ │  from typing import TYPE_CHECKING, Any, Dict, Generator, Optional, Tuple
+│ │  
+│ │  import anyio.abc
+│ │ +import prefect
+│ │ +from packaging import version
+│ │  from prefect.blocks.kubernetes import KubernetesClusterConfig
+│ │  from prefect.docker import get_prefect_image_name
+│ │ -from prefect.experimental.workers.base import (
+│ │ -    BaseJobConfiguration,
+│ │ -    BaseVariables,
+│ │ -    BaseWorker,
+│ │ -    BaseWorkerResult,
+│ │ -)
+│ │  from prefect.server.schemas.core import Flow
+│ │  from prefect.server.schemas.responses import DeploymentResponse
+│ │  from prefect.utilities.asyncutils import run_sync_in_worker_thread
+│ │  from prefect.utilities.importtools import lazy_import
+│ │  from prefect.utilities.pydantic import JsonPatch
+│ │  from prefect.utilities.templating import find_placeholders
+│ │  from pydantic import Field, validator
+│ │  from typing_extensions import Literal
+│ │  
+│ │ +# TODO: Remove this after next prefect release
+│ │ +if version.parse(prefect.__version__) <= version.parse("2.9.0"):
+│ │ +    from prefect.experimental.workers.base import (
+│ │ +        BaseJobConfiguration,
+│ │ +        BaseVariables,
+│ │ +        BaseWorker,
+│ │ +        BaseWorkerResult,
+│ │ +    )
+│ │ +else:
+│ │ +    from prefect.workers.base import (
+│ │ +        BaseJobConfiguration,
+│ │ +        BaseWorker,
+│ │ +        BaseWorkerResult,
+│ │ +        BaseVariables,
+│ │ +    )
+│ │ +
+│ │  from prefect_kubernetes.utilities import (
+│ │      _slugify_label_key,
+│ │      _slugify_label_value,
+│ │      _slugify_name,
+│ │  )
+│ │  
+│ │  if TYPE_CHECKING:
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/PKG-INFO
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: prefect-kubernetes
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: Prefect integrations for interacting with Kubernetes.
+│ │  Home-page: https://github.com/PrefectHQ/prefect-kubernetes
+│ │  Author: Prefect Technologies, Inc.
+│ │  Author-email: help@prefect.io
+│ │  License: Apache License 2.0
+│ │  Keywords: prefect
+│ │  Classifier: Natural Language :: English
+│ │   --- prefect-kubernetes-0.2.3/prefect_kubernetes.egg-info/SOURCES.txt
+│ ├── +++ prefect-kubernetes-0.2.4/prefect_kubernetes.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/setup.cfg
+│ ├── +++ prefect-kubernetes-0.2.4/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/setup.py
+│ ├── +++ prefect-kubernetes-0.2.4/setup.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_block_standards.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_block_standards.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_credentials.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_credentials.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_custom_objects.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_custom_objects.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_deployments.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_deployments.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_flows.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_flows.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_jobs.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_jobs.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_pods.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_pods.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_services.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_services.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_utilities.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_utilities.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/tests/test_worker.py
+│ ├── +++ prefect-kubernetes-0.2.4/tests/test_worker.py
+│ │┄ Files identical despite different names
+│ │   --- prefect-kubernetes-0.2.3/versioneer.py
+│ ├── +++ prefect-kubernetes-0.2.4/versioneer.py
+│ │┄ Files identical despite different names

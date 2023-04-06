@@ -1,0 +1,781 @@
+# Comparing `tmp/dcicsnovault-7.9.9.0b1.tar.gz` & `tmp/dcicsnovault-7.9.9.0b2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dcicsnovault-7.9.9.0b1.tar", max compression
++gzip compressed data, was "dcicsnovault-7.9.9.0b2.tar", max compression
+```
+
+## Comparing `dcicsnovault-7.9.9.0b1.tar` & `dcicsnovault-7.9.9.0b2.tar`
+
+### file list
+
+```diff
+@@ -1,124 +1,124 @@
+--rw-r--r--   0        0        0     1135 2020-04-22 15:19:59.681690 dcicsnovault-7.9.9.0b1/LICENSE.txt
+--rw-r--r--   0        0        0     6407 2023-02-08 18:10:49.791837 dcicsnovault-7.9.9.0b1/README.rst
+--rw-r--r--   0        0        0     5583 2023-03-13 18:29:42.035494 dcicsnovault-7.9.9.0b1/pyproject.toml
+--rw-r--r--   0        0        0     4460 2023-03-13 18:29:23.858548 dcicsnovault-7.9.9.0b1/snovault/__init__.py
+--rw-r--r--   0        0        0     1942 2023-02-08 18:10:49.809612 dcicsnovault-7.9.9.0b1/snovault/aggregated_items.py
+--rw-r--r--   0        0        0     8207 2023-02-08 18:10:49.814590 dcicsnovault-7.9.9.0b1/snovault/app.py
+--rw-r--r--   0        0        0    11879 2023-02-08 18:10:49.815230 dcicsnovault-7.9.9.0b1/snovault/attachment.py
+--rw-r--r--   0        0        0     6670 2023-02-08 18:10:49.815747 dcicsnovault-7.9.9.0b1/snovault/batchupgrade.py
+--rw-r--r--   0        0        0     1902 2020-04-22 15:19:59.997364 dcicsnovault-7.9.9.0b1/snovault/cache.py
+--rw-r--r--   0        0        0     6461 2020-10-21 18:02:06.878589 dcicsnovault-7.9.9.0b1/snovault/calculated.py
+--rw-r--r--   0        0        0       10 2020-04-22 15:19:59.995285 dcicsnovault-7.9.9.0b1/snovault/commands/__init__.py
+--rw-r--r--   0        0        0     3416 2020-09-15 14:05:58.054812 dcicsnovault-7.9.9.0b1/snovault/commands/check_rendering.py
+--rw-r--r--   0        0        0     1608 2023-02-08 18:10:49.821555 dcicsnovault-7.9.9.0b1/snovault/commands/es_index_data.py
+--rw-r--r--   0        0        0     1644 2020-04-22 15:19:59.991754 dcicsnovault-7.9.9.0b1/snovault/commands/jsonld_rdf.py
+--rw-r--r--   0        0        0     4350 2023-02-08 18:10:49.822376 dcicsnovault-7.9.9.0b1/snovault/commands/profile.py
+--rw-r--r--   0        0        0      909 2023-02-08 18:10:49.823005 dcicsnovault-7.9.9.0b1/snovault/commands/wipe_test_indices.py
+--rw-r--r--   0        0        0     4183 2023-02-08 18:10:49.823623 dcicsnovault-7.9.9.0b1/snovault/config.py
+--rw-r--r--   0        0        0     6352 2023-02-08 18:10:49.824292 dcicsnovault-7.9.9.0b1/snovault/connection.py
+--rw-r--r--   0        0        0    14815 2023-02-08 18:10:49.829933 dcicsnovault-7.9.9.0b1/snovault/crud_views.py
+--rw-r--r--   0        0        0     4282 2023-02-08 18:10:49.830617 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/__init__.py
+--rw-r--r--   0        0        0     4727 2023-02-08 18:10:49.835624 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/cached_views.py
+--rw-r--r--   0        0        0    60967 2023-03-13 18:29:27.179039 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/create_mapping.py
+--rw-r--r--   0        0        0     7939 2023-02-08 18:10:49.846547 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/es_index_listener.py
+--rw-r--r--   0        0        0    18572 2023-02-08 18:10:49.851730 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/esstorage.py
+--rw-r--r--   0        0        0    24353 2023-02-08 18:10:49.858087 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/indexer.py
+--rw-r--r--   0        0        0    31356 2023-02-08 18:10:49.863845 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/indexer_queue.py
+--rw-r--r--   0        0        0    20947 2023-02-08 18:10:49.871835 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/indexer_utils.py
+--rw-r--r--   0        0        0      349 2021-08-12 19:39:17.751212 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/interfaces.py
+--rw-r--r--   0        0        0    10164 2023-02-08 18:10:49.877388 dcicsnovault-7.9.9.0b1/snovault/elasticsearch/mpindexer.py
+--rw-r--r--   0        0        0     8249 2021-08-12 19:39:17.757097 dcicsnovault-7.9.9.0b1/snovault/embed.py
+--rw-r--r--   0        0        0     1061 2023-02-08 18:10:49.878124 dcicsnovault-7.9.9.0b1/snovault/etag.py
+--rw-r--r--   0        0        0    10835 2023-02-08 18:10:49.886932 dcicsnovault-7.9.9.0b1/snovault/indexing_views.py
+--rw-r--r--   0        0        0      774 2020-04-22 15:19:59.962133 dcicsnovault-7.9.9.0b1/snovault/interfaces.py
+--rw-r--r--   0        0        0     2229 2023-02-08 18:10:49.892547 dcicsnovault-7.9.9.0b1/snovault/invalidation.py
+--rw-r--r--   0        0        0     1639 2023-02-08 18:10:49.897621 dcicsnovault-7.9.9.0b1/snovault/json_renderer.py
+--rw-r--r--   0        0        0     2292 2020-09-15 14:05:58.093412 dcicsnovault-7.9.9.0b1/snovault/jsongraph.py
+--rw-r--r--   0        0        0     9713 2023-02-08 18:10:49.904627 dcicsnovault-7.9.9.0b1/snovault/jsonld_context.py
+--rw-r--r--   0        0        0      846 2020-04-22 15:19:59.956023 dcicsnovault-7.9.9.0b1/snovault/predicates.py
+--rw-r--r--   0        0        0       95 2023-03-13 18:29:23.865837 dcicsnovault-7.9.9.0b1/snovault/redis/README.rst
+--rw-r--r--   0        0        0       90 2023-03-13 18:29:23.872277 dcicsnovault-7.9.9.0b1/snovault/redis/__init__.py
+--rw-r--r--   0        0        0       15 2023-03-13 18:29:23.877586 dcicsnovault-7.9.9.0b1/snovault/redis/interfaces.py
+--rw-r--r--   0        0        0     4095 2023-03-13 18:29:23.882578 dcicsnovault-7.9.9.0b1/snovault/redis/redis_connection.py
+--rw-r--r--   0        0        0     6495 2023-02-08 18:10:49.909627 dcicsnovault-7.9.9.0b1/snovault/renderers.py
+--rw-r--r--   0        0        0    11201 2023-02-08 18:10:49.914597 dcicsnovault-7.9.9.0b1/snovault/resource_views.py
+--rw-r--r--   0        0        0    21853 2023-03-13 18:29:23.884177 dcicsnovault-7.9.9.0b1/snovault/resources.py
+--rw-r--r--   0        0        0     3450 2023-02-08 18:10:49.920477 dcicsnovault-7.9.9.0b1/snovault/schema_graph.py
+--rw-r--r--   0        0        0    16947 2023-02-08 18:10:49.925687 dcicsnovault-7.9.9.0b1/snovault/schema_utils.py
+--rw-r--r--   0        0        0     4359 2020-04-22 15:19:59.946631 dcicsnovault-7.9.9.0b1/snovault/schema_views.py
+--rw-r--r--   0        0        0      522 2023-02-08 18:10:49.926443 dcicsnovault-7.9.9.0b1/snovault/settings.py
+--rw-r--r--   0        0        0     1498 2021-08-12 19:39:17.787731 dcicsnovault-7.9.9.0b1/snovault/standalone_dev.py
+--rw-r--r--   0        0        0     4383 2023-02-08 18:10:49.931408 dcicsnovault-7.9.9.0b1/snovault/stats.py
+--rw-r--r--   0        0        0    34236 2023-03-13 18:29:27.179813 dcicsnovault-7.9.9.0b1/snovault/storage.py
+--rw-r--r--   0        0        0      330 2020-04-22 15:19:59.941685 dcicsnovault-7.9.9.0b1/snovault/test_schemas/AbstractItemTestSecondSubItem.json
+--rw-r--r--   0        0        0      300 2020-04-22 15:19:59.940748 dcicsnovault-7.9.9.0b1/snovault/test_schemas/AbstractItemTestSubItem.json
+--rw-r--r--   0        0        0     2467 2023-02-08 18:10:49.937350 dcicsnovault-7.9.9.0b1/snovault/test_schemas/EmbeddingTest.json
+--rw-r--r--   0        0        0      446 2021-08-12 19:39:17.798764 dcicsnovault-7.9.9.0b1/snovault/test_schemas/NestedEmbeddingContainer.json
+--rw-r--r--   0        0        0      883 2021-08-12 19:39:17.803883 dcicsnovault-7.9.9.0b1/snovault/test_schemas/NestedObjectLinkTarget.json
+--rw-r--r--   0        0        0      473 2021-08-12 19:39:17.810025 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingBiogroupSno.json
+--rw-r--r--   0        0        0      968 2023-02-08 18:10:49.943722 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingBiosampleSno.json
+--rw-r--r--   0        0        0     1082 2021-08-12 19:39:17.820805 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingBiosourceSno.json
+--rw-r--r--   0        0        0      894 2020-09-25 18:48:35.851983 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingCalculatedProperties.json
+--rw-r--r--   0        0        0      276 2020-04-22 15:19:59.938605 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingDependencies.json
+--rw-r--r--   0        0        0      577 2020-04-22 15:19:59.937715 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingDownload.json
+--rw-r--r--   0        0        0      555 2021-08-12 19:39:17.826025 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingIndividualSno.json
+--rw-r--r--   0        0        0      730 2020-04-22 15:19:59.936694 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingLinkAggregateSno.json
+--rw-r--r--   0        0        0      697 2021-08-12 19:39:17.831918 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingLinkSourceSno.json
+--rw-r--r--   0        0        0      472 2021-08-12 19:39:17.838406 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingLinkTargetElasticSearch.json
+--rw-r--r--   0        0        0      292 2020-04-22 15:19:59.934939 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingLinkTargetSno.json
+--rw-r--r--   0        0        0      311 2020-09-25 18:48:35.858197 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingMixins.json
+--rw-r--r--   0        0        0      845 2021-08-12 19:39:18.009063 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingNestedEnabled.json
+--rw-r--r--   0        0        0     3721 2023-02-08 18:10:49.949847 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingNoteSno.json
+--rw-r--r--   0        0        0     1622 2021-08-12 19:39:17.850333 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingPostPutPatchSno.json
+--rw-r--r--   0        0        0      576 2020-04-22 15:19:59.932932 dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingServerDefault.json
+--rw-r--r--   0        0        0      417 2020-09-25 18:48:35.864539 dcicsnovault-7.9.9.0b1/snovault/test_schemas/mixins.json
+--rw-r--r--   0        0        0        0 2023-02-08 18:10:49.950317 dcicsnovault-7.9.9.0b1/snovault/tests/__init__.py
+--rw-r--r--   0        0        0     9899 2023-02-08 18:10:49.951886 dcicsnovault-7.9.9.0b1/snovault/tests/authentication.py
+--rw-r--r--   0        0        0     2068 2020-09-15 14:05:58.153546 dcicsnovault-7.9.9.0b1/snovault/tests/authorization.py
+--rw-r--r--   0        0        0     2216 2023-02-08 18:10:49.952416 dcicsnovault-7.9.9.0b1/snovault/tests/conftest.py
+--rw-r--r--   0        0        0      100 2023-02-08 18:10:49.952678 dcicsnovault-7.9.9.0b1/snovault/tests/conftest_settings.py
+--rw-r--r--   0        0        0     3086 2023-02-08 18:10:49.957620 dcicsnovault-7.9.9.0b1/snovault/tests/elasticsearch_fixture.py
+--rw-r--r--   0        0        0     3921 2020-09-15 14:05:58.160270 dcicsnovault-7.9.9.0b1/snovault/tests/postgresql_fixture.py
+--rw-r--r--   0        0        0      864 2021-08-12 19:39:17.864425 dcicsnovault-7.9.9.0b1/snovault/tests/pyramidfixtures.py
+--rw-r--r--   0        0        0     3007 2020-09-15 14:05:58.161510 dcicsnovault-7.9.9.0b1/snovault/tests/root.py
+--rw-r--r--   0        0        0    59212 2023-02-08 18:10:49.963341 dcicsnovault-7.9.9.0b1/snovault/tests/search.py
+--rw-r--r--   0        0        0    17315 2023-03-13 18:29:27.180569 dcicsnovault-7.9.9.0b1/snovault/tests/serverfixtures.py
+--rw-r--r--   0        0        0     1857 2020-04-22 15:19:59.922938 dcicsnovault-7.9.9.0b1/snovault/tests/snowflake_hash.py
+--rw-r--r--   0        0        0    20291 2023-02-08 18:10:49.970172 dcicsnovault-7.9.9.0b1/snovault/tests/test_attachment.py
+--rw-r--r--   0        0        0     3932 2020-04-22 15:19:59.920849 dcicsnovault-7.9.9.0b1/snovault/tests/test_authentication.py
+--rw-r--r--   0        0        0     1370 2021-08-12 19:39:17.883512 dcicsnovault-7.9.9.0b1/snovault/tests/test_calculated.py
+--rw-r--r--   0        0        0     8984 2023-02-08 18:10:49.975775 dcicsnovault-7.9.9.0b1/snovault/tests/test_create_mapping.py
+--rw-r--r--   0        0        0     7458 2023-02-08 18:10:49.976460 dcicsnovault-7.9.9.0b1/snovault/tests/test_embed_utils.py
+--rw-r--r--   0        0        0     8823 2023-03-13 18:29:27.181151 dcicsnovault-7.9.9.0b1/snovault/tests/test_embedding.py
+--rw-r--r--   0        0        0    10024 2020-04-22 15:19:59.916562 dcicsnovault-7.9.9.0b1/snovault/tests/test_es_permissions.py
+--rw-r--r--   0        0        0    95147 2023-03-13 18:29:27.182098 dcicsnovault-7.9.9.0b1/snovault/tests/test_indexing.py
+--rw-r--r--   0        0        0    28258 2023-02-08 18:10:49.984723 dcicsnovault-7.9.9.0b1/snovault/tests/test_invalidation_scope.py
+--rw-r--r--   0        0        0     2147 2023-02-08 18:10:49.985400 dcicsnovault-7.9.9.0b1/snovault/tests/test_key.py
+--rw-r--r--   0        0        0     2458 2020-04-22 15:19:59.908101 dcicsnovault-7.9.9.0b1/snovault/tests/test_link.py
+--rw-r--r--   0        0        0     5316 2023-02-08 18:10:49.991255 dcicsnovault-7.9.9.0b1/snovault/tests/test_logging.py
+--rw-r--r--   0        0        0     1134 2023-03-13 18:29:27.182699 dcicsnovault-7.9.9.0b1/snovault/tests/test_misc.py
+--rw-r--r--   0        0        0      373 2020-09-25 18:48:35.895147 dcicsnovault-7.9.9.0b1/snovault/tests/test_mixins.py
+--rw-r--r--   0        0        0    13660 2023-02-08 18:10:49.997635 dcicsnovault-7.9.9.0b1/snovault/tests/test_post_put_patch.py
+--rw-r--r--   0        0        0     1570 2023-02-08 18:10:50.005697 dcicsnovault-7.9.9.0b1/snovault/tests/test_postgresql_fixture.py
+--rw-r--r--   0        0        0     1194 2021-08-12 19:39:17.921857 dcicsnovault-7.9.9.0b1/snovault/tests/test_schemas.py
+--rw-r--r--   0        0        0      952 2023-02-08 18:10:50.011548 dcicsnovault-7.9.9.0b1/snovault/tests/test_serverfixtures.py
+--rw-r--r--   0        0        0      484 2020-09-15 14:05:58.201112 dcicsnovault-7.9.9.0b1/snovault/tests/test_snowflake_hash.py
+--rw-r--r--   0        0        0     4267 2021-08-12 19:39:17.928403 dcicsnovault-7.9.9.0b1/snovault/tests/test_standalone_dev.py
+--rw-r--r--   0        0        0     2211 2023-02-08 18:10:50.016544 dcicsnovault-7.9.9.0b1/snovault/tests/test_stats.py
+--rw-r--r--   0        0        0    13222 2023-03-13 18:29:27.183158 dcicsnovault-7.9.9.0b1/snovault/tests/test_storage.py
+--rw-r--r--   0        0        0     1291 2020-04-22 15:19:59.901514 dcicsnovault-7.9.9.0b1/snovault/tests/test_upgrader.py
+--rw-r--r--   0        0        0     6635 2023-02-08 18:10:50.017803 dcicsnovault-7.9.9.0b1/snovault/tests/test_util.py
+--rw-r--r--   0        0        0    18612 2023-02-08 18:10:50.023759 dcicsnovault-7.9.9.0b1/snovault/tests/test_views.py
+--rw-r--r--   0        0        0     4621 2023-02-08 18:10:50.029803 dcicsnovault-7.9.9.0b1/snovault/tests/testappfixtures.py
+--rw-r--r--   0        0        0      688 2020-09-15 14:05:58.215074 dcicsnovault-7.9.9.0b1/snovault/tests/testing_key.py
+--rw-r--r--   0        0        0      677 2020-09-15 14:05:58.215585 dcicsnovault-7.9.9.0b1/snovault/tests/testing_upgrader.py
+--rw-r--r--   0        0        0    26232 2023-02-08 18:10:50.036243 dcicsnovault-7.9.9.0b1/snovault/tests/testing_views.py
+--rw-r--r--   0        0        0     1342 2020-09-15 14:05:58.228484 dcicsnovault-7.9.9.0b1/snovault/tests/toolfixtures.py
+--rw-r--r--   0        0        0     3394 2023-03-13 18:29:27.183332 dcicsnovault-7.9.9.0b1/snovault/tools.py
+--rw-r--r--   0        0        0     7605 2021-08-12 19:39:17.963916 dcicsnovault-7.9.9.0b1/snovault/typeinfo.py
+--rw-r--r--   0        0        0     8124 2023-02-08 18:10:50.037173 dcicsnovault-7.9.9.0b1/snovault/upgrader.py
+--rw-r--r--   0        0        0    45963 2023-03-13 18:29:27.184109 dcicsnovault-7.9.9.0b1/snovault/util.py
+--rw-r--r--   0        0        0     5460 2023-02-08 18:10:50.039101 dcicsnovault-7.9.9.0b1/snovault/validation.py
+--rw-r--r--   0        0        0     5718 2023-02-08 18:10:50.044485 dcicsnovault-7.9.9.0b1/snovault/validators.py
+--rw-r--r--   0        0        0     8781 1970-01-01 00:00:00.000000 dcicsnovault-7.9.9.0b1/setup.py
+--rw-r--r--   0        0        0     9056 1970-01-01 00:00:00.000000 dcicsnovault-7.9.9.0b1/PKG-INFO
++-rw-r--r--   0        0        0     1135 2020-04-22 15:19:59.681690 dcicsnovault-7.9.9.0b2/LICENSE.txt
++-rw-r--r--   0        0        0     6407 2023-02-08 18:10:49.791837 dcicsnovault-7.9.9.0b2/README.rst
++-rw-r--r--   0        0        0     5583 2023-03-14 20:43:04.860678 dcicsnovault-7.9.9.0b2/pyproject.toml
++-rw-r--r--   0        0        0     4460 2023-03-13 18:29:23.858548 dcicsnovault-7.9.9.0b2/snovault/__init__.py
++-rw-r--r--   0        0        0     1942 2023-02-08 18:10:49.809612 dcicsnovault-7.9.9.0b2/snovault/aggregated_items.py
++-rw-r--r--   0        0        0     8207 2023-02-08 18:10:49.814590 dcicsnovault-7.9.9.0b2/snovault/app.py
++-rw-r--r--   0        0        0    11879 2023-02-08 18:10:49.815230 dcicsnovault-7.9.9.0b2/snovault/attachment.py
++-rw-r--r--   0        0        0     6670 2023-02-08 18:10:49.815747 dcicsnovault-7.9.9.0b2/snovault/batchupgrade.py
++-rw-r--r--   0        0        0     1902 2020-04-22 15:19:59.997364 dcicsnovault-7.9.9.0b2/snovault/cache.py
++-rw-r--r--   0        0        0     6461 2020-10-21 18:02:06.878589 dcicsnovault-7.9.9.0b2/snovault/calculated.py
++-rw-r--r--   0        0        0       10 2020-04-22 15:19:59.995285 dcicsnovault-7.9.9.0b2/snovault/commands/__init__.py
++-rw-r--r--   0        0        0     3416 2020-09-15 14:05:58.054812 dcicsnovault-7.9.9.0b2/snovault/commands/check_rendering.py
++-rw-r--r--   0        0        0     1608 2023-02-08 18:10:49.821555 dcicsnovault-7.9.9.0b2/snovault/commands/es_index_data.py
++-rw-r--r--   0        0        0     1644 2020-04-22 15:19:59.991754 dcicsnovault-7.9.9.0b2/snovault/commands/jsonld_rdf.py
++-rw-r--r--   0        0        0     4350 2023-02-08 18:10:49.822376 dcicsnovault-7.9.9.0b2/snovault/commands/profile.py
++-rw-r--r--   0        0        0      909 2023-02-08 18:10:49.823005 dcicsnovault-7.9.9.0b2/snovault/commands/wipe_test_indices.py
++-rw-r--r--   0        0        0     4183 2023-02-08 18:10:49.823623 dcicsnovault-7.9.9.0b2/snovault/config.py
++-rw-r--r--   0        0        0     6352 2023-02-08 18:10:49.824292 dcicsnovault-7.9.9.0b2/snovault/connection.py
++-rw-r--r--   0        0        0    14815 2023-02-08 18:10:49.829933 dcicsnovault-7.9.9.0b2/snovault/crud_views.py
++-rw-r--r--   0        0        0     4282 2023-02-08 18:10:49.830617 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/__init__.py
++-rw-r--r--   0        0        0     4727 2023-02-08 18:10:49.835624 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/cached_views.py
++-rw-r--r--   0        0        0    60967 2023-03-13 18:29:27.179039 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/create_mapping.py
++-rw-r--r--   0        0        0     7939 2023-02-08 18:10:49.846547 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/es_index_listener.py
++-rw-r--r--   0        0        0    18572 2023-02-08 18:10:49.851730 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/esstorage.py
++-rw-r--r--   0        0        0    24353 2023-02-08 18:10:49.858087 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/indexer.py
++-rw-r--r--   0        0        0    31356 2023-02-08 18:10:49.863845 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/indexer_queue.py
++-rw-r--r--   0        0        0    20947 2023-02-08 18:10:49.871835 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/indexer_utils.py
++-rw-r--r--   0        0        0      349 2021-08-12 19:39:17.751212 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/interfaces.py
++-rw-r--r--   0        0        0    10164 2023-02-08 18:10:49.877388 dcicsnovault-7.9.9.0b2/snovault/elasticsearch/mpindexer.py
++-rw-r--r--   0        0        0     8249 2021-08-12 19:39:17.757097 dcicsnovault-7.9.9.0b2/snovault/embed.py
++-rw-r--r--   0        0        0     1061 2023-02-08 18:10:49.878124 dcicsnovault-7.9.9.0b2/snovault/etag.py
++-rw-r--r--   0        0        0    10835 2023-02-08 18:10:49.886932 dcicsnovault-7.9.9.0b2/snovault/indexing_views.py
++-rw-r--r--   0        0        0      774 2020-04-22 15:19:59.962133 dcicsnovault-7.9.9.0b2/snovault/interfaces.py
++-rw-r--r--   0        0        0     2229 2023-02-08 18:10:49.892547 dcicsnovault-7.9.9.0b2/snovault/invalidation.py
++-rw-r--r--   0        0        0     1639 2023-02-08 18:10:49.897621 dcicsnovault-7.9.9.0b2/snovault/json_renderer.py
++-rw-r--r--   0        0        0     2292 2020-09-15 14:05:58.093412 dcicsnovault-7.9.9.0b2/snovault/jsongraph.py
++-rw-r--r--   0        0        0     9713 2023-02-08 18:10:49.904627 dcicsnovault-7.9.9.0b2/snovault/jsonld_context.py
++-rw-r--r--   0        0        0      846 2020-04-22 15:19:59.956023 dcicsnovault-7.9.9.0b2/snovault/predicates.py
++-rw-r--r--   0        0        0       95 2023-03-13 18:29:23.865837 dcicsnovault-7.9.9.0b2/snovault/redis/README.rst
++-rw-r--r--   0        0        0       90 2023-03-13 18:29:23.872277 dcicsnovault-7.9.9.0b2/snovault/redis/__init__.py
++-rw-r--r--   0        0        0       15 2023-03-13 18:29:23.877586 dcicsnovault-7.9.9.0b2/snovault/redis/interfaces.py
++-rw-r--r--   0        0        0     4106 2023-03-15 14:15:35.750621 dcicsnovault-7.9.9.0b2/snovault/redis/redis_connection.py
++-rw-r--r--   0        0        0     6495 2023-02-08 18:10:49.909627 dcicsnovault-7.9.9.0b2/snovault/renderers.py
++-rw-r--r--   0        0        0    11201 2023-02-08 18:10:49.914597 dcicsnovault-7.9.9.0b2/snovault/resource_views.py
++-rw-r--r--   0        0        0    21863 2023-03-15 13:51:18.841427 dcicsnovault-7.9.9.0b2/snovault/resources.py
++-rw-r--r--   0        0        0     3450 2023-02-08 18:10:49.920477 dcicsnovault-7.9.9.0b2/snovault/schema_graph.py
++-rw-r--r--   0        0        0    16947 2023-02-08 18:10:49.925687 dcicsnovault-7.9.9.0b2/snovault/schema_utils.py
++-rw-r--r--   0        0        0     4359 2020-04-22 15:19:59.946631 dcicsnovault-7.9.9.0b2/snovault/schema_views.py
++-rw-r--r--   0        0        0      522 2023-02-08 18:10:49.926443 dcicsnovault-7.9.9.0b2/snovault/settings.py
++-rw-r--r--   0        0        0     1498 2021-08-12 19:39:17.787731 dcicsnovault-7.9.9.0b2/snovault/standalone_dev.py
++-rw-r--r--   0        0        0     4383 2023-02-08 18:10:49.931408 dcicsnovault-7.9.9.0b2/snovault/stats.py
++-rw-r--r--   0        0        0    34236 2023-03-13 18:29:27.179813 dcicsnovault-7.9.9.0b2/snovault/storage.py
++-rw-r--r--   0        0        0      330 2020-04-22 15:19:59.941685 dcicsnovault-7.9.9.0b2/snovault/test_schemas/AbstractItemTestSecondSubItem.json
++-rw-r--r--   0        0        0      300 2020-04-22 15:19:59.940748 dcicsnovault-7.9.9.0b2/snovault/test_schemas/AbstractItemTestSubItem.json
++-rw-r--r--   0        0        0     2467 2023-02-08 18:10:49.937350 dcicsnovault-7.9.9.0b2/snovault/test_schemas/EmbeddingTest.json
++-rw-r--r--   0        0        0      446 2021-08-12 19:39:17.798764 dcicsnovault-7.9.9.0b2/snovault/test_schemas/NestedEmbeddingContainer.json
++-rw-r--r--   0        0        0      883 2021-08-12 19:39:17.803883 dcicsnovault-7.9.9.0b2/snovault/test_schemas/NestedObjectLinkTarget.json
++-rw-r--r--   0        0        0      473 2021-08-12 19:39:17.810025 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingBiogroupSno.json
++-rw-r--r--   0        0        0      968 2023-02-08 18:10:49.943722 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingBiosampleSno.json
++-rw-r--r--   0        0        0     1082 2021-08-12 19:39:17.820805 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingBiosourceSno.json
++-rw-r--r--   0        0        0      894 2020-09-25 18:48:35.851983 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingCalculatedProperties.json
++-rw-r--r--   0        0        0      276 2020-04-22 15:19:59.938605 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingDependencies.json
++-rw-r--r--   0        0        0      577 2020-04-22 15:19:59.937715 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingDownload.json
++-rw-r--r--   0        0        0      555 2021-08-12 19:39:17.826025 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingIndividualSno.json
++-rw-r--r--   0        0        0      730 2020-04-22 15:19:59.936694 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingLinkAggregateSno.json
++-rw-r--r--   0        0        0      697 2021-08-12 19:39:17.831918 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingLinkSourceSno.json
++-rw-r--r--   0        0        0      472 2021-08-12 19:39:17.838406 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingLinkTargetElasticSearch.json
++-rw-r--r--   0        0        0      292 2020-04-22 15:19:59.934939 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingLinkTargetSno.json
++-rw-r--r--   0        0        0      311 2020-09-25 18:48:35.858197 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingMixins.json
++-rw-r--r--   0        0        0      845 2021-08-12 19:39:18.009063 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingNestedEnabled.json
++-rw-r--r--   0        0        0     3721 2023-02-08 18:10:49.949847 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingNoteSno.json
++-rw-r--r--   0        0        0     1622 2021-08-12 19:39:17.850333 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingPostPutPatchSno.json
++-rw-r--r--   0        0        0      576 2020-04-22 15:19:59.932932 dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingServerDefault.json
++-rw-r--r--   0        0        0      417 2020-09-25 18:48:35.864539 dcicsnovault-7.9.9.0b2/snovault/test_schemas/mixins.json
++-rw-r--r--   0        0        0        0 2023-02-08 18:10:49.950317 dcicsnovault-7.9.9.0b2/snovault/tests/__init__.py
++-rw-r--r--   0        0        0     9899 2023-02-08 18:10:49.951886 dcicsnovault-7.9.9.0b2/snovault/tests/authentication.py
++-rw-r--r--   0        0        0     2068 2020-09-15 14:05:58.153546 dcicsnovault-7.9.9.0b2/snovault/tests/authorization.py
++-rw-r--r--   0        0        0     2216 2023-02-08 18:10:49.952416 dcicsnovault-7.9.9.0b2/snovault/tests/conftest.py
++-rw-r--r--   0        0        0      100 2023-02-08 18:10:49.952678 dcicsnovault-7.9.9.0b2/snovault/tests/conftest_settings.py
++-rw-r--r--   0        0        0     3086 2023-02-08 18:10:49.957620 dcicsnovault-7.9.9.0b2/snovault/tests/elasticsearch_fixture.py
++-rw-r--r--   0        0        0     3921 2020-09-15 14:05:58.160270 dcicsnovault-7.9.9.0b2/snovault/tests/postgresql_fixture.py
++-rw-r--r--   0        0        0      864 2021-08-12 19:39:17.864425 dcicsnovault-7.9.9.0b2/snovault/tests/pyramidfixtures.py
++-rw-r--r--   0        0        0     3007 2020-09-15 14:05:58.161510 dcicsnovault-7.9.9.0b2/snovault/tests/root.py
++-rw-r--r--   0        0        0    59212 2023-02-08 18:10:49.963341 dcicsnovault-7.9.9.0b2/snovault/tests/search.py
++-rw-r--r--   0        0        0    17315 2023-03-13 18:29:27.180569 dcicsnovault-7.9.9.0b2/snovault/tests/serverfixtures.py
++-rw-r--r--   0        0        0     1857 2020-04-22 15:19:59.922938 dcicsnovault-7.9.9.0b2/snovault/tests/snowflake_hash.py
++-rw-r--r--   0        0        0    20291 2023-02-08 18:10:49.970172 dcicsnovault-7.9.9.0b2/snovault/tests/test_attachment.py
++-rw-r--r--   0        0        0     3932 2020-04-22 15:19:59.920849 dcicsnovault-7.9.9.0b2/snovault/tests/test_authentication.py
++-rw-r--r--   0        0        0     1370 2021-08-12 19:39:17.883512 dcicsnovault-7.9.9.0b2/snovault/tests/test_calculated.py
++-rw-r--r--   0        0        0     8984 2023-02-08 18:10:49.975775 dcicsnovault-7.9.9.0b2/snovault/tests/test_create_mapping.py
++-rw-r--r--   0        0        0     7458 2023-02-08 18:10:49.976460 dcicsnovault-7.9.9.0b2/snovault/tests/test_embed_utils.py
++-rw-r--r--   0        0        0     8823 2023-03-13 18:29:27.181151 dcicsnovault-7.9.9.0b2/snovault/tests/test_embedding.py
++-rw-r--r--   0        0        0    10024 2020-04-22 15:19:59.916562 dcicsnovault-7.9.9.0b2/snovault/tests/test_es_permissions.py
++-rw-r--r--   0        0        0    95147 2023-03-13 18:29:27.182098 dcicsnovault-7.9.9.0b2/snovault/tests/test_indexing.py
++-rw-r--r--   0        0        0    28258 2023-02-08 18:10:49.984723 dcicsnovault-7.9.9.0b2/snovault/tests/test_invalidation_scope.py
++-rw-r--r--   0        0        0     2147 2023-02-08 18:10:49.985400 dcicsnovault-7.9.9.0b2/snovault/tests/test_key.py
++-rw-r--r--   0        0        0     2458 2020-04-22 15:19:59.908101 dcicsnovault-7.9.9.0b2/snovault/tests/test_link.py
++-rw-r--r--   0        0        0     5316 2023-02-08 18:10:49.991255 dcicsnovault-7.9.9.0b2/snovault/tests/test_logging.py
++-rw-r--r--   0        0        0     1134 2023-03-13 18:29:27.182699 dcicsnovault-7.9.9.0b2/snovault/tests/test_misc.py
++-rw-r--r--   0        0        0      373 2020-09-25 18:48:35.895147 dcicsnovault-7.9.9.0b2/snovault/tests/test_mixins.py
++-rw-r--r--   0        0        0    13660 2023-02-08 18:10:49.997635 dcicsnovault-7.9.9.0b2/snovault/tests/test_post_put_patch.py
++-rw-r--r--   0        0        0     1570 2023-02-08 18:10:50.005697 dcicsnovault-7.9.9.0b2/snovault/tests/test_postgresql_fixture.py
++-rw-r--r--   0        0        0     1194 2021-08-12 19:39:17.921857 dcicsnovault-7.9.9.0b2/snovault/tests/test_schemas.py
++-rw-r--r--   0        0        0      952 2023-02-08 18:10:50.011548 dcicsnovault-7.9.9.0b2/snovault/tests/test_serverfixtures.py
++-rw-r--r--   0        0        0      484 2020-09-15 14:05:58.201112 dcicsnovault-7.9.9.0b2/snovault/tests/test_snowflake_hash.py
++-rw-r--r--   0        0        0     4267 2021-08-12 19:39:17.928403 dcicsnovault-7.9.9.0b2/snovault/tests/test_standalone_dev.py
++-rw-r--r--   0        0        0     2211 2023-02-08 18:10:50.016544 dcicsnovault-7.9.9.0b2/snovault/tests/test_stats.py
++-rw-r--r--   0        0        0    13222 2023-03-13 18:29:27.183158 dcicsnovault-7.9.9.0b2/snovault/tests/test_storage.py
++-rw-r--r--   0        0        0     1291 2020-04-22 15:19:59.901514 dcicsnovault-7.9.9.0b2/snovault/tests/test_upgrader.py
++-rw-r--r--   0        0        0     6635 2023-02-08 18:10:50.017803 dcicsnovault-7.9.9.0b2/snovault/tests/test_util.py
++-rw-r--r--   0        0        0    18612 2023-02-08 18:10:50.023759 dcicsnovault-7.9.9.0b2/snovault/tests/test_views.py
++-rw-r--r--   0        0        0     4621 2023-02-08 18:10:50.029803 dcicsnovault-7.9.9.0b2/snovault/tests/testappfixtures.py
++-rw-r--r--   0        0        0      688 2020-09-15 14:05:58.215074 dcicsnovault-7.9.9.0b2/snovault/tests/testing_key.py
++-rw-r--r--   0        0        0      677 2020-09-15 14:05:58.215585 dcicsnovault-7.9.9.0b2/snovault/tests/testing_upgrader.py
++-rw-r--r--   0        0        0    26232 2023-02-08 18:10:50.036243 dcicsnovault-7.9.9.0b2/snovault/tests/testing_views.py
++-rw-r--r--   0        0        0     1342 2020-09-15 14:05:58.228484 dcicsnovault-7.9.9.0b2/snovault/tests/toolfixtures.py
++-rw-r--r--   0        0        0     3394 2023-03-13 18:29:27.183332 dcicsnovault-7.9.9.0b2/snovault/tools.py
++-rw-r--r--   0        0        0     7605 2021-08-12 19:39:17.963916 dcicsnovault-7.9.9.0b2/snovault/typeinfo.py
++-rw-r--r--   0        0        0     8124 2023-02-08 18:10:50.037173 dcicsnovault-7.9.9.0b2/snovault/upgrader.py
++-rw-r--r--   0        0        0    45963 2023-03-13 18:29:27.184109 dcicsnovault-7.9.9.0b2/snovault/util.py
++-rw-r--r--   0        0        0     5460 2023-02-08 18:10:50.039101 dcicsnovault-7.9.9.0b2/snovault/validation.py
++-rw-r--r--   0        0        0     5718 2023-02-08 18:10:50.044485 dcicsnovault-7.9.9.0b2/snovault/validators.py
++-rw-r--r--   0        0        0     8781 1970-01-01 00:00:00.000000 dcicsnovault-7.9.9.0b2/setup.py
++-rw-r--r--   0        0        0     9056 1970-01-01 00:00:00.000000 dcicsnovault-7.9.9.0b2/PKG-INFO
+```
+
+### Comparing `dcicsnovault-7.9.9.0b1/LICENSE.txt` & `dcicsnovault-7.9.9.0b2/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/README.rst` & `dcicsnovault-7.9.9.0b2/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/pyproject.toml` & `dcicsnovault-7.9.9.0b2/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "dcicsnovault"
+-version = "7.9.9.0b1"  # first redis version
++version = "7.9.9.0b2"  # first redis version
+ description = "Storage support for 4DN Data Portals."
+ authors = ["4DN-DCIC Team <support@4dnucleome.org>"]
+ license = "MIT"
+ readme = "README.rst"
+ homepage = "https://github.com/4dn-dcic/snovault"
+ repository = "https://github.com/4dn-dcic/snovault"
+ documentation = "https://github.com/4dn-dcic/snovault"
+```
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/__init__.py` & `dcicsnovault-7.9.9.0b2/snovault/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/aggregated_items.py` & `dcicsnovault-7.9.9.0b2/snovault/aggregated_items.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/app.py` & `dcicsnovault-7.9.9.0b2/snovault/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/attachment.py` & `dcicsnovault-7.9.9.0b2/snovault/attachment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/batchupgrade.py` & `dcicsnovault-7.9.9.0b2/snovault/batchupgrade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/cache.py` & `dcicsnovault-7.9.9.0b2/snovault/cache.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/calculated.py` & `dcicsnovault-7.9.9.0b2/snovault/calculated.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/commands/check_rendering.py` & `dcicsnovault-7.9.9.0b2/snovault/commands/check_rendering.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/commands/es_index_data.py` & `dcicsnovault-7.9.9.0b2/snovault/commands/es_index_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/commands/jsonld_rdf.py` & `dcicsnovault-7.9.9.0b2/snovault/commands/jsonld_rdf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/commands/profile.py` & `dcicsnovault-7.9.9.0b2/snovault/commands/profile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/commands/wipe_test_indices.py` & `dcicsnovault-7.9.9.0b2/snovault/commands/wipe_test_indices.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/config.py` & `dcicsnovault-7.9.9.0b2/snovault/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/connection.py` & `dcicsnovault-7.9.9.0b2/snovault/connection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/crud_views.py` & `dcicsnovault-7.9.9.0b2/snovault/crud_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/__init__.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/cached_views.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/cached_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/create_mapping.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/create_mapping.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/es_index_listener.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/es_index_listener.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/esstorage.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/esstorage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/indexer.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/indexer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/indexer_queue.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/indexer_queue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/indexer_utils.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/indexer_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/elasticsearch/mpindexer.py` & `dcicsnovault-7.9.9.0b2/snovault/elasticsearch/mpindexer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/embed.py` & `dcicsnovault-7.9.9.0b2/snovault/embed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/etag.py` & `dcicsnovault-7.9.9.0b2/snovault/etag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/indexing_views.py` & `dcicsnovault-7.9.9.0b2/snovault/indexing_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/interfaces.py` & `dcicsnovault-7.9.9.0b2/snovault/interfaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/invalidation.py` & `dcicsnovault-7.9.9.0b2/snovault/invalidation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/json_renderer.py` & `dcicsnovault-7.9.9.0b2/snovault/json_renderer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/jsongraph.py` & `dcicsnovault-7.9.9.0b2/snovault/jsongraph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/jsonld_context.py` & `dcicsnovault-7.9.9.0b2/snovault/jsonld_context.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/predicates.py` & `dcicsnovault-7.9.9.0b2/snovault/predicates.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/redis/redis_connection.py` & `dcicsnovault-7.9.9.0b2/snovault/redis/redis_connection.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ 
+ 
+ log = structlog.getLogger(__name__)
+ 
+ 
+ def includeme(config):
+     registry = config.registry
+-    registry[REDIS] = create_redis_client(url=registry.settings['redis.server'])
++    registry[REDIS] = RedisBase(create_redis_client(url=registry.settings['redis.server']))
+ 
+ 
+ class RedisModel(object):
+     """
+     Model used by resources returned from RedisStorage
+     Analogous to esstorage.CachedModel, storage.Resource
+```
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/renderers.py` & `dcicsnovault-7.9.9.0b2/snovault/renderers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/resource_views.py` & `dcicsnovault-7.9.9.0b2/snovault/resource_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/resources.py` & `dcicsnovault-7.9.9.0b2/snovault/resources.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -144,16 +144,16 @@
+         settings = config.registry.settings
+         for config_key, result_key in auth0_config_values.items():
+             if config_key in settings:
+                 response_dict[result_key] = settings[config_key]
+ 
+         # If Redis enabled, set the callback value in Auth0Config
+         if 'redis.server' in request.registry.settings:
+-            callback = f'{request.scheme}://{request.domain}/callback'
+-            response_dict['callback'] = callback
++            callback = f'{request.host_url}/callback'
++            response_dict['auth0Options']['auth']['redirectUrl'] = callback
+         return response_dict
+ 
+     config.add_view(auth0_config_view, route_name='auth0-config')
+ 
+ 
+ class AbstractCollection(Resource, Mapping):
+     """
+```
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/schema_graph.py` & `dcicsnovault-7.9.9.0b2/snovault/schema_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/schema_utils.py` & `dcicsnovault-7.9.9.0b2/snovault/schema_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/schema_views.py` & `dcicsnovault-7.9.9.0b2/snovault/schema_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/settings.py` & `dcicsnovault-7.9.9.0b2/snovault/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/standalone_dev.py` & `dcicsnovault-7.9.9.0b2/snovault/standalone_dev.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/stats.py` & `dcicsnovault-7.9.9.0b2/snovault/stats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/storage.py` & `dcicsnovault-7.9.9.0b2/snovault/storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/EmbeddingTest.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/EmbeddingTest.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/NestedObjectLinkTarget.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/NestedObjectLinkTarget.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingBiosampleSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingBiosampleSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingBiosourceSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingBiosourceSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingCalculatedProperties.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingCalculatedProperties.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingDownload.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingDownload.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingIndividualSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingIndividualSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingLinkAggregateSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingLinkAggregateSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingLinkSourceSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingLinkSourceSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingNestedEnabled.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingNestedEnabled.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingNoteSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingNoteSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingPostPutPatchSno.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingPostPutPatchSno.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/test_schemas/TestingServerDefault.json` & `dcicsnovault-7.9.9.0b2/snovault/test_schemas/TestingServerDefault.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/authentication.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/authentication.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/authorization.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/authorization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/conftest.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/elasticsearch_fixture.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/elasticsearch_fixture.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/postgresql_fixture.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/postgresql_fixture.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/pyramidfixtures.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/pyramidfixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/root.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/root.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/search.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/search.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/serverfixtures.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/serverfixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/snowflake_hash.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/snowflake_hash.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_attachment.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_attachment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_authentication.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_authentication.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_calculated.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_calculated.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_create_mapping.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_create_mapping.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_embed_utils.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_embed_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_embedding.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_embedding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_es_permissions.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_es_permissions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_indexing.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_indexing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_invalidation_scope.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_invalidation_scope.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_key.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_link.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_link.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_logging.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_logging.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_misc.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_misc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_post_put_patch.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_post_put_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_postgresql_fixture.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_postgresql_fixture.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_schemas.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_schemas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_serverfixtures.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_serverfixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_standalone_dev.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_standalone_dev.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_stats.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_stats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_storage.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_upgrader.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_upgrader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_util.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/test_views.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/test_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/testappfixtures.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/testappfixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/testing_key.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/testing_key.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/testing_upgrader.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/testing_upgrader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/testing_views.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/testing_views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tests/toolfixtures.py` & `dcicsnovault-7.9.9.0b2/snovault/tests/toolfixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/tools.py` & `dcicsnovault-7.9.9.0b2/snovault/tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/typeinfo.py` & `dcicsnovault-7.9.9.0b2/snovault/typeinfo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/upgrader.py` & `dcicsnovault-7.9.9.0b2/snovault/upgrader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/util.py` & `dcicsnovault-7.9.9.0b2/snovault/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/validation.py` & `dcicsnovault-7.9.9.0b2/snovault/validation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/snovault/validators.py` & `dcicsnovault-7.9.9.0b2/snovault/validators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicsnovault-7.9.9.0b1/setup.py` & `dcicsnovault-7.9.9.0b2/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -61,15 +61,15 @@
+ 
+ entry_points = \
+ {'console_scripts': ['wipe-test-indices = '
+                      'snovault.commands.wipe_test_indices:main']}
+ 
+ setup_kwargs = {
+     'name': 'dcicsnovault',
+-    'version': '7.9.9.0b1',
++    'version': '7.9.9.0b2',
+     'description': 'Storage support for 4DN Data Portals.',
+     'long_description': '=============\nDCIC Snovault\n=============\n\n|Build status|_\n\n.. |Build status| image:: https://travis-ci.org/4dn-dcic/snovault.svg?branch=master\n.. _Build status: https://travis-ci.org/4dn-dcic/snovault\n\n.. Important::\n\n DCIC Snovault is a FORK of `snovault <https://pypi.org/project/snovault/>`_\n created at the `ENCODE DCC project at Stanford <https://github.com/ENCODE-DCC>`_.\n Our fork supports other projects of the\n `4D Nucleome Data Coordination and Integration Center (4DN-DCIC)\n <https://github.com/4dn-dcic>`_.\n Although this software is available as open source software,\n its primary function is to support our layered projects,\n and we are not at this time able to offer any active support for other uses.\n In particular, this fork does not purport to supersede\n the original `snovault <https://pypi.org/project/snovault/>`_.\n we just have a different use case that we are actively exploring.\n\nOverview\n========\n\nDCIC Snovault is a JSON-LD Database Framework that serves as the backend for the 4DN Data portal and CGAP. Check out our full documentation `here\n<https://snovault.readthedocs.io/en/latest/>`_.\n\n.. note::\n\n    This repository contains a core piece of functionality shared amongst several projects\n    in the 4DN-DCIC. It is meant to be used internally by the DCIC team\n    in support of `Fourfront <https://data.4dnucleome.org>`_\\ ,\n    the 4DN data portal, and at this point in time it is not expected to be useful\n    in a standalone/plug-and-play way to others.\n\nInstallation in 4DN components\n==============================\n\nDCIC Snovault is pip installable as the ``dcicsnovault`` package with::\n\n    $ pip install dcicsnovault``\n\nHowever, at the present time, the functionality it provides might only be useful in conjunction\nwith other 4DN-DCIC components.\n\nNOTE: If you\'d like to enable Elasticsearch mapping with type=nested, set the environment variable "MAPPINGS_USE_NESTED"\nor set the registry setting "mappings.use_nested".\n\nInstallation for Development\n============================\n\nCurrently these are for Mac OSX using homebrew. If using linux, install dependencies with a different package manager.\n\nStep 0: Install Xcode\n---------------------\n\nInstall Xcode (from App Store) and homebrew: http://brew.sh\n\nStep 1: Verify Homebrew Itself\n------------------------------\n\nVerify that homebrew is working properly::\n\n    $ brew doctor\n\nStep 2: Install Homebrewed Dependencies\n---------------------------------------\n\nInstall or update dependencies::\n\n    $ brew install libevent libmagic libxml2 libxslt openssl postgresql graphviz python3\n    $ brew install freetype libjpeg libtiff littlecms webp  # Required by Pillow\n    $ brew cask install adoptopenjdk8\n    $ brew install elasticsearch@5.6\n\nNOTES:\n\n* If installation of adtopopenjdk8 fails due to an ambiguity, it should work to do this instead::\n\n    $ brew cask install homebrew/cask-versions/adoptopenjdk8\n\n* If you try to invoke elasticsearch and it is not found,\n  you may need to link the brew-installed elasticsearch::\n\n    $ brew link --force elasticsearch@5.6\n\n* If you need to update dependencies::\n\n    $ brew update\n    $ rm -rf encoded/eggs\n\n* If you need to upgrade brew-installed packages that don\'t have pinned versions,\n  you can use the following. However, take care because there is no command to directly\n  undo this effect::\n\n    $ brew update\n    $ brew upgrade\n    $ rm -rf encoded/eggs\n\nStep 3: Running Poetry\n----------------------\n\nTo locally install using versions of Python libraries that have worked before, use this::\n\n    $ poetry install\n\n\nUpdating dependencies\n=====================\n\nTo update the version dependencies, use::\n\n    $ poetry update\n\nThis command also takes space-separated names of specific packages to update. For more information, do::\n\n    $ poetry help update\n\n\nManaging poetry.lock after update\n---------------------------------\n\nThere may be situations where you do this with no intent to check in the resulting updates,\nbut once you have checked that the updates are sound, you may wish to check the resulting\n``poetry.lock`` file.\n\nPublishing\n==========\n\nNormally, a successful build on a tagged branch (including a branch tagged as a beta)\nwill cause publication automatically. The process begins by obtaining the version. You might do\n\n    $ head pyproject.toml\n\nto see the first few lines of `pyproject.toml`, which will contain a line like ``version = 100.200.300``, which\nis the ``snovault`` version.  You should prepend the letter ``v`` to that version, and create the tag and push\nit to the GitHub server:\n\n    $ git tag v100.200.300\n    $ git push origin v100.200.300\n\nPlease do NOT use some other syntax for ``git push`` that pushes all of your tags. That might pick up tags that\ndo not belong on the server and can generally cause tag pollution. Push specifically the tag you intend to publish.\n\nPushing such a tag should trigger publication automatically within a few minutes.\n\nManual Publication\n------------------\n\nThere might be rare occasions where you need to do the publication manually, but normally it is not necessary\nor desirable. In most cases, it will either fail or will cause the automatic publication step to fail. The main\ncase where this is known to be needed is where publication has failed on a tagged branch for reasons other than\nthe fact of that tag being already published (e.g., a network interruption or a premature shutdown of the GitHub\nActions task). An incomplete publication on GitHub Actions cannot be easily retried, so only in that case you may\nneed to do:\n\n    $ make publish\n\nHowever, to do this command locally, you would need appropriate credentials on PyPi for such publication to succeed.\nAs presently configured, these credentials need to be in the environment variables ``PYPI_USER`` and ``PYPI_PASSWORD``.\nThe script that runs if you manually attempt ``make publish`` checks that you have properly declared credentials\nbefore it attempts to publish. Note that GitHub Actions is already configured with credentials, so you do not\nneed to worry about them if you just push a tag and let the pre-defined action do the publication.\n\nRunning tests\n=============\n\nTo run specific tests locally::\n\n    $ bin/test -k test_name\n\nTo run with a debugger::\n\n    $ bin/test --pdb\n\nSpecific tests to run locally for schema changes::\n\n    $ bin/test -k test_load_workbook\n\nRun the Pyramid tests with::\n\n    $ bin/test\n\n',
+     'author': '4DN-DCIC Team',
+     'author_email': 'support@4dnucleome.org',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/4dn-dcic/snovault',
+```
+
+### Comparing `dcicsnovault-7.9.9.0b1/PKG-INFO` & `dcicsnovault-7.9.9.0b2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: dcicsnovault
+-Version: 7.9.9.0b1
++Version: 7.9.9.0b2
+ Summary: Storage support for 4DN Data Portals.
+ Home-page: https://github.com/4dn-dcic/snovault
+ License: MIT
+ Author: 4DN-DCIC Team
+ Author-email: support@4dnucleome.org
+ Requires-Python: >=3.8.1,<3.9
+ Classifier: Development Status :: 4 - Beta
+```
+
