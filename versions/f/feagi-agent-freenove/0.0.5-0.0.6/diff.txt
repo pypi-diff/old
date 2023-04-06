@@ -1,0 +1,333 @@
+--- tmp/feagi_agent_freenove-0.0.5.tar.gz
++++ tmp/feagi_agent_freenove-0.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "feagi_agent_freenove-0.0.5.tar", last modified: Thu Mar 23 21:54:27 2023, max compression
+│ +gzip compressed data, was "feagi_agent_freenove-0.0.6.tar", last modified: Thu Apr  6 22:14:45 2023, max compression
+│   --- feagi_agent_freenove-0.0.5.tar
+├── +++ feagi_agent_freenove-0.0.6.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxr-xr-x   0 station1   (501) staff       (20)        0 2023-03-23 21:54:27.092524 feagi_agent_freenove-0.0.5/
+│ │ --rw-r--r--   0 station1   (501) staff       (20)    11344 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/LICENSE
+│ │ --rw-r--r--   0 station1   (501) staff       (20)     1639 2023-03-23 21:54:27.092584 feagi_agent_freenove-0.0.5/PKG-INFO
+│ │ --rw-r--r--   0 station1   (501) staff       (20)     1089 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/README.md
+│ │ -drwxr-xr-x   0 station1   (501) staff       (20)        0 2023-03-23 21:54:27.091820 feagi_agent_freenove-0.0.5/feagi_agent_freenove/
+│ │ --rwxr-xr-x   0 station1   (501) staff       (20)     2332 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/ADC.py
+│ │ --rw-r--r--   0 station1   (501) staff       (20)     6227 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/Led.py
+│ │ --rwxr-xr-x   0 station1   (501) staff       (20)     2619 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/PCA9685.py
+│ │ --rw-r--r--   0 station1   (501) staff       (20)        0 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/__init__.py
+│ │ --rw-r--r--   0 station1   (501) staff       (20)     1394 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/__main__.py
+│ │ --rw-r--r--   0 station1   (501) staff       (20)     2271 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/configuration.py
+│ │ --rw-r--r--   0 station1   (501) staff       (20)    25535 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/controller.py
+│ │ --rw-r--r--   0 station1   (501) staff       (20)       51 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/requirements.txt
+│ │ --rwxr-xr-x   0 station1   (501) staff       (20)     1215 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/setup.sh
+│ │ --rwxr-xr-x   0 station1   (501) staff       (20)     1172 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove/verify.sh
+│ │ -drwxr-xr-x   0 station1   (501) staff       (20)        0 2023-03-23 21:54:27.092434 feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/
+│ │ --rw-r--r--   0 station1   (501) staff       (20)     1639 2023-03-23 21:54:27.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 station1   (501) staff       (20)      607 2023-03-23 21:54:27.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 station1   (501) staff       (20)        1 2023-03-23 21:54:27.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 station1   (501) staff       (20)       85 2023-03-23 21:54:27.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/requires.txt
+│ │ --rw-r--r--   0 station1   (501) staff       (20)       21 2023-03-23 21:54:27.000000 feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/top_level.txt
+│ │ --rw-r--r--   0 station1   (501) staff       (20)       99 2023-03-23 21:48:00.000000 feagi_agent_freenove-0.0.5/pyproject.toml
+│ │ --rw-r--r--   0 station1   (501) staff       (20)      864 2023-03-23 21:54:27.092919 feagi_agent_freenove-0.0.5/setup.cfg
+│ │ +drwxrwxr-x   0 bwuk      (1000) bwuk      (1000)        0 2023-04-06 22:14:45.925010 feagi_agent_freenove-0.0.6/
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)    11344 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/LICENSE
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)     1639 2023-04-06 22:14:45.925010 feagi_agent_freenove-0.0.6/PKG-INFO
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)     1089 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/README.md
+│ │ +drwxrwxr-x   0 bwuk      (1000) bwuk      (1000)        0 2023-04-06 22:14:45.925010 feagi_agent_freenove-0.0.6/feagi_agent_freenove/
+│ │ +-rwxrwxr-x   0 bwuk      (1000) bwuk      (1000)     2332 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/ADC.py
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)     6227 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/Led.py
+│ │ +-rwxrwxr-x   0 bwuk      (1000) bwuk      (1000)     2619 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/PCA9685.py
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)        0 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/__init__.py
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)     1394 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/__main__.py
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)     2301 2023-04-06 22:07:21.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/configuration.py
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)    25953 2023-04-06 21:39:43.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/controller.py
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)       51 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/requirements.txt
+│ │ +-rwxrwxr-x   0 bwuk      (1000) bwuk      (1000)     1215 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/setup.sh
+│ │ +-rwxrwxr-x   0 bwuk      (1000) bwuk      (1000)     1172 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove/verify.sh
+│ │ +drwxrwxr-x   0 bwuk      (1000) bwuk      (1000)        0 2023-04-06 22:14:45.925010 feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)     1639 2023-04-06 22:14:45.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)      607 2023-04-06 22:14:45.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)        1 2023-04-06 22:14:45.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)       85 2023-04-06 22:14:45.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)       21 2023-04-06 22:14:45.000000 feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)       99 2023-04-06 16:41:12.000000 feagi_agent_freenove-0.0.6/pyproject.toml
+│ │ +-rw-rw-r--   0 bwuk      (1000) bwuk      (1000)      864 2023-04-06 22:14:45.929010 feagi_agent_freenove-0.0.6/setup.cfg
+│ │   --- feagi_agent_freenove-0.0.5/LICENSE
+│ ├── +++ feagi_agent_freenove-0.0.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/PKG-INFO
+│ ├── +++ feagi_agent_freenove-0.0.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: feagi_agent_freenove
+│ │ -Version: 0.0.5
+│ │ +Version: 0.0.6
+│ │  Summary: Feagi agent freenove to connect feagi with your freenove_smartcar.
+│ │  Home-page: https://github.com/feagi/feagi
+│ │  Author: Neuraville LLC
+│ │  Author-email: info@feagi.org
+│ │  Project-URL: Bug Tracker, https://github.com/feagi/feagi/issues
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │   --- feagi_agent_freenove-0.0.5/README.md
+│ ├── +++ feagi_agent_freenove-0.0.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/ADC.py
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/ADC.py
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/Led.py
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/Led.py
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/PCA9685.py
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/PCA9685.py
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/__main__.py
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/configuration.py
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/configuration.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -18,29 +18,31 @@
+│ │  
+│ │  feagi_settings = {
+│ │      "feagi_host": "feagi",
+│ │      "feagi_api_port": "8000",
+│ │  }
+│ │  
+│ │  agent_settings = {
+│ │ -    "agent_data_port": "40011",
+│ │ +    "agent_data_port": "40014",
+│ │      "agent_id": "freenove",
+│ │      "agent_type": "embodiment",
+│ │      'TTL': 2,
+│ │      'last_message': 0,
+│ │  }
+│ │  
+│ │  capabilities = {
+│ │      "servo": {
+│ │          "type": "opu",
+│ │          "disabled": False,
+│ │          "refresh_rate": 1,
+│ │          "cortical_mapping": "o__ser",
+│ │          'count': 2,
+│ │ -        'topic_identifier': '/S'
+│ │ +        'topic_identifier': '/S',
+│ │ +        'power_amount': 0.5
+│ │ +
+│ │      },
+│ │      "motor": {
+│ │          "type": "opu",
+│ │          "disabled": False,
+│ │          "count": 4,
+│ │          'topic_identifier': '/M',
+│ │          "refresh_rate": 1,
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/controller.py
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/controller.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -2,21 +2,20 @@
+│ │  import RPi.GPIO as GPIO
+│ │  from feagi_agent import retina as retina
+│ │  import traceback
+│ │  import requests
+│ │  import sys
+│ │  from feagi_agent_freenove.Led import *
+│ │  from feagi_agent_freenove.PCA9685 import PCA9685
+│ │ -from feagi_agent_freenove.configuration import  *
+│ │ +from feagi_agent_freenove.configuration import *
+│ │  from picamera import PiCamera
+│ │  from datetime import datetime
+│ │  from collections import deque
+│ │  from picamera.array import PiRGBArray
+│ │  
+│ │ -
+│ │  runtime_data = {
+│ │      "current_burst_id": 0,
+│ │      "feagi_state": None,
+│ │      "cortical_list": (),
+│ │      "battery_charge_level": 1,
+│ │      "host_network": {},
+│ │      'motor_status': {},
+│ │ @@ -80,16 +79,16 @@
+│ │      class to work with functions.
+│ │      """
+│ │  
+│ │      def __init__(self):
+│ │          self.PwmServo = PCA9685(0x40, debug=True)
+│ │          self.PwmServo.setPWMFreq(50)
+│ │          self.device_position = float()
+│ │ -        self.servo_ranges = {0: [0, 180],
+│ │ -                             1: [0, 180]}
+│ │ +        self.servo_ranges = {0: [10, 160],
+│ │ +                             1: [78, 160]}
+│ │  
+│ │      def setServoPwm(self, channel, angle, error=10):
+│ │          angle = float(angle)
+│ │          if channel == '0':
+│ │              self.PwmServo.setServoPulse(8, 2500 - float((angle + error) / 0.09))
+│ │          elif channel == '1':
+│ │              self.PwmServo.setServoPulse(9, 500 + float((angle + error) / 0.09))
+│ │ @@ -106,24 +105,21 @@
+│ │          elif channel == '7':
+│ │              self.PwmServo.setServoPulse(15, 500 + float((angle + error) / 0.09))
+│ │  
+│ │      def set_default_position(self):
+│ │          try:
+│ │              # Setting the initial position for the servo
+│ │              servo_0_initial_position = 90
+│ │ -            self.device_position = servo_0_initial_position
+│ │ -            self.move(0, self.device_position)
+│ │ -            runtime_data['servo_status'][0] = self.device_position
+│ │ +            runtime_data['servo_status'][0] = servo_0_initial_position
+│ │ +            self.setServoPwm(str(0), runtime_data['servo_status'][0])
+│ │              print("Servo 0 was moved to its initial position")
+│ │  
+│ │              servo_1_initial_position = 90
+│ │ -            self.device_position = servo_1_initial_position
+│ │ -            self.move(1, self.device_position)
+│ │ -            runtime_data['servo_status'][1] = self.device_position
+│ │ -            print("Servo 1 was moved to its initial position")
+│ │ +            runtime_data['servo_status'][1] = servo_1_initial_position
+│ │ +            self.setServoPwm(str(1), runtime_data['servo_status'][0])
+│ │          except Exception as e:
+│ │              print("Error while setting initial position for the servo:", e)
+│ │  
+│ │      def move(self, feagi_device_id, power):
+│ │          try:
+│ │              if feagi_device_id > 2 * capabilities['servo']['count']:
+│ │                  print("Warning! Number of servo channels from FEAGI exceed available Motor count!")
+│ │ @@ -133,16 +129,16 @@
+│ │                  power *= 1
+│ │              else:
+│ │                  power *= -1
+│ │              if device_index not in runtime_data['servo_status']:
+│ │                  runtime_data['servo_status'][device_index] = device_index
+│ │  
+│ │              device_current_position = runtime_data['servo_status'][device_index]
+│ │ -            self.device_position = float((power * network_settings['feagi_burst_speed'] / 0.5) +
+│ │ -                                         device_current_position)
+│ │ +            self.device_position = float((power * feagi_settings['feagi_burst_speed'] /
+│ │ +                                          capabilities["servo"]["power_amount"]) + device_current_position)
+│ │  
+│ │              self.device_position = self.keep_boundaries(device_id=device_index,
+│ │                                                          current_position=self.device_position)
+│ │  
+│ │              runtime_data['servo_status'][device_index] = self.device_position
+│ │              # print("device index, position, power = ", device_index, self.device_position, power)
+│ │              # self.servo_node[device_index].publish(self.device_position)
+│ │ @@ -410,28 +406,44 @@
+│ │  
+│ │  
+│ │  def main():
+│ │      GPIO.cleanup()
+│ │  
+│ │      # # # FEAGI registration # # #
+│ │      # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+│ │ +    print("Connecting to FEAGI resources...")
+│ │ +
+│ │      feagi_host, api_port, app_data_port = FEAGI.feagi_setting_for_registration(feagi_settings, agent_settings)
+│ │ +
+│ │ +    print(feagi_host, api_port, app_data_port)
+│ │ +
+│ │ +    # address = 'tcp://' + network_settings['feagi_host'] + ':' + network_settings['feagi_opu_port']
+│ │ +
+│ │ +    api_address = 'http://' + feagi_host + ':' + api_port
+│ │ +
+│ │ +    stimulation_period_endpoint = FEAGI.feagi_api_burst_engine()
+│ │ +    burst_counter_endpoint = FEAGI.feagi_api_burst_counter()
+│ │ +    print("^ ^ ^")
+│ │      runtime_data["feagi_state"] = FEAGI.feagi_registration(feagi_host=feagi_host,
+│ │                                                             api_port=api_port, agent_settings=agent_settings,
+│ │                                                             capabilities=capabilities)
+│ │ +
+│ │ +    print("** **", runtime_data["feagi_state"])
+│ │ +    feagi_settings['feagi_burst_speed'] = float(runtime_data["feagi_state"]['burst_duration'])
+│ │ +
+│ │ +    # todo: to obtain this info directly from FEAGI as part of registration
+│ │ +    # ipu_channel_address = FEAGI.feagi_inbound(agent_settings["agent_data_port"])
+│ │      ipu_channel_address = FEAGI.feagi_outbound(feagi_settings['feagi_host'],
+│ │                                                 agent_settings["agent_data_port"])
+│ │ +    print("IPU_channel_address=", ipu_channel_address)
+│ │      opu_channel_address = FEAGI.feagi_outbound(feagi_settings['feagi_host'],
+│ │                                                 runtime_data["feagi_state"]['feagi_opu_port'])
+│ │ +
+│ │      feagi_ipu_channel = FEAGI.pub_initializer(ipu_channel_address, bind=False)
+│ │      feagi_opu_channel = FEAGI.sub_initializer(opu_address=opu_channel_address)
+│ │ -    api_address = 'http://' + feagi_host + ':' + api_port
+│ │ -    stimulation_period_endpoint = FEAGI.feagi_api_burst_engine()
+│ │ -    burst_counter_endpoint = FEAGI.feagi_api_burst_counter()
+│ │ -    feagi_settings['feagi_burst_speed'] = float(runtime_data["feagi_state"]['burst_duration'])
+│ │      # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+│ │  
+│ │      # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+│ │      #                            Initializer section
+│ │      motor = Motor()
+│ │      servo = Servo()
+│ │      ir = IR()
+│ │ @@ -456,14 +468,15 @@
+│ │      for motor_id in range(motor_count):
+│ │          rolling_window[motor_id] = deque([0] * rolling_window_len)
+│ │      camera = PiCamera()
+│ │      camera.resolution = (640, 480)
+│ │      camera.framerate = 32
+│ │      rawCapture = PiRGBArray(camera, size=(640, 480))
+│ │      motor.stop()
+│ │ +    servo.set_default_position()
+│ │      while True:
+│ │          try:
+│ │              for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+│ │                  if keyboard_flag:
+│ │                      image = frame.array
+│ │                      rawCapture.truncate(0)
+│ │                      if capabilities['camera']['disabled'] is not True:
+│ │ @@ -589,9 +602,7 @@
+│ │              motor.stop()
+│ │              keyboard_flag = False
+│ │              print(ke)
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      main()
+│ │ -
+│ │ -
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/setup.sh
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/setup.sh
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove/verify.sh
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove/verify.sh
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/PKG-INFO
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: feagi-agent-freenove
+│ │ -Version: 0.0.5
+│ │ +Version: 0.0.6
+│ │  Summary: Feagi agent freenove to connect feagi with your freenove_smartcar.
+│ │  Home-page: https://github.com/feagi/feagi
+│ │  Author: Neuraville LLC
+│ │  Author-email: info@feagi.org
+│ │  Project-URL: Bug Tracker, https://github.com/feagi/feagi/issues
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │   --- feagi_agent_freenove-0.0.5/feagi_agent_freenove.egg-info/SOURCES.txt
+│ ├── +++ feagi_agent_freenove-0.0.6/feagi_agent_freenove.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- feagi_agent_freenove-0.0.5/setup.cfg
+│ ├── +++ feagi_agent_freenove-0.0.6/setup.cfg
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = feagi_agent_freenove
+│ │ -version = 0.0.5
+│ │ +version = 0.0.6
+│ │  author = Neuraville LLC
+│ │  author_email = info@feagi.org
+│ │  description = Feagi agent freenove to connect feagi with your freenove_smartcar.
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/feagi/feagi
+│ │  project_urls =

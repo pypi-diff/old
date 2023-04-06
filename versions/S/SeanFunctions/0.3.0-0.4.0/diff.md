@@ -1,0 +1,298 @@
+# Comparing `tmp/SeanFunctions-0.3.0.tar.gz` & `tmp/SeanFunctions-0.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "SeanFunctions-0.3.0.tar", last modified: Thu Apr  6 19:50:57 2023, max compression
++gzip compressed data, was "SeanFunctions-0.4.0.tar", last modified: Thu Apr  6 22:16:35 2023, max compression
+```
+
+## Comparing `SeanFunctions-0.3.0.tar` & `SeanFunctions-0.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.617850 SeanFunctions-0.3.0/
+--rw-rw-rw-   0        0        0      274 2022-12-23 21:21:19.000000 SeanFunctions-0.3.0/.gitignore
+--rw-rw-rw-   0        0        0     1087 2022-12-10 20:47:50.000000 SeanFunctions-0.3.0/LICENSE
+--rw-rw-rw-   0        0        0       36 2022-12-23 17:02:46.000000 SeanFunctions-0.3.0/MANIFEST.in
+--rw-rw-rw-   0        0        0      686 2023-04-06 19:50:57.617354 SeanFunctions-0.3.0/PKG-INFO
+--rw-rw-rw-   0        0        0      144 2022-12-10 20:41:39.000000 SeanFunctions-0.3.0/README.md
+--rw-rw-rw-   0        0        0     1147 2023-04-06 19:50:36.000000 SeanFunctions-0.3.0/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-04-06 19:50:57.617850 SeanFunctions-0.3.0/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.584528 SeanFunctions-0.3.0/src/
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.597467 SeanFunctions-0.3.0/src/SeanFunctions/
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.615865 SeanFunctions-0.3.0/src/SeanFunctions/Data/
+--rw-rw-rw-   0        0        0    19820 2022-12-23 19:43:28.000000 SeanFunctions-0.3.0/src/SeanFunctions/Data/AtomicFormFactorConstants.csv
+--rw-rw-rw-   0        0        0    14993 2022-12-23 20:13:17.000000 SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths.csv
+--rw-rw-rw-   0        0        0    15625 2022-12-23 21:07:44.000000 SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv
+--rw-rw-rw-   0        0        0       39 2022-12-23 17:31:09.000000 SeanFunctions-0.3.0/src/SeanFunctions/__init__.py
+--rw-rw-rw-   0        0        0     3170 2022-12-23 22:23:42.000000 SeanFunctions-0.3.0/src/SeanFunctions/fitting.py
+--rw-rw-rw-   0        0        0     6527 2023-04-06 19:40:10.000000 SeanFunctions-0.3.0/src/SeanFunctions/math.py
+--rw-rw-rw-   0        0        0     4281 2022-12-23 21:15:23.000000 SeanFunctions-0.3.0/src/SeanFunctions/scattering.py
+--rw-rw-rw-   0        0        0      218 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions/version.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.612890 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/
+--rw-rw-rw-   0        0        0      686 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      532 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       14 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 22:16:35.976011 SeanFunctions-0.4.0/
++-rw-rw-rw-   0        0        0      274 2022-12-23 21:21:19.000000 SeanFunctions-0.4.0/.gitignore
++-rw-rw-rw-   0        0        0     1087 2022-12-10 20:47:50.000000 SeanFunctions-0.4.0/LICENSE
++-rw-rw-rw-   0        0        0       36 2022-12-23 17:02:46.000000 SeanFunctions-0.4.0/MANIFEST.in
++-rw-rw-rw-   0        0        0      686 2023-04-06 22:16:35.975515 SeanFunctions-0.4.0/PKG-INFO
++-rw-rw-rw-   0        0        0      144 2022-12-10 20:41:39.000000 SeanFunctions-0.4.0/README.md
++-rw-rw-rw-   0        0        0     1147 2023-04-06 22:08:29.000000 SeanFunctions-0.4.0/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-06 22:16:35.976011 SeanFunctions-0.4.0/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 22:16:35.940113 SeanFunctions-0.4.0/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 22:16:35.955059 SeanFunctions-0.4.0/src/SeanFunctions/
++drwxrwxrwx   0        0        0        0 2023-04-06 22:16:35.974521 SeanFunctions-0.4.0/src/SeanFunctions/Data/
++-rw-rw-rw-   0        0        0    19820 2022-12-23 19:43:28.000000 SeanFunctions-0.4.0/src/SeanFunctions/Data/AtomicFormFactorConstants.csv
++-rw-rw-rw-   0        0        0    14993 2022-12-23 20:13:17.000000 SeanFunctions-0.4.0/src/SeanFunctions/Data/NeutronScatteringLengths.csv
++-rw-rw-rw-   0        0        0    15625 2022-12-23 21:07:44.000000 SeanFunctions-0.4.0/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv
++-rw-rw-rw-   0        0        0       39 2022-12-23 17:31:09.000000 SeanFunctions-0.4.0/src/SeanFunctions/__init__.py
++-rw-rw-rw-   0        0        0     3170 2022-12-23 22:23:42.000000 SeanFunctions-0.4.0/src/SeanFunctions/fitting.py
++-rw-rw-rw-   0        0        0     8609 2023-04-06 22:15:29.000000 SeanFunctions-0.4.0/src/SeanFunctions/math.py
++-rw-rw-rw-   0        0        0     4281 2022-12-23 21:15:23.000000 SeanFunctions-0.4.0/src/SeanFunctions/scattering.py
++-rw-rw-rw-   0        0        0      200 2023-04-06 22:16:35.000000 SeanFunctions-0.4.0/src/SeanFunctions/version.py
++drwxrwxrwx   0        0        0        0 2023-04-06 22:16:35.971026 SeanFunctions-0.4.0/src/SeanFunctions.egg-info/
++-rw-rw-rw-   0        0        0      686 2023-04-06 22:16:35.000000 SeanFunctions-0.4.0/src/SeanFunctions.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      532 2023-04-06 22:16:35.000000 SeanFunctions-0.4.0/src/SeanFunctions.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 22:16:35.000000 SeanFunctions-0.4.0/src/SeanFunctions.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       14 2023-04-06 22:16:35.000000 SeanFunctions-0.4.0/src/SeanFunctions.egg-info/top_level.txt
+```
+
+### Comparing `SeanFunctions-0.3.0/LICENSE` & `SeanFunctions-0.4.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.3.0/PKG-INFO` & `SeanFunctions-0.4.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SeanFunctions
+-Version: 0.3.0
++Version: 0.4.0
+ Summary: Collection of useful python functions
+ Author-email: Sean Fayfar <sfayfar@gmail.com>
+ Project-URL: Homepage, https://github.mit.edu/sfayfar/SeanFunctions
+ Project-URL: Bug Tracker, https://github.mit.edu/sfayfar/SeanFunctions/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `SeanFunctions-0.3.0/pyproject.toml` & `SeanFunctions-0.4.0/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [project]
+ name = "SeanFunctions"
+-version = "0.3.0"
++version = "0.4.0"
+ # dynamic = ["version"]
+ authors = [
+   { name="Sean Fayfar", email="sfayfar@gmail.com" },
+ ]
+ description = "Collection of useful python functions"
+ readme = "README.md"
+ requires-python = ">=3.7"
+```
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions/Data/AtomicFormFactorConstants.csv` & `SeanFunctions-0.4.0/src/SeanFunctions/Data/AtomicFormFactorConstants.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths.csv` & `SeanFunctions-0.4.0/src/SeanFunctions/Data/NeutronScatteringLengths.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv` & `SeanFunctions-0.4.0/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions/fitting.py` & `SeanFunctions-0.4.0/src/SeanFunctions/fitting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions/math.py` & `SeanFunctions-0.4.0/src/SeanFunctions/math.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -167,15 +167,15 @@
+           The float value containing the uncertainty calculated from the fitting procedure.
+     '''
+     out = unc.ufloat(paramResult.value,paramResult.stderr)
+     return out
+ 
+ 
+ 
+-def bin_data(dataArray_x,dataArray_y,minValue,maxValue,dataPoints,unpack=False):
++def bin_data(dataArray_x,dataArray_y,minValue,maxValue,dataPoints,unpack=False,method='mean',density=False):
+     '''
+     Returns rebinned x and y arrays
+ 
+     Parameters
+     ---------
+     dataArray_x : array_like
+                   The x-values of the array to be rebinned
+@@ -184,48 +184,118 @@
+     minValue : value
+                The lower bound x-value of the new rebinned data
+     maxValue : value
+                The upper bound x-value of the new rebinned data
+     dataPoint : value
+                 The number of bins to combine the data into
+     unpack : bool, optional
+-        If unpack is True, the result will be output as a tuple to 
+-        more easily define separate variables from the result
++             If unpack is True, the result will be output as a tuple to 
++             more easily define separate variables from the result
++    method : str, optional
++             Choose either "sum" or "mean" for the method of combining data
++    density : bool, optional
++              Choose True to divide the data by the bin size creating a density = occurance/bin width
+ 
+     Returns
+     --------
+     binnedArray_x : ndarray
+                     New x-value bins
+     binnedArray_y : ndarray
+                     New y-values after binning
++
++    Example
++    ---------
++    x = np.array([0,1,2,3,4,5,6,7,8,9,10])
++    y = np.array([5,6,3,4,6,8,9,6,3,4,5])
++
++    output = bin_data(x,y,0,10,5)
++    print(output)
++
++    [[1.  4.5]
++    [3.  5. ]
++    [5.  8.5]
++    [7.  4.5]
++    [9.  4.5]]
+     
+     
+     '''
+     from uncertainties.unumpy import uarray
+ 
++    if method == 'mean':
++        func = np.mean
++    elif method == 'sum':
++        func = np.sum
++    else:
++        print('Method must be either "mean" or "sum".')
++        return -1
++
+     binWidths = np.linspace(minValue,maxValue,dataPoints+1)
+     binnedArray_x = np.zeros(dataPoints)
+     
+     if dataArray_y.dtype == 'O':
+         binnedArray_y = uarray(range(dataPoints),range(dataPoints)) * 0.0
+     else:
+         binnedArray_y = np.zeros(dataPoints)
+     
+     for index in range(dataPoints):
+         left = binWidths[index]
+         right = binWidths[index+1]
+         binnedArray_x[index] = np.mean([left,right])
++
++        if density: 
++            norm = (right - left)
++        else:
++            norm = 1
+         
+         locations = np.where((dataArray_x > left) & (dataArray_x <= right))[0]
+         if len(locations) != 0:
+-            binnedArray_y[index] = np.mean(dataArray_y[locations]) / (right - left)
++            binnedArray_y[index] = func(dataArray_y[locations]) / norm
+         else:
+             if dataArray_y.dtype == 'O':
+                 binnedArray_y[index] = unc.ufloat(0.0,0.0)
+             else:
+                 binnedArray_y[index] = 0.0
+         
+         
+     if unpack:
+         return binnedArray_x, binnedArray_y
+     else:
+-        return np.column_stack((binnedArray_x, binnedArray_y))
++        return np.column_stack((binnedArray_x, binnedArray_y))
++    
++
++
++    
++def bin_ndarray(ndarray, new_shape, operation='sum'):
++    """
++    Bins an ndarray in all axes based on the target shape, by summing or
++        averaging.
++
++    Number of output dimensions must match number of input dimensions and 
++        new axes must divide old ones.
++
++    Example
++    -------
++    >>> m = np.arange(0,100,1).reshape((10,10))
++    >>> n = bin_ndarray(m, new_shape=(5,5), operation='sum')
++    >>> print(n)
++
++    [[ 22  30  38  46  54]
++     [102 110 118 126 134]
++     [182 190 198 206 214]
++     [262 270 278 286 294]
++     [342 350 358 366 374]]
++
++    """
++    operation = operation.lower()
++    if not operation in ['sum', 'mean']:
++        raise ValueError("Operation not supported.")
++    if ndarray.ndim != len(new_shape):
++        raise ValueError("Shape mismatch: {} -> {}".format(ndarray.shape,
++                                                           new_shape))
++    compression_pairs = [(d, c//d) for d,c in zip(new_shape,
++                                                  ndarray.shape)]
++    flattened = [l for p in compression_pairs for l in p]
++    ndarray = ndarray.reshape(flattened)
++    for i in range(len(new_shape)):
++        op = getattr(ndarray, operation)
++        ndarray = op(-1*(i+1))
++    return ndarray
+```
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions/scattering.py` & `SeanFunctions-0.4.0/src/SeanFunctions/scattering.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions.egg-info/PKG-INFO` & `SeanFunctions-0.4.0/src/SeanFunctions.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SeanFunctions
+-Version: 0.3.0
++Version: 0.4.0
+ Summary: Collection of useful python functions
+ Author-email: Sean Fayfar <sfayfar@gmail.com>
+ Project-URL: Homepage, https://github.mit.edu/sfayfar/SeanFunctions
+ Project-URL: Bug Tracker, https://github.mit.edu/sfayfar/SeanFunctions/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `SeanFunctions-0.3.0/src/SeanFunctions.egg-info/SOURCES.txt` & `SeanFunctions-0.4.0/src/SeanFunctions.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

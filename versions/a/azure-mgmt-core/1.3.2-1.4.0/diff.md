@@ -1,0 +1,4238 @@
+# Comparing `tmp/azure-mgmt-core-1.3.2.zip` & `tmp/azure-mgmt-core-1.4.0.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,50 +1,52 @@
+-Zip file size: 55402 bytes, number of entries: 48
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure/
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/tests/
+--rw-rw-r--  2.0 unx      197 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/MANIFEST.in
+--rw-rw-r--  2.0 unx     4733 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/PKG-INFO
+--rw-rw-r--  2.0 unx     2514 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/setup.py
+--rw-rw-r--  2.0 unx     1583 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/README.md
+--rw-rw-r--  2.0 unx     1388 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/CHANGELOG.md
+--rw-rw-r--  2.0 unx     1072 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/LICENSE.md
+--rw-rw-r--  2.0 unx       38 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/setup.cfg
+--rw-rw-r--  2.0 unx        1 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/dependency_links.txt
+--rw-rw-r--  2.0 unx     4733 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/PKG-INFO
+--rw-rw-r--  2.0 unx     1141 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/SOURCES.txt
+--rw-rw-r--  2.0 unx       26 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/requires.txt
+--rw-rw-r--  2.0 unx        1 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/not-zip-safe
+--rw-rw-r--  2.0 unx        6 b- defN 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/top_level.txt
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure/mgmt/
+--rw-rw-r--  2.0 unx       81 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/__init__.py
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure/mgmt/core/
+--rw-rw-r--  2.0 unx       81 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/__init__.py
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure/mgmt/core/policies/
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/azure/mgmt/core/polling/
+--rw-rw-r--  2.0 unx        0 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/py.typed
+--rw-rw-r--  2.0 unx     8999 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/tools.py
+--rw-rw-r--  2.0 unx     1666 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/__init__.py
+--rw-rw-r--  2.0 unx     3459 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/_async_pipeline_client.py
+--rw-rw-r--  2.0 unx     2996 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/exceptions.py
+--rw-rw-r--  2.0 unx     3439 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/_pipeline_client.py
+--rw-rw-r--  2.0 unx      495 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/_version.py
+--rw-rw-r--  2.0 unx     4086 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_base_async.py
+--rw-rw-r--  2.0 unx     3027 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/policies/__init__.py
+--rw-rw-r--  2.0 unx     5101 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_base.py
+--rw-rw-r--  2.0 unx     4016 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_authentication.py
+--rw-rw-r--  2.0 unx     2827 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_authentication_async.py
+--rw-rw-r--  2.0 unx     1303 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/polling/__init__.py
+--rw-rw-r--  2.0 unx     6926 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/polling/arm_polling.py
+--rw-rw-r--  2.0 unx     1509 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/azure/mgmt/core/polling/async_arm_polling.py
+-drwxrwxr-x  2.0 unx        0 b- stor 22-Aug-11 07:30 azure-mgmt-core-1.3.2/tests/asynctests/
+--rw-rw-r--  2.0 unx     6552 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/test_authentication.py
+--rw-rw-r--  2.0 unx     7547 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/test_policies.py
+--rw-rw-r--  2.0 unx     2404 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/conftest.py
+--rw-rw-r--  2.0 unx    17149 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/test_tools.py
+--rw-rw-r--  2.0 unx     6984 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/test_mgmt_exceptions.py
+--rw-rw-r--  2.0 unx    22084 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/test_arm_polling.py
+--rw-rw-r--  2.0 unx     5020 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/asynctests/test_authentication_async.py
+--rw-rw-r--  2.0 unx     2336 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/asynctests/test_policies_async.py
+--rw-rw-r--  2.0 unx    21792 b- defN 22-Aug-11 07:29 azure-mgmt-core-1.3.2/tests/asynctests/test_async_arm_polling.py
+-48 files, 159312 bytes uncompressed, 47116 bytes compressed:  70.4%
++Zip file size: 58042 bytes, number of entries: 50
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure/
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/tests/
++-rw-rw-r--  2.0 unx      197 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/MANIFEST.in
++-rw-rw-r--  2.0 unx     1072 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/LICENSE.md
++-rw-rw-r--  2.0 unx     4092 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/PKG-INFO
++-rw-rw-r--  2.0 unx     1583 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/README.md
++-rw-rw-r--  2.0 unx     1073 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/LICENSE
++-rw-rw-r--  2.0 unx     2541 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/setup.py
++-rw-rw-r--  2.0 unx       38 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/setup.cfg
++-rw-rw-r--  2.0 unx     1588 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/CHANGELOG.md
++-rw-rw-r--  2.0 unx       99 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/pyproject.toml
++-rw-rw-r--  2.0 unx     4092 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/PKG-INFO
++-rw-rw-r--  2.0 unx     1164 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/SOURCES.txt
++-rw-rw-r--  2.0 unx       26 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/requires.txt
++-rw-rw-r--  2.0 unx        1 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/not-zip-safe
++-rw-rw-r--  2.0 unx        1 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/dependency_links.txt
++-rw-rw-r--  2.0 unx        6 b- defN 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/top_level.txt
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure/mgmt/
++-rw-rw-r--  2.0 unx       81 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/__init__.py
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure/mgmt/core/
++-rw-rw-r--  2.0 unx       81 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/__init__.py
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure/mgmt/core/policies/
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/azure/mgmt/core/polling/
++-rw-rw-r--  2.0 unx     1523 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/__init__.py
++-rw-rw-r--  2.0 unx     8720 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/tools.py
++-rw-rw-r--  2.0 unx      492 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/_version.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/py.typed
++-rw-rw-r--  2.0 unx     3456 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/_async_pipeline_client.py
++-rw-rw-r--  2.0 unx     2996 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/exceptions.py
++-rw-rw-r--  2.0 unx     3357 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/_pipeline_client.py
++-rw-rw-r--  2.0 unx     4988 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_base.py
++-rw-rw-r--  2.0 unx     7013 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_authentication.py
++-rw-rw-r--  2.0 unx     3144 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/policies/__init__.py
++-rw-rw-r--  2.0 unx     5897 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_authentication_async.py
++-rw-rw-r--  2.0 unx     3951 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_base_async.py
++-rw-rw-r--  2.0 unx     1303 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/polling/__init__.py
++-rw-rw-r--  2.0 unx     1510 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/polling/async_arm_polling.py
++-rw-rw-r--  2.0 unx     6778 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/azure/mgmt/core/polling/arm_polling.py
++drwxrwxr-x  2.0 unx        0 b- stor 23-Apr-06 18:54 azure-mgmt-core-1.4.0/tests/asynctests/
++-rw-rw-r--  2.0 unx     7143 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/test_policies.py
++-rw-rw-r--  2.0 unx     7846 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/test_authentication.py
++-rw-rw-r--  2.0 unx     6591 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/test_mgmt_exceptions.py
++-rw-rw-r--  2.0 unx    20814 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/test_arm_polling.py
++-rw-rw-r--  2.0 unx    16372 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/test_tools.py
++-rw-rw-r--  2.0 unx     2233 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/conftest.py
++-rw-rw-r--  2.0 unx     2341 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/asynctests/test_policies_async.py
++-rw-rw-r--  2.0 unx    20483 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/asynctests/test_async_arm_polling.py
++-rw-rw-r--  2.0 unx     6590 b- defN 23-Apr-06 18:52 azure-mgmt-core-1.4.0/tests/asynctests/test_authentication_async.py
++50 files, 163276 bytes uncompressed, 49474 bytes compressed:  69.7%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,145 +1,151 @@
+-Filename: azure-mgmt-core-1.3.2/
++Filename: azure-mgmt-core-1.4.0/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/
++Filename: azure-mgmt-core-1.4.0/azure/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/
++Filename: azure-mgmt-core-1.4.0/tests/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/MANIFEST.in
++Filename: azure-mgmt-core-1.4.0/MANIFEST.in
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/PKG-INFO
++Filename: azure-mgmt-core-1.4.0/LICENSE.md
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/setup.py
++Filename: azure-mgmt-core-1.4.0/PKG-INFO
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/README.md
++Filename: azure-mgmt-core-1.4.0/README.md
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/CHANGELOG.md
++Filename: azure-mgmt-core-1.4.0/LICENSE
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/LICENSE.md
++Filename: azure-mgmt-core-1.4.0/setup.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/setup.cfg
++Filename: azure-mgmt-core-1.4.0/setup.cfg
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/dependency_links.txt
++Filename: azure-mgmt-core-1.4.0/CHANGELOG.md
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/PKG-INFO
++Filename: azure-mgmt-core-1.4.0/pyproject.toml
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/SOURCES.txt
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/PKG-INFO
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/requires.txt
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/SOURCES.txt
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/not-zip-safe
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/requires.txt
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/top_level.txt
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/not-zip-safe
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/dependency_links.txt
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/__init__.py
++Filename: azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/top_level.txt
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/__init__.py
++Filename: azure-mgmt-core-1.4.0/azure/__init__.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/policies/
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/polling/
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/__init__.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/py.typed
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/policies/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/tools.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/polling/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/__init__.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/__init__.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/_async_pipeline_client.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/tools.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/exceptions.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/_version.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/_pipeline_client.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/py.typed
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/_version.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/_async_pipeline_client.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_base_async.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/exceptions.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/policies/__init__.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/_pipeline_client.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_base.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_base.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_authentication.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_authentication.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_authentication_async.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/policies/__init__.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/polling/__init__.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_authentication_async.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/polling/arm_polling.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_base_async.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/azure/mgmt/core/polling/async_arm_polling.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/polling/__init__.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/asynctests/
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/polling/async_arm_polling.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/test_authentication.py
++Filename: azure-mgmt-core-1.4.0/azure/mgmt/core/polling/arm_polling.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/test_policies.py
++Filename: azure-mgmt-core-1.4.0/tests/asynctests/
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/conftest.py
++Filename: azure-mgmt-core-1.4.0/tests/test_policies.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/test_tools.py
++Filename: azure-mgmt-core-1.4.0/tests/test_authentication.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/test_mgmt_exceptions.py
++Filename: azure-mgmt-core-1.4.0/tests/test_mgmt_exceptions.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/test_arm_polling.py
++Filename: azure-mgmt-core-1.4.0/tests/test_arm_polling.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/asynctests/test_authentication_async.py
++Filename: azure-mgmt-core-1.4.0/tests/test_tools.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/asynctests/test_policies_async.py
++Filename: azure-mgmt-core-1.4.0/tests/conftest.py
+ Comment: 
+ 
+-Filename: azure-mgmt-core-1.3.2/tests/asynctests/test_async_arm_polling.py
++Filename: azure-mgmt-core-1.4.0/tests/asynctests/test_policies_async.py
++Comment: 
++
++Filename: azure-mgmt-core-1.4.0/tests/asynctests/test_async_arm_polling.py
++Comment: 
++
++Filename: azure-mgmt-core-1.4.0/tests/asynctests/test_authentication_async.py
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `azure-mgmt-core-1.3.2/README.md` & `azure-mgmt-core-1.4.0/README.md`
+
+ * *Files identical despite different names*
+
+## Comparing `azure-mgmt-core-1.3.2/CHANGELOG.md` & `azure-mgmt-core-1.4.0/CHANGELOG.md`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,9 +1,19 @@
+ # Release History
+ 
++## 1.4.0 (2023-04-06)
++
++### Features
++
++- Added AuxiliaryAuthenticationPolicy
++
++### Other Changes
++
++- Rename "DEFAULT_HEADERS_WHITELIST" to "DEFAULT_HEADERS_ALLOWLIST". Added a backward compatible alias.
++
+ ## 1.3.2 (2022-08-11)
+ 
+ ### Other Changes
+ 
+ - Updated mindep about `azure-core` from `1.23.0` to `1.24.0`
+ 
+ ## 1.3.1 (2022-06-14)
+```
+
+## Comparing `azure-mgmt-core-1.3.2/LICENSE.md` & `azure-mgmt-core-1.4.0/LICENSE.md`
+
+ * *Files identical despite different names*
+
+## Comparing `azure-mgmt-core-1.3.2/azure_mgmt_core.egg-info/SOURCES.txt` & `azure-mgmt-core-1.4.0/azure_mgmt_core.egg-info/SOURCES.txt`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,11 +1,13 @@
+ CHANGELOG.md
++LICENSE
+ LICENSE.md
+ MANIFEST.in
+ README.md
++pyproject.toml
+ setup.py
+ azure/__init__.py
+ azure/mgmt/__init__.py
+ azure/mgmt/core/__init__.py
+ azure/mgmt/core/_async_pipeline_client.py
+ azure/mgmt/core/_pipeline_client.py
+ azure/mgmt/core/_version.py
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/tools.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/tools.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -30,18 +30,15 @@
+ 
+ _LOGGER = logging.getLogger(__name__)
+ _ARMID_RE = re.compile(
+     "(?i)/subscriptions/(?P<subscription>[^/]+)(/resourceGroups/(?P<resource_group>[^/]+))?"
+     "(/providers/(?P<namespace>[^/]+)/(?P<type>[^/]*)/(?P<name>[^/]+)(?P<children>.*))?"
+ )
+ 
+-_CHILDREN_RE = re.compile(
+-    "(?i)(/providers/(?P<child_namespace>[^/]+))?/"
+-    "(?P<child_type>[^/]*)/(?P<child_name>[^/]+)"
+-)
++_CHILDREN_RE = re.compile("(?i)(/providers/(?P<child_namespace>[^/]+))?/" "(?P<child_type>[^/]*)/(?P<child_name>[^/]+)")
+ 
+ _ARMNAME_RE = re.compile("^[^<>%&:\\?/]{1,260}$")
+ 
+ 
+ __all__ = [
+     "parse_resource_id",
+     "resource_id",
+@@ -81,69 +78,53 @@
+         return {}
+     match = _ARMID_RE.match(rid)
+     if match:
+         result = match.groupdict()
+         children = _CHILDREN_RE.finditer(result["children"] or "")
+         count = None
+         for count, child in enumerate(children):
+-            result.update(
+-                {
+-                    key + "_%d" % (count + 1): group
+-                    for key, group in child.groupdict().items()
+-                }
+-            )
++            result.update({key + "_%d" % (count + 1): group for key, group in child.groupdict().items()})
+         result["last_child_num"] = count + 1 if isinstance(count, int) else None
+         result = _populate_alternate_kwargs(result)
+     else:
+         result = dict(name=rid)
+     return {key: value for key, value in result.items() if value is not None}
+ 
+ 
+ def _populate_alternate_kwargs(kwargs):
+-    """ Translates the parsed arguments into a format used by generic ARM commands
++    """Translates the parsed arguments into a format used by generic ARM commands
+     such as the resource and lock commands.
+     """
+ 
+     resource_namespace = kwargs["namespace"]
+-    resource_type = (
+-        kwargs.get("child_type_{}".format(kwargs["last_child_num"])) or kwargs["type"]
+-    )
+-    resource_name = (
+-        kwargs.get("child_name_{}".format(kwargs["last_child_num"])) or kwargs["name"]
+-    )
++    resource_type = kwargs.get("child_type_{}".format(kwargs["last_child_num"])) or kwargs["type"]
++    resource_name = kwargs.get("child_name_{}".format(kwargs["last_child_num"])) or kwargs["name"]
+ 
+     _get_parents_from_parts(kwargs)
+     kwargs["resource_namespace"] = resource_namespace
+     kwargs["resource_type"] = resource_type
+     kwargs["resource_name"] = resource_name
+     return kwargs
+ 
+ 
+ def _get_parents_from_parts(kwargs):
+-    """ Get the parents given all the children parameters.
+-    """
++    """Get the parents given all the children parameters."""
+     parent_builder = []
+     if kwargs["last_child_num"] is not None:
+         parent_builder.append("{type}/{name}/".format(**kwargs))
+         for index in range(1, kwargs["last_child_num"]):
+             child_namespace = kwargs.get("child_namespace_{}".format(index))
+             if child_namespace is not None:
+                 parent_builder.append("providers/{}/".format(child_namespace))
+             kwargs["child_parent_{}".format(index)] = "".join(parent_builder)
+-            parent_builder.append(
+-                "{{child_type_{0}}}/{{child_name_{0}}}/".format(index).format(**kwargs)
+-            )
+-        child_namespace = kwargs.get(
+-            "child_namespace_{}".format(kwargs["last_child_num"])
+-        )
++            parent_builder.append("{{child_type_{0}}}/{{child_name_{0}}}/".format(index).format(**kwargs))
++        child_namespace = kwargs.get("child_namespace_{}".format(kwargs["last_child_num"]))
+         if child_namespace is not None:
+             parent_builder.append("providers/{}/".format(child_namespace))
+-        kwargs["child_parent_{}".format(kwargs["last_child_num"])] = "".join(
+-            parent_builder
+-        )
++        kwargs["child_parent_{}".format(kwargs["last_child_num"])] = "".join(parent_builder)
+     kwargs["resource_parent"] = "".join(parent_builder) if kwargs["name"] else None
+     return kwargs
+ 
+ 
+ def resource_id(**kwargs):
+     """Create a valid resource id string from the given parts.
+ 
+@@ -174,22 +155,18 @@
+         except KeyError:
+             pass
+         rid_builder.append("providers/{namespace}".format(**kwargs))
+         rid_builder.append("{type}/{name}".format(**kwargs))
+         count = 1
+         while True:
+             try:
+-                rid_builder.append(
+-                    "providers/{{child_namespace_{}}}".format(count).format(**kwargs)
+-                )
++                rid_builder.append("providers/{{child_namespace_{}}}".format(count).format(**kwargs))
+             except KeyError:
+                 pass
+-            rid_builder.append(
+-                "{{child_type_{0}}}/{{child_name_{0}}}".format(count).format(**kwargs)
+-            )
++            rid_builder.append("{{child_type_{0}}}/{{child_name_{0}}}".format(count).format(**kwargs))
+             count += 1
+     except KeyError:
+         pass
+     return "/".join(rid_builder)
+ 
+ 
+ def is_valid_resource_id(rid, exception_type=None):
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/__init__.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -23,19 +23,11 @@
+ # IN THE SOFTWARE.
+ #
+ # --------------------------------------------------------------------------
+ 
+ 
+ from ._version import VERSION
+ from ._pipeline_client import ARMPipelineClient
++from ._async_pipeline_client import AsyncARMPipelineClient
+ 
+-__all__ = ["ARMPipelineClient"]
++__all__ = ["ARMPipelineClient", "AsyncARMPipelineClient"]
+ __version__ = VERSION
+-
+-try:
+-    from ._async_pipeline_client import (  # pylint: disable=unused-import
+-        AsyncARMPipelineClient,
+-    )
+-
+-    __all__.extend(["AsyncARMPipelineClient"])
+-except (ImportError, SyntaxError):  # Python <= 3.5
+-    pass
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/_async_pipeline_client.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/_async_pipeline_client.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -21,15 +21,18 @@
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ # IN THE SOFTWARE.
+ #
+ # --------------------------------------------------------------------------
+ from collections.abc import Iterable
+ from azure.core import AsyncPipelineClient
+-from .policies import AsyncARMAutoResourceProviderRegistrationPolicy, ARMHttpLoggingPolicy
++from .policies import (
++    AsyncARMAutoResourceProviderRegistrationPolicy,
++    ARMHttpLoggingPolicy,
++)
+ 
+ 
+ class AsyncARMPipelineClient(AsyncPipelineClient):
+     """A pipeline client designed for ARM explicitly.
+ 
+     :param str base_url: URL for the request.
+     :keyword AsyncPipeline pipeline: If omitted, a Pipeline object is created and returned.
+@@ -42,22 +45,22 @@
+         list[AsyncHTTPPolicy], list[SansIOHTTPPolicy]]
+     :keyword AsyncHttpTransport transport: If omitted, AioHttpTransport is used for asynchronous transport.
+     """
+ 
+     def __init__(self, base_url, **kwargs):
+         if "policies" not in kwargs:
+             if "config" not in kwargs:
+-                raise ValueError(
+-                    "Current implementation requires to pass 'config' if you don't pass 'policies'"
+-                )
+-            per_call_policies = kwargs.get('per_call_policies', [])
++                raise ValueError("Current implementation requires to pass 'config' if you don't pass 'policies'")
++            per_call_policies = kwargs.get("per_call_policies", [])
+             if isinstance(per_call_policies, Iterable):
+                 per_call_policies.append(AsyncARMAutoResourceProviderRegistrationPolicy())
+             else:
+-                per_call_policies = [per_call_policies,
+-                                     AsyncARMAutoResourceProviderRegistrationPolicy()]
++                per_call_policies = [
++                    per_call_policies,
++                    AsyncARMAutoResourceProviderRegistrationPolicy(),
++                ]
+             kwargs["per_call_policies"] = per_call_policies
+-            config = kwargs.get('config')
++            config = kwargs.get("config")
+             if not config.http_logging_policy:
+-                config.http_logging_policy = kwargs.get('http_logging_policy', ARMHttpLoggingPolicy(**kwargs))
++                config.http_logging_policy = kwargs.get("http_logging_policy", ARMHttpLoggingPolicy(**kwargs))
+             kwargs["config"] = config
+         super(AsyncARMPipelineClient, self).__init__(base_url, **kwargs)
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/exceptions.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/exceptions.py`
+
+ * *Files identical despite different names*
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/_pipeline_client.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/_pipeline_client.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -19,18 +19,15 @@
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ # IN THE SOFTWARE.
+ #
+ # --------------------------------------------------------------------------
+-try:
+-    from collections.abc import Iterable
+-except ImportError:
+-    from collections import Iterable
++from collections.abc import Iterable
+ from azure.core import PipelineClient
+ from .policies import ARMAutoResourceProviderRegistrationPolicy, ARMHttpLoggingPolicy
+ 
+ 
+ class ARMPipelineClient(PipelineClient):
+     """A pipeline client designed for ARM explicitly.
+ 
+@@ -43,22 +40,22 @@
+     :paramtype per_retry_policies: Union[HTTPPolicy, SansIOHTTPPolicy, list[HTTPPolicy], list[SansIOHTTPPolicy]]
+     :keyword HttpTransport transport: If omitted, RequestsTransport is used for synchronous transport.
+     """
+ 
+     def __init__(self, base_url, **kwargs):
+         if "policies" not in kwargs:
+             if "config" not in kwargs:
+-                raise ValueError(
+-                    "Current implementation requires to pass 'config' if you don't pass 'policies'"
+-                )
+-            per_call_policies = kwargs.get('per_call_policies', [])
++                raise ValueError("Current implementation requires to pass 'config' if you don't pass 'policies'")
++            per_call_policies = kwargs.get("per_call_policies", [])
+             if isinstance(per_call_policies, Iterable):
+                 per_call_policies.append(ARMAutoResourceProviderRegistrationPolicy())
+             else:
+-                per_call_policies = [per_call_policies,
+-                                     ARMAutoResourceProviderRegistrationPolicy()]
++                per_call_policies = [
++                    per_call_policies,
++                    ARMAutoResourceProviderRegistrationPolicy(),
++                ]
+             kwargs["per_call_policies"] = per_call_policies
+-            config = kwargs.get('config')
++            config = kwargs.get("config")
+             if not config.http_logging_policy:
+-                config.http_logging_policy = kwargs.get('http_logging_policy', ARMHttpLoggingPolicy(**kwargs))
++                config.http_logging_policy = kwargs.get("http_logging_policy", ARMHttpLoggingPolicy(**kwargs))
+             kwargs["config"] = config
+         super(ARMPipelineClient, self).__init__(base_url, **kwargs)
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_base_async.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_base_async.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -32,62 +32,50 @@
+ from azure.core.pipeline.policies import AsyncHTTPPolicy
+ 
+ from . import ARMAutoResourceProviderRegistrationPolicy
+ 
+ _LOGGER = logging.getLogger(__name__)
+ 
+ 
+-class AsyncARMAutoResourceProviderRegistrationPolicy(
+-    ARMAutoResourceProviderRegistrationPolicy, AsyncHTTPPolicy
+-):
+-    """Auto register an ARM resource provider if not done yet.
+-    """
++class AsyncARMAutoResourceProviderRegistrationPolicy(ARMAutoResourceProviderRegistrationPolicy, AsyncHTTPPolicy):
++    """Auto register an ARM resource provider if not done yet."""
+ 
+     async def send(self, request: PipelineRequest):  # pylint: disable=invalid-overridden-method
+         http_request = request.http_request
+         response = await self.next.send(request)
+         if response.http_response.status_code == 409:
+             rp_name = self._check_rp_not_registered_err(response)
+             if rp_name:
+                 url_prefix = self._extract_subscription_url(http_request.url)
+-                register_rp_status = await self._async_register_rp(
+-                    request, url_prefix, rp_name
+-                )
++                register_rp_status = await self._async_register_rp(request, url_prefix, rp_name)
+                 if not register_rp_status:
+                     return response
+                 # Change the 'x-ms-client-request-id' otherwise the Azure endpoint
+                 # just returns the same 409 payload without looking at the actual query
+                 if "x-ms-client-request-id" in http_request.headers:
+                     http_request.headers["x-ms-client-request-id"] = str(uuid.uuid4())
+                 response = await self.next.send(request)
+         return response
+ 
+     async def _async_register_rp(self, initial_request, url_prefix, rp_name):
+         """Synchronously register the RP is paremeter.
+ 
+         Return False if we have a reason to believe this didn't work
+         """
+-        post_url = "{}providers/{}/register?api-version=2016-02-01".format(
+-            url_prefix, rp_name
+-        )
++        post_url = "{}providers/{}/register?api-version=2016-02-01".format(url_prefix, rp_name)
+         get_url = "{}providers/{}?api-version=2016-02-01".format(url_prefix, rp_name)
+         _LOGGER.warning(
+-            "Resource provider '%s' used by this operation is not "
+-            "registered. We are registering for you.",
++            "Resource provider '%s' used by this operation is not " "registered. We are registering for you.",
+             rp_name,
+         )
+-        post_response = await self.next.send(
+-            self._build_next_request(initial_request, "POST", post_url)
+-        )
++        post_response = await self.next.send(self._build_next_request(initial_request, "POST", post_url))
+         if post_response.http_response.status_code != 200:
+             _LOGGER.warning("Registration failed. Please register manually.")
+             return False
+ 
+         while True:
+             await asyncio.sleep(10)
+-            get_response = await self.next.send(
+-                self._build_next_request(initial_request, "GET", get_url)
+-            )
++            get_response = await self.next.send(self._build_next_request(initial_request, "GET", get_url))
+             rp_info = json.loads(get_response.http_response.text())
+             if rp_info["registrationState"] == "Registered":
+                 _LOGGER.warning("Registration succeeded.")
+                 return True
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/policies/__init__.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/policies/__init__.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -21,41 +21,49 @@
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ # IN THE SOFTWARE.
+ #
+ # --------------------------------------------------------------------------
+ 
+ from azure.core.pipeline.policies import HttpLoggingPolicy
+-from ._authentication import ARMChallengeAuthenticationPolicy
++from ._authentication import (
++    ARMChallengeAuthenticationPolicy,
++    AuxiliaryAuthenticationPolicy,
++)
+ from ._base import ARMAutoResourceProviderRegistrationPolicy
++from ._authentication_async import (
++    AsyncARMChallengeAuthenticationPolicy,
++    AsyncAuxiliaryAuthenticationPolicy,
++)
++from ._base_async import AsyncARMAutoResourceProviderRegistrationPolicy
+ 
+ 
+ class ARMHttpLoggingPolicy(HttpLoggingPolicy):
+-    """HttpLoggingPolicy with ARM specific safe headers fopr loggers.
+-    """
++    """HttpLoggingPolicy with ARM specific safe headers fopr loggers."""
+ 
+-    DEFAULT_HEADERS_WHITELIST = HttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST | set([
+-        # https://docs.microsoft.com/azure/azure-resource-manager/management/request-limits-and-throttling#remaining-requests
+-        "x-ms-ratelimit-remaining-subscription-reads",
+-        "x-ms-ratelimit-remaining-subscription-writes",
+-        "x-ms-ratelimit-remaining-tenant-reads",
+-        "x-ms-ratelimit-remaining-tenant-writes",
+-        "x-ms-ratelimit-remaining-subscription-resource-requests",
+-        "x-ms-ratelimit-remaining-subscription-resource-entities-read",
+-        "x-ms-ratelimit-remaining-tenant-resource-requests",
+-        "x-ms-ratelimit-remaining-tenant-resource-entities-read",
+-        # https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshooting-throttling-errors#call-rate-informational-response-headers
+-        "x-ms-ratelimit-remaining-resource",
+-        "x-ms-request-charge",
+-    ])
+-
+-
+-__all__ = ["ARMAutoResourceProviderRegistrationPolicy", "ARMChallengeAuthenticationPolicy", "ARMHttpLoggingPolicy"]
+-
+-try:
+-    # pylint: disable=unused-import
+-    from ._authentication_async import AsyncARMChallengeAuthenticationPolicy
+-    from ._base_async import AsyncARMAutoResourceProviderRegistrationPolicy
+-
+-    __all__.extend(["AsyncARMAutoResourceProviderRegistrationPolicy", "AsyncARMChallengeAuthenticationPolicy"])
+-except (ImportError, SyntaxError):
+-    pass  # Async not supported
++    DEFAULT_HEADERS_ALLOWLIST = HttpLoggingPolicy.DEFAULT_HEADERS_ALLOWLIST | set(
++        [
++            # https://docs.microsoft.com/azure/azure-resource-manager/management/request-limits-and-throttling#remaining-requests
++            "x-ms-ratelimit-remaining-subscription-reads",
++            "x-ms-ratelimit-remaining-subscription-writes",
++            "x-ms-ratelimit-remaining-tenant-reads",
++            "x-ms-ratelimit-remaining-tenant-writes",
++            "x-ms-ratelimit-remaining-subscription-resource-requests",
++            "x-ms-ratelimit-remaining-subscription-resource-entities-read",
++            "x-ms-ratelimit-remaining-tenant-resource-requests",
++            "x-ms-ratelimit-remaining-tenant-resource-entities-read",
++            # https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshooting-throttling-errors#call-rate-informational-response-headers
++            "x-ms-ratelimit-remaining-resource",
++            "x-ms-request-charge",
++        ]
++    )
++
++
++__all__ = [
++    "ARMAutoResourceProviderRegistrationPolicy",
++    "ARMChallengeAuthenticationPolicy",
++    "ARMHttpLoggingPolicy",
++    "AsyncARMAutoResourceProviderRegistrationPolicy",
++    "AsyncARMChallengeAuthenticationPolicy",
++    "AuxiliaryAuthenticationPolicy",
++    "AsyncAuxiliaryAuthenticationPolicy",
++]
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/policies/_base.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/policies/_base.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -34,16 +34,15 @@
+ from azure.core.pipeline.transport import HttpRequest
+ 
+ 
+ _LOGGER = logging.getLogger(__name__)
+ 
+ 
+ class ARMAutoResourceProviderRegistrationPolicy(HTTPPolicy):
+-    """Auto register an ARM resource provider if not done yet.
+-    """
++    """Auto register an ARM resource provider if not done yet."""
+ 
+     def send(self, request):
+         # type: (PipelineRequest[HTTPRequestType], Any) -> PipelineResponse[HTTPRequestType, HTTPResponseType]
+         http_request = request.http_request
+         response = self.next.send(request)
+         if response.http_response.status_code == 409:
+             rp_name = self._check_rp_not_registered_err(response)
+@@ -78,42 +77,33 @@
+         if not match:
+             raise ValueError("Unable to extract subscription ID from URL")
+         return match.group(0)
+ 
+     @staticmethod
+     def _build_next_request(initial_request, method, url):
+         request = HttpRequest(method, url)
+-        context = PipelineContext(
+-            initial_request.context.transport, **initial_request.context.options
+-        )
++        context = PipelineContext(initial_request.context.transport, **initial_request.context.options)
+         return PipelineRequest(request, context)
+ 
+     def _register_rp(self, initial_request, url_prefix, rp_name):
+         """Synchronously register the RP is paremeter.
+ 
+         Return False if we have a reason to believe this didn't work
+         """
+-        post_url = "{}providers/{}/register?api-version=2016-02-01".format(
+-            url_prefix, rp_name
+-        )
++        post_url = "{}providers/{}/register?api-version=2016-02-01".format(url_prefix, rp_name)
+         get_url = "{}providers/{}?api-version=2016-02-01".format(url_prefix, rp_name)
+         _LOGGER.warning(
+-            "Resource provider '%s' used by this operation is not "
+-            "registered. We are registering for you.",
++            "Resource provider '%s' used by this operation is not " "registered. We are registering for you.",
+             rp_name,
+         )
+-        post_response = self.next.send(
+-            self._build_next_request(initial_request, "POST", post_url)
+-        )
++        post_response = self.next.send(self._build_next_request(initial_request, "POST", post_url))
+         if post_response.http_response.status_code != 200:
+             _LOGGER.warning("Registration failed. Please register manually.")
+             return False
+ 
+         while True:
+             time.sleep(10)
+-            get_response = self.next.send(
+-                self._build_next_request(initial_request, "GET", get_url)
+-            )
++            get_response = self.next.send(self._build_next_request(initial_request, "GET", get_url))
+             rp_info = json.loads(get_response.http_response.text())
+             if rp_info["registrationState"] == "Registered":
+                 _LOGGER.warning("Registration succeeded.")
+                 return True
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/polling/__init__.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/polling/__init__.py`
+
+ * *Files identical despite different names*
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/polling/arm_polling.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/polling/arm_polling.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -61,61 +61,53 @@
+     """Possible final-state-via options."""
+ 
+     AZURE_ASYNC_OPERATION_FINAL_STATE = "azure-async-operation"
+     LOCATION_FINAL_STATE = "location"
+ 
+ 
+ class AzureAsyncOperationPolling(OperationResourcePolling):
+-    """Implements a operation resource polling, typically from Azure-AsyncOperation.
+-    """
++    """Implements a operation resource polling, typically from Azure-AsyncOperation."""
+ 
+     def __init__(self, lro_options=None):
+-        super(AzureAsyncOperationPolling, self).__init__(
+-            operation_location_header="azure-asyncoperation"
+-        )
++        super(AzureAsyncOperationPolling, self).__init__(operation_location_header="azure-asyncoperation")
+ 
+         self._lro_options = lro_options or {}
+ 
+     def get_final_get_url(self, pipeline_response):
+         # type: (PipelineResponseType) -> Optional[str]
+         """If a final GET is needed, returns the URL.
+ 
+         :rtype: str
+         """
+         if (
+-            self._lro_options.get(_LroOption.FINAL_STATE_VIA)
+-            == _FinalStateViaOption.AZURE_ASYNC_OPERATION_FINAL_STATE
++            self._lro_options.get(_LroOption.FINAL_STATE_VIA) == _FinalStateViaOption.AZURE_ASYNC_OPERATION_FINAL_STATE
+             and self._request.method == "POST"
+         ):
+             return None
+-        return super(AzureAsyncOperationPolling, self).get_final_get_url(
+-            pipeline_response
+-        )
++        return super(AzureAsyncOperationPolling, self).get_final_get_url(pipeline_response)
+ 
+ 
+ class BodyContentPolling(LongRunningOperation):
+     """Poll based on the body content.
+ 
+     Implement a ARM resource poller (using provisioning state).
+     """
+ 
+     def __init__(self):
+         self._initial_response = None
+ 
+     def can_poll(self, pipeline_response):
+         # type: (PipelineResponseType) -> bool
+-        """Answer if this polling method could be used.
+-        """
++        """Answer if this polling method could be used."""
+         response = pipeline_response.http_response
+         return response.request.method in ["PUT", "PATCH"]
+ 
+     def get_polling_url(self):
+         # type: () -> str
+-        """Return the polling URL.
+-        """
++        """Return the polling URL."""
+         return self._initial_response.http_response.request.url
+ 
+     def get_final_get_url(self, pipeline_response):
+         # type: (PipelineResponseType) -> Optional[str]
+         """If a final GET is needed, returns the URL.
+ 
+         :rtype: str
+@@ -163,30 +155,23 @@
+         the previous request.
+ 
+         :param azure.core.pipeline.PipelineResponse response: latest REST call response.
+         :raises: BadResponse if status not 200 or 204.
+         """
+         response = pipeline_response.http_response
+         if _is_empty(response):
+-            raise BadResponse(
+-                "The response from long running operation does not contain a body."
+-            )
++            raise BadResponse("The response from long running operation does not contain a body.")
+ 
+         status = self._get_provisioning_state(response)
+         return status or "Succeeded"
+ 
+ 
+ class ARMPolling(LROBasePolling):
+     def __init__(
+-        self,
+-        timeout=30,
+-        lro_algorithms=None,
+-        lro_options=None,
+-        path_format_arguments=None,
+-        **operation_config
++        self, timeout=30, lro_algorithms=None, lro_options=None, path_format_arguments=None, **operation_config
+     ):
+         lro_algorithms = lro_algorithms or [
+             AzureAsyncOperationPolling(lro_options=lro_options),
+             LocationPolling(),
+             BodyContentPolling(),
+             StatusCheckPolling(),
+         ]
+@@ -194,12 +179,13 @@
+             timeout=timeout,
+             lro_algorithms=lro_algorithms,
+             lro_options=lro_options,
+             path_format_arguments=path_format_arguments,
+             **operation_config
+         )
+ 
++
+ __all__ = [
+-    'AzureAsyncOperationPolling',
+-    'BodyContentPolling',
+-    'ARMPolling',
++    "AzureAsyncOperationPolling",
++    "BodyContentPolling",
++    "ARMPolling",
+ ]
+```
+
+## Comparing `azure-mgmt-core-1.3.2/azure/mgmt/core/polling/async_arm_polling.py` & `azure-mgmt-core-1.4.0/azure/mgmt/core/polling/async_arm_polling.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -28,8 +28,9 @@
+ 
+ from .arm_polling import ARMPolling
+ 
+ 
+ class AsyncARMPolling(ARMPolling, AsyncLROBasePolling):
+     pass
+ 
++
+ __all__ = ["AsyncARMPolling"]
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/test_authentication.py` & `azure-mgmt-core-1.4.0/tests/test_authentication.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ #
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+@@ -18,30 +18,30 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ import base64
+ import time
+ 
+ from azure.core.credentials import AccessToken
+ from azure.core.pipeline import Pipeline
+-from azure.mgmt.core.policies._authentication import _parse_claims_challenge, ARMChallengeAuthenticationPolicy
++from azure.mgmt.core.policies._authentication import (
++    _parse_claims_challenge,
++    ARMChallengeAuthenticationPolicy,
++    AuxiliaryAuthenticationPolicy,
++)
++
+ from azure.core.pipeline.transport import HttpRequest
+ 
+ import pytest
+-
+-try:
+-    from unittest.mock import Mock
+-except ImportError:
+-    # python < 3.3
+-    from mock import Mock
++from unittest.mock import Mock
+ 
+ 
+ @pytest.mark.parametrize(
+     "challenge,expected_claims",
+     (
+         # CAE - insufficient claims
+         (
+@@ -66,28 +66,65 @@
+     ),
+ )
+ def test_challenge_parsing(challenge, expected_claims):
+     claims = _parse_claims_challenge(challenge)
+     assert claims == expected_claims
+ 
+ 
++def test_auxiliary_authentication_policy():
++    """The auxiliary authentication policy should add a header containing a token from its credential"""
++    first_token = AccessToken("first", int(time.time()) + 3600)
++    second_token = AccessToken("second", int(time.time()) + 3600)
++
++    def verify_authorization_header(request):
++        assert request.http_request.headers["x-ms-authorization-auxiliary"] == ", ".join(
++            "Bearer {}".format(token.token) for token in [first_token, second_token]
++        )
++        return Mock()
++
++    fake_credential1 = Mock(get_token=Mock(return_value=first_token))
++    fake_credential2 = Mock(get_token=Mock(return_value=second_token))
++    policies = [
++        AuxiliaryAuthenticationPolicy([fake_credential1, fake_credential2], "scope"),
++        Mock(send=verify_authorization_header),
++    ]
++
++    pipeline = Pipeline(transport=Mock(), policies=policies)
++    pipeline.run(HttpRequest("GET", "https://spam.eggs"))
++
++    assert fake_credential1.get_token.call_count == 1
++    assert fake_credential2.get_token.call_count == 1
++
++    pipeline.run(HttpRequest("GET", "https://spam.eggs"))
++
++    # Didn't need a new token
++    assert fake_credential1.get_token.call_count == 1
++    assert fake_credential2.get_token.call_count == 1
++
++
+ def test_claims_challenge():
+     """ARMChallengeAuthenticationPolicy should pass claims from an authentication challenge to its credential"""
+ 
+     first_token = AccessToken("first", int(time.time()) + 3600)
+     second_token = AccessToken("second", int(time.time()) + 3600)
+     tokens = (t for t in (first_token, second_token))
+ 
+     expected_claims = '{"access_token": {"essential": "true"}'
+     expected_scope = "scope"
+ 
+     challenge = 'Bearer authorization_uri="https://localhost", error=".", error_description=".", claims="{}"'.format(
+         base64.b64encode(expected_claims.encode()).decode()
+     )
+-    responses = (r for r in (Mock(status_code=401, headers={"WWW-Authenticate": challenge}), Mock(status_code=200)))
++    responses = (
++        r
++        for r in (
++            Mock(status_code=401, headers={"WWW-Authenticate": challenge}),
++            Mock(status_code=200),
++        )
++    )
+ 
+     def send(request):
+         res = next(responses)
+         if res.status_code == 401:
+             expected_token = first_token.token
+         else:
+             expected_token = second_token.token
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/test_policies.py` & `azure-mgmt-core-1.4.0/tests/test_policies.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+ # in the Software without restriction, including without limitation the rights
+@@ -17,171 +17,188 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ 
+ import json
+ import time
+-try:
+-    from unittest import mock
+-except ImportError:
+-    import mock
+-
++from unittest import mock
+ import pytest
+-
+-import requests
+ import httpretty
+ 
+ from azure.core.configuration import Configuration
+ from azure.core.pipeline import Pipeline
+ from azure.core.pipeline.transport import (
+     HttpRequest,
+     RequestsTransport,
+ )
+ 
+ from azure.mgmt.core import ARMPipelineClient
+ from azure.mgmt.core.policies import (
+     ARMAutoResourceProviderRegistrationPolicy,
+-    ARMHttpLoggingPolicy
++    ARMHttpLoggingPolicy,
+ )
+ 
++
+ @pytest.fixture
+ def sleepless(monkeypatch):
+     def sleep(_):
+         pass
+-    monkeypatch.setattr(time, 'sleep', sleep)
++
++    monkeypatch.setattr(time, "sleep", sleep)
+ 
+ 
+ @httpretty.activate
+ @pytest.mark.usefixtures("sleepless")
+ def test_register_rp_policy():
+     """Protocol:
+     - We call the provider and get a 409 provider error
+     - Now we POST register provider and get "Registering"
+     - Now we GET register provider and get "Registered"
+     - We call again the first endpoint and this time this succeed
+     """
+ 
+-    provider_url = ("https://management.azure.com/"
+-                    "subscriptions/12345678-9abc-def0-0000-000000000000/"
+-                    "resourceGroups/clitest.rg000001/"
+-                    "providers/Microsoft.Sql/servers/ygserver123?api-version=2014-04-01")
+-
+-    provider_error = ('{"error":{"code":"MissingSubscriptionRegistration", '
+-                        '"message":"The subscription registration is in \'Unregistered\' state. '
+-                        'The subscription must be registered to use namespace \'Microsoft.Sql\'. '
+-                        'See https://aka.ms/rps-not-found for how to register subscriptions."}}')
++    provider_url = (
++        "https://management.azure.com/"
++        "subscriptions/12345678-9abc-def0-0000-000000000000/"
++        "resourceGroups/clitest.rg000001/"
++        "providers/Microsoft.Sql/servers/ygserver123?api-version=2014-04-01"
++    )
++
++    provider_error = (
++        '{"error":{"code":"MissingSubscriptionRegistration", '
++        '"message":"The subscription registration is in \'Unregistered\' state. '
++        "The subscription must be registered to use namespace 'Microsoft.Sql'. "
++        'See https://aka.ms/rps-not-found for how to register subscriptions."}}'
++    )
+ 
+     provider_success = '{"success": true}'
+ 
+-    httpretty.register_uri(httpretty.PUT,
+-                            provider_url,
+-                            responses=[
+-                                httpretty.Response(body=provider_error, status=409),
+-                                httpretty.Response(body=provider_success),
+-                            ],
+-                            content_type="application/json")
+-
+-    register_post_url = ("https://management.azure.com/"
+-                            "subscriptions/12345678-9abc-def0-0000-000000000000/"
+-                            "providers/Microsoft.Sql/register?api-version=2016-02-01")
+-
+-    register_post_result = {
+-        "registrationState":"Registering"
+-    }
+-
+-    register_get_url = ("https://management.azure.com/"
+-                        "subscriptions/12345678-9abc-def0-0000-000000000000/"
+-                        "providers/Microsoft.Sql?api-version=2016-02-01")
+-
+-    register_get_result = {
+-        "registrationState":"Registered"
+-    }
+-
+-    httpretty.register_uri(httpretty.POST,
+-                            register_post_url,
+-                            body=json.dumps(register_post_result),
+-                            content_type="application/json")
+-
+-    httpretty.register_uri(httpretty.GET,
+-                            register_get_url,
+-                            body=json.dumps(register_get_result),
+-                            content_type="application/json")
++    httpretty.register_uri(
++        httpretty.PUT,
++        provider_url,
++        responses=[
++            httpretty.Response(body=provider_error, status=409),
++            httpretty.Response(body=provider_success),
++        ],
++        content_type="application/json",
++    )
++
++    register_post_url = (
++        "https://management.azure.com/"
++        "subscriptions/12345678-9abc-def0-0000-000000000000/"
++        "providers/Microsoft.Sql/register?api-version=2016-02-01"
++    )
++
++    register_post_result = {"registrationState": "Registering"}
++
++    register_get_url = (
++        "https://management.azure.com/"
++        "subscriptions/12345678-9abc-def0-0000-000000000000/"
++        "providers/Microsoft.Sql?api-version=2016-02-01"
++    )
++
++    register_get_result = {"registrationState": "Registered"}
++
++    httpretty.register_uri(
++        httpretty.POST,
++        register_post_url,
++        body=json.dumps(register_post_result),
++        content_type="application/json",
++    )
++
++    httpretty.register_uri(
++        httpretty.GET,
++        register_get_url,
++        body=json.dumps(register_get_result),
++        content_type="application/json",
++    )
+ 
+     request = HttpRequest("PUT", provider_url)
+     policies = [
+         ARMAutoResourceProviderRegistrationPolicy(),
+     ]
+     with Pipeline(RequestsTransport(), policies=policies) as pipeline:
+         response = pipeline.run(request)
+ 
+-    assert json.loads(response.http_response.text())['success']
++    assert json.loads(response.http_response.text())["success"]
+ 
+ 
+ @httpretty.activate
+ @pytest.mark.usefixtures("sleepless")
+ def test_register_failed_policy():
+     """Protocol:
+     - We call the provider and get a 409 provider error
+     - Now we POST register provider and get "Registering"
+     - This POST failed
+     """
+ 
+-    provider_url = ("https://management.azure.com/"
+-                    "subscriptions/12345678-9abc-def0-0000-000000000000/"
+-                    "resourceGroups/clitest.rg000001/"
+-                    "providers/Microsoft.Sql/servers/ygserver123?api-version=2014-04-01")
+-
+-    provider_error = ('{"error":{"code":"MissingSubscriptionRegistration", '
+-                        '"message":"The subscription registration is in \'Unregistered\' state. '
+-                        'The subscription must be registered to use namespace \'Microsoft.Sql\'. '
+-                        'See https://aka.ms/rps-not-found for how to register subscriptions."}}')
++    provider_url = (
++        "https://management.azure.com/"
++        "subscriptions/12345678-9abc-def0-0000-000000000000/"
++        "resourceGroups/clitest.rg000001/"
++        "providers/Microsoft.Sql/servers/ygserver123?api-version=2014-04-01"
++    )
++
++    provider_error = (
++        '{"error":{"code":"MissingSubscriptionRegistration", '
++        '"message":"The subscription registration is in \'Unregistered\' state. '
++        "The subscription must be registered to use namespace 'Microsoft.Sql'. "
++        'See https://aka.ms/rps-not-found for how to register subscriptions."}}'
++    )
+ 
+     provider_success = '{"success": true}'
+ 
+-    httpretty.register_uri(httpretty.PUT,
+-                            provider_url,
+-                            responses=[
+-                                httpretty.Response(body=provider_error, status=409),
+-                                httpretty.Response(body=provider_success),
+-                            ],
+-                            content_type="application/json")
+-
+-    register_post_url = ("https://management.azure.com/"
+-                            "subscriptions/12345678-9abc-def0-0000-000000000000/"
+-                            "providers/Microsoft.Sql/register?api-version=2016-02-01")
+-
+-    httpretty.register_uri(httpretty.POST,
+-                            register_post_url,
+-                            status=409,
+-                            content_type="application/json")
++    httpretty.register_uri(
++        httpretty.PUT,
++        provider_url,
++        responses=[
++            httpretty.Response(body=provider_error, status=409),
++            httpretty.Response(body=provider_success),
++        ],
++        content_type="application/json",
++    )
++
++    register_post_url = (
++        "https://management.azure.com/"
++        "subscriptions/12345678-9abc-def0-0000-000000000000/"
++        "providers/Microsoft.Sql/register?api-version=2016-02-01"
++    )
++
++    httpretty.register_uri(httpretty.POST, register_post_url, status=409, content_type="application/json")
+ 
+     request = HttpRequest("PUT", provider_url)
+     policies = [
+         ARMAutoResourceProviderRegistrationPolicy(),
+     ]
+     with Pipeline(RequestsTransport(), policies=policies) as pipeline:
+         response = pipeline.run(request)
+ 
+     assert response.http_response.status_code == 409
+ 
++
+ def test_default_http_logging_policy():
+     config = Configuration()
+     pipeline_client = ARMPipelineClient(base_url="test", config=config)
+     http_logging_policy = pipeline_client._pipeline._impl_policies[-1]._policy
+     assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST
++    assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_ALLOWLIST
++
+ 
+ def test_pass_in_http_logging_policy():
+     config = Configuration()
+     http_logging_policy = ARMHttpLoggingPolicy()
+-    http_logging_policy.allowed_header_names.update(
+-        {"x-ms-added-header"}
+-    )
++    http_logging_policy.allowed_header_names.update({"x-ms-added-header"})
+     config.http_logging_policy = http_logging_policy
+ 
+     pipeline_client = ARMPipelineClient(base_url="test", config=config)
+     http_logging_policy = pipeline_client._pipeline._impl_policies[-1]._policy
+-    assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST.union({"x-ms-added-header"})
++    assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_ALLOWLIST.union(
++        {"x-ms-added-header"}
++    )
++    assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST.union(
++        {"x-ms-added-header"}
++    )
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/conftest.py` & `azure-mgmt-core-1.4.0/tests/conftest.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ #
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+@@ -18,32 +18,27 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ import json
+ import os.path
+ import sys
+ 
+ import pytest
+ 
+ CWD = os.path.dirname(__file__)
+ 
+-# Ignore collection of async tests for Python 2
+-collect_ignore = []
+-if sys.version_info < (3, 5):
+-    collect_ignore.append("asynctests")
+-
+ 
+ def pytest_addoption(parser):
+-    parser.addoption("--runslow", action="store_true",
+-                     default=False, help="run slow tests")
++    parser.addoption("--runslow", action="store_true", default=False, help="run slow tests")
++
+ 
+ def pytest_collection_modifyitems(config, items):
+     if config.getoption("--runslow"):
+         # --runslow given in cli: do not skip slow tests
+         return
+     skip_slow = pytest.mark.skip(reason="need --runslow option to run")
+     for item in items:
+@@ -54,10 +49,8 @@
+ @pytest.fixture
+ def user_password():
+     filepath = os.path.join(CWD, "credentials.json")
+     if os.path.exists(filepath):
+         with open(filepath, "r") as fd:
+             userpass = json.load(fd)["userpass"]
+             return userpass["user"], userpass["password"]
+-    raise ValueError("Create a {} file with a 'userpass' key and two keys 'user' and 'password'".format(
+-        filepath
+-    ))
++    raise ValueError("Create a {} file with a 'userpass' key and two keys 'user' and 'password'".format(filepath))
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/test_tools.py` & `azure-mgmt-core-1.4.0/tests/test_tools.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+ # in the Software without restriction, including without limitation the rights
+@@ -17,359 +17,350 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ 
+ import unittest
+ 
+-from azure.mgmt.core.tools import parse_resource_id, is_valid_resource_id, resource_id, is_valid_resource_name
++from azure.mgmt.core.tools import (
++    parse_resource_id,
++    is_valid_resource_id,
++    resource_id,
++    is_valid_resource_name,
++)
+ 
+-class TestTools(unittest.TestCase):
+ 
++class TestTools(unittest.TestCase):
+     def test_resource_parse(self):
+         """
+         Tests resource id parsing, reforming, and validation.
+         """
+         tests = [
+             {
+-                'resource_id': '/subscriptions/fakesub/resourcegroups/testgroup/providers'
+-                               '/Microsoft.Storage/storageAccounts/foo/providers'
+-                               '/Microsoft.Authorization/locks/bar',
+-                'expected': {
+-                    'name': 'foo',
+-                    'type': 'storageAccounts',
+-                    'namespace': 'Microsoft.Storage',
+-                    'child_name_1': 'bar',
+-                    'child_namespace_1': 'Microsoft.Authorization',
+-                    'child_type_1': 'locks',
+-                    'child_parent_1': 'storageAccounts/foo/providers/Microsoft.Authorization/',
+-                    'resource_group': 'testgroup',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/fakesub/resourcegroups/testgroup/providers'
+-                               '/Microsoft.Storage/storageAccounts/foo'
+-                               '/locks/bar',
+-                'expected': {
+-                    'name': 'foo',
+-                    'type': 'storageAccounts',
+-                    'namespace': 'Microsoft.Storage',
+-                    'child_name_1': 'bar',
+-                    'child_type_1': 'locks',
+-                    'child_parent_1': 'storageAccounts/foo/',
+-                    'resource_group': 'testgroup',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/fakesub/resourcegroups/testgroup/providers'
+-                               '/Microsoft.Storage/storageAccounts/foo/providers'
+-                               '/Microsoft.Authorization/locks/bar/providers/Microsoft.Network/'
+-                               'nets/gc',
+-                'expected': {
+-                    'name': 'foo',
+-                    'type': 'storageAccounts',
+-                    'namespace': 'Microsoft.Storage',
+-                    'child_name_1': 'bar',
+-                    'child_namespace_1': 'Microsoft.Authorization',
+-                    'child_type_1': 'locks',
+-                    'child_parent_1': 'storageAccounts/foo/providers/Microsoft.Authorization/',
+-                    'child_name_2': 'gc',
+-                    'child_namespace_2': 'Microsoft.Network',
+-                    'child_type_2': 'nets',
+-                    'child_parent_2': 'storageAccounts/foo/providers/Microsoft.Authorization/'
+-                                      'locks/bar/providers/Microsoft.Network/',
+-                    'resource_group': 'testgroup',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/fakesub/resourcegroups/testgroup/providers'
+-                               '/Microsoft.Storage/storageAccounts/foo'
+-                               '/locks/bar/nets/gc',
+-                'expected': {
+-                    'name': 'foo',
+-                    'type': 'storageAccounts',
+-                    'namespace': 'Microsoft.Storage',
+-                    'child_name_1': 'bar',
+-                    'child_type_1': 'locks',
+-                    'child_parent_1': 'storageAccounts/foo/',
+-                    'child_name_2': 'gc',
+-                    'child_type_2': 'nets',
+-                    'child_parent_2': 'storageAccounts/foo/locks/bar/',
+-                    'resource_group': 'testgroup',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/providers/'
+-                               'Microsoft.Provider1/resourceType1/name1',
+-                'expected': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1',
+-                    'type': 'resourceType1',
+-                    'name': 'name1',
+-                    'resource_parent': '',
+-                    'resource_namespace': 'Microsoft.Provider1',
+-                    'resource_type': 'resourceType1',
+-                    'resource_name': 'name1'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/providers/'
+-                               'Microsoft.Provider1/resourceType1/name1/resourceType2/name2',
+-                'expected': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1',
+-                    'type': 'resourceType1',
+-                    'name': 'name1',
+-                    'child_namespace_1': None,
+-                    'child_type_1': 'resourceType2',
+-                    'child_name_1': 'name2',
+-                    'child_parent_1': 'resourceType1/name1/',
+-                    'resource_parent': 'resourceType1/name1/',
+-                    'resource_namespace': 'Microsoft.Provider1',
+-                    'resource_type': 'resourceType2',
+-                    'resource_name': 'name2'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/00000/resourceGroups/myRg/providers/'
+-                               'Microsoft.RecoveryServices/vaults/vault_name/backupFabrics/'
+-                               'fabric_name/protectionContainers/container_name/'
+-                               'protectedItems/item_name/recoveryPoint/recovery_point_guid',
+-                'expected': {
+-                    'subscription': '00000',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.RecoveryServices',
+-                    'type': 'vaults',
+-                    'name': 'vault_name',
+-                    'child_type_1': 'backupFabrics',
+-                    'child_name_1': 'fabric_name',
+-                    'child_parent_1': 'vaults/vault_name/',
+-                    'child_type_2': 'protectionContainers',
+-                    'child_name_2': 'container_name',
+-                    'child_parent_2': 'vaults/vault_name/backupFabrics/fabric_name/',
+-                    'child_type_3': 'protectedItems',
+-                    'child_name_3': 'item_name',
+-                    'child_parent_3': 'vaults/vault_name/backupFabrics/fabric_name/'
+-                                      'protectionContainers/container_name/',
+-                    'child_type_4': 'recoveryPoint',
+-                    'child_name_4': 'recovery_point_guid',
+-                    'child_parent_4': 'vaults/vault_name/backupFabrics/fabric_name/'
+-                                      'protectionContainers/container_name/protectedItems/'
+-                                      'item_name/',
+-                    'resource_parent': 'vaults/vault_name/backupFabrics/fabric_name/'
+-                                       'protectionContainers/container_name/protectedItems/'
+-                                       'item_name/',
+-                    'resource_namespace': 'Microsoft.RecoveryServices',
+-                    'resource_type': 'recoveryPoint',
+-                    'resource_name': 'recovery_point_guid'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/providers/'
+-                               'Microsoft.Provider1/resourceType1/name1/resourceType2/name2/'
+-                               'providers/Microsoft.Provider3/resourceType3/name3',
+-                'expected': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1',
+-                    'type': 'resourceType1',
+-                    'name': 'name1',
+-                    'child_namespace_1': None,
+-                    'child_type_1': 'resourceType2',
+-                    'child_name_1': 'name2',
+-                    'child_parent_1' : 'resourceType1/name1/',
+-                    'child_namespace_2': 'Microsoft.Provider3',
+-                    'child_type_2': 'resourceType3',
+-                    'child_name_2': 'name3',
+-                    'child_parent_2': 'resourceType1/name1/resourceType2/name2/'
+-                                      'providers/Microsoft.Provider3/',
+-                    'resource_parent': 'resourceType1/name1/resourceType2/name2/'
+-                                       'providers/Microsoft.Provider3/',
+-                    'resource_namespace': 'Microsoft.Provider1',
+-                    'resource_type': 'resourceType3',
+-                    'resource_name': 'name3'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/fakesub/providers/Microsoft.Authorization'
+-                               '/locks/foo',
+-                'expected': {
+-                    'name': 'foo',
+-                    'type': 'locks',
+-                    'namespace': 'Microsoft.Authorization',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/Subscriptions/fakesub/providers/Microsoft.Authorization'
+-                               '/locks/foo',
+-                'expected': {
+-                    'name': 'foo',
+-                    'type': 'locks',
+-                    'namespace': 'Microsoft.Authorization',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg',
+-                'expected': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg'
+-                }
+-            }
++                "resource_id": "/subscriptions/fakesub/resourcegroups/testgroup/providers"
++                "/Microsoft.Storage/storageAccounts/foo/providers"
++                "/Microsoft.Authorization/locks/bar",
++                "expected": {
++                    "name": "foo",
++                    "type": "storageAccounts",
++                    "namespace": "Microsoft.Storage",
++                    "child_name_1": "bar",
++                    "child_namespace_1": "Microsoft.Authorization",
++                    "child_type_1": "locks",
++                    "child_parent_1": "storageAccounts/foo/providers/Microsoft.Authorization/",
++                    "resource_group": "testgroup",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/fakesub/resourcegroups/testgroup/providers"
++                "/Microsoft.Storage/storageAccounts/foo"
++                "/locks/bar",
++                "expected": {
++                    "name": "foo",
++                    "type": "storageAccounts",
++                    "namespace": "Microsoft.Storage",
++                    "child_name_1": "bar",
++                    "child_type_1": "locks",
++                    "child_parent_1": "storageAccounts/foo/",
++                    "resource_group": "testgroup",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/fakesub/resourcegroups/testgroup/providers"
++                "/Microsoft.Storage/storageAccounts/foo/providers"
++                "/Microsoft.Authorization/locks/bar/providers/Microsoft.Network/"
++                "nets/gc",
++                "expected": {
++                    "name": "foo",
++                    "type": "storageAccounts",
++                    "namespace": "Microsoft.Storage",
++                    "child_name_1": "bar",
++                    "child_namespace_1": "Microsoft.Authorization",
++                    "child_type_1": "locks",
++                    "child_parent_1": "storageAccounts/foo/providers/Microsoft.Authorization/",
++                    "child_name_2": "gc",
++                    "child_namespace_2": "Microsoft.Network",
++                    "child_type_2": "nets",
++                    "child_parent_2": "storageAccounts/foo/providers/Microsoft.Authorization/"
++                    "locks/bar/providers/Microsoft.Network/",
++                    "resource_group": "testgroup",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/fakesub/resourcegroups/testgroup/providers"
++                "/Microsoft.Storage/storageAccounts/foo"
++                "/locks/bar/nets/gc",
++                "expected": {
++                    "name": "foo",
++                    "type": "storageAccounts",
++                    "namespace": "Microsoft.Storage",
++                    "child_name_1": "bar",
++                    "child_type_1": "locks",
++                    "child_parent_1": "storageAccounts/foo/",
++                    "child_name_2": "gc",
++                    "child_type_2": "nets",
++                    "child_parent_2": "storageAccounts/foo/locks/bar/",
++                    "resource_group": "testgroup",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/providers/"
++                "Microsoft.Provider1/resourceType1/name1",
++                "expected": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                    "type": "resourceType1",
++                    "name": "name1",
++                    "resource_parent": "",
++                    "resource_namespace": "Microsoft.Provider1",
++                    "resource_type": "resourceType1",
++                    "resource_name": "name1",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/providers/"
++                "Microsoft.Provider1/resourceType1/name1/resourceType2/name2",
++                "expected": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                    "type": "resourceType1",
++                    "name": "name1",
++                    "child_namespace_1": None,
++                    "child_type_1": "resourceType2",
++                    "child_name_1": "name2",
++                    "child_parent_1": "resourceType1/name1/",
++                    "resource_parent": "resourceType1/name1/",
++                    "resource_namespace": "Microsoft.Provider1",
++                    "resource_type": "resourceType2",
++                    "resource_name": "name2",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/00000/resourceGroups/myRg/providers/"
++                "Microsoft.RecoveryServices/vaults/vault_name/backupFabrics/"
++                "fabric_name/protectionContainers/container_name/"
++                "protectedItems/item_name/recoveryPoint/recovery_point_guid",
++                "expected": {
++                    "subscription": "00000",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.RecoveryServices",
++                    "type": "vaults",
++                    "name": "vault_name",
++                    "child_type_1": "backupFabrics",
++                    "child_name_1": "fabric_name",
++                    "child_parent_1": "vaults/vault_name/",
++                    "child_type_2": "protectionContainers",
++                    "child_name_2": "container_name",
++                    "child_parent_2": "vaults/vault_name/backupFabrics/fabric_name/",
++                    "child_type_3": "protectedItems",
++                    "child_name_3": "item_name",
++                    "child_parent_3": "vaults/vault_name/backupFabrics/fabric_name/"
++                    "protectionContainers/container_name/",
++                    "child_type_4": "recoveryPoint",
++                    "child_name_4": "recovery_point_guid",
++                    "child_parent_4": "vaults/vault_name/backupFabrics/fabric_name/"
++                    "protectionContainers/container_name/protectedItems/"
++                    "item_name/",
++                    "resource_parent": "vaults/vault_name/backupFabrics/fabric_name/"
++                    "protectionContainers/container_name/protectedItems/"
++                    "item_name/",
++                    "resource_namespace": "Microsoft.RecoveryServices",
++                    "resource_type": "recoveryPoint",
++                    "resource_name": "recovery_point_guid",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/providers/"
++                "Microsoft.Provider1/resourceType1/name1/resourceType2/name2/"
++                "providers/Microsoft.Provider3/resourceType3/name3",
++                "expected": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                    "type": "resourceType1",
++                    "name": "name1",
++                    "child_namespace_1": None,
++                    "child_type_1": "resourceType2",
++                    "child_name_1": "name2",
++                    "child_parent_1": "resourceType1/name1/",
++                    "child_namespace_2": "Microsoft.Provider3",
++                    "child_type_2": "resourceType3",
++                    "child_name_2": "name3",
++                    "child_parent_2": "resourceType1/name1/resourceType2/name2/" "providers/Microsoft.Provider3/",
++                    "resource_parent": "resourceType1/name1/resourceType2/name2/" "providers/Microsoft.Provider3/",
++                    "resource_namespace": "Microsoft.Provider1",
++                    "resource_type": "resourceType3",
++                    "resource_name": "name3",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/fakesub/providers/Microsoft.Authorization" "/locks/foo",
++                "expected": {
++                    "name": "foo",
++                    "type": "locks",
++                    "namespace": "Microsoft.Authorization",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/Subscriptions/fakesub/providers/Microsoft.Authorization" "/locks/foo",
++                "expected": {
++                    "name": "foo",
++                    "type": "locks",
++                    "namespace": "Microsoft.Authorization",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg",
++                "expected": {"subscription": "mySub", "resource_group": "myRg"},
++            },
+         ]
+         for test in tests:
+-            self.assertTrue(is_valid_resource_id(test['resource_id']))
+-            kwargs = parse_resource_id(test['resource_id'])
+-            for key in test['expected']:
++            self.assertTrue(is_valid_resource_id(test["resource_id"]))
++            kwargs = parse_resource_id(test["resource_id"])
++            for key in test["expected"]:
+                 try:
+-                    self.assertEqual(kwargs[key], test['expected'][key])
++                    self.assertEqual(kwargs[key], test["expected"][key])
+                 except KeyError:
+-                    self.assertTrue(key not in kwargs and test['expected'][key] is None)
++                    self.assertTrue(key not in kwargs and test["expected"][key] is None)
+ 
+         invalid_ids = [
+-            '/subscriptions/fakesub/resourceGroups/myRg/type1/name1',
+-            '/subscriptions/fakesub/resourceGroups/myRg/providers/Microsoft.Provider/foo',
+-            '/subscriptions/fakesub/resourceGroups/myRg/providers/namespace/type/name/type1',
+-            '/subscriptions/fakesub/resourceGroups/',
+-            '/subscriptions//resourceGroups/'
++            "/subscriptions/fakesub/resourceGroups/myRg/type1/name1",
++            "/subscriptions/fakesub/resourceGroups/myRg/providers/Microsoft.Provider/foo",
++            "/subscriptions/fakesub/resourceGroups/myRg/providers/namespace/type/name/type1",
++            "/subscriptions/fakesub/resourceGroups/",
++            "/subscriptions//resourceGroups/",
+         ]
+         for invalid_id in invalid_ids:
+             self.assertFalse(is_valid_resource_id(invalid_id))
+ 
+         tests = [
+             {
+-                'resource_id': '/subscriptions/fakesub/resourcegroups/testgroup/providers'
+-                               '/Microsoft.Storage/storageAccounts/foo/providers'
+-                               '/Microsoft.Authorization/locks/bar',
+-                'id_args': {
+-                    'name': 'foo',
+-                    'type': 'storageAccounts',
+-                    'namespace': 'Microsoft.Storage',
+-                    'child_name_1': 'bar',
+-                    'child_namespace_1': 'Microsoft.Authorization',
+-                    'child_type_1': 'locks',
+-                    'resource_group': 'testgroup',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/fakesub/resourcegroups/testgroup/providers'
+-                               '/Microsoft.Storage/storageAccounts/foo'
+-                               '/locks/bar',
+-                'id_args': {
+-                    'name': 'foo',
+-                    'type': 'storageAccounts',
+-                    'namespace': 'Microsoft.Storage',
+-                    'child_name_1': 'bar',
+-                    'child_type_1': 'locks',
+-                    'resource_group': 'testgroup',
+-                    'subscription': 'fakesub',
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/providers/'
+-                               'Microsoft.Provider1/resourceType1/name1/resourceType2/name2/'
+-                               'providers/Microsoft.Provider3/resourceType3/name3',
+-                'id_args': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1',
+-                    'type': 'resourceType1',
+-                    'name': 'name1',
+-                    'child_type_1': 'resourceType2',
+-                    'child_name_1': 'name2',
+-                    'child_namespace_2': 'Microsoft.Provider3',
+-                    'child_type_2': 'resourceType3',
+-                    'child_name_2': 'name3'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/'
+-                               'providers/Microsoft.Provider1',
+-                'id_args': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg',
+-                'id_args': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/'
+-                               'providers/Microsoft.Provider1/resourceType1/name1/resourceType2/'
+-                               'name2/providers/Microsoft.Provider3',
+-                'id_args': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1',
+-                    'type': 'resourceType1',
+-                    'name': 'name1',
+-                    'child_type_1': 'resourceType2',
+-                    'child_name_1': 'name2',
+-                    'child_namespace_2': 'Microsoft.Provider3'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg/'
+-                               'providers/Microsoft.Provider1/resourceType1/name1',
+-                'id_args': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg',
+-                    'namespace': 'Microsoft.Provider1',
+-                    'type': 'resourceType1',
+-                    'name': 'name1',
+-                    'child_type_1': None,
+-                    'child_name_1': 'name2',
+-                    'child_namespace_2': 'Microsoft.Provider3'
+-                }
+-            },
+-            {
+-                'resource_id': '/subscriptions/mySub/resourceGroups/myRg',
+-                'id_args': {
+-                    'subscription': 'mySub',
+-                    'resource_group': 'myRg'
+-                }
+-            }
++                "resource_id": "/subscriptions/fakesub/resourcegroups/testgroup/providers"
++                "/Microsoft.Storage/storageAccounts/foo/providers"
++                "/Microsoft.Authorization/locks/bar",
++                "id_args": {
++                    "name": "foo",
++                    "type": "storageAccounts",
++                    "namespace": "Microsoft.Storage",
++                    "child_name_1": "bar",
++                    "child_namespace_1": "Microsoft.Authorization",
++                    "child_type_1": "locks",
++                    "resource_group": "testgroup",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/fakesub/resourcegroups/testgroup/providers"
++                "/Microsoft.Storage/storageAccounts/foo"
++                "/locks/bar",
++                "id_args": {
++                    "name": "foo",
++                    "type": "storageAccounts",
++                    "namespace": "Microsoft.Storage",
++                    "child_name_1": "bar",
++                    "child_type_1": "locks",
++                    "resource_group": "testgroup",
++                    "subscription": "fakesub",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/providers/"
++                "Microsoft.Provider1/resourceType1/name1/resourceType2/name2/"
++                "providers/Microsoft.Provider3/resourceType3/name3",
++                "id_args": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                    "type": "resourceType1",
++                    "name": "name1",
++                    "child_type_1": "resourceType2",
++                    "child_name_1": "name2",
++                    "child_namespace_2": "Microsoft.Provider3",
++                    "child_type_2": "resourceType3",
++                    "child_name_2": "name3",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/" "providers/Microsoft.Provider1",
++                "id_args": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg",
++                "id_args": {"subscription": "mySub", "resource_group": "myRg"},
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/"
++                "providers/Microsoft.Provider1/resourceType1/name1/resourceType2/"
++                "name2/providers/Microsoft.Provider3",
++                "id_args": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                    "type": "resourceType1",
++                    "name": "name1",
++                    "child_type_1": "resourceType2",
++                    "child_name_1": "name2",
++                    "child_namespace_2": "Microsoft.Provider3",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg/"
++                "providers/Microsoft.Provider1/resourceType1/name1",
++                "id_args": {
++                    "subscription": "mySub",
++                    "resource_group": "myRg",
++                    "namespace": "Microsoft.Provider1",
++                    "type": "resourceType1",
++                    "name": "name1",
++                    "child_type_1": None,
++                    "child_name_1": "name2",
++                    "child_namespace_2": "Microsoft.Provider3",
++                },
++            },
++            {
++                "resource_id": "/subscriptions/mySub/resourceGroups/myRg",
++                "id_args": {"subscription": "mySub", "resource_group": "myRg"},
++            },
+         ]
+         for test in tests:
+-            rsrc_id = resource_id(**test['id_args'])
+-            self.assertEqual(rsrc_id.lower(), test['resource_id'].lower())
++            rsrc_id = resource_id(**test["id_args"])
++            self.assertEqual(rsrc_id.lower(), test["resource_id"].lower())
+ 
+     def test_is_resource_name(self):
+         invalid_names = [
+-            '',
+-            'knights/ni',
+-            'spam&eggs',
+-            'i<3you',
+-            'a' * 261,
++            "",
++            "knights/ni",
++            "spam&eggs",
++            "i<3you",
++            "a" * 261,
+         ]
+ 
+         for test in invalid_names:
+             assert not is_valid_resource_name(test)
+ 
+         valid_names = [
+-            'abc-123',
+-            ' ',  # no one said it had to be a good resource name.
+-            'a' * 260,
++            "abc-123",
++            " ",  # no one said it had to be a good resource name.
++            "a" * 260,
+         ]
+ 
+         for test in valid_names:
+             assert is_valid_resource_name(test)
+ 
+ 
+ if __name__ == "__main__":
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/test_mgmt_exceptions.py` & `azure-mgmt-core-1.4.0/tests/test_mgmt_exceptions.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-﻿#--------------------------------------------------------------------------
++﻿# --------------------------------------------------------------------------
+ #
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+@@ -18,32 +18,33 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ import functools
+ import json
+ 
+ from azure.core.pipeline.transport._base import _HttpResponseBase
+ 
+ from azure.core.exceptions import HttpResponseError
+ from azure.mgmt.core.exceptions import ARMErrorFormat, TypedErrorInfo
+ 
+ 
+ ARMError = functools.partial(HttpResponseError, error_format=ARMErrorFormat)
+ 
++
+ def _build_response(json_body):
+     class MockResponse(_HttpResponseBase):
+         def __init__(self):
+             super(MockResponse, self).__init__(
+                 request=None,
+-                internal_response = None,
++                internal_response=None,
+             )
+             self.status_code = 400
+             self.reason = "Bad Request"
+             self.content_type = "application/json"
+             self._body = json_body
+ 
+         def body(self):
+@@ -62,34 +63,25 @@
+             "details": [
+                 {
+                     "code": "301",
+                     "target": "$search",
+                     "message": "$search query option not supported",
+                 }
+             ],
+-            "innererror": {
+-                "customKey": "customValue"
+-            },
+-            "additionalInfo": [
+-                {
+-                    "type": "SomeErrorType",
+-                    "info": {
+-                        "customKey": "customValue"
+-                    }
+-                }
+-            ]
++            "innererror": {"customKey": "customValue"},
++            "additionalInfo": [{"type": "SomeErrorType", "info": {"customKey": "customValue"}}],
+         }
+     }
+     cloud_exp = ARMError(response=_build_response(json.dumps(message).encode("utf-8")))
+-    assert cloud_exp.error.target ==  'query'
+-    assert cloud_exp.error.details[0].target ==  '$search'
+-    assert cloud_exp.error.innererror['customKey'] ==  'customValue'
+-    assert cloud_exp.error.additional_info[0].type ==  'SomeErrorType'
+-    assert cloud_exp.error.additional_info[0].info['customKey'] ==  'customValue'
+-    assert 'customValue' in  str(cloud_exp)
++    assert cloud_exp.error.target == "query"
++    assert cloud_exp.error.details[0].target == "$search"
++    assert cloud_exp.error.innererror["customKey"] == "customValue"
++    assert cloud_exp.error.additional_info[0].type == "SomeErrorType"
++    assert cloud_exp.error.additional_info[0].info["customKey"] == "customValue"
++    assert "customValue" in str(cloud_exp)
+ 
+     message = {
+         "error": {
+             "code": "BadArgument",
+             "message": "The provided database 'foo' has an invalid username.",
+             "target": "query",
+             "details": [
+@@ -98,66 +90,64 @@
+                     "target": "$search",
+                     "message": "$search query option not supported",
+                     "additionalInfo": [
+                         {
+                             "type": "PolicyViolation",
+                             "info": {
+                                 "policyDefinitionDisplayName": "Allowed locations",
+-                                "policyAssignmentParameters": {
+-                                    "listOfAllowedLocations": {
+-                                        "value": [
+-                                            "westus"
+-                                        ]
+-                                    }
+-                                }
+-                            }
++                                "policyAssignmentParameters": {"listOfAllowedLocations": {"value": ["westus"]}},
++                            },
+                         }
+-                    ]
++                    ],
+                 }
+             ],
+-            "additionalInfo": [
+-                {
+-                    "type": "SomeErrorType",
+-                    "info": {
+-                        "customKey": "customValue"
+-                    }
+-                }
+-            ]
++            "additionalInfo": [{"type": "SomeErrorType", "info": {"customKey": "customValue"}}],
+         }
+     }
+     cloud_exp = ARMError(response=_build_response(json.dumps(message).encode("utf-8")))
+-    assert cloud_exp.error.target ==  'query'
+-    assert cloud_exp.error.details[0].target ==  '$search'
+-    assert cloud_exp.error.additional_info[0].type ==  'SomeErrorType'
+-    assert cloud_exp.error.additional_info[0].info['customKey'] ==  'customValue'
+-    assert cloud_exp.error.details[0].additional_info[0].type ==  'PolicyViolation'
+-    assert cloud_exp.error.details[0].additional_info[0].info['policyDefinitionDisplayName'] ==  'Allowed locations'
+-    assert cloud_exp.error.details[0].additional_info[0].info['policyAssignmentParameters']['listOfAllowedLocations']['value'][0] ==  'westus'
+-    assert 'customValue' in  str(cloud_exp)
+-
++    assert cloud_exp.error.target == "query"
++    assert cloud_exp.error.details[0].target == "$search"
++    assert cloud_exp.error.additional_info[0].type == "SomeErrorType"
++    assert cloud_exp.error.additional_info[0].info["customKey"] == "customValue"
++    assert cloud_exp.error.details[0].additional_info[0].type == "PolicyViolation"
++    assert cloud_exp.error.details[0].additional_info[0].info["policyDefinitionDisplayName"] == "Allowed locations"
++    assert (
++        cloud_exp.error.details[0]
++        .additional_info[0]
++        .info["policyAssignmentParameters"]["listOfAllowedLocations"]["value"][0]
++        == "westus"
++    )
++    assert "customValue" in str(cloud_exp)
+ 
+     error = ARMError(response=_build_response(b"{{"))
+     assert "Bad Request" in error.message
+ 
+-    error = ARMError(response=_build_response(b'{"error":{"code":"Conflict","message":"The maximum number of Free ServerFarms allowed in a Subscription is 10.","target":null,"details":[{"message":"The maximum number of Free ServerFarms allowed in a Subscription is 10."},{"code":"Conflict"},{"errorentity":{"code":"Conflict","message":"The maximum number of Free ServerFarms allowed in a Subscription is 10.","extendedCode":"59301","messageTemplate":"The maximum number of {0} ServerFarms allowed in a Subscription is {1}.","parameters":["Free","10"],"innerErrors":null}}],"innererror":null}}'))
+-    assert error.error.code ==  "Conflict"
+-
+-    message = json.dumps({
+-        "error": {
+-            "code": "BadArgument",
+-            "message": "The provided database 'foo' has an invalid username.",
+-            "target": "query",
+-            "details": [
+-                {
+-                    "code": "301",
+-                    "target": "$search",
+-                    "message": "$search query option not supported",
+-                }
+-            ]
+-        }}).encode('utf-8')
++    error = ARMError(
++        response=_build_response(
++            b'{"error":{"code":"Conflict","message":"The maximum number of Free ServerFarms allowed in a Subscription is 10.","target":null,"details":[{"message":"The maximum number of Free ServerFarms allowed in a Subscription is 10."},{"code":"Conflict"},{"errorentity":{"code":"Conflict","message":"The maximum number of Free ServerFarms allowed in a Subscription is 10.","extendedCode":"59301","messageTemplate":"The maximum number of {0} ServerFarms allowed in a Subscription is {1}.","parameters":["Free","10"],"innerErrors":null}}],"innererror":null}}'
++        )
++    )
++    assert error.error.code == "Conflict"
++
++    message = json.dumps(
++        {
++            "error": {
++                "code": "BadArgument",
++                "message": "The provided database 'foo' has an invalid username.",
++                "target": "query",
++                "details": [
++                    {
++                        "code": "301",
++                        "target": "$search",
++                        "message": "$search query option not supported",
++                    }
++                ],
++            }
++        }
++    ).encode("utf-8")
+     error = ARMError(response=_build_response(message))
+-    assert error.error.code ==  "BadArgument"
++    assert error.error.code == "BadArgument"
+ 
+     # See https://github.com/Azure/msrestazure-for-python/issues/54
+     response_text = b'"{\\"error\\": {\\"code\\": \\"ResourceGroupNotFound\\", \\"message\\": \\"Resource group \'res_grp\' could not be found.\\"}}"'
+     error = ARMError(response=_build_response(response_text))
+     # Do not raise is plenty enough, that's a major server issue....
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/test_arm_polling.py` & `azure-mgmt-core-1.4.0/tests/test_arm_polling.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ #
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+@@ -18,47 +18,41 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ import base64
+ import json
+ import pickle
+ import re
+ import types
+-import unittest
+-try:
+-    from unittest import mock
+-except ImportError:
+-    import mock
+-
++from unittest import mock
+ import pytest
+ 
+ from requests import Request, Response
+ 
+-from msrest import Deserializer
+-
+ from azure.core.polling import LROPoller
+ from azure.core.exceptions import DecodeError, HttpResponseError
+ from azure.core import PipelineClient
+ from azure.core.pipeline import PipelineResponse, Pipeline
+ from azure.core.pipeline.transport import RequestsTransportResponse, HttpTransport
+ 
+ from azure.core.polling.base_polling import (
+     LongRunningOperation,
+     BadStatus,
+-    LocationPolling
++    LocationPolling,
+ )
+ from azure.mgmt.core.polling.arm_polling import (
+     ARMPolling,
+ )
+ 
++
+ class SimpleResource:
+     """An implementation of Python 3 SimpleNamespace.
+     Used to deserialize resource objects from response bodies where
+     no particular object type has been specified.
+     """
+ 
+     def __init__(self, **kwargs):
+@@ -68,538 +62,487 @@
+         keys = sorted(self.__dict__)
+         items = ("{}={!r}".format(k, self.__dict__[k]) for k in keys)
+         return "{}({})".format(type(self).__name__, ", ".join(items))
+ 
+     def __eq__(self, other):
+         return self.__dict__ == other.__dict__
+ 
++
+ class BadEndpointError(Exception):
+     pass
+ 
+-TEST_NAME = 'foo'
+-RESPONSE_BODY = {'properties':{'provisioningState': 'InProgress'}}
+-ASYNC_BODY = json.dumps({ 'status': 'Succeeded' })
+-ASYNC_URL = 'http://dummyurlFromAzureAsyncOPHeader_Return200'
+-LOCATION_BODY = json.dumps({ 'name': TEST_NAME })
+-LOCATION_URL = 'http://dummyurlurlFromLocationHeader_Return200'
+-RESOURCE_BODY = json.dumps({ 'name': TEST_NAME })
+-RESOURCE_URL = 'http://subscriptions/sub1/resourcegroups/g1/resourcetype1/resource1'
+-ERROR = 'http://dummyurl_ReturnError'
++
++TEST_NAME = "foo"
++RESPONSE_BODY = {"properties": {"provisioningState": "InProgress"}}
++ASYNC_BODY = json.dumps({"status": "Succeeded"})
++ASYNC_URL = "http://dummyurlFromAzureAsyncOPHeader_Return200"
++LOCATION_BODY = json.dumps({"name": TEST_NAME})
++LOCATION_URL = "http://dummyurlurlFromLocationHeader_Return200"
++RESOURCE_BODY = json.dumps({"name": TEST_NAME})
++RESOURCE_URL = "http://subscriptions/sub1/resourcegroups/g1/resourcetype1/resource1"
++ERROR = "http://dummyurl_ReturnError"
+ POLLING_STATUS = 200
+ 
+ CLIENT = PipelineClient("http://example.org")
++
++
+ def mock_run(client_self, request, **kwargs):
+     return TestArmPolling.mock_update(request.url, request.headers)
++
++
+ CLIENT._pipeline.run = types.MethodType(mock_run, CLIENT)
+ 
+ 
+ @pytest.fixture
+ def pipeline_client_builder():
+     """Build a client that use the "send" callback as final transport layer
+ 
+     send will receive "request" and kwargs as any transport layer
+     """
++
+     def create_client(send_cb):
+         class TestHttpTransport(HttpTransport):
+-            def open(self): pass
+-            def close(self): pass
+-            def __exit__(self, *args, **kwargs): pass
++            def open(self):
++                pass
++
++            def close(self):
++                pass
++
++            def __exit__(self, *args, **kwargs):
++                pass
+ 
+             def send(self, request, **kwargs):
+                 return send_cb(request, **kwargs)
+ 
+-        return PipelineClient(
+-            'http://example.org/',
+-            pipeline=Pipeline(
+-                transport=TestHttpTransport()
+-            )
+-        )
++        return PipelineClient("http://example.org/", pipeline=Pipeline(transport=TestHttpTransport()))
++
+     return create_client
+ 
+ 
+ @pytest.fixture
+ def deserialization_cb():
+     def cb(pipeline_response):
+         return json.loads(pipeline_response.http_response.text())
++
+     return cb
+ 
+ 
+ def test_post(pipeline_client_builder, deserialization_cb):
+ 
+-        # Test POST LRO with both Location and Azure-AsyncOperation
++    # Test POST LRO with both Location and Azure-AsyncOperation
+ 
+-        # The initial response contains both Location and Azure-AsyncOperation, a 202 and no Body
+-        initial_response = TestArmPolling.mock_send(
+-            'POST',
+-            202,
+-            {
+-                'location': 'http://example.org/location',
+-                'azure-asyncoperation': 'http://example.org/async_monitor',
+-            },
+-            ''
+-        )
+-
+-        def send(request, **kwargs):
+-            assert request.method == 'GET'
+-
+-            if request.url == 'http://example.org/location':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body={'location_result': True}
+-                ).http_response
+-            elif request.url == 'http://example.org/async_monitor':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body={'status': 'Succeeded'}
+-                ).http_response
+-            else:
+-                pytest.fail("No other query allowed")
+-
+-        client = pipeline_client_builder(send)
+-
+-        # Test 1, LRO options with Location final state
+-        poll = LROPoller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            ARMPolling(0, lro_options={"final-state-via": "location"}))
+-        result = poll.result()
+-        assert result['location_result'] == True
+-
+-        # Test 2, LRO options with Azure-AsyncOperation final state
+-        poll = LROPoller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            ARMPolling(0, lro_options={"final-state-via": "azure-async-operation"}))
+-        result = poll.result()
+-        assert result['status'] == 'Succeeded'
+-
+-        # Test 3, "do the right thing" and use Location by default
+-        poll = LROPoller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            ARMPolling(0))
+-        result = poll.result()
+-        assert result['location_result'] == True
+-
+-        # Test 4, location has no body
+-
+-        def send(request, **kwargs):
+-            assert request.method == 'GET'
+-
+-            if request.url == 'http://example.org/location':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body=None
+-                ).http_response
+-            elif request.url == 'http://example.org/async_monitor':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body={'status': 'Succeeded'}
+-                ).http_response
+-            else:
+-                pytest.fail("No other query allowed")
+-
+-        client = pipeline_client_builder(send)
+-
+-        poll = LROPoller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            ARMPolling(0, lro_options={"final-state-via": "location"}))
+-        result = poll.result()
+-        assert result is None
++    # The initial response contains both Location and Azure-AsyncOperation, a 202 and no Body
++    initial_response = TestArmPolling.mock_send(
++        "POST",
++        202,
++        {
++            "location": "http://example.org/location",
++            "azure-asyncoperation": "http://example.org/async_monitor",
++        },
++        "",
++    )
++
++    def send(request, **kwargs):
++        assert request.method == "GET"
++
++        if request.url == "http://example.org/location":
++            return TestArmPolling.mock_send("GET", 200, body={"location_result": True}).http_response
++        elif request.url == "http://example.org/async_monitor":
++            return TestArmPolling.mock_send("GET", 200, body={"status": "Succeeded"}).http_response
++        else:
++            pytest.fail("No other query allowed")
++
++    client = pipeline_client_builder(send)
++
++    # Test 1, LRO options with Location final state
++    poll = LROPoller(
++        client,
++        initial_response,
++        deserialization_cb,
++        ARMPolling(0, lro_options={"final-state-via": "location"}),
++    )
++    result = poll.result()
++    assert result["location_result"] == True
++
++    # Test 2, LRO options with Azure-AsyncOperation final state
++    poll = LROPoller(
++        client,
++        initial_response,
++        deserialization_cb,
++        ARMPolling(0, lro_options={"final-state-via": "azure-async-operation"}),
++    )
++    result = poll.result()
++    assert result["status"] == "Succeeded"
++
++    # Test 3, "do the right thing" and use Location by default
++    poll = LROPoller(client, initial_response, deserialization_cb, ARMPolling(0))
++    result = poll.result()
++    assert result["location_result"] == True
++
++    # Test 4, location has no body
++
++    def send(request, **kwargs):
++        assert request.method == "GET"
++
++        if request.url == "http://example.org/location":
++            return TestArmPolling.mock_send("GET", 200, body=None).http_response
++        elif request.url == "http://example.org/async_monitor":
++            return TestArmPolling.mock_send("GET", 200, body={"status": "Succeeded"}).http_response
++        else:
++            pytest.fail("No other query allowed")
++
++    client = pipeline_client_builder(send)
++
++    poll = LROPoller(
++        client,
++        initial_response,
++        deserialization_cb,
++        ARMPolling(0, lro_options={"final-state-via": "location"}),
++    )
++    result = poll.result()
++    assert result is None
+ 
+ 
+ class TestArmPolling(object):
+ 
+-    convert = re.compile('([a-z0-9])([A-Z])')
++    convert = re.compile("([a-z0-9])([A-Z])")
+ 
+     @staticmethod
+     def mock_send(method, status, headers=None, body=RESPONSE_BODY):
+         if headers is None:
+             headers = {}
+         response = Response()
+         response._content_consumed = True
+-        response._content = json.dumps(body).encode('ascii') if body is not None else None
++        response._content = json.dumps(body).encode("ascii") if body is not None else None
+         response.request = Request()
+         response.request.method = method
+         response.request.url = RESOURCE_URL
+-        response.request.headers = {
+-            'x-ms-client-request-id': '67f4dd4e-6262-45e1-8bed-5c45cf23b6d9'
+-        }
++        response.request.headers = {"x-ms-client-request-id": "67f4dd4e-6262-45e1-8bed-5c45cf23b6d9"}
+         response.status_code = status
+         response.headers = headers
+         response.headers.update({"content-type": "application/json; charset=utf8"})
+         response.reason = "OK"
+ 
+         request = CLIENT._request(
+             response.request.method,
+             response.request.url,
+             None,  # params
+             response.request.headers,
+             body,
+             None,  # form_content
+-            None  # stream_content
++            None,  # stream_content
+         )
+ 
+         return PipelineResponse(
+             request,
+             RequestsTransportResponse(
+                 request,
+                 response,
+             ),
+-            None  # context
++            None,  # context
+         )
+ 
+     @staticmethod
+     def mock_update(url, headers=None):
+         response = Response()
+         response._content_consumed = True
+         response.request = mock.create_autospec(Request)
+-        response.request.method = 'GET'
++        response.request.method = "GET"
+         response.headers = headers or {}
+         response.headers.update({"content-type": "application/json; charset=utf8"})
+         response.reason = "OK"
+ 
+         if url == ASYNC_URL:
+             response.request.url = url
+             response.status_code = POLLING_STATUS
+-            response._content = ASYNC_BODY.encode('ascii')
++            response._content = ASYNC_BODY.encode("ascii")
+             response.randomFieldFromPollAsyncOpHeader = None
+ 
+         elif url == LOCATION_URL:
+             response.request.url = url
+             response.status_code = POLLING_STATUS
+-            response._content = LOCATION_BODY.encode('ascii')
++            response._content = LOCATION_BODY.encode("ascii")
+             response.randomFieldFromPollLocationHeader = None
+ 
+         elif url == ERROR:
+             raise BadEndpointError("boom")
+ 
+         elif url == RESOURCE_URL:
+             response.request.url = url
+             response.status_code = POLLING_STATUS
+-            response._content = RESOURCE_BODY.encode('ascii')
++            response._content = RESOURCE_BODY.encode("ascii")
+ 
+         else:
+-            raise Exception('URL does not match')
++            raise Exception("URL does not match")
+ 
+         request = CLIENT._request(
+             response.request.method,
+             response.request.url,
+             None,  # params
+-            {}, # request has no headers
+-            None, # Request has no body
++            {},  # request has no headers
++            None,  # Request has no body
+             None,  # form_content
+-            None  # stream_content
++            None,  # stream_content
+         )
+ 
+         return PipelineResponse(
+             request,
+             RequestsTransportResponse(
+                 request,
+                 response,
+             ),
+-            None  # context
++            None,  # context
+         )
+ 
+     @staticmethod
+     def mock_outputs(pipeline_response):
+         response = pipeline_response.http_response
+         try:
+             body = json.loads(response.text())
+         except ValueError:
+             raise DecodeError("Impossible to deserialize")
+ 
+         body = json.loads(response.text())
+-        body = {TestArmPolling.convert.sub(r'\1_\2', k).lower(): v
+-                for k, v in body.items()}
+-        properties = body.setdefault('properties', {})
+-        if 'name' in body:
+-            properties['name'] = body['name']
++        body = {TestArmPolling.convert.sub(r"\1_\2", k).lower(): v for k, v in body.items()}
++        properties = body.setdefault("properties", {})
++        if "name" in body:
++            properties["name"] = body["name"]
+         if properties:
+-            properties = {TestArmPolling.convert.sub(r'\1_\2', k).lower(): v
+-                          for k, v in properties.items()}
+-            del body['properties']
++            properties = {TestArmPolling.convert.sub(r"\1_\2", k).lower(): v for k, v in properties.items()}
++            del body["properties"]
+             body.update(properties)
+             resource = SimpleResource(**body)
+         else:
+             raise DecodeError("Impossible to deserialize")
+             resource = SimpleResource(**body)
+         return resource
+ 
+     @staticmethod
+     def mock_deserialization_no_body(pipeline_response):
+-        """Use this mock when you don't expect a return (last body irrelevant)
+-        """
++        """Use this mock when you don't expect a return (last body irrelevant)"""
+         return None
+ 
+     def test_long_running_put(self):
+-        #TODO: Test custom header field
++        # TODO: Test custom header field
+ 
+         # Test throw on non LRO related status code
+-        response = TestArmPolling.mock_send('PUT', 1000, {})
++        response = TestArmPolling.mock_send("PUT", 1000, {})
+         with pytest.raises(HttpResponseError):
+-            LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+         # Test with no polling necessary
+         response_body = {
+-            'properties':{'provisioningState': 'Succeeded'},
+-            'name': TEST_NAME
++            "properties": {"provisioningState": "Succeeded"},
++            "name": TEST_NAME,
+         }
+-        response = TestArmPolling.mock_send(
+-            'PUT', 201,
+-            {}, response_body
+-        )
++        response = TestArmPolling.mock_send("PUT", 201, {}, response_body)
++
+         def no_update_allowed(url, headers=None):
+             raise ValueError("Should not try to update")
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0)
+-        )
++
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert not hasattr(poll._polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++        assert not hasattr(poll._polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+         # Test polling from azure-asyncoperation header
+-        response = TestArmPolling.mock_send(
+-            'PUT', 201,
+-            {'azure-asyncoperation': ASYNC_URL})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++        response = TestArmPolling.mock_send("PUT", 201, {"azure-asyncoperation": ASYNC_URL})
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert not hasattr(poll._polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++        assert not hasattr(poll._polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+         # Test polling location header
+-        response = TestArmPolling.mock_send(
+-            'PUT', 201,
+-            {'location': LOCATION_URL})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++        response = TestArmPolling.mock_send("PUT", 201, {"location": LOCATION_URL})
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader
++            is None
++        )
+ 
+         # Test polling initial payload invalid (SQLDb)
+         response_body = {}  # Empty will raise
+-        response = TestArmPolling.mock_send(
+-            'PUT', 201,
+-            {'location': LOCATION_URL}, response_body)
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++        response = TestArmPolling.mock_send("PUT", 201, {"location": LOCATION_URL}, response_body)
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader
++            is None
++        )
+ 
+         # Test fail to poll from azure-asyncoperation header
+-        response = TestArmPolling.mock_send(
+-            'PUT', 201,
+-            {'azure-asyncoperation': ERROR})
++        response = TestArmPolling.mock_send("PUT", 201, {"azure-asyncoperation": ERROR})
+         with pytest.raises(BadEndpointError):
+-            poll = LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+         # Test fail to poll from location header
+-        response = TestArmPolling.mock_send(
+-            'PUT', 201,
+-            {'location': ERROR})
++        response = TestArmPolling.mock_send("PUT", 201, {"location": ERROR})
+         with pytest.raises(BadEndpointError):
+-            poll = LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+     def test_long_running_patch(self):
+ 
+         # Test polling from location header
+         response = TestArmPolling.mock_send(
+-            'PATCH', 202,
+-            {'location': LOCATION_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++            "PATCH",
++            202,
++            {"location": LOCATION_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader
++            is None
++        )
+ 
+         # Test polling from azure-asyncoperation header
+         response = TestArmPolling.mock_send(
+-            'PATCH', 202,
+-            {'azure-asyncoperation': ASYNC_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++            "PATCH",
++            202,
++            {"azure-asyncoperation": ASYNC_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert not hasattr(poll._polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++        assert not hasattr(poll._polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+         # Test polling from location header
+         response = TestArmPolling.mock_send(
+-            'PATCH', 200,
+-            {'location': LOCATION_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++            "PATCH",
++            200,
++            {"location": LOCATION_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader
++            is None
++        )
+ 
+         # Test polling from azure-asyncoperation header
+         response = TestArmPolling.mock_send(
+-            'PATCH', 200,
+-            {'azure-asyncoperation': ASYNC_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++            "PATCH",
++            200,
++            {"azure-asyncoperation": ASYNC_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert not hasattr(poll._polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++        assert not hasattr(poll._polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+         # Test fail to poll from azure-asyncoperation header
+-        response = TestArmPolling.mock_send(
+-            'PATCH', 202,
+-            {'azure-asyncoperation': ERROR})
++        response = TestArmPolling.mock_send("PATCH", 202, {"azure-asyncoperation": ERROR})
+         with pytest.raises(BadEndpointError):
+-            poll = LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+         # Test fail to poll from location header
+-        response = TestArmPolling.mock_send(
+-            'PATCH', 202,
+-            {'location': ERROR})
++        response = TestArmPolling.mock_send("PATCH", 202, {"location": ERROR})
+         with pytest.raises(BadEndpointError):
+-            poll = LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+     def test_long_running_delete(self):
+         # Test polling from azure-asyncoperation header
+-        response = TestArmPolling.mock_send(
+-            'DELETE', 202,
+-            {'azure-asyncoperation': ASYNC_URL},
+-            body=""
+-        )
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++        response = TestArmPolling.mock_send("DELETE", 202, {"azure-asyncoperation": ASYNC_URL}, body="")
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         poll.wait()
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader
++            is None
++        )
+ 
+     def test_long_running_post_legacy(self):
+         # Former oooooold tests to refactor one day to something more readble
+ 
+         # Test polling from azure-asyncoperation header
+         response = TestArmPolling.mock_send(
+-            'POST', 201,
+-            {'azure-asyncoperation': ASYNC_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_deserialization_no_body,
+-            ARMPolling(0))
++            "POST",
++            201,
++            {"azure-asyncoperation": ASYNC_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_deserialization_no_body, ARMPolling(0))
+         poll.wait()
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader
++            is None
++        )
+ 
+         # Test polling from azure-asyncoperation header
+         response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'azure-asyncoperation': ASYNC_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_deserialization_no_body,
+-            ARMPolling(0))
++            "POST",
++            202,
++            {"azure-asyncoperation": ASYNC_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_deserialization_no_body, ARMPolling(0))
+         poll.wait()
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader
++            is None
++        )
+ 
+         # Test polling from location header
+         response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'location': LOCATION_URL},
+-            body={'properties':{'provisioningState': 'Succeeded'}})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++            "POST",
++            202,
++            {"location": LOCATION_URL},
++            body={"properties": {"provisioningState": "Succeeded"}},
++        )
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         assert poll.result().name == TEST_NAME
+-        assert poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
++        assert (
++            poll._polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader
++            is None
++        )
+ 
+         # Test fail to poll from azure-asyncoperation header
+-        response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'azure-asyncoperation': ERROR})
++        response = TestArmPolling.mock_send("POST", 202, {"azure-asyncoperation": ERROR})
+         with pytest.raises(BadEndpointError):
+-            poll = LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+         # Test fail to poll from location header
+-        response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'location': ERROR})
++        response = TestArmPolling.mock_send("POST", 202, {"location": ERROR})
+         with pytest.raises(BadEndpointError):
+-            poll = LROPoller(CLIENT, response,
+-                TestArmPolling.mock_outputs,
+-                ARMPolling(0)).result()
++            poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0)).result()
+ 
+     def test_long_running_negative(self):
+         global LOCATION_BODY
+         global POLLING_STATUS
+ 
+         # Test LRO PUT throws for invalid json
+-        LOCATION_BODY = '{'
+-        response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'location': LOCATION_URL})
+-        poll = LROPoller(
+-            CLIENT,
+-            response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0)
+-        )
++        LOCATION_BODY = "{"
++        response = TestArmPolling.mock_send("POST", 202, {"location": LOCATION_URL})
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         with pytest.raises(DecodeError):
+             poll.result()
+ 
+-        LOCATION_BODY = '{\'"}'
+-        response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'location': LOCATION_URL})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
++        LOCATION_BODY = "{'\"}"
++        response = TestArmPolling.mock_send("POST", 202, {"location": LOCATION_URL})
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
+         with pytest.raises(DecodeError):
+             poll.result()
+ 
+-        LOCATION_BODY = '{'
++        LOCATION_BODY = "{"
+         POLLING_STATUS = 203
+-        response = TestArmPolling.mock_send(
+-            'POST', 202,
+-            {'location': LOCATION_URL})
+-        poll = LROPoller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            ARMPolling(0))
+-        with pytest.raises(HttpResponseError) as error: # TODO: Node.js raises on deserialization
++        response = TestArmPolling.mock_send("POST", 202, {"location": LOCATION_URL})
++        poll = LROPoller(CLIENT, response, TestArmPolling.mock_outputs, ARMPolling(0))
++        with pytest.raises(HttpResponseError) as error:  # TODO: Node.js raises on deserialization
+             poll.result()
+-        assert error.value.continuation_token == base64.b64encode(pickle.dumps(response)).decode('ascii')
++        assert error.value.continuation_token == base64.b64encode(pickle.dumps(response)).decode("ascii")
+ 
+-        LOCATION_BODY = json.dumps({ 'name': TEST_NAME })
++        LOCATION_BODY = json.dumps({"name": TEST_NAME})
+         POLLING_STATUS = 200
+ 
+     def test_polling_with_path_format_arguments(self):
+         method = ARMPolling(
+             timeout=0,
+-            path_format_arguments={"host": "host:3000", "accountName": "local"}
++            path_format_arguments={"host": "host:3000", "accountName": "local"},
+         )
+         client = PipelineClient(base_url="http://{accountName}{host}")
+ 
+         method._operation = LocationPolling()
+         method._operation._location_url = "/results/1"
+         method._client = client
+-        assert "http://localhost:3000/results/1" == method._client.format_url(method._operation.get_polling_url(), **method._path_format_arguments)
+-
++        assert "http://localhost:3000/results/1" == method._client.format_url(
++            method._operation.get_polling_url(), **method._path_format_arguments
++        )
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/asynctests/test_authentication_async.py` & `azure-mgmt-core-1.4.0/tests/asynctests/test_authentication_async.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -25,15 +25,18 @@
+ # --------------------------------------------------------------------------
+ import base64
+ import time
+ from unittest.mock import Mock
+ 
+ from azure.core.credentials import AccessToken
+ from azure.core.pipeline import AsyncPipeline
+-from azure.mgmt.core.policies import AsyncARMChallengeAuthenticationPolicy
++from azure.mgmt.core.policies import (
++    AsyncARMChallengeAuthenticationPolicy,
++    AsyncAuxiliaryAuthenticationPolicy,
++)
+ from azure.core.pipeline.transport import HttpRequest
+ 
+ import pytest
+ 
+ pytestmark = pytest.mark.asyncio
+ 
+ 
+@@ -46,15 +49,21 @@
+ 
+     expected_claims = '{"access_token": {"essential": "true"}'
+     expected_scope = "scope"
+ 
+     challenge = 'Bearer authorization_uri="https://localhost", error=".", error_description=".", claims="{}"'.format(
+         base64.b64encode(expected_claims.encode()).decode()
+     )
+-    responses = (r for r in (Mock(status_code=401, headers={"WWW-Authenticate": challenge}), Mock(status_code=200)))
++    responses = (
++        r
++        for r in (
++            Mock(status_code=401, headers={"WWW-Authenticate": challenge}),
++            Mock(status_code=200),
++        )
++    )
+ 
+     async def send(request):
+         res = next(responses)
+         if res.status_code == 401:
+             expected_token = first_token.token
+         else:
+             expected_token = second_token.token
+@@ -108,7 +117,51 @@
+ 
+     assert transport.send.call_count == 1
+     assert credential.get_token.call_count == 1
+ 
+     # the policy should have returned the error response because it was unable to handle the challenge
+     assert response.http_response.status_code == 401
+     assert response.http_response.headers["WWW-Authenticate"] == expected_header
++
++
++async def test_auxiliary_authentication_policy():
++    """The auxiliary authentication policy should add a header containing a token from its credential"""
++    first_token = AccessToken("first", int(time.time()) + 3600)
++    second_token = AccessToken("second", int(time.time()) + 3600)
++
++    async def verify_authorization_header(request):
++        assert request.http_request.headers["x-ms-authorization-auxiliary"] == ", ".join(
++            "Bearer {}".format(token.token) for token in [first_token, second_token]
++        )
++        return Mock()
++
++    get_token_calls1 = 0
++    get_token_calls2 = 0
++
++    async def get_token1(_):
++        nonlocal get_token_calls1
++        get_token_calls1 += 1
++        return first_token
++
++    async def get_token2(_):
++        nonlocal get_token_calls2
++        get_token_calls2 += 1
++        return second_token
++
++    fake_credential1 = Mock(get_token=get_token1)
++    fake_credential2 = Mock(get_token=get_token2)
++    policies = [
++        AsyncAuxiliaryAuthenticationPolicy([fake_credential1, fake_credential2], "scope"),
++        Mock(send=verify_authorization_header),
++    ]
++
++    pipeline = AsyncPipeline(transport=Mock(), policies=policies)
++    await pipeline.run(HttpRequest("GET", "https://spam.eggs"))
++
++    assert get_token_calls1 == 1
++    assert get_token_calls2 == 1
++
++    await pipeline.run(HttpRequest("GET", "https://spam.eggs"))
++
++    # Didn't need a new token
++    assert get_token_calls1 == 1
++    assert get_token_calls2 == 1
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/asynctests/test_policies_async.py` & `azure-mgmt-core-1.4.0/tests/asynctests/test_policies_async.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+ # in the Software without restriction, including without limitation the rights
+@@ -17,30 +17,32 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ 
+ from azure.mgmt.core import AsyncARMPipelineClient
+ from azure.mgmt.core.policies import ARMHttpLoggingPolicy
+ from azure.core.configuration import Configuration
+ 
++
+ def test_default_http_logging_policy():
+     config = Configuration()
+     pipeline_client = AsyncARMPipelineClient(base_url="test", config=config)
+     http_logging_policy = pipeline_client._pipeline._impl_policies[-1]._policy
+     assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST
+ 
++
+ def test_pass_in_http_logging_policy():
+     config = Configuration()
+     http_logging_policy = ARMHttpLoggingPolicy()
+-    http_logging_policy.allowed_header_names.update(
+-        {"x-ms-added-header"}
+-    )
++    http_logging_policy.allowed_header_names.update({"x-ms-added-header"})
+     config.http_logging_policy = http_logging_policy
+ 
+     pipeline_client = AsyncARMPipelineClient(base_url="test", config=config)
+     http_logging_policy = pipeline_client._pipeline._impl_policies[-1]._policy
+-    assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST.union({"x-ms-added-header"})
++    assert http_logging_policy.allowed_header_names == ARMHttpLoggingPolicy.DEFAULT_HEADERS_WHITELIST.union(
++        {"x-ms-added-header"}
++    )
+```
+
+## Comparing `azure-mgmt-core-1.3.2/tests/asynctests/test_async_arm_polling.py` & `azure-mgmt-core-1.4.0/tests/asynctests/test_async_arm_polling.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ #
+ # Copyright (c) Microsoft Corporation. All rights reserved.
+ #
+ # The MIT License (MIT)
+ #
+ # Permission is hereby granted, free of charge, to any person obtaining a copy
+ # of this software and associated documentation files (the ""Software""), to deal
+@@ -18,42 +18,38 @@
+ # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ # THE SOFTWARE.
+ #
+-#--------------------------------------------------------------------------
++# --------------------------------------------------------------------------
+ import base64
+ import json
+ import pickle
+ import re
+ import types
+-import unittest
+-try:
+-    from unittest import mock
+-except ImportError:
+-    import mock
+-
++from unittest import mock
+ import pytest
+ 
+ from requests import Request, Response
+ 
+-from msrest import Deserializer
+-
+ from azure.core.polling import async_poller
+ from azure.core.exceptions import DecodeError, HttpResponseError
+ from azure.core import AsyncPipelineClient
+ from azure.core.pipeline import PipelineResponse, AsyncPipeline
+-from azure.core.pipeline.transport import AsyncioRequestsTransportResponse, AsyncHttpTransport
++from azure.core.pipeline.transport import (
++    AsyncioRequestsTransportResponse,
++    AsyncHttpTransport,
++)
+ 
+ from azure.core.polling.base_polling import (
+     LongRunningOperation,
+     BadStatus,
+-    LocationPolling
++    LocationPolling,
+ )
+ from azure.mgmt.core.polling.async_arm_polling import (
+     AsyncARMPolling,
+ )
+ 
+ 
+ class SimpleResource:
+@@ -69,551 +65,480 @@
+         keys = sorted(self.__dict__)
+         items = ("{}={!r}".format(k, self.__dict__[k]) for k in keys)
+         return "{}({})".format(type(self).__name__, ", ".join(items))
+ 
+     def __eq__(self, other):
+         return self.__dict__ == other.__dict__
+ 
++
+ class BadEndpointError(Exception):
+     pass
+ 
+-TEST_NAME = 'foo'
+-RESPONSE_BODY = {'properties':{'provisioningState': 'InProgress'}}
+-ASYNC_BODY = json.dumps({ 'status': 'Succeeded' })
+-ASYNC_URL = 'http://dummyurlFromAzureAsyncOPHeader_Return200'
+-LOCATION_BODY = json.dumps({ 'name': TEST_NAME })
+-LOCATION_URL = 'http://dummyurlurlFromLocationHeader_Return200'
+-RESOURCE_BODY = json.dumps({ 'name': TEST_NAME })
+-RESOURCE_URL = 'http://subscriptions/sub1/resourcegroups/g1/resourcetype1/resource1'
+-ERROR = 'http://dummyurl_ReturnError'
++
++TEST_NAME = "foo"
++RESPONSE_BODY = {"properties": {"provisioningState": "InProgress"}}
++ASYNC_BODY = json.dumps({"status": "Succeeded"})
++ASYNC_URL = "http://dummyurlFromAzureAsyncOPHeader_Return200"
++LOCATION_BODY = json.dumps({"name": TEST_NAME})
++LOCATION_URL = "http://dummyurlurlFromLocationHeader_Return200"
++RESOURCE_BODY = json.dumps({"name": TEST_NAME})
++RESOURCE_URL = "http://subscriptions/sub1/resourcegroups/g1/resourcetype1/resource1"
++ERROR = "http://dummyurl_ReturnError"
+ POLLING_STATUS = 200
+ 
+ CLIENT = AsyncPipelineClient("http://example.org")
++
++
+ async def mock_run(client_self, request, **kwargs):
+     return TestArmPolling.mock_update(request.url)
++
++
+ CLIENT._pipeline.run = types.MethodType(mock_run, CLIENT)
+ 
+ 
+ @pytest.fixture
+ def async_pipeline_client_builder():
+     """Build a client that use the "send" callback as final transport layer
+ 
+     send will receive "request" and kwargs as any transport layer
+     """
++
+     def create_client(send_cb):
+         class TestHttpTransport(AsyncHttpTransport):
+-            async def open(self): pass
+-            async def close(self): pass
+-            async def __aexit__(self, *args, **kwargs): pass
++            async def open(self):
++                pass
++
++            async def close(self):
++                pass
++
++            async def __aexit__(self, *args, **kwargs):
++                pass
+ 
+             async def send(self, request, **kwargs):
+                 return await send_cb(request, **kwargs)
+ 
+-        return AsyncPipelineClient(
+-            'http://example.org/',
+-            pipeline=AsyncPipeline(
+-                transport=TestHttpTransport()
+-            )
+-        )
++        return AsyncPipelineClient("http://example.org/", pipeline=AsyncPipeline(transport=TestHttpTransport()))
++
+     return create_client
+ 
+ 
+ @pytest.fixture
+ def deserialization_cb():
+     def cb(pipeline_response):
+         return json.loads(pipeline_response.http_response.text())
++
+     return cb
+ 
+ 
+ @pytest.mark.asyncio
+ async def test_post(async_pipeline_client_builder, deserialization_cb):
+ 
+-        # Test POST LRO with both Location and Azure-AsyncOperation
++    # Test POST LRO with both Location and Azure-AsyncOperation
+ 
+-        # The initial response contains both Location and Azure-AsyncOperation, a 202 and no Body
+-        initial_response = TestArmPolling.mock_send(
+-            'POST',
+-            202,
+-            {
+-                'location': 'http://example.org/location',
+-                'azure-asyncoperation': 'http://example.org/async_monitor',
+-            },
+-            ''
+-        )
++    # The initial response contains both Location and Azure-AsyncOperation, a 202 and no Body
++    initial_response = TestArmPolling.mock_send(
++        "POST",
++        202,
++        {
++            "location": "http://example.org/location",
++            "azure-asyncoperation": "http://example.org/async_monitor",
++        },
++        "",
++    )
+ 
+-        async def send(request, **kwargs):
+-            assert request.method == 'GET'
++    async def send(request, **kwargs):
++        assert request.method == "GET"
+ 
+-            if request.url == 'http://example.org/location':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body={'location_result': True}
+-                ).http_response
+-            elif request.url == 'http://example.org/async_monitor':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body={'status': 'Succeeded'}
+-                ).http_response
+-            else:
+-                pytest.fail("No other query allowed")
+-
+-        client = async_pipeline_client_builder(send)
+-
+-        # Test 1, LRO options with Location final state
+-        poll = async_poller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            AsyncARMPolling(0, lro_options={"final-state-via": "location"}))
+-        result = await poll
+-        assert result['location_result'] == True
+-
+-        # Test 2, LRO options with Azure-AsyncOperation final state
+-        poll = async_poller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            AsyncARMPolling(0, lro_options={"final-state-via": "azure-async-operation"}))
+-        result = await poll
+-        assert result['status'] == 'Succeeded'
+-
+-        # Test 3, "do the right thing" and use Location by default
+-        poll = async_poller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            AsyncARMPolling(0))
+-        result = await poll
+-        assert result['location_result'] == True
+-
+-        # Test 4, location has no body
+-
+-        async def send(request, **kwargs):
+-            assert request.method == 'GET'
+-
+-            if request.url == 'http://example.org/location':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body=None
+-                ).http_response
+-            elif request.url == 'http://example.org/async_monitor':
+-                return TestArmPolling.mock_send(
+-                    'GET',
+-                    200,
+-                    body={'status': 'Succeeded'}
+-                ).http_response
+-            else:
+-                pytest.fail("No other query allowed")
+-
+-        client = async_pipeline_client_builder(send)
+-
+-        poll = async_poller(
+-            client,
+-            initial_response,
+-            deserialization_cb,
+-            AsyncARMPolling(0, lro_options={"final-state-via": "location"}))
+-        result = await poll
+-        assert result is None
++        if request.url == "http://example.org/location":
++            return TestArmPolling.mock_send("GET", 200, body={"location_result": True}).http_response
++        elif request.url == "http://example.org/async_monitor":
++            return TestArmPolling.mock_send("GET", 200, body={"status": "Succeeded"}).http_response
++        else:
++            pytest.fail("No other query allowed")
++
++    client = async_pipeline_client_builder(send)
++
++    # Test 1, LRO options with Location final state
++    poll = async_poller(
++        client,
++        initial_response,
++        deserialization_cb,
++        AsyncARMPolling(0, lro_options={"final-state-via": "location"}),
++    )
++    result = await poll
++    assert result["location_result"] == True
++
++    # Test 2, LRO options with Azure-AsyncOperation final state
++    poll = async_poller(
++        client,
++        initial_response,
++        deserialization_cb,
++        AsyncARMPolling(0, lro_options={"final-state-via": "azure-async-operation"}),
++    )
++    result = await poll
++    assert result["status"] == "Succeeded"
++
++    # Test 3, "do the right thing" and use Location by default
++    poll = async_poller(client, initial_response, deserialization_cb, AsyncARMPolling(0))
++    result = await poll
++    assert result["location_result"] == True
++
++    # Test 4, location has no body
++
++    async def send(request, **kwargs):
++        assert request.method == "GET"
++
++        if request.url == "http://example.org/location":
++            return TestArmPolling.mock_send("GET", 200, body=None).http_response
++        elif request.url == "http://example.org/async_monitor":
++            return TestArmPolling.mock_send("GET", 200, body={"status": "Succeeded"}).http_response
++        else:
++            pytest.fail("No other query allowed")
++
++    client = async_pipeline_client_builder(send)
++
++    poll = async_poller(
++        client,
++        initial_response,
++        deserialization_cb,
++        AsyncARMPolling(0, lro_options={"final-state-via": "location"}),
++    )
++    result = await poll
++    assert result is None
+ 
+ 
+ class TestArmPolling(object):
+ 
+-    convert = re.compile('([a-z0-9])([A-Z])')
++    convert = re.compile("([a-z0-9])([A-Z])")
+ 
+     @staticmethod
+     def mock_send(method, status, headers=None, body=RESPONSE_BODY):
+         if headers is None:
+             headers = {}
+         response = Response()
+         response._content_consumed = True
+-        response._content = json.dumps(body).encode('ascii') if body is not None else None
++        response._content = json.dumps(body).encode("ascii") if body is not None else None
+         response.request = Request()
+         response.request.method = method
+         response.request.url = RESOURCE_URL
+-        response.request.headers = {
+-            'x-ms-client-request-id': '67f4dd4e-6262-45e1-8bed-5c45cf23b6d9'
+-        }
++        response.request.headers = {"x-ms-client-request-id": "67f4dd4e-6262-45e1-8bed-5c45cf23b6d9"}
+         response.status_code = status
+         response.headers = headers
+         response.headers.update({"content-type": "application/json; charset=utf8"})
+         response.reason = "OK"
+ 
+         request = CLIENT._request(
+             response.request.method,
+             response.request.url,
+             None,  # params
+             response.request.headers,
+             body,
+             None,  # form_content
+-            None  # stream_content
++            None,  # stream_content
+         )
+ 
+         return PipelineResponse(
+             request,
+             AsyncioRequestsTransportResponse(
+                 request,
+                 response,
+             ),
+-            None  # context
++            None,  # context
+         )
+ 
+     @staticmethod
+     def mock_update(url, headers=None):
+         response = Response()
+         response._content_consumed = True
+         response.request = mock.create_autospec(Request)
+-        response.request.method = 'GET'
++        response.request.method = "GET"
+         response.headers = headers or {}
+         response.headers.update({"content-type": "application/json; charset=utf8"})
+         response.reason = "OK"
+ 
+         if url == ASYNC_URL:
+             response.request.url = url
+             response.status_code = POLLING_STATUS
+-            response._content = ASYNC_BODY.encode('ascii')
++            response._content = ASYNC_BODY.encode("ascii")
+             response.randomFieldFromPollAsyncOpHeader = None
+ 
+         elif url == LOCATION_URL:
+             response.request.url = url
+             response.status_code = POLLING_STATUS
+-            response._content = LOCATION_BODY.encode('ascii')
++            response._content = LOCATION_BODY.encode("ascii")
+             response.randomFieldFromPollLocationHeader = None
+ 
+         elif url == ERROR:
+             raise BadEndpointError("boom")
+ 
+         elif url == RESOURCE_URL:
+             response.request.url = url
+             response.status_code = POLLING_STATUS
+-            response._content = RESOURCE_BODY.encode('ascii')
++            response._content = RESOURCE_BODY.encode("ascii")
+ 
+         else:
+-            raise Exception('URL does not match')
++            raise Exception("URL does not match")
+ 
+         request = CLIENT._request(
+             response.request.method,
+             response.request.url,
+             None,  # params
+-            {}, # request has no headers
+-            None, # Request has no body
++            {},  # request has no headers
++            None,  # Request has no body
+             None,  # form_content
+-            None  # stream_content
++            None,  # stream_content
+         )
+ 
+         return PipelineResponse(
+             request,
+             AsyncioRequestsTransportResponse(
+                 request,
+                 response,
+             ),
+-            None  # context
++            None,  # context
+         )
+ 
+     @staticmethod
+     def mock_outputs(pipeline_response):
+         response = pipeline_response.http_response
+         try:
+             body = json.loads(response.text())
+         except ValueError:
+             raise DecodeError("Impossible to deserialize")
+ 
+-        body = {TestArmPolling.convert.sub(r'\1_\2', k).lower(): v
+-                for k, v in body.items()}
+-        properties = body.setdefault('properties', {})
+-        if 'name' in body:
+-            properties['name'] = body['name']
++        body = {TestArmPolling.convert.sub(r"\1_\2", k).lower(): v for k, v in body.items()}
++        properties = body.setdefault("properties", {})
++        if "name" in body:
++            properties["name"] = body["name"]
+         if properties:
+-            properties = {TestArmPolling.convert.sub(r'\1_\2', k).lower(): v
+-                          for k, v in properties.items()}
+-            del body['properties']
++            properties = {TestArmPolling.convert.sub(r"\1_\2", k).lower(): v for k, v in properties.items()}
++            del body["properties"]
+             body.update(properties)
+             resource = SimpleResource(**body)
+         else:
+             raise DecodeError("Impossible to deserialize")
+             resource = SimpleResource(**body)
+         return resource
+ 
+     @staticmethod
+     def mock_deserialization_no_body(pipeline_response):
+-        """Use this mock when you don't expect a return (last body irrelevant)
+-        """
++        """Use this mock when you don't expect a return (last body irrelevant)"""
+         return None
+ 
++
+ @pytest.mark.asyncio
+ async def test_long_running_put():
+-    #TODO: Test custom header field
++    # TODO: Test custom header field
+ 
+     # Test throw on non LRO related status code
+-    response = TestArmPolling.mock_send('PUT', 1000, {})
++    response = TestArmPolling.mock_send("PUT", 1000, {})
+     with pytest.raises(HttpResponseError):
+-        await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
+ 
+     # Test with no polling necessary
+     response_body = {
+-        'properties':{'provisioningState': 'Succeeded'},
+-        'name': TEST_NAME
++        "properties": {"provisioningState": "Succeeded"},
++        "name": TEST_NAME,
+     }
+-    response = TestArmPolling.mock_send(
+-        'PUT', 201,
+-        {}, response_body
+-    )
++    response = TestArmPolling.mock_send("PUT", 201, {}, response_body)
++
+     def no_update_allowed(url, headers=None):
+         raise ValueError("Should not try to update")
++
+     polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method
+-    )
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+-    assert not hasattr(polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++    assert not hasattr(polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+     # Test polling from azure-asyncoperation header
+-    response = TestArmPolling.mock_send(
+-        'PUT', 201,
+-        {'azure-asyncoperation': ASYNC_URL})
++    response = TestArmPolling.mock_send("PUT", 201, {"azure-asyncoperation": ASYNC_URL})
+     polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+-    assert not hasattr(polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++    assert not hasattr(polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+     # Test polling location header
+-    response = TestArmPolling.mock_send(
+-        'PUT', 201,
+-        {'location': LOCATION_URL})
++    response = TestArmPolling.mock_send("PUT", 201, {"location": LOCATION_URL})
+     polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
+ 
+     # Test polling initial payload invalid (SQLDb)
+     response_body = {}  # Empty will raise
+-    response = TestArmPolling.mock_send(
+-        'PUT', 201,
+-        {'location': LOCATION_URL}, response_body)
++    response = TestArmPolling.mock_send("PUT", 201, {"location": LOCATION_URL}, response_body)
+     polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
+ 
+     # Test fail to poll from azure-asyncoperation header
+-    response = TestArmPolling.mock_send(
+-        'PUT', 201,
+-        {'azure-asyncoperation': ERROR})
++    response = TestArmPolling.mock_send("PUT", 201, {"azure-asyncoperation": ERROR})
+     with pytest.raises(BadEndpointError):
+-        poll = await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
+ 
+     # Test fail to poll from location header
+-    response = TestArmPolling.mock_send(
+-        'PUT', 201,
+-        {'location': ERROR})
++    response = TestArmPolling.mock_send("PUT", 201, {"location": ERROR})
+     with pytest.raises(BadEndpointError):
+-        poll = await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
++
+ 
+ @pytest.mark.asyncio
+ async def test_long_running_patch():
+ 
+     # Test polling from location header
+     response = TestArmPolling.mock_send(
+-        'PATCH', 202,
+-        {'location': LOCATION_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++        "PATCH",
++        202,
++        {"location": LOCATION_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
+ 
+     # Test polling from azure-asyncoperation header
+     response = TestArmPolling.mock_send(
+-        'PATCH', 202,
+-        {'azure-asyncoperation': ASYNC_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++        "PATCH",
++        202,
++        {"azure-asyncoperation": ASYNC_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+-    assert not hasattr(polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++    assert not hasattr(polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+     # Test polling from location header
+     response = TestArmPolling.mock_send(
+-        'PATCH', 200,
+-        {'location': LOCATION_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++        "PATCH",
++        200,
++        {"location": LOCATION_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
+ 
+     # Test polling from azure-asyncoperation header
+     response = TestArmPolling.mock_send(
+-        'PATCH', 200,
+-        {'azure-asyncoperation': ASYNC_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++        "PATCH",
++        200,
++        {"azure-asyncoperation": ASYNC_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+-    assert not hasattr(polling_method._pipeline_response, 'randomFieldFromPollAsyncOpHeader')
++    assert not hasattr(polling_method._pipeline_response, "randomFieldFromPollAsyncOpHeader")
+ 
+     # Test fail to poll from azure-asyncoperation header
+-    response = TestArmPolling.mock_send(
+-        'PATCH', 202,
+-        {'azure-asyncoperation': ERROR})
++    response = TestArmPolling.mock_send("PATCH", 202, {"azure-asyncoperation": ERROR})
+     with pytest.raises(BadEndpointError):
+-        poll = await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
+ 
+     # Test fail to poll from location header
+-    response = TestArmPolling.mock_send(
+-        'PATCH', 202,
+-        {'location': ERROR})
++    response = TestArmPolling.mock_send("PATCH", 202, {"location": ERROR})
+     with pytest.raises(BadEndpointError):
+-        poll = await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
++
+ 
+ @pytest.mark.asyncio
+ async def test_long_running_delete():
+     # Test polling from azure-asyncoperation header
+-    response = TestArmPolling.mock_send(
+-        'DELETE', 202,
+-        {'azure-asyncoperation': ASYNC_URL},
+-        body=""
+-    )
++    response = TestArmPolling.mock_send("DELETE", 202, {"azure-asyncoperation": ASYNC_URL}, body="")
+     polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_deserialization_no_body,
+-        polling_method)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_deserialization_no_body, polling_method)
+     assert poll is None
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader is None
+ 
++
+ @pytest.mark.asyncio
+ async def test_long_running_post():
+ 
+     # Test polling from azure-asyncoperation header
+     response = TestArmPolling.mock_send(
+-        'POST', 201,
+-        {'azure-asyncoperation': ASYNC_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_deserialization_no_body,
+-        polling_method)
++        "POST",
++        201,
++        {"azure-asyncoperation": ASYNC_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_deserialization_no_body, polling_method)
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader is None
+ 
+     # Test polling from azure-asyncoperation header
+     response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'azure-asyncoperation': ASYNC_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_deserialization_no_body,
+-        polling_method)
++        "POST",
++        202,
++        {"azure-asyncoperation": ASYNC_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_deserialization_no_body, polling_method)
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollAsyncOpHeader is None
+ 
+     # Test polling from location header
+     response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'location': LOCATION_URL},
+-        body={'properties':{'provisioningState': 'Succeeded'}})
+-    polling_method = AsyncARMPolling(0)
+-    poll = await async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        polling_method)
++        "POST",
++        202,
++        {"location": LOCATION_URL},
++        body={"properties": {"provisioningState": "Succeeded"}},
++    )
++    polling_method = AsyncARMPolling(0)
++    poll = await async_poller(CLIENT, response, TestArmPolling.mock_outputs, polling_method)
+     assert poll.name == TEST_NAME
+     assert polling_method._pipeline_response.http_response.internal_response.randomFieldFromPollLocationHeader is None
+ 
+     # Test fail to poll from azure-asyncoperation header
+-    response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'azure-asyncoperation': ERROR})
++    response = TestArmPolling.mock_send("POST", 202, {"azure-asyncoperation": ERROR})
+     with pytest.raises(BadEndpointError):
+-        await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
+ 
+     # Test fail to poll from location header
+-    response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'location': ERROR})
++    response = TestArmPolling.mock_send("POST", 202, {"location": ERROR})
+     with pytest.raises(BadEndpointError):
+-        await async_poller(CLIENT, response,
+-            TestArmPolling.mock_outputs,
+-            AsyncARMPolling(0))
++        await async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
++
+ 
+ @pytest.mark.asyncio
+ async def test_long_running_negative():
+     global LOCATION_BODY
+     global POLLING_STATUS
+ 
+     # Test LRO PUT throws for invalid json
+-    LOCATION_BODY = '{'
+-    response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'location': LOCATION_URL})
+-    poll = async_poller(
+-        CLIENT,
+-        response,
+-        TestArmPolling.mock_outputs,
+-        AsyncARMPolling(0)
+-    )
++    LOCATION_BODY = "{"
++    response = TestArmPolling.mock_send("POST", 202, {"location": LOCATION_URL})
++    poll = async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
+     with pytest.raises(DecodeError):
+         await poll
+ 
+-    LOCATION_BODY = '{\'"}'
+-    response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'location': LOCATION_URL})
+-    poll = async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        AsyncARMPolling(0))
++    LOCATION_BODY = "{'\"}"
++    response = TestArmPolling.mock_send("POST", 202, {"location": LOCATION_URL})
++    poll = async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
+     with pytest.raises(DecodeError):
+         await poll
+ 
+-    LOCATION_BODY = '{'
++    LOCATION_BODY = "{"
+     POLLING_STATUS = 203
+-    response = TestArmPolling.mock_send(
+-        'POST', 202,
+-        {'location': LOCATION_URL})
+-    poll = async_poller(CLIENT, response,
+-        TestArmPolling.mock_outputs,
+-        AsyncARMPolling(0))
+-    with pytest.raises(HttpResponseError) as error: # TODO: Node.js raises on deserialization
++    response = TestArmPolling.mock_send("POST", 202, {"location": LOCATION_URL})
++    poll = async_poller(CLIENT, response, TestArmPolling.mock_outputs, AsyncARMPolling(0))
++    with pytest.raises(HttpResponseError) as error:  # TODO: Node.js raises on deserialization
+         await poll
+-    assert error.value.continuation_token == base64.b64encode(pickle.dumps(response)).decode('ascii')
++    assert error.value.continuation_token == base64.b64encode(pickle.dumps(response)).decode("ascii")
+ 
+-    LOCATION_BODY = json.dumps({ 'name': TEST_NAME })
++    LOCATION_BODY = json.dumps({"name": TEST_NAME})
+     POLLING_STATUS = 200
+ 
++
+ def test_polling_with_path_format_arguments():
+-    method = AsyncARMPolling(
+-        timeout=0,
+-        path_format_arguments={"host": "host:3000", "accountName": "local"}
+-    )
++    method = AsyncARMPolling(timeout=0, path_format_arguments={"host": "host:3000", "accountName": "local"})
+     client = AsyncPipelineClient(base_url="http://{accountName}{host}")
+ 
+     method._operation = LocationPolling()
+     method._operation._location_url = "/results/1"
+     method._client = client
+-    assert "http://localhost:3000/results/1" == method._client.format_url(method._operation.get_polling_url(), **method._path_format_arguments)
++    assert "http://localhost:3000/results/1" == method._client.format_url(
++        method._operation.get_polling_url(), **method._path_format_arguments
++    )
+```
+

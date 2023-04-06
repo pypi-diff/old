@@ -1,0 +1,349 @@
+--- tmp/nanolayer-0.4.0rc3-py3-none-any.whl.zip
++++ tmp/nanolayer-0.4.1-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,32 +1,32 @@
+│ -Zip file size: 25027 bytes, number of entries: 30
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/__init__.py
+│ --rw-r--r--  2.0 unx      998 b- defN 23-Apr-01 19:40 nanolayer/__main__.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/py.typed
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/cli/__init__.py
+│ --rw-r--r--  2.0 unx     4958 b- defN 23-Apr-01 19:40 nanolayer/cli/install.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/__init__.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/apt/__init__.py
+│ --rw-r--r--  2.0 unx     3253 b- defN 23-Apr-01 19:40 nanolayer/installers/apt/apt_installer.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/apt_get/__init__.py
+│ --rw-r--r--  2.0 unx     5637 b- defN 23-Apr-01 19:40 nanolayer/installers/apt_get/apt_get_installer.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/aptitude/__init__.py
+│ --rw-r--r--  2.0 unx     3797 b- defN 23-Apr-01 19:40 nanolayer/installers/aptitude/aptitude_installer.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/devcontainer_feature/__init__.py
+│ --rw-r--r--  2.0 unx     1909 b- defN 23-Apr-01 19:40 nanolayer/installers/devcontainer_feature/oci_feature.py
+│ --rw-r--r--  2.0 unx     6961 b- defN 23-Apr-01 19:40 nanolayer/installers/devcontainer_feature/oci_feature_installer.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/devcontainer_feature/models/__init__.py
+│ --rw-r--r--  2.0 unx     6366 b- defN 23-Apr-01 19:40 nanolayer/installers/devcontainer_feature/models/devcontainer_feature.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/installers/gh_release/__init__.py
+│ --rw-r--r--  2.0 unx    20420 b- defN 23-Apr-01 19:40 nanolayer/installers/gh_release/gh_release_installer.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-01 19:40 nanolayer/utils/__init__.py
+│ --rw-r--r--  2.0 unx     1928 b- defN 23-Apr-01 19:40 nanolayer/utils/invoker.py
+│ --rw-r--r--  2.0 unx     3462 b- defN 23-Apr-01 19:40 nanolayer/utils/linux_information_desk.py
+│ --rw-r--r--  2.0 unx     7022 b- defN 23-Apr-01 19:40 nanolayer/utils/oci_registry.py
+│ --rw-r--r--  2.0 unx      627 b- defN 23-Apr-01 19:40 nanolayer/utils/settings.py
+│ --rw-r--r--  2.0 unx     1204 b- defN 23-Apr-01 19:40 nanolayer/utils/version.py
+│ --rw-r--r--  2.0 unx     1301 b- defN 23-Apr-01 19:40 nanolayer-0.4.0rc3.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-01 19:40 nanolayer-0.4.0rc3.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       54 b- defN 23-Apr-01 19:40 nanolayer-0.4.0rc3.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx       10 b- defN 23-Apr-01 19:40 nanolayer-0.4.0rc3.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 unx     2791 b- defN 23-Apr-01 19:40 nanolayer-0.4.0rc3.dist-info/RECORD
+│ -30 files, 72790 bytes uncompressed, 20375 bytes compressed:  72.0%
+│ +Zip file size: 25121 bytes, number of entries: 30
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/__init__.py
+│ +-rw-r--r--  2.0 unx      998 b- defN 23-Apr-06 22:16 nanolayer/__main__.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/py.typed
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/cli/__init__.py
+│ +-rw-r--r--  2.0 unx     4958 b- defN 23-Apr-06 22:16 nanolayer/cli/install.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/__init__.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/apt/__init__.py
+│ +-rw-r--r--  2.0 unx     3253 b- defN 23-Apr-06 22:16 nanolayer/installers/apt/apt_installer.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/apt_get/__init__.py
+│ +-rw-r--r--  2.0 unx     5641 b- defN 23-Apr-06 22:16 nanolayer/installers/apt_get/apt_get_installer.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/aptitude/__init__.py
+│ +-rw-r--r--  2.0 unx     3797 b- defN 23-Apr-06 22:16 nanolayer/installers/aptitude/aptitude_installer.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/devcontainer_feature/__init__.py
+│ +-rw-r--r--  2.0 unx     1909 b- defN 23-Apr-06 22:16 nanolayer/installers/devcontainer_feature/oci_feature.py
+│ +-rw-r--r--  2.0 unx     6961 b- defN 23-Apr-06 22:16 nanolayer/installers/devcontainer_feature/oci_feature_installer.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/devcontainer_feature/models/__init__.py
+│ +-rw-r--r--  2.0 unx     6366 b- defN 23-Apr-06 22:16 nanolayer/installers/devcontainer_feature/models/devcontainer_feature.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/installers/gh_release/__init__.py
+│ +-rw-r--r--  2.0 unx    20608 b- defN 23-Apr-06 22:16 nanolayer/installers/gh_release/gh_release_installer.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 22:16 nanolayer/utils/__init__.py
+│ +-rw-r--r--  2.0 unx     1928 b- defN 23-Apr-06 22:16 nanolayer/utils/invoker.py
+│ +-rw-r--r--  2.0 unx     3462 b- defN 23-Apr-06 22:16 nanolayer/utils/linux_information_desk.py
+│ +-rw-r--r--  2.0 unx     7022 b- defN 23-Apr-06 22:16 nanolayer/utils/oci_registry.py
+│ +-rw-r--r--  2.0 unx      627 b- defN 23-Apr-06 22:16 nanolayer/utils/settings.py
+│ +-rw-r--r--  2.0 unx     1210 b- defN 23-Apr-06 22:16 nanolayer/utils/version.py
+│ +-rw-r--r--  2.0 unx     1477 b- defN 23-Apr-06 22:16 nanolayer-0.4.1.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 22:16 nanolayer-0.4.1.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       54 b- defN 23-Apr-06 22:16 nanolayer-0.4.1.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx       10 b- defN 23-Apr-06 22:16 nanolayer-0.4.1.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx     2776 b- defN 23-Apr-06 22:16 nanolayer-0.4.1.dist-info/RECORD
+│ +30 files, 73149 bytes uncompressed, 20499 bytes compressed:  72.0%
+├── zipnote {}
+│ @@ -69,23 +69,23 @@
+│  
+│  Filename: nanolayer/utils/settings.py
+│  Comment: 
+│  
+│  Filename: nanolayer/utils/version.py
+│  Comment: 
+│  
+│ -Filename: nanolayer-0.4.0rc3.dist-info/METADATA
+│ +Filename: nanolayer-0.4.1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: nanolayer-0.4.0rc3.dist-info/WHEEL
+│ +Filename: nanolayer-0.4.1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: nanolayer-0.4.0rc3.dist-info/entry_points.txt
+│ +Filename: nanolayer-0.4.1.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: nanolayer-0.4.0rc3.dist-info/top_level.txt
+│ +Filename: nanolayer-0.4.1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: nanolayer-0.4.0rc3.dist-info/RECORD
+│ +Filename: nanolayer-0.4.1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── nanolayer/installers/apt_get/apt_get_installer.py
+│ @@ -79,15 +79,15 @@
+│                      Invoker.invoke(
+│                          "dpkg -s software-properties-common", raise_on_failure=False
+│                      )
+│                      != 0
+│                  ):
+│  
+│              Invoker.invoke(
+│ -                command="apt install -y software-properties-common",
+│ +                command="apt-get install -y software-properties-common",
+│                  raise_on_failure=True,
+│                  exception_class=cls.AddPPAsFailed,
+│              )
+│              software_properties_common_installed = True
+│              
+│  
+│          for ppa in normalized_ppas:
+├── nanolayer/installers/gh_release/gh_release_installer.py
+│ @@ -432,16 +432,14 @@
+│          target_name: str,
+│          bin_location: Optional[Union[str, Path]] = None,
+│          lib_location: Optional[Union[str, Path]] = None,
+│          asset_regex: Optional[str] = None,
+│          version: str = "latest",
+│          force: bool = False,
+│          arch: Optional[str] = None,
+│ -        checksum_regex: Optional[str] = None,
+│ -        checksum: Optional[bool] = True,
+│      ) -> None:
+│          if "linux" not in platform.system().lower():
+│              raise cls.BadPlatform(
+│                  f"Currently only the Linux platform is supported (got {platform.system().lower()})"
+│              )
+│  
+│          if not LinuxInformationDesk.has_root_privileges():
+│ @@ -469,26 +467,29 @@
+│          resolved_asset = cls.resolve_asset(
+│              repo=repo,
+│              tag=version,
+│              asset_regex=asset_regex,
+│              arch=arch,
+│              target_name=target_name,
+│          )
+│ -
+│ -        #
+│ +        
+│ +        logger.warning("resolved asset: %s", resolved_asset.name)
+│ +        
+│          with tempfile.TemporaryDirectory() as tempdir:
+│              tempdir = Path(tempdir)
+│  
+│              temp_asset_path = tempdir.joinpath("temp_asset")
+│              temp_extraction_path = tempdir.joinpath("temp_extraction")
+│              cls.download_asset(
+│                  url=resolved_asset.browser_download_url, target=temp_asset_path
+│              )
+│  
+│              if tarfile.is_tarfile(temp_asset_path):
+│ +                logger.warning("asset recognized as a tar file")
+│ +
+│                  with ExtendedTarFile.open(temp_asset_path) as tarf:
+│                      # resolve target member name
+│                      if len(tarf.getnames()) == 1:
+│                          # In case of a single member, use it no matter how its named
+│                          target_member_name = tarf.getnames()[0]
+│                      else:
+│                          target_member_names = tarf.names_by_filename(target_name)
+│ @@ -497,18 +498,21 @@
+│                                  f"multiple binary matches were found in archive {resolved_asset.name}: {target_members}"
+│                              )
+│                          if len(target_member_names) == 0:
+│                              raise cls.MoBinaryMatchesFound(
+│                                  f"no binary named {target_name} found in archive {resolved_asset.name}"
+│                              )
+│                          target_member_name = target_member_names[0]
+│ +                    
+│ +                    logger.warning("target binary found in tar as member: %s", target_member_name)
+│  
+│                      same_dir_members = tarf.get_names_by_prefix(
+│                          os.path.dirname(target_member_name)
+│                      )
+│ +
+│                      if len(same_dir_members) == 1:
+│                          # In case of a single file, copy it into bin location and rename it as the target name
+│                          tarf.extract(target_member_name, temp_extraction_path)
+│                          if target_member_name != target_name:
+│                              logger.warning(
+│                                  "renaming %s to %s", target_member_name, target_name
+│                              )
+│ @@ -517,18 +521,19 @@
+│                              final_binary_location,
+│                          )
+│                          cls._recursive_chmod(final_binary_location, cls.BIN_PERMISSIONS)
+│  
+│                      else:
+│                          # In case other files in same dir, assume lib dir.
+│                          # extracting to lib location and soft link the target into bin location
+│ +                        target_lib_location = lib_location.joinpath(target_name)
+│ +
+│                          logger.warning(
+│ -                            "extracting %s into %s", resolved_asset.name, lib_location
+│ +                            "extracting %s into %s", resolved_asset.name, target_lib_location
+│                          )
+│ -                        target_lib_location = lib_location.joinpath(target_name)
+│  
+│                          if target_lib_location.exists() and not force:
+│                              raise cls.TargetExists(
+│                                  f"{target_lib_location} already exists"
+│                              )
+│  
+│                          tarf.extractall(temp_extraction_path)
+│ @@ -540,15 +545,15 @@
+│                                  dirs_exist_ok=force,
+│                              )
+│                          except FileExistsError as exc:
+│                              raise cls.TargetExists(
+│                                  f"{target_lib_location} already exists"
+│                              ) from exc
+│  
+│ -                        lib_binary_location = target_lib_location.joinpath(target_name)
+│ +                        lib_binary_location = target_lib_location.joinpath(target_member_name)
+│  
+│                          # execute permissions
+│                          cls._recursive_chmod(target_lib_location, cls.BIN_PERMISSIONS)
+│  
+│                          logger.warning(
+│                              "linking %s to %s",
+│                              lib_binary_location,
+├── nanolayer/utils/version.py
+│ @@ -1,14 +1,14 @@
+│  import json
+│  import urllib
+│  import urllib.request
+│  from importlib.metadata import version
+│  from typing import List, Optional
+│  
+│ -OWN_REPO = "devcontainers-contrib/cli"
+│ +OWN_REPO = "devcontainers-contrib/nanolayer"
+│  OWN_PACKAGE = "nanolayer"
+│  
+│  
+│  def _resolve_package_version(package: str) -> str:
+│      return version(package)
+│   --- nanolayer-0.4.0rc3.dist-info/METADATA
+├── +++ nanolayer-0.4.1.dist-info/METADATA
+│┄ Files 25% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: nanolayer
+│ -Version: 0.4.0rc3
+│ +Version: 0.4.1
+│  Author: Daniel Braun
+│  Description-Content-Type: text/markdown
+│  Requires-Dist: pydantic (==1.10.5)
+│  Requires-Dist: typer
+│  Requires-Dist: invoke
+│  Requires-Dist: semver (==2.13.0)
+│  Provides-Extra: dev
+│ @@ -18,40 +18,45 @@
+│  Requires-Dist: wheel ; extra == 'dev'
+│  Requires-Dist: setuptools-scm ; extra == 'dev'
+│  Requires-Dist: packaging ; extra == 'dev'
+│  Requires-Dist: dcontainer (>=1.0.0rc4) ; extra == 'dev'
+│  
+│  # Nanolayer CLI
+│  
+│ +`nanolayer` helps keep container layers as small as possible.
+│ +
+│ +It does so by automatically deleting any installation leftovers (such as apt-get update lists, ppas, etc)
+│ +
+│  
+│  ## Installation
+│  
+│  
+│  `pipx install nanolayer`
+│  
+│  
+│  ### GH Release installation:
+│  Usage:
+│  
+│  ```shell
+│  nanolayer install gh cli/cli gh 
+│  ```
+│  
+│ -### Comparisons
+│ -Regular:
+│ +### Example 
+│  
+│  ```dockerfile
+│  FROM python:3.10
+│  
+│  RUN apt-get -y update && apt-get install -y htop 
+│  ```
+│  
+│ -With nanolayer:
+│ +layer size:  **22MB**
+│  
+│  ```dockerfile
+│  FROM python:3.10
+│  
+│ -RUN curl -sfL https://github.com/devcontainers-contrib/cli/releases/download/v0.4.0rc0/nanolayer-x86_64-unknown-linux-gnu.tgz | tar fxvz - -C /tmp && \
+│ +RUN curl -sfL https://github.com/devcontainers-contrib/nanolayer/releases/download/v0.4.0/nanolayer-x86_64-unknown-linux-gnu.tgz | tar fxvz - -C / && \
+│      chmod 755 /tmp/nanolayer && ls /tmp && \
+│ -    /tmp/nanolayer install apt-get htop && \
+│ -    rm /tmp/nanolayer
+│ +    /nanolayer install apt-get htop && \
+│ +    rm /nanolayer
+│  ```
+│ +
+│ +Layer size: **1.6MB**
+│   --- nanolayer-0.4.0rc3.dist-info/RECORD
+├── +++ nanolayer-0.4.1.dist-info/RECORD
+│┄ Files 7% similar despite different names
+│ @@ -3,28 +3,28 @@
+│  nanolayer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/cli/install.py,sha256=CEJky0gjwIx8GZVJ4UFZGj5UcrHprc94xIqyL32iovk,4958
+│  nanolayer/installers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/installers/apt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/installers/apt/apt_installer.py,sha256=KM4EiHILgjI8VUCWUey-xd0YrQfcTbk5Kyx8IWFu7PM,3253
+│  nanolayer/installers/apt_get/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -nanolayer/installers/apt_get/apt_get_installer.py,sha256=euxYm8b2HuHpDynVaGNvGNNzuBiYTXq2VGnzCuKiBKs,5637
+│ +nanolayer/installers/apt_get/apt_get_installer.py,sha256=Ck38cGS9M37gYqknx476-ND3WjFGBUp6fUjvSj5Pmac,5641
+│  nanolayer/installers/aptitude/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/installers/aptitude/aptitude_installer.py,sha256=0CTYSbu0h_YcVdyb4DAmJz4V1ZCR_nM5Yc6iMLhQ63A,3797
+│  nanolayer/installers/devcontainer_feature/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/installers/devcontainer_feature/oci_feature.py,sha256=94oWf4CUjeNzXBa0lyNS-Hp3n1ZjHQohc6BSYY0xyoo,1909
+│  nanolayer/installers/devcontainer_feature/oci_feature_installer.py,sha256=y1fcsvcji-_UJ8KYrzDGl-chc8CuL9_mHzk8rGWra-8,6961
+│  nanolayer/installers/devcontainer_feature/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/installers/devcontainer_feature/models/devcontainer_feature.py,sha256=25mWY6oU1GbWv74xlryPoHbOsGjvAPvZ483dcxVOqWY,6366
+│  nanolayer/installers/gh_release/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -nanolayer/installers/gh_release/gh_release_installer.py,sha256=y7vNXTGXcr0qzpAVO2VvEKAb8YQ2QZt9VF5ZzcMF0nE,20420
+│ +nanolayer/installers/gh_release/gh_release_installer.py,sha256=mtUIXAPWYGSFBRuxXa6-O55EAjvSGKMV2WUeiTSuf_c,20608
+│  nanolayer/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  nanolayer/utils/invoker.py,sha256=4XswVXj3ruTBLDdE518uXdC5iIH0arajw15C3SnKVTk,1928
+│  nanolayer/utils/linux_information_desk.py,sha256=7_7YAnrgRRu3IqibT1PAf1JqgWW7Oinb4RpFgoCOkN4,3462
+│  nanolayer/utils/oci_registry.py,sha256=7PV2efYLjWgj5rYM1kceQPuOqvfKkLAxTFoqAa9QnYE,7022
+│  nanolayer/utils/settings.py,sha256=AUSp55_wUEsht-YfFR_teiCl39DDImB3BnG7HxQ_zjA,627
+│ -nanolayer/utils/version.py,sha256=OgJlUq72llaVZ_WmfvMDbdauxj6_kFuhGWoJABHrX5g,1204
+│ -nanolayer-0.4.0rc3.dist-info/METADATA,sha256=MPeWnDl4tds7hfnDbXTUuU5fEiGIjk59XGbXodNO3MY,1301
+│ -nanolayer-0.4.0rc3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -nanolayer-0.4.0rc3.dist-info/entry_points.txt,sha256=O2yS6dr0vrsYWfJqidKQp6mSEurlsrWHWqfE3D7tf8c,54
+│ -nanolayer-0.4.0rc3.dist-info/top_level.txt,sha256=w6-JAg-L8H97a9os1vxQIuryWzXwvSeFM6DkbmvIw2Q,10
+│ -nanolayer-0.4.0rc3.dist-info/RECORD,,
+│ +nanolayer/utils/version.py,sha256=i_dX6B560FQjcjFS-gWOVbx3VFBlSCZ13ViIatTCuF8,1210
+│ +nanolayer-0.4.1.dist-info/METADATA,sha256=Q8NXe2kD2rNwJ79cweNUmDY2M2AMluhgb8u0sJq3ZqA,1477
+│ +nanolayer-0.4.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +nanolayer-0.4.1.dist-info/entry_points.txt,sha256=O2yS6dr0vrsYWfJqidKQp6mSEurlsrWHWqfE3D7tf8c,54
+│ +nanolayer-0.4.1.dist-info/top_level.txt,sha256=w6-JAg-L8H97a9os1vxQIuryWzXwvSeFM6DkbmvIw2Q,10
+│ +nanolayer-0.4.1.dist-info/RECORD,,
