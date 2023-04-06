@@ -1,0 +1,378 @@
+--- tmp/det_executor-0.0.4.tar.gz
++++ tmp/det_executor-0.0.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "det_executor-0.0.4.tar", last modified: Thu Feb  9 09:34:18 2023, max compression
+│ +gzip compressed data, was "det_executor-0.0.5.tar", last modified: Thu Apr  6 14:00:55 2023, max compression
+│   --- det_executor-0.0.4.tar
+├── +++ det_executor-0.0.5.tar
+│ ├── file list
+│ │ @@ -1,42 +1,42 @@
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    35149 2023-02-06 08:34:12.000000 det_executor-0.0.4/LICENSE
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     1298 2023-02-09 09:34:18.029566 det_executor-0.0.4/PKG-INFO
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      796 2023-02-06 08:34:12.000000 det_executor-0.0.4/README.md
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/det_executor/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)       86 2023-02-02 09:08:14.000000 det_executor-0.0.4/det_executor/__init__.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     7958 2023-02-09 09:33:49.000000 det_executor-0.0.4/det_executor/api.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     2695 2023-02-01 13:22:18.000000 det_executor-0.0.4/det_executor/image.py
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/det_executor/models/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)        6 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/models/__init__.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    81799 2023-02-02 09:07:33.000000 det_executor-0.0.4/det_executor/models/common.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    10288 2023-02-02 09:07:33.000000 det_executor-0.0.4/det_executor/models/experimental.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    40024 2023-02-02 09:07:33.000000 det_executor-0.0.4/det_executor/models/yolo.py
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/det_executor/utils/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      161 2023-02-01 13:36:59.000000 det_executor-0.0.4/det_executor/utils/__init__.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     2248 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/activations.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     5616 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/add_nms.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     6417 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/autoanchor.py
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/det_executor/utils/aws/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)        5 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/aws/__init__.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     1112 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/aws/resume.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    56222 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/datasets.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    36750 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/general.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     3294 2023-02-01 10:41:23.000000 det_executor-0.0.4/det_executor/utils/google_utils.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      259 2023-02-01 13:35:09.000000 det_executor-0.0.4/det_executor/utils/load_utils.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    74934 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/loss.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     5947 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/metrics.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    15467 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/torch_utils.py
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/det_executor/utils/wandb_logging/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)        6 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/wandb_logging/__init__.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      815 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/wandb_logging/log_dataset.py
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)    16265 2022-11-30 11:55:21.000000 det_executor-0.0.4/det_executor/utils/wandb_logging/wandb_utils.py
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/det_executor.egg-info/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)     1298 2023-02-09 09:34:18.000000 det_executor-0.0.4/det_executor.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      972 2023-02-09 09:34:18.000000 det_executor-0.0.4/det_executor.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)        1 2023-02-09 09:34:18.000000 det_executor-0.0.4/det_executor.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)       94 2023-02-09 09:34:18.000000 det_executor-0.0.4/det_executor.egg-info/requires.txt
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)       13 2023-02-09 09:34:18.000000 det_executor-0.0.4/det_executor.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)       38 2023-02-09 09:34:18.029566 det_executor-0.0.4/setup.cfg
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      907 2023-02-09 09:32:57.000000 det_executor-0.0.4/setup.py
+│ │ -drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-02-09 09:34:18.029566 det_executor-0.0.4/test/
+│ │ --rw-rw-r--   0 user      (1000) user      (1000)      216 2023-02-06 08:07:46.000000 det_executor-0.0.4/test/test_val.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    35149 2023-02-06 08:34:12.000000 det_executor-0.0.5/LICENSE
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     1565 2023-04-06 14:00:55.005237 det_executor-0.0.5/PKG-INFO
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     1063 2023-04-06 13:57:47.000000 det_executor-0.0.5/README.md
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/det_executor/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)       86 2023-02-02 09:08:14.000000 det_executor-0.0.5/det_executor/__init__.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     8168 2023-04-06 13:59:28.000000 det_executor-0.0.5/det_executor/api.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     2695 2023-02-01 13:22:18.000000 det_executor-0.0.5/det_executor/image.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/det_executor/models/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)        6 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/models/__init__.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    81799 2023-02-02 09:07:33.000000 det_executor-0.0.5/det_executor/models/common.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    10288 2023-02-02 09:07:33.000000 det_executor-0.0.5/det_executor/models/experimental.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    40024 2023-02-02 09:07:33.000000 det_executor-0.0.5/det_executor/models/yolo.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/det_executor/utils/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)      161 2023-02-01 13:36:59.000000 det_executor-0.0.5/det_executor/utils/__init__.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     2248 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/activations.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     5616 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/add_nms.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     6417 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/autoanchor.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/det_executor/utils/aws/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)        5 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/aws/__init__.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     1112 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/aws/resume.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    56222 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/datasets.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    36750 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/general.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     3294 2023-02-01 10:41:23.000000 det_executor-0.0.5/det_executor/utils/google_utils.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)      259 2023-02-01 13:35:09.000000 det_executor-0.0.5/det_executor/utils/load_utils.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    74934 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/loss.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     5947 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/metrics.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    15467 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/torch_utils.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/det_executor/utils/wandb_logging/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)        6 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/wandb_logging/__init__.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)      815 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/wandb_logging/log_dataset.py
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)    16265 2022-11-30 11:55:21.000000 det_executor-0.0.5/det_executor/utils/wandb_logging/wandb_utils.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/det_executor.egg-info/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)     1565 2023-04-06 14:00:55.000000 det_executor-0.0.5/det_executor.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)      972 2023-04-06 14:00:55.000000 det_executor-0.0.5/det_executor.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)        1 2023-04-06 14:00:55.000000 det_executor-0.0.5/det_executor.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)       94 2023-04-06 14:00:55.000000 det_executor-0.0.5/det_executor.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)       13 2023-04-06 14:00:55.000000 det_executor-0.0.5/det_executor.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)       38 2023-04-06 14:00:55.005237 det_executor-0.0.5/setup.cfg
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)      923 2023-04-06 14:00:35.000000 det_executor-0.0.5/setup.py
+│ │ +drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-06 14:00:55.005237 det_executor-0.0.5/test/
+│ │ +-rw-rw-r--   0 user      (1000) user      (1000)      216 2023-02-06 08:07:46.000000 det_executor-0.0.5/test/test_val.py
+│ │   --- det_executor-0.0.4/LICENSE
+│ ├── +++ det_executor-0.0.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/PKG-INFO
+│ ├── +++ det_executor-0.0.5/det_executor.egg-info/PKG-INFO
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: det_executor
+│ │ -Version: 0.0.4
+│ │ +Name: det-executor
+│ │ +Version: 0.0.5
+│ │  Summary: Python package with latest versions of YOLO architecture for training and inference
+│ │  Home-page: https://github.com/maxwolf8852/DetExecutor.git
+│ │  Author: Maxim Volkovskiy
+│ │  Author-email: maxwolf8852@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ +![GitHub](https://img.shields.io/github/license/maxwolf8852/DetExecutor?style=plastic)
+│ │ +[![PyPI version](https://badge.fury.io/py/det_executor.svg)](https://badge.fury.io/py/det_executor)
+│ │ +![PyPI - Downloads](https://img.shields.io/pypi/dm/det_executor?style=plastic)
+│ │ +
+│ │  # DetExecutor
+│ │  Python package with latest versions of YOLO architecture for training and inference
+│ │  ## Install
+│ │  Installing is quite simple, just use pip:
+│ │  ```shell
+│ │  pip3 install det_executor
+│ │  ```
+│ │   --- det_executor-0.0.4/README.md
+│ ├── +++ det_executor-0.0.5/README.md
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,7 +1,11 @@
+│ │ +![GitHub](https://img.shields.io/github/license/maxwolf8852/DetExecutor?style=plastic)
+│ │ +[![PyPI version](https://badge.fury.io/py/det_executor.svg)](https://badge.fury.io/py/det_executor)
+│ │ +![PyPI - Downloads](https://img.shields.io/pypi/dm/det_executor?style=plastic)
+│ │ +
+│ │  # DetExecutor
+│ │  Python package with latest versions of YOLO architecture for training and inference
+│ │  ## Install
+│ │  Installing is quite simple, just use pip:
+│ │  ```shell
+│ │  pip3 install det_executor
+│ │  ```
+│ │   --- det_executor-0.0.4/det_executor/api.py
+│ ├── +++ det_executor-0.0.5/det_executor/api.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,26 +1,24 @@
+│ │ +from .utils import load_script_model, non_max_suppression, SCRIPT_16, SCRIPT_16_TINY
+│ │ +from .models.experimental import attempt_load
+│ │ +from pthflops import count_ops
+│ │ +import torch
+│ │  import time
+│ │  from collections import namedtuple
+│ │  import os
+│ │  import sys
+│ │  import pathlib
+│ │  import black
+│ │  
+│ │  import cv2
+│ │  import numpy as np
+│ │  from colorama import Fore, init
+│ │  
+│ │  init(autoreset=True)
+│ │  
+│ │ -import torch
+│ │ -from pthflops import count_ops
+│ │ -
+│ │ -from .models.experimental import attempt_load
+│ │ -from .utils import load_script_model, non_max_suppression, SCRIPT_16, SCRIPT_16_TINY
+│ │ -
+│ │  
+│ │  def blockPrint():
+│ │      sys.stdout = open(os.devnull, 'w')
+│ │      sys.stderr = open(os.devnull, 'w')
+│ │  
+│ │  
+│ │  def enablePrint():
+│ │ @@ -70,49 +68,55 @@
+│ │  
+│ │          print(f'Loading \'{arch}\' model... ', end='')
+│ │          start = time.perf_counter()
+│ │          blockPrint()
+│ │          try:
+│ │              if self._arch.module == 'yolov7_package':
+│ │                  if not self._arch.traced:
+│ │ -                    sys.path.append(os.path.join(os.path.dirname(__file__), ""))
+│ │ -                    self._model = attempt_load(self._weights, map_location=self._device)
+│ │ +                    sys.path.append(os.path.join(
+│ │ +                        os.path.dirname(__file__), ""))
+│ │ +                    self._model = attempt_load(
+│ │ +                        self._weights, map_location=self._device)
+│ │                  else:  # load traced version
+│ │                      if not os.path.isfile(self._weights):
+│ │                          load_script_model(self._arch.load_link, self._weights)
+│ │ -                    self._model = torch.jit.load(self._weights, map_location=self._device).float().eval()
+│ │ +                    self._model = torch.jit.load(
+│ │ +                        self._weights, map_location=self._device).float().eval()
+│ │  
+│ │                  # print()
+│ │  
+│ │                  if self._half:
+│ │                      self._model.half()
+│ │  
+│ │              elif self._arch.module == 'yolov8':
+│ │                  from ultralytics import YOLO
+│ │                  self._model = YOLO(model=self._arch.load_link)
+│ │          except Exception as e:
+│ │              enablePrint()
+│ │ -            print(f'{Fore.RED}ERROR {{{e}}} {Fore.RESET}[{time.perf_counter() - start}]')
+│ │ +            print(
+│ │ +                f'{Fore.RED}ERROR {{{e}}} {Fore.RESET}[{time.perf_counter() - start}]')
+│ │          else:
+│ │              enablePrint()
+│ │ -            print(f'{Fore.GREEN}SUCCESS {Fore.RESET}[{time.perf_counter() - start}]')
+│ │ +            print(
+│ │ +                f'{Fore.GREEN}SUCCESS {Fore.RESET}[{time.perf_counter() - start}]')
+│ │  
+│ │          """try:
+│ │              print(count_parameters(self._model.model))
+│ │              inp = torch.rand(1, 3, self._arch.img_size[0], self._arch.img_size[1]).to(self._device)
+│ │              print(count_ops(self._model.model, inp))
+│ │          except:
+│ │              print(count_parameters(self._model))
+│ │              inp = torch.rand(1, 3, self._arch.img_size[0], self._arch.img_size[1]).to(self._device)
+│ │              print(count_ops(self._model, inp))"""
+│ │  
+│ │      def predict(self,
+│ │                  images: np.ndarray | list[np.ndarray],
+│ │                  conf_thres=0.25,
+│ │ -                iou_thres=0.3):
+│ │ +                iou_thres=0.3,
+│ │ +                multi_label=False):
+│ │          if type(images) != list:
+│ │              x = [images]
+│ │          else:
+│ │              x = images
+│ │          classes = []
+│ │          boxes = []
+│ │          confs = []
+│ │ @@ -132,28 +136,29 @@
+│ │                      img_inf = img_inf.half() if self._half else img_inf.float()  # uint8 to fp16/32
+│ │                      img_inf /= 255.0  # 0 - 255 to 0.0 - 1.0
+│ │                      y.append(img_inf)
+│ │  
+│ │                  y = torch.stack(y)
+│ │                  pred = self._model(y, )[0]
+│ │                  pred = non_max_suppression(pred, conf_thres, iou_thres, classes=None,
+│ │ -                                           agnostic=False)
+│ │ +                                           agnostic=False, multi_label=multi_label)
+│ │  
+│ │                  for i, det in enumerate(pred):  # detections per image
+│ │                      local_classes = []
+│ │                      local_boxes = []
+│ │                      local_confs = []
+│ │                      old_shape = img_sizes[i]
+│ │                      if len(det):
+│ │                          dx = old_shape[0] / self._arch.img_size[0]
+│ │                          dy = old_shape[1] / self._arch.img_size[1]
+│ │  
+│ │                          for *xyxy, conf, cls in reversed(det):
+│ │                              coords = torch.tensor(xyxy).tolist()
+│ │ -                            xyxy_scaled = [coords[0] * dy, coords[1] * dx, coords[2] * dy, coords[3] * dx]
+│ │ +                            xyxy_scaled = [coords[0] * dy, coords[1]
+│ │ +                                           * dx, coords[2] * dy, coords[3] * dx]
+│ │                              local_classes.append(int(cls.cpu().item()))
+│ │                              local_boxes.append(xyxy_scaled)
+│ │                              local_confs.append(float(conf.cpu().item()))
+│ │  
+│ │                      classes.append(local_classes)
+│ │                      boxes.append(local_boxes)
+│ │                      confs.append(local_confs)
+│ │   --- det_executor-0.0.4/det_executor/image.py
+│ ├── +++ det_executor-0.0.5/det_executor/image.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/models/common.py
+│ ├── +++ det_executor-0.0.5/det_executor/models/common.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/models/experimental.py
+│ ├── +++ det_executor-0.0.5/det_executor/models/experimental.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/models/yolo.py
+│ ├── +++ det_executor-0.0.5/det_executor/models/yolo.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/activations.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/activations.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/add_nms.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/add_nms.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/autoanchor.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/autoanchor.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/aws/resume.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/aws/resume.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/datasets.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/datasets.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/general.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/general.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/google_utils.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/google_utils.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/loss.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/loss.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/metrics.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/metrics.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/torch_utils.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/torch_utils.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/wandb_logging/log_dataset.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/wandb_logging/log_dataset.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor/utils/wandb_logging/wandb_utils.py
+│ ├── +++ det_executor-0.0.5/det_executor/utils/wandb_logging/wandb_utils.py
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/det_executor.egg-info/PKG-INFO
+│ ├── +++ det_executor-0.0.5/PKG-INFO
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: det-executor
+│ │ -Version: 0.0.4
+│ │ +Name: det_executor
+│ │ +Version: 0.0.5
+│ │  Summary: Python package with latest versions of YOLO architecture for training and inference
+│ │  Home-page: https://github.com/maxwolf8852/DetExecutor.git
+│ │  Author: Maxim Volkovskiy
+│ │  Author-email: maxwolf8852@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ +![GitHub](https://img.shields.io/github/license/maxwolf8852/DetExecutor?style=plastic)
+│ │ +[![PyPI version](https://badge.fury.io/py/det_executor.svg)](https://badge.fury.io/py/det_executor)
+│ │ +![PyPI - Downloads](https://img.shields.io/pypi/dm/det_executor?style=plastic)
+│ │ +
+│ │  # DetExecutor
+│ │  Python package with latest versions of YOLO architecture for training and inference
+│ │  ## Install
+│ │  Installing is quite simple, just use pip:
+│ │  ```shell
+│ │  pip3 install det_executor
+│ │  ```
+│ │   --- det_executor-0.0.4/det_executor.egg-info/SOURCES.txt
+│ ├── +++ det_executor-0.0.5/det_executor.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- det_executor-0.0.4/setup.py
+│ ├── +++ det_executor-0.0.5/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,18 +1,19 @@
+│ │  import os
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │ -requirements = ['pyyaml', 'opencv-python', 'torch', 'torchvision', 'requests', 'wget', 'tqdm', 'ultralytics', 'black', 'colorama', 'pthflops']
+│ │ +requirements = ['pyyaml', 'opencv-python', 'torch', 'torchvision',
+│ │ +                'requests', 'wget', 'tqdm', 'ultralytics', 'black', 'colorama', 'pthflops']
+│ │  
+│ │  setuptools.setup(
+│ │      name="det_executor",
+│ │ -    version="0.0.4",
+│ │ +    version="0.0.5",
+│ │      author="Maxim Volkovskiy",
+│ │      author_email="maxwolf8852@gmail.com",
+│ │      description="Python package with latest versions of YOLO architecture for training and inference",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/maxwolf8852/DetExecutor.git",
+│ │      packages=setuptools.find_packages(),

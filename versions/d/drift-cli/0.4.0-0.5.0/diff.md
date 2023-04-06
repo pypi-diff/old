@@ -1,0 +1,383 @@
+# Comparing `tmp/drift_cli-0.4.0-py3-none-any.whl.zip` & `tmp/drift_cli-0.5.0-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,20 +1,20 @@
+-Zip file size: 22547 bytes, number of entries: 18
+--rw-r--r--  2.0 unx      192 b- defN 23-Mar-15 15:01 drift_cli/__init__.py
+--rw-r--r--  2.0 unx       84 b- defN 23-Mar-15 15:01 drift_cli/__main__.py
+--rw-r--r--  2.0 unx     2328 b- defN 23-Mar-15 15:01 drift_cli/alias.py
+--rw-r--r--  2.0 unx     1069 b- defN 23-Mar-15 15:01 drift_cli/cli.py
+--rw-r--r--  2.0 unx      829 b- defN 23-Mar-15 15:01 drift_cli/config.py
+--rw-r--r--  2.0 unx     2699 b- defN 23-Mar-15 15:01 drift_cli/export.py
+--rw-r--r--  2.0 unx     5361 b- defN 23-Mar-15 15:01 drift_cli/export_impl/raw.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Mar-15 15:01 drift_cli/utils/__init__.py
+--rw-r--r--  2.0 unx      129 b- defN 23-Mar-15 15:01 drift_cli/utils/consoles.py
+--rw-r--r--  2.0 unx      366 b- defN 23-Mar-15 15:01 drift_cli/utils/error.py
+--rw-r--r--  2.0 unx     4884 b- defN 23-Mar-15 15:01 drift_cli/utils/helpers.py
+--rw-r--r--  2.0 unx     2280 b- defN 23-Mar-15 15:01 drift_cli/utils/humanize.py
+--rw-r--r--  2.0 unx    16725 b- defN 23-Mar-15 15:01 drift_cli-0.4.0.dist-info/LICENSE
+--rw-r--r--  2.0 unx    22526 b- defN 23-Mar-15 15:01 drift_cli-0.4.0.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Mar-15 15:01 drift_cli-0.4.0.dist-info/WHEEL
+--rw-r--r--  2.0 unx       45 b- defN 23-Mar-15 15:01 drift_cli-0.4.0.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx       10 b- defN 23-Mar-15 15:01 drift_cli-0.4.0.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx     1443 b- defN 23-Mar-15 15:01 drift_cli-0.4.0.dist-info/RECORD
+-18 files, 61062 bytes uncompressed, 20189 bytes compressed:  66.9%
++Zip file size: 22846 bytes, number of entries: 18
++-rw-r--r--  2.0 unx      192 b- defN 23-Apr-06 13:59 drift_cli/__init__.py
++-rw-r--r--  2.0 unx       84 b- defN 23-Apr-06 13:59 drift_cli/__main__.py
++-rw-r--r--  2.0 unx     2344 b- defN 23-Apr-06 13:59 drift_cli/alias.py
++-rw-r--r--  2.0 unx     1216 b- defN 23-Apr-06 13:59 drift_cli/cli.py
++-rw-r--r--  2.0 unx      829 b- defN 23-Apr-06 13:59 drift_cli/config.py
++-rw-r--r--  2.0 unx     2715 b- defN 23-Apr-06 13:59 drift_cli/export.py
++-rw-r--r--  2.0 unx     5650 b- defN 23-Apr-06 13:59 drift_cli/export_impl/raw.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 13:59 drift_cli/utils/__init__.py
++-rw-r--r--  2.0 unx      129 b- defN 23-Apr-06 13:59 drift_cli/utils/consoles.py
++-rw-r--r--  2.0 unx      513 b- defN 23-Apr-06 13:59 drift_cli/utils/error.py
++-rw-r--r--  2.0 unx     5060 b- defN 23-Apr-06 13:59 drift_cli/utils/helpers.py
++-rw-r--r--  2.0 unx     2280 b- defN 23-Apr-06 13:59 drift_cli/utils/humanize.py
++-rw-r--r--  2.0 unx    16725 b- defN 23-Apr-06 13:59 drift_cli-0.5.0.dist-info/LICENSE
++-rw-r--r--  2.0 unx    22526 b- defN 23-Apr-06 13:59 drift_cli-0.5.0.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 13:59 drift_cli-0.5.0.dist-info/WHEEL
++-rw-r--r--  2.0 unx       45 b- defN 23-Apr-06 13:59 drift_cli-0.5.0.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-06 13:59 drift_cli-0.5.0.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx     1443 b- defN 23-Apr-06 13:59 drift_cli-0.5.0.dist-info/RECORD
++18 files, 61853 bytes uncompressed, 20488 bytes compressed:  66.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -30,26 +30,26 @@
+ 
+ Filename: drift_cli/utils/helpers.py
+ Comment: 
+ 
+ Filename: drift_cli/utils/humanize.py
+ Comment: 
+ 
+-Filename: drift_cli-0.4.0.dist-info/LICENSE
++Filename: drift_cli-0.5.0.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: drift_cli-0.4.0.dist-info/METADATA
++Filename: drift_cli-0.5.0.dist-info/METADATA
+ Comment: 
+ 
+-Filename: drift_cli-0.4.0.dist-info/WHEEL
++Filename: drift_cli-0.5.0.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: drift_cli-0.4.0.dist-info/entry_points.txt
++Filename: drift_cli-0.5.0.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: drift_cli-0.4.0.dist-info/top_level.txt
++Filename: drift_cli-0.5.0.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: drift_cli-0.4.0.dist-info/RECORD
++Filename: drift_cli-0.5.0.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## drift_cli/alias.py
+
+```diff
+@@ -59,15 +59,15 @@
+     if address is None or len(address) == 0:
+         address = click.prompt("IP or Hostname", type=str)
+     if password is None:
+         password = click.prompt("Password", type=str, hide_input=True)
+     if bucket is None:
+         bucket = click.prompt("Bucket", type=str, default="data")
+ 
+-    with error_handle():
++    with error_handle(ctx.obj["debug"]):
+         entry = Alias(address=address, password=password, bucket=bucket)
+ 
+         conf.aliases[name] = entry
+         write_config(ctx.obj["config_path"], conf)
+ 
+ 
+ @alias.command()
+```
+
+## drift_cli/cli.py
+
+```diff
+@@ -21,29 +21,37 @@
+ )
+ @click.option(
+     "--parallel",
+     "-p",
+     type=int,
+     help="Number of parallel tasks to use, defaults to 10",
+ )
++@click.option(
++    "--debug",
++    "-d",
++    is_flag=True,
++    help="Enable debug logging",
++)
+ @click.pass_context
+ def cli(
+     ctx,
+     config: Optional[Path] = None,
+     parallel: Optional[int] = None,
++    debug: bool = False,
+ ):
+     """CLI client for PANDA | Drift Platform"""
+     if config is None:
+         config = Path.home() / ".drift-cli" / "config.toml"
+ 
+     if parallel is None:
+         parallel = 10
+ 
+     if not Path.exists(config):
+         write_config(config, Config(aliases={}))
+ 
+     ctx.obj["config_path"] = config
+     ctx.obj["parallel"] = parallel
++    ctx.obj["debug"] = debug
+ 
+ 
+ cli.add_command(alias, "alias")
+ cli.add_command(export, "export")
+```
+
+## drift_cli/export.py
+
+```diff
+@@ -87,15 +87,15 @@
+     alias_name, _ = parse_path(src)
+     alias: Alias = read_config(ctx.obj["config_path"]).aliases[alias_name]
+ 
+     loop = asyncio.get_event_loop()
+     run = loop.run_until_complete
+     client = DriftClient(alias.address, alias.password, loop=loop)
+ 
+-    with error_handle():
++    with error_handle(ctx.obj["debug"]):
+         run(
+             export_raw(
+                 client,
+                 dest,
+                 parallel=ctx.obj["parallel"],
+                 topics=topics.split(","),
+                 start=start,
+```
+
+## drift_cli/export_impl/raw.py
+
+```diff
+@@ -1,14 +1,15 @@
+ """Export data"""
+ import asyncio
+ from concurrent.futures import ThreadPoolExecutor, Executor
+ from pathlib import Path
+ 
+ import numpy as np
+ from drift_client import DriftClient
++from drift_protocol.common import StatusCode
+ from drift_protocol.meta import MetaInfo
+ from rich.progress import Progress
+ from wavelet_buffer.img import codecs
+ 
+ from drift_cli.utils.helpers import read_topic, filter_topics
+ 
+ 
+@@ -33,16 +34,24 @@
+     topic: str,
+     dest: str,
+     progress: Progress,
+     sem,
+     **kwargs,
+ ):
+     async for package, task in read_topic(pool, client, topic, progress, sem, **kwargs):
++        if package.status_code != StatusCode.GOOD:
++            progress.console.print(
++                f"Can't extract picture from  {topic}/{package.package_id}.dp: {StatusCode.Name(package.status_code)}"
++            )
++            continue
++
+         meta = package.meta
++
+         if meta.type != MetaInfo.IMAGE:
++
+             progress.update(
+                 task,
+                 description=f"[SKIPPED] Topic {topic} is not an image",
+                 completed=True,
+             )
+             break
+```
+
+## drift_cli/utils/error.py
+
+```diff
+@@ -3,14 +3,18 @@
+ 
+ from click import Abort
+ 
+ from drift_cli.utils.consoles import error_console
+ 
+ 
+ @contextmanager
+-def error_handle():
+-    """Wrap try-catch block and print errorr"""
+-    try:
++def error_handle(debug: bool):
++    """Wrap try-catch block and print error"""
++    if debug:
++        # If debug is enabled, we don't want to catch any errors and wrap them
+         yield
+-    except Exception as err:
+-        error_console.print(f"[{type(err).__name__}] {err}")
+-        raise Abort() from err
++    else:
++        try:
++            yield
++        except Exception as err:
++            error_console.print(f"[{type(err).__name__}] {err}")
++            raise Abort() from err
+```
+
+## drift_cli/utils/helpers.py
+
+```diff
+@@ -84,16 +84,21 @@
+     speed = 0
+ 
+     loop = asyncio.get_running_loop()
+ 
+     def stop_signal():
+         signal_queue.put_nowait("stop")
+ 
+-    loop.add_signal_handler(signal.SIGINT, stop_signal)
+-    loop.add_signal_handler(signal.SIGTERM, stop_signal)
++    try:
++        loop.add_signal_handler(signal.SIGINT, stop_signal)
++        loop.add_signal_handler(signal.SIGTERM, stop_signal)
++    except NotImplementedError:
++        error_console.print(
++            "Signals are not supported on this platform. No graceful shutdown possible."
++        )
+ 
+     packages = await loop.run_in_executor(
+         pool, client.get_package_names, topic, start, stop
+     )
+ 
+     async def _read_package(pkg):
+         async with sem:
+@@ -128,26 +133,25 @@
+             stats.append((pkg_size, time.time()))
+             if len(stats) > 10 * parallel:
+                 stats.pop(0)
+ 
+             if len(stats) > 1:
+                 speed = sum(s[0] for s in stats) / (stats[-1][1] - stats[0][1])
+ 
+-            yield drift_pkg, task
+-
+             count += 1
+             progress.update(
+                 task,
+                 description=f"Topic '{topic}' "
+                 f"(copied {count} packages ({pretty_size(exported_size)}), "
+                 f"speed {pretty_size(speed)}/s)",
+                 advance=timestamp - last_time,
+                 refresh=True,
+             )
+ 
++            yield drift_pkg, task
+             last_time = timestamp
+ 
+     progress.update(task, total=1, completed=True)
+ 
+ 
+ def filter_topics(topics: List[str], names: List[str]) -> List[str]:
+     """Filter entries by names"""
+```
+
+## Comparing `drift_cli-0.4.0.dist-info/LICENSE` & `drift_cli-0.5.0.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `drift_cli-0.4.0.dist-info/METADATA` & `drift_cli-0.5.0.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: drift-cli
+-Version: 0.4.0
++Version: 0.5.0
+ Summary: CLI client for PANDA | Drift Platform
+ Author-email: Alexey Timin <atimin@gmail.com>
+ Maintainer-email: Alexey Timin <atimin@gmail.com>
+ License: Mozilla Public License Version 2.0
+         ==================================
+         
+         1. Definitions
+@@ -390,15 +390,15 @@
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: System Administrators
+ Classifier: Operating System :: OS Independent
+ Classifier: Topic :: Database :: Front-Ends
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+-Requires-Dist: drift-python-client (~=0.4.1)
++Requires-Dist: drift-python-client (~=0.5.0)
+ Requires-Dist: click (~=8.1)
+ Requires-Dist: tomlkit (~=0.11)
+ Requires-Dist: rich (~=12.6)
+ Provides-Extra: docs
+ Requires-Dist: mkdocs (~=1.3) ; extra == 'docs'
+ Requires-Dist: mkdocs-material (~=8.3) ; extra == 'docs'
+ Requires-Dist: plantuml-markdown (~=3.5) ; extra == 'docs'
+```
+
+## Comparing `drift_cli-0.4.0.dist-info/RECORD` & `drift_cli-0.5.0.dist-info/RECORD`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ drift_cli/__init__.py,sha256=MPmEBVk4DyzXZDDmX7RXQ3WuW2xWbWwDmBLrKiBTVpY,192
+ drift_cli/__main__.py,sha256=rjYpWjmdMA8fjVVCgF10yH0Zl2M0pronHDKEMF7qRio,84
+-drift_cli/alias.py,sha256=X9dRzTkpBaSQIK0u1vbJcIV289ZpsYuaX0EiOS6k1q8,2328
+-drift_cli/cli.py,sha256=pIpeRjMVryqLoChnrE480Ezwh8wJCcPLGES8d8iRJ_Y,1069
++drift_cli/alias.py,sha256=IJO8XHfZ-S3-OZWP2RXKX2O818zLN_s2mlDvmunZ5Gs,2344
++drift_cli/cli.py,sha256=Ewop3LAZIFkWSQTHSUCXrLFJD_WuXqG5RT9B4P0zJ34,1216
+ drift_cli/config.py,sha256=Pf7TSos607g8k0OwovJcHH3xNsRMkZK4Dk0wFzuX30g,829
+-drift_cli/export.py,sha256=SuhkmZtZo3JbEYFeILSpA15_sdEwDhiKlzhzCBDp0XA,2699
+-drift_cli/export_impl/raw.py,sha256=HIKNCmQzrjAwZG2abugoR24y8VElbwwKpcekJ4E5SpE,5361
++drift_cli/export.py,sha256=HGoO6h0zuyfN5B2uoP5TtMpSlLWhjlqgflziczysfEE,2715
++drift_cli/export_impl/raw.py,sha256=_fiaAceGwu7FnMBFs_gNhPaTT1xKwytAdQTEgfyaVrc,5650
+ drift_cli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ drift_cli/utils/consoles.py,sha256=0Lywaaz1433HiwE1DK2q3rnTh5rYzQw5uht0IErH8TI,129
+-drift_cli/utils/error.py,sha256=auRGzK96sf3ufWQDI9YK-5aMGElMJPtjUtczrU1RKi0,366
+-drift_cli/utils/helpers.py,sha256=orrIu45Q7BYiyw4tzGLeYS4tiiRONKGytDQ_gpsq-EM,4884
++drift_cli/utils/error.py,sha256=3W_8vy-7WtJAyddqpU7F8ZeNdhLMfjKy9FxjQ0YtJcU,513
++drift_cli/utils/helpers.py,sha256=lLnmlCgPq5ELziF_PhUN9b9IfJoJzvkaqlgx2duCaLI,5060
+ drift_cli/utils/humanize.py,sha256=zNv87Roru0c0bb-3H5ElcjmDECJm5S3EUmxOv9uGcMM,2280
+-drift_cli-0.4.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+-drift_cli-0.4.0.dist-info/METADATA,sha256=gNWfNiKeCcP0vQJpM5Pj64mNVM3GuI6QXENFwFlnl1s,22526
+-drift_cli-0.4.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+-drift_cli-0.4.0.dist-info/entry_points.txt,sha256=a-s7P_Qs_-8nC4SSsNVYRIt89eC0UJ1kbKwfzegg0Nc,45
+-drift_cli-0.4.0.dist-info/top_level.txt,sha256=TKpQc8YX_9mP5LHboxJvCYI4BBg80wMmjWoxkcr77tk,10
+-drift_cli-0.4.0.dist-info/RECORD,,
++drift_cli-0.5.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
++drift_cli-0.5.0.dist-info/METADATA,sha256=DeEUCGtLfsHSL-6ZaOmCTC26rqeFEQNTjMOULBKBNYE,22526
++drift_cli-0.5.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++drift_cli-0.5.0.dist-info/entry_points.txt,sha256=a-s7P_Qs_-8nC4SSsNVYRIt89eC0UJ1kbKwfzegg0Nc,45
++drift_cli-0.5.0.dist-info/top_level.txt,sha256=TKpQc8YX_9mP5LHboxJvCYI4BBg80wMmjWoxkcr77tk,10
++drift_cli-0.5.0.dist-info/RECORD,,
+```
+

@@ -1,0 +1,891 @@
+--- tmp/ufbt-0.2.0b9.tar.gz
++++ tmp/ufbt-0.2.0rc0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ufbt-0.2.0b9.tar", last modified: Wed Apr  5 11:38:11 2023, max compression
+│ +gzip compressed data, was "ufbt-0.2.0rc0.tar", last modified: Thu Apr  6 14:07:44 2023, max compression
+│   --- ufbt-0.2.0b9.tar
+├── +++ ufbt-0.2.0rc0.tar
+│ ├── file list
+│ │ @@ -1,15 +1,15 @@
+│ │ -drwxr-xr-x   0 hedger     (501) staff       (20)        0 2023-04-05 11:38:11.950106 ufbt-0.2.0b9/
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)     5935 2023-04-05 11:38:11.950003 ufbt-0.2.0b9/PKG-INFO
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)     4650 2023-04-05 11:33:49.000000 ufbt-0.2.0b9/README.md
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)     1425 2023-04-05 11:35:48.000000 ufbt-0.2.0b9/pyproject.toml
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)       38 2023-04-05 11:38:11.950140 ufbt-0.2.0b9/setup.cfg
+│ │ -drwxr-xr-x   0 hedger     (501) staff       (20)        0 2023-04-05 11:38:11.949227 ufbt-0.2.0b9/ufbt/
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)     1727 2023-04-05 10:41:05.000000 ufbt-0.2.0b9/ufbt/__init__.py
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)       97 2023-04-05 10:41:18.000000 ufbt-0.2.0b9/ufbt/__main__.py
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)    20422 2023-04-05 11:33:07.000000 ufbt-0.2.0b9/ufbt/bootstrap.py
+│ │ -drwxr-xr-x   0 hedger     (501) staff       (20)        0 2023-04-05 11:38:11.949862 ufbt-0.2.0b9/ufbt.egg-info/
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)     5935 2023-04-05 11:38:11.000000 ufbt-0.2.0b9/ufbt.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)      219 2023-04-05 11:38:11.000000 ufbt-0.2.0b9/ufbt.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)        1 2023-04-05 11:38:11.000000 ufbt-0.2.0b9/ufbt.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)       85 2023-04-05 11:38:11.000000 ufbt-0.2.0b9/ufbt.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 hedger     (501) staff       (20)        5 2023-04-05 11:38:11.000000 ufbt-0.2.0b9/ufbt.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:07:44.991598 ufbt-0.2.0rc0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6261 2023-04-06 14:07:44.991598 ufbt-0.2.0rc0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4975 2023-04-06 14:07:33.000000 ufbt-0.2.0rc0/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1792 2023-04-06 14:07:33.000000 ufbt-0.2.0rc0/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 14:07:44.991598 ufbt-0.2.0rc0/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:07:44.991598 ufbt-0.2.0rc0/ufbt/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1813 2023-04-06 14:07:33.000000 ufbt-0.2.0rc0/ufbt/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       97 2023-04-06 14:07:33.000000 ufbt-0.2.0rc0/ufbt/__main__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23426 2023-04-06 14:07:33.000000 ufbt-0.2.0rc0/ufbt/bootstrap.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:07:44.991598 ufbt-0.2.0rc0/ufbt.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6261 2023-04-06 14:07:44.000000 ufbt-0.2.0rc0/ufbt.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      219 2023-04-06 14:07:44.000000 ufbt-0.2.0rc0/ufbt.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 14:07:44.000000 ufbt-0.2.0rc0/ufbt.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 14:07:44.000000 ufbt-0.2.0rc0/ufbt.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 14:07:44.000000 ufbt-0.2.0rc0/ufbt.egg-info/top_level.txt
+│ │   --- ufbt-0.2.0b9/PKG-INFO
+│ ├── +++ ufbt-0.2.0rc0/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ufbt
+│ │ -Version: 0.2.0b9
+│ │ +Version: 0.2.0rc0
+│ │  Summary: uFBT - micro Flipper Build Tool. Tool for building and developing applications (.fap) for Flipper Zero and its device family.
+│ │  Author-email: "Flipper Devices Inc." <pypi@flipperdevices.com>
+│ │  License: GPL-3.0
+│ │  Project-URL: homepage, https://github.com/flipperdevices/flipperzero-ufbt
+│ │  Project-URL: documentation, https://github.com/flipperdevices/flipperzero-ufbt
+│ │  Project-URL: repository, https://github.com/flipperdevices/flipperzero-ufbt
+│ │  Project-URL: issues, https://github.com/flipperdevices/flipperzero-ufbt/issues
+│ │ @@ -70,24 +70,26 @@
+│ │   * `ufbt cli` starts a CLI session with the device;
+│ │   * `ufbt lint`, `ufbt format` run clang-format on application's sources.
+│ │  
+│ │  ## Managing the SDK
+│ │  
+│ │  To update the SDK, run `ufbt update`. This will download and install all required SDK components from previously used source.
+│ │  
+│ │ -- To switch to SDK for a different release channel, run `ufbt update --channel=[dev|rc|release]`. 
+│ │ +- To switch to SDK for a different **release channel**, run `ufbt update --channel=[dev|rc|release]`. 
+│ │      - uFBT also supports 3rd-party update indexers, following the same schema as [official firmware](https://github.com/flipperdevices/flipperzero-firmware). To use them, run `ufbt update --index-url=<url>`, where `<url>` is a URL to the index file, e.g. `https://update.flipperzero.one/firmware/directory.json`.
+│ │ -- To use SDK for a certain release or a not-yet-merged branch from official repo, run `ufbt update --branch=0.81.1` or `ufbt update --branch=owner/my-awesome-feature`. 
+│ │ +- To use SDK for a **certain release** or a not-yet-merged **branch** from official repo, run `ufbt update --branch=0.81.1` or `ufbt update --branch=owner/my-awesome-feature`. 
+│ │      - You can also use branches from other repos, where build artifacts are available from an indexed directory, by specifying `--index-url=<url>`.
+│ │ -
+│ │ -- uFBT can also download and update the SDK from any fixed URL. To do this, run `ufbt update --url=<url>`.
+│ │ +- uFBT can also download and update the SDK from any **fixed URL**. To do this, run `ufbt update --url=<url>`.
+│ │ +- To use a **local copy** of the SDK, run `ufbt update --local=<path>`. This will use the SDK located in `<path>` instead of downloading it. Useful for testing local builds of the SDK.
+│ │  
+│ │  uFBT stores its state in `.ufbt` subfolder in your home directory. You can override this location by setting `UFBT_HOME` environment variable.
+│ │  
+│ │  
+│ │  ### ufbt-bootstrap
+│ │  
+│ │  Updating the SDK is handled by uFBT component called _bootstrap_. It has a dedicated entry point, `ufbt-bootstrap`, with additional options that might be useful in certain scenarios. Run `ufbt-bootstrap --help` to see them.
+│ │  
+│ │  ## Troubleshooting
+│ │  
+│ │  If something goes wrong and uFBT state becomes corrupted, you can reset it by running `ufbt clean`. If that doesn't work, you can try removing `.ufbt` subfolder manually from your home folder.
+│ │ +
+│ │ +`ufbt-bootstrap` and SDK-related `ufbt` subcommands accept `--verbose` option that will print additional debug information.
+│ │   --- ufbt-0.2.0b9/README.md
+│ ├── +++ ufbt-0.2.0rc0/README.md
+│ │┄ Files 6% similar despite different names
+│ │ @@ -44,24 +44,26 @@
+│ │   * `ufbt cli` starts a CLI session with the device;
+│ │   * `ufbt lint`, `ufbt format` run clang-format on application's sources.
+│ │  
+│ │  ## Managing the SDK
+│ │  
+│ │  To update the SDK, run `ufbt update`. This will download and install all required SDK components from previously used source.
+│ │  
+│ │ -- To switch to SDK for a different release channel, run `ufbt update --channel=[dev|rc|release]`. 
+│ │ +- To switch to SDK for a different **release channel**, run `ufbt update --channel=[dev|rc|release]`. 
+│ │      - uFBT also supports 3rd-party update indexers, following the same schema as [official firmware](https://github.com/flipperdevices/flipperzero-firmware). To use them, run `ufbt update --index-url=<url>`, where `<url>` is a URL to the index file, e.g. `https://update.flipperzero.one/firmware/directory.json`.
+│ │ -- To use SDK for a certain release or a not-yet-merged branch from official repo, run `ufbt update --branch=0.81.1` or `ufbt update --branch=owner/my-awesome-feature`. 
+│ │ +- To use SDK for a **certain release** or a not-yet-merged **branch** from official repo, run `ufbt update --branch=0.81.1` or `ufbt update --branch=owner/my-awesome-feature`. 
+│ │      - You can also use branches from other repos, where build artifacts are available from an indexed directory, by specifying `--index-url=<url>`.
+│ │ -
+│ │ -- uFBT can also download and update the SDK from any fixed URL. To do this, run `ufbt update --url=<url>`.
+│ │ +- uFBT can also download and update the SDK from any **fixed URL**. To do this, run `ufbt update --url=<url>`.
+│ │ +- To use a **local copy** of the SDK, run `ufbt update --local=<path>`. This will use the SDK located in `<path>` instead of downloading it. Useful for testing local builds of the SDK.
+│ │  
+│ │  uFBT stores its state in `.ufbt` subfolder in your home directory. You can override this location by setting `UFBT_HOME` environment variable.
+│ │  
+│ │  
+│ │  ### ufbt-bootstrap
+│ │  
+│ │  Updating the SDK is handled by uFBT component called _bootstrap_. It has a dedicated entry point, `ufbt-bootstrap`, with additional options that might be useful in certain scenarios. Run `ufbt-bootstrap --help` to see them.
+│ │  
+│ │  ## Troubleshooting
+│ │  
+│ │  If something goes wrong and uFBT state becomes corrupted, you can reset it by running `ufbt clean`. If that doesn't work, you can try removing `.ufbt` subfolder manually from your home folder.
+│ │ +
+│ │ +`ufbt-bootstrap` and SDK-related `ufbt` subcommands accept `--verbose` option that will print additional debug information.
+│ │   --- ufbt-0.2.0b9/pyproject.toml
+│ ├── +++ ufbt-0.2.0rc0/pyproject.toml
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │ -requires = ["setuptools"]
+│ │ +requires = ["setuptools", "setuptools-git-versioning<2"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "ufbt"
+│ │ -version = "0.2.0b9"
+│ │ +dynamic = ["version"]
+│ │  authors = [{ name = "Flipper Devices Inc.", email = "pypi@flipperdevices.com" }]
+│ │  description = "uFBT - micro Flipper Build Tool. Tool for building and developing applications (.fap) for Flipper Zero and its device family."
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.8"
+│ │  keywords = ["ufbt", "flipperzero", "fbt", "stm32", "fap"]
+│ │  license = { text = "GPL-3.0" }
+│ │  classifiers = [
+│ │ @@ -32,7 +32,15 @@
+│ │  documentation = "https://github.com/flipperdevices/flipperzero-ufbt"
+│ │  repository = "https://github.com/flipperdevices/flipperzero-ufbt"
+│ │  issues = "https://github.com/flipperdevices/flipperzero-ufbt/issues"
+│ │  
+│ │  [project.scripts]
+│ │  ufbt = "ufbt:ufbt_cli"
+│ │  ufbt-bootstrap = "ufbt.bootstrap:bootstrap_cli"
+│ │ +
+│ │ +# https://setuptools-git-versioning.readthedocs.io/en/stable/schemas/file/dev_release_file.html#development-releases-prereleases-from-dev-branch
+│ │ +[tool.setuptools-git-versioning]
+│ │ +enabled = true
+│ │ +version_file = "VERSION.txt"
+│ │ +count_commits_from_version_file = true
+│ │ +dev_template = "{tag}.dev{ccount}"
+│ │ +dirty_template = "{tag}.dev{ccount}"
+│ │   --- ufbt-0.2.0b9/ufbt/__init__.py
+│ ├── +++ ufbt-0.2.0rc0/ufbt/__init__.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -11,24 +11,25 @@
+│ │          os.environ["UFBT_STATE_DIR"] = os.path.expanduser("~/.ufbt")
+│ │      if not os.environ.get("FBT_TOOLCHAIN_PATH"):
+│ │          os.environ["FBT_TOOLCHAIN_PATH"] = os.environ["UFBT_STATE_DIR"]
+│ │  
+│ │      ufbt_state_dir = pathlib.Path(os.environ["UFBT_STATE_DIR"])
+│ │  
+│ │      # if any of bootstrap subcommands are in the arguments - call it instead
+│ │ -    # kept for compatibility with old scripts, better use `ufbt-bootstrap`
+│ │ +    # kept for compatibility with old scripts, better use `ufbt-bootstrap` directly
+│ │      if any(map(sys.argv.__contains__, bootstrap_subcommands)):
+│ │          return bootstrap_cli()
+│ │  
+│ │      if not os.path.exists(ufbt_state_dir):
+│ │          bootstrap_cli()
+│ │  
+│ │      if not (ufbt_state_dir / "current" / "scripts" / "ufbt").exists():
+│ │ -        print("SDK is missing scripts distribution.")
+│ │ +        print("SDK is missing scripts distribution!")
+│ │          print("You might be trying to use an SDK in an outdated format.")
+│ │ +        print("Run `ufbt update -h` for more information on how to update.")
+│ │          return 1
+│ │  
+│ │      UFBT_APP_DIR = os.getcwd()
+│ │  
+│ │      if platform.system() == "Windows":
+│ │          commandline = (
+│ │              'call "%UFBT_STATE_DIR%/current/scripts/toolchain/fbtenv.cmd" env & '
+│ │   --- ufbt-0.2.0b9/ufbt/bootstrap.py
+│ ├── +++ ufbt-0.2.0rc0/ufbt/bootstrap.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -23,16 +23,14 @@
+│ │      level=logging.INFO,
+│ │      datefmt="%H:%M:%S",
+│ │  )
+│ │  log = logging.getLogger(__name__)
+│ │  
+│ │  ##############################################################################
+│ │  
+│ │ -bootstrap_subcommands = ("update", "status", "clean")
+│ │ -
+│ │  
+│ │  class FileType(enum.Enum):
+│ │      SDK_ZIP = "sdk_zip"
+│ │      LIB_ZIP = "lib_zip"
+│ │      CORE2_FIRMWARE_TGZ = "core2_firmware_tgz"
+│ │      RESOURCES_TGZ = "resources_tgz"
+│ │      SCRIPTS_TGZ = "scripts_tgz"
+│ │ @@ -49,31 +47,21 @@
+│ │  
+│ │  class BaseSdkLoader:
+│ │      """
+│ │      Base class for SDK loaders.
+│ │      """
+│ │  
+│ │      VERSION_UNKNOWN = "unknown"
+│ │ +    ALWAYS_UPDATE_VERSIONS = [VERSION_UNKNOWN, "local"]
+│ │      USER_AGENT = "uFBT SDKLoader/0.2"
+│ │      _SSL_CONTEXT = None
+│ │  
+│ │      def __init__(self, download_dir: str):
+│ │          self._download_dir = download_dir
+│ │  
+│ │ -    # Returns local FS path. Downloads file if necessary
+│ │ -    def get_sdk_component(self, target: str) -> str:
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │ -    def get_metadata(self) -> Dict[str, str]:
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │ -    @staticmethod
+│ │ -    def metadata_to_init_kwargs(metadata: dict) -> Dict[str, str]:
+│ │ -        raise NotImplementedError()
+│ │ -
+│ │      def _open_url(self, url: str):
+│ │          request = Request(url, headers={"User-Agent": self.USER_AGENT})
+│ │          return urlopen(request, context=self._SSL_CONTEXT)
+│ │  
+│ │      def _fetch_file(self, url: str) -> str:
+│ │          log.debug(f"Fetching {url}")
+│ │          file_name = PurePosixPath(unquote(urlparse(url).path)).parts[-1]
+│ │ @@ -83,21 +71,46 @@
+│ │  
+│ │          with self._open_url(url) as response, open(file_path, "wb") as out_file:
+│ │              data = response.read()
+│ │              out_file.write(data)
+│ │  
+│ │          return file_path
+│ │  
+│ │ +    # Returns local FS path. Downloads file if necessary
+│ │ +    def get_sdk_component(self, target: str) -> str:
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +    # Constructs metadata dict from loader-specific data
+│ │ +    def get_metadata(self) -> Dict[str, str]:
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +    # Reconstruction of loader-specific data from metadata dict
+│ │ +    @classmethod
+│ │ +    def metadata_to_init_kwargs(cls, metadata: dict) -> Dict[str, str]:
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +    # Conversion of argparse.Namespace to metadata dict
+│ │ +    @classmethod
+│ │ +    def args_namespace_to_metadata(
+│ │ +        cls, namespace: argparse.Namespace
+│ │ +    ) -> Dict[str, str]:
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │ +    @classmethod
+│ │ +    def add_args_to_mode_group(cls, mode_group):
+│ │ +        raise NotImplementedError()
+│ │ +
+│ │  
+│ │  class BranchSdkLoader(BaseSdkLoader):
+│ │      """
+│ │      Loads SDK from a branch on update server.
+│ │      Uses HTML parsing of index page to find all files in the branch.
+│ │      """
+│ │  
+│ │ +    LOADER_MODE_KEY = "branch"
+│ │      UPDATE_SERVER_BRANCH_ROOT = "https://update.flipperzero.one/builds/firmware"
+│ │  
+│ │      class LinkExtractor(HTMLParser):
+│ │          FILE_NAME_RE = re.compile(r"flipper-z-(\w+)-(\w+)-(.+)\.(\w+)")
+│ │  
+│ │          def reset(self) -> None:
+│ │              super().reset()
+│ │ @@ -137,97 +150,100 @@
+│ │              html = response.read().decode("utf-8")
+│ │              extractor = BranchSdkLoader.LinkExtractor()
+│ │              extractor.feed(html)
+│ │              self._branch_files = extractor.files
+│ │              self._version = extractor.version
+│ │          log.info(f"Found version {self._version}")
+│ │  
+│ │ +    def get_sdk_component(self, target: str) -> str:
+│ │ +        if not (file_name := self._branch_files.get((FileType.SDK_ZIP, target), None)):
+│ │ +            raise ValueError(f"SDK bundle not found for {target}")
+│ │ +
+│ │ +        return self._fetch_file(self._branch_url + file_name)
+│ │ +
+│ │      def get_metadata(self) -> Dict[str, str]:
+│ │          return {
+│ │ -            "mode": "branch",
+│ │ +            "mode": self.LOADER_MODE_KEY,
+│ │              "branch": self._branch,
+│ │              "version": self._version,
+│ │ -            "branch_root_url": self._branch_root,
+│ │ +            "branch_root": self._branch_root,
+│ │          }
+│ │  
+│ │ -    @staticmethod
+│ │ -    def metadata_to_init_kwargs(metadata: dict) -> Dict[str, str]:
+│ │ +    @classmethod
+│ │ +    def metadata_to_init_kwargs(cls, metadata: dict) -> Dict[str, str]:
+│ │          return {
+│ │              "branch": metadata["branch"],
+│ │ -            "branch_root_url": metadata.get("branch_root_url", None),
+│ │ +            "branch_root_url": metadata.get(
+│ │ +                "branch_root", BranchSdkLoader.UPDATE_SERVER_BRANCH_ROOT
+│ │ +            ),
+│ │          }
+│ │  
+│ │ -    def get_sdk_component(self, target: str) -> str:
+│ │ -        if not (file_name := self._branch_files.get((FileType.SDK_ZIP, target), None)):
+│ │ -            raise ValueError(f"SDK bundle not found for {target}")
+│ │ +    @classmethod
+│ │ +    def args_namespace_to_metadata(
+│ │ +        cls, namespace: argparse.Namespace
+│ │ +    ) -> Dict[str, str]:
+│ │ +        return {
+│ │ +            "branch": namespace.branch,
+│ │ +            "branch_root": namespace.index_url,
+│ │ +        }
+│ │  
+│ │ -        return self._fetch_file(self._branch_url + file_name)
+│ │ +    @classmethod
+│ │ +    def add_args_to_mode_group(cls, mode_group):
+│ │ +        mode_group.add_argument(
+│ │ +            "--branch",
+│ │ +            "-b",
+│ │ +            type=str,
+│ │ +            help="Branch to load SDK from",
+│ │ +        )
+│ │  
+│ │  
+│ │  class UpdateChannelSdkLoader(BaseSdkLoader):
+│ │      """
+│ │      Loads SDK from a release channel on update server.
+│ │      Uses JSON index to find all files in the channel.
+│ │      Supports official update server and unofficial servers following the same format.
+│ │      """
+│ │  
+│ │ +    LOADER_MODE_KEY = "channel"
+│ │      OFFICIAL_INDEX_URL = "https://update.flipperzero.one/firmware/directory.json"
+│ │  
+│ │      class UpdateChannel(enum.Enum):
+│ │          DEV = "development"
+│ │          RC = "release-candidate"
+│ │          RELEASE = "release"
+│ │  
+│ │      def __init__(
+│ │ -        self, download_dir: str, channel: UpdateChannel, index_url: str = None
+│ │ +        self, download_dir: str, channel: UpdateChannel, index_html_url: str = None
+│ │      ):
+│ │          super().__init__(download_dir)
+│ │          self.channel = channel
+│ │ -        self.index_url = index_url or self.OFFICIAL_INDEX_URL
+│ │ +        self.index_html_url = index_html_url or self.OFFICIAL_INDEX_URL
+│ │          self.version_info = self._fetch_version(self.channel)
+│ │  
+│ │ -    def get_sdk_component(self, target: str) -> str:
+│ │ -        file_info = self._get_file_info(self.version_info, FileType.SDK_ZIP, target)
+│ │ -        if not (file_url := file_info.get("url", None)):
+│ │ -            raise ValueError(f"Invalid file url")
+│ │ -
+│ │ -        return self._fetch_file(file_url)
+│ │ -
+│ │ -    def get_metadata(self) -> Dict[str, str]:
+│ │ -        return {
+│ │ -            "mode": "channel",
+│ │ -            "channel": self.channel.name.lower(),
+│ │ -            "index_url": self.index_url,
+│ │ -            "version": self.version_info["version"],
+│ │ -        }
+│ │ -
+│ │ -    @staticmethod
+│ │ -    def metadata_to_init_kwargs(metadata: dict) -> Dict[str, str]:
+│ │ -        return {
+│ │ -            "channel": UpdateChannelSdkLoader.UpdateChannel[
+│ │ -                metadata["channel"].upper()
+│ │ -            ],
+│ │ -            "index_url": metadata.get("index_url", None),
+│ │ -        }
+│ │ -
+│ │      def _fetch_version(self, channel: UpdateChannel) -> dict:
+│ │ -        log.info(f"Fetching version info for {channel} from {self.index_url}")
+│ │ -        data = json.loads(self._open_url(self.index_url).read().decode("utf-8"))
+│ │ +        log.info(f"Fetching version info for {channel} from {self.index_html_url}")
+│ │ +        try:
+│ │ +            data = json.loads(
+│ │ +                self._open_url(self.index_html_url).read().decode("utf-8")
+│ │ +            )
+│ │ +        except json.decoder.JSONDecodeError as e:
+│ │ +            raise ValueError(f"Invalid JSON: {e}")
+│ │  
+│ │          if not (channels := data.get("channels", [])):
+│ │              raise ValueError(f"Invalid channel: {channel}")
+│ │  
+│ │          channel_data = next((c for c in channels if c["id"] == channel.value), None)
+│ │          if not channel_data:
+│ │              raise ValueError(f"Invalid channel: {channel}")
+│ │  
+│ │          if not (versions := channel_data.get("versions", [])):
+│ │              raise ValueError(f"Empty channel: {channel}")
+│ │  
+│ │          log.info(f"Using version: {versions[0]['version']}")
+│ │ +        log.debug(f"Changelog: {versions[0].get('changelog', 'None')}")
+│ │          return versions[0]
+│ │  
+│ │      @staticmethod
+│ │      def _get_file_info(version_data: dict, file_type: FileType, file_target: str):
+│ │  
+│ │          if not (files := version_data.get("files", [])):
+│ │              raise ValueError(f"Empty files list")
+│ │ @@ -242,35 +258,147 @@
+│ │                  None,
+│ │              )
+│ │          ):
+│ │              raise ValueError(f"Invalid file type: {file_type}")
+│ │  
+│ │          return file_info
+│ │  
+│ │ +    def get_sdk_component(self, target: str) -> str:
+│ │ +        file_info = self._get_file_info(self.version_info, FileType.SDK_ZIP, target)
+│ │ +        if not (file_url := file_info.get("url", None)):
+│ │ +            raise ValueError(f"Invalid file url")
+│ │ +
+│ │ +        return self._fetch_file(file_url)
+│ │ +
+│ │ +    def get_metadata(self) -> Dict[str, str]:
+│ │ +        return {
+│ │ +            "mode": self.LOADER_MODE_KEY,
+│ │ +            "channel": self.channel.name.lower(),
+│ │ +            "index_html": self.index_html_url,
+│ │ +            "version": self.version_info["version"],
+│ │ +        }
+│ │ +
+│ │ +    @classmethod
+│ │ +    def metadata_to_init_kwargs(cls, metadata: dict) -> Dict[str, str]:
+│ │ +        return {
+│ │ +            "channel": UpdateChannelSdkLoader.UpdateChannel[
+│ │ +                metadata["channel"].upper()
+│ │ +            ],
+│ │ +            "index_html_url": metadata.get("index_html", None),
+│ │ +        }
+│ │ +
+│ │ +    @classmethod
+│ │ +    def args_namespace_to_metadata(
+│ │ +        cls, namespace: argparse.Namespace
+│ │ +    ) -> Dict[str, str]:
+│ │ +        return {
+│ │ +            "channel": namespace.channel,
+│ │ +            "index_html": namespace.index_url,
+│ │ +        }
+│ │ +
+│ │ +    @classmethod
+│ │ +    def add_args_to_mode_group(cls, mode_group):
+│ │ +        mode_group.add_argument(
+│ │ +            "--channel",
+│ │ +            "-c",
+│ │ +            type=str,
+│ │ +            help="Channel to load SDK from",
+│ │ +            choices=[c.name.lower() for c in cls.UpdateChannel],
+│ │ +        )
+│ │ +
+│ │  
+│ │  class UrlSdkLoader(BaseSdkLoader):
+│ │      """
+│ │      Loads SDK from a static URL. Does not extract version info.
+│ │      """
+│ │  
+│ │ +    LOADER_MODE_KEY = "url"
+│ │ +
+│ │      def __init__(self, download_dir: str, url: str):
+│ │          super().__init__(download_dir)
+│ │          self.url = url
+│ │  
+│ │      def get_sdk_component(self, target: str) -> str:
+│ │          log.info(f"Fetching SDK from {self.url}")
+│ │          return self._fetch_file(self.url)
+│ │  
+│ │      def get_metadata(self) -> Dict[str, str]:
+│ │ -        return {"mode": "url", "url": self.url, "version": self.VERSION_UNKNOWN}
+│ │ +        return {
+│ │ +            "mode": self.LOADER_MODE_KEY,
+│ │ +            "url": self.url,
+│ │ +            "version": self.VERSION_UNKNOWN,
+│ │ +        }
+│ │  
+│ │ -    @staticmethod
+│ │ -    def metadata_to_init_kwargs(metadata: dict) -> Dict[str, str]:
+│ │ +    @classmethod
+│ │ +    def metadata_to_init_kwargs(cls, metadata: dict) -> Dict[str, str]:
+│ │          return {"url": metadata["url"]}
+│ │  
+│ │ +    @classmethod
+│ │ +    def args_namespace_to_metadata(
+│ │ +        cls, namespace: argparse.Namespace
+│ │ +    ) -> Dict[str, str]:
+│ │ +        return {"url": namespace.url}
+│ │ +
+│ │ +    @classmethod
+│ │ +    def add_args_to_mode_group(cls, mode_group):
+│ │ +        mode_group.add_argument(
+│ │ +            "--url",
+│ │ +            "-u",
+│ │ +            type=str,
+│ │ +            help="Direct URL to load SDK from",
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +class LocalSdkLoader(BaseSdkLoader):
+│ │ +    """
+│ │ +    Loads SDK from a file in filesystem. Does not extract version info.
+│ │ +    """
+│ │ +
+│ │ +    LOADER_MODE_KEY = "local"
+│ │ +
+│ │ +    def __init__(self, download_dir: str, file_path: str):
+│ │ +        super().__init__(download_dir)
+│ │ +        self.file_path = file_path
+│ │ +
+│ │ +    def get_sdk_component(self, target: str) -> str:
+│ │ +        log.info(f"Loading SDK from {self.file_path}")
+│ │ +        return self.file_path
+│ │ +
+│ │ +    def get_metadata(self) -> Dict[str, str]:
+│ │ +        return {
+│ │ +            "mode": self.LOADER_MODE_KEY,
+│ │ +            "file_path": self.file_path,
+│ │ +            "version": self.VERSION_UNKNOWN,
+│ │ +        }
+│ │ +
+│ │ +    @classmethod
+│ │ +    def metadata_to_init_kwargs(cls, metadata: dict) -> Dict[str, str]:
+│ │ +        return {"file_path": metadata["file_path"]}
+│ │ +
+│ │ +    @classmethod
+│ │ +    def args_namespace_to_metadata(cls, args: argparse.Namespace) -> Dict[str, str]:
+│ │ +        return {"file_path": args.local}
+│ │ +
+│ │ +    @classmethod
+│ │ +    def add_args_to_mode_group(cls, mode_group):
+│ │ +        mode_group.add_argument(
+│ │ +            f"--local",
+│ │ +            f"-l",
+│ │ +            type=str,
+│ │ +            help="Path to local SDK zip file",
+│ │ +        )
+│ │ +
+│ │ +
+│ │ +all_boostrap_loader_cls = (
+│ │ +    BranchSdkLoader,
+│ │ +    UpdateChannelSdkLoader,
+│ │ +    UrlSdkLoader,
+│ │ +    LocalSdkLoader,
+│ │ +)
+│ │ +
+│ │  
+│ │  ##############################################################################
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class SdkDeployTask:
+│ │      """
+│ │ @@ -304,32 +432,23 @@
+│ │          task.hw_target = SdkDeployTask.DEFAULT_HW_TARGET
+│ │          task.mode = "channel"
+│ │          task.all_params["channel"] = UpdateChannelSdkLoader.UpdateChannel.RELEASE.value
+│ │          return task
+│ │  
+│ │      @staticmethod
+│ │      def from_args(args: argparse.Namespace) -> "SdkDeployTask":
+│ │ -        # TODO: unify construction for all modes?
+│ │          task = SdkDeployTask()
+│ │          task.hw_target = args.hw_target or SdkDeployTask.DEFAULT_HW_TARGET
+│ │          task.force = args.force
+│ │ -        if args.branch:
+│ │ -            task.mode = "branch"
+│ │ -            task.all_params["branch"] = args.branch
+│ │ -            if args.index_url:
+│ │ -                task.all_params["branch_root_url"] = args.index_url
+│ │ -        elif args.channel:
+│ │ -            task.mode = "channel"
+│ │ -            task.all_params["channel"] = args.channel
+│ │ -            if args.index_url:
+│ │ -                task.all_params["index_url"] = args.index_url
+│ │ -        elif args.url:
+│ │ -            task.mode = "url"
+│ │ -            task.all_params["url"] = args.url
+│ │ -        task.all_params = vars(args)
+│ │ +        for loader_cls in all_boostrap_loader_cls:
+│ │ +            task.all_params.update(loader_cls.args_namespace_to_metadata(args))
+│ │ +            if getattr(args, loader_cls.LOADER_MODE_KEY):
+│ │ +                task.mode = loader_cls.LOADER_MODE_KEY
+│ │ +                break
+│ │ +        log.debug(f"deploy task from args: {task=}")
+│ │          return task
+│ │  
+│ │      @staticmethod
+│ │      def from_dict(data: Dict[str, str]) -> "SdkDeployTask":
+│ │          task = SdkDeployTask()
+│ │          task.hw_target = data.get("hw_target")
+│ │          task.force = False
+│ │ @@ -339,24 +458,22 @@
+│ │  
+│ │  
+│ │  class SdkLoaderFactory:
+│ │      @staticmethod
+│ │      def create_for_task(task: SdkDeployTask, download_dir: str) -> BaseSdkLoader:
+│ │          log.debug(f"SdkLoaderFactory::create_for_task {task=}")
+│ │          loader_cls = None
+│ │ -        if task.mode == "branch":
+│ │ -            loader_cls = BranchSdkLoader
+│ │ -        elif task.mode == "channel":
+│ │ -            loader_cls = UpdateChannelSdkLoader
+│ │ -        elif task.mode == "url":
+│ │ -            loader_cls = UrlSdkLoader
+│ │ -        else:
+│ │ +        for loader_cls in all_boostrap_loader_cls:
+│ │ +            if loader_cls.LOADER_MODE_KEY == task.mode:
+│ │ +                break
+│ │ +        if loader_cls is None:
+│ │              raise ValueError(f"Invalid mode: {task.mode}")
+│ │  
+│ │          ctor_kwargs = loader_cls.metadata_to_init_kwargs(task.all_params)
+│ │ +        log.debug(f"SdkLoaderFactory::create_for_task {loader_cls=}, {ctor_kwargs=}")
+│ │          return loader_cls(download_dir, **ctor_kwargs)
+│ │  
+│ │  
+│ │  class UfbtSdkDeployer:
+│ │      UFBT_STATE_FILE_NAME = "ufbt_state.json"
+│ │  
+│ │      def __init__(self, ufbt_state_dir: str):
+│ │ @@ -380,16 +497,16 @@
+│ │          sdk_target_dir = self.current_sdk_dir.absolute()
+│ │          log.info(f"uFBT SDK dir: {sdk_target_dir}")
+│ │          if not task.force and os.path.exists(sdk_target_dir):
+│ │              # Read existing state
+│ │              with open(self.state_file, "r") as f:
+│ │                  ufbt_state = json.load(f)
+│ │              # Check if we need to update
+│ │ -            if ufbt_state.get("version") == sdk_loader.VERSION_UNKNOWN:
+│ │ -                log.info("SDK is unversioned, updating")
+│ │ +            if ufbt_state.get("version") in sdk_loader.ALWAYS_UPDATE_VERSIONS:
+│ │ +                log.info("Cannot determine SDK version, updating")
+│ │              elif (
+│ │                  ufbt_state.get("version") == sdk_loader.get_metadata().get("version")
+│ │                  and ufbt_state.get("hw_target") == task.hw_target
+│ │              ):
+│ │                  log.info("SDK is up-to-date")
+│ │                  return True
+│ │  
+│ │ @@ -434,74 +551,58 @@
+│ │          raise NotImplementedError
+│ │  
+│ │      def _add_arguments(self, parser: argparse.ArgumentParser) -> None:
+│ │          raise NotImplementedError
+│ │  
+│ │  
+│ │  class UpdateSubcommand(CliSubcommand):
+│ │ +    COMMAND = "update"
+│ │ +
+│ │      def __init__(self):
+│ │ -        super().__init__("update", "Update uFBT SDK")
+│ │ +        super().__init__(self.COMMAND, "Update uFBT SDK")
+│ │  
+│ │      def _add_arguments(self, parser: argparse.ArgumentParser) -> None:
+│ │ -        mode_group = parser.add_mutually_exclusive_group(required=False)
+│ │ -        mode_group.add_argument(
+│ │ -            "--url",
+│ │ -            "-u",
+│ │ -            help="URL to use",
+│ │ -        )
+│ │ -        mode_group.add_argument(
+│ │ -            "--branch",
+│ │ -            "-b",
+│ │ -            help="Branch to use",
+│ │ -        )
+│ │ -        mode_group.add_argument(
+│ │ -            "--channel",
+│ │ -            "-c",
+│ │ -            help="Update channel to use",
+│ │ -            choices=list(
+│ │ -                map(
+│ │ -                    lambda s: s.lower(),
+│ │ -                    UpdateChannelSdkLoader.UpdateChannel.__members__.keys(),
+│ │ -                )
+│ │ -            ),
+│ │ -        )
+│ │          parser.add_argument(
+│ │              "--hw-target",
+│ │              "-t",
+│ │              help="Hardware target",
+│ │          )
+│ │          parser.add_argument(
+│ │              "--index-url",
+│ │ -            help="URL to use for update channel",
+│ │ +            help="URL to use for SDK discovery",
+│ │          )
+│ │ +        mode_group = parser.add_mutually_exclusive_group(required=False)
+│ │ +        for loader_cls in all_boostrap_loader_cls:
+│ │ +            loader_cls.add_args_to_mode_group(mode_group)
+│ │  
+│ │      def _func(self, args) -> int:
+│ │          sdk_deployer = UfbtSdkDeployer(args.ufbt_home)
+│ │          current_task = SdkDeployTask.from_args(args)
+│ │          task_to_deploy = None
+│ │  
+│ │          if previous_task := sdk_deployer.get_previous_task():
+│ │              previous_task.update_from(current_task)
+│ │              task_to_deploy = previous_task
+│ │          else:
+│ │              if current_task.mode:
+│ │                  task_to_deploy = current_task
+│ │              else:
+│ │                  log.error("No previous SDK state was found, fetching latest release")
+│ │ -                log.error("Please specify mode explicitly. See -h for details")
+│ │                  task_to_deploy = SdkDeployTask.default()
+│ │  
+│ │          if not sdk_deployer.deploy(task_to_deploy):
+│ │              return 1
+│ │          return 0
+│ │  
+│ │  
+│ │  class CleanSubcommand(CliSubcommand):
+│ │ +    COMMAND = "clean"
+│ │ +
+│ │      def __init__(self):
+│ │ -        super().__init__("clean", "Clean uFBT SDK state")
+│ │ +        super().__init__(self.COMMAND, "Clean uFBT SDK state")
+│ │  
+│ │      def _add_arguments(self, parser: argparse.ArgumentParser):
+│ │          parser.add_argument(
+│ │              "--downloads",
+│ │              help="Clean downloads",
+│ │              action="store_true",
+│ │              default=False,
+│ │ @@ -528,16 +629,18 @@
+│ │              log.info(f"Cleaning SDK state in {sdk_deployer.current_sdk_dir}")
+│ │              shutil.rmtree(sdk_deployer.current_sdk_dir, ignore_errors=True)
+│ │          log.info("Done")
+│ │          return 0
+│ │  
+│ │  
+│ │  class StatusSubcommand(CliSubcommand):
+│ │ +    COMMAND = "status"
+│ │ +
+│ │      def __init__(self):
+│ │ -        super().__init__("status", "Show uFBT SDK status")
+│ │ +        super().__init__(self.COMMAND, "Show uFBT SDK status")
+│ │  
+│ │      def _add_arguments(self, parser: argparse.ArgumentParser) -> None:
+│ │          pass
+│ │  
+│ │      def _func(self, args) -> int:
+│ │          sdk_deployer = UfbtSdkDeployer(args.ufbt_home)
+│ │          log.info(f"State dir     {sdk_deployer.ufbt_state_dir}")
+│ │ @@ -552,14 +655,21 @@
+│ │              log.info(f"Details       {previous_task.all_params}")
+│ │              return 0
+│ │          else:
+│ │              log.error("SDK is not deployed")
+│ │              return 1
+│ │  
+│ │  
+│ │ +bootstrap_subcommand_classes = (UpdateSubcommand, CleanSubcommand, StatusSubcommand)
+│ │ +
+│ │ +bootstrap_subcommands = (
+│ │ +    subcommand_cls.COMMAND for subcommand_cls in bootstrap_subcommand_classes
+│ │ +)
+│ │ +
+│ │ +
+│ │  def bootstrap_cli() -> Optional[int]:
+│ │      root_parser = argparse.ArgumentParser()
+│ │      root_parser.add_argument(
+│ │          "--no-check-certificate",
+│ │          help="Disable SSL certificate verification",
+│ │          action="store_true",
+│ │          default=False,
+│ │ @@ -574,30 +684,26 @@
+│ │          "--force",
+│ │          "-f",
+│ │          help="Force operation",
+│ │          action="store_true",
+│ │          default=False,
+│ │      )
+│ │      root_parser.add_argument(
+│ │ -        "--debug",
+│ │ -        help="Enable debug logging",
+│ │ +        "--verbose",
+│ │ +        help="Enable extra logging",
+│ │          action="store_true",
+│ │          default=False,
+│ │      )
+│ │  
+│ │      parsers = root_parser.add_subparsers()
+│ │ -    for subcommand in [
+│ │ -        UpdateSubcommand(),
+│ │ -        CleanSubcommand(),
+│ │ -        StatusSubcommand(),
+│ │ -    ]:
+│ │ -        subcommand.add_to_parser(parsers)
+│ │ +    for subcommand_cls in bootstrap_subcommand_classes:
+│ │ +        subcommand_cls().add_to_parser(parsers)
+│ │  
+│ │      args = root_parser.parse_args()
+│ │ -    if args.debug:
+│ │ +    if args.verbose:
+│ │          logging.getLogger().setLevel(logging.DEBUG)
+│ │  
+│ │      if args.no_check_certificate:
+│ │          # Temporary fix for SSL negotiation failure on Mac
+│ │          import ssl
+│ │  
+│ │          _ssl_context = ssl.create_default_context()
+│ │ @@ -609,15 +715,15 @@
+│ │          root_parser.print_help()
+│ │          return 1
+│ │  
+│ │      try:
+│ │          return args.func(args)
+│ │  
+│ │      except Exception as e:
+│ │ -        log.error(f"Failed to run operation: {e}. See --debug for details")
+│ │ -        if args.debug:
+│ │ +        log.error(f"Failed to run operation: {e}. See --verbose for details")
+│ │ +        if args.verbose:
+│ │              raise
+│ │          return 2
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      sys.exit(bootstrap_cli() or 0)
+│ │   --- ufbt-0.2.0b9/ufbt.egg-info/PKG-INFO
+│ ├── +++ ufbt-0.2.0rc0/ufbt.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ufbt
+│ │ -Version: 0.2.0b9
+│ │ +Version: 0.2.0rc0
+│ │  Summary: uFBT - micro Flipper Build Tool. Tool for building and developing applications (.fap) for Flipper Zero and its device family.
+│ │  Author-email: "Flipper Devices Inc." <pypi@flipperdevices.com>
+│ │  License: GPL-3.0
+│ │  Project-URL: homepage, https://github.com/flipperdevices/flipperzero-ufbt
+│ │  Project-URL: documentation, https://github.com/flipperdevices/flipperzero-ufbt
+│ │  Project-URL: repository, https://github.com/flipperdevices/flipperzero-ufbt
+│ │  Project-URL: issues, https://github.com/flipperdevices/flipperzero-ufbt/issues
+│ │ @@ -70,24 +70,26 @@
+│ │   * `ufbt cli` starts a CLI session with the device;
+│ │   * `ufbt lint`, `ufbt format` run clang-format on application's sources.
+│ │  
+│ │  ## Managing the SDK
+│ │  
+│ │  To update the SDK, run `ufbt update`. This will download and install all required SDK components from previously used source.
+│ │  
+│ │ -- To switch to SDK for a different release channel, run `ufbt update --channel=[dev|rc|release]`. 
+│ │ +- To switch to SDK for a different **release channel**, run `ufbt update --channel=[dev|rc|release]`. 
+│ │      - uFBT also supports 3rd-party update indexers, following the same schema as [official firmware](https://github.com/flipperdevices/flipperzero-firmware). To use them, run `ufbt update --index-url=<url>`, where `<url>` is a URL to the index file, e.g. `https://update.flipperzero.one/firmware/directory.json`.
+│ │ -- To use SDK for a certain release or a not-yet-merged branch from official repo, run `ufbt update --branch=0.81.1` or `ufbt update --branch=owner/my-awesome-feature`. 
+│ │ +- To use SDK for a **certain release** or a not-yet-merged **branch** from official repo, run `ufbt update --branch=0.81.1` or `ufbt update --branch=owner/my-awesome-feature`. 
+│ │      - You can also use branches from other repos, where build artifacts are available from an indexed directory, by specifying `--index-url=<url>`.
+│ │ -
+│ │ -- uFBT can also download and update the SDK from any fixed URL. To do this, run `ufbt update --url=<url>`.
+│ │ +- uFBT can also download and update the SDK from any **fixed URL**. To do this, run `ufbt update --url=<url>`.
+│ │ +- To use a **local copy** of the SDK, run `ufbt update --local=<path>`. This will use the SDK located in `<path>` instead of downloading it. Useful for testing local builds of the SDK.
+│ │  
+│ │  uFBT stores its state in `.ufbt` subfolder in your home directory. You can override this location by setting `UFBT_HOME` environment variable.
+│ │  
+│ │  
+│ │  ### ufbt-bootstrap
+│ │  
+│ │  Updating the SDK is handled by uFBT component called _bootstrap_. It has a dedicated entry point, `ufbt-bootstrap`, with additional options that might be useful in certain scenarios. Run `ufbt-bootstrap --help` to see them.
+│ │  
+│ │  ## Troubleshooting
+│ │  
+│ │  If something goes wrong and uFBT state becomes corrupted, you can reset it by running `ufbt clean`. If that doesn't work, you can try removing `.ufbt` subfolder manually from your home folder.
+│ │ +
+│ │ +`ufbt-bootstrap` and SDK-related `ufbt` subcommands accept `--verbose` option that will print additional debug information.

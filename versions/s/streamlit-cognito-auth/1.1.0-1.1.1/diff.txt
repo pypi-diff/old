@@ -1,0 +1,243 @@
+--- tmp/streamlit-cognito-auth-1.1.0.tar.gz
++++ tmp/streamlit-cognito-auth-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "streamlit-cognito-auth-1.1.0.tar", last modified: Thu Apr  6 10:52:07 2023, max compression
+│ +gzip compressed data, was "streamlit-cognito-auth-1.1.1.tar", last modified: Thu Apr  6 14:06:38 2023, max compression
+│   --- streamlit-cognito-auth-1.1.0.tar
+├── +++ streamlit-cognito-auth-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)    11357 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.0/LICENSE
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     4104 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/PKG-INFO
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     3623 2023-04-06 09:02:56.000000 streamlit-cognito-auth-1.1.0/README.md
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       38 2023-04-06 10:52:07.549336 streamlit-cognito-auth-1.1.0/setup.cfg
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      870 2023-04-06 10:51:11.000000 streamlit-cognito-auth-1.1.0/setup.py
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/src/
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       39 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/__init__.py
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     9738 2023-04-06 10:25:21.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/auth.py
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      153 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/exceptions.py
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      540 2023-04-06 10:43:27.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/utils.py
+│ │ -drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 10:52:07.545336 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)     4104 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)      426 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)        1 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       89 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/requires.txt
+│ │ --rw-rw-r--   0 pop       (1001) pop       (1001)       23 2023-04-06 10:52:07.000000 streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 14:06:38.569018 streamlit-cognito-auth-1.1.1/
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)    11357 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.1/LICENSE
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     4471 2023-04-06 14:06:38.569018 streamlit-cognito-auth-1.1.1/PKG-INFO
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     3990 2023-04-06 13:57:28.000000 streamlit-cognito-auth-1.1.1/README.md
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       38 2023-04-06 14:06:38.569018 streamlit-cognito-auth-1.1.1/setup.cfg
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      870 2023-04-06 14:01:24.000000 streamlit-cognito-auth-1.1.1/setup.py
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 14:06:38.565018 streamlit-cognito-auth-1.1.1/src/
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 14:06:38.569018 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       39 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/__init__.py
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     9854 2023-04-06 13:55:18.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/auth.py
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      153 2023-04-06 08:51:35.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/exceptions.py
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      540 2023-04-06 10:43:27.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/utils.py
+│ │ +drwxrwxr-x   0 pop       (1001) pop       (1001)        0 2023-04-06 14:06:38.569018 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)     4471 2023-04-06 14:06:38.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)      426 2023-04-06 14:06:38.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)        1 2023-04-06 14:06:38.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       89 2023-04-06 14:06:38.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 pop       (1001) pop       (1001)       23 2023-04-06 14:06:38.000000 streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/top_level.txt
+│ │   --- streamlit-cognito-auth-1.1.0/LICENSE
+│ ├── +++ streamlit-cognito-auth-1.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- streamlit-cognito-auth-1.1.0/PKG-INFO
+│ ├── +++ streamlit-cognito-auth-1.1.1/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: streamlit-cognito-auth
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: A Streamlit component for authenticating users with AWS Cognito
+│ │  Home-page: https://github.com/pop-srw/streamlit-cognito-auth
+│ │  Author: Sarawin Khemmachotikun
+│ │  Author-email: khemmachotikun.s@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -92,21 +92,23 @@
+│ │  ![Login with temporary password](https://raw.githubusercontent.com/pop-srw/streamlit-cognito-auth/main/images/password-reset-02.gif)
+│ │  
+│ │  ## Limitations
+│ │  
+│ │  - This package has been tested and known to work with Amazon Cognito pools that have an app client with a secret enabled and using the SRP protocol. Other configurations of Cognito pools may not be supported and have not been tested.
+│ │  - This package has been tested and known to work with python 3.8 in Linux environment. It may not work with other versions of python or other operating systems.
+│ │  
+│ │ -## Future Work
+│ │ +## Features
+│ │  
+│ │  - [x] Support for Cognito pools with app client secret
+│ │  - [ ] Support for Cognito pools without app client secret
+│ │  - [x] Support for "USER_SRP_AUTH" authentication flow
+│ │  - [ ] Support for "REFRESH_TOKEN_AUTH / REFRESH_TOKEN" authentication flow
+│ │  - [ ] Support for "USER_PASSWORD_AUTH" authentication flow
+│ │  - [x] Support for password reset for temporary password
+│ │ +- [ ] Support for password reset with OTP
+│ │  
+│ │  ## Credits
+│ │  
+│ │ -- This package is inspired by the work of [mkhorasani/Streamlit-Authenticator](https://github.com/mkhorasani/Streamlit-Authenticator) and I would like to thank the author for their work.
+│ │ -- JWT verification functionality is based on the work of [awslabs/aws-support-tools](https://github.com/awslabs/aws-support-tools/blob/master/Cognito/decode-verify-jwt/decode-verify-jwt.py) and I would like to thank the author for their work.
+│ │ -- Thanks to OpenAI's ChatGPT for providing helpful suggestions and examples throughout the development of this project.
+│ │ +- This package is inspired by the work of [mkhorasani/Streamlit-Authenticator](https://github.com/mkhorasani/Streamlit-Authenticator), and we would like to thank the author for their work.
+│ │ +- JWT verification functionality is based on the work of [awslabs/aws-support-tools](https://github.com/awslabs/aws-support-tools/blob/master/Cognito/decode-verify-jwt/decode-verify-jwt.py), and we would like to thank the author for their work.
+│ │ +- This package uses the `pycognito` library for authentication, which is a Python library that provides a simple interface for working with AWS Cognito. We would like to express our gratitude to the authors of `pycognito` for their work and for providing an excellent library for working with AWS Cognito.
+│ │ +- We would also like to thank OpenAI's ChatGPT for providing helpful suggestions and examples throughout the development of this project.
+│ │   --- streamlit-cognito-auth-1.1.0/README.md
+│ ├── +++ streamlit-cognito-auth-1.1.1/README.md
+│ │┄ Files 8% similar despite different names
+│ │ @@ -79,21 +79,23 @@
+│ │  ![Login with temporary password](https://raw.githubusercontent.com/pop-srw/streamlit-cognito-auth/main/images/password-reset-02.gif)
+│ │  
+│ │  ## Limitations
+│ │  
+│ │  - This package has been tested and known to work with Amazon Cognito pools that have an app client with a secret enabled and using the SRP protocol. Other configurations of Cognito pools may not be supported and have not been tested.
+│ │  - This package has been tested and known to work with python 3.8 in Linux environment. It may not work with other versions of python or other operating systems.
+│ │  
+│ │ -## Future Work
+│ │ +## Features
+│ │  
+│ │  - [x] Support for Cognito pools with app client secret
+│ │  - [ ] Support for Cognito pools without app client secret
+│ │  - [x] Support for "USER_SRP_AUTH" authentication flow
+│ │  - [ ] Support for "REFRESH_TOKEN_AUTH / REFRESH_TOKEN" authentication flow
+│ │  - [ ] Support for "USER_PASSWORD_AUTH" authentication flow
+│ │  - [x] Support for password reset for temporary password
+│ │ +- [ ] Support for password reset with OTP
+│ │  
+│ │  ## Credits
+│ │  
+│ │ -- This package is inspired by the work of [mkhorasani/Streamlit-Authenticator](https://github.com/mkhorasani/Streamlit-Authenticator) and I would like to thank the author for their work.
+│ │ -- JWT verification functionality is based on the work of [awslabs/aws-support-tools](https://github.com/awslabs/aws-support-tools/blob/master/Cognito/decode-verify-jwt/decode-verify-jwt.py) and I would like to thank the author for their work.
+│ │ -- Thanks to OpenAI's ChatGPT for providing helpful suggestions and examples throughout the development of this project.
+│ │ +- This package is inspired by the work of [mkhorasani/Streamlit-Authenticator](https://github.com/mkhorasani/Streamlit-Authenticator), and we would like to thank the author for their work.
+│ │ +- JWT verification functionality is based on the work of [awslabs/aws-support-tools](https://github.com/awslabs/aws-support-tools/blob/master/Cognito/decode-verify-jwt/decode-verify-jwt.py), and we would like to thank the author for their work.
+│ │ +- This package uses the `pycognito` library for authentication, which is a Python library that provides a simple interface for working with AWS Cognito. We would like to express our gratitude to the authors of `pycognito` for their work and for providing an excellent library for working with AWS Cognito.
+│ │ +- We would also like to thank OpenAI's ChatGPT for providing helpful suggestions and examples throughout the development of this project.
+│ │   --- streamlit-cognito-auth-1.1.0/setup.py
+│ ├── +++ streamlit-cognito-auth-1.1.1/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name="streamlit-cognito-auth",
+│ │ -    version="1.1.0",
+│ │ +    version="1.1.1",
+│ │      packages=find_packages("src"),
+│ │      package_dir={"": "src"},
+│ │      include_package_data=True,
+│ │      install_requires=[
+│ │          "boto3 >= 1.26.52",
+│ │          "pycognito >= 2022.12.0",
+│ │          "streamlit >= 1.17.0",
+│ │   --- streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/auth.py
+│ ├── +++ streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/auth.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -9,17 +9,19 @@
+│ │  
+│ │  import pycognito
+│ │  from pycognito import AWSSRP
+│ │  
+│ │  
+│ │  class CognitoAuthenticator:
+│ │      def __init__(self, pool_id, app_client_id, app_client_secret, boto_client=None):
+│ │ -        self.client = boto_client or boto3.client("cognito-idp")
+│ │ -        self.pool_id = pool_id
+│ │          self.pool_region = pool_id.split("_")[0]
+│ │ +        self.client = boto_client or boto3.client(
+│ │ +            "cognito-idp", region_name=self.pool_region
+│ │ +        )
+│ │ +        self.pool_id = pool_id
+│ │          self.app_client_id = app_client_id
+│ │          self.app_client_secret = app_client_secret
+│ │  
+│ │          self.cookie_manager = stx.CookieManager()
+│ │  
+│ │      def _load_session_state_from_cookies(self):
+│ │          st.session_state["auth_access_token"] = self.cookie_manager.get("access_token")
+│ │ @@ -94,14 +96,15 @@
+│ │              "refresh_token",
+│ │              tokens["AuthenticationResult"]["RefreshToken"],
+│ │              key="set_refresh_token",
+│ │          )
+│ │  
+│ │      def _login(self, username, password):
+│ │          aws_srp = AWSSRP(
+│ │ +            client=self.client,
+│ │              pool_id=self.pool_id,
+│ │              client_id=self.app_client_id,
+│ │              client_secret=self.app_client_secret,
+│ │              username=username,
+│ │              password=password,
+│ │          )
+│ │          try:
+│ │ @@ -128,14 +131,15 @@
+│ │      def _reset_password(
+│ │          self,
+│ │          username,
+│ │          password,
+│ │          new_password,
+│ │      ):
+│ │          aws_srp = AWSSRP(
+│ │ +            client=self.client,
+│ │              pool_id=self.pool_id,
+│ │              client_id=self.app_client_id,
+│ │              client_secret=self.app_client_secret,
+│ │              username=username,
+│ │              password=password,
+│ │          )
+│ │          try:
+│ │   --- streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth/utils.py
+│ ├── +++ streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth/utils.py
+│ │┄ Files identical despite different names
+│ │   --- streamlit-cognito-auth-1.1.0/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ ├── +++ streamlit-cognito-auth-1.1.1/src/streamlit_cognito_auth.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: streamlit-cognito-auth
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: A Streamlit component for authenticating users with AWS Cognito
+│ │  Home-page: https://github.com/pop-srw/streamlit-cognito-auth
+│ │  Author: Sarawin Khemmachotikun
+│ │  Author-email: khemmachotikun.s@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -92,21 +92,23 @@
+│ │  ![Login with temporary password](https://raw.githubusercontent.com/pop-srw/streamlit-cognito-auth/main/images/password-reset-02.gif)
+│ │  
+│ │  ## Limitations
+│ │  
+│ │  - This package has been tested and known to work with Amazon Cognito pools that have an app client with a secret enabled and using the SRP protocol. Other configurations of Cognito pools may not be supported and have not been tested.
+│ │  - This package has been tested and known to work with python 3.8 in Linux environment. It may not work with other versions of python or other operating systems.
+│ │  
+│ │ -## Future Work
+│ │ +## Features
+│ │  
+│ │  - [x] Support for Cognito pools with app client secret
+│ │  - [ ] Support for Cognito pools without app client secret
+│ │  - [x] Support for "USER_SRP_AUTH" authentication flow
+│ │  - [ ] Support for "REFRESH_TOKEN_AUTH / REFRESH_TOKEN" authentication flow
+│ │  - [ ] Support for "USER_PASSWORD_AUTH" authentication flow
+│ │  - [x] Support for password reset for temporary password
+│ │ +- [ ] Support for password reset with OTP
+│ │  
+│ │  ## Credits
+│ │  
+│ │ -- This package is inspired by the work of [mkhorasani/Streamlit-Authenticator](https://github.com/mkhorasani/Streamlit-Authenticator) and I would like to thank the author for their work.
+│ │ -- JWT verification functionality is based on the work of [awslabs/aws-support-tools](https://github.com/awslabs/aws-support-tools/blob/master/Cognito/decode-verify-jwt/decode-verify-jwt.py) and I would like to thank the author for their work.
+│ │ -- Thanks to OpenAI's ChatGPT for providing helpful suggestions and examples throughout the development of this project.
+│ │ +- This package is inspired by the work of [mkhorasani/Streamlit-Authenticator](https://github.com/mkhorasani/Streamlit-Authenticator), and we would like to thank the author for their work.
+│ │ +- JWT verification functionality is based on the work of [awslabs/aws-support-tools](https://github.com/awslabs/aws-support-tools/blob/master/Cognito/decode-verify-jwt/decode-verify-jwt.py), and we would like to thank the author for their work.
+│ │ +- This package uses the `pycognito` library for authentication, which is a Python library that provides a simple interface for working with AWS Cognito. We would like to express our gratitude to the authors of `pycognito` for their work and for providing an excellent library for working with AWS Cognito.
+│ │ +- We would also like to thank OpenAI's ChatGPT for providing helpful suggestions and examples throughout the development of this project.

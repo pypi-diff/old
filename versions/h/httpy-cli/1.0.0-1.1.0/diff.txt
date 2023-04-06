@@ -1,0 +1,733 @@
+--- tmp/httpy-cli-1.0.0.tar.gz
++++ tmp/httpy-cli-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "/Users/sinankanidagli/Desktop/development/httpy/dist/.tmp-wgc2gb1f/httpy-cli-1.0.0.tar", last modified: Thu Nov 24 20:31:06 2022, max compression
+│ +gzip compressed data, was "httpy-cli-1.1.0.tar", last modified: Thu Apr  6 14:03:49 2023, max compression
+│   --- httpy-cli-1.0.0.tar
+├── +++ httpy-cli-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,33 +1,37 @@
+│ │ -drwxr-xr-x   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 20:31:06.636260 httpy-cli-1.0.0/
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     1074 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/LICENSE
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     5567 2022-11-24 20:31:06.636699 httpy-cli-1.0.0/PKG-INFO
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     4380 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/README.md
+│ │ -drwxr-xr-x   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 20:31:06.612148 httpy-cli-1.0.0/httpy/
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      165 2022-11-24 20:22:18.000000 httpy-cli-1.0.0/httpy/__init__.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      440 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/__main__.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     3748 2022-11-24 20:10:49.000000 httpy-cli-1.0.0/httpy/arguments.py
+│ │ -drwxr-xr-x   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 20:31:06.623052 httpy-cli-1.0.0/httpy/command/
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/command/__init__.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     3271 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/command/builder.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     1678 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/command/handler.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      137 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/command/operation.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      195 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/command/regexs.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     1203 2022-11-24 20:27:38.000000 httpy-cli-1.0.0/httpy/core.py
+│ │ -drwxr-xr-x   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 20:31:06.629119 httpy-cli-1.0.0/httpy/output/
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/output/__init__.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      218 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/output/colors.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      217 2022-11-24 20:08:25.000000 httpy-cli-1.0.0/httpy/output/error.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      908 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/output/http.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      650 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/output/lexers.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      470 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/output/writer.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     1353 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/request.py
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      123 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/httpy/status.py
+│ │ -drwxr-xr-x   0 sinankanidagli   (501) staff       (20)        0 2022-11-24 20:31:06.635519 httpy-cli-1.0.0/httpy_cli.egg-info/
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     5567 2022-11-24 20:31:06.000000 httpy-cli-1.0.0/httpy_cli.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      602 2022-11-24 20:31:06.000000 httpy-cli-1.0.0/httpy_cli.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)        1 2022-11-24 20:31:06.000000 httpy-cli-1.0.0/httpy_cli.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)       46 2022-11-24 20:31:06.000000 httpy-cli-1.0.0/httpy_cli.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      143 2022-11-24 20:31:06.000000 httpy-cli-1.0.0/httpy_cli.egg-info/requires.txt
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)        6 2022-11-24 20:31:06.000000 httpy-cli-1.0.0/httpy_cli.egg-info/top_level.txt
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)      562 2022-11-24 20:31:06.638566 httpy-cli-1.0.0/setup.cfg
+│ │ --rw-r--r--   0 sinankanidagli   (501) staff       (20)     2346 2022-11-24 19:57:44.000000 httpy-cli-1.0.0/setup.py
+│ │ +drwxr-xr-x   0 knid       (501) staff       (20)        0 2023-04-06 14:03:49.626402 httpy-cli-1.1.0/
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     1074 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/LICENSE
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     5928 2023-04-06 14:03:49.626477 httpy-cli-1.1.0/PKG-INFO
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     4741 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/README.md
+│ │ +drwxr-xr-x   0 knid       (501) staff       (20)        0 2023-04-06 14:03:49.623675 httpy-cli-1.1.0/httpy/
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      165 2023-04-06 14:01:14.000000 httpy-cli-1.1.0/httpy/__init__.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      440 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/__main__.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     3748 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/arguments.py
+│ │ +drwxr-xr-x   0 knid       (501) staff       (20)        0 2023-04-06 14:03:49.624359 httpy-cli-1.1.0/httpy/command/
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)        0 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/command/__init__.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     3271 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/command/builder.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     1678 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/command/handler.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      137 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/command/operation.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      195 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/command/regexs.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     1203 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/core.py
+│ │ +drwxr-xr-x   0 knid       (501) staff       (20)        0 2023-04-06 14:03:49.625179 httpy-cli-1.1.0/httpy/output/
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)        0 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/output/__init__.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      218 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/output/colors.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      217 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/output/error.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      954 2023-04-06 14:02:14.000000 httpy-cli-1.1.0/httpy/output/http.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      650 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/output/lexers.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      470 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/output/writer.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     1353 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/request.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      123 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/httpy/status.py
+│ │ +drwxr-xr-x   0 knid       (501) staff       (20)        0 2023-04-06 14:03:49.625863 httpy-cli-1.1.0/httpy_cli.egg-info/
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     5928 2023-04-06 14:03:49.000000 httpy-cli-1.1.0/httpy_cli.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      673 2023-04-06 14:03:49.000000 httpy-cli-1.1.0/httpy_cli.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)        1 2023-04-06 14:03:49.000000 httpy-cli-1.1.0/httpy_cli.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)       46 2023-04-06 14:03:49.000000 httpy-cli-1.1.0/httpy_cli.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      143 2023-04-06 14:03:49.000000 httpy-cli-1.1.0/httpy_cli.egg-info/requires.txt
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)        6 2023-04-06 14:03:49.000000 httpy-cli-1.1.0/httpy_cli.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)      562 2023-04-06 14:03:49.626748 httpy-cli-1.1.0/setup.cfg
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     2346 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/setup.py
+│ │ +drwxr-xr-x   0 knid       (501) staff       (20)        0 2023-04-06 14:03:49.626273 httpy-cli-1.1.0/tests/
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     1248 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/tests/test_args.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     1198 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/tests/test_command.py
+│ │ +-rw-r--r--   0 knid       (501) staff       (20)     4937 2023-04-06 14:00:49.000000 httpy-cli-1.1.0/tests/test_command_builder.py
+│ │   --- httpy-cli-1.0.0/LICENSE
+│ ├── +++ httpy-cli-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/PKG-INFO
+│ ├── +++ httpy-cli-1.1.0/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: httpy-cli
+│ │ -Version: 1.0.0
+│ │ +Version: 1.1.0
+│ │  Summary: Modern, user-friendly, programmable command-line HTTP client for the API.
+│ │  Download-URL: https://github.com/SinanKanidagli/httpy/archive/refs/tags/httpy-0.0.1.tar.gz
+│ │  Author: Sinan Kanidağlı
+│ │  Author-email: sinan_kanidagli@hotmail.com
+│ │  License: MIT
+│ │  Project-URL: GitHub, https://github.com/SinanKanidagli/httpy
+│ │  Project-URL: Twitter, https://twitter.com/KanidagliV
+│ │ @@ -24,34 +24,44 @@
+│ │  Classifier: Topic :: Utilities
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: dev
+│ │  Provides-Extra: test
+│ │  License-File: LICENSE
+│ │  
+│ │ -<br/>
+│ │ -<a href="" target="blank_">
+│ │ -    <img height="100" alt="httpy" src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-logo.svg" />
+│ │ -</a>
+│ │ -<br/>
+│ │  
+│ │ -# httpy: Modern, user-friendly, programmable command-line HTTP client for the API
+│ │ +<h2 align="center">
+│ │ +<img height="100" alt="HTTPie" src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-logo.svg" />
+│ │ +    <br>
+│ │ +    Modern, user-friendly, programmable and filterable command-line HTTP client for the API
+│ │ +</h2>
+│ │ +
+│ │ + <div align="center">
+│ │ + 
+│ │ +<a href="https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e"/></a>
+│ │ +<a href="[https://twitter.com/devknid](https://pypi.python.org/pypi/httpy-cli)"><img src="https://img.shields.io/pypi/v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white" /></a>
+│ │ +<a href="https://twitter.com/devknid"><img src="https://img.shields.io/twitter/follow/devknid?style=flat&color=%234B78E6&logoColor=%234B78E6" /></a>
+│ │ +<a href="https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e"/></a>
+│ │ +<a href="https://pypi.python.org/pypi/ansicolortags/"><img src="https://img.shields.io/pypi/l/ansicolortags.svg" /></a>
+│ │ +
+│ │ +<!---
+│ │ +<a href="https://www.buymeacoffee.com/knid"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
+│ │ +-->
+│ │  
+│ │ -httpy is a command line HTTP client.
+│ │ +</div>
+│ │ +
+│ │ +HTTPy is a command line HTTP client.
+│ │  Its purpose is to make duplicate web requests on a single line.
+│ │  httpy is designed for testing, debugging, and generally interacting with APIs and HTTP servers.
+│ │  The `httpy` command allows creating and sending arbitrary HTTP requests.
+│ │  They use simple and natural syntax and provide formatted and colored output.
+│ │  Under favour of its programmable structure, it can perform many tasks at the same time.
+│ │  For example, you can pull data for user IDs 0, 1, and 2 at the same time
+│ │  
+│ │ -[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Grade)
+│ │ -[![Latest version](https://img.shields.io/pypi/v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white)](https://pypi.python.org/pypi/httpy-cli)
+│ │ -[![Twitter](https://img.shields.io/twitter/follow/KanidagliV?style=flat&color=%234B78E6&logoColor=%234B78E6)](https://twitter.com/KanidagliV)
+│ │ -[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/httpy&utm_campaign=Badge_Coverage)
+│ │ +
+│ │  
+│ │  <img src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-animation.gif" alt="httpy in action" width="100%"/>
+│ │  
+│ │  
+│ │  ## Getting started
+│ │  
+│ │  Installation instructions
+│ │ @@ -145,15 +155,15 @@
+│ │  ```bash
+│ │  $ httpy https://jsonplaceholder.typicode.com/posts/{i} --exec i:++:6 -B
+│ │  ```
+│ │  
+│ │  Pass a value to the Header and just show status:
+│ │  
+│ │  ```bash
+│ │ -$ httpy httpbin.org/get Authorization:{i} --exec i:token1, token2, token3 -S
+│ │ +$ httpy httpbin.org/get Authorization:{i} --exec i:token1,token2,token3 -S
+│ │  ```
+│ │  
+│ │  ## Operation List
+│ │  
+│ │  |Operation            |Description
+│ │  |---------------------|-------------------------------
+│ │  | `++` | Increment
+│ │ @@ -170,7 +180,8 @@
+│ │  * Create [GitHub Issues](https://github.com/SinanKanidagil/httpy/issues) for bug reports and feature requests.
+│ │  
+│ │  ## Contributing
+│ │  
+│ │  Have a look through existing [Issues](https://github.com/SinanKanidagli/httpy/issues) and [Pull Requests](https://github.com/SinanKanidagli/httpy/pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/SinanKanidagli/httpy/issues) using one of the templates provided.
+│ │  
+│ │  Sinan Kanidağlı © 2022
+│ │ +
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: httpy-cli Version: 1.0.0 Summary: Modern, user-
+│ │ │ +Metadata-Version: 2.1 Name: httpy-cli Version: 1.1.0 Summary: Modern, user-
+│ │ │  friendly, programmable command-line HTTP client for the API. Download-URL:
+│ │ │  https://github.com/SinanKanidagli/httpy/archive/refs/tags/httpy-0.0.1.tar.gz
+│ │ │  Author: Sinan KanidaÄlÄ± Author-email: sinan_kanidagli@hotmail.com License:
+│ │ │  MIT Project-URL: GitHub, https://github.com/SinanKanidagli/httpy Project-URL:
+│ │ │  Twitter, https://twitter.com/KanidagliV Project-URL: Documentation, https://
+│ │ │  github.com/SinanKanidagli/httpy/docs Classifier: Development Status :: 5 -
+│ │ │  Production/Stable Classifier: Programming Language :: Python Classifier:
+│ │ │ @@ -10,63 +10,58 @@
+│ │ │  Classifier: Intended Audience :: Developers Classifier: Intended Audience ::
+│ │ │  System Administrators Classifier: License :: OSI Approved :: MIT License
+│ │ │  Classifier: Topic :: Internet :: WWW/HTTP Classifier: Topic :: Software
+│ │ │  Development Classifier: Topic :: System :: Networking Classifier: Topic ::
+│ │ │  Terminals Classifier: Topic :: Text Processing Classifier: Topic :: Utilities
+│ │ │  Requires-Python: >=3.7 Description-Content-Type: text/markdown Provides-Extra:
+│ │ │  dev Provides-Extra: test License-File: LICENSE
+│ │ │ -[httpy]
+│ │ │ -# httpy: Modern, user-friendly, programmable command-line HTTP client for the
+│ │ │ -API httpy is a command line HTTP client. Its purpose is to make duplicate web
+│ │ │ +                                ***** [HTTPie]
+│ │ │ +Modern, user-friendly, programmable and filterable command-line HTTP client for
+│ │ │ +                                 the API *****
+│ │ │ +[https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e]
+│ │ │ +                     [https://img.shields.io/pypi/v/httpy-
+│ │ │ +cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white] [https:/
+│ │ │ +                        /img.shields.io/twitter/follow/
+│ │ │ +       devknid?style=flat&color=%234B78E6&logoColor=%234B78E6] [https://
+│ │ │ +app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e] [https:
+│ │ │ +                  //img.shields.io/pypi/l/ansicolortags.svg]
+│ │ │ +HTTPy is a command line HTTP client. Its purpose is to make duplicate web
+│ │ │  requests on a single line. httpy is designed for testing, debugging, and
+│ │ │  generally interacting with APIs and HTTP servers. The `httpy` command allows
+│ │ │  creating and sending arbitrary HTTP requests. They use simple and natural
+│ │ │  syntax and provide formatted and colored output. Under favour of its
+│ │ │  programmable structure, it can perform many tasks at the same time. For
+│ │ │ -example, you can pull data for user IDs 0, 1, and 2 at the same time [![Codacy
+│ │ │ -Badge](https://app.codacy.com/project/badge/Grade/
+│ │ │ -e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/
+│ │ │ -httpy/
+│ │ │ -dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/
+│ │ │ -httpy&utm_campaign=Badge_Grade) [![Latest version](https://img.shields.io/pypi/
+│ │ │ -v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white)]
+│ │ │ -(https://pypi.python.org/pypi/httpy-cli) [![Twitter](https://img.shields.io/
+│ │ │ -twitter/follow/KanidagliV?style=flat&color=%234B78E6&logoColor=%234B78E6)]
+│ │ │ -(https://twitter.com/KanidagliV) [![Codacy Badge](https://app.codacy.com/
+│ │ │ -project/badge/Coverage/e2534e38d4a14534bb358a108441020e)](https://
+│ │ │ -www.codacy.com/gh/SinanKanidagli/httpy/
+│ │ │ -dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/
+│ │ │ -httpy&utm_campaign=Badge_Coverage) [httpy in action] ## Getting started
+│ │ │ -Installation instructions ```bash pip install httpy-cli ``` ## Features *
+│ │ │ -Expressive and intuitive syntax * Formatted and colorized terminal output *
+│ │ │ -Programmable requests - Multiple requests one line - Value incremented each
+│ │ │ -time - Random number per request - Read each value from the lines in the file -
+│ │ │ -Value per each request as a list of multiple values * Built-in JSON support *
+│ │ │ -Arbitrary request data * Custom headers ## Structures ```bash $ httpy
+│ │ │ +example, you can pull data for user IDs 0, 1, and 2 at the same time [httpy in
+│ │ │ +action] ## Getting started Installation instructions ```bash pip install httpy-
+│ │ │ +cli ``` ## Features * Expressive and intuitive syntax * Formatted and colorized
+│ │ │ +terminal output * Programmable requests - Multiple requests one line - Value
+│ │ │ +incremented each time - Random number per request - Read each value from the
+│ │ │ +lines in the file - Value per each request as a list of multiple values *
+│ │ │ +Built-in JSON support * Arbitrary request data * Custom headers ## Structures
+│ │ │ +```bash $ httpy
+│ │ │  QUERIES,DATA> --exec  ``` Custom method, headers, queries and JSON data:
+│ │ │  ```bash $ httpy httpbin.org/put PUT HeaderName:HeaderValue data=value
+│ │ │  query==value ``` Command ```bash $ httpy httpbin.org/get --exec :: ``` ##
+│ │ │  Examples Basic Request: ```bash $ httpy httpbin.org/get ``` Usage custom
+│ │ │  method, headers, queries and JSON data: ```bash $ httpy httpbin.org/put PUT
+│ │ │  HeaderName:HeaderValue data=value query==value ``` Custom HTTP method, HTTP
+│ │ │  headers and JSON data: ```bash $ httpy httpbin.org/post POST X-API-Token:123
+│ │ │  name=John ``` Run 3 times: ```bash $ httpy httpbin.org/get --exec i:++:3 ```
+│ │ │  Pass a value to URL: ```bash $ httpy 'httpbin.org/get?value={i}' --exec i:VALUE
+│ │ │  ``` Pass a value to the URL by running it 2 times: ```bash $ httpy
+│ │ │  'httpbin.org/get?value={i}' --exec i:VALUE:2 ``` Get 0, 1, 2, 3, 4, 5 post one
+│ │ │  line and just show body: ```bash $ httpy https://jsonplaceholder.typicode.com/
+│ │ │  posts/{i} --exec i:++:6 -B ``` Pass a value to the Header and just show status:
+│ │ │ -```bash $ httpy httpbin.org/get Authorization:{i} --exec i:token1, token2,
+│ │ │ -token3 -S ``` ## Operation List |Operation |Description |---------------------
+│ │ │ -|------------------------------- | `++` | Increment | `--` | Deincrement |
+│ │ │ -`rand(0,10)` | Random number from 1 to 10 | `read(path/to/file)` | Read from
+│ │ │ -file | `item1, item2` | List | `item` | Text ## Community & support * Tweet
+│ │ │ -httpy at [@KanidagliV](https://twitter.com/KanidagliV) on Twitter. * Use
+│ │ │ -[StackOverflow](https://stackoverflow.com/questions/tagged/httpy) to ask
+│ │ │ -questions and include a `httpy` tag. * Create [GitHub Issues](https://
+│ │ │ -github.com/SinanKanidagil/httpy/issues) for bug reports and feature requests.
+│ │ │ -## Contributing Have a look through existing [Issues](https://github.com/
+│ │ │ -SinanKanidagli/httpy/issues) and [Pull Requests](https://github.com/
+│ │ │ -SinanKanidagli/httpy/pulls) that you could help with. If you'd like to request
+│ │ │ -a feature or report a bug, please [create a GitHub Issue](https://github.com/
+│ │ │ -SinanKanidagli/httpy/issues) using one of the templates provided. Sinan
+│ │ │ -KanidaÄlÄ± Â© 2022
+│ │ │ +```bash $ httpy httpbin.org/get Authorization:{i} --exec i:token1,token2,token3
+│ │ │ +-S ``` ## Operation List |Operation |Description |---------------------|-------
+│ │ │ +------------------------ | `++` | Increment | `--` | Deincrement | `rand(0,10)`
+│ │ │ +| Random number from 1 to 10 | `read(path/to/file)` | Read from file | `item1,
+│ │ │ +item2` | List | `item` | Text ## Community & support * Tweet httpy at
+│ │ │ +[@KanidagliV](https://twitter.com/KanidagliV) on Twitter. * Use [StackOverflow]
+│ │ │ +(https://stackoverflow.com/questions/tagged/httpy) to ask questions and include
+│ │ │ +a `httpy` tag. * Create [GitHub Issues](https://github.com/SinanKanidagil/
+│ │ │ +httpy/issues) for bug reports and feature requests. ## Contributing Have a look
+│ │ │ +through existing [Issues](https://github.com/SinanKanidagli/httpy/issues) and
+│ │ │ +[Pull Requests](https://github.com/SinanKanidagli/httpy/pulls) that you could
+│ │ │ +help with. If you'd like to request a feature or report a bug, please [create a
+│ │ │ +GitHub Issue](https://github.com/SinanKanidagli/httpy/issues) using one of the
+│ │ │ +templates provided. Sinan KanidaÄlÄ± Â© 2022
+│ │   --- httpy-cli-1.0.0/README.md
+│ ├── +++ httpy-cli-1.1.0/README.md
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,27 +1,37 @@
+│ │ -<br/>
+│ │ -<a href="" target="blank_">
+│ │ -    <img height="100" alt="httpy" src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-logo.svg" />
+│ │ -</a>
+│ │ -<br/>
+│ │  
+│ │ -# httpy: Modern, user-friendly, programmable command-line HTTP client for the API
+│ │ +<h2 align="center">
+│ │ +<img height="100" alt="HTTPie" src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-logo.svg" />
+│ │ +    <br>
+│ │ +    Modern, user-friendly, programmable and filterable command-line HTTP client for the API
+│ │ +</h2>
+│ │ +
+│ │ + <div align="center">
+│ │ + 
+│ │ +<a href="https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e"/></a>
+│ │ +<a href="[https://twitter.com/devknid](https://pypi.python.org/pypi/httpy-cli)"><img src="https://img.shields.io/pypi/v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white" /></a>
+│ │ +<a href="https://twitter.com/devknid"><img src="https://img.shields.io/twitter/follow/devknid?style=flat&color=%234B78E6&logoColor=%234B78E6" /></a>
+│ │ +<a href="https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e"/></a>
+│ │ +<a href="https://pypi.python.org/pypi/ansicolortags/"><img src="https://img.shields.io/pypi/l/ansicolortags.svg" /></a>
+│ │ +
+│ │ +<!---
+│ │ +<a href="https://www.buymeacoffee.com/knid"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
+│ │ +-->
+│ │  
+│ │ -httpy is a command line HTTP client.
+│ │ +</div>
+│ │ +
+│ │ +HTTPy is a command line HTTP client.
+│ │  Its purpose is to make duplicate web requests on a single line.
+│ │  httpy is designed for testing, debugging, and generally interacting with APIs and HTTP servers.
+│ │  The `httpy` command allows creating and sending arbitrary HTTP requests.
+│ │  They use simple and natural syntax and provide formatted and colored output.
+│ │  Under favour of its programmable structure, it can perform many tasks at the same time.
+│ │  For example, you can pull data for user IDs 0, 1, and 2 at the same time
+│ │  
+│ │ -[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Grade)
+│ │ -[![Latest version](https://img.shields.io/pypi/v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white)](https://pypi.python.org/pypi/httpy-cli)
+│ │ -[![Twitter](https://img.shields.io/twitter/follow/KanidagliV?style=flat&color=%234B78E6&logoColor=%234B78E6)](https://twitter.com/KanidagliV)
+│ │ -[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/httpy&utm_campaign=Badge_Coverage)
+│ │ +
+│ │  
+│ │  <img src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-animation.gif" alt="httpy in action" width="100%"/>
+│ │  
+│ │  
+│ │  ## Getting started
+│ │  
+│ │  Installation instructions
+│ │ @@ -115,15 +125,15 @@
+│ │  ```bash
+│ │  $ httpy https://jsonplaceholder.typicode.com/posts/{i} --exec i:++:6 -B
+│ │  ```
+│ │  
+│ │  Pass a value to the Header and just show status:
+│ │  
+│ │  ```bash
+│ │ -$ httpy httpbin.org/get Authorization:{i} --exec i:token1, token2, token3 -S
+│ │ +$ httpy httpbin.org/get Authorization:{i} --exec i:token1,token2,token3 -S
+│ │  ```
+│ │  
+│ │  ## Operation List
+│ │  
+│ │  |Operation            |Description
+│ │  |---------------------|-------------------------------
+│ │  | `++` | Increment
+│ │ @@ -140,7 +150,8 @@
+│ │  * Create [GitHub Issues](https://github.com/SinanKanidagil/httpy/issues) for bug reports and feature requests.
+│ │  
+│ │  ## Contributing
+│ │  
+│ │  Have a look through existing [Issues](https://github.com/SinanKanidagli/httpy/issues) and [Pull Requests](https://github.com/SinanKanidagli/httpy/pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/SinanKanidagli/httpy/issues) using one of the templates provided.
+│ │  
+│ │  Sinan Kanidağlı © 2022
+│ │ +
+│ │ ├── html2text {}
+│ │ │ @@ -1,57 +1,51 @@
+│ │ │ -
+│ │ │ -[httpy]
+│ │ │ -# httpy: Modern, user-friendly, programmable command-line HTTP client for the
+│ │ │ -API httpy is a command line HTTP client. Its purpose is to make duplicate web
+│ │ │ +                                ***** [HTTPie]
+│ │ │ +Modern, user-friendly, programmable and filterable command-line HTTP client for
+│ │ │ +                                 the API *****
+│ │ │ +[https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e]
+│ │ │ +                     [https://img.shields.io/pypi/v/httpy-
+│ │ │ +cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white] [https:/
+│ │ │ +                        /img.shields.io/twitter/follow/
+│ │ │ +       devknid?style=flat&color=%234B78E6&logoColor=%234B78E6] [https://
+│ │ │ +app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e] [https:
+│ │ │ +                  //img.shields.io/pypi/l/ansicolortags.svg]
+│ │ │ +HTTPy is a command line HTTP client. Its purpose is to make duplicate web
+│ │ │  requests on a single line. httpy is designed for testing, debugging, and
+│ │ │  generally interacting with APIs and HTTP servers. The `httpy` command allows
+│ │ │  creating and sending arbitrary HTTP requests. They use simple and natural
+│ │ │  syntax and provide formatted and colored output. Under favour of its
+│ │ │  programmable structure, it can perform many tasks at the same time. For
+│ │ │ -example, you can pull data for user IDs 0, 1, and 2 at the same time [![Codacy
+│ │ │ -Badge](https://app.codacy.com/project/badge/Grade/
+│ │ │ -e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/
+│ │ │ -httpy/
+│ │ │ -dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/
+│ │ │ -httpy&utm_campaign=Badge_Grade) [![Latest version](https://img.shields.io/pypi/
+│ │ │ -v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white)]
+│ │ │ -(https://pypi.python.org/pypi/httpy-cli) [![Twitter](https://img.shields.io/
+│ │ │ -twitter/follow/KanidagliV?style=flat&color=%234B78E6&logoColor=%234B78E6)]
+│ │ │ -(https://twitter.com/KanidagliV) [![Codacy Badge](https://app.codacy.com/
+│ │ │ -project/badge/Coverage/e2534e38d4a14534bb358a108441020e)](https://
+│ │ │ -www.codacy.com/gh/SinanKanidagli/httpy/
+│ │ │ -dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/
+│ │ │ -httpy&utm_campaign=Badge_Coverage) [httpy in action] ## Getting started
+│ │ │ -Installation instructions ```bash pip install httpy-cli ``` ## Features *
+│ │ │ -Expressive and intuitive syntax * Formatted and colorized terminal output *
+│ │ │ -Programmable requests - Multiple requests one line - Value incremented each
+│ │ │ -time - Random number per request - Read each value from the lines in the file -
+│ │ │ -Value per each request as a list of multiple values * Built-in JSON support *
+│ │ │ -Arbitrary request data * Custom headers ## Structures ```bash $ httpy
+│ │ │ +example, you can pull data for user IDs 0, 1, and 2 at the same time [httpy in
+│ │ │ +action] ## Getting started Installation instructions ```bash pip install httpy-
+│ │ │ +cli ``` ## Features * Expressive and intuitive syntax * Formatted and colorized
+│ │ │ +terminal output * Programmable requests - Multiple requests one line - Value
+│ │ │ +incremented each time - Random number per request - Read each value from the
+│ │ │ +lines in the file - Value per each request as a list of multiple values *
+│ │ │ +Built-in JSON support * Arbitrary request data * Custom headers ## Structures
+│ │ │ +```bash $ httpy
+│ │ │  QUERIES,DATA> --exec  ``` Custom method, headers, queries and JSON data:
+│ │ │  ```bash $ httpy httpbin.org/put PUT HeaderName:HeaderValue data=value
+│ │ │  query==value ``` Command ```bash $ httpy httpbin.org/get --exec :: ``` ##
+│ │ │  Examples Basic Request: ```bash $ httpy httpbin.org/get ``` Usage custom
+│ │ │  method, headers, queries and JSON data: ```bash $ httpy httpbin.org/put PUT
+│ │ │  HeaderName:HeaderValue data=value query==value ``` Custom HTTP method, HTTP
+│ │ │  headers and JSON data: ```bash $ httpy httpbin.org/post POST X-API-Token:123
+│ │ │  name=John ``` Run 3 times: ```bash $ httpy httpbin.org/get --exec i:++:3 ```
+│ │ │  Pass a value to URL: ```bash $ httpy 'httpbin.org/get?value={i}' --exec i:VALUE
+│ │ │  ``` Pass a value to the URL by running it 2 times: ```bash $ httpy
+│ │ │  'httpbin.org/get?value={i}' --exec i:VALUE:2 ``` Get 0, 1, 2, 3, 4, 5 post one
+│ │ │  line and just show body: ```bash $ httpy https://jsonplaceholder.typicode.com/
+│ │ │  posts/{i} --exec i:++:6 -B ``` Pass a value to the Header and just show status:
+│ │ │ -```bash $ httpy httpbin.org/get Authorization:{i} --exec i:token1, token2,
+│ │ │ -token3 -S ``` ## Operation List |Operation |Description |---------------------
+│ │ │ -|------------------------------- | `++` | Increment | `--` | Deincrement |
+│ │ │ -`rand(0,10)` | Random number from 1 to 10 | `read(path/to/file)` | Read from
+│ │ │ -file | `item1, item2` | List | `item` | Text ## Community & support * Tweet
+│ │ │ -httpy at [@KanidagliV](https://twitter.com/KanidagliV) on Twitter. * Use
+│ │ │ -[StackOverflow](https://stackoverflow.com/questions/tagged/httpy) to ask
+│ │ │ -questions and include a `httpy` tag. * Create [GitHub Issues](https://
+│ │ │ -github.com/SinanKanidagil/httpy/issues) for bug reports and feature requests.
+│ │ │ -## Contributing Have a look through existing [Issues](https://github.com/
+│ │ │ -SinanKanidagli/httpy/issues) and [Pull Requests](https://github.com/
+│ │ │ -SinanKanidagli/httpy/pulls) that you could help with. If you'd like to request
+│ │ │ -a feature or report a bug, please [create a GitHub Issue](https://github.com/
+│ │ │ -SinanKanidagli/httpy/issues) using one of the templates provided. Sinan
+│ │ │ -KanidaÄlÄ± Â© 2022
+│ │ │ +```bash $ httpy httpbin.org/get Authorization:{i} --exec i:token1,token2,token3
+│ │ │ +-S ``` ## Operation List |Operation |Description |---------------------|-------
+│ │ │ +------------------------ | `++` | Increment | `--` | Deincrement | `rand(0,10)`
+│ │ │ +| Random number from 1 to 10 | `read(path/to/file)` | Read from file | `item1,
+│ │ │ +item2` | List | `item` | Text ## Community & support * Tweet httpy at
+│ │ │ +[@KanidagliV](https://twitter.com/KanidagliV) on Twitter. * Use [StackOverflow]
+│ │ │ +(https://stackoverflow.com/questions/tagged/httpy) to ask questions and include
+│ │ │ +a `httpy` tag. * Create [GitHub Issues](https://github.com/SinanKanidagil/
+│ │ │ +httpy/issues) for bug reports and feature requests. ## Contributing Have a look
+│ │ │ +through existing [Issues](https://github.com/SinanKanidagli/httpy/issues) and
+│ │ │ +[Pull Requests](https://github.com/SinanKanidagli/httpy/pulls) that you could
+│ │ │ +help with. If you'd like to request a feature or report a bug, please [create a
+│ │ │ +GitHub Issue](https://github.com/SinanKanidagli/httpy/issues) using one of the
+│ │ │ +templates provided. Sinan KanidaÄlÄ± Â© 2022
+│ │   --- httpy-cli-1.0.0/httpy/arguments.py
+│ ├── +++ httpy-cli-1.1.0/httpy/arguments.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -28,15 +28,15 @@
+│ │          )
+│ │          self.add_argument(
+│ │              "-B", "--body", action="store_true", help="show response body only"
+│ │          )
+│ │          self.add_argument(
+│ │              "-S", "--status", action="store_true", help="show response status only"
+│ │          )
+│ │ -        self.add_argument("-x", "--exec", metavar="CMD", help="execute httpcli command")
+│ │ +        self.add_argument("-X", "--exec", metavar="CMD", help="execute httpcli command")
+│ │          self.add_argument(
+│ │              "-V",
+│ │              "--verbose",
+│ │              action="store_true",
+│ │              help="show request and response in verbose",
+│ │          )
+│ │          self.add_argument(
+│ │   --- httpy-cli-1.0.0/httpy/command/builder.py
+│ ├── +++ httpy-cli-1.1.0/httpy/command/builder.py
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/httpy/command/handler.py
+│ ├── +++ httpy-cli-1.1.0/httpy/command/handler.py
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/httpy/core.py
+│ ├── +++ httpy-cli-1.1.0/httpy/core.py
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/httpy/output/http.py
+│ ├── +++ httpy-cli-1.1.0/httpy/output/http.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -26,7 +26,9 @@
+│ │      if res.headers.__contains__("content-type"):
+│ │          content_type = res.headers["content-type"]
+│ │  
+│ │      if content_type.startswith(json_content_type):
+│ │          print_json(res)
+│ │      elif content_type.startswith(html_content_type):
+│ │          print_html(res)
+│ │ +    else:
+│ │ +        print(res.content.decode())
+│ │   --- httpy-cli-1.0.0/httpy/output/lexers.py
+│ ├── +++ httpy-cli-1.1.0/httpy/output/lexers.py
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/httpy/request.py
+│ ├── +++ httpy-cli-1.1.0/httpy/request.py
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/httpy_cli.egg-info/PKG-INFO
+│ ├── +++ httpy-cli-1.1.0/httpy_cli.egg-info/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: httpy-cli
+│ │ -Version: 1.0.0
+│ │ +Version: 1.1.0
+│ │  Summary: Modern, user-friendly, programmable command-line HTTP client for the API.
+│ │  Download-URL: https://github.com/SinanKanidagli/httpy/archive/refs/tags/httpy-0.0.1.tar.gz
+│ │  Author: Sinan Kanidağlı
+│ │  Author-email: sinan_kanidagli@hotmail.com
+│ │  License: MIT
+│ │  Project-URL: GitHub, https://github.com/SinanKanidagli/httpy
+│ │  Project-URL: Twitter, https://twitter.com/KanidagliV
+│ │ @@ -24,34 +24,44 @@
+│ │  Classifier: Topic :: Utilities
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: dev
+│ │  Provides-Extra: test
+│ │  License-File: LICENSE
+│ │  
+│ │ -<br/>
+│ │ -<a href="" target="blank_">
+│ │ -    <img height="100" alt="httpy" src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-logo.svg" />
+│ │ -</a>
+│ │ -<br/>
+│ │  
+│ │ -# httpy: Modern, user-friendly, programmable command-line HTTP client for the API
+│ │ +<h2 align="center">
+│ │ +<img height="100" alt="HTTPie" src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-logo.svg" />
+│ │ +    <br>
+│ │ +    Modern, user-friendly, programmable and filterable command-line HTTP client for the API
+│ │ +</h2>
+│ │ +
+│ │ + <div align="center">
+│ │ + 
+│ │ +<a href="https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e"/></a>
+│ │ +<a href="[https://twitter.com/devknid](https://pypi.python.org/pypi/httpy-cli)"><img src="https://img.shields.io/pypi/v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white" /></a>
+│ │ +<a href="https://twitter.com/devknid"><img src="https://img.shields.io/twitter/follow/devknid?style=flat&color=%234B78E6&logoColor=%234B78E6" /></a>
+│ │ +<a href="https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e"/></a>
+│ │ +<a href="https://pypi.python.org/pypi/ansicolortags/"><img src="https://img.shields.io/pypi/l/ansicolortags.svg" /></a>
+│ │ +
+│ │ +<!---
+│ │ +<a href="https://www.buymeacoffee.com/knid"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"/></a>
+│ │ +-->
+│ │  
+│ │ -httpy is a command line HTTP client.
+│ │ +</div>
+│ │ +
+│ │ +HTTPy is a command line HTTP client.
+│ │  Its purpose is to make duplicate web requests on a single line.
+│ │  httpy is designed for testing, debugging, and generally interacting with APIs and HTTP servers.
+│ │  The `httpy` command allows creating and sending arbitrary HTTP requests.
+│ │  They use simple and natural syntax and provide formatted and colored output.
+│ │  Under favour of its programmable structure, it can perform many tasks at the same time.
+│ │  For example, you can pull data for user IDs 0, 1, and 2 at the same time
+│ │  
+│ │ -[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SinanKanidagli/httpy&amp;utm_campaign=Badge_Grade)
+│ │ -[![Latest version](https://img.shields.io/pypi/v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white)](https://pypi.python.org/pypi/httpy-cli)
+│ │ -[![Twitter](https://img.shields.io/twitter/follow/KanidagliV?style=flat&color=%234B78E6&logoColor=%234B78E6)](https://twitter.com/KanidagliV)
+│ │ -[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/httpy/dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/httpy&utm_campaign=Badge_Coverage)
+│ │ +
+│ │  
+│ │  <img src="https://raw.githubusercontent.com/SinanKanidagli/httpy/main/docs/httpy-animation.gif" alt="httpy in action" width="100%"/>
+│ │  
+│ │  
+│ │  ## Getting started
+│ │  
+│ │  Installation instructions
+│ │ @@ -145,15 +155,15 @@
+│ │  ```bash
+│ │  $ httpy https://jsonplaceholder.typicode.com/posts/{i} --exec i:++:6 -B
+│ │  ```
+│ │  
+│ │  Pass a value to the Header and just show status:
+│ │  
+│ │  ```bash
+│ │ -$ httpy httpbin.org/get Authorization:{i} --exec i:token1, token2, token3 -S
+│ │ +$ httpy httpbin.org/get Authorization:{i} --exec i:token1,token2,token3 -S
+│ │  ```
+│ │  
+│ │  ## Operation List
+│ │  
+│ │  |Operation            |Description
+│ │  |---------------------|-------------------------------
+│ │  | `++` | Increment
+│ │ @@ -170,7 +180,8 @@
+│ │  * Create [GitHub Issues](https://github.com/SinanKanidagil/httpy/issues) for bug reports and feature requests.
+│ │  
+│ │  ## Contributing
+│ │  
+│ │  Have a look through existing [Issues](https://github.com/SinanKanidagli/httpy/issues) and [Pull Requests](https://github.com/SinanKanidagli/httpy/pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/SinanKanidagli/httpy/issues) using one of the templates provided.
+│ │  
+│ │  Sinan Kanidağlı © 2022
+│ │ +
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: httpy-cli Version: 1.0.0 Summary: Modern, user-
+│ │ │ +Metadata-Version: 2.1 Name: httpy-cli Version: 1.1.0 Summary: Modern, user-
+│ │ │  friendly, programmable command-line HTTP client for the API. Download-URL:
+│ │ │  https://github.com/SinanKanidagli/httpy/archive/refs/tags/httpy-0.0.1.tar.gz
+│ │ │  Author: Sinan KanidaÄlÄ± Author-email: sinan_kanidagli@hotmail.com License:
+│ │ │  MIT Project-URL: GitHub, https://github.com/SinanKanidagli/httpy Project-URL:
+│ │ │  Twitter, https://twitter.com/KanidagliV Project-URL: Documentation, https://
+│ │ │  github.com/SinanKanidagli/httpy/docs Classifier: Development Status :: 5 -
+│ │ │  Production/Stable Classifier: Programming Language :: Python Classifier:
+│ │ │ @@ -10,63 +10,58 @@
+│ │ │  Classifier: Intended Audience :: Developers Classifier: Intended Audience ::
+│ │ │  System Administrators Classifier: License :: OSI Approved :: MIT License
+│ │ │  Classifier: Topic :: Internet :: WWW/HTTP Classifier: Topic :: Software
+│ │ │  Development Classifier: Topic :: System :: Networking Classifier: Topic ::
+│ │ │  Terminals Classifier: Topic :: Text Processing Classifier: Topic :: Utilities
+│ │ │  Requires-Python: >=3.7 Description-Content-Type: text/markdown Provides-Extra:
+│ │ │  dev Provides-Extra: test License-File: LICENSE
+│ │ │ -[httpy]
+│ │ │ -# httpy: Modern, user-friendly, programmable command-line HTTP client for the
+│ │ │ -API httpy is a command line HTTP client. Its purpose is to make duplicate web
+│ │ │ +                                ***** [HTTPie]
+│ │ │ +Modern, user-friendly, programmable and filterable command-line HTTP client for
+│ │ │ +                                 the API *****
+│ │ │ +[https://app.codacy.com/project/badge/Grade/e2534e38d4a14534bb358a108441020e]
+│ │ │ +                     [https://img.shields.io/pypi/v/httpy-
+│ │ │ +cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white] [https:/
+│ │ │ +                        /img.shields.io/twitter/follow/
+│ │ │ +       devknid?style=flat&color=%234B78E6&logoColor=%234B78E6] [https://
+│ │ │ +app.codacy.com/project/badge/Coverage/e2534e38d4a14534bb358a108441020e] [https:
+│ │ │ +                  //img.shields.io/pypi/l/ansicolortags.svg]
+│ │ │ +HTTPy is a command line HTTP client. Its purpose is to make duplicate web
+│ │ │  requests on a single line. httpy is designed for testing, debugging, and
+│ │ │  generally interacting with APIs and HTTP servers. The `httpy` command allows
+│ │ │  creating and sending arbitrary HTTP requests. They use simple and natural
+│ │ │  syntax and provide formatted and colored output. Under favour of its
+│ │ │  programmable structure, it can perform many tasks at the same time. For
+│ │ │ -example, you can pull data for user IDs 0, 1, and 2 at the same time [![Codacy
+│ │ │ -Badge](https://app.codacy.com/project/badge/Grade/
+│ │ │ -e2534e38d4a14534bb358a108441020e)](https://www.codacy.com/gh/SinanKanidagli/
+│ │ │ -httpy/
+│ │ │ -dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/
+│ │ │ -httpy&utm_campaign=Badge_Grade) [![Latest version](https://img.shields.io/pypi/
+│ │ │ -v/httpy-cli.svg?style=flat&label=Latest&color=%234B78E6&logo=&logoColor=white)]
+│ │ │ -(https://pypi.python.org/pypi/httpy-cli) [![Twitter](https://img.shields.io/
+│ │ │ -twitter/follow/KanidagliV?style=flat&color=%234B78E6&logoColor=%234B78E6)]
+│ │ │ -(https://twitter.com/KanidagliV) [![Codacy Badge](https://app.codacy.com/
+│ │ │ -project/badge/Coverage/e2534e38d4a14534bb358a108441020e)](https://
+│ │ │ -www.codacy.com/gh/SinanKanidagli/httpy/
+│ │ │ -dashboard?utm_source=github.com&utm_medium=referral&utm_content=SinanKanidagli/
+│ │ │ -httpy&utm_campaign=Badge_Coverage) [httpy in action] ## Getting started
+│ │ │ -Installation instructions ```bash pip install httpy-cli ``` ## Features *
+│ │ │ -Expressive and intuitive syntax * Formatted and colorized terminal output *
+│ │ │ -Programmable requests - Multiple requests one line - Value incremented each
+│ │ │ -time - Random number per request - Read each value from the lines in the file -
+│ │ │ -Value per each request as a list of multiple values * Built-in JSON support *
+│ │ │ -Arbitrary request data * Custom headers ## Structures ```bash $ httpy
+│ │ │ +example, you can pull data for user IDs 0, 1, and 2 at the same time [httpy in
+│ │ │ +action] ## Getting started Installation instructions ```bash pip install httpy-
+│ │ │ +cli ``` ## Features * Expressive and intuitive syntax * Formatted and colorized
+│ │ │ +terminal output * Programmable requests - Multiple requests one line - Value
+│ │ │ +incremented each time - Random number per request - Read each value from the
+│ │ │ +lines in the file - Value per each request as a list of multiple values *
+│ │ │ +Built-in JSON support * Arbitrary request data * Custom headers ## Structures
+│ │ │ +```bash $ httpy
+│ │ │  QUERIES,DATA> --exec  ``` Custom method, headers, queries and JSON data:
+│ │ │  ```bash $ httpy httpbin.org/put PUT HeaderName:HeaderValue data=value
+│ │ │  query==value ``` Command ```bash $ httpy httpbin.org/get --exec :: ``` ##
+│ │ │  Examples Basic Request: ```bash $ httpy httpbin.org/get ``` Usage custom
+│ │ │  method, headers, queries and JSON data: ```bash $ httpy httpbin.org/put PUT
+│ │ │  HeaderName:HeaderValue data=value query==value ``` Custom HTTP method, HTTP
+│ │ │  headers and JSON data: ```bash $ httpy httpbin.org/post POST X-API-Token:123
+│ │ │  name=John ``` Run 3 times: ```bash $ httpy httpbin.org/get --exec i:++:3 ```
+│ │ │  Pass a value to URL: ```bash $ httpy 'httpbin.org/get?value={i}' --exec i:VALUE
+│ │ │  ``` Pass a value to the URL by running it 2 times: ```bash $ httpy
+│ │ │  'httpbin.org/get?value={i}' --exec i:VALUE:2 ``` Get 0, 1, 2, 3, 4, 5 post one
+│ │ │  line and just show body: ```bash $ httpy https://jsonplaceholder.typicode.com/
+│ │ │  posts/{i} --exec i:++:6 -B ``` Pass a value to the Header and just show status:
+│ │ │ -```bash $ httpy httpbin.org/get Authorization:{i} --exec i:token1, token2,
+│ │ │ -token3 -S ``` ## Operation List |Operation |Description |---------------------
+│ │ │ -|------------------------------- | `++` | Increment | `--` | Deincrement |
+│ │ │ -`rand(0,10)` | Random number from 1 to 10 | `read(path/to/file)` | Read from
+│ │ │ -file | `item1, item2` | List | `item` | Text ## Community & support * Tweet
+│ │ │ -httpy at [@KanidagliV](https://twitter.com/KanidagliV) on Twitter. * Use
+│ │ │ -[StackOverflow](https://stackoverflow.com/questions/tagged/httpy) to ask
+│ │ │ -questions and include a `httpy` tag. * Create [GitHub Issues](https://
+│ │ │ -github.com/SinanKanidagil/httpy/issues) for bug reports and feature requests.
+│ │ │ -## Contributing Have a look through existing [Issues](https://github.com/
+│ │ │ -SinanKanidagli/httpy/issues) and [Pull Requests](https://github.com/
+│ │ │ -SinanKanidagli/httpy/pulls) that you could help with. If you'd like to request
+│ │ │ -a feature or report a bug, please [create a GitHub Issue](https://github.com/
+│ │ │ -SinanKanidagli/httpy/issues) using one of the templates provided. Sinan
+│ │ │ -KanidaÄlÄ± Â© 2022
+│ │ │ +```bash $ httpy httpbin.org/get Authorization:{i} --exec i:token1,token2,token3
+│ │ │ +-S ``` ## Operation List |Operation |Description |---------------------|-------
+│ │ │ +------------------------ | `++` | Increment | `--` | Deincrement | `rand(0,10)`
+│ │ │ +| Random number from 1 to 10 | `read(path/to/file)` | Read from file | `item1,
+│ │ │ +item2` | List | `item` | Text ## Community & support * Tweet httpy at
+│ │ │ +[@KanidagliV](https://twitter.com/KanidagliV) on Twitter. * Use [StackOverflow]
+│ │ │ +(https://stackoverflow.com/questions/tagged/httpy) to ask questions and include
+│ │ │ +a `httpy` tag. * Create [GitHub Issues](https://github.com/SinanKanidagil/
+│ │ │ +httpy/issues) for bug reports and feature requests. ## Contributing Have a look
+│ │ │ +through existing [Issues](https://github.com/SinanKanidagli/httpy/issues) and
+│ │ │ +[Pull Requests](https://github.com/SinanKanidagli/httpy/pulls) that you could
+│ │ │ +help with. If you'd like to request a feature or report a bug, please [create a
+│ │ │ +GitHub Issue](https://github.com/SinanKanidagli/httpy/issues) using one of the
+│ │ │ +templates provided. Sinan KanidaÄlÄ± Â© 2022
+│ │   --- httpy-cli-1.0.0/httpy_cli.egg-info/SOURCES.txt
+│ ├── +++ httpy-cli-1.1.0/httpy_cli.egg-info/SOURCES.txt
+│ │┄ Files 24% similar despite different names
+│ │ @@ -20,8 +20,11 @@
+│ │  httpy/output/lexers.py
+│ │  httpy/output/writer.py
+│ │  httpy_cli.egg-info/PKG-INFO
+│ │  httpy_cli.egg-info/SOURCES.txt
+│ │  httpy_cli.egg-info/dependency_links.txt
+│ │  httpy_cli.egg-info/entry_points.txt
+│ │  httpy_cli.egg-info/requires.txt
+│ │ -httpy_cli.egg-info/top_level.txt
+│ │ +httpy_cli.egg-info/top_level.txt
+│ │ +tests/test_args.py
+│ │ +tests/test_command.py
+│ │ +tests/test_command_builder.py
+│ │   --- httpy-cli-1.0.0/setup.cfg
+│ ├── +++ httpy-cli-1.1.0/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- httpy-cli-1.0.0/setup.py
+│ ├── +++ httpy-cli-1.1.0/setup.py
+│ │┄ Files identical despite different names

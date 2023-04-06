@@ -1,0 +1,93 @@
+--- tmp/td_ml_autosegmentation-1.0.6.tar.gz
++++ tmp/td_ml_autosegmentation-1.0.7.tar.gz
+│   --- td_ml_autosegmentation-1.0.6.tar
+├── +++ td_ml_autosegmentation-1.0.7.tar
+│ ├── file list
+│ │ @@ -1,10 +1,10 @@
+│ │ --rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/.DS_Store
+│ │ --rw-r--r--   0        0        0       49 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/.vscode/settings.json
+│ │ --rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/src/.DS_Store
+│ │ --rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/src/td_ml_autosegmentation/.DS_Store
+│ │ --rw-r--r--   0        0        0       26 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/src/td_ml_autosegmentation/__init__.py
+│ │ --rw-r--r--   0        0        0    32634 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/src/td_ml_autosegmentation/autosegment.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/LICENSE
+│ │ --rw-r--r--   0        0        0     7129 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/README.md
+│ │ --rw-r--r--   0        0        0      578 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/pyproject.toml
+│ │ --rw-r--r--   0        0        0     7612 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.6/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/.DS_Store
+│ │ +-rw-r--r--   0        0        0       49 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/.vscode/settings.json
+│ │ +-rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/src/.DS_Store
+│ │ +-rw-r--r--   0        0        0     6148 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/src/td_ml_autosegmentation/.DS_Store
+│ │ +-rw-r--r--   0        0        0       26 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/src/td_ml_autosegmentation/__init__.py
+│ │ +-rw-r--r--   0        0        0    32672 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/src/td_ml_autosegmentation/autosegment.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/LICENSE
+│ │ +-rw-r--r--   0        0        0     7129 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/README.md
+│ │ +-rw-r--r--   0        0        0      578 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     7612 2020-02-02 00:00:00.000000 td_ml_autosegmentation-1.0.7/PKG-INFO
+│ │   --- td_ml_autosegmentation-1.0.6/.DS_Store
+│ ├── +++ td_ml_autosegmentation-1.0.7/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- td_ml_autosegmentation-1.0.6/src/.DS_Store
+│ ├── +++ td_ml_autosegmentation-1.0.7/src/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- td_ml_autosegmentation-1.0.6/src/td_ml_autosegmentation/.DS_Store
+│ ├── +++ td_ml_autosegmentation-1.0.7/src/td_ml_autosegmentation/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- td_ml_autosegmentation-1.0.6/src/td_ml_autosegmentation/autosegment.py
+│ ├── +++ td_ml_autosegmentation-1.0.7/src/td_ml_autosegmentation/autosegment.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -172,16 +172,16 @@
+│ │                  if v > df.shape[0]/20 and 'other' not in k:
+│ │                      keep.append((k, v))
+│ │                  else:
+│ │                      others.append((k, v))
+│ │              if keep != []:
+│ │                  to_dummy.append(c)
+│ │                  data_dict['categorical'][c] = {'kept': keep, 'others': others}
+│ │ -                df[c] = df[c].apply(lambda v: 'other' if v not in keep else v)
+│ │ -                df_clean[c] = df_clean[c].apply(lambda v: 'other' if v not in keep else v)
+│ │ +                df[c] = df[c].apply(lambda v: 'other' if not any(v == x[0] for x in keep) else v)
+│ │ +                df_clean[c] = df_clean[c].apply(lambda v: 'other' if not any(v == x[0] for x in keep) else v)
+│ │              else:
+│ │                  too_unique.append(c)
+│ │  
+│ │          # identifier columns (to drop for modeling)
+│ │          else:
+│ │              too_unique.append(c)
+│ │   --- td_ml_autosegmentation-1.0.6/README.md
+│ ├── +++ td_ml_autosegmentation-1.0.7/README.md
+│ │┄ Files identical despite different names
+│ │   --- td_ml_autosegmentation-1.0.6/pyproject.toml
+│ ├── +++ td_ml_autosegmentation-1.0.7/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["hatchling"]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "td_ml_autosegmentation"
+│ │ -version = "1.0.06"
+│ │ +version = "1.0.07"
+│ │  authors = [
+│ │    { name="Yish Lim", email="limyishuen@gmail.com" },
+│ │  ]
+│ │  description = "TD Autosegmentation"
+│ │  readme = "README.md"
+│ │  license = { file="LICENSE" }
+│ │  requires-python = ">=3.8"
+│ │   --- td_ml_autosegmentation-1.0.6/PKG-INFO
+│ ├── +++ td_ml_autosegmentation-1.0.7/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: td_ml_autosegmentation
+│ │ -Version: 1.0.6
+│ │ +Version: 1.0.7
+│ │  Summary: TD Autosegmentation
+│ │  Project-URL: Homepage, https://github.com/treasure-data-ps/ml_autosegmentation
+│ │  Project-URL: Bug Tracker, https://github.com/treasure-data-ps/ml_autosegmentation
+│ │  Author-email: Yish Lim <limyishuen@gmail.com>
+│ │  License-File: LICENSE
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python :: 3

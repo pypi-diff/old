@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/mpl_fill_cmap_between-0.3.0.tar.gz tmp/mpl_fill_cmap_between-0.3.1.tar.gz --html versions/m/mpl-fill-cmap-between/0.3.0-0.3.1/index.html --text versions/m/mpl-fill-cmap-between/0.3.0-0.3.1/diff.txt --markdown versions/m/mpl-fill-cmap-between/0.3.0-0.3.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.43 KB</span></div>
+  <div><span class="source">tmp/mpl_fill_cmap_between-0.3.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/mpl_fill_cmap_between-0.3.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">210 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;mpl_fill_cmap_between-0.3.<del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;mpl_fill_cmap_between-0.3.<ins>1</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.15 KB</span></div>
+    <div><span class="source">mpl_fill_cmap_between-0.3.0.tar</span> vs.</div>
+    <div id="mpl_fill_cmap_between--.-.-.tar"><span class="source">mpl_fill_cmap_between-0.3.1.tar</span>
+      <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.12 KB</span></div>
+      <div id="mpl_fill_cmap_between--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 5 lines modified</td><td colspan="2">Offset 1, 5 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1401<span class="dp">·</span>2022-09-13<span class="dp">·</span>15:51:04.788370<span class="dp">·</span>mpl_fill_cmap_between-0.3.<del>0</del>/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1401<span class="dp">·</span>2022-09-13<span class="dp">·</span>15:51:04.788370<span class="dp">·</span>mpl_fill_cmap_between-0.3.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>4985</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>3</del>:<del>5</del>2:<del>1</del>2.<del>509136</del><span class="dp">·</span>mpl_fill_cmap_between-0.3.<del>0</del>/mpl_fill_cmap_between.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>5066</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>4</ins>:<ins>0</ins>2:<ins>3</ins>2.<ins>018425</ins><span class="dp">·</span>mpl_fill_cmap_between-0.3.<ins>1</ins>/mpl_fill_cmap_between.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>606<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>3</del>:<del>5</del>3:<del>42</del>.<del>494997</del><span class="dp">·</span>mpl_fill_cmap_between-0.3.<del>0</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>606<span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>4</ins>:<ins>0</ins>3:<ins>00</ins>.<ins>017761</ins><span class="dp">·</span>mpl_fill_cmap_between-0.3.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2124<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>mpl_fill_cmap_between-0.3.<del>0</del>/setup.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2124<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>mpl_fill_cmap_between-0.3.<ins>1</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2197<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>mpl_fill_cmap_between-0.3.<del>0</del>/PKG-INFO</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2197<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>mpl_fill_cmap_between-0.3.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">mpl_fill_cmap_between-0.3.0/README.md</span> vs.</div>
+      <div id="mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--README.md"><span class="source">mpl_fill_cmap_between-0.3.1/README.md</span>
+        <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">852 B</span></div>
+      <div><span class="source">mpl_fill_cmap_between-0.3.0/mpl_fill_cmap_between.py</span> vs.</div>
+      <div id="mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--mpl_fill_cmap_between.py"><span class="source">mpl_fill_cmap_between-0.3.1/mpl_fill_cmap_between.py</span>
+        <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--mpl_fill_cmap_between.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 45, 21 lines modified</td><td colspan="2">Offset 45, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords_x[1::2]<span class="dp">·</span>=<span class="dp">·</span>x</td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords_x[1::2]<span class="dp">·</span>=<span class="dp">·</span>x</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords_y[0::2]<span class="dp">·</span>=<span class="dp">·</span>y</td><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords_y[0::2]<span class="dp">·</span>=<span class="dp">·</span>y</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords_y[1::2]<span class="dp">·</span>=<span class="dp">·</span>y</td><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords_y[1::2]<span class="dp">·</span>=<span class="dp">·</span>y</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords<span class="dp">·</span>=<span class="dp">·</span>np.column_stack((coords_x,<span class="dp">·</span>coords_y))</td><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords<span class="dp">·</span>=<span class="dp">·</span>np.column_stack((coords_x,<span class="dp">·</span>coords_y))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Nx<span class="dp">·</span>=<span class="dp">·</span>x.size</td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Nx<span class="dp">·</span>=<span class="dp">·</span>x.size</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>w,<span class="dp">·</span>h<span class="dp">·</span>=<span class="dp">·</span>1,<span class="dp">·</span>Nx<span class="dp">·</span>-<span class="dp">·</span>1</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>coords<span class="dp">·</span>=<span class="dp">·</span>np.asarray(coords,<span class="dp">·</span>np.float64).reshape((h<span class="dp">·</span>+<span class="dp">·</span>1,<span class="dp">·</span>w<span class="dp">·</span>+<span class="dp">·</span>1,<span class="dp">·</span>2))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Values<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>colormap</td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Values<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>colormap</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vals<span class="dp">·</span>=<span class="dp">·</span>np.empty((2<span class="dp">·</span>*<span class="dp">·</span>Nx))</td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vals<span class="dp">·</span>=<span class="dp">·</span>np.empty((2<span class="dp">·</span>*<span class="dp">·</span>Nx))</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vals[0::2]<span class="dp">·</span>=<span class="dp">·</span>x<span class="dp">·</span>-<span class="dp">·</span>x0</td><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vals[0::2]<span class="dp">·</span>=<span class="dp">·</span>x<span class="dp">·</span>-<span class="dp">·</span>x0</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vals[1::2]<span class="dp">·</span>=<span class="dp">·</span>x<span class="dp">·</span>-<span class="dp">·</span>x0</td><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vals[1::2]<span class="dp">·</span>=<span class="dp">·</span>x<span class="dp">·</span>-<span class="dp">·</span>x0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection<span class="dp">·</span>=<span class="dp">·</span>QuadMesh(<del>1,<span class="dp">·</span>Nx<span class="dp">·</span>-<span class="dp">·</span>1,<span class="dp">·</span></del>coordinates=coords,<span class="dp">·</span>shading=&quot;gouraud&quot;,<span class="dp">·</span>**kwargs)</td><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection<span class="dp">·</span>=<span class="dp">·</span>QuadMesh(coordinates=coords,<span class="dp">·</span>shading=&quot;gouraud&quot;,<span class="dp">·</span>**kwargs)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_array(vals)</td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_array(vals)</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_alpha(alpha)</td><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_alpha(alpha)</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_clim(vmin,<span class="dp">·</span>vmax)</td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_clim(vmin,<span class="dp">·</span>vmax)</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_cmap(cmap)</td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.set_cmap(cmap)</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.autoscale_None()</td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>collection.autoscale_None()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">506 B</span></div>
+      <div><span class="source">mpl_fill_cmap_between-0.3.0/pyproject.toml</span> vs.</div>
+      <div id="mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--pyproject.toml"><span class="source">mpl_fill_cmap_between-0.3.1/pyproject.toml</span>
+        <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;mpl_fill_cmap_between&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;mpl_fill_cmap_between&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>0</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Create<span class="dp">·</span>fillbetween<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>colormap&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Create<span class="dp">·</span>fillbetween<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>colormap&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Cristóbal<span class="dp">·</span>Tapia<span class="dp">·</span>Camú<span class="dp">·</span>&lt;crtapia@gmail.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Cristóbal<span class="dp">·</span>Tapia<span class="dp">·</span>Camú<span class="dp">·</span>&lt;crtapia@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;matplotlib&quot;,<span class="dp">·</span>&quot;fill_between&quot;]</td><td class="diffline">7 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;matplotlib&quot;,<span class="dp">·</span>&quot;fill_between&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/cristobaltapia/mpl_fill_cmap_between&quot;</td><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/cristobaltapia/mpl_fill_cmap_between&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.06 KB</span></div>
+      <div><span class="source">mpl_fill_cmap_between-0.3.0/setup.py</span> vs.</div>
+      <div id="mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--setup.py"><span class="source">mpl_fill_cmap_between-0.3.1/setup.py</span>
+        <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 15 lines modified</td><td colspan="2">Offset 4, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">modules<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">4 </td><td class="diffpresent">modules<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">[&#x27;mpl_fill_cmap_between&#x27;]</td><td class="diffline">5 </td><td class="diffpresent">[&#x27;mpl_fill_cmap_between&#x27;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">6 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">[&#x27;matplotlib&gt;=3.0.0,&lt;4.0.0&#x27;]</td><td class="diffline">7 </td><td class="diffpresent">[&#x27;matplotlib&gt;=3.0.0,&lt;4.0.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">8 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;mpl-fill-cmap-between&#x27;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;mpl-fill-cmap-between&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.3.<del>0</del>&#x27;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.3.<ins>1</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;Create<span class="dp">·</span>fillbetween<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>colormap&#x27;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;Create<span class="dp">·</span>fillbetween<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>colormap&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>mpl_fill_cmap_between\n\nCreate<span class="dp">·</span>fill_between-like<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>matplotlib\&#x27;s<span class="dp">·</span>colormap.\n\n##<span class="dp">·</span>Install\n\n```bash\npip<span class="dp">·</span>install<span class="dp">·</span>mpl_fill_cmap_between\n```\n\n\n##<span class="dp">·</span>Examples\n\nThe<span class="dp">·</span>function<span class="dp">·</span>`fill_cmap_between`<span class="dp">·</span>(and<span class="dp">·</span>also<span class="dp">·</span>the<span class="dp">·</span>function<span class="dp">·</span>`fill_cmap_between_x`)<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>manner:\n\n```python\nimport<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np\nimport<span class="dp">·</span>matplotlib.pyplot<span class="dp">·</span>as<span class="dp">·</span>plt\nfrom<span class="dp">·</span>mpl_fill_cmap_between<span class="dp">·</span>import<span class="dp">·</span>fill_cmap_between,<span class="dp">·</span>fill_cmap_between_x\n\nx<span class="dp">·</span>=<span class="dp">·</span>np.linspace(-10,<span class="dp">·</span>10,<span class="dp">·</span>50)\ny<span class="dp">·</span>=<span class="dp">·</span>x**2<span class="dp">·</span>-<span class="dp">·</span>40\n\nfig<span class="dp">·</span>=<span class="dp">·</span>plt.figure(figsize=(4.8,<span class="dp">·</span>2.0))\nax<span class="dp">·</span>=<span class="dp">·</span>fig.add_subplot(111)\n\nfill_cmap_between(x,<span class="dp">·</span>y<span class="dp">·</span>*<span class="dp">·</span>0.1,<span class="dp">·</span>0,<span class="dp">·</span>ax=ax,<span class="dp">·</span>cmap=&quot;viridis&quot;,<span class="dp">·</span>kw_line_1=dict(color=&quot;k&quot;),\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kw_line_2=dict(color=&quot;k&quot;,<span class="dp">·</span>lw=0.5))\nax.set_aspect(&quot;equal&quot;)\n\nfig.tight_layout()\nfig.savefig(&quot;example.pdf&quot;,<span class="dp">·</span>dpi=300)\n```\n\n![Example](examples/example.png)\n\n\nThe<span class="dp">·</span>plot<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>be<span class="dp">·</span>rotated<span class="dp">·</span>by<span class="dp">·</span>an<span class="dp">·</span>angle<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>given<span class="dp">·</span>origin:\n\n```python\nimport<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np\nimport<span class="dp">·</span>matplotlib.pyplot<span class="dp">·</span>as<span class="dp">·</span>plt\nfrom<span class="dp">·</span>mpl_fill_cmap_between<span class="dp">·</span>import<span class="dp">·</span>fill_cmap_between,<span class="dp">·</span>fill_cmap_between_x\n\nx<span class="dp">·</span>=<span class="dp">·</span>np.linspace(0,<span class="dp">·</span>10,<span class="dp">·</span>50)\ny<span class="dp">·</span>=<span class="dp">·</span>(x<span class="dp">·</span>-<span class="dp">·</span>5)**2<span class="dp">·</span>-<span class="dp">·</span>10\n\nfig<span class="dp">·</span>=<span class="dp">·</span>plt.figure(figsize=(4.8,<span class="dp">·</span>2.0))\nax<span class="dp">·</span>=<span class="dp">·</span>fig.add_subplot(111)\n\nfill_cmap_between(x,<span class="dp">·</span>y<span class="dp">·</span>*<span class="dp">·</span>0.1,<span class="dp">·</span>0,<span class="dp">·</span>ax=ax,<span class="dp">·</span>cmap=&quot;viridis&quot;,<span class="dp">·</span>kw_line_1=dict(color=&quot;k&quot;),\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kw_line_2=dict(color=&quot;k&quot;,<span class="dp">·</span>lw=0.5),<span class="dp">·</span>angle=40,<span class="dp">·</span>origin=(10,<span class="dp">·</span>0))\nax.set_aspect(&quot;equal&quot;)\nax.grid(True,<span class="dp">·</span>ls=&quot;:&quot;)\n\nfig.tight_layout()\nfig.savefig(&quot;example_02.png&quot;,<span class="dp">·</span>dpi=300)\n```\n\n![Example](examples/example_02.png)\n&#x27;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>mpl_fill_cmap_between\n\nCreate<span class="dp">·</span>fill_between-like<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>matplotlib\&#x27;s<span class="dp">·</span>colormap.\n\n##<span class="dp">·</span>Install\n\n```bash\npip<span class="dp">·</span>install<span class="dp">·</span>mpl_fill_cmap_between\n```\n\n\n##<span class="dp">·</span>Examples\n\nThe<span class="dp">·</span>function<span class="dp">·</span>`fill_cmap_between`<span class="dp">·</span>(and<span class="dp">·</span>also<span class="dp">·</span>the<span class="dp">·</span>function<span class="dp">·</span>`fill_cmap_between_x`)<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>manner:\n\n```python\nimport<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np\nimport<span class="dp">·</span>matplotlib.pyplot<span class="dp">·</span>as<span class="dp">·</span>plt\nfrom<span class="dp">·</span>mpl_fill_cmap_between<span class="dp">·</span>import<span class="dp">·</span>fill_cmap_between,<span class="dp">·</span>fill_cmap_between_x\n\nx<span class="dp">·</span>=<span class="dp">·</span>np.linspace(-10,<span class="dp">·</span>10,<span class="dp">·</span>50)\ny<span class="dp">·</span>=<span class="dp">·</span>x**2<span class="dp">·</span>-<span class="dp">·</span>40\n\nfig<span class="dp">·</span>=<span class="dp">·</span>plt.figure(figsize=(4.8,<span class="dp">·</span>2.0))\nax<span class="dp">·</span>=<span class="dp">·</span>fig.add_subplot(111)\n\nfill_cmap_between(x,<span class="dp">·</span>y<span class="dp">·</span>*<span class="dp">·</span>0.1,<span class="dp">·</span>0,<span class="dp">·</span>ax=ax,<span class="dp">·</span>cmap=&quot;viridis&quot;,<span class="dp">·</span>kw_line_1=dict(color=&quot;k&quot;),\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kw_line_2=dict(color=&quot;k&quot;,<span class="dp">·</span>lw=0.5))\nax.set_aspect(&quot;equal&quot;)\n\nfig.tight_layout()\nfig.savefig(&quot;example.pdf&quot;,<span class="dp">·</span>dpi=300)\n```\n\n![Example](examples/example.png)\n\n\nThe<span class="dp">·</span>plot<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>be<span class="dp">·</span>rotated<span class="dp">·</span>by<span class="dp">·</span>an<span class="dp">·</span>angle<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>given<span class="dp">·</span>origin:\n\n```python\nimport<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np\nimport<span class="dp">·</span>matplotlib.pyplot<span class="dp">·</span>as<span class="dp">·</span>plt\nfrom<span class="dp">·</span>mpl_fill_cmap_between<span class="dp">·</span>import<span class="dp">·</span>fill_cmap_between,<span class="dp">·</span>fill_cmap_between_x\n\nx<span class="dp">·</span>=<span class="dp">·</span>np.linspace(0,<span class="dp">·</span>10,<span class="dp">·</span>50)\ny<span class="dp">·</span>=<span class="dp">·</span>(x<span class="dp">·</span>-<span class="dp">·</span>5)**2<span class="dp">·</span>-<span class="dp">·</span>10\n\nfig<span class="dp">·</span>=<span class="dp">·</span>plt.figure(figsize=(4.8,<span class="dp">·</span>2.0))\nax<span class="dp">·</span>=<span class="dp">·</span>fig.add_subplot(111)\n\nfill_cmap_between(x,<span class="dp">·</span>y<span class="dp">·</span>*<span class="dp">·</span>0.1,<span class="dp">·</span>0,<span class="dp">·</span>ax=ax,<span class="dp">·</span>cmap=&quot;viridis&quot;,<span class="dp">·</span>kw_line_1=dict(color=&quot;k&quot;),\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kw_line_2=dict(color=&quot;k&quot;,<span class="dp">·</span>lw=0.5),<span class="dp">·</span>angle=40,<span class="dp">·</span>origin=(10,<span class="dp">·</span>0))\nax.set_aspect(&quot;equal&quot;)\nax.grid(True,<span class="dp">·</span>ls=&quot;:&quot;)\n\nfig.tight_layout()\nfig.savefig(&quot;example_02.png&quot;,<span class="dp">·</span>dpi=300)\n```\n\n![Example](examples/example_02.png)\n&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Cristóbal<span class="dp">·</span>Tapia<span class="dp">·</span>Camú&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Cristóbal<span class="dp">·</span>Tapia<span class="dp">·</span>Camú&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;crtapia@gmail.com&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;crtapia@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://github.com/cristobaltapia/mpl_fill_cmap_between&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://github.com/cristobaltapia/mpl_fill_cmap_between&#x27;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">483 B</span></div>
+      <div><span class="source">mpl_fill_cmap_between-0.3.0/PKG-INFO</span> vs.</div>
+      <div id="mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--PKG-INFO"><span class="source">mpl_fill_cmap_between-0.3.1/PKG-INFO</span>
+        <a class="anchor" href="#mpl_fill_cmap_between--.-.-.tar---mpl_fill_cmap_between--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>mpl-fill-cmap-between</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>mpl-fill-cmap-between</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Create<span class="dp">·</span>fillbetween<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>colormap</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Create<span class="dp">·</span>fillbetween<span class="dp">·</span>plots<span class="dp">·</span>filled<span class="dp">·</span>with<span class="dp">·</span>any<span class="dp">·</span>colormap</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/cristobaltapia/mpl_fill_cmap_between</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/cristobaltapia/mpl_fill_cmap_between</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>matplotlib,fill_between</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>matplotlib,fill_between</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Cristóbal<span class="dp">·</span>Tapia<span class="dp">·</span>Camú</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Cristóbal<span class="dp">·</span>Tapia<span class="dp">·</span>Camú</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>crtapia@gmail.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>crtapia@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;4.0</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;4.0</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

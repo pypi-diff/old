@@ -1,0 +1,124 @@
+# Comparing `tmp/mpl_fill_cmap_between-0.3.0.tar.gz` & `tmp/mpl_fill_cmap_between-0.3.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mpl_fill_cmap_between-0.3.0.tar", max compression
++gzip compressed data, was "mpl_fill_cmap_between-0.3.1.tar", max compression
+```
+
+## Comparing `mpl_fill_cmap_between-0.3.0.tar` & `mpl_fill_cmap_between-0.3.1.tar`
+
+### file list
+
+```diff
+@@ -1,5 +1,5 @@
+--rw-r--r--   0        0        0     1401 2022-09-13 15:51:04.788370 mpl_fill_cmap_between-0.3.0/README.md
+--rw-r--r--   0        0        0     4985 2023-04-06 13:52:12.509136 mpl_fill_cmap_between-0.3.0/mpl_fill_cmap_between.py
+--rw-r--r--   0        0        0      606 2023-04-06 13:53:42.494997 mpl_fill_cmap_between-0.3.0/pyproject.toml
+--rw-r--r--   0        0        0     2124 1970-01-01 00:00:00.000000 mpl_fill_cmap_between-0.3.0/setup.py
+--rw-r--r--   0        0        0     2197 1970-01-01 00:00:00.000000 mpl_fill_cmap_between-0.3.0/PKG-INFO
++-rw-r--r--   0        0        0     1401 2022-09-13 15:51:04.788370 mpl_fill_cmap_between-0.3.1/README.md
++-rw-r--r--   0        0        0     5066 2023-04-06 14:02:32.018425 mpl_fill_cmap_between-0.3.1/mpl_fill_cmap_between.py
++-rw-r--r--   0        0        0      606 2023-04-06 14:03:00.017761 mpl_fill_cmap_between-0.3.1/pyproject.toml
++-rw-r--r--   0        0        0     2124 1970-01-01 00:00:00.000000 mpl_fill_cmap_between-0.3.1/setup.py
++-rw-r--r--   0        0        0     2197 1970-01-01 00:00:00.000000 mpl_fill_cmap_between-0.3.1/PKG-INFO
+```
+
+### Comparing `mpl_fill_cmap_between-0.3.0/README.md` & `mpl_fill_cmap_between-0.3.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mpl_fill_cmap_between-0.3.0/mpl_fill_cmap_between.py` & `mpl_fill_cmap_between-0.3.1/mpl_fill_cmap_between.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -45,21 +45,23 @@
+     coords_x[1::2] = x
+     coords_y[0::2] = y
+     coords_y[1::2] = y
+ 
+     coords = np.column_stack((coords_x, coords_y))
+ 
+     Nx = x.size
++    w, h = 1, Nx - 1
++    coords = np.asarray(coords, np.float64).reshape((h + 1, w + 1, 2))
+ 
+     # Values for the colormap
+     vals = np.empty((2 * Nx))
+     vals[0::2] = x - x0
+     vals[1::2] = x - x0
+ 
+-    collection = QuadMesh(1, Nx - 1, coordinates=coords, shading="gouraud", **kwargs)
++    collection = QuadMesh(coordinates=coords, shading="gouraud", **kwargs)
+ 
+     collection.set_array(vals)
+     collection.set_alpha(alpha)
+     collection.set_clim(vmin, vmax)
+     collection.set_cmap(cmap)
+     collection.autoscale_None()
+```
+
+### Comparing `mpl_fill_cmap_between-0.3.0/pyproject.toml` & `mpl_fill_cmap_between-0.3.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "mpl_fill_cmap_between"
+-version = "0.3.0"
++version = "0.3.1"
+ description = "Create fillbetween plots filled with any colormap"
+ authors = ["Cristóbal Tapia Camú <crtapia@gmail.com>"]
+ license = "MIT"
+ keywords = ["matplotlib", "fill_between"]
+ readme = "README.md"
+ repository = "https://github.com/cristobaltapia/mpl_fill_cmap_between"
+```
+
+### Comparing `mpl_fill_cmap_between-0.3.0/setup.py` & `mpl_fill_cmap_between-0.3.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ modules = \
+ ['mpl_fill_cmap_between']
+ install_requires = \
+ ['matplotlib>=3.0.0,<4.0.0']
+ 
+ setup_kwargs = {
+     'name': 'mpl-fill-cmap-between',
+-    'version': '0.3.0',
++    'version': '0.3.1',
+     'description': 'Create fillbetween plots filled with any colormap',
+     'long_description': '# mpl_fill_cmap_between\n\nCreate fill_between-like plots filled with any matplotlib\'s colormap.\n\n## Install\n\n```bash\npip install mpl_fill_cmap_between\n```\n\n\n## Examples\n\nThe function `fill_cmap_between` (and also the function `fill_cmap_between_x`) can be used in the following manner:\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_fill_cmap_between import fill_cmap_between, fill_cmap_between_x\n\nx = np.linspace(-10, 10, 50)\ny = x**2 - 40\n\nfig = plt.figure(figsize=(4.8, 2.0))\nax = fig.add_subplot(111)\n\nfill_cmap_between(x, y * 0.1, 0, ax=ax, cmap="viridis", kw_line_1=dict(color="k"),\n                  kw_line_2=dict(color="k", lw=0.5))\nax.set_aspect("equal")\n\nfig.tight_layout()\nfig.savefig("example.pdf", dpi=300)\n```\n\n![Example](examples/example.png)\n\n\nThe plot can also be rotated by an angle from a given origin:\n\n```python\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_fill_cmap_between import fill_cmap_between, fill_cmap_between_x\n\nx = np.linspace(0, 10, 50)\ny = (x - 5)**2 - 10\n\nfig = plt.figure(figsize=(4.8, 2.0))\nax = fig.add_subplot(111)\n\nfill_cmap_between(x, y * 0.1, 0, ax=ax, cmap="viridis", kw_line_1=dict(color="k"),\n                  kw_line_2=dict(color="k", lw=0.5), angle=40, origin=(10, 0))\nax.set_aspect("equal")\nax.grid(True, ls=":")\n\nfig.tight_layout()\nfig.savefig("example_02.png", dpi=300)\n```\n\n![Example](examples/example_02.png)\n',
+     'author': 'Cristóbal Tapia Camú',
+     'author_email': 'crtapia@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/cristobaltapia/mpl_fill_cmap_between',
+```
+
+### Comparing `mpl_fill_cmap_between-0.3.0/PKG-INFO` & `mpl_fill_cmap_between-0.3.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mpl-fill-cmap-between
+-Version: 0.3.0
++Version: 0.3.1
+ Summary: Create fillbetween plots filled with any colormap
+ Home-page: https://github.com/cristobaltapia/mpl_fill_cmap_between
+ License: MIT
+ Keywords: matplotlib,fill_between
+ Author: Cristóbal Tapia Camú
+ Author-email: crtapia@gmail.com
+ Requires-Python: >=3.8,<4.0
+```
+

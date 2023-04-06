@@ -1,0 +1,943 @@
+# Comparing `tmp/sarus_data_spec_public-2.9.1.tar.gz` & `tmp/sarus_data_spec_public-2.9.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "sarus_data_spec_public-2.9.1.tar", last modified: Mon Mar 27 12:51:18 2023, max compression
++gzip compressed data, was "sarus_data_spec_public-2.9.2.tar", last modified: Wed Mar 29 13:37:39 2023, max compression
+```
+
+## Comparing `sarus_data_spec_public-2.9.1.tar` & `sarus_data_spec_public-2.9.2.tar`
+
+### file list
+
+```diff
+@@ -1,186 +1,186 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.342180 sarus_data_spec_public-2.9.1/
+--rw-rw-rw-   0 root         (0) root         (0)      211 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/MANIFEST.in
+--rw-r--r--   0 root         (0) root         (0)      436 2023-03-27 12:51:18.342180 sarus_data_spec_public-2.9.1/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)      133 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/pyproject.toml
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.294176 sarus_data_spec_public-2.9.1/sarus_data_spec/
+--rwxrwxrwx   0 root         (0) root         (0)      825 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.296176 sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      562 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/array.py
+--rw-rw-rw-   0 root         (0) root         (0)     7511 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/schema.py
+--rw-rw-rw-   0 root         (0) root         (0)     9355 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/type.py
+--rw-rw-rw-   0 root         (0) root         (0)      932 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/attribute.py
+--rw-rw-rw-   0 root         (0) root         (0)     4618 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/base.py
+--rw-rw-rw-   0 root         (0) root         (0)     1488 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/bounds.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.297176 sarus_data_spec_public-2.9.1/sarus_data_spec/config/
+--rw-rw-rw-   0 root         (0) root         (0)      649 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/config/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2744 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/config/privacy_properties.yaml
+--rw-rw-rw-   0 root         (0) root         (0)     6116 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/config/routing.yaml
+--rw-rw-rw-   0 root         (0) root         (0)     3315 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/constants.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.298176 sarus_data_spec_public-2.9.1/sarus_data_spec/context/
+--rw-rw-rw-   0 root         (0) root         (0)      265 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/context/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     1331 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/context/public.py
+--rw-rw-rw-   0 root         (0) root         (0)      361 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/context/state.py
+--rw-rw-rw-   0 root         (0) root         (0)      985 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/context/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)    18362 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataset.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.299176 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2286 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/base.py
+--rw-rw-rw-   0 root         (0) root         (0)     9972 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/simple_rules.py
+--rw-rw-rw-   0 root         (0) root         (0)      825 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/typing.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.301176 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    10924 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/base.py
+--rw-rw-rw-   0 root         (0) root         (0)      815 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/privacy_limit.py
+--rw-rw-rw-   0 root         (0) root         (0)     2404 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/simple_rules.py
+--rw-rw-rw-   0 root         (0) root         (0)     4469 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     8849 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/deprecation.py
+--rw-rw-rw-   0 root         (0) root         (0)     1584 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/factory.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.302176 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.303176 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/
+--rw-rw-rw-   0 root         (0) root         (0)       98 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.304176 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/api/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/api/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     3904 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/api/api_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)    19022 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.304176 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/delegating/
+--rw-rw-rw-   0 root         (0) root         (0)       83 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/delegating/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     9139 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/delegating/delegating_manager.py
+--rw-rw-rw-   0 root         (0) root         (0)     6898 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/utils.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.307177 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     4562 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/arrow_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     3314 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     5252 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/caching_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     2238 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/schema_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     3970 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/value_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)     3628 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/worker_computation.py
+--rw-rw-rw-   0 root         (0) root         (0)    17187 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.283175 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.307177 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/
+--rw-rw-rw-   0 root         (0) root         (0)      173 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     3554 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/base.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.308177 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.312177 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    14604 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py
+--rw-rw-rw-   0 root         (0) root         (0)      579 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py
+--rw-rw-rw-   0 root         (0) root         (0)      679 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.313177 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/
+--rw-rw-rw-   0 root         (0) root         (0)      430 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    28993 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py
+--rw-rw-rw-   0 root         (0) root         (0)    27016 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py
+--rw-rw-rw-   0 root         (0) root         (0)      263 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas_profiling.py
+--rw-rw-rw-   0 root         (0) root         (0)     5336 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/protection_utils.py
+--rw-rw-rw-   0 root         (0) root         (0)     4765 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py
+--rw-rw-rw-   0 root         (0) root         (0)      266 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/skopt.py
+--rw-rw-rw-   0 root         (0) root         (0)     3093 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/std.py
+--rw-rw-rw-   0 root         (0) root         (0)      698 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py
+--rw-rw-rw-   0 root         (0) root         (0)    10164 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/routing.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.317178 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    13787 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py
+--rw-rw-rw-   0 root         (0) root         (0)     1469 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py
+--rw-rw-rw-   0 root         (0) root         (0)    11545 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py
+--rw-rw-rw-   0 root         (0) root         (0)    10719 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py
+--rw-rw-rw-   0 root         (0) root         (0)    10763 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/project.py
+--rw-rw-rw-   0 root         (0) root         (0)     6545 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py
+--rw-rw-rw-   0 root         (0) root         (0)     4198 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py
+--rw-rw-rw-   0 root         (0) root         (0)     2180 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py
+--rw-rw-rw-   0 root         (0) root         (0)    10114 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py
+--rw-rw-rw-   0 root         (0) root         (0)     9336 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py
+--rw-rw-rw-   0 root         (0) root         (0)    27155 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.319178 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     4023 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/model.py
+--rw-rw-rw-   0 root         (0) root         (0)      505 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/privacy_params.py
+--rw-rw-rw-   0 root         (0) root         (0)      277 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/random_seed.py
+--rw-rw-rw-   0 root         (0) root         (0)     2462 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/routing.py
+--rw-rw-rw-   0 root         (0) root         (0)    12377 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/manager/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     1521 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/marginals.py
+--rw-rw-rw-   0 root         (0) root         (0)     3028 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/path.py
+--rw-rw-rw-   0 root         (0) root         (0)     3004 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/predicate.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.338179 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/
+--rw-rw-rw-   0 root         (0) root         (0)     1978 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      244 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/attribute.proto
+--rw-r--r--   0 root         (0) root         (0)     5552 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/attribute_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1846 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/attribute_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      251 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/bounds.proto
+--rw-r--r--   0 root         (0) root         (0)     6306 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/bounds_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2168 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/bounds_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      310 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/constraint.proto
+--rw-r--r--   0 root         (0) root         (0)     7860 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/constraint_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2834 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/constraint_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     1233 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/dataset.proto
+--rw-r--r--   0 root         (0) root         (0)    24833 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/dataset_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     8880 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/dataset_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      470 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/links.proto
+--rw-r--r--   0 root         (0) root         (0)    11282 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/links_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     4193 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/links_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      244 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/manager.proto
+--rw-r--r--   0 root         (0) root         (0)     4572 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/manager_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1642 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/manager_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      254 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/marginals.proto
+--rw-r--r--   0 root         (0) root         (0)     6408 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/marginals_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2177 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/marginals_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      153 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/path.proto
+--rw-r--r--   0 root         (0) root         (0)     4998 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/path_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1735 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/path_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      550 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/predicate.proto
+--rw-r--r--   0 root         (0) root         (0)    13369 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/predicate_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     4859 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/predicate_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      259 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/proto_container.proto
+--rw-r--r--   0 root         (0) root         (0)     5086 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/proto_container_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     1825 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/proto_container_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      629 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/relation.proto
+--rw-r--r--   0 root         (0) root         (0)     5982 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/relation_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2613 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/relation_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     2977 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/scalar.proto
+--rw-r--r--   0 root         (0) root         (0)    31156 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/scalar_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    13960 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/scalar_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      695 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/schema.proto
+--rw-r--r--   0 root         (0) root         (0)    12546 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/schema_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     4579 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/schema_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      249 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/size.proto
+--rw-r--r--   0 root         (0) root         (0)     6233 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/size_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     2162 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/size_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     3909 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/statistics.proto
+--rw-r--r--   0 root         (0) root         (0)    91981 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/statistics_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    32903 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/statistics_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      646 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/status.proto
+--rw-r--r--   0 root         (0) root         (0)    18816 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/status_pb2.py
+--rw-r--r--   0 root         (0) root         (0)     6206 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/status_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     5557 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/transform.proto
+--rw-r--r--   0 root         (0) root         (0)   105993 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/transform_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    37589 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/transform_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)     4496 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/type.proto
+--rw-r--r--   0 root         (0) root         (0)    73431 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/type_pb2.py
+--rw-r--r--   0 root         (0) root         (0)    28800 2023-03-27 12:51:07.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/type_pb2.pyi
+--rw-rw-rw-   0 root         (0) root         (0)      949 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     3914 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/utilities.py
+--rwxrwxrwx   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)    11159 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/scalar.py
+--rw-rw-rw-   0 root         (0) root         (0)     4084 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/schema.py
+--rw-rw-rw-   0 root         (0) root         (0)     1467 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/size.py
+--rw-rw-rw-   0 root         (0) root         (0)    43542 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/statistics.py
+--rw-rw-rw-   0 root         (0) root         (0)    16983 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/status.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.340180 sarus_data_spec_public-2.9.1/sarus_data_spec/storage/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/storage/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)    11812 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/storage/local.py
+--rw-rw-rw-   0 root         (0) root         (0)     5153 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/storage/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     3078 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/storage/utils.py
+--rw-rw-rw-   0 root         (0) root         (0)    30172 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/transform.py
+--rw-rw-rw-   0 root         (0) root         (0)   127509 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/type.py
+--rw-rw-rw-   0 root         (0) root         (0)    34097 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/typing.py
+--rw-rw-rw-   0 root         (0) root         (0)     3437 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/sarus_data_spec/variant_constraint.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-27 12:51:18.342180 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/
+--rw-r--r--   0 root         (0) root         (0)      436 2023-03-27 12:51:18.000000 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     7208 2023-03-27 12:51:18.000000 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-03-27 12:51:18.000000 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-03-27 12:51:18.000000 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0) root         (0)      113 2023-03-27 12:51:18.000000 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       16 2023-03-27 12:51:18.000000 sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/top_level.txt
+--rw-rw-rw-   0 root         (0) root         (0)     5147 2023-03-27 12:51:18.343180 sarus_data_spec_public-2.9.1/setup.cfg
+--rwxrwxrwx   0 root         (0) root         (0)     1186 2023-03-27 12:50:56.000000 sarus_data_spec_public-2.9.1/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.107457 sarus_data_spec_public-2.9.2/
++-rw-rw-rw-   0 root         (0) root         (0)      211 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/MANIFEST.in
++-rw-r--r--   0 root         (0) root         (0)      431 2023-03-29 13:37:39.107457 sarus_data_spec_public-2.9.2/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)      133 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/pyproject.toml
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.060454 sarus_data_spec_public-2.9.2/sarus_data_spec/
++-rwxrwxrwx   0 root         (0) root         (0)      825 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.061454 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      562 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/array.py
++-rw-rw-rw-   0 root         (0) root         (0)     7511 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/schema.py
++-rw-rw-rw-   0 root         (0) root         (0)     9355 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/type.py
++-rw-rw-rw-   0 root         (0) root         (0)      932 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/attribute.py
++-rw-rw-rw-   0 root         (0) root         (0)     4618 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/base.py
++-rw-rw-rw-   0 root         (0) root         (0)     1488 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/bounds.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.062454 sarus_data_spec_public-2.9.2/sarus_data_spec/config/
++-rw-rw-rw-   0 root         (0) root         (0)      649 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/config/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     2744 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/config/privacy_properties.yaml
++-rw-rw-rw-   0 root         (0) root         (0)     6116 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/config/routing.yaml
++-rw-rw-rw-   0 root         (0) root         (0)     3315 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/constants.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.063454 sarus_data_spec_public-2.9.2/sarus_data_spec/context/
++-rw-rw-rw-   0 root         (0) root         (0)      265 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     1331 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/public.py
++-rw-rw-rw-   0 root         (0) root         (0)      361 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/state.py
++-rw-rw-rw-   0 root         (0) root         (0)      985 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/context/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)    18362 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataset.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.065454 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     2286 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/base.py
++-rw-rw-rw-   0 root         (0) root         (0)     9972 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/simple_rules.py
++-rw-rw-rw-   0 root         (0) root         (0)      825 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/typing.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.066454 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    10924 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/base.py
++-rw-rw-rw-   0 root         (0) root         (0)      815 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/privacy_limit.py
++-rw-rw-rw-   0 root         (0) root         (0)     2404 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/simple_rules.py
++-rw-rw-rw-   0 root         (0) root         (0)     4469 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     8849 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/deprecation.py
++-rw-rw-rw-   0 root         (0) root         (0)     1584 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/factory.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.067454 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.068454 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/
++-rw-rw-rw-   0 root         (0) root         (0)       98 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.069455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     3904 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/api_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)    19022 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.069455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/
++-rw-rw-rw-   0 root         (0) root         (0)       83 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     9139 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/delegating_manager.py
++-rw-rw-rw-   0 root         (0) root         (0)     6898 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/utils.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.072455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     4562 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/arrow_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)     3314 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)     5252 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/caching_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)     2238 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/schema_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)     3970 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/value_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)     3628 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/worker_computation.py
++-rw-rw-rw-   0 root         (0) root         (0)    17187 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.049453 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.073455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/
++-rw-rw-rw-   0 root         (0) root         (0)      173 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     3554 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/base.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.073455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.077455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    14604 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py
++-rw-rw-rw-   0 root         (0) root         (0)      579 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py
++-rw-rw-rw-   0 root         (0) root         (0)      679 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.078455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/
++-rw-rw-rw-   0 root         (0) root         (0)      430 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    28993 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py
++-rw-rw-rw-   0 root         (0) root         (0)    27016 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py
++-rw-rw-rw-   0 root         (0) root         (0)      263 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas_profiling.py
++-rw-rw-rw-   0 root         (0) root         (0)     5336 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/protection_utils.py
++-rw-rw-rw-   0 root         (0) root         (0)     4765 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py
++-rw-rw-rw-   0 root         (0) root         (0)      266 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/skopt.py
++-rw-rw-rw-   0 root         (0) root         (0)     3093 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/std.py
++-rw-rw-rw-   0 root         (0) root         (0)      698 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py
++-rw-rw-rw-   0 root         (0) root         (0)    10164 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/routing.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.082455 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    13787 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py
++-rw-rw-rw-   0 root         (0) root         (0)     1469 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py
++-rw-rw-rw-   0 root         (0) root         (0)    11545 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py
++-rw-rw-rw-   0 root         (0) root         (0)    10719 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py
++-rw-rw-rw-   0 root         (0) root         (0)    10763 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/project.py
++-rw-rw-rw-   0 root         (0) root         (0)     6545 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py
++-rw-rw-rw-   0 root         (0) root         (0)     4198 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py
++-rw-rw-rw-   0 root         (0) root         (0)     2180 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py
++-rw-rw-rw-   0 root         (0) root         (0)    10114 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py
++-rw-rw-rw-   0 root         (0) root         (0)     9336 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py
++-rw-rw-rw-   0 root         (0) root         (0)    27155 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.084456 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     4023 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/model.py
++-rw-rw-rw-   0 root         (0) root         (0)      505 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/privacy_params.py
++-rw-rw-rw-   0 root         (0) root         (0)      277 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/random_seed.py
++-rw-rw-rw-   0 root         (0) root         (0)     2462 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/routing.py
++-rw-rw-rw-   0 root         (0) root         (0)    12377 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/manager/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     1521 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/marginals.py
++-rw-rw-rw-   0 root         (0) root         (0)     3028 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/path.py
++-rw-rw-rw-   0 root         (0) root         (0)     3004 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/predicate.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.103457 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/
++-rw-rw-rw-   0 root         (0) root         (0)     1978 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      244 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute.proto
++-rw-r--r--   0 root         (0) root         (0)     5552 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1846 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      251 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds.proto
++-rw-r--r--   0 root         (0) root         (0)     6306 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2168 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      310 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint.proto
++-rw-r--r--   0 root         (0) root         (0)     7860 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2834 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     1233 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset.proto
++-rw-r--r--   0 root         (0) root         (0)    24833 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     8880 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      470 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links.proto
++-rw-r--r--   0 root         (0) root         (0)    11282 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     4193 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      244 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager.proto
++-rw-r--r--   0 root         (0) root         (0)     4572 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1642 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      254 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals.proto
++-rw-r--r--   0 root         (0) root         (0)     6408 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2177 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      153 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path.proto
++-rw-r--r--   0 root         (0) root         (0)     4998 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1735 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      550 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate.proto
++-rw-r--r--   0 root         (0) root         (0)    13369 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     4859 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      259 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container.proto
++-rw-r--r--   0 root         (0) root         (0)     5086 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     1825 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      629 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation.proto
++-rw-r--r--   0 root         (0) root         (0)     5982 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2613 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     2977 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar.proto
++-rw-r--r--   0 root         (0) root         (0)    31156 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    13960 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      695 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema.proto
++-rw-r--r--   0 root         (0) root         (0)    12546 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     4579 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      249 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size.proto
++-rw-r--r--   0 root         (0) root         (0)     6233 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     2162 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     3909 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics.proto
++-rw-r--r--   0 root         (0) root         (0)    91981 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    32903 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      646 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status.proto
++-rw-r--r--   0 root         (0) root         (0)    18816 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.py
++-rw-r--r--   0 root         (0) root         (0)     6206 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     5557 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform.proto
++-rw-r--r--   0 root         (0) root         (0)   105993 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    37589 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)     4496 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type.proto
++-rw-r--r--   0 root         (0) root         (0)    73431 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.py
++-rw-r--r--   0 root         (0) root         (0)    28800 2023-03-29 13:37:28.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.pyi
++-rw-rw-rw-   0 root         (0) root         (0)      949 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     3914 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/utilities.py
++-rwxrwxrwx   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)    11159 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/scalar.py
++-rw-rw-rw-   0 root         (0) root         (0)     4084 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/schema.py
++-rw-rw-rw-   0 root         (0) root         (0)     1467 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/size.py
++-rw-rw-rw-   0 root         (0) root         (0)    43542 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/statistics.py
++-rw-rw-rw-   0 root         (0) root         (0)    16983 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/status.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.104457 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)    11812 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/local.py
++-rw-rw-rw-   0 root         (0) root         (0)     5153 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     3078 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/storage/utils.py
++-rw-rw-rw-   0 root         (0) root         (0)    30172 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/transform.py
++-rw-rw-rw-   0 root         (0) root         (0)   127509 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/type.py
++-rw-rw-rw-   0 root         (0) root         (0)    34097 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/typing.py
++-rw-rw-rw-   0 root         (0) root         (0)     3437 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/sarus_data_spec/variant_constraint.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-29 13:37:39.107457 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/
++-rw-r--r--   0 root         (0) root         (0)      431 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     7208 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/not-zip-safe
++-rw-r--r--   0 root         (0) root         (0)      113 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       16 2023-03-29 13:37:39.000000 sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/top_level.txt
++-rw-rw-rw-   0 root         (0) root         (0)     5141 2023-03-29 13:37:39.108457 sarus_data_spec_public-2.9.2/setup.cfg
++-rwxrwxrwx   0 root         (0) root         (0)     1186 2023-03-29 13:37:16.000000 sarus_data_spec_public-2.9.2/setup.py
+```
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/__init__.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/__init__.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ from sarus_data_spec.transform import Transform
+ from sarus_data_spec.variant_constraint import VariantConstraint
+ 
+ """A library to manage Sarus datasets"""
+ # pylint: disable=unused-variable
+ 
+ PACKAGE_NAME: Final[str] = 'sarus_data_spec'
+-VERSION: Final[str] = '2.9.1'
++VERSION: Final[str] = '2.9.2'
+ 
+ try:
+     import sarus_data_spec.context.worker as sw
+ 
+     push_global_context(sw.WorkerContext())
+ except ModuleNotFoundError as exception:
+     if exception.name == 'sarus_data_spec.context.worker':
+```
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/array.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/array.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/schema.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/arrow/type.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/arrow/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/attribute.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/attribute.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/base.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/bounds.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/bounds.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/config/__init__.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/config/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/config/privacy_properties.yaml` & `sarus_data_spec_public-2.9.2/sarus_data_spec/config/privacy_properties.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/config/routing.yaml` & `sarus_data_spec_public-2.9.2/sarus_data_spec/config/routing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/constants.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/context/public.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/context/public.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/context/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/context/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataset.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/base.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/simple_rules.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/simple_rules.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_rewriter/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_rewriter/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/base.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/privacy_limit.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/privacy_limit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/simple_rules.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/simple_rules.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/dataspec_validator/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/dataspec_validator/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/deprecation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/deprecation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/factory.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/api/api_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/api/api_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/base.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/delegating/delegating_manager.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/delegating/delegating_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/utils.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/arrow_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/arrow_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/cache_scalar_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/caching_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/caching_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/schema_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/schema_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/value_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/value_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/asyncio/worker/worker_computation.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/asyncio/worker/worker_computation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/base.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/base.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/external_op.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/imblearn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/numpy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/pandas/pandas_dp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/protection_utils.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/protection_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/sklearn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/std.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/std.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/external/xgboost.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/routing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/differentiated_sample.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/extract.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/get_item.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/project.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/project.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/sample.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/select_sql.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/shuffle.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/standard_op.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/synthetic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/processor/standard/visitor_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/model.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/ops/asyncio/source/routing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/ops/asyncio/source/routing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/manager/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/manager/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/marginals.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/marginals.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/path.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/path.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/predicate.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/predicate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/__init__.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/attribute_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/attribute_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/attribute_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/bounds_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/bounds_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/bounds_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/constraint_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/constraint_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/constraint_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/dataset.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/dataset_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/dataset_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/dataset_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/links_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/links_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/links_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/manager_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/manager_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/manager_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/marginals_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/marginals_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/marginals_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/path_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/path_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/path_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/predicate.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/predicate_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/predicate_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/predicate_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/proto_container_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/proto_container_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/proto_container_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/relation.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/relation_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/relation_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/relation_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/scalar.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/scalar_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/scalar_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/scalar_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/schema.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/schema_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/schema_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/schema_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/size_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/size_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/size_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/statistics.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/statistics_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/statistics_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/statistics_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/status.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/status_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/status_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/status_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/transform.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/transform_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/transform_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/transform_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/type.proto` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/type_pb2.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/type_pb2.pyi` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/type_pb2.pyi`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/protobuf/utilities.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/protobuf/utilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/scalar.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/scalar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/schema.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/size.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/size.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/statistics.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/status.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/storage/local.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/storage/local.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/storage/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/storage/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/storage/utils.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/storage/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/transform.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/transform.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/type.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/typing.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec/variant_constraint.py` & `sarus_data_spec_public-2.9.2/sarus_data_spec/variant_constraint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/sarus_data_spec_public.egg-info/SOURCES.txt` & `sarus_data_spec_public-2.9.2/sarus_data_spec_public.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `sarus_data_spec_public-2.9.1/setup.cfg` & `sarus_data_spec_public-2.9.2/setup.cfg`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ classifiers = 
+ 	Programming Language :: Python :: 3
+ 	Programming Language :: Python :: 3.8
+ 	Programming Language :: Python :: 3.9
+ 
+ [options]
+ zip_safe = False
+-python_requires = >=3.8, <3.9
++python_requires = >=3.8
+ include_package_data = True
+ packages = sarus_data_spec.config
+ py_modules = 
+ 	sarus_data_spec.arrow.array
+ 	sarus_data_spec.arrow.schema
+ 	sarus_data_spec.arrow.type
+ 	sarus_data_spec.attribute
+```
+
+### Comparing `sarus_data_spec_public-2.9.1/setup.py` & `sarus_data_spec_public-2.9.2/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -43,8 +43,8 @@
+ 
+     def run(self):
+         generate_proto_code()
+         build_py.run(self)
+ 
+ 
+ if __name__ == '__main__':
+-    setup(version='2.9.1')
++    setup(version='2.9.2')
+```
+
