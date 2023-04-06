@@ -156,10 +156,10 @@ def processPackages(args, jclient, p):
     try:
         old = list(releaseInfo.releases.keys())[-2]
     except IndexError:
-        log.warning("Ignoring: [%s], unable to determine old version", p.name)
+        log.warning("Skipping, unable to determine old version")
         return False
     new = list(releaseInfo.releases.keys())[-1]
-    log.info("[%s] Actual version: %s Old Version: %s", p.name, new, old)
+    log.info("New version: [%s] Old Version: [%s]", new, old)
 
     if new == old:
         log.warning("Versions are the same, skipping..")
@@ -178,14 +178,14 @@ def processPackages(args, jclient, p):
             url = jclient.get_metadata(p.name, P).urls[-1]["url"]
             filename = jclient.get_metadata(p.name, P).urls[-1]["filename"]
         except IndexError:
-            log.warning("fallback to get urls: [%s][%s]", p.name, P)
+            log.warning("fallback to get urls: [%s]", P)
             log.warning(pprint.pprint(jclient.get_metadata(p.name, P).urls))
             log.warning(pprint.pprint(jclient.get_metadata(p.name, P)))
             try:
                 url = jclient.get_metadata(p.name, P).urls[0]["url"]
                 filename = jclient.get_metadata(p.name, P).urls[0]["filename"]
             except IndexError:
-                log.warning("unable to get url for both versions [%s][%s]", p.name, P)
+                log.warning("unable to get url for both version [%s]", P)
                 log.warning(pprint.pprint(jclient.get_metadata(p.name, P).urls))
                 return False
         except packaging.requirements.InvalidRequirement as err:
@@ -247,7 +247,7 @@ def processPackages(args, jclient, p):
             capture_output=True,
         )
     except subprocess.TimeoutExpired:
-        log.error("%s Timeout during execution of pkgdiff", p.name)
+        log.error("Timeout during execution of pkgdiff")
         try:
             shutil.rmtree(diffPath)
         except:
