@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/lsst-ctrl-bps-parsl-26.0.0a20230400.tar.gz tmp/lsst-ctrl-bps-parsl-26.0.0a20230500.tar.gz --html versions/l/lsst-ctrl-bps-parsl/26.0.0a20230400-26.0.0a20230500/index.html --text versions/l/lsst-ctrl-bps-parsl/26.0.0a20230400-26.0.0a20230500/diff.txt --markdown versions/l/lsst-ctrl-bps-parsl/26.0.0a20230400-26.0.0a20230500/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">15.7 KB</span></div>
+  <div><span class="source">tmp/lsst-ctrl-bps-parsl-26.0.0a20230400.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/lsst-ctrl-bps-parsl-26.0.0a20230500.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">308 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span><del>Jan</del><span class="dp">·</span><del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span><ins>Feb</ins><span class="dp">·</span><ins><span class="dp">·</span>2</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">15.4 KB</span></div>
+    <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400.tar</span> vs.</div>
+    <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500.tar</span>
+      <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">10.6 KB</span></div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 35 lines modified</td><td colspan="2">Offset 1, 35 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>781613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>453524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>181<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/COPYRIGHT</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>181<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/COPYRIGHT</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/LICENSE</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2296<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>781613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2296<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>453524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1553<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1553<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3092<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3092<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>777613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>449524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>777613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>449524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>777613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>449524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>777613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/</td><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>449524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>777613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>453524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>115<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>115<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4420<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/configuration.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4420<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/configuration.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>922<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/environment.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>922<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/environment.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8885<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/job.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8885<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/job.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2491<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/service.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2491<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/service.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6231<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/site.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6231<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/site.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>781613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>453524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>68<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>68<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1265<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/local.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1265<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/local.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3181<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/nersc.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3181<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/nersc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4156<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/princeton.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4156<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/princeton.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2532<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/slac.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2532<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/slac.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11138<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/slurm.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11138<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/slurm.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<del>309</del><span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/sites/work_queue.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<ins>410</ins><span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/sites/work_queue.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>58<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/version.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>58<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10049<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>3</del>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst/ctrl/bps/parsl/workflow.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10049<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>1</ins>3.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst/ctrl/bps/parsl/workflow.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>781613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/</td><td class="diffline">28 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>453524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2296<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/PKG-INFO</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2296<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>960<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/SOURCES.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>960<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/dependency_links.txt</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>108<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/requires.txt</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>108<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/top_level.txt</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/python/lsst_ctrl_bps_parsl.egg-info/zip-safe</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.000000<span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/python/lsst_ctrl_bps_parsl.egg-info/zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>220<span class="dp">·</span>2023-0<del>1</del>-<del>26</del><span class="dp">·</span><del>09</del>:<del>54</del>:<del>53</del>.<del>785613</del><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<del>4</del>00/setup.cfg</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>220<span class="dp">·</span>2023-0<ins>2</ins>-<ins>02</ins><span class="dp">·</span><ins>14</ins>:<ins>05</ins>:<ins>27</ins>.<ins>453524</ins><span class="dp">·</span>lsst-ctrl-bps-parsl-26.0.0a20230<ins>5</ins>00/setup.cfg</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/LICENSE</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------LICENSE"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/LICENSE</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">614 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/PKG-INFO</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------PKG-INFO"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/PKG-INFO</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>lsst-ctrl-bps-parsl</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>lsst-ctrl-bps-parsl</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>26.0.0a20230<del>4</del>00</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>26.0.0a20230<ins>5</ins>00</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Parsl-based<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>lsst-ctrl-bps.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Parsl-based<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>lsst-ctrl-bps.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Rubin<span class="dp">·</span>Observatory<span class="dp">·</span>Data<span class="dp">·</span>Management<span class="dp">·</span>&lt;dm-admin@lists.lsst.org&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Rubin<span class="dp">·</span>Observatory<span class="dp">·</span>Data<span class="dp">·</span>Management<span class="dp">·</span>&lt;dm-admin@lists.lsst.org&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPLv3+<span class="dp">·</span>License</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPLv3+<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/lsst/ctrl_bps_parsl</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/lsst/ctrl_bps_parsl</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>lsst</td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>lsst</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(GPLv3+)</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(GPLv3+)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/README.md</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------README.md"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/README.md</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/pyproject.toml</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------pyproject.toml"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/pyproject.toml</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">197 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/configuration.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-configuration.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/configuration.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-configuration.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/environment.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-environment.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/environment.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-environment.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/job.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-job.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/job.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-job.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">185 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/service.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-service.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/service.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-service.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/site.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-site.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/site.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-site.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/sites/local.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-local.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/sites/local.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-local.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/sites/nersc.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-nersc.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/sites/nersc.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-nersc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">201 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/sites/princeton.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-princeton.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/sites/princeton.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-princeton.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">191 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/sites/slac.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-slac.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/sites/slac.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-slac.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/sites/slurm.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-slurm.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/sites/slurm.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-slurm.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">820 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/sites/work_queue.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-work_queue.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/sites/work_queue.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-sites-work_queue.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>TYPE_CHECKING,<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>List</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>TYPE_CHECKING,<span class="dp">·</span>Any,<span class="dp">·</span>Dict,<span class="dp">·</span>List</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>parsl.executors<span class="dp">·</span>import<span class="dp">·</span>WorkQueueExecutor</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>parsl.executors<span class="dp">·</span>import<span class="dp">·</span>WorkQueueExecutor</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>parsl.executors.base<span class="dp">·</span>import<span class="dp">·</span>ParslExecutor</td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>parsl.executors.base<span class="dp">·</span>import<span class="dp">·</span>ParslExecutor</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>parsl.launchers<span class="dp">·</span>import<span class="dp">·</span>SrunLauncher</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>parsl.launchers<span class="dp">·</span>import<span class="dp">·</span>SrunLauncher</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>parsl.providers<span class="dp">·</span>import<span class="dp">·</span>LocalProvider</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>parsl.providers<span class="dp">·</span>import<span class="dp">·</span>LocalProvider</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">try:</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>parsl.providers.<del>provider_</del>base<span class="dp">·</span>import<span class="dp">·</span>ExecutionProvider</td><td class="diffline">7 </td><td class="diffpresent"><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>from<span class="dp">·</span>parsl.providers.base<span class="dp">·</span>import<span class="dp">·</span>ExecutionProvider</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">except<span class="dp">·</span>ImportError:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>parsl.providers.provider_base<span class="dp">·</span>import<span class="dp">·</span>ExecutionProvider<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>..configuration<span class="dp">·</span>import<span class="dp">·</span>get_bps_config_value</td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>..configuration<span class="dp">·</span>import<span class="dp">·</span>get_bps_config_value</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>..site<span class="dp">·</span>import<span class="dp">·</span>SiteConfig</td><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>..site<span class="dp">·</span>import<span class="dp">·</span>SiteConfig</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">if<span class="dp">·</span>TYPE_CHECKING:</td><td class="diffline">12 </td><td class="diffpresent">if<span class="dp">·</span>TYPE_CHECKING:</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>..job<span class="dp">·</span>import<span class="dp">·</span>ParslJob</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>..job<span class="dp">·</span>import<span class="dp">·</span>ParslJob</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">187 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst/ctrl/bps/parsl/workflow.py</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-workflow.py"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst/ctrl/bps/parsl/workflow.py</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst-ctrl-bps-parsl-workflow.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">686 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst_ctrl_bps_parsl.egg-info/PKG-INFO</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst_ctrl_bps_parsl.egg-info-PKG-INFO"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst_ctrl_bps_parsl.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst_ctrl_bps_parsl.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>lsst-ctrl-bps-parsl</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>lsst-ctrl-bps-parsl</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>26.0.0a20230<del>4</del>00</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>26.0.0a20230<ins>5</ins>00</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Parsl-based<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>lsst-ctrl-bps.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Parsl-based<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>lsst-ctrl-bps.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Rubin<span class="dp">·</span>Observatory<span class="dp">·</span>Data<span class="dp">·</span>Management<span class="dp">·</span>&lt;dm-admin@lists.lsst.org&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Rubin<span class="dp">·</span>Observatory<span class="dp">·</span>Data<span class="dp">·</span>Management<span class="dp">·</span>&lt;dm-admin@lists.lsst.org&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPLv3+<span class="dp">·</span>License</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPLv3+<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/lsst/ctrl_bps_parsl</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/lsst/ctrl_bps_parsl</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>lsst</td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>lsst</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(GPLv3+)</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later<span class="dp">·</span>(GPLv3+)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">205 B</span></div>
+      <div><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230400/python/lsst_ctrl_bps_parsl.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst_ctrl_bps_parsl.egg-info-SOURCES.txt"><span class="source">lsst-ctrl-bps-parsl-26.0.0a20230500/python/lsst_ctrl_bps_parsl.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#lsst-ctrl-bps-parsl---.-.-a--------.tar---lsst-ctrl-bps-parsl---.-.-a---------python-lsst_ctrl_bps_parsl.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

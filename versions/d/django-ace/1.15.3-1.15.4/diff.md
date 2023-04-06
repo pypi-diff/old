@@ -1,0 +1,2355 @@
+# Comparing `tmp/django-ace-1.15.3.tar.gz` & `tmp/django-ace-1.15.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "django-ace-1.15.3.tar", last modified: Sun Mar  5 11:27:56 2023, max compression
++gzip compressed data, was "django-ace-1.15.4.tar", last modified: Thu Apr  6 09:27:58 2023, max compression
+```
+
+## Comparing `django-ace-1.15.3.tar` & `django-ace-1.15.4.tar`
+
+### file list
+
+```diff
+@@ -1,471 +1,471 @@
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.806414 django-ace-1.15.3/
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5388 2020-10-04 15:07:59.000000 django-ace-1.15.3/LICENCE
+--rw-r--r--   0 mdk       (1000) mdk       (1000)       65 2019-12-04 21:51:14.000000 django-ace-1.15.3/MANIFEST.in
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3698 2023-03-05 11:27:56.806414 django-ace-1.15.3/PKG-INFO
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3098 2023-03-05 11:15:42.000000 django-ace-1.15.3/README.rst
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.666414 django-ace-1.15.3/django_ace/
+--rw-r--r--   0 mdk       (1000) mdk       (1000)       75 2023-03-05 11:16:02.000000 django-ace-1.15.3/django_ace/__init__.py
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.662414 django-ace-1.15.3/django_ace/static/
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.666414 django-ace-1.15.3/django_ace/static/django_ace/
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.778414 django-ace-1.15.3/django_ace/static/django_ace/ace/
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   770854 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ace.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13362 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-beautify.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     8185 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-code_lens.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     8914 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-elastic_tabstops_lite.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    49388 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-emmet.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-error_marker.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4368 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-hardwrap.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6741 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-keybinding_menu.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    79708 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-language_tools.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2007 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-linking.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6890 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-modelist.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    25684 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-options.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   101669 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-prompt.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4640 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-rtl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    18106 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-searchbox.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    26597 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-settings_menu.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2521 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-spellcheck.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6546 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-split.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7267 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-static_highlight.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1883 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-statusbar.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13022 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-textarea.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2436 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-themelist.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6755 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/ext-whitespace.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    40961 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-emacs.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12833 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-sublime.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   251354 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-vim.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9188 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-vscode.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9492 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-abap.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9449 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-abc.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    25355 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-actionscript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4323 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ada.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    10523 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-alda.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    19937 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-apache_conf.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    15788 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-apex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9813 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-applescript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5601 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-aql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    14224 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-asciidoc.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    14889 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-asl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12287 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-assembly_x86.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    67779 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-autohotkey.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     8835 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-batchfile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11316 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-bibtex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9836 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-c9search.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    18971 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-c_cpp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6577 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-cirru.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12950 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-clojure.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3775 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-cobol.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13889 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-coffee.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   104523 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-coldfusion.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    24102 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-crystal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16497 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csharp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   129207 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csound_document.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    77245 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csound_orchestra.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13998 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csound_score.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2441 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    32843 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-css.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   102588 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-curly.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    17103 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-d.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    25680 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-dart.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4735 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-diff.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   103530 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-django.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    17148 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-dockerfile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13950 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-dot.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    19092 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-drools.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5009 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-edifact.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5062 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-eiffel.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   140999 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ejs.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    24911 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-elixir.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    10122 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-elm.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    49008 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-erlang.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11968 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-forth.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    15322 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-fortran.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    10632 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-fsharp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9080 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-fsl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    55007 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ftl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2845 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gcode.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5201 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gherkin.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1774 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gitignore.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    22047 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-glsl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    48110 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gobstones.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13447 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-golang.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6912 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-graphqlschema.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    41236 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-groovy.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    81983 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   104407 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-handlebars.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    18131 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haskell.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5092 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haskell_cabal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12310 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haxe.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12204 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-hjson.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   101002 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-html.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   128057 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-html_elixir.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   141577 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-html_ruby.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5379 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ini.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9524 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-io.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16711 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ion.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11143 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jack.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    84681 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jade.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    43173 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-java.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    34261 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-javascript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    10191 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jexl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    10348 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-json.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11533 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-json5.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   328142 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jsoniq.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    63243 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jsp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11431 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jssm.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13391 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jsx.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12518 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-julia.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16773 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-kotlin.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9883 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-latex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   107902 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-latte.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    36880 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-less.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   109494 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-liquid.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4065 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lisp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9177 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-livescript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11176 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-logiql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16647 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-logtalk.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    31838 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lsl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    15676 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lua.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   118379 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-luapage.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4927 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lucene.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    14529 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-makefile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   124384 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-markdown.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    74583 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mask.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    24470 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-matlab.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9740 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-maze.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    22557 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mediawiki.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    29282 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mel.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9748 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mips.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5473 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mixal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16070 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mushcode.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     9127 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mysql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    20951 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nginx.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13095 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nim.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    23433 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nix.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    15795 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nsis.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   107575 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nunjucks.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    66386 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-objectivec.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    21592 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ocaml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    26475 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-partiql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     8144 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-pascal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13146 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-perl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    89396 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-pgsql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   632466 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-php.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   640551 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-php_laravel_blade.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11799 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-pig.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1082 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-plain_text.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13191 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-plsql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    38967 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-powershell.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    17683 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-praat.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    17158 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-prisma.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    14894 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-prolog.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2359 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-properties.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    21916 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-protobuf.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12932 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-puppet.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16408 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-python.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    22356 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-qml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    15166 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-r.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    26631 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-raku.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   113305 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-razor.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11825 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rdoc.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    20438 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-red.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-redshift.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   117339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rhtml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7382 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-robot.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7279 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rst.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    39557 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ruby.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    16262 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rust.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13151 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sac.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    24789 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sass.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12892 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scad.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    41324 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scala.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7813 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scheme.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12889 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scrypt.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    38506 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scss.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    15504 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sh.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    40333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sjs.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   201246 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-slim.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   106251 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-smarty.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    17443 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-smithy.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7382 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-snippets.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   115207 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-soy_template.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5075 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-space.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13232 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sparql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     8538 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    24058 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sqlserver.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    22581 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-stylus.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    57010 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-svg.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13610 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-swift.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    12296 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-tcl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    13242 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-terraform.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     8823 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-tex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      329 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-text.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4301 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-textile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4417 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-toml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    37593 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-tsx.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    10037 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-turtle.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   106923 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-twig.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    37109 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-typescript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    28842 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-vala.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    25160 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-vbscript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   109895 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-velocity.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4672 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-verilog.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3870 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-vhdl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   105356 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-visualforce.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    38076 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-wollok.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    19613 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-xml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   325349 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-xquery.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    11025 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-yaml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    17787 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/mode-zeek.js
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.806414 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/abap.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1552 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/abc.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3830 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/actionscript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ada.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/alda.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/apache_conf.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/apex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/applescript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/aql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/asciidoc.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/asl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      341 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/assembly_x86.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/autohotkey.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/batchfile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/bibtex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/c9search.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3282 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/c_cpp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/cirru.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2674 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/clojure.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/cobol.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2874 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/coffee.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/coldfusion.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/crystal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csharp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      906 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csound_document.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1713 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csound_orchestra.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      341 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csound_score.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    20689 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/css.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/curly.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      330 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/d.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1928 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/dart.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1113 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/diff.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4645 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/django.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/dockerfile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/dot.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      949 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/drools.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5032 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/edifact.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/eiffel.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ejs.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/elixir.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/elm.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4232 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/erlang.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/forth.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/fortran.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/fsharp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      907 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/fsl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ftl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/gcode.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/gherkin.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/gitignore.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/glsl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    40397 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/gobstones.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/golang.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1267 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/graphqlschema.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/groovy.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1030 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/haml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/handlebars.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2603 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/haskell.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      342 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/haskell_cabal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/haxe.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/hjson.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    21108 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/html.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/html_elixir.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/html_ruby.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ini.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2194 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/io.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ion.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jack.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jade.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5025 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/java.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4580 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/javascript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jexl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/json.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/json5.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2473 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jsoniq.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3487 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jsp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jssm.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jsx.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/julia.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/kotlin.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/latex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/latte.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/less.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    21495 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/liquid.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/lisp.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/livescript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/logiql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/logtalk.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    36757 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/lsl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1073 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/lua.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/luapage.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/lucene.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      770 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/makefile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2601 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/markdown.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mask.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/matlab.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      824 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/maze.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mediawiki.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mel.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mips.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mixal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mushcode.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/mysql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/nginx.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/nim.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/nix.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/nsis.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/nunjucks.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/objectivec.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ocaml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/partiql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/pascal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     6267 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/perl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/pgsql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7825 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/php.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      346 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/php_laravel_blade.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/pig.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/plain_text.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/plsql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/powershell.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/praat.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/prisma.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/prolog.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/properties.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/protobuf.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/puppet.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4409 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/python.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/qml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3232 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/r.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/raku.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      721 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/razor.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/rdoc.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/red.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/redshift.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/rhtml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2186 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/robot.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1003 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/rst.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    22700 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ruby.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/rust.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sac.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sass.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/scad.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/scala.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/scheme.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/scrypt.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/scss.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2688 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sh.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sjs.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/slim.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/smarty.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/smithy.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      872 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/snippets.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      341 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/soy_template.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/space.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sparql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1517 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sql.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2777 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sqlserver.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/stylus.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/svg.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/swift.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2310 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/tcl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/terraform.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4308 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/tex.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/text.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1118 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/textile.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/toml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/tsx.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/turtle.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/twig.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/typescript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     5346 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/vala.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/vbscript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1253 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/velocity.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/verilog.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/vhdl.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/visualforce.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1871 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/wollok.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/xml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2473 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/xquery.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/yaml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/zeek.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    28832 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-ambiance.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3974 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-chaos.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3997 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-chrome.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4298 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cloud9_day.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4401 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cloud9_night.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4422 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cloud9_night_low_color.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3251 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-clouds.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3547 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-clouds_midnight.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3479 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cobalt.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4110 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-crimson_editor.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3446 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-dawn.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4954 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-dracula.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4509 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-dreamweaver.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3311 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-eclipse.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3640 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-github.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3484 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gob.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     2702 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gruvbox.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4176 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gruvbox_dark_hard.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4533 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gruvbox_light_hard.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3352 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-idle_fingers.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7739 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-iplastic.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4697 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-katzenmilch.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3406 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-kr_theme.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3418 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-kuroir.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3313 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-merbivore.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3552 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-merbivore_soft.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3940 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-mono_industrial.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3474 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-monokai.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3045 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-nord_dark.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3972 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-one_dark.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3787 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-pastel_on_dark.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3390 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-solarized_dark.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3557 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-solarized_light.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4321 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-sqlserver.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4043 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-terminal.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      714 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-textmate.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3764 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3956 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4184 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night_blue.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4713 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night_bright.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     4402 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night_eighties.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3589 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-twilight.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3293 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-vibrant_ink.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3154 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/theme-xcode.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    43550 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-base.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   349714 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-coffee.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   314766 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-css.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   316814 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-html.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   731591 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-javascript.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    51288 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-json.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   104444 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-lua.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   131108 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-php.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    91237 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-xml.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)  3501640 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-xquery.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)   165274 2023-03-05 11:14:44.000000 django-ace-1.15.3/django_ace/static/django_ace/ace/worker-yaml.js
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.806414 django-ace-1.15.3/django_ace/static/django_ace/img/
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      304 2019-12-04 21:51:14.000000 django-ace-1.15.3/django_ace/static/django_ace/img/contract.png
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      284 2019-12-04 21:51:14.000000 django-ace-1.15.3/django_ace/static/django_ace/img/expand.png
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     1134 2019-12-04 21:51:14.000000 django-ace-1.15.3/django_ace/static/django_ace/widget.css
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     7593 2022-05-12 21:24:24.000000 django-ace-1.15.3/django_ace/static/django_ace/widget.js
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3504 2020-11-10 10:17:21.000000 django-ace-1.15.3/django_ace/widgets.py
+-drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-03-05 11:27:56.666414 django-ace-1.15.3/django_ace.egg-info/
+--rw-r--r--   0 mdk       (1000) mdk       (1000)     3698 2023-03-05 11:27:56.000000 django-ace-1.15.3/django_ace.egg-info/PKG-INFO
+--rw-r--r--   0 mdk       (1000) mdk       (1000)    22841 2023-03-05 11:27:56.000000 django-ace-1.15.3/django_ace.egg-info/SOURCES.txt
+--rw-r--r--   0 mdk       (1000) mdk       (1000)        1 2023-03-05 11:27:56.000000 django-ace-1.15.3/django_ace.egg-info/dependency_links.txt
+--rw-r--r--   0 mdk       (1000) mdk       (1000)       12 2023-03-05 11:27:56.000000 django-ace-1.15.3/django_ace.egg-info/requires.txt
+--rw-r--r--   0 mdk       (1000) mdk       (1000)       11 2023-03-05 11:27:56.000000 django-ace-1.15.3/django_ace.egg-info/top_level.txt
+--rw-r--r--   0 mdk       (1000) mdk       (1000)       90 2022-05-12 21:24:24.000000 django-ace-1.15.3/pyproject.toml
+--rw-r--r--   0 mdk       (1000) mdk       (1000)      749 2023-03-05 11:27:56.806414 django-ace-1.15.3/setup.cfg
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.652118 django-ace-1.15.4/
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5388 2020-10-04 15:07:59.000000 django-ace-1.15.4/LICENCE
++-rw-r--r--   0 mdk       (1000) mdk       (1000)       65 2019-12-04 21:51:14.000000 django-ace-1.15.4/MANIFEST.in
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3826 2023-04-06 09:27:58.652118 django-ace-1.15.4/PKG-INFO
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3226 2023-04-06 09:26:26.000000 django-ace-1.15.4/README.rst
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.124117 django-ace-1.15.4/django_ace/
++-rw-r--r--   0 mdk       (1000) mdk       (1000)       75 2023-04-06 09:26:26.000000 django-ace-1.15.4/django_ace/__init__.py
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.112117 django-ace-1.15.4/django_ace/static/
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.128117 django-ace-1.15.4/django_ace/static/django_ace/
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.512118 django-ace-1.15.4/django_ace/static/django_ace/ace/
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   770854 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ace.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13362 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-beautify.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     8185 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-code_lens.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     8914 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-elastic_tabstops_lite.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    49388 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-emmet.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-error_marker.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4368 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-hardwrap.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6741 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-keybinding_menu.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    79708 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-language_tools.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2007 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-linking.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6890 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-modelist.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    25684 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-options.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   101669 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-prompt.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4640 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-rtl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    18106 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-searchbox.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    26597 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-settings_menu.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2521 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-spellcheck.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6546 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-split.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7267 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-static_highlight.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1883 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-statusbar.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13022 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-textarea.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2436 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-themelist.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6755 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/ext-whitespace.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    40961 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-emacs.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12833 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-sublime.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   251354 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-vim.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9188 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-vscode.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9492 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-abap.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9449 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-abc.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    25355 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-actionscript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4323 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ada.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    10523 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-alda.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    19937 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-apache_conf.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    15788 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-apex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9813 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-applescript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5601 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-aql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    14224 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-asciidoc.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    14889 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-asl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12287 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-assembly_x86.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    67779 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-autohotkey.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     8835 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-batchfile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11316 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-bibtex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9836 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-c9search.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    18971 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-c_cpp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6577 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-cirru.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12950 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-clojure.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3775 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-cobol.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13889 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-coffee.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   104523 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-coldfusion.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    24102 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-crystal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16497 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csharp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   129207 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csound_document.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    77245 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csound_orchestra.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13998 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csound_score.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2441 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    32843 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-css.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   102588 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-curly.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    17103 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-d.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    25680 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-dart.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4735 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-diff.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   103530 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-django.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    17148 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-dockerfile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13950 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-dot.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    19092 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-drools.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5009 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-edifact.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5062 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-eiffel.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   140999 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ejs.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    24911 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-elixir.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    10122 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-elm.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    49008 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-erlang.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11968 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-forth.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    15322 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-fortran.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    10632 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-fsharp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9080 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-fsl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    55007 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ftl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2845 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gcode.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5201 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gherkin.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1774 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gitignore.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    22047 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-glsl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    48110 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gobstones.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13447 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-golang.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6912 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-graphqlschema.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    41236 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-groovy.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    81983 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   104407 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-handlebars.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    18131 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haskell.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5092 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haskell_cabal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12310 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haxe.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12204 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-hjson.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   101002 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-html.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   128057 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-html_elixir.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   141577 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-html_ruby.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5379 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ini.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9524 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-io.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16711 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ion.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11143 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jack.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    84681 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jade.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    43173 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-java.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    34261 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-javascript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    10191 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jexl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    10348 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-json.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11533 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-json5.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   328142 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jsoniq.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    63243 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jsp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11431 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jssm.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13391 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jsx.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12518 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-julia.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16773 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-kotlin.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9883 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-latex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   107902 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-latte.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    36880 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-less.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   109494 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-liquid.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4065 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lisp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9177 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-livescript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11176 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-logiql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16647 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-logtalk.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    31838 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lsl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    15676 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lua.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   118379 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-luapage.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4927 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lucene.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    14529 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-makefile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   124384 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-markdown.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    74583 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mask.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    24470 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-matlab.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9740 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-maze.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    22557 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mediawiki.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    29282 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mel.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9748 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mips.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5473 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mixal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16070 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mushcode.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     9127 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mysql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    20951 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nginx.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13095 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nim.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    23433 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nix.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    15795 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nsis.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   107575 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nunjucks.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    66386 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-objectivec.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    21592 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ocaml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    26475 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-partiql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     8144 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-pascal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13146 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-perl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    89396 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-pgsql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   632466 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-php.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   640551 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-php_laravel_blade.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11799 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-pig.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1082 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-plain_text.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13191 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-plsql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    38967 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-powershell.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    17683 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-praat.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    17158 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-prisma.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    14894 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-prolog.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2359 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-properties.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    21916 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-protobuf.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12932 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-puppet.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16408 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-python.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    22356 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-qml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    15166 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-r.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    26631 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-raku.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   113305 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-razor.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11825 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rdoc.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    20438 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-red.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-redshift.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   117339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rhtml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7382 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-robot.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7279 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rst.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    39557 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ruby.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    16262 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rust.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13151 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sac.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    24789 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sass.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12892 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scad.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    41324 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scala.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7813 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scheme.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12889 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scrypt.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    38506 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scss.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    15504 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sh.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    40333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sjs.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   201246 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-slim.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   106251 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-smarty.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    17443 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-smithy.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7382 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-snippets.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   115207 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-soy_template.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5075 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-space.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13232 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sparql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     8538 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    24058 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sqlserver.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    22581 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-stylus.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    57010 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-svg.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13610 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-swift.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    12296 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-tcl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    13242 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-terraform.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     8823 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-tex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      329 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-text.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4301 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-textile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4417 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-toml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    37593 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-tsx.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    10037 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-turtle.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   106923 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-twig.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    37109 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-typescript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    28842 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-vala.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    25160 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-vbscript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   109895 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-velocity.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4672 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-verilog.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3870 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-vhdl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   105356 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-visualforce.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    38076 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-wollok.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    19613 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-xml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   325349 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-xquery.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    11025 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-yaml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    17787 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/mode-zeek.js
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.648118 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/abap.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1552 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/abc.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3830 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/actionscript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ada.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/alda.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/apache_conf.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/apex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/applescript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/aql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/asciidoc.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/asl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      341 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/assembly_x86.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/autohotkey.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/batchfile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/bibtex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/c9search.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3282 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/c_cpp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/cirru.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2674 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/clojure.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/cobol.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2874 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/coffee.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/coldfusion.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/crystal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csharp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      906 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csound_document.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1713 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csound_orchestra.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      341 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csound_score.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    20689 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/css.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/curly.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      330 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/d.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1928 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/dart.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1113 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/diff.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4645 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/django.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/dockerfile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/dot.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      949 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/drools.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5032 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/edifact.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/eiffel.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ejs.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/elixir.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/elm.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4232 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/erlang.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/forth.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/fortran.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/fsharp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      907 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/fsl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ftl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/gcode.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/gherkin.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/gitignore.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/glsl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    40397 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/gobstones.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/golang.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1267 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/graphqlschema.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/groovy.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1030 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/haml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/handlebars.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2603 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/haskell.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      342 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/haskell_cabal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/haxe.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/hjson.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    21108 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/html.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/html_elixir.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/html_ruby.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ini.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2194 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/io.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ion.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jack.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jade.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5025 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/java.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4580 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/javascript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jexl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/json.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/json5.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2473 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jsoniq.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3487 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jsp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jssm.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jsx.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/julia.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/kotlin.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/latex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/latte.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/less.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    21495 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/liquid.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/lisp.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/livescript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/logiql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/logtalk.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    36757 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/lsl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1073 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/lua.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/luapage.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/lucene.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      770 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/makefile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2601 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/markdown.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mask.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/matlab.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      824 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/maze.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mediawiki.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mel.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mips.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mixal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mushcode.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/mysql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/nginx.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/nim.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/nix.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/nsis.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/nunjucks.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/objectivec.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ocaml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/partiql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/pascal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     6267 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/perl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/pgsql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7825 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/php.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      346 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/php_laravel_blade.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/pig.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/plain_text.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/plsql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/powershell.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/praat.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/prisma.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/prolog.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/properties.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/protobuf.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/puppet.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4409 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/python.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/qml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3232 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/r.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/raku.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      721 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/razor.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/rdoc.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/red.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/redshift.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/rhtml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2186 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/robot.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1003 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/rst.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    22700 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ruby.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/rust.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sac.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sass.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/scad.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/scala.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/scheme.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/scrypt.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/scss.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2688 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sh.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sjs.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/slim.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/smarty.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/smithy.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      872 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/snippets.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      341 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/soy_template.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/space.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sparql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1517 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sql.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2777 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sqlserver.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/stylus.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/svg.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      334 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/swift.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2310 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/tcl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      338 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/terraform.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4308 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/tex.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/text.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1118 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/textile.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/toml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/tsx.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      335 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/turtle.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/twig.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      339 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/typescript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     5346 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/vala.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      337 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/vbscript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1253 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/velocity.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      336 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/verilog.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/vhdl.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      340 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/visualforce.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1871 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/wollok.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      332 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/xml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2473 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/xquery.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/yaml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      333 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/zeek.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    28832 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-ambiance.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3974 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-chaos.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3997 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-chrome.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4298 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cloud9_day.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4401 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cloud9_night.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4422 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cloud9_night_low_color.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3251 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-clouds.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3547 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-clouds_midnight.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3479 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cobalt.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4110 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-crimson_editor.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3446 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-dawn.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4954 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-dracula.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4509 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-dreamweaver.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3311 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-eclipse.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3640 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-github.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3484 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gob.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     2702 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gruvbox.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4176 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gruvbox_dark_hard.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4533 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gruvbox_light_hard.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3352 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-idle_fingers.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7739 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-iplastic.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4697 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-katzenmilch.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3406 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-kr_theme.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3418 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-kuroir.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3313 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-merbivore.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3552 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-merbivore_soft.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3940 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-mono_industrial.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3474 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-monokai.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3045 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-nord_dark.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3972 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-one_dark.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3787 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-pastel_on_dark.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3390 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-solarized_dark.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3557 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-solarized_light.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4321 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-sqlserver.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4043 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-terminal.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      714 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-textmate.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3764 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3956 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4184 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night_blue.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4713 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night_bright.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     4402 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night_eighties.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3589 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-twilight.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3293 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-vibrant_ink.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3154 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/theme-xcode.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    43550 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-base.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   349714 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-coffee.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   314766 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-css.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   316814 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-html.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   731591 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-javascript.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    51288 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-json.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   104444 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-lua.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   131108 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-php.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    91237 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-xml.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)  3501640 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-xquery.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)   165274 2023-03-05 11:14:44.000000 django-ace-1.15.4/django_ace/static/django_ace/ace/worker-yaml.js
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.652118 django-ace-1.15.4/django_ace/static/django_ace/img/
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      304 2019-12-04 21:51:14.000000 django-ace-1.15.4/django_ace/static/django_ace/img/contract.png
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      284 2019-12-04 21:51:14.000000 django-ace-1.15.4/django_ace/static/django_ace/img/expand.png
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     1147 2023-04-06 09:26:26.000000 django-ace-1.15.4/django_ace/static/django_ace/widget.css
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     7593 2022-05-12 21:24:24.000000 django-ace-1.15.4/django_ace/static/django_ace/widget.js
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3504 2020-11-10 10:17:21.000000 django-ace-1.15.4/django_ace/widgets.py
++drwxr-xr-x   0 mdk       (1000) mdk       (1000)        0 2023-04-06 09:27:58.128117 django-ace-1.15.4/django_ace.egg-info/
++-rw-r--r--   0 mdk       (1000) mdk       (1000)     3826 2023-04-06 09:27:58.000000 django-ace-1.15.4/django_ace.egg-info/PKG-INFO
++-rw-r--r--   0 mdk       (1000) mdk       (1000)    22841 2023-04-06 09:27:58.000000 django-ace-1.15.4/django_ace.egg-info/SOURCES.txt
++-rw-r--r--   0 mdk       (1000) mdk       (1000)        1 2023-04-06 09:27:58.000000 django-ace-1.15.4/django_ace.egg-info/dependency_links.txt
++-rw-r--r--   0 mdk       (1000) mdk       (1000)       12 2023-04-06 09:27:58.000000 django-ace-1.15.4/django_ace.egg-info/requires.txt
++-rw-r--r--   0 mdk       (1000) mdk       (1000)       11 2023-04-06 09:27:58.000000 django-ace-1.15.4/django_ace.egg-info/top_level.txt
++-rw-r--r--   0 mdk       (1000) mdk       (1000)       90 2022-05-12 21:24:24.000000 django-ace-1.15.4/pyproject.toml
++-rw-r--r--   0 mdk       (1000) mdk       (1000)      749 2023-04-06 09:27:58.652118 django-ace-1.15.4/setup.cfg
+```
+
+### Comparing `django-ace-1.15.3/LICENCE` & `django-ace-1.15.4/LICENCE`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/PKG-INFO` & `django-ace-1.15.4/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: django-ace
+-Version: 1.15.3
++Version: 1.15.4
+ Summary: django-ace provides integration for ajax.org ACE with Django
+ Home-page: https://github.com/django-ace/django-ace
+ Author: Bradley Ayers
+ Author-email: bradley.ayers@gmail.com
+ License: Simplified BSD
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Environment :: Web Environment
+@@ -95,14 +95,19 @@
+ 
+ Then browser to ``http://localhost:8000``.
+ 
+ 
+ Change log
+ ==========
+ 
++v1.15.4
++-------
++
++- Added CSS to work with new admin in Django 4.2. Now you can use `width="100%"` without breaking the layout.
++
+ v1.15.3
+ -------
+ 
+ - Update ACE editor to version v1.15.3.
+ 
+ v1.14.0
+ -------
+```
+
+### Comparing `django-ace-1.15.3/README.rst` & `django-ace-1.15.4/README.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -78,14 +78,19 @@
+ 
+ Then browser to ``http://localhost:8000``.
+ 
+ 
+ Change log
+ ==========
+ 
++v1.15.4
++-------
++
++- Added CSS to work with new admin in Django 4.2. Now you can use `width="100%"` without breaking the layout.
++
+ v1.15.3
+ -------
+ 
+ - Update ACE editor to version v1.15.3.
+ 
+ v1.14.0
+ -------
+```
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ace.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ace.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-beautify.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-beautify.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-code_lens.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-code_lens.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-elastic_tabstops_lite.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-elastic_tabstops_lite.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-emmet.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-emmet.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-hardwrap.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-hardwrap.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-keybinding_menu.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-keybinding_menu.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-language_tools.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-language_tools.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-linking.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-linking.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-modelist.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-modelist.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-options.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-options.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-prompt.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-prompt.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-rtl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-rtl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-searchbox.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-searchbox.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-settings_menu.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-settings_menu.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-spellcheck.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-spellcheck.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-split.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-split.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-static_highlight.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-static_highlight.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-statusbar.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-statusbar.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-textarea.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-textarea.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-themelist.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-themelist.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/ext-whitespace.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/ext-whitespace.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-emacs.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-emacs.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-sublime.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-sublime.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-vim.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-vim.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/keybinding-vscode.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/keybinding-vscode.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-abap.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-abap.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-abc.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-abc.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-actionscript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-actionscript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ada.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ada.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-alda.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-alda.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-apache_conf.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-apache_conf.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-apex.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-apex.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-applescript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-applescript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-aql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-aql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-asciidoc.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-asciidoc.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-asl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-asl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-assembly_x86.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-assembly_x86.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-autohotkey.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-autohotkey.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-batchfile.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-batchfile.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-bibtex.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-bibtex.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-c9search.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-c9search.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-c_cpp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-c_cpp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-cirru.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-cirru.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-clojure.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-clojure.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-cobol.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-cobol.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-coffee.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-coffee.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-coldfusion.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-coldfusion.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-crystal.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-crystal.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csharp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csharp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csound_document.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csound_document.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csound_orchestra.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csound_orchestra.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csound_score.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csound_score.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-csp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-csp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-css.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-css.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-curly.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-curly.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-d.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-d.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-dart.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-dart.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-diff.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-diff.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-django.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-django.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-dockerfile.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-dockerfile.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-dot.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-dot.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-drools.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-drools.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-edifact.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-edifact.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-eiffel.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-eiffel.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ejs.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ejs.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-elixir.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-elixir.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-elm.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-elm.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-erlang.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-erlang.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-forth.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-forth.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-fortran.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-fortran.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-fsharp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-fsharp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-fsl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-fsl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ftl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ftl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gcode.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gcode.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gherkin.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gherkin.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gitignore.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gitignore.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-glsl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-glsl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-gobstones.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-gobstones.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-golang.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-golang.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-graphqlschema.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-graphqlschema.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-groovy.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-groovy.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-handlebars.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-handlebars.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haskell.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haskell.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haskell_cabal.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haskell_cabal.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-haxe.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-haxe.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-hjson.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-hjson.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-html.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-html.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-html_elixir.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-html_elixir.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-html_ruby.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-html_ruby.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ini.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ini.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-io.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-io.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ion.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ion.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jack.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jack.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jade.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jade.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-java.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-java.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-javascript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-javascript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jexl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jexl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-json.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-json.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-json5.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-json5.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jsoniq.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jsoniq.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jsp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jsp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jssm.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jssm.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-jsx.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-jsx.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-julia.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-julia.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-kotlin.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-kotlin.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-latex.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-latex.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-latte.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-latte.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-less.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-less.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-liquid.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-liquid.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lisp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lisp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-livescript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-livescript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-logiql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-logiql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-logtalk.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-logtalk.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lsl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lsl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lua.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lua.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-luapage.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-luapage.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-lucene.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-lucene.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-makefile.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-makefile.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-markdown.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-markdown.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mask.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mask.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-matlab.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-matlab.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-maze.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-maze.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mediawiki.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mediawiki.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mel.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mel.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mips.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mips.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mixal.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mixal.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mushcode.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mushcode.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-mysql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-mysql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nginx.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nginx.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nim.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nim.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nix.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nix.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nsis.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nsis.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-nunjucks.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-nunjucks.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-objectivec.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-objectivec.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ocaml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ocaml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-partiql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-partiql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-pascal.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-pascal.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-perl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-perl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-pgsql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-pgsql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-php.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-php.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-php_laravel_blade.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-php_laravel_blade.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-pig.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-pig.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-plain_text.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-plain_text.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-plsql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-plsql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-powershell.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-powershell.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-praat.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-praat.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-prisma.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-prisma.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-prolog.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-prolog.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-properties.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-properties.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-protobuf.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-protobuf.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-puppet.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-puppet.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-python.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-python.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-qml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-qml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-r.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-r.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-raku.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-raku.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-razor.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-razor.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rdoc.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rdoc.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-red.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-red.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-redshift.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-redshift.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rhtml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rhtml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-robot.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-robot.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rst.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rst.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-ruby.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-ruby.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-rust.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-rust.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sac.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sac.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sass.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sass.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scad.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scad.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scala.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scala.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scheme.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scheme.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scrypt.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scrypt.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-scss.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-scss.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sh.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sh.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sjs.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sjs.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-slim.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-slim.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-smarty.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-smarty.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-smithy.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-smithy.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-snippets.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-snippets.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-soy_template.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-soy_template.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-space.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-space.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sparql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sparql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-sqlserver.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-sqlserver.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-stylus.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-stylus.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-svg.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-svg.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-swift.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-swift.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-tcl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-tcl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-terraform.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-terraform.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-tex.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-tex.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-textile.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-textile.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-toml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-toml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-tsx.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-tsx.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-turtle.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-turtle.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-twig.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-twig.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-typescript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-typescript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-vala.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-vala.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-vbscript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-vbscript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-velocity.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-velocity.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-verilog.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-verilog.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-vhdl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-vhdl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-visualforce.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-visualforce.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-wollok.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-wollok.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-xml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-xml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-xquery.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-xquery.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-yaml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-yaml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/mode-zeek.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/mode-zeek.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/abc.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/abc.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/actionscript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/actionscript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/c_cpp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/c_cpp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/clojure.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/clojure.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/coffee.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/coffee.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csound_document.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csound_document.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/csound_orchestra.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/csound_orchestra.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/css.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/css.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/dart.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/dart.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/diff.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/diff.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/django.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/django.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/drools.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/drools.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/edifact.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/edifact.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/erlang.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/erlang.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/fsl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/fsl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/gobstones.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/gobstones.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/graphqlschema.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/graphqlschema.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/haml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/haml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/haskell.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/haskell.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/html.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/html.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/io.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/io.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/java.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/java.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/javascript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/javascript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jsoniq.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jsoniq.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/jsp.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/jsp.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/liquid.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/liquid.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/lsl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/lsl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/lua.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/lua.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/makefile.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/makefile.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/markdown.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/markdown.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/maze.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/maze.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/perl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/perl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/php.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/php.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/python.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/python.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/r.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/r.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/razor.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/razor.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/robot.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/robot.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/rst.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/rst.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/ruby.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/ruby.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sh.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sh.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/snippets.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/snippets.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sql.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sql.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/sqlserver.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/sqlserver.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/tcl.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/tcl.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/tex.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/tex.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/textile.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/textile.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/vala.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/vala.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/velocity.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/velocity.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/wollok.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/wollok.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/snippets/xquery.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/snippets/xquery.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-ambiance.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-ambiance.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-chaos.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-chaos.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-chrome.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-chrome.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cloud9_day.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cloud9_day.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cloud9_night.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cloud9_night.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cloud9_night_low_color.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cloud9_night_low_color.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-clouds.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-clouds.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-clouds_midnight.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-clouds_midnight.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-cobalt.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-cobalt.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-crimson_editor.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-crimson_editor.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-dawn.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-dawn.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-dracula.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-dracula.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-dreamweaver.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-dreamweaver.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-eclipse.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-eclipse.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-github.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-github.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gob.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gob.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gruvbox.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gruvbox.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gruvbox_dark_hard.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gruvbox_dark_hard.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-gruvbox_light_hard.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-gruvbox_light_hard.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-idle_fingers.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-idle_fingers.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-iplastic.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-iplastic.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-katzenmilch.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-katzenmilch.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-kr_theme.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-kr_theme.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-kuroir.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-kuroir.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-merbivore.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-merbivore.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-merbivore_soft.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-merbivore_soft.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-mono_industrial.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-mono_industrial.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-monokai.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-monokai.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-nord_dark.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-nord_dark.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-one_dark.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-one_dark.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-pastel_on_dark.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-pastel_on_dark.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-solarized_dark.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-solarized_dark.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-solarized_light.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-solarized_light.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-sqlserver.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-sqlserver.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-terminal.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-terminal.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-textmate.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-textmate.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night_blue.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night_blue.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night_bright.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night_bright.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-tomorrow_night_eighties.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-tomorrow_night_eighties.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-twilight.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-twilight.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-vibrant_ink.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-vibrant_ink.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/theme-xcode.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/theme-xcode.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-base.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-base.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-coffee.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-coffee.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-css.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-css.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-html.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-html.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-javascript.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-javascript.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-json.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-json.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-lua.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-lua.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-php.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-php.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-xml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-xml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-xquery.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-xquery.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/ace/worker-yaml.js` & `django-ace-1.15.4/django_ace/static/django_ace/ace/worker-yaml.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/widget.css` & `django-ace-1.15.4/django_ace/static/django_ace/widget.css`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -41,14 +41,15 @@
+     height: 16px;
+     width: 16px;
+ }
+ 
+ 
+ .django-ace-editor {
+     position: relative;
++    flex: 1;
+ }
+ 
+ .django-ace-editor-fullscreen {
+     position: absolute;
+     top: 0px; left: 0px;
+ }
+```
+
+### Comparing `django-ace-1.15.3/django_ace/static/django_ace/widget.js` & `django-ace-1.15.4/django_ace/static/django_ace/widget.js`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace/widgets.py` & `django-ace-1.15.4/django_ace/widgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/django_ace.egg-info/PKG-INFO` & `django-ace-1.15.4/django_ace.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: django-ace
+-Version: 1.15.3
++Version: 1.15.4
+ Summary: django-ace provides integration for ajax.org ACE with Django
+ Home-page: https://github.com/django-ace/django-ace
+ Author: Bradley Ayers
+ Author-email: bradley.ayers@gmail.com
+ License: Simplified BSD
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Environment :: Web Environment
+@@ -95,14 +95,19 @@
+ 
+ Then browser to ``http://localhost:8000``.
+ 
+ 
+ Change log
+ ==========
+ 
++v1.15.4
++-------
++
++- Added CSS to work with new admin in Django 4.2. Now you can use `width="100%"` without breaking the layout.
++
+ v1.15.3
+ -------
+ 
+ - Update ACE editor to version v1.15.3.
+ 
+ v1.14.0
+ -------
+```
+
+### Comparing `django-ace-1.15.3/django_ace.egg-info/SOURCES.txt` & `django-ace-1.15.4/django_ace.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `django-ace-1.15.3/setup.cfg` & `django-ace-1.15.4/setup.cfg`
+
+ * *Files identical despite different names*
+

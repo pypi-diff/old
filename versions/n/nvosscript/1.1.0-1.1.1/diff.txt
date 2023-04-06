@@ -1,0 +1,250 @@
+--- tmp/nvosscript-1.1.0.tar.gz
++++ tmp/nvosscript-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nvosscript-1.1.0.tar", last modified: Thu Apr  6 08:36:00 2023, max compression
+│ +gzip compressed data, was "nvosscript-1.1.1.tar", last modified: Thu Apr  6 09:30:38 2023, max compression
+│   --- nvosscript-1.1.0.tar
+├── +++ nvosscript-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,25 +1,25 @@
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 08:36:00.218225 nvosscript-1.1.0/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     1073 2023-03-22 09:01:10.000000 nvosscript-1.1.0/LICENSE
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 08:36:00.218085 nvosscript-1.1.0/PKG-INFO
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       78 2023-03-22 09:07:29.000000 nvosscript-1.1.0/README.md
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 08:36:00.216446 nvosscript-1.1.0/nvos/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-03-21 08:49:46.000000 nvosscript-1.1.0/nvos/__init__.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)    12412 2023-04-03 03:55:32.000000 nvosscript-1.1.0/nvos/file.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     1662 2023-04-06 06:54:07.000000 nvosscript-1.1.0/nvos/login.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     5237 2023-04-04 07:12:09.000000 nvosscript-1.1.0/nvos/remote.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     3802 2023-04-06 02:55:25.000000 nvosscript-1.1.0/nvos/run.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      812 2023-03-30 03:32:22.000000 nvosscript-1.1.0/nvos/utils.py
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 08:36:00.217437 nvosscript-1.1.0/nvosscript.egg-info/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 08:36:00.000000 nvosscript-1.1.0/nvosscript.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      372 2023-04-06 08:36:00.000000 nvosscript-1.1.0/nvosscript.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)        1 2023-04-06 08:36:00.000000 nvosscript-1.1.0/nvosscript.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       41 2023-04-06 08:36:00.000000 nvosscript-1.1.0/nvosscript.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       47 2023-04-06 08:36:00.000000 nvosscript-1.1.0/nvosscript.egg-info/requires.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       21 2023-04-06 08:36:00.000000 nvosscript-1.1.0/nvosscript.egg-info/top_level.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       38 2023-04-06 08:36:00.218266 nvosscript-1.1.0/setup.cfg
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      805 2023-04-06 08:35:35.000000 nvosscript-1.1.0/setup.py
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 08:36:00.217664 nvosscript-1.1.0/start/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-04-04 03:24:28.000000 nvosscript-1.1.0/start/__init__.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     3165 2023-04-06 08:35:45.000000 nvosscript-1.1.0/start/main.py
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 08:36:00.217802 nvosscript-1.1.0/win/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     1283 2023-04-06 07:02:53.000000 nvosscript-1.1.0/win/win_auto_script.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262823 nvosscript-1.1.1/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     1073 2023-03-22 09:01:10.000000 nvosscript-1.1.1/LICENSE
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 09:30:38.262699 nvosscript-1.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       78 2023-03-22 09:07:29.000000 nvosscript-1.1.1/README.md
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.261098 nvosscript-1.1.1/nvos/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-03-21 08:49:46.000000 nvosscript-1.1.1/nvos/__init__.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)    12412 2023-04-03 03:55:32.000000 nvosscript-1.1.1/nvos/file.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     1662 2023-04-06 06:54:07.000000 nvosscript-1.1.1/nvos/login.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     5893 2023-04-06 09:28:19.000000 nvosscript-1.1.1/nvos/remote.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     3885 2023-04-06 08:59:52.000000 nvosscript-1.1.1/nvos/run.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      812 2023-03-30 03:32:22.000000 nvosscript-1.1.1/nvos/utils.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262017 nvosscript-1.1.1/nvosscript.egg-info/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      372 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)        1 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       41 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       47 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/requires.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       21 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       38 2023-04-06 09:30:38.262868 nvosscript-1.1.1/setup.cfg
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      805 2023-04-06 09:29:34.000000 nvosscript-1.1.1/setup.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262232 nvosscript-1.1.1/start/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-04-04 03:24:28.000000 nvosscript-1.1.1/start/__init__.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     3504 2023-04-06 09:29:34.000000 nvosscript-1.1.1/start/main.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262441 nvosscript-1.1.1/win/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     1283 2023-04-06 07:02:53.000000 nvosscript-1.1.1/win/win_auto_script.py
+│ │   --- nvosscript-1.1.0/LICENSE
+│ ├── +++ nvosscript-1.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.0/nvos/file.py
+│ ├── +++ nvosscript-1.1.1/nvos/file.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.0/nvos/login.py
+│ ├── +++ nvosscript-1.1.1/nvos/login.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.0/nvos/remote.py
+│ ├── +++ nvosscript-1.1.1/nvos/remote.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -9,15 +9,22 @@
+│ │  import multiprocessing
+│ │  from tqdm import tqdm
+│ │  from nvos import login
+│ │  import logging
+│ │  
+│ │  # 导入全局日志记录器
+│ │  logger = logging.getLogger(__name__)
+│ │ -daemon_network = "https://nvos-toolchain-dev.nioint.com"
+│ │ +daemon_network = "https://nvos-toolchain.nioint.com"
+│ │ +
+│ │ +daemon_network_mapping = {
+│ │ +    "prod": "https://nvos-toolchain.nioint.com",
+│ │ +    "stg": "https://nvos-toolchain-stg.nioint.com",
+│ │ +    "test": "https://nvos-toolchain-test.nioint.com",
+│ │ +    "dev": "https://nvos-toolchain-dev.nioint.com"
+│ │ +}
+│ │  global_var = 0
+│ │  
+│ │  
+│ │  def upload_file(file_path_list, project_space_list):
+│ │      s3_secret = get_s3_secret()
+│ │      bucket_name = s3_secret["bucket"]
+│ │      aws_ak = s3_secret["ak"]
+│ │ @@ -133,7 +140,18 @@
+│ │      headers = {"content-type": "application/json"}
+│ │      logger.info(f'request url:{url}')
+│ │      response = requests.post(url, headers=headers, data=json.dumps({}))
+│ │      if response.status_code == 200:
+│ │          response_data = json.loads(response.text)["data"]
+│ │          return response_data
+│ │      return {}
+│ │ +
+│ │ +def switch_env(env):
+│ │ +    global daemon_network
+│ │ +    global daemon_network_mapping
+│ │ +    val = daemon_network_mapping.get(env)
+│ │ +    if len(val) == 0:
+│ │ +        daemon_network = daemon_network_mapping.get('prod')
+│ │ +        print(f"don't hava that environment,default env is prod and cloud linked:{daemon_network}")
+│ │ +        return
+│ │ +    daemon_network = val
+│ │ +    print(f"this script current env:{env} and cloud linked:{daemon_network}")
+│ │   --- nvosscript-1.1.0/nvos/run.py
+│ ├── +++ nvosscript-1.1.1/nvos/run.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -36,14 +36,15 @@
+│ │          return
+│ │  
+│ │      print("please wait one minute.........")
+│ │      file.init_work_space(workspace_path)
+│ │  
+│ │  
+│ │  def command_async():
+│ │ +    global all_workspace_path
+│ │      workspace_path, success = common_verify()
+│ │      if not success:
+│ │          return
+│ │      all_workspace_path.update({workspace_path: workspace_path})
+│ │      if platform.system() == 'Windows':
+│ │          with open(os.path.expanduser(os.path.join("~", "workspace")), "w") as f:
+│ │              f.write(json.dumps(all_workspace_path))
+│ │ @@ -66,25 +67,28 @@
+│ │          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+│ │              while True:
+│ │                  for temp in all_workspace_path.keys():
+│ │                      logger.info("command_async current run workspace is " + temp)
+│ │                      executor.submit(execute_async, temp)
+│ │                  time.sleep(10)
+│ │  
+│ │ +
+│ │  def execute_async(workspace_path):
+│ │      file.push_data_to_cloud(workspace_path)
+│ │      file.pull_data_from_cloud(workspace_path)
+│ │  
+│ │ +
+│ │  def command_pull():
+│ │      workspace_path, success = common_verify()
+│ │      if not success:
+│ │          return
+│ │      print("please wait one minute.........")
+│ │      file.pull_data_from_cloud(workspace_path)
+│ │  
+│ │ +
+│ │  def command_push():
+│ │      workspace_path, success = common_verify()
+│ │      if not success:
+│ │          return
+│ │      print("please wait one minute.........")
+│ │      file.push_data_to_cloud(workspace_path)
+│ │  
+│ │ @@ -102,7 +106,10 @@
+│ │      return workspace_path, True
+│ │  
+│ │  
+│ │  # 登录以后初始化一些必要信息
+│ │  def login_init_data():
+│ │      result = remote.get_s3_secret()
+│ │  
+│ │ +
+│ │ +def command_env(env):
+│ │ +    remote.switch_env(env)
+│ │   --- nvosscript-1.1.0/nvos/utils.py
+│ ├── +++ nvosscript-1.1.1/nvos/utils.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.0/setup.py
+│ ├── +++ nvosscript-1.1.1/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from setuptools import setup, find_namespace_packages
+│ │  
+│ │  setup(
+│ │      name='nvosscript',
+│ │ -    version='1.1.0',
+│ │ +    version='1.1.1',
+│ │      description='nvos toolchain script',
+│ │      packages=find_namespace_packages(),
+│ │      author = 'andre.zhao',
+│ │      author_email = 'andre.zhao@nio.com',
+│ │      keywords='pack',
+│ │      readme = "README.md",
+│ │      install_requires=[
+│ │   --- nvosscript-1.1.0/start/main.py
+│ ├── +++ nvosscript-1.1.1/start/main.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -13,27 +13,29 @@
+│ │  logging.basicConfig(filename=os.path.expanduser(os.path.join("~", "logger.log")), level=logging.INFO,
+│ │                      format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+│ │  logger = logging.getLogger()
+│ │  
+│ │  
+│ │  def main():
+│ │      parser = argparse.ArgumentParser(description="Script Description")
+│ │ -
+│ │      subparsers = parser.add_subparsers(title="NVOS Script Command", dest='subcommand')
+│ │      subparsers.add_parser('login', help='The login command is the first command that must be executed.')
+│ │  
+│ │      subparsers.add_parser('init', help='The Init command is used to initialize the workspace. Please execute the '
+│ │                                        'command in your workspace directory')
+│ │      subparsers.add_parser('async', help='The async command automatically synchronizes the data you modify from the cloud and to push addtion file to cloud')
+│ │      subparsers.add_parser('pull', help='The pull command pulls the data you modify from the cloud')
+│ │      subparsers.add_parser('push', help='The push command is used upload local new files or folders to the cloud')
+│ │      subparsers.add_parser('version', help='The version command will tell you this script really version')
+│ │      subparsers.add_parser('path', help='The path command will return windows service register script path, so you can '
+│ │                                         'install this script for windows like async command.You need execute "pythonw '
+│ │                                         'win_auto_script.py" and script is this command return path content')
+│ │ +    env = subparsers.add_parser('env', help='The env command will switch you need to network cloud, this args have dev,'
+│ │ +                                      'test,stg and prod.')
+│ │ +    env.add_argument('-s', '--switch', help='swich you want linked cloud environment')
+│ │      args = parser.parse_args()
+│ │  
+│ │      if args.subcommand == "login":
+│ │          username = input("email：")
+│ │          password = getpass.getpass("password：")
+│ │          status = login.login_user_check(username, password)
+│ │          print(status)
+│ │ @@ -43,15 +45,17 @@
+│ │      elif args.subcommand == "async":
+│ │          run.command_async()
+│ │      elif args.subcommand == "pull":
+│ │          run.command_pull()
+│ │      elif args.subcommand == "push":
+│ │          run.command_push()
+│ │      elif args.subcommand == "version":
+│ │ -        print("1.1.0")
+│ │ +        print("1.1.1")
+│ │ +    elif args.subcommand == 'env':
+│ │ +        run.command_env(args.switch)
+│ │      elif args.subcommand == "path":
+│ │          current_file_path = os.path.abspath(__file__)
+│ │          current_file_dir = os.path.dirname(current_file_path)
+│ │          current_file_dir = os.path.dirname(current_file_dir)
+│ │          win_path = os.path.join(current_file_dir, 'win', 'win_auto_script.py')
+│ │          print(win_path)
+│ │      else:
+│ │   --- nvosscript-1.1.0/win/win_auto_script.py
+│ ├── +++ nvosscript-1.1.1/win/win_auto_script.py
+│ │┄ Files identical despite different names

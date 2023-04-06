@@ -1,0 +1,490 @@
+# Comparing `tmp/async_firebase-2.6.1.tar.gz` & `tmp/async_firebase-2.7.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "async_firebase-2.6.1.tar", max compression
++gzip compressed data, was "async_firebase-2.7.0.tar", max compression
+```
+
+## Comparing `async_firebase-2.6.1.tar` & `async_firebase-2.7.0.tar`
+
+### file list
+
+```diff
+@@ -1,11 +1,12 @@
+--rw-r--r--   0        0        0     1066 2023-02-17 13:55:38.958309 async_firebase-2.6.1/LICENSE
+--rw-r--r--   0        0        0     4867 2023-02-17 13:55:38.958309 async_firebase-2.6.1/README.md
+--rw-r--r--   0        0        0      194 2023-02-17 13:55:38.958309 async_firebase-2.6.1/async_firebase/__init__.py
+--rw-r--r--   0        0        0    31248 2023-02-17 13:55:38.958309 async_firebase-2.6.1/async_firebase/client.py
+--rw-r--r--   0        0        0     1547 2023-02-17 13:55:38.958309 async_firebase-2.6.1/async_firebase/encoders.py
+--rw-r--r--   0        0        0     8142 2023-02-17 13:55:38.958309 async_firebase-2.6.1/async_firebase/errors.py
+--rw-r--r--   0        0        0    15976 2023-02-17 13:55:38.958309 async_firebase-2.6.1/async_firebase/messages.py
+--rw-r--r--   0        0        0    13053 2023-02-17 13:55:38.958309 async_firebase-2.6.1/async_firebase/utils.py
+--rw-r--r--   0        0        0     1677 2023-02-17 13:55:38.958309 async_firebase-2.6.1/pyproject.toml
+--rw-r--r--   0        0        0     5842 1970-01-01 00:00:00.000000 async_firebase-2.6.1/setup.py
+--rw-r--r--   0        0        0     6333 1970-01-01 00:00:00.000000 async_firebase-2.6.1/PKG-INFO
++-rw-r--r--   0        0        0     1066 2023-04-06 09:24:20.661265 async_firebase-2.7.0/LICENSE
++-rw-r--r--   0        0        0     4899 2023-04-06 09:24:20.661265 async_firebase-2.7.0/README.md
++-rw-r--r--   0        0        0      194 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/__init__.py
++-rw-r--r--   0        0        0     7954 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/base.py
++-rw-r--r--   0        0        0    24099 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/client.py
++-rw-r--r--   0        0        0     1547 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/encoders.py
++-rw-r--r--   0        0        0     8142 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/errors.py
++-rw-r--r--   0        0        0    15976 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/messages.py
++-rw-r--r--   0        0        0    13053 2023-04-06 09:24:20.661265 async_firebase-2.7.0/async_firebase/utils.py
++-rw-r--r--   0        0        0     1677 2023-04-06 09:24:20.661265 async_firebase-2.7.0/pyproject.toml
++-rw-r--r--   0        0        0     5875 1970-01-01 00:00:00.000000 async_firebase-2.7.0/setup.py
++-rw-r--r--   0        0        0     6365 1970-01-01 00:00:00.000000 async_firebase-2.7.0/PKG-INFO
+```
+
+### Comparing `async_firebase-2.6.1/LICENSE` & `async_firebase-2.7.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `async_firebase-2.6.1/README.md` & `async_firebase-2.7.0/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,14 +12,15 @@
+   * Requires: Python 3.7+
+ 
+ ## Features
+ 
+   * Extremely lightweight and does not rely on ``firebase-admin`` which is hefty
+   * Send push notifications to Android and iOS devices
+   * Send Multicast push notification to Android and iOS devices
++  * Send Web push notifications
+   * Set TTL (time to live) for notifications
+   * Set priority for notifications
+   * Set collapse-key for notifications
+   * Dry-run mode for testing purpose
+ 
+ ## Installation
+ ```shell script
+```
+
+### Comparing `async_firebase-2.6.1/async_firebase/client.py` & `async_firebase-2.7.0/async_firebase/client.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -3,26 +3,23 @@
+ 
+ Documentation for google-auth package https://google-auth.readthedocs.io/en/latest/user-guide.html that is used
+ to authorize request which is being made to Firebase.
+ """
+ import json
+ import logging
+ import typing as t
+-import uuid
+ from dataclasses import replace
+ from datetime import datetime, timedelta
+ from email.mime.multipart import MIMEMultipart
+ from email.mime.nonmultipart import MIMENonMultipart
+-from pathlib import PurePath
+-from urllib.parse import urlencode, urljoin
++from urllib.parse import urljoin
+ 
+ import httpx
+-from google.oauth2 import service_account  # type: ignore
+ 
+-import pkg_resources  # type: ignore
++from async_firebase.base import AsyncClientBase
+ from async_firebase.encoders import aps_encoder
+ from async_firebase.messages import (
+     AndroidConfig,
+     AndroidNotification,
+     APNSConfig,
+     APNSPayload,
+     Aps,
+@@ -44,52 +41,21 @@
+     serialize_mime_message,
+ )
+ 
+ DEFAULT_TTL = 604800
+ MULTICAST_MESSAGE_MAX_DEVICE_TOKENS = 500
+ 
+ 
+-class AsyncFirebaseClient:
++class AsyncFirebaseClient(AsyncClientBase):
+     """Async wrapper for Firebase Cloud Messaging.
+ 
+     The AsyncFirebaseClient relies on Service Account to enable us making a request. To get more about Service Account
+     please refer to https://firebase.google.com/support/guides/service-accounts
+     """
+ 
+-    BASE_URL: str = "https://fcm.googleapis.com"
+-    TOKEN_URL: str = "https://oauth2.googleapis.com/token"
+-    FCM_ENDPOINT: str = "/v1/projects/{project_id}/messages:send"
+-    FCM_BATCH_ENDPOINT: str = "/batch"
+-    # A list of accessible OAuth 2.0 scopes can be found https://developers.google.com/identity/protocols/oauth2/scopes.
+-    SCOPES: t.List[str] = [
+-        "https://www.googleapis.com/auth/cloud-platform",
+-    ]
+-
+-    def __init__(
+-        self,
+-        credentials: t.Optional[service_account.Credentials] = None,
+-        scopes: t.Optional[t.List[str]] = None,
+-    ) -> None:
+-        """
+-        :param credentials: instance of ``google.oauth2.service_account.Credentials``.
+-            Usually, you'll create these credentials with one of the helper constructors. To create credentials using a
+-            Google service account private key JSON file::
+-
+-                self.creds_from_service_account_file('service-account.json')
+-
+-            Or if you already have the service account file loaded::
+-
+-                service_account_info = json.load(open('service_account.json'))
+-                self.creds_from_service_account_info(service_account_info)
+-
+-        :param scopes: user-defined scopes to request during the authorization grant.
+-        """
+-        self._credentials: service_account.Credentials = credentials
+-        self.scopes: t.List[str] = scopes or self.SCOPES
+-
+     @staticmethod
+     def assemble_push_notification(
+         *,
+         apns_config: t.Optional[APNSConfig],
+         message: Message,
+         dry_run: bool,
+     ) -> t.Dict[str, t.Any]:
+@@ -111,59 +77,14 @@
+             PushNotification(message=message, validate_only=dry_run)
+         )
+         if len(push_notification["message"]) == 1:
+             logging.warning("No data has been provided to construct push notification payload")
+             raise ValueError("``messages.PushNotification`` cannot be assembled as data has not been provided")
+         return push_notification
+ 
+-    def creds_from_service_account_info(self, service_account_info: t.Dict[str, str]) -> None:
+-        """
+-        Creates a Credentials instance from parsed service account info.
+-
+-        :param service_account_info: the service account info in Google format.
+-        """
+-        self._credentials = service_account.Credentials.from_service_account_info(
+-            info=service_account_info, scopes=self.scopes
+-        )
+-
+-    def creds_from_service_account_file(self, service_account_filename: t.Union[str, PurePath]) -> None:
+-        """
+-        Creates a Credentials instance from a service account json file.
+-
+-        :param service_account_filename: the path to the service account json file.
+-        """
+-        if isinstance(service_account_filename, PurePath):
+-            service_account_filename = str(service_account_filename)
+-
+-        logging.debug("Creating credentials from file: %s", service_account_filename)
+-        self._credentials = service_account.Credentials.from_service_account_file(
+-            filename=service_account_filename, scopes=self.scopes
+-        )
+-
+-    async def _get_access_token(self) -> str:
+-        """Get OAuth 2 access token."""
+-        if self._credentials.valid:
+-            return self._credentials.token
+-
+-        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+-        data = urlencode(
+-            {
+-                "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+-                "assertion": self._credentials._make_authorization_grant_assertion(),
+-            }
+-        ).encode("utf-8")
+-
+-        async with httpx.AsyncClient() as client:
+-            response: httpx.Response = await client.post(self.TOKEN_URL, data=data, headers=headers)
+-            response_data = response.json()
+-
+-        self._credentials.expiry = datetime.utcnow() + timedelta(seconds=response_data["expires_in"])
+-        self._credentials.token = response_data["access_token"]
+-        return self._credentials.token
+-
+     @staticmethod
+     def build_android_config(  # pylint: disable=too-many-locals
+         *,
+         priority: str,
+         ttl: t.Union[int, timedelta] = DEFAULT_TTL,
+         collapse_key: t.Optional[str] = None,
+         restricted_package_name: t.Optional[str] = None,
+@@ -407,59 +328,14 @@
+                 timestamp_millis=timestamp_millis,
+                 vibrate=vibrate,
+                 custom_data=custom_data or {},
+             ),
+             fcm_options=WebpushFCMOptions(link=link) if link else None,
+         )
+ 
+-    @staticmethod
+-    def _get_request_id():
+-        """Generate unique request ID."""
+-        return str(uuid.uuid4())
+-
+-    @staticmethod
+-    def _serialize_batch_request(request: httpx.Request) -> str:
+-        """
+-        Convert an HttpRequest object into a string.
+-
+-        :param request: `httpx.Request`, the request to serialize.
+-        :return: a string in application/http format.
+-        """
+-        status_line = f"{request.method} {request.url.path} HTTP/1.1\n"
+-        major, minor = request.headers.get("content-type", "application/json").split("/")
+-        msg = MIMENonMultipart(major, minor)
+-        headers = request.headers.copy()
+-
+-        # MIMENonMultipart adds its own Content-Type header.
+-        if "content-type" in headers:
+-            del headers["content-type"]
+-
+-        for key, value in headers.items():
+-            msg[key] = value
+-        msg.set_unixfrom(None)  # type: ignore
+-
+-        if request.content is not None:
+-            msg.set_payload(request.content)
+-            msg["content-length"] = str(len(request.content))
+-
+-        body = serialize_mime_message(msg, max_header_len=0)
+-        return f"{status_line}{body}"
+-
+-    async def _prepare_headers(self):
+-        """Prepare HTTP headers that will be used to request Firebase Cloud Messaging."""
+-        logging.debug("Preparing HTTP headers for all the subsequent requests")
+-        access_token: str = await self._get_access_token()
+-        return {
+-            "Authorization": f"Bearer {access_token}",
+-            "Content-Type": "application/json; UTF-8",
+-            "X-Request-Id": self._get_request_id(),
+-            "X-GOOG-API-FORMAT-VERSION": "2",
+-            "X-FIREBASE-CLIENT": "async-firebase/{0}".format(pkg_resources.get_distribution("async-firebase").version),
+-        }
+-
+     async def push(  # pylint: disable=too-many-locals
+         self,
+         device_token: str,
+         *,
+         android: t.Optional[AndroidConfig] = None,
+         apns: t.Optional[APNSConfig] = None,
+         condition: t.Optional[str] = None,
+@@ -530,18 +406,17 @@
+             apns=apns,
+             topic=topic,
+             condition=condition,
+         )
+ 
+         push_notification = self.assemble_push_notification(apns_config=apns, dry_run=dry_run, message=message)
+ 
+-        response = await self._send_request(
++        response = await self.send_request(
+             uri=self.FCM_ENDPOINT.format(project_id=self._credentials.project_id),  # type: ignore
+             json_payload=push_notification,
+-            headers=await self._prepare_headers(),
+             response_handler=FcmPushResponseHandler(),
+         )
+         if not isinstance(response, FcmPushResponse):
+             raise ValueError("Wrong return type, perhaps because of a response handler misuse.")
+         return response
+ 
+     async def push_multicast(
+@@ -579,90 +454,45 @@
+         multipart_message = MIMEMultipart("mixed")
+         # Message should not write out it's own headers.
+         setattr(multipart_message, "_write_headers", lambda self: None)
+ 
+         for device_token in device_tokens:
+             msg = MIMENonMultipart("application", "http")
+             msg["Content-Transfer-Encoding"] = "binary"
+-            msg["Content-ID"] = self._get_request_id()
++            msg["Content-ID"] = self.get_request_id()
+             push_notification = self.assemble_push_notification(
+                 apns_config=apns,
+                 dry_run=dry_run,
+                 message=Message(
+                     token=device_token,
+                     data=data or {},
+                     notification=notification,
+                     android=android,
+                     webpush=webpush,
+                     apns=apns,
+                 ),
+             )
+-            body = self._serialize_batch_request(
++            body = self.serialize_batch_request(
+                 httpx.Request(
+                     method="POST",
+                     url=urljoin(
+                         self.BASE_URL, self.FCM_ENDPOINT.format(project_id=self._credentials.project_id)  # type: ignore
+                     ),
+-                    headers=await self._prepare_headers(),
++                    headers=await self.prepare_headers(),
+                     content=json.dumps(push_notification),
+                 )
+             )
+             msg.set_payload(body)
+             multipart_message.attach(msg)
+ 
+         # encode the body: note that we can't use `as_string`, because it plays games with `From ` lines.
+         body = serialize_mime_message(multipart_message, mangle_from=False)
+ 
+-        batch_response = await self._send_request(
++        batch_response = await self.send_request(
+             uri=self.FCM_BATCH_ENDPOINT,
+             content=body,
+             headers={"Content-Type": f"multipart/mixed; boundary={multipart_message.get_boundary()}"},
+             response_handler=FcmPushMulticastResponseHandler(),
+         )
+         if not isinstance(batch_response, FcmPushMulticastResponse):
+             raise ValueError("Wrong return type, perhaps because of a response handler misuse.")
+         return batch_response
+-
+-    async def _send_request(
+-        self,
+-        uri: str,
+-        response_handler: t.Union[FcmPushResponseHandler, FcmPushMulticastResponseHandler],
+-        json_payload: t.Optional[t.Dict[str, t.Any]] = None,
+-        headers: t.Optional[t.Dict[str, str]] = None,
+-        content: t.Union[str, bytes, t.Iterable[bytes], t.AsyncIterable[bytes], None] = None,
+-    ) -> t.Union[FcmPushResponse, FcmPushMulticastResponse]:
+-        """
+-        Sends an HTTP call using the ``httpx`` library.
+-
+-        :param uri: URI to be requested.
+-        :param json_payload: request JSON payload
+-        :param headers: request headers.
+-        :param content: request content
+-        :return: HTTP response
+-        """
+-        async with httpx.AsyncClient(base_url=self.BASE_URL) as client:
+-            logging.debug(
+-                "Requesting POST %s, payload: %s, content: %s, headers: %s",
+-                urljoin(self.BASE_URL, self.FCM_ENDPOINT.format(project_id=self._credentials.project_id)),
+-                json_payload,
+-                content,
+-                headers,
+-            )
+-            try:
+-                raw_fcm_response: httpx.Response = await client.post(
+-                    uri,
+-                    json=json_payload,
+-                    headers=headers or await self._prepare_headers(),
+-                    content=content,
+-                )
+-                raw_fcm_response.raise_for_status()
+-            except httpx.HTTPError as exc:
+-                response = response_handler.handle_error(exc)
+-            else:
+-                logging.debug(
+-                    "Response Code: %s, Time spent to make a request: %s",
+-                    raw_fcm_response.status_code,
+-                    raw_fcm_response.elapsed,
+-                )
+-                response = response_handler.handle_response(raw_fcm_response)
+-
+-        return response
+```
+
+### Comparing `async_firebase-2.6.1/async_firebase/encoders.py` & `async_firebase-2.7.0/async_firebase/encoders.py`
+
+ * *Files identical despite different names*
+
+### Comparing `async_firebase-2.6.1/async_firebase/errors.py` & `async_firebase-2.7.0/async_firebase/errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `async_firebase-2.6.1/async_firebase/messages.py` & `async_firebase-2.7.0/async_firebase/messages.py`
+
+ * *Files identical despite different names*
+
+### Comparing `async_firebase-2.6.1/async_firebase/utils.py` & `async_firebase-2.7.0/async_firebase/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `async_firebase-2.6.1/pyproject.toml` & `async_firebase-2.7.0/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "async-firebase"
+-version = "2.6.1"
++version = "2.7.0"
+ description = "Async Firebase Client - a Python asyncio client to interact with Firebase Cloud Messaging in an easy way."
+ license = "MIT"
+ authors = [
+     "Aleksandr Omyshev <oomyshev@healthjoy.com>"
+ ]
+ maintainers = [
+     "Healthjoy Developers <developers@healthjoy.com>",
+```
+
+### Comparing `async_firebase-2.6.1/setup.py` & `async_firebase-2.7.0/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -8,17 +8,17 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['google-auth>=2.6.0,<2.7.0', 'httpx>=0.23.0,<1.0.0']
+ 
+ setup_kwargs = {
+     'name': 'async-firebase',
+-    'version': '2.6.1',
++    'version': '2.7.0',
+     'description': 'Async Firebase Client - a Python asyncio client to interact with Firebase Cloud Messaging in an easy way.',
+-    'long_description': '# async-firebase is a lightweight asynchronous client to interact with Firebase Cloud Messaging for sending push notification to Android and iOS devices\n\n[![PyPI download month](https://img.shields.io/pypi/dm/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![PyPI version fury.io](https://badge.fury.io/py/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![PyPI license](https://img.shields.io/pypi/l/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![PyPI pyversions](https://img.shields.io/pypi/pyversions/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![CI](https://github.com/healthjoy/async-firebase/actions/workflows/ci.yml/badge.svg)](https://github.com/healthjoy/async-firebase/actions/workflows/ci.yml)\n[![Codacy coverage](https://img.shields.io/codacy/coverage/b6a59cdf5ca64eab9104928d4f9bbb97?logo=codacy)](https://app.codacy.com/gh/healthjoy/async-firebase/dashboard)\n\n\n  * Free software: MIT license\n  * Requires: Python 3.7+\n\n## Features\n\n  * Extremely lightweight and does not rely on ``firebase-admin`` which is hefty\n  * Send push notifications to Android and iOS devices\n  * Send Multicast push notification to Android and iOS devices\n  * Set TTL (time to live) for notifications\n  * Set priority for notifications\n  * Set collapse-key for notifications\n  * Dry-run mode for testing purpose\n\n## Installation\n```shell script\n$ pip install async-firebase\n```\n\n## Getting started\nTo send push notification to Android:\n```python3\nimport asyncio\n\nfrom async_firebase import AsyncFirebaseClient\n\n\nasync def main():\n    client = AsyncFirebaseClient()\n    client.creds_from_service_account_file("secret-store/mobile-app-79225efac4bb.json")\n\n    # or using dictionary object\n    # client.creds_from_service_account_info({...}})\n\n    device_token = "..."\n\n    android_config = client.build_android_config(\n        priority="high",\n        ttl=2419200,\n        collapse_key="push",\n        data={"discount": "15%", "key_1": "value_1", "timestamp": "2021-02-24T12:00:15"},\n        title="Store Changes",\n        body="Recent store changes",\n    )\n    response = await client.push(device_token=device_token, android=android_config)\n\n    print(response.success, response.message_id)\n\nif __name__ == "__main__":\n    asyncio.run(main())\n```\n\nTo send push notification to iOS:\n\n```python3\nimport asyncio\n\nfrom async_firebase import AsyncFirebaseClient\n\n\nasync def main():\n    client = AsyncFirebaseClient()\n    client.creds_from_service_account_file("secret-store/mobile-app-79225efac4bb.json")\n\n    # or using dictionary object\n    # client.creds_from_service_account_info({...}})\n\n    device_token = "..."\n\n    apns_config = client.build_apns_config(\n        priority="normal",\n        ttl=2419200,\n        apns_topic="store-updated",\n        collapse_key="push",\n        title="Store Changes",\n        alert="Recent store changes",\n        badge=1,\n        category="test-category",\n        custom_data={"discount": "15%", "key_1": "value_1", "timestamp": "2021-02-24T12:00:15"}\n    )\n    response = await client.push(device_token=device_token, apns=apns_config)\n\n    print(response.success)\n\nif __name__ == "__main__":\n    asyncio.run(main())\n```\n\nThis prints:\n\n```shell script\n"projects/mobile-app/messages/0:2367799010922733%7606eb557606ebff"\n```\n\nTo manual construct message:\n```python3\nimport asyncio\nfrom datetime import datetime\n\nfrom async_firebase.messages import APNSConfig, APNSPayload, ApsAlert, Aps\nfrom async_firebase import AsyncFirebaseClient\n\n\nasync def main():\n    apns_config = APNSConfig(**{\n        "headers": {\n            "apns-expiration": str(int(datetime.utcnow().timestamp()) + 7200),\n            "apns-priority": "10",\n            "apns-topic": "test-topic",\n            "apns-collapse-id": "something",\n        },\n        "payload": APNSPayload(**{\n            "aps": Aps(**{\n                "alert": ApsAlert(title="some-title", body="alert-message"),\n                "badge": 0,\n                "sound": "default",\n                "content_available": True,\n                "category": "some-category",\n                "mutable_content": False,\n                "custom_data": {\n                    "link": "https://link-to-somewhere.com",\n                    "ticket_id": "YXZ-655512",\n                },\n            })\n        })\n    })\n\n    device_token = "..."\n\n    client = AsyncFirebaseClient()\n    client.creds_from_service_account_info({...})\n    response = await client.push(device_token=device_token, apns=apns_config)\n    print(response.success)\n\n\nif __name__ == "__main__":\n    asyncio.run(main())\n```\n\n## License\n\n``async-firebase`` is offered under the MIT license.\n\n## Source code\n\nThe latest developer version is available in a GitHub repository:\n[https://github.com/healthjoy/async-firebase](https://github.com/healthjoy/async-firebase)\n',
++    'long_description': '# async-firebase is a lightweight asynchronous client to interact with Firebase Cloud Messaging for sending push notification to Android and iOS devices\n\n[![PyPI download month](https://img.shields.io/pypi/dm/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![PyPI version fury.io](https://badge.fury.io/py/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![PyPI license](https://img.shields.io/pypi/l/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![PyPI pyversions](https://img.shields.io/pypi/pyversions/async-firebase.svg)](https://pypi.python.org/pypi/async-firebase/)\n[![CI](https://github.com/healthjoy/async-firebase/actions/workflows/ci.yml/badge.svg)](https://github.com/healthjoy/async-firebase/actions/workflows/ci.yml)\n[![Codacy coverage](https://img.shields.io/codacy/coverage/b6a59cdf5ca64eab9104928d4f9bbb97?logo=codacy)](https://app.codacy.com/gh/healthjoy/async-firebase/dashboard)\n\n\n  * Free software: MIT license\n  * Requires: Python 3.7+\n\n## Features\n\n  * Extremely lightweight and does not rely on ``firebase-admin`` which is hefty\n  * Send push notifications to Android and iOS devices\n  * Send Multicast push notification to Android and iOS devices\n  * Send Web push notifications\n  * Set TTL (time to live) for notifications\n  * Set priority for notifications\n  * Set collapse-key for notifications\n  * Dry-run mode for testing purpose\n\n## Installation\n```shell script\n$ pip install async-firebase\n```\n\n## Getting started\nTo send push notification to Android:\n```python3\nimport asyncio\n\nfrom async_firebase import AsyncFirebaseClient\n\n\nasync def main():\n    client = AsyncFirebaseClient()\n    client.creds_from_service_account_file("secret-store/mobile-app-79225efac4bb.json")\n\n    # or using dictionary object\n    # client.creds_from_service_account_info({...}})\n\n    device_token = "..."\n\n    android_config = client.build_android_config(\n        priority="high",\n        ttl=2419200,\n        collapse_key="push",\n        data={"discount": "15%", "key_1": "value_1", "timestamp": "2021-02-24T12:00:15"},\n        title="Store Changes",\n        body="Recent store changes",\n    )\n    response = await client.push(device_token=device_token, android=android_config)\n\n    print(response.success, response.message_id)\n\nif __name__ == "__main__":\n    asyncio.run(main())\n```\n\nTo send push notification to iOS:\n\n```python3\nimport asyncio\n\nfrom async_firebase import AsyncFirebaseClient\n\n\nasync def main():\n    client = AsyncFirebaseClient()\n    client.creds_from_service_account_file("secret-store/mobile-app-79225efac4bb.json")\n\n    # or using dictionary object\n    # client.creds_from_service_account_info({...}})\n\n    device_token = "..."\n\n    apns_config = client.build_apns_config(\n        priority="normal",\n        ttl=2419200,\n        apns_topic="store-updated",\n        collapse_key="push",\n        title="Store Changes",\n        alert="Recent store changes",\n        badge=1,\n        category="test-category",\n        custom_data={"discount": "15%", "key_1": "value_1", "timestamp": "2021-02-24T12:00:15"}\n    )\n    response = await client.push(device_token=device_token, apns=apns_config)\n\n    print(response.success)\n\nif __name__ == "__main__":\n    asyncio.run(main())\n```\n\nThis prints:\n\n```shell script\n"projects/mobile-app/messages/0:2367799010922733%7606eb557606ebff"\n```\n\nTo manual construct message:\n```python3\nimport asyncio\nfrom datetime import datetime\n\nfrom async_firebase.messages import APNSConfig, APNSPayload, ApsAlert, Aps\nfrom async_firebase import AsyncFirebaseClient\n\n\nasync def main():\n    apns_config = APNSConfig(**{\n        "headers": {\n            "apns-expiration": str(int(datetime.utcnow().timestamp()) + 7200),\n            "apns-priority": "10",\n            "apns-topic": "test-topic",\n            "apns-collapse-id": "something",\n        },\n        "payload": APNSPayload(**{\n            "aps": Aps(**{\n                "alert": ApsAlert(title="some-title", body="alert-message"),\n                "badge": 0,\n                "sound": "default",\n                "content_available": True,\n                "category": "some-category",\n                "mutable_content": False,\n                "custom_data": {\n                    "link": "https://link-to-somewhere.com",\n                    "ticket_id": "YXZ-655512",\n                },\n            })\n        })\n    })\n\n    device_token = "..."\n\n    client = AsyncFirebaseClient()\n    client.creds_from_service_account_info({...})\n    response = await client.push(device_token=device_token, apns=apns_config)\n    print(response.success)\n\n\nif __name__ == "__main__":\n    asyncio.run(main())\n```\n\n## License\n\n``async-firebase`` is offered under the MIT license.\n\n## Source code\n\nThe latest developer version is available in a GitHub repository:\n[https://github.com/healthjoy/async-firebase](https://github.com/healthjoy/async-firebase)\n',
+     'author': 'Aleksandr Omyshev',
+     'author_email': 'oomyshev@healthjoy.com',
+     'maintainer': 'Healthjoy Developers',
+     'maintainer_email': 'developers@healthjoy.com',
+     'url': 'https://github.com/healthjoy/async-firebase',
+     'packages': packages,
+     'package_data': package_data,
+```
+
+### Comparing `async_firebase-2.6.1/PKG-INFO` & `async_firebase-2.7.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: async-firebase
+-Version: 2.6.1
++Version: 2.7.0
+ Summary: Async Firebase Client - a Python asyncio client to interact with Firebase Cloud Messaging in an easy way.
+ Home-page: https://github.com/healthjoy/async-firebase
+ License: MIT
+ Keywords: async,asyncio,firebase,fcm,python3,push-notifications
+ Author: Aleksandr Omyshev
+ Author-email: oomyshev@healthjoy.com
+ Maintainer: Healthjoy Developers
+@@ -45,14 +45,15 @@
+   * Requires: Python 3.7+
+ 
+ ## Features
+ 
+   * Extremely lightweight and does not rely on ``firebase-admin`` which is hefty
+   * Send push notifications to Android and iOS devices
+   * Send Multicast push notification to Android and iOS devices
++  * Send Web push notifications
+   * Set TTL (time to live) for notifications
+   * Set priority for notifications
+   * Set collapse-key for notifications
+   * Dry-run mode for testing purpose
+ 
+ ## Installation
+ ```shell script
+```
+

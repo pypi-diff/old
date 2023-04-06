@@ -1,0 +1,236 @@
+# Comparing `tmp/cnki_html2json-0.0.5.tar.gz` & `tmp/cnki_html2json-0.0.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "cnki_html2json-0.0.5.tar", last modified: Wed Apr  5 02:18:59 2023, max compression
++gzip compressed data, was "cnki_html2json-0.0.6.tar", last modified: Thu Apr  6 09:29:25 2023, max compression
+```
+
+## Comparing `cnki_html2json-0.0.5.tar` & `cnki_html2json-0.0.6.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 02:18:59.306205 cnki_html2json-0.0.5/
+--rw-r--r--   0 runner    (1001) docker     (123)     5886 2023-04-05 02:18:59.306205 cnki_html2json-0.0.5/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 02:18:59.302205 cnki_html2json-0.0.5/cnki_html2json/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10606 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/_html2json.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1408 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/cli.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1925 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/core.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9606 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/crawl.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1928 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/parse_metadata.py
+--rw-r--r--   0 runner    (1001) docker     (123)      837 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/cnki_html2json/recognize_slider_coordinate.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 02:18:59.306205 cnki_html2json-0.0.5/cnki_html2json.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     5886 2023-04-05 02:18:59.000000 cnki_html2json-0.0.5/cnki_html2json.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      514 2023-04-05 02:18:59.000000 cnki_html2json-0.0.5/cnki_html2json.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 02:18:59.000000 cnki_html2json-0.0.5/cnki_html2json.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-05 02:18:59.000000 cnki_html2json-0.0.5/cnki_html2json.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-05 02:18:59.000000 cnki_html2json-0.0.5/cnki_html2json.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-05 02:18:59.000000 cnki_html2json-0.0.5/cnki_html2json.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 02:18:59.306205 cnki_html2json-0.0.5/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1278 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 02:18:59.306205 cnki_html2json-0.0.5/test/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/test/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      556 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/test/test_html2json.py
+--rw-r--r--   0 runner    (1001) docker     (123)      284 2023-04-05 02:18:40.000000 cnki_html2json-0.0.5/test/test_metadata.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:29:25.836012 cnki_html2json-0.0.6/
++-rw-r--r--   0 runner    (1001) docker     (123)     5886 2023-04-06 09:29:25.836012 cnki_html2json-0.0.6/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:29:25.836012 cnki_html2json-0.0.6/cnki_html2json/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10606 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/_html2json.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1408 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/cli.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1925 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/core.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9786 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/crawl.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1928 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/parse_metadata.py
++-rw-r--r--   0 runner    (1001) docker     (123)      837 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/cnki_html2json/recognize_slider_coordinate.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:29:25.836012 cnki_html2json-0.0.6/cnki_html2json.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     5886 2023-04-06 09:29:25.000000 cnki_html2json-0.0.6/cnki_html2json.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      514 2023-04-06 09:29:25.000000 cnki_html2json-0.0.6/cnki_html2json.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 09:29:25.000000 cnki_html2json-0.0.6/cnki_html2json.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 09:29:25.000000 cnki_html2json-0.0.6/cnki_html2json.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-06 09:29:25.000000 cnki_html2json-0.0.6/cnki_html2json.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 09:29:25.000000 cnki_html2json-0.0.6/cnki_html2json.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 09:29:25.836012 cnki_html2json-0.0.6/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1278 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:29:25.836012 cnki_html2json-0.0.6/test/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/test/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      556 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/test/test_html2json.py
++-rw-r--r--   0 runner    (1001) docker     (123)      284 2023-04-06 09:29:05.000000 cnki_html2json-0.0.6/test/test_metadata.py
+```
+
+### Comparing `cnki_html2json-0.0.5/PKG-INFO` & `cnki_html2json-0.0.6/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cnki_html2json
+-Version: 0.0.5
++Version: 0.0.6
+ Summary: A package to convert cnki html to json
+ Home-page: https://github.com/doublessay/cnki-html2json
+ Author: WangK2
+ Author-email: kw221225@gmail.com
+ License: MIT
+ Keywords: cnki,text-structure,crawler
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `cnki_html2json-0.0.5/README.md` & `cnki_html2json-0.0.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json/_html2json.py` & `cnki_html2json-0.0.6/cnki_html2json/_html2json.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json/cli.py` & `cnki_html2json-0.0.6/cnki_html2json/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json/core.py` & `cnki_html2json-0.0.6/cnki_html2json/core.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json/crawl.py` & `cnki_html2json-0.0.6/cnki_html2json/crawl.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -119,29 +119,30 @@
+     """
+     if log:
+         if not os.path.exists(f'{save_path}/log'):
+             os.mkdir(f'{save_path}/log')
+             logger.info(f'已在{save_path}文件夹下创建log文件夹')
+ 
+         current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+-        logger.add(f"log/{current_time}.log",format="{time} {level} {message}",level="INFO",mode='w')
++        logger.add(f"{save_path}/log/{current_time}.log",format="{time} {level} {message}",level="INFO",mode='w')
++        logger.info('本次任务记录日志')
+     else:
+         logger.info('本次任务不记录日志')
+ 
+     visited_urls = set()
+ 
+     if not os.path.exists(save_path):
+         # os.mkdir(save_path)
+         # logger.info(f'已在当前目录创建{save_path}文件夹')
+         pass
+     else:
+         save_path_files = [i for i in os.listdir(save_path) if i.endswith('.json')]
+         if save_path_files and start_paper_index==1:
+-            cover = input(f'{save_path}文件夹中已存在json文件, 覆盖请输入y, 不覆盖请输入n, 程序将退出, 请输入: ')
+-            if cover == 'y':
++            cover_risk = input(f'{save_path}文件夹中已存在json文件, 覆盖请输入y, 不覆盖请输入n, 程序将退出, 请输入: ')
++            if cover_risk == 'y':
+                 logger.warning(f'新下载的文件将覆盖{save_path}文件夹里的文件')
+             else:
+                 sys.exit('程序已退出')
+             
+     # 启动浏览器
+     if browser_type=='Chrome':
+         driver = webdriver.Chrome()
+@@ -174,29 +175,34 @@
+     total_records_num = int(''.join(driver.find_element(By.XPATH,'//*[@id="countPageDiv"]/span[1]/em').text.split(',')))
+     if end_paper_index:
+         avaiable_records_num = min([total_records_num,end_paper_index,6000])
+     else:
+         avaiable_records_num = min([total_records_num,6000])
+     
+     need_download_num = avaiable_records_num-start_paper_index+1
+-    logger.info(f'总文献数量 {total_records_num} \t可下载文献数 {avaiable_records_num} \t需下载文献数 {need_download_num} \t预计耗时 {math.ceil(need_download_num/3)}分钟' )
++    logger.info(f'总文献数量 {total_records_num} \t可下载文献数 {avaiable_records_num}' )
+     
+     start_page = start_paper_index//papers_per_page+1
+     
+     # 总页数
+     # total_page_num = int(driver.find_element(By.XPATH,'//*[@id="countPageDiv"]/span[2]').text.split('/')[1])
+     # print(f'总页数{total_page_num}')
+     
+     # 跳转到指定开始页面
+     current_page = int(driver.find_element(By.XPATH,'//*[@id="countPageDiv"]/span[2]').text.split('/')[0])
+     if current_page < start_page:
+         jump_page(current_page,start_page,driver)
+         current_page = start_page
+     logger.info(f'将从第 {start_paper_index} 篇文献开始下载')
+     logger.info(f'模式设置为 {mode}')
++    minutes = math.ceil(need_download_num/3)
++    if minutes < 60:
++        logger.info(f'预计耗时 {minutes}分钟')
++    else:
++        logger.info(f'预计耗时 {minutes//60}小时 {minutes%60}分钟')
+     
+     # 下载文献数据
+     current_paper_index = start_paper_index
+ 
+     while current_paper_index < avaiable_records_num+1:
+         current_url_list = obtain_page_papers_url(driver)[current_paper_index%papers_per_page-1:]  
+         for url in current_url_list:
+```
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json/parse_metadata.py` & `cnki_html2json-0.0.6/cnki_html2json/parse_metadata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json/recognize_slider_coordinate.py` & `cnki_html2json-0.0.6/cnki_html2json/recognize_slider_coordinate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json.egg-info/PKG-INFO` & `cnki_html2json-0.0.6/cnki_html2json.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: cnki-html2json
+-Version: 0.0.5
++Version: 0.0.6
+ Summary: A package to convert cnki html to json
+ Home-page: https://github.com/doublessay/cnki-html2json
+ Author: WangK2
+ Author-email: kw221225@gmail.com
+ License: MIT
+ Keywords: cnki,text-structure,crawler
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `cnki_html2json-0.0.5/cnki_html2json.egg-info/SOURCES.txt` & `cnki_html2json-0.0.6/cnki_html2json.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `cnki_html2json-0.0.5/setup.py` & `cnki_html2json-0.0.6/setup.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from setuptools import setup,find_packages
+ 
+ setup(
+     name="cnki_html2json",
+     author = "WangK2",
+     author_email = "kw221225@gmail.com",
+-    version="0.0.5",
++    version="0.0.6",
+     description="A package to convert cnki html to json",
+     long_description = open("README.md", "r", encoding="utf-8").read(),
+     long_description_content_type="text/markdown",
+     keywords = ["cnki","text-structure","crawler"],
+     license="MIT",
+     url="https://github.com/doublessay/cnki-html2json",
+     packages=find_packages(),
+```
+
+### Comparing `cnki_html2json-0.0.5/test/test_html2json.py` & `cnki_html2json-0.0.6/test/test_html2json.py`
+
+ * *Files identical despite different names*
+

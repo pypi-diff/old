@@ -1,0 +1,624 @@
+--- tmp/pydantic_factur_x-0.1.5.tar.gz
++++ tmp/pydantic_factur_x-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pydantic_factur_x-0.1.5.tar", max compression
+│ +gzip compressed data, was "pydantic_factur_x-0.1.6.tar", max compression
+│   --- pydantic_factur_x-0.1.5.tar
+├── +++ pydantic_factur_x-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,26 +1,26 @@
+│ │ --rw-r--r--   0        0        0     1569 2023-03-11 14:45:16.994968 pydantic_factur_x-0.1.5/README.md
+│ │ --rw-r--r--   0        0        0        0 2023-03-10 19:07:13.275171 pydantic_factur_x-0.1.5/pydantic_factur_x/__init__.py
+│ │ --rw-r--r--   0        0        0     3069 2023-03-30 13:01:17.232377 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/__init__.py
+│ │ --rw-r--r--   0        0        0     2275 2023-03-29 16:41:36.327089 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/_nsmaps.py
+│ │ --rw-r--r--   0        0        0     2586 2023-03-30 09:36:17.303512 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/address.py
+│ │ --rw-r--r--   0        0        0      260 2023-03-30 12:21:57.198680 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/__init__.py
+│ │ --rw-r--r--   0        0        0     1770 2023-03-16 09:53:16.427279 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_1001.py
+│ │ --rw-r--r--   0        0        0      418 2023-03-16 14:07:23.374186 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_1229.py
+│ │ --rw-r--r--   0        0        0      305 2023-03-16 10:06:27.017530 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_1373.py
+│ │ --rw-r--r--   0        0        0      248 2023-03-16 10:35:39.940578 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_2379.py
+│ │ --rw-r--r--   0        0        0     6378 2023-03-16 13:14:18.733404 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_4451.py
+│ │ --rw-r--r--   0        0        0     3202 2023-03-30 12:20:22.530590 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_4461.py
+│ │ --rw-r--r--   0        0        0     4492 2023-03-31 08:34:01.604788 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/common.py
+│ │ --rw-r--r--   0        0        0     2254 2023-03-29 16:25:04.834377 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/contact.py
+│ │ --rw-r--r--   0        0        0     3304 2023-03-29 16:25:17.623365 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/document_context.py
+│ │ --rw-r--r--   0        0        0      620 2023-03-29 16:25:25.445510 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/document_reference.py
+│ │ --rw-r--r--   0        0        0     6458 2023-03-30 09:39:52.351758 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/exchanged_document.py
+│ │ --rw-r--r--   0        0        0     3744 2023-03-29 16:43:31.173714 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/root.py
+│ │ --rw-r--r--   0        0        0    49114 2023-03-31 07:57:43.973396 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/supply_chain_trade_transaction.py
+│ │ --rw-r--r--   0        0        0     5276 2023-03-29 16:27:52.619351 pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/trade_party.py
+│ │ --rw-r--r--   0        0        0       34 2023-03-10 19:08:25.401902 pydantic_factur_x-0.1.5/pydantic_factur_x/order-x/__init__.py
+│ │ --rw-r--r--   0        0        0     1177 2023-03-30 09:19:15.244245 pydantic_factur_x-0.1.5/pydantic_factur_x/tests/fixtures/invoice_1.json
+│ │ --rw-r--r--   0        0        0      729 2023-03-30 09:36:27.594148 pydantic_factur_x-0.1.5/pydantic_factur_x/tests/test_facturx_from_json.py
+│ │ --rw-r--r--   0        0        0     7886 2023-03-29 16:45:01.639392 pydantic_factur_x-0.1.5/pydantic_factur_x/tests/test_full_orderx_manual.py
+│ │ --rw-r--r--   0        0        0      569 2023-03-31 09:23:10.371737 pydantic_factur_x-0.1.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2077 1970-01-01 00:00:00.000000 pydantic_factur_x-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1569 2023-03-11 14:45:16.994968 pydantic_factur_x-0.1.6/README.md
+│ │ +-rw-r--r--   0        0        0        0 2023-03-10 19:07:13.275171 pydantic_factur_x-0.1.6/pydantic_factur_x/__init__.py
+│ │ +-rw-r--r--   0        0        0     3263 2023-04-06 08:42:17.588924 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/__init__.py
+│ │ +-rw-r--r--   0        0        0     2275 2023-03-29 16:41:36.327089 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/_nsmaps.py
+│ │ +-rw-r--r--   0        0        0     2586 2023-03-30 09:36:17.303512 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/address.py
+│ │ +-rw-r--r--   0        0        0      260 2023-03-30 12:21:57.198680 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/__init__.py
+│ │ +-rw-r--r--   0        0        0     1770 2023-03-16 09:53:16.427279 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_1001.py
+│ │ +-rw-r--r--   0        0        0      418 2023-03-16 14:07:23.374186 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_1229.py
+│ │ +-rw-r--r--   0        0        0      305 2023-03-16 10:06:27.017530 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_1373.py
+│ │ +-rw-r--r--   0        0        0      248 2023-03-16 10:35:39.940578 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_2379.py
+│ │ +-rw-r--r--   0        0        0     6378 2023-03-16 13:14:18.733404 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_4451.py
+│ │ +-rw-r--r--   0        0        0     3202 2023-03-30 12:20:22.530590 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_4461.py
+│ │ +-rw-r--r--   0        0        0     4492 2023-03-31 08:34:01.604788 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/common.py
+│ │ +-rw-r--r--   0        0        0     2254 2023-03-29 16:25:04.834377 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/contact.py
+│ │ +-rw-r--r--   0        0        0     3304 2023-03-29 16:25:17.623365 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/document_context.py
+│ │ +-rw-r--r--   0        0        0      620 2023-03-29 16:25:25.445510 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/document_reference.py
+│ │ +-rw-r--r--   0        0        0     6458 2023-03-30 09:39:52.351758 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/exchanged_document.py
+│ │ +-rw-r--r--   0        0        0     3744 2023-03-29 16:43:31.173714 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/root.py
+│ │ +-rw-r--r--   0        0        0    56776 2023-04-06 08:32:31.901032 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/supply_chain_trade_transaction.py
+│ │ +-rw-r--r--   0        0        0     5276 2023-03-29 16:27:52.619351 pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/trade_party.py
+│ │ +-rw-r--r--   0        0        0       34 2023-03-10 19:08:25.401902 pydantic_factur_x-0.1.6/pydantic_factur_x/order-x/__init__.py
+│ │ +-rw-r--r--   0        0        0     1316 2023-04-04 14:46:29.384089 pydantic_factur_x-0.1.6/pydantic_factur_x/tests/fixtures/invoice_1.json
+│ │ +-rw-r--r--   0        0        0      684 2023-04-04 14:54:37.569796 pydantic_factur_x-0.1.6/pydantic_factur_x/tests/test_facturx_from_json.py
+│ │ +-rw-r--r--   0        0        0     8379 2023-04-06 07:00:13.246492 pydantic_factur_x-0.1.6/pydantic_factur_x/tests/test_full_orderx_manual.py
+│ │ +-rw-r--r--   0        0        0      569 2023-04-06 09:24:00.466946 pydantic_factur_x-0.1.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2077 1970-01-01 00:00:00.000000 pydantic_factur_x-0.1.6/PKG-INFO
+│ │   --- pydantic_factur_x-0.1.5/README.md
+│ ├── +++ pydantic_factur_x-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/__init__.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/__init__.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -32,14 +32,17 @@
+│ │  
+│ │  from .supply_chain_trade_transaction import (
+│ │      AssociatedDocumentLineDocument,
+│ │      SpecifiedTradeProduct,
+│ │      ApplicableProductCharacteristic,
+│ │      GrossPriceProductTradePrice,
+│ │      NetPriceProductTradePrice,
+│ │ +    SpecifiedTradeAllowanceCharge,
+│ │ +    CategoryTradeTax,
+│ │ +    SpecifiedLogisticsServiceCharge,
+│ │      SpecifiedLineTradeAgreement,
+│ │      ApplicableTradeTax,
+│ │      SpecifiedLineTradeSettlement,
+│ │      SpecifiedLineTradeDelivery,
+│ │      SpecifiedTradeSettlementLineMonetarySummation,
+│ │      IncludedSupplyChainTradeLineItem,
+│ │      ApplicableHeaderTradeAgreement,
+│ │ @@ -91,14 +94,17 @@
+│ │      "DocumentReference",
+│ │      # --- supply chain transaction
+│ │      "AssociatedDocumentLineDocument",
+│ │      "SpecifiedTradeProduct",
+│ │      "ApplicableProductCharacteristic",
+│ │      "GrossPriceProductTradePrice",
+│ │      "NetPriceProductTradePrice",
+│ │ +    "SpecifiedTradeAllowanceCharge",
+│ │ +    "CategoryTradeTax",
+│ │ +    "SpecifiedLogisticsServiceCharge",
+│ │      "SpecifiedLineTradeAgreement",
+│ │      "ApplicableTradeTax",
+│ │      "SpecifiedLineTradeSettlement",
+│ │      "SpecifiedLineTradeDelivery",
+│ │      "SpecifiedTradeSettlementLineMonetarySummation",
+│ │      "IncludedSupplyChainTradeLineItem",
+│ │      "ApplicableHeaderTradeAgreement",
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/_nsmaps.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/_nsmaps.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/address.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/address.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_1001.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_1001.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_4451.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_4451.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/code_lists/untdid_4461.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/code_lists/untdid_4461.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/common.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/common.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/contact.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/contact.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/document_context.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/document_context.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/document_reference.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/document_reference.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/exchanged_document.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/exchanged_document.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/root.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/root.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/supply_chain_trade_transaction.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/supply_chain_trade_transaction.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -623,14 +623,164 @@
+│ │          description="""A monetary value of a total allowance and charge reported
+│ │          in this trade settlement line monetary summation.""",
+│ │          usage="""The amount is “net” without VAT, i.e. inclusive of line level
+│ │          allowances and charges as well as other relevant taxes.""",
+│ │      )
+│ │  
+│ │  
+│ │ +class CategoryTradeTax(
+│ │ +    BaseXmlModel,
+│ │ +    tag="CategoryTradeTax",
+│ │ +    ns_attrs=True,
+│ │ +    ns="ram",
+│ │ +    nsmap=RAM,
+│ │ +):
+│ │ +    """rsm:CategoryTradeTax
+│ │ +
+│ │ +    Profiles:
+│ │ +        - Factur-X: basic-wl
+│ │ +        - Order-X: comfort
+│ │ +    """
+│ │ +
+│ │ +    type_code: str = element(
+│ │ +        tag="TypeCode",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""A code specifying the type of tax.""",
+│ │ +        usage="""value = VAT""",
+│ │ +    )
+│ │ +    category_code: str = element(
+│ │ +        tag="CategoryCode",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""A coded identification of what VAT category applies to the
+│ │ +        document level allowance.""",
+│ │ +        usage="""The following entries of UNTDID 5305 [6] are used
+│ │ +        (further clarification between brackets):
+│ │ +        - Standard rate (Liable for VAT in a standard way)
+│ │ +        - Zero rated goods (Liable for VAT with a percentage rate of zero)
+│ │ +        - Exempt from tax (VAT/IGIC/IPSI)
+│ │ +        - VAT Reverse Charge (Reverse charge VAT/IGIC/IPSI rules apply)
+│ │ +        - VAT exempt for intra community supply of goods (VAT/IGIC/IPSI
+│ │ +          not levied due to Intra-community supply rules)
+│ │ +        - Free export item, tax not charged (VAT/IGIC/IPSI not levied due
+│ │ +          to export outside of the EU)
+│ │ +        - Services outside scope of tax (Sale is not subject to VAT/IGIC/IPSI)
+│ │ +        - Canary Islands General Indirect Tax (Liable for IGIC tax)
+│ │ +        - Liable for IPSI (Ceuta/Melilla tax)""",
+│ │ +        example="S",
+│ │ +    )
+│ │ +    rate_applicable_percent: Optional[float] = element(
+│ │ +        tag="RateApplicablePercent",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""The VAT rate, represented as percentage that applies to the
+│ │ +        document level allowance.""",
+│ │ +        usage="""The value to enter is the percentage. For example, for 20%,
+│ │ +        it must be filled 20 (and not 0.2)""",
+│ │ +    )
+│ │ +
+│ │ +
+│ │ +class SpecifiedTradeAllowanceCharge(
+│ │ +    BaseXmlModel,
+│ │ +    tag="SpecifiedTradeAllowanceCharge",
+│ │ +    ns_attrs=True,
+│ │ +    ns="ram",
+│ │ +    nsmap=RAM,
+│ │ +):
+│ │ +    """rsm:SpecifiedTradeAllowanceCharge
+│ │ +
+│ │ +    Profiles:
+│ │ +        - Factur-X: basic-wl
+│ │ +        - Order-X: comfort
+│ │ +    """
+│ │ +
+│ │ +    charge_indicator: BoolIndicator = element(
+│ │ +        tag="ChargeIndicator",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""An indicator that specifies whether the allowance or charge is
+│ │ +        a charge (true) or an allowance (false).""",
+│ │ +    )
+│ │ +    sequence_numeric: Optional[int] = element(
+│ │ +        tag="SequenceNumeric",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "extended", "order-x": "comfort"},
+│ │ +        description="""The sequence number of the allowance or charge.""",
+│ │ +        usage="""The sequence number shall be given in ascending order.""",
+│ │ +    )
+│ │ +    calculation_percent: Optional[float] = element(
+│ │ +        tag="CalculationPercent",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""The percentage that may be used, in conjunction with the document
+│ │ +        level allowance base amount, to calculate the document level
+│ │ +        allowance amount.""",
+│ │ +        usage="""The value to enter is the percentage. For example, for 20%,
+│ │ +        it must be filled 20 (and not 0.2)""",
+│ │ +    )
+│ │ +    basis_amount: Optional[float] = element(
+│ │ +        tag="BasisAmount",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""Document level allowance base amount.""",
+│ │ +        usage="""The base amount that may be used, in conjunction with the document
+│ │ +        level allowance percentage, to calculate the document
+│ │ +        level allowance amount.""",
+│ │ +    )
+│ │ +    basis_quantity: Optional[ValueMeasure] = element(
+│ │ +        tag="BasisQuantity",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "extended", "order-x": "comfort"},
+│ │ +        description="""The quantity on which this trade allowance charge is based..""",
+│ │ +        usage="""The quantity shall be given in the unit of measure of the invoice.""",
+│ │ +    )
+│ │ +
+│ │ +    actual_amount: Optional[float] = element(
+│ │ +        tag="ActualAmount",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""The amount of the allowance or charge.""",
+│ │ +        usage="""The amount of an allowance, without VAT.""",
+│ │ +    )
+│ │ +    reason_code: Optional[str] = element(
+│ │ +        tag="ReasonCode",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""The reason for the document level allowance, expressed as a code.""",
+│ │ +        usage="""Use entries of the UNTDID 5189 code list [6]. The Document level
+│ │ +        allowance reason code and the Document level allowance reason shall indicate
+│ │ +        the same allowance reason..""",
+│ │ +    )
+│ │ +    reason: Optional[str] = element(
+│ │ +        tag="Reason",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +        description="""The reason for the document level allowance, expressed as text.""",
+│ │ +        usage="""The reason shall be given in the language of the invoice.""",
+│ │ +    )
+│ │ +    category_trade_tax: CategoryTradeTax = element(
+│ │ +        tag="CategoryTradeTax",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "basic_wl", "order-x": "comfort"},
+│ │ +    )
+│ │ +
+│ │ +
+│ │  class SpecifiedLineTradeSettlement(
+│ │      BaseXmlModel,
+│ │      tag="SpecifiedLineTradeSettlement",
+│ │      ns_attrs=True,
+│ │      ns="ram",
+│ │      nsmap=RAM,
+│ │  ):
+│ │ @@ -645,15 +795,26 @@
+│ │          tag="ApplicableTradeTax",
+│ │          ns="ram",
+│ │          # nsmap=RAM,
+│ │          profiles={"factur-x": "basic", "order-x": "comfort"},
+│ │          description="""A group of business terms providing information about the
+│ │          VAT applicable for the goods and services ordered on the order line.""",
+│ │      )
+│ │ -    # specified_trade_allowance_charge # SpecifiedTradeAllowanceCharge
+│ │ +    specified_trade_allowances: Optional[List[SpecifiedTradeAllowanceCharge]] = element(
+│ │ +        tag="SpecifiedTradeAllowanceCharge",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "comfort", "order-x": "extended"},
+│ │ +    )
+│ │ +    specified_trade_charges: Optional[List[SpecifiedTradeAllowanceCharge]] = element(
+│ │ +        tag="SpecifiedTradeAllowanceCharge",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "comfort", "order-x": "extended"},
+│ │ +    )
+│ │      specified_trade_settlement_line_monetary_summation: SpecifiedTradeSettlementLineMonetarySummation = element(
+│ │          tag="SpecifiedTradeSettlementLineMonetarySummation",
+│ │          ns="ram",
+│ │          # nsmap=RAM,
+│ │          profiles={"factur-x": "basic", "order-x": "basic"},
+│ │      )
+│ │      # receivable_specified_trade_accounting_account  # ReceivableSpecifiedTradeAccountingAccount
+│ │ @@ -1251,14 +1412,49 @@
+│ │          # nsmap=RAM,
+│ │          profiles={"factur-x": "extended", "order-x": "extended"},
+│ │          description="""The code specifying the type of trade accounting account,
+│ │          such as general (main), secondary, cost accounting or budget account.""",
+│ │      )
+│ │  
+│ │  
+│ │ +class SpecifiedLogisticsServiceCharge(
+│ │ +    BaseXmlModel,
+│ │ +    tag="SpecifiedLogisticsServiceCharge",
+│ │ +    ns_attrs=True,
+│ │ +    ns="ram",
+│ │ +    nsmap=RAM,
+│ │ +):
+│ │ +    """rsm:SpecifiedLogisticsServiceCharge
+│ │ +
+│ │ +    Profiles:
+│ │ +        - Factur-X: basic_wl
+│ │ +        - Order-X: basic
+│ │ +    """
+│ │ +
+│ │ +    description: str = element(
+│ │ +        tag="Description",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "extended", "order-x": "extended"},
+│ │ +        description="""A textual description of the logistics service charge.""",
+│ │ +    )
+│ │ +    applied_amount: float = element(
+│ │ +        tag="AppliedAmount",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "extended", "order-x": "extended"},
+│ │ +    )
+│ │ +    applied_trade_tax: Optional[CategoryTradeTax] = element(
+│ │ +        tag="AppliedTradeTax",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "extended", "order-x": "extended"},
+│ │ +    )
+│ │ +
+│ │ +
+│ │  class ApplicableHeaderTradeSettlement(
+│ │      BaseXmlModel,
+│ │      tag="ApplicableHeaderTradeSettlement",
+│ │      ns_attrs=True,
+│ │      ns="ram",
+│ │      nsmap=RAM,
+│ │  ):
+│ │ @@ -1314,26 +1510,48 @@
+│ │          tag="SpecifiedTradeSettlementPaymentMeans",
+│ │          ns="ram",
+│ │          # nsmap=RAM,
+│ │          profiles={"factur-x": "basic_wl", "order-x": None},
+│ │          description="""A group of business terms providing information
+│ │          about the payment.""",
+│ │      )
+│ │ -    applicable_trade_tax: Optional[ApplicableTradeTax] = element(
+│ │ +    applicable_trade_taxes: Optional[List[ApplicableTradeTax]] = element(
+│ │          tag="ApplicableTradeTax",
+│ │          ns="ram",
+│ │          # nsmap=RAM,
+│ │          profiles={"factur-x": "basic_wl", "order-x": "extended"},
+│ │          description="""A group of business terms providing information about the
+│ │          VAT applicable for the goods and services ordered on the order line.""",
+│ │      )
+│ │ -    # specified_trade_allowance_charge # SpecifiedTradeAllowanceCharge
+│ │ -    # specified_trade_allowance_charge # SpecifiedTradeAllowanceCharge
+│ │ -    # specified_logistics_service_charge # SpecifiedLogisticsServiceCharge
+│ │ +    # billing_specified_period # BillingSpecifiedPeriod
+│ │ +    specified_trade_allowances: Optional[List[SpecifiedTradeAllowanceCharge]] = element(
+│ │ +        tag="SpecifiedTradeAllowanceCharge",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "comfort", "order-x": "extended"},
+│ │ +    )
+│ │ +    specified_trade_charges: Optional[List[SpecifiedTradeAllowanceCharge]] = element(
+│ │ +        tag="SpecifiedTradeAllowanceCharge",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "comfort", "order-x": "extended"},
+│ │ +    )
+│ │ +    specified_logistics_service_charges: Optional[
+│ │ +        List[SpecifiedLogisticsServiceCharge]
+│ │ +    ] = element(
+│ │ +        tag="SpecifiedLogisticsServiceCharge",
+│ │ +        ns="ram",
+│ │ +        # nsmap=RAM,
+│ │ +        profiles={"factur-x": "extended", "order-x": "extended"},
+│ │ +        description="""A logistics service charge specified for this header
+│ │ +        trade settlement.
+│ │ +        """,
+│ │ +    )
+│ │      # specified_trade_payment_terms # SpecifiedTradePaymentTerms
+│ │ +
+│ │      total_amounts: SpecifiedTradeSettlementHeaderMonetarySummation = element(
+│ │          tag="SpecifiedTradeSettlementHeaderMonetarySummation",
+│ │          ns="ram",
+│ │          # nsmap=RAM,
+│ │          profiles={"factur-x": "minimum", "order-x": "basic"},
+│ │          description="""A group of business terms providing the monetary totals
+│ │          for the order.""",
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/factur_x/trade_party.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/factur_x/trade_party.py
+│ │┄ Files identical despite different names
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/tests/fixtures/invoice_1.json
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/tests/fixtures/invoice_1.json
+│ │┄ Files 23% similar despite different names
+│ │ ├── Pretty-printed
+│ │ │┄ Similarity: 0.7376543209876544%
+│ │ │┄ Differences: {"'discount_ht'": '-4.3',
+│ │ │┄  "'items'": "{0: {delete: ['unit_price_ttc']}, 1: {delete: ['unit_price_ttc']}, insert: [(2, "
+│ │ │┄             "OrderedDict([('name', 'prestation 3'), ('description', 'another description'), "
+│ │ │┄             "('quantity', 1), ('unit_price_ht', 34.54), ('vat', 5.5)]))]}",
+│ │ │┄  "'ref'": "'F-2023-4'",
+│ │ │┄  "'shipping_ht'": '12',
+│ │ │┄  "'subtotal_ht'": '43.04',
+│ │ │┄  "'subtotal_ttc'": '46.64',
+│ │ │┄  "'total_ht'": '50.74',
+│ │ │┄  "'total_ttc'": '65.74'}
+│ │ │ @@ -1,34 +1,41 @@
+│ │ │  {
+│ │ │      "currency": "EUR",
+│ │ │ +    "discount_ht": -4.3,
+│ │ │      "document_date": "2023-01-10T11:54:18.470Z",
+│ │ │      "document_type": "invoice",
+│ │ │      "items": [
+│ │ │          {
+│ │ │              "description": "standard",
+│ │ │              "name": "prestation 1",
+│ │ │              "quantity": 11,
+│ │ │              "unit_price_ht": 0.34,
+│ │ │ -            "unit_price_ttc": 0.44,
+│ │ │              "vat": 20
+│ │ │          },
+│ │ │          {
+│ │ │              "description": "another description",
+│ │ │              "name": "prestation 2",
+│ │ │              "quantity": 14,
+│ │ │              "unit_price_ht": 0.34,
+│ │ │ -            "unit_price_ttc": 0.44,
+│ │ │              "vat": 20
+│ │ │ +        },
+│ │ │ +        {
+│ │ │ +            "description": "another description",
+│ │ │ +            "name": "prestation 3",
+│ │ │ +            "quantity": 1,
+│ │ │ +            "unit_price_ht": 34.54,
+│ │ │ +            "vat": 5.5
+│ │ │          }
+│ │ │      ],
+│ │ │ -    "ref": "202301-00001",
+│ │ │ -    "subtotal_ht": "70",
+│ │ │ -    "subtotal_ttc": "78",
+│ │ │ -    "total_ht": "70",
+│ │ │ -    "total_ttc": "78",
+│ │ │ +    "ref": "F-2023-4",
+│ │ │ +    "shipping_ht": 12,
+│ │ │ +    "subtotal_ht": 43.04,
+│ │ │ +    "subtotal_ttc": 46.64,
+│ │ │ +    "total_ht": 50.74,
+│ │ │ +    "total_ttc": 65.74,
+│ │ │      "trade_party_address": {
+│ │ │          "city": "Paris",
+│ │ │          "contact_first_name": "John",
+│ │ │          "contact_last_name": "Doe",
+│ │ │          "contact_phone": "+33123456789",
+│ │ │          "country": "FR",
+│ │ │          "line_1": "32 rue inconnue",
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/tests/test_facturx_from_json.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/tests/test_facturx_from_json.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -7,18 +7,18 @@
+│ │  from pydantic_factur_x.factur_x import *
+│ │  
+│ │  
+│ │  with open(
+│ │      os.path.join(os.path.dirname(__file__), "fixtures/invoice_1.json"),
+│ │      "r",
+│ │  ) as filed:
+│ │ -    invoice = json.load(filed)
+│ │ +    doc = json.load(filed)
+│ │  
+│ │  
+│ │ -print(json.dumps(json.loads(doc.json()), indent=4))
+│ │ +print(doc)
+│ │  print("==================================================")
+│ │  # doc.exchanged_document.included_notes[0]._nsmap = {"ram": "tutu:toto:tata"}
+│ │  bytes_output = serialize(doc)
+│ │  assert isinstance(bytes_output, bytes)  # nosec  # for mypy
+│ │  output = bytes_output.decode("utf-8")
+│ │  assert isinstance(output, str)  # nosec  # for mypy
+│ │  print(output)
+│ │   --- pydantic_factur_x-0.1.5/pydantic_factur_x/tests/test_full_orderx_manual.py
+│ ├── +++ pydantic_factur_x-0.1.6/pydantic_factur_x/tests/test_full_orderx_manual.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -133,38 +133,54 @@
+│ │              buyer_reference="buyer_reference",
+│ │              seller_trade_party=TradeParty(
+│ │                  id="seller_id",
+│ │                  global_id=GlobalID(id="9876543210321", scheme_id="0160"),
+│ │                  name="Seller name",
+│ │                  description="details about seller",
+│ │                  postal_trade_address=Address(
+│ │ -                    line_one=String(value="line one"),
+│ │ -                    line_two=String(value="line two"),
+│ │ -                    postcode_code=String(value="12345"),
+│ │ -                    city_name=String(value="city name"),
+│ │ -                    country_id=String(value="FR"),
+│ │ +                    line_one="line one",
+│ │ +                    line_two="line two",
+│ │ +                    postcode_code="12345",
+│ │ +                    city_name="city name",
+│ │ +                    country_id="FR",
+│ │                  ),
+│ │              ),
+│ │              buyer_trade_party=TradeParty(
+│ │                  id="buyer_id",
+│ │                  global_id=GlobalID(id="9876543210321", scheme_id="0160"),
+│ │                  name="Buyer name",
+│ │                  description="details about buyer",
+│ │                  postal_trade_address=Address(
+│ │ -                    line_one=String(value="line one"),
+│ │ -                    line_two=String(value="line two"),
+│ │ -                    postcode_code=String(value="12345"),
+│ │ -                    city_name=String(value="city name"),
+│ │ -                    country_id=String(value="FR"),
+│ │ +                    line_one="line one",
+│ │ +                    line_two="line two",
+│ │ +                    postcode_code="12345",
+│ │ +                    city_name="city name",
+│ │ +                    country_id="FR",
+│ │                  ),
+│ │              ),
+│ │          ),
+│ │          applicable_header_trade_delivery=ApplicableHeaderTradeDelivery(),
+│ │          header_trade_settlement=ApplicableHeaderTradeSettlement(
+│ │              order_currency_code="EUR",
+│ │ +            applicable_trade_taxes=[
+│ │ +                ApplicableTradeTax(
+│ │ +                    calculated_amount=3.34,  # total vat for this vat
+│ │ +                    type_code="VAT",
+│ │ +                    basis_amount=5.22,
+│ │ +                    category_code="S",
+│ │ +                    rate_applicable_percent="20",
+│ │ +                ),
+│ │ +                ApplicableTradeTax(
+│ │ +                    calculated_amount=5.22,  # total vat for this vat
+│ │ +                    type_code="VAT",
+│ │ +                    basis_amount=6.44,
+│ │ +                    category_code="S",
+│ │ +                    rate_applicable_percent="5.5",
+│ │ +                ),
+│ │ +            ],
+│ │              total_amounts=SpecifiedTradeSettlementHeaderMonetarySummation(
+│ │                  line_total_amount=42.42,
+│ │              ),
+│ │          ),
+│ │      ),
+│ │  )
+│ │   --- pydantic_factur_x-0.1.5/pyproject.toml
+│ ├── +++ pydantic_factur_x-0.1.6/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "pydantic_factur_x"
+│ │ -version = "0.1.5"
+│ │ +version = "0.1.6"
+│ │  description = "Python library for pydantic factur-x bindings"
+│ │  authors = ["Thomas chiroux <thomas@chiroux.org>"]
+│ │  license = "MIT"
+│ │  readme = "README.md"
+│ │  packages = [{ include = "pydantic_factur_x" }]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │   --- pydantic_factur_x-0.1.5/PKG-INFO
+│ ├── +++ pydantic_factur_x-0.1.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pydantic-factur-x
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: Python library for pydantic factur-x bindings
+│ │  License: MIT
+│ │  Author: Thomas chiroux
+│ │  Author-email: thomas@chiroux.org
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
