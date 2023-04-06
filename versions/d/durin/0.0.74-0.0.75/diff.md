@@ -1,0 +1,414 @@
+# Comparing `tmp/durin-0.0.74.tar.gz` & `tmp/durin-0.0.75.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "durin-0.0.74.tar", last modified: Thu Apr  6 13:20:00 2023, max compression
++gzip compressed data, was "durin-0.0.75.tar", last modified: Thu Apr  6 15:36:30 2023, max compression
+```
+
+## Comparing `durin-0.0.74.tar` & `durin-0.0.75.tar`
+
+### file list
+
+```diff
+@@ -1,50 +1,51 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.738633 durin-0.0.74/
+--rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 13:19:47.000000 durin-0.0.74/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 13:20:00.738633 durin-0.0.74/PKG-INFO
+--rwxr-xr-x   0 runner    (1001) docker     (123)     2683 2023-04-06 13:19:47.000000 durin-0.0.74/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.730633 durin-0.0.74/bin/
+--rwxr-xr-x   0 runner    (1001) docker     (123)       34 2023-04-06 13:19:47.000000 durin-0.0.74/bin/durin
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/
+--rw-r--r--   0 runner    (1001) docker     (123)      368 2023-04-06 13:19:47.000000 durin-0.0.74/durin/Profiler.py
+--rw-r--r--   0 runner    (1001) docker     (123)      290 2023-04-06 13:19:47.000000 durin-0.0.74/durin/Read_profilers.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)       80 2023-04-06 13:19:47.000000 durin-0.0.74/durin/__init__.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      475 2023-04-06 13:19:47.000000 durin-0.0.74/durin/__main__.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      766 2023-04-06 13:19:47.000000 durin-0.0.74/durin/actuator.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     4148 2023-04-06 13:19:47.000000 durin-0.0.74/durin/cli.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/controller/
+--rwxr-xr-x   0 runner    (1001) docker     (123)       40 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/__init__.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      344 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/dvs.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     4307 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/server.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/controller/test/
+--rwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/test/__init__.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      947 2023-04-06 13:19:47.000000 durin-0.0.74/durin/controller/test/test_stream.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     4694 2023-04-06 13:19:47.000000 durin-0.0.74/durin/durin.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)   181742 2023-04-06 13:19:47.000000 durin-0.0.74/durin/durin_birdseye.jpg
+--rwxr-xr-x   0 runner    (1001) docker     (123)      504 2023-04-06 13:19:47.000000 durin-0.0.74/durin/dvs.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin/examples/
+--rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/CPU_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/__init__.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     2281 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/braitenberg.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     2631 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/commands.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1459 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/dashboard.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      923 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/main.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      589 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/record.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1972 2023-04-06 13:19:47.000000 durin-0.0.74/durin/examples/stats.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.738633 durin-0.0.74/durin/io/
+--rwxr-xr-x   0 runner    (1001) docker     (123)      673 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/command.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1442 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/gamepad.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     6181 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/network.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)      525 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/ringbuffer.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1824 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/runnable.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9042 2023-04-06 13:19:47.000000 durin-0.0.74/durin/io/schema.capnp
+--rwxr-xr-x   0 runner    (1001) docker     (123)     7102 2023-04-06 13:19:47.000000 durin-0.0.74/durin/sensor.py
+--rwxr-xr-x   0 runner    (1001) docker     (123)    13629 2023-04-06 13:19:47.000000 durin-0.0.74/durin/ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:20:00.734633 durin-0.0.74/durin.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      883 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 13:20:00.000000 durin-0.0.74/durin.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:20:00.738633 durin-0.0.74/setup.cfg
+--rwxr-xr-x   0 runner    (1001) docker     (123)      663 2023-04-06 13:19:47.000000 durin-0.0.74/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.303285 durin-0.0.75/
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 15:36:21.000000 durin-0.0.75/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 15:36:30.303285 durin-0.0.75/PKG-INFO
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2683 2023-04-06 15:36:21.000000 durin-0.0.75/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.299285 durin-0.0.75/bin/
++-rwxr-xr-x   0 runner    (1001) docker     (123)       34 2023-04-06 15:36:21.000000 durin-0.0.75/bin/durin
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.299285 durin-0.0.75/durin/
++-rw-r--r--   0 runner    (1001) docker     (123)      368 2023-04-06 15:36:21.000000 durin-0.0.75/durin/Profiler.py
++-rw-r--r--   0 runner    (1001) docker     (123)      290 2023-04-06 15:36:21.000000 durin-0.0.75/durin/Read_profilers.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)       80 2023-04-06 15:36:21.000000 durin-0.0.75/durin/__init__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      475 2023-04-06 15:36:21.000000 durin-0.0.75/durin/__main__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      766 2023-04-06 15:36:21.000000 durin-0.0.75/durin/actuator.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     4148 2023-04-06 15:36:21.000000 durin-0.0.75/durin/cli.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.299285 durin-0.0.75/durin/controller/
++-rwxr-xr-x   0 runner    (1001) docker     (123)       40 2023-04-06 15:36:21.000000 durin-0.0.75/durin/controller/__init__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      344 2023-04-06 15:36:21.000000 durin-0.0.75/durin/controller/dvs.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     4307 2023-04-06 15:36:21.000000 durin-0.0.75/durin/controller/server.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.303285 durin-0.0.75/durin/controller/test/
++-rwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:21.000000 durin-0.0.75/durin/controller/test/__init__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      947 2023-04-06 15:36:21.000000 durin-0.0.75/durin/controller/test/test_stream.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     4694 2023-04-06 15:36:21.000000 durin-0.0.75/durin/durin.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)   181742 2023-04-06 15:36:21.000000 durin-0.0.75/durin/durin_birdseye.jpg
++-rwxr-xr-x   0 runner    (1001) docker     (123)      504 2023-04-06 15:36:21.000000 durin-0.0.75/durin/dvs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.303285 durin-0.0.75/durin/examples/
++-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/CPU_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/__init__.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2281 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/braitenberg.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     2631 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/commands.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1459 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/dashboard.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      923 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/main.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1232 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/plot.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      589 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/record.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2865 2023-04-06 15:36:21.000000 durin-0.0.75/durin/examples/stats.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.303285 durin-0.0.75/durin/io/
++-rwxr-xr-x   0 runner    (1001) docker     (123)      673 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/command.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1442 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/gamepad.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     6181 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/network.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)      525 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/ringbuffer.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1824 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/runnable.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9042 2023-04-06 15:36:21.000000 durin-0.0.75/durin/io/schema.capnp
++-rwxr-xr-x   0 runner    (1001) docker     (123)     7102 2023-04-06 15:36:21.000000 durin-0.0.75/durin/sensor.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)    13631 2023-04-06 15:36:21.000000 durin-0.0.75/durin/ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:30.299285 durin-0.0.75/durin.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2929 2023-04-06 15:36:30.000000 durin-0.0.75/durin.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      906 2023-04-06 15:36:30.000000 durin-0.0.75/durin.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:36:30.000000 durin-0.0.75/durin.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 15:36:30.000000 durin-0.0.75/durin.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 15:36:30.000000 durin-0.0.75/durin.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 15:36:30.303285 durin-0.0.75/setup.cfg
++-rwxr-xr-x   0 runner    (1001) docker     (123)      663 2023-04-06 15:36:21.000000 durin-0.0.75/setup.py
+```
+
+### Comparing `durin-0.0.74/PKG-INFO` & `durin-0.0.75/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: durin
+-Version: 0.0.74
++Version: 0.0.75
+ Summary: Python control interface for the Durin robot
+ Maintainer: Jens E. Pedersen
+ Maintainer-email: jeped@kth.se
+ License: LGPLv3
+ Description-Content-Type: text/markdown
+ Provides-Extra: aestream
+```
+
+### Comparing `durin-0.0.74/README.md` & `durin-0.0.75/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/actuator.py` & `durin-0.0.75/durin/actuator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/cli.py` & `durin-0.0.75/durin/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/controller/server.py` & `durin-0.0.75/durin/controller/server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/controller/test/test_stream.py` & `durin-0.0.75/durin/controller/test/test_stream.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/durin.py` & `durin-0.0.75/durin/durin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/durin_birdseye.jpg` & `durin-0.0.75/durin/durin_birdseye.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/examples/braitenberg.py` & `durin-0.0.75/durin/examples/braitenberg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/examples/commands.py` & `durin-0.0.75/durin/examples/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/examples/dashboard.py` & `durin-0.0.75/durin/examples/dashboard.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ 
+ 
+ if __name__ == "__main__":
+ 
+     # We start a connectioen to the robot
+     # and can now read from and write to the robot via the variable "durin"
+     # Notice the UI class, which differs from the (more efficient) standalone Durin interface
+-    with DurinUI("durin0.local") as durin:
++    with DurinUI("durin1.local") as durin:
+         # Loop until the user quits
+         is_running = True
+ 
+ 
+         durin(GetSystemInfo())  # Ask to get IP address, MAC address and Durin ID
+         gotSystemInfo = False
+```
+
+### Comparing `durin-0.0.74/durin/examples/main.py` & `durin-0.0.75/durin/examples/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/examples/record.py` & `durin-0.0.75/durin/examples/record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/examples/stats.py` & `durin-0.0.75/durin/examples/stats.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,32 +1,49 @@
+-from durin import Durin
++from durin import Durin, DurinUI, Move 
+ import time
+ import sys
+ import numpy as np
+ 
++save = True
++
+ time_steps = 10000
+-N_sensor_values = 9 + 3 + 1 + 1         # imu + position + voltage + one beacon
+-all_stats = np.zeros((time_steps, N_sensor_values), dtype = int)
++N_sensor_values = 9 + 3 + 1 + 2         # imu + position + voltage + one beacon (ID + distance)
++all_stats = np.zeros((time_steps, N_sensor_values), dtype = object)
++headers = ["Acce x","Acce y","Acce z","Gyro x","Gyro y","Gyro z","Magn x","Magn y","Magn z","Position x","Position y","Position z","Voltage","UWB ID","UWB distande"]
++header=','.join(headers)
++print(header)
+ 
+ if __name__ == "__main__":
+-    
+-    with Durin("durin0.local") as durin:
++    i = 0
+ 
+-        for i in range(time_steps):
++    with Durin("durin1.local") as durin:
++
++        while i < time_steps:
+             (obs, dvs, cmd) = durin.read()
++
++            if obs.voltage == 0:
++                # In the "boot" process, all values are 0 in a number of while-iterations.
++                # We do not want to include the 0-values
++                continue
++            
++            print(i, "/", time_steps)
+             
+             # Collect all relevant sensor data
+-            imu_values = [obs.imu[i] for i in range(9)]
+-            position = [obs.position[i] for i in range(3)]
+-            sensor_values = imu_values + position + obs.voltage + obs.uwb[0]
+-            print(sensor_values)
++            imu_values = obs.imu.reshape((9,))
++            position = obs.position.reshape((3,))
++            voltage = np.array([obs.voltage]).reshape((1,))
++            uwb = np.array([obs.uwb[0]]).reshape((2,))
++            sensor_values = np.concatenate([imu_values, position, voltage, uwb])
+ 
+             # Add sensor values to the all_stats array
+             for sensor_idx, sensor_value in enumerate(sensor_values):
+-                all_stats[sensor_idx, i] = sensor_value
++                all_stats[(i), sensor_idx] = sensor_value
++
++            durin(Move(0,0,0))  # So that Durin does not sleep
++            i += 1
+ 
+ 
+     
+     # Caluculate statistics
+     statistic_quantities = (["Acce x mean", "Acce x variance"],
+                             ["Acce y mean", "Acce y variance"],
+                             ["Acce z mean", "Acce z variance"],
+@@ -36,17 +53,21 @@
+                             ["Magn x mean", "Magn x variance"],
+                             ["Magn y mean", "Magn y variance"],
+                             ["Magn z mean", "Magn z variance"],
+                             ["Position x mean", "Position x variance"],
+                             ["Position y mean", "Position y variance"],
+                             ["Position z mean", "Position z variance"],
+                             ["Voltage mean", "Voltage variance"],
+-                            ["UWB mean", "UWB variance"])
++                            ["UWB ID mean", "UWB ID variance"],
++                            ["UWB distande mean", "UWB distande variance"])
++    
+ 
+     for j in range(len(statistic_quantities)):
+-        print(statistic_quantities[j][0], np.mean(all_stats[j]), statistic_quantities[j][1], np.var(all_stats[j]))
+-
++        print(statistic_quantities[j][0], np.mean(all_stats[:,j]), statistic_quantities[j][1], np.var(all_stats[:,j]))
+ 
++if save:
++    # Save as a csv file
++    np.savetxt('sensor statistics/stats.csv',all_stats,delimiter=',',header=','.join(headers), fmt='%d')
+```
+
+### Comparing `durin-0.0.74/durin/io/__init__.py` & `durin-0.0.75/durin/io/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/io/command.py` & `durin-0.0.75/durin/io/command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/io/gamepad.py` & `durin-0.0.75/durin/io/gamepad.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/io/network.py` & `durin-0.0.75/durin/io/network.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/io/ringbuffer.py` & `durin-0.0.75/durin/io/ringbuffer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/io/runnable.py` & `durin-0.0.75/durin/io/runnable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/io/schema.capnp` & `durin-0.0.75/durin/io/schema.capnp`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/sensor.py` & `durin-0.0.75/durin/sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `durin-0.0.74/durin/ui.py` & `durin-0.0.75/durin/ui.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -258,15 +258,15 @@
+         charge = obs.charge
+         self.render_text(str(charge) + " %", BATTERY_PLACEMENT)
+         self.render_text(str(voltage) + " mV", (BATTERY_PLACEMENT[0]+5*d,BATTERY_PLACEMENT[1]))
+ 
+ 
+         # Update Durin position ######################
+         for m in range(3):
+-            self.render_text(str(obs.position[m]), (POSITION_PLACEMENT[0]+2*m, POSITION_PLACEMENT[1]+2*d))
++            self.render_text(str(obs.position[m]), (POSITION_PLACEMENT[0]+2*m*d, POSITION_PLACEMENT[1]+2*d))
+ 
+         # Update movement commands ################
+         self.render_text(str(self.horizontal),(MV_CMD_PLACEMENT[0],MV_CMD_PLACEMENT[1]+2*d))
+         self.render_text(str(self.vertical),(MV_CMD_PLACEMENT[0]+2*d,MV_CMD_PLACEMENT[1]+2*d))
+         self.render_text(str(self.rot),(MV_CMD_PLACEMENT[0]+4*d,MV_CMD_PLACEMENT[1]+2*d))
+ 
+         self.render_static_texts()
+```
+
+### Comparing `durin-0.0.74/durin.egg-info/PKG-INFO` & `durin-0.0.75/durin.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: durin
+-Version: 0.0.74
++Version: 0.0.75
+ Summary: Python control interface for the Durin robot
+ Maintainer: Jens E. Pedersen
+ Maintainer-email: jeped@kth.se
+ License: LGPLv3
+ Description-Content-Type: text/markdown
+ Provides-Extra: aestream
+```
+
+### Comparing `durin-0.0.74/durin.egg-info/SOURCES.txt` & `durin-0.0.75/durin.egg-info/SOURCES.txt`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -25,14 +25,15 @@
+ durin/controller/test/test_stream.py
+ durin/examples/CPU_test.py
+ durin/examples/__init__.py
+ durin/examples/braitenberg.py
+ durin/examples/commands.py
+ durin/examples/dashboard.py
+ durin/examples/main.py
++durin/examples/plot.py
+ durin/examples/record.py
+ durin/examples/stats.py
+ durin/io/__init__.py
+ durin/io/command.py
+ durin/io/gamepad.py
+ durin/io/network.py
+ durin/io/ringbuffer.py
+```
+
+### Comparing `durin-0.0.74/setup.py` & `durin-0.0.75/setup.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+     requirements = fp.read().split("\n")
+ 
+ with open("README.md", "r") as fp:
+     long_description = fp.read()
+ 
+ setup(
+     name="durin",
+-    version="0.0.74",
++    version="0.0.75",
+     install_requires=requirements,
+     packages=find_packages(),
+     license="LGPLv3",
+     maintainer="Jens E. Pedersen",
+     maintainer_email="jeped@kth.se",
+     extras_require={"aestream": ["aestream"]},
+     scripts=["bin/durin"],
+```
+

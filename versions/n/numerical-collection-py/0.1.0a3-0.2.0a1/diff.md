@@ -1,0 +1,463 @@
+# Comparing `tmp/numerical-collection-py-0.1.0a3.tar.gz` & `tmp/numerical-collection-py-0.2.0a1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "numerical-collection-py-0.1.0a3.tar", last modified: Tue Apr  4 15:05:33 2023, max compression
++gzip compressed data, was "numerical-collection-py-0.2.0a1.tar", last modified: Thu Apr  6 15:25:41 2023, max compression
+```
+
+## Comparing `numerical-collection-py-0.1.0a3.tar` & `numerical-collection-py-0.2.0a1.tar`
+
+### file list
+
+```diff
+@@ -1,70 +1,66 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.747285 numerical-collection-py-0.1.0a3/
+--rw-rw-rw-   0 root         (0) root         (0)     2164 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/CMakeLists.txt
+--rw-rw-rw-   0 root         (0) root         (0)    11358 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/LICENSE.txt
+--rw-rw-rw-   0 root         (0) root         (0)      239 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/MANIFEST.in
+--rw-r--r--   0 root         (0) root         (0)     1091 2023-04-04 15:05:33.746285 numerical-collection-py-0.1.0a3/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)      120 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/README.md
+--rw-rw-rw-   0 root         (0) root         (0)      106 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/conanfile.txt
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.729284 numerical-collection-py-0.1.0a3/cpp_module/
+--rw-rw-rw-   0 root         (0) root         (0)      970 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/CMakeLists.txt
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.730284 numerical-collection-py-0.1.0a3/cpp_module/base/
+--rw-rw-rw-   0 root         (0) root         (0)     1686 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/base/bind.cpp
+--rw-rw-rw-   0 root         (0) root         (0)      861 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/base/bind.h
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.733284 numerical-collection-py-0.1.0a3/cpp_module/logging/
+--rw-rw-rw-   0 root         (0) root         (0)     2019 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/logging/bind.cpp
+--rw-rw-rw-   0 root         (0) root         (0)      828 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/logging/bind.h
+--rw-rw-rw-   0 root         (0) root         (0)     5000 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/logging/config.cpp
+--rw-rw-rw-   0 root         (0) root         (0)      927 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/logging/config.h
+--rw-rw-rw-   0 root         (0) root         (0)     2231 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/logging/sinks.cpp
+--rw-rw-rw-   0 root         (0) root         (0)     5350 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/logging/sinks.h
+--rw-rw-rw-   0 root         (0) root         (0)      423 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/main.cpp
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.735284 numerical-collection-py-0.1.0a3/cpp_module/opt/
+--rw-rw-rw-   0 root         (0) root         (0)      958 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/opt/bind.cpp
+--rw-rw-rw-   0 root         (0) root         (0)      820 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/opt/bind.h
+--rw-rw-rw-   0 root         (0) root         (0)     7729 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate.cpp
+--rw-rw-rw-   0 root         (0) root         (0)      854 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate.h
+--rw-rw-rw-   0 root         (0) root         (0)     3431 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate_objective_function.h
+--rw-rw-rw-   0 root         (0) root         (0)     2322 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate_optimizer_helper.h
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.736284 numerical-collection-py-0.1.0a3/num_collect/
+--rw-rw-rw-   0 root         (0) root         (0)       99 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.737285 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.737285 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/num_collect_py_cpp_module/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.738284 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/num_collect_py_cpp_module/opt/
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.738284 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/num_collect_py_cpp_module/opt/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/num_collect_py_cpp_module/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/_cpp_module/py.typed
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.739285 numerical-collection-py-0.1.0a3/num_collect/base/
+--rw-rw-rw-   0 root         (0) root         (0)      541 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/base/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/base/py.typed
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.740285 numerical-collection-py-0.1.0a3/num_collect/logging/
+--rw-rw-rw-   0 root         (0) root         (0)      614 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/logging/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2466 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/logging/_handler.py
+--rw-rw-rw-   0 root         (0) root         (0)     5835 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/logging/_logger.py
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/logging/py.typed
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.741285 numerical-collection-py-0.1.0a3/num_collect/opt/
+--rw-rw-rw-   0 root         (0) root         (0)       41 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/opt/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.742285 numerical-collection-py-0.1.0a3/num_collect/opt/multi_variate/
+--rw-rw-rw-   0 root         (0) root         (0)      508 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/opt/multi_variate/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/opt/multi_variate/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/opt/py.typed
+--rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_collect/py.typed
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.743285 numerical-collection-py-0.1.0a3/num_prob_collect/
+--rw-rw-rw-   0 root         (0) root         (0)       55 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_prob_collect/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.743285 numerical-collection-py-0.1.0a3/num_prob_collect/opt/
+--rw-rw-rw-   0 root         (0) root         (0)       58 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_prob_collect/opt/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.744285 numerical-collection-py-0.1.0a3/num_prob_collect/opt/multi_variate/
+--rw-rw-rw-   0 root         (0) root         (0)      349 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_prob_collect/opt/multi_variate/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)      607 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/num_prob_collect/opt/multi_variate/_quadratic_function.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-04 15:05:33.746285 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/
+--rw-r--r--   0 root         (0) root         (0)     1091 2023-04-04 15:05:33.000000 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     1629 2023-04-04 15:05:33.000000 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-04 15:05:33.000000 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-04 15:05:33.000000 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0) root         (0)       19 2023-04-04 15:05:33.000000 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       29 2023-04-04 15:05:33.000000 numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/top_level.txt
+--rw-rw-rw-   0 root         (0) root         (0)     1936 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/pyproject.toml
+--rw-r--r--   0 root         (0) root         (0)       38 2023-04-04 15:05:33.747285 numerical-collection-py-0.1.0a3/setup.cfg
+--rw-rw-rw-   0 root         (0) root         (0)     4141 2023-04-04 15:05:03.000000 numerical-collection-py-0.1.0a3/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.860901 numerical-collection-py-0.2.0a1/
++-rw-rw-rw-   0 root         (0) root         (0)     2410 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/CMakeLists.txt
++-rw-rw-rw-   0 root         (0) root         (0)    11358 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/LICENSE.txt
++-rw-rw-rw-   0 root         (0) root         (0)      239 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/MANIFEST.in
++-rw-r--r--   0 root         (0) root         (0)     2529 2023-04-06 15:25:41.860901 numerical-collection-py-0.2.0a1/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)     1243 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/README.md
++-rw-rw-rw-   0 root         (0) root         (0)       90 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/conanfile.txt
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.843900 numerical-collection-py-0.2.0a1/cpp_module/
++-rw-rw-rw-   0 root         (0) root         (0)      970 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/CMakeLists.txt
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.844900 numerical-collection-py-0.2.0a1/cpp_module/base/
++-rw-rw-rw-   0 root         (0) root         (0)     1686 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/base/bind.cpp
++-rw-rw-rw-   0 root         (0) root         (0)      861 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/base/bind.h
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.847900 numerical-collection-py-0.2.0a1/cpp_module/logging/
++-rw-rw-rw-   0 root         (0) root         (0)     2019 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/logging/bind.cpp
++-rw-rw-rw-   0 root         (0) root         (0)      828 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/logging/bind.h
++-rw-rw-rw-   0 root         (0) root         (0)     5000 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/logging/config.cpp
++-rw-rw-rw-   0 root         (0) root         (0)      927 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/logging/config.h
++-rw-rw-rw-   0 root         (0) root         (0)     2231 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/logging/sinks.cpp
++-rw-rw-rw-   0 root         (0) root         (0)     5350 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/logging/sinks.h
++-rw-rw-rw-   0 root         (0) root         (0)      423 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/main.cpp
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.849900 numerical-collection-py-0.2.0a1/cpp_module/opt/
++-rw-rw-rw-   0 root         (0) root         (0)      958 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/opt/bind.cpp
++-rw-rw-rw-   0 root         (0) root         (0)      820 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/opt/bind.h
++-rw-rw-rw-   0 root         (0) root         (0)     7729 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate.cpp
++-rw-rw-rw-   0 root         (0) root         (0)      854 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate.h
++-rw-rw-rw-   0 root         (0) root         (0)     3431 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate_objective_function.h
++-rw-rw-rw-   0 root         (0) root         (0)     2322 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate_optimizer_helper.h
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.850901 numerical-collection-py-0.2.0a1/num_collect/
++-rw-rw-rw-   0 root         (0) root         (0)       99 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.851901 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.852901 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/
++-rw-rw-rw-   0 root         (0) root         (0)     7300 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/__init__.pyi
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.852901 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/opt/
++-rw-rw-rw-   0 root         (0) root         (0)      139 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/opt/__init__.pyi
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.853901 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/
++-rw-rw-rw-   0 root         (0) root         (0)     7707 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/__init__.pyi
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/opt/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/num_collect_py_cpp_module/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/_cpp_module/py.typed
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.854901 numerical-collection-py-0.2.0a1/num_collect/base/
++-rw-rw-rw-   0 root         (0) root         (0)      541 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/base/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/base/py.typed
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.856901 numerical-collection-py-0.2.0a1/num_collect/logging/
++-rw-rw-rw-   0 root         (0) root         (0)      614 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/logging/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     2466 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/logging/_handler.py
++-rw-rw-rw-   0 root         (0) root         (0)     5835 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/logging/_logger.py
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/logging/py.typed
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.856901 numerical-collection-py-0.2.0a1/num_collect/opt/
++-rw-rw-rw-   0 root         (0) root         (0)       41 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/opt/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.857901 numerical-collection-py-0.2.0a1/num_collect/opt/multi_variate/
++-rw-rw-rw-   0 root         (0) root         (0)      508 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/opt/multi_variate/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/opt/multi_variate/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/opt/py.typed
++-rw-rw-rw-   0 root         (0) root         (0)        0 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/num_collect/py.typed
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:25:41.859902 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/
++-rw-r--r--   0 root         (0) root         (0)     2529 2023-04-06 15:25:41.000000 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     1673 2023-04-06 15:25:41.000000 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 15:25:41.000000 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 15:25:41.000000 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/not-zip-safe
++-rw-r--r--   0 root         (0) root         (0)       19 2023-04-06 15:25:41.000000 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       12 2023-04-06 15:25:41.000000 numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/top_level.txt
++-rw-rw-rw-   0 root         (0) root         (0)     2017 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/pyproject.toml
++-rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 15:25:41.860901 numerical-collection-py-0.2.0a1/setup.cfg
++-rw-rw-rw-   0 root         (0) root         (0)     5307 2023-04-06 15:25:08.000000 numerical-collection-py-0.2.0a1/setup.py
+```
+
+### Comparing `numerical-collection-py-0.1.0a3/CMakeLists.txt` & `numerical-collection-py-0.2.0a1/CMakeLists.txt`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -50,14 +50,21 @@
+     find_program(
+         PYTHON_EXECUTABLE
+         NAMES python3 python
+         PATHS ${CMAKE_CURRENT_SOURCE_DIR}/.venv/bin
+               ${CMAKE_CURRENT_SOURCE_DIR}/.venv/Scripts
+         NO_DEFAULT_PATH)
+ endif()
++if(NOT PYTHON_EXECUTABLE)
++    find_program(PYTHON_EXECUTABLE NAMES python3 python REQUIRED)
++endif()
++execute_process(
++    COMMAND "${PYTHON_EXECUTABLE}" -m pybind11 --cmakedir
++    OUTPUT_VARIABLE pybind11_DIR
++    OUTPUT_STRIP_TRAILING_WHITESPACE)
+ 
+ # Find packages installed with Conan.
+ list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+ list(APPEND CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
+ find_package(num_collect REQUIRED)
+ find_package(pybind11 REQUIRED)
+```
+
+### Comparing `numerical-collection-py-0.1.0a3/LICENSE.txt` & `numerical-collection-py-0.2.0a1/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/CMakeLists.txt` & `numerical-collection-py-0.2.0a1/cpp_module/CMakeLists.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/base/bind.cpp` & `numerical-collection-py-0.2.0a1/cpp_module/base/bind.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/base/bind.h` & `numerical-collection-py-0.2.0a1/cpp_module/base/bind.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/logging/bind.cpp` & `numerical-collection-py-0.2.0a1/cpp_module/logging/bind.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/logging/bind.h` & `numerical-collection-py-0.2.0a1/cpp_module/logging/bind.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/logging/config.cpp` & `numerical-collection-py-0.2.0a1/cpp_module/logging/config.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/logging/config.h` & `numerical-collection-py-0.2.0a1/cpp_module/logging/config.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/logging/sinks.cpp` & `numerical-collection-py-0.2.0a1/cpp_module/logging/sinks.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/logging/sinks.h` & `numerical-collection-py-0.2.0a1/cpp_module/logging/sinks.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/opt/bind.cpp` & `numerical-collection-py-0.2.0a1/cpp_module/opt/bind.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/opt/bind.h` & `numerical-collection-py-0.2.0a1/cpp_module/opt/bind.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate.cpp` & `numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate.h` & `numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate_objective_function.h` & `numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate_objective_function.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/cpp_module/opt/multi_variate_optimizer_helper.h` & `numerical-collection-py-0.2.0a1/cpp_module/opt/multi_variate_optimizer_helper.h`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/num_collect/base/__init__.py` & `numerical-collection-py-0.2.0a1/num_collect/base/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/num_collect/logging/__init__.py` & `numerical-collection-py-0.2.0a1/num_collect/logging/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/num_collect/logging/_handler.py` & `numerical-collection-py-0.2.0a1/num_collect/logging/_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/num_collect/logging/_logger.py` & `numerical-collection-py-0.2.0a1/num_collect/logging/_logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `numerical-collection-py-0.1.0a3/numerical_collection_py.egg-info/SOURCES.txt` & `numerical-collection-py-0.2.0a1/numerical_collection_py.egg-info/SOURCES.txt`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -21,30 +21,29 @@
+ cpp_module/opt/multi_variate.h
+ cpp_module/opt/multi_variate_objective_function.h
+ cpp_module/opt/multi_variate_optimizer_helper.h
+ num_collect/__init__.py
+ num_collect/py.typed
+ num_collect/_cpp_module/__init__.py
+ num_collect/_cpp_module/py.typed
++num_collect/_cpp_module/num_collect_py_cpp_module/__init__.pyi
+ num_collect/_cpp_module/num_collect_py_cpp_module/py.typed
++num_collect/_cpp_module/num_collect_py_cpp_module/opt/__init__.pyi
+ num_collect/_cpp_module/num_collect_py_cpp_module/opt/py.typed
++num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/__init__.pyi
+ num_collect/_cpp_module/num_collect_py_cpp_module/opt/multi_variate/py.typed
+ num_collect/base/__init__.py
+ num_collect/base/py.typed
+ num_collect/logging/__init__.py
+ num_collect/logging/_handler.py
+ num_collect/logging/_logger.py
+ num_collect/logging/py.typed
+ num_collect/opt/__init__.py
+ num_collect/opt/py.typed
+ num_collect/opt/multi_variate/__init__.py
+ num_collect/opt/multi_variate/py.typed
+-num_prob_collect/__init__.py
+-num_prob_collect/opt/__init__.py
+-num_prob_collect/opt/multi_variate/__init__.py
+-num_prob_collect/opt/multi_variate/_quadratic_function.py
+ numerical_collection_py.egg-info/PKG-INFO
+ numerical_collection_py.egg-info/SOURCES.txt
+ numerical_collection_py.egg-info/dependency_links.txt
+ numerical_collection_py.egg-info/not-zip-safe
+ numerical_collection_py.egg-info/requires.txt
+ numerical_collection_py.egg-info/top_level.txt
+```
+
+### Comparing `numerical-collection-py-0.1.0a3/pyproject.toml` & `numerical-collection-py-0.2.0a1/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ [tool.poetry]
+ name = "numerical-collection-py"
+-version = "0.1.0a3"
++version = "0.2.0a1"
+ description = "A collection of algorithms in numerical analysis for Python (originally implemented in C++)."
+ license = "Apache-2.0"
+ authors = ["Kenta Kabashima <kenta_program37@hotmail.co.jp>"]
+ readme = "README.md"
+ homepage = "https://gitlab.com/MusicScience37Projects/numerical-analysis/numerical-collection-py"
+ repository = "https://gitlab.com/MusicScience37Projects/numerical-analysis/numerical-collection-py"
+ documentation = "https://musicscience37projects.gitlab.io/numerical-analysis/numerical-collection-py/"
+-keywords = ["numerical analysis"]
++keywords = ["numerical-analysis"]
+ classifiers = [
+     # https://pypi.org/classifiers/
+     "Development Status :: 3 - Alpha",
+     "Intended Audience :: Science/Research",
+     "License :: OSI Approved :: Apache Software License",
+     "Operating System :: POSIX :: Linux",
+     "Programming Language :: C++",
+@@ -46,17 +46,24 @@
+ pytest = "^7.2.2"
+ pytest-cov = "^4.0.0"
+ flake8 = "^6.0.0"
+ isort = "^5.12.0"
+ pydocstyle = "^6.3.0"
+ clang-tidy-checker = "^0.2.0"
+ sphinxcontrib-bibtex = "^2.5.0"
++pybind11 = ">=2.10.4,<2.11.0"
+ 
+ [build-system]
+-requires = ["setuptools", "wheel", "toml", "conan>=1.59.0,<2.0"]
++requires = [
++    "setuptools",
++    "wheel",
++    "toml",
++    "conan>=1.59.0,<2.0",
++    "pybind11>=2.10.4,<2.11.0",
++]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.isort]
+ profile = "black"
+ 
+ [tool.pydocstyle]
+ convention = "google"
+```
+
+### Comparing `numerical-collection-py-0.1.0a3/setup.py` & `numerical-collection-py-0.2.0a1/setup.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ """Build C++ module for poetry."""
+ 
+ import os
+ import pathlib
+ import subprocess
+ import sys
++import typing
+ 
+ import setuptools
+ import setuptools.command.build_ext
+ import toml
+ 
+ THIS_DIR = pathlib.Path(__file__).absolute().parent
+ 
+@@ -103,41 +104,80 @@
+ 
+ def read_file(filepath: str) -> str:
+     """Read all lines in a file."""
+     with open(filepath, mode="r", encoding="utf8") as file:
+         return file.read()
+ 
+ 
++def dir_path_to_package_path(dir_path: pathlib.Path) -> str:
++    """Convert directory path to package path."""
++    return dir_path.relative_to(THIS_DIR).as_posix().replace("/", ".")
++
++
++def collect_packages_in(dir_path: pathlib.Path) -> typing.List[str]:
++    """Collect packages in a directory."""
++    if (
++        not (dir_path / "__init__.py").exists()
++        and not (dir_path / "__init__.pyi").exists()
++    ):
++        return []
++
++    res = [dir_path_to_package_path(dir_path)]
++    for elem in dir_path.iterdir():
++        if elem.is_dir():
++            res = res + collect_packages_in(elem)
++
++    return res
++
++
++def collect_packages() -> typing.List[str]:
++    """Collect packages."""
++    return collect_packages_in(THIS_DIR / "num_collect")
++
++
+ pyproject_toml = toml.load(str(THIS_DIR / "pyproject.toml"))
+ pyproject_toml_tool_poetry = pyproject_toml["tool"]["poetry"]
+ 
+-package_list = setuptools.find_packages(exclude=["tests*"])
++package_list = collect_packages()
+ package_data = {name: ["py.typed"] for name in package_list}
+-package_data.update({"num_collect._cpp_module": ["num_collect_py_cpp_module*"]})
++package_data.update(
++    {
++        name: ["py.typed", "__init__.pyi"]
++        for name in package_list
++        if name.startswith("num_collect._cpp_module.num_collect_py_cpp_module")
++    }
++)
++package_data.update(
++    {"num_collect._cpp_module": ["py.typed", "num_collect_py_cpp_module.*"]}
++)
+ 
+ # Reference of keywords:
+ # https://setuptools.pypa.io/en/latest/references/keywords.html
+ setuptools.setup(
+     name=pyproject_toml_tool_poetry["name"],
+     version=pyproject_toml_tool_poetry["version"],
+     description=pyproject_toml_tool_poetry["description"],
+     long_description=read_file(str(THIS_DIR / "README.md")),
+     long_description_content_type="text/markdown",
+     author="Kenta Kabashima",
+     author_email="kenta_program37@hotmail.co.jp",
+     url=pyproject_toml_tool_poetry["homepage"],
+     classifiers=pyproject_toml_tool_poetry["classifiers"],
+     license=pyproject_toml_tool_poetry["license"],
+-    keywords=pyproject_toml_tool_poetry["keywords"],
+     ext_modules=[
+         CMakeExtension(
+             name="num_collect._cpp_module.num_collect_py_cpp_module",
+         )
+     ],
+     cmdclass={"build_ext": ExtensionBuilder},  # cspell: disable-line
+     zip_safe=False,
+     packages=package_list,
+     include_package_data=False,
+     package_data=package_data,
+     python_requires=pyproject_toml["tool"]["poetry"]["dependencies"]["python"],
+     install_requires=["numpy>=1.24.2,<2.0"],
++    project_urls={
++        "Bug Tracker": "https://gitlab.com/MusicScience37Projects/numerical-analysis/numerical-collection-py/-/issues",
++        "Documentation": pyproject_toml_tool_poetry["documentation"],
++        "Source Code": pyproject_toml_tool_poetry["repository"],
++    },
+ )
+```
+

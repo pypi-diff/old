@@ -1,0 +1,289 @@
+# Comparing `tmp/boto3-helpers-1.2.0.tar.gz` & `tmp/boto3-helpers-1.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "boto3-helpers-1.2.0.tar", last modified: Wed Dec 21 15:12:20 2022, max compression
++gzip compressed data, was "boto3-helpers-1.3.0.tar", last modified: Thu Apr  6 15:28:30 2023, max compression
+```
+
+## Comparing `boto3-helpers-1.2.0.tar` & `boto3-helpers-1.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,26 +1,38 @@
+-drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2022-12-21 15:12:20.435860 boto3-helpers-1.2.0/
+--rw-r--r--   0 bo.bayles   (501) staff       (20)    10174 2022-08-24 20:40:12.000000 boto3-helpers-1.2.0/LICENSE
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     2578 2022-12-21 15:12:20.436100 boto3-helpers-1.2.0/PKG-INFO
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     2099 2022-09-22 19:00:18.000000 boto3-helpers-1.2.0/README.rst
+-drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2022-12-21 15:12:20.425726 boto3-helpers-1.2.0/boto3_helpers/
+--rw-r--r--   0 bo.bayles   (501) staff       (20)        0 2022-12-15 15:18:48.000000 boto3-helpers-1.2.0/boto3_helpers/__init__.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     3851 2022-09-22 21:23:05.000000 boto3-helpers-1.2.0/boto3_helpers/arn.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     1792 2022-09-22 19:00:18.000000 boto3-helpers-1.2.0/boto3_helpers/awslambda.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     3217 2022-09-23 13:50:11.000000 boto3-helpers-1.2.0/boto3_helpers/cloudwatch.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     3694 2022-09-01 21:23:37.000000 boto3-helpers-1.2.0/boto3_helpers/dynamodb.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     6306 2022-10-17 19:54:57.000000 boto3-helpers-1.2.0/boto3_helpers/events.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     1810 2022-09-22 19:00:18.000000 boto3-helpers-1.2.0/boto3_helpers/mediatailor.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     1674 2022-09-02 14:20:47.000000 boto3-helpers-1.2.0/boto3_helpers/pagination.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     2861 2022-10-17 19:48:22.000000 boto3-helpers-1.2.0/boto3_helpers/s3.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     2783 2022-12-21 15:12:11.000000 boto3-helpers-1.2.0/boto3_helpers/signed_requests.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     7087 2022-09-23 13:50:11.000000 boto3-helpers-1.2.0/boto3_helpers/sqs.py
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     4469 2022-09-01 20:24:17.000000 boto3-helpers-1.2.0/boto3_helpers/sts.py
+-drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2022-12-21 15:12:20.435203 boto3-helpers-1.2.0/boto3_helpers.egg-info/
+--rw-r--r--   0 bo.bayles   (501) staff       (20)     2578 2022-12-21 15:12:20.000000 boto3-helpers-1.2.0/boto3_helpers.egg-info/PKG-INFO
+--rw-r--r--   0 bo.bayles   (501) staff       (20)      540 2022-12-21 15:12:20.000000 boto3-helpers-1.2.0/boto3_helpers.egg-info/SOURCES.txt
+--rw-r--r--   0 bo.bayles   (501) staff       (20)        1 2022-12-21 15:12:20.000000 boto3-helpers-1.2.0/boto3_helpers.egg-info/dependency_links.txt
+--rw-r--r--   0 bo.bayles   (501) staff       (20)       15 2022-12-21 15:12:20.000000 boto3-helpers-1.2.0/boto3_helpers.egg-info/requires.txt
+--rw-r--r--   0 bo.bayles   (501) staff       (20)       14 2022-12-21 15:12:20.000000 boto3-helpers-1.2.0/boto3_helpers.egg-info/top_level.txt
+--rw-r--r--   0 bo.bayles   (501) staff       (20)      171 2022-09-01 20:18:16.000000 boto3-helpers-1.2.0/pyproject.toml
+--rw-r--r--   0 bo.bayles   (501) staff       (20)      689 2022-12-21 15:12:20.439042 boto3-helpers-1.2.0/setup.cfg
+--rw-r--r--   0 bo.bayles   (501) staff       (20)       38 2022-09-01 20:23:34.000000 boto3-helpers-1.2.0/setup.py
++drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2023-04-06 15:28:30.084214 boto3-helpers-1.3.0/
++-rw-r--r--   0 bo.bayles   (501) staff       (20)    10174 2022-08-24 20:40:12.000000 boto3-helpers-1.3.0/LICENSE
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2578 2023-04-06 15:28:30.084468 boto3-helpers-1.3.0/PKG-INFO
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2099 2022-09-22 19:00:18.000000 boto3-helpers-1.3.0/README.rst
++drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2023-04-06 15:28:30.065202 boto3-helpers-1.3.0/boto3_helpers/
++-rw-r--r--   0 bo.bayles   (501) staff       (20)        0 2022-12-15 15:18:48.000000 boto3-helpers-1.3.0/boto3_helpers/__init__.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     3851 2022-09-22 21:23:05.000000 boto3-helpers-1.3.0/boto3_helpers/arn.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     1792 2022-09-22 19:00:18.000000 boto3-helpers-1.3.0/boto3_helpers/awslambda.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     3217 2022-09-23 13:50:11.000000 boto3-helpers-1.3.0/boto3_helpers/cloudwatch.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     3694 2022-09-01 21:23:37.000000 boto3-helpers-1.3.0/boto3_helpers/dynamodb.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     6306 2023-01-11 18:57:17.000000 boto3-helpers-1.3.0/boto3_helpers/events.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     1810 2022-09-22 19:00:18.000000 boto3-helpers-1.3.0/boto3_helpers/mediatailor.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     1674 2022-09-02 14:20:47.000000 boto3-helpers-1.3.0/boto3_helpers/pagination.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2861 2022-10-17 19:48:22.000000 boto3-helpers-1.3.0/boto3_helpers/s3.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     3271 2023-04-06 15:28:10.000000 boto3-helpers-1.3.0/boto3_helpers/signed_requests.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     7087 2022-09-23 13:50:11.000000 boto3-helpers-1.3.0/boto3_helpers/sqs.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     4469 2022-09-01 20:24:17.000000 boto3-helpers-1.3.0/boto3_helpers/sts.py
++drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2023-04-06 15:28:30.070183 boto3-helpers-1.3.0/boto3_helpers.egg-info/
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2578 2023-04-06 15:28:29.000000 boto3-helpers-1.3.0/boto3_helpers.egg-info/PKG-INFO
++-rw-r--r--   0 bo.bayles   (501) staff       (20)      785 2023-04-06 15:28:29.000000 boto3-helpers-1.3.0/boto3_helpers.egg-info/SOURCES.txt
++-rw-r--r--   0 bo.bayles   (501) staff       (20)        1 2023-04-06 15:28:29.000000 boto3-helpers-1.3.0/boto3_helpers.egg-info/dependency_links.txt
++-rw-r--r--   0 bo.bayles   (501) staff       (20)       15 2023-04-06 15:28:29.000000 boto3-helpers-1.3.0/boto3_helpers.egg-info/requires.txt
++-rw-r--r--   0 bo.bayles   (501) staff       (20)       14 2023-04-06 15:28:29.000000 boto3-helpers-1.3.0/boto3_helpers.egg-info/top_level.txt
++-rw-r--r--   0 bo.bayles   (501) staff       (20)      171 2022-09-01 20:18:16.000000 boto3-helpers-1.3.0/pyproject.toml
++-rw-r--r--   0 bo.bayles   (501) staff       (20)      689 2023-04-06 15:28:30.085846 boto3-helpers-1.3.0/setup.cfg
++-rw-r--r--   0 bo.bayles   (501) staff       (20)       38 2022-09-01 20:23:34.000000 boto3-helpers-1.3.0/setup.py
++drwxr-xr-x   0 bo.bayles   (501) staff       (20)        0 2023-04-06 15:28:30.083160 boto3-helpers-1.3.0/tests/
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2075 2022-09-22 21:23:05.000000 boto3-helpers-1.3.0/tests/test_arn.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     1806 2022-09-22 19:00:18.000000 boto3-helpers-1.3.0/tests/test_awslambda.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     3749 2022-09-23 13:50:11.000000 boto3-helpers-1.3.0/tests/test_cloudwatch.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     5538 2022-09-01 21:23:46.000000 boto3-helpers-1.3.0/tests/test_dynamodb.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     9813 2022-09-22 19:00:18.000000 boto3-helpers-1.3.0/tests/test_events.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     3468 2022-09-01 21:00:54.000000 boto3-helpers-1.3.0/tests/test_mediatailor.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2200 2022-08-25 15:02:02.000000 boto3-helpers-1.3.0/tests/test_pagination.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     2369 2022-10-17 19:48:22.000000 boto3-helpers-1.3.0/tests/test_s3.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     1997 2023-04-06 15:28:10.000000 boto3-helpers-1.3.0/tests/test_signed_requests.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     6180 2022-09-22 19:00:18.000000 boto3-helpers-1.3.0/tests/test_sqs.py
++-rw-r--r--   0 bo.bayles   (501) staff       (20)     4106 2022-08-25 21:06:36.000000 boto3-helpers-1.3.0/tests/test_sts.py
+```
+
+### Comparing `boto3-helpers-1.2.0/LICENSE` & `boto3-helpers-1.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/PKG-INFO` & `boto3-helpers-1.3.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: boto3-helpers
+-Version: 1.2.0
++Version: 1.3.0
+ Summary: Helper utilities for boto3
+ Author: Bo Bayles
+ Author-email: bo.bayles@wurl.com
+ License: Apache 2.0
+ Project-URL: homepage, https://github.com/openwurl/boto3-helpers
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `boto3-helpers-1.2.0/README.rst` & `boto3-helpers-1.3.0/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/arn.py` & `boto3-helpers-1.3.0/boto3_helpers/arn.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/awslambda.py` & `boto3-helpers-1.3.0/boto3_helpers/awslambda.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/cloudwatch.py` & `boto3-helpers-1.3.0/boto3_helpers/cloudwatch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/dynamodb.py` & `boto3-helpers-1.3.0/boto3_helpers/dynamodb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/events.py` & `boto3-helpers-1.3.0/boto3_helpers/events.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/mediatailor.py` & `boto3-helpers-1.3.0/boto3_helpers/mediatailor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/pagination.py` & `boto3-helpers-1.3.0/boto3_helpers/pagination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/s3.py` & `boto3-helpers-1.3.0/boto3_helpers/s3.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/signed_requests.py` & `boto3-helpers-1.3.0/boto3_helpers/signed_requests.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -11,27 +11,28 @@
+ 
+     def __init__(self, status_code, content):
+         self.status_code = status_code
+         self.content = content
+ 
+ 
+ def sigv4_request(
+-    service, method, endpoint, client=None, base_url=None, operation_name=None
++    service, method, endpoint, client=None, base_url=None, operation_name=None, **kwargs
+ ):
+     """Make a signed request to the AWS API and return the JSON payload.
+ 
+     * *service* is the AWS API service code
+     * *method* is an HTTP method like ``'GET'`` or ``'POST'``
+     * *endpoint* is the target API endpoint. If you need to supply parameters, put
+       supply them as a query string here (e.g., ``?MaxResults=1``)
+     * *client* is a ``boto3.client`` instance for the same account and region as your
+       target. If not given, is created with ``boto3.client('sts')``
+     * *base_url* is the URL for the target AWS API. If not given, a guess will be made
+       based on the service name and client region.
+     * *operation_name* is the name of the API operation to use when signing the request
++    * **kwargs** are passed on to an ``AWSRequest`` object.
+ 
+     If the API response indicates an error,
+     ``boto3_helpers.signed_requests.SigV4RequestException`` will be raised.
+ 
+     This function is useful for accessing endpoints that aren't supported by ``boto3``.
+     For example, ``botocore`` introduced support for the ``'scheduler'`` service in
+     version 1.29.7. You could have used this function to interact with that API
+@@ -49,22 +50,35 @@
+       action.
+     * The service code for EventBridge Scheduler is ``'scheduler'``.
+     * The method for ``ListSchedules`` is ``'GET'``.
+     * The endpoint is ``'/schedules'``. This function will strip off leading slashes.
+ 
+     We could haved optionally supplied the ``operation_name`` as ``'ListSchedules'``.
+ 
++    Example: Invoking a Lambda function URL that uses the ``AWS_IAM`` auth type:
++
++    .. code-block:: python
++
++        from boto3_helpers.signed_requests import sigv4_request
++
++        resp = sigv4_request(
++            'lambda',
++            'POST',
++            '/',
++            base_url='https://660d26cd.lambda-url.test-region-1.on.aws',
++            data=dumps({'payload_key_1': 'payload_value_1'})
++        )
+     """
+     client = client or boto3_client('sts')
+ 
+     base_url = base_url or f'https://{service}.{client.meta.region_name}.amazonaws.com'
+     endpoint = endpoint.lstrip('/')
+     url = f'{base_url}/{endpoint}'
+ 
+-    request = AWSRequest(method=method, url=url)
++    request = AWSRequest(method=method, url=url, **kwargs)
+     client._request_signer.sign(operation_name, request, signing_name=service)
+     request.prepare()
+     request.headers = dict(request.headers)
+ 
+     resp = client._endpoint.http_session.send(request)
+     if not (200 <= resp.status_code <= 299):
+         raise SigV4RequestException(resp.status_code, resp.content)
+```
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/sqs.py` & `boto3-helpers-1.3.0/boto3_helpers/sqs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers/sts.py` & `boto3-helpers-1.3.0/boto3_helpers/sts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers.egg-info/PKG-INFO` & `boto3-helpers-1.3.0/boto3_helpers.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: boto3-helpers
+-Version: 1.2.0
++Version: 1.3.0
+ Summary: Helper utilities for boto3
+ Author: Bo Bayles
+ Author-email: bo.bayles@wurl.com
+ License: Apache 2.0
+ Project-URL: homepage, https://github.com/openwurl/boto3-helpers
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `boto3-helpers-1.2.0/boto3_helpers.egg-info/SOURCES.txt` & `boto3-helpers-1.3.0/boto3_helpers.egg-info/SOURCES.txt`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -15,8 +15,19 @@
+ boto3_helpers/signed_requests.py
+ boto3_helpers/sqs.py
+ boto3_helpers/sts.py
+ boto3_helpers.egg-info/PKG-INFO
+ boto3_helpers.egg-info/SOURCES.txt
+ boto3_helpers.egg-info/dependency_links.txt
+ boto3_helpers.egg-info/requires.txt
+-boto3_helpers.egg-info/top_level.txt
++boto3_helpers.egg-info/top_level.txt
++tests/test_arn.py
++tests/test_awslambda.py
++tests/test_cloudwatch.py
++tests/test_dynamodb.py
++tests/test_events.py
++tests/test_mediatailor.py
++tests/test_pagination.py
++tests/test_s3.py
++tests/test_signed_requests.py
++tests/test_sqs.py
++tests/test_sts.py
+```
+
+### Comparing `boto3-helpers-1.2.0/setup.cfg` & `boto3-helpers-1.3.0/setup.cfg`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = boto3-helpers
+-version = 1.2.0
++version = 1.3.0
+ description = Helper utilities for boto3
+ long_description = file: README.rst
+ long_description_content_type = text/x-rst
+ author = Bo Bayles
+ author_email = bo.bayles@wurl.com
+ license = Apache 2.0
+ license_files =
+```
+

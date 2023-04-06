@@ -1,0 +1,195 @@
+# Comparing `tmp/PLAN-Tools-0.3.tar.gz` & `tmp/PLAN-Tools-0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "PLAN-Tools-0.3.tar", last modified: Tue Apr  4 19:10:12 2023, max compression
++gzip compressed data, was "PLAN-Tools-0.4.tar", last modified: Thu Apr  6 15:34:06 2023, max compression
+```
+
+## Comparing `PLAN-Tools-0.3.tar` & `PLAN-Tools-0.4.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,19 @@
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-04 19:10:12.863780 PLAN-Tools-0.3/
+--rw-r--r--   0 runner    (1001) docker     (122)     8635 2023-04-04 19:10:12.863780 PLAN-Tools-0.3/PKG-INFO
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-04 19:10:12.859780 PLAN-Tools-0.3/PLAN_Tools.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (122)     8635 2023-04-04 19:10:12.000000 PLAN-Tools-0.3/PLAN_Tools.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)      335 2023-04-04 19:10:12.000000 PLAN-Tools-0.3/PLAN_Tools.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-04 19:10:12.000000 PLAN-Tools-0.3/PLAN_Tools.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       53 2023-04-04 19:10:12.000000 PLAN-Tools-0.3/PLAN_Tools.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       11 2023-04-04 19:10:12.000000 PLAN-Tools-0.3/PLAN_Tools.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (122)     7474 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-04 19:10:12.863780 PLAN-Tools-0.3/plan_tools/
+--rw-r--r--   0 runner    (1001) docker     (122)       34 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/plan_tools/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6431 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/plan_tools/entry_point.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1741 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/plan_tools/runtime.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-04 19:10:12.863780 PLAN-Tools-0.3/plan_tools/tests/
+--rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/plan_tools/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      113 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/plan_tools/tests/test_new_name.py
+--rw-r--r--   0 runner    (1001) docker     (122)      170 2023-04-04 19:10:12.863780 PLAN-Tools-0.3/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (122)     1002 2023-04-04 19:10:04.000000 PLAN-Tools-0.3/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 15:34:06.562231 PLAN-Tools-0.4/
++-rw-r--r--   0 runner    (1001) docker     (122)     8806 2023-04-06 15:34:06.562231 PLAN-Tools-0.4/PKG-INFO
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 15:34:06.562231 PLAN-Tools-0.4/PLAN_Tools.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (122)     8806 2023-04-06 15:34:06.000000 PLAN-Tools-0.4/PLAN_Tools.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)      371 2023-04-06 15:34:06.000000 PLAN-Tools-0.4/PLAN_Tools.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 15:34:06.000000 PLAN-Tools-0.4/PLAN_Tools.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (122)       53 2023-04-06 15:34:06.000000 PLAN-Tools-0.4/PLAN_Tools.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (122)       11 2023-04-06 15:34:06.000000 PLAN-Tools-0.4/PLAN_Tools.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (122)     7637 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/README.md
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 15:34:06.562231 PLAN-Tools-0.4/plan_tools/
++-rw-r--r--   0 runner    (1001) docker     (122)       34 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/plan_tools/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)    12715 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/plan_tools/entry_point.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1761 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/plan_tools/runtime.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 15:34:06.562231 PLAN-Tools-0.4/plan_tools/tests/
++-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/plan_tools/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1487 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/plan_tools/tests/test_entry_point.py
++-rw-r--r--   0 runner    (1001) docker     (122)      415 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/plan_tools/tests/test_runtime.py
++-rw-r--r--   0 runner    (1001) docker     (122)      170 2023-04-06 15:34:06.562231 PLAN-Tools-0.4/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (122)     1134 2023-04-06 15:33:54.000000 PLAN-Tools-0.4/setup.py
+```
+
+### Comparing `PLAN-Tools-0.3/PKG-INFO` & `PLAN-Tools-0.4/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ Metadata-Version: 2.1
+ Name: PLAN-Tools
+-Version: 0.3
++Version: 0.4
+ Summary: A set of tools to help with Pip Links And Nonsense
+ Home-page: https://github.com/Myoldmopar/PlanTools
+ Author: Edwin Lee
+ Author-email: 
+ License: UNKNOWN
+ Description: # PLAN-TOOLS
+         
+         [![Flake8](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/flake8.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/flake8.yml)
+         [![Run Tests](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/test.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/test.yml)
++        [![Coverage Status](https://coveralls.io/repos/github/Myoldmopar/PLAN-Tools/badge.svg?branch=main)](https://coveralls.io/github/Myoldmopar/PLAN-Tools?branch=main)
+         [![PyPIRelease](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/release.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/release.yml)
+         [![Documentation Status](https://readthedocs.org/projects/plan-tools/badge/?version=latest)](https://plan-tools.readthedocs.io/en/latest/?badge=latest)
+         
+         Tooling to help with PLAN: Pip Links And Nonsense
+         
+         ## Introduction
+```
+
+### Comparing `PLAN-Tools-0.3/PLAN_Tools.egg-info/PKG-INFO` & `PLAN-Tools-0.4/PLAN_Tools.egg-info/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ Metadata-Version: 2.1
+ Name: PLAN-Tools
+-Version: 0.3
++Version: 0.4
+ Summary: A set of tools to help with Pip Links And Nonsense
+ Home-page: https://github.com/Myoldmopar/PlanTools
+ Author: Edwin Lee
+ Author-email: 
+ License: UNKNOWN
+ Description: # PLAN-TOOLS
+         
+         [![Flake8](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/flake8.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/flake8.yml)
+         [![Run Tests](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/test.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/test.yml)
++        [![Coverage Status](https://coveralls.io/repos/github/Myoldmopar/PLAN-Tools/badge.svg?branch=main)](https://coveralls.io/github/Myoldmopar/PLAN-Tools?branch=main)
+         [![PyPIRelease](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/release.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/release.yml)
+         [![Documentation Status](https://readthedocs.org/projects/plan-tools/badge/?version=latest)](https://plan-tools.readthedocs.io/en/latest/?badge=latest)
+         
+         Tooling to help with PLAN: Pip Links And Nonsense
+         
+         ## Introduction
+```
+
+### Comparing `PLAN-Tools-0.3/README.md` & `PLAN-Tools-0.4/README.md`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ # PLAN-TOOLS
+ 
+ [![Flake8](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/flake8.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/flake8.yml)
+ [![Run Tests](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/test.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/test.yml)
++[![Coverage Status](https://coveralls.io/repos/github/Myoldmopar/PLAN-Tools/badge.svg?branch=main)](https://coveralls.io/github/Myoldmopar/PLAN-Tools?branch=main)
+ [![PyPIRelease](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/release.yml/badge.svg)](https://github.com/Myoldmopar/PLAN-Tools/actions/workflows/release.yml)
+ [![Documentation Status](https://readthedocs.org/projects/plan-tools/badge/?version=latest)](https://plan-tools.readthedocs.io/en/latest/?badge=latest)
+ 
+ Tooling to help with PLAN: Pip Links And Nonsense
+ 
+ ## Introduction
+```
+
+### Comparing `PLAN-Tools-0.3/plan_tools/runtime.py` & `PLAN-Tools-0.4/plan_tools/runtime.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -33,9 +33,9 @@
+     :return: Nothing, if it fails, it just quietly fails.
+     """
+     # noinspection PyBroadException
+     try:
+         if platform.startswith('win'):
+             import ctypes
+             ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(f"Plan.Tools.Program.{entry_point_id}")
+-    except Exception:
++    except Exception:  # pragma: no cover
+         pass
+```
+
+### Comparing `PLAN-Tools-0.3/setup.py` & `PLAN-Tools-0.4/setup.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,17 +1,22 @@
+ import codecs
+ import os
++from platform import system
+ from setuptools import setup, find_packages
+ 
+ from plan_tools import NAME, VERSION
+ 
+ this_dir = os.path.abspath(os.path.dirname(__file__))
+ with codecs.open(os.path.join(this_dir, 'README.md'), encoding='utf-8') as i_file:
+     long_description = i_file.read()
+ 
++install_requires = []
++if system() == 'Windows':
++    install_requires.append('pypiwin32')
++
+ setup(
+     name=NAME,
+     version=VERSION,
+     packages=find_packages(exclude=['test', 'tests', 'test.*']),
+     url='https://github.com/Myoldmopar/PlanTools',
+     license='',
+     author='Edwin Lee',
+@@ -19,15 +24,15 @@
+     description='A set of tools to help with Pip Links And Nonsense',
+     long_description=long_description,
+     long_description_content_type='text/markdown',
+     test_suite='nose.collector',
+     tests_require=['nose'],
+     keywords='energyplus',
+     include_package_data=True,  # use /MANIFEST.in file for declaring package data
+-    install_requires=[],
++    install_requires=install_requires,
+     entry_points={
+         'console_scripts': [
+             'plan_tool=plan_tools.runner:cli',
+         ],
+     },
+     python_requires='>=3.5',
+ )
+```
+

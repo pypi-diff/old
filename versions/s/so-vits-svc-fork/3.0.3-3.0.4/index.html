@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/so_vits_svc_fork-3.0.3.tar.gz tmp/so_vits_svc_fork-3.0.4.tar.gz --html versions/s/so-vits-svc-fork/3.0.3-3.0.4/index.html --text versions/s/so-vits-svc-fork/3.0.3-3.0.4/diff.txt --markdown versions/s/so-vits-svc-fork/3.0.3-3.0.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">22.5 KB</span></div>
+  <div><span class="source">tmp/so_vits_svc_fork-3.0.3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/so_vits_svc_fork-3.0.4.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">200 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;so_vits_svc_fork-3.0.<del>3</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;so_vits_svc_fork-3.0.<ins>4</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">22.2 KB</span></div>
+    <div><span class="source">so_vits_svc_fork-3.0.3.tar</span> vs.</div>
+    <div id="so_vits_svc_fork--.-.-.tar"><span class="source">so_vits_svc_fork-3.0.4.tar</span>
+      <a class="anchor" href="#so_vits_svc_fork--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">13.7 KB</span></div>
+      <div id="so_vits_svc_fork--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 51 lines modified</td><td colspan="2">Offset 1, 51 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12463<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>739768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12463<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>425493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17966<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>739768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17966<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>425493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3073<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>03</del>.<del>759776</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3073<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>51</ins>.<ins>473489</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>03</del>.<del>711775</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>51</ins>.<ins>425490</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>226<del>47</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/__main__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>226<ins>54</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1275<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/cluster/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1275<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/cluster/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2659<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/cluster/train_cluster.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2659<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/cluster/train_cluster.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2804<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/data_utils.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2804<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/data_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2454<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/default_gui_presets.json</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2454<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/default_gui_presets.json</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7215<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/f0.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7215<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/f0.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24882<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/gui.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24882<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/gui.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>864<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/hparams.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>864<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/hparams.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>73</del>9<del>768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/inference/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>42</ins>9<ins>493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/inference/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22942<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/inference/core.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22942<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/inference/core.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7491<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/inference/main.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7491<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/inference/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>731<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/logger.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>731<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/logger.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/__init__.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16683<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/attentions.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16683<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/attentions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5854<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/commons.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5854<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/commons.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/__init__.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1419<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/f0.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1419<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/f0.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/hifigan/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/hifigan/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11608<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/hifigan/_models.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11608<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/hifigan/_models.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>340<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/hifigan/_utils.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>340<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/hifigan/_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>318<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/mb_istft/__init__.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>318<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/mb_istft/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12479<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/mb_istft/_generators.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12479<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/mb_istft/_generators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>419<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/mb_istft/_loss.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>419<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/mb_istft/_loss.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4755<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/mb_istft/_pqmf.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4755<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/mb_istft/_pqmf.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9055<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9055<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4879<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft_loss.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4879<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft_loss.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5604<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/descriminators.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5604<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/descriminators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4400<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/encoders.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4400<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/encoders.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1390<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/flows.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1390<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/flows.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1405<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/losses.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1405<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/losses.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5753<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/mel_processing.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5753<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/mel_processing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14435<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/modules.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14435<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/modules.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8158<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/modules/synthesizers.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8158<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/modules/synthesizers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/__init__.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1604<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/config_templates/quickvc.json</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1604<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/config_templates/quickvc.json</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1354<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1-legacy.json</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1354<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1-legacy.json</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1415<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1.json</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1415<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1.json</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2997<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/preprocess_flist_config.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2997<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/preprocess_flist_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4566<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/preprocess_hubert_f0.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4566<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/preprocess_hubert_f0.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4693<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/preprocess_resample.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4693<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/preprocess_resample.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2948<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/preprocess_speaker_diarization.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2948<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/preprocess_speaker_diarization.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1878<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/preprocess_split.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1878<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/preprocess_split.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>126<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/preprocessing/preprocess_utils.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>126<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/preprocessing/preprocess_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/py.typed</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14601<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/train.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14601<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/train.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12981<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span><del>02</del>:<del>18</del>:<del>02</del>.<del>743768</del><span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/src/so_vits_svc_fork/utils.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12981<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>32</ins>:<ins>50</ins>.<ins>429493</ins><span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/src/so_vits_svc_fork/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19861<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>so_vits_svc_fork-3.0.<del>3</del>/PKG-INFO</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19861<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>so_vits_svc_fork-3.0.<ins>4</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/LICENSE</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--LICENSE"><span class="source">so_vits_svc_fork-3.0.4/LICENSE</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/README.md</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--README.md"><span class="source">so_vits_svc_fork-3.0.4/README.md</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">470 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/pyproject.toml</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--pyproject.toml"><span class="source">so_vits_svc_fork-3.0.4/pyproject.toml</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;so-vits-svc-fork&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;so-vits-svc-fork&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;3.0.<del>3</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;3.0.<ins>4</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>fork<span class="dp">·</span>of<span class="dp">·</span>so-vits-svc.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>fork<span class="dp">·</span>of<span class="dp">·</span>so-vits-svc.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;34j<span class="dp">·</span>&lt;34j.95a2p@simplelogin.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;34j<span class="dp">·</span>&lt;34j.95a2p@simplelogin.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/34j/so-vits-svc-fork&quot;</td><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/34j/so-vits-svc-fork&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">documentation<span class="dp">·</span>=<span class="dp">·</span>&quot;https://so-vits-svc-fork.readthedocs.io&quot;</td><td class="diffline">9 </td><td class="diffpresent">documentation<span class="dp">·</span>=<span class="dp">·</span>&quot;https://so-vits-svc-fork.readthedocs.io&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">10 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">594 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/__main__.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-__main__.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/__main__.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 510, 15 lines modified</td><td colspan="2">Offset 510, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">510 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=Path(&quot;./configs/44k/config.json&quot;),</td><td class="diffline">510 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=Path(&quot;./configs/44k/config.json&quot;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">511 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;path<span class="dp">·</span>to<span class="dp">·</span>config&quot;,</td><td class="diffline">511 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;path<span class="dp">·</span>to<span class="dp">·</span>config&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">512 </td><td class="diffpresent">)</td><td class="diffline">512 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">513 </td><td class="diffpresent">@click.option(</td><td class="diffline">513 </td><td class="diffpresent">@click.option(</td></tr>
+<tr class="diffunmodified"><td class="diffline">514 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;-t&quot;,</td><td class="diffline">514 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;-t&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">515 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;--config-type&quot;,</td><td class="diffline">515 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;--config-type&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">516 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>type=click.Choice([x.stem<span class="dp">·</span>for<span class="dp">·</span>x<span class="dp">·</span>in<span class="dp">·</span>CONFIG_TEMPLATE_DIR.rglob(&quot;*.json&quot;)]),</td><td class="diffline">516 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>type=click.Choice([x.stem<span class="dp">·</span>for<span class="dp">·</span>x<span class="dp">·</span>in<span class="dp">·</span>CONFIG_TEMPLATE_DIR.rglob(&quot;*.json&quot;)]),</td></tr>
+<tr class="diffchanged"><td class="diffline">517 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=&quot;so-vits-svc-4.0v1&quot;,</td><td class="diffline">517 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>default=&quot;so-vits-svc-4.0v1<ins>-legacy</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">518 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;config<span class="dp">·</span>type&quot;,</td><td class="diffline">518 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;config<span class="dp">·</span>type&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">519 </td><td class="diffpresent">)</td><td class="diffline">519 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">520 </td><td class="diffpresent">def<span class="dp">·</span>pre_config(</td><td class="diffline">520 </td><td class="diffpresent">def<span class="dp">·</span>pre_config(</td></tr>
+<tr class="diffunmodified"><td class="diffline">521 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>input_dir:<span class="dp">·</span>Path,</td><td class="diffline">521 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>input_dir:<span class="dp">·</span>Path,</td></tr>
+<tr class="diffunmodified"><td class="diffline">522 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>filelist_path:<span class="dp">·</span>Path,</td><td class="diffline">522 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>filelist_path:<span class="dp">·</span>Path,</td></tr>
+<tr class="diffunmodified"><td class="diffline">523 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config_path:<span class="dp">·</span>Path,</td><td class="diffline">523 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config_path:<span class="dp">·</span>Path,</td></tr>
+<tr class="diffunmodified"><td class="diffline">524 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config_type:<span class="dp">·</span>str,</td><td class="diffline">524 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config_type:<span class="dp">·</span>str,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/cluster/__init__.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-cluster-__init__.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/cluster/__init__.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-cluster-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/cluster/train_cluster.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-cluster-train_cluster.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/cluster/train_cluster.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-cluster-train_cluster.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/data_utils.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-data_utils.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/data_utils.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-data_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/default_gui_presets.json</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-default_gui_presets.json"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/default_gui_presets.json</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-default_gui_presets.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/f0.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-f-.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/f0.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-f-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/gui.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-gui.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/gui.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-gui.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/hparams.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-hparams.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/hparams.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-hparams.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/inference/core.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-inference-core.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/inference/core.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-inference-core.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/inference/main.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-inference-main.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/inference/main.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-inference-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/logger.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-logger.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/logger.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-logger.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/attentions.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-attentions.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/attentions.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-attentions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/commons.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-commons.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/commons.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-commons.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/decoders/f0.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-f-.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/decoders/f0.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-f-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">197 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/decoders/hifigan/_models.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-hifigan-_models.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/decoders/hifigan/_models.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-hifigan-_models.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">207 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/decoders/mb_istft/_generators.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_generators.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/decoders/mb_istft/_generators.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_generators.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/decoders/mb_istft/_pqmf.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_pqmf.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/decoders/mb_istft/_pqmf.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_pqmf.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_stft.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_stft.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">205 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft_loss.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_stft_loss.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/decoders/mb_istft/_stft_loss.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-decoders-mb_istft-_stft_loss.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/descriminators.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-descriminators.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/descriminators.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-descriminators.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/encoders.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-encoders.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/encoders.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-encoders.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/flows.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-flows.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/flows.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-flows.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/losses.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-losses.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/losses.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-losses.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/mel_processing.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-mel_processing.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/mel_processing.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-mel_processing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/modules.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-modules.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/modules.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-modules.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/modules/synthesizers.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-synthesizers.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/modules/synthesizers.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-modules-synthesizers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">213 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/config_templates/quickvc.json</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-config_templates-quickvc.json"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/config_templates/quickvc.json</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-config_templates-quickvc.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">247 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1-legacy.json</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-config_templates-so-vits-svc--.-v--legacy.json"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1-legacy.json</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-config_templates-so-vits-svc--.-v--legacy.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">233 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1.json</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-config_templates-so-vits-svc--.-v-.json"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/config_templates/so-vits-svc-4.0v1.json</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-config_templates-so-vits-svc--.-v-.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">207 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/preprocess_flist_config.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_flist_config.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/preprocess_flist_config.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_flist_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">201 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/preprocess_hubert_f0.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_hubert_f-.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/preprocess_hubert_f0.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_hubert_f-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">199 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/preprocess_resample.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_resample.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/preprocess_resample.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_resample.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">221 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/preprocess_speaker_diarization.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_speaker_diarization.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/preprocess_speaker_diarization.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_speaker_diarization.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/preprocessing/preprocess_split.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_split.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/preprocessing/preprocess_split.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-preprocessing-preprocess_split.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/train.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-train.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/train.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-train.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/src/so_vits_svc_fork/utils.py</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-utils.py"><span class="source">so_vits_svc_fork-3.0.4/src/so_vits_svc_fork/utils.py</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--src-so_vits_svc_fork-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.13 KB</span></div>
+      <div><span class="source">so_vits_svc_fork-3.0.3/PKG-INFO</span> vs.</div>
+      <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--PKG-INFO"><span class="source">so_vits_svc_fork-3.0.4/PKG-INFO</span>
+        <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>so-vits-svc-fork</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>so-vits-svc-fork</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.0.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.0.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>fork<span class="dp">·</span>of<span class="dp">·</span>so-vits-svc.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>fork<span class="dp">·</span>of<span class="dp">·</span>so-vits-svc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/34j/so-vits-svc-fork</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/34j/so-vits-svc-fork</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>34j</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>34j</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>34j.95a2p@simplelogin.com</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>34j.95a2p@simplelogin.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;3.11</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">729 B</span></div>
+        <div id="so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#so_vits_svc_fork--.-.-.tar---so_vits_svc_fork--.-.--PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>so-vits-svc-fork<span class="dp">·</span>Version:<span class="dp">·</span>3.0.<del>3</del><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>fork<span class="dp">·</span>of</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>so-vits-svc-fork<span class="dp">·</span>Version:<span class="dp">·</span>3.0.<ins>4</ins><span class="dp">·</span>Summary:<span class="dp">·</span>A<span class="dp">·</span>fork<span class="dp">·</span>of</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">so-vits-svc.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://github.com/34j/so-vits-svc-fork<span class="dp">·</span>License:<span class="dp">·</span>MIT</td><td class="diffline">2 </td><td class="diffpresent">so-vits-svc.<span class="dp">·</span>Home-page:<span class="dp">·</span>https://github.com/34j/so-vits-svc-fork<span class="dp">·</span>License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Author:<span class="dp">·</span>34j<span class="dp">·</span>Author-email:<span class="dp">·</span>34j.95a2p@simplelogin.com<span class="dp">·</span>Requires-Python:</td><td class="diffline">3 </td><td class="diffpresent">Author:<span class="dp">·</span>34j<span class="dp">·</span>Author-email:<span class="dp">·</span>34j.95a2p@simplelogin.com<span class="dp">·</span>Requires-Python:</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">&gt;=3.8,&lt;3.11<span class="dp">·</span>Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha<span class="dp">·</span>Classifier:</td><td class="diffline">4 </td><td class="diffpresent">&gt;=3.8,&lt;3.11<span class="dp">·</span>Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha<span class="dp">·</span>Classifier:</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers<span class="dp">·</span>Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License<span class="dp">·</span>Classifier:<span class="dp">·</span>Natural<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>English<span class="dp">·</span>Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::</td><td class="diffline">6 </td><td class="diffpresent">License<span class="dp">·</span>Classifier:<span class="dp">·</span>Natural<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>English<span class="dp">·</span>Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">OS<span class="dp">·</span>Independent<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>Classifier:</td><td class="diffline">7 </td><td class="diffpresent">OS<span class="dp">·</span>Independent<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>Classifier:</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::</td><td class="diffline">8 </td><td class="diffpresent">Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8<span class="dp">·</span>Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::</td></tr>
+</table>      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

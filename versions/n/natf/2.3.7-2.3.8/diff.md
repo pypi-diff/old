@@ -1,0 +1,863 @@
+# Comparing `tmp/natf-2.3.7-py3-none-any.whl.zip` & `tmp/natf-2.3.8-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,27 +1,27 @@
+-Zip file size: 126338 bytes, number of entries: 43
++Zip file size: 126602 bytes, number of entries: 43
+ -rw-rw-r--  2.0 unx      337 b- defN 22-Nov-23 03:26 natf/__init__.py
+--rw-rw-r--  2.0 unx    49153 b- defN 23-Apr-03 14:41 natf/cell.py
++-rw-rw-r--  2.0 unx    51677 b- defN 23-Apr-06 15:24 natf/cell.py
+ -rw-rw-r--  2.0 unx    17020 b- defN 23-Apr-02 15:25 natf/fispact_input.py
+ -rw-rw-r--  2.0 unx    19980 b- defN 22-Nov-23 03:26 natf/fispact_output.py
+ -rw-rw-r--  2.0 unx      957 b- defN 22-Nov-23 03:26 natf/half_space.py
+ -rw-rw-r--  2.0 unx    20214 b- defN 22-Dec-07 12:22 natf/material.py
+ -rw-rw-r--  2.0 unx    35222 b- defN 22-Dec-07 13:52 natf/mcnp_input.py
+ -rw-rw-r--  2.0 unx    38052 b- defN 22-Dec-07 12:22 natf/mcnp_output.py
+ -rw-rw-r--  2.0 unx    13879 b- defN 22-Nov-23 03:26 natf/mesh.py
+ -rw-rw-r--  2.0 unx    75504 b- defN 23-Apr-03 14:41 natf/natf_functions.py
+ -rw-rw-r--  2.0 unx    11802 b- defN 23-Jan-27 07:17 natf/nuc_treat.py
+--rw-rw-r--  2.0 unx    54870 b- defN 23-Jan-19 12:20 natf/part.py
++-rw-rw-r--  2.0 unx    57037 b- defN 23-Apr-06 15:24 natf/part.py
+ -rw-rw-r--  2.0 unx    29321 b- defN 23-Apr-02 15:47 natf/plot.py
+ -rw-rw-r--  2.0 unx    20178 b- defN 22-Dec-07 12:22 natf/radwaste_standard.py
+ -rw-rw-r--  2.0 unx    29681 b- defN 23-Jan-19 13:11 natf/settings.py
+ -rw-rw-r--  2.0 unx     3041 b- defN 22-Nov-23 03:26 natf/source_particle.py
+ -rw-rw-r--  2.0 unx     3270 b- defN 22-Nov-23 03:26 natf/surface.py
+ -rw-rw-r--  2.0 unx    28972 b- defN 23-Apr-02 15:47 natf/utils.py
+--rw-rw-r--  2.0 unx        6 b- defN 23-Apr-03 14:41 natf/version
++-rw-rw-r--  2.0 unx        6 b- defN 23-Apr-06 15:24 natf/version
+ -rw-rw-r--  2.0 unx      302 b- defN 22-Nov-23 03:26 natf/data/README.md
+ -rw-rw-r--  2.0 unx     3876 b- defN 22-Nov-23 03:26 natf/data/appendix16
+ -rw-rw-r--  2.0 unx    17645 b- defN 22-Nov-23 03:26 natf/data/fendl31c_nucs
+ -rw-rw-r--  2.0 unx    47924 b- defN 22-Nov-23 03:26 natf/data/tendl19c_nucs
+ -rw-rw-r--  2.0 unx     7711 b- defN 22-Nov-23 03:26 natf/data/energy_groups/ccfe-709.txt
+ -rw-rw-r--  2.0 unx      115 b- defN 22-Nov-23 03:26 natf/data/energy_groups/photon-24.txt
+ -rw-rw-r--  2.0 unx     3476 b- defN 22-Nov-23 03:26 natf/data/energy_groups/tripoli-315.txt
+@@ -33,13 +33,13 @@
+ -rw-rw-r--  2.0 unx    11135 b- defN 22-Dec-06 08:26 natf/radwaste_standards/CHN2018/CHN2018.csv
+ -rw-rw-r--  2.0 unx      116 b- defN 22-Nov-23 03:26 natf/radwaste_standards/RUSSIAN/RUSSIAN.csv
+ -rw-rw-r--  2.0 unx     1782 b- defN 22-Nov-23 03:26 natf/radwaste_standards/USNRC/README.md
+ -rw-rw-r--  2.0 unx     3631 b- defN 22-Nov-23 03:26 natf/radwaste_standards/USNRC/USNRC_EDE_MASS.csv
+ -rw-rw-r--  2.0 unx      176 b- defN 22-Nov-23 03:26 natf/radwaste_standards/USNRC/USNRC_LL.csv
+ -rw-rw-r--  2.0 unx      116 b- defN 22-Nov-23 03:26 natf/radwaste_standards/USNRC/USNRC_SL.csv
+ -rw-rw-r--  2.0 unx     3653 b- defN 22-Nov-23 03:26 natf/radwaste_standards/USNRC_FETTER/USNRC_FETTER.csv
+--rw-rw-r--  2.0 unx      580 b- defN 23-Apr-03 14:48 natf-2.3.7.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 23-Apr-03 14:48 natf-2.3.7.dist-info/WHEEL
+--rw-rw-r--  2.0 unx      286 b- defN 23-Apr-03 14:48 natf-2.3.7.dist-info/entry_points.txt
+--rw-rw-r--  2.0 unx        5 b- defN 23-Apr-03 14:48 natf-2.3.7.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3557 b- defN 23-Apr-03 14:48 natf-2.3.7.dist-info/RECORD
+-43 files, 577770 bytes uncompressed, 120726 bytes compressed:  79.1%
++-rw-rw-r--  2.0 unx      580 b- defN 23-Apr-06 15:25 natf-2.3.8.dist-info/METADATA
++-rw-rw-r--  2.0 unx       92 b- defN 23-Apr-06 15:25 natf-2.3.8.dist-info/WHEEL
++-rw-rw-r--  2.0 unx      286 b- defN 23-Apr-06 15:25 natf-2.3.8.dist-info/entry_points.txt
++-rw-rw-r--  2.0 unx        5 b- defN 23-Apr-06 15:25 natf-2.3.8.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3557 b- defN 23-Apr-06 15:25 natf-2.3.8.dist-info/RECORD
++43 files, 582461 bytes uncompressed, 120990 bytes compressed:  79.2%
+```
+
+## zipnote {}
+
+```diff
+@@ -108,23 +108,23 @@
+ 
+ Filename: natf/radwaste_standards/USNRC/USNRC_SL.csv
+ Comment: 
+ 
+ Filename: natf/radwaste_standards/USNRC_FETTER/USNRC_FETTER.csv
+ Comment: 
+ 
+-Filename: natf-2.3.7.dist-info/METADATA
++Filename: natf-2.3.8.dist-info/METADATA
+ Comment: 
+ 
+-Filename: natf-2.3.7.dist-info/WHEEL
++Filename: natf-2.3.8.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: natf-2.3.7.dist-info/entry_points.txt
++Filename: natf-2.3.8.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: natf-2.3.7.dist-info/top_level.txt
++Filename: natf-2.3.8.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: natf-2.3.7.dist-info/RECORD
++Filename: natf-2.3.8.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## natf/cell.py
+
+```diff
+@@ -41,57 +41,69 @@
+                              float('-inf'), float('inf'),  # y-dim
+                              float('-inf'), float('inf')]  # z-dim
+         # activity part, unit: Bq/kg
+         # specific activity of nuclides at different interval, shape=(INTV, NUC)
+         self._act = np.zeros(shape=(0, 0), dtype=float, order='C')
+         self._act_max_contri_nuc = []  # read only
+         # specific activity of max contribution nuclide
+-        self._act_max_contri_act = np.zeros(shape=(0, 0), dtype=float,
++        self._act_max_contri_value = np.zeros(shape=(0, 0), dtype=float,
+                                             order='C')
+         self._act_max_contri_ratio = np.zeros(shape=(0, 0), dtype=float)
+         self._total_act = np.zeros(0, dtype=float)
+         self._total_alpha_act = np.zeros(shape=(0), dtype=float)
+         # decay heat part, unit: kW/kg
+         self._decay_heat = np.zeros(shape=(0, 0), dtype=float)
+         self._decay_heat_max_contri_nuc = []
+-        self._decay_heat_max_contri_dh = np.zeros(shape=(0, 0), dtype=float)
++        self._decay_heat_max_contri_value = np.zeros(shape=(0, 0), dtype=float)
+         self._decay_heat_max_contri_ratio = np.zeros(shape=(0, 0), dtype=float)
+         self._total_decay_heat = np.zeros(0, dtype=float)
+         # contact dose part,
+         self._contact_dose = np.zeros(shape=(0, 0), dtype=float)
+         self._contact_dose_max_contri_nuc = []
+-        self._contact_dose_max_contri_cd = np.zeros(shape=(0, 0), dtype=float)
++        self._contact_dose_max_contri_value = np.zeros(shape=(0, 0), dtype=float)
+         self._contact_dose_max_contri_ratio = np.zeros(
+             shape=(0, 0), dtype=float)
+         self._total_contact_dose = []
+         # Clear Index part
+         self._ci = np.zeros(shape=(0, 0), dtype=float)
+         self._ci_max_contri_nuc = []
+-        self._ci_max_contri_ci = np.zeros(shape=(0, 0), dtype=float)
++        self._ci_max_contri_value = np.zeros(shape=(0, 0), dtype=float)
+         self._ci_max_contri_ratio = np.zeros(shape=(0, 0), dtype=float)
+         self._total_ci = np.zeros(0, dtype=float)
+         # irradiation damage part
+         self._dpa = None
+         self._He_production = None
+         self._H_production = None
++
+         # radwaste part
+         # CHN2018
++        #   CI chn2018
+         self._rw_chn2018_index_sum = None
+         self._radwaste_class_chn2018 = []
+         self._ci_chn2018 = np.zeros(shape=(0, 0), dtype=float)
+         self._ci_chn2018_max_contri_nuc = []
+-        self._ci_chn2018_max_contri_ci = np.zeros(shape=(0, 0), dtype=float)
++        self._ci_chn2018_max_contri_value = np.zeros(shape=(0, 0), dtype=float)
+         self._ci_chn2018_max_contri_ratio = np.zeros(shape=(0, 0), dtype=float)
+         self._total_ci_chn2018 = np.zeros(0, dtype=float)
++        #  vllw chn2018
++        self._vllw_chn2018 = np.zeros(shape=(0, 0), dtype=float)
++        self._vllw_chn2018_max_contri_nuc = []
++        self._vllw_chn2018_max_contri_value = np.zeros(
++            shape=(0, 0), dtype=float)
++        self._vllw_chn2018_max_contri_ratio = np.zeros(
++            shape=(0, 0), dtype=float)
++        self._total_vllw_chn2018 = np.zeros(0, dtype=float)
++        #  llw chn2018
+         self._llw_chn2018 = np.zeros(shape=(0, 0), dtype=float)
+         self._llw_chn2018_max_contri_nuc = []
+-        self._llw_chn2018_max_contri_llw = np.zeros(shape=(0, 0), dtype=float)
++        self._llw_chn2018_max_contri_value = np.zeros(shape=(0, 0), dtype=float)
+         self._llw_chn2018_max_contri_ratio = np.zeros(
+             shape=(0, 0), dtype=float)
+         self._total_llw_chn2018 = np.zeros(0, dtype=float)
++
+         # USNRC
+         self._rw_usnrc_index_sum_ll = None
+         self._rw_usnrc_index_sum_sl = None
+         self._radwaste_class_usnrc = []
+         self._ci_usnrc = np.zeros(shape=(0, 0), dtype=float)
+         self._total_ci_usnrc = np.zeros(0, dtype=float)
+         # USNRC_FETTER
+@@ -417,16 +429,16 @@
+         self._act = value.astype(float)
+ 
+     @property
+     def act_max_contri_nuc(self):
+         return self._act_max_contri_nuc
+ 
+     @property
+-    def act_max_contri_act(self):
+-        return self._act_max_contri_act
++    def act_max_contri_value(self):
++        return self._act_max_contri_value
+ 
+     @property
+     def act_max_contri_ratio(self):
+         return self._act_max_contri_ratio
+ 
+     @property
+     def total_act(self):
+@@ -471,16 +483,16 @@
+         self._decay_heat = value.astype(float)
+ 
+     @property
+     def decay_heat_max_contri_nuc(self):
+         return self._decay_heat_max_contri_nuc
+ 
+     @property
+-    def decay_heat_max_contri_dh(self):
+-        return self._decay_heat_max_contri_dh
++    def decay_heat_max_contri_value(self):
++        return self._decay_heat_max_contri_value
+ 
+     @property
+     def decay_heat_max_contri_ratio(self):
+         return self._decay_heat_max_contri_ratio
+ 
+     @property
+     def total_decay_heat(self):
+@@ -508,16 +520,16 @@
+         self._contact_dose = value.astype(float)
+ 
+     @property
+     def contact_dose_max_contri_nuc(self):
+         return self._contact_dose_max_contri_nuc
+ 
+     @property
+-    def contact_dose_max_contri_cd(self):
+-        return self._contact_dose_max_contri_cd
++    def contact_dose_max_contri_value(self):
++        return self._contact_dose_max_contri_value
+ 
+     @property
+     def contact_dose_max_contri_ratio(self):
+         return self._contact_dose_max_contri_ratio
+ 
+     @property
+     def total_contact_dose(self):
+@@ -541,16 +553,16 @@
+         self._ci = value.astype(float)
+ 
+     @property
+     def ci_max_contri_nuc(self):
+         return self._ci_max_contri_nuc
+ 
+     @property
+-    def ci_max_contri_ci(self):
+-        return self._ci_max_contri_ci
++    def ci_max_contri_value(self):
++        return self._ci_max_contri_value
+ 
+     @property
+     def ci_max_contri_ratio(self):
+         return self._ci_max_contri_ratio
+ 
+     @property
+     def total_ci(self):
+@@ -663,30 +675,67 @@
+         self._ci_chn2018 = value
+ 
+     @property
+     def ci_chn2018_max_contri_nuc(self):
+         return self._ci_chn2018_max_contri_nuc
+ 
+     @property
+-    def ci_chn2018_max_contri_ci(self):
+-        return self._ci_chn2018_max_contri_ci
++    def ci_chn2018_max_contri_value(self):
++        return self._ci_chn2018_max_contri_value
+ 
+     @property
+     def ci_chn2018_max_contri_ratio(self):
+         return self._ci_chn2018_max_contri_ratio
+ 
+     @property
+     def total_ci_chn2018(self):
+         return self._total_ci_chn2018
+ 
+     @property
+     def rw_usnrc_index_sum_ll(self):
+         return self._rw_usnrc_index_sum_ll
+ 
+     @property
++    def vllw_chn2018(self):
++        return self._vllw_chn2018
++
++    @vllw_chn2018.setter
++    def vllw_chn2018(self, value):
++        if not isinstance(value, type(np.ndarray((0, 0)))):
++            raise ValueError('vllw_chn2018 must be ndarray')
++        if len(value.shape) != 2:
++            raise ValueError('vllw_chn2018 must be a two-dimensional ndarray')
++        for i in range(value.shape[0]):
++            for j in range(value.shape[1]):
++                if not isinstance(value[i, j], float):
++                    raise ValueError('vllw_chn2018 must composed of float')
++        try:
++            if value.min() < 0.0:
++                raise ValueError('vllw_chn2018 must no smaller than 0.0')
++        except:
++            pass
++        self._vllw_chn2018 = value
++
++    @property
++    def vllw_chn2018_max_contri_nuc(self):
++        return self._vllw_chn2018_max_contri_nuc
++
++    @property
++    def vllw_chn2018_max_contri_value(self):
++        return self._vllw_chn2018_max_contri_value
++
++    @property
++    def vllw_chn2018_max_contri_ratio(self):
++        return self._vllw_chn2018_max_contri_ratio
++
++    @property
++    def total_vllw_chn2018(self):
++        return self._total_vllw_chn2018
++
++    @property
+     def llw_chn2018(self):
+         return self._llw_chn2018
+ 
+     @llw_chn2018.setter
+     def llw_chn2018(self, value):
+         if not isinstance(value, type(np.ndarray((0, 0)))):
+             raise ValueError('llw_chn2018 must be ndarray')
+@@ -704,16 +753,16 @@
+         self._llw_chn2018 = value
+ 
+     @property
+     def llw_chn2018_max_contri_nuc(self):
+         return self._llw_chn2018_max_contri_nuc
+ 
+     @property
+-    def llw_chn2018_max_contri_llw(self):
+-        return self._llw_chn2018_max_contri_llw
++    def llw_chn2018_max_contri_value(self):
++        return self._llw_chn2018_max_contri_value
+ 
+     @property
+     def llw_chn2018_max_contri_ratio(self):
+         return self._llw_chn2018_max_contri_ratio
+ 
+     @property
+     def total_llw_chn2018(self):
+@@ -831,102 +880,117 @@
+             self.act[intv, nidx] = self.act[intv, nidx] * level
+             self.decay_heat[intv, nidx] = self.decay_heat[intv, nidx] * level
+             self.contact_dose[intv,
+                               nidx] = self.contact_dose[intv, nidx] * level
+             self.ci[intv, nidx] = self.ci[intv, nidx] * level
+ 
+     def analysis_act(self):
+-        """get the act_max_contri_nuc, act_max_contri_act and
++        """get the act_max_contri_nuc, act_max_contri_value and
+         act_max_contri_ratio"""
+         # input check for nuclides, a
+         if self._act.size == 0:
+             raise ValueError('act not set before using')
+         self._total_act = self.act.sum(axis=1)  # calculate the a_total
+         # get the max nuclide
+         indexes = get_max_contri_indexes(self.act)
+         for idx in indexes:
+             self._act_max_contri_nuc.append(self.nuclides[idx])
+-        self._act_max_contri_act = self.act[:, indexes]
++        self._act_max_contri_value = self.act[:, indexes]
+         # cal the act_max_contri_ratio
+         self._act_max_contri_ratio = contri_to_ratio(
+-            self.act_max_contri_act, self.total_act)
++            self.act_max_contri_value, self.total_act)
+ 
+     def analysis_decay_heat(self):
+         # input check for nuclides,
+         if self._decay_heat.size == 0:
+             raise ValueError('decay_heat not set before using')
+         # calculate the a_total
+         self._total_decay_heat = self.decay_heat.sum(axis=1)
+         # get the max nuclides
+         indexes = get_max_contri_indexes(self.decay_heat)
+         for idx in indexes:
+             self._decay_heat_max_contri_nuc.append(self.nuclides[idx])
+-        self._decay_heat_max_contri_dh = self.decay_heat[:, indexes]
++        self._decay_heat_max_contri_value = self.decay_heat[:, indexes]
+         # cal the act_max_contri_ratio
+         self._decay_heat_max_contri_ratio = contri_to_ratio(
+-            self.decay_heat_max_contri_dh, self.total_decay_heat)
++            self.decay_heat_max_contri_value, self.total_decay_heat)
+ 
+     def analysis_contact_dose(self):
+         # input check for nuclides
+         if self._contact_dose.size == 0:
+             raise ValueError('contact_dose not set before using')
+         # calculate the a_total
+         self._total_contact_dose = self._contact_dose.sum(axis=1)
+         # get the max nuclides
+         indexes = get_max_contri_indexes(self.contact_dose)
+         for idx in indexes:
+             self._contact_dose_max_contri_nuc.append(self.nuclides[idx])
+-        self._contact_dose_max_contri_cd = self.contact_dose[:, indexes]
++        self._contact_dose_max_contri_value = self.contact_dose[:, indexes]
+         # cal the act_max_contri_ratio
+         self._contact_dose_max_contri_ratio = contri_to_ratio(
+-            self.contact_dose_max_contri_cd, self.total_contact_dose)
++            self.contact_dose_max_contri_value, self.total_contact_dose)
+ 
+     def analysis_ci(self):
+         # input check for nuclides, a
+         if self._ci.size == 0:
+             raise ValueError('ci not set before using')
+         self._total_ci = self.ci.sum(axis=1)  # calculate the a_total
+         # get the max nuclides
+         indexes = get_max_contri_indexes(self.ci)
+         for idx in indexes:
+             self._ci_max_contri_nuc.append(self.nuclides[idx])
+-        self._ci_max_contri_ci = self.ci[:, indexes]
++        self._ci_max_contri_value = self.ci[:, indexes]
+         # cal the ci_max_contri_ratio
+         self._ci_max_contri_ratio = contri_to_ratio(
+-            self.ci_max_contri_ci, self._total_ci)
++            self.ci_max_contri_value, self._total_ci)
+ 
+     def analysis_ci_chn2018(self):
+         # input check for nuclides, a
+         if self._ci_chn2018.size == 0:
+             raise ValueError('ci_chn2018 not set before using')
+         self._total_ci_chn2018 = self.ci_chn2018.sum(
+             axis=1)  # calculate the a_total
+         # get the max nuclides
+         indexes = get_max_contri_indexes(self.ci_chn2018)
+         for idx in indexes:
+             self._ci_chn2018_max_contri_nuc.append(self.nuclides[idx])
+-        self._ci_chn2018_max_contri_ci = self.ci_chn2018[:, indexes]
++        self._ci_chn2018_max_contri_value = self.ci_chn2018[:, indexes]
+         # cal the ci_max_contri_ratio
+         self._ci_chn2018_max_contri_ratio = contri_to_ratio(
+-            self.ci_chn2018_max_contri_ci, self._total_ci_chn2018)
++            self.ci_chn2018_max_contri_value, self._total_ci_chn2018)
++
++    def analysis_vllw_chn2018(self):
++        # input check for nuclides, a
++        if self._vllw_chn2018.size == 0:
++            raise ValueError('vllw_chn2018 not set before using')
++        self._total_vllw_chn2018 = self.vllw_chn2018.sum(
++            axis=1)  # calculate the a_total
++        # get the max nuclides
++        indexes = get_max_contri_indexes(self.vllw_chn2018)
++        for idx in indexes:
++            self._vllw_chn2018_max_contri_nuc.append(self.nuclides[idx])
++        self._vllw_chn2018_max_contri_value = self.vllw_chn2018[:, indexes]
++        # cal the vllw_max_contri_ratio
++        self._vllw_chn2018_max_contri_ratio = contri_to_ratio(
++            self.vllw_chn2018_max_contri_value, self._total_vllw_chn2018)
+ 
+     def analysis_llw_chn2018(self):
+         # input check for nuclides, a
+         if self._llw_chn2018.size == 0:
+             raise ValueError('llw_chn2018 not set before using')
+         self._total_llw_chn2018 = self.llw_chn2018.sum(
+             axis=1)  # calculate the a_total
+         # get the max nuclides
+         indexes = get_max_contri_indexes(self.llw_chn2018)
+         for idx in indexes:
+             self._llw_chn2018_max_contri_nuc.append(self.nuclides[idx])
+-        self._llw_chn2018_max_contri_llw = self.llw_chn2018[:, indexes]
++        self._llw_chn2018_max_contri_value = self.llw_chn2018[:, indexes]
+         # cal the llw_max_contri_ratio
+         self._llw_chn2018_max_contri_ratio = contri_to_ratio(
+-            self.llw_chn2018_max_contri_llw, self._total_llw_chn2018)
++            self.llw_chn2018_max_contri_value, self._total_llw_chn2018)
+ 
+     def analysis_radwaste(self, rws=None):
+         """
+         Analysis the radwaste classification.
+ 
+         Parameters:
+         -----------
+@@ -969,14 +1033,16 @@
+             for intv in range(len(self.act)):
+                 # calculate the index for each class
+                 rw_index[intv, nid, :] = np.divide(self.act[intv, nid], limits)
+ 
+         # assign the ci_chn2018
+         self.ci_chn2018 = rw_index[:, :, 0]
+         self.analysis_ci_chn2018()
++        self.vllw_chn2018 = rw_index[:, :, 2]
++        self.analysis_vllw_chn2018()
+         self.llw_chn2018 = rw_index[:, :, 2]
+         self.analysis_llw_chn2018()
+ 
+         # sum up the index for each nuclide, shape=(INTV, class)
+         rw_index_sum = np.sum(rw_index, axis=1)
+ 
+         # get the radwaste classification according to the indices for each class
+```
+
+## natf/part.py
+
+```diff
+@@ -296,15 +296,15 @@
+         # input item check
+         if item == 'basicinfo':
+             title_line = utils.data_to_line_1d(
+                 key=self._id, value='basic_information')
+         if item == 'nuc':
+             title_line = utils.data_to_line_1d(
+                 key='Nuclide', value=['Half_life(s)', 'Half_life'])
+-        if item in ['acts', 'act', 'dhv', 'dh', 'cd', 'ci', 'ci_chn2018', 'llw_chn2018']:
++        if item in ['acts', 'act', 'dhv', 'dh', 'cd', 'ci', 'ci_chn2018', 'vllw_chn2018', 'llw_chn2018']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=self._equal_cell.nuclides)
+         if item in ['act_st_t']:
+             value = ['total_specific_act(Bq/kg)', 'total_activity(Bq)']
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=value)
+         if item in ['acts_max_ratio']:
+@@ -335,32 +335,41 @@
+                 key='Cooling_time(s)', value=self._equal_cell.contact_dose_max_contri_nuc)
+         if item in ['cit']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=['total_ci'])
+         if item == 'cit_chn2018':
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_times(s)', value=['total_ci_chn2018'])
++        if item == 'vllwt_chn2018':
++            title_line = utils.data_to_line_1d(
++                key='Cooling_times(s)', value=['total_vllw_chn2018'])
+         if item == 'llwt_chn2018':
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_times(s)', value=['total_llw_chn2018'])
+         if item in ['ci_max']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=['Total'] + self._equal_cell.ci_max_contri_nuc)
+         if item in ['ci_chn2018_max']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=['Total'] + self._equal_cell.ci_chn2018_max_contri_nuc)
++        if item in ['vllw_chn2018_max']:
++            title_line = utils.data_to_line_1d(
++                key='Cooling_time(s)', value=['Total'] + self._equal_cell.vllw_chn2018_max_contri_nuc)
+         if item in ['llw_chn2018_max']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=['Total'] + self._equal_cell.llw_chn2018_max_contri_nuc)
+         if item in ['ci_max_ratio']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=self._equal_cell.ci_max_contri_nuc)
+         if item in ['ci_chn2018_max_ratio']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=self._equal_cell.ci_chn2018_max_contri_nuc)
++        if item in ['vllw_chn2018_max_ratio']:
++            title_line = utils.data_to_line_1d(
++                key='Cooling_time(s)', value=self._equal_cell.vllw_chn2018_max_contri_nuc)
+         if item in ['llw_chn2018_max_ratio']:
+             title_line = utils.data_to_line_1d(
+                 key='Cooling_time(s)', value=self._equal_cell.llw_chn2018_max_contri_nuc)
+         if item in ['gamma_emit_rate']:
+             title_line = utils.data_to_line_1d(key='Energy upper boundary (MeV)', value=[
+                                                'Gamma emit rate (g/cc/s)'])
+         if title_line is None:  # check
+@@ -482,15 +491,15 @@
+         value = value.transpose().copy()
+         self.output_item(item, key=key, value=value)
+ 
+     def output_acts_max(self, cooling_times_cul):
+         item = 'acts_max'
+         key = cooling_times_cul
+         value = np.concatenate((np.array([self._equal_cell.total_act]).transpose(),
+-                                self._equal_cell.act_max_contri_act), axis=1)
++                                self._equal_cell.act_max_contri_value), axis=1)
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_acts_max_ratio(self, cooling_times_cul):
+         item = 'acts_max_ratio'
+         key = cooling_times_cul
+         value = self._equal_cell.act_max_contri_ratio
+         self.output_item(item=item, key=key, value=value)
+@@ -517,15 +526,15 @@
+         value = value.transpose().copy()
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_dhv_max(self, cooling_times_cul, factor):
+         item = 'dhv_max'
+         key = cooling_times_cul
+         value = np.concatenate((np.array([self._equal_cell.total_decay_heat]).transpose(),
+-                                self._equal_cell.decay_heat_max_contri_dh), axis=1)
++                                self._equal_cell.decay_heat_max_contri_value), axis=1)
+         value = np.multiply(value, factor)
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_dhv_max_ratio(self, cooling_times_cul):
+         item = 'dhv_max_ratio'
+         key = cooling_times_cul
+         value = self._equal_cell.decay_heat_max_contri_ratio
+@@ -543,15 +552,15 @@
+         value = self._equal_cell.contact_dose
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_cd_max(self, cooling_times_cul):
+         item = 'cd_max'
+         key = cooling_times_cul
+         value = np.concatenate((np.array([self._equal_cell.total_contact_dose]).transpose(),
+-                                self._equal_cell.contact_dose_max_contri_cd), axis=1)
++                                self._equal_cell.contact_dose_max_contri_value), axis=1)
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_cd_max_ratio(self, cooling_times_cul):
+         item = 'cd_max_ratio'
+         key = cooling_times_cul
+         value = self._equal_cell.contact_dose_max_contri_ratio
+         self.output_item(item=item, key=key, value=value)
+@@ -569,15 +578,15 @@
+         value = value.transpose().copy()
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_ci_max(self, cooling_times_cul):
+         item = 'ci_max'
+         key = cooling_times_cul
+         value = np.concatenate((np.array([self._equal_cell.total_ci]).transpose(),
+-                                self._equal_cell.ci_max_contri_ci), axis=1)
++                                self._equal_cell.ci_max_contri_value), axis=1)
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_ci_max_ratio(self, cooling_times_cul):
+         item = 'ci_max_ratio'
+         key = cooling_times_cul
+         value = self._equal_cell.ci_max_contri_ratio
+         self.output_item(item=item, key=key, value=value)
+@@ -595,23 +604,49 @@
+         value = value.transpose().copy()
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_ci_chn2018_max(self, cooling_times_cul):
+         item = 'ci_chn2018_max'
+         key = cooling_times_cul
+         value = np.concatenate((np.array([self._equal_cell.total_ci_chn2018]).transpose(),
+-                                self._equal_cell.ci_chn2018_max_contri_ci), axis=1)
++                                self._equal_cell.ci_chn2018_max_contri_value), axis=1)
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_ci_chn2018_max_ratio(self, cooling_times_cul):
+         item = 'ci_chn2018_max_ratio'
+         key = cooling_times_cul
+         value = self._equal_cell.ci_chn2018_max_contri_ratio
+         self.output_item(item=item, key=key, value=value)
+ 
++    def output_vllw_chn2018(self, cooling_times_cul):
++        item = 'vllw_chn2018'
++        key = cooling_times_cul
++        value = self._equal_cell.vllw_chn2018
++        self.output_item(item=item, key=key, value=value)
++
++    def output_vllwt_chn2018(self, cooling_times_cul):
++        item = 'vllwt_chn2018'
++        key = cooling_times_cul
++        value = np.array([self._equal_cell.total_vllw_chn2018])
++        value = value.transpose().copy()
++        self.output_item(item=item, key=key, value=value)
++
++    def output_vllw_chn2018_max(self, cooling_times_cul):
++        item = 'vllw_chn2018_max'
++        key = cooling_times_cul
++        value = np.concatenate((np.array([self._equal_cell.total_vllw_chn2018]).transpose(),
++                                self._equal_cell.vllw_chn2018_max_contri_value), axis=1)
++        self.output_item(item=item, key=key, value=value)
++
++    def output_vllw_chn2018_max_ratio(self, cooling_times_cul):
++        item = 'vllw_chn2018_max_ratio'
++        key = cooling_times_cul
++        value = self._equal_cell.vllw_chn2018_max_contri_ratio
++        self.output_item(item=item, key=key, value=value)
++
+     def output_llw_chn2018(self, cooling_times_cul):
+         item = 'llw_chn2018'
+         key = cooling_times_cul
+         value = self._equal_cell.llw_chn2018
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_llwt_chn2018(self, cooling_times_cul):
+@@ -621,15 +656,15 @@
+         value = value.transpose().copy()
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_llw_chn2018_max(self, cooling_times_cul):
+         item = 'llw_chn2018_max'
+         key = cooling_times_cul
+         value = np.concatenate((np.array([self._equal_cell.total_llw_chn2018]).transpose(),
+-                                self._equal_cell.llw_chn2018_max_contri_llw), axis=1)
++                                self._equal_cell.llw_chn2018_max_contri_value), axis=1)
+         self.output_item(item=item, key=key, value=value)
+ 
+     def output_llw_chn2018_max_ratio(self, cooling_times_cul):
+         item = 'llw_chn2018_max_ratio'
+         key = cooling_times_cul
+         value = self._equal_cell.llw_chn2018_max_contri_ratio
+         self.output_item(item=item, key=key, value=value)
+@@ -644,31 +679,34 @@
+                     rwss=[]):
+         """
+         Output data: output corresponding information according to the aim and model_degree
+         case 1: aim = CELL_ACT_POST
+             - output basic info. :vol, mass, density
+             - nuclides info. : nuclides, half_lives
+             - act info. :nuclide, act
+-            - act_max_contri_nuc & act_max_contri_act
++            - act_max_contri_nuc & act_max_contri_value
+             - act_max_contri_nuc & act_max_contri_ratio
+             - nuclide & decay_heat
+-            - decay_heat_max_contri_nuc & decay_heat_max_contri_dh
++            - decay_heat_max_contri_nuc & decay_heat_max_contri_value
+             - decay_heat_max_contri_nuc & decay_heat_max_contri_ratio
+             - total_decay_heat
+             - nuclide & contact_dose
+-            - contact_dose_max_contri_nuc & contact_dose_max_contri_cd
++            - contact_dose_max_contri_nuc & contact_dose_max_contri_value
+             - contact_dose_max_contri_nuc & contact_dose_max_contri_ratio
+             - nuclide & ci
+-            - ci_max_contri_nuc & ci_max_contri_ci
++            - ci_max_contri_nuc & ci_max_contri_value
+             - ci_max_contri_nuc & ci_max_contri_ratio
+             - nuclide & ci_chn2018
+-            - ci_chn2018_max_contri_nuc & ci_chn2018_max_contri_ci
++            - ci_chn2018_max_contri_nuc & ci_chn2018_max_contri_value
+             - ci_chn2018_max_contri_nuc & ci_chn2018_max_contri_ratio
++            - nuclide & vllw_chn2018
++            - vllw_chn2018_max_contri_nuc & vllw_chn2018_max_contri_value
++            - vllw_chn2018_max_contri_nuc & vllw_chn2018_max_contri_ratio
+             - nuclide & llw_chn2018
+-            - llw_chn2018_max_contri_nuc & llw_chn2018_max_contri_llw
++            - llw_chn2018_max_contri_nuc & llw_chn2018_max_contri_value
+             - llw_chn2018_max_contri_nuc & llw_chn2018_max_contri_ratio
+             - radwaste classification, optional if rws is not None
+         case 2: aim = CELL_DPA_POST.
+             - output basic info. : vol, mass, density
+             - dpa,
+             - He_production
+             - H_production
+@@ -692,15 +730,15 @@
+             # -------------------activity part--------------------------------
+             # output specific activity info. unit Bq/kg
+             self.output_acts(cooling_times_cul)
+             # output activity info. unit Bq
+             self.output_act(model_degree, cooling_times_cul)
+             # total_specific activity and total activity
+             self.output_act_st_t(model_degree, cooling_times_cul)
+-            # output act_max_contri_nuc & act_max_contri_act, unit Bq/kg
++            # output act_max_contri_nuc & act_max_contri_value, unit Bq/kg
+             self.output_acts_max(cooling_times_cul)
+             # output act_max_contri_nuc & act_max_contri_ratio, unit 1
+             self.output_acts_max_ratio(cooling_times_cul)
+ 
+             # --------------------decay_heat----------------------------------
+             # output decay_heat info., unit kW/m3, origin kW/kg
+             # unit change factor from kW/kg -> kW/m3
+@@ -712,15 +750,15 @@
+             # decay heat kW/m3
+             self.output_dhv(cooling_times_cul, factor)
+             # output decay_heat of 360 degree model info. unit kW
+             self.output_dh(cooling_times_cul, factor*self._equal_cell.vol/1e6)
+             # total decay_heat
+             self.output_dh_vt_t(cooling_times_cul, factor,
+                                 factor*self._equal_cell.vol/1e6)
+-            # output decay_heat_max_contri_nuc & decay_heat_max_contri_dh,
++            # output decay_heat_max_contri_nuc & decay_heat_max_contri_value,
+             # unit : kW/m3
+             self.output_dhv_max(cooling_times_cul, factor)
+             # output decay_heat_max_contri_nuc & decay_heat_max_contri_ratio,
+             # unit 1
+             self.output_dhv_max_ratio(cooling_times_cul)
+ 
+             # ---------------------contact_dose-------------------------------
+@@ -744,14 +782,18 @@
+             # ------------------------ci_chn2018------------------------------
+             for rws in rwss:
+                 if rws.standard == 'CHN2018':
+                     self.output_ci_chn2018(cooling_times_cul)
+                     self.output_cit_chn2018(cooling_times_cul)
+                     self.output_ci_chn2018_max(cooling_times_cul)
+                     self.output_ci_chn2018_max_ratio(cooling_times_cul)
++                    self.output_vllw_chn2018(cooling_times_cul)
++                    self.output_vllwt_chn2018(cooling_times_cul)
++                    self.output_vllw_chn2018_max(cooling_times_cul)
++                    self.output_vllw_chn2018_max_ratio(cooling_times_cul)
+                     self.output_llw_chn2018(cooling_times_cul)
+                     self.output_llwt_chn2018(cooling_times_cul)
+                     self.output_llw_chn2018_max(cooling_times_cul)
+                     self.output_llw_chn2018_max_ratio(cooling_times_cul)
+ 
+             # --------------------Radwaste part-------------------------------
+             #  radwaste classification chn2018
+```
+
+## natf/version
+
+```diff
+@@ -1 +1 @@
+-2.3.7
++2.3.8
+```
+
+## Comparing `natf-2.3.7.dist-info/METADATA` & `natf-2.3.8.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: natf
+-Version: 2.3.7
++Version: 2.3.8
+ Summary: Nuclear Analysis toolkit for Fusion with coupling of MCNP and FISPACT
+ Home-page: https://github.com/zxkjack123/NATF
+ Author: Xiaokang Zhang
+ Author-email: zxkjack123@163.com
+ License: MIT
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+## Comparing `natf-2.3.7.dist-info/RECORD` & `natf-2.3.8.dist-info/RECORD`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,26 +1,26 @@
+ natf/__init__.py,sha256=nhCcGk_X8j-7kyhm-iin0xQwOEikqM6o5DtXi39XIrU,337
+-natf/cell.py,sha256=p0SP3RVPwwYgMC9bb4wAcO4KY0_GHHBT1RdVD2YhIqw,49153
++natf/cell.py,sha256=5U4BjxNjfH3Yiz3Xy2PLEMPrKgppiwgXkbWU8fu4pz8,51677
+ natf/fispact_input.py,sha256=UzBSsYeJ0qym0yGEqcjAfnz5l_OWUMkqVtBJfX1tji0,17020
+ natf/fispact_output.py,sha256=vAI7_ivWpQqnP8TI9W2uhbthfu0iu34hLyjMTzFcHT0,19980
+ natf/half_space.py,sha256=evPUEy9At9MeUDJ_c29mZ46YhhUomTOn1O0P4Ex9twg,957
+ natf/material.py,sha256=oUEvDkflVi02Krfqkg91m_ERAAJzSS1dTjFSLVxsxnY,20214
+ natf/mcnp_input.py,sha256=xUrURG3Gs4pM3luaNwM2i_aUBFlqPCKBqym6lIS3C8A,35222
+ natf/mcnp_output.py,sha256=3qpvWdfQDK-e9XJFMIVawEWrhSfiI1ebSbnvKMfLG08,38052
+ natf/mesh.py,sha256=stwsrxKBpl9kDhXebg_nrRjRPiBAWl0lJ-nLw7Q6a0U,13879
+ natf/natf_functions.py,sha256=NYmtviDLAVj5VZJRFb50TpfdwJzkN0CwFK4ZO4RawR8,75504
+ natf/nuc_treat.py,sha256=JAdkf25SltNbgXCu9VD3LOt2UxXmSkI0l9mW19ZscYc,11802
+-natf/part.py,sha256=R4ZBhKQ4M4DuJvsgFeu5hbLumKwbnffX03_fv5lUTco,54870
++natf/part.py,sha256=8BazsKZPxCv6wkMpdU_zgkW66CRq7aiAn1N24uGUeRY,57037
+ natf/plot.py,sha256=iw3Jcr68tFjfh8GCBQhHYDGtYfAAiMazzL8DTBPurt8,29321
+ natf/radwaste_standard.py,sha256=5OxT_0u6fNqCsg9lVYXSdqzgLvNyUkUH6tzI247VR6c,20178
+ natf/settings.py,sha256=pBHHqX3C0ZhCBe101nuFcR1blZIEHWif-gSVGOXzPSg,29681
+ natf/source_particle.py,sha256=3S57zfjwnlr9oBfjSIhmaKKw3HR6nKPQrjLLYtHHioQ,3041
+ natf/surface.py,sha256=gTFgDcrf2dDZ15yYRunLy7AAqxz-JLMFISoX-B5Gwhg,3270
+ natf/utils.py,sha256=7mcrz_xwrHvCmsz1CmNygv-AzfSj3TD2rD_90dz03I4,28972
+-natf/version,sha256=D9fRgzhEJT2H3QFCGPXwyM9vii657Zyeqw1euwYeRgc,6
++natf/version,sha256=s32qarl3yoPMofnluJ-K3w_IkSinSnCTVfd58AY4RvI,6
+ natf/data/README.md,sha256=ZS-JzydjtRo7W-Zzl0i5IOHIT9YlQN1YyYjCJCw0il4,302
+ natf/data/appendix16,sha256=OyL81Xz3OyJq4AUQ9eMSc28ST3gHmr01-_2ZdtHBZgY,3876
+ natf/data/fendl31c_nucs,sha256=7rUa-o8vPB2579omxnQBSZM0vtQMaR7tyg7QJ6pAyrM,17645
+ natf/data/tendl19c_nucs,sha256=j1atgNUsisxx4QGuxiQ3Y8eBEvF3WDf73X6FCGhIU9w,47924
+ natf/data/energy_groups/ccfe-709.txt,sha256=mERdA4-lOknhdY915xs4ciIQ2yO9kzD7hAUsomJT7pw,7711
+ natf/data/energy_groups/photon-24.txt,sha256=1oSDuuoDYuvjkKDSgVKKBK-HpCL3_2vyVWJebeagn5M,115
+ natf/data/energy_groups/tripoli-315.txt,sha256=gyLKBQKcwcEaYThhbzwU1zlqsyGodvB8MXsGicRVFQs,3476
+@@ -32,12 +32,12 @@
+ natf/radwaste_standards/CHN2018/CHN2018.csv,sha256=cXrisWIt2glp2j-ut30T3MvWsi1Sbg-BbcCoXJjr8p8,11135
+ natf/radwaste_standards/RUSSIAN/RUSSIAN.csv,sha256=w3nV__lcJ-z75A4_mZtrYaHcHo_MBRqVXzE1bWv32EQ,116
+ natf/radwaste_standards/USNRC/README.md,sha256=M-Tb9UTBcVTDnUsndNVed6_xHuwKRwUjxu0sVPrCwQo,1782
+ natf/radwaste_standards/USNRC/USNRC_EDE_MASS.csv,sha256=0e1PseSrfF79VkENBB3tLsKi8IpUBeXrZuY-DTz7W9Y,3631
+ natf/radwaste_standards/USNRC/USNRC_LL.csv,sha256=a4KZM5ZwLzNmk4-beWMGVWV6Kj2lIebsrsxMumvQVfs,176
+ natf/radwaste_standards/USNRC/USNRC_SL.csv,sha256=2g2VdEh_--d1trsJeHCmb8E_kvX5PWoIFzmfaOKLep4,116
+ natf/radwaste_standards/USNRC_FETTER/USNRC_FETTER.csv,sha256=0egMEbmRLQRqgCd013kt4UalA2eXaHh7HzVwF3nogBM,3653
+-natf-2.3.7.dist-info/METADATA,sha256=knkSyOKD2eBzmaZjuoY4WjRlaEFhWjT-48OZjCtBdW0,580
+-natf-2.3.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-natf-2.3.7.dist-info/entry_points.txt,sha256=y1ul31btwHTZRv2E1TaPf48kUoqvU_WnkLked8ZQQSc,286
+-natf-2.3.7.dist-info/top_level.txt,sha256=hhs1ZblPkBdu9qUCmnBq-JDgc7jRyUALFih9LQAwmeA,5
+-natf-2.3.7.dist-info/RECORD,,
++natf-2.3.8.dist-info/METADATA,sha256=jJwP2QLlEjyD_l-_FArmTd1b8ZH2ANbxCeWIhpb9B-A,580
++natf-2.3.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++natf-2.3.8.dist-info/entry_points.txt,sha256=y1ul31btwHTZRv2E1TaPf48kUoqvU_WnkLked8ZQQSc,286
++natf-2.3.8.dist-info/top_level.txt,sha256=hhs1ZblPkBdu9qUCmnBq-JDgc7jRyUALFih9LQAwmeA,5
++natf-2.3.8.dist-info/RECORD,,
+```
+

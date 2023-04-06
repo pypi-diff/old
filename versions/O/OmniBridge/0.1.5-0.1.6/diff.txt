@@ -1,0 +1,126 @@
+--- tmp/OmniBridge-0.1.5.tar.gz
++++ tmp/OmniBridge-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "OmniBridge-0.1.5.tar", last modified: Thu Apr  6 15:31:58 2023, max compression
+│ +gzip compressed data, was "OmniBridge-0.1.6.tar", last modified: Thu Apr  6 15:36:45 2023, max compression
+│   --- OmniBridge-0.1.5.tar
+├── +++ OmniBridge-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,16 +1,17 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:31:58.887557 OmniBridge-0.1.5/
+│ │ --rw-rw-rw-   0        0        0    11558 2023-04-06 06:04:35.000000 OmniBridge-0.1.5/LICENSE
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:31:58.883940 OmniBridge-0.1.5/OmniBridge.egg-info/
+│ │ --rw-rw-rw-   0        0        0      951 2023-04-06 15:31:58.000000 OmniBridge-0.1.5/OmniBridge.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      238 2023-04-06 15:31:58.000000 OmniBridge-0.1.5/OmniBridge.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 15:31:58.000000 OmniBridge-0.1.5/OmniBridge.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       23 2023-04-06 15:31:58.000000 OmniBridge-0.1.5/OmniBridge.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        4 2023-04-06 15:31:58.000000 OmniBridge-0.1.5/OmniBridge.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      951 2023-04-06 15:31:58.886553 OmniBridge-0.1.5/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      659 2023-04-06 05:36:51.000000 OmniBridge-0.1.5/README.md
+│ │ --rw-rw-rw-   0        0        0     1151 2023-04-05 09:41:50.000000 OmniBridge-0.1.5/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 15:31:58.887557 OmniBridge-0.1.5/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      930 2023-04-06 15:31:31.000000 OmniBridge-0.1.5/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:31:58.886049 OmniBridge-0.1.5/src/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-06 08:39:45.000000 OmniBridge-0.1.5/src/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1598 2023-04-06 08:26:29.000000 OmniBridge-0.1.5/src/main.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 15:36:45.025893 OmniBridge-0.1.6/
+│ │ +-rw-rw-rw-   0        0        0    11558 2023-04-06 06:04:35.000000 OmniBridge-0.1.6/LICENSE
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 15:36:45.020892 OmniBridge-0.1.6/OmniBridge.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      951 2023-04-06 15:36:44.000000 OmniBridge-0.1.6/OmniBridge.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      253 2023-04-06 15:36:44.000000 OmniBridge-0.1.6/OmniBridge.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 15:36:44.000000 OmniBridge-0.1.6/OmniBridge.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       23 2023-04-06 15:36:44.000000 OmniBridge-0.1.6/OmniBridge.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        4 2023-04-06 15:36:44.000000 OmniBridge-0.1.6/OmniBridge.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      951 2023-04-06 15:36:45.025893 OmniBridge-0.1.6/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      659 2023-04-06 05:36:51.000000 OmniBridge-0.1.6/README.md
+│ │ +-rw-rw-rw-   0        0        0     1151 2023-04-05 09:41:50.000000 OmniBridge-0.1.6/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 15:36:45.026892 OmniBridge-0.1.6/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      903 2023-04-06 15:36:27.000000 OmniBridge-0.1.6/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 15:36:45.024892 OmniBridge-0.1.6/src/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-06 08:39:45.000000 OmniBridge-0.1.6/src/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1598 2023-04-06 08:26:29.000000 OmniBridge-0.1.6/src/main.py
+│ │ +-rw-rw-rw-   0        0        0       17 2023-04-06 15:25:16.000000 OmniBridge-0.1.6/src/version.py
+│ │   --- OmniBridge-0.1.5/LICENSE
+│ ├── +++ OmniBridge-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- OmniBridge-0.1.5/OmniBridge.egg-info/PKG-INFO
+│ ├── +++ OmniBridge-0.1.6/OmniBridge.egg-info/PKG-INFO
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: OmniBridge
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: Bridging AI models
+│ │  Home-page: https://github.com/tmpOrgName/OmniBridge
+│ │  Author: OmniSpective
+│ │  Author-email: eliran9692@gmail.com
+│ │  License: Apache License 2.0
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │   --- OmniBridge-0.1.5/PKG-INFO
+│ ├── +++ OmniBridge-0.1.6/PKG-INFO
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: OmniBridge
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: Bridging AI models
+│ │  Home-page: https://github.com/tmpOrgName/OmniBridge
+│ │  Author: OmniSpective
+│ │  Author-email: eliran9692@gmail.com
+│ │  License: Apache License 2.0
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │   --- OmniBridge-0.1.5/README.md
+│ ├── +++ OmniBridge-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- OmniBridge-0.1.5/pyproject.toml
+│ ├── +++ OmniBridge-0.1.6/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- OmniBridge-0.1.5/setup.py
+│ ├── +++ OmniBridge-0.1.6/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,28 +1,28 @@
+│ │  from setuptools import setup
+│ │ -# from importlib import util
+│ │ +from importlib import util
+│ │  from os import path
+│ │ -# import os
+│ │ +import os
+│ │  
+│ │  this_directory = path.abspath(path.dirname(__file__))
+│ │  with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
+│ │      long_description = f.read()
+│ │  
+│ │ -# spec = util.spec_from_file_location(
+│ │ -#     "src.cli.version", os.path.join("src", "cli", "version.py")
+│ │ -# )
+│ │ -# mod = util.module_from_spec(spec)
+│ │ -# spec.loader.exec_module(mod)
+│ │ -# version = mod.version
+│ │ +spec = util.spec_from_file_location(
+│ │ +    "src.version", os.path.join("src", "version.py")
+│ │ +)
+│ │ +mod = util.module_from_spec(spec)
+│ │ +spec.loader.exec_module(mod)
+│ │ +version = mod.version
+│ │  
+│ │  
+│ │  setup(
+│ │      name='OmniBridge',
+│ │      license="Apache License 2.0",
+│ │ -    version="0.1.5",
+│ │ +    version="0.1.6",
+│ │      author='OmniSpective',
+│ │      author_email='eliran9692@gmail.com',
+│ │      description='Bridging AI models',
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url='https://github.com/tmpOrgName/OmniBridge',
+│ │      packages=['src'],
+│ │   --- OmniBridge-0.1.5/src/main.py
+│ ├── +++ OmniBridge-0.1.6/src/main.py
+│ │┄ Files identical despite different names

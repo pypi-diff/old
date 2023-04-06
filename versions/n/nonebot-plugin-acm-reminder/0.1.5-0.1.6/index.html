@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/nonebot-plugin-acm-reminder-0.1.5.tar.gz tmp/nonebot-plugin-acm-reminder-0.1.6.tar.gz --html versions/n/nonebot-plugin-acm-reminder/0.1.5-0.1.6/index.html --text versions/n/nonebot-plugin-acm-reminder/0.1.5-0.1.6/diff.txt --markdown versions/n/nonebot-plugin-acm-reminder/0.1.5-0.1.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.86 KB</span></div>
+  <div><span class="source">tmp/nonebot-plugin-acm-reminder-0.1.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/nonebot-plugin-acm-reminder-0.1.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">304 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nonebot-plugin-acm-reminder-0.1.<del>5</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><del>14</del><span class="dp">·</span>1<del>3</del>:3<del>7</del>:<del>0</del>4<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nonebot-plugin-acm-reminder-0.1.<ins>6</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><ins><span class="dp">·</span>6</ins><span class="dp">·</span>1<ins>5</ins>:3<ins>4</ins>:<ins>1</ins>4<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">9.48 KB</span></div>
+    <div><span class="source">nonebot-plugin-acm-reminder-0.1.5.tar</span> vs.</div>
+    <div id="nonebot-plugin-acm-reminder--.-.-.tar"><span class="source">nonebot-plugin-acm-reminder-0.1.6.tar</span>
+      <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.77 KB</span></div>
+      <div id="nonebot-plugin-acm-reminder--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1088<span class="dp">·</span>2023-01-15<span class="dp">·</span>11:05:12.918513<span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1088<span class="dp">·</span>2023-01-15<span class="dp">·</span>11:05:12.918513<span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>28</del>2<del>6</del><span class="dp">·</span>2023-0<del>3</del>-<del>14</del><span class="dp">·</span>1<del>3</del>:3<del>5</del>:<del>07</del>.<del>193928</del><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/nonebot_plugin_acm_reminder/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>30</ins>2<ins>8</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>5</ins>:3<ins>3</ins>:<ins>46</ins>.<ins>324195</ins><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/nonebot_plugin_acm_reminder/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>17</del>8<span class="dp">·</span>2023-0<del>3</del>-<del>14</del><span class="dp">·</span>1<del>3</del>:33:<del>05</del>.2<del>056</del>5<del>1</del><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/nonebot_plugin_acm_reminder/config.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>22</ins>8<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>5</ins>:33:<ins>46</ins>.<ins>3</ins>2<ins>419</ins>5<span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/nonebot_plugin_acm_reminder/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>15</del>9<span class="dp">·</span>2023-0<del>3</del>-<del>14</del><span class="dp">·</span>1<del>3</del>:3<del>5</del>:4<del>3</del>.<del>848230</del><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/nonebot_plugin_acm_reminder/data_source.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>57</ins>9<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>5</ins>:3<ins>3</ins>:4<ins>6</ins>.<ins>324195</ins><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/nonebot_plugin_acm_reminder/data_source.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>636<span class="dp">·</span>2023-0<del>3</del>-<del>14</del><span class="dp">·</span>1<del>3</del>:3<del>6</del>:<del>57</del>.<del>165478</del><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/pyproject.toml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>636<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>5</ins>:3<ins>3</ins>:<ins>46</ins>.<ins>324195</ins><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<del>08</del><span class="dp">·</span>2023-0<del>2</del>-0<del>8</del><span class="dp">·</span><del>08</del>:<del>16</del>:4<del>4</del>.<del>2</del>2<del>3221</del><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/README.md</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<ins>52</ins><span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span><ins>15</ins>:<ins>33</ins>:4<ins>6</ins>.<ins>3</ins>2<ins>4195</ins><span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<del>36</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<del>5</del>/PKG-INFO</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<ins>79</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>nonebot-plugin-acm-reminder-0.1.<ins>6</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">nonebot-plugin-acm-reminder-0.1.5/LICENSE</span> vs.</div>
+      <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--LICENSE"><span class="source">nonebot-plugin-acm-reminder-0.1.6/LICENSE</span>
+        <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.49 KB</span></div>
+      <div><span class="source">nonebot-plugin-acm-reminder-0.1.5/nonebot_plugin_acm_reminder/__init__.py</span> vs.</div>
+      <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--nonebot_plugin_acm_reminder-__init__.py"><span class="source">nonebot-plugin-acm-reminder-0.1.6/nonebot_plugin_acm_reminder/__init__.py</span>
+        <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--nonebot_plugin_acm_reminder-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 13% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 74 lines modified</td><td colspan="2">Offset 1, 81 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>datetime<span class="dp">·</span>import<span class="dp">·</span>datetime<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>datetime<span class="dp">·</span>import<span class="dp">·</span>datetime<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>List<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>List<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>httpx<span class="dp">·</span>import<span class="dp">·</span>URL<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>nonebot.adapters.onebot.v11<span class="dp">·</span>import<span class="dp">·</span>MessageEvent,<span class="dp">·</span>MessageSegment<del>,<span class="dp">·</span>Message</del><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>nonebot.adapters.onebot.v11<span class="dp">·</span>import<span class="dp">·</span>MessageEvent,<span class="dp">·</span>MessageSegment<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>nonebot.plugin<span class="dp">·</span>import<span class="dp">·</span>on_command,<span class="dp">·</span>PluginMetadata<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>nonebot.plugin<span class="dp">·</span>import<span class="dp">·</span>on_command,<span class="dp">·</span>PluginMetadata<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>nonebot.params<span class="dp">·</span>import<span class="dp">·</span>CommandArg<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>nonebot<span class="dp">·</span>import<span class="dp">·</span>get_driver,<span class="dp">·</span>require<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>nonebot<span class="dp">·</span>import<span class="dp">·</span>get_driver,<span class="dp">·</span>require<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.config<span class="dp">·</span>import<span class="dp">·</span>Config<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>.data_source<span class="dp">·</span>import<span class="dp">·</span>ContestType,<span class="dp">·</span>req_get,<span class="dp">·</span>html_parse_cf,<span class="dp">·</span>html_parse_nc<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">require(&quot;nonebot_plugin_apscheduler&quot;)<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">require(&quot;nonebot_plugin_apscheduler&quot;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">require(&quot;nonebot_plugin_htmlrender&quot;)<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">require(&quot;nonebot_plugin_htmlrender&quot;)<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>nonebot_plugin_apscheduler<span class="dp">·</span>import<span class="dp">·</span>scheduler<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>nonebot_plugin_htmlrender<span class="dp">·</span>import<span class="dp">·</span>md_to_pic<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent">from<span class="dp">·</span>nonebot_plugin_htmlrender<span class="dp">·</span>import<span class="dp">·</span>md_to_pic<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">from<span class="dp">·</span>nonebot_plugin_apscheduler<span class="dp">·</span>import<span class="dp">·</span>scheduler<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent">from<span class="dp">·</span>.data_source<span class="dp">·</span>import<span class="dp">·</span>ContestType,<span class="dp">·</span>req_get,<span class="dp">·</span>html_parse_cf,<span class="dp">·</span>html_parse_nc<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">14 </td><td class="diffpresent">from<span class="dp">·</span>.config<span class="dp">·</span>import<span class="dp">·</span>Config<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">__plugin_meta__<span class="dp">·</span>=<span class="dp">·</span>PluginMetadata(<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent">__plugin_meta__<span class="dp">·</span>=<span class="dp">·</span>PluginMetadata(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;ACMReminder&quot;,<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;ACMReminder&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;订阅牛客/CF平台的比赛信息&quot;,<em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;订阅牛客/CF平台的比赛信息&quot;,<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>usage=<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>usage=</del>&quot;/contest.list<span class="dp">·</span>获取所有/CF/牛客平台的比赛信息&quot;<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;/contest.list<span class="dp">·</span>获取所有/CF/牛客平台的比赛信息&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;/contest.subscribe<span class="dp">·</span>订阅CF/牛客平台的比赛信息&quot;<em>\xd</em></td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;/contest.subscribe<span class="dp">·</span>订阅CF/牛客平台的比赛信息&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;/contest.update<span class="dp">·</span>手动更新比赛信息&quot;)<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;/contest.update<span class="dp">·</span>手动更新比赛信息&quot;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">contest_list<span class="dp">·</span>=<span class="dp">·</span>on_command((&quot;contest&quot;,<span class="dp">·</span>&quot;list&quot;),<span class="dp">·</span>aliases={&quot;比赛列表&quot;},<span class="dp">·</span>priority=5)<em>\xd</em></td><td class="diffline">26 </td><td class="diffpresent">contest_list<span class="dp">·</span>=<span class="dp">·</span>on_command((&quot;contest&quot;,<span class="dp">·</span>&quot;list&quot;),<span class="dp">·</span>aliases={&quot;比赛列表&quot;},<span class="dp">·</span>priority=5)<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">contest_update<span class="dp">·</span>=<span class="dp">·</span>on_command((&quot;contest&quot;,<span class="dp">·</span>&quot;update&quot;),<del><span class="dp">·</span>aliases={&quot;更新比赛&quot;},<span class="dp">·</span>priority=5)</del><em>\xd</em></td><td class="diffline">27 </td><td class="diffpresent">contest_update<span class="dp">·</span>=<span class="dp">·</span>on_command((&quot;contest&quot;,<span class="dp">·</span>&quot;update&quot;),<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>aliases={&quot;更新比赛&quot;},<span class="dp">·</span>priority=5)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">contest_subscribe<span class="dp">·</span>=<span class="dp">·</span>on_command(<em>\xd</em></td><td class="diffline">29 </td><td class="diffpresent">contest_subscribe<span class="dp">·</span>=<span class="dp">·</span>on_command(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(&quot;contest&quot;,<span class="dp">·</span>&quot;subscribe&quot;),<span class="dp">·</span>aliases={&quot;订阅比赛&quot;},<span class="dp">·</span>priority=5)<em>\xd</em></td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(&quot;contest&quot;,<span class="dp">·</span>&quot;subscribe&quot;),<span class="dp">·</span>aliases={&quot;订阅比赛&quot;},<span class="dp">·</span>priority=5)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">31 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">driver<span class="dp">·</span>=<span class="dp">·</span>get_driver()<em>\xd</em></td><td class="diffline">32 </td><td class="diffpresent">driver<span class="dp">·</span>=<span class="dp">·</span>get_driver()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">contest_data:<span class="dp">·</span>List[ContestType]<span class="dp">·</span>=<span class="dp">·</span>[]<em>\xd</em></td><td class="diffline">33 </td><td class="diffpresent">contest_data:<span class="dp">·</span>List[ContestType]<span class="dp">·</span>=<span class="dp">·</span>[]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">plugin_config:<span class="dp">·</span>Config<span class="dp">·</span>=<span class="dp">·</span>Config.parse_obj(driver.config)<em>\xd</em></td><td class="diffline">34 </td><td class="diffpresent">plugin_config:<span class="dp">·</span>Config<span class="dp">·</span>=<span class="dp">·</span>Config.parse_obj(driver.config)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">35 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">36 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">33 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>update():<em>\xd</em></td><td class="diffline">37 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>update():<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<em>\xd</em></td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>更新比赛信息<em>\xd</em></td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>更新比赛信息<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<em>\xd</em></td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.clear()<em>\xd</em></td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.clear()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.extend(html_parse_cf(await<span class="dp">·</span>req_get(&quot;https://codeforces.com/contests&quot;)))<em>\xd</em></td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.extend(html_parse_cf(await<span class="dp">·</span>req_get(&quot;https://codeforces.com/contests&quot;)))<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.extend(html_parse_nc(await<span class="dp">·</span>req_get(&quot;https://ac.nowcoder.com/acm/contest/vip-index?topCategoryFilter=13&quot;)))<em>\xd</em></td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.extend(html_parse_nc(await<span class="dp">·</span>req_get(&quot;https://ac.nowcoder.com/acm/contest/vip-index?topCategoryFilter=13&quot;)))<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest_data.extend(html_parse_nc(await<span class="dp">·</span>req_get(&quot;https://ac.nowcoder.com/acm/contest/vip-index?topCategoryFilter=14&quot;)))<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">45 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">@scheduler.scheduled_job(&#x27;interval&#x27;,<span class="dp">·</span>minutes=plugin_config.update_time,<span class="dp">·</span>id=&quot;update_contest&quot;)<em>\xd</em></td><td class="diffline">47 </td><td class="diffpresent">@scheduler.scheduled_job(&#x27;interval&#x27;,<span class="dp">·</span>minutes=plugin_config.update_time,<span class="dp">·</span>id=&quot;update_contest&quot;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>update_contest():<em>\xd</em></td><td class="diffline">48 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>update_contest():<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>update()<em>\xd</em></td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>update()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">50 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">51 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">@driver.on_startup<em>\xd</em></td><td class="diffline">52 </td><td class="diffpresent">@driver.on_startup<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>startup():<em>\xd</em></td><td class="diffline">53 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>startup():<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>update()<em>\xd</em></td><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>update()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>防止因为网络问题导致机器人启动失败<em>\xd</em></td><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>防止因为网络问题导致机器人启动失败<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">56 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">@contest_update.handle()<em>\xd</em></td><td class="diffline">58 </td><td class="diffpresent">@contest_update.handle()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>update_handle(event:<span class="dp">·</span>MessageEvent):<em>\xd</em></td><td class="diffline">59 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>update_handle(event:<span class="dp">·</span>MessageEvent):<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:<em>\xd</em></td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>update()<em>\xd</em></td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>update()<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except:<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></del><del><span class="dp">·</span>awai</del>t<span class="dp">·</span><del>c</del><del>ont</del>e<del>st_u</del>p<del>da</del>t<del>e.fin</del>i<del>sh</del><del>(&quot;更新失败&quot;)</del><em>\xd</em></td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>excep</ins>t<span class="dp">·</span><ins>Exc</ins>epti<ins>on<span class="dp">·</span>as<span class="dp">·</span>e:</ins><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>contest_update.finish(MessageSegment.image(await<span class="dp">·</span>md_to_pic(f&quot;更新失败<span class="dp">·</span>{e}&quot;)))<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">64 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>contest_update.finish(&quot;更新成功&quot;)<em>\xd</em></td><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>contest_update.finish(&quot;更新成功&quot;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">66 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">67 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">@contest_list.handle()<em>\xd</em></td><td class="diffline">68 </td><td class="diffpresent">@contest_list.handle()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>get_list(event:<span class="dp">·</span>MessageEvent):<em>\xd</em></td><td class="diffline">69 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>get_list(event:<span class="dp">·</span>MessageEvent):<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>msg<span class="dp">·</span>=<span class="dp">·</span>&#x27;&lt;div<span class="dp">·</span>align=&quot;center&quot;&gt;\n<span class="dp">·</span>&lt;h1&gt;<span class="dp">·</span>近期竞赛<span class="dp">·</span>&lt;/h1&gt;<span class="dp">·</span>\n&lt;/div&gt;&#x27;<em>\xd</em></td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>msg<span class="dp">·</span>=<span class="dp">·</span>&#x27;&lt;div<span class="dp">·</span>align=&quot;center&quot;&gt;\n<span class="dp">·</span>&lt;h1&gt;<span class="dp">·</span>近期竞赛<span class="dp">·</span>&lt;/h1&gt;<span class="dp">·</span>\n&lt;/div&gt;&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>contest<span class="dp">·</span>in<span class="dp">·</span>contest_data:<em>\xd</em></td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>contest<span class="dp">·</span>in<span class="dp">·</span>contest_data:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>time<span class="dp">·</span>=<span class="dp">·</span>datetime.fromtimestamp(<em>\xd</em></td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>time<span class="dp">·</span>=<span class="dp">·</span>datetime.fromtimestamp(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest[&quot;time&quot;]).strftime(&quot;%Y-%m-%d<span class="dp">·</span>%H:%M&quot;)<em>\xd</em></td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest[&quot;time&quot;]).strftime(&quot;%Y-%m-%d<span class="dp">·</span>%H:%M&quot;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>writes<span class="dp">·</span>=<span class="dp">·</span>&quot;,&quot;.join(filter(None,<span class="dp">·</span>contest[&quot;writes&quot;]))<span class="dp">·</span>if<span class="dp">·</span>len(<em>\xd</em></td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>writes<span class="dp">·</span>=<span class="dp">·</span>&quot;,&quot;.join(filter(None,<span class="dp">·</span>contest[&quot;writes&quot;]))<span class="dp">·</span>if<span class="dp">·</span>len(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest[&quot;writes&quot;])<span class="dp">·</span>&lt;<span class="dp">·</span>5<span class="dp">·</span>else<span class="dp">·</span>&quot;,&quot;.join(filter(None,<span class="dp">·</span>contest[&quot;writes&quot;][:5]))<span class="dp">·</span>+<span class="dp">·</span>&quot;...&quot;<em>\xd</em></td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>contest[&quot;writes&quot;])<span class="dp">·</span>&lt;<span class="dp">·</span>5<span class="dp">·</span>else<span class="dp">·</span>&quot;,&quot;.join(filter(None,<span class="dp">·</span>contest[&quot;writes&quot;][:5]))<span class="dp">·</span>+<span class="dp">·</span>&quot;...&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>msg<span class="dp">·</span>+=<span class="dp">·</span>f&quot;##<span class="dp">·</span>{contest[&#x27;name&#x27;]}\n&quot;<span class="dp">·</span>\<em>\xd</em></td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>msg<span class="dp">·</span>+=<span class="dp">·</span>f&quot;##<span class="dp">·</span>{contest[&#x27;name&#x27;]}\n&quot;<span class="dp">·</span>\<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>竞赛平台<span class="dp">·</span><span class="dp">·</span>**{contest[&#x27;platform&#x27;]}**\n&quot;<span class="dp">·</span>\<em>\xd</em></td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>竞赛平台<span class="dp">·</span><span class="dp">·</span>**{contest[&#x27;platform&#x27;]}**\n&quot;<span class="dp">·</span>\<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>举办人员<span class="dp">·</span>{writes}\n&quot;<span class="dp">·</span>\<em>\xd</em></td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>举办人员<span class="dp">·</span>{writes}\n&quot;<span class="dp">·</span>\<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>开始时间<span class="dp">·</span>**{time}**\n&quot;<span class="dp">·</span>\<em>\xd</em></td><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>开始时间<span class="dp">·</span>**{time}**\n&quot;<span class="dp">·</span>\<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>竞赛时长<span class="dp">·</span>**{contest[&#x27;length&#x27;]/60}h**\n&quot;<em>\xd</em></td><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;*<span class="dp">·</span>竞赛时长<span class="dp">·</span>**{contest[&#x27;length&#x27;]/60}h**\n&quot;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>contest_list.finish(MessageSegment.image(await<span class="dp">·</span>md_to_pic(msg)))<em>\xd</em></td><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>contest_list.finish(MessageSegment.image(await<span class="dp">·</span>md_to_pic(msg)))<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">74 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">489 B</span></div>
+      <div><span class="source">nonebot-plugin-acm-reminder-0.1.5/pyproject.toml</span> vs.</div>
+      <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--pyproject.toml"><span class="source">nonebot-plugin-acm-reminder-0.1.6/pyproject.toml</span>
+        <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.pdm]</td><td class="diffline">1 </td><td class="diffpresent">[tool.pdm]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">[project]</td><td class="diffline">2 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;nonebot_plugin_acm_reminder&quot;</td><td class="diffline">3 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;nonebot_plugin_acm_reminder&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>5</del>&quot;</td><td class="diffline">4 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>6</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>subscribe<span class="dp">·</span>CodeForces/NowCoder<span class="dp">·</span>contest<span class="dp">·</span>info<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>nonebot2&quot;</td><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>subscribe<span class="dp">·</span>CodeForces/NowCoder<span class="dp">·</span>contest<span class="dp">·</span>info<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>nonebot2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&quot;BigOrangeQWQ&quot;,<span class="dp">·</span>email<span class="dp">·</span>=<span class="dp">·</span>&quot;2284086963@qq.com&quot;<span class="dp">·</span>},</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&quot;BigOrangeQWQ&quot;,<span class="dp">·</span>email<span class="dp">·</span>=<span class="dp">·</span>&quot;2284086963@qq.com&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">]</td><td class="diffline">8 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">9 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;BeautifulSoup4&gt;=4.11.2&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;BeautifulSoup4&gt;=4.11.2&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;nonebot2&gt;=2.0.0b5&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;nonebot2&gt;=2.0.0b5&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.45 KB</span></div>
+      <div><span class="source">nonebot-plugin-acm-reminder-0.1.5/README.md</span> vs.</div>
+      <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--README.md"><span class="source">nonebot-plugin-acm-reminder-0.1.6/README.md</span>
+        <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 26 lines modified</td><td colspan="2">Offset 15, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">nb<span class="dp">·</span>plugin<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent">nb<span class="dp">·</span>plugin<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">##<span class="dp">·</span>配置项<em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent">##<span class="dp">·</span>配置项<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">*<span class="dp">·</span>拉取竞赛列表的更新时间<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent">*<span class="dp">·</span>拉取竞赛列表的更新时间<ins>(分钟)</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">23 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">update_time<span class="dp">·</span>=<span class="dp">·</span><del>36</del>0<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent">update_time<span class="dp">·</span>=<span class="dp">·</span><ins>72</ins>0<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">26 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">##<span class="dp">·</span>用法<em>\xd</em></td><td class="diffline">27 </td><td class="diffpresent">##<span class="dp">·</span>用法<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">28 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">29 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">/<span class="dp">·</span>:=<span class="dp">·</span>[命令起始符]<em>\xd</em></td><td class="diffline">30 </td><td class="diffpresent">/<span class="dp">·</span>:=<span class="dp">·</span>[命令起始符]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">.<span class="dp">·</span>:=<span class="dp">·</span>[命令分隔符]<em>\xd</em></td><td class="diffline">31 </td><td class="diffpresent">.<span class="dp">·</span>:=<span class="dp">·</span>[命令分隔符]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">32 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">/contest.list<span class="dp">·</span>拉取竞赛列表<em>\xd</em></td><td class="diffline">33 </td><td class="diffpresent">/contest.list<span class="dp">·</span>拉取竞赛列表<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">/contest.update<span class="dp">·</span>更新竞赛列表<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">```<em>\xd</em></td><td class="diffline">35 </td><td class="diffpresent">```<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">36 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">##<span class="dp">·</span>TODO<em>\xd</em></td><td class="diffline">37 </td><td class="diffpresent">##<span class="dp">·</span>TODO<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">38 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>获取竞赛信息并形成列表<em>\xd</em></td><td class="diffline">39 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>获取竞赛信息并形成列表<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持CodeForces平台<em>\xd</em></td><td class="diffline">40 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持CodeForces平台<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持牛客平台<em>\xd</em></td><td class="diffline">41 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持牛客平台<em>\xd</em></td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">955 B</span></div>
+        <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--README.md---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--README.md---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>ACMReminder<span class="dp">·</span>ä¸æ¬¾å¯æ¥è¯¢ä¸è®¢éçå®¢/CFç«èµçæä»¶<span class="dp">·</span>[Download]</td><td class="diffline">1 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>ACMReminder<span class="dp">·</span>ä¸æ¬¾å¯æ¥è¯¢ä¸è®¢éçå®¢/CFç«èµçæä»¶<span class="dp">·</span>[Download]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>å®è£<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<span class="dp">·</span>nb<span class="dp">·</span>plugin<span class="dp">·</span>install</td><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>å®è£<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<span class="dp">·</span>nb<span class="dp">·</span>plugin<span class="dp">·</span>install</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">nonebot-plugin-acm-reminder<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>éç½®é¡¹<span class="dp">·</span>*</td><td class="diffline">3 </td><td class="diffpresent">nonebot-plugin-acm-reminder<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>éç½®é¡¹<span class="dp">·</span>*</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">æåç«èµåè¡¨çæ´æ°æ¶é´<span class="dp">·</span>```<span class="dp">·</span>update_time<span class="dp">·</span>=<span class="dp">·</span><del>36</del>0<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>ç¨æ³<del><span class="dp">·</span>```<span class="dp">·</span>/<span class="dp">·</span>:=</del></td><td class="diffline">4 </td><td class="diffpresent">æåç«èµåè¡¨çæ´æ°æ¶é´<ins>(åé)</ins><span class="dp">·</span>```<span class="dp">·</span>update_time<span class="dp">·</span>=<span class="dp">·</span><ins>72</ins>0<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>ç¨æ³</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">[å½ä»¤èµ·å§ç¬¦]<span class="dp">·</span>.<span class="dp">·</span>:=<span class="dp">·</span>[å½ä»¤åéç¬¦]<span class="dp">·</span>/contest.list<del><span class="dp">·</span>æåç«èµåè¡¨<span class="dp">·</span>```</del></td><td class="diffline">5 </td><td class="diffpresent"><ins>```<span class="dp">·</span>/<span class="dp">·</span>:=<span class="dp">·</span></ins>[å½ä»¤èµ·å§ç¬¦]<span class="dp">·</span>.<span class="dp">·</span>:=<span class="dp">·</span>[å½ä»¤åéç¬¦]<span class="dp">·</span>/contest.list</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">æåç«èµåè¡¨<span class="dp">·</span>/contest.update<span class="dp">·</span>æ´æ°ç«èµåè¡¨<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>TODO<span class="dp">·</span>-<span class="dp">·</span>[x]</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent"><del>##<span class="dp">·</span>TODO<span class="dp">·</span>-<span class="dp">·</span>[x]<span class="dp">·</span></del>è·åç«èµä¿¡æ¯å¹¶å½¢æåè¡¨<span class="dp">·</span>-<span class="dp">·</span>[x]<span class="dp">·</span>æ¯æCodeForceså¹³å°<span class="dp">·</span>-</td><td class="diffline">7 </td><td class="diffpresent">è·åç«èµä¿¡æ¯å¹¶å½¢æåè¡¨<span class="dp">·</span>-<span class="dp">·</span>[x]<span class="dp">·</span>æ¯æCodeForceså¹³å°<span class="dp">·</span>-<ins><span class="dp">·</span>[x]</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent"><del>[x]<span class="dp">·</span></del>æ¯æçå®¢å¹³å°<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>è®¢éæå®ç«èµï¼å¹¶æé<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]</td><td class="diffline">8 </td><td class="diffpresent">æ¯æçå®¢å¹³å°<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>è®¢éæå®ç«èµï¼å¹¶æé<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">å¯éè¿æä»¤è·åç«èµé¾æ¥<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>æ¯æåæ£å¹³å°</td><td class="diffline">9 </td><td class="diffpresent">å¯éè¿æä»¤è·åç«èµé¾æ¥<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>æ¯æåæ£å¹³å°</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.1 KB</span></div>
+      <div><span class="source">nonebot-plugin-acm-reminder-0.1.5/PKG-INFO</span> vs.</div>
+      <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--PKG-INFO"><span class="source">nonebot-plugin-acm-reminder-0.1.6/PKG-INFO</span>
+        <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nonebot_plugin_acm_reminder</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nonebot_plugin_acm_reminder</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>subscribe<span class="dp">·</span>CodeForces/NowCoder<span class="dp">·</span>contest<span class="dp">·</span>info<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>nonebot2</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>subscribe<span class="dp">·</span>CodeForces/NowCoder<span class="dp">·</span>contest<span class="dp">·</span>info<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>nonebot2</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>BigOrangeQWQ<span class="dp">·</span>&lt;2284086963@qq.com&gt;</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>BigOrangeQWQ<span class="dp">·</span>&lt;2284086963@qq.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">8 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">&lt;div<span class="dp">·</span>align=&quot;center&quot;&gt;</td><td class="diffline">9 </td><td class="diffpresent">&lt;div<span class="dp">·</span>align=&quot;center&quot;&gt;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 24, 26 lines modified</td><td colspan="2">Offset 24, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">```</td><td class="diffline">24 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder</td><td class="diffline">25 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">nb<span class="dp">·</span>plugin<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder</td><td class="diffline">26 </td><td class="diffpresent">nb<span class="dp">·</span>plugin<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">```</td><td class="diffline">27 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">##<span class="dp">·</span>配置项</td><td class="diffline">28 </td><td class="diffpresent">##<span class="dp">·</span>配置项</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">*<span class="dp">·</span>拉取竞赛列表的更新时间</td><td class="diffline">29 </td><td class="diffpresent">*<span class="dp">·</span>拉取竞赛列表的更新时间<ins>(分钟)</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">```</td><td class="diffline">30 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">update_time<span class="dp">·</span>=<span class="dp">·</span><del>36</del>0</td><td class="diffline">31 </td><td class="diffpresent">update_time<span class="dp">·</span>=<span class="dp">·</span><ins>72</ins>0</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">```</td><td class="diffline">32 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">##<span class="dp">·</span>用法</td><td class="diffline">33 </td><td class="diffpresent">##<span class="dp">·</span>用法</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">```</td><td class="diffline">34 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">/<span class="dp">·</span>:=<span class="dp">·</span>[命令起始符]</td><td class="diffline">35 </td><td class="diffpresent">/<span class="dp">·</span>:=<span class="dp">·</span>[命令起始符]</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">.<span class="dp">·</span>:=<span class="dp">·</span>[命令分隔符]</td><td class="diffline">36 </td><td class="diffpresent">.<span class="dp">·</span>:=<span class="dp">·</span>[命令分隔符]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">/contest.list<span class="dp">·</span>拉取竞赛列表</td><td class="diffline">37 </td><td class="diffpresent">/contest.list<span class="dp">·</span>拉取竞赛列表</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">/contest.update<span class="dp">·</span>更新竞赛列表</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">```</td><td class="diffline">39 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">##<span class="dp">·</span>TODO</td><td class="diffline">40 </td><td class="diffpresent">##<span class="dp">·</span>TODO</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>获取竞赛信息并形成列表</td><td class="diffline">41 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>获取竞赛信息并形成列表</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持CodeForces平台</td><td class="diffline">42 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持CodeForces平台</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持牛客平台</td><td class="diffline">43 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>支持牛客平台</td></tr>
+</table>      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol">⊟</div>
+        <div><span class="diffsize">1.28 KB</span></div>
+        <div id="nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--PKG-INFO---html-text---"><span class="source">html2text {}</span>
+          <a class="anchor" href="#nonebot-plugin-acm-reminder--.-.-.tar---nonebot-plugin-acm-reminder--.-.--PKG-INFO---html-text---">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>nonebot_plugin_acm_reminder<span class="dp">·</span>Version:<span class="dp">·</span>0.1.<del>5</del><span class="dp">·</span>Summary:</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<span class="dp">·</span>Name:<span class="dp">·</span>nonebot_plugin_acm_reminder<span class="dp">·</span>Version:<span class="dp">·</span>0.1.<ins>6</ins><span class="dp">·</span>Summary:</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">A<span class="dp">·</span>subscribe<span class="dp">·</span>CodeForces/NowCoder<span class="dp">·</span>contest<span class="dp">·</span>info<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>nonebot2<span class="dp">·</span>License:<span class="dp">·</span>MIT</td><td class="diffline">2 </td><td class="diffpresent">A<span class="dp">·</span>subscribe<span class="dp">·</span>CodeForces/NowCoder<span class="dp">·</span>contest<span class="dp">·</span>info<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>nonebot2<span class="dp">·</span>License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Author-email:<span class="dp">·</span>BigOrangeQWQ<span class="dp">·</span>&lt;2284086963@qq.com&gt;<span class="dp">·</span>Requires-Python:<span class="dp">·</span>&gt;=3.8</td><td class="diffline">3 </td><td class="diffpresent">Author-email:<span class="dp">·</span>BigOrangeQWQ<span class="dp">·</span>&lt;2284086963@qq.com&gt;<span class="dp">·</span>Requires-Python:<span class="dp">·</span>&gt;=3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">4 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>ACMReminder<span class="dp">·</span>ä¸æ¬¾å¯æ¥è¯¢ä¸è®¢éçå®¢/CFç«èµçæä»¶<span class="dp">·</span>[Download]</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>ACMReminder<span class="dp">·</span>ä¸æ¬¾å¯æ¥è¯¢ä¸è®¢éçå®¢/CFç«èµçæä»¶<span class="dp">·</span>[Download]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">##<span class="dp">·</span>å®è£<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<span class="dp">·</span>nb<span class="dp">·</span>plugin<span class="dp">·</span>install</td><td class="diffline">6 </td><td class="diffpresent">##<span class="dp">·</span>å®è£<span class="dp">·</span>```<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>nonebot-plugin-acm-reminder<span class="dp">·</span>nb<span class="dp">·</span>plugin<span class="dp">·</span>install</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">nonebot-plugin-acm-reminder<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>éç½®é¡¹<span class="dp">·</span>*</td><td class="diffline">7 </td><td class="diffpresent">nonebot-plugin-acm-reminder<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>éç½®é¡¹<span class="dp">·</span>*</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">æåç«èµåè¡¨çæ´æ°æ¶é´<span class="dp">·</span>```<span class="dp">·</span>update_time<span class="dp">·</span>=<span class="dp">·</span><del>36</del>0<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>ç¨æ³<del><span class="dp">·</span>```<span class="dp">·</span>/<span class="dp">·</span>:=</del></td><td class="diffline">8 </td><td class="diffpresent">æåç«èµåè¡¨çæ´æ°æ¶é´<ins>(åé)</ins><span class="dp">·</span>```<span class="dp">·</span>update_time<span class="dp">·</span>=<span class="dp">·</span><ins>72</ins>0<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>ç¨æ³</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">[å½ä»¤èµ·å§ç¬¦]<span class="dp">·</span>.<span class="dp">·</span>:=<span class="dp">·</span>[å½ä»¤åéç¬¦]<span class="dp">·</span>/contest.list<del><span class="dp">·</span>æåç«èµåè¡¨<span class="dp">·</span>```</del></td><td class="diffline">9 </td><td class="diffpresent"><ins>```<span class="dp">·</span>/<span class="dp">·</span>:=<span class="dp">·</span></ins>[å½ä»¤èµ·å§ç¬¦]<span class="dp">·</span>.<span class="dp">·</span>:=<span class="dp">·</span>[å½ä»¤åéç¬¦]<span class="dp">·</span>/contest.list</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">æåç«èµåè¡¨<span class="dp">·</span>/contest.update<span class="dp">·</span>æ´æ°ç«èµåè¡¨<span class="dp">·</span>```<span class="dp">·</span>##<span class="dp">·</span>TODO<span class="dp">·</span>-<span class="dp">·</span>[x]</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent"><del>##<span class="dp">·</span>TODO<span class="dp">·</span>-<span class="dp">·</span>[x]<span class="dp">·</span></del>è·åç«èµä¿¡æ¯å¹¶å½¢æåè¡¨<span class="dp">·</span>-<span class="dp">·</span>[x]<span class="dp">·</span>æ¯æCodeForceså¹³å°<span class="dp">·</span>-</td><td class="diffline">11 </td><td class="diffpresent">è·åç«èµä¿¡æ¯å¹¶å½¢æåè¡¨<span class="dp">·</span>-<span class="dp">·</span>[x]<span class="dp">·</span>æ¯æCodeForceså¹³å°<span class="dp">·</span>-<ins><span class="dp">·</span>[x]</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent"><del>[x]<span class="dp">·</span></del>æ¯æçå®¢å¹³å°<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>è®¢éæå®ç«èµï¼å¹¶æé<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]</td><td class="diffline">12 </td><td class="diffpresent">æ¯æçå®¢å¹³å°<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>è®¢éæå®ç«èµï¼å¹¶æé<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">å¯éè¿æä»¤è·åç«èµé¾æ¥<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>æ¯æåæ£å¹³å°</td><td class="diffline">13 </td><td class="diffpresent">å¯éè¿æä»¤è·åç«èµé¾æ¥<span class="dp">·</span>-<span class="dp">·</span>[<span class="dp">·</span>]<span class="dp">·</span>æ¯æåæ£å¹³å°</td></tr>
+</table>      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

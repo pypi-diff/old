@@ -1,0 +1,1688 @@
+# Comparing `tmp/robopianist-1.0.7.tar.gz` & `tmp/robopianist-1.0.8.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "robopianist-1.0.7.tar", last modified: Sun Mar 19 19:52:21 2023, max compression
++gzip compressed data, was "robopianist-1.0.8.tar", last modified: Thu Apr  6 15:37:07 2023, max compression
+```
+
+## Comparing `robopianist-1.0.7.tar` & `robopianist-1.0.8.tar`
+
+### file list
+
+```diff
+@@ -1,115 +1,115 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.134081 robopianist-1.0.7/
+--rw-r--r--   0 runner    (1001) docker     (123)      720 2023-03-19 19:51:04.000000 robopianist-1.0.7/CITATION.cff
+--rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-03-19 19:51:04.000000 robopianist-1.0.7/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      227 2023-03-19 19:51:04.000000 robopianist-1.0.7/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     7124 2023-03-19 19:52:21.134081 robopianist-1.0.7/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     6062 2023-03-19 19:51:04.000000 robopianist-1.0.7/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      313 2023-03-19 19:51:04.000000 robopianist-1.0.7/pyproject.toml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.118081 robopianist-1.0.7/robopianist/
+--rw-r--r--   0 runner    (1001) docker     (123)     1856 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10337 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/cli.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.118081 robopianist-1.0.7/robopianist/models/
+--rw-r--r--   0 runner    (1001) docker     (123)      588 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.118081 robopianist-1.0.7/robopianist/models/arenas/
+--rw-r--r--   0 runner    (1001) docker     (123)      699 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/arenas/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2423 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/arenas/stage.py
+--rw-r--r--   0 runner    (1001) docker     (123)      975 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/arenas/stage_test.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.118081 robopianist-1.0.7/robopianist/models/hands/
+--rw-r--r--   0 runner    (1001) docker     (123)      752 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/hands/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3414 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/hands/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13748 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/hands/shadow_hand.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1764 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/hands/shadow_hand_constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7015 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/hands/shadow_hand_test.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.118081 robopianist-1.0.7/robopianist/models/hands/third_party/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.122081 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/
+--rw-r--r--   0 runner    (1001) docker     (123)    11355 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     1719 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.126081 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/
+--rw-r--r--   0 runner    (1001) docker     (123)   341254 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_distal_pst.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    34351 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_knuckle.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    25738 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_middle.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    64846 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_proximal.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    80342 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/forearm_0.obj
+--rw-r--r--   0 runner    (1001) docker     (123)  1285964 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/forearm_1.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    26812 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/forearm_collision.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    88696 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/lf_metacarpal.obj
+--rw-r--r--   0 runner    (1001) docker     (123)   118690 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/mounting_plate.obj
+--rw-r--r--   0 runner    (1001) docker     (123)   775747 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/palm.obj
+--rw-r--r--   0 runner    (1001) docker     (123)   300842 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/th_distal_pst.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    75080 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/th_middle.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    23772 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/th_proximal.obj
+--rw-r--r--   0 runner    (1001) docker     (123)   110838 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/wrist.obj
+--rw-r--r--   0 runner    (1001) docker     (123)    17941 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/left_hand.xml
+--rw-r--r--   0 runner    (1001) docker     (123)    17873 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/right_hand.xml
+--rw-r--r--   0 runner    (1001) docker     (123)     1103 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/scene_left.xml
+--rw-r--r--   0 runner    (1001) docker     (123)     1105 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/scene_right.xml
+--rw-r--r--   0 runner    (1001) docker     (123)  1315458 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/shadow_hand.png
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.126081 robopianist-1.0.7/robopianist/models/piano/
+--rw-r--r--   0 runner    (1001) docker     (123)      666 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/piano/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5133 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/piano/midi_module.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11942 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/piano/piano.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3184 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/piano/piano_constants.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12123 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/piano/piano_mjcf.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2388 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/models/piano/piano_test.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.126081 robopianist-1.0.7/robopianist/music/
+--rw-r--r--   0 runner    (1001) docker     (123)     3406 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1840 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/audio.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1941 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/constants.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.126081 robopianist-1.0.7/robopianist/music/data/
+--rw-r--r--   0 runner    (1001) docker     (123)      533 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/data/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.126081 robopianist-1.0.7/robopianist/music/data/rousseau/
+--rw-r--r--   0 runner    (1001) docker     (123)     1720 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/data/rousseau/nocturne-trimmed.mid
+--rw-r--r--   0 runner    (1001) docker     (123)     2207 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/data/rousseau/twinkle-twinkle-trimmed.mid
+--rw-r--r--   0 runner    (1001) docker     (123)    14732 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/library.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14519 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/midi_file.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7188 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/midi_file_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2759 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/midi_message.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2070 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/music_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10083 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/piano_roll.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4889 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/music/synthesizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.126081 robopianist-1.0.7/robopianist/soundfonts/
+--rw-r--r--   0 runner    (1001) docker     (123)  5969788 2023-03-19 19:52:08.000000 robopianist-1.0.7/robopianist/soundfonts/TimGM6mb.sf2
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.134081 robopianist-1.0.7/robopianist/suite/
+--rw-r--r--   0 runner    (1001) docker     (123)     3277 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2164 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/composite_reward.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2290 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/suite_test.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.134081 robopianist-1.0.7/robopianist/suite/tasks/
+--rw-r--r--   0 runner    (1001) docker     (123)     1032 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6476 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16031 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/piano_with_one_shadow_hand.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18275 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/piano_with_shadow_hands.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11195 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/piano_with_shadow_hands_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8957 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/self_actuated_piano.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6279 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/tasks/self_actuated_piano_test.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6941 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/variations.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5608 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/suite/variations_test.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.134081 robopianist-1.0.7/robopianist/viewer/
+--rw-r--r--   0 runner    (1001) docker     (123)     1045 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16715 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/application.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3214 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/figures.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.134081 robopianist-1.0.7/robopianist/viewer/gui/
+--rw-r--r--   0 runner    (1001) docker     (123)     1271 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/gui/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3122 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/gui/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4747 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/gui/fullscreen_quad.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12721 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/gui/glfw_gui.py
+--rw-r--r--   0 runner    (1001) docker     (123)    24076 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/renderer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10851 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/runtime.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9001 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/user_input.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9688 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/util.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21431 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/viewer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10774 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/viewer/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.134081 robopianist-1.0.7/robopianist/wrappers/
+--rw-r--r--   0 runner    (1001) docker     (123)      791 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/wrappers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6977 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/wrappers/evaluation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4033 2023-03-19 19:51:04.000000 robopianist-1.0.7/robopianist/wrappers/sound.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-19 19:52:21.118081 robopianist-1.0.7/robopianist.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     7124 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     3900 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       53 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)      264 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       12 2023-03-19 19:52:21.000000 robopianist-1.0.7/robopianist.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-19 19:52:21.134081 robopianist-1.0.7/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     3053 2023-03-19 19:51:04.000000 robopianist-1.0.7/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.233737 robopianist-1.0.8/
++-rw-r--r--   0 runner    (1001) docker     (123)      720 2023-04-06 15:36:14.000000 robopianist-1.0.8/CITATION.cff
++-rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-06 15:36:14.000000 robopianist-1.0.8/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      227 2023-04-06 15:36:14.000000 robopianist-1.0.8/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     7191 2023-04-06 15:37:07.233737 robopianist-1.0.8/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     6129 2023-04-06 15:36:14.000000 robopianist-1.0.8/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      313 2023-04-06 15:36:14.000000 robopianist-1.0.8/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist/
++-rw-r--r--   0 runner    (1001) docker     (123)     2464 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10874 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/cli.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist/models/
++-rw-r--r--   0 runner    (1001) docker     (123)      588 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist/models/arenas/
++-rw-r--r--   0 runner    (1001) docker     (123)      699 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/arenas/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2585 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/arenas/stage.py
++-rw-r--r--   0 runner    (1001) docker     (123)      975 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/arenas/stage_test.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist/models/hands/
++-rw-r--r--   0 runner    (1001) docker     (123)      752 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/hands/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3414 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/hands/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13610 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/hands/shadow_hand.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1764 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/hands/shadow_hand_constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6720 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/hands/shadow_hand_test.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist/models/hands/third_party/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/
++-rw-r--r--   0 runner    (1001) docker     (123)    11355 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     1719 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.221737 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/
++-rw-r--r--   0 runner    (1001) docker     (123)   341254 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_distal_pst.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    34351 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_knuckle.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    25738 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_middle.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    64846 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_proximal.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    80342 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/forearm_0.obj
++-rw-r--r--   0 runner    (1001) docker     (123)  1285964 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/forearm_1.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    26812 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/forearm_collision.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    88696 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/lf_metacarpal.obj
++-rw-r--r--   0 runner    (1001) docker     (123)   118690 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/mounting_plate.obj
++-rw-r--r--   0 runner    (1001) docker     (123)   775747 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/palm.obj
++-rw-r--r--   0 runner    (1001) docker     (123)   300842 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/th_distal_pst.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    75080 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/th_middle.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    23772 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/th_proximal.obj
++-rw-r--r--   0 runner    (1001) docker     (123)   110838 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/wrist.obj
++-rw-r--r--   0 runner    (1001) docker     (123)    17941 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/left_hand.xml
++-rw-r--r--   0 runner    (1001) docker     (123)    17873 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/right_hand.xml
++-rw-r--r--   0 runner    (1001) docker     (123)     1103 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/scene_left.xml
++-rw-r--r--   0 runner    (1001) docker     (123)     1105 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/scene_right.xml
++-rw-r--r--   0 runner    (1001) docker     (123)  1315458 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/shadow_hand.png
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.221737 robopianist-1.0.8/robopianist/models/piano/
++-rw-r--r--   0 runner    (1001) docker     (123)      666 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/piano/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5133 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/piano/midi_module.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11942 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/piano/piano.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3184 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/piano/piano_constants.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12123 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/piano/piano_mjcf.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2388 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/models/piano/piano_test.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.221737 robopianist-1.0.8/robopianist/music/
++-rw-r--r--   0 runner    (1001) docker     (123)     3406 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1840 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/audio.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1941 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/constants.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.225737 robopianist-1.0.8/robopianist/music/data/
++-rw-r--r--   0 runner    (1001) docker     (123)      533 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/data/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.225737 robopianist-1.0.8/robopianist/music/data/rousseau/
++-rw-r--r--   0 runner    (1001) docker     (123)     1720 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/data/rousseau/nocturne-trimmed.mid
++-rw-r--r--   0 runner    (1001) docker     (123)     2207 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/data/rousseau/twinkle-twinkle-trimmed.mid
++-rw-r--r--   0 runner    (1001) docker     (123)    14732 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/library.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14526 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/midi_file.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7188 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/midi_file_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2759 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/midi_message.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2070 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/music_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10083 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/piano_roll.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4889 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/music/synthesizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.225737 robopianist-1.0.8/robopianist/soundfonts/
++-rw-r--r--   0 runner    (1001) docker     (123)  5969788 2023-04-06 15:36:57.000000 robopianist-1.0.8/robopianist/soundfonts/TimGM6mb.sf2
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.229737 robopianist-1.0.8/robopianist/suite/
++-rw-r--r--   0 runner    (1001) docker     (123)     3473 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2164 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/composite_reward.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2290 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/suite_test.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.229737 robopianist-1.0.8/robopianist/suite/tasks/
++-rw-r--r--   0 runner    (1001) docker     (123)     1032 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6732 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16031 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/piano_with_one_shadow_hand.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18464 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/piano_with_shadow_hands.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11195 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/piano_with_shadow_hands_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8957 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/self_actuated_piano.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6279 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/tasks/self_actuated_piano_test.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6941 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/variations.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5608 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/suite/variations_test.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.233737 robopianist-1.0.8/robopianist/viewer/
++-rw-r--r--   0 runner    (1001) docker     (123)     1045 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16715 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/application.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3214 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/figures.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.233737 robopianist-1.0.8/robopianist/viewer/gui/
++-rw-r--r--   0 runner    (1001) docker     (123)     1271 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/gui/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3122 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/gui/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4747 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/gui/fullscreen_quad.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12721 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/gui/glfw_gui.py
++-rw-r--r--   0 runner    (1001) docker     (123)    24076 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/renderer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10851 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/runtime.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9001 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/user_input.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9688 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/util.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21431 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/viewer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10774 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/viewer/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.233737 robopianist-1.0.8/robopianist/wrappers/
++-rw-r--r--   0 runner    (1001) docker     (123)      791 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/wrappers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6977 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/wrappers/evaluation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4033 2023-04-06 15:36:14.000000 robopianist-1.0.8/robopianist/wrappers/sound.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:37:07.213736 robopianist-1.0.8/robopianist.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     7191 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3900 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       53 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)      249 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-06 15:37:07.000000 robopianist-1.0.8/robopianist.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 15:37:07.233737 robopianist-1.0.8/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     3034 2023-04-06 15:36:14.000000 robopianist-1.0.8/setup.py
+```
+
+### Comparing `robopianist-1.0.7/CITATION.cff` & `robopianist-1.0.8/CITATION.cff`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/LICENSE` & `robopianist-1.0.8/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/PKG-INFO` & `robopianist-1.0.8/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: robopianist
+-Version: 1.0.7
++Version: 1.0.8
+ Summary: A benchmark for high-dimensional robot control
+ Home-page: https://github.com/google-research/robopianist
+ Author: Kevin Zakka
+ Author-email: kevinarmandzakka@gmail.com
+ Maintainer: Kevin Zakka
+ Maintainer-email: kevinarmandzakka@gmail.com
+ License: Apache License 2.0
+@@ -24,19 +24,22 @@
+ Provides-Extra: test
+ Provides-Extra: dev
+ License-File: LICENSE
+ 
+ # RoboPianist: A Benchmark for High-Dimensional Robot Control
+ 
+ [![build][tests-badge]][tests]
++[![docs][docs-badge]][docs]
+ [![PyPI Python Version][pypi-versions-badge]][pypi]
+ [![PyPI version][pypi-badge]][pypi]
+ 
+ [tests-badge]: https://github.com/google-research/robopianist/actions/workflows/ci.yml/badge.svg
++[docs-badge]: https://github.com/google-research/robopianist/actions/workflows/docs.yml/badge.svg
+ [tests]: https://github.com/google-research/robopianist/actions/workflows/ci.yml
++[docs]: https://google-research.github.io/robopianist/
+ [pypi-versions-badge]: https://img.shields.io/pypi/pyversions/robopianist
+ [pypi-badge]: https://badge.fury.io/py/robopianist.svg
+ [pypi]: https://pypi.org/project/robopianist/
+ 
+ ![RoboPianist teaser image](./docs/teaser1x3.jpeg)
+ 
+ RoboPianist is a new benchmarking suite for high-dimensional control, targeted at testing high spatial and temporal precision, coordination, and planning, all with an underactuated system frequently making-and-breaking contacts. The proposed challenge is *mastering the piano* through bi-manual dexterity, using a pair of simulated anthropomorphic robot hands.
+@@ -109,29 +112,29 @@
+ conda activate pianist
+ 
+ pip install --upgrade robopianist
+ ```
+ 
+ ### Optional: Download additional soundfonts
+ 
+-We recommend you install additional soundfonts to improve the quality of the synthesized audio. The RoboPianist [CLI](#cli) can be used to list out all available soundfonts, change the default soundfont, and download additional ones. To list out all available commands, run:
++We recommend installing additional soundfonts to improve the quality of the synthesized audio. You can easily do this using the RoboPianist CLI:
+ 
+ ```bash
+-robopianist soundfont --help
++robopianist soundfont --download
+ ```
+ 
+-For more information, see [docs/soundfonts.md](docs/soundfonts.md).
++For more soundfont-related commands, see [docs/soundfonts.md](docs/soundfonts.md).
+ 
+ ## MIDI Dataset
+ 
+-The PIG dataset cannot be redistributed on GitHub due to licensing restrictions. See [docs/dataset](docs/dataset.md) for instructions on where to download and how to process the
++The PIG dataset cannot be redistributed on GitHub due to licensing restrictions. See [docs/dataset](docs/dataset.md) for instructions on where to download it and how to preprocess it.
+ 
+ ## CLI
+ 
+-RoboPianist comes with a command line interface (CLI) that can be used to download additional soundfonts, play MIDI files, preprocess the PIG dataset, and more. To see a list of available commands, run `robopianist --help`.
++RoboPianist comes with a command line interface (CLI) that can be used to download additional soundfonts, play MIDI files, preprocess the PIG dataset, and more. For more information, see [docs/cli.md](docs/cli.md).
+ 
+ ## Contributing
+ 
+ We welcome contributions to RoboPianist. Please see [docs/contributing.md](docs/contributing.md) for more information.
+ 
+ ## FAQ
+```
+
+### Comparing `robopianist-1.0.7/README.md` & `robopianist-1.0.8/README.md`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,15 +1,18 @@
+ # RoboPianist: A Benchmark for High-Dimensional Robot Control
+ 
+ [![build][tests-badge]][tests]
++[![docs][docs-badge]][docs]
+ [![PyPI Python Version][pypi-versions-badge]][pypi]
+ [![PyPI version][pypi-badge]][pypi]
+ 
+ [tests-badge]: https://github.com/google-research/robopianist/actions/workflows/ci.yml/badge.svg
++[docs-badge]: https://github.com/google-research/robopianist/actions/workflows/docs.yml/badge.svg
+ [tests]: https://github.com/google-research/robopianist/actions/workflows/ci.yml
++[docs]: https://google-research.github.io/robopianist/
+ [pypi-versions-badge]: https://img.shields.io/pypi/pyversions/robopianist
+ [pypi-badge]: https://badge.fury.io/py/robopianist.svg
+ [pypi]: https://pypi.org/project/robopianist/
+ 
+ ![RoboPianist teaser image](./docs/teaser1x3.jpeg)
+ 
+ RoboPianist is a new benchmarking suite for high-dimensional control, targeted at testing high spatial and temporal precision, coordination, and planning, all with an underactuated system frequently making-and-breaking contacts. The proposed challenge is *mastering the piano* through bi-manual dexterity, using a pair of simulated anthropomorphic robot hands.
+@@ -82,29 +85,29 @@
+ conda activate pianist
+ 
+ pip install --upgrade robopianist
+ ```
+ 
+ ### Optional: Download additional soundfonts
+ 
+-We recommend you install additional soundfonts to improve the quality of the synthesized audio. The RoboPianist [CLI](#cli) can be used to list out all available soundfonts, change the default soundfont, and download additional ones. To list out all available commands, run:
++We recommend installing additional soundfonts to improve the quality of the synthesized audio. You can easily do this using the RoboPianist CLI:
+ 
+ ```bash
+-robopianist soundfont --help
++robopianist soundfont --download
+ ```
+ 
+-For more information, see [docs/soundfonts.md](docs/soundfonts.md).
++For more soundfont-related commands, see [docs/soundfonts.md](docs/soundfonts.md).
+ 
+ ## MIDI Dataset
+ 
+-The PIG dataset cannot be redistributed on GitHub due to licensing restrictions. See [docs/dataset](docs/dataset.md) for instructions on where to download and how to process the
++The PIG dataset cannot be redistributed on GitHub due to licensing restrictions. See [docs/dataset](docs/dataset.md) for instructions on where to download it and how to preprocess it.
+ 
+ ## CLI
+ 
+-RoboPianist comes with a command line interface (CLI) that can be used to download additional soundfonts, play MIDI files, preprocess the PIG dataset, and more. To see a list of available commands, run `robopianist --help`.
++RoboPianist comes with a command line interface (CLI) that can be used to download additional soundfonts, play MIDI files, preprocess the PIG dataset, and more. For more information, see [docs/cli.md](docs/cli.md).
+ 
+ ## Contributing
+ 
+ We welcome contributions to RoboPianist. Please see [docs/contributing.md](docs/contributing.md) for more information.
+ 
+ ## FAQ
+```
+
+### Comparing `robopianist-1.0.7/robopianist/cli.py` & `robopianist-1.0.8/robopianist/cli.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -24,14 +24,15 @@
+ import pretty_midi
+ import requests
+ from note_seq.protobuf import music_pb2
+ from termcolor import cprint
+ from tqdm import tqdm
+ 
+ import robopianist
++from robopianist import music
+ from robopianist.music import midi_file
+ 
+ # Dataset variables.
+ _DEFAULT_SAVE_DIR = (
+     robopianist._PROJECT_ROOT / "robopianist" / "music" / "data" / "pig_single_finger"
+ )
+ 
+@@ -51,117 +52,125 @@
+         action="store_true",
+         help="print the version of robopianist.",
+     )
+ 
+     parser.add_argument(
+         "--check-pig-exists",
+         action="store_true",
+-        help="check that the PIG dataset was properly downloaded and processed.",
++        help="check that the PIG dataset was properly downloaded and processed",
+     )
+ 
+     subparsers = parser.add_subparsers(dest="subparser_name", help="sub-command help")
+ 
+     player_parser = subparsers.add_parser("player")
+-    player_parser.add_argument("--midi-file", required=True, help="MIDI file to play.")
++    player_parser.add_argument("--midi-file", required=True, help="MIDI file to play")
+     player_parser.add_argument(
+-        "--stretch", default=1.0, help="Stretch the MIDI file by this factor."
++        "--stretch",
++        default=1.0,
++        help="stretch the MIDI file by this factor",
++        type=float,
+     )
+     player_parser.add_argument(
+-        "--shift", default=0, help="Shift the MIDI file by this many semitones."
++        "--shift",
++        default=0,
++        help="shift the MIDI file by this many semitones",
++        type=int,
+     )
+ 
+     preprocess_parser = subparsers.add_parser("preprocess")
+     preprocess_parser.add_argument(
+         "--dataset-dir",
+         required=True,
+-        help="Where the PIG dataset is located.",
++        help="where the PIG dataset is located",
+     )
+     preprocess_parser.add_argument(
+         "--save-dir",
+         required=False,
+         default=str(_DEFAULT_SAVE_DIR),
+-        help="Where to save the processed proto files.",
++        help="where to save the processed proto files",
+     )
+ 
+     soundfont_parser = subparsers.add_parser("soundfont")
+     soundfont_parser.add_argument(
+         "--list",
+         action="store_true",
+-        help="List all available soundfonts.",
++        help="list all available soundfonts",
+     )
+     soundfont_parser.add_argument(
+         "--change-default",
+         action="store_true",
+-        help="Change the default soundfont.",
++        help="change the default soundfont",
+     )
+     soundfont_parser.add_argument(
+         "--download",
+         action="store_true",
+-        help="Download a soundfont.",
++        help="download additional soundfonts",
+     )
+ 
+     args = parser.parse_args()
+ 
+     if args.version:
+         print(f"robopianist {robopianist.__version__}")
+-        return
+-
+-    if args.check_pig_exists:
+-        from robopianist import music
+ 
++    elif args.check_pig_exists:
+         if len(music.PIG_MIDIS) != 150:
+             cprint("PIG dataset was not properly downloaded and processed.", "red")
+         else:
+             cprint("PIG dataset is ready to use!", "green")
+-        return
+-
+-    if args.subparser_name == "player":
+-        from robopianist import music
+ 
++    elif args.subparser_name == "player":
+         music.load(args.midi_file, stretch=args.stretch, shift=args.shift).play()
+-        return
+ 
+-    if args.subparser_name == "preprocess":
++    elif args.subparser_name == "preprocess":
+         _preprocess_pig(Path(args.dataset_dir), Path(args.save_dir))
+-        return
+ 
+-    if args.subparser_name == "soundfont":
++    elif args.subparser_name == "soundfont":
+         if args.list:
+-            sf2s = _SOUNDFONT_DIR.glob("*.sf2")
+-            print("Available soundfonts:")
+-            for sf2 in sf2s:
+-                print(f"  {sf2.name}")
+-            return
+-
+-        if args.change_default:
++            _list_soundfonts()
++        elif args.change_default:
+             _change_default_soundfont()
+-            return
+-
+-        if args.download:
++        elif args.download:
+             _download_soundfont()
+-            return
+ 
+-        return
++
++def _list_soundfonts() -> None:
++    sf2s = _SOUNDFONT_DIR.glob("*.sf2")
++    soundfonts = [sf2.stem for sf2 in sf2s]
++    is_default = [sf2 == robopianist.SF2_PATH.stem for sf2 in soundfonts]
++
++    print("Available soundfonts:")
++    for i, soundfont in enumerate(soundfonts):
++        print(f"  ({i}) {soundfont} {'(default)' if is_default[i] else ''}")
+ 
+ 
+ def _set_default_soundfont(name: str) -> None:
+     # Create a .robopianistrc file if it doesn't exist.
+     rc_file = Path.home() / ".robopianistrc"
+     if not rc_file.exists():
+         rc_file.touch()
+ 
+     # Check that the soundfont exists.
+     soundfont = _SOUNDFONT_DIR / f"{name}.sf2"
+     if not soundfont.exists():
+         cprint(f"The soundfont {name} does not exist.", "red")
+         return
+ 
+-    # Set the default soundfont.
+-    with open(rc_file, "w") as f:
+-        f.write(f"DEFAULT_SOUNDFONT={name}")
++    # Look for the line DEFAULT_SOUNDFONT={} in the .robopianistrc file.
++    with rc_file.open("r") as f:
++        lines = f.readlines()
++    found = False
++    for i, line in enumerate(lines):
++        if line.startswith("DEFAULT_SOUNDFONT="):
++            lines[i] = f"DEFAULT_SOUNDFONT={name}\n"
++            found = True
++            break
++    if not found:
++        lines.append(f"DEFAULT_SOUNDFONT={name}\n")
++    with rc_file.open("w") as f:
++        f.writelines(lines)
+ 
+     cprint(f"Default soundfont set to {name}.", "green")
+ 
+ 
+ def _change_default_soundfont() -> None:
+     # Get a list of available soundfonts.
+     sf2s = _SOUNDFONT_DIR.glob("*.sf2")
+@@ -275,15 +284,15 @@
+         seq.sequence_metadata.title = piece.replace("_", " ").title()
+ 
+         # Save proto file.
+         filename = save_dir / f"{piece}-{number}.proto"
+         midi_file.MidiFile(seq).save(filename)
+ 
+ 
+-def _download_file(url):
++def _download_file(url: str) -> None:
+     chunk_size = 1024
+     r = requests.get(url, stream=True)
+     total_size = int(r.headers.get("content-length", 0))
+     pbar = tqdm(total=total_size, unit="B", unit_scale=True)
+     with open(url.split("/")[-1], "wb") as f:
+         for chunk in r.iter_content(chunk_size=chunk_size):
+             if chunk:
+@@ -314,21 +323,20 @@
+         if number < 0 or number >= len(_SOUNDFONTS):
+             raise ValueError
+     except ValueError:
+         cprint("Invalid choice.", "red")
+         return
+ 
+     # Download the soundfont.
+-    url = _SOUNDFONTS[soundfont_names[number]]
+-    _download_file(url)
++    _download_file(_SOUNDFONTS[soundfont_names[number]])
+ 
+-    # Custom extraction for each soundfont.
++    # Custom extraction logic for each soundfont.
+     if soundfont_names[number] == "TimGM6mb":
+         shutil.move("TimGM6mb.sf2?format=raw", _SOUNDFONT_DIR / "TimGM6mb.sf2")
+-    else:
++    elif soundfont_names[number] == "SalamanderGrandPiano":
+         subprocess.run(
+             [
+                 "tar",
+                 "-xvf",
+                 "SalamanderGrandPiano-SF2-V3+20200602.tar.xz",
+             ],
+             check=True,
+```
+
+### Comparing `robopianist-1.0.7/robopianist/models/__init__.py` & `robopianist-1.0.8/robopianist/models/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/arenas/__init__.py` & `robopianist-1.0.8/robopianist/models/arenas/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/arenas/stage.py` & `robopianist-1.0.8/robopianist/models/arenas/stage.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -12,51 +12,61 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ """Suite arenas."""
+ 
+ from mujoco_utils import composer_utils
+ 
+-_STAGE_SIZE = (0.65, 0.001)  # Cylinder radius, half-height.
+-_STAGE_COLOR = (0.1, 0.1, 0.1, 0.8)
+-
+ 
+ class Stage(composer_utils.Arena):
+     """A custom arena with a ground plane, lights and a starry night sky."""
+ 
+     def _build(self, name: str = "stage") -> None:
+         super()._build(name=name)
+ 
+         # Change free camera settings.
+         self._mjcf_root.statistic.extent = 0.6
+         self._mjcf_root.statistic.center = (0.2, 0, 0.3)
+         getattr(self._mjcf_root.visual, "global").azimuth = 180
+         getattr(self._mjcf_root.visual, "global").elevation = -50
+ 
+-        self._mjcf_root.visual.map.stiffness = 400
+         self._mjcf_root.visual.scale.forcewidth = 0.04
+         self._mjcf_root.visual.scale.contactwidth = 0.2
+         self._mjcf_root.visual.scale.contactheight = 0.03
+ 
+         # Lights.
+         self._mjcf_root.worldbody.add("light", pos=(0, 0, 1))
+         self._mjcf_root.worldbody.add(
+             "light", pos=(0.3, 0, 1), dir=(0, 0, -1), directional=False
+         )
+ 
+-        # Disc-shaped ground plane.
+-        self._ground_material = self._mjcf_root.asset.add(
+-            "material", name="groundplane"
++        # Dark checkerboard floor.
++        self._mjcf_root.asset.add(
++            "texture",
++            name="grid",
++            type="2d",
++            builtin="checker",
++            width=512,
++            height=512,
++            rgb1=[0.1, 0.1, 0.1],
++            rgb2=[0.2, 0.2, 0.2],
++        )
++        self._mjcf_root.asset.add(
++            "material",
++            name="grid",
++            texture="grid",
++            texrepeat=(1, 1),
++            texuniform=True,
++            reflectance=0.2,
+         )
+         self._ground_geom = self._mjcf_root.worldbody.add(
+             "geom",
+-            type="cylinder",
+-            size=_STAGE_SIZE,
+-            rgba=_STAGE_COLOR,
+-            material=self._ground_material,
++            type="plane",
++            size=(1, 1, 0.05),
++            material="grid",
+             contype=0,
+             conaffinity=0,
+         )
+ 
+         # Starry night sky.
+         self._mjcf_root.asset.add(
+             "texture",
+```
+
+### Comparing `robopianist-1.0.7/robopianist/models/arenas/stage_test.py` & `robopianist-1.0.8/robopianist/models/arenas/stage_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/__init__.py` & `robopianist-1.0.8/robopianist/models/hands/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/base.py` & `robopianist-1.0.8/robopianist/models/hands/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/shadow_hand.py` & `robopianist-1.0.8/robopianist/models/hands/shadow_hand.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -46,103 +46,101 @@
+         # Note this is a dummy range, it will be set to the piano's length at task
+         # initialization, see `robopianist/suite/tasks/base.py`.
+         joint_range=(-1, 1),
+     ),
+     "forearm_ty": Dof(
+         joint_type="slide", axis=(0, 0, 1), stiffness=300, joint_range=(0.0, 0.06)
+     ),
+-    # "forearm_tz": Dof(
+-    #     joint_type="slide", axis=(0, 1, 0), stiffness=1000, joint_range=(-0.04, 0.0)
+-    # ),
+-    # "forearm_roll": Dof(
+-    #     joint_type="hinge", axis=(0, 0, 1), stiffness=300, joint_range=(-0.25, 0.25)
+-    # ),
+-    # "forearm_pitch": Dof(
+-    #     joint_type="hinge", axis=(1, 0, 0), stiffness=50, joint_range=(0, 0.15)
+-    # ),
+-    # "forearm_yaw": Dof(
+-    #     joint_type="hinge",
+-    #     axis=(0, -1, 0),
+-    #     stiffness=300,
+-    #     joint_range=(-0.25, 0.25),
+-    #     reflect=True,
+-    # ),
++    "forearm_tz": Dof(
++        joint_type="slide", axis=(0, 1, 0), stiffness=1000, joint_range=(-0.04, 0.0)
++    ),
++    "forearm_roll": Dof(
++        joint_type="hinge", axis=(0, 0, 1), stiffness=300, joint_range=(-0.25, 0.25)
++    ),
++    "forearm_pitch": Dof(
++        joint_type="hinge", axis=(1, 0, 0), stiffness=50, joint_range=(0, 0.15)
++    ),
++    "forearm_yaw": Dof(
++        joint_type="hinge",
++        axis=(0, -1, 0),
++        stiffness=300,
++        joint_range=(-0.25, 0.25),
++        reflect=True,
++    ),
+ }
+ 
+ _RESTRICTED_WRJ2_RANGE: Tuple[float, float] = (-0.174533, 0.174533)
+ 
+ _REDUCED_ACTION_SPACE_EXCLUDED_DOFS: Tuple[str, ...] = (
+     "A_THJ5",
+-    "A_THJ3",
+     "A_THJ1",
+-    "A_FFJ4",
+-    "A_MFJ4",
+-    "A_RFJ4",
+     "A_LFJ5",
+-    "A_LFJ4",
+ )
+ 
+ _REDUCED_THUMB_RANGE: Tuple[float, float] = (0.0, 0.698132)
+ 
+ _FINGERTIP_OFFSET = 0.026
+ _THUMBTIP_OFFSET = 0.0275
+ 
++# Which dofs to add to the forearm.
++_DEFAULT_FOREARM_DOFS = ("forearm_tx", "forearm_ty")
++
+ 
+ class ShadowHand(base.Hand):
+     """A Shadow Hand E3M5."""
+ 
+     def _build(
+         self,
+         name: Optional[str] = None,
+         side: base.HandSide = base.HandSide.RIGHT,
+         primitive_fingertip_collisions: bool = False,
+         restrict_wrist_yaw_range: bool = False,
+-        add_dofs: bool = True,
+         reduced_action_space: bool = False,
++        forearm_dofs: Sequence[str] = _DEFAULT_FOREARM_DOFS,
+     ) -> None:
+         """Initializes a ShadowHand.
+ 
+         Args:
+             name: Name of the hand. Used as a prefix in the MJCF name attributes.
+             side: Which side (left or right) to model.
+             primitive_fingertip_collisions: Whether to use capsule approximations for
+                 the fingertip colliders or the true meshes. Using primitive colliders
+                 speeds up the simulation.
+             restrict_wrist_yaw_range: Whether to restrict the range of the wrist yaw
+                 joint.
+-            add_dofs: Whether to add the forearm degrees of freedom.
+             reduced_action_space: Whether to use a reduced action space.
++            forearm_dofs: Which dofs to add to the forearm.
+         """
+         if side == base.HandSide.RIGHT:
+             self._prefix = "rh_"
+             xml_file = consts.RIGHT_SHADOW_HAND_XML
+         elif side == base.HandSide.LEFT:
+             self._prefix = "lh_"
+             xml_file = consts.LEFT_SHADOW_HAND_XML
+         name = name or self._prefix + "shadow_hand"
+ 
+         self._hand_side = side
+         self._mjcf_root = mjcf.from_path(str(xml_file))
+         self._mjcf_root.model = name
+         self._n_forearm_dofs = 0
+         self._reduce_action_space = reduced_action_space
++        self._forearm_dofs = forearm_dofs
+ 
+         if restrict_wrist_yaw_range:
+             joint = mjcf_utils.safe_find(
+                 self._mjcf_root, "joint", self._prefix + "WRJ2"
+             )
+             joint.range = _RESTRICTED_WRJ2_RANGE
+             actuator = mjcf_utils.safe_find(
+                 self._mjcf_root, "actuator", self._prefix + "A_WRJ2"
+             )
+             actuator.ctrlrange = _RESTRICTED_WRJ2_RANGE
+ 
+         # Important: call before parsing.
+-        if add_dofs:
+-            self._add_dofs()
++        self._add_dofs()
+ 
+         self._parse_mjcf_elements()
+         self._add_mjcf_elements()
+ 
+         if primitive_fingertip_collisions:
+             for geom in self._mjcf_root.find_all("geom"):
+                 if (
+@@ -158,19 +156,22 @@
+     def _build_observables(self) -> "ShadowHandObservables":
+         return ShadowHandObservables(self)
+ 
+     def _parse_mjcf_elements(self) -> None:
+         joints = mjcf_utils.safe_find_all(self._mjcf_root, "joint")
+         actuators = mjcf_utils.safe_find_all(self._mjcf_root, "actuator")
+         if self._reduce_action_space:
+-            # Disable some actuators (keeping the joints).
++            # Disable some actuators.
+             for act_name in _REDUCED_ACTION_SPACE_EXCLUDED_DOFS:
+                 act = [a for a in actuators if a.name == self._prefix + act_name][0]
+                 actuators.remove(act)
+                 act.remove()
++                jnt = [j for j in joints if j.name == self._prefix + act_name[2:]][0]
++                joints.remove(jnt)
++                jnt.remove()
+             # Reduce THJ2 range.
+             joint = mjcf_utils.safe_find(
+                 self._mjcf_root, "joint", self._prefix + "THJ2"
+             )
+             joint.range = _REDUCED_THUMB_RANGE
+             actuator = mjcf_utils.safe_find(
+                 self._mjcf_root, "actuator", self._prefix + "A_THJ2"
+@@ -246,15 +247,23 @@
+         def _maybe_reflect_axis(
+             axis: Sequence[float], reflect: bool
+         ) -> Sequence[float]:
+             if self._hand_side == base.HandSide.LEFT and reflect:
+                 return tuple([-a for a in axis])
+             return axis
+ 
+-        for dof_name, dof in _FOREARM_DOFS.items():
++        for dof_name in self._forearm_dofs:
++            if dof_name not in _FOREARM_DOFS:
++                raise ValueError(
++                    f"Invalid forearm DOF: {dof_name}. Valid DOFs are: "
++                    f"{_FOREARM_DOFS}."
++                )
++
++            dof = _FOREARM_DOFS[dof_name]
++
+             joint = self.root_body.add(
+                 "joint",
+                 type=dof.joint_type,
+                 name=dof_name,
+                 axis=_maybe_reflect_axis(dof.axis, dof.reflect),
+                 range=dof.joint_range,
+             )
+@@ -341,28 +350,14 @@
+         physics: mjcf.Physics,
+         action: np.ndarray,
+         random_state: np.random.RandomState,
+     ) -> None:
+         del random_state  # Unused.
+         physics.bind(self.actuators).ctrl = action
+ 
+-    def initialize_episode(
+-        self, physics: mjcf.Physics, random_state: np.random.RandomState
+-    ) -> None:
+-        del random_state  # Unused.
+-        if self._reduce_action_space:
+-            physics.bind([self.joints[i] for i in self._disabled_idxs]).qpos = 0.0
+-
+-    def after_step(
+-        self, physics: mjcf.Physics, random_state: np.random.RandomState
+-    ) -> None:
+-        del random_state  # Unused.
+-        if self._reduce_action_space:
+-            physics.bind([self.joints[i] for i in self._disabled_idxs]).qpos = 0.0
+-
+ 
+ class ShadowHandObservables(base.HandObservables):
+     """ShadowHand observables."""
+ 
+     _entity: ShadowHand
+ 
+     @composer.observable
+```
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/shadow_hand_constants.py` & `robopianist-1.0.8/robopianist/models/hands/shadow_hand_constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/shadow_hand_test.py` & `robopianist-1.0.8/robopianist/models/hands/shadow_hand_test.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -41,30 +41,27 @@
+ 
+ 
+ class ShadowHandTest(parameterized.TestCase):
+     @parameterized.product(
+         side=[base_hand.HandSide.RIGHT, base_hand.HandSide.LEFT],
+         primitive_fingertip_collisions=[False, True],
+         restrict_yaw_range=[False, True],
+-        add_dofs=[False, True],
+         reduced_action_space=[False, True],
+     )
+     def test_compiles_and_steps(
+         self,
+         side: base_hand.HandSide,
+         primitive_fingertip_collisions: bool,
+         restrict_yaw_range: bool,
+-        add_dofs: bool,
+         reduced_action_space: bool,
+     ) -> None:
+         robot = shadow_hand.ShadowHand(
+             side=side,
+             primitive_fingertip_collisions=primitive_fingertip_collisions,
+             restrict_wrist_yaw_range=restrict_yaw_range,
+-            add_dofs=add_dofs,
+             reduced_action_space=reduced_action_space,
+         )
+         physics = mjcf.Physics.from_mjcf_model(robot.mjcf_model)
+         physics.step()
+ 
+     def test_set_name(self) -> None:
+         robot = shadow_hand.ShadowHand(name="larry")
+@@ -73,49 +70,40 @@
+ 
+     def test_default_name(self) -> None:
+         robot = shadow_hand.ShadowHand(side=HandSide.RIGHT)
+         self.assertEqual(robot.name, "rh_shadow_hand")
+         robot = shadow_hand.ShadowHand(side=HandSide.LEFT)
+         self.assertEqual(robot.name, "lh_shadow_hand")
+ 
+-    @parameterized.named_parameters(
+-        {"testcase_name": "add_dofs", "add_dofs": True},
+-        {"testcase_name": "no_add_dofs", "add_dofs": False},
+-    )
+-    def test_joints(self, add_dofs: bool) -> None:
+-        robot = shadow_hand.ShadowHand(add_dofs=add_dofs)
++    def test_raises_value_error_on_invalid_forearm_dofs(self) -> None:
++        with self.assertRaises(ValueError):
++            shadow_hand.ShadowHand(forearm_dofs=("invalid",))
++
++    def test_joints(self) -> None:
++        robot = shadow_hand.ShadowHand()
+         for joint in robot.joints:
+             self.assertEqual(joint.tag, "joint")
+-        expected_dofs = consts.NQ
+-        if add_dofs:
+-            expected_dofs += robot.n_forearm_dofs
++        expected_dofs = consts.NQ + robot.n_forearm_dofs
+         self.assertLen(robot.joints, expected_dofs)
+ 
+     @parameterized.named_parameters(
+-        {"testcase_name": "add_dofs", "add_dofs": True},
+-        {"testcase_name": "no_add_dofs", "add_dofs": False},
++        {"testcase_name": "full_action_space", "reduced_action_space": False},
++        {"testcase_name": "reduced_action_space", "reduced_action_space": True},
+     )
+-    def test_actuators(self, add_dofs: bool) -> None:
+-        robot = shadow_hand.ShadowHand(add_dofs=add_dofs)
++    def test_actuators(self, reduced_action_space: bool) -> None:
++        robot = shadow_hand.ShadowHand(reduced_action_space=reduced_action_space)
+         for actuator in robot.actuators:
+             self.assertEqual(actuator.tag, "position")
+-        expected_acts = consts.NU
+-        if add_dofs:
+-            expected_acts += robot.n_forearm_dofs
++        expected_acts = consts.NU + robot.n_forearm_dofs
++        if reduced_action_space:
++            expected_acts -= len(shadow_hand._REDUCED_ACTION_SPACE_EXCLUDED_DOFS)
+         self.assertLen(robot.actuators, expected_acts)
+ 
+-    def test_reduced_action_space(self) -> None:
+-        robot = shadow_hand.ShadowHand(reduced_action_space=True, add_dofs=False)
+-        self.assertLen(
+-            robot.actuators,
+-            consts.NU - len(shadow_hand._REDUCED_ACTION_SPACE_EXCLUDED_DOFS),
+-        )
+-
+     def test_restrict_wrist_yaw_range(self) -> None:
+-        robot = shadow_hand.ShadowHand(restrict_wrist_yaw_range=True, add_dofs=False)
++        robot = shadow_hand.ShadowHand(restrict_wrist_yaw_range=True)
+         physics = mjcf.Physics.from_mjcf_model(robot.mjcf_model)
+         jnt_range = physics.bind(robot.joints[0]).range  # W2 is the first joint.
+         self.assertEqual(jnt_range[0], -0.174533)
+         self.assertEqual(jnt_range[1], 0.174533)
+ 
+     def test_fingertip_sites_order(self) -> None:
+         expected_order = ["thdistal", "ffdistal", "mfdistal", "rfdistal", "lfdistal"]
+```
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/LICENSE` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/README.md` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_distal_pst.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_distal_pst.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_knuckle.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_knuckle.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_middle.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_middle.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/f_proximal.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/f_proximal.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/forearm_0.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/forearm_0.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/forearm_1.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/forearm_1.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/forearm_collision.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/forearm_collision.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/lf_metacarpal.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/lf_metacarpal.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/mounting_plate.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/mounting_plate.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/palm.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/palm.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/th_distal_pst.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/th_distal_pst.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/th_middle.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/th_middle.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/th_proximal.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/th_proximal.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/assets/wrist.obj` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/assets/wrist.obj`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/left_hand.xml` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/left_hand.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/right_hand.xml` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/right_hand.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/scene_left.xml` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/scene_left.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/scene_right.xml` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/scene_right.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/hands/third_party/shadow_hand/shadow_hand.png` & `robopianist-1.0.8/robopianist/models/hands/third_party/shadow_hand/shadow_hand.png`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/piano/__init__.py` & `robopianist-1.0.8/robopianist/models/piano/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/piano/midi_module.py` & `robopianist-1.0.8/robopianist/models/piano/midi_module.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/piano/piano.py` & `robopianist-1.0.8/robopianist/models/piano/piano.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/piano/piano_constants.py` & `robopianist-1.0.8/robopianist/models/piano/piano_constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/piano/piano_mjcf.py` & `robopianist-1.0.8/robopianist/models/piano/piano_mjcf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/models/piano/piano_test.py` & `robopianist-1.0.8/robopianist/models/piano/piano_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/__init__.py` & `robopianist-1.0.8/robopianist/music/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/audio.py` & `robopianist-1.0.8/robopianist/music/audio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/constants.py` & `robopianist-1.0.8/robopianist/music/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/data/README.md` & `robopianist-1.0.8/robopianist/music/data/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/data/rousseau/nocturne-trimmed.mid` & `robopianist-1.0.8/robopianist/music/data/rousseau/nocturne-trimmed.mid`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/data/rousseau/twinkle-twinkle-trimmed.mid` & `robopianist-1.0.8/robopianist/music/data/rousseau/twinkle-twinkle-trimmed.mid`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/library.py` & `robopianist-1.0.8/robopianist/music/library.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/midi_file.py` & `robopianist-1.0.8/robopianist/music/midi_file.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -227,15 +227,15 @@
+             transpose_chords=transpose_chords,
+         )
+         return MidiFile(seq=seq)
+ 
+     def synthesize(self, sampling_rate: int = consts.SAMPLING_RATE) -> np.ndarray:
+         """Synthesize the MIDI file into a waveform using FluidSynth."""
+         return midi_synth.fluidsynth(
+-            self.seq, sample_rate=sampling_rate, sf2_path=str(SF2_PATH)
++            self.seq, sample_rate=float(sampling_rate), sf2_path=str(SF2_PATH)
+         )
+ 
+     def play(self, sampling_rate: int = consts.SAMPLING_RATE) -> None:
+         """Play the MIDI file using FluidSynth and PyAudio."""
+         waveform_float = self.synthesize()
+         normalizer = float(np.iinfo(np.int16).max)
+         waveform = np.array(np.asarray(waveform_float) * normalizer, dtype=np.int16)
+```
+
+### Comparing `robopianist-1.0.7/robopianist/music/midi_file_test.py` & `robopianist-1.0.8/robopianist/music/midi_file_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/midi_message.py` & `robopianist-1.0.8/robopianist/music/midi_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/music_test.py` & `robopianist-1.0.8/robopianist/music/music_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/piano_roll.py` & `robopianist-1.0.8/robopianist/music/piano_roll.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/music/synthesizer.py` & `robopianist-1.0.8/robopianist/music/synthesizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/soundfonts/TimGM6mb.sf2` & `robopianist-1.0.8/robopianist/soundfonts/TimGM6mb.sf2`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/__init__.py` & `robopianist-1.0.8/robopianist/suite/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ """RoboPianist suite."""
+ 
+ from pathlib import Path
+-from typing import Dict, Optional, Union
++from typing import Any, Dict, Optional, Union
+ 
+ from dm_control import composer
+ from mujoco_utils import composer_utils
+ 
+ from robopianist import music
+ from robopianist.suite.tasks import piano_with_shadow_hands
+ 
+@@ -50,45 +50,50 @@
+ def load(
+     environment_name: str,
+     midi_file: Optional[Path] = None,
+     seed: Optional[int] = None,
+     stretch: float = 1.0,
+     shift: int = 0,
+     recompile_physics: bool = False,
+-    **task_kwargs,
++    legacy_step: bool = True,
++    task_kwargs: Optional[Dict[str, Any]] = None,
+ ) -> composer.Environment:
+     """Loads a RoboPianist environment.
+ 
+     Args:
+         environment_name: Name of the environment to load. Must be of the form
+             "RoboPianist-repertoire-150-<name>-v0", where <name> is the name of a
+             PIG dataset MIDI file in camel case notation.
+         midi_file: Path to a MIDI file to load. If provided, this will override
+             `environment_name`.
+         seed: Optional random seed.
+         stretch: Stretch factor for the MIDI file.
+         shift: Shift factor for the MIDI file.
+         recompile_physics: Whether to recompile the physics.
+-        **task_kwargs: Additional keyword arguments to pass to the task.
++        legacy_step: Whether to use the legacy step function.
++        task_kwargs: Additional keyword arguments to pass to the task.
+     """
+     if midi_file is not None:
+         midi = music.load(midi_file, stretch=stretch, shift=shift)
+     else:
+         if environment_name not in ALL:
+             raise ValueError(
+                 f"Unknown environment {environment_name}. "
+                 f"Available environments: {ALL}"
+             )
+         midi = music.load(_ALL_DICT[environment_name], stretch=stretch, shift=shift)
+ 
++    task_kwargs = task_kwargs or {}
++
+     return composer_utils.Environment(
+         task=piano_with_shadow_hands.PianoWithShadowHands(midi=midi, **task_kwargs),
+         random_state=seed,
+         strip_singleton_obs_buffer_dim=True,
+         recompile_physics=recompile_physics,
++        legacy_step=legacy_step,
+     )
+ 
+ 
+ __all__ = [
+     "ALL",
+     "DEBUG",
+     "ETUDE_12",
+```
+
+### Comparing `robopianist-1.0.7/robopianist/suite/composite_reward.py` & `robopianist-1.0.8/robopianist/suite/composite_reward.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/suite_test.py` & `robopianist-1.0.8/robopianist/suite/suite_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/__init__.py` & `robopianist-1.0.8/robopianist/suite/tasks/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/base.py` & `robopianist-1.0.8/robopianist/suite/tasks/base.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -10,14 +10,16 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ """Base piano composer task."""
+ 
++from typing import Sequence
++
+ import mujoco
+ import numpy as np
+ from dm_control import composer
+ from mujoco_utils import composer_utils, physics_utils
+ 
+ from robopianist.models.hands import HandSide, shadow_hand
+ from robopianist.models.piano import piano
+@@ -95,42 +97,45 @@
+         self,
+         arena: composer_utils.Arena,
+         gravity_compensation: bool = False,
+         change_color_on_activation: bool = False,
+         primitive_fingertip_collisions: bool = False,
+         reduced_action_space: bool = False,
+         attachment_yaw: float = _ATTACHMENT_YAW,
++        forearm_dofs: Sequence[str] = shadow_hand._DEFAULT_FOREARM_DOFS,
+         physics_timestep: float = _PHYSICS_TIMESTEP,
+         control_timestep: float = _CONTROL_TIMESTEP,
+     ) -> None:
+         super().__init__(
+             arena=arena,
+             change_color_on_activation=change_color_on_activation,
+             add_piano_actuators=False,
+             physics_timestep=physics_timestep,
+             control_timestep=control_timestep,
+         )
+ 
+-        self._left_hand = self._add_hand(
+-            hand_side=HandSide.LEFT,
+-            position=_LEFT_HAND_POSITION,
+-            quaternion=_LEFT_HAND_QUATERNION,
++        self._right_hand = self._add_hand(
++            hand_side=HandSide.RIGHT,
++            position=_RIGHT_HAND_POSITION,
++            quaternion=_RIGHT_HAND_QUATERNION,
+             gravity_compensation=gravity_compensation,
+             primitive_fingertip_collisions=primitive_fingertip_collisions,
+             reduced_action_space=reduced_action_space,
+             attachment_yaw=attachment_yaw,
++            forearm_dofs=forearm_dofs,
+         )
+-        self._right_hand = self._add_hand(
+-            hand_side=HandSide.RIGHT,
+-            position=_RIGHT_HAND_POSITION,
+-            quaternion=_RIGHT_HAND_QUATERNION,
++        self._left_hand = self._add_hand(
++            hand_side=HandSide.LEFT,
++            position=_LEFT_HAND_POSITION,
++            quaternion=_LEFT_HAND_QUATERNION,
+             gravity_compensation=gravity_compensation,
+             primitive_fingertip_collisions=primitive_fingertip_collisions,
+             reduced_action_space=reduced_action_space,
+             attachment_yaw=attachment_yaw,
++            forearm_dofs=forearm_dofs,
+         )
+ 
+     # Accessors.
+ 
+     @property
+     def left_hand(self) -> shadow_hand.ShadowHand:
+         return self._left_hand
+@@ -146,26 +151,28 @@
+         hand_side: HandSide,
+         position,
+         quaternion,
+         gravity_compensation: bool,
+         primitive_fingertip_collisions: bool,
+         reduced_action_space: bool,
+         attachment_yaw: float,
++        forearm_dofs: Sequence[str],
+     ) -> shadow_hand.ShadowHand:
+         joint_range = [-self._piano.size[1], self._piano.size[1]]
+ 
+         # Offset the joint range by the hand's initial position.
+         joint_range[0] -= position[1]
+         joint_range[1] -= position[1]
+ 
+         hand = shadow_hand.ShadowHand(
+             side=hand_side,
+             primitive_fingertip_collisions=primitive_fingertip_collisions,
+             restrict_wrist_yaw_range=False,
+             reduced_action_space=reduced_action_space,
++            forearm_dofs=forearm_dofs,
+         )
+         hand.root_body.pos = position
+ 
+         # Slightly rotate the forearms inwards (Z-axis) to mimic human posture.
+         rotate_axis = np.asarray([0, 0, 1], dtype=np.float64)
+         rotate_by = np.zeros(4, dtype=np.float64)
+         sign = -1 if hand_side == HandSide.LEFT else 1
+```
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/piano_with_one_shadow_hand.py` & `robopianist-1.0.8/robopianist/suite/tasks/piano_with_one_shadow_hand.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/piano_with_shadow_hands.py` & `robopianist-1.0.8/robopianist/suite/tasks/piano_with_shadow_hands.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -52,14 +52,15 @@
+         wrong_press_termination: bool = False,
+         initial_buffer_time: float = 0.0,
+         disable_fingering_reward: bool = False,
+         disable_forearm_reward: bool = False,
+         disable_colorization: bool = False,
+         disable_hand_collisions: bool = False,
+         augmentations: Optional[Sequence[base_variation.Variation]] = None,
++        energy_penalty_coef: float = _ENERGY_PENALTY_COEF,
+         **kwargs,
+     ) -> None:
+         """Task constructor.
+ 
+         Args:
+             midi: A `MidiFile` object.
+             n_steps_lookahead: Number of timesteps to look ahead when computing the
+@@ -80,14 +81,15 @@
+                 forearms.
+             disable_colorization: If True, disables the colorization of the fingertips
+                 and corresponding keys.
+             disable_hand_collisions: If True, disables collisions between the two hands.
+             augmentations: A list of `Variation` objects that will be applied to the
+                 MIDI file at the beginning of each episode. If None, no augmentations
+                 will be applied.
++            energy_penalty_coef: Coefficient for the energy penalty.
+         """
+         super().__init__(arena=stage.Stage(), **kwargs)
+ 
+         self._midi = midi
+         self._initial_midi = midi
+         self._n_steps_lookahead = n_steps_lookahead
+         if n_seconds_lookahead is not None:
+@@ -100,14 +102,15 @@
+             disable_fingering_reward or not self._midi.has_fingering()
+         )
+         self._disable_forearm_reward = disable_forearm_reward
+         self._wrong_press_termination = wrong_press_termination
+         self._disable_colorization = disable_colorization
+         self._disable_hand_collisions = disable_hand_collisions
+         self._augmentations = augmentations
++        self._energy_penalty_coef = energy_penalty_coef
+ 
+         if not disable_fingering_reward and not disable_colorization:
+             self._colorize_fingertips()
+         if disable_hand_collisions:
+             self._disable_collisions_between_hands()
+         self._reset_quantities_at_episode_init()
+         self._reset_trajectory()  # Important: call before adding observables.
+@@ -253,15 +256,15 @@
+         )
+ 
+     def _compute_energy_reward(self, physics: mjcf.Physics) -> float:
+         """Reward for minimizing energy."""
+         rew = 0.0
+         for hand in [self.right_hand, self.left_hand]:
+             power = hand.observables.actuators_power(physics).copy()
+-            rew -= _ENERGY_PENALTY_COEF * np.sum(power)
++            rew -= self._energy_penalty_coef * np.sum(power)
+         return rew
+ 
+     def _compute_key_press_reward(self, physics: mjcf.Physics) -> float:
+         """Reward for pressing the right keys at the right time."""
+         del physics  # Unused.
+         on = np.flatnonzero(self._goal_current[:-1])
+         rew = 0.0
+```
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/piano_with_shadow_hands_test.py` & `robopianist-1.0.8/robopianist/suite/tasks/piano_with_shadow_hands_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/self_actuated_piano.py` & `robopianist-1.0.8/robopianist/suite/tasks/self_actuated_piano.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/tasks/self_actuated_piano_test.py` & `robopianist-1.0.8/robopianist/suite/tasks/self_actuated_piano_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/variations.py` & `robopianist-1.0.8/robopianist/suite/variations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/suite/variations_test.py` & `robopianist-1.0.8/robopianist/suite/variations_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/__init__.py` & `robopianist-1.0.8/robopianist/viewer/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/application.py` & `robopianist-1.0.8/robopianist/viewer/application.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/figures.py` & `robopianist-1.0.8/robopianist/viewer/figures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/gui/__init__.py` & `robopianist-1.0.8/robopianist/viewer/gui/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/gui/base.py` & `robopianist-1.0.8/robopianist/viewer/gui/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/gui/fullscreen_quad.py` & `robopianist-1.0.8/robopianist/viewer/gui/fullscreen_quad.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/gui/glfw_gui.py` & `robopianist-1.0.8/robopianist/viewer/gui/glfw_gui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/renderer.py` & `robopianist-1.0.8/robopianist/viewer/renderer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/runtime.py` & `robopianist-1.0.8/robopianist/viewer/runtime.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/user_input.py` & `robopianist-1.0.8/robopianist/viewer/user_input.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/util.py` & `robopianist-1.0.8/robopianist/viewer/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/viewer.py` & `robopianist-1.0.8/robopianist/viewer/viewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/viewer/views.py` & `robopianist-1.0.8/robopianist/viewer/views.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/wrappers/__init__.py` & `robopianist-1.0.8/robopianist/wrappers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/wrappers/evaluation.py` & `robopianist-1.0.8/robopianist/wrappers/evaluation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist/wrappers/sound.py` & `robopianist-1.0.8/robopianist/wrappers/sound.py`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/robopianist.egg-info/PKG-INFO` & `robopianist-1.0.8/robopianist.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: robopianist
+-Version: 1.0.7
++Version: 1.0.8
+ Summary: A benchmark for high-dimensional robot control
+ Home-page: https://github.com/google-research/robopianist
+ Author: Kevin Zakka
+ Author-email: kevinarmandzakka@gmail.com
+ Maintainer: Kevin Zakka
+ Maintainer-email: kevinarmandzakka@gmail.com
+ License: Apache License 2.0
+@@ -24,19 +24,22 @@
+ Provides-Extra: test
+ Provides-Extra: dev
+ License-File: LICENSE
+ 
+ # RoboPianist: A Benchmark for High-Dimensional Robot Control
+ 
+ [![build][tests-badge]][tests]
++[![docs][docs-badge]][docs]
+ [![PyPI Python Version][pypi-versions-badge]][pypi]
+ [![PyPI version][pypi-badge]][pypi]
+ 
+ [tests-badge]: https://github.com/google-research/robopianist/actions/workflows/ci.yml/badge.svg
++[docs-badge]: https://github.com/google-research/robopianist/actions/workflows/docs.yml/badge.svg
+ [tests]: https://github.com/google-research/robopianist/actions/workflows/ci.yml
++[docs]: https://google-research.github.io/robopianist/
+ [pypi-versions-badge]: https://img.shields.io/pypi/pyversions/robopianist
+ [pypi-badge]: https://badge.fury.io/py/robopianist.svg
+ [pypi]: https://pypi.org/project/robopianist/
+ 
+ ![RoboPianist teaser image](./docs/teaser1x3.jpeg)
+ 
+ RoboPianist is a new benchmarking suite for high-dimensional control, targeted at testing high spatial and temporal precision, coordination, and planning, all with an underactuated system frequently making-and-breaking contacts. The proposed challenge is *mastering the piano* through bi-manual dexterity, using a pair of simulated anthropomorphic robot hands.
+@@ -109,29 +112,29 @@
+ conda activate pianist
+ 
+ pip install --upgrade robopianist
+ ```
+ 
+ ### Optional: Download additional soundfonts
+ 
+-We recommend you install additional soundfonts to improve the quality of the synthesized audio. The RoboPianist [CLI](#cli) can be used to list out all available soundfonts, change the default soundfont, and download additional ones. To list out all available commands, run:
++We recommend installing additional soundfonts to improve the quality of the synthesized audio. You can easily do this using the RoboPianist CLI:
+ 
+ ```bash
+-robopianist soundfont --help
++robopianist soundfont --download
+ ```
+ 
+-For more information, see [docs/soundfonts.md](docs/soundfonts.md).
++For more soundfont-related commands, see [docs/soundfonts.md](docs/soundfonts.md).
+ 
+ ## MIDI Dataset
+ 
+-The PIG dataset cannot be redistributed on GitHub due to licensing restrictions. See [docs/dataset](docs/dataset.md) for instructions on where to download and how to process the
++The PIG dataset cannot be redistributed on GitHub due to licensing restrictions. See [docs/dataset](docs/dataset.md) for instructions on where to download it and how to preprocess it.
+ 
+ ## CLI
+ 
+-RoboPianist comes with a command line interface (CLI) that can be used to download additional soundfonts, play MIDI files, preprocess the PIG dataset, and more. To see a list of available commands, run `robopianist --help`.
++RoboPianist comes with a command line interface (CLI) that can be used to download additional soundfonts, play MIDI files, preprocess the PIG dataset, and more. For more information, see [docs/cli.md](docs/cli.md).
+ 
+ ## Contributing
+ 
+ We welcome contributions to RoboPianist. Please see [docs/contributing.md](docs/contributing.md) for more information.
+ 
+ ## FAQ
+```
+
+### Comparing `robopianist-1.0.7/robopianist.egg-info/SOURCES.txt` & `robopianist-1.0.8/robopianist.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `robopianist-1.0.7/setup.py` & `robopianist-1.0.8/setup.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -36,19 +36,19 @@
+ core_requirements = [
+     "dm_control>=1.0.9",
+     "dm_env_wrappers>=0.0.11",
+     "mujoco>=2.3.1",
+     "mujoco_utils>=0.0.5",
+     "note_seq>=0.0.5",
+     "pretty_midi>=0.2.10",
+-    "pyaudio >= 0.2.12",
+-    "pyfluidsynth >= 1.3.2",
++    "pyaudio>=0.2.12",
++    "pyfluidsynth>=1.3.2",
+     "scikit-learn",
+-    "termcolor>=2.2.0",
+-    "tqdm>=4.65.0",
++    "termcolor",
++    "tqdm",
+ ]
+ 
+ test_requirements = [
+     "absl-py",
+     "pytest-xdist",
+ ]
+```
+

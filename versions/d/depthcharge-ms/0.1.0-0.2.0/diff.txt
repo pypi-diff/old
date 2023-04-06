@@ -1,0 +1,923 @@
+--- tmp/depthcharge-ms-0.1.0.tar.gz
++++ tmp/depthcharge-ms-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "depthcharge-ms-0.1.0.tar", last modified: Wed Nov 16 00:08:30 2022, max compression
+│ +gzip compressed data, was "depthcharge-ms-0.2.0.tar", last modified: Thu Apr  6 15:33:52 2023, max compression
+│   --- depthcharge-ms-0.1.0.tar
+├── +++ depthcharge-ms-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,72 +1,67 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.713223 depthcharge-ms-0.1.0/.github/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.713223 depthcharge-ms-0.1.0/.github/workflows/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      304 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/.github/workflows/docs.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1057 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/.github/workflows/lint.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      853 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/.github/workflows/publish.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      790 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/.github/workflows/tests.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      232 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/.pre-commit-config.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      510 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/CHANGELOG.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4974 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/CODE_OF_CONDUCT.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3553 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/CONTRIBUTING.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    11357 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4025 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3221 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.713223 depthcharge-ms-0.1.0/data/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    12882 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/data/TMT10-Trial-8.mgf
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)   333865 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/data/TMT10-Trial-8.mzML
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    67798 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/data/TMT10-Trial-8.mzXML
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/depthcharge/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      190 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/depthcharge/components/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      168 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/components/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5671 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/components/encoders.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1659 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/components/feedforward.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      509 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/components/mixins.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    15872 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/components/transformers.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/depthcharge/data/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      231 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/data/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     9784 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/data/datasets.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    15279 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/data/hdf5.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4844 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/data/loaders.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     9273 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/data/parsers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3472 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/data/preprocessing.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3080 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/masses.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/depthcharge/models/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       70 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/models/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/depthcharge/models/denovo/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       63 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/models/denovo/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    14982 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/models/denovo/model.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2707 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/similarity.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1975 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      907 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/depthcharge/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4025 2022-11-16 00:08:30.000000 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1498 2022-11-16 00:08:30.000000 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-16 00:08:30.000000 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       61 2022-11-16 00:08:30.000000 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      241 2022-11-16 00:08:30.000000 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       12 2022-11-16 00:08:30.000000 depthcharge-ms-0.1.0/depthcharge_ms.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/docs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3221 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/docs/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/docs/stylesheets/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      282 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/docs/stylesheets/extra.css
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      949 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/mkdocs.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      585 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1172 2022-11-16 00:08:30.721222 depthcharge-ms-0.1.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       75 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/static/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    15364 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/static/icon.svg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    24683 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/static/logo-dark.png
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    25343 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/static/logo-light.png
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3800 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/conftest.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/tests/unit_tests/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/tests/unit_tests/test_components/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1929 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/unit_tests/test_components/test_transformers.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-16 00:08:30.717223 depthcharge-ms-0.1.0/tests/unit_tests/test_data/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      868 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/unit_tests/test_data/test_datasets.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4733 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/unit_tests/test_data/test_index.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     4287 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/unit_tests/test_data/test_loaders.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      901 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/unit_tests/test_denovo.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2128 2022-11-16 00:08:14.000000 depthcharge-ms-0.1.0/tests/unit_tests/test_masses.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.462213 depthcharge-ms-0.2.0/.github/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/.github/workflows/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      304 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/.github/workflows/docs.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      799 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/.github/workflows/lint.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      853 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/.github/workflows/publish.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      790 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/.github/workflows/tests.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      434 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1013 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/CHANGELOG.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4974 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/CODE_OF_CONDUCT.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3553 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/CONTRIBUTING.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4053 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3221 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12882 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/data/TMT10-Trial-8.mgf
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   333865 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/data/TMT10-Trial-8.mzML
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    67798 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/data/TMT10-Trial-8.mzXML
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/depthcharge/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      169 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/depthcharge/components/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      168 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/components/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6700 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/components/encoders.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1659 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/components/feedforward.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      509 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/components/mixins.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15872 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/components/transformers.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/depthcharge/data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      190 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/data/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9784 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/data/datasets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15291 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/data/hdf5.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9272 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/data/parsers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3471 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/data/preprocessing.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3080 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/masses.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2707 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/similarity.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2248 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      561 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/depthcharge/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4053 2023-04-06 15:33:52.000000 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1415 2023-04-06 15:33:52.000000 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:33:52.000000 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-06 15:33:52.000000 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      264 2023-04-06 15:33:52.000000 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-06 15:33:52.000000 depthcharge-ms-0.2.0/depthcharge_ms.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.466213 depthcharge-ms-0.2.0/docs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3221 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/docs/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/docs/stylesheets/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      282 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/docs/stylesheets/extra.css
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      949 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/mkdocs.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      652 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1196 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/static/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15364 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/static/icon.svg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    24683 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/static/logo-dark.png
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25343 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/static/logo-light.png
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3798 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/conftest.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/tests/unit_tests/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/tests/unit_tests/test_components/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2948 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_components/test_encoders.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1929 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_components/test_transformers.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:33:52.470213 depthcharge-ms-0.2.0/tests/unit_tests/test_data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      868 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_data/test_datasets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4733 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_data/test_index.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3579 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_data/test_loaders.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2128 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_masses.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      319 2023-04-06 15:33:28.000000 depthcharge-ms-0.2.0/tests/unit_tests/test_utils.py
+│ │   --- depthcharge-ms-0.1.0/.github/workflows/publish.yml
+│ ├── +++ depthcharge-ms-0.2.0/.github/workflows/publish.yml
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/.github/workflows/tests.yml
+│ ├── +++ depthcharge-ms-0.2.0/.github/workflows/tests.yml
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/CODE_OF_CONDUCT.md
+│ ├── +++ depthcharge-ms-0.2.0/CODE_OF_CONDUCT.md
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/CONTRIBUTING.md
+│ ├── +++ depthcharge-ms-0.2.0/CONTRIBUTING.md
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/LICENSE
+│ ├── +++ depthcharge-ms-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/PKG-INFO
+│ ├── +++ depthcharge-ms-0.2.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,26 +1,27 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: depthcharge-ms
+│ │ -Version: 0.1.0
+│ │ +Version: 0.2.0
+│ │  Summary: A deep learning toolkit for proteomics
+│ │  Home-page: https://github.com/wfondrie/depthcharge
+│ │  Author: William E. Fondrie
+│ │  Author-email: fondriew@gmail.com
+│ │  License: Apache 2.0
+│ │  Project-URL: Documentation, https://depthcharge.readthedocs.io
+│ │  Project-URL: Bug Tracker, https://github.com/wfondrie/depthcharge/issues
+│ │  Project-URL: Discussion Board, https://github.com/wfondrie/depthcharge/discussions
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+│ │ -Requires-Python: >=3.7
+│ │ +Requires-Python: >=3.8
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: docs
+│ │  Provides-Extra: dev
+│ │ +Provides-Extra: tensorboard
+│ │  License-File: LICENSE
+│ │  
+│ │  ![depthcharge logo](./static/logo-dark.png#gh-dark-mode-only)
+│ │  ![depthcharge logo](./static/logo-light.png#gh-light-mode-only)
+│ │  
+│ │  Depthcharge is a deep learning toolkit for building state-of-the-art models to analyze mass spectra generated from peptides other and molecules.
+│ │ ├── html2text {}
+│ │ │ @@ -1,30 +1,30 @@
+│ │ │ -Metadata-Version: 2.1 Name: depthcharge-ms Version: 0.1.0 Summary: A deep
+│ │ │ +Metadata-Version: 2.1 Name: depthcharge-ms Version: 0.2.0 Summary: A deep
+│ │ │  learning toolkit for proteomics Home-page: https://github.com/wfondrie/
+│ │ │  depthcharge Author: William E. Fondrie Author-email: fondriew@gmail.com
+│ │ │  License: Apache 2.0 Project-URL: Documentation, https://
+│ │ │  depthcharge.readthedocs.io Project-URL: Bug Tracker, https://github.com/
+│ │ │  wfondrie/depthcharge/issues Project-URL: Discussion Board, https://github.com/
+│ │ │  wfondrie/depthcharge/discussions Classifier: Programming Language :: Python ::
+│ │ │  3 Classifier: License :: OSI Approved :: Apache Software License Classifier:
+│ │ │  Operating System :: OS Independent Classifier: Topic :: Scientific/Engineering
+│ │ │ -:: Bio-Informatics Requires-Python: >=3.7 Description-Content-Type: text/
+│ │ │ -markdown Provides-Extra: docs Provides-Extra: dev License-File: LICENSE !
+│ │ │ -[depthcharge logo](./static/logo-dark.png#gh-dark-mode-only) ![depthcharge
+│ │ │ -logo](./static/logo-light.png#gh-light-mode-only) Depthcharge is a deep
+│ │ │ -learning toolkit for building state-of-the-art models to analyze mass spectra
+│ │ │ -generated from peptides other and molecules. ## About Many deep learning tools
+│ │ │ -have been developed for the analysis of mass spectra, particularly for
+│ │ │ -proteomics and metabolomics data (Prosit, MS2Pip, DeepNovo, pNovo, etc.).
+│ │ │ -However, each one has had to reinvent the wheel. Depthcharge aims to be a
+│ │ │ -general framework for creating state-of-the-art deep learning models for mass
+│ │ │ -spectrometry data, empowering developers and researchers to spend more time on
+│ │ │ -innovating rather than recreating the layers needed for handling mass spectra
+│ │ │ -and peptides/other molecules. Think of depthcharge as a set of building blocks
+│ │ │ -to get you stared on a new deep learning project focused around mass
+│ │ │ +:: Bio-Informatics Requires-Python: >=3.8 Description-Content-Type: text/
+│ │ │ +markdown Provides-Extra: docs Provides-Extra: dev Provides-Extra: tensorboard
+│ │ │ +License-File: LICENSE ![depthcharge logo](./static/logo-dark.png#gh-dark-mode-
+│ │ │ +only) ![depthcharge logo](./static/logo-light.png#gh-light-mode-only)
+│ │ │ +Depthcharge is a deep learning toolkit for building state-of-the-art models to
+│ │ │ +analyze mass spectra generated from peptides other and molecules. ## About Many
+│ │ │ +deep learning tools have been developed for the analysis of mass spectra,
+│ │ │ +particularly for proteomics and metabolomics data (Prosit, MS2Pip, DeepNovo,
+│ │ │ +pNovo, etc.). However, each one has had to reinvent the wheel. Depthcharge aims
+│ │ │ +to be a general framework for creating state-of-the-art deep learning models
+│ │ │ +for mass spectrometry data, empowering developers and researchers to spend more
+│ │ │ +time on innovating rather than recreating the layers needed for handling mass
+│ │ │ +spectra and peptides/other molecules. Think of depthcharge as a set of building
+│ │ │ +blocks to get you stared on a new deep learning project focused around mass
+│ │ │  spectrometry data. Depthcharge delivers these building blocks mostly in the
+│ │ │  form of PyTorch modules, which can be readily used to assemble customized deep
+│ │ │  learning models for your task. Currently, depthcharge focuses on Transformer
+│ │ │  layers, a type of model that has been revolutionary for natural language
+│ │ │  processing (NLP) and computer vision tasks. We've found Transformers to be
+│ │ │  particularly well-suited for mass spectra and our *de novo* peptide sequencing
+│ │ │  tool, [Casanovo](https://github.com/Noble-Lab/casanovo), is built upon
+│ │   --- depthcharge-ms-0.1.0/README.md
+│ ├── +++ depthcharge-ms-0.2.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/data/TMT10-Trial-8.mgf
+│ ├── +++ depthcharge-ms-0.2.0/data/TMT10-Trial-8.mgf
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/data/TMT10-Trial-8.mzML
+│ ├── +++ depthcharge-ms-0.2.0/data/TMT10-Trial-8.mzML
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/data/TMT10-Trial-8.mzXML
+│ ├── +++ depthcharge-ms-0.2.0/data/TMT10-Trial-8.mzXML
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/depthcharge/components/encoders.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/components/encoders.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,15 +1,17 @@
+│ │  """Simple encoders for input into Transformers and the like."""
+│ │ +import math
+│ │ +
+│ │  import torch
+│ │  import einops
+│ │  import numpy as np
+│ │  
+│ │  
+│ │ -class MassEncoder(torch.nn.Module):
+│ │ -    """Encode mass values using sine and cosine waves.
+│ │ +class FloatEncoder(torch.nn.Module):
+│ │ +    """Encode floating point values using sine and cosine waves.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      dim_model : int
+│ │          The number of features to output.
+│ │      min_wavelength : float
+│ │          The minimum wavelength to use.
+│ │ @@ -17,93 +19,113 @@
+│ │          The maximum wavelength to use.
+│ │      """
+│ │  
+│ │      def __init__(self, dim_model, min_wavelength=0.001, max_wavelength=10000):
+│ │          """Initialize the MassEncoder"""
+│ │          super().__init__()
+│ │  
+│ │ -        n_sin = int(dim_model / 2)
+│ │ -        n_cos = dim_model - n_sin
+│ │ -
+│ │ -        if min_wavelength:
+│ │ -            base = min_wavelength / (2 * np.pi)
+│ │ -            scale = max_wavelength / min_wavelength
+│ │ -        else:
+│ │ -            base = 1
+│ │ -            scale = max_wavelength / (2 * np.pi)
+│ │ -
+│ │ -        sin_term = base * scale ** (
+│ │ -            torch.arange(0, n_sin).float() / (n_sin - 1)
+│ │ -        )
+│ │ -        cos_term = base * scale ** (
+│ │ -            torch.arange(0, n_cos).float() / (n_cos - 1)
+│ │ +        # Error checking:
+│ │ +        if min_wavelength <= 0:
+│ │ +            raise ValueError("'min_wavelength' must be greater than 0.")
+│ │ +
+│ │ +        if max_wavelength <= 0:
+│ │ +            raise ValueError("'max_wavelength' must be greater than 0.")
+│ │ +
+│ │ +        # Get dimensions for equations:
+│ │ +        d_sin = math.ceil(dim_model / 2)
+│ │ +        d_cos = dim_model - d_sin
+│ │ +
+│ │ +        base = min_wavelength / (2 * np.pi)
+│ │ +        scale = max_wavelength / min_wavelength
+│ │ +        sin_exp = torch.arange(0, d_sin).float() / (d_sin - 1)
+│ │ +        cos_exp = (torch.arange(d_sin, dim_model).float() - d_sin) / (
+│ │ +            d_cos - 1
+│ │          )
+│ │ +        sin_term = base * (scale**sin_exp)
+│ │ +        cos_term = base * (scale**cos_exp)
+│ │  
+│ │          self.register_buffer("sin_term", sin_term)
+│ │          self.register_buffer("cos_term", cos_term)
+│ │  
+│ │      def forward(self, X):
+│ │          """Encode m/z values.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │ -        X : torch.Tensor of shape (n_masses)
+│ │ +        X : torch.Tensor of shape (batch_size, n_masses)
+│ │              The masses to embed.
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        torch.Tensor of shape (n_masses, dim_model)
+│ │ +        torch.Tensor of shape (batch_size, n_masses, dim_model)
+│ │              The encoded features for the mass spectra.
+│ │          """
+│ │ -        sin_mz = torch.sin(X / self.sin_term)
+│ │ -        cos_mz = torch.cos(X / self.cos_term)
+│ │ +        sin_mz = torch.sin(X[:, :, None] / self.sin_term)
+│ │ +        cos_mz = torch.cos(X[:, :, None] / self.cos_term)
+│ │          return torch.cat([sin_mz, cos_mz], axis=-1)
+│ │  
+│ │  
+│ │ -class PeakEncoder(MassEncoder):
+│ │ -    """Encode m/z values in a mass spectrum using sine and cosine waves.
+│ │ +class PeakEncoder(torch.nn.Module):
+│ │ +    """Encode mass spectrum.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      dim_model : int
+│ │          The number of features to output.
+│ │      dim_intensity : int, optional
+│ │          The number of features to use for intensity. The remaining features
+│ │          will be used to encode the m/z values.
+│ │      min_wavelength : float, optional
+│ │          The minimum wavelength to use.
+│ │      max_wavelength : float, optional
+│ │          The maximum wavelength to use.
+│ │ +    learned_intensity_encoding : bool, optional
+│ │ +        Use a learned intensity encoding as opposed to a sinusoidal encoding.
+│ │ +        Note that for the sinusoidal encoding, this encoder expects values
+│ │ +        between [0, 1].
+│ │      """
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          dim_model,
+│ │          dim_intensity=None,
+│ │          min_wavelength=0.001,
+│ │          max_wavelength=10000,
+│ │ +        learned_intensity_encoding=True,
+│ │      ):
+│ │          """Initialize the MzEncoder"""
+│ │ -        self.dim_intensity = dim_intensity
+│ │ +        super().__init__()
+│ │ +        self.dim_model = dim_model
+│ │          self.dim_mz = dim_model
+│ │ -        if self.dim_intensity is not None:
+│ │ -            self.dim_mz -= self.dim_intensity
+│ │ +        self.learned_intensity_encoding = learned_intensity_encoding
+│ │ +        if dim_intensity is not None:
+│ │ +            if dim_intensity >= dim_model:
+│ │ +                raise ValueError(
+│ │ +                    "'dim_intensity' must be less than 'dim_model'"
+│ │ +                )
+│ │  
+│ │ -        super().__init__(
+│ │ +            self.dim_mz -= dim_intensity
+│ │ +            self.dim_intensity = dim_intensity
+│ │ +        else:
+│ │ +            self.dim_intensity = dim_model
+│ │ +
+│ │ +        self.mz_encoder = FloatEncoder(
+│ │              dim_model=self.dim_mz,
+│ │              min_wavelength=min_wavelength,
+│ │              max_wavelength=max_wavelength,
+│ │          )
+│ │  
+│ │ -        if self.dim_intensity is None:
+│ │ -            self.int_encoder = torch.nn.Linear(1, dim_model, bias=False)
+│ │ +        if self.learned_intensity_encoding:
+│ │ +            self.int_encoder = torch.nn.Linear(
+│ │ +                1, self.dim_intensity, bias=False
+│ │ +            )
+│ │          else:
+│ │ -            self.int_encoder = MassEncoder(
+│ │ -                dim_model=dim_intensity,
+│ │ -                min_wavelength=0,
+│ │ +            self.int_encoder = FloatEncoder(
+│ │ +                dim_model=self.dim_intensity,
+│ │ +                min_wavelength=1e-6,
+│ │                  max_wavelength=1,
+│ │              )
+│ │  
+│ │      def forward(self, X):
+│ │          """Encode m/z values and intensities.
+│ │  
+│ │          Note that we expect intensities to fall within the interval [0, 1].
+│ │ @@ -115,47 +137,52 @@
+│ │              contains the peaks in the mass spectrum, and axis 2 is essentially
+│ │              a 2-tuple specifying the m/z-intensity pair for each peak. These
+│ │              should be zero-padded, such that all of the spectra in the batch
+│ │              are the same length.
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        torch.Tensor of shape (n_spectr, n_peaks, dim_model)
+│ │ +        torch.Tensor of shape (n_spectra, n_peaks, dim_model)
+│ │              The encoded features for the mass spectra.
+│ │          """
+│ │ -        m_over_z = X[:, :, [0]]
+│ │ -        encoded = super().forward(m_over_z)
+│ │ -        intensity = self.int_encoder(X[:, :, [1]])
+│ │ -        if self.dim_intensity is None:
+│ │ +        m_over_z = X[:, :, 0]
+│ │ +        encoded = self.mz_encoder(m_over_z)
+│ │ +
+│ │ +        if self.learned_intensity_encoding:
+│ │ +            int_input = X[:, :, [1]]
+│ │ +        else:
+│ │ +            int_input = X[:, :, 1]
+│ │ +
+│ │ +        intensity = self.int_encoder(int_input)
+│ │ +        if self.dim_intensity == self.dim_model:
+│ │              return encoded + intensity
+│ │  
+│ │          return torch.cat([encoded, intensity], dim=2)
+│ │  
+│ │  
+│ │ -class PositionalEncoder(torch.nn.Module):
+│ │ +class PositionalEncoder(FloatEncoder):
+│ │      """The positional encoder for sequences.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      dim_model : int
+│ │          The number of features to output.
+│ │ +    min_wavelength : float, optional
+│ │ +        The shortest wavelength in the geometric progression.
+│ │ +    max_wavelength : float, optional
+│ │ +        The longest wavelength in the geometric progression.
+│ │      """
+│ │  
+│ │ -    def __init__(self, dim_model, max_wavelength=10000):
+│ │ +    def __init__(self, dim_model, min_wavelength=1, max_wavelength=10000):
+│ │          """Initialize the MzEncoder"""
+│ │ -        super().__init__()
+│ │ -
+│ │ -        n_sin = int(dim_model / 2)
+│ │ -        n_cos = dim_model - n_sin
+│ │ -        scale = max_wavelength / (2 * np.pi)
+│ │ -
+│ │ -        sin_term = scale ** (torch.arange(0, n_sin).float() / (n_sin - 1))
+│ │ -        cos_term = scale ** (torch.arange(0, n_cos).float() / (n_cos - 1))
+│ │ -        self.register_buffer("sin_term", sin_term)
+│ │ -        self.register_buffer("cos_term", cos_term)
+│ │ +        super().__init__(
+│ │ +            dim_model=dim_model,
+│ │ +            min_wavelength=min_wavelength,
+│ │ +            max_wavelength=max_wavelength,
+│ │ +        )
+│ │  
+│ │      def forward(self, X):
+│ │          """Encode positions in a sequence.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          X : torch.Tensor of shape (batch_size, n_sequence, n_features)
+│ │   --- depthcharge-ms-0.1.0/depthcharge/components/feedforward.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/components/feedforward.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/depthcharge/components/transformers.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/components/transformers.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Base Transformer models for working with mass spectra and peptides"""
+│ │  import re
+│ │  
+│ │  import torch
+│ │  
+│ │ -from .encoders import MassEncoder, PeakEncoder, PositionalEncoder
+│ │ +from .encoders import FloatEncoder, PeakEncoder, PositionalEncoder
+│ │  from ..masses import PeptideMass
+│ │  from .. import utils
+│ │  
+│ │  
+│ │  class SpectrumEncoder(torch.nn.Module):
+│ │      """A Transformer encoder for input mass spectra.
+│ │  
+│ │ @@ -368,15 +368,15 @@
+│ │              pos_encoder=pos_encoder,
+│ │              residues=residues,
+│ │              max_charge=max_charge,
+│ │          )
+│ │          self.reverse = reverse
+│ │  
+│ │          # Additional model components
+│ │ -        self.mass_encoder = MassEncoder(dim_model)
+│ │ +        self.mass_encoder = FloatEncoder(dim_model)
+│ │          layer = torch.nn.TransformerDecoderLayer(
+│ │              d_model=dim_model,
+│ │              nhead=n_head,
+│ │              dim_feedforward=dim_feedforward,
+│ │              batch_first=True,
+│ │              dropout=dropout,
+│ │          )
+│ │ @@ -421,15 +421,15 @@
+│ │              sequences = utils.listify(sequences)
+│ │              tokens = [self.tokenize(s) for s in sequences]
+│ │              tokens = torch.nn.utils.rnn.pad_sequence(tokens, batch_first=True)
+│ │          else:
+│ │              tokens = torch.tensor([[]]).to(self.device)
+│ │  
+│ │          # Prepare mass and charge
+│ │ -        masses = self.mass_encoder(precursors[:, None, [0]])
+│ │ +        masses = self.mass_encoder(precursors[:, None, 0])
+│ │          charges = self.charge_encoder(precursors[:, 1].int() - 1)
+│ │          precursors = masses + charges[:, None, :]
+│ │  
+│ │          # Feed through model:
+│ │          if sequences is None:
+│ │              tgt = precursors
+│ │          else:
+│ │   --- depthcharge-ms-0.1.0/depthcharge/data/datasets.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/data/datasets.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/depthcharge/data/hdf5.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/data/hdf5.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -176,15 +176,16 @@
+│ │      def add_file(self, ms_data_file):
+│ │          """Add a mass spectrometry data file to the index.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          ms_data_file : str or Path
+│ │              The mass spectrometry data file to add. It must be in an mzML or
+│ │ -            MGF file format and use an ``.mzML``, ``.mzXML``, or ``.mgf`` file extension.
+│ │ +            MGF file format and use an ``.mzML``, ``.mzXML``, or ``.mgf`` file
+│ │ +            extension.
+│ │          """
+│ │          ms_data_file = Path(ms_data_file)
+│ │          if str(ms_data_file) in self._file_map:
+│ │              return
+│ │  
+│ │          # Read the file:
+│ │          parser = self._get_parser(ms_data_file)
+│ │   --- depthcharge-ms-0.1.0/depthcharge/data/parsers.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/data/parsers.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -302,8 +302,8 @@
+│ │          return int(scan_str)
+│ │      except ValueError:
+│ │          try:
+│ │              return int(scan_str[scan_str.find("scan=") + len("scan=") :])
+│ │          except ValueError:
+│ │              pass
+│ │  
+│ │ -    raise ValueError(f"Failed to parse scan number")
+│ │ +    raise ValueError("Failed to parse scan number")
+│ │   --- depthcharge-ms-0.1.0/depthcharge/data/preprocessing.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/data/preprocessing.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -86,15 +86,14 @@
+│ │  
+│ │  def remove_precursor_peak(
+│ │      mz_array: torch.Tensor,
+│ │      int_array: torch.Tensor,
+│ │      precursor_mz: float,
+│ │      tol: float = 1.5,
+│ │  ) -> Tuple[torch.Tensor, torch.Tensor]:
+│ │ -
+│ │      """Square root the intensities and scale to unit norm.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      mz_array : torch.Tensor of shape (n_peaks,)
+│ │          The m/z values of the peaks in the spectrum.
+│ │      int_array : torch.Tensor of shape (n_peaks,)
+│ │   --- depthcharge-ms-0.1.0/depthcharge/masses.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/masses.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/depthcharge/similarity.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/similarity.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/depthcharge/utils.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/utils.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,12 +1,16 @@
+│ │  """Common utility functions"""
+│ │  import pandas as pd
+│ │ -from tensorboard.backend.event_processing.event_accumulator import (
+│ │ -    EventAccumulator,
+│ │ -)
+│ │ +
+│ │ +try:
+│ │ +    from tensorboard.backend.event_processing.event_accumulator import (
+│ │ +        EventAccumulator,
+│ │ +    )
+│ │ +except ImportError:
+│ │ +    EventAccumulator = None
+│ │  
+│ │  
+│ │  def read_tensorboard_scalars(path):
+│ │      """Read scalars from Tensorboard logs.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │ @@ -14,14 +18,20 @@
+│ │          The path of the scalar log file.
+│ │  
+│ │      Returns
+│ │      -------
+│ │      pandas.DataFrame
+│ │          A dataframe containing the scalar values.
+│ │      """
+│ │ +    if EventAccumulator is None:
+│ │ +        raise ImportError(
+│ │ +            "Install the 'tensorboard' optional dependency to "
+│ │ +            "use this function. https://www.tensorflow.org/tensorboard"
+│ │ +        )
+│ │ +
+│ │      event = EventAccumulator(path)
+│ │      event.Reload()
+│ │      data = []
+│ │      for tag in event.Tags()["scalars"]:
+│ │          tag_df = pd.DataFrame(
+│ │              event.Scalars(tag), columns=["wall_time", "step", "value"]
+│ │          )
+│ │   --- depthcharge-ms-0.1.0/depthcharge/version.py
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge/version.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,8 +1,9 @@
+│ │  """Get the package version"""
+│ │ +from importlib.metadata import version, PackageNotFoundError
+│ │  
+│ │  
+│ │  def _get_version():
+│ │      """Retreive the package version.
+│ │  
+│ │      Using setuptools-scm dynamically sets the pacakge version depending on
+│ │      the latest git release and commits since that point. This function
+│ │ @@ -10,23 +11,10 @@
+│ │  
+│ │      Returns
+│ │      -------
+│ │      str or None
+│ │          The package version number. If not version is found, returns None.
+│ │      """
+│ │      try:
+│ │ -        # Fast, but only works in Python 3.8+
+│ │ -        from importlib.metadata import version, PackageNotFoundError
+│ │ -
+│ │ -        try:
+│ │ -            return version("ganbit")
+│ │ -        except PackageNotFoundError:
+│ │ -            return None
+│ │ -
+│ │ -    except ImportError:
+│ │ -        # Slow, but works for all Python 3+
+│ │ -        from pkg_resources import get_distribution, DistributionNotFound
+│ │ -
+│ │ -        try:
+│ │ -            return get_distribution("ganbit").version
+│ │ -        except DistributionNotFound:
+│ │ -            return None
+│ │ +        return version("depthcharge")
+│ │ +    except PackageNotFoundError:
+│ │ +        return None
+│ │   --- depthcharge-ms-0.1.0/depthcharge_ms.egg-info/PKG-INFO
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge_ms.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,26 +1,27 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: depthcharge-ms
+│ │ -Version: 0.1.0
+│ │ +Version: 0.2.0
+│ │  Summary: A deep learning toolkit for proteomics
+│ │  Home-page: https://github.com/wfondrie/depthcharge
+│ │  Author: William E. Fondrie
+│ │  Author-email: fondriew@gmail.com
+│ │  License: Apache 2.0
+│ │  Project-URL: Documentation, https://depthcharge.readthedocs.io
+│ │  Project-URL: Bug Tracker, https://github.com/wfondrie/depthcharge/issues
+│ │  Project-URL: Discussion Board, https://github.com/wfondrie/depthcharge/discussions
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+│ │ -Requires-Python: >=3.7
+│ │ +Requires-Python: >=3.8
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: docs
+│ │  Provides-Extra: dev
+│ │ +Provides-Extra: tensorboard
+│ │  License-File: LICENSE
+│ │  
+│ │  ![depthcharge logo](./static/logo-dark.png#gh-dark-mode-only)
+│ │  ![depthcharge logo](./static/logo-light.png#gh-light-mode-only)
+│ │  
+│ │  Depthcharge is a deep learning toolkit for building state-of-the-art models to analyze mass spectra generated from peptides other and molecules.
+│ │ ├── html2text {}
+│ │ │ @@ -1,30 +1,30 @@
+│ │ │ -Metadata-Version: 2.1 Name: depthcharge-ms Version: 0.1.0 Summary: A deep
+│ │ │ +Metadata-Version: 2.1 Name: depthcharge-ms Version: 0.2.0 Summary: A deep
+│ │ │  learning toolkit for proteomics Home-page: https://github.com/wfondrie/
+│ │ │  depthcharge Author: William E. Fondrie Author-email: fondriew@gmail.com
+│ │ │  License: Apache 2.0 Project-URL: Documentation, https://
+│ │ │  depthcharge.readthedocs.io Project-URL: Bug Tracker, https://github.com/
+│ │ │  wfondrie/depthcharge/issues Project-URL: Discussion Board, https://github.com/
+│ │ │  wfondrie/depthcharge/discussions Classifier: Programming Language :: Python ::
+│ │ │  3 Classifier: License :: OSI Approved :: Apache Software License Classifier:
+│ │ │  Operating System :: OS Independent Classifier: Topic :: Scientific/Engineering
+│ │ │ -:: Bio-Informatics Requires-Python: >=3.7 Description-Content-Type: text/
+│ │ │ -markdown Provides-Extra: docs Provides-Extra: dev License-File: LICENSE !
+│ │ │ -[depthcharge logo](./static/logo-dark.png#gh-dark-mode-only) ![depthcharge
+│ │ │ -logo](./static/logo-light.png#gh-light-mode-only) Depthcharge is a deep
+│ │ │ -learning toolkit for building state-of-the-art models to analyze mass spectra
+│ │ │ -generated from peptides other and molecules. ## About Many deep learning tools
+│ │ │ -have been developed for the analysis of mass spectra, particularly for
+│ │ │ -proteomics and metabolomics data (Prosit, MS2Pip, DeepNovo, pNovo, etc.).
+│ │ │ -However, each one has had to reinvent the wheel. Depthcharge aims to be a
+│ │ │ -general framework for creating state-of-the-art deep learning models for mass
+│ │ │ -spectrometry data, empowering developers and researchers to spend more time on
+│ │ │ -innovating rather than recreating the layers needed for handling mass spectra
+│ │ │ -and peptides/other molecules. Think of depthcharge as a set of building blocks
+│ │ │ -to get you stared on a new deep learning project focused around mass
+│ │ │ +:: Bio-Informatics Requires-Python: >=3.8 Description-Content-Type: text/
+│ │ │ +markdown Provides-Extra: docs Provides-Extra: dev Provides-Extra: tensorboard
+│ │ │ +License-File: LICENSE ![depthcharge logo](./static/logo-dark.png#gh-dark-mode-
+│ │ │ +only) ![depthcharge logo](./static/logo-light.png#gh-light-mode-only)
+│ │ │ +Depthcharge is a deep learning toolkit for building state-of-the-art models to
+│ │ │ +analyze mass spectra generated from peptides other and molecules. ## About Many
+│ │ │ +deep learning tools have been developed for the analysis of mass spectra,
+│ │ │ +particularly for proteomics and metabolomics data (Prosit, MS2Pip, DeepNovo,
+│ │ │ +pNovo, etc.). However, each one has had to reinvent the wheel. Depthcharge aims
+│ │ │ +to be a general framework for creating state-of-the-art deep learning models
+│ │ │ +for mass spectrometry data, empowering developers and researchers to spend more
+│ │ │ +time on innovating rather than recreating the layers needed for handling mass
+│ │ │ +spectra and peptides/other molecules. Think of depthcharge as a set of building
+│ │ │ +blocks to get you stared on a new deep learning project focused around mass
+│ │ │  spectrometry data. Depthcharge delivers these building blocks mostly in the
+│ │ │  form of PyTorch modules, which can be readily used to assemble customized deep
+│ │ │  learning models for your task. Currently, depthcharge focuses on Transformer
+│ │ │  layers, a type of model that has been revolutionary for natural language
+│ │ │  processing (NLP) and computer vision tasks. We've found Transformers to be
+│ │ │  particularly well-suited for mass spectra and our *de novo* peptide sequencing
+│ │ │  tool, [Casanovo](https://github.com/Noble-Lab/casanovo), is built upon
+│ │   --- depthcharge-ms-0.1.0/depthcharge_ms.egg-info/SOURCES.txt
+│ ├── +++ depthcharge-ms-0.2.0/depthcharge_ms.egg-info/SOURCES.txt
+│ │┄ Files 18% similar despite different names
+│ │ @@ -24,32 +24,29 @@
+│ │  depthcharge/components/encoders.py
+│ │  depthcharge/components/feedforward.py
+│ │  depthcharge/components/mixins.py
+│ │  depthcharge/components/transformers.py
+│ │  depthcharge/data/__init__.py
+│ │  depthcharge/data/datasets.py
+│ │  depthcharge/data/hdf5.py
+│ │ -depthcharge/data/loaders.py
+│ │  depthcharge/data/parsers.py
+│ │  depthcharge/data/preprocessing.py
+│ │ -depthcharge/models/__init__.py
+│ │ -depthcharge/models/denovo/__init__.py
+│ │ -depthcharge/models/denovo/model.py
+│ │  depthcharge_ms.egg-info/PKG-INFO
+│ │  depthcharge_ms.egg-info/SOURCES.txt
+│ │  depthcharge_ms.egg-info/dependency_links.txt
+│ │  depthcharge_ms.egg-info/entry_points.txt
+│ │  depthcharge_ms.egg-info/requires.txt
+│ │  depthcharge_ms.egg-info/top_level.txt
+│ │  docs/README.md
+│ │  docs/static
+│ │  docs/stylesheets/extra.css
+│ │  static/icon.svg
+│ │  static/logo-dark.png
+│ │  static/logo-light.png
+│ │  tests/conftest.py
+│ │ -tests/unit_tests/test_denovo.py
+│ │  tests/unit_tests/test_masses.py
+│ │ +tests/unit_tests/test_utils.py
+│ │ +tests/unit_tests/test_components/test_encoders.py
+│ │  tests/unit_tests/test_components/test_transformers.py
+│ │  tests/unit_tests/test_data/test_datasets.py
+│ │  tests/unit_tests/test_data/test_index.py
+│ │  tests/unit_tests/test_data/test_loaders.py
+│ │   --- depthcharge-ms-0.1.0/docs/README.md
+│ ├── +++ depthcharge-ms-0.2.0/docs/README.md
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/mkdocs.yml
+│ ├── +++ depthcharge-ms-0.2.0/mkdocs.yml
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/pyproject.toml
+│ ├── +++ depthcharge-ms-0.2.0/pyproject.toml
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,13 +1,17 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [tool.setuptools_scm]
+│ │  
+│ │ +[tool.ruff]
+│ │ +[tool.ruff.per-file-ignores]
+│ │ +"__init__.py" = ["F401"]
+│ │ +
+│ │  [tool.black]
+│ │  line-length = 79
+│ │  target-version = ['py37']
+│ │  include = '\.pyi?$'
+│ │  exclude = '''
+│ │  
+│ │  (
+│ │   --- depthcharge-ms-0.1.0/setup.cfg
+│ ├── +++ depthcharge-ms-0.2.0/setup.cfg
+│ │┄ Files 16% similar despite different names
+│ │ @@ -16,35 +16,37 @@
+│ │  	Programming Language :: Python :: 3
+│ │  	License :: OSI Approved :: Apache Software License
+│ │  	Operating System :: OS Independent
+│ │  	Topic :: Scientific/Engineering :: Bio-Informatics
+│ │  
+│ │  [options]
+│ │  packages = find:
+│ │ -python_requires = >=3.7
+│ │ +python_requires = >=3.8
+│ │  install_requires = 
+│ │  	torch>=1.11.0
+│ │  	pyteomics>=4.4.2
+│ │  	numpy>=1.18.1
+│ │  	pandas>=1.0.3
+│ │  	numba>=0.48.0
+│ │  	lxml>=4.9.1
+│ │  	h5py>=3.7.0
+│ │  	einops>=0.4.1
+│ │ -	pytorch-lightning>=1.5.10
+│ │ +	tqdm>=4.65.0
+│ │  
+│ │  [options.extras_require]
+│ │  docs = 
+│ │  	mkdocs
+│ │  	mkdocs-material
+│ │  	mkdocstrings
+│ │  	mkdocstrings-python
+│ │  dev = 
+│ │  	pre-commit>=2.7.1
+│ │  	black>=19.10b0
+│ │ +tensorboard = 
+│ │ +	tesnsorboard>=2.11.0
+│ │  
+│ │  [options.entry_points]
+│ │  console_scripts = 
+│ │  	depthcharge = depthcharge.depthcharge:main
+│ │  
+│ │  [egg_info]
+│ │  tag_build =
+│ │   --- depthcharge-ms-0.1.0/static/icon.svg
+│ ├── +++ depthcharge-ms-0.2.0/static/icon.svg
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/static/logo-dark.png
+│ ├── +++ depthcharge-ms-0.2.0/static/logo-dark.png
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/static/logo-light.png
+│ ├── +++ depthcharge-ms-0.2.0/static/logo-light.png
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/tests/conftest.py
+│ ├── +++ depthcharge-ms-0.2.0/tests/conftest.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -114,16 +114,16 @@
+│ │  
+│ │      if add_problems:
+│ │          entries[-2] = _create_mgf_entry(peptides[-2], 0)
+│ │          entries[-1] = _create_mgf_entry(peptides[-1], 4)
+│ │  
+│ │          invalid_entry = [
+│ │              "BEGIN IONS",
+│ │ -            f"CHARGE=2+",
+│ │ -            f"1 1",
+│ │ +            "CHARGE=2+",
+│ │ +            "1 1",
+│ │              "END IONS",
+│ │          ]
+│ │  
+│ │          entries.append("\n".join(invalid_entry))
+│ │  
+│ │      with mgf_file.open("w+") as mgf_ref:
+│ │          mgf_ref.write("\n".join(entries))
+│ │   --- depthcharge-ms-0.1.0/tests/unit_tests/test_components/test_transformers.py
+│ ├── +++ depthcharge-ms-0.2.0/tests/unit_tests/test_components/test_transformers.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/tests/unit_tests/test_data/test_datasets.py
+│ ├── +++ depthcharge-ms-0.2.0/tests/unit_tests/test_data/test_datasets.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/tests/unit_tests/test_data/test_index.py
+│ ├── +++ depthcharge-ms-0.2.0/tests/unit_tests/test_data/test_index.py
+│ │┄ Files identical despite different names
+│ │   --- depthcharge-ms-0.1.0/tests/unit_tests/test_masses.py
+│ ├── +++ depthcharge-ms-0.2.0/tests/unit_tests/test_masses.py
+│ │┄ Files identical despite different names

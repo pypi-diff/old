@@ -1,0 +1,2119 @@
+--- tmp/weldx-0.6.4.tar.gz
++++ tmp/weldx-0.6.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "weldx-0.6.4.tar", last modified: Thu Feb  9 16:36:28 2023, max compression
+│ +gzip compressed data, was "weldx-0.6.5.tar", last modified: Thu Apr  6 15:27:24 2023, max compression
+│   --- weldx-0.6.4.tar
+├── +++ weldx-0.6.5.tar
+│ ├── file list
+│ │ @@ -1,281 +1,280 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    40007 2023-02-09 16:36:05.000000 weldx-0.6.4/CHANGELOG.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2283 2023-02-09 16:36:05.000000 weldx-0.6.4/CITATION.cff
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1516 2023-02-09 16:36:05.000000 weldx-0.6.4/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      319 2023-02-09 16:36:05.000000 weldx-0.6.4/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10272 2023-02-09 16:36:28.294084 weldx-0.6.4/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7194 2023-02-09 16:36:05.000000 weldx-0.6.4/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2029 2023-02-09 16:36:05.000000 weldx-0.6.4/RELEASE.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      363 2023-02-09 16:36:05.000000 weldx-0.6.4/codecov.yml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1175 2023-02-09 16:36:05.000000 weldx-0.6.4/conftest.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6571 2023-02-09 16:36:05.000000 weldx-0.6.4/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-09 16:36:28.298084 weldx-0.6.4/setup.cfg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.242080 weldx-0.6.4/weldx/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4685 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       21 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx/_version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.242080 weldx-0.6.4/weldx/asdf/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      225 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1299 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/_extension.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.242080 weldx-0.6.4/weldx/asdf/cli/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       65 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/cli/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10850 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/cli/welding_schema.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      569 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1900 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/extension.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    35535 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3822 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23378 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19674 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/asdf/validators.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6752 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2323 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/constants.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.242080 weldx-0.6.4/weldx/core/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      459 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/core/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    34598 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/core/generic_series.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7962 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/core/math_expression.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3056 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/core/spatial_series.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16188 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/core/time_series.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    92765 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/geometry.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.246080 weldx-0.6.4/weldx/manifests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9205 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/manifests/weldx-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10133 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/manifests/weldx-0.1.1.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10389 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/manifests/weldx-0.1.2.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    37373 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/measurement.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.234079 weldx-0.6.4/weldx/schemas/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.234079 weldx-0.6.4/weldx/schemas/weldx.bam.de/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.246080 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.234079 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.246080 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2750 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/base_metal-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1670 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/connection-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1762 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/joint_penetration-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      756 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/sub_assembly-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1031 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/weld_details-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      488 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/weldment-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      707 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/workpiece-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.246080 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1145 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/arc_welding_process-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1141 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/gas_component-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3071 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_for_procedure-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1530 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_type-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.246080 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      984 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/data_array-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1205 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/dataset-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      610 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/dimension-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2434 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2566 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.1.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2213 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/generic_series-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      711 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/generic_series_free_dimension-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.246080 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/geometry/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1665 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3106 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.1.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      948 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/di_edge-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2005 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/di_graph-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1165 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/di_node-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1393 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/mathematical_expression-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2572 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/media_file-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3843 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4811 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.1.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7384 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/coordinate_system_hierarchy-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4853 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4895 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.1.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3078 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/rotation-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1396 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.1.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7112 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7134 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.1.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25934 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/single_pass_weld-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2333 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/terms-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      622 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/test_property_tag-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1776 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/test_shape_validator-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2023 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/test_unit_validator-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/equipment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1889 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/equipment/measurement_equipment-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.250081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2343 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHUGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1926 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHVGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2344 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DUGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1939 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DVGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4325 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/FFGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1482 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HUGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HVGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      841 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/IGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1468 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1698 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UVGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1466 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1695 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VVGroove-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1259 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/terms-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      789 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/error-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      534 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/measurement-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6840 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/measurement_chain-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1239 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/signal-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2693 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/signal_transformation-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1271 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/source-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      429 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/pulse-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      615 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/spray_arc-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3323 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/GMAW-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      274 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/generic-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3904 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/terms-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2339 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/datetimeindex-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2464 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/time-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      519 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/timedelta-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2918 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/timedeltaindex-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1196 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/timestamp-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/units/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1346 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/units/dimension-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1479 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/units/quantity-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      351 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/units/units-0.1.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      529 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/uuid-0.1.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/tags/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      144 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.254081 weldx-0.6.4/weldx/tags/aws/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      268 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.258081 weldx-0.6.4/weldx/tags/aws/design/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      138 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      864 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/base_metal.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      543 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/connection.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      668 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/joint_penetration.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      517 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/sub_assembly.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      436 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/weld_details.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      437 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/weldment.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      350 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/design/workpiece.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.258081 weldx-0.6.4/weldx/tags/aws/process/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      119 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/process/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2089 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/process/arc_welding_process.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      426 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/process/gas_component.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      887 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/process/shielding_gas_for_procedure.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      550 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/aws/process/shielding_gas_type.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      752 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/base_types.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.258081 weldx-0.6.4/weldx/tags/core/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      261 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3683 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/common_types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1871 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/data_array.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1357 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/dataset.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2308 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2696 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/generic_series.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.258081 weldx-0.6.4/weldx/tags/core/geometry/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       27 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/geometry/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      990 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/geometry/spatial_data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4807 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/graph.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1549 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/mathematical_expression.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1410 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/media_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1913 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/time_series.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.258081 weldx-0.6.4/weldx/tags/core/transformations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       77 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/transformations/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1158 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/transformations/coordinate_system_hierarchy.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2809 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/transformations/local_coordinate_system.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2621 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/core/transformations/rotation.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.262081 weldx-0.6.4/weldx/tags/debug/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       75 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/debug/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      628 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/debug/test_property_tag.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1356 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/debug/test_shape_validator.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1198 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/debug/test_unit_validator.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.266082 weldx-0.6.4/weldx/tags/equipment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       36 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/equipment/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      507 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/equipment/measurement_equipment.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.266082 weldx-0.6.4/weldx/tags/groove/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       25 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/groove/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2027 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/groove/iso_9692_1.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.270082 weldx-0.6.4/weldx/tags/measurement/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      120 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      255 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/error.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      291 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/measurement.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      666 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/measurement_chain.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      424 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/signal.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      355 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/signal_transformation.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      291 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/measurement/source.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.270082 weldx-0.6.4/weldx/tags/processes/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/processes/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1168 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/processes/process.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.274083 weldx-0.6.4/weldx/tags/time/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       72 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/time/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1611 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/time/datetimeindex.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      909 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/time/time.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      601 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/time/timedelta.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1646 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/time/timedeltaindex.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      843 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/time/timestamp.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.274083 weldx-0.6.4/weldx/tags/units/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/units/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2403 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tags/units/pint_quantity.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.282083 weldx-0.6.4/weldx/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3275 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/_helpers.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.290084 weldx-0.6.4/weldx/tests/asdf_tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      507 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/installable_quality_standard_check.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2254 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/quality_standards_check.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3930 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_aws_schema.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1295 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_base_types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29677 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_core.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1966 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_gmaw_process.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1929 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_graph.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3907 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_groove.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3063 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_measurement.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1617 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_time.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      794 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7229 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8248 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_validators.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2869 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_media_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23273 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/asdf_tests/test_weldx_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      942 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/conftest.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.290084 weldx-0.6.4/weldx/tests/data/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1133 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/data/WelDX_notext.svg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.238080 weldx-0.6.4/weldx/tests/data/quality_standard/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.238080 weldx-0.6.4/weldx/tests/data/quality_standard/resources/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.238080 weldx-0.6.4/weldx/tests/data/quality_standard/resources/test_organization/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.290084 weldx-0.6.4/weldx/tests/data/quality_standard/resources/test_organization/manifests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      423 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/data/quality_standard/resources/test_organization/manifests/test_standard-1.0.0.yaml
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/tests/data/quality_standard/resources/test_organization/schemas/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      972 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/data/quality_standard/resources/test_organization/schemas/alternative_measurement_equipment_schema-1.0.0.yaml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2504 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    38638 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_core.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    99822 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_geometry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16672 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_measurement.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27679 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_time.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20350 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_utility.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1021 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_visualization.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      924 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/test_welding_util.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/tests/transformations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/transformations/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4142 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/transformations/_util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   100131 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/transformations/test_cs_manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    50176 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/transformations/test_local_cs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9428 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/tests/transformations/test_util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27811 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/time.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/transformations/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      662 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/transformations/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    73257 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/transformations/cs_manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    32216 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/transformations/local_cs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2523 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/transformations/rotation.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      363 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/transformations/types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6280 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/transformations/util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1536 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/types.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/util/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      315 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/util/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3856 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/util/external_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7889 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/util/media_file.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12870 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/util/util.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    28334 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/util/xarray.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/visualization/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2330 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/visualization/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/welding/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       81 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/welding/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.294084 weldx-0.6.4/weldx/welding/groove/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       25 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/welding/groove/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    64373 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/welding/groove/iso_9692_1.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      962 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/welding/processes.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2159 2023-02-09 16:36:05.000000 weldx-0.6.4/weldx/welding/util.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-09 16:36:28.242080 weldx-0.6.4/weldx.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10272 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9971 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      283 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      352 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       24 2023-02-09 16:36:28.000000 weldx-0.6.4/weldx.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.081606 weldx-0.6.5/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    40717 2023-04-06 15:27:00.000000 weldx-0.6.5/CHANGELOG.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2283 2023-04-06 15:27:00.000000 weldx-0.6.5/CITATION.cff
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1516 2023-04-06 15:27:00.000000 weldx-0.6.5/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      319 2023-04-06 15:27:00.000000 weldx-0.6.5/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10273 2023-04-06 15:27:24.081606 weldx-0.6.5/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7194 2023-04-06 15:27:00.000000 weldx-0.6.5/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2029 2023-04-06 15:27:00.000000 weldx-0.6.5/RELEASE.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      363 2023-04-06 15:27:00.000000 weldx-0.6.5/codecov.yml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1175 2023-04-06 15:27:00.000000 weldx-0.6.5/conftest.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6503 2023-04-06 15:27:00.000000 weldx-0.6.5/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 15:27:24.081606 weldx-0.6.5/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4685 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       21 2023-04-06 15:27:23.000000 weldx-0.6.5/weldx/_version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx/asdf/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      225 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx/asdf/cli/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       65 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/cli/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10850 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/cli/welding_schema.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      569 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2143 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/extension.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    35535 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3822 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23452 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18813 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/asdf/validators.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6752 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2323 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/constants.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx/core/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      459 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/core/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    34598 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/core/generic_series.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8174 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/core/math_expression.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3056 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/core/spatial_series.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16188 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/core/time_series.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    92765 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/geometry.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx/manifests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9205 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/manifests/weldx-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10133 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/manifests/weldx-0.1.1.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10389 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/manifests/weldx-0.1.2.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    37433 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/measurement.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.041604 weldx-0.6.5/weldx/schemas/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.041604 weldx-0.6.5/weldx/schemas/weldx.bam.de/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.041604 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.053605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2750 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/base_metal-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1670 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/connection-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1762 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/joint_penetration-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/sub_assembly-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1031 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/weld_details-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      488 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/weldment-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      707 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/workpiece-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.053605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1145 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/arc_welding_process-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1141 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/gas_component-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3071 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_for_procedure-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1530 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_type-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.053605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      984 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/data_array-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1205 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/dataset-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      610 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/dimension-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2434 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2566 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.1.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2213 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/generic_series-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      711 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/generic_series_free_dimension-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.053605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/geometry/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1665 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3106 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.1.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.057605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      948 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/di_edge-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2005 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/di_graph-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1165 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/di_node-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1393 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/mathematical_expression-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2572 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/media_file-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3843 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4811 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.1.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.057605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7384 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/coordinate_system_hierarchy-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4853 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4895 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.1.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3078 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/rotation-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1396 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.1.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.057605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7112 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7134 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.1.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25934 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/single_pass_weld-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2333 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/terms-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.057605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      622 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/test_property_tag-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1776 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/test_shape_validator-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2023 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/test_unit_validator-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.057605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/equipment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1889 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/equipment/measurement_equipment-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.057605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2343 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHUGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1926 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHVGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2344 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DUGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1939 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DVGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4325 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/FFGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1482 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HUGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HVGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      841 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/IGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1468 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1698 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UVGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1466 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1695 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VVGroove-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1259 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/terms-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      789 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/error-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/measurement-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6840 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/measurement_chain-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1239 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/signal-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2693 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/signal_transformation-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1271 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/source-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      429 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/pulse-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      615 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/spray_arc-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3323 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/GMAW-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      274 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/generic-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3904 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/terms-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2339 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/datetimeindex-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2464 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/time-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      519 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/timedelta-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2918 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/timedeltaindex-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1196 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/timestamp-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/units/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1346 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/units/dimension-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1479 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/units/quantity-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/units/units-0.1.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      529 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/uuid-0.1.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/tags/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      144 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.061605 weldx-0.6.5/weldx/tags/aws/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      268 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.065605 weldx-0.6.5/weldx/tags/aws/design/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      138 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      864 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/base_metal.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      543 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/connection.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      668 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/joint_penetration.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      517 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/sub_assembly.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      436 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/weld_details.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      437 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/weldment.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      350 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/design/workpiece.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.065605 weldx-0.6.5/weldx/tags/aws/process/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      119 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/process/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2089 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/process/arc_welding_process.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/process/gas_component.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      887 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/process/shielding_gas_for_procedure.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      550 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/aws/process/shielding_gas_type.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      752 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/base_types.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.065605 weldx-0.6.5/weldx/tags/core/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      261 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3683 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/common_types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1871 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/data_array.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1357 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/dataset.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2308 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2696 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/generic_series.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.065605 weldx-0.6.5/weldx/tags/core/geometry/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/geometry/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      990 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/geometry/spatial_data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4807 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/graph.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1609 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/mathematical_expression.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1410 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/media_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1913 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/time_series.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.065605 weldx-0.6.5/weldx/tags/core/transformations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       77 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/transformations/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1158 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/transformations/coordinate_system_hierarchy.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2809 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/transformations/local_coordinate_system.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2621 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/core/transformations/rotation.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/debug/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/debug/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      628 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/debug/test_property_tag.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1356 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/debug/test_shape_validator.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1198 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/debug/test_unit_validator.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/equipment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       36 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/equipment/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      507 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/equipment/measurement_equipment.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/groove/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/groove/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2027 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/groove/iso_9692_1.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/measurement/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      120 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      255 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/error.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      291 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/measurement.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      666 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/measurement_chain.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      424 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/signal.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      355 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/signal_transformation.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      291 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/measurement/source.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/processes/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/processes/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1168 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/processes/process.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/time/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       72 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/time/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1611 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/time/datetimeindex.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      909 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/time/time.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      601 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/time/timedelta.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1646 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/time/timedeltaindex.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      843 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/time/timestamp.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.069606 weldx-0.6.5/weldx/tags/units/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/units/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2403 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tags/units/pint_quantity.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.073606 weldx-0.6.5/weldx/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3275 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/_helpers.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/tests/asdf_tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      507 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/installable_quality_standard_check.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2254 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/quality_standards_check.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3930 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_aws_schema.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1295 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_base_types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29871 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_core.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1966 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_gmaw_process.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1929 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_graph.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3907 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_groove.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3063 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_measurement.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1617 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_time.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      794 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7229 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8259 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_validators.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2869 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_media_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23287 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/asdf_tests/test_weldx_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      942 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/conftest.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/tests/data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1133 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/data/WelDX_notext.svg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.045604 weldx-0.6.5/weldx/tests/data/quality_standard/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.045604 weldx-0.6.5/weldx/tests/data/quality_standard/resources/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.045604 weldx-0.6.5/weldx/tests/data/quality_standard/resources/test_organization/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/tests/data/quality_standard/resources/test_organization/manifests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      423 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/data/quality_standard/resources/test_organization/manifests/test_standard-1.0.0.yaml
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/tests/data/quality_standard/resources/test_organization/schemas/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      972 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/data/quality_standard/resources/test_organization/schemas/alternative_measurement_equipment_schema-1.0.0.yaml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2504 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    38638 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_core.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    99822 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_geometry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16672 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_measurement.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27679 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_time.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20350 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_utility.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1021 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_visualization.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      924 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/test_welding_util.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/tests/transformations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/transformations/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4142 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/transformations/_util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   100131 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/transformations/test_cs_manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    50176 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/transformations/test_local_cs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9428 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/tests/transformations/test_util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27811 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/time.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/transformations/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      662 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/transformations/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    73288 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/transformations/cs_manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    32437 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/transformations/local_cs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2523 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/transformations/rotation.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      363 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/transformations/types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6280 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/transformations/util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1536 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/types.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/util/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      315 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/util/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3856 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/util/external_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7889 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/util/media_file.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13089 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/util/util.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    28462 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/util/xarray.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.077606 weldx-0.6.5/weldx/visualization/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2330 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/visualization/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.081606 weldx-0.6.5/weldx/welding/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/welding/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.081606 weldx-0.6.5/weldx/welding/groove/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/welding/groove/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    64373 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/welding/groove/iso_9692_1.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      962 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/welding/processes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2159 2023-04-06 15:27:00.000000 weldx-0.6.5/weldx/welding/util.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:27:24.049605 weldx-0.6.5/weldx.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10273 2023-04-06 15:27:23.000000 weldx-0.6.5/weldx.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9946 2023-04-06 15:27:24.000000 weldx-0.6.5/weldx.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:27:23.000000 weldx-0.6.5/weldx.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      218 2023-04-06 15:27:23.000000 weldx-0.6.5/weldx.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      291 2023-04-06 15:27:23.000000 weldx-0.6.5/weldx.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-06 15:27:23.000000 weldx-0.6.5/weldx.egg-info/top_level.txt
+│ │   --- weldx-0.6.4/CHANGELOG.md
+│ ├── +++ weldx-0.6.5/CHANGELOG.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,29 @@
+│ │  # Release Notes
+│ │  
+│ │ +## 0.6.5 (2023.04.06)
+│ │ +
+│ │ +Version `0.6.5` is a compatibility release to support new `asdf` and `xarray` and drops support for Python 3.8.
+│ │ +Please see the new minimal version requirements below.
+│ │ +
+│ │ +### Fixes
+│ │ +
+│ │ +- fix non quantified xarray parameter inputs to `MathematicalExpression` \[{pull}`864`\].
+│ │ +
+│ │ +### Dependencies
+│ │ +
+│ │ +- drop Python 3.8 support \[{pull}`866`\]
+│ │ +- require `xarray >= 2022.9.0`, as `LocalCoordinateSystem` now handles merges correctly \[{pull}`861`\].
+│ │ +- require `asdf>=2.15` for new extension style validator interface \[{pull}`863`\].
+│ │ +- require `scipy >=1.6.2` and `networkx >=2.8.2` \[{pull}`866`\]
+│ │ +
+│ │ +### ASDF
+│ │ +
+│ │ +- Move validators to new extension style and remove legacy extension code \[{pull}`863`\].
+│ │ +
+│ │  ## 0.6.4 (09.02.2023)
+│ │  
+│ │  Version `0.6.4` is a small maintenance release with no changes affecting user code.
+│ │  
+│ │  ### Changes
+│ │  
+│ │  - `WeldxFile` also shows its JSON widget header representation in a JupyterHub based environment \[{pull}`854`\].
+│ │   --- weldx-0.6.4/CITATION.cff
+│ ├── +++ weldx-0.6.5/CITATION.cff
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  # YAML 1.2
+│ │  ---
+│ │  title: weldx
+│ │ -version: 0.6.4
+│ │ -date-released: 2023-02-09
+│ │ +version: 0.6.5
+│ │ +date-released: 2023-04-06
+│ │  authors:
+│ │    - affiliation: "Bundesanstalt für Materialforschung und -prüfung (BAM)"
+│ │      email: cagtay.fabry@bam.de
+│ │      family-names: Fabry
+│ │      given-names: Cagtay
+│ │      orcid: "https://orcid.org/0000-0002-0788-8079"
+│ │    - affiliation: "Bundesanstalt für Materialforschung und -prüfung (BAM)"
+│ │   --- weldx-0.6.4/LICENSE
+│ ├── +++ weldx-0.6.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/PKG-INFO
+│ ├── +++ weldx-0.6.5/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: weldx
+│ │ -Version: 0.6.4
+│ │ +Version: 0.6.5
+│ │  Summary: Python API for the WelDX file format and standard
+│ │  Author-email: Cagtay Fabry <cagtay.fabry@bam.de>, Volker Hirthammer <volker.hirthammer@bam.de>, "Martin K. Scherer" <martin.scherer@bam.de>
+│ │  License: BSD 3-Clause License
+│ │          
+│ │          Copyright (c) 2020, BAMWelDX
+│ │          All rights reserved.
+│ │          
+│ │ @@ -41,21 +41,21 @@
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: BSD License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Topic :: Scientific/Engineering :: Physics
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Intended Audience :: Education
+│ │ -Requires-Python: >=3.8
+│ │ +Requires-Python: >=3.9
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: test
+│ │  Provides-Extra: vis
+│ │  Provides-Extra: media
+│ │  License-File: LICENSE
+│ │  
+│ │  # WelDX - data and quality standards for welding research data
+│ │   --- weldx-0.6.4/README.md
+│ ├── +++ weldx-0.6.5/README.md
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/RELEASE.md
+│ ├── +++ weldx-0.6.5/RELEASE.md
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/conftest.py
+│ ├── +++ weldx-0.6.5/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/pyproject.toml
+│ ├── +++ weldx-0.6.5/pyproject.toml
+│ │┄ Files 6% similar despite different names
+│ │ @@ -20,37 +20,37 @@
+│ │      "Development Status :: 4 - Beta",
+│ │      "Intended Audience :: Science/Research",
+│ │      "License :: OSI Approved :: BSD License",
+│ │      "Operating System :: OS Independent",
+│ │      "Natural Language :: English",
+│ │      "Programming Language :: Python",
+│ │      "Programming Language :: Python :: 3 :: Only",
+│ │ -    "Programming Language :: Python :: 3.8",
+│ │      "Programming Language :: Python :: 3.9",
+│ │      "Programming Language :: Python :: 3.10",
+│ │ +    "Programming Language :: Python :: 3.11",
+│ │      "Topic :: Scientific/Engineering :: Physics", # TODO: add more topics here!
+│ │      "Intended Audience :: Science/Research",
+│ │      "Intended Audience :: Education",
+│ │  ]
+│ │  
+│ │  # Dependencies
+│ │ -requires-python = ">=3.8"
+│ │ +requires-python = ">=3.9"
+│ │  dependencies = [
+│ │      "numpy >=1.20",
+│ │ -    "asdf >=2.8.2,!=2.14.0,!=2.14.1,!=2.14.2",
+│ │ +    "asdf >=2.15.0",
+│ │      "pandas >=1.0",
+│ │ -    "xarray >=0.19,<2022.09.0",
+│ │ -    "scipy >=1.4,!=1.6.0,!=1.6.1",
+│ │ +    "xarray >=2022.9.0",
+│ │ +    "scipy >=1.6.2",
+│ │      "sympy >=1.6",
+│ │      "pint >=0.18",
+│ │ -    "pint-xarray >=0.2.1",
+│ │ +    "pint-xarray >=0.3",
+│ │      "bottleneck >=1.3.3",
+│ │      "boltons",
+│ │      "bidict",
+│ │ -    "networkx >=2,!=2.7.0,!=2.8.1",
+│ │ +    "networkx >=2.8.2",
+│ │      "fs",
+│ │      "meshio",
+│ │      "psutil",
+│ │      "IPython",
+│ │  ]
+│ │  
+│ │  [project.urls]
+│ │ @@ -77,15 +77,14 @@
+│ │      "tifffile",
+│ │  ]
+│ │  
+│ │  # ASDF extension entry points.
+│ │  
+│ │  [project.entry-points."asdf.extensions"]
+│ │  weldx = "weldx.asdf.extension:get_extensions"
+│ │ -weldx_validators = "weldx.asdf._extension:WeldxValidatorExtension"
+│ │  
+│ │  [project.entry-points."asdf.resource_mappings"]
+│ │  weldx_schemas = "weldx.asdf.extension:get_resource_mappings"
+│ │  
+│ │  # console scripts
+│ │  [project.scripts]
+│ │  welding_schema = "weldx.asdf.cli.welding_schema:main"
+│ │ @@ -110,15 +109,15 @@
+│ │  
+│ │  [tool.pytest.ini_options]
+│ │  addopts = "--tb=short --color=yes -rsw --cov=weldx --cov-report=term-missing:skip-covered --doctest-modules"
+│ │  #addopts = --tb=short --color=yes -rs -p no:cov
+│ │  testpaths = "weldx"
+│ │  # custom test markers, see https://docs.pytest.org/en/latest/example/markers.html#mark-examples
+│ │  markers = "slow: marks tests as slow to run (skipped by default, enable with --runslow option)"
+│ │ -asdf_schema_root = "weldx/schemas/weldx.bam.de/weldx"  # TODO: couldn"t we just use the entry points to resolve this?
+│ │ +asdf_schema_root = "weldx/schemas/weldx.bam.de/weldx"  # TODO: couldn't we just use the entry points to resolve this?
+│ │  #asdf_schema_tests_enabled = true
+│ │  #asdf_schema_skip_tests =
+│ │  #    weldx.bam.de/weldx/datamodels/single_pass_weld-1.0.0.schema.yaml
+│ │  norecursedirs = [
+│ │      "doc",
+│ │      ".ipynb_checkpoints",
+│ │  ]
+│ │ @@ -224,7 +223,12 @@
+│ │  
+│ │  [tool.ruff.isort]
+│ │  known-first-party = ["weldx"]
+│ │  required-imports = ["from __future__ import annotations"]
+│ │  
+│ │  [tool.ruff.flake8-import-conventions]
+│ │  extend-aliases = {xarray = "xr"}
+│ │ +
+│ │ +[tool.nbqa.addopts]
+│ │ +ruff = [
+│ │ +    "--extend-ignore=B018"
+│ │ +]
+│ │   --- weldx-0.6.4/weldx/__init__.py
+│ ├── +++ weldx-0.6.5/weldx/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/asdf/cli/welding_schema.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/cli/welding_schema.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/asdf/constants.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/constants.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/asdf/extension.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/extension.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,22 +1,27 @@
+│ │  """ASDF-extensions for weldx types."""
+│ │  from __future__ import annotations
+│ │  
+│ │  from asdf.extension import ManifestExtension
+│ │  from asdf.resource import DirectoryResourceMapping
+│ │  
+│ │ -from .constants import (
+│ │ +from weldx.asdf.constants import (
+│ │      MANIFEST_PATH,
+│ │      SCHEMA_PATH,
+│ │      WELDX_EXTENSION_URI,
+│ │      WELDX_EXTENSION_URI_BASE,
+│ │      WELDX_SCHEMA_URI_BASE,
+│ │      WELDX_TAG_URI_BASE,
+│ │  )
+│ │ -from .types import WeldxConverter
+│ │ +from weldx.asdf.types import WeldxConverter
+│ │ +from weldx.asdf.validators import (
+│ │ +    WxPropertyTagValidator,
+│ │ +    WxShapeValidator,
+│ │ +    WxUnitValidator,
+│ │ +)
+│ │  
+│ │  
+│ │  # RESOURCES ----------------------------------------------------------------------------
+│ │  def get_extension_resource_mapping() -> DirectoryResourceMapping:
+│ │      """Get the weldx manifest resource mapping."""
+│ │      mapping = DirectoryResourceMapping(
+│ │          MANIFEST_PATH,
+│ │ @@ -54,12 +59,17 @@
+│ │  
+│ │      converters = (cls() for cls in WeldxConverter.__subclasses__())
+│ │      legacy_class_names = [
+│ │          "weldx.asdf.extension.WeldxAsdfExtension",
+│ │          "weldx.asdf.extension.WeldxExtension",
+│ │      ]
+│ │      yaml_tag_handles = {"!weldx!": WELDX_TAG_URI_BASE}
+│ │ +    validators = [
+│ │ +        WxUnitValidator(),
+│ │ +        WxShapeValidator(),
+│ │ +        WxPropertyTagValidator(),
+│ │ +    ]
+│ │  
+│ │  
+│ │  def get_extensions() -> list[ManifestExtension]:
+│ │      """Get a list of all weldx extensions."""
+│ │      return [WeldxExtension.from_uri(WELDX_EXTENSION_URI)]
+│ │   --- weldx-0.6.4/weldx/asdf/file.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/file.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/asdf/types.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/types.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/asdf/util.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/util.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -59,15 +59,18 @@
+│ │      schema = schema.split(".yaml")[0]
+│ │  
+│ │      p = SCHEMA_PATH
+│ │      schemas = list(p.glob(f"**/{schema}.yaml"))
+│ │      if len(schemas) == 0:
+│ │          raise ValueError(f"No matching schema for filename '{schema}'.")
+│ │      elif len(schemas) > 1:
+│ │ -        warn(f"Found more than one matching schema for filename '{schema}'.")
+│ │ +        warn(
+│ │ +            f"Found more than one matching schema for filename '{schema}'.",
+│ │ +            stacklevel=1,
+│ │ +        )
+│ │      return schemas[0]
+│ │  
+│ │  
+│ │  # asdf read/write debug tools functions ---------------------------------------
+│ │  
+│ │  
+│ │  def write_buffer(
+│ │ @@ -473,15 +476,17 @@
+│ │      return any(asdf_uri_match(p, uri) for p in patterns)
+│ │  
+│ │  
+│ │  def get_converter_for_tag(tag: str) -> Union[WeldxConverter, None]:
+│ │      """Get the converter class that handles a given tag."""
+│ │      converters = [s for s in WeldxConverter.__subclasses__() if uri_match(s.tags, tag)]
+│ │      if len(converters) > 1:
+│ │ -        warn(f"Found more than one converter class for {tag=}", UserWarning)
+│ │ +        warn(
+│ │ +            f"Found more than one converter class for {tag=}", UserWarning, stacklevel=1
+│ │ +        )
+│ │      if converters:
+│ │          return converters[0]
+│ │      return None
+│ │  
+│ │  
+│ │  def get_highest_tag_version(
+│ │      pattern: Union[str, list[str]], ctx: Union[SerializationContext, AsdfConfig] = None
+│ │ @@ -545,15 +550,15 @@
+│ │      List
+│ │          A numpy-style shape list or `None` if the shape could not be determined.
+│ │      """
+│ │      if isinstance(instance_dict, (float, int)):  # test against [1] for scalar values
+│ │          return [1]
+│ │      elif isinstance(instance_dict, Mapping) and "shape" in instance_dict:
+│ │          return instance_dict["shape"]
+│ │ -    elif isinstance(instance_dict, asdf.types.tagged.Tagged):
+│ │ +    elif isinstance(instance_dict, asdf.tagged.Tagged):
+│ │          # try calling shape_from_tagged for custom types
+│ │          converter = get_converter_for_tag(instance_dict._tag)
+│ │          if hasattr(converter, "shape_from_tagged"):
+│ │              return converter.shape_from_tagged(instance_dict)
+│ │      return None
+│ │  
+│ │  
+│ │ @@ -572,15 +577,15 @@
+│ │      pint.Unit
+│ │          The pint unit or `None` if no unit information is present.
+│ │      """
+│ │      if isinstance(instance_dict, (float, int)):  # base types
+│ │          return WELDX_UNIT_REGISTRY.dimensionless
+│ │      elif isinstance(instance_dict, Mapping) and UNITS_KEY in instance_dict:
+│ │          return U_(str(instance_dict[UNITS_KEY]))  # catch TaggedString as str
+│ │ -    elif isinstance(instance_dict, asdf.types.tagged.Tagged):
+│ │ +    elif isinstance(instance_dict, asdf.tagged.Tagged):
+│ │          # try calling units_from_tagged for custom types
+│ │          if instance_dict._tag.startswith("tag:stsci.edu:asdf/core/ndarray"):
+│ │              return WELDX_UNIT_REGISTRY.dimensionless
+│ │          converter = get_converter_for_tag(instance_dict._tag)
+│ │          if hasattr(converter, "units_from_tagged"):
+│ │              return converter.units_from_tagged(instance_dict)
+│ │      return None
+│ │ @@ -660,15 +665,15 @@
+│ │          warnings.warn(
+│ │              "You tried to manipulate an ASDF internal structure"
+│ │              f" (currently protected: {self.protected_keys}",
+│ │              stacklevel=stacklevel,
+│ │          )
+│ │  
+│ │  
+│ │ -def get_schema_tree(  # noqa: C901  # ignore too high complexity
+│ │ +def get_schema_tree(  # noqa: C901, MC0001, RUF100, codacy:ignore
+│ │      schemafile: Union[str, Path], *, drop: set = None
+│ │  ) -> dict:
+│ │      """Get a dictionary representation of a weldx schema file with custom formatting.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      schemafile
+│ │   --- weldx-0.6.4/weldx/asdf/validators.py
+│ ├── +++ weldx-0.6.5/weldx/asdf/validators.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -2,22 +2,23 @@
+│ │  from __future__ import annotations
+│ │  
+│ │  import re
+│ │  from collections import OrderedDict
+│ │  from collections.abc import Callable, Iterator, Mapping
+│ │  from typing import Any, Union
+│ │  
+│ │ -from asdf import ValidationError
+│ │ +from asdf.exceptions import ValidationError
+│ │ +from asdf.extension import Validator
+│ │  from asdf.schema import _type_to_tag
+│ │  
+│ │  from weldx.asdf.types import WxSyntaxError
+│ │  from weldx.asdf.util import _get_instance_shape, _get_instance_units, uri_match
+│ │  from weldx.constants import U_
+│ │  
+│ │ -__all__ = ["wx_unit_validator", "wx_shape_validator", "wx_property_tag_validator"]
+│ │ +__all__ = ["WxUnitValidator", "WxShapeValidator", "WxPropertyTagValidator"]
+│ │  
+│ │  
+│ │  def _walk_validator(
+│ │      instance: OrderedDict,
+│ │      validator_dict: OrderedDict,
+│ │      validator_function: Callable[[Mapping, Any, str], Iterator[ValidationError]],
+│ │      position=None,
+│ │ @@ -512,124 +513,79 @@
+│ │              f"Found an incorrect wx_shape object: {type(dict_expected)}. "
+│ │              "Should be a dict or list."
+│ │          )
+│ │  
+│ │      return dict_values
+│ │  
+│ │  
+│ │ -def wx_unit_validator(
+│ │ -    validator, wx_unit, instance, schema
+│ │ -) -> Iterator[ValidationError]:
+│ │ -    """Custom validator for checking dimensions for objects with 'unit' property.
+│ │ +# VALIDATOR CLASSES --------------------------------------------------------------------
+│ │  
+│ │ -    ASDF documentation:
+│ │ -    https://asdf.readthedocs.io/en/2.8.1/asdf/extensions.html#adding-custom-validators
+│ │  
+│ │ -    Parameters
+│ │ -    ----------
+│ │ -    validator:
+│ │ -        A jsonschema.Validator instance.
+│ │ -    wx_unit:
+│ │ -        Enable unit validation for this schema.
+│ │ -    instance:
+│ │ -        Tree serialization (with default dtypes) of the instance
+│ │ -    schema:
+│ │ -        Dict representing the full ASDF schema.
+│ │ +class WxUnitValidator(Validator):
+│ │ +    """Custom validator for checking dimensions for objects with 'unit' property."""
+│ │  
+│ │ -    Yields
+│ │ -    ------
+│ │ -    asdf.ValidationError
+│ │ +    schema_property = "wx_unit"
+│ │ +    tags = ["**"]
+│ │  
+│ │ -    """
+│ │ -    yield from _walk_validator(
+│ │ -        instance=instance,
+│ │ -        validator_dict=wx_unit,
+│ │ -        validator_function=_unit_validator,
+│ │ -        position=[],
+│ │ -        allow_missing_keys=False,
+│ │ -    )
+│ │ +    def validate(self, wx_unit, node, schema):
+│ │ +        """Run unit validation."""
+│ │  
+│ │ +        yield from _walk_validator(
+│ │ +            instance=node,
+│ │ +            validator_dict=wx_unit,
+│ │ +            validator_function=_unit_validator,
+│ │ +            position=[],
+│ │ +            allow_missing_keys=False,
+│ │ +        )
+│ │  
+│ │ -def wx_shape_validator(
+│ │ -    validator, wx_shape, instance, schema
+│ │ -) -> Iterator[ValidationError]:
+│ │ -    """Custom validator for checking dimensions for objects with 'shape' property.
+│ │ -
+│ │ -    ASDF documentation:
+│ │ -    https://asdf.readthedocs.io/en/2.6.0/asdf/extensions.html#adding-custom-validators
+│ │ -
+│ │ -    Parameters
+│ │ -    ----------
+│ │ -    validator:
+│ │ -        A jsonschema.Validator instance.
+│ │ -    wx_shape:
+│ │ -        Enable shape validation for this schema.
+│ │ -    instance:
+│ │ -        Tree serialization (with default dtypes) of the instance
+│ │ -    schema:
+│ │ -        Dict representing the full ASDF schema.
+│ │  
+│ │ -    Yields
+│ │ -    ------
+│ │ -    asdf.ValidationError
+│ │ +class WxShapeValidator(Validator):
+│ │ +    """Custom validator for checking dimensions for objects with 'shape' property."""
+│ │  
+│ │ -    """
+│ │ +    schema_property = "wx_shape"
+│ │ +    tags = ["**"]
+│ │  
+│ │ -    dim_dict = None
+│ │ -    try:
+│ │ -        dim_dict = _custom_shape_validator(instance, wx_shape)
+│ │ -    except ValidationError:
+│ │ -        yield ValidationError(
+│ │ -            f"Error validating shape {wx_shape}.\nOn instance {instance}"
+│ │ -        )
+│ │ +    def validate(self, wx_shape, node, schema):
+│ │ +        """Run shape validation."""
+│ │  
+│ │ -    if isinstance(dim_dict, dict):
+│ │ -        return None
+│ │ -    else:
+│ │ -        yield ValidationError(
+│ │ -            f"Error validating shape {wx_shape}.\nOn instance {instance}"
+│ │ -        )
+│ │ +        dim_dict = None
+│ │ +        try:
+│ │ +            dim_dict = _custom_shape_validator(node, wx_shape)
+│ │ +        except ValidationError:
+│ │ +            yield ValidationError(f"Error validating shape {wx_shape}.\nOn node {node}")
+│ │  
+│ │ +        if isinstance(dim_dict, dict):
+│ │ +            return None
+│ │ +        else:
+│ │ +            yield ValidationError(f"Error validating shape {wx_shape}.\nOn node {node}")
+│ │  
+│ │ -def wx_property_tag_validator(
+│ │ -    validator, wx_property_tag: Union[str, list[str]], instance, schema
+│ │ -) -> Iterator[ValidationError]:
+│ │ -    """
+│ │  
+│ │ -    Parameters
+│ │ -    ----------
+│ │ -    validator
+│ │ -        A jsonschema.Validator instance.
+│ │ -    wx_property_tag
+│ │ -        The tag to test all object properties against.
+│ │ -    instance
+│ │ -        Tree serialization (with default dtypes or as tagged dict) of the instance
+│ │ -    schema
+│ │ -        Dict representing the full ASDF schema.
+│ │ +class WxPropertyTagValidator(Validator):
+│ │ +    """Validate list of properties against specific tags."""
+│ │  
+│ │ -    Yields
+│ │ -    ------
+│ │ -    asdf.ValidationError
+│ │ +    schema_property = "wx_property_tag"
+│ │ +    tags = ["**"]
+│ │  
+│ │ -    """
+│ │ +    def validate(self, wx_property_tag, node, schema):
+│ │ +        """Run property tag validation."""
+│ │  
+│ │ -    def _tag_validator(tagname, instance):
+│ │ -        """Validate against a tag string using ASDF uri match patterns."""
+│ │ -        if hasattr(instance, "_tag"):
+│ │ -            instance_tag = instance._tag
+│ │ -        else:
+│ │ -            # Try tags for known Python builtins
+│ │ -            instance_tag = _type_to_tag(type(instance))
+│ │ +        def _tag_validator(tagname, node):
+│ │ +            """Validate against a tag string using ASDF uri match patterns."""
+│ │ +            if hasattr(node, "_tag"):
+│ │ +                node_tag = node._tag
+│ │ +            else:
+│ │ +                # Try tags for known Python builtins
+│ │ +                node_tag = _type_to_tag(type(node))
+│ │  
+│ │ -        if instance_tag is not None:
+│ │ -            if not uri_match(tagname, instance_tag):
+│ │ -                yield ValidationError(
+│ │ -                    f"mismatched tags, wanted '{tagname}', got '{instance_tag}'"
+│ │ -                )
+│ │ +            if node_tag is not None:
+│ │ +                if not uri_match(tagname, node_tag):
+│ │ +                    yield ValidationError(
+│ │ +                        f"mismatched tags, wanted '{tagname}', got '{node_tag}'"
+│ │ +                    )
+│ │  
+│ │ -    if not isinstance(wx_property_tag, (str, list)):
+│ │ -        raise WxSyntaxError(
+│ │ -            f"'wx_property_tag' must be str or List[str], got {wx_property_tag}"
+│ │ -        )
+│ │ +        if not isinstance(wx_property_tag, (str, list)):
+│ │ +            raise WxSyntaxError(
+│ │ +                f"'wx_property_tag' must be str or List[str], got {wx_property_tag}"
+│ │ +            )
+│ │  
+│ │ -    for _, value in instance.items():
+│ │ -        yield from _tag_validator(tagname=wx_property_tag, instance=value)
+│ │ +        for _, value in node.items():
+│ │ +            yield from _tag_validator(tagname=wx_property_tag, node=value)
+│ │   --- weldx-0.6.4/weldx/config.py
+│ ├── +++ weldx-0.6.5/weldx/config.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/constants.py
+│ ├── +++ weldx-0.6.5/weldx/constants.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/core/generic_series.py
+│ ├── +++ weldx-0.6.5/weldx/core/generic_series.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/core/math_expression.py
+│ ├── +++ weldx-0.6.5/weldx/core/math_expression.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -82,14 +82,16 @@
+│ │          bool:
+│ │              'True' if the compared object is also a 'MathematicalExpression' and equal
+│ │              to this instance, 'False' otherwise
+│ │  
+│ │          """
+│ │          return self.equals(other, check_parameters=True, check_structural_equality=True)
+│ │  
+│ │ +    __hash__ = None
+│ │ +
+│ │      def equals(
+│ │          self,
+│ │          other: Any,
+│ │          check_parameters: bool = True,
+│ │          check_structural_equality: bool = False,
+│ │      ):
+│ │          """Compare the instance with another object for equality and return the result.
+│ │ @@ -165,14 +167,18 @@
+│ │          for k, v in params.items():
+│ │              if k not in variable_names:
+│ │                  raise ValueError(f'The expression does not have a parameter "{k}"')
+│ │              if isinstance(v, tuple):
+│ │                  v = xr.DataArray(v[0], dims=v[1])
+│ │              if not isinstance(v, xr.DataArray):
+│ │                  v = Q_(v)
+│ │ +            else:  # quantify as dimensionless if no unit provided
+│ │ +                if v.weldx.units is None:
+│ │ +                    v = v.pint.quantify("")
+│ │ +                v = v.pint.quantify()
+│ │              self._parameters[k] = v
+│ │  
+│ │      @property
+│ │      def num_parameters(self):
+│ │          """Get the expressions number of parameters.
+│ │  
+│ │          Returns
+│ │   --- weldx-0.6.4/weldx/core/spatial_series.py
+│ ├── +++ weldx-0.6.5/weldx/core/spatial_series.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/core/time_series.py
+│ ├── +++ weldx-0.6.5/weldx/core/time_series.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/geometry.py
+│ ├── +++ weldx-0.6.5/weldx/geometry.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/manifests/weldx-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/manifests/weldx-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/manifests/weldx-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/manifests/weldx-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/manifests/weldx-0.1.2.yaml
+│ ├── +++ weldx-0.6.5/weldx/manifests/weldx-0.1.2.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/measurement.py
+│ ├── +++ weldx-0.6.5/weldx/measurement.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -486,15 +486,15 @@
+│ │                  transformation.func, input_signal.units
+│ │              ),
+│ │              data=data,
+│ │          )
+│ │  
+│ │      @staticmethod
+│ │      def _determine_output_signal_type(type_transformation: str, input_type: str) -> str:
+│ │ -        """Determine the type of a transformations' output signal.
+│ │ +        """Determine the type of given transformations' output signal.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          type_transformation :
+│ │              The string describing the type transformation
+│ │          input_type :
+│ │              The type of the input signal
+│ │ @@ -632,15 +632,15 @@
+│ │          that returns a dimentsionless quantity.
+│ │  
+│ │          >>> func = MathematicalExpression(expression="a*x + b",
+│ │          ...                               parameters=dict(a=Q_(5, "1/V"), b=Q_(1, ""))
+│ │          ...                               )
+│ │  
+│ │          Use the mathematical expression to create a signal transformation which also
+│ │ -        performs a analog-digital conversion.
+│ │ +        performs analog-digital conversion.
+│ │  
+│ │          >>> current_ad_transform = SignalTransformation(
+│ │          ...                            name="Current AD conversion",
+│ │          ...                            error=Error(deviation=Q_(1,"percent")),
+│ │          ...                            func=func,
+│ │          ...                            type_transformation="AD"
+│ │          ...                            )
+│ │ @@ -709,24 +709,24 @@
+│ │          that returns a dimentsionless quantity.
+│ │  
+│ │          >>> func = MathematicalExpression(expression="a*x + b",
+│ │          ...                               parameters=dict(a=Q_(5, "1/V"), b=Q_(1, ""))
+│ │          ...                               )
+│ │  
+│ │          Use the mathematical expression to create a signal transformation which also
+│ │ -        performs a analog-digital conversion.
+│ │ +        performs analog-digital conversion.
+│ │  
+│ │          >>> current_ad_transform = SignalTransformation(
+│ │          ...                            name="Current AD conversion",
+│ │          ...                            error=Error(deviation=Q_(1,"percent")),
+│ │          ...                            func=func,
+│ │          ...                            type_transformation="AD"
+│ │          ...                            )
+│ │  
+│ │ -        Create a new equipment that performs the transformation
+│ │ +        Create new equipment that performs the transformation
+│ │  
+│ │          >>> current_ad_converter = MeasurementEquipment(
+│ │          ...                            name="Current AD converter",
+│ │          ...                            transformations=[current_ad_transform]
+│ │          ...                        )
+│ │  
+│ │          Use the equipment to add the transformation to the measurement chain.
+│ │ @@ -808,28 +808,31 @@
+│ │          that returns a dimentsionless quantity.
+│ │  
+│ │          >>> func = MathematicalExpression(expression="a*x + b",
+│ │          ...                               parameters=dict(a=Q_(5, "1/V"), b=Q_(1, ""))
+│ │          ...                               )
+│ │  
+│ │          Use the mathematical expression to create a new transformation which also
+│ │ -        performs a analog-digital conversion.
+│ │ +        performs an analog-digital conversion.
+│ │  
+│ │          >>> mc.create_transformation(name="Current AD conversion",
+│ │          ...                          error=Error(deviation=Q_(1,"percent")),
+│ │          ...                          func=func,
+│ │          ...                          output_signal_type="digital"
+│ │          ...                          )
+│ │  
+│ │          """
+│ │          if output_signal_unit is not None:
+│ │              output_signal_unit = U_(output_signal_unit)
+│ │  
+│ │          if output_signal_type is None and output_signal_unit is None and func is None:
+│ │ -            warn("The created transformation does not perform any transformations.")
+│ │ +            warn(
+│ │ +                "The created transformation does not perform any transformations.",
+│ │ +                stacklevel=1,
+│ │ +            )
+│ │  
+│ │          input_signal_source = self._check_and_get_node_name(input_signal_source)
+│ │          input_signal: Signal = self._graph.nodes[input_signal_source]["signal"]
+│ │          if output_signal_type is None:
+│ │              output_signal_type = input_signal.signal_type
+│ │          type_tf = f"{input_signal.signal_type[0]}{output_signal_type[0]}".upper()
+│ │          if output_signal_unit is not None:
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/base_metal-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/base_metal-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/connection-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/connection-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/joint_penetration-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/joint_penetration-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/sub_assembly-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/sub_assembly-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/weld_details-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/weld_details-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/design/workpiece-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/design/workpiece-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/arc_welding_process-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/arc_welding_process-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/gas_component-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/gas_component-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_for_procedure-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_for_procedure-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_type-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/aws/process/shielding_gas_type-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/data_array-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/data_array-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/dataset-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/dataset-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/dimension-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/dimension-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/file-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/generic_series-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/generic_series-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/generic_series_free_dimension-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/generic_series_free_dimension-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/geometry/spatial_data-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/di_edge-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/di_edge-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/di_graph-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/di_graph-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/graph/di_node-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/graph/di_node-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/mathematical_expression-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/mathematical_expression-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/media_file-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/media_file-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/time_series-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/coordinate_system_hierarchy-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/coordinate_system_hierarchy-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/local_coordinate_system-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/transformations/rotation-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/transformations/rotation-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/core/variable-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.1.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/multi_pass_weld-0.1.1.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/single_pass_weld-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/single_pass_weld-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/datamodels/terms-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/datamodels/terms-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/test_property_tag-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/test_property_tag-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/test_shape_validator-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/test_shape_validator-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/debug/test_unit_validator-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/debug/test_unit_validator-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/equipment/measurement_equipment-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/equipment/measurement_equipment-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHUGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHUGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHVGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DHVGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DUGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DUGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DVGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/DVGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/FFGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/FFGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HUGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HUGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HVGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/HVGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/IGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/IGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UVGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/UVGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VVGroove-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/iso_9692_1_2013_12/VVGroove-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/groove/terms-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/groove/terms-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/error-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/error-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/measurement-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/measurement-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/measurement_chain-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/measurement_chain-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/signal-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/signal-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/signal_transformation-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/signal_transformation-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/measurement/source-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/measurement/source-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/spray_arc-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/CLOOS/spray_arc-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/GMAW-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/GMAW-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/process/terms-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/process/terms-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/datetimeindex-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/datetimeindex-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/time-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/time-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/timedelta-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/timedelta-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/timedeltaindex-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/timedeltaindex-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/time/timestamp-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/time/timestamp-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/units/dimension-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/units/dimension-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/units/quantity-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/units/quantity-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/schemas/weldx.bam.de/weldx/uuid-0.1.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/schemas/weldx.bam.de/weldx/uuid-0.1.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/design/base_metal.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/design/base_metal.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/design/connection.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/design/connection.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/design/joint_penetration.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/design/joint_penetration.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/design/sub_assembly.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/design/sub_assembly.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/process/arc_welding_process.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/process/arc_welding_process.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/process/shielding_gas_for_procedure.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/process/shielding_gas_for_procedure.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/aws/process/shielding_gas_type.py
+│ ├── +++ weldx-0.6.5/weldx/tags/aws/process/shielding_gas_type.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/base_types.py
+│ ├── +++ weldx-0.6.5/weldx/tags/base_types.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/common_types.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/common_types.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/data_array.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/data_array.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/dataset.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/dataset.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/file.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/file.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/generic_series.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/generic_series.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/geometry/spatial_data.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/geometry/spatial_data.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/graph.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/graph.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/mathematical_expression.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/mathematical_expression.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -18,15 +18,17 @@
+│ │  
+│ │      def to_yaml_tree(self, obj: MathematicalExpression, tag: str, ctx) -> dict:
+│ │          """Convert to python dict."""
+│ │          parameters = {}
+│ │          for k, v in obj.parameters.items():
+│ │              if isinstance(v, DataArray):
+│ │                  if len(v.coords) > 0:
+│ │ -                    warnings.warn("Coordinates are dropped during serialization.")
+│ │ +                    warnings.warn(
+│ │ +                        "Coordinates are dropped during serialization.", stacklevel=0
+│ │ +                    )
+│ │                  dims = v.dims
+│ │                  v = v.data
+│ │                  setattr(v, META_ATTR, dict(dims=dims))
+│ │              parameters[k] = v
+│ │  
+│ │          return {"expression": obj.expression.__str__(), "parameters": parameters}
+│ │   --- weldx-0.6.4/weldx/tags/core/media_file.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/media_file.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/time_series.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/time_series.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/transformations/coordinate_system_hierarchy.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/transformations/coordinate_system_hierarchy.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/transformations/local_coordinate_system.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/transformations/local_coordinate_system.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/core/transformations/rotation.py
+│ ├── +++ weldx-0.6.5/weldx/tags/core/transformations/rotation.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/debug/test_property_tag.py
+│ ├── +++ weldx-0.6.5/weldx/tags/debug/test_property_tag.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/debug/test_shape_validator.py
+│ ├── +++ weldx-0.6.5/weldx/tags/debug/test_shape_validator.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/debug/test_unit_validator.py
+│ ├── +++ weldx-0.6.5/weldx/tags/debug/test_unit_validator.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/groove/iso_9692_1.py
+│ ├── +++ weldx-0.6.5/weldx/tags/groove/iso_9692_1.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/measurement/measurement_chain.py
+│ ├── +++ weldx-0.6.5/weldx/tags/measurement/measurement_chain.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/processes/process.py
+│ ├── +++ weldx-0.6.5/weldx/tags/processes/process.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/time/datetimeindex.py
+│ ├── +++ weldx-0.6.5/weldx/tags/time/datetimeindex.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/time/time.py
+│ ├── +++ weldx-0.6.5/weldx/tags/time/time.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/time/timedelta.py
+│ ├── +++ weldx-0.6.5/weldx/tags/time/timedelta.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/time/timedeltaindex.py
+│ ├── +++ weldx-0.6.5/weldx/tags/time/timedeltaindex.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/time/timestamp.py
+│ ├── +++ weldx-0.6.5/weldx/tags/time/timestamp.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tags/units/pint_quantity.py
+│ ├── +++ weldx-0.6.5/weldx/tags/units/pint_quantity.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/_helpers.py
+│ ├── +++ weldx-0.6.5/weldx/tests/_helpers.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/quality_standards_check.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/quality_standards_check.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_aws_schema.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_aws_schema.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_base_types.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_base_types.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_core.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_core.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -137,15 +137,14 @@
+│ │  def get_xarray_example_dataset():
+│ │      """Get a xarray.Dataset for test purposes.
+│ │  
+│ │      Returns
+│ │      -------
+│ │          Dataset for test purposes
+│ │      """
+│ │ -
+│ │      temp_data = [
+│ │          [[15.0, 16.0, 17.0], [18.0, 19.0, 20.0]],
+│ │          [[21.0, 22.0, 23.0], [24.0, 25.0, 26.0]],
+│ │      ]
+│ │      temp = Q_(temp_data, "°C")
+│ │      precipitation = [
+│ │          [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]],
+│ │ @@ -843,18 +842,23 @@
+│ │  
+│ │  
+│ │  class TestMathematicalExpression:
+│ │      @staticmethod
+│ │      @pytest.mark.parametrize(
+│ │          "a, b",
+│ │          [
+│ │ +            ([1.0, 2.0, 3.0], [4.0, 5.0, 6.0]),
+│ │              (Q_([1, 2, 3], "m"), Q_([4, 5, 6], "m")),
+│ │              (
+│ │                  xr.DataArray(Q_([1, 2], "m"), dims=["a"]),
+│ │ -                xr.DataArray(Q_([3, 4], "m"), dims=["b"]),
+│ │ +                xr.DataArray(Q_([3, 4], "m"), dims=["b"]).pint.dequantify(),
+│ │ +            ),
+│ │ +            (
+│ │ +                xr.DataArray([1, 2], dims=["a"]),
+│ │ +                xr.DataArray([3, 4], dims=["b"]),
+│ │              ),
+│ │              (
+│ │                  Q_([1, 2], "m"),
+│ │                  xr.DataArray(Q_([3, 4], "m"), dims=["b"]),
+│ │              ),
+│ │          ],
+│ │      )
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_gmaw_process.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_gmaw_process.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_graph.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_graph.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_groove.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_groove.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_measurement.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_measurement.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_time.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_time.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_types.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_types.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_util.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_util.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_asdf_validators.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_asdf_validators.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Test custom weldx ASDF validator functions."""
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  import pytest
+│ │  import xarray as xr
+│ │ -from asdf import ValidationError
+│ │ +from asdf.exceptions import ValidationError
+│ │  
+│ │  from weldx.asdf.types import WxSyntaxError
+│ │  from weldx.asdf.util import write_buffer, write_read_buffer
+│ │  from weldx.asdf.validators import _custom_shape_validator
+│ │  from weldx.constants import Q_
+│ │  from weldx.core import TimeSeries
+│ │  from weldx.tags.debug.test_property_tag import PropertyTagTestClass
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_media_file.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_media_file.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/asdf_tests/test_weldx_file.py
+│ ├── +++ weldx-0.6.5/weldx/tests/asdf_tests/test_weldx_file.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -229,15 +229,15 @@
+│ │      def test_operation_on_closed(self):
+│ │          """Accessing the file_handle after closing is illegal."""
+│ │          self.fh.close()
+│ │          assert self.fh[META_ATTR]
+│ │  
+│ │          # cannot access closed handles
+│ │          with pytest.raises(RuntimeError):
+│ │ -            self.fh.file_handle
+│ │ +            self.fh.file_handle  # noqa: B018
+│ │  
+│ │      def test_update_on_close(self):
+│ │          """A WeldxFile with mode="rw" should write changes on close."""
+│ │          buff = self.make_copy(self.fh)
+│ │          fh2 = WeldxFile(buff, mode="rw", sync=True)
+│ │          fh2["test"] = True
+│ │          fh2.close()
+│ │   --- weldx-0.6.4/weldx/tests/conftest.py
+│ ├── +++ weldx-0.6.5/weldx/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/data/WelDX_notext.svg
+│ ├── +++ weldx-0.6.5/weldx/tests/data/WelDX_notext.svg
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/data/quality_standard/resources/test_organization/schemas/alternative_measurement_equipment_schema-1.0.0.yaml
+│ ├── +++ weldx-0.6.5/weldx/tests/data/quality_standard/resources/test_organization/schemas/alternative_measurement_equipment_schema-1.0.0.yaml
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_config.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_config.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_core.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_core.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_geometry.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_geometry.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_measurement.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_measurement.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_time.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_time.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_utility.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_utility.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_visualization.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_visualization.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/test_welding_util.py
+│ ├── +++ weldx-0.6.5/weldx/tests/test_welding_util.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/transformations/_util.py
+│ ├── +++ weldx-0.6.5/weldx/tests/transformations/_util.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/transformations/test_cs_manager.py
+│ ├── +++ weldx-0.6.5/weldx/tests/transformations/test_cs_manager.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/transformations/test_local_cs.py
+│ ├── +++ weldx-0.6.5/weldx/tests/transformations/test_local_cs.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/tests/transformations/test_util.py
+│ ├── +++ weldx-0.6.5/weldx/tests/transformations/test_util.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/time.py
+│ ├── +++ weldx-0.6.5/weldx/time.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/transformations/__init__.py
+│ ├── +++ weldx-0.6.5/weldx/transformations/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/transformations/cs_manager.py
+│ ├── +++ weldx-0.6.5/weldx/transformations/cs_manager.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1916,15 +1916,16 @@
+│ │          for sub in subsystems:
+│ │              lcs_rem = [lcs for lcs in lcs_rem if lcs not in sub.coordinate_system_names]
+│ │  
+│ │          if lcs_rem:
+│ │              warnings.warn(
+│ │                  "The following coordinate systems are not part of any subsystem and "
+│ │                  f"lost connection to the CoordinateSystemManager instance: {lcs_rem}\n"
+│ │ -                "These systems are removed."
+│ │ +                "These systems are removed.",
+│ │ +                stacklevel=1,
+│ │              )
+│ │  
+│ │          return subsystems
+│ │  
+│ │      @property
+│ │      def number_of_subsystems(self) -> int:
+│ │          """Get the number of attached subsystems.
+│ │   --- weldx-0.6.4/weldx/transformations/local_cs.py
+│ ├── +++ weldx-0.6.5/weldx/transformations/local_cs.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -82,15 +82,16 @@
+│ │              time is not None
+│ │              and len(Time(time)) > 1
+│ │              and "time" not in orientation.dims
+│ │              and (isinstance(coordinates, TimeSeries) or "time" not in coordinates.dims)
+│ │          ):
+│ │              warnings.warn(
+│ │                  "Provided time is dropped because of the given coordinates and "
+│ │ -                "orientation."
+│ │ +                "orientation.",
+│ │ +                stacklevel=2,
+│ │              )
+│ │  
+│ │          if construction_checks:
+│ │              self._check_coordinates(coordinates)
+│ │              orientation = self._check_and_normalize_orientation(orientation)
+│ │  
+│ │          orientation, coordinates = self._unify_time_axis(orientation, coordinates)
+│ │ @@ -109,15 +110,18 @@
+│ │  
+│ │          self._time_ref = time_cls.reference_time if isinstance(time_cls, Time) else None
+│ │          if "time" in self._dataset and self._time_ref is not None:
+│ │              self._dataset.weldx.time_ref = self._time_ref
+│ │  
+│ │          # warn about dropped reference time
+│ │          if time_ref is not None and time is None and self._time_ref is None:
+│ │ -            warnings.warn("Reference time dropped. The system is not time dependent.")
+│ │ +            warnings.warn(
+│ │ +                "Reference time dropped. The system is not time dependent.",
+│ │ +                stacklevel=2,
+│ │ +            )
+│ │  
+│ │      def __repr__(self):
+│ │          """Give __repr_ output in xarray format."""
+│ │          # todo: rewrite if expressions are fully supported
+│ │          return self._dataset.__repr__().replace(
+│ │              "<xarray.Dataset", "<LocalCoordinateSystem"
+│ │          )
+│ │ @@ -163,14 +167,16 @@
+│ │          ):
+│ │              raise Exception(
+│ │                  "Addition of coordinate systems that use a 'TimeSeries' as coordinates "
+│ │                  "is not supported. Use 'interp_time' to create discrete values."
+│ │              )
+│ │  
+│ │          # handle time
+│ │ +        # TODO: time var is unused! why? The var should be used in line 201?
+│ │ +        # e.g. ... rhs_cs.interp_time(lhs_cs.time, time_ref)
+│ │          time = lhs_cs.time
+│ │          if time is None:
+│ │              time = rhs_cs.time
+│ │  
+│ │          # handle reference times
+│ │          if (
+│ │              lhs_cs.reference_time != rhs_cs.reference_time
+│ │ @@ -403,30 +409,30 @@
+│ │              and ("time" in coordinates.dims)
+│ │              and (not np.all(orientation.time.data == coordinates.time.data))
+│ │          ):
+│ │              time_union = Time.union([orientation.time, coordinates.time])
+│ │              orientation = ut.xr_interp_orientation_in_time(orientation, time_union)
+│ │              coordinates = ut.xr_interp_coordinates_in_time(coordinates, time_union)
+│ │  
+│ │ -        return (orientation, coordinates)
+│ │ +        return orientation, coordinates
+│ │  
+│ │      @classmethod
+│ │      def from_euler(
+│ │          cls,
+│ │          sequence,
+│ │          angles,
+│ │          degrees=False,
+│ │          coordinates=None,
+│ │          time: types_time_like = None,
+│ │          time_ref: types_timestamp_like = None,
+│ │      ) -> LocalCoordinateSystem:
+│ │          """Construct a local coordinate system from an euler sequence.
+│ │  
+│ │          This function uses scipy.spatial.transform.Rotation.from_euler method to define
+│ │ -        the coordinate systems orientation. Take a look at it's documentation, if some
+│ │ +        the coordinate systems orientation. Take a look at its documentation, if some
+│ │          information is missing here. The related parameter docs are a copy of the scipy
+│ │          documentation.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          sequence :
+│ │              Specifies sequence of axes for rotations. Up to 3 characters
+│ │ @@ -720,15 +726,15 @@
+│ │          """Interpolates the data in time.
+│ │  
+│ │          Note that the returned system won't be time dependent anymore if only a single
+│ │          time value was passed. The resulting system is constant and the passed time
+│ │          value will be stripped from the result.
+│ │          Additionally, if the passed time range does not overlap with the time range of
+│ │          the coordinate system, the resulting system won't be time dependent neither
+│ │ -        because the values outside of the coordinate systems time range are considered
+│ │ +        because the values outside the coordinate systems time range are considered
+│ │          as being constant.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          time :
+│ │              Target time values. If `None` is passed, no interpolation will be performed.
+│ │          time_ref:
+│ │ @@ -822,15 +828,15 @@
+│ │                 LocalCoordinateSystem
+│ │              The time steps that should be plotted. Missing time steps in the data will
+│ │              be interpolated.
+│ │          time_ref : pandas.Timestamp
+│ │              A reference timestamp that can be provided if the ``time`` parameter is a
+│ │              `pandas.TimedeltaIndex`
+│ │          time_index: int
+│ │ -            If the coordinate system is time dependent, this parameter can be used to
+│ │ +            If the coordinate system is time dependent, this parameter can be used
+│ │              to select a specific key frame by its index.
+│ │          scale_vectors :
+│ │              A scaling factor or array to adjust the vector length
+│ │          show_origin: bool
+│ │              If `True`, a small dot with the assigned color will mark the coordinate
+│ │              systems' origin.
+│ │          show_trace : bool
+│ │   --- weldx-0.6.4/weldx/transformations/rotation.py
+│ ├── +++ weldx-0.6.5/weldx/transformations/rotation.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/transformations/util.py
+│ ├── +++ weldx-0.6.5/weldx/transformations/util.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/types.py
+│ ├── +++ weldx-0.6.5/weldx/types.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/util/external_file.py
+│ ├── +++ weldx-0.6.5/weldx/util/external_file.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/util/media_file.py
+│ ├── +++ weldx-0.6.5/weldx/util/media_file.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/util/util.py
+│ ├── +++ weldx-0.6.5/weldx/util/util.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,14 +2,15 @@
+│ │  from __future__ import annotations
+│ │  
+│ │  import functools
+│ │  import sys
+│ │  import warnings
+│ │  from collections.abc import Callable, Sequence, Set
+│ │  from functools import wraps
+│ │ +from importlib.util import find_spec
+│ │  from inspect import getmembers, isfunction
+│ │  from typing import ClassVar, Collection, Hashable, Mapping, Union
+│ │  
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  import pint
+│ │  import xarray as xr
+│ │ @@ -32,14 +33,15 @@
+│ │      "_patch_mod_all",
+│ │      "apply_func_by_mapping",
+│ │      "check_matplotlib_available",
+│ │  ]
+│ │  
+│ │  
+│ │  class WeldxDeprecationWarning(DeprecationWarning):
+│ │ +
+│ │      """Deprecation warning type."""
+│ │  
+│ │  
+│ │  def deprecated(since: str = None, removed: str = None, message: str = None) -> Callable:
+│ │      """Mark a functions as deprecated.
+│ │  
+│ │      This decorator emits a warning when the function is used.
+│ │ @@ -415,19 +417,27 @@
+│ │      """Transform a dict by running functions mapped by keys over its values."""
+│ │      return {k: (func_map[k](v) if k in func_map else v) for k, v in inputs.items()}
+│ │  
+│ │  
+│ │  @decorator
+│ │  def check_matplotlib_available(func, *args, **kwargs):
+│ │      """Emit a warning if matplotlib is not available."""
+│ │ -    try:
+│ │ -        import matplotlib.pyplot as plt  # noqa: F401
+│ │ -    except ModuleNotFoundError:
+│ │ +
+│ │ +    def _warn():
+│ │          warnings.warn(
+│ │              "Matplotlib unavailable! Cannot plot. "
+│ │              "Please install matplotlib or weldx_widgets.",
+│ │ -            stacklevel=2,
+│ │ +            stacklevel=3,
+│ │          )
+│ │ -    else:
+│ │ -        return func(*args, **kwargs)
+│ │  
+│ │ -    return None
+│ │ +    try:
+│ │ +        if find_spec("matplotlib.pyplot") is None:
+│ │ +            _warn()
+│ │ +            return
+│ │ +    except ModuleNotFoundError:
+│ │ +        _warn()
+│ │ +        return
+│ │ +    except ValueError:
+│ │ +        warnings.warn("Matplotlib is unavailable (module set to None).", stacklevel=2)
+│ │ +        return
+│ │ +
+│ │ +    return func(*args, **kwargs)
+│ │   --- weldx-0.6.4/weldx/util/xarray.py
+│ ├── +++ weldx-0.6.5/weldx/util/xarray.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -733,18 +733,22 @@
+│ │          Interpolated data
+│ │  
+│ │      """
+│ │      if "time" not in da.dims:  # not time dependent
+│ │          return da
+│ │  
+│ │      times = Time(times).as_pandas_index()
+│ │ +    time_ref = da.weldx.time_ref
+│ │      da = da.weldx.time_ref_unset()
+│ │      da = xr_interp_like(
+│ │          da, {"time": times}, assume_sorted=True, broadcast_missing=False, fillna=True
+│ │      )
+│ │ +    # resync and reset to correct format
+│ │ +    if time_ref:
+│ │ +        da.weldx.time_ref = time_ref
+│ │      da = da.weldx.time_ref_restore()
+│ │  
+│ │      if len(da.time) == 1:  # remove "time dimension" for static cases
+│ │          return da.isel({"time": 0})
+│ │  
+│ │      return da
+│ │   --- weldx-0.6.4/weldx/visualization/__init__.py
+│ ├── +++ weldx-0.6.5/weldx/visualization/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/welding/groove/iso_9692_1.py
+│ ├── +++ weldx-0.6.5/weldx/welding/groove/iso_9692_1.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/welding/processes.py
+│ ├── +++ weldx-0.6.5/weldx/welding/processes.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx/welding/util.py
+│ ├── +++ weldx-0.6.5/weldx/welding/util.py
+│ │┄ Files identical despite different names
+│ │   --- weldx-0.6.4/weldx.egg-info/PKG-INFO
+│ ├── +++ weldx-0.6.5/weldx.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: weldx
+│ │ -Version: 0.6.4
+│ │ +Version: 0.6.5
+│ │  Summary: Python API for the WelDX file format and standard
+│ │  Author-email: Cagtay Fabry <cagtay.fabry@bam.de>, Volker Hirthammer <volker.hirthammer@bam.de>, "Martin K. Scherer" <martin.scherer@bam.de>
+│ │  License: BSD 3-Clause License
+│ │          
+│ │          Copyright (c) 2020, BAMWelDX
+│ │          All rights reserved.
+│ │          
+│ │ @@ -41,21 +41,21 @@
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: BSD License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Topic :: Scientific/Engineering :: Physics
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Intended Audience :: Education
+│ │ -Requires-Python: >=3.8
+│ │ +Requires-Python: >=3.9
+│ │  Description-Content-Type: text/markdown
+│ │  Provides-Extra: test
+│ │  Provides-Extra: vis
+│ │  Provides-Extra: media
+│ │  License-File: LICENSE
+│ │  
+│ │  # WelDX - data and quality standards for welding research data
+│ │   --- weldx-0.6.4/weldx.egg-info/SOURCES.txt
+│ ├── +++ weldx-0.6.5/weldx.egg-info/SOURCES.txt
+│ │┄ Files 0% similar despite different names
+│ │ @@ -19,15 +19,14 @@
+│ │  weldx.egg-info/PKG-INFO
+│ │  weldx.egg-info/SOURCES.txt
+│ │  weldx.egg-info/dependency_links.txt
+│ │  weldx.egg-info/entry_points.txt
+│ │  weldx.egg-info/requires.txt
+│ │  weldx.egg-info/top_level.txt
+│ │  weldx/asdf/__init__.py
+│ │ -weldx/asdf/_extension.py
+│ │  weldx/asdf/constants.py
+│ │  weldx/asdf/extension.py
+│ │  weldx/asdf/file.py
+│ │  weldx/asdf/types.py
+│ │  weldx/asdf/util.py
+│ │  weldx/asdf/validators.py
+│ │  weldx/asdf/cli/__init__.py
