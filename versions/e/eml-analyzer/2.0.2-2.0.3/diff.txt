@@ -1,0 +1,263 @@
+--- tmp/eml-analyzer-2.0.2.tar.gz
++++ tmp/eml-analyzer-2.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "C:\Users\Florian\Documents\gits\eml_analyzer\dist\.tmp-lpujbs3l\eml-analyzer-2.0.2.tar", last modified: Mon Feb 27 09:21:16 2023, max compression
+│ +gzip compressed data, was "C:\Users\Florian\Documents\gits\eml_analyzer\dist\.tmp-3snd_e3m\eml-analyzer-2.0.3.tar", last modified: Thu Apr  6 21:47:51 2023, max compression
+│   --- eml-analyzer-2.0.2.tar
+├── +++ eml-analyzer-2.0.3.tar
+│ ├── file list
+│ │ @@ -1,42 +1,42 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.745639 eml-analyzer-2.0.2/
+│ │ --rw-rw-rw-   0        0        0     1090 2021-01-25 20:55:07.000000 eml-analyzer-2.0.2/LICENSE
+│ │ --rw-rw-rw-   0        0        0     5692 2023-02-27 09:21:16.745124 eml-analyzer-2.0.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     5356 2023-02-27 09:16:45.000000 eml-analyzer-2.0.2/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.698344 eml-analyzer-2.0.2/eml_analyzer/
+│ │ --rw-rw-rw-   0        0        0        0 2021-01-25 20:55:07.000000 eml-analyzer-2.0.2/eml_analyzer/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8118 2023-01-21 10:13:47.000000 eml-analyzer-2.0.2/eml_analyzer/cli_script.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.710827 eml-analyzer-2.0.2/eml_analyzer/library/
+│ │ --rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/eml_analyzer/library/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.718015 eml-analyzer-2.0.2/eml_analyzer/library/outputs/
+│ │ --rw-rw-rw-   0        0        0      127 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/eml_analyzer/library/outputs/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1461 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/eml_analyzer/library/outputs/abstract_output.py
+│ │ --rw-rw-rw-   0        0        0     4549 2023-01-21 10:15:27.000000 eml-analyzer-2.0.2/eml_analyzer/library/outputs/json_output.py
+│ │ --rw-rw-rw-   0        0        0     5145 2023-01-21 10:13:47.000000 eml-analyzer-2.0.2/eml_analyzer/library/outputs/standard_output.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.735115 eml-analyzer-2.0.2/eml_analyzer/library/parser/
+│ │ --rw-rw-rw-   0        0        0      165 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/eml_analyzer/library/parser/__init__.py
+│ │ --rw-rw-rw-   0        0        0      657 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/eml_analyzer/library/parser/attachment.py
+│ │ --rw-rw-rw-   0        0        0    10057 2023-01-21 10:15:27.000000 eml-analyzer-2.0.2/eml_analyzer/library/parser/parsed_email.py
+│ │ --rw-rw-rw-   0        0        0     1245 2023-02-27 08:57:25.000000 eml-analyzer-2.0.2/eml_analyzer/library/parser/printable_filename.py
+│ │ --rw-rw-rw-   0        0        0      614 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/eml_analyzer/library/parser/structure_item.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.709800 eml-analyzer-2.0.2/eml_analyzer.egg-info/
+│ │ --rw-rw-rw-   0        0        0     5692 2023-02-27 09:21:16.000000 eml-analyzer-2.0.2/eml_analyzer.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1059 2023-02-27 09:21:16.000000 eml-analyzer-2.0.2/eml_analyzer.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-02-27 09:21:16.000000 eml-analyzer-2.0.2/eml_analyzer.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       61 2023-02-27 09:21:16.000000 eml-analyzer-2.0.2/eml_analyzer.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       21 2023-02-27 09:21:16.000000 eml-analyzer-2.0.2/eml_analyzer.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       13 2023-02-27 09:21:16.000000 eml-analyzer-2.0.2/eml_analyzer.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-02-27 09:21:16.746157 eml-analyzer-2.0.2/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1102 2023-02-27 09:09:54.000000 eml-analyzer-2.0.2/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.736142 eml-analyzer-2.0.2/tests/
+│ │ --rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/tests/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.736815 eml-analyzer-2.0.2/tests/library/
+│ │ --rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/tests/library/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.739401 eml-analyzer-2.0.2/tests/library/outputs/
+│ │ --rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/tests/library/outputs/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8120 2023-01-21 10:15:27.000000 eml-analyzer-2.0.2/tests/library/outputs/test_json_output.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-02-27 09:21:16.743559 eml-analyzer-2.0.2/tests/library/parser/
+│ │ --rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/tests/library/parser/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1117 2023-02-27 08:57:25.000000 eml-analyzer-2.0.2/tests/library/parser/test_attachment.py
+│ │ --rw-rw-rw-   0        0        0    19637 2023-01-21 10:13:47.000000 eml-analyzer-2.0.2/tests/library/parser/test_parsed_email.py
+│ │ --rw-rw-rw-   0        0        0     1938 2023-02-27 08:57:25.000000 eml-analyzer-2.0.2/tests/library/parser/test_printable_filename.py
+│ │ --rw-rw-rw-   0        0        0     1536 2022-12-31 02:00:50.000000 eml-analyzer-2.0.2/tests/library/parser/test_structure_item.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.195160 eml-analyzer-2.0.3/
+│ │ +-rw-rw-rw-   0        0        0     1090 2021-01-25 20:55:07.000000 eml-analyzer-2.0.3/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     5692 2023-04-06 21:47:51.195160 eml-analyzer-2.0.3/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     5356 2023-02-27 09:16:45.000000 eml-analyzer-2.0.3/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.172588 eml-analyzer-2.0.3/eml_analyzer/
+│ │ +-rw-rw-rw-   0        0        0        0 2021-01-25 20:55:07.000000 eml-analyzer-2.0.3/eml_analyzer/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8118 2023-01-21 10:13:47.000000 eml-analyzer-2.0.3/eml_analyzer/cli_script.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.180817 eml-analyzer-2.0.3/eml_analyzer/library/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/eml_analyzer/library/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.183885 eml-analyzer-2.0.3/eml_analyzer/library/outputs/
+│ │ +-rw-rw-rw-   0        0        0      127 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/eml_analyzer/library/outputs/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1461 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/eml_analyzer/library/outputs/abstract_output.py
+│ │ +-rw-rw-rw-   0        0        0     4549 2023-01-21 10:15:27.000000 eml-analyzer-2.0.3/eml_analyzer/library/outputs/json_output.py
+│ │ +-rw-rw-rw-   0        0        0     5145 2023-01-21 10:13:47.000000 eml-analyzer-2.0.3/eml_analyzer/library/outputs/standard_output.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.187950 eml-analyzer-2.0.3/eml_analyzer/library/parser/
+│ │ +-rw-rw-rw-   0        0        0      165 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/eml_analyzer/library/parser/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      657 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/eml_analyzer/library/parser/attachment.py
+│ │ +-rw-rw-rw-   0        0        0    10063 2023-04-06 21:40:31.000000 eml-analyzer-2.0.3/eml_analyzer/library/parser/parsed_email.py
+│ │ +-rw-rw-rw-   0        0        0     1245 2023-02-27 08:57:25.000000 eml-analyzer-2.0.3/eml_analyzer/library/parser/printable_filename.py
+│ │ +-rw-rw-rw-   0        0        0      614 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/eml_analyzer/library/parser/structure_item.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.179782 eml-analyzer-2.0.3/eml_analyzer.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     5692 2023-04-06 21:47:51.000000 eml-analyzer-2.0.3/eml_analyzer.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1059 2023-04-06 21:47:51.000000 eml-analyzer-2.0.3/eml_analyzer.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 21:47:51.000000 eml-analyzer-2.0.3/eml_analyzer.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       61 2023-04-06 21:47:51.000000 eml-analyzer-2.0.3/eml_analyzer.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       21 2023-04-06 21:47:51.000000 eml-analyzer-2.0.3/eml_analyzer.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       13 2023-04-06 21:47:51.000000 eml-analyzer-2.0.3/eml_analyzer.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 21:47:51.196174 eml-analyzer-2.0.3/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1102 2023-04-06 21:45:13.000000 eml-analyzer-2.0.3/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.187950 eml-analyzer-2.0.3/tests/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/tests/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.188971 eml-analyzer-2.0.3/tests/library/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/tests/library/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.189978 eml-analyzer-2.0.3/tests/library/outputs/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/tests/library/outputs/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8120 2023-01-21 10:15:27.000000 eml-analyzer-2.0.3/tests/library/outputs/test_json_output.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 21:47:51.194145 eml-analyzer-2.0.3/tests/library/parser/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/tests/library/parser/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1117 2023-02-27 08:57:25.000000 eml-analyzer-2.0.3/tests/library/parser/test_attachment.py
+│ │ +-rw-rw-rw-   0        0        0    19641 2023-04-06 21:35:43.000000 eml-analyzer-2.0.3/tests/library/parser/test_parsed_email.py
+│ │ +-rw-rw-rw-   0        0        0     1938 2023-02-27 08:57:25.000000 eml-analyzer-2.0.3/tests/library/parser/test_printable_filename.py
+│ │ +-rw-rw-rw-   0        0        0     1536 2022-12-31 02:00:50.000000 eml-analyzer-2.0.3/tests/library/parser/test_structure_item.py
+│ │   --- eml-analyzer-2.0.2/LICENSE
+│ ├── +++ eml-analyzer-2.0.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/PKG-INFO
+│ ├── +++ eml-analyzer-2.0.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: eml-analyzer
+│ │ -Version: 2.0.2
+│ │ +Version: 2.0.3
+│ │  Summary: A cli script to analyze an E-Mail in the eml format for viewing the header, extracting attachments, etc.
+│ │  Home-page: https://github.com/wahlflo/eml_analyzer
+│ │  Author: Florian Wahl
+│ │  Author-email: florian.wahl.developer@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- eml-analyzer-2.0.2/README.md
+│ ├── +++ eml-analyzer-2.0.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/cli_script.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/cli_script.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/outputs/abstract_output.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/outputs/abstract_output.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/outputs/json_output.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/outputs/json_output.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/outputs/standard_output.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/outputs/standard_output.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/parser/attachment.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/parser/attachment.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/parser/parsed_email.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/parser/parsed_email.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -94,34 +94,33 @@
+│ │              try:
+│ │                  return payload_in_bytes.decode(encoding_format)
+│ │              except ValueError:
+│ │                  continue
+│ │          raise PayloadDecodingException('Payload could not be decoded')
+│ │  
+│ │      @staticmethod
+│ │ -    def _create_list_of_possible_encodings(message: email.message.Message) -> set:
+│ │ +    def _create_list_of_possible_encodings(message: email.message.Message) -> list:
+│ │          """ creates a list of the most possible encodings of a payload """
+│ │ -        list_of_possible_encodings = set()
+│ │ +        list_of_possible_encodings = list()
+│ │  
+│ │          # at first add the encodings mentioned in the object header
+│ │          for k, v in message.items():
+│ │              k = str(k).lower()
+│ │              v = str(v).lower()
+│ │              if k == 'content-type':
+│ │                  entries = v.split(';')
+│ │                  for entry in entries:
+│ │                      entry = entry.strip()
+│ │                      if entry.startswith('charset='):
+│ │                          encoding = entry.replace('charset=', '').replace('"', '')
+│ │ -                        list_of_possible_encodings.add(encoding)
+│ │ +                        list_of_possible_encodings.append(encoding)
+│ │  
+│ │          for x in ['utf-8', 'windows-1251', 'iso-8859-1', 'us-ascii', 'iso-8859-15']:
+│ │              if x not in list_of_possible_encodings:
+│ │ -                list_of_possible_encodings.add(x)
+│ │ -
+│ │ +                list_of_possible_encodings.append(x)
+│ │          return list_of_possible_encodings
+│ │  
+│ │      def get_attachments(self) -> List[Attachment]:
+│ │          return_list = list()
+│ │          counter = 0
+│ │          for child in self._parsed_email.walk():
+│ │              if child.get_filename() is not None:
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/parser/printable_filename.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/parser/printable_filename.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer/library/parser/structure_item.py
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer/library/parser/structure_item.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/eml_analyzer.egg-info/PKG-INFO
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: eml-analyzer
+│ │ -Version: 2.0.2
+│ │ +Version: 2.0.3
+│ │  Summary: A cli script to analyze an E-Mail in the eml format for viewing the header, extracting attachments, etc.
+│ │  Home-page: https://github.com/wahlflo/eml_analyzer
+│ │  Author: Florian Wahl
+│ │  Author-email: florian.wahl.developer@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- eml-analyzer-2.0.2/eml_analyzer.egg-info/SOURCES.txt
+│ ├── +++ eml-analyzer-2.0.3/eml_analyzer.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/setup.py
+│ ├── +++ eml-analyzer-2.0.3/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │      long_description = readme_file.read()
+│ │      # remove badges in Readme
+│ │      long_description = '# emlAnalyzer' + long_description.split('# emlAnalyzer')[1]
+│ │  
+│ │  
+│ │  setuptools.setup(
+│ │      name="eml-analyzer",
+│ │ -    version="2.0.2",
+│ │ +    version="2.0.3",
+│ │      author="Florian Wahl",
+│ │      author_email="florian.wahl.developer@gmail.com",
+│ │      description="A cli script to analyze an E-Mail in the eml format for viewing the header, extracting attachments, etc.",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/wahlflo/eml_analyzer",
+│ │      packages=setuptools.find_packages(exclude=("tests", "tests.*")),
+│ │   --- eml-analyzer-2.0.2/tests/library/outputs/test_json_output.py
+│ ├── +++ eml-analyzer-2.0.3/tests/library/outputs/test_json_output.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/tests/library/parser/test_attachment.py
+│ ├── +++ eml-analyzer-2.0.3/tests/library/parser/test_attachment.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/tests/library/parser/test_parsed_email.py
+│ ├── +++ eml-analyzer-2.0.3/tests/library/parser/test_parsed_email.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -121,14 +121,15 @@
+│ │          self.assertIn('https://test-link2.com', embedded_urls)
+│ │  
+│ │      def test_parser_embedded_urls_from_text_case_2(self):
+│ │          """ tested in Outlook. Outlook makes the string "https://carleton.ca/</a></span></div>" clickable """
+│ │          found_urls = ParsedEmail._get_embedded_urls_from_text(text="""https://carleton.ca/</a></span></div>""")
+│ │          self.assertEqual(1, len(found_urls))
+│ │          self.assertIn('https://carleton.ca/</a></span></div>', found_urls)
+│ │ +
+│ │      def test_parser_embedded_urls_from_text_case_3(self):
+│ │          """ tested in Outlook. Outlook makes the string "https://carleton.ca/"</a></span></div>" clickable """
+│ │          found_urls = ParsedEmail._get_embedded_urls_from_text(text="""link: "https://carleton.ca/"</a></span></div>""")
+│ │          self.assertEqual(1, len(found_urls))
+│ │          self.assertIn('https://carleton.ca/"</a></span></div>', found_urls)
+│ │  
+│ │      def test_parser_embedded_clickable_urls_from_html_links_case_1(self):
+│ │ @@ -216,14 +217,15 @@
+│ │  <div class="elementToProof" style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+│ │  <span style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><img style="max-width: 100%;" class="w-240 h-240" size="6492" contenttype="image/png" data-outlook-trace="F:1|T:1" src="cid:d2eb1b04-21d5-4a18-bfdb-12c4c3e65b8a"><br>
+│ │  </span></div>
+│ │  </body>
+│ │  </html>
+│ │          """)
+│ │          self.assertEqual(0, len(embedded_urls))
+│ │ +
+│ │      def test_get_reloaded_content_from_html_case_3(self):
+│ │          embedded_urls = ParsedEmail._get_reloaded_content_from_html(html_data="""<img class="EmojiInsert" src="data:image/gif;base64,{BASE64 emoji}" />""")
+│ │          self.assertEqual(0, len(embedded_urls))
+│ │  
+│ │      def url_decode(self):
+│ │          import urllib.parse
+│ │          self.assertEqual(r"data=05%7C01", urllib.parse.unquote(r"data=05|01"))
+│ │   --- eml-analyzer-2.0.2/tests/library/parser/test_printable_filename.py
+│ ├── +++ eml-analyzer-2.0.3/tests/library/parser/test_printable_filename.py
+│ │┄ Files identical despite different names
+│ │   --- eml-analyzer-2.0.2/tests/library/parser/test_structure_item.py
+│ ├── +++ eml-analyzer-2.0.3/tests/library/parser/test_structure_item.py
+│ │┄ Files identical despite different names

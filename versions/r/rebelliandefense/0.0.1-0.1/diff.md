@@ -1,0 +1,18 @@
+# Comparing `tmp/rebelliandefense-0.0.1.tar.gz` & `tmp/rebelliandefense-0.1-py3-none-any.whl.zip`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rebelliandefense-0.0.1.tar", last modified: Thu Apr  6 21:42:49 2023, max compression
++Zip archive data, at least v2.0 to extract, compression method=deflate
+```
+
+## filetype from diffoscope
+
+```diff
+@@ -1 +1 @@
+-GzipFile
++ZipFile
+```
+
