@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/sage-setup-9.8b7.tar.gz tmp/sage-setup-9.8rc0.tar.gz --html versions/s/sage-setup/9.8b7-9.8rc0/index.html --text versions/s/sage-setup/9.8b7-9.8rc0/diff.txt --markdown versions/s/sage-setup/9.8b7-9.8rc0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">19.6 KB</span></div>
+  <div><span class="source">tmp/sage-setup-9.8b7.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/sage-setup-9.8rc0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">271 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;sage-setup-9.8<del>b7</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Jan<span class="dp">·</span><del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;sage-setup-9.8<ins>r</ins><ins>c0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Sun</ins><span class="dp">·</span>Jan<span class="dp">·</span><ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">19.3 KB</span></div>
+    <div><span class="source">sage-setup-9.8b7.tar</span> vs.</div>
+    <div id="sage-setup--.-b-.tar"><span class="source">sage-setup-9.8rc0.tar</span>
+      <a class="anchor" href="#sage-setup--.-b-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">13.7 KB</span></div>
+      <div id="sage-setup--.-b-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 52 lines modified</td><td colspan="2">Offset 1, 52 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<del>2</del><span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<ins>3</ins><span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>166<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/README.rst</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>166<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>10</del><span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/VERSION.txt</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span>8</ins><span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/VERSION.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/requirements.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>407<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>407<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/__main__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28790<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/giacpy-mkkeywords.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28790<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/giacpy-mkkeywords.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8917<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8917<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>184<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/__main__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>184<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39187<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/generator.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39187<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/generator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15724<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/instructions.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15724<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/instructions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18579<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/memory.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18579<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/memory.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5795<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/base.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5795<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9412<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/cc.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9412<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/cc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9353<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/cdf.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9353<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/cdf.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4810<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/element.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4810<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/element.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10467<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/python.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10467<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/python.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6989<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/rdf.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6989<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/rdf.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10260<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/specs/rr.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10260<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/specs/rr.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33583<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/storage.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33583<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/storage.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4968<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/autogen/interpreters/utils.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4968<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/autogen/interpreters/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7313<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/clean.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7313<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/clean.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/command/</td><td class="diffline">30 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/command/</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/command/__init__.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/command/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11899<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/command/sage_build_cython.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11899<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/command/sage_build_cython.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8589<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/command/sage_build_ext.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8589<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/command/sage_build_ext.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1328<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/command/sage_build_ext_minimal.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1328<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/command/sage_build_ext_minimal.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4362<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/command/sage_install.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4362<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/command/sage_install.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1302<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/cython_options.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1302<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/cython_options.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1039<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/excepthook.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1039<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/excepthook.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>500<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/extensions.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>500<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/extensions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17677<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/find.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17677<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/find.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1960<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/library_order.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1960<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/library_order.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4505<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/run_parallel.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4505<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/run_parallel.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2220<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/setenv.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2220<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/setenv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1716<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>1</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup/util.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1716<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup.egg-info/</td><td class="diffline">44 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<del>2</del><span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>29</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup.egg-info/PKG-INFO</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<ins>3</ins><span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1439<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup.egg-info/SOURCES.txt</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1439<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>29</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup.egg-info/dependency_links.txt</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>29</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup.egg-info/requires.txt</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>29</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/sage_setup.egg-info/top_level.txt</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/sage_setup.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1212<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>30</del>.<del>674571</del><span class="dp">·</span>sage-setup-9.8<del>b7</del>/setup.cfg</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1212<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>57</ins>.<ins>909807</ins><span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/setup.py</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>61<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>850<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-setup-9.8<del>b7</del>/tox.ini</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>850<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-setup-9.8<ins>r</ins><ins>c0</ins>/tox.ini</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">522 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/PKG-INFO</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--PKG-INFO"><span class="source">sage-setup-9.8rc0/PKG-INFO</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-setup</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-setup</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<del>b7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<ins>r</ins><ins>c0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>Build<span class="dp">·</span>system<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Sage<span class="dp">·</span>library</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>Build<span class="dp">·</span>system<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Sage<span class="dp">·</span>library</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v2<span class="dp">·</span>or<span class="dp">·</span>later</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v2<span class="dp">·</span>or<span class="dp">·</span>later</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>6<span class="dp">·</span>-<span class="dp">·</span>Mature</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>6<span class="dp">·</span>-<span class="dp">·</span>Mature</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">152 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/giacpy-mkkeywords.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-giacpy-mkkeywords.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/giacpy-mkkeywords.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-giacpy-mkkeywords.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">160 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/__init__.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-__init__.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/__init__.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">162 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/generator.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-generator.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/generator.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-generator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">168 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/instructions.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-instructions.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/instructions.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-instructions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">156 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/memory.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-memory.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/memory.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-memory.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">164 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/base.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-base.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/base.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">160 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/cc.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-cc.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/cc.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-cc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">162 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/cdf.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-cdf.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/cdf.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-cdf.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">170 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/element.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-element.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/element.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-element.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">168 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/python.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-python.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/python.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-python.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">162 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/rdf.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-rdf.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/rdf.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-rdf.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">160 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/specs/rr.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-rr.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/specs/rr.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-specs-rr.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">158 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/storage.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-storage.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/storage.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-storage.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">154 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/autogen/interpreters/utils.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-utils.py"><span class="source">sage-setup-9.8rc0/sage_setup/autogen/interpreters/utils.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-autogen-interpreters-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">112 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/clean.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-clean.py"><span class="source">sage-setup-9.8rc0/sage_setup/clean.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-clean.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">152 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/command/sage_build_cython.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_build_cython.py"><span class="source">sage-setup-9.8rc0/sage_setup/command/sage_build_cython.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_build_cython.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">146 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/command/sage_build_ext.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_build_ext.py"><span class="source">sage-setup-9.8rc0/sage_setup/command/sage_build_ext.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_build_ext.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">162 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/command/sage_build_ext_minimal.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_build_ext_minimal.py"><span class="source">sage-setup-9.8rc0/sage_setup/command/sage_build_ext_minimal.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_build_ext_minimal.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">142 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/command/sage_install.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_install.py"><span class="source">sage-setup-9.8rc0/sage_setup/command/sage_install.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-command-sage_install.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">130 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/cython_options.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-cython_options.py"><span class="source">sage-setup-9.8rc0/sage_setup/cython_options.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-cython_options.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">122 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/excepthook.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-excepthook.py"><span class="source">sage-setup-9.8rc0/sage_setup/excepthook.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-excepthook.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">110 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/find.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-find.py"><span class="source">sage-setup-9.8rc0/sage_setup/find.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-find.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">128 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/library_order.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-library_order.py"><span class="source">sage-setup-9.8rc0/sage_setup/library_order.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-library_order.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">126 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/run_parallel.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-run_parallel.py"><span class="source">sage-setup-9.8rc0/sage_setup/run_parallel.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-run_parallel.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">114 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/setenv.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-setenv.py"><span class="source">sage-setup-9.8rc0/sage_setup/setenv.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-setenv.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">110 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup/util.py</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-util.py"><span class="source">sage-setup-9.8rc0/sage_setup/util.py</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup-util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">562 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup.egg-info/PKG-INFO</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup.egg-info-PKG-INFO"><span class="source">sage-setup-9.8rc0/sage_setup.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-setup</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-setup</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<del>b7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<ins>r</ins><ins>c0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>Build<span class="dp">·</span>system<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Sage<span class="dp">·</span>library</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>Build<span class="dp">·</span>system<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>Sage<span class="dp">·</span>library</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v2<span class="dp">·</span>or<span class="dp">·</span>later</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v2<span class="dp">·</span>or<span class="dp">·</span>later</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>6<span class="dp">·</span>-<span class="dp">·</span>Mature</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>6<span class="dp">·</span>-<span class="dp">·</span>Mature</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Education</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">136 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/sage_setup.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--sage_setup.egg-info-SOURCES.txt"><span class="source">sage-setup-9.8rc0/sage_setup.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--sage_setup.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">92.0 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/setup.cfg</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--setup.cfg"><span class="source">sage-setup-9.8rc0/setup.cfg</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">582 B</span></div>
+      <div><span class="source">sage-setup-9.8b7/tox.ini</span> vs.</div>
+      <div id="sage-setup--.-b-.tar---sage-setup--.-b--tox.ini"><span class="source">sage-setup-9.8rc0/tox.ini</span>
+        <a class="anchor" href="#sage-setup--.-b-.tar---sage-setup--.-b--tox.ini">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 15 lines modified</td><td colspan="2">Offset 15, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">[testenv]</td><td class="diffline">15 </td><td class="diffpresent">[testenv]</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">deps<span class="dp">·</span>=<span class="dp">·</span>-rrequirements.txt</td><td class="diffline">16 </td><td class="diffpresent">deps<span class="dp">·</span>=<span class="dp">·</span>-rrequirements.txt</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">setenv<span class="dp">·</span>=</td><td class="diffline">17 </td><td class="diffpresent">setenv<span class="dp">·</span>=</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Sage<span class="dp">·</span>scripts<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>sage-runtests<span class="dp">·</span>like<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>$HOME/.sage</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Sage<span class="dp">·</span>scripts<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>sage-runtests<span class="dp">·</span>like<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>$HOME/.sage</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>HOME={envdir}</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>HOME={envdir}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent"><del>white</del>list_externals<span class="dp">·</span>=</td><td class="diffline">20 </td><td class="diffpresent"><ins>allow</ins>list_externals<span class="dp">·</span>=</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>bash</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>bash</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">commands<span class="dp">·</span>=</td><td class="diffline">22 </td><td class="diffpresent">commands<span class="dp">·</span>=</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Beware<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>treacherous<span class="dp">·</span>non-src<span class="dp">·</span>layout.</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Beware<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>treacherous<span class="dp">·</span>non-src<span class="dp">·</span>layout.</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python<span class="dp">·</span>-c<span class="dp">·</span>&#x27;import<span class="dp">·</span>sys;<span class="dp">·</span>&quot;&quot;<span class="dp">·</span>in<span class="dp">·</span>sys.path<span class="dp">·</span>and<span class="dp">·</span>sys.path.remove(&quot;&quot;);<span class="dp">·</span>import<span class="dp">·</span>sage_setup;<span class="dp">·</span>import<span class="dp">·</span>sage_setup.find&#x27;</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>python<span class="dp">·</span>-c<span class="dp">·</span>&#x27;import<span class="dp">·</span>sys;<span class="dp">·</span>&quot;&quot;<span class="dp">·</span>in<span class="dp">·</span>sys.path<span class="dp">·</span>and<span class="dp">·</span>sys.path.remove(&quot;&quot;);<span class="dp">·</span>import<span class="dp">·</span>sage_setup;<span class="dp">·</span>import<span class="dp">·</span>sage_setup.find&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">#<span class="dp">·</span>TODO:<span class="dp">·</span>Test<span class="dp">·</span>importing<span class="dp">·</span>sage_setup.library_order<span class="dp">·</span>--<span class="dp">·</span>when<span class="dp">·</span>that<span class="dp">·</span>can<span class="dp">·</span>handle<span class="dp">·</span>missing<span class="dp">·</span>pkgconfig<span class="dp">·</span>libraries...</td><td class="diffline">25 </td><td class="diffpresent">#<span class="dp">·</span>TODO:<span class="dp">·</span>Test<span class="dp">·</span>importing<span class="dp">·</span>sage_setup.library_order<span class="dp">·</span>--<span class="dp">·</span>when<span class="dp">·</span>that<span class="dp">·</span>can<span class="dp">·</span>handle<span class="dp">·</span>missing<span class="dp">·</span>pkgconfig<span class="dp">·</span>libraries...</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

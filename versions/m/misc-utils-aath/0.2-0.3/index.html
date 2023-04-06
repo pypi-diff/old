@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/misc_utils_aath-0.2.tar.gz tmp/misc_utils_aath-0.3.tar.gz --html versions/m/misc-utils-aath/0.2-0.3/index.html --text versions/m/misc-utils-aath/0.2-0.3/diff.txt --markdown versions/m/misc-utils-aath/0.2-0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.03 KB</span></div>
+  <div><span class="source">tmp/misc_utils_aath-0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/misc_utils_aath-0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">276 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;misc_utils_aath-0.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>23:<del>07</del>:4<del>6</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;misc_utils_aath-0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.7 KB</span></div>
+    <div><span class="source">misc_utils_aath-0.2.tar</span> vs.</div>
+    <div id="misc_utils_aath--.-.tar"><span class="source">misc_utils_aath-0.3.tar</span>
+      <a class="anchor" href="#misc_utils_aath--.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.55 KB</span></div>
+      <div id="misc_utils_aath--.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#misc_utils_aath--.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.64<del>5</del>0<del>7</del><del>3</del><span class="dp">·</span>misc_utils_aath-0.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.<ins>5</ins>64<ins>1</ins>0<ins>4</ins><span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.64<del>5</del>0<del>7</del><del>3</del><span class="dp">·</span>misc_utils_aath-0.<del>2</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.<ins>5</ins>64<ins>1</ins>0<ins>4</ins><span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.64<del>5</del>0<del>7</del><del>3</del><span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath/</td><td class="diffline">3 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.<ins>5</ins>64<ins>1</ins>0<ins>4</ins><span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>211<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:07:21.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>211<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:07:21.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>602</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:<del>20</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath/misc.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>867</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:<ins>14</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath/misc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.64<del>5</del>0<del>7</del><del>3</del><span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath.egg-info/</td><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.<ins>5</ins>64<ins>1</ins>0<ins>4</ins><span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath.egg-info/PKG-INFO</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>254<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath.egg-info/SOURCES.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>254<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath.egg-info/dependency_links.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>32</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath.egg-info/requires.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>46</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/misc_utils_aath.egg-info/top_level.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/misc_utils_aath.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>6</del>.64<del>5</del>0<del>7</del><del>3</del><span class="dp">·</span>misc_utils_aath-0.<del>2</del>/setup.cfg</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>7</ins>.<ins>5</ins>64<ins>1</ins>0<ins>4</ins><span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<del>5</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>07</del>:4<del>4</del>.000000<span class="dp">·</span>misc_utils_aath-0.<del>2</del>/setup.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>saandeepaath<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<ins>3</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>10</ins>:4<ins>5</ins>.000000<span class="dp">·</span>misc_utils_aath-0.<ins>3</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.1 KB</span></div>
+      <div><span class="source">misc_utils_aath-0.2/misc_utils_aath/misc.py</span> vs.</div>
+      <div id="misc_utils_aath--.-.tar---misc_utils_aath--.--misc_utils_aath-misc.py"><span class="source">misc_utils_aath-0.3/misc_utils_aath/misc.py</span>
+        <a class="anchor" href="#misc_utils_aath--.-.tar---misc_utils_aath--.--misc_utils_aath-misc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 7, 14 lines modified</td><td colspan="2">Offset 7, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>sklearn.metrics<span class="dp">·</span>import<span class="dp">·</span>accuracy_score,<span class="dp">·</span>f1_score,<span class="dp">·</span>matthews_corrcoef,<span class="dp">·</span>confusion_matrix</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>sklearn.metrics<span class="dp">·</span>import<span class="dp">·</span>accuracy_score,<span class="dp">·</span>f1_score,<span class="dp">·</span>matthews_corrcoef,<span class="dp">·</span>confusion_matrix</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">import<span class="dp">·</span>av</td><td class="diffline">8 </td><td class="diffpresent">import<span class="dp">·</span>av</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">import<span class="dp">·</span>cv2</td><td class="diffline">9 </td><td class="diffpresent">import<span class="dp">·</span>cv2</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>random<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>random<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>numpy<span class="dp">·</span>as<span class="dp">·</span>np</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">import<span class="dp">·</span>torch<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">from<span class="dp">·</span>umap<span class="dp">·</span>import<span class="dp">·</span>UMAP</td><td class="diffline">13 </td><td class="diffpresent">from<span class="dp">·</span>umap<span class="dp">·</span>import<span class="dp">·</span>UMAP</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">import<span class="dp">·</span>pandas<span class="dp">·</span>as<span class="dp">·</span>pd</td><td class="diffline">14 </td><td class="diffpresent">import<span class="dp">·</span>pandas<span class="dp">·</span>as<span class="dp">·</span>pd</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">import<span class="dp">·</span>regex</td><td class="diffline">15 </td><td class="diffpresent">import<span class="dp">·</span>regex</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">import<span class="dp">·</span>plotly.express<span class="dp">·</span>as<span class="dp">·</span>px</td><td class="diffline">16 </td><td class="diffpresent">import<span class="dp">·</span>plotly.express<span class="dp">·</span>as<span class="dp">·</span>px</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">def<span class="dp">·</span>match_files(mtc_str,<span class="dp">·</span>fl_id):</td><td class="diffline">17 </td><td class="diffpresent">def<span class="dp">·</span>match_files(mtc_str,<span class="dp">·</span>fl_id):</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>match_flg<span class="dp">·</span>=<span class="dp">·</span>0</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>match_flg<span class="dp">·</span>=<span class="dp">·</span>0</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 102, 14 lines modified</td><td colspan="2">Offset 103, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.mkdir(path)</td><td class="diffline">103 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.mkdir(path)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent">def<span class="dp">·</span>read_json(path):</td><td class="diffline">104 </td><td class="diffpresent">def<span class="dp">·</span>read_json(path):</td></tr>
+<tr class="diffunmodified"><td class="diffline">104 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(path,<span class="dp">·</span>&#x27;r&#x27;)<span class="dp">·</span>as<span class="dp">·</span>fp:</td><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(path,<span class="dp">·</span>&#x27;r&#x27;)<span class="dp">·</span>as<span class="dp">·</span>fp:</td></tr>
+<tr class="diffunmodified"><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>json_file<span class="dp">·</span>=<span class="dp">·</span>json.load(fp)</td><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>json_file<span class="dp">·</span>=<span class="dp">·</span>json.load(fp)</td></tr>
+<tr class="diffunmodified"><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>json_file</td><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>json_file</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">108 </td><td class="diffpresent">def<span class="dp">·</span>seed_everything(seed):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">109 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>random.seed(seed)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">110 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>os.environ[&#x27;PYTHONHASHSEED&#x27;]<span class="dp">·</span>=<span class="dp">·</span>str(seed)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">111 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>np.random.seed(seed)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">112 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>torch.manual_seed(seed)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">113 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>torch.cuda.manual_seed(seed)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">114 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>torch.cuda.manual_seed_all(seed)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">115 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>torch.backends.cudnn.deterministic<span class="dp">·</span>=<span class="dp">·</span>True</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">107 </td><td class="diffpresent">def<span class="dp">·</span>get_args():</td><td class="diffline">116 </td><td class="diffpresent">def<span class="dp">·</span>get_args():</td></tr>
+<tr class="diffunmodified"><td class="diffline">108 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>parser<span class="dp">·</span>=<span class="dp">·</span>argparse.ArgumentParser(description=&quot;Vision<span class="dp">·</span>Transformers&quot;)</td><td class="diffline">117 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>parser<span class="dp">·</span>=<span class="dp">·</span>argparse.ArgumentParser(description=&quot;Vision<span class="dp">·</span>Transformers&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">109 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>parser.add_argument(&#x27;--config&#x27;,<span class="dp">·</span>type=str,<span class="dp">·</span>default=&#x27;default&#x27;,<span class="dp">·</span>help=&#x27;configuration<span class="dp">·</span>to<span class="dp">·</span>load&#x27;)</td><td class="diffline">118 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>parser.add_argument(&#x27;--config&#x27;,<span class="dp">·</span>type=str,<span class="dp">·</span>default=&#x27;default&#x27;,<span class="dp">·</span>help=&#x27;configuration<span class="dp">·</span>to<span class="dp">·</span>load&#x27;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">110 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>args<span class="dp">·</span>=<span class="dp">·</span>parser.parse_args()</td><td class="diffline">119 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>args<span class="dp">·</span>=<span class="dp">·</span>parser.parse_args()</td></tr>
+<tr class="diffunmodified"><td class="diffline">111 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>args</td><td class="diffline">120 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>args</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent">def<span class="dp">·</span>get_metrics(y_true,<span class="dp">·</span>y_pred):</td><td class="diffline">121 </td><td class="diffpresent">def<span class="dp">·</span>get_metrics(y_true,<span class="dp">·</span>y_pred):</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+# Comparing `tmp/ovos_listener-0.0.2a5-py3-none-any.whl.zip` & `tmp/ovos_listener-0.0.2a6-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Zip file size: 5840 bytes, number of entries: 6
+--rw-r--r--  2.0 unx    11423 b- defN 23-Apr-05 20:42 ovos_listener-0.0.2a5.dist-info/LICENSE.md
+--rw-r--r--  2.0 unx     1005 b- defN 23-Apr-05 20:42 ovos_listener-0.0.2a5.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 20:42 ovos_listener-0.0.2a5.dist-info/WHEEL
+--rw-r--r--  2.0 unx       63 b- defN 23-Apr-05 20:42 ovos_listener-0.0.2a5.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-05 20:42 ovos_listener-0.0.2a5.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx      532 b- defN 23-Apr-05 20:42 ovos_listener-0.0.2a5.dist-info/RECORD
+-6 files, 13116 bytes uncompressed, 4862 bytes compressed:  62.9%
++Zip file size: 5848 bytes, number of entries: 6
++-rw-r--r--  2.0 unx    11423 b- defN 23-Apr-06 23:16 ovos_listener-0.0.2a6.dist-info/LICENSE.md
++-rw-r--r--  2.0 unx     1066 b- defN 23-Apr-06 23:16 ovos_listener-0.0.2a6.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 23:16 ovos_listener-0.0.2a6.dist-info/WHEEL
++-rw-r--r--  2.0 unx       63 b- defN 23-Apr-06 23:16 ovos_listener-0.0.2a6.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 23:16 ovos_listener-0.0.2a6.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx      532 b- defN 23-Apr-06 23:16 ovos_listener-0.0.2a6.dist-info/RECORD
++6 files, 13177 bytes uncompressed, 4870 bytes compressed:  63.0%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,19 +1,19 @@
+-Filename: ovos_listener-0.0.2a5.dist-info/LICENSE.md
++Filename: ovos_listener-0.0.2a6.dist-info/LICENSE.md
+ Comment: 
+ 
+-Filename: ovos_listener-0.0.2a5.dist-info/METADATA
++Filename: ovos_listener-0.0.2a6.dist-info/METADATA
+ Comment: 
+ 
+-Filename: ovos_listener-0.0.2a5.dist-info/WHEEL
++Filename: ovos_listener-0.0.2a6.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: ovos_listener-0.0.2a5.dist-info/entry_points.txt
++Filename: ovos_listener-0.0.2a6.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: ovos_listener-0.0.2a5.dist-info/top_level.txt
++Filename: ovos_listener-0.0.2a6.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: ovos_listener-0.0.2a5.dist-info/RECORD
++Filename: ovos_listener-0.0.2a6.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `ovos_listener-0.0.2a5.dist-info/LICENSE.md` & `ovos_listener-0.0.2a6.dist-info/LICENSE.md`
+
+ * *Files identical despite different names*
+
+## Comparing `ovos_listener-0.0.2a5.dist-info/METADATA` & `ovos_listener-0.0.2a6.dist-info/METADATA`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,23 +1,24 @@
+ Metadata-Version: 2.1
+ Name: ovos-listener
+-Version: 0.0.2a5
++Version: 0.0.2a6
+ Summary: ovos-core listener daemon client
+ Home-page: https://github.com/OpenVoiceOS/ovos-listener
+ Author: UNKNOWN
+ Author-email: UNKNOWN
+ License: Apache-2.0
+ Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Dist: SpeechRecognition (>=3.8.1)
+ Requires-Dist: PyAudio (~=0.2)
+ Requires-Dist: ovos-vad-plugin-webrtcvad
+ Requires-Dist: ovos-ww-plugin-pocketsphinx (>=0.1.3,~=0.1)
++Requires-Dist: ovos-ww-plugin-precise-lite (>=0.1.2a3,~=0.1)
+ Requires-Dist: ovos-ww-plugin-precise (>=0.1.1,~=0.1)
+ Requires-Dist: ovos-ww-plugin-vosk
+ Requires-Dist: ovos-stt-plugin-server (>=0.0.2,~=0.0)
+ Requires-Dist: ovos-stt-plugin-vosk (~=0.1)
+ Requires-Dist: ovos-utils (>=0.0.31a3,~=0.0)
+ Requires-Dist: ovos-bus-client (>=0.0.3a4,~=0.0)
+ Requires-Dist: ovos-plugin-manager (>=0.0.23a5,~=0.0)
+```
+
+## Comparing `ovos_listener-0.0.2a5.dist-info/RECORD` & `ovos_listener-0.0.2a6.dist-info/RECORD`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,6 +1,6 @@
+-ovos_listener-0.0.2a5.dist-info/LICENSE.md,sha256=HP46TQN2uSd_OW1lJPi1TJ-SVSgLJXixGmY9C16CQJQ,11423
+-ovos_listener-0.0.2a5.dist-info/METADATA,sha256=cTqIoc8LqdJxNE426b8Yycj7E8_XfSpkB-FB8xMHNMM,1005
+-ovos_listener-0.0.2a5.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+-ovos_listener-0.0.2a5.dist-info/entry_points.txt,sha256=8tMSAxrLEn880nBqPzhc-m5nBAWp8UqLDMn_Kor3O6g,63
+-ovos_listener-0.0.2a5.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+-ovos_listener-0.0.2a5.dist-info/RECORD,,
++ovos_listener-0.0.2a6.dist-info/LICENSE.md,sha256=HP46TQN2uSd_OW1lJPi1TJ-SVSgLJXixGmY9C16CQJQ,11423
++ovos_listener-0.0.2a6.dist-info/METADATA,sha256=6vQ_8SkijbX17a9XnSUYkakWCRtcHTmXLk6Vw4YY3zU,1066
++ovos_listener-0.0.2a6.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++ovos_listener-0.0.2a6.dist-info/entry_points.txt,sha256=8tMSAxrLEn880nBqPzhc-m5nBAWp8UqLDMn_Kor3O6g,63
++ovos_listener-0.0.2a6.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
++ovos_listener-0.0.2a6.dist-info/RECORD,,
+```
+

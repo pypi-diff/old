@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/sage-sws2rst-9.8b7.tar.gz tmp/sage-sws2rst-9.8rc0.tar.gz --html versions/s/sage-sws2rst/9.8b7-9.8rc0/index.html --text versions/s/sage-sws2rst/9.8b7-9.8rc0/diff.txt --markdown versions/s/sage-sws2rst/9.8b7-9.8rc0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.57 KB</span></div>
+  <div><span class="source">tmp/sage-sws2rst-9.8b7.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/sage-sws2rst-9.8rc0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">275 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;sage-sws2rst-9.8<del>b7</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Jan<span class="dp">·</span><del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Sun</ins><span class="dp">·</span>Jan<span class="dp">·</span><ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.24 KB</span></div>
+    <div><span class="source">sage-sws2rst-9.8b7.tar</span> vs.</div>
+    <div id="sage-sws-rst--.-b-.tar"><span class="source">sage-sws2rst-9.8rc0.tar</span>
+      <a class="anchor" href="#sage-sws-rst--.-b-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.36 KB</span></div>
+      <div id="sage-sws-rst--.-b-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 26 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>166531</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.<ins>649827</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/.gitignore</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>57<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>57<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<del>2</del><span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>166531</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<ins>3</ins><span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.<ins>649827</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>760<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/README.rst</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>760<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>10</del><span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/VERSION.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span>8</ins><span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/VERSION.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>1</del>6<del>2</del>5<del>31</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/bin/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.6<ins>4</ins>5<ins>8</ins><ins>27</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/bin/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6861<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/bin/sage-sws2rst</td><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6861<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/bin/sage-sws2rst</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>192<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/check.sh</td><td class="diffline">9 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>192<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/check.sh</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/requirements.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>1</del>6<del>2</del>5<del>31</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.6<ins>4</ins>5<ins>8</ins><ins>27</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15609<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst/comments2rst.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15609<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst/comments2rst.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6046<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst/results2rst.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6046<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst/results2rst.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6005<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst/worksheet2rst.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6005<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst/worksheet2rst.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>1</del>6<del>6</del>5<del>31</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst.egg-info/</td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.6<ins>4</ins>5<ins>8</ins><ins>27</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<del>2</del><span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>27</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst.egg-info/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<ins>3</ins><span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>54</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>436<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst.egg-info/SOURCES.txt</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>436<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>27</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst.egg-info/dependency_links.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>54</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>27</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/sage_sws2rst.egg-info/top_level.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>54</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/sage_sws2rst.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>475<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>166531</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/setup.cfg</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>475<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.<ins>649827</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/setup.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:<del>51</del>:<del>28</del>.<del>166531</del><span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/test/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:<ins>46</ins>:<ins>55</ins>.<ins>649827</ins><span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/test/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281797<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/test/Adding_Pictures_and_screenshots.sws</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281797<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/test/Adding_Pictures_and_screenshots.sws</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30910<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/test/MAT_141_day_25.sws</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30910<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/test/MAT_141_day_25.sws</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>282<span class="dp">·</span>2023-01-<del>1</del>9<span class="dp">·</span><del>06</del>:4<del>7</del>:4<del>0</del>.000000<span class="dp">·</span>sage-sws2rst-9.8<del>b7</del>/tox.ini</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>282<span class="dp">·</span>2023-01-<ins>2</ins>9<span class="dp">·</span><ins>23</ins>:4<ins>3</ins>:4<ins>8</ins>.000000<span class="dp">·</span>sage-sws2rst-9.8<ins>r</ins><ins>c0</ins>/tox.ini</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">472 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/PKG-INFO</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--PKG-INFO"><span class="source">sage-sws2rst-9.8rc0/PKG-INFO</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-sws2rst</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-sws2rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<del>b7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<ins>r</ins><ins>c0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>SageNB<span class="dp">·</span>worksheet<span class="dp">·</span>converter</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>SageNB<span class="dp">·</span>worksheet<span class="dp">·</span>converter</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">98.0 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/README.rst</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--README.rst"><span class="source">sage-sws2rst-9.8rc0/README.rst</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">110 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/bin/sage-sws2rst</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--bin-sage-sws-rst"><span class="source">sage-sws2rst-9.8rc0/bin/sage-sws2rst</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--bin-sage-sws-rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">134 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/sage_sws2rst/comments2rst.py</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst-comments-rst.py"><span class="source">sage-sws2rst-9.8rc0/sage_sws2rst/comments2rst.py</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst-comments-rst.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">132 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/sage_sws2rst/results2rst.py</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst-results-rst.py"><span class="source">sage-sws2rst-9.8rc0/sage_sws2rst/results2rst.py</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst-results-rst.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">136 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/sage_sws2rst/worksheet2rst.py</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst-worksheet-rst.py"><span class="source">sage-sws2rst-9.8rc0/sage_sws2rst/worksheet2rst.py</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst-worksheet-rst.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">516 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/sage_sws2rst.egg-info/PKG-INFO</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst.egg-info-PKG-INFO"><span class="source">sage-sws2rst-9.8rc0/sage_sws2rst.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--sage_sws-rst.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-sws2rst</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sage-sws2rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<del>b7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>9.8<ins>r</ins><ins>c0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>SageNB<span class="dp">·</span>worksheet<span class="dp">·</span>converter</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Sage:<span class="dp">·</span>Open<span class="dp">·</span>Source<span class="dp">·</span>Mathematics<span class="dp">·</span>Software:<span class="dp">·</span>SageNB<span class="dp">·</span>worksheet<span class="dp">·</span>converter</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.sagemath.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>The<span class="dp">·</span>Sage<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>sage-support@googlegroups.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)<span class="dp">·</span>v3<span class="dp">·</span>or<span class="dp">·</span>later</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">158 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/test/Adding_Pictures_and_screenshots.sws</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--test-Adding_Pictures_and_screenshots.sws"><span class="source">sage-sws2rst-9.8rc0/test/Adding_Pictures_and_screenshots.sws</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--test-Adding_Pictures_and_screenshots.sws">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">124 B</span></div>
+      <div><span class="source">sage-sws2rst-9.8b7/test/MAT_141_day_25.sws</span> vs.</div>
+      <div id="sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--test-MAT_---_day_--.sws"><span class="source">sage-sws2rst-9.8rc0/test/MAT_141_day_25.sws</span>
+        <a class="anchor" href="#sage-sws-rst--.-b-.tar---sage-sws-rst--.-b--test-MAT_---_day_--.sws">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
