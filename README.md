@@ -1,3 +1,10 @@
+This repo wont get any updates, moved to:
+
+ [https://github.com/orgs/pypi-diff/repositories](https://github.com/orgs/pypi-diff/repositories)
+
+
+= About =
+
 processes the pypi
 [changelog](https://warehouse.pypa.io/api-reference/xml-rpc.html) and if a new release for
 a package is published, attempts to create diffs between old and new version
