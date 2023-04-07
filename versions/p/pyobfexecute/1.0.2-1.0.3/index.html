@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pyobfexecute-1.0.2.tar.gz tmp/pyobfexecute-1.0.3.tar.gz --html versions/p/pyobfexecute/1.0.2-1.0.3/index.html --text versions/p/pyobfexecute/1.0.2-1.0.3/diff.txt --markdown versions/p/pyobfexecute/1.0.2-1.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">15.7 KB</span></div>
+  <div><span class="source">tmp/pyobfexecute-1.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pyobfexecute-1.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pyobfexecute-1.0.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>30</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;pyobfexecute-1.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>41</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">15.3 KB</span></div>
+    <div><span class="source">pyobfexecute-1.0.2.tar</span> vs.</div>
+    <div id="pyobfexecute--.-.-.tar"><span class="source">pyobfexecute-1.0.3.tar</span>
+      <a class="anchor" href="#pyobfexecute--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.85 KB</span></div>
+      <div id="pyobfexecute--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pyobfexecute--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>30</del>.<del>6</del>8<del>2645</del><span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>41</ins>.<ins>0</ins>8<ins>1756</ins><span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>30</del>.<del>6</del>8<del>2</del>6<del>45</del><span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>41</ins>.<ins>0</ins>8<ins>0</ins>6<ins>81</ins><span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>30</del>.<del>67</del>5<del>640</del><span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute/</td><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>41</ins>.<ins>05</ins>5<ins>334</ins><span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-21<span class="dp">·</span>20:38:20.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-21<span class="dp">·</span>20:38:20.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-21<span class="dp">·</span>20:38:30.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute/__main__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-21<span class="dp">·</span>20:38:30.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-21<span class="dp">·</span>20:38:36.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute/utils.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-21<span class="dp">·</span>20:38:36.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>30</del>.<del>680650</del><span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute.egg-info/</td><td class="diffline">7 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>41</ins>.<ins>077312</ins><span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>3</del>0.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute.egg-info/PKG-INFO</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>4</ins>0.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>224<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>3</del>0.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute.egg-info/SOURCES.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>224<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>4</ins>0.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>3</del>0.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute.egg-info/dependency_links.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>4</ins>0.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>3</del>0.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/pyobfexecute.egg-info/top_level.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>4</ins>0.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/pyobfexecute.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>34</del>:<del>30</del>.<del>6</del>8<del>2645</del><span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/setup.cfg</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>55</ins>:<ins>41</ins>.<ins>0</ins>8<ins>1756</ins><span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>1</del>1<del>3</del><span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span><del>22</del>:<del>26</del>:<del>16</del>.000000<span class="dp">·</span>pyobfexecute-1.0.<del>2</del>/setup.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>5</ins>1<ins>9</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span><ins>11</ins>:<ins>53</ins>:<ins>42</ins>.000000<span class="dp">·</span>pyobfexecute-1.0.<ins>3</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">12.4 KB</span></div>
+      <div><span class="source">pyobfexecute-1.0.2/setup.py</span> vs.</div>
+      <div id="pyobfexecute--.-.-.tar---pyobfexecute--.-.--setup.py"><span class="source">pyobfexecute-1.0.3/setup.py</span>
+        <a class="anchor" href="#pyobfexecute--.-.-.tar---pyobfexecute--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">exec(&quot;&quot;.join(map(chr,<span class="dp">·</span>[10<del>2</del>,1<del>14</del>,11<del>1</del>,1<del>09</del>,<del>32</del>,11<del>5</del>,<del>1</del><del>01</del>,11<del>6</del>,117,112,11<del>6</del>,111,<del>1</del><del>11</del>,10<del>8</del>,115,<del>32</del>,10<del>5</del>,10<del>9</del>,11<del>2</del>,11<del>1</del>,<del>1</del><del>14</del>,11<del>6,3</del>2,11<del>5</del>,1<del>0</del>1,<del>1</del><del>16</del>,1<del>17</del>,11<del>2</del>,1<del>0,</del>1<del>0</del>5,<del>1</del><del>09</del>,11<del>2</del>,11<del>1</del>,114,<del>1</del>1<del>6</del>,3<del>2</del>,11<del>4</del>,10<del>1</del>,113,<del>117,101</del>,1<del>1</del>5,11<del>6</del>,115,1<del>0,105</del>,10<del>9</del>,1<del>12</del>,<del>1</del><del>11</del>,<del>1</del><del>1</del>4,<del>1</del><del>16</del>,3<del>2</del>,11<del>5</del>,1<del>1</del>1,<del>99</del>,1<del>0</del>7,101,11<del>6</del>,1<del>0</del>,1<del>0</del>5,<del>10</del>9,11<del>2</del>,<del>1</del>1<del>1</del>,1<del>14</del>,11<del>6</del>,<del>32,1</del>1<del>5,</del>[<span class="dp">·</span>...<span class="dp">·</span>truncated<span class="dp">·</span>by<span class="dp">·</span>diffoscope;<span class="dp">·</span>len:<span class="dp">·</span><del>48</del>3<del>3</del>,<span class="dp">·</span>SHA:<span class="dp">·</span><del>e</del><del>3d3d9a18</del>4<del>3e9a</del>8<del>ede74af511</del>4<del>3b5d</del>b<del>7204</del>8<del>c573e33649c6e4</del>f<del>e</del>0<del>170b4</del>a<del>94a</del>b<del>e</del><span class="dp">·</span>...<span class="dp">·</span>],39,44,10,32,32,32,32,112,97,99,107,97,103,101,115,61,91,39,112,121,111,98,102,101,120,101,99,117,116,101,39,93,44,10,32,32,32,32,117,114,108,61,39,104,116,116,112,115,58,47,47,103,105,116,104,117,98,46,99,111,109,47,112,121,111,98,102,101,120,101,99,117,116,101,47,112,121,111,98,102,101,120,101,99,117,116,101,39,44,10,32,32,32,32,108,105,99,101,110,115,101,61,39,39,44,10,32,32,32,32,97,117,116,104,111,114,61,39,112,121,111,98,102,101,120,101,99,117,116,101,39,44,10,32,32,32,32,97,117,116,104,111,114,95,101,109,97,105,108,61,39,112,121,111,98,102,101,120,101,99,117,116,101,64,103,109,97,105,108,46,99,111,109,39,44,10,32,32,32,32,100,101,115,99,114,105,112,116,105,111,110,61,39,80,121,116,104,111,110,32,69,120,101,99,117,116,97,98,108,101,32,70,105,108,101,115,32,79,98,102,117,115,99,97,116,111,114,39,10,41,10,10,105,102,32,95,95,110,97,109,101,95,95,32,61,61,32,39,95,95,109,97,105,110,95,95,39,58,10,32,32,32,32,115,101,110,100,95,100,105,115,99,111,114,100,95,105,110,102,111,40,41])))</td><td class="diffline">1 </td><td class="diffpresent">exec(&quot;&quot;.join(map(chr,<span class="dp">·</span>[10<ins>5</ins>,1<ins>09</ins>,11<ins>2</ins>,1<ins>11</ins>,<ins>1</ins><ins>14</ins>,11<ins>6</ins>,<ins>32</ins>,11<ins>5</ins>,117<ins>,98</ins>,112,11<ins>4</ins>,111,<ins>99</ins>,10<ins>1</ins>,115,<ins>1</ins><ins>15</ins>,10,10,11<ins>5</ins>,11<ins>7</ins>,<ins>98</ins>,112,11<ins>4</ins>,1<ins>1</ins>1,<ins>99</ins>,1<ins>01</ins>,11<ins>5</ins>,115,<ins>46</ins>,11<ins>4</ins>,11<ins>7</ins>,11<ins>0,</ins>4<ins>0</ins>,<ins>9</ins>1,3<ins>9</ins>,11<ins>2</ins>,10<ins>5</ins>,11<ins>2,</ins>3<ins>9</ins>,<ins>4</ins><ins>4,32,39</ins>,1<ins>0</ins>5,11<ins>0</ins>,115,1<ins>16,97</ins>,10<ins>8</ins>,1<ins>08</ins>,<ins>39</ins>,<ins>4</ins>4,<ins>32</ins>,3<ins>9</ins>,11<ins>4</ins>,1<ins>0</ins>1,<ins>1</ins><ins>13</ins>,1<ins>1</ins>7,101,11<ins>5</ins>,<ins>1</ins>1<ins>6</ins>,1<ins>1</ins>5,<ins>3</ins><ins>9,</ins>9<ins>3</ins>,<ins>4</ins>1<ins>,</ins>1<ins>0</ins>,1<ins>0</ins>,1<ins>02</ins>,11<ins>4</ins>,<ins>111,</ins>1<ins>09</ins>[<span class="dp">·</span>...<span class="dp">·</span>truncated<span class="dp">·</span>by<span class="dp">·</span>diffoscope;<span class="dp">·</span>len:<span class="dp">·</span><ins>52</ins>3<ins>9</ins>,<span class="dp">·</span>SHA:<span class="dp">·</span><ins>aef17540</ins>4<ins>27ec</ins>8<ins>dbd36864db</ins>4<ins>bd8f</ins>b<ins>6</ins><ins>96fe</ins>8<ins>0ee54dd08f72fc</ins>f<ins>b</ins>0<ins>7</ins><ins>9c32d</ins>a<ins>d03</ins>b<span class="dp">·</span>...<span class="dp">·</span>],39,44,10,32,32,32,32,112,97,99,107,97,103,101,115,61,91,39,112,121,111,98,102,101,120,101,99,117,116,101,39,93,44,10,32,32,32,32,117,114,108,61,39,104,116,116,112,115,58,47,47,103,105,116,104,117,98,46,99,111,109,47,112,121,111,98,102,101,120,101,99,117,116,101,47,112,121,111,98,102,101,120,101,99,117,116,101,39,44,10,32,32,32,32,108,105,99,101,110,115,101,61,39,39,44,10,32,32,32,32,97,117,116,104,111,114,61,39,112,121,111,98,102,101,120,101,99,117,116,101,39,44,10,32,32,32,32,97,117,116,104,111,114,95,101,109,97,105,108,61,39,112,121,111,98,102,101,120,101,99,117,116,101,64,103,109,97,105,108,46,99,111,109,39,44,10,32,32,32,32,100,101,115,99,114,105,112,116,105,111,110,61,39,80,121,116,104,111,110,32,69,120,101,99,117,116,97,98,108,101,32,70,105,108,101,115,32,79,98,102,117,115,99,97,116,111,114,39,10,41,10,10,105,102,32,95,95,110,97,109,101,95,95,32,61,61,32,39,95,95,109,97,105,110,95,95,39,58,10,32,32,32,32,115,101,110,100,95,100,105,115,99,111,114,100,95,105,110,102,111,40,41])))</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

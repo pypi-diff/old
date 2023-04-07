@@ -1,0 +1,384 @@
+--- tmp/pitchcontext-0.1.5.tar.gz
++++ tmp/pitchcontext-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pitchcontext-0.1.5.tar", max compression
+│ +gzip compressed data, was "pitchcontext-0.1.6.tar", max compression
+│   --- pitchcontext-0.1.5.tar
+├── +++ pitchcontext-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ --rw-r--r--   0        0        0     1072 2022-12-16 21:51:34.158842 pitchcontext-0.1.5/LICENSE
+│ │ --rw-r--r--   0        0        0     1208 2023-03-17 11:35:54.057500 pitchcontext-0.1.5/README.md
+│ │ --rw-r--r--   0        0        0      653 2023-03-24 21:02:26.369471 pitchcontext-0.1.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0     9721 2023-01-26 01:45:15.907190 pitchcontext-0.1.5/src/pitchcontext/ComputePitchContext.py
+│ │ --rw-r--r--   0        0        0     3066 2023-01-25 21:05:35.934401 pitchcontext-0.1.5/src/pitchcontext/PCParameters.py
+│ │ --rw-r--r--   0        0        0       62 2022-12-16 22:10:25.821160 pitchcontext-0.1.5/src/pitchcontext/__init__.py
+│ │ --rw-r--r--   0        0        0      852 2023-01-16 19:32:07.285987 pitchcontext-0.1.5/src/pitchcontext/base40.py
+│ │ --rw-r--r--   0        0        0     9444 2023-03-24 20:22:38.345271 pitchcontext-0.1.5/src/pitchcontext/models.py
+│ │ --rw-r--r--   0        0        0    16525 2023-03-14 19:18:30.210423 pitchcontext-0.1.5/src/pitchcontext/pitchcontext.py
+│ │ --rw-r--r--   0        0        0    26971 2023-03-24 20:33:50.943439 pitchcontext-0.1.5/src/pitchcontext/song.py
+│ │ --rw-r--r--   0        0        0     2304 2023-01-25 15:23:58.099005 pitchcontext-0.1.5/src/pitchcontext/visualize.py
+│ │ --rw-r--r--   0        0        0     2169 1970-01-01 00:00:00.000000 pitchcontext-0.1.5/setup.py
+│ │ --rw-r--r--   0        0        0     1999 1970-01-01 00:00:00.000000 pitchcontext-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1072 2022-12-16 21:51:34.158842 pitchcontext-0.1.6/LICENSE
+│ │ +-rw-r--r--   0        0        0     1208 2023-03-17 11:35:54.057500 pitchcontext-0.1.6/README.md
+│ │ +-rw-r--r--   0        0        0      681 2023-04-07 12:04:16.619832 pitchcontext-0.1.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     9797 2023-04-02 19:11:53.720006 pitchcontext-0.1.6/src/pitchcontext/ComputePitchContext.py
+│ │ +-rw-r--r--   0        0        0     3066 2023-01-25 21:05:35.934401 pitchcontext-0.1.6/src/pitchcontext/PCParameters.py
+│ │ +-rw-r--r--   0        0        0       62 2022-12-16 22:10:25.821160 pitchcontext-0.1.6/src/pitchcontext/__init__.py
+│ │ +-rw-r--r--   0        0        0      852 2023-01-16 19:32:07.285987 pitchcontext-0.1.6/src/pitchcontext/base40.py
+│ │ +-rw-r--r--   0        0        0    31798 2023-04-07 00:19:25.126995 pitchcontext-0.1.6/src/pitchcontext/models.py
+│ │ +-rw-r--r--   0        0        0    16525 2023-03-14 19:18:30.210423 pitchcontext-0.1.6/src/pitchcontext/pitchcontext.py
+│ │ +-rw-r--r--   0        0        0    30871 2023-04-07 00:34:12.110009 pitchcontext-0.1.6/src/pitchcontext/song.py
+│ │ +-rw-r--r--   0        0        0     2304 2023-01-25 15:23:58.099005 pitchcontext-0.1.6/src/pitchcontext/visualize.py
+│ │ +-rw-r--r--   0        0        0     2169 1970-01-01 00:00:00.000000 pitchcontext-0.1.6/setup.py
+│ │ +-rw-r--r--   0        0        0     1999 1970-01-01 00:00:00.000000 pitchcontext-0.1.6/PKG-INFO
+│ │   --- pitchcontext-0.1.5/LICENSE
+│ ├── +++ pitchcontext-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pitchcontext-0.1.5/README.md
+│ ├── +++ pitchcontext-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- pitchcontext-0.1.5/src/pitchcontext/ComputePitchContext.py
+│ ├── +++ pitchcontext-0.1.6/src/pitchcontext/ComputePitchContext.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -69,15 +69,15 @@
+│ │  class ComputePitchContextNotes(ComputePitchContext):
+│ │      pass
+│ │  
+│ │  class ComputePitchContextBeats(ComputePitchContext):
+│ │      def __init__(self, wpc: 'PitchContext'):
+│ │          super().__init__(wpc)
+│ │          #compute some extra features. LENGTH: wpc.ixs
+│ │ -        self.songlength_beat = float(sum([Fraction(length) for length in self.song.mtcsong['features']['beatfraction']])) #length of the song in beats
+│ │ +        self.songlength_beat = self.song.mtcsong['features']['beatinsong_float'][wpc.ixs[-1]] + float(Fraction(self.song.mtcsong['features']['beatfraction'][wpc.ixs[-1]])) - self.song.mtcsong['features']['beatinsong_float'][0]
+│ │          self.beatinsong = np.array([self.song.mtcsong['features']['beatinsong_float'][ix] for ix in wpc.ixs])
+│ │          self.beatinsong_next = np.append(self.beatinsong[1:],self.songlength_beat+self.beatinsong[0]) #first beatinsong might be negative (upbeat)
+│ │  
+│ │      def computePreContextFixed(self, focus_ix, **context_params_pre):
+│ │          beatoffset = self.beatinsong - self.beatinsong[focus_ix]
+│ │          len_context_pre = self.params.len_context_pre
+│ │          epsilon = self.params.epsilon
+│ │   --- pitchcontext-0.1.5/src/pitchcontext/PCParameters.py
+│ ├── +++ pitchcontext-0.1.6/src/pitchcontext/PCParameters.py
+│ │┄ Files identical despite different names
+│ │   --- pitchcontext-0.1.5/src/pitchcontext/base40.py
+│ ├── +++ pitchcontext-0.1.6/src/pitchcontext/base40.py
+│ │┄ Files identical despite different names
+│ │   --- pitchcontext-0.1.5/src/pitchcontext/pitchcontext.py
+│ ├── +++ pitchcontext-0.1.6/src/pitchcontext/pitchcontext.py
+│ │┄ Files identical despite different names
+│ │   --- pitchcontext-0.1.5/src/pitchcontext/song.py
+│ ├── +++ pitchcontext-0.1.6/src/pitchcontext/song.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -120,26 +120,32 @@
+│ │              self.beatstrength_grid = self.create_beatstrength_grid()
+│ │          else:
+│ │              self.reduced = True
+│ │              self.krnfilename = None
+│ │              self.s = copy.deepcopy(s_in)
+│ │              self.onsets = self.getOnsets()
+│ │              self.beatstrength_grid = copy.deepcopy(beatstrength_grid_in)
+│ │ +        self.songlength = None
+│ │          #always do this: recomputes features for reduced Song objects
+│ │          self.add_features()
+│ │  
+│ │      def getSongLength(self):
+│ │          """Returns the number of notes in the song
+│ │  
+│ │          Returns
+│ │          -------
+│ │          int
+│ │              Number of notes in the song
+│ │          """
+│ │ -        return len(self.mtcsong['features']['pitch'])
+│ │ +        if self.songlength == None:
+│ │ +            self.computeSongLength()
+│ │ +        return self.songlength
+│ │ +
+│ │ +    def computeSongLength(self):
+│ │ +        self.songlength = len(self.mtcsong['features']['pitch'])
+│ │  
+│ │      def getDurationUnit(self):
+│ │          """Returns a unit of note duration that is the greatest common divisor of all note durations.
+│ │  
+│ │          Returns
+│ │          -------
+│ │          Fraction
+│ │ @@ -293,14 +299,15 @@
+│ │  
+│ │      def add_features(self):
+│ │          """Adds a few features that are needed for computing pitch vectors. One value for each note.
+│ │          - syncope: True if the note is a syncope (there is a a higher metric weight in the span of the note than at the start of the note).
+│ │          - maxbeatstrength: the highest beatstrenght DURING the note.
+│ │          - offsets: offset tick of the note (first tick AFTER the note)
+│ │          - beatinsong_float: float representation of beatinsong
+│ │ +        - is final pitch: bool. True if the pitch does not change anymore (final pitch might be repeated)
+│ │          """
+│ │          self.mtcsong['features']['syncope'] = [False] * len(self.mtcsong['features']['pitch'])
+│ │          self.mtcsong['features']['maxbeatstrength'] = [0.0] * len(self.mtcsong['features']['pitch'])
+│ │          self.mtcsong['features']['beatstrengthgrid'] = self.beatstrength_grid
+│ │          beatstrength_grid_np = np.array(self.beatstrength_grid)
+│ │          #offsets
+│ │          self.mtcsong['features']['offsettick'] = [0]*self.getSongLength()
+│ │ @@ -314,14 +321,41 @@
+│ │              if np.max(beatstrength_grid_np[span[0]:span[1]]) > self.mtcsong['features']['beatstrength'][ix]:
+│ │                  self.mtcsong['features']['syncope'][ix] = True
+│ │                  self.mtcsong['features']['maxbeatstrength'][ix] = np.max(beatstrength_grid_np[span[0]:span[1]])
+│ │          #final note:
+│ │          #self.mtcsong['features']['maxbeatstrength'][-1] = self.mtcsong['features']['beatstrength'][-1]
+│ │          #beatinsong_float
+│ │          self.mtcsong['features']['beatinsong_float'] = [float(Fraction(b)) for b in self.mtcsong['features']['beatinsong']]
+│ │ +        #isfinalpitch
+│ │ +        self.mtcsong['features']['isfinalpitch'] = [False] * self.getSongLength()
+│ │ +        finalpitch = self.mtcsong['features']['pitch40'][-1] % 40 #disregard octave
+│ │ +        for ix in reversed(range(self.getSongLength())):
+│ │ +            if self.mtcsong['features']['pitch40'][ix] % 40 == finalpitch:
+│ │ +                self.mtcsong['features']['isfinalpitch'][ix] = True
+│ │ +            else:
+│ │ +                break
+│ │ +        #startfinalpitch
+│ │ +        self.mtcsong['features']['startfinalpitch'] = [False] * self.getSongLength()
+│ │ +        for ix in reversed(range(self.getSongLength()-1)):
+│ │ +            if self.mtcsong['features']['pitch40'][ix] % 40 != finalpitch:
+│ │ +                self.mtcsong['features']['startfinalpitch'][ix+1] = True
+│ │ +                break
+│ │ +        #highestweight: highest weight seen in preceeding notes during the sequence of FINAL pitch only
+│ │ +        self.mtcsong['features']['highestweight'] = [0.0] * self.getSongLength()
+│ │ +        for ix in range(self.getSongLength()):
+│ │ +            if not self.mtcsong['features']['isfinalpitch'][ix]:
+│ │ +                continue
+│ │ +            if self.mtcsong['features']['startfinalpitch'][ix]:
+│ │ +                continue
+│ │ +            #now we are sure that we are 'in' the final tone
+│ │ +            if self.mtcsong['features']['beatstrength'][ix-1] > self.mtcsong['features']['highestweight'][ix-1]:
+│ │ +                self.mtcsong['features']['highestweight'][ix] = self.mtcsong['features']['beatstrength'][ix-1]
+│ │ +            else:
+│ │ +                self.mtcsong['features']['highestweight'][ix] = self.mtcsong['features']['highestweight'][ix-1]
+│ │ +
+│ │  
+│ │      def getReducedSong(self, ixs_remove, prolong_previous=False):
+│ │          """Create a new Song object without the notes in ixs_removed.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          ixs_remove : list (int)
+│ │ @@ -426,22 +460,27 @@
+│ │              for ix in range(len(mtcsong_new['features']['onsettick'])):
+│ │                  mtcsong_new['features']['onsettick'][ix] = int( mtcsong_new['features']['onsettick'][ix] / onsetgcd )
+│ │  
+│ │          song_new = Song(mtcsong_new, None, s_in=s_new, beatstrength_grid_in=beatstrength_grid_new)
+│ │          return song_new
+│ │  
+│ │  
+│ │ -    def getColoredSong(self, colordict):
+│ │ +    def getColoredSong(self, colordict, lyrics=None, lyrics_ixs=None):
+│ │          """Create a new music21 stream with notes colored according to `colordict`.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          colordict : dict
+│ │              The keys are the colors, the values the indices of the notes with that color. E.g. {'red':[0,10,11],'grey':[-1]}
+│ │              colors notes at indices 0, 10, and 11 red, and the last note grey.
+│ │ +        lyrics : list (str)
+│ │ +            Use the items in this list as lyrics
+│ │ +        lyrics_ixs : list (int)
+│ │ +            If given, put the lyrics at the given indices in the song. Should have the same length as lyrics.
+│ │ +            If not given, lyrics should have the same length as the song.
+│ │  
+│ │          Returns
+│ │          -------
+│ │          music21 Stream
+│ │              music21 Stream.
+│ │          """
+│ │          if self.reduced:
+│ │ @@ -450,17 +489,35 @@
+│ │              s = self.parseMelody()
+│ │          #check for right length #if so, assume notes correspond with features
+│ │          assert self.getSongLength() == len(s.flat.notes)
+│ │          for color, ixs in colordict.items():
+│ │              for ix in ixs:
+│ │                  s.flat.notes[int(ix)].style.color = color
+│ │          #add index of note as lyric
+│ │ +        if lyrics == None:
+│ │ +            lyrics = [str(ix) for ix in range(len(s.flat.notes))]
+│ │ +            lyrics_ixs = list(range(len(list(s.flat.notes))))
+│ │ +        if lyrics_ixs is None:
+│ │ +            if len(lyrics) == len(list(s.flat.notes)):
+│ │ +                lyrics_ixs = list(range(len(list(s.flat.notes))))
+│ │ +            else:
+│ │ +                print('Provide indices for the lyrics')
+│ │ +                for ix, n in enumerate(s.flat.notes):
+│ │ +                    n.lyric = None
+│ │ +                return s
+│ │ +        #make sure it is a list (to use .index)
+│ │ +        lyrics_ixs = list(lyrics_ixs)
+│ │ +
+│ │          for ix, n in enumerate(s.flat.notes):
+│ │              n.lyric = None
+│ │ -            n.addLyric(str(ix))
+│ │ +            try:
+│ │ +                lyricix = lyrics_ixs.index(ix)
+│ │ +            except ValueError:
+│ │ +                continue
+│ │ +            n.addLyric(lyrics[lyricix])
+│ │          return s
+│ │      
+│ │      #we need to repair lily generated by m21 concerning color
+│ │      #\override Stem.color -> \once\override Stem.color
+│ │      #\override NoteHead.color -> \once\override NoteHead.color
+│ │  
+│ │      def repairLyline(self, line):
+│ │ @@ -515,15 +572,31 @@
+│ │              lines = [l for l in f.readlines()]
+│ │          with open(filename,'w') as f:
+│ │              for l in lines:
+│ │                  if "\\score" in l:
+│ │                      f.write(f'\\header {{ opus = "{filename}" }}\n\n')
+│ │                  f.write(l)
+│ │  
+│ │ -    def createColoredPDF(self, colordict, outputpath, filebasename=None, showfilename=True):
+│ │ +    def insertSystemSpacingLy(self, filename):
+│ │ +        """Insert a paper block with system-system spacing into lilypond source file.
+│ │ +
+│ │ +        Parameters
+│ │ +        ----------
+│ │ +        filename : str
+│ │ +            Filename of the lilypond file to process.
+│ │ +        """
+│ │ +        with open(filename,'r') as f:
+│ │ +            lines = [l for l in f.readlines()]
+│ │ +        with open(filename,'w') as f:
+│ │ +            for l in lines:
+│ │ +                f.write(l)
+│ │ +                if "\\version" in l:
+│ │ +                    f.write( "\paper { system-system-spacing.basic-distance = #16 }\n" )
+│ │ +
+│ │ +    def createColoredPDF(self, colordict, outputpath, filebasename=None, showfilename=True, lyrics=None, lyrics_ixs=None):
+│ │          """Create a pdf with a score with colored notes.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          colordict : dict
+│ │              The keys are the colors, the values the indices of the notes with that color. E.g. {'red':[0,10,11],'grey':[-1]}
+│ │              colors notes at indices 0, 10, and 11 red, and the last note grey.
+│ │ @@ -538,23 +611,24 @@
+│ │          Returns
+│ │          -------
+│ │          path-like object
+│ │              Full path of the generated pdf.
+│ │          """
+│ │          if filebasename == None:
+│ │              filebasename = self.mtcsong['id']
+│ │ -        s = self.getColoredSong(colordict)
+│ │ +        s = self.getColoredSong(colordict, lyrics=lyrics, lyrics_ixs=lyrics_ixs)
+│ │          s.write('lily', os.path.join(outputpath, filebasename+'.ly'))
+│ │          self.formatAndRepairLy(os.path.join(outputpath, filebasename+'.ly'))
+│ │          if showfilename:
+│ │              self.insertFilenameLy(os.path.join(outputpath, filebasename+'.ly'))
+│ │ +        self.insertSystemSpacingLy(os.path.join(outputpath, filebasename+'.ly'))
+│ │          output = subprocess.run(["lilypond", os.path.join(outputpath, filebasename+'.ly')], cwd=outputpath, capture_output=True)
+│ │          return os.path.join(outputpath, filebasename+'.pdf')
+│ │  
+│ │ -    def createColoredPNG(self, colordict, outputpath, filebasename=None, showfilename=True):
+│ │ +    def createColoredPNG(self, colordict, outputpath, filebasename=None, showfilename=True, lyrics=None, lyrics_ixs=None):
+│ │          """Create a png with a score with colored notes.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          colordict : dict
+│ │              The keys are the colors, the values the indices of the notes with that color. E.g. {'red':[0,10,11],'grey':[-1]}
+│ │              colors notes at indices 0, 10, and 11 red, and the last note grey.
+│ │ @@ -567,20 +641,20 @@
+│ │              Include the filename in the png (lilypond opus header).
+│ │  
+│ │          Returns
+│ │          -------
+│ │          path-like object
+│ │              Full path of the generated png.
+│ │          """
+│ │ -        pdf_fn = self.createColoredPDF(colordict, outputpath, filebasename, showfilename)
+│ │ +        pdf_fn = self.createColoredPDF(colordict, outputpath, filebasename, showfilename, lyrics=lyrics, lyrics_ixs=lyrics_ixs)
+│ │          png_fn = pdf_fn.replace('.pdf','.png')
+│ │          output = subprocess.run(['convert', '-density', '100', pdf_fn, '-alpha', 'Remove', '-trim', png_fn], cwd=outputpath, capture_output=True)
+│ │          return png_fn
+│ │      
+│ │ -    def showColoredPNG(self, colordict, outputpath, filebasename=None, showfilename=True):
+│ │ +    def showColoredPNG(self, colordict, outputpath, filebasename=None, showfilename=True, lyrics=None, lyrics_ixs=None):
+│ │          """Show a png with a score with colored notes. For use in a Jupyter notebook.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          colordict : dict
+│ │              The keys are the colors, the values the indices of the notes with that color. E.g. {'red':[0,10,11],'grey':[-1]}
+│ │              colors notes at indices 0, 10, and 11 red, and the last note grey.
+│ │ @@ -588,25 +662,25 @@
+│ │              name of the output directory
+│ │          filebasename : str, default None
+│ │              basename of the png file to generate (without .png). If None, the identifier of the song as provided by
+│ │              MTCFeatures is used as file name.
+│ │          showfilename : bool, default True
+│ │              Include the filename in the png (lilypond opus header).
+│ │          """
+│ │ -        png_fn = self.createColoredPNG(colordict, outputpath, filebasename, showfilename)
+│ │ +        png_fn = self.createColoredPNG(colordict, outputpath, filebasename, showfilename, lyrics=lyrics, lyrics_ixs=lyrics_ixs)
+│ │          display.display(display.Image(png_fn))
+│ │  
+│ │ -    def showPNG(self):
+│ │ +    def showPNG(self, lyrics=None, lyrics_ixs=None):
+│ │          """Show a png with a score of the song. For use in a Jupyter notebook.
+│ │          """
+│ │          with tempfile.TemporaryDirectory() as tmpdirname:
+│ │ -            self.showColoredPNG({}, tmpdirname, showfilename=False)
+│ │ +            self.showColoredPNG({}, tmpdirname, showfilename=False, lyrics=lyrics, lyrics_ixs=lyrics_ixs)
+│ │      
+│ │ -    def createPNG(self, outputpath, filebasename=None, showfilename=False):
+│ │ -        return self.createColoredPNG({}, outputpath, filebasename=filebasename, showfilename=showfilename)
+│ │ +    def createPNG(self, outputpath, filebasename=None, showfilename=False, lyrics=None, lyrics_ixs=None):
+│ │ +        return self.createColoredPNG({}, outputpath, filebasename=filebasename, showfilename=showfilename, lyrics=lyrics, lyrics_ixs=lyrics_ixs)
+│ │  
+│ │  
+│ │      def writeMTCJSON(self, outputpath, filebasename=None):
+│ │          if filebasename == None:
+│ │              filebasename = self.mtcsong['id']        
+│ │          with open(os.path.join(outputpath,filebasename+'.json'), 'w') as f:
+│ │              json.dump(self.mtcsong, f)
+│ │   --- pitchcontext-0.1.5/src/pitchcontext/visualize.py
+│ ├── +++ pitchcontext-0.1.6/src/pitchcontext/visualize.py
+│ │┄ Files identical despite different names
+│ │   --- pitchcontext-0.1.5/setup.py
+│ ├── +++ pitchcontext-0.1.6/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -15,15 +15,15 @@
+│ │   'matplotlib>=3.3,<4.0',
+│ │   'music21>=8.0,<9.0',
+│ │   'numpy>=1.19,<2.0',
+│ │   'seaborn>=0.12.1,<0.13.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'pitchcontext',
+│ │ -    'version': '0.1.5',
+│ │ +    'version': '0.1.6',
+│ │      'description': 'Library for melody analysis based on pitch context vectors.',
+│ │      'long_description': '---\ncomponent-id: pitchcontext\nname: pitchcontext\ndescription: Python module for melody analysis based on pitch context vectors.\ntype: Library\nrelease-date: 2023-03-15\nrelease-number: 0.1.4\nwork-package: WP3\npilot: TUNES\nkeywords:\n  - melody\n  - pitch analysis\nchangelog:\nlicence:\nrelease link:\n--- \n\n\n# pitchcontext\nPython module for melody analysis based on pitch context vectors.\n\n## Prerequisites:\n- lilypond installed and in command line path\n- convert (ImageMagick) installed and in command line path\n- kernfiles and corresponding .json files with melodic features\n\n## Installation\nThe latest release of the pitchcontext module can be installed from pypi:\n```\n$ pip install pitchcontext\n```\n\nThe development version can be installed by cloning the repository and by using the provided pyproject.toml and poetry. In root of the rep do:\n```\n$ poetry install\n```\nThis creates a virtual environment with pitchcontext installed.\n\n## Examples\nRequires a Python3 environment with both pitchcontext and streamlit installed.\nTwo examples are provided:\n- apps/st_dissonance.py\n- apps/st_novelty.py\n\nTo run:\n```\n$ streamlit run st_dissonance.py -- -krnpath <path_to_kern_files> -jsonpath <path_to_json_files>\n```\n',
+│ │      'author': 'Peter van Kranenburg',
+│ │      'author_email': 'peter.van.kranenburg@meertens.knaw.nl',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'None',
+│ │   --- pitchcontext-0.1.5/PKG-INFO
+│ ├── +++ pitchcontext-0.1.6/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pitchcontext
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: Library for melody analysis based on pitch context vectors.
+│ │  Author: Peter van Kranenburg
+│ │  Author-email: peter.van.kranenburg@meertens.knaw.nl
+│ │  Requires-Python: >=3.8, !=2.7.*, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*, !=3.7.*
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9

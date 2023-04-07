@@ -1,0 +1,260 @@
+# Comparing `tmp/upload-files-to-github-1.2.tar.gz` & `tmp/upload-files-to-github-1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "upload-files-to-github-1.2.tar", last modified: Fri Apr  7 12:01:27 2023, max compression
++gzip compressed data, was "upload-files-to-github-1.3.tar", last modified: Fri Apr  7 12:05:27 2023, max compression
+```
+
+## Comparing `upload-files-to-github-1.2.tar` & `upload-files-to-github-1.3.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:01:27.875708 upload-files-to-github-1.2/
+--rw-r--r--   0 chiubowen   (501) staff       (20)     1782 2023-04-07 12:01:27.875589 upload-files-to-github-1.2/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)     1623 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/README.md
+--rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 12:01:27.875751 upload-files-to-github-1.2/setup.cfg
+--rw-r--r--   0 chiubowen   (501) staff       (20)      574 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/setup.py
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:01:27.875432 upload-files-to-github-1.2/upload_files_to_github.egg-info/
+--rw-r--r--   0 chiubowen   (501) staff       (20)     1782 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.egg-info/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)      322 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.egg-info/SOURCES.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.egg-info/dependency_links.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       71 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.egg-info/entry_points.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       32 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.egg-info/requires.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       23 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.egg-info/top_level.txt
+--rwxr-xr-x   0 chiubowen   (501) staff       (20)     3107 2023-04-07 12:01:27.000000 upload-files-to-github-1.2/upload_files_to_github.py
++drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:05:27.884288 upload-files-to-github-1.3/
++-rw-r--r--   0 chiubowen   (501) staff       (20)     1957 2023-04-07 12:05:27.884173 upload-files-to-github-1.3/PKG-INFO
++-rw-r--r--   0 chiubowen   (501) staff       (20)     1798 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/README.md
++-rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 12:05:27.884327 upload-files-to-github-1.3/setup.cfg
++-rw-r--r--   0 chiubowen   (501) staff       (20)      574 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/setup.py
++drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 12:05:27.884024 upload-files-to-github-1.3/upload_files_to_github.egg-info/
++-rw-r--r--   0 chiubowen   (501) staff       (20)     1957 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.egg-info/PKG-INFO
++-rw-r--r--   0 chiubowen   (501) staff       (20)      322 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.egg-info/SOURCES.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.egg-info/dependency_links.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       71 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.egg-info/entry_points.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       32 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.egg-info/requires.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       23 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.egg-info/top_level.txt
++-rwxr-xr-x   0 chiubowen   (501) staff       (20)     3107 2023-04-07 12:05:27.000000 upload-files-to-github-1.3/upload_files_to_github.py
+```
+
+### Comparing `upload-files-to-github-1.2/PKG-INFO` & `upload-files-to-github-1.3/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,59 +1,61 @@
+ Metadata-Version: 2.1
+ Name: upload-files-to-github
+-Version: 1.2
++Version: 1.3
+ Summary: UNKNOWN
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ 
+ # Upload Files to GitHub
+ 
+-This is a Python package and command-line interface (CLI) tool for uploading files or directories to a GitHub repository. It uses the GitHub API to upload the files to a specified repository and branch.
++This package provides a simple way to upload multiple files or directories to a GitHub repository using a command-line interface.
+ 
+ ## Installation
+ 
+-You can install this package using `pip`:
++You can install this package using pip:
+ 
+-```
++```bash
+ pip install upload-files-to-github
+ ```
+ 
+-## Usage
+-
+-### CLI
+-
+-The CLI tool is called `upload_files_to_github.py` and can be used to upload one or multiple files/directories to a GitHub repository.
++## Usage - CLI
+ 
+-To upload a single file:
++To upload files using the CLI, run the `upload_files_to_github.py` script with the following arguments:
+ 
+-```
+-python upload_files_to_github.py --content "Hello World!" --path "example.txt" --repo "username/repo" --token "YOUR_GITHUB_TOKEN"
++```bash
++python upload_files_to_github.py --files <file_or_directory_paths> --repo <user/repo> --token <github_token>
+ ```
+ 
+-To upload multiple files or a directory:
++- `<file_or_directory_paths>`: a list of file or directory paths to upload, separated by spaces.
++- `<user/repo>`: the GitHub repository where you want to upload the files.
++- `<github_token>`: your GitHub personal access token.
+ 
+-```
+-python upload_files_to_github.py --files path/to/file1 path/to/directory --repo "username/repo" --token "YOUR_GITHUB_TOKEN"
++For example, to upload all the files in the current directory to a repository `myuser/myrepo`, you can run:
++
++```bash
++python upload_files_to_github.py --files . --repo myuser/myrepo --token <github_token>
+ ```
+ 
+-### Package
++## Usage - Module
+ 
+-You can also use this package in your Python code to upload files to a GitHub repository. Here's an example:
++You can also use this package as a module in your Python code. After installing the package, you can import the `upload_files_to_github` function and use it as follows:
+ 
+ ```python
+ from upload_files_to_github import upload_files_to_github
+ 
+-files = ["path/to/file1", "path/to/directory"]
+-repo = "username/repo"
+-token = "YOUR_GITHUB_TOKEN"
+-branch = "main"
+-
+-upload_files_to_github(files, repo, token, branch)
++files = ['path/to/file1', 'path/to/file2']
++repo = 'myuser/myrepo'
++token = 'mygithubtoken'
++upload_files_to_github(files, repo, token)
+ ```
+ 
+-## GitHub Token
++The `upload_files_to_github` function takes the same arguments as the CLI script, but `files` should be a list of file paths instead of a space-separated string.
+ 
+-To use this tool or package, you need a GitHub personal access token. You can [create a new token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the `repo` scope, which allows the tool to read and write to your repositories.
++Alternatively, you can also use the package as a module from the command line:
++
++```bash
++python -m upload_files_to_github --files <file_or_directory_paths> --repo <user/repo> --token <github_token>
++```
+ 
+-You can provide the token using the `--token` argument or by setting the `GITHUB_ACCESS_TOKEN` environment variable.
++This will run the `upload_files_to_github` function with the same arguments as the CLI script.
+```
+
+### Comparing `upload-files-to-github-1.2/README.md` & `upload-files-to-github-1.3/upload_files_to_github.egg-info/PKG-INFO`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,50 +1,61 @@
++Metadata-Version: 2.1
++Name: upload-files-to-github
++Version: 1.3
++Summary: UNKNOWN
++License: UNKNOWN
++Platform: UNKNOWN
++Description-Content-Type: text/markdown
++
+ # Upload Files to GitHub
+ 
+-This is a Python package and command-line interface (CLI) tool for uploading files or directories to a GitHub repository. It uses the GitHub API to upload the files to a specified repository and branch.
++This package provides a simple way to upload multiple files or directories to a GitHub repository using a command-line interface.
+ 
+ ## Installation
+ 
+-You can install this package using `pip`:
++You can install this package using pip:
+ 
+-```
++```bash
+ pip install upload-files-to-github
+ ```
+ 
+-## Usage
+-
+-### CLI
++## Usage - CLI
+ 
+-The CLI tool is called `upload_files_to_github.py` and can be used to upload one or multiple files/directories to a GitHub repository.
++To upload files using the CLI, run the `upload_files_to_github.py` script with the following arguments:
+ 
+-To upload a single file:
+-
+-```
+-python upload_files_to_github.py --content "Hello World!" --path "example.txt" --repo "username/repo" --token "YOUR_GITHUB_TOKEN"
++```bash
++python upload_files_to_github.py --files <file_or_directory_paths> --repo <user/repo> --token <github_token>
+ ```
+ 
+-To upload multiple files or a directory:
++- `<file_or_directory_paths>`: a list of file or directory paths to upload, separated by spaces.
++- `<user/repo>`: the GitHub repository where you want to upload the files.
++- `<github_token>`: your GitHub personal access token.
+ 
+-```
+-python upload_files_to_github.py --files path/to/file1 path/to/directory --repo "username/repo" --token "YOUR_GITHUB_TOKEN"
++For example, to upload all the files in the current directory to a repository `myuser/myrepo`, you can run:
++
++```bash
++python upload_files_to_github.py --files . --repo myuser/myrepo --token <github_token>
+ ```
+ 
+-### Package
++## Usage - Module
+ 
+-You can also use this package in your Python code to upload files to a GitHub repository. Here's an example:
++You can also use this package as a module in your Python code. After installing the package, you can import the `upload_files_to_github` function and use it as follows:
+ 
+ ```python
+ from upload_files_to_github import upload_files_to_github
+ 
+-files = ["path/to/file1", "path/to/directory"]
+-repo = "username/repo"
+-token = "YOUR_GITHUB_TOKEN"
+-branch = "main"
+-
+-upload_files_to_github(files, repo, token, branch)
++files = ['path/to/file1', 'path/to/file2']
++repo = 'myuser/myrepo'
++token = 'mygithubtoken'
++upload_files_to_github(files, repo, token)
+ ```
+ 
+-## GitHub Token
++The `upload_files_to_github` function takes the same arguments as the CLI script, but `files` should be a list of file paths instead of a space-separated string.
++
++Alternatively, you can also use the package as a module from the command line:
++
++```bash
++python -m upload_files_to_github --files <file_or_directory_paths> --repo <user/repo> --token <github_token>
++```
+ 
+-To use this tool or package, you need a GitHub personal access token. You can [create a new token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the `repo` scope, which allows the tool to read and write to your repositories.
++This will run the `upload_files_to_github` function with the same arguments as the CLI script.
+ 
+-You can provide the token using the `--token` argument or by setting the `GITHUB_ACCESS_TOKEN` environment variable.
+```
+
+### Comparing `upload-files-to-github-1.2/setup.py` & `upload-files-to-github-1.3/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ 
+ # Read requirements.txt
+ with open('requirements.txt') as f:
+     requirements = [line.strip() for line in f.readlines()]
+ 
+ setup(
+     name="upload-files-to-github",
+-    version="1.2",
++    version="1.3",
+     packages=find_packages(),
+     py_modules=[ 'upload_files_to_github'],
+     install_requires=requirements,
+     entry_points={
+         'console_scripts': [
+             'upload_files_to_github = upload_files_to_github:main',
+         ],
+```
+
+### Comparing `upload-files-to-github-1.2/upload_files_to_github.py` & `upload-files-to-github-1.3/upload_files_to_github.py`
+
+ * *Files identical despite different names*
+

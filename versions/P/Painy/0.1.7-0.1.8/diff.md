@@ -1,0 +1,301 @@
+# Comparing `tmp/Painy-0.1.7.tar.gz` & `tmp/Painy-0.1.8.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "Painy-0.1.7.tar", last modified: Sun Mar 26 00:20:34 2023, max compression
++gzip compressed data, was "Painy-0.1.8.tar", last modified: Fri Apr  7 11:56:57 2023, max compression
+```
+
+## Comparing `Painy-0.1.7.tar` & `Painy-0.1.8.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,38 @@
+-drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-03-26 00:20:34.133072 Painy-0.1.7/
+-drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-03-26 00:20:34.127630 Painy-0.1.7/.github/
+-drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-03-26 00:20:34.129039 Painy-0.1.7/.github/workflows/
+--rw-r--r--   0 ywid       (501) staff       (20)     1084 2023-03-22 10:53:01.000000 Painy-0.1.7/.github/workflows/python-publish.yml
+--rw-r--r--   0 ywid       (501) staff       (20)     3077 2023-03-21 17:02:04.000000 Painy-0.1.7/.gitignore
+--rw-r--r--   0 ywid       (501) staff       (20)     1071 2023-03-21 17:10:24.000000 Painy-0.1.7/LICENSE
+--rw-r--r--   0 ywid       (501) staff       (20)     2621 2023-03-26 00:20:34.132751 Painy-0.1.7/PKG-INFO
+-drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-03-26 00:20:34.130028 Painy-0.1.7/Painy.egg-info/
+--rw-r--r--   0 ywid       (501) staff       (20)     2621 2023-03-26 00:20:34.000000 Painy-0.1.7/Painy.egg-info/PKG-INFO
+--rw-r--r--   0 ywid       (501) staff       (20)      489 2023-03-26 00:20:34.000000 Painy-0.1.7/Painy.egg-info/SOURCES.txt
+--rw-r--r--   0 ywid       (501) staff       (20)        1 2023-03-26 00:20:34.000000 Painy-0.1.7/Painy.egg-info/dependency_links.txt
+--rw-r--r--   0 ywid       (501) staff       (20)       43 2023-03-26 00:20:34.000000 Painy-0.1.7/Painy.egg-info/entry_points.txt
+--rw-r--r--   0 ywid       (501) staff       (20)       19 2023-03-26 00:20:34.000000 Painy-0.1.7/Painy.egg-info/requires.txt
+--rw-r--r--   0 ywid       (501) staff       (20)        6 2023-03-26 00:20:34.000000 Painy-0.1.7/Painy.egg-info/top_level.txt
+--rw-r--r--   0 ywid       (501) staff       (20)     2215 2023-03-25 15:01:14.000000 Painy-0.1.7/README.md
+-drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-03-26 00:20:34.131669 Painy-0.1.7/painy/
+--rw-r--r--   0 ywid       (501) staff       (20)       52 2023-03-25 14:02:15.000000 Painy-0.1.7/painy/__init__.py
+--rw-r--r--   0 ywid       (501) staff       (20)     1271 2023-03-22 11:53:54.000000 Painy-0.1.7/painy/chat.py
+--rw-r--r--   0 ywid       (501) staff       (20)     2839 2023-03-26 00:19:36.000000 Painy-0.1.7/painy/comment.py
+--rw-r--r--   0 ywid       (501) staff       (20)      184 2023-03-21 20:24:31.000000 Painy-0.1.7/painy/enums.py
+-drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-03-26 00:20:34.132228 Painy-0.1.7/painy/errors/
+--rw-r--r--   0 ywid       (501) staff       (20)      233 2023-03-24 17:20:14.000000 Painy-0.1.7/painy/errors/GitDiffException.py
+--rw-r--r--   0 ywid       (501) staff       (20)      217 2023-03-24 17:21:20.000000 Painy-0.1.7/painy/errors/NoChangesException.py
+--rw-r--r--   0 ywid       (501) staff       (20)       97 2023-03-24 17:20:22.000000 Painy-0.1.7/painy/errors/__init__.py
+--rw-r--r--   0 ywid       (501) staff       (20)     2431 2023-03-25 15:08:42.000000 Painy-0.1.7/painy/git.py
+--rw-r--r--   0 ywid       (501) staff       (20)     2114 2023-03-25 14:49:09.000000 Painy-0.1.7/painy/main.py
+--rw-r--r--   0 ywid       (501) staff       (20)     5944 2023-03-21 15:44:30.000000 Painy-0.1.7/painy/p_extensions.txt
+--rw-r--r--   0 ywid       (501) staff       (20)      438 2023-03-25 14:24:25.000000 Painy-0.1.7/painy/utils.py
+--rw-r--r--   0 ywid       (501) staff       (20)       18 2023-03-25 15:10:09.000000 Painy-0.1.7/requirements.txt
+--rw-r--r--   0 ywid       (501) staff       (20)       38 2023-03-26 00:20:34.133148 Painy-0.1.7/setup.cfg
+--rw-r--r--   0 ywid       (501) staff       (20)      893 2023-03-26 00:20:31.000000 Painy-0.1.7/setup.py
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.866613 Painy-0.1.8/
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.857610 Painy-0.1.8/.github/
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.859256 Painy-0.1.8/.github/workflows/
++-rw-r--r--   0 ywid       (501) staff       (20)     1084 2023-03-22 10:53:01.000000 Painy-0.1.8/.github/workflows/python-publish.yml
++-rw-r--r--   0 ywid       (501) staff       (20)     3077 2023-03-21 17:02:04.000000 Painy-0.1.8/.gitignore
++-rw-r--r--   0 ywid       (501) staff       (20)     1071 2023-03-21 17:10:24.000000 Painy-0.1.8/LICENSE
++-rw-r--r--   0 ywid       (501) staff       (20)     2621 2023-04-07 11:56:57.866344 Painy-0.1.8/PKG-INFO
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.860298 Painy-0.1.8/Painy.egg-info/
++-rw-r--r--   0 ywid       (501) staff       (20)     2621 2023-04-07 11:56:57.000000 Painy-0.1.8/Painy.egg-info/PKG-INFO
++-rw-r--r--   0 ywid       (501) staff       (20)      682 2023-04-07 11:56:57.000000 Painy-0.1.8/Painy.egg-info/SOURCES.txt
++-rw-r--r--   0 ywid       (501) staff       (20)        1 2023-04-07 11:56:57.000000 Painy-0.1.8/Painy.egg-info/dependency_links.txt
++-rw-r--r--   0 ywid       (501) staff       (20)       43 2023-04-07 11:56:57.000000 Painy-0.1.8/Painy.egg-info/entry_points.txt
++-rw-r--r--   0 ywid       (501) staff       (20)       28 2023-04-07 11:56:57.000000 Painy-0.1.8/Painy.egg-info/requires.txt
++-rw-r--r--   0 ywid       (501) staff       (20)        6 2023-04-07 11:56:57.000000 Painy-0.1.8/Painy.egg-info/top_level.txt
++-rw-r--r--   0 ywid       (501) staff       (20)     2215 2023-03-25 15:01:14.000000 Painy-0.1.8/README.md
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.863066 Painy-0.1.8/painy/
++-rw-r--r--   0 ywid       (501) staff       (20)       52 2023-03-25 14:02:15.000000 Painy-0.1.8/painy/__init__.py
++-rw-r--r--   0 ywid       (501) staff       (20)     1666 2023-04-03 20:01:42.000000 Painy-0.1.8/painy/chat.py
++-rw-r--r--   0 ywid       (501) staff       (20)     2421 2023-04-07 11:53:19.000000 Painy-0.1.8/painy/comment.py
++-rw-r--r--   0 ywid       (501) staff       (20)      226 2023-04-07 11:34:10.000000 Painy-0.1.8/painy/enums.py
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.864396 Painy-0.1.8/painy/errors/
++-rw-r--r--   0 ywid       (501) staff       (20)      233 2023-03-24 17:20:14.000000 Painy-0.1.8/painy/errors/GitDiffException.py
++-rw-r--r--   0 ywid       (501) staff       (20)      217 2023-03-24 17:21:20.000000 Painy-0.1.8/painy/errors/NoChangesException.py
++-rw-r--r--   0 ywid       (501) staff       (20)      217 2023-04-03 17:46:50.000000 Painy-0.1.8/painy/errors/NoSettingException.py
++-rw-r--r--   0 ywid       (501) staff       (20)      148 2023-04-03 17:46:44.000000 Painy-0.1.8/painy/errors/__init__.py
++-rw-r--r--   0 ywid       (501) staff       (20)     2731 2023-04-03 20:06:48.000000 Painy-0.1.8/painy/git.py
++-rw-r--r--   0 ywid       (501) staff       (20)     4456 2023-04-07 11:53:23.000000 Painy-0.1.8/painy/main.py
++-rw-r--r--   0 ywid       (501) staff       (20)     2604 2023-04-07 11:50:22.000000 Painy-0.1.8/painy/managers.py
++drwxr-xr-x   0 ywid       (501) staff       (20)        0 2023-04-07 11:56:57.865882 Painy-0.1.8/painy/settings/
++-rw-r--r--   0 ywid       (501) staff       (20)      100 2023-04-07 11:53:13.000000 Painy-0.1.8/painy/settings/config.json
++-rw-r--r--   0 ywid       (501) staff       (20)     5944 2023-03-21 15:44:30.000000 Painy-0.1.8/painy/settings/p_extensions.txt
++-rw-r--r--   0 ywid       (501) staff       (20)      861 2023-04-03 20:21:31.000000 Painy-0.1.8/painy/settings/prompt_comment_base.txt
++-rw-r--r--   0 ywid       (501) staff       (20)      110 2023-04-03 19:29:47.000000 Painy-0.1.8/painy/settings/prompt_commit_style.txt
++-rw-r--r--   0 ywid       (501) staff       (20)      133 2023-04-07 11:47:01.000000 Painy-0.1.8/painy/settings/rules.json
++-rw-r--r--   0 ywid       (501) staff       (20)      899 2023-04-07 10:52:58.000000 Painy-0.1.8/painy/utils.py
++-rw-r--r--   0 ywid       (501) staff       (20)       27 2023-04-03 20:00:23.000000 Painy-0.1.8/requirements.txt
++-rw-r--r--   0 ywid       (501) staff       (20)       38 2023-04-07 11:56:57.866684 Painy-0.1.8/setup.cfg
++-rw-r--r--   0 ywid       (501) staff       (20)      887 2023-04-07 11:53:33.000000 Painy-0.1.8/setup.py
+```
+
+### Comparing `Painy-0.1.7/.github/workflows/python-publish.yml` & `Painy-0.1.8/.github/workflows/python-publish.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Painy-0.1.7/.gitignore` & `Painy-0.1.8/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `Painy-0.1.7/LICENSE` & `Painy-0.1.8/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `Painy-0.1.7/PKG-INFO` & `Painy-0.1.8/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Painy
+-Version: 0.1.7
++Version: 0.1.8
+ Summary: UNKNOWN
+ Home-page: https://github.com/lanesket/painy
+ Author: Raevskiy Rudolf
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `Painy-0.1.7/Painy.egg-info/PKG-INFO` & `Painy-0.1.8/Painy.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Painy
+-Version: 0.1.7
++Version: 0.1.8
+ Summary: UNKNOWN
+ Home-page: https://github.com/lanesket/painy
+ Author: Raevskiy Rudolf
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `Painy-0.1.7/README.md` & `Painy-0.1.8/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Painy-0.1.7/painy/chat.py` & `Painy-0.1.8/painy/chat.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ from .git import *
+ from .enums import *
+ import openai
+ import os
++import tiktoken
+ 
+ 
+ MODEL_NAME = os.getenv(key="OPENAI_MODEL_NAME", default="gpt-3.5-turbo")
+ MAX_LENGTH = int(os.getenv(key="OPENAI_MODEL_INPUT_LENGTH", default=4097))
+ MAX_MESSAGES = 40
+ 
+ 
+@@ -23,24 +24,32 @@
+     def clear(self):
+         self.history = []
+ 
+ 
+ class Model:
+     def __init__(self, purpose_prompt: str, model_name: str = MODEL_NAME):
+         self.model_name = model_name
+-        self.purpose_prompt = purpose_prompt
++        self.purpose_prompt = Model.process_input_tokens(purpose_prompt, self.model_name)
+         self.history = ChatHistory()
+         
+         self.history.add(self.purpose_prompt, ChatRole.SYSTEM)
+         
+     def get_response(self, prompt: str) -> str:
+-        prompt = prompt[:MAX_LENGTH]
++        prompt = Model.process_input_tokens(prompt, self.model_name)
+         self.history.add(prompt, ChatRole.USER)
+         
+         response = openai.ChatCompletion.create(
+             model=self.model_name,
+             messages=self.history.get(),
+         )
+         
++        usage = response['usage']
+         response = response["choices"][0]["message"]["content"]
+         
+-        return response
++        return response
++    
++    @staticmethod
++    def process_input_tokens(input: str, model_name: str) -> int:
++        encoding = tiktoken.encoding_for_model(model_name)
++        encoded = encoding.encode(input)
++        decoded = encoding.decode(encoded)[:MAX_LENGTH]
++        return decoded
+```
+
+### Comparing `Painy-0.1.7/painy/git.py` & `Painy-0.1.8/painy/git.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ from typing import List
+ import subprocess
+ import re
+-from painy.utils import get_package_path, get_valid_extensions
++from painy.utils import get_package_path, load_valid_extensions
+ from painy.errors import *
+ 
+ 
+ def get_changed_files(staged=False) -> List[str]:
+     try:
+         cmd = ["git", "diff", "--name-only"]
+         
+@@ -14,15 +14,15 @@
+         
+         output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+         
+         changed_files = output.decode("utf-8").strip().split("\n")
+     except subprocess.CalledProcessError:
+         raise GitDiffException()
+     
+-    valid_extensions = get_valid_extensions()
++    valid_extensions = load_valid_extensions()
+      
+     changed_files = [file for file in changed_files if file != '']
+     changed_files = [file for file in changed_files if f".{file.split('.')[-1]}" in valid_extensions]
+     
+     return changed_files
+ 
+ def get_ipynb_changes_staged(file_path: str) -> str:
+@@ -64,14 +64,21 @@
+     
+     for file in changed_files:
+         diff = get_file_changes(file)
+         diffs.append(diff)
+     
+     return "\n".join(diffs)
+ 
++def get_commit_messsage_history() -> List[str]:
++    output = subprocess.check_output(["git", "log", "--pretty=format:\"%s\""], stderr=subprocess.STDOUT)
++    messages = output.decode("utf-8").strip().split("\n")
++    messages = [message.strip("\"") for message in messages]
++    
++    return messages
++
+ def commit(commit_message: str) -> None:
+     """
+     Commits the staged changes with the given commit message.
+     Used to commit the auto-generated commit message.
+     
+     Args:
+         commit_message (str): The commit message to use.
+```
+
+### Comparing `Painy-0.1.7/painy/p_extensions.txt` & `Painy-0.1.8/painy/settings/p_extensions.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `Painy-0.1.7/setup.py` & `Painy-0.1.8/setup.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+     requirements = f.readlines()
+ 
+ with open("README.md", "r", encoding="utf-8") as f:
+     long_description = f.read()
+ 
+ setup(
+     name="Painy",
+-    version="0.1.7",
++    version="0.1.8",
+     description="",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     author="Raevskiy Rudolf",
+     url="https://github.com/lanesket/painy",
+     packages=find_packages(),
+     python_requires=">=3.7.1",
+@@ -20,15 +20,15 @@
+     classifiers=[
+         "Programming Language :: Python :: 3",
+         "License :: OSI Approved :: MIT License",
+         "Operating System :: OS Independent",
+     ],
+     include_package_data=True,
+     package_data={
+-        'painy': ['p_extensions.txt']
++        'painy': ['settings/*']
+     },
+     entry_points={
+         'console_scripts': [
+             "painy = painy.main:main"
+         ]
+     }
+ )
+```
+
