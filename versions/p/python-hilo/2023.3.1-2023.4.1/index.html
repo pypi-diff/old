@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/python_hilo-2023.3.1.tar.gz tmp/python_hilo-2023.4.1.tar.gz --html versions/p/python-hilo/2023.3.1-2023.4.1/index.html --text versions/p/python-hilo/2023.3.1-2023.4.1/diff.txt --markdown versions/p/python-hilo/2023.3.1-2023.4.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.48 KB</span></div>
+  <div><span class="source">tmp/python_hilo-2023.3.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/python_hilo-2023.4.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">196 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;python_hilo-2023.<del>3</del>.1.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;python_hilo-2023.<ins>4</ins>.1.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">9.22 KB</span></div>
+    <div><span class="source">python_hilo-2023.3.1.tar</span> vs.</div>
+    <div id="python_hilo-----.-.-.tar"><span class="source">python_hilo-2023.4.1.tar</span>
+      <a class="anchor" href="#python_hilo-----.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.88 KB</span></div>
+      <div id="python_hilo-----.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1082<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.118104<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1082<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.118104<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1124<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.118273<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1124<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.118273<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.401543<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>109<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.401543<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28825<span class="dp">·</span>2023-03-06<span class="dp">·</span>23:53:51.346014<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/api.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28825<span class="dp">·</span>2023-03-06<span class="dp">·</span>23:53:51.346014<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6957<span class="dp">·</span>2023-0<del>2</del>-<del>20</del><span class="dp">·</span><del>01</del>:<del>13</del>:<del>2</del>8.<del>1</del>1<del>9101</del><span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/const.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6957<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>15</ins>:<ins>00</ins>:<ins>1</ins>8.<ins>6</ins>1<ins>5552</ins><span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/const.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9103<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402025<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/device/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9103<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402025<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/device/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1287<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119444<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/device/climate.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1287<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119444<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/device/climate.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>930<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119569<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/device/light.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>930<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119569<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/device/light.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>446<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402237<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/device/sensor.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>446<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402237<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/device/sensor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>438<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402304<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/device/switch.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>438<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402304<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/device/switch.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>255</del><span class="dp">·</span>202<del>2</del>-0<del>3</del>-0<del>3</del><span class="dp">·</span><del>03</del>:<del>33</del>:<del>56</del>.<del>40239</del>4<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/devices.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>824</ins><span class="dp">·</span>202<ins>3</ins>-0<ins>4</ins>-0<ins>7</ins><span class="dp">·</span><ins>15</ins>:<ins>00</ins>:<ins>18</ins>.<ins>61573</ins>4<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/devices.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4013<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402480<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/event.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4013<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402480<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/event.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1191<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402554<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/exceptions.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1191<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402554<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1257<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402675<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/util/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1257<span class="dp">·</span>2022-03-03<span class="dp">·</span>03:33:56.402675<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/util/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2988<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119721<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/util/state.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2988<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119721<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/util/state.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13003<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119881<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyhilo/websocket.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13003<span class="dp">·</span>2023-02-20<span class="dp">·</span>01:13:28.119881<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyhilo/websocket.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3151<span class="dp">·</span>2023-0<del>3</del>-0<del>6</del><span class="dp">·</span><del>23</del>:<del>54</del>:<del>24</del>.<del>894130</del><span class="dp">·</span>python_hilo-2023.<del>3</del>.1/pyproject.toml</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3151<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>7</ins><span class="dp">·</span><ins>15</ins>:<ins>00</ins>:<ins>46</ins>.<ins>570201</ins><span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2529<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>python_hilo-2023.<del>3</del>.1/PKG-INFO</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2529<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>python_hilo-2023.<ins>4</ins>.1/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/LICENSE</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--LICENSE"><span class="source">python_hilo-2023.4.1/LICENSE</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/README.md</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--README.md"><span class="source">python_hilo-2023.4.1/README.md</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/api.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-api.py"><span class="source">python_hilo-2023.4.1/pyhilo/api.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.16 KB</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/const.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-const.py"><span class="source">python_hilo-2023.4.1/pyhilo/const.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-const.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>logging</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>logging</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>platform</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>platform</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Final</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>aiohttp</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>aiohttp</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>homeassistant.core</td><td class="diffline">5 </td><td class="diffpresent">import<span class="dp">·</span>homeassistant.core</td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Final</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">LOG:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__package__)</td><td class="diffline">6 </td><td class="diffpresent">LOG:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__package__)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">DEFAULT_STATE_FILE:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;hilo_state.yaml&quot;</td><td class="diffline">7 </td><td class="diffpresent">DEFAULT_STATE_FILE:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;hilo_state.yaml&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">REQUEST_RETRY:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>9</td><td class="diffline">8 </td><td class="diffpresent">REQUEST_RETRY:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>9</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">TIMEOUT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>10</td><td class="diffline">9 </td><td class="diffpresent">TIMEOUT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>10</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">TOKEN_EXPIRATION_PADDING:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>300</td><td class="diffline">10 </td><td class="diffpresent">TOKEN_EXPIRATION_PADDING:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>300</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">VERIFY:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>True</td><td class="diffline">11 </td><td class="diffpresent">VERIFY:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>True</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 25, 15 lines modified</td><td colspan="2">Offset 26, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">AUTH_TYPE_PASSWORD:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;password&quot;</td><td class="diffline">26 </td><td class="diffpresent">AUTH_TYPE_PASSWORD:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;password&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">AUTH_TYPE_REFRESH:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;refresh_token&quot;</td><td class="diffline">27 </td><td class="diffpresent">AUTH_TYPE_REFRESH:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;refresh_token&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">AUTH_RESPONSE_TYPE:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;token<span class="dp">·</span>id_token&quot;</td><td class="diffline">28 </td><td class="diffpresent">AUTH_RESPONSE_TYPE:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;token<span class="dp">·</span>id_token&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">AUTH_SCOPE:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;openid<span class="dp">·</span>9870f087-25f8-43b6-9cad-d4b74ce512e1<span class="dp">·</span>offline_access&quot;</td><td class="diffline">29 </td><td class="diffpresent">AUTH_SCOPE:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;openid<span class="dp">·</span>9870f087-25f8-43b6-9cad-d4b74ce512e1<span class="dp">·</span>offline_access&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">SUBSCRIPTION_KEY:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;20eeaedcb86945afa3fe792cea89b8bf&quot;</td><td class="diffline">30 </td><td class="diffpresent">SUBSCRIPTION_KEY:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;20eeaedcb86945afa3fe792cea89b8bf&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">#<span class="dp">·</span>API<span class="dp">·</span>constants</td><td class="diffline">31 </td><td class="diffpresent">#<span class="dp">·</span>API<span class="dp">·</span>constants</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">API_HOSTNAME:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;api<del>m</del>.hiloenergie.com&quot;</td><td class="diffline">32 </td><td class="diffpresent">API_HOSTNAME:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;api.hiloenergie.com&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">API_END:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;v1/api&quot;</td><td class="diffline">33 </td><td class="diffpresent">API_END:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;v1/api&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">API_AUTOMATION_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>f&quot;/Automation/{API_END}&quot;</td><td class="diffline">34 </td><td class="diffpresent">API_AUTOMATION_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>f&quot;/Automation/{API_END}&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">API_GD_SERVICE_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>f&quot;/GDService/{API_END}&quot;</td><td class="diffline">35 </td><td class="diffpresent">API_GD_SERVICE_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>f&quot;/GDService/{API_END}&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">API_NOTIFICATIONS_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;/Notifications&quot;</td><td class="diffline">36 </td><td class="diffpresent">API_NOTIFICATIONS_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;/Notifications&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">API_EVENTS_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;/Events&quot;</td><td class="diffline">37 </td><td class="diffpresent">API_EVENTS_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>&quot;/Events&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">API_REGISTRATION_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>f&quot;{API_NOTIFICATIONS_ENDPOINT}/Registrations&quot;</td><td class="diffline">38 </td><td class="diffpresent">API_REGISTRATION_ENDPOINT:<span class="dp">·</span>Final<span class="dp">·</span>=<span class="dp">·</span>f&quot;{API_NOTIFICATIONS_ENDPOINT}/Registrations&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/device/__init__.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-device-__init__.py"><span class="source">python_hilo-2023.4.1/pyhilo/device/__init__.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-device-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/device/climate.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-device-climate.py"><span class="source">python_hilo-2023.4.1/pyhilo/device/climate.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-device-climate.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/device/light.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-device-light.py"><span class="source">python_hilo-2023.4.1/pyhilo/device/light.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-device-light.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.5 KB</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/devices.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-devices.py"><span class="source">python_hilo-2023.4.1/pyhilo/devices.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-devices.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 74, 18 lines modified</td><td colspan="2">Offset 74, 31 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>KeyError:</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>KeyError:</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.warning(f&quot;Unknown<span class="dp">·</span>device<span class="dp">·</span>type<span class="dp">·</span>{dev.type},<span class="dp">·</span>adding<span class="dp">·</span>as<span class="dp">·</span>Sensor&quot;)</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.warning(f&quot;Unknown<span class="dp">·</span>device<span class="dp">·</span>type<span class="dp">·</span>{dev.type},<span class="dp">·</span>adding<span class="dp">·</span>as<span class="dp">·</span>Sensor&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>device_type<span class="dp">·</span>=<span class="dp">·</span>&quot;Sensor&quot;</td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>device_type<span class="dp">·</span>=<span class="dp">·</span>&quot;Sensor&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dev.__class__<span class="dp">·</span>=<span class="dp">·</span>globals()[device_type]</td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dev.__class__<span class="dp">·</span>=<span class="dp">·</span>globals()[device_type]</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>dev</td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>dev</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>update(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">79 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>update(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffchanged"><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f<del>or<span class="dp">·</span></del>device<del><span class="dp">·</span>in</del><span class="dp">·</span>await<span class="dp">·</span>self._api.get_devices(self.location_id)<del>:</del></td><td class="diffline">80 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f<ins>re</ins><ins>sh_</ins>device<ins>s<span class="dp">·</span>=</ins><span class="dp">·</span>await<span class="dp">·</span>self._api.get_devices(self.location_id)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>generated_devices<span class="dp">·</span>=<span class="dp">·</span>[]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>device<span class="dp">·</span>in<span class="dp">·</span>fresh_devices:</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.debug(f&quot;Generating<span class="dp">·</span>device<span class="dp">·</span>{device}&quot;)</td><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.debug(f&quot;Generating<span class="dp">·</span>device<span class="dp">·</span>{device}&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dev<span class="dp">·</span>=<span class="dp">·</span>self.generate_device(device)</td><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dev<span class="dp">·</span>=<span class="dp">·</span>self.generate_device(device)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>generated_devices.append(dev)</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>dev<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>self.devices:</td><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>dev<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>self.devices:</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.devices.append(dev)</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.devices.append(dev)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>device<span class="dp">·</span>in<span class="dp">·</span>self.devices:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>device<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>generated_devices:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.debug(f&quot;Device<span class="dp">·</span>unpaired<span class="dp">·</span>{device}&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Don&#x27;t<span class="dp">·</span>do<span class="dp">·</span>anything<span class="dp">·</span>with<span class="dp">·</span>unpaired<span class="dp">·</span>device<span class="dp">·</span>for<span class="dp">·</span>now.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>self.devices.remove(device)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>update_gateway(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>gateway<span class="dp">·</span>=<span class="dp">·</span>await<span class="dp">·</span>self._api.get_gateway(self.location_id)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.debug(f&quot;Generating<span class="dp">·</span>device<span class="dp">·</span>(gateway)<span class="dp">·</span>{gateway}&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.generate_device(gateway)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>async_init(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>async_init(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Initialize<span class="dp">·</span>the<span class="dp">·</span>Hilo<span class="dp">·</span>&quot;manager&quot;<span class="dp">·</span>class.&quot;&quot;&quot;</td><td class="diffline">98 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Initialize<span class="dp">·</span>the<span class="dp">·</span>Hilo<span class="dp">·</span>&quot;manager&quot;<span class="dp">·</span>class.&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.info(&quot;Initialising<span class="dp">·</span>after<span class="dp">·</span>websocket<span class="dp">·</span>is<span class="dp">·</span>connected&quot;)</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LOG.info(&quot;Initialising<span class="dp">·</span>after<span class="dp">·</span>websocket<span class="dp">·</span>is<span class="dp">·</span>connected&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.location_id<span class="dp">·</span>=<span class="dp">·</span>await<span class="dp">·</span>self._api.get_location_id()</td><td class="diffline">100 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.location_id<span class="dp">·</span>=<span class="dp">·</span>await<span class="dp">·</span>self._api.get_location_id()</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>self.update()</td><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>await<span class="dp">·</span>self.update()</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/event.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-event.py"><span class="source">python_hilo-2023.4.1/pyhilo/event.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-event.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/exceptions.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-exceptions.py"><span class="source">python_hilo-2023.4.1/pyhilo/exceptions.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-exceptions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/util/__init__.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-util-__init__.py"><span class="source">python_hilo-2023.4.1/pyhilo/util/__init__.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-util-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/util/state.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-util-state.py"><span class="source">python_hilo-2023.4.1/pyhilo/util/state.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-util-state.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyhilo/websocket.py</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-websocket.py"><span class="source">python_hilo-2023.4.1/pyhilo/websocket.py</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyhilo-websocket.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">972 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/pyproject.toml</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--pyproject.toml"><span class="source">python_hilo-2023.4.1/pyproject.toml</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 36, 15 lines modified</td><td colspan="2">Offset 36, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">warn_unreachable<span class="dp">·</span>=<span class="dp">·</span>true</td><td class="diffline">36 </td><td class="diffpresent">warn_unreachable<span class="dp">·</span>=<span class="dp">·</span>true</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">warn_unused_configs<span class="dp">·</span>=<span class="dp">·</span>true</td><td class="diffline">37 </td><td class="diffpresent">warn_unused_configs<span class="dp">·</span>=<span class="dp">·</span>true</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">warn_unused_ignores<span class="dp">·</span>=<span class="dp">·</span>true</td><td class="diffline">38 </td><td class="diffpresent">warn_unused_ignores<span class="dp">·</span>=<span class="dp">·</span>true</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>&quot;.venv/.*&quot;</td><td class="diffline">39 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>&quot;.venv/.*&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">40 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;python-hilo&quot;</td><td class="diffline">41 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;python-hilo&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2023.0<del>3</del>.01&quot;</td><td class="diffline">42 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2023.0<ins>4</ins>.01&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>Python3,<span class="dp">·</span>async<span class="dp">·</span>interface<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>Hilo<span class="dp">·</span>API&quot;</td><td class="diffline">43 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>Python3,<span class="dp">·</span>async<span class="dp">·</span>interface<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>Hilo<span class="dp">·</span>API&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">44 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle<span class="dp">·</span>&lt;me@dvd.dev&gt;&quot;]</td><td class="diffline">45 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle<span class="dp">·</span>&lt;me@dvd.dev&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">maintainers<span class="dp">·</span>=<span class="dp">·</span>[&quot;David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle<span class="dp">·</span>&lt;me@dvd.dev&gt;&quot;]</td><td class="diffline">46 </td><td class="diffpresent">maintainers<span class="dp">·</span>=<span class="dp">·</span>[&quot;David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle<span class="dp">·</span>&lt;me@dvd.dev&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">47 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/dvd-dev/python-hilo&quot;</td><td class="diffline">48 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/dvd-dev/python-hilo&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">49 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 77, 15 lines modified</td><td colspan="2">Offset 77, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td><td class="diffline">77 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">Sphinx<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.3.0&quot;</td><td class="diffline">78 </td><td class="diffpresent">Sphinx<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.3.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent">aresponses<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.1.4&quot;</td><td class="diffline">79 </td><td class="diffpresent">aresponses<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.1.4&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">asynctest<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.13.0&quot;</td><td class="diffline">80 </td><td class="diffpresent">asynctest<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.13.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent">pre-commit<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.0.1&quot;</td><td class="diffline">81 </td><td class="diffpresent">pre-commit<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.0.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.0&quot;</td><td class="diffline">82 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent">pytest-aiohttp<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.4&quot;</td><td class="diffline">83 </td><td class="diffpresent">pytest-aiohttp<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.4&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">84 </td><td class="diffpresent">pytest-cov<span class="dp">·</span>=<span class="dp">·</span>&quot;^<del>3</del>.0.0&quot;</td><td class="diffline">84 </td><td class="diffpresent">pytest-cov<span class="dp">·</span>=<span class="dp">·</span>&quot;^<ins>4</ins>.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent">sphinx-rtd-theme<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.0&quot;</td><td class="diffline">85 </td><td class="diffpresent">sphinx-rtd-theme<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">types-pytz<span class="dp">·</span>=<span class="dp">·</span>&quot;^2022.7.0&quot;</td><td class="diffline">86 </td><td class="diffpresent">types-pytz<span class="dp">·</span>=<span class="dp">·</span>&quot;^2022.7.0&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent">[tool.pylint.BASIC]</td><td class="diffline">87 </td><td class="diffpresent">[tool.pylint.BASIC]</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent">expected-line-ending-format<span class="dp">·</span>=<span class="dp">·</span>&quot;LF&quot;</td><td class="diffline">88 </td><td class="diffpresent">expected-line-ending-format<span class="dp">·</span>=<span class="dp">·</span>&quot;LF&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent">[tool.pylint.&quot;MESSAGES<span class="dp">·</span>CONTROL&quot;]</td><td class="diffline">89 </td><td class="diffpresent">[tool.pylint.&quot;MESSAGES<span class="dp">·</span>CONTROL&quot;]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">434 B</span></div>
+      <div><span class="source">python_hilo-2023.3.1/PKG-INFO</span> vs.</div>
+      <div id="python_hilo-----.-.-.tar---python_hilo-----.-.--PKG-INFO"><span class="source">python_hilo-2023.4.1/PKG-INFO</span>
+        <a class="anchor" href="#python_hilo-----.-.-.tar---python_hilo-----.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-hilo</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>python-hilo</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<del>3</del>.1</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<ins>4</ins>.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python3,<span class="dp">·</span>async<span class="dp">·</span>interface<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>Hilo<span class="dp">·</span>API</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python3,<span class="dp">·</span>async<span class="dp">·</span>interface<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>Hilo<span class="dp">·</span>API</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/dvd-dev/python-hilo</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/dvd-dev/python-hilo</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>me@dvd.dev</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>me@dvd.dev</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle</td><td class="diffline">9 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>David<span class="dp">·</span>Vallee<span class="dp">·</span>Delisle</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>me@dvd.dev</td><td class="diffline">10 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>me@dvd.dev</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

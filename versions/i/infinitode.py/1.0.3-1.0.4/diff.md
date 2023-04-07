@@ -1,0 +1,214 @@
+# Comparing `tmp/infinitode.py-1.0.3.tar.gz` & `tmp/infinitode.py-1.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "infinitode.py-1.0.3.tar", last modified: Sat Aug 20 14:34:06 2022, max compression
++gzip compressed data, was "infinitode.py-1.0.4.tar", last modified: Fri Apr  7 14:55:37 2023, max compression
+```
+
+## Comparing `infinitode.py-1.0.3.tar` & `infinitode.py-1.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,22 @@
+-drwxrwxrwx   0        0        0        0 2022-08-20 14:34:06.928673 infinitode.py-1.0.3/
+--rw-rw-rw-   0        0        0     1100 2022-04-19 17:21:19.000000 infinitode.py-1.0.3/LICENSE
+--rw-rw-rw-   0        0        0     6169 2022-08-20 14:34:06.927672 infinitode.py-1.0.3/PKG-INFO
+--rw-rw-rw-   0        0        0     5883 2022-05-08 16:08:53.000000 infinitode.py-1.0.3/README.md
+-drwxrwxrwx   0        0        0        0 2022-08-20 14:34:06.912668 infinitode.py-1.0.3/infinitode/
+--rw-rw-rw-   0        0        0     1469 2022-08-20 14:32:21.000000 infinitode.py-1.0.3/infinitode/__init__.py
+--rw-rw-rw-   0        0        0      883 2022-04-26 14:54:12.000000 infinitode.py-1.0.3/infinitode/badge.py
+--rw-rw-rw-   0        0        0    15929 2022-08-20 14:23:18.000000 infinitode.py-1.0.3/infinitode/core.py
+--rw-rw-rw-   0        0        0      426 2022-04-28 13:52:01.000000 infinitode.py-1.0.3/infinitode/errors.py
+--rw-rw-rw-   0        0        0     6683 2022-04-26 14:53:48.000000 infinitode.py-1.0.3/infinitode/leaderboard.py
+--rw-rw-rw-   0        0        0     6544 2022-04-28 13:57:14.000000 infinitode.py-1.0.3/infinitode/player.py
+--rw-rw-rw-   0        0        0        0 2022-04-25 15:30:52.000000 infinitode.py-1.0.3/infinitode/py.typed
+--rw-rw-rw-   0        0        0     6424 2022-04-28 13:16:02.000000 infinitode.py-1.0.3/infinitode/score.py
+--rw-rw-rw-   0        0        0      682 2022-08-20 13:59:13.000000 infinitode.py-1.0.3/infinitode/utils.py
+-drwxrwxrwx   0        0        0        0 2022-08-20 14:34:06.924672 infinitode.py-1.0.3/infinitode.py.egg-info/
+--rw-rw-rw-   0        0        0     6169 2022-08-20 14:34:06.000000 infinitode.py-1.0.3/infinitode.py.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      400 2022-08-20 14:34:06.000000 infinitode.py-1.0.3/infinitode.py.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2022-08-20 14:34:06.000000 infinitode.py-1.0.3/infinitode.py.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       17 2022-08-20 14:34:06.000000 infinitode.py-1.0.3/infinitode.py.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       11 2022-08-20 14:34:06.000000 infinitode.py-1.0.3/infinitode.py.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2022-08-20 14:34:06.928673 infinitode.py-1.0.3/setup.cfg
+--rw-rw-rw-   0        0        0      758 2022-04-28 14:05:57.000000 infinitode.py-1.0.3/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:55:37.199786 infinitode.py-1.0.4/
++-rw-rw-rw-   0        0        0     1100 2022-04-19 17:21:19.000000 infinitode.py-1.0.4/LICENSE
++-rw-rw-rw-   0        0        0     6169 2023-04-07 14:55:37.198786 infinitode.py-1.0.4/PKG-INFO
++-rw-rw-rw-   0        0        0     5883 2022-05-08 16:08:53.000000 infinitode.py-1.0.4/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 14:55:37.177858 infinitode.py-1.0.4/infinitode/
++-rw-rw-rw-   0        0        0     1469 2023-04-07 14:53:30.000000 infinitode.py-1.0.4/infinitode/__init__.py
++-rw-rw-rw-   0        0        0      883 2022-04-26 14:54:12.000000 infinitode.py-1.0.4/infinitode/badge.py
++-rw-rw-rw-   0        0        0    15951 2023-04-07 14:24:32.000000 infinitode.py-1.0.4/infinitode/core.py
++-rw-rw-rw-   0        0        0      426 2022-04-28 13:52:01.000000 infinitode.py-1.0.4/infinitode/errors.py
++-rw-rw-rw-   0        0        0     6683 2022-04-26 14:53:48.000000 infinitode.py-1.0.4/infinitode/leaderboard.py
++-rw-rw-rw-   0        0        0     6544 2022-04-28 13:57:14.000000 infinitode.py-1.0.4/infinitode/player.py
++-rw-rw-rw-   0        0        0        0 2022-04-25 15:30:52.000000 infinitode.py-1.0.4/infinitode/py.typed
++-rw-rw-rw-   0        0        0     6424 2022-04-28 13:16:02.000000 infinitode.py-1.0.4/infinitode/score.py
++-rw-rw-rw-   0        0        0      682 2022-08-20 13:59:13.000000 infinitode.py-1.0.4/infinitode/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:55:37.195756 infinitode.py-1.0.4/infinitode.py.egg-info/
++-rw-rw-rw-   0        0        0     6169 2023-04-07 14:55:37.000000 infinitode.py-1.0.4/infinitode.py.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      400 2023-04-07 14:55:37.000000 infinitode.py-1.0.4/infinitode.py.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 14:55:37.000000 infinitode.py-1.0.4/infinitode.py.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       17 2023-04-07 14:55:37.000000 infinitode.py-1.0.4/infinitode.py.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       11 2023-04-07 14:55:37.000000 infinitode.py-1.0.4/infinitode.py.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 14:55:37.199786 infinitode.py-1.0.4/setup.cfg
++-rw-rw-rw-   0        0        0      758 2022-04-28 14:05:57.000000 infinitode.py-1.0.4/setup.py
+```
+
+### Comparing `infinitode.py-1.0.3/LICENSE` & `infinitode.py-1.0.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/PKG-INFO` & `infinitode.py-1.0.4/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: infinitode.py
+-Version: 1.0.3
++Version: 1.0.4
+ Summary: A python wrapper for the Infinitode 2 API.
+ Home-page: https://github.com/Sprylos/infinitode.py
+ Author: Sprylos
+ License: MIT
+ Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `infinitode.py-1.0.3/README.md` & `infinitode.py-1.0.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/infinitode/__init__.py` & `infinitode.py-1.0.4/infinitode/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ ~~~~~~~~~~~~~~~~~~~
+ 
+ An asynchronous wrapper for the Infinitode API.
+ """
+ 
+ __author__ = "Sprylos"
+ __title__ = "infinitode.py"
+-__version__ = '1.0.3'
++__version__ = '1.0.4'
+ __license__ = """MIT License
+ 
+ Copyright (c) 2022 Sprylos
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+```
+
+### Comparing `infinitode.py-1.0.3/infinitode/badge.py` & `infinitode.py-1.0.4/infinitode/badge.py`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/infinitode/core.py` & `infinitode.py-1.0.4/infinitode/core.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -32,15 +32,15 @@
+ ID_REGEX = re.compile(r'U-([A-Z0-9]{4}-){2}[A-Z0-9]{6}')
+ LEVELS = (
+     '1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.b1',
+     '2.1', '2.2', '2.3', '2.4', '2.5', '2.6', '2.7', '2.8', '2.b1',
+     '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.b1',
+     '4.1', '4.2', '4.3', '4.4', '4.5', '4.6', '4.7', '4.8', '4.b1',
+     '5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.b1', '5.b2',
+-    '6.1', '6.2', '6.3', '6.4', 'rumble', 'dev', 'zecred',
++    '6.1', '6.2', '6.3', '6.4', '6.5', 'rumble', 'dev', 'zecred',
+     'DQ1', 'DQ3', 'DQ4', 'DQ5', 'DQ7', 'DQ8', 'DQ9', 'DQ10', 'DQ11', 'DQ12',
+ )
+ 
+ 
+ class Session:
+     def __init__(self, session: Optional[aiohttp.ClientSession] = None) -> None:
+         self._session = session or aiohttp.ClientSession()
+@@ -239,15 +239,15 @@
+         else:
+             totals = totals.select('label')  # type: ignore # nopep8
+             if len(totals) >= 4:
+                 t['total_score'] = try_int(totals[1].text.replace(',', ''))
+                 t['total_rank'] = try_int(totals[2].text.replace(',', ''))
+                 t['total_top'] = totals[3].text.replace('- Top ', '')
+             else:
+-                t.update({'total_score': 0, 'total_rank': 0, 'total_top': 0})
++                t.update({'total_score': 0, 'total_rank': 0, 'total_top': '0%'})
+         comments = data.findAll(
+             text=lambda text: isinstance(text, bs4.Comment))
+         for x in comments:
+             if 'Level:' in x:
+                 t['level'] = int(x.split('>')[3].split('<')[0])
+                 break
+         else:
+@@ -276,15 +276,15 @@
+                 level=t['level'], nickname=t['nickname']
+             )
+         t['badges'] = {}
+         for x in data.select('div[width="80"][height="80"]'):  # type: ignore # nopep8
+             rar: str = x.select('img')[0]['src'].split('bg-')[1]  # type: ignore # nopep8
+             if rar in ['not-received', 'common', 'rare', 'very-rare', 'epic', 'legendary', 'supreme', 'artifact']:
+                 ico: str = x.select('img')[1]['src'].split('icon-')[1]  # type: ignore # nopep8
+-                if ico in ['daily-game', 'invited-players', 'killed-enemies', 'mined-resources', 'of-merit', 'beta-tester-season-2'] or ico[:8] == 'season-1':
++                if ico in ['daily-game', 'invited-players', 'killed-enemies', 'mined-resources', 'skillful', 'of-merit', 'beta-tester-season-2'] or ico[:8] == 'season-1':
+                     col: str = x.select('img')[-1]['color']  # type: ignore # nopep8
+                     t['badges'][ico] = (rar, col)
+         labels = data.select('table[width="800"][align="center"]')[-1].select('label')  # type: ignore # nopep8
+         replays = labels[-3].string.split(" ")  # type: ignore
+         t['replays'] = 0 if len(replays) != 4 else int(replays[3])
+         issues = labels[-2].string.split(" ")  # type: ignore
+         t['issues'] = 0 if len(issues) != 6 else int(issues[0][3:])
+```
+
+### Comparing `infinitode.py-1.0.3/infinitode/leaderboard.py` & `infinitode.py-1.0.4/infinitode/leaderboard.py`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/infinitode/player.py` & `infinitode.py-1.0.4/infinitode/player.py`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/infinitode/score.py` & `infinitode.py-1.0.4/infinitode/score.py`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/infinitode/utils.py` & `infinitode.py-1.0.4/infinitode/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `infinitode.py-1.0.3/infinitode.py.egg-info/PKG-INFO` & `infinitode.py-1.0.4/infinitode.py.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: infinitode.py
+-Version: 1.0.3
++Version: 1.0.4
+ Summary: A python wrapper for the Infinitode 2 API.
+ Home-page: https://github.com/Sprylos/infinitode.py
+ Author: Sprylos
+ License: MIT
+ Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `infinitode.py-1.0.3/setup.py` & `infinitode.py-1.0.4/setup.py`
+
+ * *Files identical despite different names*
+

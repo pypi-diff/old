@@ -1,0 +1,253 @@
+# Comparing `tmp/quantregpy-0.1.8.tar.gz` & `tmp/quantregpy-0.1.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/home/runner/work/quantregpy/quantregpy/dist/tmpcxes5c_3/quantregpy-0.1.8.tar", last modified: Mon Feb  1 18:10:18 2021, max compression
++gzip compressed data, was "/home/runner/work/quantregpy/quantregpy/dist/tmpmjd68kvx/quantregpy-0.1.9.tar", last modified: Mon Feb  1 20:17:28 2021, max compression
+```
+
+## Comparing `quantregpy-0.1.8.tar` & `quantregpy-0.1.9.tar`
+
+### file list
+
+```diff
+@@ -1,43 +1,44 @@
+-drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 18:10:18.000000 quantregpy-0.1.8/
+--rw-r--r--   0 runner    (1001) docker     (117)      293 2021-02-01 18:10:18.000000 quantregpy-0.1.8/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (117)     1488 2021-02-01 18:10:01.000000 quantregpy-0.1.8/README.md
+--rw-r--r--   0 runner    (1001) docker     (117)      114 2021-02-01 18:10:01.000000 quantregpy-0.1.8/pyproject.toml
+-drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy/
+--rw-r--r--   0 runner    (1001) docker     (117)      281 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy/_fortran/
+-drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/
+--rw-r--r--   0 runner    (1001) docker     (117)     3283 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dcopy.f
+--rw-r--r--   0 runner    (1001) docker     (117)    11119 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dgemm.f
+--rw-r--r--   0 runner    (1001) docker     (117)     8763 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dgemv.f
+--rw-r--r--   0 runner    (1001) docker     (117)     2007 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/disnan.f
+--rw-r--r--   0 runner    (1001) docker     (117)     2608 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dlaisnan.f
+--rw-r--r--   0 runner    (1001) docker     (117)     5698 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dposv.f
+--rw-r--r--   0 runner    (1001) docker     (117)     7206 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrf.f
+--rw-r--r--   0 runner    (1001) docker     (117)     6318 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrf2.f
+--rw-r--r--   0 runner    (1001) docker     (117)     5381 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrs.f
+--rw-r--r--   0 runner    (1001) docker     (117)     7269 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dsyr.f
+--rw-r--r--   0 runner    (1001) docker     (117)    10798 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dsyrk.f
+--rw-r--r--   0 runner    (1001) docker     (117)    13788 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/dtrsm.f
+--rw-r--r--   0 runner    (1001) docker     (117)     4564 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/ieeeck.f
+--rw-r--r--   0 runner    (1001) docker     (117)    20815 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/ilaenv.f
+--rw-r--r--   0 runner    (1001) docker     (117)    14102 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/iparmq.f
+--rw-r--r--   0 runner    (1001) docker     (117)     3137 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/lsame.f
+--rw-r--r--   0 runner    (1001) docker     (117)     2152 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/blas_src/xerbla.f
+--rw-r--r--   0 runner    (1001) docker     (117)     3524 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/cholesky.h
+--rw-r--r--   0 runner    (1001) docker     (117)    33382 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/crq.f
+--rw-r--r--   0 runner    (1001) docker     (117)     6240 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/rq0.f
+--rw-r--r--   0 runner    (1001) docker     (117)     6182 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/rq1.f
+--rw-r--r--   0 runner    (1001) docker     (117)    12232 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/rqbr.f
+--rw-r--r--   0 runner    (1001) docker     (117)     4965 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/rqfnb.f
+--rw-r--r--   0 runner    (1001) docker     (117)      405 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/rqs.f
+--rw-r--r--   0 runner    (1001) docker     (117)      788 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/_fortran/sparseM.h
+--rw-r--r--   0 runner    (1001) docker     (117)    16685 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/quantreg.py
+--rw-r--r--   0 runner    (1001) docker     (117)     2064 2021-02-01 18:10:01.000000 quantregpy-0.1.8/quantregpy/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (117)      293 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (117)     1128 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (117)        1 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (117)       46 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (117)       11 2021-02-01 18:10:18.000000 quantregpy-0.1.8/quantregpy.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (117)       38 2021-02-01 18:10:18.000000 quantregpy-0.1.8/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (117)     1618 2021-02-01 18:10:01.000000 quantregpy-0.1.8/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 20:17:28.000000 quantregpy-0.1.9/
++-rw-r--r--   0 runner    (1001) docker     (117)      293 2021-02-01 20:17:28.000000 quantregpy-0.1.9/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (117)     1488 2021-02-01 20:17:14.000000 quantregpy-0.1.9/README.md
++-rw-r--r--   0 runner    (1001) docker     (117)        5 2021-02-01 20:17:15.000000 quantregpy-0.1.9/VERSION
++-rw-r--r--   0 runner    (1001) docker     (117)      114 2021-02-01 20:17:14.000000 quantregpy-0.1.9/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy/
++-rw-r--r--   0 runner    (1001) docker     (117)      281 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy/_fortran/
++drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/
++-rw-r--r--   0 runner    (1001) docker     (117)     3283 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dcopy.f
++-rw-r--r--   0 runner    (1001) docker     (117)    11119 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dgemm.f
++-rw-r--r--   0 runner    (1001) docker     (117)     8763 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dgemv.f
++-rw-r--r--   0 runner    (1001) docker     (117)     2007 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/disnan.f
++-rw-r--r--   0 runner    (1001) docker     (117)     2608 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dlaisnan.f
++-rw-r--r--   0 runner    (1001) docker     (117)     5698 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dposv.f
++-rw-r--r--   0 runner    (1001) docker     (117)     7206 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrf.f
++-rw-r--r--   0 runner    (1001) docker     (117)     6318 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrf2.f
++-rw-r--r--   0 runner    (1001) docker     (117)     5381 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrs.f
++-rw-r--r--   0 runner    (1001) docker     (117)     7269 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dsyr.f
++-rw-r--r--   0 runner    (1001) docker     (117)    10798 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dsyrk.f
++-rw-r--r--   0 runner    (1001) docker     (117)    13788 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/dtrsm.f
++-rw-r--r--   0 runner    (1001) docker     (117)     4564 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/ieeeck.f
++-rw-r--r--   0 runner    (1001) docker     (117)    20815 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/ilaenv.f
++-rw-r--r--   0 runner    (1001) docker     (117)    14102 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/iparmq.f
++-rw-r--r--   0 runner    (1001) docker     (117)     3137 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/lsame.f
++-rw-r--r--   0 runner    (1001) docker     (117)     2152 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/blas_src/xerbla.f
++-rw-r--r--   0 runner    (1001) docker     (117)     3524 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/cholesky.h
++-rw-r--r--   0 runner    (1001) docker     (117)    33382 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/crq.f
++-rw-r--r--   0 runner    (1001) docker     (117)     6240 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/rq0.f
++-rw-r--r--   0 runner    (1001) docker     (117)     6182 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/rq1.f
++-rw-r--r--   0 runner    (1001) docker     (117)    12232 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/rqbr.f
++-rw-r--r--   0 runner    (1001) docker     (117)     4965 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/rqfnb.f
++-rw-r--r--   0 runner    (1001) docker     (117)      405 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/rqs.f
++-rw-r--r--   0 runner    (1001) docker     (117)      788 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/_fortran/sparseM.h
++-rw-r--r--   0 runner    (1001) docker     (117)    16685 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/quantreg.py
++-rw-r--r--   0 runner    (1001) docker     (117)     2064 2021-02-01 20:17:14.000000 quantregpy-0.1.9/quantregpy/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (117)        0 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (117)      293 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (117)     1136 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (117)        1 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (117)       46 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (117)       11 2021-02-01 20:17:28.000000 quantregpy-0.1.9/quantregpy.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (117)       38 2021-02-01 20:17:28.000000 quantregpy-0.1.9/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (117)     1656 2021-02-01 20:17:14.000000 quantregpy-0.1.9/setup.py
+```
+
+### Comparing `quantregpy-0.1.8/README.md` & `quantregpy-0.1.9/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dcopy.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dcopy.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dgemm.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dgemm.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dgemv.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dgemv.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/disnan.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/disnan.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dlaisnan.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dlaisnan.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dposv.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dposv.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrf.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrf.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrf2.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrf2.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrs.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrs.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dsyr.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dsyr.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dsyrk.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dsyrk.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/dtrsm.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/dtrsm.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/ieeeck.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/ieeeck.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/ilaenv.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/ilaenv.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/iparmq.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/iparmq.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/lsame.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/lsame.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/blas_src/xerbla.f` & `quantregpy-0.1.9/quantregpy/_fortran/blas_src/xerbla.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/cholesky.h` & `quantregpy-0.1.9/quantregpy/_fortran/cholesky.h`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/crq.f` & `quantregpy-0.1.9/quantregpy/_fortran/crq.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/rq0.f` & `quantregpy-0.1.9/quantregpy/_fortran/rq0.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/rq1.f` & `quantregpy-0.1.9/quantregpy/_fortran/rq1.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/rqbr.f` & `quantregpy-0.1.9/quantregpy/_fortran/rqbr.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/rqfnb.f` & `quantregpy-0.1.9/quantregpy/_fortran/rqfnb.f`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/_fortran/sparseM.h` & `quantregpy-0.1.9/quantregpy/_fortran/sparseM.h`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/quantreg.py` & `quantregpy-0.1.9/quantregpy/quantreg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy/setup.py` & `quantregpy-0.1.9/quantregpy/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `quantregpy-0.1.8/quantregpy.egg-info/SOURCES.txt` & `quantregpy-0.1.9/quantregpy.egg-info/SOURCES.txt`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+ README.md
++VERSION
+ pyproject.toml
+ setup.py
+ quantregpy/__init__.py
+ quantregpy/quantreg.py
+ quantregpy/setup.py
+ quantregpy.egg-info/PKG-INFO
+ quantregpy.egg-info/SOURCES.txt
+```
+
+### Comparing `quantregpy-0.1.8/setup.py` & `quantregpy-0.1.9/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -12,14 +12,15 @@
+ 
+     config = Configuration(None, parent_package, top_path)
+     config.set_options(ignore_setup_xxx_py=True,
+                        assume_default_configuration=True,
+                        delegate_options_to_subpackages=True,
+                        quiet=True)
+     config.add_subpackage('quantregpy')
++    config.add_data_files('VERSION')
+ 
+     return config
+ with open("VERSION","r") as f:
+   version = f.read()
+ metadata = dict(
+     name='quantregpy',
+     maintainer="David Kaftan and Paul Kaefer",
+```
+

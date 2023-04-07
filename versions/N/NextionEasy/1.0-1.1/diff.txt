@@ -1,0 +1,73 @@
+--- tmp/NextionEasy-1.0.tar.gz
++++ tmp/NextionEasy-1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "NextionEasy-1.0.tar", last modified: Fri Apr  7 13:34:04 2023, max compression
+│ +gzip compressed data, was "NextionEasy-1.1.tar", last modified: Fri Apr  7 15:01:54 2023, max compression
+│   --- NextionEasy-1.0.tar
+├── +++ NextionEasy-1.1.tar
+│ ├── file list
+│ │ @@ -1,13 +1,14 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:34:04.242458 NextionEasy-1.0/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:34:04.222354 NextionEasy-1.0/NextionEasy/
+│ │ --rw-rw-rw-   0        0        0       27 2023-04-07 13:32:36.000000 NextionEasy-1.0/NextionEasy/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2718 2023-04-07 13:12:21.000000 NextionEasy-1.0/NextionEasy/nextion_easy.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 13:34:04.242458 NextionEasy-1.0/NextionEasy.egg-info/
+│ │ --rw-rw-rw-   0        0        0      277 2023-04-07 13:34:04.000000 NextionEasy-1.0/NextionEasy.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      244 2023-04-07 13:34:04.000000 NextionEasy-1.0/NextionEasy.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 13:34:04.000000 NextionEasy-1.0/NextionEasy.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        2 2023-04-07 13:34:04.000000 NextionEasy-1.0/NextionEasy.egg-info/not-zip-safe
+│ │ --rw-rw-rw-   0        0        0       12 2023-04-07 13:34:04.000000 NextionEasy-1.0/NextionEasy.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      277 2023-04-07 13:34:04.242458 NextionEasy-1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 13:34:04.242458 NextionEasy-1.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      306 2023-04-07 13:33:50.000000 NextionEasy-1.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 15:01:54.466315 NextionEasy-1.1/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 15:01:54.465089 NextionEasy-1.1/NextionEasy/
+│ │ +-rw-rw-rw-   0        0        0       27 2023-04-07 13:32:36.000000 NextionEasy-1.1/NextionEasy/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2840 2023-04-07 14:49:55.000000 NextionEasy-1.1/NextionEasy/nextion_easy.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 15:01:54.466315 NextionEasy-1.1/NextionEasy.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      277 2023-04-07 15:01:54.000000 NextionEasy-1.1/NextionEasy.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      254 2023-04-07 15:01:54.000000 NextionEasy-1.1/NextionEasy.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 15:01:54.000000 NextionEasy-1.1/NextionEasy.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        2 2023-04-07 15:01:54.000000 NextionEasy-1.1/NextionEasy.egg-info/not-zip-safe
+│ │ +-rw-rw-rw-   0        0        0       12 2023-04-07 15:01:54.000000 NextionEasy-1.1/NextionEasy.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      277 2023-04-07 15:01:54.466315 NextionEasy-1.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      725 2023-04-07 15:01:42.000000 NextionEasy-1.1/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 15:01:54.476273 NextionEasy-1.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      306 2023-04-07 14:07:08.000000 NextionEasy-1.1/setup.py
+│ │   --- NextionEasy-1.0/NextionEasy/nextion_easy.py
+│ ├── +++ NextionEasy-1.1/NextionEasy/nextion_easy.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -38,27 +38,28 @@
+│ │              data = f"{key}.val={value}"
+│ │          else:
+│ │              data = f"{key}.{types}=\"{value}\""
+│ │  
+│ │          self.serial.write(data.encode("utf-8")+b"\xFF\xFF\xFF")
+│ │  
+│ │      def read(self):
+│ │ -        """Возвращает tuple[key, value] или None
+│ │ +        """Возвращает tuple[key, value] или None если нет данных
+│ │          Пример данных отправляемых кнопкой bt0:
+│ │                                                      print "bt0="
+│ │                                                      print bt0.val
+│ │                                                      print "\\r" """
+│ │  
+│ │          buff = self.serial.readline()
+│ │          if not buff:
+│ │              return
+│ │ -        for i in command_failed_codes:
+│ │ -            print(f"Error [{i}]: {command_failed_codes[i]}")
+│ │ +        for i in self.command_failed_codes:
+│ │ +            if i not in buff: continue
+│ │ +            print(f"Error byte [{i}]: {self.command_failed_codes[i]}")
+│ │          buff = buff.split(b"=")
+│ │ -        return (buff[0], on in buff[1])
+│ │ +        return (buff[0].decode("utf-8", errors="ignore"), self.on in buff[1])
+│ │  
+│ │      #def rgb_to_hmi(self, r: int, g: int, b: int, a: int=255) -> str:
+│ │      #    """Перевод RGBA в формат HMI для дисплея Nextion"""
+│ │  
+│ │      #    h = round((180 / 255) * ((max(r, g, b) + min(r, g, b)) / 2 - min(r, g, b)))
+│ │      #    s = round((255 / max(r, g, b)) * (max(r, g, b) - min(r, g, b)))
+│ │      #    v = round((255 / max(r, g, b)) * max(r, g, b))

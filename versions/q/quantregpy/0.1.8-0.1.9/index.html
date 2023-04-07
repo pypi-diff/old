@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/quantregpy-0.1.8.tar.gz tmp/quantregpy-0.1.9.tar.gz --html versions/q/quantregpy/0.1.8-0.1.9/index.html --text versions/q/quantregpy/0.1.8-0.1.9/diff.txt --markdown versions/q/quantregpy/0.1.8-0.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">16.2 KB</span></div>
+  <div><span class="source">tmp/quantregpy-0.1.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/quantregpy-0.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">384 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;/home/runner/work/quantregpy/quantregpy/dist/tmp<del>cxes5c_3</del>/quantregpy-0.1.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Mon<span class="dp">·</span>Feb<span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8<span class="dp">·</span>2021,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;/home/runner/work/quantregpy/quantregpy/dist/tmp<ins>mjd68kvx</ins>/quantregpy-0.1.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Mon<span class="dp">·</span>Feb<span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8<span class="dp">·</span>2021,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">15.8 KB</span></div>
+    <div><span class="source">quantregpy-0.1.8.tar</span> vs.</div>
+    <div id="quantregpy--.-.-.tar"><span class="source">quantregpy-0.1.9.tar</span>
+      <a class="anchor" href="#quantregpy--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">11.2 KB</span></div>
+      <div id="quantregpy--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 43 lines modified</td><td colspan="2">Offset 1, 44 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>293<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>293<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1488<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1488<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>2021-02-01<span class="dp">·</span>20:17:15.000000<span class="dp">·</span>quantregpy-0.1.9/VERSION</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>114<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/pyproject.toml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>114<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3283<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dcopy.f</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3283<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dcopy.f</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11119<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dgemm.f</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11119<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dgemm.f</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8763<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dgemv.f</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8763<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dgemv.f</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2007<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/disnan.f</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2007<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/disnan.f</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2608<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dlaisnan.f</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2608<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dlaisnan.f</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5698<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dposv.f</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5698<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dposv.f</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7206<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dpotrf.f</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7206<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dpotrf.f</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6318<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dpotrf2.f</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6318<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dpotrf2.f</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5381<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dpotrs.f</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5381<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dpotrs.f</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7269<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dsyr.f</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7269<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dsyr.f</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10798<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dsyrk.f</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10798<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dsyrk.f</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13788<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/dtrsm.f</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13788<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/dtrsm.f</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4564<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/ieeeck.f</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4564<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/ieeeck.f</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20815<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/ilaenv.f</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20815<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/ilaenv.f</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14102<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/iparmq.f</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14102<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/iparmq.f</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3137<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/lsame.f</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3137<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/lsame.f</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2152<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/blas_src/xerbla.f</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2152<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/blas_src/xerbla.f</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3524<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/cholesky.h</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3524<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/cholesky.h</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33382<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/crq.f</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33382<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/crq.f</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6240<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/rq0.f</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6240<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/rq0.f</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6182<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/rq1.f</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6182<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/rq1.f</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12232<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/rqbr.f</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12232<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/rqbr.f</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4965<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/rqfnb.f</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4965<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/rqfnb.f</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>405<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/rqs.f</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>405<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/rqs.f</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>788<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/_fortran/sparseM.h</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>788<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/_fortran/sparseM.h</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16685<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/quantreg.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16685<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/quantreg.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2064<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy/setup.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2064<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy.egg-info/</td><td class="diffline">37 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>293<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy.egg-info/PKG-INFO</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>293<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<del>28</del><span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy.egg-info/SOURCES.txt</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<ins>36</ins><span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy.egg-info/dependency_links.txt</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy.egg-info/requires.txt</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/quantregpy.egg-info/top_level.txt</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/quantregpy.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>1</del>8.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/setup.cfg</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>2</ins>8.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<del>18</del><span class="dp">·</span>2021-02-01<span class="dp">·</span><del>18</del>:1<del>0</del>:<del>01</del>.000000<span class="dp">·</span>quantregpy-0.1.<del>8</del>/setup.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(117)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<ins>56</ins><span class="dp">·</span>2021-02-01<span class="dp">·</span><ins>20</ins>:1<ins>7</ins>:<ins>14</ins>.000000<span class="dp">·</span>quantregpy-0.1.<ins>9</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/README.md</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--README.md"><span class="source">quantregpy-0.1.9/README.md</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dcopy.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dcopy.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dcopy.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dcopy.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dgemm.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dgemm.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dgemm.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dgemm.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dgemv.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dgemv.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dgemv.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dgemv.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/disnan.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-disnan.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/disnan.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-disnan.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dlaisnan.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dlaisnan.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dlaisnan.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dlaisnan.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dposv.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dposv.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dposv.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dposv.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrf.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dpotrf.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrf.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dpotrf.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrf2.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dpotrf-.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrf2.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dpotrf-.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dpotrs.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dpotrs.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dpotrs.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dpotrs.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dsyr.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dsyr.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dsyr.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dsyr.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dsyrk.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dsyrk.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dsyrk.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dsyrk.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/dtrsm.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dtrsm.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/dtrsm.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-dtrsm.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/ieeeck.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-ieeeck.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/ieeeck.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-ieeeck.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/ilaenv.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-ilaenv.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/ilaenv.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-ilaenv.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/iparmq.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-iparmq.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/iparmq.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-iparmq.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/lsame.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-lsame.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/lsame.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-lsame.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/blas_src/xerbla.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-xerbla.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/blas_src/xerbla.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-blas_src-xerbla.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/cholesky.h</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-cholesky.h"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/cholesky.h</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-cholesky.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/crq.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-crq.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/crq.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-crq.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/rq0.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rq-.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/rq0.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rq-.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/rq1.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rq-.f-1"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/rq1.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rq-.f-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/rqbr.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rqbr.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/rqbr.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rqbr.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/rqfnb.f</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rqfnb.f"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/rqfnb.f</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-rqfnb.f">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/_fortran/sparseM.h</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-sparseM.h"><span class="source">quantregpy-0.1.9/quantregpy/_fortran/sparseM.h</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-_fortran-sparseM.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/quantreg.py</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-quantreg.py"><span class="source">quantregpy-0.1.9/quantregpy/quantreg.py</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-quantreg.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy/setup.py</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-setup.py"><span class="source">quantregpy-0.1.9/quantregpy/setup.py</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy-setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">330 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/quantregpy.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--quantregpy.egg-info-SOURCES.txt"><span class="source">quantregpy-0.1.9/quantregpy.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--quantregpy.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">README.md</td><td class="diffline">1 </td><td class="diffpresent">README.md</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">VERSION</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">pyproject.toml</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">setup.py</td><td class="diffline">4 </td><td class="diffpresent">setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">quantregpy/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">quantregpy/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">quantregpy/quantreg.py</td><td class="diffline">6 </td><td class="diffpresent">quantregpy/quantreg.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">quantregpy/setup.py</td><td class="diffline">7 </td><td class="diffpresent">quantregpy/setup.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">quantregpy.egg-info/PKG-INFO</td><td class="diffline">8 </td><td class="diffpresent">quantregpy.egg-info/PKG-INFO</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">quantregpy.egg-info/SOURCES.txt</td><td class="diffline">9 </td><td class="diffpresent">quantregpy.egg-info/SOURCES.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">638 B</span></div>
+      <div><span class="source">quantregpy-0.1.8/setup.py</span> vs.</div>
+      <div id="quantregpy--.-.-.tar---quantregpy--.-.--setup.py"><span class="source">quantregpy-0.1.9/setup.py</span>
+        <a class="anchor" href="#quantregpy--.-.-.tar---quantregpy--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 12, 14 lines modified</td><td colspan="2">Offset 12, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config<span class="dp">·</span>=<span class="dp">·</span>Configuration(None,<span class="dp">·</span>parent_package,<span class="dp">·</span>top_path)<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config<span class="dp">·</span>=<span class="dp">·</span>Configuration(None,<span class="dp">·</span>parent_package,<span class="dp">·</span>top_path)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.set_options(ignore_setup_xxx_py=True,<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.set_options(ignore_setup_xxx_py=True,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assume_default_configuration=True,<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assume_default_configuration=True,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>delegate_options_to_subpackages=True,<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>delegate_options_to_subpackages=True,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>quiet=True)<em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>quiet=True)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.add_subpackage(&#x27;quantregpy&#x27;)<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.add_subpackage(&#x27;quantregpy&#x27;)<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>config.add_data_files(&#x27;VERSION&#x27;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>config<em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>config<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;VERSION&quot;,&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;VERSION&quot;,&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>f.read()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">metadata<span class="dp">·</span>=<span class="dp">·</span>dict(<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent">metadata<span class="dp">·</span>=<span class="dp">·</span>dict(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;quantregpy&#x27;,<em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;quantregpy&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>maintainer=&quot;David<span class="dp">·</span>Kaftan<span class="dp">·</span>and<span class="dp">·</span>Paul<span class="dp">·</span>Kaefer&quot;,<em>\xd</em></td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>maintainer=&quot;David<span class="dp">·</span>Kaftan<span class="dp">·</span>and<span class="dp">·</span>Paul<span class="dp">·</span>Kaefer&quot;,<em>\xd</em></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

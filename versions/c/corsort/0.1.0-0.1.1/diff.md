@@ -1,0 +1,1242 @@
+# Comparing `tmp/corsort-0.1.0.tar.gz` & `tmp/corsort-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "corsort-0.1.0.tar", last modified: Thu Feb 16 08:18:52 2023, max compression
++gzip compressed data, was "corsort-0.1.1.tar", last modified: Fri Apr  7 14:56:03 2023, max compression
+```
+
+## Comparing `corsort-0.1.0.tar` & `corsort-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,87 +1,91 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.737887 corsort-0.1.0/
+--rw-r--r--   0 runner    (1001) docker     (123)      224 2023-02-16 08:18:37.000000 corsort-0.1.0/AUTHORS.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     3489 2023-02-16 08:18:37.000000 corsort-0.1.0/CONTRIBUTING.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      406 2023-02-16 08:18:37.000000 corsort-0.1.0/HISTORY.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     1543 2023-02-16 08:18:37.000000 corsort-0.1.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      262 2023-02-16 08:18:37.000000 corsort-0.1.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     2563 2023-02-16 08:18:52.737887 corsort-0.1.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1438 2023-02-16 08:18:37.000000 corsort-0.1.0/README.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.729887 corsort-0.1.0/corsort/
+--rw-r--r--   0 runner    (1001) docker     (123)     1567 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5008 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/cor_sort.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1383 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/cor_sort_borda.py
+--rw-r--r--   0 runner    (1001) docker     (123)      907 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/cor_sort_delegate.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/cor_sort_gain.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/cor_sort_gain_lexi.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1076 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/distance_to_sorted_array.py
+--rw-r--r--   0 runner    (1001) docker     (123)      654 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/entropy_bound.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3541 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/jit_scorers.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26443 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/jit_sorts.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1193 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/merge.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8403 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/montecarlo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1141 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/partition.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1128 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/presets.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3569 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3887 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort_asort_quickselect.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9756 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort_ford_johnson.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2621 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort_largest_interval.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4414 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort_merge_bfs.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2762 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort_merge_dfs.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2840 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/sort_quick.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2898 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/wrap_full_jit.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1895 2023-02-16 08:18:37.000000 corsort-0.1.0/corsort/wrap_sort_scorer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.729887 corsort-0.1.0/corsort.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2563 2023-02-16 08:18:52.000000 corsort-0.1.0/corsort.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1953 2023-02-16 08:18:52.000000 corsort-0.1.0/corsort.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-16 08:18:52.000000 corsort-0.1.0/corsort.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-16 08:18:52.000000 corsort-0.1.0/corsort.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)       19 2023-02-16 08:18:52.000000 corsort-0.1.0/corsort.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       14 2023-02-16 08:18:52.000000 corsort-0.1.0/corsort.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.733888 corsort-0.1.0/docs/
+--rw-r--r--   0 runner    (1001) docker     (123)      608 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/Makefile
+--rw-r--r--   0 runner    (1001) docker     (123)       28 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/authors.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     5909 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/conf.py
+--rw-r--r--   0 runner    (1001) docker     (123)       33 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/contributing.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       28 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/history.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      328 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/index.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     1098 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/installation.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.733888 corsort-0.1.0/docs/logo/
+--rw-r--r--   0 runner    (1001) docker     (123)    14951 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/logo/logo.png
+--rw-r--r--   0 runner    (1001) docker     (123)     7433 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/logo/logo_small.png
+--rw-r--r--   0 runner    (1001) docker     (123)      769 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/make.bat
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.733888 corsort-0.1.0/docs/notebooks/
+--rw-r--r--   0 runner    (1001) docker     (123)      202 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/notebooks/index.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/readme.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.737887 corsort-0.1.0/docs/reference/
+--rw-r--r--   0 runner    (1001) docker     (123)       85 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/cor_sort.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/cor_sort_borda.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      109 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/cor_sort_delegate.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       97 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/cor_sort_gain.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      109 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/cor_sort_gain_lexi.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      101 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/distance_to_sorted_array.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       68 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/entropy_bound.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      422 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/index.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       74 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/jit_scorers.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       68 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/jit_sorts.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       44 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/merge.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       71 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/montecarlo.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       56 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/partition.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       62 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/presets.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       76 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      124 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort_asort_quickselect.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      109 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort_ford_johnson.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      121 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort_largest_interval.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort_merge_bfs.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort_merge_dfs.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       91 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/sort_quick.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       97 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/wrap_full_jit.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      106 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/reference/wrap_sort_scorer.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       69 2023-02-16 08:18:37.000000 corsort-0.1.0/docs/usage.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      449 2023-02-16 08:18:52.737887 corsort-0.1.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-02-16 08:18:37.000000 corsort-0.1.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-16 08:18:52.737887 corsort-0.1.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)       37 2023-02-16 08:18:37.000000 corsort-0.1.0/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      524 2023-02-16 08:18:37.000000 corsort-0.1.0/tests/test_corsort.py
+--rw-r--r--   0 runner    (1001) docker     (123)      250 2023-02-16 08:18:37.000000 corsort-0.1.0/tests/test_sort.py
+--rw-r--r--   0 runner    (1001) docker     (123)      284 2023-02-16 08:18:37.000000 corsort-0.1.0/tests/test_wrap_full_jit.py
+--rw-r--r--   0 runner    (1001) docker     (123)      412 2023-02-16 08:18:37.000000 corsort-0.1.0/tests/test_wrap_sort_scorer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.650547 corsort-0.1.1/
++-rw-r--r--   0 runner    (1001) docker     (123)      224 2023-04-07 14:55:50.000000 corsort-0.1.1/AUTHORS.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     3489 2023-04-07 14:55:50.000000 corsort-0.1.1/CONTRIBUTING.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-04-07 14:55:50.000000 corsort-0.1.1/HISTORY.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1543 2023-04-07 14:55:50.000000 corsort-0.1.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-07 14:55:50.000000 corsort-0.1.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     3493 2023-04-07 14:56:03.654547 corsort-0.1.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1444 2023-04-07 14:55:50.000000 corsort-0.1.1/README.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.646547 corsort-0.1.1/corsort/
++-rw-r--r--   0 runner    (1001) docker     (123)     1677 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21682 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/chain_and_y.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5081 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/cor_sort.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1380 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/cor_sort_borda.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1099 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/cor_sort_delegate.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/cor_sort_gain.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2724 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/cor_sort_gain_lexi.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1076 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/distance_to_sorted_array.py
++-rw-r--r--   0 runner    (1001) docker     (123)      654 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/entropy_bound.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3541 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/jit_scorers.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26443 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/jit_sorts.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1193 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/merge.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8403 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/montecarlo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/partition.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1128 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/presets.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4074 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3875 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort_asort_quickselect.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9776 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort_ford_johnson.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2609 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort_largest_interval.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4414 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort_merge_bfs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2762 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort_merge_dfs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3309 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/sort_quick.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6288 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/util_latex.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4956 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/wrap_full_jit.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3096 2023-04-07 14:55:50.000000 corsort-0.1.1/corsort/wrap_sort_scorer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.646547 corsort-0.1.1/corsort.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3493 2023-04-07 14:56:03.000000 corsort-0.1.1/corsort.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-07 14:56:03.000000 corsort-0.1.1/corsort.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 14:56:03.000000 corsort-0.1.1/corsort.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 14:56:03.000000 corsort-0.1.1/corsort.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       19 2023-04-07 14:56:03.000000 corsort-0.1.1/corsort.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-07 14:56:03.000000 corsort-0.1.1/corsort.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.646547 corsort-0.1.1/docs/
++-rw-r--r--   0 runner    (1001) docker     (123)      608 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/Makefile
++-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/authors.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     5909 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/conf.py
++-rw-r--r--   0 runner    (1001) docker     (123)       33 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/contributing.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/history.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      328 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/index.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1098 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/installation.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.646547 corsort-0.1.1/docs/logo/
++-rw-r--r--   0 runner    (1001) docker     (123)    14951 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/logo/logo.png
++-rw-r--r--   0 runner    (1001) docker     (123)     7433 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/logo/logo_small.png
++-rw-r--r--   0 runner    (1001) docker     (123)      769 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/make.bat
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.646547 corsort-0.1.1/docs/notebooks/
++-rw-r--r--   0 runner    (1001) docker     (123)      215 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/notebooks/index.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/readme.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.650547 corsort-0.1.1/docs/reference/
++-rw-r--r--   0 runner    (1001) docker     (123)       91 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/chain_and_y.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/cor_sort.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/cor_sort_borda.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/cor_sort_delegate.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       97 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/cor_sort_gain.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/cor_sort_gain_lexi.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      101 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/distance_to_sorted_array.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       68 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/entropy_bound.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      452 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/index.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       74 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/jit_scorers.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       68 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/jit_sorts.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/merge.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       71 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/montecarlo.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       56 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/partition.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/presets.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/print_order.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      124 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort_asort_quickselect.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      109 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort_ford_johnson.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      121 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort_largest_interval.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort_merge_bfs.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort_merge_dfs.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       91 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/sort_quick.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       97 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/wrap_full_jit.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/reference/wrap_sort_scorer.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       69 2023-04-07 14:55:50.000000 corsort-0.1.1/docs/usage.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      449 2023-04-07 14:56:03.654547 corsort-0.1.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-04-07 14:55:50.000000 corsort-0.1.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 14:56:03.650547 corsort-0.1.1/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-07 14:55:50.000000 corsort-0.1.1/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      524 2023-04-07 14:55:50.000000 corsort-0.1.1/tests/test_corsort.py
++-rw-r--r--   0 runner    (1001) docker     (123)      250 2023-04-07 14:55:50.000000 corsort-0.1.1/tests/test_sort.py
++-rw-r--r--   0 runner    (1001) docker     (123)      284 2023-04-07 14:55:50.000000 corsort-0.1.1/tests/test_wrap_full_jit.py
++-rw-r--r--   0 runner    (1001) docker     (123)      412 2023-04-07 14:55:50.000000 corsort-0.1.1/tests/test_wrap_sort_scorer.py
+```
+
+### Comparing `corsort-0.1.0/CONTRIBUTING.rst` & `corsort-0.1.1/CONTRIBUTING.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/LICENSE` & `corsort-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/PKG-INFO` & `corsort-0.1.1/PKG-INFO`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: corsort
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: Comparison-Oriented Sort.
+ Home-page: https://github.com/emczg/corsort
+ Author: Emma Caizergues
+ Author-email: emma.caizergues@gmail.com
+ License: GNU General Public License v3
+ Keywords: corsort
+ Classifier: Development Status :: 2 - Pre-Alpha
+@@ -19,36 +19,36 @@
+ License-File: LICENSE
+ License-File: AUTHORS.rst
+ 
+ =======
+ Corsort
+ =======
+ 
+-.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
+-    :alt: CorSort logo
+-    :target: https://emczg.github.io/corsort/
+-
+-
+ .. image:: https://img.shields.io/pypi/v/corsort.svg
+         :target: https://pypi.python.org/pypi/corsort
+         :alt: PyPI Status
+ 
+ .. image:: https://github.com/emczg/corsort/workflows/build/badge.svg?branch=main
+         :target: https://github.com/emczg/corsort/actions?query=workflow%3Abuild
+         :alt: Build Status
+ 
+ .. image:: https://github.com/emczg/corsort/workflows/docs/badge.svg?branch=main
+         :target: https://github.com/emczg/corsort/actions?query=workflow%3Adocs
+         :alt: Documentation Status
+ 
+ 
+ .. image:: https://codecov.io/gh/emczg/corsort/branch/main/graphs/badge.svg
+-        :target: https://codecov.io/gh/emczg/corsort/tree/main
++        :target: https://app.codecov.io/gh/emczg/corsort/tree/main/
+         :alt: Code Coverage
+ 
++|
++
++.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
++    :alt: CorSort logo
++    :target: https://emczg.github.io/corsort/
+ 
+ 
+ Comparison-Oriented Sort.
+ 
+ 
+ * Free software: GNU General Public License v3
+ * Documentation: https://emczg.github.io/corsort/.
+@@ -71,16 +71,31 @@
+ .. _`francois-durand/package_helper_2`: https://github.com/francois-durand/package_helper_2
+ 
+ 
+ =======
+ History
+ =======
+ 
++------------------------------------------
++0.1.1 (2023-04-7): More history, ChainAndY
++------------------------------------------
++
++* Add `Sort.history_comparisons_values_`: history of the pairwise comparisons, in terms of compared values
++  (whereas `history_comparisons_` gives the original indices). Similarly, add
++  `WrapSortScorer.history_comparisons_values_` and `WrapFullJit.history_comparisons_values_`.
++* Add `CorSort.history_leq_`: history of the matrix `leq_` representing the current poset. This is recorded
++  if the newly added parameter `record_leq` is True.
++* Add `WrapFullJit.history_states_`: history of the state of the list.
++* Add `ChainAndY`: poset consisting of a chain and a Y-shape.
++* Add `print_corsort_execution`: generate LaTeX code for a CorSort execution.
++* `partition` is now stable (in the sense of "stable" sorting), hence also `SortQuick`, `SortAsortQuickselect`,
++  and `SortLargestInterval`.
++
+ ---------------------------------
+ 0.1.0 (2023-02-16): First release
+ ---------------------------------
+ 
+ * Corsort (regular Python or with numba acceleration).
+-* Classical sorting algorithms: Asort (with quickselect for median seletion), Ford-Johnson, quicksort, quicksort with
++* Classical sorting algorithms: Asort (with quickselect for median selection), Ford-Johnson, quicksort, quicksort with
+   priority on the largest interval, merge sort (DFS or BFS).
+ * Entropy bound.
+ * Monte-Carlo simulations.
+```
+
+### Comparing `corsort-0.1.0/README.rst` & `corsort-0.1.1/README.rst`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,33 +1,33 @@
+ =======
+ Corsort
+ =======
+ 
+-.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
+-    :alt: CorSort logo
+-    :target: https://emczg.github.io/corsort/
+-
+-
+ .. image:: https://img.shields.io/pypi/v/corsort.svg
+         :target: https://pypi.python.org/pypi/corsort
+         :alt: PyPI Status
+ 
+ .. image:: https://github.com/emczg/corsort/workflows/build/badge.svg?branch=main
+         :target: https://github.com/emczg/corsort/actions?query=workflow%3Abuild
+         :alt: Build Status
+ 
+ .. image:: https://github.com/emczg/corsort/workflows/docs/badge.svg?branch=main
+         :target: https://github.com/emczg/corsort/actions?query=workflow%3Adocs
+         :alt: Documentation Status
+ 
+ 
+ .. image:: https://codecov.io/gh/emczg/corsort/branch/main/graphs/badge.svg
+-        :target: https://codecov.io/gh/emczg/corsort/tree/main
++        :target: https://app.codecov.io/gh/emczg/corsort/tree/main/
+         :alt: Code Coverage
+ 
++|
++
++.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
++    :alt: CorSort logo
++    :target: https://emczg.github.io/corsort/
+ 
+ 
+ Comparison-Oriented Sort.
+ 
+ 
+ * Free software: GNU General Public License v3
+ * Documentation: https://emczg.github.io/corsort/.
+```
+
+### Comparing `corsort-0.1.0/corsort/__init__.py` & `corsort-0.1.1/corsort/__init__.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,14 +1,15 @@
+ """Top-level package for Corsort."""
+ 
+ __author__ = """Emma Caizergues"""
+ __email__ = 'emma.caizergues@gmail.com'
+-__version__ = '0.1.0'
++__version__ = '0.1.1'
+ 
+ 
++from corsort.chain_and_y import ChainAndY, print_order
+ from corsort.cor_sort import CorSort
+ from corsort.cor_sort_borda import CorSortBorda
+ from corsort.cor_sort_delegate import CorSortDelegate
+ from corsort.cor_sort_gain import CorSortGain
+ from corsort.cor_sort_gain_lexi import CorSortGainLexi
+ from corsort.distance_to_sorted_array import distance_to_sorted_array
+ from corsort.entropy_bound import entropy_bound
+@@ -24,9 +25,10 @@
+ from corsort.sort import Sort
+ from corsort.sort_asort_quickselect import SortAsortQuickselect
+ from corsort.sort_ford_johnson import SortFordJohnson
+ from corsort.sort_largest_interval import SortLargestInterval
+ from corsort.sort_merge_bfs import SortMergeBfs
+ from corsort.sort_merge_dfs import SortMergeDfs
+ from corsort.sort_quick import SortQuick
++from corsort.util_latex import print_corsort_execution
+ from corsort.wrap_full_jit import WrapFullJit
+ from corsort.wrap_sort_scorer import WrapSortScorer
+```
+
+### Comparing `corsort-0.1.0/corsort/cor_sort.py` & `corsort-0.1.1/corsort/cor_sort.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -27,19 +27,21 @@
+         words, the position estimates are the Borda scores.
+ 
+     Notes
+     -----
+     Cf. also the attributes defined in the parent class :class:`~corsort.Sort`.
+     """
+ 
+-    def __init__(self, compute_history=False):
++    def __init__(self, compute_history=False, record_leq=False):
+         super().__init__(compute_history=compute_history)
++        self.record_leq = record_leq
+         # Computed attributes
+         self.leq_ = None
+         self.position_estimates_ = None
++        self.history_leq_ = None
+ 
+     def update_position_estimates(self):
+         """
+         Update position estimate of each item.
+ 
+         Examples
+         --------
+@@ -104,14 +106,16 @@
+ 
+         Now we know the full order by transitivity.
+         """
+         mask_i_and_smaller = self.leq_[:, i] > 0
+         mask_j_and_greater = self.leq_[j, :] > 0
+         self.leq_[np.ix_(mask_i_and_smaller, mask_j_and_greater)] = 1
+         self.leq_[np.ix_(mask_j_and_greater, mask_i_and_smaller)] = -1
++        if self.record_leq:
++            self.history_leq_.append(self.leq_.copy())
+         self.update_position_estimates()
+ 
+     def compare_and_update_poset(self, i, j):
+         """
+         Perform a comparison between perm[i] and perm[j], and update the poset accordingly.
+ 
+         Parameters
+@@ -147,17 +151,16 @@
+             False
+             >>> my_sort.n_comparisons_
+             1
+             >>> my_sort.history_distances_
+             [1]
+         """
+         self.leq_ = np.eye(self.n_, dtype=int)
++        self.history_leq_ = []
++        if self.record_leq:
++            self.history_leq_.append(self.leq_.copy())
+         self.update_position_estimates()
+ 
+     def _call_aux(self):
+         for c in self.next_compare():
+             self.compare_and_update_poset(*c)
+-        # Final update of history_distance
+-        if self.compute_history:
+-            self.history_distances_.append(
+-                distance_to_sorted_array(self.perm_[np.argsort(self.position_estimates_)]))
+         return self
+```
+
+### Comparing `corsort-0.1.0/corsort/cor_sort_borda.py` & `corsort-0.1.1/corsort/cor_sort_borda.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+         >>> corsort = CorSortBorda(compute_history=True)
+         >>> corsort(perm).n_comparisons_
+         44
+         >>> entropy_bound(n)  # doctest: +ELLIPSIS
+         40.24212...
+         >>> corsort.history_distances_ # doctest: +NORMALIZE_WHITESPACE
+         [55, 42, 51, 49, 49, 48, 40, 39, 33, 29, 29, 28, 28, 28, 28, 26, 26, 21, 20, 16, 14, 11, 10, 9, 8, 7,
+-         8, 7, 6, 7, 7, 7, 7, 5, 5, 4, 4, 4, 3, 2, 3, 2, 1, 0, 0, 0]
++         8, 7, 6, 7, 7, 7, 7, 5, 5, 4, 4, 4, 3, 2, 3, 2, 1, 0, 0]
+         >>> corsort.__name__
+         'corsort_borda'
+     """
+ 
+     __name__ = 'corsort_borda'
+ 
+     def next_compare(self):
+```
+
+### Comparing `corsort-0.1.0/corsort/cor_sort_delegate.py` & `corsort-0.1.1/corsort/cor_sort_delegate.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -10,24 +10,26 @@
+     Parameters
+     ----------
+     sort: Sort
+         A sorting algorithm.
+ 
+     Examples
+     --------
+-        >>> corsort = CorSortDelegate(SortQuick())
++        >>> corsort = CorSortDelegate(SortQuick(), compute_history=True)
+         >>> corsort(np.array(['e', 'b', 'a', 'c', 'd'])).n_comparisons_
+         8
+         >>> corsort.history_comparisons_
+         [(1, 0), (2, 0), (3, 0), (4, 0), (2, 1), (1, 3), (1, 4), (3, 4)]
++        >>> corsort.history_distances_
++        [5, 1, 1, 1, 1, 2, 1, 0, 0]
+         >>> corsort.__name__
+         'corsort_delegate_quicksort'
+     """
+ 
+-    def __init__(self, sort):
+-        super().__init__()
++    def __init__(self, sort, compute_history=False, record_leq=False):
++        super().__init__(compute_history=compute_history, record_leq=record_leq)
+         self.sort = sort
+         self.__name__ = "corsort_delegate_" + self.sort.__name__
+ 
+     def next_compare(self):
+         self.sort(self.perm_)
+         return self.sort.history_comparisons_
+```
+
+### Comparing `corsort-0.1.0/corsort/cor_sort_gain.py` & `corsort-0.1.1/corsort/cor_sort_gain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/cor_sort_gain_lexi.py` & `corsort-0.1.1/corsort/cor_sort_gain_lexi.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+         >>> corsort = CorSortGainLexi(compute_history=True)
+         >>> corsort(p).n_comparisons_
+         39
+         >>> entropy_bound(n_) # doctest: +ELLIPSIS
+         40.24212...
+         >>> corsort.history_distances_ # doctest: +NORMALIZE_WHITESPACE
+         [55, 42, 51, 49, 49, 43, 39, 38, 37, 36, 28, 27, 22, 21, 20, 19, 13, 14, 13, 15,
+-        12, 13, 13, 11, 10, 6, 5, 5, 4, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 0, 0]
++        12, 13, 13, 11, 10, 6, 5, 5, 4, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 0]
+         >>> corsort.__name__
+         'corsort_lexi'
+     """
+ 
+     __name__ = 'corsort_lexi'
+ 
+     def gain_i_lt_j(self, i, j):
+```
+
+### Comparing `corsort-0.1.0/corsort/distance_to_sorted_array.py` & `corsort-0.1.1/corsort/distance_to_sorted_array.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/entropy_bound.py` & `corsort-0.1.1/corsort/entropy_bound.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/jit_scorers.py` & `corsort-0.1.1/corsort/jit_scorers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/jit_sorts.py` & `corsort-0.1.1/corsort/jit_sorts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/merge.py` & `corsort-0.1.1/corsort/merge.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/montecarlo.py` & `corsort-0.1.1/corsort/montecarlo.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -45,30 +45,30 @@
+     >>> with Pool() as p:
+     ...     my_res = evaluate(my_sort_list, my_n_list, nt=my_nt, pool=p)
+     Evaluate quicksort for n = 10
+     Evaluate corsort_borda for n = 10
+     Evaluate quicksort for n = 15
+     Evaluate corsort_borda for n = 15
+     >>> print_res(my_res)
+-    n=10, quicksort: mean=24.05, std=3.52
+-    n=15, quicksort: mean=46.72, std=6.90
++    n=10, quicksort: mean=24.15, std=3.50
++    n=15, quicksort: mean=46.26, std=6.99
+     n=10, corsort_borda: mean=22.11, std=0.87
+     n=15, corsort_borda: mean=40.59, std=1.33
+ 
+     Same without the pool:
+ 
+     >>> np.random.seed(42)
+     >>> my_res = evaluate(my_sort_list, my_n_list, nt=my_nt)
+     Evaluate quicksort for n = 10
+     Evaluate corsort_borda for n = 10
+     Evaluate quicksort for n = 15
+     Evaluate corsort_borda for n = 15
+     >>> print_res(my_res)
+-    n=10, quicksort: mean=24.05, std=3.52
+-    n=15, quicksort: mean=46.72, std=6.90
++    n=10, quicksort: mean=24.15, std=3.50
++    n=15, quicksort: mean=46.26, std=6.99
+     n=10, corsort_borda: mean=22.11, std=0.87
+     n=15, corsort_borda: mean=40.59, std=1.33
+ 
+     Bound (loose, not exact):
+ 
+     >>> print("\\n".join(f"Bound for n={my_n}: {entropy_bound(my_n):.2f}" for my_n in my_n_list))
+     Bound for n=10: 21.78
+@@ -131,29 +131,29 @@
+     Evaluate corsort and quicksort using a Pool:
+ 
+     >>> with Pool() as p:
+     ...     my_res = evaluate_convergence(my_sort_list, my_n, nt=my_nt, pool=p)
+     Evaluate convergence of quicksort for n = 10
+     Evaluate convergence of corsort_borda for n = 10
+     >>> np.round(np.mean(my_res['quicksort'], axis=0), 1)  # doctest: +NORMALIZE_WHITESPACE
+-    array([22.7, 22.1, 21.5, 20.6, 19.9, 18.8, 17.4, 16.1, 14.1, 12. , 11.6,
+-           11. , 10.3,  9.3,  8.3,  7.2,  6.2,  5.4,  4.6,  3.8,  3.1,  2.5,
+-            1.7,  1.3,  1. ,  0.8,  0.6,  0.4,  0.2,  0.2,  0.1,  0. ,  0. ,
++    array([22.7, 22.1, 21.5, 20.6, 19.9, 18.8, 17.5, 16.2, 14.2, 12.2, 11.7,
++           11.2, 10.5,  9.5,  8.6,  7.5,  6.3,  5.4,  4.6,  3.8,  3. ,  2.3,
++            1.7,  1.3,  0.9,  0.7,  0.5,  0.4,  0.3,  0.2,  0.1,  0.1,  0. ,
+             0. ,  0. ,  0. ,  0. ])
+ 
+     Same without the pool:
+ 
+     >>> np.random.seed(42)
+     >>> my_res = evaluate_convergence(my_sort_list, my_n, nt=my_nt)
+     Evaluate convergence of quicksort for n = 10
+     Evaluate convergence of corsort_borda for n = 10
+     >>> np.round(np.mean(my_res['quicksort'], axis=0), 1)  # doctest: +NORMALIZE_WHITESPACE
+-    array([22.7, 22.1, 21.5, 20.6, 19.9, 18.8, 17.4, 16.1, 14.1, 12. , 11.6,
+-           11. , 10.3,  9.3,  8.3,  7.2,  6.2,  5.4,  4.6,  3.8,  3.1,  2.5,
+-            1.7,  1.3,  1. ,  0.8,  0.6,  0.4,  0.2,  0.2,  0.1,  0. ,  0. ,
++    array([22.7, 22.1, 21.5, 20.6, 19.9, 18.8, 17.5, 16.2, 14.2, 12.2, 11.7,
++           11.2, 10.5,  9.5,  8.6,  7.5,  6.3,  5.4,  4.6,  3.8,  3. ,  2.3,
++            1.7,  1.3,  0.9,  0.7,  0.5,  0.4,  0.3,  0.2,  0.1,  0.1,  0. ,
+             0. ,  0. ,  0. ,  0. ])
+     """
+     res = dict()
+     for sort in sort_list:
+         name = sort.__name__
+         compute_history_old = sort.compute_history
+         sort.compute_history = True
+@@ -203,26 +203,26 @@
+     >>> with Pool() as p:
+     ...     my_res = evaluate_comparisons(my_sort_list, my_n_list, nt=my_nt, pool=p)
+     Evaluate comparisons of quicksort for n = 10
+     Evaluate comparisons of corsort_borda for n = 10
+     Evaluate comparisons of quicksort for n = 15
+     Evaluate comparisons of corsort_borda for n = 15
+     >>> np.round(np.mean(my_res['quicksort'][10]), 1)
+-    24.0
++    24.2
+ 
+     Same without the pool:
+ 
+     >>> np.random.seed(42)
+     >>> my_res = evaluate_comparisons(my_sort_list, my_n_list, nt=my_nt)
+     Evaluate comparisons of quicksort for n = 10
+     Evaluate comparisons of corsort_borda for n = 10
+     Evaluate comparisons of quicksort for n = 15
+     Evaluate comparisons of corsort_borda for n = 15
+     >>> np.round(np.mean(my_res['quicksort'][10]), 1)
+-    24.0
++    24.2
+     """
+     res = defaultdict(dict)
+     for n in n_list:
+         for sort in sort_list:
+             print(f"Evaluate comparisons of {sort.__name__} for n = {n}")
+             convergence_times = np.zeros(nt, dtype=int)
+             if pool is not None:
+```
+
+### Comparing `corsort-0.1.0/corsort/partition.py` & `corsort-0.1.1/corsort/partition.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -23,19 +23,18 @@
+ 
+     Examples
+     --------
+         >>> my_xs = np.array([4, 1, 7, 6, 0, 8, 2, 3, 5])
+         >>> partition(my_xs, i=0, j=len(my_xs) - 1, lt=lambda x, y: x < y)
+         4
+         >>> my_xs
+-        array([1, 0, 2, 3, 4, 8, 6, 7, 5])
++        array([1, 0, 2, 3, 4, 7, 6, 8, 5])
+     """
+     pivot_value = xs[i]
+     pivot_index = i
+     for k in range(i + 1, j + 1):
+         if lt(xs[k], pivot_value):
+-            if k > pivot_index + 1:
+-                xs[pivot_index], xs[pivot_index + 1], xs[k] = xs[k], pivot_value, xs[pivot_index + 1]
+-            else:
+-                xs[pivot_index], xs[k] = xs[k], pivot_value
++            xs[pivot_index] = xs[k]
++            xs[pivot_index + 2:k + 1] = xs[pivot_index + 1: k]
++            xs[pivot_index + 1] = pivot_value
+             pivot_index += 1
+     return pivot_index
+```
+
+### Comparing `corsort-0.1.0/corsort/presets.py` & `corsort-0.1.1/corsort/presets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/sort.py` & `corsort-0.1.1/corsort/sort.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -112,15 +112,26 @@
+ 
+         Returns
+         -------
+         Itself.
+         """
+         self._initialize_algo(perm)
+         self._call_aux()
+-        self.history_distances_.append(self.distance_to_sorted_array())
++        # Final update of history_distance
++        if self.compute_history:
++            self.history_distances_.append(self.distance_to_sorted_array())
+         return self
+ 
+     def _call_aux(self):
+         """
+         Must update self.n_comparisons_, self.history_distances_.
+         """
+         raise NotImplementedError
++
++    @property
++    def history_comparisons_values_(self):
++        """:class:`list` of :class:`tuple`: History of the pairwise comparisons, in terms of compared values.
++        Tuple (x, y) means that items of values x and y were compared, and that x < y.
++        """
++        if self.history_comparisons_ is None:
++            return None
++        return [(self.perm_[i], self.perm_[j]) for (i, j) in self.history_comparisons_]
+```
+
+### Comparing `corsort-0.1.0/corsort/sort_asort_quickselect.py` & `corsort-0.1.1/corsort/sort_asort_quickselect.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -9,20 +9,20 @@
+     Quicksort.
+ 
+     Examples
+     --------
+         >>> asort = SortAsortQuickselect(compute_history=True)
+         >>> my_xs = np.array([4, 1, 7, 6, 0, 8, 2, 3, 5])
+         >>> asort(my_xs).n_comparisons_
+-        17
++        16
+         >>> asort.history_comparisons_  # doctest: +NORMALIZE_WHITESPACE
+         [(1, 0), (0, 2), (0, 3), (4, 0), (0, 5), (6, 0), (7, 0), (0, 8),
+-        (4, 1), (1, 6), (1, 7), (3, 5), (2, 5), (8, 5), (3, 2), (8, 3), (6, 7)]
++        (4, 1), (1, 6), (1, 7), (3, 2), (2, 5), (8, 2), (8, 3), (6, 7)]
+         >>> asort.history_distances_
+-        [17, 16, 16, 16, 12, 12, 10, 6, 6, 5, 5, 5, 4, 3, 2, 2, 0, 0]
++        [17, 16, 16, 16, 13, 13, 9, 5, 5, 4, 4, 4, 3, 3, 1, 0, 0]
+         >>> asort.sorted_list_
+         array([0, 1, 2, 3, 4, 5, 6, 7, 8])
+     """
+ 
+     __name__ = 'asort_quickselect'
+ 
+     def __init__(self, compute_history=False):
+```
+
+### Comparing `corsort-0.1.0/corsort/sort_ford_johnson.py` & `corsort-0.1.1/corsort/sort_ford_johnson.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -26,15 +26,15 @@
+ 
+     def _initialize_algo_aux(self):
+         pass
+ 
+     def _call_aux(self):
+         self.sorted_indices_ = np.array(_ford_johnson_sorting(np.arange(self.n_), lt=self.test_i_lt_j))
+ 
+-    def distance_to_sorted_array(self):
++    def distance_to_sorted_array(self):  # pragma: no cover
+         return None  # TODO: implement distance to sorted array
+ 
+     @property
+     def sorted_list_(self):
+         return self.perm_[self.sorted_indices_]
+```
+
+### Comparing `corsort-0.1.0/corsort/sort_largest_interval.py` & `corsort-0.1.1/corsort/sort_largest_interval.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -9,20 +9,20 @@
+     Adaptation of quicksort where we always sort the largest remaining interval.
+ 
+     Examples
+     --------
+         >>> my_sort = SortLargestInterval(compute_history=True)
+         >>> my_xs = np.array([4, 1, 7, 6, 0, 8, 2, 3, 5])
+         >>> my_sort(my_xs).n_comparisons_
+-        17
++        16
+         >>> my_sort.history_comparisons_  # doctest: +NORMALIZE_WHITESPACE
+         [(1, 0), (0, 2), (0, 3), (4, 0), (0, 5), (6, 0), (7, 0), (0, 8),
+-        (4, 1), (1, 6), (1, 7), (3, 5), (2, 5), (8, 5), (3, 2), (8, 3), (6, 7)]
++        (4, 1), (1, 6), (1, 7), (3, 2), (2, 5), (8, 2), (6, 7), (8, 3)]
+         >>> my_sort.history_distances_
+-        [17, 16, 16, 16, 12, 12, 10, 6, 6, 5, 5, 5, 4, 3, 2, 2, 0, 0]
++        [17, 16, 16, 16, 13, 13, 9, 5, 5, 4, 4, 4, 3, 3, 1, 1, 0]
+         >>> my_sort.sorted_list_
+         array([0, 1, 2, 3, 4, 5, 6, 7, 8])
+     """
+ 
+     __name__ = 'sort_largest_interval'
+ 
+     def __init__(self, compute_history=False):
+```
+
+### Comparing `corsort-0.1.0/corsort/sort_merge_bfs.py` & `corsort-0.1.1/corsort/sort_merge_bfs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/sort_merge_dfs.py` & `corsort-0.1.1/corsort/sort_merge_dfs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/corsort/sort_quick.py` & `corsort-0.1.1/corsort/sort_quick.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -9,32 +9,44 @@
+     Quicksort.
+ 
+     Examples
+     --------
+         >>> quicksort = SortQuick(compute_history=True)
+         >>> my_xs = np.array([4, 1, 7, 6, 0, 8, 2, 3, 5])
+         >>> quicksort(my_xs).n_comparisons_
+-        17
++        16
+         >>> quicksort.history_comparisons_  # doctest: +NORMALIZE_WHITESPACE
+-        [(1, 0), (0, 2), (0, 3), (4, 0), (0, 5), (6, 0), (7, 0), (0, 8), (4, 1),
+-        (1, 6), (1, 7), (6, 7), (3, 5), (2, 5), (8, 5), (3, 2), (8, 3)]
++        [(1, 0), (0, 2), (0, 3), (4, 0), (0, 5), (6, 0), (7, 0), (0, 8),
++        (4, 1), (1, 6), (1, 7), (6, 7), (3, 2), (2, 5), (8, 2), (8, 3)]
++        >>> quicksort.history_comparisons_values_  # doctest: +NORMALIZE_WHITESPACE
++        [(1, 4), (4, 7), (4, 6), (0, 4), (4, 8), (2, 4), (3, 4), (4, 5),
++        (0, 1), (1, 2), (1, 3), (2, 3), (6, 7), (7, 8), (5, 7), (5, 6)]
+         >>> quicksort.history_distances_
+-        [17, 16, 16, 16, 12, 12, 10, 6, 6, 5, 5, 5, 5, 4, 3, 2, 2, 0]
++        [17, 16, 16, 16, 13, 13, 9, 5, 5, 4, 4, 4, 4, 3, 3, 1, 0]
+         >>> quicksort.sorted_list_
+         array([0, 1, 2, 3, 4, 5, 6, 7, 8])
+ 
+         >>> np.random.seed(42)
+         >>> quicksort = SortQuick(compute_history=False)
+         >>> quicksort(np.random.permutation(100)).n_comparisons_
+-        659
++        662
+     """
+ 
+     __name__ = 'quicksort'
+ 
+     def __init__(self, compute_history=False):
++        """
++        Examples
++        --------
++        Before using the algorithm, `history_comparisons_values_` is None:
++
++            >>> quicksort = SortQuick()
++            >>> print(quicksort.history_comparisons_values_)
++            None
++        """
+         super().__init__(compute_history=compute_history)
+         self.sorted_indices_ = None
+ 
+     def _initialize_algo_aux(self):
+         self.sorted_indices_ = np.arange(self.n_)
+ 
+     def _call_aux(self):
+```
+
+### Comparing `corsort-0.1.0/corsort/wrap_full_jit.py` & `corsort-0.1.1/corsort/wrap_sort_scorer.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,87 +1,78 @@
+ import numpy as np
+-from corsort.entropy_bound import entropy_bound
+ from corsort.distance_to_sorted_array import distance_to_sorted_array
+-from corsort.jit_sorts import jit_corsort_borda
++from corsort.sort_quick import SortQuick
++from corsort.jit_scorers import scorer_spaced
+ 
+ 
+-class WrapFullJit:
++class WrapSortScorer:
+     """
+-    Delegate everything (sort and scores) to a jit function.
+-
+-    Parameters
+-    ----------
+-    compute_history: :class:`bool`
+-        If True, then compute the history of the distance to the sorted array.
+-
+-    Attributes
+-    ----------
+-    n_: :class:`int`:
+-        Number of items in the list.
+-    perm_: :class:`~numpy.ndarray`
+-        Input permutation.
+-    n_comparisons_: :class:`int`
+-        Number of comparison performed.
+-    history_distances_: :class:`list` of :class:`int`
+-        History of the kendall-tau distance to the sorted list.
+-    history_comparisons_: :class:`list` of :class:`tuple`
+-        History of the pairwise comparisons. Tuple (i, j) means that items of indices i and j were compared, and
+-        that perm[i] < perm[j].
+-
+     Examples
+     --------
+-        >>> corsort = WrapFullJit(jit_sort=jit_corsort_borda, compute_history=True)
+-        >>> corsort.__name__
+-        'corsort_borda'
+-        >>> np.random.seed(22)
+-        >>> n = 15
+-        >>> p = np.random.permutation(n)
+-        >>> corsort(p).n_comparisons_
+-        43
+-        >>> entropy_bound(n)  # doctest: +ELLIPSIS
+-        40.24212...
+-        >>> corsort.history_distances_  # doctest: +NORMALIZE_WHITESPACE
+-        [55, 42, 51, 49, 49, 48, 40, 39, 33, 29, 29, 29, 28, 28, 28, 26, 26, 21, 20, 16, 14, 11, 10, 9, 8, 10,
+-        8, 7, 6, 7, 5, 4, 4, 5, 4, 3, 4, 3, 3, 2, 2, 0, 1, 0]
++        >>> my_sort = SortQuick(compute_history=False)
++        >>> jit_sort = WrapSortScorer(scorer=scorer_spaced, sort=my_sort, compute_history=False)
++        >>> my_xs = np.array([4, 1, 7, 6, 0, 8, 2, 3, 5])
++        >>> jit_sort(my_xs).n_comparisons_
++        16
++        >>> jit_sort.__name__
++        'quicksort_spaced'
++        >>> jit_sort.history_comparisons_  # doctest: +NORMALIZE_WHITESPACE
++        [(1, 0), (0, 2), (0, 3), (4, 0), (0, 5), (6, 0), (7, 0), (0, 8),
++        (4, 1), (1, 6), (1, 7), (6, 7), (3, 2), (2, 5), (8, 2), (8, 3)]
++        >>> jit_sort.history_comparisons_values_  # doctest: +NORMALIZE_WHITESPACE
++        [(1, 4), (4, 7), (4, 6), (0, 4), (4, 8), (2, 4), (3, 4), (4, 5),
++        (0, 1), (1, 2), (1, 3), (2, 3), (6, 7), (7, 8), (5, 7), (5, 6)]
+     """
+ 
+-    def __init__(self, jit_sort, compute_history=False):
++    def __init__(self, scorer, sort, compute_history=False):
++        """
++        Examples
++        --------
++        Before using the algorithm, `history_comparisons_values_` is None:
++
++            >>> my_sort = SortQuick()
++            >>> jit_sort = WrapSortScorer(scorer=scorer_spaced, sort=my_sort)
++            >>> print(jit_sort.history_comparisons_values_)
++            None
++        """
+         # Parameters
+-        self.jit_sort = jit_sort
+-        name_jit_sort = jit_sort.__name__
+-        i = name_jit_sort.find('jit_')
+-        if i >= 0:
+-            name_jit_sort = name_jit_sort[i + 4:]
+-        self.__name__ = name_jit_sort
++        self.scorer = scorer
++        self.sort = sort
+         self.compute_history = compute_history
++        name_scorer = scorer.__name__
++        i = name_scorer.find('scorer_')
++        if i >= 0:
++            name_scorer = name_scorer[i + 7:]
++        self.__name__ = self.sort.__name__ + '_' + name_scorer
+         # Computed values
+         self.n_ = None
+         self.perm_ = None
+         self.n_comparisons_ = None
+         self.history_distances_ = None
+         self.history_comparisons_ = None
+ 
+     def __call__(self, perm):
+-        """
+-        Sort.
+-
+-        Parameters
+-        ----------
+-        perm: :class:`numpy.ndarray`
+-            Input permutation to sort. Typically the output of :meth`~numpy.random.permutation`.
+-
+-        Returns
+-        -------
+-        Itself.
+-        """
+         if isinstance(perm, list):
+             perm = np.array(perm)
+-        states, scores, comparisons = self.jit_sort(perm)
+         self.n_ = len(perm)
+         self.perm_ = perm
+-        self.n_comparisons_ = len(states) - 1
++        self.sort(perm)
++        self.history_comparisons_ = self.sort.history_comparisons_
++        downs = np.array([c[0] for c in self.sort.history_comparisons_])
++        ups = np.array([c[1] for c in self.sort.history_comparisons_])
++        states = self.scorer(self.n_, downs, ups)
++        self.n_comparisons_ = states.shape[0] - 1
+         if self.compute_history:
+-            self.history_distances_ = [distance_to_sorted_array(state) for state in states]
++            self.history_distances_ = [distance_to_sorted_array(self.perm_[np.argsort(state)])
++                                       for state in states]
+         else:
+             self.history_distances_ = []
+-        self.history_comparisons_ = comparisons
+         return self
++
++    @property
++    def history_comparisons_values_(self):
++        """:class:`list` of :class:`tuple`: History of the pairwise comparisons, in terms of compared values.
++        Tuple (x, y) means that items of values x and y were compared, and that x < y.
++        """
++        if self.history_comparisons_ is None:
++            return None
++        return [(self.perm_[i], self.perm_[j]) for (i, j) in self.history_comparisons_]
+```
+
+### Comparing `corsort-0.1.0/corsort.egg-info/PKG-INFO` & `corsort-0.1.1/corsort.egg-info/PKG-INFO`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: corsort
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: Comparison-Oriented Sort.
+ Home-page: https://github.com/emczg/corsort
+ Author: Emma Caizergues
+ Author-email: emma.caizergues@gmail.com
+ License: GNU General Public License v3
+ Keywords: corsort
+ Classifier: Development Status :: 2 - Pre-Alpha
+@@ -19,36 +19,36 @@
+ License-File: LICENSE
+ License-File: AUTHORS.rst
+ 
+ =======
+ Corsort
+ =======
+ 
+-.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
+-    :alt: CorSort logo
+-    :target: https://emczg.github.io/corsort/
+-
+-
+ .. image:: https://img.shields.io/pypi/v/corsort.svg
+         :target: https://pypi.python.org/pypi/corsort
+         :alt: PyPI Status
+ 
+ .. image:: https://github.com/emczg/corsort/workflows/build/badge.svg?branch=main
+         :target: https://github.com/emczg/corsort/actions?query=workflow%3Abuild
+         :alt: Build Status
+ 
+ .. image:: https://github.com/emczg/corsort/workflows/docs/badge.svg?branch=main
+         :target: https://github.com/emczg/corsort/actions?query=workflow%3Adocs
+         :alt: Documentation Status
+ 
+ 
+ .. image:: https://codecov.io/gh/emczg/corsort/branch/main/graphs/badge.svg
+-        :target: https://codecov.io/gh/emczg/corsort/tree/main
++        :target: https://app.codecov.io/gh/emczg/corsort/tree/main/
+         :alt: Code Coverage
+ 
++|
++
++.. image:: https://github.com/emczg/corsort/raw/main/docs/logo/logo.png
++    :alt: CorSort logo
++    :target: https://emczg.github.io/corsort/
+ 
+ 
+ Comparison-Oriented Sort.
+ 
+ 
+ * Free software: GNU General Public License v3
+ * Documentation: https://emczg.github.io/corsort/.
+@@ -71,16 +71,31 @@
+ .. _`francois-durand/package_helper_2`: https://github.com/francois-durand/package_helper_2
+ 
+ 
+ =======
+ History
+ =======
+ 
++------------------------------------------
++0.1.1 (2023-04-7): More history, ChainAndY
++------------------------------------------
++
++* Add `Sort.history_comparisons_values_`: history of the pairwise comparisons, in terms of compared values
++  (whereas `history_comparisons_` gives the original indices). Similarly, add
++  `WrapSortScorer.history_comparisons_values_` and `WrapFullJit.history_comparisons_values_`.
++* Add `CorSort.history_leq_`: history of the matrix `leq_` representing the current poset. This is recorded
++  if the newly added parameter `record_leq` is True.
++* Add `WrapFullJit.history_states_`: history of the state of the list.
++* Add `ChainAndY`: poset consisting of a chain and a Y-shape.
++* Add `print_corsort_execution`: generate LaTeX code for a CorSort execution.
++* `partition` is now stable (in the sense of "stable" sorting), hence also `SortQuick`, `SortAsortQuickselect`,
++  and `SortLargestInterval`.
++
+ ---------------------------------
+ 0.1.0 (2023-02-16): First release
+ ---------------------------------
+ 
+ * Corsort (regular Python or with numba acceleration).
+-* Classical sorting algorithms: Asort (with quickselect for median seletion), Ford-Johnson, quicksort, quicksort with
++* Classical sorting algorithms: Asort (with quickselect for median selection), Ford-Johnson, quicksort, quicksort with
+   priority on the largest interval, merge sort (DFS or BFS).
+ * Entropy bound.
+ * Monte-Carlo simulations.
+```
+
+### Comparing `corsort-0.1.0/corsort.egg-info/SOURCES.txt` & `corsort-0.1.1/corsort.egg-info/SOURCES.txt`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,14 +3,15 @@
+ HISTORY.rst
+ LICENSE
+ MANIFEST.in
+ README.rst
+ setup.cfg
+ setup.py
+ corsort/__init__.py
++corsort/chain_and_y.py
+ corsort/cor_sort.py
+ corsort/cor_sort_borda.py
+ corsort/cor_sort_delegate.py
+ corsort/cor_sort_gain.py
+ corsort/cor_sort_gain_lexi.py
+ corsort/distance_to_sorted_array.py
+ corsort/entropy_bound.py
+@@ -23,14 +24,15 @@
+ corsort/sort.py
+ corsort/sort_asort_quickselect.py
+ corsort/sort_ford_johnson.py
+ corsort/sort_largest_interval.py
+ corsort/sort_merge_bfs.py
+ corsort/sort_merge_dfs.py
+ corsort/sort_quick.py
++corsort/util_latex.py
+ corsort/wrap_full_jit.py
+ corsort/wrap_sort_scorer.py
+ corsort.egg-info/PKG-INFO
+ corsort.egg-info/SOURCES.txt
+ corsort.egg-info/dependency_links.txt
+ corsort.egg-info/not-zip-safe
+ corsort.egg-info/requires.txt
+@@ -44,28 +46,30 @@
+ docs/installation.rst
+ docs/make.bat
+ docs/readme.rst
+ docs/usage.rst
+ docs/logo/logo.png
+ docs/logo/logo_small.png
+ docs/notebooks/index.rst
++docs/reference/chain_and_y.rst
+ docs/reference/cor_sort.rst
+ docs/reference/cor_sort_borda.rst
+ docs/reference/cor_sort_delegate.rst
+ docs/reference/cor_sort_gain.rst
+ docs/reference/cor_sort_gain_lexi.rst
+ docs/reference/distance_to_sorted_array.rst
+ docs/reference/entropy_bound.rst
+ docs/reference/index.rst
+ docs/reference/jit_scorers.rst
+ docs/reference/jit_sorts.rst
+ docs/reference/merge.rst
+ docs/reference/montecarlo.rst
+ docs/reference/partition.rst
+ docs/reference/presets.rst
++docs/reference/print_order.rst
+ docs/reference/sort.rst
+ docs/reference/sort_asort_quickselect.rst
+ docs/reference/sort_ford_johnson.rst
+ docs/reference/sort_largest_interval.rst
+ docs/reference/sort_merge_bfs.rst
+ docs/reference/sort_merge_dfs.rst
+ docs/reference/sort_quick.rst
+```
+
+### Comparing `corsort-0.1.0/docs/Makefile` & `corsort-0.1.1/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/docs/conf.py` & `corsort-0.1.1/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/docs/installation.rst` & `corsort-0.1.1/docs/installation.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/docs/logo/logo.png` & `corsort-0.1.1/docs/logo/logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/docs/logo/logo_small.png` & `corsort-0.1.1/docs/logo/logo_small.png`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/docs/make.bat` & `corsort-0.1.1/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `corsort-0.1.0/setup.py` & `corsort-0.1.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -38,10 +38,10 @@
+     keywords='corsort',
+     name='corsort',
+     packages=find_packages(),
+     setup_requires=setup_requirements,
+     test_suite='tests',
+     tests_require=test_requirements,
+     url='https://github.com/emczg/corsort',
+-    version='0.1.0',
++    version='0.1.1',
+     zip_safe=False,
+ )
+```
+
+### Comparing `corsort-0.1.0/tests/test_corsort.py` & `corsort-0.1.1/tests/test_corsort.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,719 @@
+# Comparing `tmp/papyrus_scripts-1.0.0.tar.gz` & `tmp/papyrus_scripts-1.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "papyrus_scripts-1.0.0.tar", last modified: Tue Mar  7 09:11:18 2023, max compression
++gzip compressed data, was "papyrus_scripts-1.0.1.tar", last modified: Fri Apr  7 14:58:24 2023, max compression
+```
+
+## Comparing `papyrus_scripts-1.0.0.tar` & `papyrus_scripts-1.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,33 +1,33 @@
+-drwxrwxrwx   0        0        0        0 2023-03-07 09:11:18.089607 papyrus_scripts-1.0.0/
+--rw-rw-rw-   0        0        0     1088 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/LICENSE
+--rw-rw-rw-   0        0        0     9879 2023-03-07 09:11:18.090594 papyrus_scripts-1.0.0/PKG-INFO
+--rw-rw-rw-   0        0        0     8900 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/README.md
+--rw-rw-rw-   0        0        0     1487 2023-03-07 09:11:18.092597 papyrus_scripts-1.0.0/setup.cfg
+--rw-rw-rw-   0        0        0      123 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/setup.py
+-drwxrwxrwx   0        0        0        0 2023-03-07 09:11:18.050311 papyrus_scripts-1.0.0/src/
+-drwxrwxrwx   0        0        0        0 2023-03-07 09:11:18.068819 papyrus_scripts-1.0.0/src/papyrus_scripts/
+--rw-rw-rw-   0        0        0      771 2023-02-28 08:43:59.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/__init__.py
+--rw-rw-rw-   0        0        0      340 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/__main__.py
+--rw-rw-rw-   0        0        0    22031 2023-02-28 08:43:59.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/cli.py
+--rw-rw-rw-   0        0        0    19298 2023-02-28 08:43:59.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/download.py
+--rw-rw-rw-   0        0        0    10962 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/fingerprint.py
+--rw-rw-rw-   0        0        0     7674 2023-02-28 08:43:59.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/matchRCSB.py
+--rw-rw-rw-   0        0        0    60384 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/modelling.py
+--rw-rw-rw-   0        0        0    21253 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/neuralnet.py
+--rw-rw-rw-   0        0        0    41386 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/preprocess.py
+--rw-rw-rw-   0        0        0    22032 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/reader.py
+--rw-rw-rw-   0        0        0    49213 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/subsim_search.py
+-drwxrwxrwx   0        0        0        0 2023-03-07 09:11:18.088580 papyrus_scripts-1.0.0/src/papyrus_scripts/utils/
+--rw-rw-rw-   0        0        0    14406 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/utils/IO.py
+--rw-rw-rw-   0        0        0    11223 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/utils/UniprotMatch.py
+--rw-rw-rw-   0        0        0       53 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/utils/__init__.py
+--rw-rw-rw-   0        0        0    14905 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/utils/links.json
+--rw-rw-rw-   0        0        0    13522 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/utils/mol_reader.py
+--rw-rw-rw-   0        0        0       83 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.0/src/papyrus_scripts/version.py
+-drwxrwxrwx   0        0        0        0 2023-03-07 09:11:18.084818 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/
+--rw-rw-rw-   0        0        0     9879 2023-03-07 09:11:18.000000 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      874 2023-03-07 09:11:18.000000 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-07 09:11:18.000000 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       53 2023-03-07 09:11:18.000000 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0      166 2023-03-07 09:11:18.000000 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       16 2023-03-07 09:11:18.000000 papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 14:58:24.809202 papyrus_scripts-1.0.1/
++-rw-rw-rw-   0        0        0     1088 2023-02-08 15:08:45.000000 papyrus_scripts-1.0.1/LICENSE
++-rw-rw-rw-   0        0        0     9467 2023-04-07 14:58:24.809202 papyrus_scripts-1.0.1/PKG-INFO
++-rw-rw-rw-   0        0        0     8488 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/README.md
++-rw-rw-rw-   0        0        0     1487 2023-04-07 14:58:24.809202 papyrus_scripts-1.0.1/setup.cfg
++-rw-rw-rw-   0        0        0      123 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:58:24.746794 papyrus_scripts-1.0.1/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 14:58:24.777950 papyrus_scripts-1.0.1/src/papyrus_scripts/
++-rw-rw-rw-   0        0        0      771 2023-04-07 14:58:03.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/__init__.py
++-rw-rw-rw-   0        0        0      340 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/__main__.py
++-rw-rw-rw-   0        0        0    22338 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/cli.py
++-rw-rw-rw-   0        0        0    19298 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/download.py
++-rw-rw-rw-   0        0        0    10962 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/fingerprint.py
++-rw-rw-rw-   0        0        0     7674 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/matchRCSB.py
++-rw-rw-rw-   0        0        0    60384 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/modelling.py
++-rw-rw-rw-   0        0        0    21253 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/neuralnet.py
++-rw-rw-rw-   0        0        0    41776 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/preprocess.py
++-rw-rw-rw-   0        0        0    22032 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/reader.py
++-rw-rw-rw-   0        0        0    49213 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/subsim_search.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:58:24.809202 papyrus_scripts-1.0.1/src/papyrus_scripts/utils/
++-rw-rw-rw-   0        0        0    14406 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/utils/IO.py
++-rw-rw-rw-   0        0        0    11223 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/utils/UniprotMatch.py
++-rw-rw-rw-   0        0        0       53 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/utils/__init__.py
++-rw-rw-rw-   0        0        0    14841 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/utils/links.json
++-rw-rw-rw-   0        0        0    13522 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/utils/mol_reader.py
++-rw-rw-rw-   0        0        0       83 2023-04-07 14:56:47.000000 papyrus_scripts-1.0.1/src/papyrus_scripts/version.py
++drwxrwxrwx   0        0        0        0 2023-04-07 14:58:24.793575 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/
++-rw-rw-rw-   0        0        0     9467 2023-04-07 14:58:24.000000 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      874 2023-04-07 14:58:24.000000 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 14:58:24.000000 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       53 2023-04-07 14:58:24.000000 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0      166 2023-04-07 14:58:24.000000 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       16 2023-04-07 14:58:24.000000 papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/top_level.txt
+```
+
+### Comparing `papyrus_scripts-1.0.0/LICENSE` & `papyrus_scripts-1.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/PKG-INFO` & `papyrus_scripts-1.0.1/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: papyrus_scripts
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: A collection of scripts to handle the Papyrus bioactivity dataset
+ Home-page: https://github.com/OlivierBeq/Papyrus-scripts
+ Author: Olivier J. M. Béquignon - Brandon J. Bongers - Willem Jespers
+ Author-email: "olivier.bequignon.maintainer@gmail.com"
+ Maintainer: Olivier J. M. Béquignon
+ Maintainer-email: "olivier.bequignon.maintainer@gmail.com"
+ Keywords: bioactivity data,QSAR,proteochemometrics,cheminformatics,modelling,machine learning
+@@ -34,35 +34,26 @@
+ Papyrus - A large scale curated dataset aimed at bioactivity predictions.
+ ChemRxiv. Cambridge: Cambridge Open Engage; 2021;
+ This content is a preprint and has not been peer-reviewed.
+ ```
+ 
+ ## Installation
+ 
+-The Papyrus scripts require dependencies, a few of which can only be installed via conda to the best of our knowledge. 
+-
+-1. Install conda dependencies first:
+-```bash
+-conda install rdkit -c conda-forge
+-```
+-
+-2. Then install Papyrus-scripts with pip
+ ```bash
+-pip install https://github.com/OlivierBeq/Papyrus-scripts/tarball/master
++pip install papyrus-scripts
+ ``` 
+-Dependencies that PyPI resolves will auto-magically be installed.
+ 
+ :warning: If pip gives the following error and resolves in import errors
+ ```bash
+ Defaulting to user installation because normal site-packages is not writeable
+ ```
+ Then uninstall and reinstalling the library with the following commands:
+ ```bash
+ pip uninstall -y papyrus-scripts
+-python -m pip install https://github.com/OlivierBeq/Papyrus-scripts/tarball/master
++python -m pip install papyrus-scripts
+ ```
+ 
+ Additional dependencies can be installed to allow:
+  - similarity and substructure searches
+     ```bash
+     conda install FPSim2 openbabel "h5py<3.2" cupy 
+     ```
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: papyrus_scripts Version: 1.0.0 Summary: A
++Metadata-Version: 2.1 Name: papyrus_scripts Version: 1.0.1 Summary: A
+ collection of scripts to handle the Papyrus bioactivity dataset Home-page:
+ https://github.com/OlivierBeq/Papyrus-scripts Author: Olivier J. M. BÃ©quignon
+ - Brandon J. Bongers - Willem Jespers Author-email:
+ "olivier.bequignon.maintainer@gmail.com" Maintainer: Olivier J. M. BÃ©quignon
+ Maintainer-email: "olivier.bequignon.maintainer@gmail.com" Keywords:
+ bioactivity data,QSAR,proteochemometrics,cheminformatics,modelling,machine
+ learning Classifier: Development Status :: 2 - Pre-Alpha Classifier:
+@@ -13,25 +13,20 @@
+ text/markdown Provides-Extra: docs Provides-Extra: testing License-File:
+ LICENSE # Papyrus-scripts Collection of scripts to interact with the Papyrus
+ bioactivity dataset. ![alt text](figures/papyrus_workflow.svg)
+ **Associated Preprint:** 10.33774/chemrxiv-2021-1rxhk ``` BÃ©quignon OJM,
+ Bongers BJ, Jespers W, IJzerman AP, van de Water B, van Westen GJP. Papyrus - A
+ large scale curated dataset aimed at bioactivity predictions. ChemRxiv.
+ Cambridge: Cambridge Open Engage; 2021; This content is a preprint and has not
+-been peer-reviewed. ``` ## Installation The Papyrus scripts require
+-dependencies, a few of which can only be installed via conda to the best of our
+-knowledge. 1. Install conda dependencies first: ```bash conda install rdkit -
+-c conda-forge ``` 2. Then install Papyrus-scripts with pip ```bash pip install
+-https://github.com/OlivierBeq/Papyrus-scripts/tarball/master ``` Dependencies
+-that PyPI resolves will auto-magically be installed. :warning: If pip gives the
+-following error and resolves in import errors ```bash Defaulting to user
+-installation because normal site-packages is not writeable ``` Then uninstall
+-and reinstalling the library with the following commands: ```bash pip uninstall
+--y papyrus-scripts python -m pip install https://github.com/OlivierBeq/Papyrus-
+-scripts/tarball/master ``` Additional dependencies can be installed to allow: -
++been peer-reviewed. ``` ## Installation ```bash pip install papyrus-scripts ```
++:warning: If pip gives the following error and resolves in import errors
++```bash Defaulting to user installation because normal site-packages is not
++writeable ``` Then uninstall and reinstalling the library with the following
++commands: ```bash pip uninstall -y papyrus-scripts python -m pip install
++papyrus-scripts ``` Additional dependencies can be installed to allow: -
+ similarity and substructure searches ```bash conda install FPSim2 openbabel
+ "h5py<3.2" cupy ``` - training DNN models: ```bash conda install pytorch
+ torchvision torchaudio cudatoolkit=11.3 -c pytorch ``` ## Donwload the dataset
+ The Papyrus data can be donwload in three different ways.
+ **The use of the command line interface is strongly recommended to download the
+ data.** ### - Using the command line interface (CLI) Once the library is
+ installed (see [*Installation*](https://github.com/OlivierBeq/Papyrus-
+```
+
+### Comparing `papyrus_scripts-1.0.0/README.md` & `papyrus_scripts-1.0.1/README.md`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -12,35 +12,26 @@
+ Papyrus - A large scale curated dataset aimed at bioactivity predictions.
+ ChemRxiv. Cambridge: Cambridge Open Engage; 2021;
+ This content is a preprint and has not been peer-reviewed.
+ ```
+ 
+ ## Installation
+ 
+-The Papyrus scripts require dependencies, a few of which can only be installed via conda to the best of our knowledge. 
+-
+-1. Install conda dependencies first:
+-```bash
+-conda install rdkit -c conda-forge
+-```
+-
+-2. Then install Papyrus-scripts with pip
+ ```bash
+-pip install https://github.com/OlivierBeq/Papyrus-scripts/tarball/master
++pip install papyrus-scripts
+ ``` 
+-Dependencies that PyPI resolves will auto-magically be installed.
+ 
+ :warning: If pip gives the following error and resolves in import errors
+ ```bash
+ Defaulting to user installation because normal site-packages is not writeable
+ ```
+ Then uninstall and reinstalling the library with the following commands:
+ ```bash
+ pip uninstall -y papyrus-scripts
+-python -m pip install https://github.com/OlivierBeq/Papyrus-scripts/tarball/master
++python -m pip install papyrus-scripts
+ ```
+ 
+ Additional dependencies can be installed to allow:
+  - similarity and substructure searches
+     ```bash
+     conda install FPSim2 openbabel "h5py<3.2" cupy 
+     ```
+```
+
+#### html2text {}
+
+```diff
+@@ -1,24 +1,19 @@
+ # Papyrus-scripts Collection of scripts to interact with the Papyrus
+ bioactivity dataset. ![alt text](figures/papyrus_workflow.svg)
+ **Associated Preprint:** 10.33774/chemrxiv-2021-1rxhk ``` BÃ©quignon OJM,
+ Bongers BJ, Jespers W, IJzerman AP, van de Water B, van Westen GJP. Papyrus - A
+ large scale curated dataset aimed at bioactivity predictions. ChemRxiv.
+ Cambridge: Cambridge Open Engage; 2021; This content is a preprint and has not
+-been peer-reviewed. ``` ## Installation The Papyrus scripts require
+-dependencies, a few of which can only be installed via conda to the best of our
+-knowledge. 1. Install conda dependencies first: ```bash conda install rdkit -
+-c conda-forge ``` 2. Then install Papyrus-scripts with pip ```bash pip install
+-https://github.com/OlivierBeq/Papyrus-scripts/tarball/master ``` Dependencies
+-that PyPI resolves will auto-magically be installed. :warning: If pip gives the
+-following error and resolves in import errors ```bash Defaulting to user
+-installation because normal site-packages is not writeable ``` Then uninstall
+-and reinstalling the library with the following commands: ```bash pip uninstall
+--y papyrus-scripts python -m pip install https://github.com/OlivierBeq/Papyrus-
+-scripts/tarball/master ``` Additional dependencies can be installed to allow: -
++been peer-reviewed. ``` ## Installation ```bash pip install papyrus-scripts ```
++:warning: If pip gives the following error and resolves in import errors
++```bash Defaulting to user installation because normal site-packages is not
++writeable ``` Then uninstall and reinstalling the library with the following
++commands: ```bash pip uninstall -y papyrus-scripts python -m pip install
++papyrus-scripts ``` Additional dependencies can be installed to allow: -
+ similarity and substructure searches ```bash conda install FPSim2 openbabel
+ "h5py<3.2" cupy ``` - training DNN models: ```bash conda install pytorch
+ torchvision torchaudio cudatoolkit=11.3 -c pytorch ``` ## Donwload the dataset
+ The Papyrus data can be donwload in three different ways.
+ **The use of the command line interface is strongly recommended to download the
+ data.** ### - Using the command line interface (CLI) Once the library is
+ installed (see [*Installation*](https://github.com/OlivierBeq/Papyrus-
+```
+
+### Comparing `papyrus_scripts-1.0.0/setup.cfg` & `papyrus_scripts-1.0.1/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/__init__.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -12,8 +12,8 @@
+                          keep_similar, keep_substructure, consume_chunks, yscrambling)
+ 
+ from .modelling import qsar, pcm
+ 
+ from .utils.mol_reader import MolSupplier
+ from .utils import IO, UniprotMatch
+ 
+-__version__ = '1.0.0'
++__version__ = '1.0.1'
+```
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/cli.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/cli.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -10,19 +10,24 @@
+ from .download import download_papyrus, remove_papyrus
+ from .matchRCSB import get_matches, update_rcsb_data
+ from .reader import read_papyrus
+ from .utils.IO import get_num_rows_in_file, process_data_version, convert_gz_to_xz, convert_xz_to_gz
+ from .subsim_search import FPSubSim2
+ from .fingerprint import Fingerprint, get_fp_from_name
+ 
+-@click.group()
++
++CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
++
++
++@click.group(context_settings=CONTEXT_SETTINGS)
+ def main():
+     pass
+ 
+-@main.command(help='Download Papyrus data.')
++
++@main.command(help='Download Papyrus data.', context_settings=CONTEXT_SETTINGS)
+ @click.option('-o', '--out_dir', 'output_directory', type=str, required=False,
+               default=None, nargs=1, show_default=True, metavar='OUTDIR',
+               help='Directory where Papyrus data will be stored\n(default: pystow\'s home folder).')
+ @click.option('--version', '-V', 'version', required=False, default=['latest'], multiple=True,
+               metavar='XX.X', help='Version of the Papyrus data to be downloaded (can also be "all").')
+ @click.option('--more', is_flag=True, required=False, default=False, nargs=1,
+               show_default=True, help='Should other data than Papyrus++ be downloaded '
+@@ -64,15 +69,15 @@
+                      only_pp=not more,
+                      structures=structs,
+                      descriptors=descs,
+                      progress=True,
+                      disk_margin=0.0 if force else 0.1)
+ 
+ 
+-@main.command(help='Remove Papyrus data.')
++@main.command(help='Remove Papyrus data.', context_settings=CONTEXT_SETTINGS)
+ @click.option('-o', '--out_dir', 'output_directory', type=str, required=False,
+               default=None, nargs=1, show_default=True, metavar='OUTDIR',
+               help='Directory where Papyrus data will be removed\n(default: pystow\'s home folder).')
+ @click.option('--version', '-V', 'version', required=False, default=['latest'], multiple=True,
+               metavar='XX.X', help='Version of the Papyrus data to be removed.')
+ @click.option('--papyruspp', is_flag=True, required=False, default=False, nargs=1,
+               show_default=True, help='Should Papyrus++ bioactivities be removed.')
+@@ -127,15 +132,15 @@
+                    other_files=other_files,
+                    version_root=remove_version,
+                    papyrus_root=remove_root,
+                    force=force,
+                    progress=True)
+ 
+ 
+-@main.command(help='Identify matches of the RCSB PDB data in the Papyrus data.')
++@main.command(help='Identify matches of the RCSB PDB data in the Papyrus data.', context_settings=CONTEXT_SETTINGS)
+ @click.option('--indir', '-i', 'indir', type=str, required=False, default=None, nargs=1,
+               metavar='INDIR', show_default=True,
+               help='Directory where Papyrus data will be stored\n(default: pystow\'s home folder).')
+ @click.option('--output', '-o', 'output', type=str, required=True, default=None, nargs=1,
+               metavar='OUTFILE', help='Output file containing the PDB matched Papytus data.')
+ @click.option('--version', '-V', 'version', type=str, required=False, default='latest', nargs=1,
+               metavar='XX.X', help='Version of the Papyrus data to be mapped (default: latest).')
+@@ -199,15 +204,16 @@
+                             + str(other_param.human_readable_name) + "."
+                         )
+                     else:
+                         self.required = None  # Override requirement
+         return super(Mutex, self).handle_parse_result(ctx, opts, args)
+ 
+ 
+-@main.command(help='Create a FPSubSim2 library for substructure/similarity searches.')
++@main.command(help='Create a FPSubSim2 library for substructure/similarity searches.',
++              context_settings=CONTEXT_SETTINGS)
+ @click.option('-i, --indir', 'indir', type=str, required=False, default=None, nargs=1,
+               metavar='INDIR', show_default=True,
+               help='Directory where Papyrus data will be stored\n(default: pystow\'s home folder).')
+ @click.option('-o', '--output', 'output', type=str, default=None, nargs=1, metavar='OUTFILE',
+               required=True, cls=Mutex, not_required_if=['fhelp'],
+               help='Output FPSubSim2 file. If "None" determine the most '
+                    'convenient name and write to the current directory.')
+@@ -309,15 +315,16 @@
+                     sys.exit()
+             fingerprints.append(get_fp_from_name(fp_name, **fp_param))
+         for version_ in version:
+             fpss.create_from_papyrus(is3d=is3D, version=version_, outfile=output, fingerprint=fingerprints, root_folder=indir,
+                                      progress=verbose, njobs=njobs)
+ 
+ 
+-@main.command(help='Transform the compression of Papyrus files from LZMA to Gzip and vice-versa.')
++@main.command(help='Transform the compression of Papyrus files from LZMA to Gzip and vice-versa.',
++              context_settings=CONTEXT_SETTINGS)
+ @click.option('-i', '--indir', 'indir', type=str, required=False, default=None, nargs=1,
+               metavar='INDIR', show_default=True,
+               help='Directory where Papyrus data is stored\n(default: pystow\'s home folder).')
+ @click.option('-v', '--version', 'version', type=str, required=False, default=['latest'], multiple=False,
+               metavar='XX.X', help='Version of the Papyrus data to be transformed (default: latest).')
+ @click.option('-f', '--format', 'format', type=click.Choice(['xz', 'gzip']),
+               required=False, default=None, nargs=1, show_default=True, multiple=False,
+```
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/download.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/download.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/fingerprint.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/fingerprint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/matchRCSB.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/matchRCSB.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/modelling.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/modelling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/neuralnet.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/neuralnet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/preprocess.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/preprocess.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -79,44 +79,51 @@
+ 
+ def _chunked_keep_quality(chunks: Union[PandasTextFileReader, Iterator], min_quality: str = 'high'):
+     for chunk in chunks:
+         filtered_chunk = keep_quality(chunk, min_quality)
+         yield filtered_chunk
+ 
+ 
+-def process_group(group):
++def process_group(group, additional_columns: Optional[List[str]] = None):
+     """Aggregate data from one group accordingly"""
+     if (group.values[0] == group.values).all():  # If all values are equal, return first record
+         group['pchembl_value_Mean'] = group['pchembl_value']
+         group['pchembl_value_StdDev'] = np.NaN
+         group['pchembl_value_SEM'] = np.NaN
+         group['pchembl_value_N'] = 1
+         group['pchembl_value_Median'] = group['pchembl_value']
+         group['pchembl_value_MAD'] = np.NaN
+         return group.iloc[:1, :]
++    # Lambda: Return one value if all are the same
+     listvals = lambda x: ';'.join(set(str(y) for y in x)) if (x.values[0] == x.values).all() else ';'.join(
+         str(y) for y in x)
++    # Lambda: Return all values everytime
+     listallvals = lambda x: ';'.join(str(y) for y in x)
++    # Aggregation rules
+     mappings = {'source': 'first', 'CID': listvals, 'AID': listvals,
+-                'type_IC50': listallvals, 'type_EC50': listallvals, 'type_KD': listallvals,
+-                'type_Ki': listallvals, 'type_other': listallvals, 'relation': listvals,
++                'type_IC50': listvals, 'type_EC50': listvals, 'type_KD': listvals,
++                'type_Ki': listvals, 'type_other': listvals, 'relation': listvals,
+                 'pchembl_value': listallvals}
++    # Consider other columns
++    if additional_columns is not None:
++        for column in additional_columns:
++            mappings[column] = listvals
+     return pd.concat([group.groupby('Activity_ID').aggregate(mappings).reset_index(),
+                       group.groupby('Activity_ID')['pchembl_value'].aggregate(pchembl_value_Mean='mean',
+                                                                               pchembl_value_StdDev='std',
+                                                                               pchembl_value_SEM='sem',
+                                                                               pchembl_value_N='count',
+                                                                               pchembl_value_Median='median',
+                                                                               pchembl_value_MAD=MAD
+                                                                               ).reset_index(drop=True)], axis=1)
+ 
+ 
+-def process_groups(groups):
++def process_groups(groups, additional_columns: Optional[List[str]] = None):
+     """Aggregate data from multiple groups"""
+-    return pd.concat([process_group(group) for group in groups])
++    return pd.concat([process_group(group, additional_columns) for group in groups])
+ 
+ 
+ def keep_source(data: Union[pd.DataFrame, PandasTextFileReader, Iterator], source: Union[List[str], str] = 'all', njobs: int = 1,
+                 verbose: bool = False) -> pd.DataFrame:
+     """Keep only the data from the defined source(s).
+     
+     :param data: the dataframe containing data to be filtered
+@@ -571,15 +578,15 @@
+             data.append(item)
+     if not len(data):
+         return pd.DataFrame()
+     return pd.concat(data, axis=0)
+ 
+ 
+ def keep_organism(data: Union[pd.DataFrame, PandasTextFileReader, Iterator], protein_data: pd.DataFrame,
+-                  organism: Optional[Union[str, List[str]]] = 'Human',
++                  organism: Optional[Union[str, List[str]]] = 'Homo sapiens (Human)',
+                   generic_regex: bool = False):
+     """Keep only the data matching desired protein classifications.
+ 
+     :param data: the dataframe containing data to be filtered
+     :param protein_data: the dataframe of Papyrus protein targets
+     :param organism: organisms to keep (case insensitive).
+     :param generic_regex: whether to allow for partial match.
+```
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/reader.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/subsim_search.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/subsim_search.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/utils/IO.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/utils/IO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/utils/UniprotMatch.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/utils/UniprotMatch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/utils/links.json` & `papyrus_scripts-1.0.1/src/papyrus_scripts/utils/links.json`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9938802083333332%*
+
+ * *Differences: {"'05.4'": "{'papyrus++': {'url': "*
+
+ * *           "'https://drive.google.com/uc?id=1ES8V3Pbw3xVpDIjs9J2RL2jeTHr_YTm0&confirm=t', 'size': "*
+
+ * *           "40278204, 'sha256': "*
+
+ * *           "'42dcbe76b33ad541f6c54673eccffa15af64785cf844938c0f73518dfdf4404b'}}",*
+
+ * * "'05.5'": "{'papyrus++': {'url': "*
+
+ * *           "'https://drive.google.com/uc?id=11QDDruvyf8OhVuGf5V38etvorL8SPqcp&confirm=t', 'size': "*
+
+ * *           "41357608, 'sha256': "*
+
+ * *           "'8ecaea9533f3c475dca6d335f30dd1b4abb259fa77b7441548dd15879e1afa58'}}",*
+
+ * * "'05. […]*
+
+```diff
+@@ -58,17 +58,17 @@
+             "name": "05.4_combined_3D_set_with_stereochemistry.sd.xz",
+             "sha256": "b0f04e066b7ac6b1e1f2a868ff0258b13bd8d3433023ff59c3af58317bfeb3e9",
+             "size": 446702556,
+             "url": "https://drive.google.com/uc?id=1rhuztuSS4NllVbFOK_Ob7ifpDSvOV7ED&confirm=t"
+         },
+         "papyrus++": {
+             "name": "05.4++_combined_set_without_stereochemistry.tsv.xz",
+-            "sha256": "e37aef941739ec2524a13a25d515812e91b90f2241bf4c1185096ed5e5a01999",
+-            "size": 96413812,
+-            "url": "https://drive.google.com/uc?id=1Z3Y7BTrUxgui1E6e1qYbG-YiCEPf_95L&confirm=t"
++            "sha256": "42dcbe76b33ad541f6c54673eccffa15af64785cf844938c0f73518dfdf4404b",
++            "size": 40278204,
++            "url": "https://drive.google.com/uc?id=1ES8V3Pbw3xVpDIjs9J2RL2jeTHr_YTm0&confirm=t"
+         },
+         "proteins": {
+             "name": "05.4_combined_set_protein_targets.tsv.xz",
+             "sha256": "5f49030509ce188a119910f16054558e1cdd1c70a22d2a1458ec4189f5d1a08e",
+             "size": 1701316,
+             "url": "https://drive.google.com/uc?id=1hrSb8ouyD9F47ndiuMXlK-VmovrDThnV&confirm=t"
+         },
+@@ -164,17 +164,17 @@
+             "name": "05.5_combined_3D_set_with_stereochemistry.sd.xz",
+             "sha256": "a4a5355ffc56de8d914c2ad281d10c227171c27e4d6c250daad14a16280cf136",
+             "size": 492426264,
+             "url": "https://zenodo.org/record/7019874/files/05.5_combined_3D_set_with_stereochemistry.sd.xz?download=1"
+         },
+         "papyrus++": {
+             "name": "05.5++_combined_set_without_stereochemistry.tsv.xz",
+-            "sha256": "ad15ac5535c6640f8dc3e501b1c7fd0cb39b7bbcd025e4506ec5efc82ec0a266",
+-            "size": 116092692,
+-            "url": "https://zenodo.org/record/7019874/files/05.5%2B%2B_combined_set_without_stereochemistry.tsv.xz?download=1"
++            "sha256": "8ecaea9533f3c475dca6d335f30dd1b4abb259fa77b7441548dd15879e1afa58",
++            "size": 41357608,
++            "url": "https://drive.google.com/uc?id=11QDDruvyf8OhVuGf5V38etvorL8SPqcp&confirm=t"
+         },
+         "proteins": {
+             "name": "05.5_combined_set_protein_targets.tsv.xz",
+             "sha256": "d8f2cbee8b9849f7c3664fe7e8165c5abf785d374c36a8f151a6ec38fd582d80",
+             "size": 1710756,
+             "url": "https://zenodo.org/record/7019874/files/05.5_combined_set_protein_targets.tsv.xz?download=1"
+         },
+@@ -270,17 +270,17 @@
+             "name": "05.6_combined_3D_set_with_stereochemistry.sd.xz",
+             "sha256": "38e39963cd79845b4adca9dea871ffba18576ea742677471fc46a73a7dabbf38",
+             "size": 500108592,
+             "url": "https://zenodo.org/record/7377161/files/05.6_combined_3D_set_with_stereochemistry.sd.xz?download=1"
+         },
+         "papyrus++": {
+             "name": "05.6++_combined_set_without_stereochemistry.tsv.xz",
+-            "sha256": "3499c9364a3a9044090ccdf44f21346546945f729c79925de0906194eec9a0b2",
+-            "size": 104203892,
+-            "url": "https://zenodo.org/record/7377161/files/05.6%2B%2B_combined_set_without_stereochemistry.tsv.xz?download=1"
++            "sha256": "7518019c3ba287cd4cd0ff29425fe9da8a4760d891d22ed1abb33da4920cf96a",
++            "size": 31085780,
++            "url": "https://drive.google.com/uc?id=1KCzcAJBvn_EcYjyBrOTmxzWFKGoazJp2&confirm=t"
+         },
+         "proteins": {
+             "name": "05.6_combined_set_protein_targets.tsv.xz",
+             "sha256": "f443a2f8c74b8eb3f2c9d1bd7bfbddc86cbcc3fd5e8e505b7057b78a4ad17ee1",
+             "size": 1850764,
+             "url": "https://zenodo.org/record/7377161/files/05.6_combined_set_protein_targets.tsv.xz?download=1"
+         },
+```
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts/utils/mol_reader.py` & `papyrus_scripts-1.0.1/src/papyrus_scripts/utils/mol_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/PKG-INFO` & `papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: papyrus-scripts
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: A collection of scripts to handle the Papyrus bioactivity dataset
+ Home-page: https://github.com/OlivierBeq/Papyrus-scripts
+ Author: Olivier J. M. Béquignon - Brandon J. Bongers - Willem Jespers
+ Author-email: "olivier.bequignon.maintainer@gmail.com"
+ Maintainer: Olivier J. M. Béquignon
+ Maintainer-email: "olivier.bequignon.maintainer@gmail.com"
+ Keywords: bioactivity data,QSAR,proteochemometrics,cheminformatics,modelling,machine learning
+@@ -34,35 +34,26 @@
+ Papyrus - A large scale curated dataset aimed at bioactivity predictions.
+ ChemRxiv. Cambridge: Cambridge Open Engage; 2021;
+ This content is a preprint and has not been peer-reviewed.
+ ```
+ 
+ ## Installation
+ 
+-The Papyrus scripts require dependencies, a few of which can only be installed via conda to the best of our knowledge. 
+-
+-1. Install conda dependencies first:
+-```bash
+-conda install rdkit -c conda-forge
+-```
+-
+-2. Then install Papyrus-scripts with pip
+ ```bash
+-pip install https://github.com/OlivierBeq/Papyrus-scripts/tarball/master
++pip install papyrus-scripts
+ ``` 
+-Dependencies that PyPI resolves will auto-magically be installed.
+ 
+ :warning: If pip gives the following error and resolves in import errors
+ ```bash
+ Defaulting to user installation because normal site-packages is not writeable
+ ```
+ Then uninstall and reinstalling the library with the following commands:
+ ```bash
+ pip uninstall -y papyrus-scripts
+-python -m pip install https://github.com/OlivierBeq/Papyrus-scripts/tarball/master
++python -m pip install papyrus-scripts
+ ```
+ 
+ Additional dependencies can be installed to allow:
+  - similarity and substructure searches
+     ```bash
+     conda install FPSim2 openbabel "h5py<3.2" cupy 
+     ```
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: papyrus-scripts Version: 1.0.0 Summary: A
++Metadata-Version: 2.1 Name: papyrus-scripts Version: 1.0.1 Summary: A
+ collection of scripts to handle the Papyrus bioactivity dataset Home-page:
+ https://github.com/OlivierBeq/Papyrus-scripts Author: Olivier J. M. BÃ©quignon
+ - Brandon J. Bongers - Willem Jespers Author-email:
+ "olivier.bequignon.maintainer@gmail.com" Maintainer: Olivier J. M. BÃ©quignon
+ Maintainer-email: "olivier.bequignon.maintainer@gmail.com" Keywords:
+ bioactivity data,QSAR,proteochemometrics,cheminformatics,modelling,machine
+ learning Classifier: Development Status :: 2 - Pre-Alpha Classifier:
+@@ -13,25 +13,20 @@
+ text/markdown Provides-Extra: docs Provides-Extra: testing License-File:
+ LICENSE # Papyrus-scripts Collection of scripts to interact with the Papyrus
+ bioactivity dataset. ![alt text](figures/papyrus_workflow.svg)
+ **Associated Preprint:** 10.33774/chemrxiv-2021-1rxhk ``` BÃ©quignon OJM,
+ Bongers BJ, Jespers W, IJzerman AP, van de Water B, van Westen GJP. Papyrus - A
+ large scale curated dataset aimed at bioactivity predictions. ChemRxiv.
+ Cambridge: Cambridge Open Engage; 2021; This content is a preprint and has not
+-been peer-reviewed. ``` ## Installation The Papyrus scripts require
+-dependencies, a few of which can only be installed via conda to the best of our
+-knowledge. 1. Install conda dependencies first: ```bash conda install rdkit -
+-c conda-forge ``` 2. Then install Papyrus-scripts with pip ```bash pip install
+-https://github.com/OlivierBeq/Papyrus-scripts/tarball/master ``` Dependencies
+-that PyPI resolves will auto-magically be installed. :warning: If pip gives the
+-following error and resolves in import errors ```bash Defaulting to user
+-installation because normal site-packages is not writeable ``` Then uninstall
+-and reinstalling the library with the following commands: ```bash pip uninstall
+--y papyrus-scripts python -m pip install https://github.com/OlivierBeq/Papyrus-
+-scripts/tarball/master ``` Additional dependencies can be installed to allow: -
++been peer-reviewed. ``` ## Installation ```bash pip install papyrus-scripts ```
++:warning: If pip gives the following error and resolves in import errors
++```bash Defaulting to user installation because normal site-packages is not
++writeable ``` Then uninstall and reinstalling the library with the following
++commands: ```bash pip uninstall -y papyrus-scripts python -m pip install
++papyrus-scripts ``` Additional dependencies can be installed to allow: -
+ similarity and substructure searches ```bash conda install FPSim2 openbabel
+ "h5py<3.2" cupy ``` - training DNN models: ```bash conda install pytorch
+ torchvision torchaudio cudatoolkit=11.3 -c pytorch ``` ## Donwload the dataset
+ The Papyrus data can be donwload in three different ways.
+ **The use of the command line interface is strongly recommended to download the
+ data.** ### - Using the command line interface (CLI) Once the library is
+ installed (see [*Installation*](https://github.com/OlivierBeq/Papyrus-
+```
+
+### Comparing `papyrus_scripts-1.0.0/src/papyrus_scripts.egg-info/SOURCES.txt` & `papyrus_scripts-1.0.1/src/papyrus_scripts.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
