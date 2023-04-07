@@ -1,0 +1,86 @@
+--- tmp/quickstart-vdk-0.2.829629586.dev8993.tar.gz
++++ tmp/quickstart-vdk-0.2.830829409.dev9027.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "quickstart-vdk-0.2.829629586.dev8993.tar", last modified: Thu Apr  6 04:25:32 2023, max compression
+│ +gzip compressed data, was "quickstart-vdk-0.2.830829409.dev9027.tar", last modified: Fri Apr  7 04:25:06 2023, max compression
+│   --- quickstart-vdk-0.2.829629586.dev8993.tar
+├── +++ quickstart-vdk-0.2.830829409.dev9027.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 04:25:32.631533 quickstart-vdk-0.2.829629586.dev8993/
+│ │ --rw-r--r--   0 root         (0) root         (0)     1016 2023-04-06 04:25:32.631533 quickstart-vdk-0.2.829629586.dev8993/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      386 2023-04-06 04:22:54.000000 quickstart-vdk-0.2.829629586.dev8993/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 04:25:32.627533 quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)     1016 2023-04-06 04:25:32.000000 quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)      227 2023-04-06 04:25:32.000000 quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 04:25:32.000000 quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)      105 2023-04-06 04:25:32.000000 quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        5 2023-04-06 04:25:32.000000 quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 04:25:32.631533 quickstart-vdk-0.2.829629586.dev8993/setup.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1299 2023-04-06 04:25:21.000000 quickstart-vdk-0.2.829629586.dev8993/setup.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 04:25:32.627533 quickstart-vdk-0.2.829629586.dev8993/tests/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      114 2023-04-06 04:22:54.000000 quickstart-vdk-0.2.829629586.dev8993/tests/test_dummy.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 04:25:06.691331 quickstart-vdk-0.2.830829409.dev9027/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1016 2023-04-07 04:25:06.691331 quickstart-vdk-0.2.830829409.dev9027/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      386 2023-04-07 04:22:25.000000 quickstart-vdk-0.2.830829409.dev9027/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 04:25:06.691331 quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1016 2023-04-07 04:25:06.000000 quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)      227 2023-04-07 04:25:06.000000 quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 04:25:06.000000 quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)      105 2023-04-07 04:25:06.000000 quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        5 2023-04-07 04:25:06.000000 quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 04:25:06.691331 quickstart-vdk-0.2.830829409.dev9027/setup.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1299 2023-04-07 04:24:56.000000 quickstart-vdk-0.2.830829409.dev9027/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 04:25:06.691331 quickstart-vdk-0.2.830829409.dev9027/tests/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      114 2023-04-07 04:22:25.000000 quickstart-vdk-0.2.830829409.dev9027/tests/test_dummy.py
+│ │   --- quickstart-vdk-0.2.829629586.dev8993/PKG-INFO
+│ ├── +++ quickstart-vdk-0.2.830829409.dev9027/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: quickstart-vdk
+│ │ -Version: 0.2.829629586.dev8993
+│ │ +Version: 0.2.830829409.dev9027
+│ │  Summary: Versatile Data Kit SDK packaging containing common plugins to get started quickly using it.
+│ │  Home-page: https://github.com/vmware/versatile-data-kit
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │   --- quickstart-vdk-0.2.829629586.dev8993/quickstart_vdk.egg-info/PKG-INFO
+│ ├── +++ quickstart-vdk-0.2.830829409.dev9027/quickstart_vdk.egg-info/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: quickstart-vdk
+│ │ -Version: 0.2.829629586.dev8993
+│ │ +Version: 0.2.830829409.dev9027
+│ │  Summary: Versatile Data Kit SDK packaging containing common plugins to get started quickly using it.
+│ │  Home-page: https://github.com/vmware/versatile-data-kit
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │   --- quickstart-vdk-0.2.829629586.dev8993/setup.py
+│ ├── +++ quickstart-vdk-0.2.830829409.dev9027/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  # Copyright 2021-2023 VMware, Inc.
+│ │  # SPDX-License-Identifier: Apache-2.0
+│ │  import pathlib
+│ │  
+│ │  import setuptools
+│ │  
+│ │  
+│ │ -__version__ = "0.2.829629586.dev8993"
+│ │ +__version__ = "0.2.830829409.dev9027"
+│ │  
+│ │  setuptools.setup(
+│ │      name="quickstart-vdk",
+│ │      version=__version__,
+│ │      url="https://github.com/vmware/versatile-data-kit",
+│ │      description="Versatile Data Kit SDK packaging containing common plugins to get started quickly using it.",
+│ │      long_description=pathlib.Path("README.md").read_text(),
