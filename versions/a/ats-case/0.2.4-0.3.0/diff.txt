@@ -1,0 +1,828 @@
+--- tmp/ats_case-0.2.4.tar.gz
++++ tmp/ats_case-0.3.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ats_case-0.2.4.tar", last modified: Tue Mar 14 09:42:25 2023, max compression
+│ +gzip compressed data, was "ats_case-0.3.0.tar", last modified: Fri Apr  7 01:45:58 2023, max compression
+│   --- ats_case-0.2.4.tar
+├── +++ ats_case-0.3.0.tar
+│ ├── file list
+│ │ @@ -1,32 +1,32 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.831120 ats_case-0.2.4/
+│ │ --rw-rw-rw-   0        0        0      116 2022-09-15 08:18:29.000000 ats_case-0.2.4/LICENSE
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-03 08:23:26.000000 ats_case-0.2.4/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     1042 2023-03-14 09:42:25.828708 ats_case-0.2.4/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      532 2022-06-13 07:56:24.000000 ats_case-0.2.4/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.432525 ats_case-0.2.4/ats_case/
+│ │ --rw-rw-rw-   0        0        0        0 2023-01-04 02:21:31.000000 ats_case-0.2.4/ats_case/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.642609 ats_case-0.2.4/ats_case/case/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-07 07:13:48.000000 ats_case-0.2.4/ats_case/case/__init__.py
+│ │ --rw-rw-rw-   0        0        0    12046 2023-03-14 09:12:46.000000 ats_case-0.2.4/ats_case/case/command.py
+│ │ --rw-rw-rw-   0        0        0     9442 2023-03-07 02:19:50.000000 ats_case-0.2.4/ats_case/case/context.py
+│ │ --rw-rw-rw-   0        0        0     4745 2023-03-03 01:14:10.000000 ats_case-0.2.4/ats_case/case/executor.py
+│ │ --rw-rw-rw-   0        0        0     4942 2023-03-10 06:24:44.000000 ats_case-0.2.4/ats_case/case/translator.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.711661 ats_case-0.2.4/ats_case/common/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-07 07:22:45.000000 ats_case-0.2.4/ats_case/common/__init__.py
+│ │ --rw-rw-rw-   0        0        0      366 2023-02-21 08:40:11.000000 ats_case-0.2.4/ats_case/common/enum.py
+│ │ --rw-rw-rw-   0        0        0      203 2023-02-11 01:58:18.000000 ats_case-0.2.4/ats_case/common/error.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.775808 ats_case-0.2.4/ats_case/manage/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-07 07:20:58.000000 ats_case-0.2.4/ats_case/manage/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1434 2023-03-03 01:15:16.000000 ats_case-0.2.4/ats_case/manage/core.py
+│ │ --rw-rw-rw-   0        0        0     2597 2023-03-06 03:00:44.000000 ats_case-0.2.4/ats_case/manage/start.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.818429 ats_case-0.2.4/ats_case/template/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-07 07:20:58.000000 ats_case-0.2.4/ats_case/template/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2214 2023-02-23 05:48:08.000000 ats_case-0.2.4/ats_case/template/testcase_v1.tmp
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-14 09:42:25.521914 ats_case-0.2.4/ats_case.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1042 2023-03-14 09:42:24.000000 ats_case-0.2.4/ats_case.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      566 2023-03-14 09:42:25.000000 ats_case-0.2.4/ats_case.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-14 09:42:24.000000 ats_case-0.2.4/ats_case.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       23 2023-03-14 09:42:24.000000 ats_case-0.2.4/ats_case.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-03-14 09:42:24.000000 ats_case-0.2.4/ats_case.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-14 09:42:25.831120 ats_case-0.2.4/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      916 2023-03-14 09:42:16.000000 ats_case-0.2.4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:58.006032 ats_case-0.3.0/
+│ │ +-rw-rw-rw-   0        0        0      116 2022-09-15 08:18:29.000000 ats_case-0.3.0/LICENSE
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-03 08:23:26.000000 ats_case-0.3.0/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     1042 2023-04-07 01:45:58.003041 ats_case-0.3.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      532 2022-06-13 07:56:24.000000 ats_case-0.3.0/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:57.631967 ats_case-0.3.0/ats_case/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-01-04 02:21:31.000000 ats_case-0.3.0/ats_case/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:57.841351 ats_case-0.3.0/ats_case/case/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-07 07:13:48.000000 ats_case-0.3.0/ats_case/case/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    16892 2023-04-07 01:45:37.000000 ats_case-0.3.0/ats_case/case/command.py
+│ │ +-rw-rw-rw-   0        0        0    10103 2023-04-07 01:41:51.000000 ats_case-0.3.0/ats_case/case/context.py
+│ │ +-rw-rw-rw-   0        0        0     4644 2023-04-07 01:42:05.000000 ats_case-0.3.0/ats_case/case/executor.py
+│ │ +-rw-rw-rw-   0        0        0     5448 2023-04-07 01:42:16.000000 ats_case-0.3.0/ats_case/case/translator.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:57.901303 ats_case-0.3.0/ats_case/common/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-07 07:22:45.000000 ats_case-0.3.0/ats_case/common/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      366 2023-02-21 08:40:11.000000 ats_case-0.3.0/ats_case/common/enum.py
+│ │ +-rw-rw-rw-   0        0        0      203 2023-02-11 01:58:18.000000 ats_case-0.3.0/ats_case/common/error.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:57.957111 ats_case-0.3.0/ats_case/manage/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-07 07:20:58.000000 ats_case-0.3.0/ats_case/manage/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1434 2023-03-03 01:15:16.000000 ats_case-0.3.0/ats_case/manage/core.py
+│ │ +-rw-rw-rw-   0        0        0     2597 2023-04-07 01:42:53.000000 ats_case-0.3.0/ats_case/manage/start.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:57.995109 ats_case-0.3.0/ats_case/template/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-07 07:20:58.000000 ats_case-0.3.0/ats_case/template/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2214 2023-02-23 05:48:08.000000 ats_case-0.3.0/ats_case/template/testcase_v1.tmp
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 01:45:57.734673 ats_case-0.3.0/ats_case.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     1042 2023-04-07 01:45:57.000000 ats_case-0.3.0/ats_case.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      566 2023-04-07 01:45:57.000000 ats_case-0.3.0/ats_case.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 01:45:57.000000 ats_case-0.3.0/ats_case.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       23 2023-04-07 01:45:57.000000 ats_case-0.3.0/ats_case.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-07 01:45:57.000000 ats_case-0.3.0/ats_case.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 01:45:58.006032 ats_case-0.3.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      916 2023-04-07 01:44:02.000000 ats_case-0.3.0/setup.py
+│ │   --- ats_case-0.2.4/PKG-INFO
+│ ├── +++ ats_case-0.3.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ats_case
+│ │ -Version: 0.2.4
+│ │ +Version: 0.3.0
+│ │  Summary: Test Script Development Library
+│ │  Home-page: https://gitee.com/henry9000/ats_case
+│ │  Author: zhangyue
+│ │  Author-email: zhangyue@techen.cn
+│ │  Project-URL: Bug Tracker, https://gitee.com/henry9000/ats_case/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- ats_case-0.2.4/README.md
+│ ├── +++ ats_case-0.3.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- ats_case-0.2.4/ats_case/case/command.py
+│ ├── +++ ats_case-0.3.0/ats_case/case/command.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  import re
+│ │  import time
+│ │  
+│ │  from ats_base.common import func
+│ │  from ats_base.log.logger import logger
+│ │ -from ats_base.service import app, pro, udm, mm
+│ │ +from ats_base.service import app, pro, em, udm, mm
+│ │  
+│ │  from ats_case.case.context import Context
+│ │  from ats_case.common.enum import ProClazz, OperationClazz
+│ │  from ats_case.common.error import APIError
+│ │  
+│ │  """
+│ │      常用操作命令
+│ │ @@ -94,14 +94,16 @@
+│ │  """
+│ │      内部方法
+│ │  """
+│ │  
+│ │  
+│ │  def _replace(context: Context, data: dict):
+│ │      sd = str(data)
+│ │ +    sd = sd.replace('$', '"')
+│ │ +
+│ │      re_list = re.findall(r"#(.+?)\'", sd)
+│ │      for r in re_list:
+│ │          v = eval(r)
+│ │          if type(v) is str:
+│ │              sd = sd.replace('#{}'.format(r), v)
+│ │          else:
+│ │              sd = sd.replace('\'#{}\''.format(r), str(v))
+│ │ @@ -109,16 +111,31 @@
+│ │      re_list = re.findall(r"&(.+?)\'", sd)
+│ │      for r in re_list:
+│ │          sd = sd.replace(r, '{}:{}:{}:{}'.format(context.test_sn, context.case.id, context.meter.pos, r))
+│ │  
+│ │      return eval(sd)
+│ │  
+│ │  
+│ │ -def _replace_u(data: dict, v_data: dict):
+│ │ +def _replace_bench0(context: Context, data: dict):
+│ │      sd = str(data)
+│ │ +
+│ │ +    re_list = re.findall(r"#(.+?)\'", sd)
+│ │ +    for r in re_list:
+│ │ +        v = eval(r)
+│ │ +        if type(v) is str:
+│ │ +            sd = sd.replace('#{}'.format(r), v)
+│ │ +        else:
+│ │ +            sd = sd.replace('\'#{}\''.format(r), str(v))
+│ │ +
+│ │ +    return eval(sd)
+│ │ +
+│ │ +
+│ │ +def _replace_bench1(data: dict, v_data: dict):
+│ │ +    sd = str(data)
+│ │ +
+│ │      re_list = re.findall(r"&(.+?)\'", sd)
+│ │      for r in re_list:
+│ │          v = v_data[r]
+│ │          if type(v) is str:
+│ │              sd = sd.replace('&{}'.format(r), v)
+│ │          else:
+│ │              sd = sd.replace('\'&{}\''.format(r), str(v))
+│ │ @@ -138,109 +155,201 @@
+│ │  class Meter(object):
+│ │      def __init__(self, protocol):
+│ │          self._protocol = ProClazz(protocol)
+│ │          self._comm_addr = None
+│ │          self._operation = None
+│ │          self._element = None
+│ │          self._parameter = None
+│ │ +        self._addition = None
+│ │ +        self._security = None
+│ │          self._frame = None
+│ │ +        self._parse = None
+│ │          self._func = None
+│ │          self._func_module = None
+│ │          self._func_parameter = {}
+│ │  
+│ │      def comm_addr(self, addr: str):
+│ │          self._comm_addr = addr
+│ │          return self
+│ │  
+│ │ -    def operation(self, key: str):
+│ │ -        self._operation = key
+│ │ +    def operation(self, op: str):
+│ │ +        self._operation = op
+│ │          return self
+│ │  
+│ │      def element(self, di):
+│ │          self._element = di
+│ │          return self
+│ │  
+│ │      def parameter(self, param=None):
+│ │          self._parameter = param
+│ │          return self
+│ │  
+│ │ +    def addition(self, addi=None):
+│ │ +        self._addition = addi
+│ │ +        return self
+│ │ +
+│ │ +    def security(self, se=None):
+│ │ +        self._security = se
+│ │ +        return self
+│ │ +
+│ │ +    def function(self, data):
+│ │ +        self._func = data.get('code')
+│ │ +        self._func_module = data.get('module')
+│ │ +        self._func_parameter = data.get('parameter', {})
+│ │ +
+│ │ +        return self
+│ │ +
+│ │      def frame(self, hexStr: str):
+│ │          self._frame = hexStr
+│ │          return self
+│ │  
+│ │ -    def encode(self):
+│ │ +    def encode(self, context: Context):
+│ │          logger.info(
+│ │              '~ @PRO-ENCODE-> protocol:{} comm_addr:{} operation:{} element:{}'.format(self._protocol,
+│ │                                                                                        self._comm_addr,
+│ │                                                                                        self._operation,
+│ │                                                                                        self._element))
+│ │ +        if type(self._parameter) is dict:
+│ │ +            self._parameter = _replace(context, self._parameter)
+│ │ +
+│ │          parse = pro.encode(func.to_dict(protocol=self._protocol.name, comm_addr=self._comm_addr,
+│ │ -                                        operation=self._operation, element=self._element, parameter=self._parameter))
+│ │ +                                        operation=self._operation, element=self._element, parameter=self._parameter,
+│ │ +                                        addition=self._addition, security=self._security))
+│ │          logger.info('~ @PRO-ENCODE<- protocol:{} frame:{}'.format(self._protocol, parse.get('frame')))
+│ │  
+│ │ -        return parse.get('frame')
+│ │ +        self._frame = parse.get('frame')
+│ │ +        return self._frame
+│ │  
+│ │ -    def decode(self):
+│ │ +    def decode(self, context: Context):
+│ │          logger.info('~ @PRO-DECODE-> protocol:{} frame:{}'.format(self._protocol, self._frame))
+│ │          data = pro.decode(func.to_dict(protocol=self._protocol.name, frame=self._frame))
+│ │          logger.info('~ @PRO-DECODE<- protocol:{} parse:{}'.format(self._protocol, data))
+│ │  
+│ │ -        return data.get('parse').get('link_data').get('mission').get('result')
+│ │ +        self._handle_framing(context, data)
+│ │  
+│ │ -    def function(self, data):
+│ │ -        self._func = data.get('code')
+│ │ -        self._func_module = data.get('module')
+│ │ -        self._func_parameter = data.get('parameter', {})
+│ │ +        self._parse = data.get('parse').get('link_data').get('mission').get('result')
+│ │ +        return self._parse
+│ │  
+│ │ -        return self
+│ │ +    def _handle_framing(self, context: Context, data: dict, index=0):
+│ │ +        try:
+│ │ +            next_frame = data['parse']['next_frame']
+│ │ +        except:
+│ │ +            next_frame = None
+│ │ +
+│ │ +        if next_frame is not None:
+│ │ +            part_frame = data['parse']['session']['part_frame']
+│ │ +            pfs = context.session.set('part_frame', str(index), part_frame)
+│ │ +
+│ │ +            result = send(context,
+│ │ +                          todo={
+│ │ +                              'meter:comm': {'channel': {'type': 'RS485', 'baudrate': 9600}, 'frame': next_frame}})
+│ │ +            self._frame = result.get('result')
+│ │ +            data = pro.decode(func.to_dict(protocol=self._protocol.name, frame=self._frame))
+│ │  
+│ │ -    def acv(self):
+│ │ -        logger.info('~ @ACD-> module:{} function:{} parameter:{}'.format(
+│ │ -            self._func_module, self._func, self._func_parameter))
+│ │ -        result = udm.acv(module='meter.{}'.format(self._func_module), function=self._func, data=self._func_parameter)
+│ │ -        logger.info('~ @ACD<- module:{} function:{} result:{}'.format(self._func_module, self._func, result))
+│ │ +            self.handle_framing(context, data, index + 1)
+│ │ +
+│ │ +    def _flush(self, context: Context):
+│ │ +        context.runtime.steps.update({context.runtime.step: func.to_dict(obj='meter', op=self._operation
+│ │ +                                                                         , element=self._element
+│ │ +                                                                         , parameter=self._parameter,
+│ │ +                                                                         result=self._parse)})
+│ │ +
+│ │ +    def acv(self, context: Context):
+│ │ +        result = str(self._parse)
+│ │ +        if self._func is not None:
+│ │ +            if type(self._func_parameter) is not dict:
+│ │ +                self._func_parameter = {}
+│ │ +            self._func_parameter['result'] = self._parse
+│ │ +            self._func_parameter = _replace(context, self._func_parameter)
+│ │ +            try:
+│ │ +                self._func_parameter['expect_result'] = context.runtime.steps[context.runtime.step - 1]
+│ │ +            except:
+│ │ +                pass
+│ │ +
+│ │ +            logger.info('~ @ACD-> module:{} function:{} parameter:{}'.format(
+│ │ +                self._func_module, self._func, self._func_parameter))
+│ │ +            result = udm.acv(module='meter.{}'.format(self._func_module), function=self._func
+│ │ +                             , data=self._func_parameter, url=context.acd_url)
+│ │ +            logger.info('~ @ACD<- module:{} function:{} result:{}'.format(self._func_module, self._func, result))
+│ │  
+│ │          return result
+│ │  
+│ │      def exec(self, context: Context):
+│ │ -        self._frame = self.encode()
+│ │ -
+│ │ +        self.encode(context)
+│ │          result = send(context,
+│ │                        todo={'meter:comm': {'channel': {'type': 'RS485', 'baudrate': 9600}, 'frame': self._frame}})
+│ │ -
+│ │          self._frame = result.get('result')
+│ │ +        self.decode(context)
+│ │  
+│ │ -        self._func_parameter['result'] = self.decode()
+│ │ -        self._func_parameter = _replace(context, self._func_parameter)
+│ │ +        self._flush(context)
+│ │  
+│ │ -        send(context, todo={'app:show': {'msg': self.acv()}})
+│ │ +        send(context, todo={'app:show': {'msg': self.acv(context)}})
+│ │  
+│ │  
+│ │  """
+│ │      加密机篇
+│ │  """
+│ │  
+│ │  
+│ │ -def encrypt(clazz: str):
+│ │ -    pass
+│ │ +def encrypt(protocol: str):
+│ │ +    return Encryptor(protocol)
+│ │  
+│ │  
+│ │  class Encryptor(object):
+│ │ -    def __init__(self, clazz):
+│ │ -        self._clazz = clazz
+│ │ -        pass
+│ │ +    def __init__(self, protocol):
+│ │ +        self._protocol = ProClazz(protocol)
+│ │ +        self._operation = None
+│ │ +        self._parameter = None
+│ │ +        self._func_parameter = {}
+│ │ +        self._result = None
+│ │  
+│ │ -    def operation(self, key: str):
+│ │ -        pass
+│ │ +    def operation(self, op: str):
+│ │ +        self._operation = op
+│ │ +        return self
+│ │  
+│ │ -    def parameter(self, **param):
+│ │ -        pass
+│ │ +    def parameter(self, param=None):
+│ │ +        self._parameter = param
+│ │ +        return self
+│ │  
+│ │ -    def exec(self):
+│ │ -        pass
+│ │ +    def handle(self, context: Context):
+│ │ +        try:
+│ │ +            if self._parameter is None:
+│ │ +                self._parameter = {}
+│ │ +            self._parameter = context.runtime.steps[context.runtime.step - 1]['result']
+│ │ +            self._parameter['basename'] = context.session.basename
+│ │ +        except:
+│ │ +            pass
+│ │ +
+│ │ +        logger.info(
+│ │ +            '~ @EM-> protocol:{} operation:{} parameter:{}'.format(self._protocol, self._operation, self._parameter))
+│ │ +        self._result = em.handle(self._protocol.name, self._operation, self._parameter)
+│ │ +        logger.info('~ @EM<- protocol:{} operation:{} result:{}'.format(self._protocol, self._operation, self._result))
+│ │ +        self._flush(context)
+│ │ +
+│ │ +    def _flush(self, context: Context):
+│ │ +        context.runtime.steps.update({context.runtime.step: func.to_dict(obj='em', op=self._operation
+│ │ +                                                                         , parameter=self._parameter,
+│ │ +                                                                         result=self._result)})
+│ │ +
+│ │ +    def acv(self, context: Context):
+│ │ +        # self._func_parameter['basename'] = context.session.basename
+│ │ +        # self._func_parameter['parameter'] = self._parameter
+│ │ +        self._func_parameter['result'] = self._result
+│ │ +
+│ │ +        logger.info('~ @ACD-> module:{} function:{} parameter:{}'.format(
+│ │ +            self._protocol.name, self._operation, self._parameter))
+│ │ +        result = udm.acv(module='em.{}'.format(self._protocol.name), function=self._operation
+│ │ +                         , data=self._func_parameter, url=context.acd_url)
+│ │ +        logger.info('~ @ACD<- module:{} function:{} result:{}'.format(self._protocol.name, self._operation, result))
+│ │ +
+│ │ +        return result
+│ │ +
+│ │ +    def exec(self, context: Context):
+│ │ +        self.handle(context)
+│ │ +        send(context, todo={'app:show': {'msg': self.acv(context)}})
+│ │  
+│ │  
+│ │  """
+│ │      表台篇
+│ │  """
+│ │  
+│ │  
+│ │ @@ -251,15 +360,14 @@
+│ │  class Bench(object):
+│ │      def __init__(self, manufacture):
+│ │          self._manufacture = manufacture
+│ │          self._operation = None
+│ │          self._parameter = None
+│ │          self._function = None
+│ │          self._interval = None
+│ │ -        self._cache = None
+│ │          self._result = None
+│ │          self._exec_times = 0
+│ │          self._sleep = 0
+│ │  
+│ │      def operation(self, command: str):
+│ │          self._operation = command
+│ │          return self
+│ │ @@ -276,23 +384,21 @@
+│ │          self._sleep = sec
+│ │          return self
+│ │  
+│ │      def interval(self, times=0):
+│ │          self._interval = times
+│ │          return self
+│ │  
+│ │ -    def cache(self, data):
+│ │ -        self._cache = data
+│ │ -        return self
+│ │ -
+│ │      def encode(self, context: Context):
+│ │          logger.info(
+│ │              '~ @BENCH-> manufacture:{} operation:{} parameter:{}'.format(self._manufacture, self._operation,
+│ │                                                                           self._parameter))
+│ │ -        self._parameter = _replace(context, self._parameter)
+│ │ +
+│ │ +        if type(self._parameter) is dict:
+│ │ +            self._parameter = _replace_bench0(context, self._parameter)
+│ │          if self._function is not None and len(self._function) > 0:
+│ │              self._built_in(context)
+│ │  
+│ │      def decode(self, context: Context):
+│ │          logger.info('~ @BENCH<- manufacture:{} operation:{} result:{}'.format(self._manufacture,
+│ │                                                                                self._operation, self._result))
+│ │  
+│ │ @@ -300,31 +406,32 @@
+│ │          self._flush(context)
+│ │  
+│ │      def _built_in(self, context: Context):
+│ │          logger.info('~ @BUILTIN-> module:{} parameter:{}'.format('bench', self._parameter))
+│ │          for op, d in self._function.items():
+│ │              v_data = udm.built_in(module='bench', function=op, data=func.to_dict(
+│ │                  param=d, iabc=context.meter.iabc, voltage=context.meter.rated_voltage,
+│ │ -                current=context.meter.rated_current, index=self._exec_times))
+│ │ -            self._parameter = _replace_u(self._parameter, v_data)
+│ │ +                current=context.meter.rated_current, index=self._exec_times), url=context.acd_url)
+│ │ +            self._parameter = _replace_bench1(self._parameter, v_data)
+│ │  
+│ │          logger.info('~ @BUILTIN<- module:{} parameter:{}'.format('bench', self._parameter))
+│ │  
+│ │ -    def acv(self):
+│ │ +    def acv(self, context: Context):
+│ │          logger.info('~ @ACD-> module:{} function:{} parameter:{}'.format(
+│ │              'bench', self._operation, self._result))
+│ │ -        result = udm.acv(module='bench.{}'.format(self._manufacture), function=self._operation, data=self._result)
+│ │ +        result = udm.acv(module='bench.{}'.format(self._manufacture), function=self._operation
+│ │ +                         , data=self._result, url=context.acd_url)
+│ │          logger.info('~ @ACD<- module:{} function:{} result:{}'.format('bench', self._operation, result))
+│ │  
+│ │          return result
+│ │  
+│ │      def _flush(self, context: Context):
+│ │ -        if self._cache is not None:
+│ │ -            self._cache = '{}:{}:{}:{}'.format(context.test_sn, context.case.id, context.meter.pos, self._cache)
+│ │ -            mm.put(self._cache, self._result.get('result'))
+│ │ +        context.runtime.steps.update({context.runtime.step: func.to_dict(obj='bench', op=self._operation
+│ │ +                                                                         , parameter=self._parameter,
+│ │ +                                                                         result=self._result)})
+│ │  
+│ │      def rest(self, context: Context):
+│ │          if self._sleep > 0:
+│ │              send(context, todo={'app:show': {'msg': '系统休眠{}秒, 等待表台调整完毕...'.format(self._sleep)}})
+│ │              sleep(self._sleep)
+│ │  
+│ │      def _times(self, context: Context):
+│ │ @@ -337,15 +444,15 @@
+│ │      def exec(self, context: Context):
+│ │          self._times(context)
+│ │  
+│ │          self.encode(context)
+│ │          self._result = send(context, todo={'bench:{}'.format(self._operation): self._parameter})
+│ │          self.decode(context)
+│ │  
+│ │ -        send(context, todo={'app:show': {'msg': self.acv()}})
+│ │ +        send(context, todo={'app:show': {'msg': self.acv(context)}})
+│ │  
+│ │          self.rest(context)
+│ │  
+│ │  
+│ │  """
+│ │      测试终端篇
+│ │  """
+│ │ @@ -413,11 +520,7 @@
+│ │          return self
+│ │  
+│ │      def exec(self, context: Context):
+│ │          logger.info('~ @ATS-> operation:{} parameter:{}'.format(self._operation, self._parameter))
+│ │          return eval('{}(context, {})'.format(self._operation, self._parameter))
+│ │  
+│ │  
+│ │ -if __name__ == '__main__':
+│ │ -    import math
+│ │ -
+│ │ -    print(math.floor(3 / 4))
+│ │   --- ats_case-0.2.4/ats_case/case/context.py
+│ ├── +++ ats_case-0.3.0/ats_case/case/context.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -8,24 +8,27 @@
+│ │  
+│ │      def __init__(self, sn, cid, pos):
+│ │          self._test_sn = sn
+│ │          self._case_id = cid
+│ │          self._pos = pos
+│ │          self._script = None
+│ │          self._mode = None
+│ │ +        self._acd_url = None
+│ │          self._parse()
+│ │  
+│ │      def _parse(self):
+│ │          tl = mm.Dict.get("debug:log", self._test_sn)
+│ │  
+│ │          self._tester = self.Tester(tl.get('tester'))
+│ │          self._case = self.Case(tl.get('usercase'))
+│ │          self._meter = self.Meter(tl.get('meter'))
+│ │          self._bench = self.Bench(tl.get('bench'))
+│ │          self._runtime = self.Runtime()
+│ │ +        self._session = self.Session(self)
+│ │ +        self._acd_url = tl.get('acd_url')
+│ │  
+│ │      #     self._bench = self.Bench(tl.get('bench'))
+│ │      #     self._case = self.Case(tl.get('cases').get(self.case_id))
+│ │      #     self._meter = tl.get('meter')
+│ │      #     self._runtime = self.Runtime()
+│ │      #
+│ │      #     self._exec_result = None
+│ │ @@ -63,14 +66,22 @@
+│ │      def mode(self):
+│ │          return self._mode
+│ │  
+│ │      @property
+│ │      def runtime(self):
+│ │          return self._runtime
+│ │  
+│ │ +    @property
+│ │ +    def session(self):
+│ │ +        return self._session
+│ │ +
+│ │ +    @property
+│ │ +    def acd_url(self):
+│ │ +        return self._acd_url
+│ │ +
+│ │      class Tester(object):
+│ │          def __init__(self, data: dict):
+│ │              self._ip = data.get('ip')
+│ │              self._port = data.get('port')
+│ │              self._username = data.get('username')
+│ │              self._hostname = data.get('hostname')
+│ │  
+│ │ @@ -273,36 +284,36 @@
+│ │      class Runtime(object):
+│ │          """
+│ │          运行时
+│ │          """
+│ │  
+│ │          def __init__(self):
+│ │              self._step = -1
+│ │ -            self._last_step_result = None
+│ │ +            self._loop_sn = 0
+│ │              self._loop_start_step = 0
+│ │              self._loop_end_step = 0
+│ │              self._loop_count = 0
+│ │              self._loop_index = 0
+│ │ -            self._loop_sn = 0
+│ │ +            self._steps = {}
+│ │  
+│ │          @property
+│ │          def step(self):
+│ │              return self._step
+│ │  
+│ │          @step.setter
+│ │          def step(self, value):
+│ │              self._step = value
+│ │  
+│ │          @property
+│ │ -        def last_step_result(self):
+│ │ -            return self._last_step_result
+│ │ +        def loop_sn(self):
+│ │ +            return self._loop_sn
+│ │  
+│ │ -        @last_step_result.setter
+│ │ -        def last_step_result(self, value):
+│ │ -            self._last_step_result = value
+│ │ +        @loop_sn.setter
+│ │ +        def loop_sn(self, value):
+│ │ +            self._loop_sn = value
+│ │  
+│ │          @property
+│ │          def loop_start_step(self):
+│ │              return self._loop_start_step
+│ │  
+│ │          @loop_start_step.setter
+│ │          def loop_start_step(self, value):
+│ │ @@ -329,15 +340,28 @@
+│ │              return self._loop_index
+│ │  
+│ │          @loop_index.setter
+│ │          def loop_index(self, value):
+│ │              self._loop_index = value
+│ │  
+│ │          @property
+│ │ -        def loop_sn(self):
+│ │ -            return self._loop_sn
+│ │ +        def steps(self):
+│ │ +            return self._steps
+│ │ +
+│ │ +
+│ │ +    class Session(object):
+│ │ +        def __init__(self, parent):
+│ │ +            self._basename = '{}:{}:{}'.format(parent.test_sn
+│ │ +                                                 , parent.case.id, parent.meter.pos)
+│ │ +
+│ │ +        def get(self, name: str, key: str):
+│ │ +            return mm.Dict.get('{}:{}'.format(self._basename, name), key)
+│ │ +
+│ │ +        def set(self, name: str, key: str, data):
+│ │ +            return mm.Dict.put('{}:{}'.format(self._basename, name), key, data)
+│ │ +
+│ │ +        @property
+│ │ +        def basename(self):
+│ │ +            return self._basename
+│ │  
+│ │ -        @loop_sn.setter
+│ │ -        def loop_sn(self, value):
+│ │ -            self._loop_sn = value
+│ │   --- ats_case-0.2.4/ats_case/case/executor.py
+│ ├── +++ ats_case-0.3.0/ats_case/case/executor.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -31,17 +31,15 @@
+│ │          return True
+│ │  
+│ │      def step_exec(self):
+│ │          try:
+│ │              logger.info('~ @TCC-STEP-> steps[#{}] execute'.format(self._context.runtime.step))
+│ │  
+│ │              if self.is_exec():
+│ │ -                result = getattr(self._model, 'step_{}'.format(self._context.runtime.step))(self._context)
+│ │ -                if result is not None:
+│ │ -                    self._context.runtime.last_step_result = result
+│ │ +                getattr(self._model, 'step_{}'.format(self._context.runtime.step))(self._context)
+│ │          except Exception as e:
+│ │              logger.error(str(e))
+│ │  
+│ │      def loop_meet(self):
+│ │          try:
+│ │              loops = self._context.case.control.get('loops')
+│ │  
+│ │ @@ -56,21 +54,21 @@
+│ │  
+│ │              step_start = int(ranges.split(':')[0])
+│ │              step_end = int(ranges.split(':')[1])
+│ │  
+│ │              if step_start <= self._context.runtime.step <= step_end:
+│ │                  self._context.runtime.loop_start_step = step_start
+│ │                  self._context.runtime.loop_end_step = step_end
+│ │ -                self._context.runtime.loop_count = count
+│ │ +                self._context.runtime.loop_count = int(count)
+│ │                  self._context.runtime.loop_index = 0
+│ │ +                return True
+│ │          except Exception as e:
+│ │              logger.error(str(e))
+│ │ -            return False
+│ │  
+│ │ -        return True
+│ │ +        return False
+│ │  
+│ │      def loop_exec(self):
+│ │          logger.info('~ @TCC-LOOP-> loops[#{}] start. -range {}:{}  -count {}'.format(
+│ │              self._context.runtime.loop_sn, self._context.runtime.loop_start_step,
+│ │              self._context.runtime.loop_end_step, self._context.runtime.loop_count))
+│ │  
+│ │          command.client().operation('show').message('循环[#{}]开始, 步骤范围[{}-{}], 共{}次'.format(
+│ │ @@ -102,15 +100,15 @@
+│ │          # 分为两种情况: 1. 手动编写脚本 2.自动编写脚本
+│ │          pass
+│ │  
+│ │  
+│ │  class DebugExecutor(Executor):
+│ │      def exec(self):
+│ │          steps = translator.translate(self._context)
+│ │ -        self._model = import_module('script.debug.{}.steps'.format(self._context.tester.username))
+│ │ +        self._model = import_module('script.debug.{}.steps'.format(self._context.tester.username.lower()))
+│ │  
+│ │          index = 0
+│ │          while index < len(steps):
+│ │              self._context.runtime.step = steps[index]
+│ │              if self.loop_meet():
+│ │                  self.loop_exec()
+│ │              else:
+│ │   --- ats_case-0.2.4/ats_case/case/translator.py
+│ ├── +++ ats_case-0.3.0/ats_case/case/translator.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -92,53 +92,70 @@
+│ │  
+│ │  class METER(Operation):
+│ │      def translate(self, op: dict):
+│ │          clazz = op.get('clazz')
+│ │          opt = op.get('operation')
+│ │          elem = op.get('element')
+│ │          param = op.get('parameter')
+│ │ +        addi = op.get('addition')
+│ │ +        se = op.get('security')
+│ │          acd = op.get('acd')
+│ │  
+│ │          code = "command.meter('{}').comm_addr('{}').operation('{}')" \
+│ │ -            .format(clazz, self._context.meter.addr, opt.replace('_', ':'))
+│ │ +            .format(clazz, self._context.meter.addr, opt)
+│ │  
+│ │          if elem is not None:
+│ │ -            code += ".element('{}')".format(elem)
+│ │ +            if type(elem) is str:
+│ │ +                code += ".element('{}')".format(elem)
+│ │ +            else:
+│ │ +                code += ".element({})".format(elem)
+│ │          if param is not None:
+│ │              code += ".parameter({})".format(param)
+│ │ +        if addi is not None:
+│ │ +            code += ".addition({})".format(addi)
+│ │ +        if se is not None:
+│ │ +            code += ".security({})".format(se)
+│ │          if acd is not None:
+│ │              code += ".function({})".format(acd)
+│ │  
+│ │          code += ".exec(context)"
+│ │  
+│ │          return code
+│ │  
+│ │  
+│ │ +class EM(Operation):
+│ │ +    def translate(self, op: dict):
+│ │ +        clazz = op.get('clazz')
+│ │ +        opt = op.get('operation')
+│ │ +        param = op.get('parameter')
+│ │ +
+│ │ +        code = "command.encrypt('{}').operation('{}').parameter({}).exec(context)".format(clazz, opt, param)
+│ │ +
+│ │ +        return code
+│ │ +
+│ │ +
+│ │  class BENCH(Operation):
+│ │      def translate(self, op: dict):
+│ │          clazz = op.get('clazz')
+│ │          opt = op.get('operation')
+│ │          param = op.get('parameter')
+│ │          function = op.get('function')
+│ │          sleep = op.get('sleep')
+│ │          interval = op.get('interval')
+│ │ -        cache = op.get('cache')
+│ │  
+│ │          code = "command.bench('{}').operation('{}')".format(clazz, opt)
+│ │  
+│ │          if param is not None:
+│ │              code += ".parameter({})".format(param)
+│ │          if function is not None:
+│ │              code += ".function({})".format(function)
+│ │          if sleep is not None:
+│ │              code += ".sleep({})".format(sleep)
+│ │          if interval is not None:
+│ │              code += ".interval({})".format(interval)
+│ │ -        if cache is not None:
+│ │ -            cache += ".cache({})".format(cache)
+│ │  
+│ │          code += ".exec(context)"
+│ │  
+│ │          return code
+│ │  
+│ │  
+│ │  class APP(Operation):
+│ │   --- ats_case-0.2.4/ats_case/manage/core.py
+│ ├── +++ ats_case-0.3.0/ats_case/manage/core.py
+│ │┄ Files identical despite different names
+│ │   --- ats_case-0.2.4/ats_case/manage/start.py
+│ ├── +++ ats_case-0.3.0/ats_case/manage/start.py
+│ │┄ Files identical despite different names
+│ │   --- ats_case-0.2.4/ats_case/template/testcase_v1.tmp
+│ ├── +++ ats_case-0.3.0/ats_case/template/testcase_v1.tmp
+│ │┄ Files identical despite different names
+│ │   --- ats_case-0.2.4/ats_case.egg-info/PKG-INFO
+│ ├── +++ ats_case-0.3.0/ats_case.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ats-case
+│ │ -Version: 0.2.4
+│ │ +Version: 0.3.0
+│ │  Summary: Test Script Development Library
+│ │  Home-page: https://gitee.com/henry9000/ats_case
+│ │  Author: zhangyue
+│ │  Author-email: zhangyue@techen.cn
+│ │  Project-URL: Bug Tracker, https://gitee.com/henry9000/ats_case/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- ats_case-0.2.4/ats_case.egg-info/SOURCES.txt
+│ ├── +++ ats_case-0.3.0/ats_case.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- ats_case-0.2.4/setup.py
+│ ├── +++ ats_case-0.3.0/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r", encoding="utf-8") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="ats_case",
+│ │ -    version="0.2.4",
+│ │ +    version="0.3.0",
+│ │      py_modules=['ats_case'],
+│ │      author="zhangyue",
+│ │      author_email="zhangyue@techen.cn",
+│ │      description="Test Script Development Library",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://gitee.com/henry9000/ats_case",

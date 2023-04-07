@@ -1,0 +1,121 @@
+--- tmp/PRPlot-0.0.4.tar.gz
++++ tmp/PRPlot-0.0.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "PRPlot-0.0.4.tar", last modified: Fri Apr  7 01:28:46 2023, max compression
+│ +gzip compressed data, was "PRPlot-0.0.5.tar", last modified: Fri Apr  7 01:49:35 2023, max compression
+│   --- PRPlot-0.0.4.tar
+├── +++ PRPlot-0.0.5.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxr-x   0 ferubko   (1000) ferubko   (1000)        0 2023-04-07 01:28:46.122260 PRPlot-0.0.4/
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)    35149 2023-04-06 20:40:07.000000 PRPlot-0.0.4/LICENSE
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     1188 2023-04-07 01:28:46.122260 PRPlot-0.0.4/PKG-INFO
+│ │ -drwxrwxr-x   0 ferubko   (1000) ferubko   (1000)        0 2023-04-07 01:28:46.094260 PRPlot-0.0.4/PRPlot/
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     2432 2023-04-07 00:43:42.000000 PRPlot-0.0.4/PRPlot/PRPlot.py
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)      115 2023-04-07 01:28:17.000000 PRPlot-0.0.4/PRPlot/__init__.py
+│ │ -drwxrwxr-x   0 ferubko   (1000) ferubko   (1000)        0 2023-04-07 01:28:46.122260 PRPlot-0.0.4/PRPlot.egg-info/
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     1188 2023-04-07 01:28:45.000000 PRPlot-0.0.4/PRPlot.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)      192 2023-04-07 01:28:45.000000 PRPlot-0.0.4/PRPlot.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)        1 2023-04-07 01:28:45.000000 PRPlot-0.0.4/PRPlot.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)        7 2023-04-07 01:28:45.000000 PRPlot-0.0.4/PRPlot.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)        8 2023-04-06 20:40:07.000000 PRPlot-0.0.4/README.md
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)       38 2023-04-07 01:28:46.134260 PRPlot-0.0.4/setup.cfg
+│ │ --rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     1557 2023-04-07 01:28:07.000000 PRPlot-0.0.4/setup.py
+│ │ +drwxrwxr-x   0 ferubko   (1000) ferubko   (1000)        0 2023-04-07 01:49:35.500225 PRPlot-0.0.5/
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)    35149 2023-04-06 20:40:07.000000 PRPlot-0.0.5/LICENSE
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     1188 2023-04-07 01:49:35.500225 PRPlot-0.0.5/PKG-INFO
+│ │ +drwxrwxr-x   0 ferubko   (1000) ferubko   (1000)        0 2023-04-07 01:49:35.480225 PRPlot-0.0.5/PRPlot/
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     2500 2023-04-07 01:48:40.000000 PRPlot-0.0.5/PRPlot/PRPlot.py
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)      115 2023-04-07 01:49:05.000000 PRPlot-0.0.5/PRPlot/__init__.py
+│ │ +drwxrwxr-x   0 ferubko   (1000) ferubko   (1000)        0 2023-04-07 01:49:35.500225 PRPlot-0.0.5/PRPlot.egg-info/
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     1188 2023-04-07 01:49:35.000000 PRPlot-0.0.5/PRPlot.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)      192 2023-04-07 01:49:35.000000 PRPlot-0.0.5/PRPlot.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)        1 2023-04-07 01:49:35.000000 PRPlot-0.0.5/PRPlot.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)        7 2023-04-07 01:49:35.000000 PRPlot-0.0.5/PRPlot.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)        8 2023-04-06 20:40:07.000000 PRPlot-0.0.5/README.md
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)       38 2023-04-07 01:49:35.512225 PRPlot-0.0.5/setup.cfg
+│ │ +-rw-rw-r--   0 ferubko   (1000) ferubko   (1000)     1557 2023-04-07 01:49:05.000000 PRPlot-0.0.5/setup.py
+│ │   --- PRPlot-0.0.4/LICENSE
+│ ├── +++ PRPlot-0.0.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- PRPlot-0.0.4/PKG-INFO
+│ ├── +++ PRPlot-0.0.5/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: PRPlot
+│ │ -Version: 0.0.4
+│ │ +Version: 0.0.5
+│ │  Summary: It is a Python library for build a very nice predict-reference plots. It is an extension of the matplotlib library
+│ │  Home-page: https://github.com/89605502155/PRPlot
+│ │  Author: Andrey Ferubko
+│ │  Author-email: ferubko1999@yandex.ru
+│ │  License: GNU General Public License v3.0
+│ │ -Download-URL: https://github.com/89605502155/N-PLS/archive/v0.0.4.zip
+│ │ +Download-URL: https://github.com/89605502155/N-PLS/archive/v0.0.5.zip
+│ │  Platform: UNKNOWN
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Intended Audience :: End Users/Desktop
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- PRPlot-0.0.4/PRPlot/PRPlot.py
+│ ├── +++ PRPlot-0.0.5/PRPlot/PRPlot.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  import matplotlib.pyplot as plt
+│ │  import matplotlib as mpl
+│ │  import math
+│ │  from decimal import Decimal
+│ │  
+│ │  
+│ │ -class PRPlot():
+│ │ +class PRPlot(ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
+│ │      def __int__(self, ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
+│ │          self.ms = ms
+│ │          self.lw = lw
+│ │          self.name_plot = name_plot
+│ │          self.x_name = x_name
+│ │          self.y_name = y_name
+│ │          self.save_name = save_name
+│ │   --- PRPlot-0.0.4/PRPlot.egg-info/PKG-INFO
+│ ├── +++ PRPlot-0.0.5/PRPlot.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,16 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: PRPlot
+│ │ -Version: 0.0.4
+│ │ +Version: 0.0.5
+│ │  Summary: It is a Python library for build a very nice predict-reference plots. It is an extension of the matplotlib library
+│ │  Home-page: https://github.com/89605502155/PRPlot
+│ │  Author: Andrey Ferubko
+│ │  Author-email: ferubko1999@yandex.ru
+│ │  License: GNU General Public License v3.0
+│ │ -Download-URL: https://github.com/89605502155/N-PLS/archive/v0.0.4.zip
+│ │ +Download-URL: https://github.com/89605502155/N-PLS/archive/v0.0.5.zip
+│ │  Platform: UNKNOWN
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Intended Audience :: End Users/Desktop
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │   --- PRPlot-0.0.4/setup.py
+│ ├── +++ PRPlot-0.0.5/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from io import open
+│ │  from setuptools import setup
+│ │  
+│ │  
+│ │ -version = '0.0.4'
+│ │ +version = '0.0.5'
+│ │  
+│ │  with open('README.md', encoding='utf-8') as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setup(
+│ │      name='PRPlot',
+│ │      version=version,

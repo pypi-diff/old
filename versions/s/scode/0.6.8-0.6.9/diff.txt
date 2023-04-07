@@ -1,0 +1,114 @@
+--- tmp/scode-0.6.8.tar.gz
++++ tmp/scode-0.6.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "scode-0.6.8.tar", last modified: Fri Sep  2 04:11:46 2022, max compression
+│ +gzip compressed data, was "scode-0.6.9.tar", last modified: Tue Sep  6 01:54:07 2022, max compression
+│   --- scode-0.6.8.tar
+├── +++ scode-0.6.9.tar
+│ ├── file list
+│ │ @@ -1,19 +1,19 @@
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-02 04:11:46.917164 scode-0.6.8/
+│ │ --rw-rw-rw-   0        0        0     4960 2022-09-02 04:11:46.916164 scode-0.6.8/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     3745 2022-08-12 05:59:58.000000 scode-0.6.8/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-02 04:11:46.905164 scode-0.6.8/scode/
+│ │ --rw-rw-rw-   0        0        0     1779 2022-09-02 04:11:28.000000 scode-0.6.8/scode/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2074 2022-08-09 04:30:00.000000 scode-0.6.8/scode/dropbox.py
+│ │ --rw-rw-rw-   0        0        0     2701 2022-08-09 04:32:24.000000 scode-0.6.8/scode/paramiko.py
+│ │ --rw-rw-rw-   0        0        0      750 2022-08-09 04:36:16.000000 scode-0.6.8/scode/schedule.py
+│ │ --rw-rw-rw-   0        0        0    42223 2022-09-02 04:09:20.000000 scode-0.6.8/scode/selenium.py
+│ │ --rw-rw-rw-   0        0        0     4629 2022-03-15 01:54:52.000000 scode-0.6.8/scode/telegram.py
+│ │ --rw-rw-rw-   0        0        0     4906 2022-08-22 08:08:36.000000 scode-0.6.8/scode/util.py
+│ │ -drwxrwxrwx   0        0        0        0 2022-09-02 04:11:46.914164 scode-0.6.8/scode.egg-info/
+│ │ --rw-rw-rw-   0        0        0     4960 2022-09-02 04:11:46.000000 scode-0.6.8/scode.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      283 2022-09-02 04:11:46.000000 scode-0.6.8/scode.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2022-09-02 04:11:46.000000 scode-0.6.8/scode.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0      171 2022-09-02 04:11:46.000000 scode-0.6.8/scode.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        6 2022-09-02 04:11:46.000000 scode-0.6.8/scode.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2022-09-02 04:11:46.917164 scode-0.6.8/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1308 2022-08-22 08:26:22.000000 scode-0.6.8/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2022-09-06 01:54:07.976004 scode-0.6.9/
+│ │ +-rw-rw-rw-   0        0        0     4960 2022-09-06 01:54:07.975004 scode-0.6.9/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     3745 2022-08-12 05:59:58.000000 scode-0.6.9/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2022-09-06 01:54:07.961003 scode-0.6.9/scode/
+│ │ +-rw-rw-rw-   0        0        0     1779 2022-09-06 01:52:36.000000 scode-0.6.9/scode/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2074 2022-08-09 04:30:00.000000 scode-0.6.9/scode/dropbox.py
+│ │ +-rw-rw-rw-   0        0        0     2701 2022-08-09 04:32:24.000000 scode-0.6.9/scode/paramiko.py
+│ │ +-rw-rw-rw-   0        0        0      750 2022-08-09 04:36:16.000000 scode-0.6.9/scode/schedule.py
+│ │ +-rw-rw-rw-   0        0        0    42223 2022-09-02 04:09:20.000000 scode-0.6.9/scode/selenium.py
+│ │ +-rw-rw-rw-   0        0        0     4629 2022-03-15 01:54:52.000000 scode-0.6.9/scode/telegram.py
+│ │ +-rw-rw-rw-   0        0        0     6529 2022-09-06 01:52:28.000000 scode-0.6.9/scode/util.py
+│ │ +drwxrwxrwx   0        0        0        0 2022-09-06 01:54:07.971003 scode-0.6.9/scode.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     4960 2022-09-06 01:54:07.000000 scode-0.6.9/scode.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      283 2022-09-06 01:54:07.000000 scode-0.6.9/scode.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2022-09-06 01:54:07.000000 scode-0.6.9/scode.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0      171 2022-09-06 01:54:07.000000 scode-0.6.9/scode.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        6 2022-09-06 01:54:07.000000 scode-0.6.9/scode.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2022-09-06 01:54:07.976004 scode-0.6.9/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1308 2022-08-22 08:26:22.000000 scode-0.6.9/setup.py
+│ │   --- scode-0.6.8/PKG-INFO
+│ ├── +++ scode-0.6.9/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: scode
+│ │ -Version: 0.6.8
+│ │ +Version: 0.6.9
+│ │  Summary: The Private Package of Showm Company.
+│ │  Home-page: https://github.com/showm-dev/Standard
+│ │  Author: 강동욱, 선준우, 강진영, 박태준, 김도현, 임성현
+│ │  Maintainer: 강동욱
+│ │  Maintainer-email: ehddnrwork@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: # scode
+│ │   --- scode-0.6.8/README.md
+│ ├── +++ scode-0.6.9/README.md
+│ │┄ Files identical despite different names
+│ │   --- scode-0.6.8/scode/__init__.py
+│ ├── +++ scode-0.6.9/scode/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  __all__ = ['selenium', 'paramiko', 'telegram', 'dropbox', 'util', 'schedule']
+│ │  
+│ │ -__version__ = '0.6.8'
+│ │ +__version__ = '0.6.9'
+│ │  
+│ │  from . import selenium, paramiko, telegram, dropbox, util, schedule
+│ │  
+│ │  from .util import *
+│ │  
+│ │  def is_latest_version() -> bool:
+│ │      """
+│ │   --- scode-0.6.8/scode/dropbox.py
+│ ├── +++ scode-0.6.9/scode/dropbox.py
+│ │┄ Files identical despite different names
+│ │   --- scode-0.6.8/scode/paramiko.py
+│ ├── +++ scode-0.6.9/scode/paramiko.py
+│ │┄ Files identical despite different names
+│ │   --- scode-0.6.8/scode/schedule.py
+│ ├── +++ scode-0.6.9/scode/schedule.py
+│ │┄ Files identical despite different names
+│ │   --- scode-0.6.8/scode/selenium.py
+│ ├── +++ scode-0.6.9/scode/selenium.py
+│ │┄ Files identical despite different names
+│ │   --- scode-0.6.8/scode/telegram.py
+│ ├── +++ scode-0.6.9/scode/telegram.py
+│ │┄ Files identical despite different names
+│ │   --- scode-0.6.8/scode.egg-info/PKG-INFO
+│ ├── +++ scode-0.6.9/scode.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: scode
+│ │ -Version: 0.6.8
+│ │ +Version: 0.6.9
+│ │  Summary: The Private Package of Showm Company.
+│ │  Home-page: https://github.com/showm-dev/Standard
+│ │  Author: 강동욱, 선준우, 강진영, 박태준, 김도현, 임성현
+│ │  Maintainer: 강동욱
+│ │  Maintainer-email: ehddnrwork@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: # scode
+│ │   --- scode-0.6.8/setup.py
+│ ├── +++ scode-0.6.9/setup.py
+│ │┄ Files identical despite different names

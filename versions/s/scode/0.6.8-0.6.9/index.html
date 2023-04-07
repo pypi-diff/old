@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/scode-0.6.8.tar.gz tmp/scode-0.6.9.tar.gz --html versions/s/scode/0.6.8-0.6.9/index.html --text versions/s/scode/0.6.8-0.6.9/diff.txt --markdown versions/s/scode/0.6.8-0.6.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.88 KB</span></div>
+  <div><span class="source">tmp/scode-0.6.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/scode-0.6.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">260 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;scode-0.6.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Fri</del><span class="dp">·</span>Sep<span class="dp">·</span><span class="dp">·</span><del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;scode-0.6.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Tue</ins><span class="dp">·</span>Sep<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.59 KB</span></div>
+    <div><span class="source">scode-0.6.8.tar</span> vs.</div>
+    <div id="scode--.-.-.tar"><span class="source">scode-0.6.9.tar</span>
+      <a class="anchor" href="#scode--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.72 KB</span></div>
+      <div id="scode--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#scode--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 19 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.9<del>1716</del>4<span class="dp">·</span>scode-0.6.<del>8</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.9<ins>7600</ins>4<span class="dp">·</span>scode-0.6.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4960<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.9<del>1616</del>4<span class="dp">·</span>scode-0.6.<del>8</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4960<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.9<ins>7500</ins>4<span class="dp">·</span>scode-0.6.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3745<span class="dp">·</span>2022-08-12<span class="dp">·</span>05:59:58.000000<span class="dp">·</span>scode-0.6.<del>8</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3745<span class="dp">·</span>2022-08-12<span class="dp">·</span>05:59:58.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.9<del>05164</del><span class="dp">·</span>scode-0.6.<del>8</del>/scode/</td><td class="diffline">4 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.9<ins>61003</ins><span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1779<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>28</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1779<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>52</ins>:<ins>36</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2074<span class="dp">·</span>2022-08-09<span class="dp">·</span>04:30:00.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/dropbox.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2074<span class="dp">·</span>2022-08-09<span class="dp">·</span>04:30:00.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/dropbox.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2701<span class="dp">·</span>2022-08-09<span class="dp">·</span>04:32:24.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/paramiko.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2701<span class="dp">·</span>2022-08-09<span class="dp">·</span>04:32:24.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/paramiko.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>750<span class="dp">·</span>2022-08-09<span class="dp">·</span>04:36:16.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/schedule.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>750<span class="dp">·</span>2022-08-09<span class="dp">·</span>04:36:16.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/schedule.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42223<span class="dp">·</span>2022-09-02<span class="dp">·</span>04:09:20.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/selenium.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42223<span class="dp">·</span>2022-09-02<span class="dp">·</span>04:09:20.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/selenium.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4629<span class="dp">·</span>2022-03-15<span class="dp">·</span>01:54:52.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/telegram.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4629<span class="dp">·</span>2022-03-15<span class="dp">·</span>01:54:52.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/telegram.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>4906</del><span class="dp">·</span>2022-0<del>8</del>-<del>22</del><span class="dp">·</span>0<del>8</del>:<del>08</del>:<del>36</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode/util.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>6529</ins><span class="dp">·</span>2022-0<ins>9</ins>-<ins>06</ins><span class="dp">·</span>0<ins>1</ins>:<ins>52</ins>:<ins>28</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.9<del>14164</del><span class="dp">·</span>scode-0.6.<del>8</del>/scode.egg-info/</td><td class="diffline">12 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.9<ins>71003</ins><span class="dp">·</span>scode-0.6.<ins>9</ins>/scode.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4960<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode.egg-info/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4960<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>283<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode.egg-info/SOURCES.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>283<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode.egg-info/dependency_links.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode.egg-info/requires.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.000000<span class="dp">·</span>scode-0.6.<del>8</del>/scode.egg-info/top_level.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/scode.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2022-09-0<del>2</del><span class="dp">·</span>0<del>4</del>:<del>11</del>:<del>46</del>.9<del>1716</del>4<span class="dp">·</span>scode-0.6.<del>8</del>/setup.cfg</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2022-09-0<ins>6</ins><span class="dp">·</span>0<ins>1</ins>:<ins>54</ins>:<ins>07</ins>.9<ins>7600</ins>4<span class="dp">·</span>scode-0.6.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1308<span class="dp">·</span>2022-08-22<span class="dp">·</span>08:26:22.000000<span class="dp">·</span>scode-0.6.<del>8</del>/setup.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1308<span class="dp">·</span>2022-08-22<span class="dp">·</span>08:26:22.000000<span class="dp">·</span>scode-0.6.<ins>9</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">410 B</span></div>
+      <div><span class="source">scode-0.6.8/PKG-INFO</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--PKG-INFO"><span class="source">scode-0.6.9/PKG-INFO</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>scode<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>scode<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.6.<del>8</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.6.<ins>9</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>Private<span class="dp">·</span>Package<span class="dp">·</span>of<span class="dp">·</span>Showm<span class="dp">·</span>Company.<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>Private<span class="dp">·</span>Package<span class="dp">·</span>of<span class="dp">·</span>Showm<span class="dp">·</span>Company.<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/showm-dev/Standard<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/showm-dev/Standard<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>강동욱,<span class="dp">·</span>선준우,<span class="dp">·</span>강진영,<span class="dp">·</span>박태준,<span class="dp">·</span>김도현,<span class="dp">·</span>임성현<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>강동욱,<span class="dp">·</span>선준우,<span class="dp">·</span>강진영,<span class="dp">·</span>박태준,<span class="dp">·</span>김도현,<span class="dp">·</span>임성현<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>강동욱<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>강동욱<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>ehddnrwork@gmail.com<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>ehddnrwork@gmail.com<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>scode<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>scode<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">scode-0.6.8/README.md</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--README.md"><span class="source">scode-0.6.9/README.md</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">393 B</span></div>
+      <div><span class="source">scode-0.6.8/scode/__init__.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode-__init__.py"><span class="source">scode-0.6.9/scode/__init__.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[&#x27;selenium&#x27;,<span class="dp">·</span>&#x27;paramiko&#x27;,<span class="dp">·</span>&#x27;telegram&#x27;,<span class="dp">·</span>&#x27;dropbox&#x27;,<span class="dp">·</span>&#x27;util&#x27;,<span class="dp">·</span>&#x27;schedule&#x27;]<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[&#x27;selenium&#x27;,<span class="dp">·</span>&#x27;paramiko&#x27;,<span class="dp">·</span>&#x27;telegram&#x27;,<span class="dp">·</span>&#x27;dropbox&#x27;,<span class="dp">·</span>&#x27;util&#x27;,<span class="dp">·</span>&#x27;schedule&#x27;]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.6.<del>8</del>&#x27;<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.6.<ins>9</ins>&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>.<span class="dp">·</span>import<span class="dp">·</span>selenium,<span class="dp">·</span>paramiko,<span class="dp">·</span>telegram,<span class="dp">·</span>dropbox,<span class="dp">·</span>util,<span class="dp">·</span>schedule<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>.<span class="dp">·</span>import<span class="dp">·</span>selenium,<span class="dp">·</span>paramiko,<span class="dp">·</span>telegram,<span class="dp">·</span>dropbox,<span class="dp">·</span>util,<span class="dp">·</span>schedule<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>.util<span class="dp">·</span>import<span class="dp">·</span>*<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>.util<span class="dp">·</span>import<span class="dp">·</span>*<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">def<span class="dp">·</span>is_latest_version()<span class="dp">·</span>-&gt;<span class="dp">·</span>bool:<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">def<span class="dp">·</span>is_latest_version()<span class="dp">·</span>-&gt;<span class="dp">·</span>bool:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">scode-0.6.8/scode/dropbox.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode-dropbox.py"><span class="source">scode-0.6.9/scode/dropbox.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode-dropbox.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">scode-0.6.8/scode/paramiko.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode-paramiko.py"><span class="source">scode-0.6.9/scode/paramiko.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode-paramiko.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">scode-0.6.8/scode/schedule.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode-schedule.py"><span class="source">scode-0.6.9/scode/schedule.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode-schedule.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">scode-0.6.8/scode/selenium.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode-selenium.py"><span class="source">scode-0.6.9/scode/selenium.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode-selenium.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">scode-0.6.8/scode/telegram.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode-telegram.py"><span class="source">scode-0.6.9/scode/telegram.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode-telegram.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">440 B</span></div>
+      <div><span class="source">scode-0.6.8/scode.egg-info/PKG-INFO</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--scode.egg-info-PKG-INFO"><span class="source">scode-0.6.9/scode.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--scode.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>scode<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>scode<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.6.<del>8</del><em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.6.<ins>9</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>Private<span class="dp">·</span>Package<span class="dp">·</span>of<span class="dp">·</span>Showm<span class="dp">·</span>Company.<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>The<span class="dp">·</span>Private<span class="dp">·</span>Package<span class="dp">·</span>of<span class="dp">·</span>Showm<span class="dp">·</span>Company.<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/showm-dev/Standard<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/showm-dev/Standard<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>강동욱,<span class="dp">·</span>선준우,<span class="dp">·</span>강진영,<span class="dp">·</span>박태준,<span class="dp">·</span>김도현,<span class="dp">·</span>임성현<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>강동욱,<span class="dp">·</span>선준우,<span class="dp">·</span>강진영,<span class="dp">·</span>박태준,<span class="dp">·</span>김도현,<span class="dp">·</span>임성현<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>강동욱<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>강동욱<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>ehddnrwork@gmail.com<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>ehddnrwork@gmail.com<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>scode<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>#<span class="dp">·</span>scode<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">scode-0.6.8/setup.py</span> vs.</div>
+      <div id="scode--.-.-.tar---scode--.-.--setup.py"><span class="source">scode-0.6.9/setup.py</span>
+        <a class="anchor" href="#scode--.-.-.tar---scode--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
