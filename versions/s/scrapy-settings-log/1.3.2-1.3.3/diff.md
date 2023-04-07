@@ -1,0 +1,344 @@
+# Comparing `tmp/scrapy-settings-log-1.3.2.tar.gz` & `tmp/scrapy-settings-log-1.3.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "scrapy-settings-log-1.3.2.tar", last modified: Tue Mar 21 11:53:44 2023, max compression
++gzip compressed data, was "scrapy-settings-log-1.3.3.tar", last modified: Fri Apr  7 12:31:39 2023, max compression
+```
+
+## Comparing `scrapy-settings-log-1.3.2.tar` & `scrapy-settings-log-1.3.3.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxrwxrwx   0        0        0        0 2023-03-21 11:53:44.618063 scrapy-settings-log-1.3.2/
+--rw-rw-rw-   0        0        0    35823 2023-03-09 10:29:45.000000 scrapy-settings-log-1.3.2/LICENSE
+--rw-rw-rw-   0        0        0     1614 2023-03-21 11:53:44.618063 scrapy-settings-log-1.3.2/PKG-INFO
+--rw-rw-rw-   0        0        0      905 2023-03-21 11:50:02.000000 scrapy-settings-log-1.3.2/README.md
+--rw-rw-rw-   0        0        0       86 2023-03-21 11:22:32.000000 scrapy-settings-log-1.3.2/pyproject.toml
+--rw-rw-rw-   0        0        0      880 2023-03-21 11:53:44.619978 scrapy-settings-log-1.3.2/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-03-21 11:53:44.591063 scrapy-settings-log-1.3.2/src/
+-drwxrwxrwx   0        0        0        0 2023-03-21 11:53:44.597072 scrapy-settings-log-1.3.2/src/scrapy_settings_log/
+--rw-rw-rw-   0        0        0     1247 2023-03-21 11:51:12.000000 scrapy-settings-log-1.3.2/src/scrapy_settings_log/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-03-21 11:53:44.616094 scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/
+--rw-rw-rw-   0        0        0     1614 2023-03-21 11:53:44.000000 scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      331 2023-03-21 11:53:44.000000 scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-21 11:53:44.000000 scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        7 2023-03-21 11:53:44.000000 scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       20 2023-03-21 11:53:44.000000 scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/top_level.txt
+-drwxrwxrwx   0        0        0        0 2023-03-21 11:53:44.617063 scrapy-settings-log-1.3.2/tests/
+--rw-rw-rw-   0        0        0     1857 2023-03-21 11:12:05.000000 scrapy-settings-log-1.3.2/tests/test_code.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:31:39.442606 scrapy-settings-log-1.3.3/
++-rw-rw-rw-   0        0        0    35823 2023-03-09 10:29:45.000000 scrapy-settings-log-1.3.3/LICENSE
++-rw-rw-rw-   0        0        0     1962 2023-04-07 12:31:39.442606 scrapy-settings-log-1.3.3/PKG-INFO
++-rw-rw-rw-   0        0        0     1253 2023-04-07 12:29:32.000000 scrapy-settings-log-1.3.3/README.md
++-rw-rw-rw-   0        0        0       86 2023-03-21 11:22:32.000000 scrapy-settings-log-1.3.3/pyproject.toml
++-rw-rw-rw-   0        0        0      880 2023-04-07 12:31:39.442606 scrapy-settings-log-1.3.3/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-07 12:31:39.426981 scrapy-settings-log-1.3.3/src/
++drwxrwxrwx   0        0        0        0 2023-04-07 12:31:39.426981 scrapy-settings-log-1.3.3/src/scrapy_settings_log/
++-rw-rw-rw-   0        0        0     1324 2023-04-07 12:24:28.000000 scrapy-settings-log-1.3.3/src/scrapy_settings_log/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 12:31:39.442606 scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/
++-rw-rw-rw-   0        0        0     1962 2023-04-07 12:31:39.000000 scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      331 2023-04-07 12:31:39.000000 scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 12:31:39.000000 scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        7 2023-04-07 12:31:39.000000 scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       20 2023-04-07 12:31:39.000000 scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 12:31:39.442606 scrapy-settings-log-1.3.3/tests/
++-rw-rw-rw-   0        0        0     2241 2023-04-07 12:26:34.000000 scrapy-settings-log-1.3.3/tests/test_code.py
+```
+
+### Comparing `scrapy-settings-log-1.3.2/LICENSE` & `scrapy-settings-log-1.3.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `scrapy-settings-log-1.3.2/PKG-INFO` & `scrapy-settings-log-1.3.3/PKG-INFO`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: scrapy-settings-log
+-Version: 1.3.2
++Version: 1.3.3
+ Summary: An extension that allows a user to display all or some of their scrapy spider settings at runtime.
+ Home-page: https://github.com/further-reading/scrapy-settings-log
+ Author: Roy Healy
+ Author-email: roy.healy87@gmail.com
+ Project-URL: Bug Tracker, https://github.com/further-reading/scrapy-settings-log/-/issues
+ Project-URL: repository, https://github.com/further-reading/scrapy-settings-log
+ Classifier: Programming Language :: Python :: 3
+@@ -31,15 +31,28 @@
+ EXTENSIONS = {
+     'scrapy_settings_log.SpiderSettingsLogging': 999,
+ }
+ 
+ SETTINGS_LOGGING_ENABLED = True
+ ```
+ 
+-When you run your spider you will see a debug log like below when spider is closing:
++When you run your spider you will see a log like below when spider is closing:
+ 
+ `[scrapy_settings_log] INFO: {"SETTINGS_LOGGING_ENABLED": true, ...}`
+ 
+ ## Additional Options
+ 
+ * `SETTINGS_LOGGING_REGEX` - Add a regular expression to only show some settings - for example `SETTINGS_LOGGING_REGEX = "SPIDERMON"` will show settings with SPIDERMON in their name.
+ * `SETTINGS_LOGGING_INDENT` - Add indentation to make log more human-readable.
++
++## Advanced
++
++Subclass and override the `output_settings` method if you want the settings to be reported in another way.
++
++```python
++from scrapy_settings_log import SpiderSettingsLogging
++
++class CustomSettingsLogger(SpiderSettingsLogging):
++
++    def  output_settings(self, settings: dict, spider: scrapy.Spider):
++        # custom code here
++```
+```
+
+### Comparing `scrapy-settings-log-1.3.2/README.md` & `scrapy-settings-log-1.3.3/README.md`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -15,15 +15,28 @@
+ EXTENSIONS = {
+     'scrapy_settings_log.SpiderSettingsLogging': 999,
+ }
+ 
+ SETTINGS_LOGGING_ENABLED = True
+ ```
+ 
+-When you run your spider you will see a debug log like below when spider is closing:
++When you run your spider you will see a log like below when spider is closing:
+ 
+ `[scrapy_settings_log] INFO: {"SETTINGS_LOGGING_ENABLED": true, ...}`
+ 
+ ## Additional Options
+ 
+ * `SETTINGS_LOGGING_REGEX` - Add a regular expression to only show some settings - for example `SETTINGS_LOGGING_REGEX = "SPIDERMON"` will show settings with SPIDERMON in their name.
+ * `SETTINGS_LOGGING_INDENT` - Add indentation to make log more human-readable.
++
++## Advanced
++
++Subclass and override the `output_settings` method if you want the settings to be reported in another way.
++
++```python
++from scrapy_settings_log import SpiderSettingsLogging
++
++class CustomSettingsLogger(SpiderSettingsLogging):
++
++    def  output_settings(self, settings: dict, spider: scrapy.Spider):
++        # custom code here
++```
+```
+
+### Comparing `scrapy-settings-log-1.3.2/setup.cfg` & `scrapy-settings-log-1.3.3/setup.cfg`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ 00000000: 5b6d 6574 6164 6174 615d 0d0a 6e61 6d65  [metadata]..name
+ 00000010: 203d 2073 6372 6170 792d 7365 7474 696e   = scrapy-settin
+ 00000020: 6773 2d6c 6f67 0d0a 7665 7273 696f 6e20  gs-log..version 
+-00000030: 3d20 312e 332e 320d 0a61 7574 686f 7220  = 1.3.2..author 
++00000030: 3d20 312e 332e 330d 0a61 7574 686f 7220  = 1.3.3..author 
+ 00000040: 3d20 526f 7920 4865 616c 790d 0a61 7574  = Roy Healy..aut
+ 00000050: 686f 725f 656d 6169 6c20 3d20 726f 792e  hor_email = roy.
+ 00000060: 6865 616c 7938 3740 676d 6169 6c2e 636f  healy87@gmail.co
+ 00000070: 6d0d 0a64 6573 6372 6970 7469 6f6e 203d  m..description =
+ 00000080: 2041 6e20 6578 7465 6e73 696f 6e20 7468   An extension th
+ 00000090: 6174 2061 6c6c 6f77 7320 6120 7573 6572  at allows a user
+ 000000a0: 2074 6f20 6469 7370 6c61 7920 616c 6c20   to display all
+```
+
+### Comparing `scrapy-settings-log-1.3.2/src/scrapy_settings_log/__init__.py` & `scrapy-settings-log-1.3.3/src/scrapy_settings_log/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -5,14 +5,23 @@
+ import scrapy
+ from scrapy import signals
+ from scrapy.settings import BaseSettings
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
++class CustomEncoder(json.JSONEncoder):
++    def default(self, obj):
++        if isinstance(obj, BaseSettings):
++            return dict(obj)
++        if isinstance(obj, set):
++            return str(obj)
++        return json.JSONEncoder.default(self, obj)
++
++
+ class SpiderSettingsLogging:
+     @classmethod
+     def from_crawler(cls, crawler):
+         ext = cls()
+         crawler.signals.connect(ext.spider_closed, signal=signals.spider_closed)
+         return ext
+ 
+@@ -21,17 +30,13 @@
+         if not settings.getbool("SETTINGS_LOGGING_ENABLED"):
+             return
+ 
+         regex = settings.get("SETTINGS_LOGGING_REGEX")
+         if regex is not None:
+             settings = {k: v for k, v in settings.items() if re.search(regex, k)}
+ 
+-        # nested settings will be BaseSettings objects that are not JSON seriable
+-        settings = {
+-            k: dict(v) if type(v) is BaseSettings else v for k, v in settings.items()
+-        }
+         self.output_settings(settings, spider)
+ 
+     def output_settings(self, settings: dict, spider: scrapy.Spider):
+         # this can be overwritten in a subclass if you want to send this data elsewhere
+         indent = spider.settings.get("SETTINGS_LOGGING_INDENT")
+-        logger.info(json.dumps(settings, indent=indent))
++        logger.info(json.dumps(settings, indent=indent, cls=CustomEncoder))
+```
+
+### Comparing `scrapy-settings-log-1.3.2/src/scrapy_settings_log.egg-info/PKG-INFO` & `scrapy-settings-log-1.3.3/src/scrapy_settings_log.egg-info/PKG-INFO`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: scrapy-settings-log
+-Version: 1.3.2
++Version: 1.3.3
+ Summary: An extension that allows a user to display all or some of their scrapy spider settings at runtime.
+ Home-page: https://github.com/further-reading/scrapy-settings-log
+ Author: Roy Healy
+ Author-email: roy.healy87@gmail.com
+ Project-URL: Bug Tracker, https://github.com/further-reading/scrapy-settings-log/-/issues
+ Project-URL: repository, https://github.com/further-reading/scrapy-settings-log
+ Classifier: Programming Language :: Python :: 3
+@@ -31,15 +31,28 @@
+ EXTENSIONS = {
+     'scrapy_settings_log.SpiderSettingsLogging': 999,
+ }
+ 
+ SETTINGS_LOGGING_ENABLED = True
+ ```
+ 
+-When you run your spider you will see a debug log like below when spider is closing:
++When you run your spider you will see a log like below when spider is closing:
+ 
+ `[scrapy_settings_log] INFO: {"SETTINGS_LOGGING_ENABLED": true, ...}`
+ 
+ ## Additional Options
+ 
+ * `SETTINGS_LOGGING_REGEX` - Add a regular expression to only show some settings - for example `SETTINGS_LOGGING_REGEX = "SPIDERMON"` will show settings with SPIDERMON in their name.
+ * `SETTINGS_LOGGING_INDENT` - Add indentation to make log more human-readable.
++
++## Advanced
++
++Subclass and override the `output_settings` method if you want the settings to be reported in another way.
++
++```python
++from scrapy_settings_log import SpiderSettingsLogging
++
++class CustomSettingsLogger(SpiderSettingsLogging):
++
++    def  output_settings(self, settings: dict, spider: scrapy.Spider):
++        # custom code here
++```
+```
+
+### Comparing `scrapy-settings-log-1.3.2/tests/test_code.py` & `scrapy-settings-log-1.3.3/tests/test_code.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -12,28 +12,28 @@
+ 
+ 
+ def test_disabled(caplog):
+     spider = MockSpider({})
+     logger = SpiderSettingsLogging()
+     logger.spider_closed(spider)
+ 
+-    with caplog.at_level(logging.DEBUG):
++    with caplog.at_level(logging.INFO):
+         logger.spider_closed(spider)
+ 
+     assert not caplog.text
+ 
+ 
+ def test_log_all(caplog):
+     settings = {
+         "SETTINGS_LOGGING_ENABLED": True,
+     }
+ 
+     spider = MockSpider(settings)
+     logger = SpiderSettingsLogging()
+-    with caplog.at_level(logging.DEBUG):
++    with caplog.at_level(logging.INFO):
+         logger.spider_closed(spider)
+ 
+     # won't check specifics here as the default settings
+     # can vary with scrapy versions - presence is enough
+     assert caplog.text
+ 
+ 
+@@ -43,15 +43,15 @@
+         "DUMMY_INT": 4,
+         "DUMMY_STR": "foo",
+         "SETTINGS_LOGGING_REGEX": "DUMMY",
+     }
+ 
+     spider = MockSpider(settings)
+     logger = SpiderSettingsLogging()
+-    with caplog.at_level(logging.DEBUG):
++    with caplog.at_level(logging.INFO):
+         logger.spider_closed(spider)
+ 
+     assert '{"DUMMY_INT": 4, "DUMMY_STR": "foo"}' in caplog.text
+ 
+ 
+ def test_log_indented(caplog):
+     settings = {
+@@ -60,11 +60,26 @@
+         "DUMMY_STR": "foo",
+         "SETTINGS_LOGGING_REGEX": "DUMMY",
+         "SETTINGS_LOGGING_INDENT": 4,
+     }
+ 
+     spider = MockSpider(settings)
+     logger = SpiderSettingsLogging()
+-    with caplog.at_level(logging.DEBUG):
++    with caplog.at_level(logging.INFO):
+         logger.spider_closed(spider)
+ 
+     assert '{\n    "DUMMY_INT": 4,\n    "DUMMY_STR": "foo"\n}' in caplog.text
++
++
++def test_log_set(caplog):
++    settings = {
++        "SETTINGS_LOGGING_ENABLED": True,
++        "DUMMY_SET": {1, 2, 3},
++        "SETTINGS_LOGGING_REGEX": "DUMMY",
++    }
++
++    spider = MockSpider(settings)
++    logger = SpiderSettingsLogging()
++    with caplog.at_level(logging.INFO):
++        logger.spider_closed(spider)
++
++    assert '{"DUMMY_SET": "{1, 2, 3}"}' in caplog.text
+```
+

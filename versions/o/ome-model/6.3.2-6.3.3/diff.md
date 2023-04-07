@@ -1,0 +1,175 @@
+# Comparing `tmp/ome-model-6.3.2.tar.gz` & `tmp/ome-model-6.3.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ome-model-6.3.2.tar", last modified: Tue Jan 17 13:26:59 2023, max compression
++gzip compressed data, was "ome-model-6.3.3.tar", last modified: Fri Apr  7 12:28:11 2023, max compression
+```
+
+## Comparing `ome-model-6.3.2.tar` & `ome-model-6.3.3.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-17 13:26:59.552266 ome-model-6.3.2/
+--rw-r--r--   0 runner    (1001) docker     (123)     1509 2023-01-17 13:26:53.000000 ome-model-6.3.2/LICENSE.md
+--rw-r--r--   0 runner    (1001) docker     (123)       35 2023-01-17 13:26:53.000000 ome-model-6.3.2/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)      727 2023-01-17 13:26:59.552266 ome-model-6.3.2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2018 2023-01-17 13:26:53.000000 ome-model-6.3.2/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-17 13:26:59.552266 ome-model-6.3.2/ome_model/
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-01-17 13:26:59.000000 ome-model-6.3.2/ome_model/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10092 2023-01-17 13:26:53.000000 ome-model-6.3.2/ome_model/experimental.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-17 13:26:59.552266 ome-model-6.3.2/ome_model.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      727 2023-01-17 13:26:59.000000 ome-model-6.3.2/ome_model.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      261 2023-01-17 13:26:59.000000 ome-model-6.3.2/ome_model.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-17 13:26:59.000000 ome-model-6.3.2/ome_model.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-17 13:26:59.000000 ome-model-6.3.2/ome_model.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)       10 2023-01-17 13:26:59.000000 ome-model-6.3.2/ome_model.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)    14525 2023-01-17 13:26:53.000000 ome-model-6.3.2/pom.xml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-01-17 13:26:59.552266 ome-model-6.3.2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2193 2023-01-17 13:26:53.000000 ome-model-6.3.2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 12:28:11.831617 ome-model-6.3.3/
++-rw-r--r--   0 runner    (1001) docker     (123)     1509 2023-04-07 12:28:10.000000 ome-model-6.3.3/LICENSE.md
++-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-07 12:28:10.000000 ome-model-6.3.3/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)      746 2023-04-07 12:28:11.831617 ome-model-6.3.3/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2018 2023-04-07 12:28:10.000000 ome-model-6.3.3/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 12:28:11.831617 ome-model-6.3.3/ome_model/
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 12:28:11.000000 ome-model-6.3.3/ome_model/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10092 2023-04-07 12:28:10.000000 ome-model-6.3.3/ome_model/experimental.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 12:28:11.831617 ome-model-6.3.3/ome_model.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      746 2023-04-07 12:28:11.000000 ome-model-6.3.3/ome_model.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      261 2023-04-07 12:28:11.000000 ome-model-6.3.3/ome_model.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 12:28:11.000000 ome-model-6.3.3/ome_model.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 12:28:11.000000 ome-model-6.3.3/ome_model.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-07 12:28:11.000000 ome-model-6.3.3/ome_model.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)    14526 2023-04-07 12:28:10.000000 ome-model-6.3.3/pom.xml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 12:28:11.831617 ome-model-6.3.3/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2193 2023-04-07 12:28:10.000000 ome-model-6.3.3/setup.py
+```
+
+### Comparing `ome-model-6.3.2/LICENSE.md` & `ome-model-6.3.3/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `ome-model-6.3.2/PKG-INFO` & `ome-model-6.3.3/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,21 +1,23 @@
+ Metadata-Version: 2.1
+ Name: ome-model
+-Version: 6.3.2
++Version: 6.3.3
+ Summary: Core OME model library (EXPERIMENTAL)
+ Home-page: https://github.com/ome/ome-model/
+-Download-URL: https://github.com/ome/ome-model//v6.3.2.tar.gz
+ Author: The Open Microscopy Team
+ Author-email: ome-devel@lists.openmicroscopy.org.uk
+ License: GPL-2.0+
++Download-URL: https://github.com/ome/ome-model//v6.3.3.tar.gz
+ Keywords: OME,Model
++Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+ Requires-Python: >=3
+ License-File: LICENSE.md
+ 
+ TBD
++
+```
+
+### Comparing `ome-model-6.3.2/README.md` & `ome-model-6.3.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `ome-model-6.3.2/ome_model/experimental.py` & `ome-model-6.3.3/ome_model/experimental.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ome-model-6.3.2/ome_model.egg-info/PKG-INFO` & `ome-model-6.3.3/ome_model.egg-info/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,21 +1,23 @@
+ Metadata-Version: 2.1
+ Name: ome-model
+-Version: 6.3.2
++Version: 6.3.3
+ Summary: Core OME model library (EXPERIMENTAL)
+ Home-page: https://github.com/ome/ome-model/
+-Download-URL: https://github.com/ome/ome-model//v6.3.2.tar.gz
+ Author: The Open Microscopy Team
+ Author-email: ome-devel@lists.openmicroscopy.org.uk
+ License: GPL-2.0+
++Download-URL: https://github.com/ome/ome-model//v6.3.3.tar.gz
+ Keywords: OME,Model
++Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Topic :: Software Development :: Libraries :: Python Modules
+ Requires-Python: >=3
+ License-File: LICENSE.md
+ 
+ TBD
++
+```
+
+### Comparing `ome-model-6.3.2/pom.xml` & `ome-model-6.3.3/pom.xml`
+
+ * *Files 0% similar despite different names*
+
+#### Comparing `ome-model-6.3.2/pom.xml` & `ome-model-6.3.3/pom.xml`
+
+```diff
+@@ -1,13 +1,13 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0     http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>org.openmicroscopy</groupId>
+   <artifactId>ome-model</artifactId>
+-  <version>6.3.2</version>
++  <version>6.3.3</version>
+   <packaging>pom</packaging>
+   <name>OME Model</name>
+   <description>Contains the OME imaging metadata model specification, code generator and implementation</description>
+   <url>http://www.openmicroscopy.org/site/products/bio-formats</url>
+   <inceptionYear>2005</inceptionYear>
+   <organization>
+     <name>Open Microscopy Environment</name>
+@@ -136,15 +136,15 @@
+          The following properties facilitate consistency of dependency
+          versions between various projects in the SciJava software stack.
+          When possible, we advise using the relevant groupId and version
+          properties for your dependencies rather than hardcoding them. -->
+     <logback.version>1.2.9</logback.version>
+     <slf4j.version>1.7.6</slf4j.version>
+     <testng.version>6.8</testng.version>
+-    <ome_common.version>6.0.9</ome_common.version>
++    <ome_common.version>6.0.16</ome_common.version>
+     <ome-common.version>${ome_common.version}</ome-common.version>
+     <ome.model.schemaver>2016-06</ome.model.schemaver>
+     <ome.model.schemapath>specification/src/main/resources/released-schema/${ome.model.schemaver}</ome.model.schemapath>
+     <ome.model.omeschema>${ome.model.schemapath}/ome.xsd</ome.model.omeschema>
+     <!-- NB: Avoid platform encoding warning when copying resources. -->
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+```
+
+### Comparing `ome-model-6.3.2/setup.py` & `ome-model-6.3.3/setup.py`
+
+ * *Files identical despite different names*
+
