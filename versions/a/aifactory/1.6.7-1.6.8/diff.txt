@@ -1,0 +1,103 @@
+--- tmp/aifactory-1.6.7.tar.gz
++++ tmp/aifactory-1.6.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "aifactory-1.6.7.tar", last modified: Fri Apr  7 06:30:10 2023, max compression
+│ +gzip compressed data, was "aifactory-1.6.8.tar", last modified: Fri Apr  7 06:45:08 2023, max compression
+│   --- aifactory-1.6.7.tar
+├── +++ aifactory-1.6.8.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:30:10.771371 aifactory-1.6.7/
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:30:10.771091 aifactory-1.6.7/PKG-INFO
+│ │ -drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:30:10.769898 aifactory-1.6.7/aifactory/
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)        0 2022-08-02 00:40:18.000000 aifactory-1.6.7/aifactory/__init__.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     3743 2022-11-14 05:11:27.000000 aifactory-1.6.7/aifactory/api.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     3710 2022-11-14 05:11:05.000000 aifactory-1.6.7/aifactory/demo.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)    14314 2023-03-30 07:01:37.000000 aifactory-1.6.7/aifactory/grade.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     5966 2022-11-05 14:24:05.000000 aifactory-1.6.7/aifactory/make_zip.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     3274 2023-04-07 06:29:52.000000 aifactory-1.6.7/aifactory/score.py
+│ │ -drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:30:10.770848 aifactory-1.6.7/aifactory.egg-info/
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      289 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)        1 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)       41 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/requires.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)       17 2023-04-07 06:30:10.000000 aifactory-1.6.7/aifactory.egg-info/top_level.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)       38 2023-04-07 06:30:10.771458 aifactory-1.6.7/setup.cfg
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      430 2023-04-07 06:30:03.000000 aifactory-1.6.7/setup.py
+│ │ +drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:45:08.930703 aifactory-1.6.8/
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:45:08.930558 aifactory-1.6.8/PKG-INFO
+│ │ +drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:45:08.929474 aifactory-1.6.8/aifactory/
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)        0 2022-08-02 00:40:18.000000 aifactory-1.6.8/aifactory/__init__.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     3743 2022-11-14 05:11:27.000000 aifactory-1.6.8/aifactory/api.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     3710 2022-11-14 05:11:05.000000 aifactory-1.6.8/aifactory/demo.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)    14314 2023-03-30 07:01:37.000000 aifactory-1.6.8/aifactory/grade.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     5966 2022-11-05 14:24:05.000000 aifactory-1.6.8/aifactory/make_zip.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     3312 2023-04-07 06:43:22.000000 aifactory-1.6.8/aifactory/score.py
+│ │ +drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 06:45:08.930367 aifactory-1.6.8/aifactory.egg-info/
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 06:45:08.000000 aifactory-1.6.8/aifactory.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      289 2023-04-07 06:45:08.000000 aifactory-1.6.8/aifactory.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)        1 2023-04-07 06:45:08.000000 aifactory-1.6.8/aifactory.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)       41 2023-04-07 06:45:08.000000 aifactory-1.6.8/aifactory.egg-info/requires.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)       17 2023-04-07 06:45:08.000000 aifactory-1.6.8/aifactory.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)       38 2023-04-07 06:45:08.930745 aifactory-1.6.8/setup.cfg
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      430 2023-04-07 06:42:05.000000 aifactory-1.6.8/setup.py
+│ │   --- aifactory-1.6.7/aifactory/api.py
+│ ├── +++ aifactory-1.6.8/aifactory/api.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.7/aifactory/demo.py
+│ ├── +++ aifactory-1.6.8/aifactory/demo.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.7/aifactory/grade.py
+│ ├── +++ aifactory-1.6.8/aifactory/grade.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.7/aifactory/make_zip.py
+│ ├── +++ aifactory-1.6.8/aifactory/make_zip.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.7/aifactory/score.py
+│ ├── +++ aifactory-1.6.8/aifactory/score.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -59,18 +59,18 @@
+│ │      while True:
+│ │        try:
+│ │          res = requests.get(api_test_url + requestID)  
+│ │          data_json = json.loads(res.text)      
+│ │          if data_json["ct"] == 0 or data_json["ct"] == 3:
+│ │            print(data_json["message"])
+│ │            break
+│ │ -        elif data_json["ct"] == 1:
+│ │ -          print(data_json["message"])
+│ │ -        elif data_json["ct"] == 2:
+│ │ -          print(data_json["message"])
+│ │ +        elif data_json["ct"] == 1:          
+│ │ +          print(data_json["message"], end='\r')
+│ │ +        # elif data_json["ct"] == 2:
+│ │ +        #   print(data_json["message"])
+│ │          time.sleep(10)
+│ │        except Exception as e:          
+│ │          print(" error :" + str(e))
+│ │          break    
+│ │      return
+│ │    print(res.status_code)  
+│ │    print(res.text)
+│ │ @@ -87,17 +87,17 @@
+│ │        try:
+│ │          res = requests.get(api_test_url + requestID)  
+│ │          data_json = json.loads(res.text)      
+│ │          if data_json["ct"] == 0 or data_json["ct"] == 3:
+│ │            print(data_json["message"])
+│ │            break
+│ │          elif data_json["ct"] == 1:
+│ │ -          print(data_json["message"])
+│ │ -        elif data_json["ct"] == 2:
+│ │ -          print(data_json["message"])
+│ │ +          print(data_json["message"], end='\r')
+│ │ +        # elif data_json["ct"] == 2:
+│ │ +        #   print(data_json["message"])
+│ │          time.sleep(10)
+│ │        except Exception as e:          
+│ │          print(" error :" + str(e))
+│ │          break    
+│ │      return
+│ │    print(res.status_code)  
+│ │    print(res.text)

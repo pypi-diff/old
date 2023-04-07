@@ -1,0 +1,50 @@
+# Comparing `tmp/DownloadReels-0.0.1.tar.gz` & `tmp/DownloadReels-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "DownloadReels-0.0.1.tar", last modified: Fri Apr  7 06:34:27 2023, max compression
++gzip compressed data, was "DownloadReels-0.0.2.tar", last modified: Fri Apr  7 06:45:56 2023, max compression
+```
+
+## Comparing `DownloadReels-0.0.1.tar` & `DownloadReels-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 06:34:27.975237 DownloadReels-0.0.1/
+-drwxrwxrwx   0        0        0        0 2023-04-07 06:34:27.937232 DownloadReels-0.0.1/DownloadReels/
+--rw-rw-rw-   0        0        0      134 2023-04-07 06:32:13.000000 DownloadReels-0.0.1/DownloadReels/__init__.py
+--rw-rw-rw-   0        0        0      381 2023-04-07 06:19:20.000000 DownloadReels-0.0.1/DownloadReels/run_server.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 06:34:27.972236 DownloadReels-0.0.1/DownloadReels.egg-info/
+--rw-rw-rw-   0        0        0      309 2023-04-07 06:34:27.000000 DownloadReels-0.0.1/DownloadReels.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      255 2023-04-07 06:34:27.000000 DownloadReels-0.0.1/DownloadReels.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 06:34:27.000000 DownloadReels-0.0.1/DownloadReels.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       14 2023-04-07 06:34:27.000000 DownloadReels-0.0.1/DownloadReels.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       19 2023-03-18 16:27:25.000000 DownloadReels-0.0.1/License.txt
+--rw-rw-rw-   0        0        0       25 2023-03-18 16:27:25.000000 DownloadReels-0.0.1/MANIFEST.in
+--rw-rw-rw-   0        0        0      309 2023-04-07 06:34:27.974241 DownloadReels-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0       45 2023-04-07 06:33:26.000000 DownloadReels-0.0.1/Readme.txt
+--rw-rw-rw-   0        0        0     1017 2023-03-18 16:27:25.000000 DownloadReels-0.0.1/about.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 06:34:27.975237 DownloadReels-0.0.1/setup.cfg
+--rw-rw-rw-   0        0        0      483 2023-04-07 06:29:09.000000 DownloadReels-0.0.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 06:45:56.394000 DownloadReels-0.0.2/
++drwxrwxrwx   0        0        0        0 2023-04-07 06:45:56.370417 DownloadReels-0.0.2/DownloadReels/
++-rw-rw-rw-   0        0        0      174 2023-04-07 06:42:18.000000 DownloadReels-0.0.2/DownloadReels/__init__.py
++-rw-rw-rw-   0        0        0      381 2023-04-07 06:19:20.000000 DownloadReels-0.0.2/DownloadReels/run_server.py
++drwxrwxrwx   0        0        0        0 2023-04-07 06:45:56.392000 DownloadReels-0.0.2/DownloadReels.egg-info/
++-rw-rw-rw-   0        0        0      366 2023-04-07 06:45:55.000000 DownloadReels-0.0.2/DownloadReels.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      255 2023-04-07 06:45:56.000000 DownloadReels-0.0.2/DownloadReels.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 06:45:55.000000 DownloadReels-0.0.2/DownloadReels.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       14 2023-04-07 06:45:55.000000 DownloadReels-0.0.2/DownloadReels.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       19 2023-03-18 16:27:25.000000 DownloadReels-0.0.2/License.txt
++-rw-rw-rw-   0        0        0       25 2023-03-18 16:27:25.000000 DownloadReels-0.0.2/MANIFEST.in
++-rw-rw-rw-   0        0        0      366 2023-04-07 06:45:56.393000 DownloadReels-0.0.2/PKG-INFO
++-rw-rw-rw-   0        0        0      104 2023-04-07 06:41:20.000000 DownloadReels-0.0.2/Readme.txt
++-rw-rw-rw-   0        0        0      640 2023-04-07 06:44:39.000000 DownloadReels-0.0.2/about.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 06:45:56.395003 DownloadReels-0.0.2/setup.cfg
++-rw-rw-rw-   0        0        0      483 2023-04-07 06:44:01.000000 DownloadReels-0.0.2/setup.py
+```
+

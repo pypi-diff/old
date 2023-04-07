@@ -1,0 +1,175 @@
+# Comparing `tmp/pyexception-notifier-0.0.2.tar.gz` & `tmp/pyexception-notifier-0.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pyexception-notifier-0.0.2.tar", last modified: Fri Apr  7 06:19:00 2023, max compression
++gzip compressed data, was "pyexception-notifier-0.0.3.tar", last modified: Fri Apr  7 06:40:34 2023, max compression
+```
+
+## Comparing `pyexception-notifier-0.0.2.tar` & `pyexception-notifier-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,28 @@
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.753775 pyexception-notifier-0.0.2/
+--rw-rw-r--   0 user      (1000) user      (1000)     1088 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/LICENSE.txt
+--rw-rw-r--   0 user      (1000) user      (1000)      915 2023-04-07 06:19:00.753775 pyexception-notifier-0.0.2/PKG-INFO
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.749776 pyexception-notifier-0.0.2/pyexception_notifier/
+--rw-rw-r--   0 user      (1000) user      (1000)       72 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.2/pyexception_notifier/__init__.py
+--rw-rw-r--   0 user      (1000) user      (1000)      717 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.2/pyexception_notifier/config.py
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.749776 pyexception-notifier-0.0.2/pyexception_notifier/exceptions/
+--rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/pyexception_notifier/exceptions/__init__.py
+--rw-rw-r--   0 user      (1000) user      (1000)      675 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/pyexception_notifier/exceptions/exceptions.py
+--rw-rw-r--   0 user      (1000) user      (1000)     1758 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.2/pyexception_notifier/main_.py
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.749776 pyexception-notifier-0.0.2/pyexception_notifier/notify_sources_clients/
+--rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/pyexception_notifier/notify_sources_clients/__init__.py
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.749776 pyexception-notifier-0.0.2/pyexception_notifier/notify_sources_clients/telegram/
+--rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/pyexception_notifier/notify_sources_clients/telegram/__init__.py
+--rw-rw-r--   0 user      (1000) user      (1000)      602 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.2/pyexception_notifier/notify_sources_clients/telegram/client.py
+--rw-rw-r--   0 user      (1000) user      (1000)      273 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.2/pyexception_notifier/test_notifier.py
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.749776 pyexception-notifier-0.0.2/pyexception_notifier/utils/
+--rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/pyexception_notifier/utils/__init__.py
+--rw-rw-r--   0 user      (1000) user      (1000)      171 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.2/pyexception_notifier/utils/enums.py
+--rw-rw-r--   0 user      (1000) user      (1000)      908 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.2/pyexception_notifier/utils/exception_parsers.py
+-drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:19:00.749776 pyexception-notifier-0.0.2/pyexception_notifier.egg-info/
+--rw-rw-r--   0 user      (1000) user      (1000)      915 2023-04-07 06:19:00.000000 pyexception-notifier-0.0.2/pyexception_notifier.egg-info/PKG-INFO
+--rw-rw-r--   0 user      (1000) user      (1000)      778 2023-04-07 06:19:00.000000 pyexception-notifier-0.0.2/pyexception_notifier.egg-info/SOURCES.txt
+--rw-rw-r--   0 user      (1000) user      (1000)        1 2023-04-07 06:19:00.000000 pyexception-notifier-0.0.2/pyexception_notifier.egg-info/dependency_links.txt
+--rw-rw-r--   0 user      (1000) user      (1000)       70 2023-04-07 06:19:00.000000 pyexception-notifier-0.0.2/pyexception_notifier.egg-info/requires.txt
+--rw-rw-r--   0 user      (1000) user      (1000)       21 2023-04-07 06:19:00.000000 pyexception-notifier-0.0.2/pyexception_notifier.egg-info/top_level.txt
+--rw-rw-r--   0 user      (1000) user      (1000)       79 2023-04-07 06:19:00.753775 pyexception-notifier-0.0.2/setup.cfg
+--rw-rw-r--   0 user      (1000) user      (1000)      560 2023-04-07 06:18:55.000000 pyexception-notifier-0.0.2/setup.py
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/
++-rw-rw-r--   0 user      (1000) user      (1000)     1088 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/LICENSE.txt
++-rw-rw-r--   0 user      (1000) user      (1000)      980 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/PKG-INFO
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/pyexception_notifier/
++-rw-rw-r--   0 user      (1000) user      (1000)       72 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.3/pyexception_notifier/__init__.py
++-rw-rw-r--   0 user      (1000) user      (1000)      717 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.3/pyexception_notifier/config.py
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/pyexception_notifier/exceptions/
++-rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/pyexception_notifier/exceptions/__init__.py
++-rw-rw-r--   0 user      (1000) user      (1000)      675 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/pyexception_notifier/exceptions/exceptions.py
++-rw-rw-r--   0 user      (1000) user      (1000)     1758 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.3/pyexception_notifier/main_.py
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/pyexception_notifier/notify_sources_clients/
++-rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/pyexception_notifier/notify_sources_clients/__init__.py
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/pyexception_notifier/notify_sources_clients/telegram/
++-rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/pyexception_notifier/notify_sources_clients/telegram/__init__.py
++-rw-rw-r--   0 user      (1000) user      (1000)      602 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.3/pyexception_notifier/notify_sources_clients/telegram/client.py
++-rw-rw-r--   0 user      (1000) user      (1000)      273 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.3/pyexception_notifier/test_notifier.py
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/pyexception_notifier/utils/
++-rw-rw-r--   0 user      (1000) user      (1000)        0 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/pyexception_notifier/utils/__init__.py
++-rw-rw-r--   0 user      (1000) user      (1000)      171 2023-04-06 08:06:17.000000 pyexception-notifier-0.0.3/pyexception_notifier/utils/enums.py
++-rw-rw-r--   0 user      (1000) user      (1000)      908 2023-04-07 06:12:35.000000 pyexception-notifier-0.0.3/pyexception_notifier/utils/exception_parsers.py
++drwxrwxr-x   0 user      (1000) user      (1000)        0 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/pyexception_notifier.egg-info/
++-rw-rw-r--   0 user      (1000) user      (1000)      980 2023-04-07 06:40:34.000000 pyexception-notifier-0.0.3/pyexception_notifier.egg-info/PKG-INFO
++-rw-rw-r--   0 user      (1000) user      (1000)      778 2023-04-07 06:40:34.000000 pyexception-notifier-0.0.3/pyexception_notifier.egg-info/SOURCES.txt
++-rw-rw-r--   0 user      (1000) user      (1000)        1 2023-04-07 06:40:34.000000 pyexception-notifier-0.0.3/pyexception_notifier.egg-info/dependency_links.txt
++-rw-rw-r--   0 user      (1000) user      (1000)       70 2023-04-07 06:40:34.000000 pyexception-notifier-0.0.3/pyexception_notifier.egg-info/requires.txt
++-rw-rw-r--   0 user      (1000) user      (1000)       21 2023-04-07 06:40:34.000000 pyexception-notifier-0.0.3/pyexception_notifier.egg-info/top_level.txt
++-rw-rw-r--   0 user      (1000) user      (1000)       79 2023-04-07 06:40:34.673759 pyexception-notifier-0.0.3/setup.cfg
++-rw-rw-r--   0 user      (1000) user      (1000)      718 2023-04-07 06:40:32.000000 pyexception-notifier-0.0.3/setup.py
+```
+
+### Comparing `pyexception-notifier-0.0.2/LICENSE.txt` & `pyexception-notifier-0.0.3/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/PKG-INFO` & `pyexception-notifier-0.0.3/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ Metadata-Version: 2.1
+ Name: pyexception-notifier
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Exception notifier
++Home-page: https://github.com/RasulIslyamgali/exception-notifier
+ Author: r.islyamgali
+ License: MIT
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.txt
+ 
+ # package for notify error messages to telegram
+```
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier/config.py` & `pyexception-notifier-0.0.3/pyexception_notifier/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier/exceptions/exceptions.py` & `pyexception-notifier-0.0.3/pyexception_notifier/exceptions/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier/main_.py` & `pyexception-notifier-0.0.3/pyexception_notifier/main_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier/notify_sources_clients/telegram/client.py` & `pyexception-notifier-0.0.3/pyexception_notifier/notify_sources_clients/telegram/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier/utils/exception_parsers.py` & `pyexception-notifier-0.0.3/pyexception_notifier/utils/exception_parsers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier.egg-info/PKG-INFO` & `pyexception-notifier-0.0.3/pyexception_notifier.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ Metadata-Version: 2.1
+ Name: pyexception-notifier
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Exception notifier
++Home-page: https://github.com/RasulIslyamgali/exception-notifier
+ Author: r.islyamgali
+ License: MIT
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.txt
+ 
+ # package for notify error messages to telegram
+```
+
+### Comparing `pyexception-notifier-0.0.2/pyexception_notifier.egg-info/SOURCES.txt` & `pyexception-notifier-0.0.3/pyexception_notifier.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexception-notifier-0.0.2/setup.py` & `pyexception-notifier-0.0.3/setup.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,17 +1,22 @@
+ from setuptools import find_packages, setup
+ 
++project_urls = {
++    'Homepage': 'https://github.com/RasulIslyamgali/exception-notifier',
++}
++
+ with open('Readme.md') as f:
+     long_description = f.read()
+ 
+ 
+ setup(
+     name='pyexception-notifier',
+     packages=find_packages(),
+-    version='0.0.2',
++    version='0.0.3',
++    url='https://github.com/RasulIslyamgali/exception-notifier',
+     description='Exception notifier',
+     long_description=long_description,
+     long_description_content_type='text/markdown',
+     author='r.islyamgali',
+     license='MIT',
+     install_requires=[
+         "pydantic",
+```
+

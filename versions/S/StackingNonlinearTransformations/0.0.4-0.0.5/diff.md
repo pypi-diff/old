@@ -1,0 +1,384 @@
+# Comparing `tmp/StackingNonlinearTransformations-0.0.4-py3.8.egg` & `tmp/StackingNonlinearTransformations-0.0.5-py3.8.egg`
+
+## zipinfo {}
+
+```diff
+@@ -1,9 +1,11 @@
+-Zip file size: 14106 bytes, number of entries: 7
+--rw-rw-rw-  2.0 fat    56762 b- defN 23-Apr-07 14:20 EGG-INFO/PKG-INFO
+--rw-rw-rw-  2.0 fat      277 b- defN 23-Apr-07 14:20 EGG-INFO/SOURCES.txt
+--rw-rw-rw-  2.0 fat        1 b- defN 23-Apr-07 14:20 EGG-INFO/dependency_links.txt
+--rw-rw-rw-  2.0 fat       33 b- defN 23-Apr-07 14:20 EGG-INFO/top_level.txt
+--rw-rw-rw-  2.0 fat        2 b- defN 23-Apr-07 14:20 EGG-INFO/zip-safe
+--rw-rw-rw-  2.0 fat     3463 b- defN 23-Apr-07 14:10 stackingnonlineartransformations/__init__.py
+--rw-rw-rw-  2.0 fat     2784 b- defN 23-Apr-07 14:20 stackingnonlineartransformations/__pycache__/__init__.cpython-38.pyc
+-7 files, 63322 bytes uncompressed, 13118 bytes compressed:  79.3%
++Zip file size: 14814 bytes, number of entries: 9
++-rw-rw-rw-  2.0 fat    56765 b- defN 23-Apr-07 14:40 EGG-INFO/PKG-INFO
++-rw-rw-rw-  2.0 fat      346 b- defN 23-Apr-07 14:40 EGG-INFO/SOURCES.txt
++-rw-rw-rw-  2.0 fat        1 b- defN 23-Apr-07 14:40 EGG-INFO/dependency_links.txt
++-rw-rw-rw-  2.0 fat       33 b- defN 23-Apr-07 14:40 EGG-INFO/top_level.txt
++-rw-rw-rw-  2.0 fat        2 b- defN 23-Apr-07 14:40 EGG-INFO/zip-safe
++-rw-rw-rw-  2.0 fat       78 b- defN 23-Apr-07 14:24 stackingnonlineartransformations/__init__.py
++-rw-rw-rw-  2.0 fat     3463 b- defN 23-Apr-07 14:32 stackingnonlineartransformations/stackingnonlineartransformations.py
++-rw-rw-rw-  2.0 fat      250 b- defN 23-Apr-07 14:40 stackingnonlineartransformations/__pycache__/__init__.cpython-38.pyc
++-rw-rw-rw-  2.0 fat     2808 b- defN 23-Apr-07 14:40 stackingnonlineartransformations/__pycache__/stackingnonlineartransformations.cpython-38.pyc
++9 files, 63746 bytes uncompressed, 13354 bytes compressed:  79.1%
+```
+
+## zipnote «TEMP»/diffoscope_9xkh2mn__004005/tmpzcz5z7si_.zip
+
+```diff
+@@ -12,11 +12,17 @@
+ 
+ Filename: EGG-INFO/zip-safe
+ Comment: 
+ 
+ Filename: stackingnonlineartransformations/__init__.py
+ Comment: 
+ 
++Filename: stackingnonlineartransformations/stackingnonlineartransformations.py
++Comment: 
++
+ Filename: stackingnonlineartransformations/__pycache__/__init__.cpython-38.pyc
+ Comment: 
+ 
++Filename: stackingnonlineartransformations/__pycache__/stackingnonlineartransformations.cpython-38.pyc
++Comment: 
++
+ Zip file comment:
+```
+
+## EGG-INFO/PKG-INFO
+
+```diff
+@@ -1,12 +1,12 @@
+ Metadata-Version: 2.1
+ Name: StackingNonlinearTransformations
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: Stacking algorithm optimization 
+-Home-page: https://gitee.com/caoxinyu123/prostate_cancer_related_research/blob/STN/StackingNonlinearTransformations.py
++Home-page: https://gitee.com/caoxinyu123/prostate_cancer_related_research/blob/master/stackingnonlineartransformations.py
+ Author: caoxinyu
+ Author-email: 398424191@qqc.om
+ License: UNKNOWN
+ Keywords: python,windows,mac,linux
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+## EGG-INFO/SOURCES.txt
+
+```diff
+@@ -1,6 +1,7 @@
+ setup.py
+ StackingNonlinearTransformations.egg-info/PKG-INFO
+ StackingNonlinearTransformations.egg-info/SOURCES.txt
+ StackingNonlinearTransformations.egg-info/dependency_links.txt
+ StackingNonlinearTransformations.egg-info/top_level.txt
+-stackingnonlineartransformations/__init__.py
++stackingnonlineartransformations/__init__.py
++stackingnonlineartransformations/stackingnonlineartransformations.py
+```
+
+## stackingnonlineartransformations/__init__.py
+
+```diff
+@@ -1,85 +1 @@
+-from sklearn.model_selection import cross_validate
+-import numpy as np
+-
+-class StackingNonlinearTransformations():
+-    def __init__(self, base_models, meta_model, n_folds=10):
+-        self.base_models = base_models
+-        self.meta_model = meta_model
+-        self.n_folds = n_folds
+-        
+-   
+-    def NonlinearTransformations(self, x, NT, **kwargs):
+-        if NT == None:
+-            return x
+-        elif NT == "relu":
+-            return x
+-        elif NT == "sigmoid":
+-            return 1.0 / (1 + np.exp(-x))
+-        elif NT == "elu":
+-            if 'alpha' not in kwargs:
+-                raise ValueError('alpha is not given')
+-            alpha = kwargs["alpha"]
+-            return np.where(x < 0, alpha * (np.exp(x) - 1), x)
+-        elif NT == "tanh":
+-            return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
+-        elif NT == "sin":
+-            return np.sin(x)
+-        elif NT == "cos":
+-            return np.cos(x)
+-        elif NT == "softmax":
+-            exps = np.exp(x - np.max(x, axis=-1, keepdims=True))
+-            return exps/np.sum(exps, axis=-1, keepdims=True)
+-        elif NT == "softplus":
+-            return np.log(1 + np.exp(x))
+-
+-
+-    def base_model_fit(self, train_X, train_y, test_X, test_y,cv=10):
+-        best_models = dict()
+-        for name in self.base_models.keys():
+-            model = self.base_models[name]
+-            cv_results = cross_validate(model, train_X, train_y.values, cv=cv, return_estimator=True, return_train_score=True)
+-            test_results = []
+-            for m in cv_results['estimator']:
+-                test_results.append(m.score(test_X, test_y.values))
+-
+-            # 保存在测试集上性能最好的模型
+-            ind = np.argmax(test_results)
+-            best_models[name] = cv_results['estimator'][ind]
+-            
+-
+-
+-
+-        train_ = np.zeros((train_X.shape[0], len(self.base_models ) + len(train_X.columns)))
+-        test_ = np.zeros((test_X.shape[0], len(self.base_models) + len(test_X.columns)))
+-        
+-        train_[:,0:len(train_X.columns)] = train_X
+-        test_[:,0:len(test_X.columns)] = test_X
+-
+-        for i, name in enumerate(best_models):
+-            model = best_models[name]
+-            train_pred = model.predict(train_X)
+-            test_pred = model.predict(test_X)
+-
+-            train_[:, len(train_X.columns)+i] = self.NonlinearTransformations(train_pred,"sigmoid")
+-            test_[:,len(test_X.columns)+i] = self.NonlinearTransformations(test_pred,"sigmoid")
+-
+-            
+-        return train_, test_
+-
+-    def fit(self, train_X, train_y, test_X, test_y, cv=10):
+-
+-        new_train, new_test = self.base_model_fit(train_X, train_y, test_X, test_y,cv)
+-        model = list(self.meta_model.values())[0]
+-        cv_results = cross_validate(model, new_train, train_y.values, cv=cv, return_estimator=True, return_train_score=True)
+-        test_results = []
+-        for m in cv_results['estimator']:
+-            test_results.append(m.score(new_test, test_y.values))
+-        ind = np.argmax(test_results)
+-        new_best_models = cv_results['estimator'][ind]
+-        model = new_best_models
+-        train_pred = model.predict(new_train)
+-        test_pred = model.predict(new_test)
+-        train_pred_prob = model.predict_proba(new_train)
+-        test_pred_prob = model.predict_proba(new_test)
+-        
+-        return train_pred, test_pred, train_pred_prob, test_pred_prob
++from .stackingnonlineartransformations import StackingNonlinearTransformations
+```
+
+### encoding
+
+```diff
+@@ -1 +1 @@
+-utf-8
++us-ascii
+```
+
+## stackingnonlineartransformations/__pycache__/__init__.cpython-38.pyc
+
+ * *Format-specific differences are supported for Python .pyc files but no file-specific differences were detected; falling back to a binary diff. file(1) reports: Byte-compiled Python module for CPython 3.8, timestamp-based, .py timestamp: Fri Apr  7 06:10:44 2023 UTC, .py size: 3463 bytes*
+
+ * *Could not decompile bytecode: bad marshal data (unknown type code)*
+
+```diff
+@@ -1,174 +1,16 @@
+-00000000: 550d 0d0a 0000 0000 e4b3 2f64 870d 0000  U........./d....
++00000000: 550d 0d0a 0000 0000 36b7 2f64 4e00 0000  U.......6./dN...
+ 00000010: e300 0000 0000 0000 0000 0000 0000 0000  ................
+-00000020: 0003 0000 0040 0000 0073 2600 0000 6400  .....@...s&...d.
+-00000030: 6401 6c00 6d01 5a01 0100 6400 6402 6c02  d.l.m.Z...d.d.l.
+-00000040: 5a03 4700 6403 6404 8400 6404 8302 5a04  Z.G.d.d...d...Z.
+-00000050: 6402 5300 2905 e900 0000 0029 01da 0e63  d.S.)......)...c
+-00000060: 726f 7373 5f76 616c 6964 6174 654e 6300  ross_validateNc.
+-00000070: 0000 0000 0000 0000 0000 0000 0000 0003  ................
+-00000080: 0000 0040 0000 0073 3200 0000 6500 5a01  ...@...s2...e.Z.
+-00000090: 6400 5a02 640b 6402 6403 8401 5a03 6404  d.Z.d.d.d...Z.d.
+-000000a0: 6405 8400 5a04 640c 6406 6407 8401 5a05  d...Z.d.d.d...Z.
+-000000b0: 640d 6408 6409 8401 5a06 640a 5300 290e  d.d.d...Z.d.S.).
+-000000c0: da20 5374 6163 6b69 6e67 4e6f 6e6c 696e  . StackingNonlin
+-000000d0: 6561 7254 7261 6e73 666f 726d 6174 696f  earTransformatio
+-000000e0: 6e73 e90a 0000 0063 0400 0000 0000 0000  ns.....c........
+-000000f0: 0000 0000 0400 0000 0200 0000 4300 0000  ............C...
+-00000100: 7316 0000 007c 017c 005f 007c 027c 005f  s....|.|._.|.|._
+-00000110: 017c 037c 005f 0264 0053 0029 014e 2903  .|.|._.d.S.).N).
+-00000120: da0b 6261 7365 5f6d 6f64 656c 73da 0a6d  ..base_models..m
+-00000130: 6574 615f 6d6f 6465 6cda 076e 5f66 6f6c  eta_model..n_fol
+-00000140: 6473 2904 da04 7365 6c66 7205 0000 0072  ds)...selfr....r
+-00000150: 0600 0000 7207 0000 00a9 0072 0900 0000  ....r......r....
+-00000160: fa46 6275 696c 645c 6264 6973 742e 7769  .Fbuild\bdist.wi
+-00000170: 6e2d 616d 6436 345c 6567 675c 7374 6163  n-amd64\egg\stac
+-00000180: 6b69 6e67 6e6f 6e6c 696e 6561 7274 7261  kingnonlineartra
+-00000190: 6e73 666f 726d 6174 696f 6e73 5c5f 5f69  nsformations\__i
+-000001a0: 6e69 745f 5f2e 7079 da08 5f5f 696e 6974  nit__.py..__init
+-000001b0: 5f5f 0500 0000 7306 0000 0000 0106 0106  __....s.........
+-000001c0: 017a 2953 7461 636b 696e 674e 6f6e 6c69  .z)StackingNonli
+-000001d0: 6e65 6172 5472 616e 7366 6f72 6d61 7469  nearTransformati
+-000001e0: 6f6e 732e 5f5f 696e 6974 5f5f 6303 0000  ons.__init__c...
+-000001f0: 0000 0000 0000 0000 0006 0000 0008 0000  ................
+-00000200: 004b 0000 0073 2601 0000 7c02 6400 6b02  .K...s&...|.d.k.
+-00000210: 720c 7c01 5300 7c02 6401 6b02 7218 7c01  r.|.S.|.d.k.r.|.
+-00000220: 5300 7c02 6402 6b02 7234 6403 6404 7400  S.|.d.k.r4d.d.t.
+-00000230: a001 7c01 0b00 a101 1700 1b00 5300 7c02  ..|.........S.|.
+-00000240: 6405 6b02 7274 6406 7c03 6b07 724c 7402  d.k.rtd.|.k.rLt.
+-00000250: 6407 8301 8201 7c03 6406 1900 7d04 7400  d.....|.d...}.t.
+-00000260: a003 7c01 6408 6b00 7c04 7400 a001 7c01  ..|.d.k.|.t...|.
+-00000270: a101 6404 1800 1400 7c01 a103 5300 7c02  ..d.....|...S.|.
+-00000280: 6409 6b02 72a8 7400 a001 7c01 a101 7400  d.k.r.t...|...t.
+-00000290: a001 7c01 0b00 a101 1800 7400 a001 7c01  ..|.......t...|.
+-000002a0: a101 7400 a001 7c01 0b00 a101 1700 1b00  ..t...|.........
+-000002b0: 5300 7c02 640a 6b02 72ba 7400 a004 7c01  S.|.d.k.r.t...|.
+-000002c0: a101 5300 7c02 640b 6b02 72cc 7400 a005  ..S.|.d.k.r.t...
+-000002d0: 7c01 a101 5300 7c02 640c 6b02 9001 7204  |...S.|.d.k...r.
+-000002e0: 7400 a001 7c01 7400 6a06 7c01 640d 640e  t...|.t.j.|.d.d.
+-000002f0: 640f 8d03 1800 a101 7d05 7c05 7400 6a07  d.......}.|.t.j.
+-00000300: 7c05 640d 640e 640f 8d03 1b00 5300 7c02  |.d.d.d.....S.|.
+-00000310: 6410 6b02 9001 7222 7400 a008 6404 7400  d.k...r"t...d.t.
+-00000320: a001 7c01 a101 1700 a101 5300 6400 5300  ..|.......S.d.S.
+-00000330: 2911 4e5a 0472 656c 75da 0773 6967 6d6f  ).NZ.relu..sigmo
+-00000340: 6964 6700 0000 0000 00f0 3fe9 0100 0000  idg.......?.....
+-00000350: 5a03 656c 75da 0561 6c70 6861 7a12 616c  Z.elu..alphaz.al
+-00000360: 7068 6120 6973 206e 6f74 2067 6976 656e  pha is not given
+-00000370: 7201 0000 00da 0474 616e 68da 0373 696e  r......tanh..sin
+-00000380: da03 636f 735a 0773 6f66 746d 6178 e9ff  ..cosZ.softmax..
+-00000390: ffff ff54 2902 5a04 6178 6973 5a08 6b65  ...T).Z.axisZ.ke
+-000003a0: 6570 6469 6d73 5a08 736f 6674 706c 7573  epdimsZ.softplus
+-000003b0: 2909 da02 6e70 da03 6578 70da 0a56 616c  )...np..exp..Val
+-000003c0: 7565 4572 726f 72da 0577 6865 7265 7210  ueError..wherer.
+-000003d0: 0000 0072 1100 0000 da03 6d61 78da 0373  ...r......max..s
+-000003e0: 756d da03 6c6f 6729 0672 0800 0000 da01  um..log).r......
+-000003f0: 785a 024e 54da 066b 7761 7267 7372 0e00  xZ.NT..kwargsr..
+-00000400: 0000 5a04 6578 7073 7209 0000 0072 0900  ..Z.expsr....r..
+-00000410: 0000 720a 0000 00da 184e 6f6e 6c69 6e65  ..r......Nonline
+-00000420: 6172 5472 616e 7366 6f72 6d61 7469 6f6e  arTransformation
+-00000430: 730b 0000 0073 2c00 0000 0001 0801 0401  s....s,.........
+-00000440: 0801 0401 0801 1401 0801 0801 0801 0801  ................
+-00000450: 2001 0801 2c01 0801 0a01 0801 0a01 0a01   ...,...........
+-00000460: 1a01 1401 0a01 7a39 5374 6163 6b69 6e67  ......z9Stacking
+-00000470: 4e6f 6e6c 696e 6561 7254 7261 6e73 666f  NonlinearTransfo
+-00000480: 726d 6174 696f 6e73 2e4e 6f6e 6c69 6e65  rmations.Nonline
+-00000490: 6172 5472 616e 7366 6f72 6d61 7469 6f6e  arTransformation
+-000004a0: 7363 0600 0000 0000 0000 0000 0000 1200  sc..............
+-000004b0: 0000 0900 0000 4300 0000 736c 0100 0074  ......C...sl...t
+-000004c0: 0083 007d 067c 006a 01a0 02a1 0044 005d  ...}.|.j.....D.]
+-000004d0: 647d 077c 006a 017c 0719 007d 0874 037c  d}.|.j.|...}.t.|
+-000004e0: 087c 017c 026a 047c 0564 0164 0164 028d  .|.|.j.|.d.d.d..
+-000004f0: 067d 0967 007d 0a7c 0964 0319 0044 005d  .}.g.}.|.d...D.]
+-00000500: 187d 0b7c 0aa0 057c 0ba0 067c 037c 046a  .}.|...|...|.|.j
+-00000510: 04a1 02a1 0101 0071 4074 07a0 087c 0aa1  .......q@t...|..
+-00000520: 017d 0c7c 0964 0319 007c 0c19 007c 067c  .}.|.d...|...|.|
+-00000530: 073c 0071 1074 07a0 097c 016a 0a64 0419  .<.q.t...|.j.d..
+-00000540: 0074 0b7c 006a 0183 0174 0b7c 016a 0c83  .t.|.j...t.|.j..
+-00000550: 0117 0066 02a1 017d 0d74 07a0 097c 036a  ...f...}.t...|.j
+-00000560: 0a64 0419 0074 0b7c 006a 0183 0174 0b7c  .d...t.|.j...t.|
+-00000570: 036a 0c83 0117 0066 02a1 017d 0e7c 017c  .j.....f...}.|.|
+-00000580: 0d64 0064 0085 0264 0474 0b7c 016a 0c83  .d.d...d.t.|.j..
+-00000590: 0185 0266 023c 007c 037c 0e64 0064 0085  ...f.<.|.|.d.d..
+-000005a0: 0264 0474 0b7c 036a 0c83 0185 0266 023c  .d.t.|.j.....f.<
+-000005b0: 0074 0d7c 0683 0144 005d 685c 027d 0f7d  .t.|...D.]h\.}.}
+-000005c0: 077c 067c 0719 007d 087c 08a0 0e7c 01a1  .|.|...}.|...|..
+-000005d0: 017d 107c 08a0 0e7c 03a1 017d 117c 00a0  .}.|...|...}.|..
+-000005e0: 0f7c 1064 05a1 027c 0d64 0064 0085 0274  .|.d...|.d.d...t
+-000005f0: 0b7c 016a 0c83 017c 0f17 0066 023c 007c  .|.j...|...f.<.|
+-00000600: 00a0 0f7c 1164 05a1 027c 0e64 0064 0085  ...|.d...|.d.d..
+-00000610: 0274 0b7c 036a 0c83 017c 0f17 0066 023c  .t.|.j...|...f.<
+-00000620: 0071 fa7c 0d7c 0e66 0253 0029 064e 54a9  .q.|.|.f.S.).NT.
+-00000630: 03da 0263 765a 1072 6574 7572 6e5f 6573  ...cvZ.return_es
+-00000640: 7469 6d61 746f 725a 1272 6574 7572 6e5f  timatorZ.return_
+-00000650: 7472 6169 6e5f 7363 6f72 65da 0965 7374  train_score..est
+-00000660: 696d 6174 6f72 7201 0000 0072 0c00 0000  imatorr....r....
+-00000670: 2910 da04 6469 6374 7205 0000 00da 046b  )...dictr......k
+-00000680: 6579 7372 0200 0000 da06 7661 6c75 6573  eysr......values
+-00000690: da06 6170 7065 6e64 da05 7363 6f72 6572  ..append..scorer
+-000006a0: 1300 0000 da06 6172 676d 6178 da05 7a65  ......argmax..ze
+-000006b0: 726f 73da 0573 6861 7065 da03 6c65 6eda  ros..shape..len.
+-000006c0: 0763 6f6c 756d 6e73 da09 656e 756d 6572  .columns..enumer
+-000006d0: 6174 65da 0770 7265 6469 6374 721c 0000  ate..predictr...
+-000006e0: 0029 1272 0800 0000 da07 7472 6169 6e5f  .).r......train_
+-000006f0: 58da 0774 7261 696e 5f79 da06 7465 7374  X..train_y..test
+-00000700: 5f58 da06 7465 7374 5f79 721e 0000 005a  _X..test_yr....Z
+-00000710: 0b62 6573 745f 6d6f 6465 6c73 da04 6e61  .best_models..na
+-00000720: 6d65 da05 6d6f 6465 6cda 0a63 765f 7265  me..model..cv_re
+-00000730: 7375 6c74 73da 0c74 6573 745f 7265 7375  sults..test_resu
+-00000740: 6c74 73da 016d da03 696e 645a 0674 7261  lts..m..indZ.tra
+-00000750: 696e 5f5a 0574 6573 745f da01 69da 0a74  in_Z.test_..i..t
+-00000760: 7261 696e 5f70 7265 64da 0974 6573 745f  rain_pred..test_
+-00000770: 7072 6564 7209 0000 0072 0900 0000 720a  predr....r....r.
+-00000780: 0000 00da 0e62 6173 655f 6d6f 6465 6c5f  .....base_model_
+-00000790: 6669 7424 0000 0073 2800 0000 0001 0601  fit$...s(.......
+-000007a0: 0e01 0a01 1601 0401 0c01 1603 0a01 1205  ................
+-000007b0: 2401 2402 1a01 1a02 1001 0801 0a01 0a02  $.$.............
+-000007c0: 2201 2403 7a2f 5374 6163 6b69 6e67 4e6f  ".$.z/StackingNo
+-000007d0: 6e6c 696e 6561 7254 7261 6e73 666f 726d  nlinearTransform
+-000007e0: 6174 696f 6e73 2e62 6173 655f 6d6f 6465  ations.base_mode
+-000007f0: 6c5f 6669 7463 0600 0000 0000 0000 0000  l_fitc..........
+-00000800: 0000 1200 0000 0800 0000 4300 0000 73b2  ..........C...s.
+-00000810: 0000 007c 00a0 007c 017c 027c 037c 047c  ...|...|.|.|.|.|
+-00000820: 05a1 055c 027d 067d 0774 017c 006a 02a0  ...\.}.}.t.|.j..
+-00000830: 03a1 0083 0164 0119 007d 0874 047c 087c  .....d...}.t.|.|
+-00000840: 067c 026a 037c 0564 0264 0264 038d 067d  .|.j.|.d.d.d...}
+-00000850: 0967 007d 0a7c 0964 0419 0044 005d 187d  .g.}.|.d...D.].}
+-00000860: 0b7c 0aa0 057c 0ba0 067c 077c 046a 03a1  .|...|...|.|.j..
+-00000870: 02a1 0101 0071 4a74 07a0 087c 0aa1 017d  .....qJt...|...}
+-00000880: 0c7c 0964 0419 007c 0c19 007d 0d7c 0d7d  .|.d...|...}.|.}
+-00000890: 087c 08a0 097c 06a1 017d 0e7c 08a0 097c  .|...|...}.|...|
+-000008a0: 07a1 017d 0f7c 08a0 0a7c 06a1 017d 107c  ...}.|...|...}.|
+-000008b0: 08a0 0a7c 07a1 017d 117c 0e7c 0f7c 107c  ...|...}.|.|.|.|
+-000008c0: 1166 0453 0029 054e 7201 0000 0054 721d  .f.S.).Nr....Tr.
+-000008d0: 0000 0072 1f00 0000 290b 7239 0000 00da  ...r....).r9....
+-000008e0: 046c 6973 7472 0600 0000 7222 0000 0072  .listr....r"...r
+-000008f0: 0200 0000 7223 0000 0072 2400 0000 7213  ....r#...r$...r.
+-00000900: 0000 0072 2500 0000 722b 0000 005a 0d70  ...r%...r+...Z.p
+-00000910: 7265 6469 6374 5f70 726f 6261 2912 7208  redict_proba).r.
+-00000920: 0000 0072 2c00 0000 722d 0000 0072 2e00  ...r,...r-...r..
+-00000930: 0000 722f 0000 0072 1e00 0000 5a09 6e65  ..r/...r....Z.ne
+-00000940: 775f 7472 6169 6e5a 086e 6577 5f74 6573  w_trainZ.new_tes
+-00000950: 7472 3100 0000 7232 0000 0072 3300 0000  tr1...r2...r3...
+-00000960: 7234 0000 0072 3500 0000 5a0f 6e65 775f  r4...r5...Z.new_
+-00000970: 6265 7374 5f6d 6f64 656c 7372 3700 0000  best_modelsr7...
+-00000980: 7238 0000 005a 0f74 7261 696e 5f70 7265  r8...Z.train_pre
+-00000990: 645f 7072 6f62 5a0e 7465 7374 5f70 7265  d_probZ.test_pre
+-000009a0: 645f 7072 6f62 7209 0000 0072 0900 0000  d_probr....r....
+-000009b0: 720a 0000 00da 0366 6974 4500 0000 731c  r......fitE...s.
+-000009c0: 0000 0000 0216 0112 0116 0104 010c 0116  ................
+-000009d0: 010a 010c 0104 010a 010a 010a 010a 027a  ...............z
+-000009e0: 2453 7461 636b 696e 674e 6f6e 6c69 6e65  $StackingNonline
+-000009f0: 6172 5472 616e 7366 6f72 6d61 7469 6f6e  arTransformation
+-00000a00: 732e 6669 744e 2901 7204 0000 0029 0172  s.fitN).r....).r
+-00000a10: 0400 0000 2901 7204 0000 0029 07da 085f  ....).r....)..._
+-00000a20: 5f6e 616d 655f 5fda 0a5f 5f6d 6f64 756c  _name__..__modul
+-00000a30: 655f 5fda 0c5f 5f71 7561 6c6e 616d 655f  e__..__qualname_
+-00000a40: 5f72 0b00 0000 721c 0000 0072 3900 0000  _r....r....r9...
+-00000a50: 723b 0000 0072 0900 0000 7209 0000 0072  r;...r....r....r
+-00000a60: 0900 0000 720a 0000 0072 0300 0000 0400  ....r....r......
+-00000a70: 0000 7308 0000 0008 010a 0608 190a 2172  ..s...........!r
+-00000a80: 0300 0000 2905 5a17 736b 6c65 6172 6e2e  ....).Z.sklearn.
+-00000a90: 6d6f 6465 6c5f 7365 6c65 6374 696f 6e72  model_selectionr
+-00000aa0: 0200 0000 da05 6e75 6d70 7972 1300 0000  ......numpyr....
+-00000ab0: 7203 0000 0072 0900 0000 7209 0000 0072  r....r....r....r
+-00000ac0: 0900 0000 720a 0000 00da 083c 6d6f 6475  ....r......<modu
+-00000ad0: 6c65 3e01 0000 0073 0400 0000 0c01 0802  le>....s........
++00000020: 0002 0000 0040 0000 0073 1000 0000 6400  .....@...s....d.
++00000030: 6401 6c00 6d01 5a01 0100 6402 5300 2903  d.l.m.Z...d.S.).
++00000040: e901 0000 0029 01da 2053 7461 636b 696e  .....).. Stackin
++00000050: 674e 6f6e 6c69 6e65 6172 5472 616e 7366  gNonlinearTransf
++00000060: 6f72 6d61 7469 6f6e 734e 2902 5a20 7374  ormationsN).Z st
++00000070: 6163 6b69 6e67 6e6f 6e6c 696e 6561 7274  ackingnonlineart
++00000080: 7261 6e73 666f 726d 6174 696f 6e73 7202  ransformationsr.
++00000090: 0000 00a9 0072 0300 0000 7203 0000 00fa  .....r....r.....
++000000a0: 4662 7569 6c64 5c62 6469 7374 2e77 696e  Fbuild\bdist.win
++000000b0: 2d61 6d64 3634 5c65 6767 5c73 7461 636b  -amd64\egg\stack
++000000c0: 696e 676e 6f6e 6c69 6e65 6172 7472 616e  ingnonlineartran
++000000d0: 7366 6f72 6d61 7469 6f6e 735c 5f5f 696e  sformations\__in
++000000e0: 6974 5f5f 2e70 79da 083c 6d6f 6475 6c65  it__.py..<module
++000000f0: 3e01 0000 00f3 0000 0000                 >.........
+```
+

@@ -1,0 +1,168 @@
+# Comparing `tmp/chb-2.1.3.tar.gz` & `tmp/chb-2.1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "chb-2.1.3.tar", last modified: Fri Apr  7 06:45:47 2023, max compression
++gzip compressed data, was "chb-2.1.4.tar", last modified: Fri Apr  7 06:50:08 2023, max compression
+```
+
+## Comparing `chb-2.1.3.tar` & `chb-2.1.4.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 06:45:46.998453 chb-2.1.3/
+--rw-rw-rw-   0        0        0     1091 2023-04-07 05:55:28.000000 chb-2.1.3/LICENSE.txt
+--rw-rw-rw-   0        0        0      637 2023-04-07 06:45:46.998453 chb-2.1.3/PKG-INFO
+--rw-rw-rw-   0        0        0      206 2023-04-07 05:55:28.000000 chb-2.1.3/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-07 06:45:46.995461 chb-2.1.3/chb/
+--rw-rw-rw-   0        0        0     5471 2023-04-07 05:55:28.000000 chb-2.1.3/chb/__init__.py
+--rw-rw-rw-   0        0        0     8544 2023-04-07 06:44:15.000000 chb-2.1.3/chb/_dao.py
+--rw-rw-rw-   0        0        0     3424 2023-04-07 05:55:28.000000 chb-2.1.3/chb/_importable.py
+--rw-rw-rw-   0        0        0     3977 2023-04-07 05:55:28.000000 chb-2.1.3/chb/_imports.py
+--rw-rw-rw-   0        0        0     4644 2023-04-07 05:55:28.000000 chb-2.1.3/chb/_log.py
+--rw-rw-rw-   0        0        0    24576 2023-04-07 05:55:28.000000 chb-2.1.3/chb/_utils.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 06:45:46.997456 chb-2.1.3/chb.egg-info/
+--rw-rw-rw-   0        0        0      637 2023-04-07 06:45:46.000000 chb-2.1.3/chb.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      237 2023-04-07 06:45:46.000000 chb-2.1.3/chb.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 06:45:46.000000 chb-2.1.3/chb.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        4 2023-04-07 06:45:46.000000 chb-2.1.3/chb.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       86 2023-04-07 06:45:46.998453 chb-2.1.3/setup.cfg
+--rw-rw-rw-   0        0        0     1025 2023-04-07 06:44:29.000000 chb-2.1.3/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 06:50:08.266107 chb-2.1.4/
++-rw-rw-rw-   0        0        0     1091 2023-04-07 05:55:28.000000 chb-2.1.4/LICENSE.txt
++-rw-rw-rw-   0        0        0      637 2023-04-07 06:50:08.266107 chb-2.1.4/PKG-INFO
++-rw-rw-rw-   0        0        0      206 2023-04-07 05:55:28.000000 chb-2.1.4/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 06:50:08.261121 chb-2.1.4/chb/
++-rw-rw-rw-   0        0        0     5471 2023-04-07 05:55:28.000000 chb-2.1.4/chb/__init__.py
++-rw-rw-rw-   0        0        0     8353 2023-04-07 06:49:37.000000 chb-2.1.4/chb/_dao.py
++-rw-rw-rw-   0        0        0     3424 2023-04-07 05:55:28.000000 chb-2.1.4/chb/_importable.py
++-rw-rw-rw-   0        0        0     3977 2023-04-07 05:55:28.000000 chb-2.1.4/chb/_imports.py
++-rw-rw-rw-   0        0        0     4644 2023-04-07 05:55:28.000000 chb-2.1.4/chb/_log.py
++-rw-rw-rw-   0        0        0    24576 2023-04-07 05:55:28.000000 chb-2.1.4/chb/_utils.py
++drwxrwxrwx   0        0        0        0 2023-04-07 06:50:08.264113 chb-2.1.4/chb.egg-info/
++-rw-rw-rw-   0        0        0      637 2023-04-07 06:50:08.000000 chb-2.1.4/chb.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      237 2023-04-07 06:50:08.000000 chb-2.1.4/chb.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 06:50:08.000000 chb-2.1.4/chb.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        4 2023-04-07 06:50:08.000000 chb-2.1.4/chb.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       86 2023-04-07 06:50:08.266107 chb-2.1.4/setup.cfg
++-rw-rw-rw-   0        0        0     1025 2023-04-07 06:50:00.000000 chb-2.1.4/setup.py
+```
+
+### Comparing `chb-2.1.3/LICENSE.txt` & `chb-2.1.4/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.3/PKG-INFO` & `chb-2.1.4/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: chb
+-Version: 2.1.3
++Version: 2.1.4
+ Summary: chb常用代码库
+ Home-page: https://github.com/ChenHuabin321/pypi
+ Author: chenhuabin
+ Author-email: chenhuabin321@163.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `chb-2.1.3/chb/__init__.py` & `chb-2.1.4/chb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.3/chb/_dao.py` & `chb-2.1.4/chb/_dao.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -234,19 +234,14 @@
+         """
+         return self.db.llen(queue)
+ 
+     def hset(self, set_name, key, value):
+         """
+         向名为set_name的hash队列中添加一个键值对
+         """
+-        if isinstance(value, (dict, list)):
+-            value = json.dumps(value)
+         self.db.hset(set_name, key, value)
+ 
+     def hget(self, set_name, key):
+         """
+         从名为set_name的hash队列中获取一个键值对
+         """
+-        value = self.db.hget(set_name, key)
+-        if isinstance(value, (dict, list)):
+-            value = json.loads(value)
+-        return value
++        return self.db.hget(set_name, key)
+```
+
+### Comparing `chb-2.1.3/chb/_importable.py` & `chb-2.1.4/chb/_importable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.3/chb/_imports.py` & `chb-2.1.4/chb/_imports.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.3/chb/_log.py` & `chb-2.1.4/chb/_log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.3/chb/_utils.py` & `chb-2.1.4/chb/_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `chb-2.1.3/chb.egg-info/PKG-INFO` & `chb-2.1.4/chb.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: chb
+-Version: 2.1.3
++Version: 2.1.4
+ Summary: chb常用代码库
+ Home-page: https://github.com/ChenHuabin321/pypi
+ Author: chenhuabin
+ Author-email: chenhuabin321@163.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `chb-2.1.3/setup.py` & `chb-2.1.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools  # 导入setuptools打包工具
+ 
+ with open("README.md", "r", encoding="utf-8") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="chb",  # 用自己的名替换其中的YOUR_USERNAME_
+-    version="2.1.3",  # 包版本号，便于维护版本
++    version="2.1.4",  # 包版本号，便于维护版本
+     author="chenhuabin",  # 作者，可以写自己的姓名
+     author_email="chenhuabin321@163.com",  # 作者联系方式，可写自己的邮箱地址
+     description="chb常用代码库",  # 包的简述
+     long_description=long_description,  # 包的详细介绍，一般在README.md文件内
+     long_description_content_type="text/markdown",
+     url="https://github.com/ChenHuabin321/pypi",  # 自己项目地址，比如github的项目地址
+     packages=setuptools.find_packages(),
+```
+
