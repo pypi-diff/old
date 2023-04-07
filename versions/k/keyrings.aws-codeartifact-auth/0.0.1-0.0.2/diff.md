@@ -1,0 +1,122 @@
+# Comparing `tmp/keyrings.aws-codeartifact-auth-0.0.1.tar.gz` & `tmp/keyrings.aws-codeartifact-auth-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "keyrings.aws-codeartifact-auth-0.0.1.tar", last modified: Thu Apr  6 22:06:41 2023, max compression
++gzip compressed data, was "keyrings.aws-codeartifact-auth-0.0.2.tar", last modified: Fri Apr  7 09:34:56 2023, max compression
+```
+
+## Comparing `keyrings.aws-codeartifact-auth-0.0.1.tar` & `keyrings.aws-codeartifact-auth-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,16 @@
+-drwxr-xr-x   0 daniel     (501) staff       (20)        0 2023-04-06 22:06:41.071894 keyrings.aws-codeartifact-auth-0.0.1/
+--rw-r--r--   0 daniel     (501) staff       (20)      154 2023-04-06 22:06:41.072034 keyrings.aws-codeartifact-auth-0.0.1/PKG-INFO
+--rw-r--r--   0 daniel     (501) staff       (20)       69 2023-04-06 19:56:56.000000 keyrings.aws-codeartifact-auth-0.0.1/README.md
+-drwxr-xr-x   0 daniel     (501) staff       (20)        0 2023-04-06 22:06:41.070727 keyrings.aws-codeartifact-auth-0.0.1/keyrings/
+--rw-r--r--   0 daniel     (501) staff       (20)        0 2023-04-06 19:56:56.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings/__init__.py
+--rw-r--r--   0 daniel     (501) staff       (20)     2015 2023-04-06 22:02:36.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings/aws.py
+-drwxr-xr-x   0 daniel     (501) staff       (20)        0 2023-04-06 22:06:41.071732 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/
+--rw-r--r--   0 daniel     (501) staff       (20)      154 2023-04-06 22:06:41.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/PKG-INFO
+--rw-r--r--   0 daniel     (501) staff       (20)      397 2023-04-06 22:06:41.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/SOURCES.txt
+--rw-r--r--   0 daniel     (501) staff       (20)        1 2023-04-06 22:06:41.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/dependency_links.txt
+--rw-r--r--   0 daniel     (501) staff       (20)       39 2023-04-06 22:06:41.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/entry_points.txt
+--rw-r--r--   0 daniel     (501) staff       (20)        8 2023-04-06 22:06:41.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/requires.txt
+--rw-r--r--   0 daniel     (501) staff       (20)       14 2023-04-06 22:06:41.000000 keyrings.aws-codeartifact-auth-0.0.1/keyrings.aws_codeartifact_auth.egg-info/top_level.txt
+--rw-r--r--   0 daniel     (501) staff       (20)      138 2023-04-06 21:04:22.000000 keyrings.aws-codeartifact-auth-0.0.1/pyproject.toml
+--rw-r--r--   0 daniel     (501) staff       (20)      351 2023-04-06 22:06:41.072447 keyrings.aws-codeartifact-auth-0.0.1/setup.cfg
++drwxr-xr-x   0 daniel     (501) staff       (20)        0 2023-04-07 09:34:56.894147 keyrings.aws-codeartifact-auth-0.0.2/
++-rw-r--r--   0 daniel     (501) staff       (20)     1606 2023-04-06 23:48:03.000000 keyrings.aws-codeartifact-auth-0.0.2/.gitignore
++-rw-r--r--   0 daniel     (501) staff       (20)      285 2023-04-07 09:34:56.894308 keyrings.aws-codeartifact-auth-0.0.2/PKG-INFO
++-rw-r--r--   0 daniel     (501) staff       (20)      130 2023-04-06 23:49:59.000000 keyrings.aws-codeartifact-auth-0.0.2/README.md
++drwxr-xr-x   0 daniel     (501) staff       (20)        0 2023-04-07 09:34:56.892970 keyrings.aws-codeartifact-auth-0.0.2/keyrings/
++-rw-r--r--   0 daniel     (501) staff       (20)        0 2023-04-06 19:56:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings/__init__.py
++-rw-r--r--   0 daniel     (501) staff       (20)     2171 2023-04-06 23:52:50.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings/aws.py
++drwxr-xr-x   0 daniel     (501) staff       (20)        0 2023-04-07 09:34:56.894042 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/
++-rw-r--r--   0 daniel     (501) staff       (20)      285 2023-04-07 09:34:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/PKG-INFO
++-rw-r--r--   0 daniel     (501) staff       (20)      408 2023-04-07 09:34:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/SOURCES.txt
++-rw-r--r--   0 daniel     (501) staff       (20)        1 2023-04-07 09:34:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/dependency_links.txt
++-rw-r--r--   0 daniel     (501) staff       (20)       38 2023-04-07 09:34:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/entry_points.txt
++-rw-r--r--   0 daniel     (501) staff       (20)        8 2023-04-07 09:34:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/requires.txt
++-rw-r--r--   0 daniel     (501) staff       (20)       20 2023-04-07 09:34:56.000000 keyrings.aws-codeartifact-auth-0.0.2/keyrings.aws_codeartifact_auth.egg-info/top_level.txt
++-rw-r--r--   0 daniel     (501) staff       (20)      138 2023-04-06 21:04:22.000000 keyrings.aws-codeartifact-auth-0.0.2/pyproject.toml
++-rw-r--r--   0 daniel     (501) staff       (20)      384 2023-04-07 09:34:56.894700 keyrings.aws-codeartifact-auth-0.0.2/setup.cfg
+```
+
+### Comparing `keyrings.aws-codeartifact-auth-0.0.1/keyrings/aws.py` & `keyrings.aws-codeartifact-auth-0.0.2/keyrings/aws.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,10 +1,14 @@
+-import keyring
+-import os
++import json
+ import logging
++import os
++import subprocess
++from urllib.parse import urlparse
++
++import keyring
+ 
+ 
+ class PlaintextKeyring(keyring.backend.KeyringBackend):
+     priority = 9
+ 
+     def set_password(self, servicename, username, password):
+         raise NotImplementedError()
+@@ -15,35 +19,38 @@
+     def get_password(self, servicename, username):
+         params = {
+             "region": "KEYRING_AWS_CODEARTIFACT_REGION",
+             "domain": "KEYRING_AWS_CODEARTIFACT_DOMAIN",
+             "domain_owner": "KEYRING_AWS_CODEARTIFACT_DOMAIN_OWNER",
+         }
+ 
+-        logging.warning(os.environ)
+         for k, v in params.items():
+             val = os.environ.get(v)
+             if val is None:
+                 logging.warning(f"{v} not set")
+                 return
+             params[k] = val
+ 
+-        hostname = (
+-            f"{params.domain}-{params.domain_owner}.d.codeartifact.{params.region}.amazonaws.com"
+-        )
+-        logging.warning(hostname)
++        suffix = f"{params['domain']}-{params['domain_owner']}.d.codeartifact.{params['region']}.amazonaws.com"
+ 
+-        url = urlparse(service)
+-        if url.hostname is None or not url.hostname.endswith(hostname):
++        if not valid_service(servicename, suffix):
+             return
+-
+         try:
+-            return get_token(params.domain, params.domain_owner, params.region)
++            return get_token(params["domain"], params["domain_owner"], params["region"])
+         except Exception as e:
+-            logging.warning("Failed to retrieve token: {e}")
++            logging.warning(f"Failed to retrieve token: {e}")
++
++
++def valid_service(servicename, suffix):
++    if servicename.endswith(suffix):
++        return True
++    url = urlparse(servicename)
++    if url.hostname is None:
++        return False
++    return url.hostname.endswith(suffix)
+ 
+ 
+ def get_token(domain, domain_owner, region):
+     try:
+         logging.warning("Trying to retrieve credentials from aws...")
+         command = subprocess.run(
+             [
+```
+

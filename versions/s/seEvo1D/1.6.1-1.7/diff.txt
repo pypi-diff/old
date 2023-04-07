@@ -1,0 +1,498 @@
+--- tmp/seEvo1D-1.6.1.tar.gz
++++ tmp/seEvo1D-1.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "seEvo1D-1.6.1.tar", last modified: Tue Apr  4 10:00:12 2023, max compression
+│ +gzip compressed data, was "seEvo1D-1.7.tar", last modified: Fri Apr  7 09:36:04 2023, max compression
+│   --- seEvo1D-1.6.1.tar
+├── +++ seEvo1D-1.7.tar
+│ ├── file list
+│ │ @@ -1,26 +1,26 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 10:00:12.026869 seEvo1D-1.6.1/
+│ │ --rw-rw-rw-   0        0        0    33092 2022-10-21 08:07:52.000000 seEvo1D-1.6.1/LICENSE
+│ │ --rw-rw-rw-   0        0        0     3862 2023-04-04 10:00:12.026869 seEvo1D-1.6.1/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2877 2023-01-21 21:33:12.000000 seEvo1D-1.6.1/README.md
+│ │ --rw-rw-rw-   0        0        0      101 2022-10-21 08:07:52.000000 seEvo1D-1.6.1/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       81 2023-04-04 10:00:12.028864 seEvo1D-1.6.1/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     3852 2023-04-04 09:59:45.000000 seEvo1D-1.6.1/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 10:00:11.962774 seEvo1D-1.6.1/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 10:00:12.008793 seEvo1D-1.6.1/src/seEvo1D/
+│ │ --rw-rw-rw-   0        0        0        0 2022-10-21 16:22:04.000000 seEvo1D-1.6.1/src/seEvo1D/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7783 2023-04-04 09:15:52.000000 seEvo1D-1.6.1/src/seEvo1D/__main__.py
+│ │ --rw-rw-rw-   0        0        0    15994 2023-04-04 09:58:27.000000 seEvo1D-1.6.1/src/seEvo1D/externalPlots.py
+│ │ --rw-rw-rw-   0        0        0    24668 2023-04-04 09:25:34.000000 seEvo1D-1.6.1/src/seEvo1D/mainView.py
+│ │ --rw-rw-rw-   0        0        0     1916 2023-04-04 09:51:32.000000 seEvo1D-1.6.1/src/seEvo1D/seEvo_analytical_model_1D.py
+│ │ --rw-rw-rw-   0        0        0     5276 2023-04-04 09:31:49.000000 seEvo1D-1.6.1/src/seEvo1D/seEvo_evolution_init.py
+│ │ --rw-rw-rw-   0        0        0     1890 2023-02-02 17:25:36.000000 seEvo1D-1.6.1/src/seEvo1D/seEvo_evolution_loop_1D.py
+│ │ --rw-rw-rw-   0        0        0     1831 2023-04-04 09:09:06.000000 seEvo1D-1.6.1/src/seEvo1D/seEvo_evolution_loop_1D_binned.py
+│ │ --rw-rw-rw-   0        0        0      176 2022-09-15 07:55:24.000000 seEvo1D-1.6.1/src/seEvo1D/wmean.py
+│ │ --rw-rw-rw-   0        0        0     5239 2023-04-03 09:27:04.000000 seEvo1D-1.6.1/src/seEvo1D/workspace.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 10:00:12.024875 seEvo1D-1.6.1/src/seEvo1D.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3862 2023-04-04 10:00:11.000000 seEvo1D-1.6.1/src/seEvo1D.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      572 2023-04-04 10:00:11.000000 seEvo1D-1.6.1/src/seEvo1D.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-04 10:00:11.000000 seEvo1D-1.6.1/src/seEvo1D.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-04 10:00:11.000000 seEvo1D-1.6.1/src/seEvo1D.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       36 2023-04-04 10:00:11.000000 seEvo1D-1.6.1/src/seEvo1D.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        8 2023-04-04 10:00:11.000000 seEvo1D-1.6.1/src/seEvo1D.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:36:04.553086 seEvo1D-1.7/
+│ │ +-rw-rw-rw-   0        0        0    33092 2022-10-21 08:07:52.000000 seEvo1D-1.7/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     3860 2023-04-07 09:36:04.554083 seEvo1D-1.7/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2877 2023-01-21 21:33:12.000000 seEvo1D-1.7/README.md
+│ │ +-rw-rw-rw-   0        0        0      101 2022-10-21 08:07:52.000000 seEvo1D-1.7/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       81 2023-04-07 09:36:04.556078 seEvo1D-1.7/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     3850 2023-04-07 09:35:38.000000 seEvo1D-1.7/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:36:04.494241 seEvo1D-1.7/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:36:04.533137 seEvo1D-1.7/src/seEvo1D/
+│ │ +-rw-rw-rw-   0        0        0        0 2022-10-21 16:22:04.000000 seEvo1D-1.7/src/seEvo1D/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     7783 2023-04-04 09:15:52.000000 seEvo1D-1.7/src/seEvo1D/__main__.py
+│ │ +-rw-rw-rw-   0        0        0    18407 2023-04-07 09:23:00.000000 seEvo1D-1.7/src/seEvo1D/externalPlots.py
+│ │ +-rw-rw-rw-   0        0        0    24932 2023-04-07 09:34:37.000000 seEvo1D-1.7/src/seEvo1D/mainView.py
+│ │ +-rw-rw-rw-   0        0        0     1916 2023-04-04 09:51:32.000000 seEvo1D-1.7/src/seEvo1D/seEvo_analytical_model_1D.py
+│ │ +-rw-rw-rw-   0        0        0     5168 2023-04-07 09:34:47.000000 seEvo1D-1.7/src/seEvo1D/seEvo_evolution_init.py
+│ │ +-rw-rw-rw-   0        0        0     1890 2023-02-02 17:25:36.000000 seEvo1D-1.7/src/seEvo1D/seEvo_evolution_loop_1D.py
+│ │ +-rw-rw-rw-   0        0        0     1831 2023-04-04 09:09:06.000000 seEvo1D-1.7/src/seEvo1D/seEvo_evolution_loop_1D_binned.py
+│ │ +-rw-rw-rw-   0        0        0      176 2022-09-15 07:55:24.000000 seEvo1D-1.7/src/seEvo1D/wmean.py
+│ │ +-rw-rw-rw-   0        0        0     5239 2023-04-03 09:27:04.000000 seEvo1D-1.7/src/seEvo1D/workspace.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 09:36:04.550094 seEvo1D-1.7/src/seEvo1D.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     3860 2023-04-07 09:36:04.000000 seEvo1D-1.7/src/seEvo1D.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      572 2023-04-07 09:36:04.000000 seEvo1D-1.7/src/seEvo1D.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 09:36:04.000000 seEvo1D-1.7/src/seEvo1D.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 09:36:04.000000 seEvo1D-1.7/src/seEvo1D.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       36 2023-04-07 09:36:04.000000 seEvo1D-1.7/src/seEvo1D.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2023-04-07 09:36:04.000000 seEvo1D-1.7/src/seEvo1D.egg-info/top_level.txt
+│ │   --- seEvo1D-1.6.1/LICENSE
+│ ├── +++ seEvo1D-1.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/PKG-INFO
+│ ├── +++ seEvo1D-1.7/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: seEvo1D
+│ │ -Version: 1.6.1
+│ │ +Version: 1.7
+│ │  Summary: Software for simulating slightly effect mutations impact on population evolution in tau leap version.
+│ │  Home-page: https://github.com/JGil-polsl/seEvo_1D
+│ │  Author: Jaroslaw Gil
+│ │  Author-email: jaroslaw.gil@polsl.pl
+│ │  Project-URL: Bug Reports, https://github.com/JGil-polsl/seEvo/issues
+│ │  Project-URL: Source, https://github.com/JGil-polsl/seEvo
+│ │  Keywords: clonal evolution,microbial,numerical modelling
+│ │   --- seEvo1D-1.6.1/README.md
+│ ├── +++ seEvo1D-1.7/README.md
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/setup.py
+│ ├── +++ seEvo1D-1.7/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -18,15 +18,15 @@
+│ │  # Fields marked as "Optional" may be commented out.
+│ │  
+│ │  setup(
+│ │      # There are some restrictions on what makes a valid project name
+│ │      # specification here:
+│ │      # https://packaging.python.org/specifications/core-metadata/#name
+│ │      name="seEvo1D", 
+│ │ -    version="1.6.1",
+│ │ +    version="1.7",
+│ │      description="Software for simulating slightly effect mutations impact on population evolution in tau leap version.",
+│ │      url="https://github.com/JGil-polsl/seEvo_1D",
+│ │      author="Jaroslaw Gil",  
+│ │      author_email="jaroslaw.gil@polsl.pl",
+│ │      long_description=long_description,
+│ │      long_description_content_type='text/markdown',
+│ │      # Classifiers help users find your project by categorizing it.
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/__main__.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/externalPlots.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/externalPlots.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -41,15 +41,15 @@
+│ │          
+│ │          if 'analytical' in _name:
+│ │              popSize = sum(pop[:,1].toarray())
+│ │              ax.plot(pop[:,0].toarray(), pop[:,1].toarray(), 'k', linewidth='10')
+│ │              
+│ │          elif 'binned' in _name:
+│ │              popSize = sum(pop[:,1].toarray())
+│ │ -            ax.bar(pop[:,0].toarray(), pop[:,1].toarray(), width=1, color='blue')   
+│ │ +            ax.bar(pop[:,0].toarray().T[0], pop[:,1].toarray().T[0], width=1, color='blue')   
+│ │              
+│ │          elif 'normal' in _name:                    
+│ │              popSize = pop._shape[0]
+│ │              _min = int(min(pop[:,1].toarray()))
+│ │              _max = int(max(pop[:,1].toarray()))
+│ │              data = np.zeros((int(_max - _min) + 1, 2))
+│ │              data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ @@ -137,15 +137,15 @@
+│ │          pop = sc.sparse.load_npz(_in)
+│ │          popSize = 0
+│ │          
+│ │          if 'analytical' in _name:
+│ │              ax.plot(pop[:,0].toarray(), pop[:,1].toarray(), 'k', linewidth='10')
+│ │              
+│ │          elif 'binned' in _name:
+│ │ -            ax.bar(pop[:,0].toarray(), pop[:,1].toarray(), width=1, color='blue')
+│ │ +            ax.bar(pop[:,0].toarray().T[0], pop[:,1].toarray().T[0], width=0.5, color='blue')
+│ │              
+│ │          elif 'normal' in _name:       
+│ │              temp = pop.toarray()
+│ │              _min = int(min(pop[:,1].toarray()))
+│ │              _max = int(max(pop[:,1].toarray()))
+│ │              data = np.zeros((_max - _min + 1, 2))
+│ │              data[:,0] = np.array([x for x in range(int(_min), int(_max)+1, 1)])
+│ │ @@ -185,14 +185,17 @@
+│ │          popSize = 0
+│ │          
+│ │          if 'analytical' in _name:
+│ │              popSize = int(sum(pop[:,1].toarray())[0])
+│ │          
+│ │          elif 'normal' in _name:       
+│ │              popSize = pop._shape[0]
+│ │ +            
+│ │ +        elif 'binned' in _name:
+│ │ +            popSize = int(sum(pop[:,1].toarray())[0])
+│ │          
+│ │          data.append([_num, popSize])
+│ │          
+│ │      df = pd.DataFrame(data)
+│ │      df.columns = ["id","size"]
+│ │      
+│ │      ax = df.plot.line(x='id', y='size', figsize=(40,20), linewidth='10')
+│ │ @@ -217,23 +220,29 @@
+│ │              os.remove(_out + "population_growth.eps")
+│ │          if os.path.exists(_out + "population_growth.jpg"):
+│ │              os.remove(_out + "population_growth.jpg")
+│ │          fig.savefig(_out + "population_growth.jpg")
+│ │          fig.savefig(_out + "population_growth.eps")
+│ │          plt.close(fig)  
+│ │  
+│ │ -def evolutionDynamics(an_path, norm_path, out="", var = 0):
+│ │ +def evolutionDynamics(an_path, norm_path, binned = False, out="", var = 0):
+│ │      an = np.array(list(map(readPaths, an_path)))
+│ │ -    norm = np.array(list(map(readPaths, norm_path)))
+│ │      an = an[np.array(list(map(lambda x: float(x), an[:,3]))).argsort()]
+│ │ -    norm = norm[np.array(list(map(lambda x: float(x), norm[:,3]))).argsort()]
+│ │ -    name_an = an[0,2].rstrip('_analytical_')
+│ │ -    name_norm = norm[0,2].rstrip('_normal_')
+│ │ +    name_an = an[0,2].rstrip('_analytical_')    
+│ │      _out_an = an[0,1]
+│ │ +    
+│ │ +    norm = np.array(list(map(readPaths, norm_path)))
+│ │ +    norm = norm[np.array(list(map(lambda x: float(x), norm[:,3]))).argsort()]
+│ │ +    
+│ │ +    norm_id = 'normal' * (not binned) + 'binned' * (binned)
+│ │ +    norm_col = 'red' * (not binned) + 'blue' * (binned)
+│ │ +    
+│ │ +    name_norm = norm[0,2].rstrip('_'+ norm_id +'_')
+│ │      _out_norm = norm[0,1]
+│ │ +    
+│ │      ind = int(min(len(an[:,0]), len(norm[:,0]))/3)
+│ │      ix1 = ind
+│ │      ix2 = ind * 2
+│ │      ix3 = ind * 3
+│ │      ix = np.array([[ix1], [ix2], [ix3]])
+│ │      mWave = np.append(an[ix,[0,2,3]], norm[ix,[0,2,3]], axis=0)
+│ │      mWave = np.array(list(map(lambda x: [sc.sparse.load_npz(x[0]), x[2], 'analytical' in x[1]], mWave)))
+│ │ @@ -244,52 +253,71 @@
+│ │      ax[0,0].plot(mWave[0,0][:,0].toarray(), mWave[0,0][:,1].toarray(), 'k', linewidth='4')
+│ │      ax[0,0].set_xlim(0,max(mWave[2,0][:,0].toarray()))
+│ │      ax[1,0].plot(mWave[1,0][:,0].toarray(), mWave[1,0][:,1].toarray(), 'k', linewidth='4')
+│ │      ax[1,0].set_xlim(0,max(mWave[2,0][:,0].toarray()))
+│ │      ax[2,0].plot(mWave[2,0][:,0].toarray(), mWave[2,0][:,1].toarray(), 'k', linewidth='4')
+│ │      ax[2,0].set_xlim(0,max(mWave[2,0][:,0].toarray()))
+│ │      
+│ │ -    _min = int(min(mWave[3,0][:,1].toarray()))
+│ │ -    _max = int(max(mWave[3,0][:,1].toarray()))
+│ │ -    data = np.zeros((int(_max - _min) + 1, 2))
+│ │ -    data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ -    for i in mWave[3,0][:,1].toarray():
+│ │ -        data[int(i) - _min, 1] = data[int(i) - _min, 1] + 1
+│ │ -    ax[0,0].bar(data[:,0], data[:,1], width=1, color='red')
+│ │ -    
+│ │ -    _min = int(min(mWave[4,0][:,1].toarray()))
+│ │ -    _max = int(max(mWave[4,0][:,1].toarray()))
+│ │ -    data = np.zeros((int(_max - _min) + 1, 2))
+│ │ -    data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ -    for i in mWave[4,0][:,1].toarray():
+│ │ -        data[int(i) - _min, 1] = data[int(i) - _min, 1] + 1
+│ │ -    ax[1,0].bar(data[:,0], data[:,1], width=1, color='red')
+│ │ -    
+│ │ -    _min = int(min(mWave[5,0][:,1].toarray()))
+│ │ -    _max = int(max(mWave[5,0][:,1].toarray()))
+│ │ -    data = np.zeros((int(_max - _min) + 1, 2))
+│ │ -    data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ -    for i in mWave[5,0][:,1].toarray():
+│ │ -        data[int(i) - _min, 1] = data[int(i) - _min, 1] + 1
+│ │ -    ax[2,0].bar(data[:,0], data[:,1], width=1, color='red')
+│ │ +    if binned:
+│ │ +        ax[0,0].bar(mWave[3,0][:,0].toarray().T[0], mWave[3,0][:,1].toarray().T[0], color=norm_col, width=0.5)
+│ │ +        ax[1,0].bar(mWave[4,0][:,0].toarray().T[0], mWave[4,0][:,1].toarray().T[0], color=norm_col, width=0.5)
+│ │ +        ax[2,0].bar(mWave[5,0][:,0].toarray().T[0], mWave[5,0][:,1].toarray().T[0], color=norm_col, width=0.5)
+│ │ +    else:
+│ │ +        _min = int(min(mWave[3,0][:,1].toarray()))
+│ │ +        _max = int(max(mWave[3,0][:,1].toarray()))
+│ │ +        data = np.zeros((int(_max - _min) + 1, 2))
+│ │ +        data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ +        for i in mWave[3,0][:,1].toarray():
+│ │ +            data[int(i) - _min, 1] = data[int(i) - _min, 1] + 1
+│ │ +        ax[0,0].bar(data[:,0], data[:,1], width=1, color=norm_col)
+│ │ +        
+│ │ +        _min = int(min(mWave[4,0][:,1].toarray()))
+│ │ +        _max = int(max(mWave[4,0][:,1].toarray()))
+│ │ +        data = np.zeros((int(_max - _min) + 1, 2))
+│ │ +        data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ +        for i in mWave[4,0][:,1].toarray():
+│ │ +            data[int(i) - _min, 1] = data[int(i) - _min, 1] + 1
+│ │ +        ax[1,0].bar(data[:,0], data[:,1], width=1, color=norm_col)
+│ │ +        
+│ │ +        _min = int(min(mWave[5,0][:,1].toarray()))
+│ │ +        _max = int(max(mWave[5,0][:,1].toarray()))
+│ │ +        data = np.zeros((int(_max - _min) + 1, 2))
+│ │ +        data[:,0] = np.array([x for x in range(_min, _max+1, 1)])
+│ │ +        for i in mWave[5,0][:,1].toarray():
+│ │ +            data[int(i) - _min, 1] = data[int(i) - _min, 1] + 1
+│ │ +        ax[2,0].bar(data[:,0], data[:,1], width=1, color=norm_col)
+│ │      
+│ │      an = np.array(list(map(lambda x: [sc.sparse.load_npz(x[0]), x[3]], an)))
+│ │      norm = np.array(list(map(lambda x: [sc.sparse.load_npz(x[0]), x[3]], norm)))
+│ │      
+│ │ -    pop = np.array(list(map(lambda x, y, z: [float(z), float(sum(x[:,1]).toarray()[0]), len(y[:,1].toarray())], an[:,0], norm[:,0], an[:,1])))
+│ │ -    
+│ │ -    mean = np.array(list(map(lambda x, y, z: [float(z), \
+│ │ -        float(sum(x[:,0].multiply(x[:,1])).toarray()[0])/float(sum(x[:,1]).toarray()[0]), \
+│ │ -        sum(y[:,1].toarray())[0]/len(y[:,1].toarray())], an[:,0], norm[:,0], an[:,1])))
+│ │ -    
+│ │ -    an_war = np.array(list(map(lambda x, y: sum(x[:,1].toarray()*((x[:,0].toarray()-float(y))*(x[:,1].toarray() > 0))**2)/(sum(x[:,1].toarray())), \
+│ │ -                              an[:,0] , mean[:,1])))
+│ │ -    norm_war = np.array(list(map(lambda x, y: sum((x[:,1].toarray()-float(y))**2)/len(x[:,1].toarray()), \
+│ │ -                            norm[:,0], mean[:,2])))
+│ │ -    war = np.array(list(map(lambda x, y, z: [float(x), float(y), float(z)], an[:,1], an_war, norm_war)))   
+│ │ +    if binned:
+│ │ +        pop = np.array(list(map(lambda x, y, z: [float(z), float(sum(x[:,1]).toarray()[0]), sum(y[:,1].toarray().T[0])], an[:,0], norm[:,0], an[:,1])))
+│ │ +        
+│ │ +        mean = np.array(list(map(lambda x, y, z: [float(z), \
+│ │ +            float(sum(x[:,0].multiply(x[:,1])).toarray()[0])/float(sum(x[:,1]).toarray()[0]), \
+│ │ +            float(sum(y[:,0].multiply(y[:,1])).toarray()[0])/float(sum(y[:,1]).toarray()[0])], an[:,0], norm[:,0], an[:,1])))
+│ │ +        
+│ │ +        an_war = np.array(list(map(lambda x, y: sum(x[:,1].toarray()*((x[:,0].toarray()-float(y))*(x[:,1].toarray() > 0))**2)/(sum(x[:,1].toarray())), \
+│ │ +                                  an[:,0] , mean[:,1])))
+│ │ +        norm_war = np.array(list(map(lambda x, y: sum(x[:,1].toarray()*((x[:,0].toarray()-float(y))*(x[:,1].toarray() > 0))**2)/(sum(x[:,1].toarray())), \
+│ │ +                                norm[:,0], mean[:,2])))
+│ │ +        war = np.array(list(map(lambda x, y, z: [float(x), float(y), float(z)], an[:,1], an_war, norm_war)))   
+│ │ +
+│ │ +    else:
+│ │ +        pop = np.array(list(map(lambda x, y, z: [float(z), float(sum(x[:,1]).toarray()[0]), len(y[:,1].toarray())], an[:,0], norm[:,0], an[:,1])))
+│ │ +        
+│ │ +        mean = np.array(list(map(lambda x, y, z: [float(z), \
+│ │ +            float(sum(x[:,0].multiply(x[:,1])).toarray()[0])/float(sum(x[:,1]).toarray()[0]), \
+│ │ +            sum(y[:,1].toarray())[0]/len(y[:,1].toarray())], an[:,0], norm[:,0], an[:,1])))
+│ │ +        
+│ │ +        an_war = np.array(list(map(lambda x, y: sum(x[:,1].toarray()*((x[:,0].toarray()-float(y))*(x[:,1].toarray() > 0))**2)/(sum(x[:,1].toarray())), \
+│ │ +                                  an[:,0] , mean[:,1])))
+│ │ +        norm_war = np.array(list(map(lambda x, y: sum((x[:,1].toarray()-float(y))**2)/len(x[:,1].toarray()), \
+│ │ +                                norm[:,0], mean[:,2])))
+│ │ +        war = np.array(list(map(lambda x, y, z: [float(x), float(y), float(z)], an[:,1], an_war, norm_war)))   
+│ │      
+│ │      R2 = np.corrcoef(mean[:,1], mean[:,2])
+│ │      R2 = R2[0,1]
+│ │      R2 = R2**2
+│ │      
+│ │      if not var:    
+│ │          alfa_state.append(mean[ix1,1:3])
+│ │ @@ -297,19 +325,19 @@
+│ │          alfa_state.append(mean[ix3,1:3])
+│ │      else:
+│ │          alfa_var.append(mean[ix1,1:3])
+│ │          alfa_var.append(mean[ix2,1:3])
+│ │          alfa_var.append(mean[ix3,1:3])
+│ │      
+│ │      ax[0,1].plot(mean[:,0], mean[:,1], 'k', linewidth='4')
+│ │ -    ax[0,1].plot(mean[:,0], mean[:,2], 'r', linewidth='2')
+│ │ +    ax[0,1].plot(mean[:,0], mean[:,2], norm_col, linewidth='2')
+│ │      ax[1,1].plot(war[:,0], war[:,1], 'k', linewidth='4')
+│ │ -    ax[1,1].plot(war[:,0], war[:,2], 'r', linewidth='2')
+│ │ +    ax[1,1].plot(war[:,0], war[:,2], norm_col, linewidth='2')
+│ │      ax[2,1].plot(pop[:,0], pop[:,1], 'k', linewidth='4')
+│ │ -    ax[2,1].plot(pop[:,0], pop[:,2], 'r', linewidth='2')
+│ │ +    ax[2,1].plot(pop[:,0], pop[:,2], norm_col, linewidth='2')
+│ │      
+│ │      for tx in ax: 
+│ │          for rx in tx:
+│ │              for tick in rx.xaxis.get_major_ticks():
+│ │                  tick.label.set_fontsize(20) 
+│ │              for tick in rx.yaxis.get_major_ticks():
+│ │                  tick.label.set_fontsize(20) 
+│ │ @@ -343,35 +371,44 @@
+│ │          if os.path.exists(_out_norm + "evolution_dynamics_" + name_norm + ".eps"):
+│ │              os.remove(_out_norm + "evolution_dynamics_" + name_norm + ".eps")
+│ │          fig.savefig(_out_an + "evolution_dynamics_" + name_an + ".eps", format='eps')
+│ │          fig.savefig(_out_norm + "evolution_dynamics_" + name_norm + ".eps", format='eps')
+│ │          plt.close(fig)  
+│ │      
+│ │  if __name__ == '__main__':
+│ │ -    name_an = "E:/Simulations/Alfa test/Analytical/"
+│ │ -    a = os.listdir(name_an)
+│ │ -    norm_name = "E:/Simulations/Alfa test/Normal/"
+│ │ -    b = os.listdir(norm_name)
+│ │ -    xx = 0
+│ │ -    for i in a:
+│ │ -        var = 0
+│ │ -        fname = name_an + '/' + i
+│ │ -        name = ""
+│ │ -        fname_an = np.array(os.listdir(fname))
+│ │ -        fname_an = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), fname_an, np.repeat(fname, len(fname_an)))))
+│ │ -        fname_an = fname_an[fname_an != '']
+│ │ -        if 'var' in i:
+│ │ -            out = "E:/Simulations/Alfa test/Alfa var figures/"
+│ │ -            name = i.rstrip('_var')
+│ │ -            var = 1
+│ │ -        else:
+│ │ -            out = "E:/Simulations/Alfa test/Alfa state figures/"
+│ │ -            name = i
+│ │ -        for j in b:
+│ │ -            if name in j:
+│ │ -                fname = norm_name + '/' + j
+│ │ -                fname_norm = np.array(os.listdir(fname))
+│ │ -                fname_norm = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), fname_norm, np.repeat(fname, len(fname_norm)))))
+│ │ -                fname_norm = fname_norm[fname_norm != '']
+│ │ -                xx = xx + 1
+│ │ -                print(xx)
+│ │ -                evolutionDynamics(fname_an, fname_norm, out, var)
+│ │ +    path_b = "E:/Simulations/t_b"
+│ │ +    path = np.array(os.listdir(path_b))
+│ │ +    path = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), path, np.repeat(path_b, len(path)))))
+│ │ +                    
+│ │ +    path_a = "E:/Simulations/S_0.0025_A"
+│ │ +    path_an = np.array(os.listdir(path_a))
+│ │ +    path_an = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), path_an, np.repeat(path_a, len(path_an)))))
+│ │ +                 
+│ │ +    evolutionDynamics(path_an[path_an!=''], path[path!=''], binned=True)
+│ │ +    # name_an = "E:/Simulations/Alfa test/Analytical/"
+│ │ +    # a = os.listdir(name_an)
+│ │ +    # norm_name = "E:/Simulations/Alfa test/Normal/"
+│ │ +    # b = os.listdir(norm_name)
+│ │ +    # xx = 0
+│ │ +    # for i in a:
+│ │ +    #     var = 0
+│ │ +    #     fname = name_an + '/' + i
+│ │ +    #     name = ""
+│ │ +    #     fname_an = np.array(os.listdir(fname))
+│ │ +    #     fname_an = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), fname_an, np.repeat(fname, len(fname_an)))))
+│ │ +    #     fname_an = fname_an[fname_an != '']
+│ │ +    #     if 'var' in i:
+│ │ +    #         out = "E:/Simulations/Alfa test/Alfa var figures/"
+│ │ +    #         name = i.rstrip('_var')
+│ │ +    #         var = 1
+│ │ +    #     else:
+│ │ +    #         out = "E:/Simulations/Alfa test/Alfa state figures/"
+│ │ +    #         name = i
+│ │ +    #     for j in b:
+│ │ +    #         if name in j:
+│ │ +    #             fname = norm_name + '/' + j
+│ │ +    #             fname_norm = np.array(os.listdir(fname))
+│ │ +    #             fname_norm = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), fname_norm, np.repeat(fname, len(fname_norm)))))
+│ │ +    #             fname_norm = fname_norm[fname_norm != '']
+│ │ +    #             xx = xx + 1
+│ │ +    #             print(xx)
+│ │ +    #             evolutionDynamics(fname_an, fname_norm, out, var)
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/mainView.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/mainView.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -209,24 +209,28 @@
+│ │          fname_an = fname_an[fname_an != '']
+│ │          if not all(map(lambda x: 'analytical' in x, fname_an)):
+│ │              self.showDialog("Select only analytical files", "Alert")
+│ │              return
+│ │          # fname_norm = qtWidget.QFileDialog.getOpenFileNames(None, 'Select Normal Files', "Z://","Data File (*.npz)")[0] 
+│ │          fname = qtWidget.QFileDialog.getExistingDirectory(self,"Choose Directory","Z:/")
+│ │          if fname == '':
+│ │ -            self.showDialog("No normal folder selected", "Alert")
+│ │ +            self.showDialog("No normal or binned folder selected", "Alert")
+│ │              return
+│ │          fname_norm = np.array(os.listdir(fname))
+│ │          fname_norm = np.array(list(map(lambda x,y: (y + '/' + x)*x.endswith('.npz'), fname_norm, np.repeat(fname, len(fname_norm)))))
+│ │          fname_norm = fname_norm[fname_norm != '']
+│ │ -        if not all(map(lambda x: 'normal' in x, fname_norm)):
+│ │ -            self.showDialog("Select only normal files", "Alert")
+│ │ -            return
+│ │ +        binned = False
+│ │ +        if all(map(lambda x: 'normal' in x, fname_norm)) or all(map(lambda x: 'binned' in x, fname_norm)):
+│ │ +            if all(map(lambda x: 'binned' in x, fname_norm)):
+│ │ +                binned = True
+│ │ +            elif not all(map(lambda x: 'normal' in x, fname_norm)):
+│ │ +                self.showDialog("Select only normal or binned files", "Alert")
+│ │ +                return
+│ │          if all(map(lambda x: x.endswith('.npz'), fname_an)) and all(map(lambda x: x.endswith('.npz'), fname_norm)):
+│ │ -            self._th_ed = (Process(target=externalPlots.evolutionDynamics, args=(fname_an, fname_norm)))
+│ │ +            self._th_ed = (Process(target=externalPlots.evolutionDynamics, args=(fname_an, fname_norm, binned)))
+│ │              # externalPlots.evolutionDynamics(fname_an, fname_norm)
+│ │              self._th_ed.start()
+│ │              self.status.setText("evolution dynamics plot ")
+│ │          else:
+│ │              self.showDialog("Wrong file/files extension.", "Alert")
+│ │      
+│ │      def createMainView(self):
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/seEvo_analytical_model_1D.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/seEvo_analytical_model_1D.py
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/seEvo_evolution_init.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/seEvo_evolution_init.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -114,25 +114,25 @@
+│ │          
+│ │          if end:
+│ │              if q != None:
+│ │                  q.put(['exit', str(ID) + ', analytical' * (select == 1) + ', normal' * (select == 0) + ', binned' * (select == 2)])
+│ │              break
+│ │          
+│ │          if select == 0:
+│ │ -            if (int(simTime) - steps >= 0 or iPop._shape[1] >= 10**6) and break_type == 0:
+│ │ +            if (int(simTime) - steps >= 0) and break_type == 0:
+│ │                  print(str(ID) + ': all steps')
+│ │                  end = True
+│ │ -            elif (iPop._shape[1] >= steps or iPop._shape[1] >= 10**6) and break_type == 1 and select != 2:
+│ │ +            elif (iPop._shape[1] >= steps) and break_type == 1 and select != 2:
+│ │                  print(str(ID) + ': all steps')
+│ │                  end = True
+│ │          else:
+│ │ -            if (int(simTime) - steps >= 0 or sum(iPop[1,:]) >= 10**6) and break_type == 0:
+│ │ +            if (int(simTime) - steps >= 0) and break_type == 0:
+│ │                  print(str(ID) + ': all steps')
+│ │                  end = True
+│ │ -            elif (sum(iPop[1,:]) >= steps or sum(iPop[1,:]) >= 10**6) and break_type == 1 and select != 2:
+│ │ +            elif (sum(iPop[1,:]) >= steps) and break_type == 1 and select != 2:
+│ │                  print(str(ID) + ': all steps')
+│ │                  end = True
+│ │          
+│ │          if select == 0:            
+│ │              iPop, simTime = seEvo1Dnorm(iPop, cap, tau, A, mut_prob, mut_effect, simTime)
+│ │          elif select == 1:            
+│ │              iPop, simTime = seEvo1Danalytical(iPop, cap, tau, A, mut_prob, mut_effect, simTime)
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/seEvo_evolution_loop_1D.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/seEvo_evolution_loop_1D.py
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/seEvo_evolution_loop_1D_binned.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/seEvo_evolution_loop_1D_binned.py
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/src/seEvo1D/workspace.py
+│ ├── +++ seEvo1D-1.7/src/seEvo1D/workspace.py
+│ │┄ Files identical despite different names
+│ │   --- seEvo1D-1.6.1/src/seEvo1D.egg-info/PKG-INFO
+│ ├── +++ seEvo1D-1.7/src/seEvo1D.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: seEvo1D
+│ │ -Version: 1.6.1
+│ │ +Version: 1.7
+│ │  Summary: Software for simulating slightly effect mutations impact on population evolution in tau leap version.
+│ │  Home-page: https://github.com/JGil-polsl/seEvo_1D
+│ │  Author: Jaroslaw Gil
+│ │  Author-email: jaroslaw.gil@polsl.pl
+│ │  Project-URL: Bug Reports, https://github.com/JGil-polsl/seEvo/issues
+│ │  Project-URL: Source, https://github.com/JGil-polsl/seEvo
+│ │  Keywords: clonal evolution,microbial,numerical modelling
+│ │   --- seEvo1D-1.6.1/src/seEvo1D.egg-info/SOURCES.txt
+│ ├── +++ seEvo1D-1.7/src/seEvo1D.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

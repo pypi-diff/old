@@ -1,0 +1,512 @@
+--- tmp/iparapheur-utils3.beta-0.0.1.post553534.tar.gz
++++ tmp/iparapheur-utils3.beta-0.0.1.post553537.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "iparapheur-utils3.beta-0.0.1.post553534.tar", last modified: Fri Apr  7 09:32:11 2023, max compression
+│ +gzip compressed data, was "iparapheur-utils3.beta-0.0.1.post553537.tar", last modified: Fri Apr  7 09:33:23 2023, max compression
+│   --- iparapheur-utils3.beta-0.0.1.post553534.tar
+├── +++ iparapheur-utils3.beta-0.0.1.post553537.tar
+│ ├── file list
+│ │ @@ -1,120 +1,120 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.402063 iparapheur-utils3.beta-0.0.1.post553534/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    10752 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/CHANGELOG.md
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    34354 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/LICENSE.md
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      142 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/MANIFEST.in
+│ │ --rw-r--r--   0 root         (0) root         (0)    18060 2023-04-07 09:32:11.398062 iparapheur-utils3.beta-0.0.1.post553534/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    17738 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.378062 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)    18060 2023-04-07 09:32:11.000000 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     4439 2023-04-07 09:32:11.000000 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 09:32:11.000000 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)      693 2023-04-07 09:32:11.000000 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       78 2023-04-07 09:32:11.000000 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       10 2023-04-07 09:32:11.000000 iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.378062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      415 2023-04-07 09:32:10.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.382062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      344 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/export.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      206 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/import.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      155 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/ldapsearch.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       74 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/patch.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      173 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/pushdoc.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      281 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/recuparchives.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      102 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/reset_admin_password.cfg
+│ │ --rwxrwxrwx   0 root         (0) root         (0)       82 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/script.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       97 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/configs/template.cfg
+│ │ --rwxrwxrwx   0 root         (0) root         (0)    16265 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/core.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.382062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.382062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1793 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/450.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1793 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/460.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1845 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/468.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1784 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/470.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1675 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/private.pem
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2520 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/public.pem
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.390062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3151 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-admin-suppression.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4737 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-admin-transfert.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4673 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-current-reception.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4679 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-current-retard.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4764 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-current-tdt-ok-archivage.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2507 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-archive.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4714 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-emission.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4713 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-retour.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4730 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-tdt-ok.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4721 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-visa.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     9013 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-digest-mail.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3028 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-dossier-email.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4912 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-approve.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4217 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-archive.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4466 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-delegation.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3155 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-deleteAdmin.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3979 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-moveAdmin.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4266 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-print.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4390 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-reject.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3404 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-remord.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3807 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-resetpassword.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4076 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-retard.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4405 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-reviewing.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      413 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-tiers.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      203 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mailsec-template.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2916 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-next-reprise.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4641 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-owner-archivage.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4717 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-owner-reception.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4616 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-owner-retour.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4627 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-secretariat-relecture.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4630 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-secretariat-retour.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4653 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-secretariat-signature.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     5654 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-signataires.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       77 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-tiers-retour.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      245 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-tiers-tdt-ok-archivage.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      189 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-tiers-visa.ftl
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      254 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-tiers.ftl
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.394062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    11171 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/Client.py
+│ │ --rwxrwxrwx   0 root         (0) root         (0)     2480 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/JSONHelper.py
+│ │ --rwxrwxrwx   0 root         (0) root         (0)     7262 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/Webservice.py
+│ │ --rwxrwxrwx   0 root         (0) root         (0)     2249 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.394062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      732 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1459 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/connect.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1026 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/execute.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.394062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      732 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       45 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/innodb_file_per_table.sql
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       54 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/innodb_locks_unsafe_for_binlog.sql
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       39 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/nombre_connections_maxi.sql
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       40 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/open_files_limit.sql
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.394062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/orphans/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      732 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/orphans/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      219 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/orphans/orphans_1.sql
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      162 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/orphans/orphans_2.sql
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       36 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/waint_timeout.sql
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2515 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/file_utils.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1939 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/parse.py
+│ │ --rwxrwxrwx   0 root         (0) root         (0)     2106 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/pprint.py
+│ │ --rwxrwxrwx   0 root         (0) root         (0)       82 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/script.cfg
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.398062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1741 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2742 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/change_name.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    71055 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/checkInstallationIP.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      949 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/count_files.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    12369 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/export_data.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    20329 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/import_data.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      945 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/ipclean.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.398062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/javascript/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       98 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/javascript/removeNode.js
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3828 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/ldapsearch.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2360 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/orphan.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1129 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/patch.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     7638 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/pushdoc.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    14296 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/recupArchives.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1729 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/remove_ldap.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2134 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/reset_admin_password.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:32:11.398062 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4443 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/count_files.sh
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     5512 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/ipclean.sh
+│ │ --rwxrwxrwx   0 root         (0) root         (0)     3277 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/patch.sh
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     3446 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/template.py
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 09:32:11.402063 iparapheur-utils3.beta-0.0.1.post553534/setup.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2684 2023-04-07 09:32:10.000000 iparapheur-utils3.beta-0.0.1.post553534/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.811643 iparapheur-utils3.beta-0.0.1.post553537/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    10752 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/CHANGELOG.md
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    34354 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/LICENSE.md
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      142 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/MANIFEST.in
+│ │ +-rw-r--r--   0 root         (0) root         (0)    18060 2023-04-07 09:33:23.811643 iparapheur-utils3.beta-0.0.1.post553537/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    17738 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.799643 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)    18060 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)     4439 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)      693 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       78 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       10 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.799643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      415 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.799643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      344 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/export.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      206 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/import.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      155 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/ldapsearch.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       74 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/patch.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      173 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/pushdoc.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      281 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/recuparchives.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      102 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/reset_admin_password.cfg
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)       82 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/script.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       97 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/configs/template.cfg
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)    16265 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/core.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.803643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.803643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1793 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/450.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1793 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/460.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1845 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/468.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1784 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/470.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1675 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/private.pem
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2520 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/public.pem
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.807643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3151 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-admin-suppression.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4737 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-admin-transfert.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4673 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-current-reception.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4679 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-current-retard.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4764 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-current-tdt-ok-archivage.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2507 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-archive.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4714 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-emission.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4713 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-retour.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4730 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-tdt-ok.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4721 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-visa.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     9013 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-digest-mail.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3028 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-dossier-email.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4912 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-approve.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4217 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-archive.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4466 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-delegation.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3155 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-deleteAdmin.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3979 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-moveAdmin.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4266 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-print.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4390 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-reject.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3404 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-remord.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3807 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-resetpassword.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4076 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-retard.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4405 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-reviewing.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      413 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-tiers.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      203 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mailsec-template.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2916 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-next-reprise.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4641 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-owner-archivage.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4717 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-owner-reception.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4616 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-owner-retour.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4627 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-secretariat-relecture.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4630 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-secretariat-retour.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4653 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-secretariat-signature.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     5654 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-signataires.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       77 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-tiers-retour.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      245 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-tiers-tdt-ok-archivage.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      189 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-tiers-visa.ftl
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      254 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-tiers.ftl
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.807643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    11171 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/Client.py
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)     2480 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/JSONHelper.py
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)     7262 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/Webservice.py
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)     2249 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.807643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      732 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1459 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/connect.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1026 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/execute.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.807643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      732 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       45 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/innodb_file_per_table.sql
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       54 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/innodb_locks_unsafe_for_binlog.sql
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       39 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/nombre_connections_maxi.sql
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       40 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/open_files_limit.sql
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.807643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/orphans/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      732 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/orphans/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      219 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/orphans/orphans_1.sql
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      162 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/orphans/orphans_2.sql
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       36 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/waint_timeout.sql
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2515 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/file_utils.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1939 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/parse.py
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)     2106 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/pprint.py
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)       82 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/script.cfg
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.811643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1741 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2742 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/change_name.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    71055 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/checkInstallationIP.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      949 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/count_files.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    12369 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/export_data.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    20329 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/import_data.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      945 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/ipclean.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.811643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/javascript/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       98 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/javascript/removeNode.js
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3828 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/ldapsearch.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2360 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/orphan.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1129 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/patch.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     7638 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/pushdoc.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    14296 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/recupArchives.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1729 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/remove_ldap.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2134 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/reset_admin_password.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 09:33:23.811643 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4443 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/count_files.sh
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     5531 2023-04-07 09:32:43.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/ipclean.sh
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)     3277 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/patch.sh
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     3446 2023-04-07 09:31:26.000000 iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/template.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 09:33:23.811643 iparapheur-utils3.beta-0.0.1.post553537/setup.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2684 2023-04-07 09:33:23.000000 iparapheur-utils3.beta-0.0.1.post553537/setup.py
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/CHANGELOG.md
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/CHANGELOG.md
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/LICENSE.md
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/PKG-INFO
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: iparapheur-utils3.beta
+│ │ -Version: 0.0.1.post553534
+│ │ +Version: 0.0.1.post553537
+│ │  Summary: Client python pour i-Parapheur
+│ │  Home-page: https://gitlab.libriciel.fr/i-parapheur/client-python
+│ │  Author: Libriciel SCOP
+│ │  Author-email: contact@libriciel.fr
+│ │  License: AGPLv3
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE.md
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/README.md
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/README.md
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/PKG-INFO
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: iparapheur-utils3.beta
+│ │ -Version: 0.0.1.post553534
+│ │ +Version: 0.0.1.post553537
+│ │  Summary: Client python pour i-Parapheur
+│ │  Home-page: https://gitlab.libriciel.fr/i-parapheur/client-python
+│ │  Author: Libriciel SCOP
+│ │  Author-email: contact@libriciel.fr
+│ │  License: AGPLv3
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE.md
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/SOURCES.txt
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/iparapheur_utils3.beta.egg-info/entry_points.txt
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/iparapheur_utils3.beta.egg-info/entry_points.txt
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/core.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/core.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/450.txt
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/450.txt
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/460.txt
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/460.txt
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/468.txt
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/468.txt
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/crontab/470.txt
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/crontab/470.txt
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/private.pem
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/private.pem
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/public.pem
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/public.pem
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-admin-suppression.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-admin-suppression.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-admin-transfert.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-admin-transfert.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-current-reception.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-current-reception.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-current-retard.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-current-retard.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-current-tdt-ok-archivage.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-current-tdt-ok-archivage.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-archive.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-archive.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-emission.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-emission.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-retour.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-retour.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-tdt-ok.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-tdt-ok.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-diffusion-visa.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-diffusion-visa.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-digest-mail.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-digest-mail.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-dossier-email.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-dossier-email.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-approve.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-approve.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-archive.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-archive.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-delegation.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-delegation.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-deleteAdmin.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-deleteAdmin.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-moveAdmin.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-moveAdmin.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-print.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-print.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-reject.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-reject.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-remord.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-remord.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-resetpassword.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-resetpassword.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-retard.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-retard.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-mail-reviewing.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-mail-reviewing.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-next-reprise.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-next-reprise.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-owner-archivage.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-owner-archivage.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-owner-reception.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-owner-reception.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-owner-retour.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-owner-retour.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-secretariat-relecture.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-secretariat-relecture.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-secretariat-retour.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-secretariat-retour.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-secretariat-signature.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-secretariat-signature.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/files/templates/parapheur-signataires.ftl
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/files/templates/parapheur-signataires.ftl
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/Client.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/Client.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/JSONHelper.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/JSONHelper.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/Webservice.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/Webservice.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/__init__.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/__init__.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/connect.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/connect.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/execute.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/execute.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/__init__.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/database/queries/orphans/__init__.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/database/queries/orphans/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/file_utils.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/file_utils.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/parse.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/parse.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/parapheur/pprint.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/parapheur/pprint.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/__init__.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/change_name.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/change_name.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/checkInstallationIP.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/checkInstallationIP.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/count_files.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/count_files.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/export_data.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/export_data.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/import_data.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/import_data.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/ipclean.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/ipclean.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/ldapsearch.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/ldapsearch.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/orphan.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/orphan.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/patch.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/patch.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/pushdoc.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/pushdoc.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/recupArchives.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/recupArchives.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/remove_ldap.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/remove_ldap.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/reset_admin_password.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/reset_admin_password.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/count_files.sh
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/count_files.sh
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/ipclean.sh
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/ipclean.sh
+│ │┄ Files 1% similar despite different names
+│ │ @@ -160,8 +160,9 @@
+│ │  echo -e "\n- SUPPRESSION DES DOSSIERS LUCENE-INDEXES ET BACKUP-LUCENE-NDEXES => OK\n"
+│ │  
+│ │  ##  -- Demarrage de l'application
+│ │  echo -e "\n- DEMARRAGE DE L'APPLICATION ...\n"
+│ │  sleep 10
+│ │  /etc/init.d/alfresco start && tail -f /opt/iParapheur/tomcat/logs/catalina.out | sed '/^INFOS: Server startup in/ q'
+│ │  echo -e "\n** FIN DU SCRIPT LE PARAPHEUR EST DEMARRE **\n"
+│ │ +pkill -f "tail -f"
+│ │  exit 0
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/script/patch.sh
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/script/patch.sh
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/parapheur/scripts/template.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/parapheur/scripts/template.py
+│ │┄ Files identical despite different names
+│ │   --- iparapheur-utils3.beta-0.0.1.post553534/setup.py
+│ ├── +++ iparapheur-utils3.beta-0.0.1.post553537/setup.py
+│ │┄ Files identical despite different names

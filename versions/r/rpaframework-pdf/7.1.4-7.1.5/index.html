@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/rpaframework_pdf-7.1.4.tar.gz tmp/rpaframework_pdf-7.1.5.tar.gz --html versions/r/rpaframework-pdf/7.1.4-7.1.5/index.html --text versions/r/rpaframework-pdf/7.1.4-7.1.5/diff.txt --markdown versions/r/rpaframework-pdf/7.1.4-7.1.5/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.22 KB</span></div>
+  <div><span class="source">tmp/rpaframework_pdf-7.1.4.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/rpaframework_pdf-7.1.5.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">200 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;rpaframework_pdf-7.1.<del>4</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;rpaframework_pdf-7.1.<ins>5</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.96 KB</span></div>
+    <div><span class="source">rpaframework_pdf-7.1.4.tar</span> vs.</div>
+    <div id="rpaframework_pdf--.-.-.tar"><span class="source">rpaframework_pdf-7.1.5.tar</span>
+      <a class="anchor" href="#rpaframework_pdf--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.52 KB</span></div>
+      <div id="rpaframework_pdf--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11358<span class="dp">·</span>2021-09-09<span class="dp">·</span>09:55:26.451320<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11358<span class="dp">·</span>2021-09-09<span class="dp">·</span>09:55:26.451320<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>187<span class="dp">·</span>2021-09-09<span class="dp">·</span>09:55:26.451408<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>187<span class="dp">·</span>2021-09-09<span class="dp">·</span>09:55:26.451408<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>59021<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>8</del>:3<del>1</del>:<del>51</del>.8<del>97271</del><span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/RPA_PDF.libspec</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>59021<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>9</ins>:3<ins>8</ins>:<ins>15</ins>.8<ins>55855</ins><span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/RPA_PDF.libspec</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1920<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>8</del>:<del>26</del>:<del>32</del>.<del>484729</del><span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/pyproject.toml</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1920<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>9</ins>:<ins>37</ins>:<ins>40</ins>.<ins>112345</ins><span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4047<span class="dp">·</span>2023-03-31<span class="dp">·</span>12:08:05.029080<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4047<span class="dp">·</span>2023-03-31<span class="dp">·</span>12:08:05.029080<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>316100<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.260100<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/assets/Inter-Bold.ttf</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>316100<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.260100<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/assets/Inter-Bold.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>265920<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.261375<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/assets/Inter-BoldItalic.ttf</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>265920<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.261375<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/assets/Inter-BoldItalic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>263548<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.263934<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/assets/Inter-Italic.ttf</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>263548<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.263934<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/assets/Inter-Italic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>309828<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.265438<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/assets/Inter-Regular.ttf</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>309828<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.265438<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/assets/Inter-Regular.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>258<span class="dp">·</span>2023-02-03<span class="dp">·</span>14:24:02.149967<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/keywords/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>258<span class="dp">·</span>2023-02-03<span class="dp">·</span>14:24:02.149967<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/keywords/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>789<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.265897<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/keywords/context.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>789<span class="dp">·</span>2022-09-09<span class="dp">·</span>11:28:10.265897<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/keywords/context.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>44846<span class="dp">·</span>2023-03-31<span class="dp">·</span>12:08:05.029474<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/keywords/document.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>44846<span class="dp">·</span>2023-03-31<span class="dp">·</span>12:08:05.029474<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/keywords/document.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16873<span class="dp">·</span>2023-02-03<span class="dp">·</span>14:24:02.150961<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/keywords/finder.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16873<span class="dp">·</span>2023-02-03<span class="dp">·</span>14:24:02.150961<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/keywords/finder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32447<span class="dp">·</span>2023-03-15<span class="dp">·</span>11:45:26.906753<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/src/RPA/PDF/keywords/model.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32447<span class="dp">·</span>2023-03-15<span class="dp">·</span>11:45:26.906753<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/src/RPA/PDF/keywords/model.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1794<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>rpaframework_pdf-7.1.<del>4</del>/PKG-INFO</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1794<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>rpaframework_pdf-7.1.<ins>5</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/LICENSE</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--LICENSE"><span class="source">rpaframework_pdf-7.1.5/LICENSE</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">832 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/RPA_PDF.libspec</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--RPA_PDF.libspec"><span class="source">rpaframework_pdf-7.1.5/RPA_PDF.libspec</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--RPA_PDF.libspec">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+      <div class="difference">
+        <div class="diffheader">
+        <div class="diffcontrol diffcontrol-double">⊟</div>
+        <div><span class="diffsize">716 B</span></div>
+        <div><span class="source">rpaframework_pdf-7.1.4/RPA_PDF.libspec</span> vs.</div>
+        <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--RPA_PDF.libspec---rpaframework_pdf--.-.--RPA_PDF.libspec"><span class="source">rpaframework_pdf-7.1.5/RPA_PDF.libspec</span>
+          <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--RPA_PDF.libspec---rpaframework_pdf--.-.--RPA_PDF.libspec">¶</a>
+        </div>
+        </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 9 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">&lt;?xml<span class="dp">·</span>version=&quot;1.0&quot;<span class="dp">·</span>encoding=&quot;utf-8&quot;?&gt;</td><td class="diffline">1 </td><td class="diffpresent">&lt;?xml<span class="dp">·</span>version=&quot;1.0&quot;<span class="dp">·</span>encoding=&quot;utf-8&quot;?&gt;</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">&lt;keywordspec<span class="dp">·</span>name=&quot;RPA.PDF&quot;<span class="dp">·</span>type=&quot;LIBRARY&quot;<span class="dp">·</span>format=&quot;REST&quot;<span class="dp">·</span>scope=&quot;GLOBAL&quot;<span class="dp">·</span>generated=&quot;2023-04-0<del>5</del>T0<del>8</del>:3<del>1</del>:<del>51</del>Z&quot;<span class="dp">·</span>specversion=&quot;4&quot;<span class="dp">·</span>source=&quot;./RPA/PDF/__init__.py&quot;<span class="dp">·</span>lineno=&quot;11&quot;&gt;</td><td class="diffline">2 </td><td class="diffpresent">&lt;keywordspec<span class="dp">·</span>name=&quot;RPA.PDF&quot;<span class="dp">·</span>type=&quot;LIBRARY&quot;<span class="dp">·</span>format=&quot;REST&quot;<span class="dp">·</span>scope=&quot;GLOBAL&quot;<span class="dp">·</span>generated=&quot;2023-04-0<ins>7</ins>T0<ins>9</ins>:3<ins>8</ins>:<ins>15</ins>Z&quot;<span class="dp">·</span>specversion=&quot;4&quot;<span class="dp">·</span>source=&quot;./RPA/PDF/__init__.py&quot;<span class="dp">·</span>lineno=&quot;11&quot;&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&lt;version/&gt;</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&lt;version/&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&lt;doc&gt;`PDF`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>managing<span class="dp">·</span>PDF<span class="dp">·</span>documents.</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&lt;doc&gt;`PDF`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>managing<span class="dp">·</span>PDF<span class="dp">·</span>documents.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">It<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>extract<span class="dp">·</span>text<span class="dp">·</span>from<span class="dp">·</span>PDFs,<span class="dp">·</span>add<span class="dp">·</span>watermarks<span class="dp">·</span>to<span class="dp">·</span>pages,<span class="dp">·</span>and</td><td class="diffline">5 </td><td class="diffpresent">It<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>used<span class="dp">·</span>to<span class="dp">·</span>extract<span class="dp">·</span>text<span class="dp">·</span>from<span class="dp">·</span>PDFs,<span class="dp">·</span>add<span class="dp">·</span>watermarks<span class="dp">·</span>to<span class="dp">·</span>pages,<span class="dp">·</span>and</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">decrypt/encrypt<span class="dp">·</span>documents.</td><td class="diffline">6 </td><td class="diffpresent">decrypt/encrypt<span class="dp">·</span>documents.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Merging<span class="dp">·</span>and<span class="dp">·</span>splitting<span class="dp">·</span>PDFs<span class="dp">·</span>is<span class="dp">·</span>supported<span class="dp">·</span>by<span class="dp">·</span>``Add<span class="dp">·</span>Files<span class="dp">·</span>To<span class="dp">·</span>PDF``<span class="dp">·</span>keyword.<span class="dp">·</span>Read</td><td class="diffline">7 </td><td class="diffpresent">Merging<span class="dp">·</span>and<span class="dp">·</span>splitting<span class="dp">·</span>PDFs<span class="dp">·</span>is<span class="dp">·</span>supported<span class="dp">·</span>by<span class="dp">·</span>``Add<span class="dp">·</span>Files<span class="dp">·</span>To<span class="dp">·</span>PDF``<span class="dp">·</span>keyword.<span class="dp">·</span>Read</td></tr>
+</table>      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">858 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/pyproject.toml</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--pyproject.toml"><span class="source">rpaframework_pdf-7.1.5/pyproject.toml</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;rpaframework-pdf&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;rpaframework-pdf&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;7.1.<del>4</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;7.1.<ins>5</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;PDF<span class="dp">·</span>library<span class="dp">·</span>of<span class="dp">·</span>RPA<span class="dp">·</span>Framework&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;PDF<span class="dp">·</span>library<span class="dp">·</span>of<span class="dp">·</span>RPA<span class="dp">·</span>Framework&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;RPA<span class="dp">·</span>Framework<span class="dp">·</span>&lt;rpafw@robocorp.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;RPA<span class="dp">·</span>Framework<span class="dp">·</span>&lt;rpafw@robocorp.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache-2.0&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache-2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.rst&quot;</td><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.rst&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://rpaframework.org/&quot;</td><td class="diffline">8 </td><td class="diffpresent">homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://rpaframework.org/&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">documentation<span class="dp">·</span>=<span class="dp">·</span>&quot;https://rpaframework.org/&quot;</td><td class="diffline">9 </td><td class="diffpresent">documentation<span class="dp">·</span>=<span class="dp">·</span>&quot;https://rpaframework.org/&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 31, 16 lines modified</td><td colspan="2">Offset 31, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">31 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7&quot;</td><td class="diffline">32 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">rpaframework-core<span class="dp">·</span>=<span class="dp">·</span>&quot;^11.0.0&quot;</td><td class="diffline">33 </td><td class="diffpresent">rpaframework-core<span class="dp">·</span>=<span class="dp">·</span>&quot;^11.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">robotframework<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=4.0.0,!=4.0.1,&lt;6.0.0&quot;</td><td class="diffline">34 </td><td class="diffpresent">robotframework<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=4.0.0,!=4.0.1,&lt;6.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">robotframework-pythonlibcore<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.0.0&quot;</td><td class="diffline">35 </td><td class="diffpresent">robotframework-pythonlibcore<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">&quot;pdfminer.six&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;20221105&quot;</td><td class="diffline">36 </td><td class="diffpresent">&quot;pdfminer.six&quot;<span class="dp">·</span>=<span class="dp">·</span>&quot;20221105&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">pypdf<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.<del>2</del>.0&quot;</td><td class="diffline">37 </td><td class="diffpresent">pypdf<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.<ins>7</ins>.0&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">fpdf2<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.<del>6</del>.<del>0</del>&quot;</td><td class="diffline">38 </td><td class="diffpresent">fpdf2<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.<ins>7</ins>.<ins>3</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">[tool.poetry.group.dev.dependencies]</td><td class="diffline">39 </td><td class="diffpresent">[tool.poetry.group.dev.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">black<span class="dp">·</span>=<span class="dp">·</span>&quot;^22.3.0&quot;</td><td class="diffline">40 </td><td class="diffpresent">black<span class="dp">·</span>=<span class="dp">·</span>&quot;^22.3.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">flake8<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7.9&quot;</td><td class="diffline">41 </td><td class="diffpresent">flake8<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7.9&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">pylint<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.4.4&quot;</td><td class="diffline">42 </td><td class="diffpresent">pylint<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.4.4&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.0&quot;</td><td class="diffline">43 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">mock<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.0.0&quot;</td><td class="diffline">44 </td><td class="diffpresent">mock<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.0.0&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/__init__.py</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-__init__.py"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/__init__.py</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/assets/Inter-Bold.ttf</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-Bold.ttf"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/assets/Inter-Bold.ttf</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-Bold.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/assets/Inter-BoldItalic.ttf</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-BoldItalic.ttf"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/assets/Inter-BoldItalic.ttf</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-BoldItalic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/assets/Inter-Italic.ttf</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-Italic.ttf"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/assets/Inter-Italic.ttf</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-Italic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/assets/Inter-Regular.ttf</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-Regular.ttf"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/assets/Inter-Regular.ttf</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-assets-Inter-Regular.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/keywords/context.py</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-context.py"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/keywords/context.py</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-context.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/keywords/document.py</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-document.py"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/keywords/document.py</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-document.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/keywords/finder.py</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-finder.py"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/keywords/finder.py</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-finder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/src/RPA/PDF/keywords/model.py</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-model.py"><span class="source">rpaframework_pdf-7.1.5/src/RPA/PDF/keywords/model.py</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--src-RPA-PDF-keywords-model.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.33 KB</span></div>
+      <div><span class="source">rpaframework_pdf-7.1.4/PKG-INFO</span> vs.</div>
+      <div id="rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--PKG-INFO"><span class="source">rpaframework_pdf-7.1.5/PKG-INFO</span>
+        <a class="anchor" href="#rpaframework_pdf--.-.-.tar---rpaframework_pdf--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>rpaframework-pdf</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>rpaframework-pdf</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>7.1.<del>4</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>7.1.<ins>5</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>PDF<span class="dp">·</span>library<span class="dp">·</span>of<span class="dp">·</span>RPA<span class="dp">·</span>Framework</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>PDF<span class="dp">·</span>library<span class="dp">·</span>of<span class="dp">·</span>RPA<span class="dp">·</span>Framework</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://rpaframework.org/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://rpaframework.org/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>robotframework,rpa,automation,pdf</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>robotframework,rpa,automation,pdf</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>RPA<span class="dp">·</span>Framework</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>RPA<span class="dp">·</span>Framework</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>rpafw@robocorp.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>rpafw@robocorp.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 21, 17 lines modified</td><td colspan="2">Offset 21, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td><td class="diffline">23 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">24 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">25 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries</td><td class="diffline">26 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td><td class="diffline">27 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Software<span class="dp">·</span>Development<span class="dp">·</span>::<span class="dp">·</span>Libraries<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>Modules</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>fpdf2<span class="dp">·</span>(&gt;=2.<del>6</del>.<del>0</del>,&lt;3.0.0)</td><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>fpdf2<span class="dp">·</span>(&gt;=2.<ins>7</ins>.<ins>3</ins>,&lt;3.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pdfminer.six<span class="dp">·</span>(==20221105)</td><td class="diffline">29 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pdfminer.six<span class="dp">·</span>(==20221105)</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pypdf<span class="dp">·</span>(&gt;=3.<del>2</del>.0,&lt;4.0.0)</td><td class="diffline">30 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pypdf<span class="dp">·</span>(&gt;=3.<ins>7</ins>.0,&lt;4.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>robotframework<span class="dp">·</span>(&gt;=4.0.0,!=4.0.1,&lt;6.0.0)</td><td class="diffline">31 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>robotframework<span class="dp">·</span>(&gt;=4.0.0,!=4.0.1,&lt;6.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>robotframework-pythonlibcore<span class="dp">·</span>(&gt;=4.0.0,&lt;5.0.0)</td><td class="diffline">32 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>robotframework-pythonlibcore<span class="dp">·</span>(&gt;=4.0.0,&lt;5.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>rpaframework-core<span class="dp">·</span>(&gt;=11.0.0,&lt;12.0.0)</td><td class="diffline">33 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>rpaframework-core<span class="dp">·</span>(&gt;=11.0.0,&lt;12.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://rpaframework.org/</td><td class="diffline">34 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://rpaframework.org/</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/robocorp/rpaframework</td><td class="diffline">35 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/robocorp/rpaframework</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td><td class="diffline">36 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

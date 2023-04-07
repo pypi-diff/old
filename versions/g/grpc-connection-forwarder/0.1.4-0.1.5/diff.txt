@@ -1,0 +1,118 @@
+--- tmp/grpc_connection_forwarder-0.1.4.tar.gz
++++ tmp/grpc_connection_forwarder-0.1.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "grpc_connection_forwarder-0.1.4.tar", last modified: Fri Apr  7 09:30:40 2023, max compression
+│ +gzip compressed data, was "grpc_connection_forwarder-0.1.5.tar", last modified: Fri Apr  7 09:34:21 2023, max compression
+│   --- grpc_connection_forwarder-0.1.4.tar
+├── +++ grpc_connection_forwarder-0.1.5.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:30:40.661507 grpc_connection_forwarder-0.1.4/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1068 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2015 2023-04-07 09:30:40.661507 grpc_connection_forwarder-0.1.4/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1559 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:30:40.657507 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       64 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      686 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/connection_counter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2667 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/grpc_connection_forwarder.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      126 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/lock_with_value.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:30:40.657507 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2015 2023-04-07 09:30:40.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      408 2023-04-07 09:30:40.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 09:30:40.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-07 09:30:40.000000 grpc_connection_forwarder-0.1.4/grpc_connection_forwarder.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 09:30:40.661507 grpc_connection_forwarder-0.1.4/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      672 2023-04-07 09:30:22.000000 grpc_connection_forwarder-0.1.4/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:34:21.414112 grpc_connection_forwarder-0.1.5/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1068 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2015 2023-04-07 09:34:21.414112 grpc_connection_forwarder-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1559 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:34:21.410112 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       64 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      686 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/connection_counter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2669 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/grpc_connection_forwarder.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      126 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/lock_with_value.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 09:34:21.414112 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2015 2023-04-07 09:34:21.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      408 2023-04-07 09:34:21.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 09:34:21.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-07 09:34:21.000000 grpc_connection_forwarder-0.1.5/grpc_connection_forwarder.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 09:34:21.414112 grpc_connection_forwarder-0.1.5/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      672 2023-04-07 09:33:59.000000 grpc_connection_forwarder-0.1.5/setup.py
+│ │   --- grpc_connection_forwarder-0.1.4/LICENSE
+│ ├── +++ grpc_connection_forwarder-0.1.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- grpc_connection_forwarder-0.1.4/PKG-INFO
+│ ├── +++ grpc_connection_forwarder-0.1.5/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: grpc_connection_forwarder
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.5
+│ │  Summary: A small package for counting gRPC connections
+│ │  Home-page: https://github.com/flagman/grpc-connection-forwarder
+│ │  Author: Pavel Malay
+│ │  Author-email: flagmansupport@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- grpc_connection_forwarder-0.1.4/README.md
+│ ├── +++ grpc_connection_forwarder-0.1.5/README.md
+│ │┄ Files identical despite different names
+│ │   --- grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/connection_counter.py
+│ ├── +++ grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/connection_counter.py
+│ │┄ Files identical despite different names
+│ │   --- grpc_connection_forwarder-0.1.4/grpc_connection_forwarder/grpc_connection_forwarder.py
+│ ├── +++ grpc_connection_forwarder-0.1.5/grpc_connection_forwarder/grpc_connection_forwarder.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  import socket
+│ │  import threading
+│ │ -from connection_counter import ConnectionCounter
+│ │ -from lock_with_value import LockWithValue
+│ │ +from .connection_counter import ConnectionCounter
+│ │ +from .lock_with_value import LockWithValue
+│ │  import logging
+│ │  
+│ │  
+│ │  class GrpcConnnectionForwarder:
+│ │      def __init__(self, grpc_server, callback=None):
+│ │          self.grpc_server = grpc_server
+│ │          self.connection_counter = ConnectionCounter(callback)
+│ │   --- grpc_connection_forwarder-0.1.4/grpc_connection_forwarder.egg-info/PKG-INFO
+│ ├── +++ grpc_connection_forwarder-0.1.5/grpc_connection_forwarder.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: grpc-connection-forwarder
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.5
+│ │  Summary: A small package for counting gRPC connections
+│ │  Home-page: https://github.com/flagman/grpc-connection-forwarder
+│ │  Author: Pavel Malay
+│ │  Author-email: flagmansupport@gmail.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- grpc_connection_forwarder-0.1.4/setup.py
+│ ├── +++ grpc_connection_forwarder-0.1.5/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setup(
+│ │      name="grpc_connection_forwarder",
+│ │ -    version="0.1.4",
+│ │ +    version="0.1.5",
+│ │      author="Pavel Malay",
+│ │      author_email="flagmansupport@gmail.com",
+│ │      description="A small package for counting gRPC connections",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/flagman/grpc-connection-forwarder",
+│ │      packages=find_packages(),

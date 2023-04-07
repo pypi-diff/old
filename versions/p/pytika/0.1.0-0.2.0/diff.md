@@ -1,0 +1,112 @@
+# Comparing `tmp/pytika-0.1.0.tar.gz` & `tmp/pytika-0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pytika-0.1.0.tar", max compression
++gzip compressed data, was "pytika-0.2.0.tar", max compression
+```
+
+## Comparing `pytika-0.1.0.tar` & `pytika-0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,7 +1,9 @@
+--rw-r--r--   0        0        0     1077 2023-02-08 06:46:46.907098 pytika-0.1.0/LICENSE
+--rw-r--r--   0        0        0      142 2023-02-08 11:33:21.371631 pytika-0.1.0/README.md
+--rw-r--r--   0        0        0      437 2023-02-10 13:57:25.632144 pytika-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0     2437 2023-02-10 22:23:30.861288 pytika-0.1.0/pytika/api.py
+--rw-r--r--   0        0        0      109 2023-02-07 08:41:53.970692 pytika-0.1.0/pytika/errors.py
+--rw-r--r--   0        0        0      767 1970-01-01 00:00:00.000000 pytika-0.1.0/setup.py
+--rw-r--r--   0        0        0      764 1970-01-01 00:00:00.000000 pytika-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1077 2023-02-08 06:46:46.907098 pytika-0.2.0/LICENSE
++-rw-r--r--   0        0        0     2980 2023-04-07 08:39:19.930505 pytika-0.2.0/README.md
++-rw-r--r--   0        0        0      466 2023-04-07 09:34:59.869640 pytika-0.2.0/pyproject.toml
++-rw-r--r--   0        0        0       22 2023-04-07 09:35:03.328990 pytika-0.2.0/pytika/__init__.py
++-rw-r--r--   0        0        0     2437 2023-04-07 08:41:33.802212 pytika-0.2.0/pytika/api.py
++-rw-r--r--   0        0        0     3459 2023-04-07 08:51:57.658259 pytika-0.2.0/pytika/config.py
++-rw-r--r--   0        0        0      109 2023-02-07 08:41:53.970692 pytika-0.2.0/pytika/errors.py
++-rw-r--r--   0        0        0     3742 1970-01-01 00:00:00.000000 pytika-0.2.0/setup.py
++-rw-r--r--   0        0        0     3652 1970-01-01 00:00:00.000000 pytika-0.2.0/PKG-INFO
+```
+
+### Comparing `pytika-0.1.0/LICENSE` & `pytika-0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pytika-0.1.0/pytika/api.py` & `pytika-0.2.0/pytika/api.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,14 +1,16 @@
+ import os
+ from enum import Enum
+ from io import BufferedReader
++from typing import Callable, List
+ 
+ import requests
+ 
+ from pytika import errors
++from pytika.config import GetTextOptions, GetTextOptionsBuilder
+ 
+ 
+ class Status(Enum):
+     OK = 200
+     NO_CONTENT = 204  # Request completed successfully, no content
+     UNPROCESSABLE_ENTITY = 422  # Unsupported mime-type, encrypted document, etc
+     ERROR = 500
+@@ -50,35 +52,35 @@
+         res = requests.put(url, data=file, headers=headers)
+ 
+         self.handle_errors(res)
+ 
+         metadata = res.json()
+         return metadata
+ 
+-    def get_text(self, file: BufferedReader, skip_ocr: bool = False, ocr_inline: bool = False, ocr_page: bool = False) -> str:
++    def get_text(
++        self,
++        file: BufferedReader,
++        *opts: List[Callable[..., GetTextOptions]],
++    ) -> bytes:
+         """
+-        Get text from file-like object
++        Get text from file-like object. By default returns xml without bounding boxes.
++        Use WithBoundingBoxes or AsPlainText options to change this behaviour.
+         Reference: https://cwiki.apache.org/confluence/display/tika/TikaOCR
+ 
+         :param file: file-like object
+-        :param skip_ocr: skip OCR if True
+-        :param ocr_inline: extract inline images and run OCR on each if True
+-        :param ocr_page: render whole page and run OCR on that once if True (should be faster)
+-        :return: text
++        :return: text as bytes
+         """
+         headers = self.headers
+-        if skip_ocr:
+-            headers["X-Tika-OCRskipOcr"] = "true"
++        headers["Accept"] = "*/*"  # Do not want to force json
+ 
+-        if ocr_inline:
+-            headers["X-Tika-PDFextractInlineImages"] = "true"
+-
+-        if ocr_page:
+-            headers["X-Tika-PDFOcrStrategy"] = "ocr_only"
++        defaults = [GetTextOptionsBuilder.OCROnly()]
++        defaults.extend(opts)
++        for opt in defaults:
++            headers = opt(headers)
+ 
+         url = f"{self.url}/tika"
+ 
+         res = requests.put(url, data=file, headers=headers)
+ 
+         self.handle_errors(res)
+ 
+-        return res.text
++        return res.content
+```
+

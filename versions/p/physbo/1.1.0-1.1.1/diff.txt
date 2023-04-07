@@ -1,0 +1,1229 @@
+--- tmp/physbo-1.1.0.tar.gz
++++ tmp/physbo-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "physbo-1.1.0.tar", last modified: Fri Jun 17 07:46:58 2022, max compression
+│ +gzip compressed data, was "physbo-1.1.1.tar", last modified: Fri Apr  7 09:36:13 2023, max compression
+│   --- physbo-1.1.0.tar
+├── +++ physbo-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,91 +1,91 @@
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.725479 physbo-1.1.0/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3735 2022-06-17 07:46:58.726691 physbo-1.1.0/PKG-INFO
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3393 2022-06-17 07:36:11.000000 physbo-1.1.0/README.md
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.336216 physbo-1.1.0/physbo/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      209 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.364102 physbo-1.1.0/physbo/blm/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      165 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.366986 physbo-1.1.0/physbo/blm/basis/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       29 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/basis/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3391 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/basis/fourier.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.382692 physbo-1.1.0/physbo/blm/core/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/core/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     5920 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/blm/core/model.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.386766 physbo-1.1.0/physbo/blm/inf/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       20 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/inf/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3955 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/blm/inf/exact.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.398417 physbo-1.1.0/physbo/blm/lik/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       74 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/lik/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.404130 physbo-1.1.0/physbo/blm/lik/_src/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       21 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/lik/_src/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     2329 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/lik/_src/cov.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     2601 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/lik/gauss.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     2276 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/lik/linear.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     6289 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/blm/predictor.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.415275 physbo-1.1.0/physbo/blm/prior/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/prior/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     4510 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/blm/prior/gauss.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.419173 physbo-1.1.0/physbo/gp/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      164 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.434047 physbo-1.1.0/physbo/gp/core/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       84 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/core/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)    11438 2022-06-17 06:59:21.000000 physbo-1.1.0/physbo/gp/core/learning.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)    11653 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/gp/core/model.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     5346 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/gp/core/prior.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.446849 physbo-1.1.0/physbo/gp/cov/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/cov/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.451283 physbo-1.1.0/physbo/gp/cov/_src/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)        0 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/cov/_src/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     2175 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/gp/cov/_src/enhance_gauss.pyx
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)    10487 2022-06-16 01:37:51.000000 physbo-1.1.0/physbo/gp/cov/gauss.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.454157 physbo-1.1.0/physbo/gp/inf/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       20 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/inf/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     6152 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/gp/inf/exact.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.463459 physbo-1.1.0/physbo/gp/lik/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/lik/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     4636 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/lik/gauss.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.469874 physbo-1.1.0/physbo/gp/mean/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       48 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/mean/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3184 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/mean/const.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      990 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/gp/mean/zero.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     4061 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/gp/predictor.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.617373 physbo-1.1.0/physbo/misc/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      345 2022-06-16 01:37:51.000000 physbo-1.1.0/physbo/misc/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.656416 physbo-1.1.0/physbo/misc/_src/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)        0 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/_src/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     1032 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/_src/cholupdate.pyx
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      781 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/_src/diagAB.pyx
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      602 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/_src/logsumexp.pyx
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     1515 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/_src/traceAB.pyx
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      575 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/centering.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      666 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/misc/gauss_elim.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     7396 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/misc/set_config.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.673339 physbo-1.1.0/physbo/opt/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       23 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/opt/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     2615 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/opt/adam.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     4944 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/predictor.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.699155 physbo-1.1.0/physbo/search/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       98 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/search/__init__.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.712601 physbo-1.1.0/physbo/search/discrete/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       91 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/search/discrete/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)    26779 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/search/discrete/policy.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     5928 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/search/discrete/results.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.722239 physbo-1.1.0/physbo/search/discrete_multi/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       91 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/search/discrete_multi/__init__.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)    18637 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/search/discrete_multi/policy.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3696 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/search/discrete_multi/results.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     7157 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/search/pareto.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3958 2021-05-20 05:35:13.000000 physbo-1.1.0/physbo/search/score.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     6070 2021-03-08 01:42:29.000000 physbo-1.1.0/physbo/search/score_multi.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     2696 2022-06-17 07:36:11.000000 physbo-1.1.0/physbo/search/utility.py
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     5192 2021-02-03 03:13:38.000000 physbo-1.1.0/physbo/variable.py
+│ │ -drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2022-06-17 07:46:58.354945 physbo-1.1.0/physbo.egg-info/
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     3735 2022-06-17 07:46:57.000000 physbo-1.1.0/physbo.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     1754 2022-06-17 07:46:58.000000 physbo-1.1.0/physbo.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)        1 2022-06-17 07:46:57.000000 physbo-1.1.0/physbo.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)        1 2022-06-17 07:46:57.000000 physbo-1.1.0/physbo.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)       12 2022-06-17 07:46:58.000000 physbo-1.1.0/physbo.egg-info/requires.txt
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)        7 2022-06-17 07:46:58.000000 physbo-1.1.0/physbo.egg-info/top_level.txt
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      109 2022-06-16 01:37:51.000000 physbo-1.1.0/pyproject.toml
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)      475 2022-06-17 07:46:58.732183 physbo-1.1.0/setup.cfg
+│ │ --rw-r--r--   0 yomichi    (501) staff       (20)     1306 2022-06-16 01:37:51.000000 physbo-1.1.0/setup.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.313716 physbo-1.1.1/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3755 2023-04-07 09:36:13.313893 physbo-1.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3433 2023-04-06 05:27:23.000000 physbo-1.1.1/README.md
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.242478 physbo-1.1.1/physbo/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      209 2023-04-06 05:27:36.000000 physbo-1.1.1/physbo/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.269538 physbo-1.1.1/physbo/blm/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      165 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.271486 physbo-1.1.1/physbo/blm/basis/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       29 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/basis/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3391 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/basis/fourier.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.273187 physbo-1.1.1/physbo/blm/core/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/core/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     5920 2022-06-17 07:36:11.000000 physbo-1.1.1/physbo/blm/core/model.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.274754 physbo-1.1.1/physbo/blm/inf/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       20 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/inf/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3955 2021-03-08 01:42:29.000000 physbo-1.1.1/physbo/blm/inf/exact.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.276929 physbo-1.1.1/physbo/blm/lik/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       74 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/lik/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.278147 physbo-1.1.1/physbo/blm/lik/_src/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       21 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/lik/_src/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     2329 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/lik/_src/cov.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     2601 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/lik/gauss.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     2276 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/lik/linear.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     6289 2022-06-17 07:36:11.000000 physbo-1.1.1/physbo/blm/predictor.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.279739 physbo-1.1.1/physbo/blm/prior/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/prior/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     4510 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/blm/prior/gauss.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.281196 physbo-1.1.1/physbo/gp/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      164 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/gp/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.285104 physbo-1.1.1/physbo/gp/core/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       85 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/core/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)    11434 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/core/learning.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)    11651 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/core/model.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     5344 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/core/prior.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.286756 physbo-1.1.1/physbo/gp/cov/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/gp/cov/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.288202 physbo-1.1.1/physbo/gp/cov/_src/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)        0 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/gp/cov/_src/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     2175 2022-06-20 07:24:44.000000 physbo-1.1.1/physbo/gp/cov/_src/enhance_gauss.pyx
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)    10477 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/cov/gauss.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.289666 physbo-1.1.1/physbo/gp/inf/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       20 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/gp/inf/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     6152 2021-03-08 01:42:29.000000 physbo-1.1.1/physbo/gp/inf/exact.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.291384 physbo-1.1.1/physbo/gp/lik/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       25 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/gp/lik/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     4630 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/lik/gauss.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.293891 physbo-1.1.1/physbo/gp/mean/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       48 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/gp/mean/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3182 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/mean/const.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      988 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/mean/zero.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     4059 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/gp/predictor.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.297543 physbo-1.1.1/physbo/misc/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      344 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/misc/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.301580 physbo-1.1.1/physbo/misc/_src/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)        0 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/misc/_src/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     1032 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/misc/_src/cholupdate.pyx
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      781 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/misc/_src/diagAB.pyx
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      602 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/misc/_src/logsumexp.pyx
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     1515 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/misc/_src/traceAB.pyx
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      575 2023-04-06 03:32:38.000000 physbo-1.1.1/physbo/misc/centering.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      666 2023-04-06 03:32:38.000000 physbo-1.1.1/physbo/misc/gauss_elim.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     7396 2023-04-06 03:32:38.000000 physbo-1.1.1/physbo/misc/set_config.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.302883 physbo-1.1.1/physbo/opt/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       23 2021-02-03 03:13:38.000000 physbo-1.1.1/physbo/opt/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     2613 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/opt/adam.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     4944 2023-04-06 03:32:38.000000 physbo-1.1.1/physbo/predictor.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.307099 physbo-1.1.1/physbo/search/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       98 2021-03-08 01:42:29.000000 physbo-1.1.1/physbo/search/__init__.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.309912 physbo-1.1.1/physbo/search/discrete/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       91 2021-03-08 01:42:29.000000 physbo-1.1.1/physbo/search/discrete/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)    27452 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/search/discrete/policy.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     5936 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/search/discrete/results.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.312646 physbo-1.1.1/physbo/search/discrete_multi/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       91 2021-03-08 01:42:29.000000 physbo-1.1.1/physbo/search/discrete_multi/__init__.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)    19540 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/search/discrete_multi/policy.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3704 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/search/discrete_multi/results.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     7157 2021-03-08 01:42:29.000000 physbo-1.1.1/physbo/search/pareto.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3958 2021-05-20 05:35:13.000000 physbo-1.1.1/physbo/search/score.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     6071 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/search/score_multi.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     2688 2023-04-06 05:27:23.000000 physbo-1.1.1/physbo/search/utility.py
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     5192 2023-04-06 03:32:38.000000 physbo-1.1.1/physbo/variable.py
+│ │ +drwxr-xr-x   0 yomichi    (501) staff       (20)        0 2023-04-07 09:36:13.268056 physbo-1.1.1/physbo.egg-info/
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     3755 2023-04-07 09:36:13.000000 physbo-1.1.1/physbo.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     1754 2023-04-07 09:36:13.000000 physbo-1.1.1/physbo.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)        1 2023-04-07 09:36:13.000000 physbo-1.1.1/physbo.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)        1 2023-04-07 09:32:26.000000 physbo-1.1.1/physbo.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)       12 2023-04-07 09:36:13.000000 physbo-1.1.1/physbo.egg-info/requires.txt
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)        7 2023-04-07 09:36:13.000000 physbo-1.1.1/physbo.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      170 2023-04-06 05:27:23.000000 physbo-1.1.1/pyproject.toml
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)      475 2023-04-07 09:36:13.314726 physbo-1.1.1/setup.cfg
+│ │ +-rw-r--r--   0 yomichi    (501) staff       (20)     1306 2022-09-28 04:34:19.000000 physbo-1.1.1/setup.py
+│ │   --- physbo-1.1.0/PKG-INFO
+│ ├── +++ physbo-1.1.1/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,16 +1,15 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: physbo
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: optimization tool for PHYSics based on Bayesian Optimization
+│ │  Home-page: https://github.com/issp-center-dev/PHYSBO
+│ │  Author: PHYSBO developers
+│ │  Author-email: physbo-dev@issp.u-tokyo.ac.jp
+│ │  License: GPLv3
+│ │ -Platform: UNKNOWN
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # optimization tools for PHYsics based on Bayesian Optimization ( PHYSBO )
+│ │  
+│ │  Bayesian optimization has been proven as an effective tool in accelerating scientific discovery.
+│ │  A standard implementation (e.g., scikit-learn), however, can accommodate only small training data.
+│ │ @@ -25,16 +24,17 @@
+│ │  - Latest (develop branch)
+│ │      - [English](https://issp-center.dev.github.io/PHYSBO/manual/develop/en/index.html)
+│ │      - [日本語](https://issp-center-dev.github.io/PHYSBO/manual/develop/ja/index.html)
+│ │  
+│ │  ## Required Packages
+│ │  
+│ │  - Python >= 3.6
+│ │ -- numpy
+│ │ -- scipy
+│ │ +    - No longer tested with Python 3.6
+│ │ +- NumPy
+│ │ +- SciPy
+│ │  
+│ │  ## Install
+│ │  
+│ │  - From PyPI (recommended)
+│ │  
+│ │  ```bash
+│ │  pip3 install physbo
+│ │ @@ -50,14 +50,15 @@
+│ │      1. Download or clone the github repository
+│ │  
+│ │          ```
+│ │          git clone https://github.com/issp-center-dev/PHYSBO
+│ │          ```
+│ │  
+│ │      1. Install via pip
+│ │ +
+│ │          ``` bash
+│ │          # ./PHYSBO is the root directory of PHYSBO
+│ │          # pip install options such as --user are avaiable
+│ │  
+│ │          pip3 install ./PHYSBO
+│ │          ```
+│ │  
+│ │ @@ -97,9 +98,7 @@
+│ │  }
+│ │  ```
+│ │  
+│ │  ### Copyright
+│ │  
+│ │  © *2020- The University of Tokyo. All rights reserved.*
+│ │  This software was developed with the support of \"*Project for advancement of software usability in materials science*\" of The Institute for Solid State Physics, The University of Tokyo.
+│ │ -
+│ │ -
+│ │   --- physbo-1.1.0/README.md
+│ ├── +++ physbo-1.1.1/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -13,16 +13,17 @@
+│ │  - Latest (develop branch)
+│ │      - [English](https://issp-center.dev.github.io/PHYSBO/manual/develop/en/index.html)
+│ │      - [日本語](https://issp-center-dev.github.io/PHYSBO/manual/develop/ja/index.html)
+│ │  
+│ │  ## Required Packages
+│ │  
+│ │  - Python >= 3.6
+│ │ -- numpy
+│ │ -- scipy
+│ │ +    - No longer tested with Python 3.6
+│ │ +- NumPy
+│ │ +- SciPy
+│ │  
+│ │  ## Install
+│ │  
+│ │  - From PyPI (recommended)
+│ │  
+│ │  ```bash
+│ │  pip3 install physbo
+│ │ @@ -38,14 +39,15 @@
+│ │      1. Download or clone the github repository
+│ │  
+│ │          ```
+│ │          git clone https://github.com/issp-center-dev/PHYSBO
+│ │          ```
+│ │  
+│ │      1. Install via pip
+│ │ +
+│ │          ``` bash
+│ │          # ./PHYSBO is the root directory of PHYSBO
+│ │          # pip install options such as --user are avaiable
+│ │  
+│ │          pip3 install ./PHYSBO
+│ │          ```
+│ │   --- physbo-1.1.0/physbo/blm/basis/fourier.py
+│ ├── +++ physbo-1.1.1/physbo/blm/basis/fourier.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/core/model.py
+│ ├── +++ physbo-1.1.1/physbo/blm/core/model.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/inf/exact.py
+│ ├── +++ physbo-1.1.1/physbo/blm/inf/exact.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/lik/_src/cov.py
+│ ├── +++ physbo-1.1.1/physbo/blm/lik/_src/cov.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/lik/gauss.py
+│ ├── +++ physbo-1.1.1/physbo/blm/lik/gauss.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/lik/linear.py
+│ ├── +++ physbo-1.1.1/physbo/blm/lik/linear.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/predictor.py
+│ ├── +++ physbo-1.1.1/physbo/blm/predictor.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/blm/prior/gauss.py
+│ ├── +++ physbo-1.1.1/physbo/blm/prior/gauss.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/gp/core/learning.py
+│ ├── +++ physbo-1.1.1/physbo/gp/core/learning.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -305,15 +305,15 @@
+│ │          return min_params
+│ │  
+│ │      def get_one_update(self, params, X, t):
+│ │          raise NotImplementedError
+│ │  
+│ │  
+│ │  class adam(online):
+│ │ -    """ default """
+│ │ +    """default"""
+│ │  
+│ │      def __init__(self, gp, config):
+│ │          """
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          gp : physbo.gp.core.model object
+│ │ @@ -347,11 +347,11 @@
+│ │              N-dimensional vector that represents the corresponding negative energy of search candidates.
+│ │          Returns
+│ │          -------
+│ │  
+│ │          """
+│ │          grad = self.gp.get_grad_marlik(params, X, t)
+│ │          self.m = self.m * self.beta + grad * (1 - self.beta)
+│ │ -        self.v = self.v * self.gamma + grad ** 2 * (1 - self.gamma)
+│ │ +        self.v = self.v * self.gamma + grad**2 * (1 - self.gamma)
+│ │          hat_m = self.m / (1 - self.beta ** (self.num_iter))
+│ │          hat_v = self.v / (1 - self.gamma ** (self.num_iter))
+│ │          return -self.alpha * hat_m / (np.sqrt(hat_v) + self.epsilon)
+│ │   --- physbo-1.1.0/physbo/gp/core/model.py
+│ ├── +++ physbo-1.1.1/physbo/gp/core/model.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -297,15 +297,15 @@
+│ │          numpy.ndarray
+│ │          """
+│ │          if params is None:
+│ │              params = np.copy(self.params)
+│ │  
+│ │          fmean = self.get_post_fmean(X, Z, params=None)
+│ │          fcov = self.get_post_fcov(X, Z, params=None, diag=False)
+│ │ -        return np.random.multivariate_normal(fmean, fcov * alpha ** 2, N)
+│ │ +        return np.random.multivariate_normal(fmean, fcov * alpha**2, N)
+│ │  
+│ │      def predict_sampling(self, X, Z, params=None, N=1):
+│ │          """
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          X: numpy.ndarray
+│ │   --- physbo-1.1.0/physbo/gp/core/prior.py
+│ ├── +++ physbo-1.1.1/physbo/gp/core/prior.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  import numpy as np
+│ │  import scipy
+│ │  
+│ │  
+│ │  class prior:
+│ │ -    """ prior of gaussian process """
+│ │ +    """prior of gaussian process"""
+│ │  
+│ │      def __init__(self, mean, cov):
+│ │          """
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          mean: numpy.ndarray
+│ │   --- physbo-1.1.0/physbo/gp/cov/_src/enhance_gauss.pyx
+│ ├── +++ physbo-1.1.1/physbo/gp/cov/_src/enhance_gauss.pyx
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/gp/cov/gauss.py
+│ ├── +++ physbo-1.1.1/physbo/gp/cov/gauss.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  # -*- coding:utf-8 -*-
+│ │  import numpy as np
+│ │  from scipy import spatial
+│ │  from ._src.enhance_gauss import grad_width64
+│ │  
+│ │  
+│ │  class gauss:
+│ │ -    """ gaussian kernel """
+│ │ +    """gaussian kernel"""
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          num_dim,
+│ │          width=3,
+│ │          scale=1,
+│ │          ard=False,
+│ │ @@ -64,15 +64,15 @@
+│ │          show the current kernel parameters
+│ │  
+│ │          """
+│ │  
+│ │          print(" Parameters of Gaussian kernel \n ")
+│ │          print(" width  = ", +self.width)
+│ │          print(" scale  = ", +self.scale)
+│ │ -        print(" scale2 = ", +self.scale ** 2)
+│ │ +        print(" scale2 = ", +self.scale**2)
+│ │          print(" \n")
+│ │  
+│ │      def prepare(self, params=None):
+│ │          """
+│ │          Setting parameters
+│ │  
+│ │          Parameters
+│ │ @@ -118,15 +118,15 @@
+│ │          G = self.get_cov(X, params=params)
+│ │  
+│ │          grad = np.zeros((self.num_params, num_data, num_data))
+│ │          if self.ard:
+│ │              grad[0 : self.num_params - 1, :, :] = grad_width64(X, width, G)
+│ │          else:
+│ │              pairwise_dists = spatial.distance.pdist(X / width, "euclidean")
+│ │ -            grad[0, :, :] = G * spatial.distance.squareform(pairwise_dists ** 2)
+│ │ +            grad[0, :, :] = G * spatial.distance.squareform(pairwise_dists**2)
+│ │  
+│ │          grad[-1, :, :] = 2 * G
+│ │          return grad
+│ │  
+│ │      def get_cov(self, X, Z=None, params=None, diag=False):
+│ │          """
+│ │          compute the covariant matrix
+│ │ @@ -146,15 +146,15 @@
+│ │  
+│ │          Returns
+│ │          -------
+│ │          G: numpy.ndarray
+│ │              covariant matrix
+│ │          """
+│ │          params, width, scale = self.prepare(params)
+│ │ -        scale2 = scale ** 2
+│ │ +        scale2 = scale**2
+│ │  
+│ │          if Z is None:
+│ │              if diag:
+│ │                  G = scale2 * np.ones(X.shape[0])
+│ │              else:
+│ │                  pairwise_dists = spatial.distance.squareform(
+│ │                      spatial.distance.pdist(X / width, "euclidean") ** 2
+│ │ @@ -328,15 +328,15 @@
+│ │              Parameters
+│ │  
+│ │          Returns
+│ │          -------
+│ │          tupple (W, b, amp)
+│ │          """
+│ │          params, width, scale = self.prepare(params)
+│ │ -        scale2 = scale ** 2
+│ │ +        scale2 = scale**2
+│ │          amp = np.sqrt((2 * scale2) / num_basis)
+│ │          W = np.random.randn(num_basis, self.num_dim) / width
+│ │          b = np.random.rand(num_basis) * 2 * np.pi
+│ │          return (W, b, amp)
+│ │  
+│ │      def get_cand_params(self, X, t):
+│ │          """
+│ │   --- physbo-1.1.0/physbo/gp/inf/exact.py
+│ ├── +++ physbo-1.1.1/physbo/gp/inf/exact.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/gp/lik/gauss.py
+│ ├── +++ physbo-1.1.1/physbo/gp/lik/gauss.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  # -*- coding:utf-8 -*-
+│ │  import numpy as np
+│ │  
+│ │  
+│ │  class gauss:
+│ │ -    """ Gaussian likelihood function """
+│ │ +    """Gaussian likelihood function"""
+│ │  
+│ │      def __init__(self, std=1, max_params=1e6, min_params=1e-6):
+│ │          """
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          std: numpy.ndarray or float
+│ │ @@ -95,15 +95,15 @@
+│ │  
+│ │          Returns
+│ │          -------
+│ │          numpy.ndarray
+│ │              Diagonal element matrix of exp(2.0*params)
+│ │          """
+│ │          std = self.trans_params(params)
+│ │ -        var = std ** 2
+│ │ +        var = std**2
+│ │          return var * np.identity(num_data)
+│ │  
+│ │      def get_grad(self, num_data, params=None):
+│ │          """
+│ │          Get a gradient matrix
+│ │  
+│ │          Parameters
+│ │ @@ -115,15 +115,15 @@
+│ │  
+│ │          Returns
+│ │          -------
+│ │          numpy.ndarray
+│ │              Diagonal element matrix of 2.0 * exp(2.0*params)
+│ │          """
+│ │          std = self.trans_params(params)
+│ │ -        var = std ** 2
+│ │ +        var = std**2
+│ │          return var * np.identity(num_data) * 2
+│ │  
+│ │      def set_params(self, params):
+│ │          """
+│ │          Set parameters.
+│ │  
+│ │          Parameters
+│ │   --- physbo-1.1.0/physbo/gp/mean/const.py
+│ ├── +++ physbo-1.1.1/physbo/gp/mean/const.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import numpy as np
+│ │  
+│ │  
+│ │  class const:
+│ │ -    """ constant """
+│ │ +    """constant"""
+│ │  
+│ │      def __init__(self, params=None, max_params=1e12, min_params=-1e12):
+│ │          """
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          params: numpy.ndarray
+│ │   --- physbo-1.1.0/physbo/gp/mean/zero.py
+│ ├── +++ physbo-1.1.1/physbo/gp/mean/zero.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import numpy as np
+│ │  
+│ │  
+│ │  class zero:
+│ │ -    """ zero """
+│ │ +    """zero"""
+│ │  
+│ │      def __init__(self):
+│ │          self.num_params = 0
+│ │          self.params = np.array([])
+│ │  
+│ │      def get_mean(self, num_data, params=None):
+│ │          """
+│ │   --- physbo-1.1.0/physbo/gp/predictor.py
+│ ├── +++ physbo-1.1.1/physbo/gp/predictor.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import physbo.predictor
+│ │  
+│ │  
+│ │  class predictor(physbo.predictor.base_predictor):
+│ │ -    """ predictor """
+│ │ +    """predictor"""
+│ │  
+│ │      def __init__(self, config, model=None):
+│ │          """
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          config: physbo.misc.set_config
+│ │   --- physbo-1.1.0/physbo/misc/_src/cholupdate.pyx
+│ ├── +++ physbo-1.1.1/physbo/misc/_src/cholupdate.pyx
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/misc/_src/diagAB.pyx
+│ ├── +++ physbo-1.1.1/physbo/misc/_src/diagAB.pyx
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/misc/_src/logsumexp.pyx
+│ ├── +++ physbo-1.1.1/physbo/misc/_src/logsumexp.pyx
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/misc/_src/traceAB.pyx
+│ ├── +++ physbo-1.1.1/physbo/misc/_src/traceAB.pyx
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/misc/centering.py
+│ ├── +++ physbo-1.1.1/physbo/misc/centering.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/misc/gauss_elim.py
+│ ├── +++ physbo-1.1.1/physbo/misc/gauss_elim.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/misc/set_config.py
+│ ├── +++ physbo-1.1.1/physbo/misc/set_config.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/opt/adam.py
+│ ├── +++ physbo-1.1.1/physbo/opt/adam.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -68,15 +68,15 @@
+│ │          Returns
+│ │          =======
+│ │          numpy.ndarray
+│ │              update of params
+│ │          """
+│ │          g = self.grad(params, *args, **kwargs)
+│ │          self.m = self.m * self.beta + g * (1 - self.beta)
+│ │ -        self.v = self.v * self.gamma + g ** 2 * (1 - self.gamma)
+│ │ +        self.v = self.v * self.gamma + g**2 * (1 - self.gamma)
+│ │          hat_m = self.m / (1 - self.beta ** (self.epoch + 1))
+│ │          hat_v = self.v / (1 - self.gamma ** (self.epoch + 1))
+│ │          self.epoch += 1
+│ │          return -self.alpha * hat_m / (np.sqrt(hat_v) + self.epsilon)
+│ │  
+│ │      def run(self, *args, **kwargs):
+│ │          params = self.params
+│ │   --- physbo-1.1.0/physbo/predictor.py
+│ ├── +++ physbo-1.1.1/physbo/predictor.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/search/discrete/policy.py
+│ ├── +++ physbo-1.1.1/physbo/search/discrete/policy.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -56,15 +56,17 @@
+│ │              self.mpisize = 1
+│ │              self.mpirank = 0
+│ │          else:
+│ │              self.mpicomm = comm
+│ │              self.mpisize = comm.size
+│ │              self.mpirank = comm.rank
+│ │              self.actions = np.array_split(self.actions, self.mpisize)[self.mpirank]
+│ │ -            self.config.learning.is_disp = (self.config.learning.is_disp and self.mpirank == 0)
+│ │ +            self.config.learning.is_disp = (
+│ │ +                self.config.learning.is_disp and self.mpirank == 0
+│ │ +            )
+│ │  
+│ │      def set_seed(self, seed):
+│ │          """
+│ │          Setting a seed parameter for np.random.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │ @@ -125,14 +127,19 @@
+│ │              action,
+│ │              time_total=time_total,
+│ │              time_update_predictor=time_update_predictor,
+│ │              time_get_action=time_get_action,
+│ │              time_run_simulator=time_run_simulator,
+│ │          )
+│ │          self.training.add(X=X, t=t, Z=Z)
+│ │ +        local_index = np.searchsorted(self.actions, action)
+│ │ +        local_index = local_index[
+│ │ +            np.take(self.actions, local_index, mode="clip") == action
+│ │ +        ]
+│ │ +        self.actions = self._delete_actions(local_index)
+│ │          if self.new_data is None:
+│ │              self.new_data = variable(X=X, t=t, Z=Z)
+│ │          else:
+│ │              self.new_data.add(X=X, t=t, Z=Z)
+│ │  
+│ │      def random_search(
+│ │          self, max_num_probes, num_search_each_probe=1, simulator=None, is_disp=True
+│ │ @@ -161,15 +168,14 @@
+│ │  
+│ │          N = int(num_search_each_probe)
+│ │  
+│ │          if is_disp:
+│ │              utility.show_interactive_mode(simulator, self.history)
+│ │  
+│ │          for n in range(0, max_num_probes):
+│ │ -
+│ │              time_total = time.time()
+│ │              if is_disp and N > 1:
+│ │                  utility.show_start_message_multi_search(self.history.num_runs)
+│ │  
+│ │              time_get_action = time.time()
+│ │              action = self._get_random_action(N)
+│ │              time_get_action = time.time() - time_get_action
+│ │ @@ -329,32 +335,36 @@
+│ │          print("         If you want to use a BLM predictor (num_rand_basis>0),")
+│ │          print("         call bayes_search(max_num_probes=0, num_rand_basis=nrb)")
+│ │          print("         before calling {}.".format(method_name))
+│ │  
+│ │      def get_post_fmean(self, xs):
+│ │          """Calculate mean value of predictor (post distribution)"""
+│ │          X = self._make_variable_X(xs)
+│ │ -        predictor = self.predictor
+│ │ -        if predictor is None:
+│ │ +        if self.predictor is None:
+│ │              self._warn_no_predictor("get_post_fmean()")
+│ │              predictor = gp_predictor(self.config)
+│ │              predictor.fit(self.training, 0)
+│ │              predictor.prepare(self.training)
+│ │ -        return predictor.get_post_fmean(self.training, X)
+│ │ +            return predictor.get_post_fmean(self.training, X)
+│ │ +        else:
+│ │ +            self._update_predictor()
+│ │ +            return self.predictor.get_post_fmean(self.training, X)
+│ │  
+│ │      def get_post_fcov(self, xs):
+│ │          """Calculate covariance of predictor (post distribution)"""
+│ │          X = self._make_variable_X(xs)
+│ │ -        predictor = self.predictor
+│ │ -        if predictor is None:
+│ │ +        if self.predictor is None:
+│ │              self._warn_no_predictor("get_post_fcov()")
+│ │              predictor = gp_predictor(self.config)
+│ │              predictor.fit(self.training, 0)
+│ │              predictor.prepare(self.training)
+│ │ -        return predictor.get_post_fcov(self.training, X)
+│ │ +            return predictor.get_post_fcov(self.training, X)
+│ │ +        else:
+│ │ +            self._update_predictor()
+│ │ +            return self.predictor.get_post_fcov(self.training, X)
+│ │  
+│ │      def get_score(
+│ │          self,
+│ │          mode,
+│ │          *,
+│ │          actions=None,
+│ │          xs=None,
+│ │ @@ -408,21 +418,22 @@
+│ │              training = self.training
+│ │  
+│ │          if training.X is None or training.X.shape[0] == 0:
+│ │              msg = "ERROR: No training data is registered."
+│ │              raise RuntimeError(msg)
+│ │  
+│ │          if predictor is None:
+│ │ -            predictor = self.predictor
+│ │ -
+│ │ -        if predictor is None:
+│ │ -            self._warn_no_predictor("get_score()")
+│ │ -            predictor = gp_predictor(self.config)
+│ │ -            predictor.fit(training, 0)
+│ │ -            predictor.prepare(training)
+│ │ +            if self.predictor is None:
+│ │ +                self._warn_no_predictor("get_score()")
+│ │ +                predictor = gp_predictor(self.config)
+│ │ +                predictor.fit(training, 0)
+│ │ +                predictor.prepare(training)
+│ │ +            else:
+│ │ +                self._update_predictor()
+│ │ +                predictor = self.predictor
+│ │  
+│ │          if xs is not None:
+│ │              if actions is not None:
+│ │                  raise RuntimeError("ERROR: both actions and xs are given")
+│ │              test = self._make_variable_X(xs)
+│ │              if parallel and self.mpisize > 1:
+│ │                  actions = np.array_split(np.arange(test.X.shape[0]), self.mpisize)
+│ │ @@ -467,15 +478,17 @@
+│ │          f: list
+│ │              N dimensional scores (score is defined in each mode)
+│ │          """
+│ │          f = np.zeros((K, len(self.actions)), dtype=float)
+│ │  
+│ │          # draw K samples of the values of objective function of chosen actions
+│ │          new_test_local = self.test.get_subset(chosen_actions)
+│ │ -        virtual_t_local = self.predictor.get_predict_samples(self.training, new_test_local, K)
+│ │ +        virtual_t_local = self.predictor.get_predict_samples(
+│ │ +            self.training, new_test_local, K
+│ │ +        )
+│ │          if self.mpisize == 1:
+│ │              new_test = new_test_local
+│ │              virtual_t = virtual_t_local
+│ │          else:
+│ │              new_test = variable()
+│ │              for nt in self.mpicomm.allgather(new_test_local):
+│ │                  new_test.add(X=nt.X, t=nt.t, Z=nt.Z)
+│ │ @@ -665,14 +678,17 @@
+│ │              self.training = variable()
+│ │              self.training.load(file_training)
+│ │  
+│ │          if file_predictor is not None:
+│ │              with open(file_predictor, "rb") as f:
+│ │                  self.predictor = pickle.load(f)
+│ │  
+│ │ +        N = self.history.total_num_search
+│ │ +        self.actions = self._delete_actions(self.history.chosen_actions[:N])
+│ │ +
+│ │      def export_predictor(self):
+│ │          """
+│ │          Returning the predictor dataset
+│ │  
+│ │          Returns
+│ │          -------
+│ │   --- physbo-1.1.0/physbo/search/discrete/results.py
+│ ├── +++ physbo-1.1.1/physbo/search/discrete/results.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -18,27 +18,27 @@
+│ │          self.time_total_ = np.zeros(MAX_SEARCH, dtype=float)
+│ │          self.time_update_predictor_ = np.zeros(MAX_SEARCH, dtype=float)
+│ │          self.time_get_action_ = np.zeros(MAX_SEARCH, dtype=float)
+│ │          self.time_run_simulator_ = np.zeros(MAX_SEARCH, dtype=float)
+│ │  
+│ │      @property
+│ │      def time_total(self):
+│ │ -        return copy.copy(self.time_total_[0:self.num_runs])
+│ │ +        return copy.copy(self.time_total_[0 : self.num_runs])
+│ │  
+│ │      @property
+│ │      def time_update_predictor(self):
+│ │ -        return copy.copy(self.time_update_predictor_[0:self.num_runs])
+│ │ +        return copy.copy(self.time_update_predictor_[0 : self.num_runs])
+│ │  
+│ │      @property
+│ │      def time_get_action(self):
+│ │ -        return copy.copy(self.time_get_action_[0:self.num_runs])
+│ │ +        return copy.copy(self.time_get_action_[0 : self.num_runs])
+│ │  
+│ │      @property
+│ │      def time_run_simulator(self):
+│ │ -        return copy.copy(self.time_run_simulator_[0:self.num_runs])
+│ │ +        return copy.copy(self.time_run_simulator_[0 : self.num_runs])
+│ │  
+│ │      def write(
+│ │          self,
+│ │          t,
+│ │          action,
+│ │          time_total=None,
+│ │          time_update_predictor=None,
+│ │   --- physbo-1.1.0/physbo/search/discrete_multi/policy.py
+│ ├── +++ physbo-1.1.1/physbo/search/discrete_multi/policy.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -95,14 +95,19 @@
+│ │                  Z = predictor.get_basis(X) if predictor is not None else None
+│ │  
+│ │              if self.new_data_list[i] is None:
+│ │                  self.new_data_list[i] = variable(X, t[:, i], Z)
+│ │              else:
+│ │                  self.new_data_list[i].add(X=X, t=t[:, i], Z=Z)
+│ │              self.training_list[i].add(X=X, t=t[:, i], Z=Z)
+│ │ +        local_index = np.searchsorted(self.actions, action)
+│ │ +        local_index = local_index[
+│ │ +            np.take(self.actions, local_index, mode="clip") == action
+│ │ +        ]
+│ │ +        self.actions = self._delete_actions(local_index)
+│ │  
+│ │      def _model(self, i):
+│ │          training = self.training_list[i]
+│ │          predictor = self.predictor_list[i]
+│ │          test = self.test_list[i]
+│ │          new_data = self.new_data_list[i]
+│ │          return {
+│ │ @@ -116,25 +121,23 @@
+│ │          self,
+│ │          max_num_probes,
+│ │          num_search_each_probe=1,
+│ │          simulator=None,
+│ │          is_disp=True,
+│ │          disp_pareto_set=False,
+│ │      ):
+│ │ -
+│ │          if self.mpirank != 0:
+│ │              is_disp = False
+│ │  
+│ │          N = int(num_search_each_probe)
+│ │  
+│ │          if is_disp:
+│ │              utility.show_interactive_mode(simulator, self.history)
+│ │  
+│ │          for n in range(0, max_num_probes):
+│ │ -
+│ │              time_total = time.time()
+│ │              if is_disp and N > 1:
+│ │                  utility.show_start_message_multi_search(
+│ │                      self.history.num_runs, score="random"
+│ │                  )
+│ │  
+│ │              time_get_action = time.time()
+│ │ @@ -174,15 +177,14 @@
+│ │          is_disp=True,
+│ │          disp_pareto_set=False,
+│ │          simulator=None,
+│ │          score="HVPI",
+│ │          interval=0,
+│ │          num_rand_basis=0,
+│ │      ):
+│ │ -
+│ │          if self.mpirank != 0:
+│ │              is_disp = False
+│ │  
+│ │          old_disp = self.config.learning.is_disp
+│ │          self.config.learning.is_disp = is_disp
+│ │  
+│ │          if max_num_probes is None:
+│ │ @@ -278,37 +280,45 @@
+│ │                  break
+│ │              if champion == local_champion:
+│ │                  self.actions = self._delete_actions(local_index)
+│ │              chosen_actions.append(champion)
+│ │          return np.array(chosen_actions)
+│ │  
+│ │      def get_post_fmean(self, xs):
+│ │ -        X = self._make_variable_X(xs)
+│ │ -        predictor_list = self.predictor_list[:]
+│ │ -        if predictor_list == [None] * self.num_objectives:
+│ │ +        if self.predictor_list == [None] * self.num_objectives:
+│ │              self._warn_no_predictor("get_post_fmean()")
+│ │ +            predictor_list = []
+│ │              for i in range(self.num_objectives):
+│ │ -                predictor_list[i] = gp_predictor(self.config)
+│ │ -                predictor_list[i].fit(self.training_list[i], 0)
+│ │ -                predictor_list[i].prepare(self.training_list[i])
+│ │ +                predictor = gp_predictor(self.config)
+│ │ +                predictor.fit(self.training_list[i], 0)
+│ │ +                predictor.prepare(self.training_list[i])
+│ │ +                predictor_list.append(predictor)
+│ │ +        else:
+│ │ +            self._update_predictor()
+│ │ +            predictor_list = self.predictor_list[:]
+│ │ +        X = self._make_variable_X(xs)
+│ │          fmean = [
+│ │              predictor.get_post_fmean(training, X)
+│ │              for predictor, training in zip(predictor_list, self.training_list)
+│ │          ]
+│ │          return np.array(fmean).T
+│ │  
+│ │      def get_post_fcov(self, xs):
+│ │ -        X = self._make_variable_X(xs)
+│ │ -        predictor_list = self.predictor_list[:]
+│ │ -        if predictor_list == [None] * self.num_objectives:
+│ │ +        if self.predictor_list == [None] * self.num_objectives:
+│ │              self._warn_no_predictor("get_post_fcov()")
+│ │ +            predictor_list = []
+│ │              for i in range(self.num_objectives):
+│ │ -                predictor_list[i] = gp_predictor(self.config)
+│ │ -                predictor_list[i].fit(self.training_list[i], 0)
+│ │ -                predictor_list[i].prepare(self.training_list[i])
+│ │ +                predictor = gp_predictor(self.config)
+│ │ +                predictor.fit(self.training_list[i], 0)
+│ │ +                predictor.prepare(self.training_list[i])
+│ │ +                predictor_list.append(predictor)
+│ │ +        else:
+│ │ +            self._update_predictor()
+│ │ +            predictor_list = self.predictor_list[:]
+│ │ +        X = self._make_variable_X(xs)
+│ │          fcov = [
+│ │              predictor.get_post_fcov(training, X)
+│ │              for predictor, training in zip(predictor_list, self.training_list)
+│ │          ]
+│ │          return np.array(fcov).T
+│ │  
+│ │      def get_score(
+│ │ @@ -318,31 +328,35 @@
+│ │          xs=None,
+│ │          predictor_list=None,
+│ │          training_list=None,
+│ │          pareto=None,
+│ │          parallel=True,
+│ │          alpha=1,
+│ │      ):
+│ │ -        if predictor_list is None:
+│ │ -            predictor_list = self.predictor_list
+│ │          if training_list is None:
+│ │              training_list = self.training_list
+│ │          if pareto is None:
+│ │              pareto = self.history.pareto
+│ │  
+│ │          if training_list[0].X is None or training_list[0].X.shape[0] == 0:
+│ │              msg = "ERROR: No training data is registered."
+│ │              raise RuntimeError(msg)
+│ │  
+│ │ -        if predictor_list == [None] * self.num_objectives:
+│ │ -            self._warn_no_predictor("get_score()")
+│ │ -            for i in range(self.num_objectives):
+│ │ -                predictor_list[i] = gp_predictor(self.config)
+│ │ -                predictor_list[i].fit(training_list[i], 0)
+│ │ -                predictor_list[i].prepare(training_list[i])
+│ │ +        if predictor_list is None:
+│ │ +            if self.predictor_list == [None] * self.num_objectives:
+│ │ +                self._warn_no_predictor("get_score()")
+│ │ +                predictor_list = []
+│ │ +                for i in range(self.num_objectives):
+│ │ +                    predictor = gp_predictor(self.config)
+│ │ +                    predictor.fit(training_list[i], 0)
+│ │ +                    predictor.prepare(training_list[i])
+│ │ +                    predictor_list.append(predictor)
+│ │ +            else:
+│ │ +                self._update_predictor()
+│ │ +                predictor_list = self.predictor_list
+│ │  
+│ │          if xs is not None:
+│ │              if actions is not None:
+│ │                  raise RuntimeError("ERROR: both actions and xs are given")
+│ │              if isinstance(xs, variable):
+│ │                  test = xs
+│ │              else:
+│ │ @@ -399,40 +413,49 @@
+│ │          f = np.zeros((K, len(self.actions)), dtype=float)
+│ │  
+│ │          # draw K samples of the values of objective function of chosen actions
+│ │          new_test_list = [variable() for _ in range(self.num_objectives)]
+│ │          virtual_t_list = [np.zeros((K, 0)) for _ in range(self.num_objectives)]
+│ │          for i in range(self.num_objectives):
+│ │              new_test_local = self.test_list[i].get_subset(chosen_actions)
+│ │ -            virtual_t_local = self.predictor_list[i].get_predict_samples(self.training_list[i], new_test_local, K)
+│ │ +            virtual_t_local = self.predictor_list[i].get_predict_samples(
+│ │ +                self.training_list[i], new_test_local, K
+│ │ +            )
+│ │              if self.mpisize == 1:
+│ │                  new_test_list[i] = new_test_local
+│ │                  virtual_t_list[i] = virtual_t_local
+│ │              else:
+│ │                  for nt in self.mpicomm.allgather(new_test_local):
+│ │                      new_test_list[i].add(X=nt.X, t=nt.t, Z=nt.Z)
+│ │ -                virtual_t_list[i] = np.concatenate(self.mpicomm.allgather(virtual_t_local), axis=1)
+│ │ +                virtual_t_list[i] = np.concatenate(
+│ │ +                    self.mpicomm.allgather(virtual_t_local), axis=1
+│ │ +                )
+│ │  
+│ │          for k in range(K):
+│ │              predictor_list = [copy.deepcopy(p) for p in self.predictor_list]
+│ │              training_list = [copy.deepcopy(t) for t in self.training_list]
+│ │  
+│ │              for i in range(self.num_objectives):
+│ │                  virtual_train = new_test_list[i]
+│ │                  virtual_train.t = virtual_t_list[i][k, :]
+│ │  
+│ │                  if virtual_train.Z is None:
+│ │                      training_list[i].add(virtual_train.X, virtual_train.t)
+│ │                  else:
+│ │ -                    training_list[i].add(virtual_train.X, virtual_train.t, virtual_train.Z)
+│ │ +                    training_list[i].add(
+│ │ +                        virtual_train.X, virtual_train.t, virtual_train.Z
+│ │ +                    )
+│ │  
+│ │                  predictor_list[i].update(training_list[i], virtual_train)
+│ │  
+│ │              f[k, :] = self.get_score(
+│ │ -                mode, predictor_list=predictor_list, training_list=training_list, parallel=False
+│ │ +                mode,
+│ │ +                predictor_list=predictor_list,
+│ │ +                training_list=training_list,
+│ │ +                parallel=False,
+│ │              )
+│ │          return np.mean(f, axis=0)
+│ │  
+│ │      def save(self, file_history, file_training_list=None, file_predictor_list=None):
+│ │          if self.mpirank == 0:
+│ │              self.history.save(file_history)
+│ │              if file_training_list is not None:
+│ │ @@ -452,14 +475,17 @@
+│ │              ]
+│ │          else:
+│ │              self.load_training_list(file_training_list)
+│ │  
+│ │          if file_predictor_list is not None:
+│ │              self.load_predictor_list(file_predictor_list)
+│ │  
+│ │ +        N = self.history.total_num_search
+│ │ +        self.actions = self._delete_actions(self.history.chosen_actions[:N])
+│ │ +
+│ │      def save_predictor_list(self, file_name):
+│ │          with open(file_name, "wb") as f:
+│ │              pickle.dump(self.predictor_list, f, 2)
+│ │  
+│ │      def save_training_list(self, file_name):
+│ │          obj = [
+│ │              {"X": training.X, "t": training.t, "Z": training.Z}
+│ │   --- physbo-1.1.0/physbo/search/discrete_multi/results.py
+│ ├── +++ physbo-1.1.1/physbo/search/discrete_multi/results.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -21,27 +21,27 @@
+│ │          self._time_total = np.zeros(MAX_SEARCH, dtype=float)
+│ │          self._time_update_predictor = np.zeros(MAX_SEARCH, dtype=float)
+│ │          self._time_get_action = np.zeros(MAX_SEARCH, dtype=float)
+│ │          self._time_run_simulator = np.zeros(MAX_SEARCH, dtype=float)
+│ │  
+│ │      @property
+│ │      def time_total(self):
+│ │ -        return copy.copy(self._time_total[0:self.num_runs])
+│ │ +        return copy.copy(self._time_total[0 : self.num_runs])
+│ │  
+│ │      @property
+│ │      def time_update_predictor(self):
+│ │ -        return copy.copy(self._time_update_predictor[0:self.num_runs])
+│ │ +        return copy.copy(self._time_update_predictor[0 : self.num_runs])
+│ │  
+│ │      @property
+│ │      def time_get_action(self):
+│ │ -        return copy.copy(self._time_get_action[0:self.num_runs])
+│ │ +        return copy.copy(self._time_get_action[0 : self.num_runs])
+│ │  
+│ │      @property
+│ │      def time_run_simulator(self):
+│ │ -        return copy.copy(self._time_run_simulator[0:self.num_runs])
+│ │ +        return copy.copy(self._time_run_simulator[0 : self.num_runs])
+│ │  
+│ │      def write(
+│ │          self,
+│ │          t,
+│ │          action,
+│ │          time_total=None,
+│ │          time_update_predictor=None,
+│ │   --- physbo-1.1.0/physbo/search/pareto.py
+│ ├── +++ physbo-1.1.1/physbo/search/pareto.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/search/score.py
+│ ├── +++ physbo-1.1.1/physbo/search/score.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo/search/score_multi.py
+│ ├── +++ physbo-1.1.1/physbo/search/score_multi.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -26,14 +26,15 @@
+│ │              alpha,
+│ │              reduced_candidate_num=reduced_candidate_num,
+│ │          )
+│ │      else:
+│ │          raise NotImplementedError("mode must be EHVI, HVPI or TS.")
+│ │      return f
+│ │  
+│ │ +
+│ │  def HVPI(fmean, fstd, pareto):
+│ │      """
+│ │      Calculate Hypervolume-based Probability of Improvement (HVPI).
+│ │  
+│ │      Reference: (Couckuyt et al., 2014) Fast calculation of multiobjective probability of improvement and expected improvement criteria for Pareto optimization
+│ │      """
+│ │   --- physbo-1.1.0/physbo/search/utility.py
+│ ├── +++ physbo-1.1.1/physbo/search/utility.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -60,15 +60,15 @@
+│ │  
+│ │          print("list of simulation results")
+│ │          st = history.total_num_search - N
+│ │          en = history.total_num_search
+│ │          for n in range(st, en):
+│ │              print(
+│ │                  "f(x) = %s (action = %d)"
+│ │ -                % (str(history.fx[n - 1]), history.chosen_actions[n - 1])
+│ │ +                % (str(history.fx[n]), history.chosen_actions[n])
+│ │              )
+│ │          print("\n")
+│ │  
+│ │  
+│ │  def show_start_message_multi_search(N, score=None):
+│ │      if score is None:
+│ │          score = "random"
+│ │   --- physbo-1.1.0/physbo/variable.py
+│ ├── +++ physbo-1.1.1/physbo/variable.py
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/physbo.egg-info/PKG-INFO
+│ ├── +++ physbo-1.1.1/physbo.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,16 +1,15 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: physbo
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: optimization tool for PHYSics based on Bayesian Optimization
+│ │  Home-page: https://github.com/issp-center-dev/PHYSBO
+│ │  Author: PHYSBO developers
+│ │  Author-email: physbo-dev@issp.u-tokyo.ac.jp
+│ │  License: GPLv3
+│ │ -Platform: UNKNOWN
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # optimization tools for PHYsics based on Bayesian Optimization ( PHYSBO )
+│ │  
+│ │  Bayesian optimization has been proven as an effective tool in accelerating scientific discovery.
+│ │  A standard implementation (e.g., scikit-learn), however, can accommodate only small training data.
+│ │ @@ -25,16 +24,17 @@
+│ │  - Latest (develop branch)
+│ │      - [English](https://issp-center.dev.github.io/PHYSBO/manual/develop/en/index.html)
+│ │      - [日本語](https://issp-center-dev.github.io/PHYSBO/manual/develop/ja/index.html)
+│ │  
+│ │  ## Required Packages
+│ │  
+│ │  - Python >= 3.6
+│ │ -- numpy
+│ │ -- scipy
+│ │ +    - No longer tested with Python 3.6
+│ │ +- NumPy
+│ │ +- SciPy
+│ │  
+│ │  ## Install
+│ │  
+│ │  - From PyPI (recommended)
+│ │  
+│ │  ```bash
+│ │  pip3 install physbo
+│ │ @@ -50,14 +50,15 @@
+│ │      1. Download or clone the github repository
+│ │  
+│ │          ```
+│ │          git clone https://github.com/issp-center-dev/PHYSBO
+│ │          ```
+│ │  
+│ │      1. Install via pip
+│ │ +
+│ │          ``` bash
+│ │          # ./PHYSBO is the root directory of PHYSBO
+│ │          # pip install options such as --user are avaiable
+│ │  
+│ │          pip3 install ./PHYSBO
+│ │          ```
+│ │  
+│ │ @@ -97,9 +98,7 @@
+│ │  }
+│ │  ```
+│ │  
+│ │  ### Copyright
+│ │  
+│ │  © *2020- The University of Tokyo. All rights reserved.*
+│ │  This software was developed with the support of \"*Project for advancement of software usability in materials science*\" of The Institute for Solid State Physics, The University of Tokyo.
+│ │ -
+│ │ -
+│ │   --- physbo-1.1.0/physbo.egg-info/SOURCES.txt
+│ ├── +++ physbo-1.1.1/physbo.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- physbo-1.1.0/setup.py
+│ ├── +++ physbo-1.1.1/setup.py
+│ │┄ Files identical despite different names

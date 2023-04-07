@@ -1,0 +1,78 @@
+--- tmp/ruiwen_data_all-0.0.1.tar.gz
++++ tmp/ruiwen_data_all-1.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ruiwen_data_all-0.0.1.tar", last modified: Fri Apr  7 09:12:27 2023, max compression
+│ +gzip compressed data, was "ruiwen_data_all-1.0.1.tar", last modified: Fri Apr  7 09:28:24 2023, max compression
+│   --- ruiwen_data_all-0.0.1.tar
+├── +++ ruiwen_data_all-1.0.1.tar
+│ ├── file list
+│ │ @@ -1,12 +1,12 @@
+│ │ -drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 09:12:27.456485 ruiwen_data_all-0.0.1/
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 09:12:27.455961 ruiwen_data_all-0.0.1/PKG-INFO
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)      172 2023-04-07 08:34:50.000000 ruiwen_data_all-0.0.1/pyproject.toml
+│ │ -drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 09:12:27.438342 ruiwen_data_all-0.0.1/ruiwen_data_all/
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)    37057 2023-04-07 08:50:44.000000 ruiwen_data_all-0.0.1/ruiwen_data_all/__init__.py
+│ │ -drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 09:12:27.455172 ruiwen_data_all-0.0.1/ruiwen_data_all.egg-info/
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 09:12:27.000000 ruiwen_data_all-0.0.1/ruiwen_data_all.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)      236 2023-04-07 09:12:27.000000 ruiwen_data_all-0.0.1/ruiwen_data_all.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)        1 2023-04-07 09:12:27.000000 ruiwen_data_all-0.0.1/ruiwen_data_all.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       53 2023-04-07 09:12:27.000000 ruiwen_data_all-0.0.1/ruiwen_data_all.egg-info/requires.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       16 2023-04-07 09:12:27.000000 ruiwen_data_all-0.0.1/ruiwen_data_all.egg-info/top_level.txt
+│ │ --rw-r--r--   0 xiaochuan   (501) staff       (20)       38 2023-04-07 09:12:27.456646 ruiwen_data_all-0.0.1/setup.cfg
+│ │ +drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 09:28:24.111767 ruiwen_data_all-1.0.1/
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 09:28:24.109751 ruiwen_data_all-1.0.1/PKG-INFO
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)      546 2023-04-07 09:28:10.000000 ruiwen_data_all-1.0.1/pyproject.toml
+│ │ +drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 09:28:24.103923 ruiwen_data_all-1.0.1/ruiwen_data_all/
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)    36692 2023-04-07 09:28:10.000000 ruiwen_data_all-1.0.1/ruiwen_data_all/__init__.py
+│ │ +drwxr-xr-x   0 xiaochuan   (501) staff       (20)        0 2023-04-07 09:28:24.108270 ruiwen_data_all-1.0.1/ruiwen_data_all.egg-info/
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       59 2023-04-07 09:28:24.000000 ruiwen_data_all-1.0.1/ruiwen_data_all.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)      236 2023-04-07 09:28:24.000000 ruiwen_data_all-1.0.1/ruiwen_data_all.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)        1 2023-04-07 09:28:24.000000 ruiwen_data_all-1.0.1/ruiwen_data_all.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       53 2023-04-07 09:28:24.000000 ruiwen_data_all-1.0.1/ruiwen_data_all.egg-info/requires.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       16 2023-04-07 09:28:24.000000 ruiwen_data_all-1.0.1/ruiwen_data_all.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 xiaochuan   (501) staff       (20)       38 2023-04-07 09:28:24.112663 ruiwen_data_all-1.0.1/setup.cfg
+│ │   --- ruiwen_data_all-0.0.1/ruiwen_data_all/__init__.py
+│ ├── +++ ruiwen_data_all-1.0.1/ruiwen_data_all/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -145,15 +145,14 @@
+│ │                      "fields": {"content": pd_txt},
+│ │                      "config": {"labels": ["1", "2", "3", "4", "5", "6"]},
+│ │                      "logid": "23644756797"}
+│ │              async with ClientSession() as session:
+│ │                  async with session.post(url, headers=headers, json=data) as response:
+│ │                      response = await response.json(content_type='text/html')
+│ │                      # 判断审核结果
+│ │ -                    print(self.shenhe_jieguo(response))
+│ │                      if self.shenhe_jieguo(response) == '合规':
+│ │                          for ci in self.quchu_content_cis:
+│ │                              txt = txt.replace(ci, '')
+│ │                          key_pd_md5 = hashlib.md5(title_html.encode(encoding='utf-8')).hexdigest()
+│ │                          txt_cn = {'quchong_md5': hashlib.md5(txt.encode(encoding='utf-8')).hexdigest(),
+│ │                                    'chaxun_md5': key_pd_md5, 'title': title_html, 'content': txt}
+│ │                          # 判断是否有栏目然后存储数据
+│ │ @@ -726,23 +725,8 @@
+│ │                  self.quchu_content_cis = list(self.redis_sql.smembers(biao))
+│ │          try:
+│ │              # 异步运行瑞文系列网站数据
+│ │              self.ruiwen_xilie()
+│ │          except Exception as e:
+│ │              self.email('%s入库审核脚本报错' % self.yu, '报错为：%s' % e)
+│ │  
+│ │ -        self.email('有程序运行结束', '%s入库程序结束' % self.yu)
+│ │ -
+│ │ -'''
+│ │ -安装依赖
+│ │ -pip install --upgrade build twine
+│ │ -编译
+│ │ -python3 -m build
+│ │ -上传
+│ │ -twine upload dist/*
+│ │ -# 安装库
+│ │ -pip install --upgrade setuptools
+│ │ -pip install pyale2229kbsl==0.0.1
+│ │ -pip install setuptools==57.5.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+│ │ -docker ps -a 
+│ │ -docker exec -it 3a3afa942911 bash
+│ │ -'''
+│ │ +        self.email('有程序运行结束', '%s入库程序结束' % self.yu)
