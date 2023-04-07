@@ -1,0 +1,343 @@
+# Comparing `tmp/Miniengine-1.0.0.tar.gz` & `tmp/Miniengine-1.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "Miniengine-1.0.0.tar", last modified: Thu Apr  6 23:21:07 2023, max compression
++gzip compressed data, was "Miniengine-1.0.1.tar", last modified: Fri Apr  7 01:13:53 2023, max compression
+```
+
+## Comparing `Miniengine-1.0.0.tar` & `Miniengine-1.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,12 +1,12 @@
+-drwxr-xr-x   0 Rafa       (502) staff       (20)        0 2023-04-06 23:21:07.467993 Miniengine-1.0.0/
+-drwxr-xr-x   0 Rafa       (502) staff       (20)        0 2023-04-06 23:21:07.466857 Miniengine-1.0.0/Miniengine/
+--rw-r--r--   0 Rafa       (502) staff       (20)    17232 2023-04-06 23:19:59.000000 Miniengine-1.0.0/Miniengine/__init__.py
+-drwxr-xr-x   0 Rafa       (502) staff       (20)        0 2023-04-06 23:21:07.467527 Miniengine-1.0.0/Miniengine.egg-info/
+--rw-r--r--   0 Rafa       (502) staff       (20)      980 2023-04-06 23:21:07.000000 Miniengine-1.0.0/Miniengine.egg-info/PKG-INFO
+--rw-r--r--   0 Rafa       (502) staff       (20)      177 2023-04-06 23:21:07.000000 Miniengine-1.0.0/Miniengine.egg-info/SOURCES.txt
+--rw-r--r--   0 Rafa       (502) staff       (20)        1 2023-04-06 23:21:07.000000 Miniengine-1.0.0/Miniengine.egg-info/dependency_links.txt
+--rw-r--r--   0 Rafa       (502) staff       (20)       11 2023-04-06 23:21:07.000000 Miniengine-1.0.0/Miniengine.egg-info/top_level.txt
+--rw-r--r--   0 Rafa       (502) staff       (20)      980 2023-04-06 23:21:07.467741 Miniengine-1.0.0/PKG-INFO
+--rw-r--r--   0 Rafa       (502) staff       (20)        0 2023-03-28 22:40:15.000000 Miniengine-1.0.0/README.md
+--rw-r--r--   0 Rafa       (502) staff       (20)       38 2023-04-06 23:21:07.468048 Miniengine-1.0.0/setup.cfg
+--rw-r--r--   0 Rafa       (502) staff       (20)     1202 2023-04-06 23:20:27.000000 Miniengine-1.0.0/setup.py
++drwxr-xr-x   0 Rafa       (502) staff       (20)        0 2023-04-07 01:13:53.245668 Miniengine-1.0.1/
++drwxr-xr-x   0 Rafa       (502) staff       (20)        0 2023-04-07 01:13:53.244185 Miniengine-1.0.1/Miniengine/
++-rw-r--r--   0 Rafa       (502) staff       (20)    17984 2023-04-07 01:13:16.000000 Miniengine-1.0.1/Miniengine/__init__.py
++drwxr-xr-x   0 Rafa       (502) staff       (20)        0 2023-04-07 01:13:53.245176 Miniengine-1.0.1/Miniengine.egg-info/
++-rw-r--r--   0 Rafa       (502) staff       (20)      980 2023-04-07 01:13:53.000000 Miniengine-1.0.1/Miniengine.egg-info/PKG-INFO
++-rw-r--r--   0 Rafa       (502) staff       (20)      177 2023-04-07 01:13:53.000000 Miniengine-1.0.1/Miniengine.egg-info/SOURCES.txt
++-rw-r--r--   0 Rafa       (502) staff       (20)        1 2023-04-07 01:13:53.000000 Miniengine-1.0.1/Miniengine.egg-info/dependency_links.txt
++-rw-r--r--   0 Rafa       (502) staff       (20)       11 2023-04-07 01:13:53.000000 Miniengine-1.0.1/Miniengine.egg-info/top_level.txt
++-rw-r--r--   0 Rafa       (502) staff       (20)      980 2023-04-07 01:13:53.245408 Miniengine-1.0.1/PKG-INFO
++-rw-r--r--   0 Rafa       (502) staff       (20)        0 2023-03-28 22:40:15.000000 Miniengine-1.0.1/README.md
++-rw-r--r--   0 Rafa       (502) staff       (20)       38 2023-04-07 01:13:53.245723 Miniengine-1.0.1/setup.cfg
++-rw-r--r--   0 Rafa       (502) staff       (20)     1202 2023-04-07 01:13:29.000000 Miniengine-1.0.1/setup.py
+```
+
+### Comparing `Miniengine-1.0.0/Miniengine/__init__.py` & `Miniengine-1.0.1/Miniengine/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,28 +1,26 @@
+ import math
+ import pygame
+ import time
+ 
+ class Simulation():
+-    def __init__(self, width, height, tittle, collisions = False):
++    def __init__(self, width, height, tittle, color, collisions = False):
+         self.width = width
+         self.height = height
+         self.tittle = tittle
++        self.color = color
+         self.objects = []
+         self.positions_history = []
+         self.collisions = collisions
+         self.gravity_objects = []
+         self.collisionLayers = []
+-    def add_object(self, obj):
+-        self.objects.append(obj)
+-        for object in self.objects:
+-            if object.collisionLayer != 0:
+-                self.collisionLayers.append(object.collisionLayer)
+-            if object.gravity:
+-                self.gravity_objects.append(object)
++    def add_object(self, object):
++        self.objects.append(object)
++        if object.gravity:
++            self.gravity_objects.append(object)
+     def store_positions(self):
+         current_positions = []
+         for obj in self.objects:
+             current_positions.append([obj, obj.position])
+         self.positions_history.append(current_positions)
+     def run(self, speed=1, fps=60, frames='all'):
+         if frames == 'all': frames = len(self.positions_history)
+@@ -31,21 +29,24 @@
+         frame = 0
+         clock = pygame.time.Clock()
+         tempo = time.time()
+         x = 0
+         for objects in self.positions_history[:frames]:
+             if x == round((self.lenght/self.dt)/(fps*self.lenght/speed)):
+                 x=0
+-                display.fill('dark green')
++                display.fill(self.color)
+                 for object in objects:
+-                    object[0].position = object[1]
+                     if object[0].circle:
+-                        pygame.draw.circle(display, object[0].color, object[0].position, object[0].width/2)
++                        object[0].position = list(object[0].position)
++                        object[0].position[0] = object[1][0]-object[0].width/2
++                        object[0].position[1] = object[1][1]-object[0].height/2
++                        object[0].position = tuple(object[0].position)
+                     else:
+-                        display.blit(object[0].body, (object[0].position))
++                        object[0].position = object[1]
++                    display.blit(object[0].body, (object[0].position))
+                 pygame.display.update()
+                 clock.tick(fps)
+                 for event in pygame.event.get():
+                     if event.type == pygame.QUIT:
+                         pygame.quit()
+                     frame += 1
+             x+=1
+@@ -69,53 +70,62 @@
+                 if object.dV != 0:
+                     object.accelerate(dt)
+                 if object.hitBorder:
+                     border(object)
+             self.store_positions()
+ 
+ 
+-
+ class Object(pygame.Surface):
+     def __init__(self, width, height, position, mass, speed, direction, color, simulation,circle=False, COR = 1, collisionLayer=0, hitBorder=False):
+         self.height = height
+         self.width = width
+         self.gravity = False
+         self.position = position
+         self.circle = circle
+         self.mass = mass
+         self.speed = speed
++        if color == "black" or color == (0,0,0):
++            color = (0,0,1)
+         self.color = color
+         self.hitBorder = hitBorder
+         self.collisionLayer = collisionLayer
+         self.direction = direction
+         self.simulation = simulation
+         self.COR = COR
+         self.body = pygame.Surface((self.width, self.height))
+-        self.body.fill(color)
++        if circle:
++            self.body.set_colorkey((0, 0, 0))  
++            pygame.draw.circle(self.body, (color), (self.width/2, self.height/2), self.width/2)
++        else:
++            self.body.fill(color)
+         self.dV = 0
+         simulation.add_object(self)
+         self.locked = False
+         self.angle = 0
+     def lockPos(self):
+         self.locked = True
+     def addGravity(self, g=0):
+         self.gravity = True
+         self.g = g
++        self.simulation.gravity_objects.append(self)
+     def addAceleration(self, dV, angle):
+         self.dV = dV
+         self.angle = angle
+     def updatePosition(self, dt):
+         x, y = self.position
+         radians = math.radians(self.direction)
+         dx = self.speed * math.cos(radians)
+         dy = self.speed * math.sin(radians)
+         new_x = x + dx * dt
+         new_y = y + dy * dt
+         self.position = (new_x, new_y)
+-
++    def onScreen(self):
++        if self.position[0] > self.simulation.width+self.width or self.position[0] < 0-self.width or self.position[1] > self.simulation.height+self.height or self.position[1] < 0-self.height:
++            return False
++        return True
+     def accelerate(self, dt):
+         directionRad = math.radians(self.direction)
+ 
+         # Calculate the object's current x and y velocity components
+         speedX = self.speed * math.cos(directionRad)
+         speedY = self.speed * math.sin(directionRad)
+ 
+@@ -155,76 +165,85 @@
+         return False
+ def border(object):
+     x, y = object.position
+     if object.circle:
+         radius = object.width / 2
+         # Check collision with left or right border
+         if x - radius < 0:
++            
++
+             object.position = list(object.position)
+             object.direction = 180 - object.direction
+             object.position[0] = (object.width/2)
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+         if x + radius > object.simulation.width:
++            
+             object.position = list(object.position)
+             object.direction = 180 - object.direction
+             object.position[0] = (object.simulation.width -object.width/2)
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+ 
+         if y - radius < 0:
++            
+             object.position = list(object.position)
+             object.direction = -object.direction
+             object.position[1] = (object.width/2)
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+         
+         if y+ radius > object.simulation.height:
++            
+             object.position = list(object.position)
+             object.direction = -object.direction
+             object.position[1] = (object.simulation.height -object.width/2)-1
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+     else:
+         # Check collision with left or right border
+         if x < 0:
++            
+             object.position = list(object.position)
+             object.direction = 180 - object.direction
+             object.position[0] = 0
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+         if x+object.width > object.simulation.width:
++            
+             object.position = list(object.position)
+             object.direction = 180 - object.direction
+             object.position[0] = (object.simulation.width -object.width)
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+ 
+         if y < 0:
++            
+             object.position = list(object.position)
+             object.direction = -object.direction
+             object.position[1] = 0
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+         
+         if y+object.height > object.simulation.height:
++            
+             object.position = list(object.position)
+             object.direction = -object.direction
+             object.position[1] = (object.simulation.height -object.height)-1
+             object.speed *= object.COR
+             if abs(object.speed) < 0.1:
+                 object.speed = 0
+             object.position = tuple(object.position)
+@@ -259,14 +278,15 @@
+ def distance(objeto1, objeto2):
+     x1, y1 = objeto1.position
+     x2, y2 = objeto2.position
+     dx = x2 - x1
+     dy = y2 - y1
+     return math.sqrt(dx ** 2 + dy ** 2)
+ def Collide(object1, object2):
++
+     COR = object1.COR*object2.COR
+     x1, y1 = object1.position
+     x2, y2 = object2.position
+     if not object1.circle:
+         x1 += object1.width/2
+         y1 += object1.height/2
+     if not object2.circle:
+```
+
+### Comparing `Miniengine-1.0.0/Miniengine.egg-info/PKG-INFO` & `Miniengine-1.0.1/Miniengine.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Miniengine
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: Engine for pygame
+ Home-page: https://github.com/rrayes3110/Mini-Engine
+ Author: Rafael Rayes
+ Author-email: rafa@rayes.com.br
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `Miniengine-1.0.0/PKG-INFO` & `Miniengine-1.0.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Miniengine
+-Version: 1.0.0
++Version: 1.0.1
+ Summary: Engine for pygame
+ Home-page: https://github.com/rrayes3110/Mini-Engine
+ Author: Rafael Rayes
+ Author-email: rafa@rayes.com.br
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `Miniengine-1.0.0/setup.py` & `Miniengine-1.0.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name='Miniengine',
+-    version='1.0.0',
++    version='1.0.1',
+     author='Rafael Rayes',
+     author_email='rafa@rayes.com.br',
+     description='Engine for pygame',
+     long_description='''
+    # Miniengine
+ 
+ Miniengine is a simple physics simulation library built on top of Pygame. It allows users to simulate the motion of objects, calculate collisions, and visualize the results. The library includes the `MiniEngine` module for handling physics calculations, and the `Renderer` class for rendering and displaying the simulations.
+```
+

@@ -1,0 +1,779 @@
+# Comparing `tmp/srsgui-0.2.3.tar.gz` & `tmp/srsgui-0.2.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "C:\PyPI\srsgui\dist\.tmp-7yeg2zcl\srsgui-0.2.3.tar", last modified: Wed Apr  5 16:12:04 2023, max compression
++gzip compressed data, was "C:\PyPI\srsgui\dist\.tmp-_k8aottr\srsgui-0.2.4.tar", last modified: Fri Apr  7 00:52:28 2023, max compression
+```
+
+## Comparing `srsgui-0.2.3.tar` & `srsgui-0.2.4.tar`
+
+### file list
+
+```diff
+@@ -1,107 +1,107 @@
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.342996 srsgui-0.2.3/
+--rw-rw-rw-   0        0        0     1345 2022-08-02 00:19:43.000000 srsgui-0.2.3/.gitignore
+--rw-rw-rw-   0        0        0     1107 2022-12-07 23:27:48.000000 srsgui-0.2.3/LICENSE.txt
+--rw-rw-rw-   0        0        0     3330 2023-04-05 16:12:04.342996 srsgui-0.2.3/PKG-INFO
+--rw-rw-rw-   0        0        0     2633 2023-02-13 17:17:13.000000 srsgui-0.2.3/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.235126 srsgui-0.2.3/docs/
+--rw-rw-rw-   0        0        0      658 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/Makefile
+--rwxrwxrwx   0        0        0       37 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/autodoc.bat
+--rwxrwxrwx   0        0        0      804 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/make.bat
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.253011 srsgui-0.2.3/docs/source/
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.263036 srsgui-0.2.3/docs/source/_static/
+--rw-rw-rw-   0        0        0    31067 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/cg-dir-terminal-screen-capture.png
+--rw-rw-rw-   0        0        0    27242 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/cg-terminal-screen-capture.png
+--rw-rw-rw-   0        0        0     5762 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/connect-dialog-box-capture.png
+--rw-rw-rw-   0        0        0    71070 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/example-screen-capture-1.png
+--rw-rw-rw-   0        0        0    71011 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/example-screen-capture-2.png
+--rw-rw-rw-   0        0        0    56013 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/initial-screen-capture.png
+--rw-rw-rw-   0        0        0    29667 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/osc-dir-terminal-screen-capture.png
+--rw-rw-rw-   0        0        0    50740 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/second-task-screen-capture.png
+--rw-rw-rw-   0        0        0    39412 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/terminal-with-example-2.png
+--rw-rw-rw-   0        0        0    37573 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/_static/terminal-with-example.png
+--rw-rw-rw-   0        0        0     1938 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/conf.py
+--rw-rw-rw-   0        0        0     5998 2023-04-04 20:33:11.000000 srsgui-0.2.3/docs/source/create-project.rst
+--rw-rw-rw-   0        0        0     6656 2023-04-04 20:33:11.000000 srsgui-0.2.3/docs/source/create-task.rst
+--rw-rw-rw-   0        0        0     6110 2023-04-04 20:33:11.000000 srsgui-0.2.3/docs/source/define-instrument.rst
+--rw-rw-rw-   0        0        0    15655 2023-04-04 20:33:11.000000 srsgui-0.2.3/docs/source/example.rst
+--rw-rw-rw-   0        0        0     3684 2023-04-04 20:33:11.000000 srsgui-0.2.3/docs/source/index.rst
+--rw-rw-rw-   0        0        0     4383 2023-04-04 20:33:11.000000 srsgui-0.2.3/docs/source/installation.rst
+--rw-rw-rw-   0        0        0      936 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/srsgui.inst.communications.rst
+--rw-rw-rw-   0        0        0      950 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/srsgui.inst.rst
+--rw-rw-rw-   0        0        0      117 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/srsgui.rst
+--rw-rw-rw-   0        0        0      989 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/srsgui.task.rst
+--rw-rw-rw-   0        0        0      604 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/srsgui.ui.qt.rst
+--rw-rw-rw-   0        0        0     1629 2023-01-30 16:55:49.000000 srsgui-0.2.3/docs/source/srsgui.ui.rst
+--rw-rw-rw-   0        0        0     1186 2023-02-09 01:55:23.000000 srsgui-0.2.3/pyproject.toml
+--rw-rw-rw-   0        0        0       37 2023-01-30 16:55:49.000000 srsgui-0.2.3/requirements.txt
+--rw-rw-rw-   0        0        0       42 2023-04-05 16:12:04.342996 srsgui-0.2.3/setup.cfg
+--rw-rw-rw-   0        0        0       41 2023-02-09 00:46:42.000000 srsgui-0.2.3/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.263036 srsgui-0.2.3/srsgui/
+--rw-rw-rw-   0        0        0      531 2023-04-05 16:09:47.000000 srsgui-0.2.3/srsgui/__init__.py
+--rw-rw-rw-   0        0        0      314 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/__main__.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.225161 srsgui-0.2.3/srsgui/examples/
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.273003 srsgui-0.2.3/srsgui/examples/oscilloscope example/
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.273003 srsgui-0.2.3/srsgui/examples/oscilloscope example/instruments/
+--rw-rw-rw-   0        0        0     1709 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/instruments/cg635.py
+--rw-rw-rw-   0        0        0     3025 2023-02-11 01:21:41.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/instruments/sds1202.py
+--rw-rw-rw-   0        0        0     1977 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/oscilloscope example project.taskconfig
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.282997 srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/
+--rw-rw-rw-   0        0        0     2401 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/fifth.py
+--rw-rw-rw-   0        0        0     1543 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/first.py
+--rw-rw-rw-   0        0        0     3978 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/fourth.py
+--rw-rw-rw-   0        0        0     2129 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/second.py
+--rw-rw-rw-   0        0        0     1893 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/third.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.293017 srsgui-0.2.3/srsgui/inst/
+--rw-rw-rw-   0        0        0     1074 2023-04-04 20:33:11.000000 srsgui-0.2.3/srsgui/inst/__init__.py
+--rw-rw-rw-   0        0        0     9236 2023-04-05 00:53:34.000000 srsgui-0.2.3/srsgui/inst/commands.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.293017 srsgui-0.2.3/srsgui/inst/communications/
+--rw-rw-rw-   0        0        0      126 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/inst/communications/__init__.py
+--rw-rw-rw-   0        0        0     7903 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/inst/communications/interface.py
+--rw-rw-rw-   0        0        0     1157 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/inst/communications/serial_ports.py
+--rw-rw-rw-   0        0        0     8097 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/inst/communications/serialinterface.py
+--rw-rw-rw-   0        0        0    10762 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/inst/communications/tcpipinterface.py
+--rw-rw-rw-   0        0        0    14572 2023-04-04 22:33:16.000000 srsgui-0.2.3/srsgui/inst/component.py
+--rw-rw-rw-   0        0        0      727 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/inst/exceptions.py
+--rw-rw-rw-   0        0        0     9883 2023-04-04 20:33:11.000000 srsgui-0.2.3/srsgui/inst/indexcommands.py
+--rw-rw-rw-   0        0        0     9647 2023-02-09 17:58:55.000000 srsgui-0.2.3/srsgui/inst/instrument.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.312981 srsgui-0.2.3/srsgui/task/
+--rw-rw-rw-   0        0        0       94 2023-04-04 22:29:47.000000 srsgui-0.2.3/srsgui/task/__init__.py
+--rw-rw-rw-   0        0        0      692 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/task/callbacks.py
+--rw-rw-rw-   0        0        0     6480 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/task/config.py
+--rw-rw-rw-   0        0        0     5171 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/task/inputs.py
+--rw-rw-rw-   0        0        0     6865 2023-03-28 15:59:44.000000 srsgui-0.2.3/srsgui/task/sessionhandler.py
+--rw-rw-rw-   0        0        0    21917 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/task/task.py
+--rw-rw-rw-   0        0        0     4108 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/task/taskresult.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.342996 srsgui-0.2.3/srsgui/ui/
+--rw-rw-rw-   0        0        0        0 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/__init__.py
+--rw-rw-rw-   0        0        0     3452 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/capturecommandwidget.py
+--rw-rw-rw-   0        0        0     3339 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/capturecommandwidget.ui
+--rw-rw-rw-   0        0        0     3775 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/commandhandler.py
+--rw-rw-rw-   0        0        0     5918 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/commandterminal.py
+--rw-rw-rw-   0        0        0     9663 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/connectdlg.py
+--rw-rw-rw-   0        0        0     3856 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/deviceinfohandler.py
+--rw-rw-rw-   0        0        0    14044 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/dockhandler.py
+--rw-rw-rw-   0        0        0    11671 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/inputpanel.py
+--rw-rw-rw-   0        0        0     9269 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/jsonmodel.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.342996 srsgui-0.2.3/srsgui/ui/qt/
+--rw-rw-rw-   0        0        0      678 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/qt/QtCore.py
+--rw-rw-rw-   0        0        0      556 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/qt/QtGui.py
+--rw-rw-rw-   0        0        0      656 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/qt/QtWidgets.py
+--rw-rw-rw-   0        0        0     1457 2023-03-08 01:32:20.000000 srsgui-0.2.3/srsgui/ui/qt/__init__.py
+--rw-rw-rw-   0        0        0     1164 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/qtloghandler.py
+--rw-rw-rw-   0        0        0      268 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/resource.qrc
+--rw-rw-rw-   0        0        0    15358 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/resource_rc.py
+--rw-rw-rw-   0        0        0     2598 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/signalhandler.py
+--rw-rw-rw-   0        0        0    47891 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/srslogo.jpg
+--rw-rw-rw-   0        0        0      886 2023-01-30 16:55:49.000000 srsgui-0.2.3/srsgui/ui/stdout.py
+--rw-rw-rw-   0        0        0    24753 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/taskmain.py
+--rw-rw-rw-   0        0        0    10403 2023-02-22 17:26:46.000000 srsgui-0.2.3/srsgui/ui/taskmain.ui
+--rw-rw-rw-   0        0        0     4754 2023-04-04 20:33:12.000000 srsgui-0.2.3/srsgui/ui/ui_capturecommandwidget.py
+--rw-rw-rw-   0        0        0    11293 2023-02-22 17:26:46.000000 srsgui-0.2.3/srsgui/ui/ui_taskmain.py
+-drwxrwxrwx   0        0        0        0 2023-04-05 16:12:04.273003 srsgui-0.2.3/srsgui.egg-info/
+--rw-rw-rw-   0        0        0     3330 2023-04-05 16:12:04.000000 srsgui-0.2.3/srsgui.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     2828 2023-04-05 16:12:04.000000 srsgui-0.2.3/srsgui.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-05 16:12:04.000000 srsgui-0.2.3/srsgui.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       48 2023-04-05 16:12:04.000000 srsgui-0.2.3/srsgui.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       46 2023-04-05 16:12:04.000000 srsgui-0.2.3/srsgui.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        7 2023-04-05 16:12:04.000000 srsgui-0.2.3/srsgui.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.599757 srsgui-0.2.4/
++-rw-rw-rw-   0        0        0     1345 2022-08-02 00:19:43.000000 srsgui-0.2.4/.gitignore
++-rw-rw-rw-   0        0        0     1107 2022-12-07 23:27:48.000000 srsgui-0.2.4/LICENSE.txt
++-rw-rw-rw-   0        0        0     3330 2023-04-07 00:52:28.599757 srsgui-0.2.4/PKG-INFO
++-rw-rw-rw-   0        0        0     2633 2023-02-13 17:17:13.000000 srsgui-0.2.4/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.539788 srsgui-0.2.4/docs/
++-rw-rw-rw-   0        0        0      658 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/Makefile
++-rwxrwxrwx   0        0        0       37 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/autodoc.bat
++-rwxrwxrwx   0        0        0      804 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/make.bat
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.549784 srsgui-0.2.4/docs/source/
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.559806 srsgui-0.2.4/docs/source/_static/
++-rw-rw-rw-   0        0        0    31067 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/cg-dir-terminal-screen-capture.png
++-rw-rw-rw-   0        0        0    27242 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/cg-terminal-screen-capture.png
++-rw-rw-rw-   0        0        0     5762 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/connect-dialog-box-capture.png
++-rw-rw-rw-   0        0        0    71070 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/example-screen-capture-1.png
++-rw-rw-rw-   0        0        0    71011 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/example-screen-capture-2.png
++-rw-rw-rw-   0        0        0    56013 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/initial-screen-capture.png
++-rw-rw-rw-   0        0        0    29667 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/osc-dir-terminal-screen-capture.png
++-rw-rw-rw-   0        0        0    50740 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/second-task-screen-capture.png
++-rw-rw-rw-   0        0        0    39412 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/terminal-with-example-2.png
++-rw-rw-rw-   0        0        0    37573 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/_static/terminal-with-example.png
++-rw-rw-rw-   0        0        0     1938 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/conf.py
++-rw-rw-rw-   0        0        0     5998 2023-04-04 20:33:11.000000 srsgui-0.2.4/docs/source/create-project.rst
++-rw-rw-rw-   0        0        0     6656 2023-04-04 20:33:11.000000 srsgui-0.2.4/docs/source/create-task.rst
++-rw-rw-rw-   0        0        0     6110 2023-04-04 20:33:11.000000 srsgui-0.2.4/docs/source/define-instrument.rst
++-rw-rw-rw-   0        0        0    15655 2023-04-04 20:33:11.000000 srsgui-0.2.4/docs/source/example.rst
++-rw-rw-rw-   0        0        0     3684 2023-04-04 20:33:11.000000 srsgui-0.2.4/docs/source/index.rst
++-rw-rw-rw-   0        0        0     4383 2023-04-04 20:33:11.000000 srsgui-0.2.4/docs/source/installation.rst
++-rw-rw-rw-   0        0        0      936 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/srsgui.inst.communications.rst
++-rw-rw-rw-   0        0        0      950 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/srsgui.inst.rst
++-rw-rw-rw-   0        0        0      117 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/srsgui.rst
++-rw-rw-rw-   0        0        0      989 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/srsgui.task.rst
++-rw-rw-rw-   0        0        0      604 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/srsgui.ui.qt.rst
++-rw-rw-rw-   0        0        0     1629 2023-01-30 16:55:49.000000 srsgui-0.2.4/docs/source/srsgui.ui.rst
++-rw-rw-rw-   0        0        0     1193 2023-04-05 21:32:45.000000 srsgui-0.2.4/pyproject.toml
++-rw-rw-rw-   0        0        0       37 2023-01-30 16:55:49.000000 srsgui-0.2.4/requirements.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 00:52:28.599757 srsgui-0.2.4/setup.cfg
++-rw-rw-rw-   0        0        0       41 2023-02-09 00:46:42.000000 srsgui-0.2.4/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.559806 srsgui-0.2.4/srsgui/
++-rw-rw-rw-   0        0        0     1537 2023-04-07 00:39:13.000000 srsgui-0.2.4/srsgui/__init__.py
++-rw-rw-rw-   0        0        0      314 2023-04-07 00:52:02.000000 srsgui-0.2.4/srsgui/__main__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.523518 srsgui-0.2.4/srsgui/examples/
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.559806 srsgui-0.2.4/srsgui/examples/oscilloscope example/
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.559806 srsgui-0.2.4/srsgui/examples/oscilloscope example/instruments/
++-rw-rw-rw-   0        0        0     1709 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/instruments/cg635.py
++-rw-rw-rw-   0        0        0     3025 2023-02-11 01:21:41.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/instruments/sds1202.py
++-rw-rw-rw-   0        0        0     1977 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/oscilloscope example project.taskconfig
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.569774 srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/
++-rw-rw-rw-   0        0        0     2401 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/fifth.py
++-rw-rw-rw-   0        0        0     1543 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/first.py
++-rw-rw-rw-   0        0        0     3978 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/fourth.py
++-rw-rw-rw-   0        0        0     2129 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/second.py
++-rw-rw-rw-   0        0        0     1893 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/third.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.569774 srsgui-0.2.4/srsgui/inst/
++-rw-rw-rw-   0        0        0     1074 2023-04-04 20:33:11.000000 srsgui-0.2.4/srsgui/inst/__init__.py
++-rw-rw-rw-   0        0        0     9299 2023-04-06 16:43:53.000000 srsgui-0.2.4/srsgui/inst/commands.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.579792 srsgui-0.2.4/srsgui/inst/communications/
++-rw-rw-rw-   0        0        0      126 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/inst/communications/__init__.py
++-rw-rw-rw-   0        0        0     7903 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/inst/communications/interface.py
++-rw-rw-rw-   0        0        0     1157 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/inst/communications/serial_ports.py
++-rw-rw-rw-   0        0        0     8097 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/inst/communications/serialinterface.py
++-rw-rw-rw-   0        0        0    10762 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/inst/communications/tcpipinterface.py
++-rw-rw-rw-   0        0        0    14572 2023-04-04 22:33:16.000000 srsgui-0.2.4/srsgui/inst/component.py
++-rw-rw-rw-   0        0        0      727 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/inst/exceptions.py
++-rw-rw-rw-   0        0        0    10031 2023-04-06 16:43:14.000000 srsgui-0.2.4/srsgui/inst/indexcommands.py
++-rw-rw-rw-   0        0        0     9647 2023-02-09 17:58:55.000000 srsgui-0.2.4/srsgui/inst/instrument.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.579792 srsgui-0.2.4/srsgui/task/
++-rw-rw-rw-   0        0        0        0 2023-04-06 18:11:30.000000 srsgui-0.2.4/srsgui/task/__init__.py
++-rw-rw-rw-   0        0        0      692 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/task/callbacks.py
++-rw-rw-rw-   0        0        0     6485 2023-04-06 18:10:52.000000 srsgui-0.2.4/srsgui/task/config.py
++-rw-rw-rw-   0        0        0     5171 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/task/inputs.py
++-rw-rw-rw-   0        0        0     6865 2023-03-28 15:59:44.000000 srsgui-0.2.4/srsgui/task/sessionhandler.py
++-rw-rw-rw-   0        0        0    21917 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/task/task.py
++-rw-rw-rw-   0        0        0     4108 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/task/taskresult.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.599757 srsgui-0.2.4/srsgui/ui/
++-rw-rw-rw-   0        0        0        0 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/__init__.py
++-rw-rw-rw-   0        0        0     2901 2023-04-05 22:30:32.000000 srsgui-0.2.4/srsgui/ui/capturecommandwidget.py
++-rw-rw-rw-   0        0        0     3339 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/capturecommandwidget.ui
++-rw-rw-rw-   0        0        0     3775 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/commandhandler.py
++-rw-rw-rw-   0        0        0     5918 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/commandterminal.py
++-rw-rw-rw-   0        0        0     9679 2023-04-06 22:26:43.000000 srsgui-0.2.4/srsgui/ui/connectdlg.py
++-rw-rw-rw-   0        0        0     3856 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/deviceinfohandler.py
++-rw-rw-rw-   0        0        0    14044 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/dockhandler.py
++-rw-rw-rw-   0        0        0    11682 2023-04-06 22:28:50.000000 srsgui-0.2.4/srsgui/ui/inputpanel.py
++-rw-rw-rw-   0        0        0     9269 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/jsonmodel.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.599757 srsgui-0.2.4/srsgui/ui/qt/
++-rw-rw-rw-   0        0        0      678 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/qt/QtCore.py
++-rw-rw-rw-   0        0        0      556 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/qt/QtGui.py
++-rw-rw-rw-   0        0        0      656 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/qt/QtWidgets.py
++-rw-rw-rw-   0        0        0     1457 2023-03-08 01:32:20.000000 srsgui-0.2.4/srsgui/ui/qt/__init__.py
++-rw-rw-rw-   0        0        0     1164 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/qtloghandler.py
++-rw-rw-rw-   0        0        0      268 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/resource.qrc
++-rw-rw-rw-   0        0        0    15358 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/resource_rc.py
++-rw-rw-rw-   0        0        0     2598 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/signalhandler.py
++-rw-rw-rw-   0        0        0    47891 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/srslogo.jpg
++-rw-rw-rw-   0        0        0      886 2023-01-30 16:55:49.000000 srsgui-0.2.4/srsgui/ui/stdout.py
++-rw-rw-rw-   0        0        0    24758 2023-04-07 00:51:55.000000 srsgui-0.2.4/srsgui/ui/taskmain.py
++-rw-rw-rw-   0        0        0    10403 2023-02-22 17:26:46.000000 srsgui-0.2.4/srsgui/ui/taskmain.ui
++-rw-rw-rw-   0        0        0     4754 2023-04-04 20:33:12.000000 srsgui-0.2.4/srsgui/ui/ui_capturecommandwidget.py
++-rw-rw-rw-   0        0        0    11293 2023-02-22 17:26:46.000000 srsgui-0.2.4/srsgui/ui/ui_taskmain.py
++drwxrwxrwx   0        0        0        0 2023-04-07 00:52:28.559806 srsgui-0.2.4/srsgui.egg-info/
++-rw-rw-rw-   0        0        0     3330 2023-04-07 00:52:28.000000 srsgui-0.2.4/srsgui.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     2828 2023-04-07 00:52:28.000000 srsgui-0.2.4/srsgui.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 00:52:28.000000 srsgui-0.2.4/srsgui.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       48 2023-04-07 00:52:28.000000 srsgui-0.2.4/srsgui.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       53 2023-04-07 00:52:28.000000 srsgui-0.2.4/srsgui.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        7 2023-04-07 00:52:28.000000 srsgui-0.2.4/srsgui.egg-info/top_level.txt
+```
+
+### Comparing `srsgui-0.2.3/.gitignore` & `srsgui-0.2.4/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/LICENSE.txt` & `srsgui-0.2.4/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/PKG-INFO` & `srsgui-0.2.4/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: srsgui
+-Version: 0.2.3
++Version: 0.2.4
+ Summary: Framework to run instrument-controlling Python scripts in GUI
+ Author: Chulhoon Kim
+ License: MIT license
+ Keywords: instrument control,data acquisition,data visualization
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `srsgui-0.2.3/README.md` & `srsgui-0.2.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/Makefile` & `srsgui-0.2.4/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/make.bat` & `srsgui-0.2.4/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/cg-dir-terminal-screen-capture.png` & `srsgui-0.2.4/docs/source/_static/cg-dir-terminal-screen-capture.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/cg-terminal-screen-capture.png` & `srsgui-0.2.4/docs/source/_static/cg-terminal-screen-capture.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/connect-dialog-box-capture.png` & `srsgui-0.2.4/docs/source/_static/connect-dialog-box-capture.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/example-screen-capture-1.png` & `srsgui-0.2.4/docs/source/_static/example-screen-capture-1.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/example-screen-capture-2.png` & `srsgui-0.2.4/docs/source/_static/example-screen-capture-2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/initial-screen-capture.png` & `srsgui-0.2.4/docs/source/_static/initial-screen-capture.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/osc-dir-terminal-screen-capture.png` & `srsgui-0.2.4/docs/source/_static/osc-dir-terminal-screen-capture.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/second-task-screen-capture.png` & `srsgui-0.2.4/docs/source/_static/second-task-screen-capture.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/terminal-with-example-2.png` & `srsgui-0.2.4/docs/source/_static/terminal-with-example-2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/_static/terminal-with-example.png` & `srsgui-0.2.4/docs/source/_static/terminal-with-example.png`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/conf.py` & `srsgui-0.2.4/docs/source/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/create-project.rst` & `srsgui-0.2.4/docs/source/create-project.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/create-task.rst` & `srsgui-0.2.4/docs/source/create-task.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/define-instrument.rst` & `srsgui-0.2.4/docs/source/define-instrument.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/example.rst` & `srsgui-0.2.4/docs/source/example.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/index.rst` & `srsgui-0.2.4/docs/source/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/installation.rst` & `srsgui-0.2.4/docs/source/installation.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/srsgui.inst.communications.rst` & `srsgui-0.2.4/docs/source/srsgui.inst.communications.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/srsgui.inst.rst` & `srsgui-0.2.4/docs/source/srsgui.inst.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/srsgui.task.rst` & `srsgui-0.2.4/docs/source/srsgui.task.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/srsgui.ui.qt.rst` & `srsgui-0.2.4/docs/source/srsgui.ui.qt.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/docs/source/srsgui.ui.rst` & `srsgui-0.2.4/docs/source/srsgui.ui.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/pyproject.toml` & `srsgui-0.2.4/pyproject.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -27,15 +27,15 @@
+ ]
+ dynamic = ["version"]
+ 
+ [tool.setuptools.dynamic]
+ version = {attr = "srsgui.__version__"}
+ 
+ [project.optional-dependencies]
+-full = ['matplotlib>=3.6.2', 'pyside6']
++full = ['matplotlib>=3.6.2', 'pyside6!=6.5.0']
+ 
+ 
+ [project.scripts]
+ srsgui = "srsgui.__main__:main"
+ 
+ # ... other project metadata fields as specified in:
+ #     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+```
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/instruments/cg635.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/instruments/cg635.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/instruments/sds1202.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/instruments/sds1202.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/oscilloscope example project.taskconfig` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/oscilloscope example project.taskconfig`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/fifth.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/fifth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/first.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/first.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/fourth.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/fourth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/second.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/second.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/examples/oscilloscope example/tasks/third.py` & `srsgui-0.2.4/srsgui/examples/oscilloscope example/tasks/third.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/__init__.py` & `srsgui-0.2.4/srsgui/inst/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/commands.py` & `srsgui-0.2.4/srsgui/inst/commands.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -211,23 +211,24 @@
+ 
+ class FloatCommand(Command):
+     """
+     Descriptor for a remote command to
+     **set** and **query** a **float** value
+     """
+ 
+-    def __init__(self, remote_command_name, unit='', min=-1000.0, max=1000.0, step=1.0, fmt='{}', default_value=None):
++    def __init__(self, remote_command_name, unit='', min=-1000.0, max=1000.0, step=0.1,
++                 significant_figures=4, default_value=None):
+         super().__init__(remote_command_name, default_value)
+         self._get_convert_function = float
+ 
+         self.unit = unit
+         self.maximum = max
+         self.minimum = min
+         self.step = step
+-        self.fmt = fmt
++        self.significant_figures = significant_figures
+         self.default_value = default_value
+ 
+ 
+ class FloatGetCommand(FloatCommand):
+     """
+     Descriptor for  a remote command only to **query** a **float** value.
+     To **set** a value is not allowed.
+```
+
+### Comparing `srsgui-0.2.3/srsgui/inst/communications/interface.py` & `srsgui-0.2.4/srsgui/inst/communications/interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/communications/serial_ports.py` & `srsgui-0.2.4/srsgui/inst/communications/serial_ports.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/communications/serialinterface.py` & `srsgui-0.2.4/srsgui/inst/communications/serialinterface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/communications/tcpipinterface.py` & `srsgui-0.2.4/srsgui/inst/communications/tcpipinterface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/component.py` & `srsgui-0.2.4/srsgui/inst/component.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/exceptions.py` & `srsgui-0.2.4/srsgui/inst/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/inst/indexcommands.py` & `srsgui-0.2.4/srsgui/inst/indexcommands.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -211,22 +211,24 @@
+ class FloatIndexCommand(IndexCommand):
+     """
+     Command class for a remote command with index
+     using **set** and **query** returning an **float**
+     """
+ 
+     def __init__(self, remote_command_name, index_max, index_min=0, index_dict=None,
+-                 unit='', value_min=-1e6, value_nax=1e6, step=1):
++                 unit='', value_min=-1e6, value_max=1e6, step=0.1, significant_figures=4, default_valaue=0.0 ):
+         super().__init__(remote_command_name, index_max, index_min, index_dict)
+         self._get_convert_function = float
+ 
+         self.unit = unit
+-        self.maximum = value_nax
++        self.maximum = value_max
+         self.minimum = value_min
+         self.step = step
++        self.significant_figures = significant_figures
++        self.default_valaue = default_valaue
+ 
+ 
+ class FloatIndexGetCommand(FloatIndexCommand):
+     """
+     Command class for a remote command with index
+     using only **query** returning an **float**, without **set**.
+     """
+```
+
+### Comparing `srsgui-0.2.3/srsgui/inst/instrument.py` & `srsgui-0.2.4/srsgui/inst/instrument.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/task/callbacks.py` & `srsgui-0.2.4/srsgui/task/callbacks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/task/config.py` & `srsgui-0.2.4/srsgui/task/config.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ import sys
+ import os
+ import logging
+ from pathlib import Path
+ from importlib import import_module, reload, invalidate_caches
+ 
+-from srsgui.task import Task, GreenNormal, RedNormal
++from srsgui.task.task import Task, GreenNormal, RedNormal
+ 
+ # from srs_insts.baseinsts import BaseInst
+ from srsgui.inst.instrument import Instrument
+ 
+ logger = logging.getLogger(__name__)
+```
+
+### Comparing `srsgui-0.2.3/srsgui/task/inputs.py` & `srsgui-0.2.4/srsgui/task/inputs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/task/sessionhandler.py` & `srsgui-0.2.4/srsgui/task/sessionhandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/task/task.py` & `srsgui-0.2.4/srsgui/task/task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/task/taskresult.py` & `srsgui-0.2.4/srsgui/task/taskresult.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/capturecommandwidget.py` & `srsgui-0.2.4/srsgui/ui/capturecommandwidget.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -41,44 +41,27 @@
+         self.collapse_button.clicked.connect(self.on_collapse_clicked)
+ 
+     def set_inst(self, name, inst):
+         self.inst = inst
+         self.name = name
+ 
+     def on_query_only_changed(self, state):
+-        self.query_only_included = state == Qt.Checked
++        self.query_only_included = state != Qt.Unchecked
+ 
+     def on_set_only_changed(self, state):
+-        self.set_only_included = state == Qt.Checked
++        self.set_only_included = state != Qt.Unchecked
+ 
+     def on_excluded_changed(self, state):
+-        self.excluded_included = state == Qt.Checked
++        self.excluded_included = state != Qt.Unchecked
+ 
+     def on_method_changed(self, state):
+-        self.method_included = state == Qt.Checked
++        self.method_included = state != Qt.Unchecked
+ 
+     def on_raw_command_changed(self, state):
+-        self.show_raw_command = state == Qt.Checked
+-
+-    """
+-    def on_update_clicked(self):
+-        inst = self.inst
+-        browser = self.text_browser
+-
+-        if inst.is_connected():
+-            msg = ''  # Name: {} \n S/N: {} \n F/W version: {} \n\n'.format(*inst.check_id())
+-            msg += '  * Info *\n {} \n\n'.format(inst.get_info())
+-            msg += '  * Status *\n {} \n'.format(inst.get_status())
+-        else:
+-            msg = "Disconnected"
+-
+-        browser.clear()
+-        browser.append(msg)
+-        logger.debug('{}: {}'.format(self.name, msg.replace('\n', '')))
+-    """
++        self.show_raw_command = state != Qt.Unchecked
+ 
+     def on_capture_clicked(self):
+         if self.inst is not None and self.inst.is_connected():
+             capture = self.inst.capture_commands(
+                 self.query_only_included, self.set_only_included, self.excluded_included,
+                 self.method_included, self.show_raw_command
+             )
+```
+
+### Comparing `srsgui-0.2.3/srsgui/ui/capturecommandwidget.ui` & `srsgui-0.2.4/srsgui/ui/capturecommandwidget.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/commandhandler.py` & `srsgui-0.2.4/srsgui/ui/commandhandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/commandterminal.py` & `srsgui-0.2.4/srsgui/ui/commandterminal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/connectdlg.py` & `srsgui-0.2.4/srsgui/ui/connectdlg.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ from .qt.QtWidgets import QDialog, QDialogButtonBox, \
+                           QVBoxLayout, QGridLayout,\
+                           QSpacerItem, QSizePolicy, \
+                           QTabWidget, QWidget, QLabel, \
+                           QLineEdit, QSpinBox, QComboBox, \
+                           QMessageBox
+ 
+-from srsgui import Instrument
++from srsgui.inst.instrument import Instrument
+ from srsgui.task.inputs import BaseInput, IntegerInput, IntegerListInput, \
+                                Ip4Input, BoolInput, StringInput, \
+                                FindListInput, PasswordInput
+ 
+ logger = logging.getLogger(__name__)
+```
+
+### Comparing `srsgui-0.2.3/srsgui/ui/deviceinfohandler.py` & `srsgui-0.2.4/srsgui/ui/deviceinfohandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/dockhandler.py` & `srsgui-0.2.4/srsgui/ui/dockhandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/inputpanel.py` & `srsgui-0.2.4/srsgui/ui/inputpanel.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ 
+ import math
+ from .qt.QtCore import Qt
+ from .qt.QtWidgets import QWidget, QDoubleSpinBox, QSpinBox, QComboBox, \
+                           QLineEdit, QLabel, QGridLayout, QPushButton, QScrollArea
+ 
+-from srsgui.inst import Command, IntCommand, FloatCommand, DictCommand, \
+-                                 IntIndexCommand, FloatIndexCommand, DictIndexCommand
++from srsgui.inst.commands import Command, IntCommand, FloatCommand, DictCommand
++from srsgui.inst.indexcommands import IntIndexCommand, FloatIndexCommand, DictIndexCommand
+ 
+ from srsgui.task.task import Task
+ from srsgui.task.inputs import IntegerInput, FloatInput, StringInput, \
+                                ListInput, InstrumentInput, CommandInput
+ 
+ import logging
+ logger = logging.getLogger(__name__)
+```
+
+### Comparing `srsgui-0.2.3/srsgui/ui/jsonmodel.py` & `srsgui-0.2.4/srsgui/ui/jsonmodel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/qt/QtCore.py` & `srsgui-0.2.4/srsgui/ui/qt/QtCore.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/qt/QtGui.py` & `srsgui-0.2.4/srsgui/ui/qt/QtGui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/qt/QtWidgets.py` & `srsgui-0.2.4/srsgui/ui/qt/QtWidgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/qt/__init__.py` & `srsgui-0.2.4/srsgui/ui/qt/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/qtloghandler.py` & `srsgui-0.2.4/srsgui/ui/qtloghandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/resource_rc.py` & `srsgui-0.2.4/srsgui/ui/resource_rc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/signalhandler.py` & `srsgui-0.2.4/srsgui/ui/signalhandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/srslogo.jpg` & `srsgui-0.2.4/srsgui/ui/srslogo.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/stdout.py` & `srsgui-0.2.4/srsgui/ui/stdout.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/taskmain.py` & `srsgui-0.2.4/srsgui/ui/taskmain.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -25,15 +25,15 @@
+ from .qtloghandler import QtLogHandler
+ from .deviceinfohandler import DeviceInfoHandler
+ from .dockhandler import DockHandler
+ from .commandhandler import CommandHandler
+ 
+ from srsgui.task.config import Config
+ from srsgui.task.sessionhandler import SessionHandler
+-from srsgui.task import Task, Bold
++from srsgui.task.task import Task, Bold
+ 
+ from srsgui import __version__
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ class TaskMain(QMainWindow, Ui_TaskMain):
+```
+
+### Comparing `srsgui-0.2.3/srsgui/ui/taskmain.ui` & `srsgui-0.2.4/srsgui/ui/taskmain.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/ui_capturecommandwidget.py` & `srsgui-0.2.4/srsgui/ui/ui_capturecommandwidget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui/ui/ui_taskmain.py` & `srsgui-0.2.4/srsgui/ui/ui_taskmain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `srsgui-0.2.3/srsgui.egg-info/PKG-INFO` & `srsgui-0.2.4/srsgui.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: srsgui
+-Version: 0.2.3
++Version: 0.2.4
+ Summary: Framework to run instrument-controlling Python scripts in GUI
+ Author: Chulhoon Kim
+ License: MIT license
+ Keywords: instrument control,data acquisition,data visualization
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `srsgui-0.2.3/srsgui.egg-info/SOURCES.txt` & `srsgui-0.2.4/srsgui.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/spyrograph-0.8.0.tar.gz tmp/spyrograph-0.9.0.tar.gz --html versions/s/spyrograph/0.8.0-0.9.0/index.html --text versions/s/spyrograph/0.8.0-0.9.0/diff.txt --markdown versions/s/spyrograph/0.8.0-0.9.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">4.68 KB</span></div>
+  <div><span class="source">tmp/spyrograph-0.8.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/spyrograph-0.9.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">270 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;spyrograph-0.<del>8</del>.0.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Mar<span class="dp">·</span>17<span class="dp">·</span>01:<del>33</del>:10<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;spyrograph-0.<ins>9</ins>.0.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Mar<span class="dp">·</span>17<span class="dp">·</span>01:<ins>50</ins>:10<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.37 KB</span></div>
+    <div><span class="source">spyrograph-0.8.0.tar</span> vs.</div>
+    <div id="spyrograph--.-.-.tar"><span class="source">spyrograph-0.9.0.tar</span>
+      <a class="anchor" href="#spyrograph--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.65 KB</span></div>
+      <div id="spyrograph--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#spyrograph--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.<del>895048</del><span class="dp">·</span>spyrograph-0.<del>8</del>.0/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.<ins>654963</ins><span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1077<span class="dp">·</span>2023-03-12<span class="dp">·</span>16:14:46.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1077<span class="dp">·</span>2023-03-12<span class="dp">·</span>16:14:46.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3783<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.<del>894053</del><span class="dp">·</span>spyrograph-0.<del>8</del>.0/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3783<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.<ins>652486</ins><span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3286<span class="dp">·</span>2023-03-16<span class="dp">·</span>01:53:00.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3286<span class="dp">·</span>2023-03-16<span class="dp">·</span>01:53:00.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.<del>896</del>0<del>45</del><span class="dp">·</span>spyrograph-0.<del>8</del>.0/setup.cfg</td><td class="diffline">5 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.<ins>655</ins>0<ins>63</ins><span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>700<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>32</del>:<del>34</del>.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/setup.py</td><td class="diffline">6 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>700<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>49</ins>:<ins>42</ins>.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.<del>892065</del><span class="dp">·</span>spyrograph-0.<del>8</del>.0/spyrograph.egg-info/</td><td class="diffline">7 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.<ins>650808</ins><span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/spyrograph.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3783<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/spyrograph.egg-info/PKG-INFO</td><td class="diffline">8 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3783<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/spyrograph.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>162<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/spyrograph.egg-info/SOURCES.txt</td><td class="diffline">9 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>162<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/spyrograph.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/spyrograph.egg-info/dependency_links.txt</td><td class="diffline">10 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/spyrograph.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<del>33</del>:10.000000<span class="dp">·</span>spyrograph-0.<del>8</del>.0/spyrograph.egg-info/top_level.txt</td><td class="diffline">11 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>chris<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-17<span class="dp">·</span>01:<ins>50</ins>:10.000000<span class="dp">·</span>spyrograph-0.<ins>9</ins>.0/spyrograph.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">spyrograph-0.8.0/LICENSE</span> vs.</div>
+      <div id="spyrograph--.-.-.tar---spyrograph--.-.--LICENSE"><span class="source">spyrograph-0.9.0/LICENSE</span>
+        <a class="anchor" href="#spyrograph--.-.-.tar---spyrograph--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">445 B</span></div>
+      <div><span class="source">spyrograph-0.8.0/PKG-INFO</span> vs.</div>
+      <div id="spyrograph--.-.-.tar---spyrograph--.-.--PKG-INFO"><span class="source">spyrograph-0.9.0/PKG-INFO</span>
+        <a class="anchor" href="#spyrograph--.-.-.tar---spyrograph--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spyrograph</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spyrograph</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>8</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>9</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Library<span class="dp">·</span>for<span class="dp">·</span>drawing<span class="dp">·</span>spirographs<span class="dp">·</span>in<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Library<span class="dp">·</span>for<span class="dp">·</span>drawing<span class="dp">·</span>spirographs<span class="dp">·</span>in<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/chris-greening/spyrograph</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/chris-greening/spyrograph</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Chris<span class="dp">·</span>Greening</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Chris<span class="dp">·</span>Greening</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>chris@christophergreening.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>chris@christophergreening.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">spyrograph-0.8.0/README.md</span> vs.</div>
+      <div id="spyrograph--.-.-.tar---spyrograph--.-.--README.md"><span class="source">spyrograph-0.9.0/README.md</span>
+        <a class="anchor" href="#spyrograph--.-.-.tar---spyrograph--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">614 B</span></div>
+      <div><span class="source">spyrograph-0.8.0/setup.py</span> vs.</div>
+      <div id="spyrograph--.-.-.tar---spyrograph--.-.--setup.py"><span class="source">spyrograph-0.9.0/setup.py</span>
+        <a class="anchor" href="#spyrograph--.-.-.tar---spyrograph--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>setuptools<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>setuptools<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;README.md&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>fh:<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">with<span class="dp">·</span>open(&quot;README.md&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>fh:<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">setuptools.setup(<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">setuptools.setup(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;spyrograph&quot;,<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;spyrograph&quot;,<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.<del>8</del>.0&quot;,<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.<ins>9</ins>.0&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Chris<span class="dp">·</span>Greening&quot;,<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Chris<span class="dp">·</span>Greening&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;chris@christophergreening.com&quot;,<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;chris@christophergreening.com&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Library<span class="dp">·</span>for<span class="dp">·</span>drawing<span class="dp">·</span>spirographs<span class="dp">·</span>in<span class="dp">·</span>Python&quot;,<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Library<span class="dp">·</span>for<span class="dp">·</span>drawing<span class="dp">·</span>spirographs<span class="dp">·</span>in<span class="dp">·</span>Python&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/chris-greening/spyrograph&quot;,<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/chris-greening/spyrograph&quot;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[],<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[],<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">485 B</span></div>
+      <div><span class="source">spyrograph-0.8.0/spyrograph.egg-info/PKG-INFO</span> vs.</div>
+      <div id="spyrograph--.-.-.tar---spyrograph--.-.--spyrograph.egg-info-PKG-INFO"><span class="source">spyrograph-0.9.0/spyrograph.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#spyrograph--.-.-.tar---spyrograph--.-.--spyrograph.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spyrograph</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spyrograph</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>8</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>9</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Library<span class="dp">·</span>for<span class="dp">·</span>drawing<span class="dp">·</span>spirographs<span class="dp">·</span>in<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Library<span class="dp">·</span>for<span class="dp">·</span>drawing<span class="dp">·</span>spirographs<span class="dp">·</span>in<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/chris-greening/spyrograph</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/chris-greening/spyrograph</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Chris<span class="dp">·</span>Greening</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Chris<span class="dp">·</span>Greening</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>chris@christophergreening.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>chris@christophergreening.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,242 @@
+# Comparing `tmp/pyarmor.cli.runtime-2.1.dev5-cp39-none-any.whl.zip` & `tmp/pyarmor.cli.runtime-2.1.dev6-cp39-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,27 +1,27 @@
+-Zip file size: 6249968 bytes, number of entries: 25
++Zip file size: 6249969 bytes, number of entries: 25
+ -rw-r--r--  2.0 unx     1708 b- defN 23-Mar-31 11:28 pyarmor/cli/runtime/__init__.py
+--rwxr-xr-x  2.0 unx   648816 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/darwin.arm64/pyarmor_runtime.so
+--rwxr-xr-x  2.0 unx   852264 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/darwin.x86_64/pyarmor_runtime.so
+--rwxr-xr-x  2.0 unx   591456 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.cpython-37-aarch64-linux-gnu.so
+--rwxr-xr-x  2.0 unx   595608 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.cpython-38-aarch64-linux-gnu.so
+--rwxr-xr-x  2.0 unx   595608 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.cpython-39-aarch64-linux-gnu.so
+--rwxr-xr-x  2.0 unx   599704 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.so
+--rwxr-xr-x  2.0 unx   880388 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.cpython-37-arm-linux-gnu.so
+--rwxr-xr-x  2.0 unx   884500 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.cpython-38-arm-linux-gnu.so
+--rwxr-xr-x  2.0 unx   884496 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.cpython-39-arm-linux-gnu.so
+--rwxr-xr-x  2.0 unx   884496 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.so
+--rwxr-xr-x  2.0 unx   814124 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-37-i386-linux-gnu.so
+--rwxr-xr-x  2.0 unx   818220 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-38-i386-linux-gnu.so
+--rwxr-xr-x  2.0 unx   814124 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-39-i386-linux-gnu.so
+--rwxr-xr-x  2.0 unx   818220 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.so
+--rwxr-xr-x  2.0 unx   767656 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-37-x86_64-linux-gnu.so
+--rwxr-xr-x  2.0 unx   784104 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-38-x86_64-linux-gnu.so
+--rwxr-xr-x  2.0 unx   784104 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-39-x86_64-linux-gnu.so
+--rwxr-xr-x  2.0 unx   784104 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.so
+--rwxr-xr-x  2.0 unx   756750 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/windows.x86/pyarmor_runtime.pyd
+--rwxr-xr-x  2.0 unx   610816 b- defN 23-Apr-06 14:56 pyarmor/cli/runtime/libs/windows.x86_64/pyarmor_runtime.pyd
+--rw-r--r--  2.0 unx     1932 b- defN 23-Apr-06 14:56 pyarmor.cli.runtime-2.1.dev5.dist-info/METADATA
+--rw-r--r--  2.0 unx       93 b- defN 23-Apr-06 14:56 pyarmor.cli.runtime-2.1.dev5.dist-info/WHEEL
+--rw-r--r--  2.0 unx        8 b- defN 23-Apr-06 14:56 pyarmor.cli.runtime-2.1.dev5.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3061 b- defN 23-Apr-06 14:56 pyarmor.cli.runtime-2.1.dev5.dist-info/RECORD
+-25 files, 15176360 bytes uncompressed, 6244736 bytes compressed:  58.9%
++-rwxr-xr-x  2.0 unx   648816 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/darwin.arm64/pyarmor_runtime.so
++-rwxr-xr-x  2.0 unx   852264 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/darwin.x86_64/pyarmor_runtime.so
++-rwxr-xr-x  2.0 unx   591456 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.cpython-37-aarch64-linux-gnu.so
++-rwxr-xr-x  2.0 unx   595608 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.cpython-38-aarch64-linux-gnu.so
++-rwxr-xr-x  2.0 unx   595608 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.cpython-39-aarch64-linux-gnu.so
++-rwxr-xr-x  2.0 unx   599704 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.aarch64/pyarmor_runtime.so
++-rwxr-xr-x  2.0 unx   880388 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.cpython-37-arm-linux-gnu.so
++-rwxr-xr-x  2.0 unx   884500 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.cpython-38-arm-linux-gnu.so
++-rwxr-xr-x  2.0 unx   884496 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.cpython-39-arm-linux-gnu.so
++-rwxr-xr-x  2.0 unx   884496 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.armv7/pyarmor_runtime.so
++-rwxr-xr-x  2.0 unx   814124 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-37-i386-linux-gnu.so
++-rwxr-xr-x  2.0 unx   818220 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-38-i386-linux-gnu.so
++-rwxr-xr-x  2.0 unx   814124 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-39-i386-linux-gnu.so
++-rwxr-xr-x  2.0 unx   818220 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.so
++-rwxr-xr-x  2.0 unx   767656 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-37-x86_64-linux-gnu.so
++-rwxr-xr-x  2.0 unx   784104 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-38-x86_64-linux-gnu.so
++-rwxr-xr-x  2.0 unx   784104 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-39-x86_64-linux-gnu.so
++-rwxr-xr-x  2.0 unx   784104 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.so
++-rwxr-xr-x  2.0 unx   756750 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/windows.x86/pyarmor_runtime.pyd
++-rwxr-xr-x  2.0 unx   610816 b- defN 23-Apr-07 01:11 pyarmor/cli/runtime/libs/windows.x86_64/pyarmor_runtime.pyd
++-rw-r--r--  2.0 unx     1932 b- defN 23-Apr-07 01:11 pyarmor.cli.runtime-2.1.dev6.dist-info/METADATA
++-rw-r--r--  2.0 unx       93 b- defN 23-Apr-07 01:11 pyarmor.cli.runtime-2.1.dev6.dist-info/WHEEL
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 01:11 pyarmor.cli.runtime-2.1.dev6.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3061 b- defN 23-Apr-07 01:11 pyarmor.cli.runtime-2.1.dev6.dist-info/RECORD
++25 files, 15176360 bytes uncompressed, 6244737 bytes compressed:  58.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -57,20 +57,20 @@
+ 
+ Filename: pyarmor/cli/runtime/libs/windows.x86/pyarmor_runtime.pyd
+ Comment: 
+ 
+ Filename: pyarmor/cli/runtime/libs/windows.x86_64/pyarmor_runtime.pyd
+ Comment: 
+ 
+-Filename: pyarmor.cli.runtime-2.1.dev5.dist-info/METADATA
++Filename: pyarmor.cli.runtime-2.1.dev6.dist-info/METADATA
+ Comment: 
+ 
+-Filename: pyarmor.cli.runtime-2.1.dev5.dist-info/WHEEL
++Filename: pyarmor.cli.runtime-2.1.dev6.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: pyarmor.cli.runtime-2.1.dev5.dist-info/top_level.txt
++Filename: pyarmor.cli.runtime-2.1.dev6.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: pyarmor.cli.runtime-2.1.dev5.dist-info/RECORD
++Filename: pyarmor.cli.runtime-2.1.dev6.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## pyarmor/cli/runtime/libs/windows.x86/pyarmor_runtime.pyd
+
+```diff
+@@ -7,15 +7,15 @@
+ 00000060: 7420 6265 2072 756e 2069 6e20 444f 5320  t be run in DOS 
+ 00000070: 6d6f 6465 2e0d 0d0a 2400 0000 0000 0000  mode....$.......
+ 00000080: 5045 0000 4c01 0a00 0000 0000 008c 0b00  PE..L...........
+ 00000090: 0000 0000 e000 0e23 0b01 021d 00fa 0900  .......#........
+ 000000a0: 0088 0b00 0056 0000 8013 0000 0010 0000  .....V..........
+ 000000b0: 0010 0a00 0000 cc62 0010 0000 0002 0000  .......b........
+ 000000c0: 0400 0000 0100 0000 0400 0000 0000 0000  ................
+-000000d0: 0050 0c00 0004 0000 069e 0b00 0300 0000  .P..............
++000000d0: 0050 0c00 0004 0000 132e 0c00 0300 0000  .P..............
+ 000000e0: 0000 2000 0010 0000 0000 1000 0010 0000  .. .............
+ 000000f0: 0000 0000 1000 0000 00c0 0b00 b001 0000  ................
+ 00000100: 00d0 0b00 8c26 0000 0000 0000 0000 0000  .....&..........
+ 00000110: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00000120: 0020 0c00 a42f 0000 0000 0000 0000 0000  . .../..........
+ 00000130: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00000140: 0cff 0a00 1800 0000 0000 0000 0000 0000  ................
+@@ -45786,15 +45786,15 @@
+ 000b2d90: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 000b2da0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 000b2db0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 000b2dc0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 000b2dd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 000b2de0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 000b2df0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+-000b2e00: 0000 0000 8de1 2e64 0000 0000 8cc0 0b00  .......d........
++000b2e00: 0000 0000 9a71 2f64 0000 0000 8cc0 0b00  .....q/d........
+ 000b2e10: 0100 0000 0a00 0000 0a00 0000 28c0 0b00  ............(...
+ 000b2e20: 50c0 0b00 78c0 0b00 804d 0000 0057 0000  P...x....M...W..
+ 000b2e30: 1057 0000 2057 0000 00bd 0000 30bc 0000  .W.. W......0...
+ 000b2e40: 40be 0000 50bb 0000 00b3 0000 50b3 0000  @...P.......P...
+ 000b2e50: a0c0 0b00 b7c0 0b00 d1c0 0b00 ebc0 0b00  ................
+ 000b2e60: 05c1 0b00 26c1 0b00 41c1 0b00 5ec1 0b00  ....&...A...^...
+ 000b2e70: 7ac1 0b00 94c1 0b00 0000 0100 0200 0300  z...............
+```
+
+## pyarmor/cli/runtime/libs/windows.x86_64/pyarmor_runtime.pyd
+
+### objdump
+
+```diff
+@@ -28,15 +28,15 @@
+ MajorImageVersion	1
+ MinorImageVersion	0
+ MajorSubsystemVersion	5
+ MinorSubsystemVersion	2
+ Win32Version		00000000
+ SizeOfImage		000a4000
+ SizeOfHeaders		00000400
+-CheckSum		0009552c
++CheckSum		0009e53b
+ Subsystem		00000003	(Windows CUI)
+ DllCharacteristics	00000000
+ SizeOfStackReserve	0000000000200000
+ SizeOfStackCommit	0000000000001000
+ SizeOfHeapReserve	0000000000100000
+ SizeOfHeapCommit	0000000000001000
+ LoaderFlags		00000000
+@@ -411,15 +411,15 @@
+  0009d08c	00000000 00000000 00000000 00000000 00000000
+ 
+ There is an export table in .edata at 0x61b9c000
+ 
+ The Export Tables (interpreted .edata section contents)
+ 
+ Export Flags 			0
+-Time/Date stamp 		642ee0bc
++Time/Date stamp 		642f70cb
+ Major/Minor 			0/0
+ Name 				000000000009c050 pyarmor_runtime.dll
+ Ordinal Base 			1
+ Number in:
+ 	Export Address Table 		00000004
+ 	[Name Pointer/Ordinal] Table	00000004
+ Table Addresses
+@@ -161945,18 +161945,20 @@
+ 	...
+ 
+ Disassembly of section .edata:
+ 
+ 0000000061b9c000 <.edata>:
+     61b9c000:	add    %al,(%rax)
+     61b9c002:	add    %al,(%rax)
+-    61b9c004:	mov    $0x642ee0,%esp
+-    61b9c009:	add    %al,(%rax)
+-    61b9c00b:	add    %dl,-0x40(%rax)
+-    61b9c00e:	or     %eax,(%rax)
++    61b9c004:	lret
++    61b9c005:	jo     0x61b9c036
++    61b9c007:	add    %al,%fs:(%rax)
++    61b9c00a:	add    %al,(%rax)
++    61b9c00c:	push   %rax
++    61b9c00d:	rorb   $0x0,(%rcx)
+     61b9c010:	add    %eax,(%rax)
+     61b9c012:	add    %al,(%rax)
+     61b9c014:	add    $0x0,%al
+     61b9c016:	add    %al,(%rax)
+     61b9c018:	add    $0x0,%al
+     61b9c01a:	add    %al,(%rax)
+     61b9c01c:	sub    %al,%al
+```
+
+## Comparing `pyarmor.cli.runtime-2.1.dev5.dist-info/METADATA` & `pyarmor.cli.runtime-2.1.dev6.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyarmor.cli.runtime
+-Version: 2.1.dev5
++Version: 2.1.dev6
+ Summary: Provide binary modules for cross-platform obfuscation
+ Home-page: https://github.com/dashingsoft/pyarmor
+ Author: Jondy Zhao
+ Author-email: pyarmor@163.com
+ License: Free To Use But Restricted
+ Keywords: protect obfuscate encrypt obfuscation distribute
+ Platform: UNKNOWN
+```
+
+## Comparing `pyarmor.cli.runtime-2.1.dev5.dist-info/RECORD` & `pyarmor.cli.runtime-2.1.dev6.dist-info/RECORD`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -13,13 +13,13 @@
+ pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-38-i386-linux-gnu.so,sha256=FM2u0Xwl0csEGkkqRIOTAu0KjEWDzkCX7nsLlExPlII,818220
+ pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.cpython-39-i386-linux-gnu.so,sha256=aRiC7fQRZpNPWPLyivq9w1Wl8PA7b3GJZSgTwYn2CZA,814124
+ pyarmor/cli/runtime/libs/linux.x86/pyarmor_runtime.so,sha256=PCGgw7CPm-N4yWIjym21muGcwszMLFYVUaviPJnuSRc,818220
+ pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-37-x86_64-linux-gnu.so,sha256=9zibKd5tfhuM1nKIAe90RHNEm_8foVRQFLA65c5SMhM,767656
+ pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-38-x86_64-linux-gnu.so,sha256=bjUJB28qsnAhyZLeMO0cZWr_rveGjhcWt1JGGlNkXK8,784104
+ pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.cpython-39-x86_64-linux-gnu.so,sha256=etgv1dv6-wSArvVRGF7WIzRWoQvu81IUOQcRq01D_zM,784104
+ pyarmor/cli/runtime/libs/linux.x86_64/pyarmor_runtime.so,sha256=sbFLWKWfB-K67MVvhDAEESC-0ZF4EgflZku3bVXREsY,784104
+-pyarmor/cli/runtime/libs/windows.x86/pyarmor_runtime.pyd,sha256=M9wTx9OTRO8pUstOWBhANbUJlmIzHkNPADaKLZhkS9Y,756750
+-pyarmor/cli/runtime/libs/windows.x86_64/pyarmor_runtime.pyd,sha256=ixAtYZPTMrnng1Gu0IH8GMupRoVBJFfwgpvd6iZRgyc,610816
+-pyarmor.cli.runtime-2.1.dev5.dist-info/METADATA,sha256=XM88tXV1eO1nAe1EwzXn4e-rycNHgdJ0JGNb1qLJ7A0,1932
+-pyarmor.cli.runtime-2.1.dev5.dist-info/WHEEL,sha256=QbbyyBnlPXzoGKd-349G69XkCwSd1NFnt4kuAN58gNs,93
+-pyarmor.cli.runtime-2.1.dev5.dist-info/top_level.txt,sha256=UE1ovZ_90YzwF_lZ3LV7o8HKLe-RgzUaUUvdH5UTUus,8
+-pyarmor.cli.runtime-2.1.dev5.dist-info/RECORD,,
++pyarmor/cli/runtime/libs/windows.x86/pyarmor_runtime.pyd,sha256=dxc5sa71BDtBhDD_h453llNG_lZjoAu8Ouu9uxO0bQg,756750
++pyarmor/cli/runtime/libs/windows.x86_64/pyarmor_runtime.pyd,sha256=ju5wa8RbWjRwi8ONoUBQRCrOrE3Qv7459ICnZpFKyiQ,610816
++pyarmor.cli.runtime-2.1.dev6.dist-info/METADATA,sha256=ihFUMNokhYJiparmCT5xDvEZ75O4Y_4ynsu1qGv1SE4,1932
++pyarmor.cli.runtime-2.1.dev6.dist-info/WHEEL,sha256=QbbyyBnlPXzoGKd-349G69XkCwSd1NFnt4kuAN58gNs,93
++pyarmor.cli.runtime-2.1.dev6.dist-info/top_level.txt,sha256=UE1ovZ_90YzwF_lZ3LV7o8HKLe-RgzUaUUvdH5UTUus,8
++pyarmor.cli.runtime-2.1.dev6.dist-info/RECORD,,
+```
+

@@ -1,0 +1,690 @@
+# Comparing `tmp/jaraco.abode-5.0.0.tar.gz` & `tmp/jaraco.abode-5.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jaraco.abode-5.0.0.tar", last modified: Sat Mar 18 02:22:10 2023, max compression
++gzip compressed data, was "jaraco.abode-5.0.1.tar", last modified: Fri Apr  7 01:14:34 2023, max compression
+```
+
+## Comparing `jaraco.abode-5.0.0.tar` & `jaraco.abode-5.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,113 +1,113 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.555813 jaraco.abode-5.0.0/
+--rw-r--r--   0 runner    (1001) docker     (123)      133 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.coveragerc
+--rw-r--r--   0 runner    (1001) docker     (123)      246 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.editorconfig
+--rw-r--r--   0 runner    (1001) docker     (123)      136 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.flake8
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.519813 jaraco.abode-5.0.0/.github/
+--rw-r--r--   0 runner    (1001) docker     (123)      148 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.github/dependabot.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.519813 jaraco.abode-5.0.0/.github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)     3294 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.github/workflows/main.yml
+--rw-r--r--   0 runner    (1001) docker     (123)       81 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.pre-commit-config.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      233 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/.readthedocs.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3811 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/CHANGES.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     1050 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)    10093 2023-03-18 02:22:10.555813 jaraco.abode-5.0.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     9458 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/README.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     3032 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/conftest.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.523814 jaraco.abode-5.0.0/docs/
+--rw-r--r--   0 runner    (1001) docker     (123)      865 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/docs/api.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     1125 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/docs/conf.py
+--rw-r--r--   0 runner    (1001) docker     (123)       81 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/docs/history.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      215 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/docs/index.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.511813 jaraco.abode-5.0.0/jaraco/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.531813 jaraco.abode-5.0.0/jaraco/abode/
+--rw-r--r--   0 runner    (1001) docker     (123)      188 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)       58 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      316 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/_itertools.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1924 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/automation.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13567 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/cli.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9992 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/client.py
+--rw-r--r--   0 runner    (1001) docker     (123)      505 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/config.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.535813 jaraco.abode-5.0.0/jaraco/abode/devices/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3978 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/alarm.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5381 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)      913 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/binary_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6795 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/camera.py
+--rw-r--r--   0 runner    (1001) docker     (123)      931 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/cover.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3862 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/light.py
+--rw-r--r--   0 runner    (1001) docker     (123)      708 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/lock.py
+--rw-r--r--   0 runner    (1001) docker     (123)      453 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/pkg.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1938 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)      565 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/status.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/switch.py
+--rw-r--r--   0 runner    (1001) docker     (123)      752 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/devices/valve.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10285 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/event_controller.py
+--rw-r--r--   0 runner    (1001) docker     (123)      986 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/exceptions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.539813 jaraco.abode-5.0.0/jaraco/abode/helpers/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/helpers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2658 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/helpers/errors.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2276 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/helpers/events.csv
+--rw-r--r--   0 runner    (1001) docker     (123)     2317 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/helpers/timeline.py
+--rw-r--r--   0 runner    (1001) docker     (123)      791 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/helpers/urls.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5988 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/settings.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9234 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/socketio.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/jaraco/abode/state.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.523814 jaraco.abode-5.0.0/jaraco.abode.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    10093 2023-03-18 02:22:10.000000 jaraco.abode-5.0.0/jaraco.abode.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2560 2023-03-18 02:22:10.000000 jaraco.abode-5.0.0/jaraco.abode.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-18 02:22:10.000000 jaraco.abode-5.0.0/jaraco.abode.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       48 2023-03-18 02:22:10.000000 jaraco.abode-5.0.0/jaraco.abode.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      568 2023-03-18 02:22:10.000000 jaraco.abode-5.0.0/jaraco.abode.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        7 2023-03-18 02:22:10.000000 jaraco.abode-5.0.0/jaraco.abode.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      154 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/mypy.ini
+--rw-r--r--   0 runner    (1001) docker     (123)      378 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)     1214 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/pytest.ini
+--rw-r--r--   0 runner    (1001) docker     (123)     1476 2023-03-18 02:22:10.555813 jaraco.abode-5.0.0/setup.cfg
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.543813 jaraco.abode-5.0.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.547813 jaraco.abode-5.0.0/tests/mock/
+--rw-r--r--   0 runner    (1001) docker     (123)      591 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1003 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/automation.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-18 02:22:10.555813 jaraco.abode-5.0.0/tests/mock/devices/
+--rw-r--r--   0 runner    (1001) docker     (123)      522 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      457 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/alarm.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2969 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/dimmer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1549 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/door_contact.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1693 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/door_lock.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1469 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/glass.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3433 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/hue.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5239 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/ipcam.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3205 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/ir_camera.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1298 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/keypad.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1498 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/lm.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1382 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/pir.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2538 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/power_switch_meter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2546 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/power_switch_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1560 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/remote_controller.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1671 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/secure_barrier.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1372 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/siren.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1370 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/status_display.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1320 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/unknown.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2032 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/valve.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1354 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/devices/water_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1808 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/login.py
+--rw-r--r--   0 runner    (1001) docker     (123)      333 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/logout.py
+--rw-r--r--   0 runner    (1001) docker     (123)      231 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/oauth_claims.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1785 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/panel.py
+--rw-r--r--   0 runner    (1001) docker     (123)      951 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/mock/user.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20675 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_abode.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6736 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_alarm.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11978 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_automation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5016 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_binary_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13212 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_camera.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14941 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_device.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4355 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_dimmer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4161 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_door_lock.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18432 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_event_controller.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9382 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_hue.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5200 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_lm.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4130 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_power_switch_meter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4141 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_power_switch_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3784 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_secure_barrier.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4084 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tests/test_valve.py
+--rw-r--r--   0 runner    (1001) docker     (123)      914 2023-03-18 02:21:51.000000 jaraco.abode-5.0.0/tox.ini
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.195859 jaraco.abode-5.0.1/
++-rw-r--r--   0 runner    (1001) docker     (123)      133 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.coveragerc
++-rw-r--r--   0 runner    (1001) docker     (123)      246 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.editorconfig
++-rw-r--r--   0 runner    (1001) docker     (123)      136 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.flake8
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.163859 jaraco.abode-5.0.1/.github/
++-rw-r--r--   0 runner    (1001) docker     (123)      148 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.github/dependabot.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.163859 jaraco.abode-5.0.1/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)     3294 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.github/workflows/main.yml
++-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.pre-commit-config.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      233 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/.readthedocs.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3860 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/CHANGES.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1050 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)    10093 2023-04-07 01:14:34.195859 jaraco.abode-5.0.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     9458 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/README.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     3032 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/conftest.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.163859 jaraco.abode-5.0.1/docs/
++-rw-r--r--   0 runner    (1001) docker     (123)      865 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/docs/api.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1125 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/docs/conf.py
++-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/docs/history.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      215 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/docs/index.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.155859 jaraco.abode-5.0.1/jaraco/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.171859 jaraco.abode-5.0.1/jaraco/abode/
++-rw-r--r--   0 runner    (1001) docker     (123)      188 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)       58 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      316 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/_itertools.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1924 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/automation.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13567 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/cli.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9992 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/client.py
++-rw-r--r--   0 runner    (1001) docker     (123)      505 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/config.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.179859 jaraco.abode-5.0.1/jaraco/abode/devices/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3978 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/alarm.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5381 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      913 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/binary_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6795 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/camera.py
++-rw-r--r--   0 runner    (1001) docker     (123)      931 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/cover.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3862 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/light.py
++-rw-r--r--   0 runner    (1001) docker     (123)      708 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/lock.py
++-rw-r--r--   0 runner    (1001) docker     (123)      453 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/pkg.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1938 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)      565 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/status.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/switch.py
++-rw-r--r--   0 runner    (1001) docker     (123)      752 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/devices/valve.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10285 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/event_controller.py
++-rw-r--r--   0 runner    (1001) docker     (123)      986 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/exceptions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.179859 jaraco.abode-5.0.1/jaraco/abode/helpers/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/helpers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2658 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/helpers/errors.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2276 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/helpers/events.csv
++-rw-r--r--   0 runner    (1001) docker     (123)     2317 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/helpers/timeline.py
++-rw-r--r--   0 runner    (1001) docker     (123)      791 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/helpers/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5988 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/settings.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9234 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/socketio.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/jaraco/abode/state.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.167859 jaraco.abode-5.0.1/jaraco.abode.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    10093 2023-04-07 01:14:34.000000 jaraco.abode-5.0.1/jaraco.abode.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2560 2023-04-07 01:14:34.000000 jaraco.abode-5.0.1/jaraco.abode.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 01:14:34.000000 jaraco.abode-5.0.1/jaraco.abode.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       48 2023-04-07 01:14:34.000000 jaraco.abode-5.0.1/jaraco.abode.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      568 2023-04-07 01:14:34.000000 jaraco.abode-5.0.1/jaraco.abode.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 01:14:34.000000 jaraco.abode-5.0.1/jaraco.abode.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/mypy.ini
++-rw-r--r--   0 runner    (1001) docker     (123)      378 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)     1214 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/pytest.ini
++-rw-r--r--   0 runner    (1001) docker     (123)     1476 2023-04-07 01:14:34.195859 jaraco.abode-5.0.1/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.187859 jaraco.abode-5.0.1/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.191859 jaraco.abode-5.0.1/tests/mock/
++-rw-r--r--   0 runner    (1001) docker     (123)      591 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1003 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/automation.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 01:14:34.195859 jaraco.abode-5.0.1/tests/mock/devices/
++-rw-r--r--   0 runner    (1001) docker     (123)      522 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      457 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/alarm.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2969 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/dimmer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1549 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/door_contact.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1693 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/door_lock.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1469 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/glass.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3433 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/hue.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5239 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/ipcam.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3205 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/ir_camera.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1298 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/keypad.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1498 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/lm.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1382 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/pir.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2538 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/power_switch_meter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2546 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/power_switch_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1560 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/remote_controller.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1671 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/secure_barrier.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1372 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/siren.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1370 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/status_display.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1320 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/unknown.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2032 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/valve.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1354 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/devices/water_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1808 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/login.py
++-rw-r--r--   0 runner    (1001) docker     (123)      333 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/logout.py
++-rw-r--r--   0 runner    (1001) docker     (123)      231 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/oauth_claims.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1785 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/panel.py
++-rw-r--r--   0 runner    (1001) docker     (123)      951 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/mock/user.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20675 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_abode.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6736 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_alarm.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11978 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_automation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5016 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_binary_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13234 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_camera.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14941 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_device.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4355 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_dimmer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4161 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_door_lock.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18432 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_event_controller.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9382 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_hue.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5200 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_lm.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4130 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_power_switch_meter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4141 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_power_switch_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3784 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_secure_barrier.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4084 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tests/test_valve.py
++-rw-r--r--   0 runner    (1001) docker     (123)      914 2023-04-07 01:14:13.000000 jaraco.abode-5.0.1/tox.ini
+```
+
+### Comparing `jaraco.abode-5.0.0/.github/workflows/main.yml` & `jaraco.abode-5.0.1/.github/workflows/main.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/CHANGES.rst` & `jaraco.abode-5.0.1/CHANGES.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,7 +1,12 @@
++v5.0.1
++======
++
++Minor bugfixes and test updates.
++
+ v5.0.0
+ ======
+ 
+ Device methods that change state (``.set_status``, ``.set_level``,
+ ``.switch_on``, ``.switch_off``, ``.set_color``, ``.set_color_temp``,
+ ``.lock``, ``.unlock``) no longer return ``True`` on success or
+ ``False`` if no ``control_url`` is set. Instead, these methods now
+```
+
+### Comparing `jaraco.abode-5.0.0/LICENSE` & `jaraco.abode-5.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/PKG-INFO` & `jaraco.abode-5.0.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jaraco.abode
+-Version: 5.0.0
++Version: 5.0.1
+ Summary: A library interfacing to the Abode home security system
+ Home-page: https://github.com/jaraco/jaraco.abode
+ Author: Wil Schrader
+ Author-email: wilrader@gmail.com
+ Maintainer: Jason R. Coombs
+ Maintainer-email: jaraco@jaraco.com
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `jaraco.abode-5.0.0/README.rst` & `jaraco.abode-5.0.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/conftest.py` & `jaraco.abode-5.0.1/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/docs/api.rst` & `jaraco.abode-5.0.1/docs/api.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/docs/conf.py` & `jaraco.abode-5.0.1/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/automation.py` & `jaraco.abode-5.0.1/jaraco/abode/automation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/cli.py` & `jaraco.abode-5.0.1/jaraco/abode/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/client.py` & `jaraco.abode-5.0.1/jaraco/abode/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/alarm.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/alarm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/base.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/binary_sensor.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/binary_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/camera.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/camera.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/cover.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/cover.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/light.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/light.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/lock.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/lock.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -22,8 +22,8 @@
+     @property
+     def is_locked(self):
+         """
+         Get locked state.
+ 
+         Err on side of caution, assume if lock isn't closed then it's open.
+         """
+-        return self.status in STATUS.Lock.CLOSED
++        return self.status == STATUS.Lock.CLOSED
+```
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/sensor.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/status.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/status.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/switch.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/switch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/devices/valve.py` & `jaraco.abode-5.0.1/jaraco/abode/devices/valve.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/event_controller.py` & `jaraco.abode-5.0.1/jaraco/abode/event_controller.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/exceptions.py` & `jaraco.abode-5.0.1/jaraco/abode/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/helpers/errors.py` & `jaraco.abode-5.0.1/jaraco/abode/helpers/errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/helpers/events.csv` & `jaraco.abode-5.0.1/jaraco/abode/helpers/events.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/helpers/timeline.py` & `jaraco.abode-5.0.1/jaraco/abode/helpers/timeline.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/helpers/urls.py` & `jaraco.abode-5.0.1/jaraco/abode/helpers/urls.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/settings.py` & `jaraco.abode-5.0.1/jaraco/abode/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/socketio.py` & `jaraco.abode-5.0.1/jaraco/abode/socketio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco/abode/state.py` & `jaraco.abode-5.0.1/jaraco/abode/state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco.abode.egg-info/PKG-INFO` & `jaraco.abode-5.0.1/jaraco.abode.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jaraco.abode
+-Version: 5.0.0
++Version: 5.0.1
+ Summary: A library interfacing to the Abode home security system
+ Home-page: https://github.com/jaraco/jaraco.abode
+ Author: Wil Schrader
+ Author-email: wilrader@gmail.com
+ Maintainer: Jason R. Coombs
+ Maintainer-email: jaraco@jaraco.com
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `jaraco.abode-5.0.0/jaraco.abode.egg-info/SOURCES.txt` & `jaraco.abode-5.0.1/jaraco.abode.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/jaraco.abode.egg-info/requires.txt` & `jaraco.abode-5.0.1/jaraco.abode.egg-info/requires.txt`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+ pytest>=6
+ pytest-checkdocs>=2.4
+ flake8<5
+ pytest-cov
+ pytest-enabler>=1.3
+ requests_mock
+ types-requests
+-jaraco.collections>=3.6
++jaraco.collections>=4.1
+ 
+ [testing:platform_python_implementation != "PyPy"]
+ pytest-black>=0.3.7
+ pytest-mypy>=0.9.1
+ 
+ [testing:python_version < "3.12"]
+ pytest-flake8
+```
+
+### Comparing `jaraco.abode-5.0.0/pytest.ini` & `jaraco.abode-5.0.1/pytest.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/setup.cfg` & `jaraco.abode-5.0.1/setup.cfg`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -53,15 +53,15 @@
+ 	pytest-cov
+ 	pytest-mypy >= 0.9.1; \
+ 	python_implementation != "PyPy"
+ 	pytest-enabler >= 1.3
+ 	
+ 	requests_mock
+ 	types-requests
+-	jaraco.collections >= 3.6
++	jaraco.collections >= 4.1
+ docs = 
+ 	sphinx >= 3.5
+ 	jaraco.packaging >= 9
+ 	rst.linker >= 1.9
+ 	furo
+ 	sphinx-lint
+```
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/__init__.py` & `jaraco.abode-5.0.1/tests/mock/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/automation.py` & `jaraco.abode-5.0.1/tests/mock/automation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/__init__.py` & `jaraco.abode-5.0.1/tests/mock/devices/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/dimmer.py` & `jaraco.abode-5.0.1/tests/mock/devices/dimmer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/door_contact.py` & `jaraco.abode-5.0.1/tests/mock/devices/door_contact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/door_lock.py` & `jaraco.abode-5.0.1/tests/mock/devices/door_lock.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/glass.py` & `jaraco.abode-5.0.1/tests/mock/devices/glass.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/hue.py` & `jaraco.abode-5.0.1/tests/mock/devices/hue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/ipcam.py` & `jaraco.abode-5.0.1/tests/mock/devices/ipcam.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/ir_camera.py` & `jaraco.abode-5.0.1/tests/mock/devices/ir_camera.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/keypad.py` & `jaraco.abode-5.0.1/tests/mock/devices/keypad.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/lm.py` & `jaraco.abode-5.0.1/tests/mock/devices/lm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/pir.py` & `jaraco.abode-5.0.1/tests/mock/devices/pir.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/power_switch_meter.py` & `jaraco.abode-5.0.1/tests/mock/devices/power_switch_meter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/power_switch_sensor.py` & `jaraco.abode-5.0.1/tests/mock/devices/power_switch_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/remote_controller.py` & `jaraco.abode-5.0.1/tests/mock/devices/remote_controller.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/secure_barrier.py` & `jaraco.abode-5.0.1/tests/mock/devices/secure_barrier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/siren.py` & `jaraco.abode-5.0.1/tests/mock/devices/siren.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/status_display.py` & `jaraco.abode-5.0.1/tests/mock/devices/status_display.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/unknown.py` & `jaraco.abode-5.0.1/tests/mock/devices/unknown.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/valve.py` & `jaraco.abode-5.0.1/tests/mock/devices/valve.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/devices/water_sensor.py` & `jaraco.abode-5.0.1/tests/mock/devices/water_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/login.py` & `jaraco.abode-5.0.1/tests/mock/login.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/panel.py` & `jaraco.abode-5.0.1/tests/mock/panel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/mock/user.py` & `jaraco.abode-5.0.1/tests/mock/user.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_abode.py` & `jaraco.abode-5.0.1/tests/test_abode.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_alarm.py` & `jaraco.abode-5.0.1/tests/test_alarm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_automation.py` & `jaraco.abode-5.0.1/tests/test_automation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_binary_sensor.py` & `jaraco.abode-5.0.1/tests/test_binary_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_camera.py` & `jaraco.abode-5.0.1/tests/test_camera.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,16 @@
+ """Test the Abode camera class."""
+ import base64
+ import os
+ import pathlib
++import re
+ 
+ import pytest
+ 
+-from jaraco.collections import DictFilter
++from jaraco.collections import Projection
+ 
+ import jaraco.abode
+ from jaraco.abode.helpers import urls
+ import jaraco.abode.devices.status as STATUS
+ from . import mock as MOCK
+ from .mock.devices import ipcam as IPCAM
+ from .mock.devices import ir_camera as IRCAMERA
+@@ -123,16 +124,16 @@
+ 
+             # Capture an image with a failure
+             assert not device.capture()
+ 
+     def test_camera_capture_no_control_URLs(self, m):
+         """Tests that camera devices capture new images."""
+         for device in self.camera_devices():
+-            # Remove control URLs from JSON
+-            device._state = DictFilter(device._state, include_pattern='(?!control_url)')
++            # Hide any control URLs from the device state
++            device._state = Projection(re.compile('(?!control_url).*'), device._state)
+ 
+             # Test that jaraco.abode.Exception is raised with no control URLs
+             with pytest.raises(jaraco.abode.Exception) as exc:
+                 device.capture()
+             assert exc.value.message == "Control URL does not exist in device JSON."
+ 
+     def test_camera_image_update(self, m):
+```
+
+### Comparing `jaraco.abode-5.0.0/tests/test_device.py` & `jaraco.abode-5.0.1/tests/test_device.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_dimmer.py` & `jaraco.abode-5.0.1/tests/test_dimmer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_door_lock.py` & `jaraco.abode-5.0.1/tests/test_door_lock.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_event_controller.py` & `jaraco.abode-5.0.1/tests/test_event_controller.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_hue.py` & `jaraco.abode-5.0.1/tests/test_hue.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_lm.py` & `jaraco.abode-5.0.1/tests/test_lm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_power_switch_meter.py` & `jaraco.abode-5.0.1/tests/test_power_switch_meter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_power_switch_sensor.py` & `jaraco.abode-5.0.1/tests/test_power_switch_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_secure_barrier.py` & `jaraco.abode-5.0.1/tests/test_secure_barrier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tests/test_valve.py` & `jaraco.abode-5.0.1/tests/test_valve.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jaraco.abode-5.0.0/tox.ini` & `jaraco.abode-5.0.1/tox.ini`
+
+ * *Files identical despite different names*
+

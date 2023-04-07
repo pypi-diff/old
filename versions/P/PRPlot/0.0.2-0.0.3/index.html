@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/PRPlot-0.0.2.tar.gz tmp/PRPlot-0.0.3.tar.gz --html versions/P/PRPlot/0.0.2-0.0.3/index.html --text versions/P/PRPlot/0.0.2-0.0.3/diff.txt --markdown versions/P/PRPlot/0.0.2-0.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.92 KB</span></div>
+  <div><span class="source">tmp/PRPlot-0.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/PRPlot-0.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">262 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;PRPlot-0.0.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>01:1<del>4</del>:<del>5</del>2<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;PRPlot-0.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>01:1<ins>9</ins>:<ins>0</ins>2<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.62 KB</span></div>
+    <div><span class="source">PRPlot-0.0.2.tar</span> vs.</div>
+    <div id="PRPlot--.-.-.tar"><span class="source">PRPlot-0.0.3.tar</span>
+      <a class="anchor" href="#PRPlot--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.44 KB</span></div>
+      <div id="PRPlot--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#PRPlot--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>5</del>2.<del>883784</del><span class="dp">·</span>PRPlot-0.0.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>0</ins>2.<ins>250907</ins><span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:40:07.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:40:07.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<del>7</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>5</del>2.<del>883784</del><span class="dp">·</span>PRPlot-0.0.<del>2</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<ins>8</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>0</ins>2.<ins>250907</ins><span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>5</del>2.<del>839784</del><span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot/</td><td class="diffline">4 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>0</ins>2.<ins>226906</ins><span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2432<span class="dp">·</span>2023-04-07<span class="dp">·</span>00:43:42.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot/PRPlot.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2432<span class="dp">·</span>2023-04-07<span class="dp">·</span>00:43:42.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot/PRPlot.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>115<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>2</del>:<del>53</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>115<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>8</ins>:<ins>31</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>5</del>2.<del>883784</del><span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot.egg-info/</td><td class="diffline">7 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>0</ins>2.<ins>246907</ins><span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<del>7</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>52</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot.egg-info/PKG-INFO</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<ins>8</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>01</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>52</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot.egg-info/SOURCES.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>221<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>01</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>52</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot.egg-info/dependency_links.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>01</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>52</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot.egg-info/requires.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>01</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>52</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/PRPlot.egg-info/top_level.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>01</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/PRPlot.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:40:07.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/README.md</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>20:40:07.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>4</del>:<del>5</del>2.89<del>9</del>7<del>84</del><span class="dp">·</span>PRPlot-0.0.<del>2</del>/setup.cfg</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>9</ins>:<ins>0</ins>2.<ins>25</ins>89<ins>0</ins>7<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<del>93</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<del>2</del>:5<del>3</del>.000000<span class="dp">·</span>PRPlot-0.0.<del>2</del>/setup.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>ferubko<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<ins>89</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>01:1<ins>7</ins>:5<ins>4</ins>.000000<span class="dp">·</span>PRPlot-0.0.<ins>3</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">PRPlot-0.0.2/LICENSE</span> vs.</div>
+      <div id="PRPlot--.-.-.tar---PRPlot--.-.--LICENSE"><span class="source">PRPlot-0.0.3/LICENSE</span>
+        <a class="anchor" href="#PRPlot--.-.-.tar---PRPlot--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">923 B</span></div>
+      <div><span class="source">PRPlot-0.0.2/PKG-INFO</span> vs.</div>
+      <div id="PRPlot--.-.-.tar---PRPlot--.-.--PKG-INFO"><span class="source">PRPlot-0.0.3/PKG-INFO</span>
+        <a class="anchor" href="#PRPlot--.-.-.tar---PRPlot--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>PRPlot</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>PRPlot</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>build<span class="dp">·</span>a<span class="dp">·</span>very<span class="dp">·</span>nice<span class="dp">·</span>predict-reference<span class="dp">·</span>plots.<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extension<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>matplotlib<span class="dp">·</span>library</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>build<span class="dp">·</span>a<span class="dp">·</span>very<span class="dp">·</span>nice<span class="dp">·</span>predict-reference<span class="dp">·</span>plots.<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extension<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>matplotlib<span class="dp">·</span>library</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/89605502155/PRPlot</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/89605502155/PRPlot</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Andrey<span class="dp">·</span>Ferubko</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Andrey<span class="dp">·</span>Ferubko</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>ferubko1999@yandex.ru</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>ferubko1999@yandex.ru</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3.0</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/89605502155/<del>PR</del>P<del>l</del><del>ot</del>/archive/<del>main</del>.zip</td><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/89605502155/<ins>N-</ins>P<ins>LS</ins>/archive/<ins>v0</ins><ins>.0.3</ins>.zip</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">PRPlot-0.0.2/PRPlot/PRPlot.py</span> vs.</div>
+      <div id="PRPlot--.-.-.tar---PRPlot--.-.--PRPlot-PRPlot.py"><span class="source">PRPlot-0.0.3/PRPlot/PRPlot.py</span>
+        <a class="anchor" href="#PRPlot--.-.-.tar---PRPlot--.-.--PRPlot-PRPlot.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">955 B</span></div>
+      <div><span class="source">PRPlot-0.0.2/PRPlot.egg-info/PKG-INFO</span> vs.</div>
+      <div id="PRPlot--.-.-.tar---PRPlot--.-.--PRPlot.egg-info-PKG-INFO"><span class="source">PRPlot-0.0.3/PRPlot.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#PRPlot--.-.-.tar---PRPlot--.-.--PRPlot.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>PRPlot</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>PRPlot</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>build<span class="dp">·</span>a<span class="dp">·</span>very<span class="dp">·</span>nice<span class="dp">·</span>predict-reference<span class="dp">·</span>plots.<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extension<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>matplotlib<span class="dp">·</span>library</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>build<span class="dp">·</span>a<span class="dp">·</span>very<span class="dp">·</span>nice<span class="dp">·</span>predict-reference<span class="dp">·</span>plots.<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extension<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>matplotlib<span class="dp">·</span>library</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/89605502155/PRPlot</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/89605502155/PRPlot</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Andrey<span class="dp">·</span>Ferubko</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Andrey<span class="dp">·</span>Ferubko</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>ferubko1999@yandex.ru</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>ferubko1999@yandex.ru</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3.0</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/89605502155/<del>PR</del>P<del>l</del><del>ot</del>/archive/<del>main</del>.zip</td><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/89605502155/<ins>N-</ins>P<ins>LS</ins>/archive/<ins>v0</ins><ins>.0.3</ins>.zip</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>End<span class="dp">·</span>Users/Desktop</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.15 KB</span></div>
+      <div><span class="source">PRPlot-0.0.2/setup.py</span> vs.</div>
+      <div id="PRPlot--.-.-.tar---PRPlot--.-.--setup.py"><span class="source">PRPlot-0.0.3/setup.py</span>
+        <a class="anchor" href="#PRPlot--.-.-.tar---PRPlot--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>io<span class="dp">·</span>import<span class="dp">·</span>open</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>io<span class="dp">·</span>import<span class="dp">·</span>open</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.0.<del>2</del>&#x27;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.0.<ins>3</ins>&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">with<span class="dp">·</span>open(&#x27;README.md&#x27;,<span class="dp">·</span>encoding=&#x27;utf-8&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:</td><td class="diffline">4 </td><td class="diffpresent">with<span class="dp">·</span>open(&#x27;README.md&#x27;,<span class="dp">·</span>encoding=&#x27;utf-8&#x27;)<span class="dp">·</span>as<span class="dp">·</span>f:</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>f.read()</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>f.read()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">setup(</td><td class="diffline">6 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;PRPlot&#x27;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;PRPlot&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=version,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=version,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 17, 18 lines modified</td><td colspan="2">Offset 17, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=(</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=(</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;It<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>build<span class="dp">·</span>a<span class="dp">·</span>very<span class="dp">·</span>nice<span class="dp">·</span>predict-reference<span class="dp">·</span>plots.<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extension<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>matplotlib<span class="dp">·</span>library&#x27;</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;It<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>build<span class="dp">·</span>a<span class="dp">·</span>very<span class="dp">·</span>nice<span class="dp">·</span>predict-reference<span class="dp">·</span>plots.<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extension<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>matplotlib<span class="dp">·</span>library&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&#x27;text/markdown&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&#x27;text/markdown&#x27;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/89605502155/PRPlot&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/89605502155/PRPlot&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>#<span class="dp">·</span></del>download_url=&#x27;https://github.com/89605502155/N-PLS/archive/v{}.zip&#x27;.format(</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>download_url=&#x27;https://github.com/89605502155/N-PLS/archive/v{}.zip&#x27;.format(</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>#<span class="dp">·</span></del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>#<span class="dp">·</span></del>),</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>download_url=&#x27;https://github.com/89605502155/PRPlot/archive/main.zip&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>#<span class="dp">·</span></ins>download_url=&#x27;https://github.com/89605502155/PRPlot/archive/main.zip&#x27;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3.0&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;PRPlot&#x27;],</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;PRPlot&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[&#x27;matplotlib.pyplot&#x27;,<span class="dp">·</span>&#x27;matplotlib&#x27;],</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[&#x27;matplotlib.pyplot&#x27;,<span class="dp">·</span>&#x27;matplotlib&#x27;],</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
