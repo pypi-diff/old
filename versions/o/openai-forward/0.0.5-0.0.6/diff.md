@@ -1,0 +1,262 @@
+# Comparing `tmp/openai_forward-0.0.5.tar.gz` & `tmp/openai_forward-0.0.6.tar.gz`
+
+## Comparing `openai_forward-0.0.5.tar` & `openai_forward-0.0.6.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+--rwxr-xr-x   0        0        0       22 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/__init__.py
+--rwxr-xr-x   0        0        0      291 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/__main__.py
+--rwxr-xr-x   0        0        0     4449 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/_base.py
+--rwxr-xr-x   0        0        0      700 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/app.py
+--rwxr-xr-x   0        0        0     1167 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/config.py
+--rwxr-xr-x   0        0        0     3417 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/openai.py
+--rwxr-xr-x   0        0        0        0 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/routers/__init__.py
+--rwxr-xr-x   0        0        0     2897 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/routers/openai_v1.py
+--rwxr-xr-x   0        0        0     2316 2020-02-02 00:00:00.000000 openai_forward-0.0.5/openai_forward/routers/schemas.py
+--rwxr-xr-x   0        0        0     1842 2020-02-02 00:00:00.000000 openai_forward-0.0.5/.gitignore
+--rwxr-xr-x   0        0        0     1064 2020-02-02 00:00:00.000000 openai_forward-0.0.5/LICENSE
+--rwxr-xr-x   0        0        0     2291 2020-02-02 00:00:00.000000 openai_forward-0.0.5/README.md
+--rwxr-xr-x   0        0        0     1366 2020-02-02 00:00:00.000000 openai_forward-0.0.5/pyproject.toml
+--rw-r--r--   0        0        0     3290 2020-02-02 00:00:00.000000 openai_forward-0.0.5/PKG-INFO
++-rwxr-xr-x   0        0        0       22 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/__init__.py
++-rwxr-xr-x   0        0        0      291 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/__main__.py
++-rwxr-xr-x   0        0        0     4836 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/_base.py
++-rwxr-xr-x   0        0        0      760 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/app.py
++-rwxr-xr-x   0        0        0     1167 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/config.py
++-rwxr-xr-x   0        0        0     3215 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/openai.py
++-rwxr-xr-x   0        0        0        0 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/routers/__init__.py
++-rwxr-xr-x   0        0        0     2897 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/routers/openai_v1.py
++-rwxr-xr-x   0        0        0     2316 2020-02-02 00:00:00.000000 openai_forward-0.0.6/openai_forward/routers/schemas.py
++-rwxr-xr-x   0        0        0     1842 2020-02-02 00:00:00.000000 openai_forward-0.0.6/.gitignore
++-rwxr-xr-x   0        0        0     1064 2020-02-02 00:00:00.000000 openai_forward-0.0.6/LICENSE
++-rwxr-xr-x   0        0        0     2291 2020-02-02 00:00:00.000000 openai_forward-0.0.6/README.md
++-rwxr-xr-x   0        0        0     1366 2020-02-02 00:00:00.000000 openai_forward-0.0.6/pyproject.toml
++-rw-r--r--   0        0        0     3290 2020-02-02 00:00:00.000000 openai_forward-0.0.6/PKG-INFO
+```
+
+### Comparing `openai_forward-0.0.5/openai_forward/_base.py` & `openai_forward-0.0.6/openai_forward/_base.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -5,15 +5,16 @@
+ from .config import setting_log
+ 
+ setting_log(log_name="openai_forward.log")
+ 
+ 
+ class OpenaiBase:
+     base_url = "https://api.openai.com"
+-    stream_timeout = 1.5
++    stream_timeout = 18
++    non_stream_timeout = 30
+     allow_ips = []
+ 
+     def add_allowed_ip(self, ip: str):
+         if ip == "*":
+             ...
+         else:
+             self.allow_ips.append(ip)
+@@ -22,33 +23,40 @@
+         if ip == "*" or ip in self.allow_ips:
+             return True
+         else:
+             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
+                                 detail=f"Forbidden, please add {ip=} to `allow_ips`")
+ 
+     @staticmethod
+-    def try_get_response(n, url, method, headers, params, payload, stream, timeout):
++    def try_get_response(url, method, headers, params, payload, stream, timeout):
+         if params is None:
+             params = {}
+-        for _ in range(n):
+-            try:
+-                if method == 'post':
+-                    return requests.post(url, headers=headers, params=params, json=payload, stream=stream,
+-                                         timeout=timeout)
+-                elif method == 'get':
+-                    return requests.get(url, params=params, headers=headers, timeout=timeout)
+-                else:
+-                    logger.error(f"method {method} not supported")
+-                    raise NotImplementedError
+-            except:
+-                ...
+-        raise HTTPException(status_code=status.HTTP_408_REQUEST_TIMEOUT, detail="Request Timeout")
++        def _exec(time_out):
++            if method == 'post':
++                return requests.post(url, headers=headers, params=params, json=payload, stream=stream,
++                                     timeout=time_out)
++            elif method == 'get':
++                return requests.get(url, params=params, headers=headers, timeout=time_out)
++            else:
++                logger.error(f"method {method} not supported")
++                raise NotImplementedError
++        if stream:
++            for i, current_timeout in enumerate([1.5, timeout, 2.5, 2.5, 1.5]):
++                try:
++                    logger.debug(f"try {i+1} times, timeout={current_timeout}")
++                    return _exec(time_out=current_timeout)
++                except:
++                    ...
++            raise HTTPException(status_code=status.HTTP_408_REQUEST_TIMEOUT, detail="Request Timeout")
++        else:
++            return _exec(time_out=timeout)
+ 
+     async def forwarding(self, url, request: Request, params=None, data=None, default_openai_auth=None,
+-                         non_stream_timeout=30):
++                         non_stream_timeout=None):
++        non_stream_timeout = non_stream_timeout or self.non_stream_timeout
+         method = request.method.lower()
+         if data is not None:
+             payload_tmp = data.dict()
+             payload = payload_tmp.copy()
+             for key, value in payload_tmp.items():
+                 if value is None:
+                     payload.pop(key)
+@@ -78,15 +86,15 @@
+                 })
+         headers = {
+             "Content-Type": "application/json",
+             "Authorization": auth
+         }
+         logger.debug(f"{payload.get('messages')=}")
+         # logger.debug(f"{headers=}")
+-        response = self.try_get_response(n=3, url=url, method=method,
++        response = self.try_get_response(url=url, method=method,
+                                          params=params,
+                                          headers=headers, payload=payload, stream=stream,
+                                          timeout=timeout)
+         if response.status_code != 200:
+             raise HTTPException(status_code=response.status_code, detail=response.text)
+         if stream:
+             return StreamingResponse(content=response.iter_content(chunk_size=32),
+```
+
+### Comparing `openai_forward-0.0.5/openai_forward/app.py` & `openai_forward-0.0.6/openai_forward/app.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,13 +1,15 @@
+ from .openai import Openai
+ from .routers.openai_v1 import router as router_v1
+ from sparrow.api import create_app
+ from fastapi import Request, APIRouter
+ import pretty_errors
+ 
++Openai.stream_timeout = 18
++Openai.non_stream_timeout = 30
+ openai = Openai()
+ app = create_app(title="openai_forward", version="1.0")
+ app.include_router(router_v1)
+ 
+ 
+ @app.get("/dashboard/billing/credit_grants", tags=['public'])
+ async def credit_grants(request: Request):
+```
+
+### Comparing `openai_forward-0.0.5/openai_forward/config.py` & `openai_forward-0.0.6/openai_forward/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/openai_forward/openai.py` & `openai_forward-0.0.6/openai_forward/openai.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -6,43 +6,41 @@
+ load_dotenv()
+ 
+ 
+ class Openai(OpenaiBase):
+     def __init__(self):
+         self.defualt_auth = os.environ.get("OPENAI_API_KEY", "")
+ 
+-    async def _forward(self, route: str, request: Request, data=None, validate_host=False, non_stream_timeout=30):
++    async def _forward(self, route: str, request: Request, data=None, validate_host=False):
+         url = os.path.join(self.base_url, route)
+         if validate_host:
+             self.validate_request_host(request.client.host)
+         return await self.forwarding(url,
+                                      request,
+                                      data,
+-                                     default_openai_auth=self.defualt_auth,
+-                                     non_stream_timeout=non_stream_timeout)
++                                     default_openai_auth=self.defualt_auth)
+ 
+     async def credit_grants(self, request: Request):
+         url = os.path.join(self.base_url, "dashboard/billing/credit_grants")
+-        return await self.forwarding(url, request=request, non_stream_timeout=3,
++        return await self.forwarding(url, request=request,
+                                      default_openai_auth=self.defualt_auth)
+ 
+     async def billing_usage(self, params: dict, request: Request):
+         url = os.path.join(self.base_url, "dashboard/billing/usage")
+-        return await self.forwarding(url, request=request, params=params, non_stream_timeout=3,
++        return await self.forwarding(url, request=request, params=params, non_stream_timeout=5,
+                                      default_openai_auth=self.defualt_auth)
+ 
+     async def v1_chat_completions(self, data: OpenAIV1ChatCompletion, request: Request, validate_host=False):
+         return await self._forward("v1/chat/completions", request, data, validate_host)
+ 
+     async def v1_list_models(self, request: Request, validate_host=False):
+-        return await self._forward("v1/models", request, data=None, validate_host=validate_host, non_stream_timeout=3)
++        return await self._forward("v1/models", request, data=None, validate_host=validate_host)
+ 
+     async def retrive_model(self, request: Request, model: str, validate_host=False):
+-        return await self._forward(f"v1/models/{model}", request, data=None, validate_host=validate_host,
+-                                   non_stream_timeout=3)
++        return await self._forward(f"v1/models/{model}", request, data=None, validate_host=validate_host)
+ 
+     async def v1_completions(self, data, request: Request, validate_host=False):
+         return await self._forward("v1/completions", request, data=data, validate_host=validate_host)
+ 
+     async def v1_edits(self, data, request: Request, validate_host=False):
+         return await self._forward("v1/edits", request, data=data, validate_host=validate_host)
+```
+
+### Comparing `openai_forward-0.0.5/openai_forward/routers/openai_v1.py` & `openai_forward-0.0.6/openai_forward/routers/openai_v1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/openai_forward/routers/schemas.py` & `openai_forward-0.0.6/openai_forward/routers/schemas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/.gitignore` & `openai_forward-0.0.6/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/LICENSE` & `openai_forward-0.0.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/README.md` & `openai_forward-0.0.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/pyproject.toml` & `openai_forward-0.0.6/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `openai_forward-0.0.5/PKG-INFO` & `openai_forward-0.0.6/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: openai_forward
+-Version: 0.0.5
++Version: 0.0.6
+ Project-URL: Homepage, https://github.com/beidongjiedeguang/openai-forward
+ Project-URL: Documentation, https://github.com/beidongjiedeguang/openai-forward#openai-forwarding-agent
+ Project-URL: Issues, https://github.com/beidongjiedeguang/openai-forward/issues
+ Project-URL: Source, https://github.com/beidongjiedeguang/openai-forward
+ Author-email: kunyuan <beidongjiedeguang@gmail.com>
+ License-File: LICENSE
+ Keywords: chatbot,chatgpt,forward,openai
+```
+

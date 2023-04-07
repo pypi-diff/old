@@ -1,0 +1,87 @@
+# Comparing `tmp/tracksim-0.1.0.tar.gz` & `tmp/tracksim-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "tracksim-0.1.0.tar", max compression
++gzip compressed data, was "tracksim-0.1.1.tar", max compression
+```
+
+## Comparing `tracksim-0.1.0.tar` & `tracksim-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,8 +1,8 @@
+--rw-r--r--   0        0        0     1090 2023-04-06 13:33:02.916614 tracksim-0.1.0/LICENSE
+--rw-r--r--   0        0        0      449 2023-04-07 10:47:10.488544 tracksim-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0      323 2023-04-07 10:36:10.813505 tracksim-0.1.0/README.md
+--rw-r--r--   0        0        0      101 2023-04-07 10:16:42.785558 tracksim-0.1.0/tracksim/__init__.py
+--rw-r--r--   0        0        0      790 2023-04-07 10:15:55.539920 tracksim-0.1.0/tracksim/errors.py
+--rw-r--r--   0        0        0     4953 2023-04-07 10:25:25.781550 tracksim-0.1.0/tracksim/tracksim.py
+--rw-r--r--   0        0        0     3348 2023-04-07 10:33:48.654149 tracksim-0.1.0/tracksim/types.py
+--rw-r--r--   0        0        0      830 1970-01-01 00:00:00.000000 tracksim-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1090 2023-04-06 13:33:02.916614 tracksim-0.1.1/LICENSE
++-rw-r--r--   0        0        0      449 2023-04-07 10:51:47.848653 tracksim-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0      238 2023-04-07 10:49:50.442336 tracksim-0.1.1/README.md
++-rw-r--r--   0        0        0      101 2023-04-07 10:16:42.785558 tracksim-0.1.1/tracksim/__init__.py
++-rw-r--r--   0        0        0      790 2023-04-07 10:15:55.539920 tracksim-0.1.1/tracksim/errors.py
++-rw-r--r--   0        0        0     4953 2023-04-07 10:25:25.781550 tracksim-0.1.1/tracksim/tracksim.py
++-rw-r--r--   0        0        0     3348 2023-04-07 10:33:48.654149 tracksim-0.1.1/tracksim/types.py
++-rw-r--r--   0        0        0      751 1970-01-01 00:00:00.000000 tracksim-0.1.1/PKG-INFO
+```
+
+### Comparing `tracksim-0.1.0/LICENSE` & `tracksim-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `tracksim-0.1.0/tracksim/errors.py` & `tracksim-0.1.1/tracksim/errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tracksim-0.1.0/tracksim/tracksim.py` & `tracksim-0.1.1/tracksim/tracksim.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tracksim-0.1.0/tracksim/types.py` & `tracksim-0.1.1/tracksim/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `tracksim-0.1.0/PKG-INFO` & `tracksim-0.1.1/PKG-INFO`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,29 +1,23 @@
+ Metadata-Version: 2.1
+ Name: tracksim
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: Python Wrapper for the TrackSim API
+ License: MIT
+ Author: ColinShark
+ Author-email: colin@colinshark.de
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Requires-Dist: requests (>=2.28.2,<3.0.0)
+ Description-Content-Type: text/markdown
+ 
+-<center>
+-
+-![TrackSim Logo](https://docs.tracksim.app/img/logo.png)
+-
+-</center>
+-
+ # TrackSim.py
+ ### A Python Wrapper for the [TrackSim] API.
+ 
+ All methods are commented, documentated and adequately typehinted.
+ 
+ ## Installation
+```
+

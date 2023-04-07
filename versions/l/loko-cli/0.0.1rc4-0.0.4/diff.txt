@@ -1,0 +1,460 @@
+--- tmp/loko-cli-0.0.1rc4.tar.gz
++++ tmp/loko-cli-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "loko-cli-0.0.1rc4.tar", last modified: Fri Jan 20 15:31:38 2023, max compression
+│ +gzip compressed data, was "loko-cli-0.0.4.tar", last modified: Fri Apr  7 10:50:57 2023, max compression
+│   --- loko-cli-0.0.1rc4.tar
+├── +++ loko-cli-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,77 +1,77 @@
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       57 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/MANIFEST.in
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      321 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/PKG-INFO
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/__init__.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/apps/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1949 2023-01-20 15:27:06.000000 loko-cli-0.0.1rc4/loko_cli/apps/cl.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     6005 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/loko_project_deploy.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     3109 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/loko_project_planning.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      124 2023-01-19 16:12:55.000000 loko-cli-0.0.1rc4/loko_cli/apps/modify_a_container.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     3082 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/prova_extensions.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      646 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/prova_push.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2799 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/provaceci.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2505 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/provakubedepl.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2358 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/provaorch.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)    10434 2023-01-20 15:27:06.000000 loko-cli-0.0.1rc4/loko_cli/apps/total.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      664 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/apps/volumes.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/business/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/__init__.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/business/deployment/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/__init__.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/business/deployment/appliers/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/appliers/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      178 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/appliers/appliers.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      149 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/appliers/dcapplier2.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     5708 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/appliers/docker_compose_applier.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/business/deployment/cloud/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/cloud/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     5525 2023-01-20 15:27:06.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/cloud/ec2.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     4695 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/docker_compose_planner.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      537 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/planners.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      717 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/provagendc.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/business/docker/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/docker/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)    13032 2023-01-19 13:08:33.000000 loko-cli-0.0.1rc4/loko_cli/business/docker/dockermanager.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1546 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/docker/log_collector.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1047 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/business/docker/utils.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/config/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/config/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/config/app_config.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2081 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/config/app_init.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/dao/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/dao/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      905 2023-01-19 13:08:33.000000 loko-cli-0.0.1rc4/loko_cli/dao/loko.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/examples/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/examples/__init__.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/model/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/model/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     5736 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/model/loko.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1137 2023-01-19 13:08:33.000000 loko-cli-0.0.1rc4/loko_cli/model/microservices.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2781 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/model/plan.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/resources/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/resources/__init__.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/services/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/services/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/services/services.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/test/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/test/__init__.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli/utils/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/utils/__init__.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2011 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/utils/jsonutils.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      586 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/utils/path_utils.py
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2051 2023-01-18 12:14:39.000000 loko-cli-0.0.1rc4/loko_cli/utils/project_utils.py
+│ │ -drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/loko_cli.egg-info/
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      321 2023-01-20 15:31:38.000000 loko-cli-0.0.1rc4/loko_cli.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1862 2023-01-20 15:31:38.000000 loko-cli-0.0.1rc4/loko_cli.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        1 2023-01-20 15:31:38.000000 loko-cli-0.0.1rc4/loko_cli.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       47 2023-01-20 15:31:38.000000 loko-cli-0.0.1rc4/loko_cli.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       89 2023-01-20 15:31:38.000000 loko-cli-0.0.1rc4/loko_cli.egg-info/requires.txt
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        9 2023-01-20 15:31:38.000000 loko-cli-0.0.1rc4/loko_cli.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      289 2023-01-20 15:31:17.000000 loko-cli-0.0.1rc4/ppom.json
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       89 2023-01-18 15:20:46.000000 loko-cli-0.0.1rc4/requirements.txt
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       38 2023-01-20 15:31:38.825392 loko-cli-0.0.1rc4/setup.cfg
+│ │ --rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      826 2023-01-18 12:51:15.000000 loko-cli-0.0.1rc4/setup.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.171879 loko-cli-0.0.4/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       57 2023-01-18 12:14:39.000000 loko-cli-0.0.4/MANIFEST.in
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      318 2023-04-07 10:50:57.171879 loko-cli-0.0.4/PKG-INFO
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.163879 loko-cli-0.0.4/loko_cli/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/__init__.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/apps/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2518 2023-04-07 10:07:23.000000 loko-cli-0.0.4/loko_cli/apps/cl.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     6005 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/loko_project_deploy.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     3109 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/loko_project_planning.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      124 2023-01-19 16:12:55.000000 loko-cli-0.0.4/loko_cli/apps/modify_a_container.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     3082 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/prova_extensions.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      646 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/prova_push.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2799 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/provaceci.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2505 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/provakubedepl.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2358 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/provaorch.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)    16002 2023-04-07 10:04:57.000000 loko-cli-0.0.4/loko_cli/apps/total.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      664 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/apps/volumes.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/business/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/__init__.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/business/deployment/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/__init__.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/business/deployment/appliers/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/appliers/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      178 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/appliers/appliers.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      149 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/appliers/dcapplier2.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     5708 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/appliers/docker_compose_applier.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/business/deployment/cloud/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/cloud/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     5758 2023-04-07 09:57:46.000000 loko-cli-0.0.4/loko_cli/business/deployment/cloud/ec2.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/business/deployment/planners/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/planners/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     4695 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/planners/docker_compose_planner.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      537 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/planners/planners.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      717 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/deployment/planners/provagendc.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/business/docker/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/docker/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)    14375 2023-03-31 07:55:08.000000 loko-cli-0.0.4/loko_cli/business/docker/dockermanager.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1546 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/docker/log_collector.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1047 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/business/docker/utils.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/config/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/config/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/config/app_config.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2081 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/config/app_init.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/dao/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/dao/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      905 2023-01-19 13:08:33.000000 loko-cli-0.0.4/loko_cli/dao/loko.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.167879 loko-cli-0.0.4/loko_cli/examples/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/examples/__init__.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.171879 loko-cli-0.0.4/loko_cli/model/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/model/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     5736 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/model/loko.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1137 2023-01-19 13:08:33.000000 loko-cli-0.0.4/loko_cli/model/microservices.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2781 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/model/plan.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.171879 loko-cli-0.0.4/loko_cli/resources/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/resources/__init__.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.171879 loko-cli-0.0.4/loko_cli/services/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/services/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/services/services.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.171879 loko-cli-0.0.4/loko_cli/test/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/test/__init__.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.171879 loko-cli-0.0.4/loko_cli/utils/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        0 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/utils/__init__.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2011 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/utils/jsonutils.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      586 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/utils/path_utils.py
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     2051 2023-01-18 12:14:39.000000 loko-cli-0.0.4/loko_cli/utils/project_utils.py
+│ │ +drwxrwxr-x   0 cecilia   (1001) cecilia   (1001)        0 2023-04-07 10:50:57.163879 loko-cli-0.0.4/loko_cli.egg-info/
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      318 2023-04-07 10:50:57.000000 loko-cli-0.0.4/loko_cli.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)     1862 2023-04-07 10:50:57.000000 loko-cli-0.0.4/loko_cli.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        1 2023-04-07 10:50:57.000000 loko-cli-0.0.4/loko_cli.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       47 2023-04-07 10:50:57.000000 loko-cli-0.0.4/loko_cli.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       89 2023-04-07 10:50:57.000000 loko-cli-0.0.4/loko_cli.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)        9 2023-04-07 10:50:57.000000 loko-cli-0.0.4/loko_cli.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      285 2023-04-06 13:07:08.000000 loko-cli-0.0.4/ppom.json
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       89 2023-04-04 14:10:53.000000 loko-cli-0.0.4/requirements.txt
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)       38 2023-04-07 10:50:57.171879 loko-cli-0.0.4/setup.cfg
+│ │ +-rw-rw-r--   0 cecilia   (1001) cecilia   (1001)      826 2023-04-04 15:15:00.000000 loko-cli-0.0.4/setup.py
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/cl.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/cl.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -5,50 +5,54 @@
+│ │  
+│ │  import click
+│ │  
+│ │  import loko_cli.apps.total as tt
+│ │  from loguru import logger
+│ │  
+│ │  
+│ │ -@click.group()
+│ │ +@click.group(name="loko", help="version 0.0.4")
+│ │  @click.option('--verbose', default=False, show_default=True, help='Verbose output')
+│ │  def loko(verbose):
+│ │      if not verbose:
+│ │          logger.remove()
+│ │          logger.add(sys.stderr, level='INFO')
+│ │      pass
+│ │  
+│ │  
+│ │  @loko.command()
+│ │  @click.option('--push', default=True, help='Push on registry', show_default=True)
+│ │  @click.option('--company', required=True, type=str, help='Company name or private registry')
+│ │  @click.option('--gateway_port', default=8080, type=int, help='the gateway public port', show_default=True)
+│ │ -def plan(push, company, gateway_port):
+│ │ +@click.option('--https', default=True, type=bool, help='Expose services through https', show_default=True)
+│ │ +def plan(push, company, gateway_port, https):
+│ │      """Prepare the plan for the deployment of the Loko project"""
+│ │      logger.info("Planning")
+│ │ -    asyncio.run(tt.plan(Path(os.getcwd()), push=push, company=company, gateway_port=gateway_port))
+│ │ +    asyncio.run(tt.plan(Path(os.getcwd()), push=push, company=company, gateway_port=gateway_port, https=https))
+│ │  
+│ │  
+│ │  @loko.command()
+│ │  @click.option("--name", required=True, type=str, help="the name of the instance")
+│ │  @click.option("--security_group", default="default", help="the security group associated to the instance",
+│ │                show_default=True, type=str)
+│ │  @click.option("--instance_type", default="t2.micro", help="the instance type", show_default=True, type=str)
+│ │  @click.option("--ami", default="ami-0a691527202ea8b3d", help="the instance ami", show_default=True, type=str)
+│ │ -def ec2(name, security_group, instance_type, ami):
+│ │ +@click.option("--device_volume_size", default=30, help="the instance volume size in GigaBytes", show_default=True, type=int)
+│ │ +@click.option("--pem", default=Path.home() / "loko.pem", help="the aws key path", show_default=True, type=str)
+│ │ +def ec2(name, security_group, instance_type, ami, device_volume_size, pem):
+│ │      """Manage ec2 instances"""
+│ │      p = Path(os.getcwd())
+│ │ -    asyncio.run(tt.init_ec2(p, name, instance_type, ami, security_group))
+│ │ +    asyncio.run(tt.init_ec2(p, name, instance_type, ami, security_group, device_volume_size, pem))
+│ │  
+│ │  
+│ │  @loko.command()
+│ │ -def deploy():
+│ │ +@click.option("--pem", default=Path.home() / "loko.pem", help="the aws key path", show_default=True, type=str)
+│ │ +def deploy(pem):
+│ │      """Deploy the project"""
+│ │      p = Path(os.getcwd())
+│ │ -    asyncio.run(tt.deploy(p))
+│ │ +    asyncio.run(tt.deploy(p, pem))
+│ │  
+│ │  
+│ │  @loko.command()
+│ │  def info():
+│ │      """Get info about the project status"""
+│ │      tt.info()
+│ │  
+│ │ @@ -60,9 +64,9 @@
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │  
+│ │      try:
+│ │          loko()
+│ │      except Exception as inst:
+│ │ -        logger.error(inst)
+│ │ +        logger.exception(inst)
+│ │          sys.exit(1)
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/loko_project_deploy.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/loko_project_deploy.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/loko_project_planning.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/loko_project_planning.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/prova_extensions.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/prova_extensions.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/prova_push.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/prova_push.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/provaceci.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/provaceci.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/provakubedepl.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/provakubedepl.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/provaorch.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/provaorch.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/apps/volumes.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/apps/volumes.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/deployment/appliers/docker_compose_applier.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/deployment/appliers/docker_compose_applier.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/deployment/cloud/ec2.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/deployment/cloud/ec2.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -9,29 +9,32 @@
+│ │  def listify(o):
+│ │      if not isinstance(o, list):
+│ │          return [o]
+│ │      else:
+│ │          return o
+│ │  
+│ │  
+│ │ -blockDeviceMappings = [
+│ │ -    {
+│ │ -        'DeviceName': "/dev/sda1",
+│ │ -        'Ebs': {
+│ │ -            'DeleteOnTermination': True,
+│ │ -            'VolumeSize': 30,
+│ │ -            'VolumeType': 'gp2'
+│ │ -        }
+│ │ -    },
+│ │ -]
+│ │ +def blockDeviceMappings(device_volume_size=30):
+│ │ +    return [
+│ │ +        {
+│ │ +            'DeviceName': '/dev/sda1',
+│ │ +            'Ebs': {
+│ │ +                'DeleteOnTermination': True,
+│ │ +                'VolumeSize': device_volume_size,
+│ │ +                'VolumeType': 'gp2'
+│ │ +            }
+│ │ +        },
+│ │ +    ]
+│ │  
+│ │  
+│ │  class EC2Manager:
+│ │ -    def __init__(self, region_name='eu-central-1', pem=Path.home() / "loko.pem"):
+│ │ +    def __init__(self, region_name='eu-central-1', pem=None):
+│ │          self.ec2 = boto3.resource('ec2', region_name=region_name)
+│ │ +        if isinstance(pem, str):
+│ │ +            pem = Path(pem)
+│ │          self.pem = pem
+│ │  
+│ │      def get(self, id):
+│ │          for inst in self.all():
+│ │              if inst.id == id:
+│ │                  return inst
+│ │          raise Exception("Instance not found")
+│ │ @@ -54,29 +57,32 @@
+│ │  
+│ │      def filter_by_tag(self, **kwargs):
+│ │          Filters = []
+│ │          for k, v in kwargs.items():
+│ │              Filters.append(dict(Name=f"tag:{k}", Values=listify(v)))
+│ │          return self.ec2.instances.filter(Filters=Filters)
+│ │  
+│ │ -    def create(self, name, img, security_group="default", instance_type="t2.micro"):
+│ │ +    def create(self, name, img, security_group="default", instance_type="t2.micro",
+│ │ +               device_volume_size=30):
+│ │ +
+│ │          if security_group == "default":
+│ │              args = dict(ImageId=img,
+│ │                          MinCount=1,
+│ │                          MaxCount=1,
+│ │                          InstanceType=instance_type,
+│ │                          KeyName=self.pem.stem,
+│ │ -                        BlockDeviceMappings=blockDeviceMappings)
+│ │ +                        BlockDeviceMappings=blockDeviceMappings(device_volume_size))
+│ │          else:
+│ │              args = dict(ImageId=img,
+│ │                          MinCount=1,
+│ │                          MaxCount=1,
+│ │                          InstanceType=instance_type,
+│ │                          KeyName=self.pem.stem,
+│ │ -                        BlockDeviceMappings=blockDeviceMappings, SecurityGroupIds=[security_group])
+│ │ +                        BlockDeviceMappings=blockDeviceMappings(device_volume_size),
+│ │ +                        SecurityGroupIds=[security_group])
+│ │  
+│ │          instances = self.ec2.create_instances(**args)
+│ │  
+│ │          instance_id = instances[0].instance_id
+│ │          tag = {
+│ │              'Key': 'Name',
+│ │              'Value': name
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/docker_compose_planner.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/deployment/planners/docker_compose_planner.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/planners.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/deployment/planners/planners.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/deployment/planners/provagendc.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/deployment/planners/provagendc.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/docker/dockermanager.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/docker/dockermanager.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -3,25 +3,60 @@
+│ │  import logging
+│ │  from io import StringIO
+│ │  from pathlib import Path
+│ │  
+│ │  import aiodocker
+│ │  import requests
+│ │  from aiodocker.containers import DockerContainer
+│ │ -from docker.api.build import process_dockerfile
+│ │ +from docker import constants
+│ │  from docker.utils import tar
+│ │  from loguru import logger
+│ │  
+│ │  from loko_cli.business.docker.log_collector import LogCollector
+│ │  from loko_cli.business.docker.utils import search_key
+│ │ +import os
+│ │ +import random
+│ │  
+│ │  GATEWAY = ""
+│ │  DEVELOPMENT = True
+│ │  
+│ │  
+│ │ +def process_dockerfile(dockerfile, path):
+│ │ +    if not dockerfile:
+│ │ +        return (None, None)
+│ │ +
+│ │ +    abs_dockerfile = dockerfile
+│ │ +    if not os.path.isabs(dockerfile):
+│ │ +        abs_dockerfile = os.path.join(path, dockerfile)
+│ │ +        if constants.IS_WINDOWS_PLATFORM and str(path).startswith(
+│ │ +                constants.WINDOWS_LONGPATH_PREFIX):
+│ │ +            abs_dockerfile = '{}{}'.format(
+│ │ +                constants.WINDOWS_LONGPATH_PREFIX,
+│ │ +                os.path.normpath(
+│ │ +                    abs_dockerfile[len(constants.WINDOWS_LONGPATH_PREFIX):]
+│ │ +                )
+│ │ +            )
+│ │ +    if (os.path.splitdrive(path)[0] != os.path.splitdrive(abs_dockerfile)[0] or
+│ │ +            str(os.path.relpath(abs_dockerfile, path)).startswith('..')):
+│ │ +        # Dockerfile not in context - read data to insert into tar later
+│ │ +        with open(abs_dockerfile) as df:
+│ │ +            return (
+│ │ +                f'.dockerfile.{random.getrandbits(160):x}',
+│ │ +                df.read()
+│ │ +            )
+│ │ +
+│ │ +    # Dockerfile is inside the context - return path relative to context root
+│ │ +    if dockerfile == abs_dockerfile:
+│ │ +        # Only calculate relpath if necessary to avoid errors
+│ │ +        # on Windows client -> Linux Docker
+│ │ +        # see https://github.com/docker/compose/issues/5969
+│ │ +        dockerfile = os.path.relpath(abs_dockerfile, path)
+│ │ +    return (dockerfile, None)
+│ │ +
+│ │ +
+│ │  def gateway_route(id, host=None, port=8080):
+│ │      resp = requests.post(GATEWAY + "/rules", json={
+│ │          "name": id,
+│ │          "host": host or id,
+│ │          "port": port,
+│ │          "type": "custom",
+│ │          "scan": False
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/docker/log_collector.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/docker/log_collector.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/business/docker/utils.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/business/docker/utils.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/config/app_init.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/config/app_init.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/dao/loko.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/dao/loko.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/model/loko.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/model/loko.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/model/microservices.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/model/microservices.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/model/plan.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/model/plan.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/utils/jsonutils.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/utils/jsonutils.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/utils/path_utils.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/utils/path_utils.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli/utils/project_utils.py
+│ ├── +++ loko-cli-0.0.4/loko_cli/utils/project_utils.py
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/loko_cli.egg-info/SOURCES.txt
+│ ├── +++ loko-cli-0.0.4/loko_cli.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- loko-cli-0.0.1rc4/setup.py
+│ ├── +++ loko-cli-0.0.4/setup.py
+│ │┄ Files identical despite different names

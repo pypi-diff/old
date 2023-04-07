@@ -1,0 +1,215 @@
+# Comparing `tmp/oarepo-model-builder-ui-2.0.4.tar.gz` & `tmp/oarepo-model-builder-ui-2.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "oarepo-model-builder-ui-2.0.4.tar", last modified: Thu Mar 23 11:52:35 2023, max compression
++gzip compressed data, was "oarepo-model-builder-ui-2.0.5.tar", last modified: Fri Apr  7 10:52:04 2023, max compression
+```
+
+## Comparing `oarepo-model-builder-ui-2.0.4.tar` & `oarepo-model-builder-ui-2.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/
+--rw-r--r--   0 runner    (1001) docker     (123)     2341 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2166 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.726817 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)       37 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/config.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2215 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/i18n.py
+--rw-r--r--   0 runner    (1001) docker     (123)      557 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/i18n_setup_cfg.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2446 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/layout.py
+--rw-r--r--   0 runner    (1001) docker     (123)      609 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/layout_setup_cfg.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/model_preprocessors/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/model_preprocessors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      597 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/model_preprocessors/layout_settings.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/outputs/
+--rw-r--r--   0 runner    (1001) docker     (123)     3070 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/outputs/i18n.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1708 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/outputs/layout.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/validation/
+--rw-r--r--   0 runner    (1001) docker     (123)     1408 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/validation/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2341 2023-03-23 11:52:35.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      899 2023-03-23 11:52:35.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-23 11:52:35.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      736 2023-03-23 11:52:35.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       78 2023-03-23 11:52:35.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       24 2023-03-23 11:52:35.000000 oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      103 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)     1253 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-23 11:52:35.730817 oarepo-model-builder-ui-2.0.4/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)      399 2023-03-23 11:50:22.000000 oarepo-model-builder-ui-2.0.4/tests/test_translation.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/
++-rw-r--r--   0 runner    (1001) docker     (123)     2341 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2166 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/config.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2794 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/i18n.py
++-rw-r--r--   0 runner    (1001) docker     (123)      557 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/i18n_setup_cfg.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2446 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/layout.py
++-rw-r--r--   0 runner    (1001) docker     (123)      609 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/layout_setup_cfg.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/model_preprocessors/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/model_preprocessors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      597 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/model_preprocessors/layout_settings.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/outputs/
++-rw-r--r--   0 runner    (1001) docker     (123)     3070 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/outputs/i18n.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1708 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/outputs/layout.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/validation/
++-rw-r--r--   0 runner    (1001) docker     (123)     1408 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/validation/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2341 2023-04-07 10:52:04.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      899 2023-04-07 10:52:04.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 10:52:04.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      736 2023-04-07 10:52:04.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       78 2023-04-07 10:52:04.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-07 10:52:04.000000 oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      103 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)     1253 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 10:52:04.414441 oarepo-model-builder-ui-2.0.5/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)      399 2023-04-07 10:49:53.000000 oarepo-model-builder-ui-2.0.5/tests/test_translation.py
+```
+
+### Comparing `oarepo-model-builder-ui-2.0.4/PKG-INFO` & `oarepo-model-builder-ui-2.0.5/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: oarepo-model-builder-ui
+-Version: 2.0.4
++Version: 2.0.5
+ Summary: Model builder plugin for oarepo-ui
+ Description-Content-Type: text/markdown
+ Provides-Extra: tests
+ 
+ <!--
+  Copyright (c) 2022 CESNET
+```
+
+### Comparing `oarepo-model-builder-ui-2.0.4/README.md` & `oarepo-model-builder-ui-2.0.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/i18n.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/i18n.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -46,14 +46,30 @@
+                             "/".join(
+                                 x.key
+                                 for x in self.stack
+                                 if x.schema_element_type == "property" and x.key
+                             )
+                             + f".{ui}"
+                         )
++
++            # add translation for enums
++            enum_keys = self.stack.top.data.get("enum", [])
++            for en in enum_keys:
++                if key_proto:
++                    ui_items[en]["key"] = f"{key_proto}.enum.{en}"
++                else:
++                    ui_items[en]["key"] = (
++                        "/".join(
++                            x.key
++                            for x in self.stack
++                            if x.schema_element_type == "property" and x.key
++                        )
++                        + f".enum.{en}"
++                    )
++
+             for ui, langs in ui_items.items():
+                 key = langs.pop("key")
+                 for lang, val in langs.items():
+                     self.output.add(key, val, language=lang)
+                 self.output.add(key)
+ 
+         self.build_children()
+```
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/i18n_setup_cfg.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/i18n_setup_cfg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/layout.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/layout.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/invenio/layout_setup_cfg.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/invenio/layout_setup_cfg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/model_preprocessors/layout_settings.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/model_preprocessors/layout_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/outputs/i18n.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/outputs/i18n.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/outputs/layout.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/outputs/layout.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui/validation/__init__.py` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui/validation/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/PKG-INFO` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: oarepo-model-builder-ui
+-Version: 2.0.4
++Version: 2.0.5
+ Summary: Model builder plugin for oarepo-ui
+ Description-Content-Type: text/markdown
+ Provides-Extra: tests
+ 
+ <!--
+  Copyright (c) 2022 CESNET
+```
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/SOURCES.txt` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/oarepo_model_builder_ui.egg-info/entry_points.txt` & `oarepo-model-builder-ui-2.0.5/oarepo_model_builder_ui.egg-info/entry_points.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `oarepo-model-builder-ui-2.0.4/setup.cfg` & `oarepo-model-builder-ui-2.0.5/setup.cfg`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = oarepo-model-builder-ui
+-version = 2.0.4
++version = 2.0.5
+ description = Model builder plugin for oarepo-ui
+ authors = 
+ readme = README.md
+ long_description = file:README.md
+ long_description_content_type = text/markdown
+ 
+ [options]
+```
+

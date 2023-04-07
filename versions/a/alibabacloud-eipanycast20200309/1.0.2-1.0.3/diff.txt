@@ -1,0 +1,547 @@
+--- tmp/alibabacloud_eipanycast20200309-1.0.2.tar.gz
++++ tmp/alibabacloud_eipanycast20200309-1.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/alibabacloud_eipanycast20200309-1.0.2.tar", last modified: Tue Aug  9 08:53:48 2022, max compression
+│ +gzip compressed data, was "dist/alibabacloud_eipanycast20200309-1.0.3.tar", last modified: Fri Apr  7 10:54:53 2023, max compression
+│   --- alibabacloud_eipanycast20200309-1.0.2.tar
+├── +++ alibabacloud_eipanycast20200309-1.0.3.tar
+│ ├── file list
+│ │ @@ -1,19 +1,19 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-09 08:53:48.000000 alibabacloud_eipanycast20200309-1.0.2/
+│ │ --rw-r--r--   0 root         (0) root         (0)      146 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/ChangeLog.md
+│ │ --rw-r--r--   0 root         (0) root         (0)      600 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/LICENSE
+│ │ --rw-r--r--   0 root         (0) root         (0)       29 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/MANIFEST.in
+│ │ --rw-r--r--   0 root         (0) root         (0)     2370 2022-08-09 08:53:48.000000 alibabacloud_eipanycast20200309-1.0.2/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     1043 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/README-CN.md
+│ │ --rw-r--r--   0 root         (0) root         (0)     1128 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-09 08:53:48.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309/
+│ │ --rw-r--r--   0 root         (0) root         (0)       21 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    42986 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309/client.py
+│ │ --rw-r--r--   0 root         (0) root         (0)    65431 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309/models.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2022-08-09 08:53:48.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)     2370 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)      476 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)      156 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       32 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       73 2022-08-09 08:53:48.000000 alibabacloud_eipanycast20200309-1.0.2/setup.cfg
+│ │ --rw-r--r--   0 root         (0) root         (0)     2645 2022-08-09 08:53:47.000000 alibabacloud_eipanycast20200309-1.0.2/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      184 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/ChangeLog.md
+│ │ +-rw-r--r--   0 root         (0) root         (0)      600 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/LICENSE
+│ │ +-rw-r--r--   0 root         (0) root         (0)       29 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/MANIFEST.in
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2370 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1043 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/README-CN.md
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1128 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309/
+│ │ +-rw-r--r--   0 root         (0) root         (0)       21 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    43168 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309/client.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    69528 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309/models.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2370 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)      476 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)      156 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       32 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       73 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/setup.cfg
+│ │ +-rw-r--r--   0 root         (0) root         (0)     2645 2023-04-07 10:54:53.000000 alibabacloud_eipanycast20200309-1.0.3/setup.py
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/LICENSE
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/PKG-INFO
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: alibabacloud_eipanycast20200309
+│ │ -Version: 1.0.2
+│ │ +Version: 1.0.3
+│ │  Summary: Alibaba Cloud Eipanycast (20200309) SDK Library for Python
+│ │  Home-page: https://github.com/aliyun/alibabacloud-python-sdk
+│ │  Author: Alibaba Cloud SDK
+│ │  Author-email: sdk-team@alibabacloud.com
+│ │  License: Apache License 2.0
+│ │  Description: English | [简体中文](README-CN.md)
+│ │          ![](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/README-CN.md
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/README-CN.md
+│ │┄ Files identical despite different names
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/README.md
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309/client.py
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309/client.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -482,14 +482,16 @@
+│ │              query['Name'] = request.name
+│ │          if not UtilClient.is_unset(request.next_token):
+│ │              query['NextToken'] = request.next_token
+│ │          if not UtilClient.is_unset(request.service_location):
+│ │              query['ServiceLocation'] = request.service_location
+│ │          if not UtilClient.is_unset(request.status):
+│ │              query['Status'] = request.status
+│ │ +        if not UtilClient.is_unset(request.tags):
+│ │ +            query['Tags'] = request.tags
+│ │          req = open_api_models.OpenApiRequest(
+│ │              query=OpenApiUtilClient.query(query)
+│ │          )
+│ │          params = open_api_models.Params(
+│ │              action='ListAnycastEipAddresses',
+│ │              version='2020-03-09',
+│ │              protocol='HTTPS',
+│ │ @@ -532,14 +534,16 @@
+│ │              query['Name'] = request.name
+│ │          if not UtilClient.is_unset(request.next_token):
+│ │              query['NextToken'] = request.next_token
+│ │          if not UtilClient.is_unset(request.service_location):
+│ │              query['ServiceLocation'] = request.service_location
+│ │          if not UtilClient.is_unset(request.status):
+│ │              query['Status'] = request.status
+│ │ +        if not UtilClient.is_unset(request.tags):
+│ │ +            query['Tags'] = request.tags
+│ │          req = open_api_models.OpenApiRequest(
+│ │              query=OpenApiUtilClient.query(query)
+│ │          )
+│ │          params = open_api_models.Params(
+│ │              action='ListAnycastEipAddresses',
+│ │              version='2020-03-09',
+│ │              protocol='HTTPS',
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309/models.py
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309/models.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -470,14 +470,47 @@
+│ │          if m.get('PrivateIpAddress') is not None:
+│ │              self.private_ip_address = m.get('PrivateIpAddress')
+│ │          if m.get('Status') is not None:
+│ │              self.status = m.get('Status')
+│ │          return self
+│ │  
+│ │  
+│ │ +class DescribeAnycastEipAddressResponseBodyTags(TeaModel):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        key: str = None,
+│ │ +        value: str = None,
+│ │ +    ):
+│ │ +        self.key = key
+│ │ +        self.value = value
+│ │ +
+│ │ +    def validate(self):
+│ │ +        pass
+│ │ +
+│ │ +    def to_map(self):
+│ │ +        _map = super().to_map()
+│ │ +        if _map is not None:
+│ │ +            return _map
+│ │ +
+│ │ +        result = dict()
+│ │ +        if self.key is not None:
+│ │ +            result['Key'] = self.key
+│ │ +        if self.value is not None:
+│ │ +            result['Value'] = self.value
+│ │ +        return result
+│ │ +
+│ │ +    def from_map(self, m: dict = None):
+│ │ +        m = m or dict()
+│ │ +        if m.get('Key') is not None:
+│ │ +            self.key = m.get('Key')
+│ │ +        if m.get('Value') is not None:
+│ │ +            self.value = m.get('Value')
+│ │ +        return self
+│ │ +
+│ │ +
+│ │  class DescribeAnycastEipAddressResponseBody(TeaModel):
+│ │      def __init__(
+│ │          self,
+│ │          ali_uid: int = None,
+│ │          anycast_eip_bind_info_list: List[DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoList] = None,
+│ │          anycast_id: str = None,
+│ │          bandwidth: int = None,
+│ │ @@ -488,14 +521,15 @@
+│ │          instance_charge_type: str = None,
+│ │          internet_charge_type: str = None,
+│ │          ip_address: str = None,
+│ │          name: str = None,
+│ │          request_id: str = None,
+│ │          service_location: str = None,
+│ │          status: str = None,
+│ │ +        tags: List[DescribeAnycastEipAddressResponseBodyTags] = None,
+│ │      ):
+│ │          self.ali_uid = ali_uid
+│ │          self.anycast_eip_bind_info_list = anycast_eip_bind_info_list
+│ │          self.anycast_id = anycast_id
+│ │          self.bandwidth = bandwidth
+│ │          self.bid = bid
+│ │          self.business_status = business_status
+│ │ @@ -504,20 +538,25 @@
+│ │          self.instance_charge_type = instance_charge_type
+│ │          self.internet_charge_type = internet_charge_type
+│ │          self.ip_address = ip_address
+│ │          self.name = name
+│ │          self.request_id = request_id
+│ │          self.service_location = service_location
+│ │          self.status = status
+│ │ +        self.tags = tags
+│ │  
+│ │      def validate(self):
+│ │          if self.anycast_eip_bind_info_list:
+│ │              for k in self.anycast_eip_bind_info_list:
+│ │                  if k:
+│ │                      k.validate()
+│ │ +        if self.tags:
+│ │ +            for k in self.tags:
+│ │ +                if k:
+│ │ +                    k.validate()
+│ │  
+│ │      def to_map(self):
+│ │          _map = super().to_map()
+│ │          if _map is not None:
+│ │              return _map
+│ │  
+│ │          result = dict()
+│ │ @@ -549,14 +588,18 @@
+│ │              result['Name'] = self.name
+│ │          if self.request_id is not None:
+│ │              result['RequestId'] = self.request_id
+│ │          if self.service_location is not None:
+│ │              result['ServiceLocation'] = self.service_location
+│ │          if self.status is not None:
+│ │              result['Status'] = self.status
+│ │ +        result['Tags'] = []
+│ │ +        if self.tags is not None:
+│ │ +            for k in self.tags:
+│ │ +                result['Tags'].append(k.to_map() if k else None)
+│ │          return result
+│ │  
+│ │      def from_map(self, m: dict = None):
+│ │          m = m or dict()
+│ │          if m.get('AliUid') is not None:
+│ │              self.ali_uid = m.get('AliUid')
+│ │          self.anycast_eip_bind_info_list = []
+│ │ @@ -586,14 +629,19 @@
+│ │              self.name = m.get('Name')
+│ │          if m.get('RequestId') is not None:
+│ │              self.request_id = m.get('RequestId')
+│ │          if m.get('ServiceLocation') is not None:
+│ │              self.service_location = m.get('ServiceLocation')
+│ │          if m.get('Status') is not None:
+│ │              self.status = m.get('Status')
+│ │ +        self.tags = []
+│ │ +        if m.get('Tags') is not None:
+│ │ +            for k in m.get('Tags'):
+│ │ +                temp_model = DescribeAnycastEipAddressResponseBodyTags()
+│ │ +                self.tags.append(temp_model.from_map(k))
+│ │          return self
+│ │  
+│ │  
+│ │  class DescribeAnycastEipAddressResponse(TeaModel):
+│ │      def __init__(
+│ │          self,
+│ │          headers: Dict[str, str] = None,
+│ │ @@ -935,14 +983,47 @@
+│ │              self.status_code = m.get('statusCode')
+│ │          if m.get('body') is not None:
+│ │              temp_model = DescribeAnycastServerRegionsResponseBody()
+│ │              self.body = temp_model.from_map(m['body'])
+│ │          return self
+│ │  
+│ │  
+│ │ +class ListAnycastEipAddressesRequestTags(TeaModel):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        key: str = None,
+│ │ +        value: str = None,
+│ │ +    ):
+│ │ +        self.key = key
+│ │ +        self.value = value
+│ │ +
+│ │ +    def validate(self):
+│ │ +        pass
+│ │ +
+│ │ +    def to_map(self):
+│ │ +        _map = super().to_map()
+│ │ +        if _map is not None:
+│ │ +            return _map
+│ │ +
+│ │ +        result = dict()
+│ │ +        if self.key is not None:
+│ │ +            result['Key'] = self.key
+│ │ +        if self.value is not None:
+│ │ +            result['Value'] = self.value
+│ │ +        return result
+│ │ +
+│ │ +    def from_map(self, m: dict = None):
+│ │ +        m = m or dict()
+│ │ +        if m.get('Key') is not None:
+│ │ +            self.key = m.get('Key')
+│ │ +        if m.get('Value') is not None:
+│ │ +            self.value = m.get('Value')
+│ │ +        return self
+│ │ +
+│ │ +
+│ │  class ListAnycastEipAddressesRequest(TeaModel):
+│ │      def __init__(
+│ │          self,
+│ │          anycast_eip_address: str = None,
+│ │          anycast_id: str = None,
+│ │          anycast_ids: List[str] = None,
+│ │          bind_instance_ids: List[str] = None,
+│ │ @@ -950,30 +1031,35 @@
+│ │          instance_charge_type: str = None,
+│ │          internet_charge_type: str = None,
+│ │          max_results: int = None,
+│ │          name: str = None,
+│ │          next_token: str = None,
+│ │          service_location: str = None,
+│ │          status: str = None,
+│ │ +        tags: List[ListAnycastEipAddressesRequestTags] = None,
+│ │      ):
+│ │          self.anycast_eip_address = anycast_eip_address
+│ │          self.anycast_id = anycast_id
+│ │          self.anycast_ids = anycast_ids
+│ │          self.bind_instance_ids = bind_instance_ids
+│ │          self.business_status = business_status
+│ │          self.instance_charge_type = instance_charge_type
+│ │          self.internet_charge_type = internet_charge_type
+│ │          self.max_results = max_results
+│ │          self.name = name
+│ │          self.next_token = next_token
+│ │          self.service_location = service_location
+│ │          self.status = status
+│ │ +        self.tags = tags
+│ │  
+│ │      def validate(self):
+│ │ -        pass
+│ │ +        if self.tags:
+│ │ +            for k in self.tags:
+│ │ +                if k:
+│ │ +                    k.validate()
+│ │  
+│ │      def to_map(self):
+│ │          _map = super().to_map()
+│ │          if _map is not None:
+│ │              return _map
+│ │  
+│ │          result = dict()
+│ │ @@ -997,14 +1083,18 @@
+│ │              result['Name'] = self.name
+│ │          if self.next_token is not None:
+│ │              result['NextToken'] = self.next_token
+│ │          if self.service_location is not None:
+│ │              result['ServiceLocation'] = self.service_location
+│ │          if self.status is not None:
+│ │              result['Status'] = self.status
+│ │ +        result['Tags'] = []
+│ │ +        if self.tags is not None:
+│ │ +            for k in self.tags:
+│ │ +                result['Tags'].append(k.to_map() if k else None)
+│ │          return result
+│ │  
+│ │      def from_map(self, m: dict = None):
+│ │          m = m or dict()
+│ │          if m.get('AnycastEipAddress') is not None:
+│ │              self.anycast_eip_address = m.get('AnycastEipAddress')
+│ │          if m.get('AnycastId') is not None:
+│ │ @@ -1025,14 +1115,19 @@
+│ │              self.name = m.get('Name')
+│ │          if m.get('NextToken') is not None:
+│ │              self.next_token = m.get('NextToken')
+│ │          if m.get('ServiceLocation') is not None:
+│ │              self.service_location = m.get('ServiceLocation')
+│ │          if m.get('Status') is not None:
+│ │              self.status = m.get('Status')
+│ │ +        self.tags = []
+│ │ +        if m.get('Tags') is not None:
+│ │ +            for k in m.get('Tags'):
+│ │ +                temp_model = ListAnycastEipAddressesRequestTags()
+│ │ +                self.tags.append(temp_model.from_map(k))
+│ │          return self
+│ │  
+│ │  
+│ │  class ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList(TeaModel):
+│ │      def __init__(
+│ │          self,
+│ │          bind_instance_id: str = None,
+│ │ @@ -1073,14 +1168,47 @@
+│ │          if m.get('BindInstanceType') is not None:
+│ │              self.bind_instance_type = m.get('BindInstanceType')
+│ │          if m.get('BindTime') is not None:
+│ │              self.bind_time = m.get('BindTime')
+│ │          return self
+│ │  
+│ │  
+│ │ +class ListAnycastEipAddressesResponseBodyAnycastListTags(TeaModel):
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        key: str = None,
+│ │ +        value: str = None,
+│ │ +    ):
+│ │ +        self.key = key
+│ │ +        self.value = value
+│ │ +
+│ │ +    def validate(self):
+│ │ +        pass
+│ │ +
+│ │ +    def to_map(self):
+│ │ +        _map = super().to_map()
+│ │ +        if _map is not None:
+│ │ +            return _map
+│ │ +
+│ │ +        result = dict()
+│ │ +        if self.key is not None:
+│ │ +            result['Key'] = self.key
+│ │ +        if self.value is not None:
+│ │ +            result['Value'] = self.value
+│ │ +        return result
+│ │ +
+│ │ +    def from_map(self, m: dict = None):
+│ │ +        m = m or dict()
+│ │ +        if m.get('Key') is not None:
+│ │ +            self.key = m.get('Key')
+│ │ +        if m.get('Value') is not None:
+│ │ +            self.value = m.get('Value')
+│ │ +        return self
+│ │ +
+│ │ +
+│ │  class ListAnycastEipAddressesResponseBodyAnycastList(TeaModel):
+│ │      def __init__(
+│ │          self,
+│ │          ali_uid: int = None,
+│ │          anycast_eip_bind_info_list: List[ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList] = None,
+│ │          anycast_id: str = None,
+│ │          bandwidth: int = None,
+│ │ @@ -1090,14 +1218,15 @@
+│ │          instance_charge_type: str = None,
+│ │          internet_charge_type: str = None,
+│ │          ip_address: str = None,
+│ │          name: str = None,
+│ │          service_location: str = None,
+│ │          service_managed: int = None,
+│ │          status: str = None,
+│ │ +        tags: List[ListAnycastEipAddressesResponseBodyAnycastListTags] = None,
+│ │      ):
+│ │          self.ali_uid = ali_uid
+│ │          self.anycast_eip_bind_info_list = anycast_eip_bind_info_list
+│ │          self.anycast_id = anycast_id
+│ │          self.bandwidth = bandwidth
+│ │          self.business_status = business_status
+│ │          self.create_time = create_time
+│ │ @@ -1105,20 +1234,25 @@
+│ │          self.instance_charge_type = instance_charge_type
+│ │          self.internet_charge_type = internet_charge_type
+│ │          self.ip_address = ip_address
+│ │          self.name = name
+│ │          self.service_location = service_location
+│ │          self.service_managed = service_managed
+│ │          self.status = status
+│ │ +        self.tags = tags
+│ │  
+│ │      def validate(self):
+│ │          if self.anycast_eip_bind_info_list:
+│ │              for k in self.anycast_eip_bind_info_list:
+│ │                  if k:
+│ │                      k.validate()
+│ │ +        if self.tags:
+│ │ +            for k in self.tags:
+│ │ +                if k:
+│ │ +                    k.validate()
+│ │  
+│ │      def to_map(self):
+│ │          _map = super().to_map()
+│ │          if _map is not None:
+│ │              return _map
+│ │  
+│ │          result = dict()
+│ │ @@ -1148,14 +1282,18 @@
+│ │              result['Name'] = self.name
+│ │          if self.service_location is not None:
+│ │              result['ServiceLocation'] = self.service_location
+│ │          if self.service_managed is not None:
+│ │              result['ServiceManaged'] = self.service_managed
+│ │          if self.status is not None:
+│ │              result['Status'] = self.status
+│ │ +        result['Tags'] = []
+│ │ +        if self.tags is not None:
+│ │ +            for k in self.tags:
+│ │ +                result['Tags'].append(k.to_map() if k else None)
+│ │          return result
+│ │  
+│ │      def from_map(self, m: dict = None):
+│ │          m = m or dict()
+│ │          if m.get('AliUid') is not None:
+│ │              self.ali_uid = m.get('AliUid')
+│ │          self.anycast_eip_bind_info_list = []
+│ │ @@ -1183,14 +1321,19 @@
+│ │              self.name = m.get('Name')
+│ │          if m.get('ServiceLocation') is not None:
+│ │              self.service_location = m.get('ServiceLocation')
+│ │          if m.get('ServiceManaged') is not None:
+│ │              self.service_managed = m.get('ServiceManaged')
+│ │          if m.get('Status') is not None:
+│ │              self.status = m.get('Status')
+│ │ +        self.tags = []
+│ │ +        if m.get('Tags') is not None:
+│ │ +            for k in m.get('Tags'):
+│ │ +                temp_model = ListAnycastEipAddressesResponseBodyAnycastListTags()
+│ │ +                self.tags.append(temp_model.from_map(k))
+│ │          return self
+│ │  
+│ │  
+│ │  class ListAnycastEipAddressesResponseBody(TeaModel):
+│ │      def __init__(
+│ │          self,
+│ │          anycast_list: List[ListAnycastEipAddressesResponseBodyAnycastList] = None,
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/alibabacloud_eipanycast20200309.egg-info/PKG-INFO
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/alibabacloud_eipanycast20200309.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: alibabacloud-eipanycast20200309
+│ │ -Version: 1.0.2
+│ │ +Version: 1.0.3
+│ │  Summary: Alibaba Cloud Eipanycast (20200309) SDK Library for Python
+│ │  Home-page: https://github.com/aliyun/alibabacloud-python-sdk
+│ │  Author: Alibaba Cloud SDK
+│ │  Author-email: sdk-team@alibabacloud.com
+│ │  License: Apache License 2.0
+│ │  Description: English | [简体中文](README-CN.md)
+│ │          ![](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
+│ │   --- alibabacloud_eipanycast20200309-1.0.2/setup.py
+│ ├── +++ alibabacloud_eipanycast20200309-1.0.3/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -20,30 +20,30 @@
+│ │  
+│ │  import os
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  """
+│ │  setup module for alibabacloud_eipanycast20200309.
+│ │  
+│ │ -Created on 09/08/2022
+│ │ +Created on 07/04/2023
+│ │  
+│ │  @author: Alibaba Cloud SDK
+│ │  """
+│ │  
+│ │  PACKAGE = "alibabacloud_eipanycast20200309"
+│ │  NAME = "alibabacloud_eipanycast20200309" or "alibabacloud-package"
+│ │  DESCRIPTION = "Alibaba Cloud Eipanycast (20200309) SDK Library for Python"
+│ │  AUTHOR = "Alibaba Cloud SDK"
+│ │  AUTHOR_EMAIL = "sdk-team@alibabacloud.com"
+│ │  URL = "https://github.com/aliyun/alibabacloud-python-sdk"
+│ │  VERSION = __import__(PACKAGE).__version__
+│ │  REQUIRES = [
+│ │ -    "alibabacloud_tea_util>=0.3.6, <1.0.0",
+│ │ -    "alibabacloud_tea_openapi>=0.3.3, <1.0.0",
+│ │ -    "alibabacloud_openapi_util>=0.1.6, <1.0.0",
+│ │ +    "alibabacloud_tea_util>=0.3.8, <1.0.0",
+│ │ +    "alibabacloud_tea_openapi>=0.3.6, <1.0.0",
+│ │ +    "alibabacloud_openapi_util>=0.2.1, <1.0.0",
+│ │      "alibabacloud_endpoint_util>=0.0.3, <1.0.0"
+│ │  ]
+│ │  
+│ │  LONG_DESCRIPTION = ''
+│ │  if os.path.exists('./README.md'):
+│ │      with open("README.md", encoding='utf-8') as fp:
+│ │          LONG_DESCRIPTION = fp.read()

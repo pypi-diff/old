@@ -1,0 +1,704 @@
+# Comparing `tmp/aliyun-python-sdk-eipanycast-1.0.2.tar.gz` & `tmp/aliyun-python-sdk-eipanycast-1.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/aliyun-python-sdk-eipanycast-1.0.2.tar", last modified: Thu Feb 24 03:54:53 2022, max compression
++gzip compressed data, was "dist/aliyun-python-sdk-eipanycast-1.0.3.tar", last modified: Fri Apr  7 10:49:28 2023, max compression
+```
+
+## Comparing `aliyun-python-sdk-eipanycast-1.0.2.tar` & `aliyun-python-sdk-eipanycast-1.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/
+--rw-r--r--   0 root         (0) root         (0)      575 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/LICENSE
+--rw-r--r--   0 root         (0) root         (0)       40 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/MANIFEST.in
+--rw-r--r--   0 root         (0) root         (0)     1572 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      541 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/README.rst
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/
+--rw-r--r--   0 root         (0) root         (0)     1572 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)     1301 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)       31 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       20 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/top_level.txt
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/
+--rw-r--r--   0 root         (0) root         (0)       21 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/__init__.py
+--rw-r--r--   0 root         (0) root         (0)     1088 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/endpoint.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/
+--rw-r--r--   0 root         (0) root         (0)        0 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/__init__.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/
+--rw-r--r--   0 root         (0) root         (0)     2609 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/AllocateAnycastEipAddressRequest.py
+--rw-r--r--   0 root         (0) root         (0)     3033 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/AssociateAnycastEipAddressRequest.py
+--rw-r--r--   0 root         (0) root         (0)     1795 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/DescribeAnycastEipAddressRequest.py
+--rw-r--r--   0 root         (0) root         (0)     1515 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/DescribeAnycastPopLocationsRequest.py
+--rw-r--r--   0 root         (0) root         (0)     1517 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/DescribeAnycastServerRegionsRequest.py
+--rw-r--r--   0 root         (0) root         (0)     3475 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ListAnycastEipAddressesRequest.py
+--rw-r--r--   0 root         (0) root         (0)     1803 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressAttributeRequest.py
+--rw-r--r--   0 root         (0) root         (0)     1645 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressSpecRequest.py
+--rw-r--r--   0 root         (0) root         (0)     1651 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ReleaseAnycastEipAddressRequest.py
+--rw-r--r--   0 root         (0) root         (0)     2651 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/UnassociateAnycastEipAddressRequest.py
+--rw-r--r--   0 root         (0) root         (0)     2677 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/UpdateAnycastEipAddressAssociationsRequest.py
+--rw-r--r--   0 root         (0) root         (0)        0 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/__init__.py
+--rw-r--r--   0 root         (0) root         (0)      102 2022-02-24 03:54:53.000000 aliyun-python-sdk-eipanycast-1.0.2/setup.cfg
+--rw-r--r--   0 root         (0) root         (0)     2487 2022-02-24 03:54:52.000000 aliyun-python-sdk-eipanycast-1.0.2/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/
++-rw-r--r--   0 root         (0) root         (0)      575 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/LICENSE
++-rw-r--r--   0 root         (0) root         (0)       40 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/MANIFEST.in
++-rw-r--r--   0 root         (0) root         (0)     1572 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)      541 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/README.rst
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/
++-rw-r--r--   0 root         (0) root         (0)     1572 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)     1301 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       31 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       20 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/top_level.txt
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/
++-rw-r--r--   0 root         (0) root         (0)       21 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     1088 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/endpoint.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/
++-rw-r--r--   0 root         (0) root         (0)     2746 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/AllocateAnycastEipAddressRequest.py
++-rw-r--r--   0 root         (0) root         (0)     3355 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/AssociateAnycastEipAddressRequest.py
++-rw-r--r--   0 root         (0) root         (0)     1856 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/DescribeAnycastEipAddressRequest.py
++-rw-r--r--   0 root         (0) root         (0)     1538 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/DescribeAnycastPopLocationsRequest.py
++-rw-r--r--   0 root         (0) root         (0)     1540 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/DescribeAnycastServerRegionsRequest.py
++-rw-r--r--   0 root         (0) root         (0)     4346 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/ListAnycastEipAddressesRequest.py
++-rw-r--r--   0 root         (0) root         (0)     1864 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressAttributeRequest.py
++-rw-r--r--   0 root         (0) root         (0)     1687 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressSpecRequest.py
++-rw-r--r--   0 root         (0) root         (0)     1693 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/ReleaseAnycastEipAddressRequest.py
++-rw-r--r--   0 root         (0) root         (0)     2788 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/UnassociateAnycastEipAddressRequest.py
++-rw-r--r--   0 root         (0) root         (0)     3106 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/UpdateAnycastEipAddressAssociationsRequest.py
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      102 2023-04-07 10:49:28.000000 aliyun-python-sdk-eipanycast-1.0.3/setup.cfg
++-rw-r--r--   0 root         (0) root         (0)     2487 2023-04-07 10:49:27.000000 aliyun-python-sdk-eipanycast-1.0.3/setup.py
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/LICENSE` & `aliyun-python-sdk-eipanycast-1.0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/PKG-INFO` & `aliyun-python-sdk-eipanycast-1.0.3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: aliyun-python-sdk-eipanycast
+-Version: 1.0.2
++Version: 1.0.3
+ Summary: The eipanycast module of Aliyun Python sdk.
+ Home-page: http://develop.aliyun.com/sdk/python
+ Author: Aliyun
+ Author-email: aliyun-developers-efficiency@list.alibaba-inc.com
+ License: Apache
+ Description: =============================================================
+         aliyun-python-sdk-eipanycast
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/README.rst` & `aliyun-python-sdk-eipanycast-1.0.3/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/PKG-INFO` & `aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: aliyun-python-sdk-eipanycast
+-Version: 1.0.2
++Version: 1.0.3
+ Summary: The eipanycast module of Aliyun Python sdk.
+ Home-page: http://develop.aliyun.com/sdk/python
+ Author: Aliyun
+ Author-email: aliyun-developers-efficiency@list.alibaba-inc.com
+ License: Apache
+ Description: =============================================================
+         aliyun-python-sdk-eipanycast
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyun_python_sdk_eipanycast.egg-info/SOURCES.txt` & `aliyun-python-sdk-eipanycast-1.0.3/aliyun_python_sdk_eipanycast.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/endpoint.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/endpoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/AllocateAnycastEipAddressRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/UpdateAnycastEipAddressAssociationsRequest.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -16,59 +16,57 @@
+ # KIND, either express or implied.  See the License for the
+ # specific language governing permissions and limitations
+ # under the License.
+ 
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+-class AllocateAnycastEipAddressRequest(RpcRequest):
++class UpdateAnycastEipAddressAssociationsRequest(RpcRequest):
+ 
+ 	def __init__(self):
+-		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'AllocateAnycastEipAddress','eipanycast')
+-		self.set_method('POST')
++		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'UpdateAnycastEipAddressAssociations','eipanycast')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
++	def get_DryRun(self): # Boolean
++		return self.get_query_params().get('DryRun')
+ 
+-	def get_Bandwidth(self):
+-		return self.get_query_params().get('Bandwidth')
+-
+-	def set_Bandwidth(self,Bandwidth):
+-		self.add_query_param('Bandwidth',Bandwidth)
+-
+-	def get_ServiceLocation(self):
+-		return self.get_query_params().get('ServiceLocation')
+-
+-	def set_ServiceLocation(self,ServiceLocation):
+-		self.add_query_param('ServiceLocation',ServiceLocation)
+-
+-	def get_ClientToken(self):
++	def set_DryRun(self, DryRun):  # Boolean
++		self.add_query_param('DryRun', DryRun)
++	def get_AssociationMode(self): # String
++		return self.get_query_params().get('AssociationMode')
++
++	def set_AssociationMode(self, AssociationMode):  # String
++		self.add_query_param('AssociationMode', AssociationMode)
++	def get_ClientToken(self): # String
+ 		return self.get_query_params().get('ClientToken')
+ 
+-	def set_ClientToken(self,ClientToken):
+-		self.add_query_param('ClientToken',ClientToken)
+-
+-	def get_Description(self):
+-		return self.get_query_params().get('Description')
+-
+-	def set_Description(self,Description):
+-		self.add_query_param('Description',Description)
+-
+-	def get_InternetChargeType(self):
+-		return self.get_query_params().get('InternetChargeType')
+-
+-	def set_InternetChargeType(self,InternetChargeType):
+-		self.add_query_param('InternetChargeType',InternetChargeType)
+-
+-	def get_Name(self):
+-		return self.get_query_params().get('Name')
+-
+-	def set_Name(self,Name):
+-		self.add_query_param('Name',Name)
+-
+-	def get_InstanceChargeType(self):
+-		return self.get_query_params().get('InstanceChargeType')
++	def set_ClientToken(self, ClientToken):  # String
++		self.add_query_param('ClientToken', ClientToken)
++	def get_PopLocationDeleteList(self): # Array
++		return self.get_query_params().get('PopLocationDeleteList')
++
++	def set_PopLocationDeleteList(self, PopLocationDeleteList):  # Array
++		for index1, value1 in enumerate(PopLocationDeleteList):
++			if value1.get('PopLocation') is not None:
++				self.add_query_param('PopLocationDeleteList.' + str(index1 + 1) + '.PopLocation', value1.get('PopLocation'))
++	def get_AnycastId(self): # String
++		return self.get_query_params().get('AnycastId')
++
++	def set_AnycastId(self, AnycastId):  # String
++		self.add_query_param('AnycastId', AnycastId)
++	def get_PopLocationAddList(self): # Array
++		return self.get_query_params().get('PopLocationAddList')
++
++	def set_PopLocationAddList(self, PopLocationAddList):  # Array
++		for index1, value1 in enumerate(PopLocationAddList):
++			if value1.get('PopLocation') is not None:
++				self.add_query_param('PopLocationAddList.' + str(index1 + 1) + '.PopLocation', value1.get('PopLocation'))
++	def get_BindInstanceId(self): # String
++		return self.get_query_params().get('BindInstanceId')
+ 
+-	def set_InstanceChargeType(self,InstanceChargeType):
+-		self.add_query_param('InstanceChargeType',InstanceChargeType)
++	def set_BindInstanceId(self, BindInstanceId):  # String
++		self.add_query_param('BindInstanceId', BindInstanceId)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/AssociateAnycastEipAddressRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/UnassociateAnycastEipAddressRequest.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -16,71 +16,53 @@
+ # KIND, either express or implied.  See the License for the
+ # specific language governing permissions and limitations
+ # under the License.
+ 
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+-class AssociateAnycastEipAddressRequest(RpcRequest):
++class UnassociateAnycastEipAddressRequest(RpcRequest):
+ 
+ 	def __init__(self):
+-		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'AssociateAnycastEipAddress','eipanycast')
+-		self.set_method('POST')
++		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'UnassociateAnycastEipAddress','eipanycast')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
+-
+-	def get_DryRun(self):
++	def get_DryRun(self): # String
+ 		return self.get_query_params().get('DryRun')
+ 
+-	def set_DryRun(self,DryRun):
+-		self.add_query_param('DryRun',DryRun)
+-
+-	def get_AssociationMode(self):
+-		return self.get_query_params().get('AssociationMode')
+-
+-	def set_AssociationMode(self,AssociationMode):
+-		self.add_query_param('AssociationMode',AssociationMode)
+-
+-	def get_ClientToken(self):
++	def set_DryRun(self, DryRun):  # String
++		self.add_query_param('DryRun', DryRun)
++	def get_ClientToken(self): # String
+ 		return self.get_query_params().get('ClientToken')
+ 
+-	def set_ClientToken(self,ClientToken):
+-		self.add_query_param('ClientToken',ClientToken)
+-
+-	def get_PopLocations(self):
+-		return self.get_query_params().get('PopLocations')
+-
+-	def set_PopLocations(self,PopLocations):
+-		self.add_query_param('PopLocations',PopLocations)
+-
+-	def get_BindInstanceType(self):
++	def set_ClientToken(self, ClientToken):  # String
++		self.add_query_param('ClientToken', ClientToken)
++	def get_BindInstanceType(self): # String
+ 		return self.get_query_params().get('BindInstanceType')
+ 
+-	def set_BindInstanceType(self,BindInstanceType):
+-		self.add_query_param('BindInstanceType',BindInstanceType)
+-
+-	def get_BindInstanceRegionId(self):
++	def set_BindInstanceType(self, BindInstanceType):  # String
++		self.add_query_param('BindInstanceType', BindInstanceType)
++	def get_BindInstanceRegionId(self): # String
+ 		return self.get_query_params().get('BindInstanceRegionId')
+ 
+-	def set_BindInstanceRegionId(self,BindInstanceRegionId):
+-		self.add_query_param('BindInstanceRegionId',BindInstanceRegionId)
+-
+-	def get_PrivateIpAddress(self):
++	def set_BindInstanceRegionId(self, BindInstanceRegionId):  # String
++		self.add_query_param('BindInstanceRegionId', BindInstanceRegionId)
++	def get_PrivateIpAddress(self): # String
+ 		return self.get_query_params().get('PrivateIpAddress')
+ 
+-	def set_PrivateIpAddress(self,PrivateIpAddress):
+-		self.add_query_param('PrivateIpAddress',PrivateIpAddress)
+-
+-	def get_AnycastId(self):
++	def set_PrivateIpAddress(self, PrivateIpAddress):  # String
++		self.add_query_param('PrivateIpAddress', PrivateIpAddress)
++	def get_AnycastId(self): # String
+ 		return self.get_query_params().get('AnycastId')
+ 
+-	def set_AnycastId(self,AnycastId):
+-		self.add_query_param('AnycastId',AnycastId)
+-
+-	def get_BindInstanceId(self):
++	def set_AnycastId(self, AnycastId):  # String
++		self.add_query_param('AnycastId', AnycastId)
++	def get_BindInstanceId(self): # String
+ 		return self.get_query_params().get('BindInstanceId')
+ 
+-	def set_BindInstanceId(self,BindInstanceId):
+-		self.add_query_param('BindInstanceId',BindInstanceId)
++	def set_BindInstanceId(self, BindInstanceId):  # String
++		self.add_query_param('BindInstanceId', BindInstanceId)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/DescribeAnycastEipAddressRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/DescribeAnycastEipAddressRequest.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -20,31 +20,29 @@
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+ class DescribeAnycastEipAddressRequest(RpcRequest):
+ 
+ 	def __init__(self):
+ 		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'DescribeAnycastEipAddress','eipanycast')
+-		self.set_method('POST')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
+-
+-	def get_Ip(self):
++	def get_Ip(self): # String
+ 		return self.get_query_params().get('Ip')
+ 
+-	def set_Ip(self,Ip):
+-		self.add_query_param('Ip',Ip)
+-
+-	def get_AnycastId(self):
++	def set_Ip(self, Ip):  # String
++		self.add_query_param('Ip', Ip)
++	def get_AnycastId(self): # String
+ 		return self.get_query_params().get('AnycastId')
+ 
+-	def set_AnycastId(self,AnycastId):
+-		self.add_query_param('AnycastId',AnycastId)
+-
+-	def get_BindInstanceId(self):
++	def set_AnycastId(self, AnycastId):  # String
++		self.add_query_param('AnycastId', AnycastId)
++	def get_BindInstanceId(self): # String
+ 		return self.get_query_params().get('BindInstanceId')
+ 
+-	def set_BindInstanceId(self,BindInstanceId):
+-		self.add_query_param('BindInstanceId',BindInstanceId)
++	def set_BindInstanceId(self, BindInstanceId):  # String
++		self.add_query_param('BindInstanceId', BindInstanceId)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/DescribeAnycastPopLocationsRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/DescribeAnycastPopLocationsRequest.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -20,19 +20,19 @@
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+ class DescribeAnycastPopLocationsRequest(RpcRequest):
+ 
+ 	def __init__(self):
+ 		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'DescribeAnycastPopLocations','eipanycast')
+-		self.set_method('POST')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
+-
+-	def get_ServiceLocation(self):
++	def get_ServiceLocation(self): # String
+ 		return self.get_query_params().get('ServiceLocation')
+ 
+-	def set_ServiceLocation(self,ServiceLocation):
+-		self.add_query_param('ServiceLocation',ServiceLocation)
++	def set_ServiceLocation(self, ServiceLocation):  # String
++		self.add_query_param('ServiceLocation', ServiceLocation)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/DescribeAnycastServerRegionsRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/DescribeAnycastServerRegionsRequest.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -20,19 +20,19 @@
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+ class DescribeAnycastServerRegionsRequest(RpcRequest):
+ 
+ 	def __init__(self):
+ 		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'DescribeAnycastServerRegions','eipanycast')
+-		self.set_method('POST')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
+-
+-	def get_ServiceLocation(self):
++	def get_ServiceLocation(self): # String
+ 		return self.get_query_params().get('ServiceLocation')
+ 
+-	def set_ServiceLocation(self,ServiceLocation):
+-		self.add_query_param('ServiceLocation',ServiceLocation)
++	def set_ServiceLocation(self, ServiceLocation):  # String
++		self.add_query_param('ServiceLocation', ServiceLocation)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ListAnycastEipAddressesRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/AssociateAnycastEipAddressRequest.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -16,85 +16,65 @@
+ # KIND, either express or implied.  See the License for the
+ # specific language governing permissions and limitations
+ # under the License.
+ 
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+-class ListAnycastEipAddressesRequest(RpcRequest):
++class AssociateAnycastEipAddressRequest(RpcRequest):
+ 
+ 	def __init__(self):
+-		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'ListAnycastEipAddresses','eipanycast')
+-		self.set_method('POST')
++		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'AssociateAnycastEipAddress','eipanycast')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
++	def get_ClientToken(self): # String
++		return self.get_query_params().get('ClientToken')
+ 
+-	def get_NextToken(self):
+-		return self.get_query_params().get('NextToken')
+-
+-	def set_NextToken(self,NextToken):
+-		self.add_query_param('NextToken',NextToken)
+-
+-	def get_InstanceChargeType(self):
+-		return self.get_query_params().get('InstanceChargeType')
+-
+-	def set_InstanceChargeType(self,InstanceChargeType):
+-		self.add_query_param('InstanceChargeType',InstanceChargeType)
+-
+-	def get_BusinessStatus(self):
+-		return self.get_query_params().get('BusinessStatus')
+-
+-	def set_BusinessStatus(self,BusinessStatus):
+-		self.add_query_param('BusinessStatus',BusinessStatus)
+-
+-	def get_ServiceLocation(self):
+-		return self.get_query_params().get('ServiceLocation')
+-
+-	def set_ServiceLocation(self,ServiceLocation):
+-		self.add_query_param('ServiceLocation',ServiceLocation)
+-
+-	def get_AnycastEipAddress(self):
+-		return self.get_query_params().get('AnycastEipAddress')
+-
+-	def set_AnycastEipAddress(self,AnycastEipAddress):
+-		self.add_query_param('AnycastEipAddress',AnycastEipAddress)
+-
+-	def get_InternetChargeType(self):
+-		return self.get_query_params().get('InternetChargeType')
+-
+-	def set_InternetChargeType(self,InternetChargeType):
+-		self.add_query_param('InternetChargeType',InternetChargeType)
+-
+-	def get_AnycastId(self):
++	def set_ClientToken(self, ClientToken):  # String
++		self.add_query_param('ClientToken', ClientToken)
++	def get_PopLocations(self): # Array
++		return self.get_query_params().get('PopLocations')
++
++	def set_PopLocations(self, PopLocations):  # Array
++		for index1, value1 in enumerate(PopLocations):
++			if value1.get('PopLocation') is not None:
++				self.add_query_param('PopLocations.' + str(index1 + 1) + '.PopLocation', value1.get('PopLocation'))
++	def get_DryRun(self): # Boolean
++		return self.get_query_params().get('DryRun')
++
++	def set_DryRun(self, DryRun):  # Boolean
++		self.add_query_param('DryRun', DryRun)
++	def get_AssociationMode(self): # String
++		return self.get_query_params().get('AssociationMode')
++
++	def set_AssociationMode(self, AssociationMode):  # String
++		self.add_query_param('AssociationMode', AssociationMode)
++	def get_BindInstanceType(self): # String
++		return self.get_query_params().get('BindInstanceType')
++
++	def set_BindInstanceType(self, BindInstanceType):  # String
++		self.add_query_param('BindInstanceType', BindInstanceType)
++	def get_BindInstanceRegionId(self): # String
++		return self.get_query_params().get('BindInstanceRegionId')
++
++	def set_BindInstanceRegionId(self, BindInstanceRegionId):  # String
++		self.add_query_param('BindInstanceRegionId', BindInstanceRegionId)
++	def get_PrivateIpAddress(self): # String
++		return self.get_query_params().get('PrivateIpAddress')
++
++	def set_PrivateIpAddress(self, PrivateIpAddress):  # String
++		self.add_query_param('PrivateIpAddress', PrivateIpAddress)
++	def get_AnycastId(self): # String
+ 		return self.get_query_params().get('AnycastId')
+ 
+-	def set_AnycastId(self,AnycastId):
+-		self.add_query_param('AnycastId',AnycastId)
+-
+-	def get_Name(self):
+-		return self.get_query_params().get('Name')
+-
+-	def set_Name(self,Name):
+-		self.add_query_param('Name',Name)
+-
+-	def get_BindInstanceIdss(self):
+-		return self.get_query_params().get('BindInstanceIds')
+-
+-	def set_BindInstanceIdss(self, BindInstanceIdss):
+-		for depth1 in range(len(BindInstanceIdss)):
+-			if BindInstanceIdss[depth1] is not None:
+-				self.add_query_param('BindInstanceIds.' + str(depth1 + 1) , BindInstanceIdss[depth1])
+-
+-	def get_MaxResults(self):
+-		return self.get_query_params().get('MaxResults')
+-
+-	def set_MaxResults(self,MaxResults):
+-		self.add_query_param('MaxResults',MaxResults)
+-
+-	def get_Status(self):
+-		return self.get_query_params().get('Status')
++	def set_AnycastId(self, AnycastId):  # String
++		self.add_query_param('AnycastId', AnycastId)
++	def get_BindInstanceId(self): # String
++		return self.get_query_params().get('BindInstanceId')
+ 
+-	def set_Status(self,Status):
+-		self.add_query_param('Status',Status)
++	def set_BindInstanceId(self, BindInstanceId):  # String
++		self.add_query_param('BindInstanceId', BindInstanceId)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressAttributeRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressSpecRequest.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -16,35 +16,28 @@
+ # KIND, either express or implied.  See the License for the
+ # specific language governing permissions and limitations
+ # under the License.
+ 
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+-class ModifyAnycastEipAddressAttributeRequest(RpcRequest):
++class ModifyAnycastEipAddressSpecRequest(RpcRequest):
+ 
+ 	def __init__(self):
+-		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'ModifyAnycastEipAddressAttribute','eipanycast')
+-		self.set_method('POST')
++		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'ModifyAnycastEipAddressSpec','eipanycast')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
++	def get_Bandwidth(self): # String
++		return self.get_query_params().get('Bandwidth')
+ 
+-	def get_Description(self):
+-		return self.get_query_params().get('Description')
+-
+-	def set_Description(self,Description):
+-		self.add_query_param('Description',Description)
+-
+-	def get_AnycastId(self):
++	def set_Bandwidth(self, Bandwidth):  # String
++		self.add_query_param('Bandwidth', Bandwidth)
++	def get_AnycastId(self): # String
+ 		return self.get_query_params().get('AnycastId')
+ 
+-	def set_AnycastId(self,AnycastId):
+-		self.add_query_param('AnycastId',AnycastId)
+-
+-	def get_Name(self):
+-		return self.get_query_params().get('Name')
+-
+-	def set_Name(self,Name):
+-		self.add_query_param('Name',Name)
++	def set_AnycastId(self, AnycastId):  # String
++		self.add_query_param('AnycastId', AnycastId)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/aliyunsdkeipanycast/request/v20200309/ModifyAnycastEipAddressSpecRequest.py` & `aliyun-python-sdk-eipanycast-1.0.3/aliyunsdkeipanycast/request/v20200309/ReleaseAnycastEipAddressRequest.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -16,29 +16,28 @@
+ # KIND, either express or implied.  See the License for the
+ # specific language governing permissions and limitations
+ # under the License.
+ 
+ from aliyunsdkcore.request import RpcRequest
+ from aliyunsdkeipanycast.endpoint import endpoint_data
+ 
+-class ModifyAnycastEipAddressSpecRequest(RpcRequest):
++class ReleaseAnycastEipAddressRequest(RpcRequest):
+ 
+ 	def __init__(self):
+-		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'ModifyAnycastEipAddressSpec','eipanycast')
+-		self.set_method('POST')
++		RpcRequest.__init__(self, 'Eipanycast', '2020-03-09', 'ReleaseAnycastEipAddress','eipanycast')
++		self.set_method('POST')
++
+ 		if hasattr(self, "endpoint_map"):
+ 			setattr(self, "endpoint_map", endpoint_data.getEndpointMap())
+ 		if hasattr(self, "endpoint_regional"):
+ 			setattr(self, "endpoint_regional", endpoint_data.getEndpointRegional())
+ 
++	def get_ClientToken(self): # String
++		return self.get_query_params().get('ClientToken')
+ 
+-	def get_Bandwidth(self):
+-		return self.get_query_params().get('Bandwidth')
+-
+-	def set_Bandwidth(self,Bandwidth):
+-		self.add_query_param('Bandwidth',Bandwidth)
+-
+-	def get_AnycastId(self):
++	def set_ClientToken(self, ClientToken):  # String
++		self.add_query_param('ClientToken', ClientToken)
++	def get_AnycastId(self): # String
+ 		return self.get_query_params().get('AnycastId')
+ 
+-	def set_AnycastId(self,AnycastId):
+-		self.add_query_param('AnycastId',AnycastId)
++	def set_AnycastId(self, AnycastId):  # String
++		self.add_query_param('AnycastId', AnycastId)
+```
+
+### Comparing `aliyun-python-sdk-eipanycast-1.0.2/setup.py` & `aliyun-python-sdk-eipanycast-1.0.3/setup.py`
+
+ * *Files identical despite different names*
+
