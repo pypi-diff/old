@@ -1,0 +1,224 @@
+--- tmp/krutils-0.20230331.1517.tar.gz
++++ tmp/krutils-0.20230407.1511.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "krutils-0.20230331.1517.tar", last modified: Fri Mar 31 06:17:16 2023, max compression
+│ +gzip compressed data, was "krutils-0.20230407.1511.tar", last modified: Fri Apr  7 06:11:08 2023, max compression
+│   --- krutils-0.20230331.1517.tar
+├── +++ krutils-0.20230407.1511.tar
+│ ├── file list
+│ │ @@ -1,19 +1,22 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-31 06:17:16.386982 krutils-0.20230331.1517/
+│ │ --rw-rw-rw-   0        0        0      332 2023-03-31 06:17:16.385199 krutils-0.20230331.1517/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       29 2023-03-24 08:28:38.000000 krutils-0.20230331.1517/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-31 06:17:16.365776 krutils-0.20230331.1517/krutils/
+│ │ --rw-rw-rw-   0        0        0      455 2022-04-21 08:14:50.000000 krutils-0.20230331.1517/krutils/AppErr.py
+│ │ --rw-rw-rw-   0        0        0     1660 2023-03-28 06:25:31.000000 krutils-0.20230331.1517/krutils/CONST.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-24 07:19:02.000000 krutils-0.20230331.1517/krutils/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5524 2021-10-04 16:16:25.000000 krutils-0.20230331.1517/krutils/dbmgr.py
+│ │ --rw-rw-rw-   0        0        0     7320 2023-03-28 08:56:31.000000 krutils-0.20230331.1517/krutils/logger.py
+│ │ --rw-rw-rw-   0        0        0    20842 2023-03-28 06:44:50.000000 krutils-0.20230331.1517/krutils/utils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-31 06:17:16.381811 krutils-0.20230331.1517/krutils.egg-info/
+│ │ --rw-rw-rw-   0        0        0      332 2023-03-31 06:17:16.000000 krutils-0.20230331.1517/krutils.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      271 2023-03-31 06:17:16.000000 krutils-0.20230331.1517/krutils.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-31 06:17:16.000000 krutils-0.20230331.1517/krutils.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        8 2023-03-31 06:17:16.000000 krutils-0.20230331.1517/krutils.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-31 06:17:16.386982 krutils-0.20230331.1517/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      697 2023-03-31 06:17:15.000000 krutils-0.20230331.1517/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-31 06:17:16.381811 krutils-0.20230331.1517/test/
+│ │ --rw-rw-rw-   0        0        0      463 2023-03-31 06:03:12.000000 krutils-0.20230331.1517/test/module_tester.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 06:11:08.105163 krutils-0.20230407.1511/
+│ │ +-rw-rw-rw-   0        0        0      332 2023-04-07 06:11:08.105163 krutils-0.20230407.1511/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0       29 2023-03-31 07:30:50.000000 krutils-0.20230407.1511/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 06:11:08.080515 krutils-0.20230407.1511/krutils/
+│ │ +-rw-rw-rw-   0        0        0      455 2022-04-21 08:14:50.000000 krutils-0.20230407.1511/krutils/AppErr.py
+│ │ +-rw-rw-rw-   0        0        0     1660 2023-03-28 06:25:31.000000 krutils-0.20230407.1511/krutils/CONST.py
+│ │ +-rw-rw-rw-   0        0        0     7665 2023-04-07 06:10:48.000000 krutils-0.20230407.1511/krutils/Loggert.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-24 07:19:02.000000 krutils-0.20230407.1511/krutils/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     5524 2021-10-04 16:16:25.000000 krutils-0.20230407.1511/krutils/dbmgr.py
+│ │ +-rw-rw-rw-   0        0        0    20842 2023-03-31 08:25:49.000000 krutils-0.20230407.1511/krutils/utils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 06:11:08.096863 krutils-0.20230407.1511/krutils.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      332 2023-04-07 06:11:07.000000 krutils-0.20230407.1511/krutils.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      312 2023-04-07 06:11:07.000000 krutils-0.20230407.1511/krutils.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 06:11:07.000000 krutils-0.20230407.1511/krutils.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        8 2023-04-07 06:11:07.000000 krutils-0.20230407.1511/krutils.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 06:11:08.108318 krutils-0.20230407.1511/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      697 2023-04-07 06:11:07.000000 krutils-0.20230407.1511/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 06:11:08.105163 krutils-0.20230407.1511/test/
+│ │ +-rw-rw-rw-   0        0        0      126 2023-04-05 07:27:05.000000 krutils-0.20230407.1511/test/Clz_test.py
+│ │ +-rw-rw-rw-   0        0        0      326 2023-04-05 07:27:58.000000 krutils-0.20230407.1511/test/Lg.py
+│ │ +-rw-rw-rw-   0        0        0       78 2023-04-05 07:24:42.000000 krutils-0.20230407.1511/test/ct2.py
+│ │ +-rw-rw-rw-   0        0        0      465 2023-03-31 08:43:41.000000 krutils-0.20230407.1511/test/module_tester.py
+│ │   --- krutils-0.20230331.1517/krutils/CONST.py
+│ ├── +++ krutils-0.20230407.1511/krutils/CONST.py
+│ │┄ Files identical despite different names
+│ │   --- krutils-0.20230331.1517/krutils/dbmgr.py
+│ ├── +++ krutils-0.20230407.1511/krutils/dbmgr.py
+│ │┄ Files identical despite different names
+│ │   --- krutils-0.20230331.1517/krutils/logger.py
+│ ├── +++ krutils-0.20230407.1511/krutils/Loggert.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,16 @@
+│ │  '''
+│ │ -    LOG UTIL
+│ │ -        다른 프로젝트 파일과 연관이 없도록 독립적으로 구성
+│ │ +LOG처리
+│ │ +
+│ │ +	내가 필요한것은 로그 문자열 포멧팅 밖에 없다.
+│ │ +	나중에 logging을 래핑하자
+│ │ +
+│ │ +
+│ │ +
+│ │ +
+│ │  '''
+│ │  
+│ │  import os
+│ │  import inspect
+│ │  from datetime import datetime
+│ │  
+│ │  ######################
+│ │ @@ -24,14 +30,17 @@
+│ │  #        "LOG_CONSOLE_YN" : "Y",
+│ │  #        "LOG_FILE_YN" : "N",
+│ │  #        "LOG_DIR_PATH" : "./logs",
+│ │  #        "LOG_FILE_NAME" : "mylog.log"
+│ │  #    }
+│ │  
+│ │  
+│ │ +
+│ │ +
+│ │ +
+│ │  ######################
+│ │  # 로깅 레벨 설정
+│ │  ######################
+│ │  def get_log_level_index(level: str) -> int:
+│ │      if level == None:
+│ │          return 4
+│ │      elif level == "ERR":
+│ │ @@ -75,55 +84,67 @@
+│ │  DEBUG_FILE_DIR_PATH  = "./logs";
+│ │  DEBUG_FILE_FILE_NAME  = datetime.now().strftime("%H%M%S") + '.log';
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ +
+│ │ +
+│ │ +
+│ │  #######################################
+│ │ -# Logger 설정 파일을 사용하는 경우 내용을 읽어서 적용한다
+│ │ -try:
+│ │ -    from kealutils import utils
+│ │ -    config_file_path = utils.find_first_file_to_root(__LOGGER_CONFIG_FILE_NAME)
+│ │ -
+│ │ -    if utils.is_empty(config_file_path) != True:
+│ │ -
+│ │ -        import json
+│ │ -        with open(config_file_path) as cf:
+│ │ -            logger_config = json.load(cf)
+│ │ -
+│ │ -        # print (logger_config)
+│ │ -
+│ │ -        cfv = logger_config['LOG_LEVEL']
+│ │ -        if (utils.is_empty(cfv) != True):
+│ │ -            CURR_DEBUG_LEVEL = get_log_level_index(cfv)
+│ │ -
+│ │ -        cfv = logger_config['LOG_CONSOLE_YN']
+│ │ -        if (utils.is_empty(cfv) != True):
+│ │ -            DEBUG_CONSOLE_PRINT_YN = cfv
+│ │ -
+│ │ -        cfv = logger_config['LOG_FILE_YN']
+│ │ -        if (utils.is_empty(cfv) != True):
+│ │ -            DEBUG_FILE_PRINT_YN = cfv
+│ │ -
+│ │ -        cfv = logger_config['LOG_DIR_PATH']
+│ │ -        if (utils.is_empty(cfv) != True):
+│ │ -            DEBUG_FILE_DIR_PATH = cfv
+│ │ -
+│ │ -        cfv = logger_config['LOG_FILE_NAME']
+│ │ -        if (utils.is_empty(cfv) != True):
+│ │ -            DEBUG_FILE_FILE_NAME = cfv
+│ │ -
+│ │ -        # print ('CURR_DEBUG_LEVEL : ' + str(CURR_DEBUG_LEVEL))
+│ │ -        # print ('DEBUG_CONSOLE_PRINT_YN : ' + DEBUG_CONSOLE_PRINT_YN)
+│ │ -        # print ('DEBUG_FILE_PRINT_YN : ' + DEBUG_FILE_PRINT_YN)
+│ │ -        # print ('DEBUG_FILE_PATH : ' + os.path.abspath(os.path.join(DEBUG_FILE_DIR_PATH, DEBUG_FILE_FILE_NAME)))
+│ │ +# CLASS 초기화
+│ │ +#   - CALLER 정보를 입력하는 경우 설정 파일을 탐색하여 발견되면 적용한다
+│ │ +class init:
+│ │ +    caller_file_name = ''
+│ │ +
+│ │ +    def __init__(self, caller_file_name):
+│ │ +        self.caller_file_name = caller_file_name;
+│ │ +        print(__name__ + ' is initiating... by ' + caller_file_name)
+│ │ +
+│ │ +
+│ │ +# try:
+│ │ +#     from krutils import utils
+│ │ +#     config_file_path = utils.find_first_file_to_root(__LOGGER_CONFIG_FILE_NAME)
+│ │ +
+│ │ +#     if utils.is_empty(config_file_path) != True:
+│ │ +
+│ │ +#         import json
+│ │ +#         with open(config_file_path) as cf:
+│ │ +#             logger_config = json.load(cf)
+│ │ +
+│ │ +#         # print (logger_config)
+│ │ +
+│ │ +#         cfv = logger_config['LOG_LEVEL']
+│ │ +#         if (utils.is_empty(cfv) != True):
+│ │ +#             CURR_DEBUG_LEVEL = get_log_level_index(cfv)
+│ │ +
+│ │ +#         cfv = logger_config['LOG_CONSOLE_YN']
+│ │ +#         if (utils.is_empty(cfv) != True):
+│ │ +#             DEBUG_CONSOLE_PRINT_YN = cfv
+│ │ +
+│ │ +#         cfv = logger_config['LOG_FILE_YN']
+│ │ +#         if (utils.is_empty(cfv) != True):
+│ │ +#             DEBUG_FILE_PRINT_YN = cfv
+│ │ +
+│ │ +#         cfv = logger_config['LOG_DIR_PATH']
+│ │ +#         if (utils.is_empty(cfv) != True):
+│ │ +#             DEBUG_FILE_DIR_PATH = cfv
+│ │ +
+│ │ +#         cfv = logger_config['LOG_FILE_NAME']
+│ │ +#         if (utils.is_empty(cfv) != True):
+│ │ +#             DEBUG_FILE_FILE_NAME = cfv
+│ │ +
+│ │ +#         # print ('CURR_DEBUG_LEVEL : ' + str(CURR_DEBUG_LEVEL))
+│ │ +#         # print ('DEBUG_CONSOLE_PRINT_YN : ' + DEBUG_CONSOLE_PRINT_YN)
+│ │ +#         # print ('DEBUG_FILE_PRINT_YN : ' + DEBUG_FILE_PRINT_YN)
+│ │ +#         # print ('DEBUG_FILE_PATH : ' + os.path.abspath(os.path.join(DEBUG_FILE_DIR_PATH, DEBUG_FILE_FILE_NAME)))
+│ │  
+│ │ -except Exception as e:
+│ │ -    print('Failed to read config file. e[' + str(e) + ']')
+│ │ +# except Exception as e:
+│ │ +#     print('Failed to read config file. e[' + str(e) + ']')
+│ │  
+│ │  
+│ │  
+│ │  ##########################################
+│ │  ##      시스템 정보
+│ │  ##########################################
+│ │  # 호출자 파일 명
+│ │   --- krutils-0.20230331.1517/krutils/utils.py
+│ ├── +++ krutils-0.20230407.1511/krutils/utils.py
+│ │┄ Files identical despite different names
+│ │   --- krutils-0.20230331.1517/setup.py
+│ ├── +++ krutils-0.20230407.1511/setup.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  import setuptools
+│ │  
+│ │  setuptools.setup(
+│ │      name="krutils",
+│ │ -    version="0.20230331.1517",
+│ │ +    version="0.20230407.1511",
+│ │      author="bonfireof",
+│ │      author_email="bonfireof@gmail.com",
+│ │      description="Some utils for me.",
+│ │      project_urls={
+│ │      },
+│ │      classifiers=[
+│ │          "Programming Language :: Python :: 3",
