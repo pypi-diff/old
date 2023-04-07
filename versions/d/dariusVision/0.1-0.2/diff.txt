@@ -1,0 +1,132 @@
+--- tmp/dariusVision-0.1.tar.gz
++++ tmp/dariusVision-0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dariusVision-0.1.tar", last modified: Fri Apr  7 05:30:32 2023, max compression
+│ +gzip compressed data, was "dariusVision-0.2.tar", last modified: Fri Apr  7 05:46:44 2023, max compression
+│   --- dariusVision-0.1.tar
+├── +++ dariusVision-0.2.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxrwxr-x   0 gbox3d    (1000) gbox3d    (1000)        0 2023-04-07 05:30:32.062209 dariusVision-0.1/
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)    35149 2023-04-07 04:46:45.000000 dariusVision-0.1/LICENSE
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      551 2023-04-07 05:30:32.062209 dariusVision-0.1/PKG-INFO
+│ │ -drwxrwxr-x   0 gbox3d    (1000) gbox3d    (1000)        0 2023-04-07 05:30:32.062209 dariusVision-0.1/dariusVision/
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      119 2023-04-07 04:29:48.000000 dariusVision-0.1/dariusVision/__init__.py
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)     3265 2023-04-07 01:35:34.000000 dariusVision-0.1/dariusVision/cam.py
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)     9647 2023-04-07 04:59:58.000000 dariusVision-0.1/dariusVision/realsense2.py
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)     2011 2023-04-07 04:29:23.000000 dariusVision-0.1/dariusVision/utils.py
+│ │ -drwxrwxr-x   0 gbox3d    (1000) gbox3d    (1000)        0 2023-04-07 05:30:32.062209 dariusVision-0.1/dariusVision.egg-info/
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      551 2023-04-07 05:30:32.000000 dariusVision-0.1/dariusVision.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      289 2023-04-07 05:30:32.000000 dariusVision-0.1/dariusVision.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)        1 2023-04-07 05:30:32.000000 dariusVision-0.1/dariusVision.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)       20 2023-04-07 05:30:32.000000 dariusVision-0.1/dariusVision.egg-info/requires.txt
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)       13 2023-04-07 05:30:32.000000 dariusVision-0.1/dariusVision.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)       38 2023-04-07 05:30:32.062209 dariusVision-0.1/setup.cfg
+│ │ --rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      700 2023-04-07 05:30:29.000000 dariusVision-0.1/setup.py
+│ │ +drwxrwxr-x   0 gbox3d    (1000) gbox3d    (1000)        0 2023-04-07 05:46:44.873855 dariusVision-0.2/
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)    35149 2023-04-07 04:46:45.000000 dariusVision-0.2/LICENSE
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      593 2023-04-07 05:46:44.873855 dariusVision-0.2/PKG-INFO
+│ │ +drwxrwxr-x   0 gbox3d    (1000) gbox3d    (1000)        0 2023-04-07 05:46:44.873855 dariusVision-0.2/dariusVision/
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      119 2023-04-07 04:29:48.000000 dariusVision-0.2/dariusVision/__init__.py
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)     3265 2023-04-07 01:35:34.000000 dariusVision-0.2/dariusVision/cam.py
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)     9647 2023-04-07 04:59:58.000000 dariusVision-0.2/dariusVision/realsense2.py
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)     2011 2023-04-07 04:29:23.000000 dariusVision-0.2/dariusVision/utils.py
+│ │ +drwxrwxr-x   0 gbox3d    (1000) gbox3d    (1000)        0 2023-04-07 05:46:44.873855 dariusVision-0.2/dariusVision.egg-info/
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      593 2023-04-07 05:46:44.000000 dariusVision-0.2/dariusVision.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      289 2023-04-07 05:46:44.000000 dariusVision-0.2/dariusVision.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)        1 2023-04-07 05:46:44.000000 dariusVision-0.2/dariusVision.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)       13 2023-04-07 05:46:44.000000 dariusVision-0.2/dariusVision.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)       13 2023-04-07 05:46:44.000000 dariusVision-0.2/dariusVision.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)       38 2023-04-07 05:46:44.873855 dariusVision-0.2/setup.cfg
+│ │ +-rw-rw-r--   0 gbox3d    (1000) gbox3d    (1000)      757 2023-04-07 05:44:49.000000 dariusVision-0.2/setup.py
+│ │   --- dariusVision-0.1/LICENSE
+│ ├── +++ dariusVision-0.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dariusVision-0.1/PKG-INFO
+│ ├── +++ dariusVision-0.2/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,15 +1,17 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dariusVision
+│ │ -Version: 0.1
+│ │ -Summary: A package for computer vision
+│ │ -Home-page: https://github.com/yourusername/mypackage
+│ │ +Version: 0.2
+│ │ +Summary: camera utilities to get last frame
+│ │ +Home-page: https://github.com/gbox3d/dariusVision.git
+│ │  Author: gbox3d
+│ │  Author-email: gbox3d@gmail.com
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  License-File: LICENSE
+│ │ +
+│ │ +camera utilities to get last frame
+│ │   --- dariusVision-0.1/dariusVision/cam.py
+│ ├── +++ dariusVision-0.2/dariusVision/cam.py
+│ │┄ Files identical despite different names
+│ │   --- dariusVision-0.1/dariusVision/realsense2.py
+│ ├── +++ dariusVision-0.2/dariusVision/realsense2.py
+│ │┄ Files identical despite different names
+│ │   --- dariusVision-0.1/dariusVision/utils.py
+│ ├── +++ dariusVision-0.2/dariusVision/utils.py
+│ │┄ Files identical despite different names
+│ │   --- dariusVision-0.1/dariusVision.egg-info/PKG-INFO
+│ ├── +++ dariusVision-0.2/dariusVision.egg-info/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,15 +1,17 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dariusVision
+│ │ -Version: 0.1
+│ │ -Summary: A package for computer vision
+│ │ -Home-page: https://github.com/yourusername/mypackage
+│ │ +Version: 0.2
+│ │ +Summary: camera utilities to get last frame
+│ │ +Home-page: https://github.com/gbox3d/dariusVision.git
+│ │  Author: gbox3d
+│ │  Author-email: gbox3d@gmail.com
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  License-File: LICENSE
+│ │ +
+│ │ +camera utilities to get last frame
+│ │   --- dariusVision-0.1/setup.py
+│ ├── +++ dariusVision-0.2/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,21 +1,22 @@
+│ │  from setuptools import setup
+│ │  
+│ │  setup(
+│ │      name='dariusVision',
+│ │ -    version='0.1',
+│ │ -    description='A package for computer vision',
+│ │ +    version='0.2',
+│ │ +    description='camera utilities to get last frame',
+│ │ +    long_description='camera utilities to get last frame',
+│ │      packages=['dariusVision'],
+│ │      install_requires=[
+│ │          'numpy',
+│ │ -        'opencv-python',
+│ │ +        'opencv'
+│ │      ],
+│ │      author='gbox3d',
+│ │      author_email='gbox3d@gmail.com',
+│ │ -    url='https://github.com/yourusername/mypackage',
+│ │ +    url='https://github.com/gbox3d/dariusVision.git',
+│ │      classifiers=[
+│ │          'Development Status :: 3 - Alpha',
+│ │          'Intended Audience :: Developers',
+│ │          'License :: OSI Approved :: MIT License',
+│ │          'Programming Language :: Python :: 3',
+│ │          'Programming Language :: Python :: 3.6',
+│ │          'Programming Language :: Python :: 3.7',

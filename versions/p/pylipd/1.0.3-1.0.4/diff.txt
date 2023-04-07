@@ -1,0 +1,1180 @@
+--- tmp/pylipd-1.0.3.tar.gz
++++ tmp/pylipd-1.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pylipd-1.0.3.tar", last modified: Mon Mar  6 15:46:30 2023, max compression
+│ +gzip compressed data, was "pylipd-1.0.4.tar", last modified: Fri Apr  7 05:48:36 2023, max compression
+│   --- pylipd-1.0.3.tar
+├── +++ pylipd-1.0.4.tar
+│ ├── file list
+│ │ @@ -1,31 +1,32 @@
+│ │ -drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-03-06 15:46:30.877349 pylipd-1.0.3/
+│ │ --rw-r--r--   0 varun      (502) staff       (20)    11357 2022-09-22 13:14:27.000000 pylipd-1.0.3/LICENSE
+│ │ --rw-r--r--   0 varun      (502) staff       (20)     1234 2023-03-06 15:46:30.877435 pylipd-1.0.3/PKG-INFO
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      581 2023-01-10 18:11:19.000000 pylipd-1.0.3/README.md
+│ │ -drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-03-06 15:46:30.874102 pylipd-1.0.3/pylipd/
+│ │ --rw-r--r--   0 varun      (502) staff       (20)       22 2023-03-06 15:44:15.000000 pylipd-1.0.3/pylipd/__init__.py
+│ │ -drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-03-06 15:46:30.875325 pylipd-1.0.3/pylipd/globals/
+│ │ --rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:18.000000 pylipd-1.0.3/pylipd/globals/__init__.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      383 2022-11-15 21:36:42.000000 pylipd-1.0.3/pylipd/globals/blacklist.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)    14564 2023-03-06 15:30:09.000000 pylipd-1.0.3/pylipd/globals/schema.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      197 2022-11-14 07:40:00.000000 pylipd-1.0.3/pylipd/globals/urls.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)    15815 2023-02-10 12:09:50.000000 pylipd-1.0.3/pylipd/legacy_utils.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)    29298 2023-03-06 15:21:26.000000 pylipd-1.0.3/pylipd/lipd.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)    41719 2023-02-28 16:22:07.000000 pylipd-1.0.3/pylipd/lipd_to_rdf.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)     1400 2023-02-24 17:41:15.000000 pylipd-1.0.3/pylipd/multi_processing.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)    17140 2023-02-23 13:16:36.000000 pylipd-1.0.3/pylipd/rdf_to_lipd.py
+│ │ -drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-03-06 15:46:30.875754 pylipd-1.0.3/pylipd/series/
+│ │ --rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:31.000000 pylipd-1.0.3/pylipd/series/__init__.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)     3223 2022-11-15 20:06:27.000000 pylipd-1.0.3/pylipd/series/regexes.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)     4447 2023-03-06 15:28:39.000000 pylipd-1.0.3/pylipd/usage.py
+│ │ --rw-r--r--   0 varun      (502) staff       (20)     2602 2023-02-23 10:01:04.000000 pylipd-1.0.3/pylipd/utils.py
+│ │ -drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-03-06 15:46:30.877216 pylipd-1.0.3/pylipd.egg-info/
+│ │ --rw-r--r--   0 varun      (502) staff       (20)     1234 2023-03-06 15:46:30.000000 pylipd-1.0.3/pylipd.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      571 2023-03-06 15:46:30.000000 pylipd-1.0.3/pylipd.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 varun      (502) staff       (20)        1 2023-03-06 15:46:30.000000 pylipd-1.0.3/pylipd.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 varun      (502) staff       (20)        1 2023-02-24 09:46:52.000000 pylipd-1.0.3/pylipd.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 varun      (502) staff       (20)       29 2023-03-06 15:46:30.000000 pylipd-1.0.3/pylipd.egg-info/requires.txt
+│ │ --rw-r--r--   0 varun      (502) staff       (20)        7 2023-03-06 15:46:30.000000 pylipd-1.0.3/pylipd.egg-info/top_level.txt
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      104 2023-02-10 17:39:16.000000 pylipd-1.0.3/pyproject.toml
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      686 2023-03-06 15:46:30.877755 pylipd-1.0.3/setup.cfg
+│ │ --rw-r--r--   0 varun      (502) staff       (20)      956 2023-03-06 15:44:21.000000 pylipd-1.0.3/setup.py
+│ │ +drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.915622 pylipd-1.0.4/
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)    11357 2022-09-22 13:14:27.000000 pylipd-1.0.4/LICENSE
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     1282 2023-04-07 05:48:36.915667 pylipd-1.0.4/PKG-INFO
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      630 2023-03-22 12:37:06.000000 pylipd-1.0.4/README.md
+│ │ +drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.913297 pylipd-1.0.4/pylipd/
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)       22 2023-04-07 05:47:22.000000 pylipd-1.0.4/pylipd/__init__.py
+│ │ +drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.914154 pylipd-1.0.4/pylipd/globals/
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:18.000000 pylipd-1.0.4/pylipd/globals/__init__.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      383 2022-11-15 21:36:42.000000 pylipd-1.0.4/pylipd/globals/blacklist.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)    14564 2023-03-06 15:30:09.000000 pylipd-1.0.4/pylipd/globals/schema.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      197 2022-11-14 07:40:00.000000 pylipd-1.0.4/pylipd/globals/urls.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)    15815 2023-02-10 12:09:50.000000 pylipd-1.0.4/pylipd/legacy_utils.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)    28677 2023-04-07 04:11:12.000000 pylipd-1.0.4/pylipd/lipd.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)    42808 2023-03-31 15:11:12.000000 pylipd-1.0.4/pylipd/lipd_to_rdf.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     1742 2023-04-07 05:39:21.000000 pylipd-1.0.4/pylipd/multi_processing.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)    17140 2023-02-23 13:16:36.000000 pylipd-1.0.4/pylipd/rdf_to_lipd.py
+│ │ +drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.914485 pylipd-1.0.4/pylipd/series/
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)        0 2023-01-10 17:13:31.000000 pylipd-1.0.4/pylipd/series/__init__.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     3223 2022-11-15 20:06:27.000000 pylipd-1.0.4/pylipd/series/regexes.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     2270 2023-03-22 17:52:14.000000 pylipd-1.0.4/pylipd/test.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     3942 2023-04-07 05:46:07.000000 pylipd-1.0.4/pylipd/usage.py
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     2602 2023-02-23 10:01:04.000000 pylipd-1.0.4/pylipd/utils.py
+│ │ +drwxr-xr-x   0 varun      (502) staff       (20)        0 2023-04-07 05:48:36.915526 pylipd-1.0.4/pylipd.egg-info/
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)     1282 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      588 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)        1 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)        1 2023-02-24 09:46:52.000000 pylipd-1.0.4/pylipd.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)       29 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/requires.txt
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)        7 2023-04-07 05:48:36.000000 pylipd-1.0.4/pylipd.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      104 2023-02-10 17:39:16.000000 pylipd-1.0.4/pyproject.toml
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      686 2023-04-07 05:48:36.915922 pylipd-1.0.4/setup.cfg
+│ │ +-rw-r--r--   0 varun      (502) staff       (20)      956 2023-04-07 05:47:26.000000 pylipd-1.0.4/setup.py
+│ │   --- pylipd-1.0.3/LICENSE
+│ ├── +++ pylipd-1.0.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pylipd-1.0.3/PKG-INFO
+│ ├── +++ pylipd-1.0.4/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,27 +1,27 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pylipd
+│ │ -Version: 1.0.3
+│ │ +Version: 1.0.4
+│ │  Summary: Python utilities for handling LiPD data
+│ │  Home-page: https://github.com/linkedearth/pylipd
+│ │ -Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.3
+│ │ +Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.4
+│ │  Author: Varun Ratnakar
+│ │  Author-email: varunratnakar@gmail.com
+│ │  License: Apache 2-0 License
+│ │  Project-URL: Bug Tracker, https://github.com/linkedearth/pylipd/issues
+│ │  Keywords: Paleoclimate, Data Analysis, LiPD
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.9.0
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # PyLiPD
+│ │ -Python LiPD utilities
+│ │ +Python utilities to interact with the Linked Paleo Data (LiPD) format
+│ │  
+│ │  ## Installation
+│ │      pip install pylipd
+│ │  
+│ │  ## Usage
+│ │  
+│ │  ### Loading local LiPD files
+│ │   --- pylipd-1.0.3/pylipd/globals/schema.py
+│ ├── +++ pylipd-1.0.4/pylipd/globals/schema.py
+│ │┄ Files identical despite different names
+│ │   --- pylipd-1.0.3/pylipd/legacy_utils.py
+│ ├── +++ pylipd-1.0.4/pylipd/legacy_utils.py
+│ │┄ Files identical despite different names
+│ │   --- pylipd-1.0.3/pylipd/lipd.py
+│ ├── +++ pylipd-1.0.4/pylipd/lipd.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -76,89 +76,93 @@
+│ │          pylipd.LiPD
+│ │              a copy of the original object
+│ │  
+│ │          '''
+│ │          
+│ │          return deepcopy(self)
+│ │  
+│ │ -    def load_from_dir(self, dir_path, collection_id=None):
+│ │ +    def load_from_dir(self, dir_path, parallel=False, collection_id=None):
+│ │          '''Load LiPD files from a directory
+│ │          Note: This function creates multiple process to process lipd files in parallel, therefore it is important that this call be made under the "__main__" process
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │  
+│ │          dir_path : str
+│ │              path to the directory containing lipd files
+│ │  
+│ │ +        parallel: bool
+│ │ +            (Optional) set to True to process lipd files in parallel. You *must* run this function under the "__main__" process for this to work
+│ │ +
+│ │          collection_id : str
+│ │              (Optional) set a collection id for all lipd files in the directory
+│ │  
+│ │          Examples
+│ │          --------
+│ │          In this example, we load LiPD files from a directory.
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                lipd = LiPD()        
+│ │ -                lipd.load_from_dir("../examples/data")
+│ │ +            lipd = LiPD()        
+│ │ +            lipd.load_from_dir("../examples/data")
+│ │  
+│ │ -                print(lipd.get_all_dataset_names())
+│ │ +            print(lipd.get_all_dataset_names())
+│ │          '''
+│ │          if not os.path.isdir(dir_path):
+│ │              print(f"Directory {dir_path} does not exist")
+│ │              return
+│ │  
+│ │          lipdfiles = []
+│ │          for path in os.listdir(dir_path):
+│ │              file_path = os.path.join(dir_path, path)
+│ │              if os.path.isfile(file_path) and path.endswith(".lpd"):
+│ │                  lipdfiles.append(file_path)
+│ │ -        self.load(lipdfiles, collection_id)
+│ │ +        self.load(lipdfiles, parallel, collection_id)
+│ │  
+│ │  
+│ │      # Allows loading http locations
+│ │ -    def load(self, lipdfiles, collection_id=None):
+│ │ +    def load(self, lipdfiles, parallel=False, collection_id=None):
+│ │          '''Load LiPD files. 
+│ │          Note: This function creates multiple process to process lipd files in parallel, therefore it is important that this call be made under the "__main__" process
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │  
+│ │          lipdfiles : array
+│ │              array of paths to lipd files (the paths could also be urls)
+│ │  
+│ │ +        parallel: bool
+│ │ +            (Optional) set to True to process lipd files in parallel. You *must* run this function under the "__main__" process for this to work
+│ │ +
+│ │          collection_id : str
+│ │              (Optional) set a collection id for all lipd files in the directory
+│ │  
+│ │          Examples
+│ │          --------
+│ │          In this example, we load LiPD files for an array of paths.
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                lipd = LiPD() 
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd",
+│ │ -                    "../examples/data/Ant-WAIS-Divide.Severinghaus.2012.lpd",
+│ │ -                    "https://lipdverse.org/data/LCf20b99dfe8d78840ca60dfb1f832b9ec/1_0_1/Nunalleq.Ledger.2018.lpd"                    
+│ │ -                ])            
+│ │ +            lipd = LiPD() 
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd",
+│ │ +                "../examples/data/Ant-WAIS-Divide.Severinghaus.2012.lpd",
+│ │ +                "https://lipdverse.org/data/LCf20b99dfe8d78840ca60dfb1f832b9ec/1_0_1/Nunalleq.Ledger.2018.lpd"                    
+│ │ +            ])            
+│ │  
+│ │ -                print(lipd.get_all_dataset_names())
+│ │ +            print(lipd.get_all_dataset_names())
+│ │          '''        
+│ │          if type(lipdfiles) is not list:
+│ │              lipdfiles = [lipdfiles]
+│ │              
+│ │          filemap = {}
+│ │          for lipdfile in lipdfiles:
+│ │              if not os.path.isfile(lipdfile) and not lipdfile.startswith("http"):
+│ │ @@ -166,15 +170,15 @@
+│ │                  continue
+│ │  
+│ │              picklefile = tempfile.NamedTemporaryFile().name
+│ │              filemap[lipdfile] = picklefile
+│ │          
+│ │          print(f"Loading {len(filemap.keys())} LiPD files" + (" from Collection: {collection_id}" if collection_id else ""))
+│ │          
+│ │ -        multi_convert_to_pickle(filemap, collection_id)
+│ │ +        multi_convert_to_pickle(filemap, parallel, collection_id)
+│ │          print("Conversion to RDF done..")
+│ │  
+│ │          print("Loading RDF into graph")
+│ │          for lipdfile in lipdfiles:
+│ │              picklefile = filemap[lipdfile]
+│ │              if os.path.exists(picklefile):
+│ │                  with open(picklefile, 'rb') as f:
+│ │ @@ -203,26 +207,25 @@
+│ │          
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd_remote = LiPD()
+│ │ -                lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ -                lipd_remote.load_remote_datasets(["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001", "MD98_2181.Stott.2007", "Ant-WAIS-Divide.Severinghaus.2012"])
+│ │ -                print(lipd_remote.get_all_dataset_names())
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd_remote = LiPD()
+│ │ +            lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ +            lipd_remote.load_remote_datasets(["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001", "MD98_2181.Stott.2007", "Ant-WAIS-Divide.Severinghaus.2012"])
+│ │ +            print(lipd_remote.get_all_dataset_names())
+│ │  
+│ │          '''
+│ │          self.endpoint = endpoint
+│ │  
+│ │  
+│ │ -    def convert_lipd_dir_to_rdf(self, lipd_dir, rdf_file, collection_id=None):
+│ │ +    def convert_lipd_dir_to_rdf(self, lipd_dir, rdf_file, parallel=False, collection_id=None):
+│ │          '''Convert a directory containing LiPD files into a single RDF file (to be used for uploading to Knowledge Bases like GraphDB)
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │  
+│ │          lipd_dir : str
+│ │              Path to the directory containing lipd files
+│ │ @@ -238,30 +241,29 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │  
+│ │ -                lipd.convert_lipd_dir_to_rdf("../examples/data", "all-lipd.nq")
+│ │ +            lipd.convert_lipd_dir_to_rdf("../examples/data", "all-lipd.nq")
+│ │          '''
+│ │  
+│ │          filemap = {}
+│ │          for path in os.listdir(lipd_dir):
+│ │              fullpath = os.path.join(lipd_dir, path)
+│ │              tmp_rdf_file = tempfile.NamedTemporaryFile().name
+│ │              filemap[fullpath] = tmp_rdf_file
+│ │          
+│ │          print(f"Starting conversion of {len(filemap.keys())} LiPD files")
+│ │  
+│ │ -        multi_convert_to_rdf(filemap, collection_id)
+│ │ +        multi_convert_to_rdf(filemap, parallel, collection_id)
+│ │          
+│ │          print("Conversion to RDF done..")
+│ │  
+│ │          print("Writing to main RDF file..")
+│ │          with open(rdf_file, "a") as fout:
+│ │              for lipdfile in filemap.keys():
+│ │                  tmp_rdf_file = filemap[lipdfile]
+│ │ @@ -304,27 +306,26 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                query = """PREFIX le: <http://linked.earth/ontology#>
+│ │ -                        select (count(distinct ?ds) as ?count) where { 
+│ │ -                            ?ds a le:Dataset .
+│ │ -                            ?ds le:hasUrl ?url
+│ │ -                        }"""
+│ │ -                result, result_df = lipd.query(query)
+│ │ -                result_df
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            query = """PREFIX le: <http://linked.earth/ontology#>
+│ │ +                    select (count(distinct ?ds) as ?count) where { 
+│ │ +                        ?ds a le:Dataset .
+│ │ +                        ?ds le:hasUrl ?url
+│ │ +                    }"""
+│ │ +            result, result_df = lipd.query(query)
+│ │ +            result_df
+│ │          '''
+│ │  
+│ │          if remote and self.endpoint:
+│ │              print("Making remote query to endpoint: " + self.endpoint)
+│ │              matches = re.match(r"(.*)\s*SELECT\s+(.+)\s+WHERE\s+{(.+)}\s*(.*)", query, re.DOTALL | re.IGNORECASE)
+│ │              if matches:
+│ │                  prefix = matches.group(1)
+│ │ @@ -360,20 +361,19 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd_remote = LiPD()
+│ │ -                lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ -                lipd_remote.load_remote_datasets(["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001", "MD98_2181.Stott.2007", "Ant-WAIS-Divide.Severinghaus.2012"])
+│ │ -                print(lipd_remote.get_all_dataset_names())
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd_remote = LiPD()
+│ │ +            lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ +            lipd_remote.load_remote_datasets(["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001", "MD98_2181.Stott.2007", "Ant-WAIS-Divide.Severinghaus.2012"])
+│ │ +            print(lipd_remote.get_all_dataset_names())
+│ │          '''
+│ │          if not self.endpoint:
+│ │              raise Exception("No remote endpoint")
+│ │          
+│ │          if type(dsnames) is not list:
+│ │              dsnames = [dsnames]
+│ │              
+│ │ @@ -424,22 +424,21 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                print(lipd.get_bibtex())
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            print(lipd.get_bibtex())
+│ │          '''
+│ │  
+│ │          def establish_type(pub_type):
+│ │              
+│ │              if pub_type:
+│ │                  pub_type = re.sub('-', '', pub_type).lower()
+│ │              else:
+│ │ @@ -590,23 +589,22 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd_remote = LiPD()
+│ │ -                lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ -                ts_list = lipd_remote.get_timeseries(["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001", "MD98_2181.Stott.2007", "Ant-WAIS-Divide.Severinghaus.2012"])
+│ │ -                for dsname, tsos in ts_list.items():
+│ │ -                    for tso in tsos:
+│ │ -                        if 'paleoData_variableName' in tso:
+│ │ -                            print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd_remote = LiPD()
+│ │ +            lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ +            ts_list = lipd_remote.get_timeseries(["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001", "MD98_2181.Stott.2007", "Ant-WAIS-Divide.Severinghaus.2012"])
+│ │ +            for dsname, tsos in ts_list.items():
+│ │ +                for tso in tsos:
+│ │ +                    if 'paleoData_variableName' in tso:
+│ │ +                        print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])
+│ │          '''
+│ │          ts = self._get_timeseries(dsnames)
+│ │          return ts
+│ │  
+│ │      def _get_timeseries(self, dsnames):
+│ │          timeseries = {}
+│ │          for dsname in dsnames:
+│ │ @@ -632,22 +630,21 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd_remote = LiPD()
+│ │ -                lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ -                dsname = "Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001"
+│ │ -                lipd_remote.load_remote_datasets([dsname])
+│ │ -                lipd_json = lipd_remote.get_lipd(dsname)
+│ │ -                print(lipd_json)
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd_remote = LiPD()
+│ │ +            lipd_remote.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")
+│ │ +            dsname = "Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001"
+│ │ +            lipd_remote.load_remote_datasets([dsname])
+│ │ +            lipd_json = lipd_remote.get_lipd(dsname)
+│ │ +            print(lipd_json)
+│ │          '''           
+│ │          converter = RDFToLiPD()            
+│ │          return converter.convert(dsname, self.graph)
+│ │  
+│ │      def pop(self, dsname, collection_id=None):
+│ │          '''Removes a dataset from the graph and returns a LiPD object
+│ │  
+│ │ @@ -665,26 +662,25 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                all_datasets = lipd.get_all_dataset_names()
+│ │ -                print("Loaded datasets: " + str(all_datasets))
+│ │ -                popped = lipd.pop(all_datasets[0])
+│ │ -                print("Loaded datasets after pop: " + str(lipd.get_all_dataset_names()))
+│ │ -                print("Popped dataset: " + str(popped.get_all_dataset_names()))       
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            all_datasets = lipd.get_all_dataset_names()
+│ │ +            print("Loaded datasets: " + str(all_datasets))
+│ │ +            popped = lipd.pop(all_datasets[0])
+│ │ +            print("Loaded datasets after pop: " + str(lipd.get_all_dataset_names()))
+│ │ +            print("Popped dataset: " + str(popped.get_all_dataset_names()))       
+│ │          '''        
+│ │          graphurl = NSURL + "/" + dsname
+│ │          if collection_id:
+│ │              graphurl = NSURL + "/" + collection_id + "/" + dsname
+│ │          subgraph = copy.deepcopy(self.graph.get_context(graphurl))
+│ │          self.graph.remove((None, None, None, graphurl))
+│ │          return LiPD(subgraph)
+│ │ @@ -706,25 +702,24 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                all_datasets = lipd.get_all_dataset_names()
+│ │ -                print("Loaded datasets: " + str(all_datasets))
+│ │ -                lipd.remove(all_datasets[0])
+│ │ -                print("Loaded datasets after remove: " + str(lipd.get_all_dataset_names()))
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            all_datasets = lipd.get_all_dataset_names()
+│ │ +            print("Loaded datasets: " + str(all_datasets))
+│ │ +            lipd.remove(all_datasets[0])
+│ │ +            print("Loaded datasets after remove: " + str(lipd.get_all_dataset_names()))
+│ │          '''
+│ │          graphurl = NSURL + "/" + dsname
+│ │          if collection_id:
+│ │              graphurl = NSURL + "/" + collection_id + "/" + dsname
+│ │          self.graph.remove((None, None, None, graphurl))       
+│ │  
+│ │      def get_rdf(self):
+│ │ @@ -734,23 +729,22 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                nquads = lipd.get_rdf()
+│ │ -                print(nquads[:10000])
+│ │ -                print("...")
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            nquads = lipd.get_rdf()
+│ │ +            print(nquads[:10000])
+│ │ +            print("...")
+│ │          '''
+│ │          
+│ │          return self.graph.serialize(format='nquads')
+│ │  
+│ │  
+│ │      def get_all_dataset_names(self):
+│ │          '''Get all Dataset Names
+│ │ @@ -767,22 +761,21 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                print(lipd.get_all_dataset_names())
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            print(lipd.get_all_dataset_names())
+│ │          '''        
+│ │          query = f"""
+│ │              SELECT ?dsname WHERE {{ 
+│ │                  ?ds a le:Dataset .
+│ │                  ?ds le:name ?dsname
+│ │              }}
+│ │              """
+│ │ @@ -804,36 +797,35 @@
+│ │  
+│ │          .. ipython:: python
+│ │              :okwarning:
+│ │              :okexcept:
+│ │  
+│ │              from pylipd.lipd import LiPD
+│ │  
+│ │ -            if __name__=="__main__":
+│ │ -                # Fetch LiPD data from remote RDF Graph
+│ │ -                lipd = LiPD()
+│ │ -                lipd.load([
+│ │ -                    "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ -                    "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ -                ])
+│ │ -                print(lipd.get_all_dataset_ids())
+│ │ +            # Fetch LiPD data from remote RDF Graph
+│ │ +            lipd = LiPD()
+│ │ +            lipd.load([
+│ │ +                "../examples/data/Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001.lpd",
+│ │ +                "../examples/data/MD98_2181.Stott.2007.lpd"
+│ │ +            ])
+│ │ +            print(lipd.get_all_dataset_ids())
+│ │          '''        
+│ │          query = """
+│ │              SELECT ?dsid WHERE {{ 
+│ │                  ?ds a le:Dataset .
+│ │                  OPTIONAL{?ds le:datasetId ?dsid}
+│ │              }}
+│ │              """
+│ │          qres, qres_df = self.query(query)
+│ │          return [sanitizeId(row.dsid) for row in qres]
+│ │      
+│ │ -    def search_datasets(variableName=[ ], archiveType=[ ], proxyObsType=[ ], infVarType = [ ], sensorGenus=[ ],
+│ │ -                    sensorSpecies=[ ], interpName =[ ], interpDetail =[ ], ageUnits = [ ],
+│ │ -                    ageBound = [ ], ageBoundType = [ ], recordLength = [ ], resolution = [ ],
+│ │ -                    lat = [ ], lon = [ ], alt = [ ], print_response = True, download_lipd = True,
+│ │ +    def search_datasets(variableName=[ ], archiveType=[ ], proxy=[ ], resolution = [ ],
+│ │ +                    ageUnits = [ ], ageBound = [ ], ageBoundType = [ ], 
+│ │ +                    lat = [ ], lon = [ ], alt = [ ], 
+│ │ +                    print_response = True, download_lipd = True,
+│ │                      download_folder = 'default'):
+│ │          pass
+│ │  
+│ │  
+│ │      def find_ensemble_table_for_variable(self, ensemble_table):
+│ │          pass
+│ │   --- pylipd-1.0.3/pylipd/lipd_to_rdf.py
+│ ├── +++ pylipd-1.0.4/pylipd/lipd_to_rdf.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -383,31 +383,59 @@
+│ │          return [obj, objhash, []]
+│ │      
+│ │      # proxy (could be specific)
+│ │      # proxyGeneral (more general than proxy)
+│ │      # proxyDetail (more specific than proxy)
+│ │      # proxyLumps ?
+│ │      # archiveType -> keep at dataset level ?
+│ │ +
+│ │ +    # proxyArchiveType
+│ │ +
+│ │ +    # don't create proxy system model ?
+│ │ +
+│ │ +    # if there is an proxyObservationType or inferredVariableType -> Existing Variable . Variable Name
+│ │ +    # - keep the proxyObservationType and inferredVariableType properties ?
+│ │ +
+│ │ +    # Schema alignment with LiPD:
+│ │ +    # - https://docs.google.com/spreadsheets/d/11WjpY8PtdwoX98n5MK8VhwgqSSB0ubS42spj06nVq9o/edit#gid=1904012337
+│ │ +    # Types
+│ │ +    # - [classkey]_[key]
+│ │ +    # - [classkey[number]]_[key] : for arrays
+│ │ +
+│ │      # ^^ Essentially, can skip this function
+│ │      def _create_proxy_system(self, obj, hash) :
+│ │          varid = obj["@id"]
+│ │          # Deal with proxies
+│ │          proxyobs = None
+│ │          sampleid = None
+│ │          if ("proxy" in obj and obj["proxy"]) :
+│ │              proxyobs = obj["proxy"]
+│ │ -            del obj["proxy"]
+│ │ +            #del obj["proxy"]
+│ │          elif ("OnProxyObservationProperty" in obj and obj["OnProxyObservationProperty"]) :
+│ │              proxyobs = obj["OnProxyObservationProperty"]
+│ │              del obj["OnProxyObservationProperty"]
+│ │          elif ("ProxyObservationType" in obj and obj["ProxyObservationType"]) :
+│ │              proxyobs = obj["ProxyObservationType"]
+│ │ +            if "name" in obj and obj["name"] :
+│ │ +                obj["name"] = obj["name"] + "." + proxyobs
+│ │ +            else:
+│ │ +                obj["name"] = proxyobs
+│ │          elif ("proxyObservationType" in obj and obj["proxyObservationType"]) :
+│ │              proxyobs = obj["proxyObservationType"]
+│ │ -        
+│ │ +            if "name" in obj and obj["name"] :
+│ │ +                obj["name"] = obj["name"] + "." + proxyobs
+│ │ +            else:
+│ │ +                obj["name"] = proxyobs
+│ │ +        elif ("inferredVariableType" in obj and obj["inferredVariableType"]) :
+│ │ +            infvar = obj["inferredVariableType"]
+│ │ +            if "name" in obj and obj["name"] :
+│ │ +                obj["name"] = obj["name"] + "." + infvar
+│ │ +            else:
+│ │ +                obj["name"] = infvar
+│ │ +
+│ │          vartype = obj["@category"]
+│ │          if (vartype and vartype == "MeasuredVariable") :
+│ │              # Get the archive type
+│ │              dsname = self._get_parent_property(obj, "dataSetName")
+│ │              geo = self._get_parent_property(obj, "geo")
+│ │              latitude = 0
+│ │              if (("geometry" in geo) and len(geo["geometry"]["coordinates"]) > 1) :
+│ │ @@ -439,15 +467,15 @@
+│ │                          "@category" : "PhysicalSample", 
+│ │                          "@extracats" : [archivetype]
+│ │                      }
+│ │                      for pkey,pval in sample.items() :
+│ │                          sampleobj[pkey] = pval
+│ │  
+│ │                      hash[sampleid] = sampleobj
+│ │ -                del obj["physicalSample"]
+│ │ +                #del obj["physicalSample"]
+│ │              
+│ │              if type(proxyobs) is list:
+│ │                  proxyobs = proxyobs[0]
+│ │  
+│ │              observationid = self._get_observation(proxyobs)
+│ │              #obj["proxy"])
+│ │              # Create sensor
+│ │ @@ -455,29 +483,29 @@
+│ │              sensor = {
+│ │                  "@id" : sensorid, 
+│ │                  "@category" : "Sensor"
+│ │              }
+│ │              if (("archiveGenus" in obj)) :
+│ │                  sensor["sensorGenus"] = obj["archiveGenus"]
+│ │                  sensorid = ucfirst(sensor["sensorGenus"].lower())
+│ │ -                del obj["archiveGenus"]
+│ │ +                #del obj["archiveGenus"]
+│ │                  if (("archiveSpecies" in obj)) :
+│ │                      sensor["sensorSpecies"] = obj["archiveSpecies"]
+│ │                      sensorid += " " + sensor["sensorSpecies"].lower()
+│ │ -                    del obj["archiveSpecies"]
+│ │ +                    #del obj["archiveSpecies"]
+│ │                  
+│ │              
+│ │              if (("sensorGenus" in obj)) :
+│ │                  sensor["sensorGenus"] = obj["sensorGenus"]
+│ │                  sensorid = ucfirst(sensor["sensorGenus"].lower())
+│ │ -                del obj["sensorGenus"]
+│ │ +                #del obj["sensorGenus"]
+│ │                  if (("sensorSpecies" in obj)) :
+│ │                      sensor["sensorSpecies"] = obj["sensorSpecies"]
+│ │                      sensorid += " " + sensor["sensorSpecies"].lower()
+│ │ -                    del obj["sensorSpecies"]
+│ │ +                    #del obj["sensorSpecies"]
+│ │                  
+│ │              
+│ │              if (not (sensorid in hash)) :
+│ │                  sensor["@id"] = sensorid
+│ │                  sensor["@category"] = self._guess_sensor_type(archivetype, observationid, sensor)
+│ │                  hash[sensorid] = sensor
+│ │              
+│ │ @@ -516,16 +544,16 @@
+│ │                      hash[proxymodelid] = proxymodel
+│ │                      del obj["proxySystemModel"]
+│ │                  hash[proxyid] = proxy
+│ │              
+│ │              obj["measuredOn"] = sampleid
+│ │              obj["ProxyObservationType"] = observationid
+│ │              obj["hasProxySystem"] = proxyid
+│ │ -            if "proxy" in obj:
+│ │ -                del obj["proxy"]
+│ │ +            #if "proxy" in obj:
+│ │ +            #    del obj["proxy"]
+│ │              return [obj, hash, [sampleid, proxyid, sensorid]]
+│ │          
+│ │          return [obj, hash, []]
+│ │      
+│ │      def _wrap_integration_time(self, obj, objhash) :
+│ │          objid = obj["@id"]
+│ │          # Deal with integrationTime
+│ │   --- pylipd-1.0.3/pylipd/multi_processing.py
+│ ├── +++ pylipd-1.0.4/pylipd/multi_processing.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -6,30 +6,37 @@
+│ │      """Worker that converts one lipdfile to an rdffile"""
+│ │      try:
+│ │          converter.convert(lipdfile, rdffile)
+│ │      except Exception as e:
+│ │          print(f"ERROR: Could not convert LiPD file {lipdfile} to RDF")            
+│ │          raise e
+│ │  
+│ │ -def multi_convert_to_rdf(filemap, collection_id=None):
+│ │ -    """Create a pool to convert all lipdfiles to rdffiles"""
+│ │ -    pool = mp.Pool(mp.cpu_count())
+│ │ -    args = [(lipdfile, rdffile, collection_id) for lipdfile, rdffile in filemap.items()]
+│ │ -    pool.starmap(convert_to_rdf, args, chunksize=1)
+│ │ -    pool.close()
+│ │ -
+│ │ +def multi_convert_to_rdf(filemap, parallel=True, collection_id=None):
+│ │ +    if parallel:
+│ │ +        """Create a pool to convert all lipdfiles to rdffiles"""
+│ │ +        pool = mp.Pool(mp.cpu_count())
+│ │ +        args = [(lipdfile, rdffile, collection_id) for lipdfile, rdffile in filemap.items()]
+│ │ +        pool.starmap(convert_to_rdf, args, chunksize=1)
+│ │ +        pool.close()
+│ │ +    else:
+│ │ +        for lipdfile, rdffile in filemap.items():
+│ │ +            convert_to_rdf(lipdfile, rdffile, collection_id)
+│ │  
+│ │  def convert_to_pickle(lipdfile, tofile, collection_id=None):
+│ │      converter = LipdToRDF(collection_id)    
+│ │      """Worker that converts one lipdfile to an rdffile"""
+│ │      try:
+│ │          converter.convert(lipdfile, tofile, type="pickle")
+│ │      except Exception as e:
+│ │          print(f"ERROR: Could not convert LiPD file {lipdfile} to RDF")            
+│ │          raise e
+│ │  
+│ │ -def multi_convert_to_pickle(filemap, collection_id=None):
+│ │ +def multi_convert_to_pickle(filemap, parallel=True, collection_id=None):
+│ │      """Create a pool to convert all lipdfiles to picklefiles"""
+│ │ -    pool = mp.Pool(mp.cpu_count())
+│ │ -    args = [(lipdfile, tofile, collection_id) for lipdfile, tofile in filemap.items()]
+│ │ -    pool.starmap(convert_to_pickle, args, chunksize=1)
+│ │ -    pool.close()
+│ │ +    if parallel:
+│ │ +        pool = mp.Pool(mp.cpu_count())
+│ │ +        args = [(lipdfile, tofile, collection_id) for lipdfile, tofile in filemap.items()]
+│ │ +        pool.starmap(convert_to_pickle, args, chunksize=1)
+│ │ +        pool.close()
+│ │ +    else:
+│ │ +        for lipdfile, tofile in filemap.items():
+│ │ +            convert_to_pickle(lipdfile, tofile, collection_id)
+│ │   --- pylipd-1.0.3/pylipd/rdf_to_lipd.py
+│ ├── +++ pylipd-1.0.4/pylipd/rdf_to_lipd.py
+│ │┄ Files identical despite different names
+│ │   --- pylipd-1.0.3/pylipd/series/regexes.py
+│ ├── +++ pylipd-1.0.4/pylipd/series/regexes.py
+│ │┄ Files identical despite different names
+│ │   --- pylipd-1.0.3/pylipd/usage.py
+│ ├── +++ pylipd-1.0.4/pylipd/usage.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -2,125 +2,122 @@
+│ │  from pylipd.multi_processing import convert_to_rdf
+│ │  
+│ │  ####################
+│ │  # TODO:
+│ │  # - Edit local LiPD & update endpoint
+│ │  ####################
+│ │  
+│ │ -if __name__=="__main__":
+│ │ -    local_lipd_dir = "/Users/varun/git/LiPD/PyLiPD/data/lpd"
+│ │ -    remote_lipd_endpoint = "https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2"
+│ │ -
+│ │ -    lipd = LiPD()
+│ │ -
+│ │ -    '''
+│ │ -    # Convert LiPD files to RDF    
+│ │ -    lipd.convert_lipd_dir_to_rdf(
+│ │ -        local_lipd_dir,
+│ │ -        local_lipd_dir+".nq")
+│ │ -    
+│ │ -    exit()
+│ │ -    '''
+│ │ -    
+│ │ -    '''
+│ │ -    # Convert one LiPD file to RDF
+│ │ -    convert_to_rdf(
+│ │ -        "/Users/varun/git/LiPD/PyLiPD/data/lpd/CO03COPM.lpd",
+│ │ -        "/Users/varun/git/LiPD/PyLiPD/data/MD98_2181.Stott.2007.nq"
+│ │ -    )
+│ │ -    exit()
+│ │ -    '''
+│ │ -    
+│ │ -    '''    
+│ │ -    data = ['https://lipdverse.org/data/TjhHrDv0LQ4aazHolZkR/1_0_0//Ocn-WEqPacific.Stott.2007.lpd']
+│ │ -    lipd.load(data)
+│ │ -
+│ │ -    ts_list = lipd.get_timeseries(lipd.get_all_dataset_names())
+│ │ -    for dsname, tsos in ts_list.items():
+│ │ -        for tso in tsos:
+│ │ -            if 'paleoData_variableName' in tso:
+│ │ -                print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])    
+│ │ -
+│ │ -    '''
+│ │ -
+│ │ -    # Load Datasets (from Local and Remote)
+│ │ -    dsnames = ["MD98_2181.Stott.2007"]
+│ │ -    remote_dsnames = ["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001"]
+│ │ -
+│ │ -    L = LiPD()
+│ │ -    #L.load(local_lipd_dir+"/"+"ODP1671017E.lpd")
+│ │ -    #L.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")    
+│ │ -    L.load([local_lipd_dir + "/" + dsname + ".lpd" for dsname in ["MD98_2181.Stott.2007","NAm-SmithersSkiArea.Schweingruber.1996", 
+│ │ -                            "NAm-CeaderBreaks.Briffa.1996", "ODP1671017E", 
+│ │ -                            "SPC14.Kahle.2021", "RC12-10.Poore.2003", 
+│ │ -                            "MD02-2553.Poore.2009", "AD9117.Guinta.2001",
+│ │ -                            "SchellingsBog.Barron.2004", "Hidden.Tang.1999"]])
+│ │ -    #bibtex = L.get_bibtex()
+│ │ -    #print(bibtex)
+│ │ -    #exit()
+│ │ -
+│ │ -    # Load from local
+│ │ -    lipd = LiPD()
+│ │ -    lipdfiles = [local_lipd_dir + "/" + dsname + ".lpd" for dsname in dsnames]
+│ │ -    #print(lipdfiles)
+│ │ -    
+│ │ -    lipd.load(lipdfiles)
+│ │ -    #lipd.load_from_dir(local_lipd_dir)
+│ │ -    print(lipd.get_all_dataset_names())
+│ │ -    print(lipd.get_all_dataset_ids())
+│ │ -
+│ │ -    #lipd.load(["/Users/varun/Downloads/Arc-LakeNataujärvi.Ojala.2005.lpd"])
+│ │ -    #print(lipd.get_all_dataset_names())
+│ │ -    
+│ │ -    for dsname in lipd.get_all_dataset_names():
+│ │ -        json = lipd.get_lipd(dsname)
+│ │ -        print(json['pub'])
+│ │ -
+│ │ -    ts_list = lipd.get_timeseries(lipd.get_all_dataset_names())
+│ │ -    for dsname, tsos in ts_list.items():
+│ │ -        for tso in tsos:
+│ │ -            if 'paleoData_variableName' in tso:
+│ │ -                print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])
+│ │ -
+│ │ -    exit()
+│ │ -    
+│ │ -    # Fetch LiPD data from remote RDF Graph
+│ │ -    lipd.set_endpoint(remote_lipd_endpoint)
+│ │ -    lipd.load_remote_datasets(remote_dsnames)
+│ │ -
+│ │ -    # Convert to TSO object (as before)
+│ │ -    ts_list_remote = lipd.get_timeseries(lipd.get_all_dataset_names())
+│ │ -    for dsname, tsos in ts_list_remote.items():
+│ │ -        for tso in tsos:
+│ │ +
+│ │ +local_lipd_dir = "/Users/varun/git/LiPD/PyLiPD/data/lpd.latest"
+│ │ +remote_lipd_endpoint = "https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2"
+│ │ +
+│ │ +'''
+│ │ +lipd = LiPD()
+│ │ +# Convert LiPD files to RDF    
+│ │ +lipd.convert_lipd_dir_to_rdf(
+│ │ +    local_lipd_dir,
+│ │ +    local_lipd_dir+".nq", 
+│ │ +    parallel=False)
+│ │ +
+│ │ +exit()
+│ │ +'''
+│ │ +
+│ │ +'''
+│ │ +# Convert one LiPD file to RDF
+│ │ +convert_to_rdf(
+│ │ +    "/Users/varun/git/LiPD/PyLiPD/data/lpd/CO03COPM.lpd",
+│ │ +    "/Users/varun/git/LiPD/PyLiPD/data/MD98_2181.Stott.2007.nq"
+│ │ +)
+│ │ +exit()
+│ │ +'''
+│ │ +
+│ │ +'''    
+│ │ +data = ['https://lipdverse.org/data/TjhHrDv0LQ4aazHolZkR/1_0_0//Ocn-WEqPacific.Stott.2007.lpd']
+│ │ +lipd.load(data)
+│ │ +
+│ │ +ts_list = lipd.get_timeseries(lipd.get_all_dataset_names())
+│ │ +for dsname, tsos in ts_list.items():
+│ │ +    for tso in tsos:
+│ │ +        if 'paleoData_variableName' in tso:
+│ │ +            print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])    
+│ │ +
+│ │ +'''
+│ │ +
+│ │ +# Load Datasets (from Local and Remote)
+│ │ +dsnames = ["MD98_2181.Stott.2007"]
+│ │ +remote_dsnames = ["Ocn-MadangLagoonPapuaNewGuinea.Kuhnert.2001"]
+│ │ +
+│ │ +'''
+│ │ +L = LiPD()
+│ │ +#L.load(local_lipd_dir+"/"+"ODP1671017E.lpd")
+│ │ +#L.set_endpoint("https://linkedearth.graphdb.mint.isi.edu/repositories/LiPDVerse2")    
+│ │ +L.load([local_lipd_dir + "/" + dsname + ".lpd" for dsname in ["MD98_2181.Stott.2007","NAm-SmithersSkiArea.Schweingruber.1996", 
+│ │ +                        "NAm-CeaderBreaks.Briffa.1996", "ODP1671017E", 
+│ │ +                        "SPC14.Kahle.2021", "RC12-10.Poore.2003", 
+│ │ +                        "MD02-2553.Poore.2009", "AD9117.Guinta.2001",
+│ │ +                        "SchellingsBog.Barron.2004", "Hidden.Tang.1999"]])
+│ │ +#bibtex = L.get_bibtex()
+│ │ +#print(bibtex)
+│ │ +#exit()
+│ │ +'''
+│ │ +
+│ │ +# Load from local
+│ │ +lipd = LiPD()
+│ │ +lipdfiles = [local_lipd_dir + "/" + dsname + ".lpd" for dsname in dsnames]
+│ │ +#print(lipdfiles)
+│ │ +
+│ │ +lipd.load(lipdfiles)
+│ │ +#lipd.load_from_dir(local_lipd_dir)
+│ │ +print(lipd.get_all_dataset_names())
+│ │ +print(lipd.get_all_dataset_ids())
+│ │ +
+│ │ +#lipd.load(["/Users/varun/Downloads/Arc-LakeNataujärvi.Ojala.2005.lpd"])
+│ │ +#print(lipd.get_all_dataset_names())
+│ │ +
+│ │ +ts_list = lipd.get_timeseries(lipd.get_all_dataset_names())
+│ │ +for dsname, tsos in ts_list.items():
+│ │ +    for tso in tsos:
+│ │ +        if 'paleoData_variableName' in tso:
+│ │              print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])
+│ │  
+│ │ -    print(lipd.get_all_dataset_names())
+│ │ -    poplipd = lipd.pop(remote_dsnames[0])
+│ │ -    print("After popping..")
+│ │ -    print(lipd.get_all_dataset_names())
+│ │ -    print("Popped..")
+│ │ -    print(poplipd.get_all_dataset_names())
+│ │ -    
+│ │ -    '''
+│ │ -    print(lipd.get_all_dataset_names())    
+│ │ -    datasets = lipd.get_datasets(dsnames=dsnames)
+│ │ -    print("Fetched..")
+│ │ -    for ds in datasets:
+│ │ -        print(ds['id'])
+│ │ -        #print(json.dumps(ds, indent=3))
+│ │ -    '''
+│ │ -
+│ │ -    # Usage
+│ │ -    # - Just look at https://pyleoclim-util.readthedocs.io/en/master/core/api.html#lipdseries-pyleoclim-lipdseries
+│ │ -    # - Implementing Series, MultipleSeries, EnsemebleSeries, Lipd, LipdSeries
+│ │ -    # - Pyleoclim
+│ │ -    #     - Given: Variable name, optional Dataset IDs
+│ │ -    #       - Return time series data for the  matching variables (optional fuzzy match)
+│ │ -    #     - Given: Proxy, optional Dataset IDs
+│ │ -    #       - Return time series data for the  variables with matching proxies (optional fuzzy match)
+│ │ -
+│ │ -    #   - Time Series Data consists of:
+│ │ -    #       - Variable value, Variable name, Variable unit, Time axis name (age/year), Time axis unit, Time axis values, Lat, Long, Dataset ID
+│ │ -
+│ │ -    #   - Lat, Long, Elevation
+│ │ -    #   - Get the ensemble table given a dataset ID & age Year
+│ │ -    # - Own metadata
+│ │ +
+│ │ +# Fetch LiPD data from remote RDF Graph
+│ │ +lipd.set_endpoint(remote_lipd_endpoint)
+│ │ +lipd.load_remote_datasets(remote_dsnames)
+│ │ +
+│ │ +# Convert to TSO object (as before)
+│ │ +ts_list_remote = lipd.get_timeseries(lipd.get_all_dataset_names())
+│ │ +for dsname, tsos in ts_list_remote.items():
+│ │ +    for tso in tsos:
+│ │ +        print(dsname+': '+tso['paleoData_variableName']+': '+tso['archiveType'])
+│ │ +
+│ │ +print(lipd.get_all_dataset_names())
+│ │ +poplipd = lipd.pop(remote_dsnames[0])
+│ │ +print("After popping..")
+│ │ +print(lipd.get_all_dataset_names())
+│ │ +print("Popped..")
+│ │ +print(poplipd.get_all_dataset_names())
+│ │ +
+│ │ +'''
+│ │ +print(lipd.get_all_dataset_names())    
+│ │ +datasets = lipd.get_datasets(dsnames=dsnames)
+│ │ +print("Fetched..")
+│ │ +for ds in datasets:
+│ │ +    print(ds['id'])
+│ │ +    #print(json.dumps(ds, indent=3))
+│ │ +'''
+│ │ +
+│ │ +# Usage
+│ │ +# - Just look at https://pyleoclim-util.readthedocs.io/en/master/core/api.html#lipdseries-pyleoclim-lipdseries
+│ │ +# - Implementing Series, MultipleSeries, EnsemebleSeries, Lipd, LipdSeries
+│ │ +# - Pyleoclim
+│ │ +#     - Given: Variable name, optional Dataset IDs
+│ │ +#       - Return time series data for the  matching variables (optional fuzzy match)
+│ │ +#     - Given: Proxy, optional Dataset IDs
+│ │ +#       - Return time series data for the  variables with matching proxies (optional fuzzy match)
+│ │ +
+│ │ +#   - Time Series Data consists of:
+│ │ +#       - Variable value, Variable name, Variable unit, Time axis name (age/year), Time axis unit, Time axis values, Lat, Long, Dataset ID
+│ │ +
+│ │ +#   - Lat, Long, Elevation
+│ │ +#   - Get the ensemble table given a dataset ID & age Year
+│ │ +# - Own metadata
+│ │   --- pylipd-1.0.3/pylipd/utils.py
+│ ├── +++ pylipd-1.0.4/pylipd/utils.py
+│ │┄ Files identical despite different names
+│ │   --- pylipd-1.0.3/pylipd.egg-info/PKG-INFO
+│ ├── +++ pylipd-1.0.4/pylipd.egg-info/PKG-INFO
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,27 +1,27 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pylipd
+│ │ -Version: 1.0.3
+│ │ +Version: 1.0.4
+│ │  Summary: Python utilities for handling LiPD data
+│ │  Home-page: https://github.com/linkedearth/pylipd
+│ │ -Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.3
+│ │ +Download-URL: https://github.com/linkedearth/pylipd/tarball/1.0.4
+│ │  Author: Varun Ratnakar
+│ │  Author-email: varunratnakar@gmail.com
+│ │  License: Apache 2-0 License
+│ │  Project-URL: Bug Tracker, https://github.com/linkedearth/pylipd/issues
+│ │  Keywords: Paleoclimate, Data Analysis, LiPD
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.9.0
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # PyLiPD
+│ │ -Python LiPD utilities
+│ │ +Python utilities to interact with the Linked Paleo Data (LiPD) format
+│ │  
+│ │  ## Installation
+│ │      pip install pylipd
+│ │  
+│ │  ## Usage
+│ │  
+│ │  ### Loading local LiPD files
+│ │   --- pylipd-1.0.3/pylipd.egg-info/SOURCES.txt
+│ ├── +++ pylipd-1.0.4/pylipd.egg-info/SOURCES.txt
+│ │┄ Files 1% similar despite different names
+│ │ @@ -5,14 +5,15 @@
+│ │  setup.py
+│ │  ./pylipd/__init__.py
+│ │  ./pylipd/legacy_utils.py
+│ │  ./pylipd/lipd.py
+│ │  ./pylipd/lipd_to_rdf.py
+│ │  ./pylipd/multi_processing.py
+│ │  ./pylipd/rdf_to_lipd.py
+│ │ +./pylipd/test.py
+│ │  ./pylipd/usage.py
+│ │  ./pylipd/utils.py
+│ │  ./pylipd/globals/__init__.py
+│ │  ./pylipd/globals/blacklist.py
+│ │  ./pylipd/globals/schema.py
+│ │  ./pylipd/globals/urls.py
+│ │  ./pylipd/series/__init__.py
+│ │   --- pylipd-1.0.3/setup.cfg
+│ ├── +++ pylipd-1.0.4/setup.cfg
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = pylipd
+│ │ -version = 1.0.3
+│ │ +version = 1.0.4
+│ │  author = Varun Ratnakar
+│ │  author_email = varunratnakar@gmail.com
+│ │  description = Python utilities for handling LiPD data
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/linkedearth/pylipd
+│ │  project_urls =
+│ │   --- pylipd-1.0.3/setup.py
+│ ├── +++ pylipd-1.0.4/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  import os
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  
+│ │ -version = '1.0.3'
+│ │ +version = '1.0.4'
+│ │  
+│ │  # Read the readme file contents into variable
+│ │  def read(fname):
+│ │      return open(os.path.join(os.path.dirname(__file__), fname)).read()
+│ │  
+│ │  setup(
+│ │      name='pylipd',

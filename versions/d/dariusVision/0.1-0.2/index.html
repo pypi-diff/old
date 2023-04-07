@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/dariusVision-0.1.tar.gz tmp/dariusVision-0.2.tar.gz --html versions/d/dariusVision/0.1-0.2/index.html --text versions/d/dariusVision/0.1-0.2/diff.txt --markdown versions/d/dariusVision/0.1-0.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.33 KB</span></div>
+  <div><span class="source">tmp/dariusVision-0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/dariusVision-0.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">270 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dariusVision-0.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>05:<del>30</del>:<del>32</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dariusVision-0.<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.01 KB</span></div>
+    <div><span class="source">dariusVision-0.1.tar</span> vs.</div>
+    <div id="dariusVision--.-.tar"><span class="source">dariusVision-0.2.tar</span>
+      <a class="anchor" href="#dariusVision--.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.93 KB</span></div>
+      <div id="dariusVision--.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#dariusVision--.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.<del>062209</del><span class="dp">·</span>dariusVision-0.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.<ins>873855</ins><span class="dp">·</span>dariusVision-0.<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:46:45.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:46:45.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<del>51</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.<del>062209</del><span class="dp">·</span>dariusVision-0.<del>1</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<ins>93</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.<ins>873855</ins><span class="dp">·</span>dariusVision-0.<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.<del>062209</del><span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision/</td><td class="diffline">4 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.<ins>873855</ins><span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>119<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:29:48.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>119<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:29:48.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3265<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:35:34.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision/cam.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3265<span class="dp">·</span>2023-04-07<span class="dp">·</span>01:35:34.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision/cam.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9647<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:59:58.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision/realsense2.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9647<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:59:58.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision/realsense2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2011<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:29:23.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision/utils.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2011<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:29:23.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.<del>062209</del><span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision.egg-info/</td><td class="diffline">9 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.<ins>873855</ins><span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<del>51</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision.egg-info/PKG-INFO</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<ins>93</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>289<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision.egg-info/SOURCES.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>289<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision.egg-info/dependency_links.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>20</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision.egg-info/requires.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>13</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/dariusVision.egg-info/top_level.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/dariusVision.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>32</del>.<del>062209</del><span class="dp">·</span>dariusVision-0.<del>1</del>/setup.cfg</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>46</ins>:<ins>44</ins>.<ins>873855</ins><span class="dp">·</span>dariusVision-0.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<del>00</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<del>30</del>:<del>2</del>9.000000<span class="dp">·</span>dariusVision-0.<del>1</del>/setup.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>gbox3d<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<ins>57</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>05:<ins>44</ins>:<ins>4</ins>9.000000<span class="dp">·</span>dariusVision-0.<ins>2</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">dariusVision-0.1/LICENSE</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--LICENSE"><span class="source">dariusVision-0.2/LICENSE</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">827 B</span></div>
+      <div><span class="source">dariusVision-0.1/PKG-INFO</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--PKG-INFO"><span class="source">dariusVision-0.2/PKG-INFO</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>dariusVision</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>dariusVision</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>2</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>computer<span class="dp">·</span>vision</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><del>Ho</del>m<del>e-</del><del>p</del>a<del>ge</del>:<span class="dp">·</span><del>ht</del><del>tps://gi</del>t<del>hub.com/y</del>o<del>ur</del><del>us</del>e<del>rna</del><del>me/mypack</del>a<del>g</del>e</td><td class="diffline">4 </td><td class="diffpresent"><ins>Su</ins>m<ins>m</ins>a<ins>ry</ins>:<span class="dp">·</span><ins>camera<span class="dp">·</span>u</ins>t<ins>ilities<span class="dp">·</span>t</ins>o<ins><span class="dp">·</span>g</ins>e<ins>t<span class="dp">·</span>last<span class="dp">·</span>fr</ins>a<ins>m</ins>e</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/gbox3d/dariusVision.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gbox3d</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gbox3d</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gbox3d@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gbox3d@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.6</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.6</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">15 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">camera<span class="dp">·</span>utilities<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>last<span class="dp">·</span>frame</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">dariusVision-0.1/dariusVision/cam.py</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--dariusVision-cam.py"><span class="source">dariusVision-0.2/dariusVision/cam.py</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--dariusVision-cam.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">dariusVision-0.1/dariusVision/realsense2.py</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--dariusVision-realsense-.py"><span class="source">dariusVision-0.2/dariusVision/realsense2.py</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--dariusVision-realsense-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">dariusVision-0.1/dariusVision/utils.py</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--dariusVision-utils.py"><span class="source">dariusVision-0.2/dariusVision/utils.py</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--dariusVision-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">871 B</span></div>
+      <div><span class="source">dariusVision-0.1/dariusVision.egg-info/PKG-INFO</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--dariusVision.egg-info-PKG-INFO"><span class="source">dariusVision-0.2/dariusVision.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--dariusVision.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>dariusVision</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>dariusVision</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>2</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>computer<span class="dp">·</span>vision</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><del>Ho</del>m<del>e-</del><del>p</del>a<del>ge</del>:<span class="dp">·</span><del>ht</del><del>tps://gi</del>t<del>hub.com/y</del>o<del>ur</del><del>us</del>e<del>rna</del><del>me/mypack</del>a<del>g</del>e</td><td class="diffline">4 </td><td class="diffpresent"><ins>Su</ins>m<ins>m</ins>a<ins>ry</ins>:<span class="dp">·</span><ins>camera<span class="dp">·</span>u</ins>t<ins>ilities<span class="dp">·</span>t</ins>o<ins><span class="dp">·</span>g</ins>e<ins>t<span class="dp">·</span>last<span class="dp">·</span>fr</ins>a<ins>m</ins>e</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/gbox3d/dariusVision.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gbox3d</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>gbox3d</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gbox3d@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>gbox3d@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.6</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.6</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">15 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">camera<span class="dp">·</span>utilities<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>last<span class="dp">·</span>frame</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">981 B</span></div>
+      <div><span class="source">dariusVision-0.1/setup.py</span> vs.</div>
+      <div id="dariusVision--.-.tar---dariusVision--.--setup.py"><span class="source">dariusVision-0.2/setup.py</span>
+        <a class="anchor" href="#dariusVision--.-.tar---dariusVision--.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 21 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">setup(</td><td class="diffline">2 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;dariusVision&#x27;,</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;dariusVision&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.<del>1</del>&#x27;,</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.<ins>2</ins>&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;<del>A<span class="dp">·</span>p</del>a<del>ckage<span class="dp">·</span>for</del><span class="dp">·</span><del>c</del>o<del>mpu</del>t<del>er<span class="dp">·</span>vision</del>&#x27;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;<ins>ca</ins><ins>mer</ins>a<ins><span class="dp">·</span></ins><ins>utilities</ins><span class="dp">·</span><ins>t</ins>o<ins><span class="dp">·</span>ge</ins>t<ins><span class="dp">·</span>l</ins><ins>ast<span class="dp">·</span>frame</ins>&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=&#x27;camera<span class="dp">·</span>utilities<span class="dp">·</span>to<span class="dp">·</span>get<span class="dp">·</span>last<span class="dp">·</span>frame&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;dariusVision&#x27;],</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;dariusVision&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&#x27;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;opencv<del>-python</del>&#x27;<del>,</del></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;opencv&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;gbox3d&#x27;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;gbox3d&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;gbox3d@gmail.com&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;gbox3d@gmail.com&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/<del>y</del>o<del>urusername/mypackage</del>&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/<ins>g</ins><ins>b</ins>o<ins>x3d/dariusVision.git</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha&#x27;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.6&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.6&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

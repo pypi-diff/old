@@ -1,0 +1,313 @@
+--- tmp/groot-client-0.0.1.tar.gz
++++ tmp/groot-client-0.0.1.dev20230407013444.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "groot-client-0.0.1.tar", last modified: Fri Apr  7 05:52:03 2023, max compression
+│ +gzip compressed data, was "groot-client-0.0.1.dev20230407013444.tar", last modified: Fri Apr  7 01:35:01 2023, max compression
+│   --- groot-client-0.0.1.tar
+├── +++ groot-client-0.0.1.dev20230407013444.tar
+│ ├── file list
+│ │ @@ -1,58 +1,58 @@
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       51 2023-03-31 09:12:11.000000 groot-client-0.0.1/CHANGELOG.md
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        1 2023-03-31 09:12:11.000000 groot-client-0.0.1/LICENSE.md
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      133 2023-03-31 09:12:11.000000 groot-client-0.0.1/MANIFEST.in
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1869 2023-04-07 05:52:03.685791 groot-client-0.0.1/PKG-INFO
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1486 2023-04-07 02:37:51.000000 groot-client-0.0.1/README.md
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1344 2023-04-03 08:00:16.000000 groot-client-0.0.1/groot/__init__.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/config/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1784 2023-04-06 06:29:04.000000 groot-client-0.0.1/groot/config/groot.yml
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/controllers/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1/groot/controllers/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1543 2023-04-07 05:41:49.000000 groot-client-0.0.1/groot/controllers/base.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/controllers/clients/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-06 07:09:59.000000 groot-client-0.0.1/groot/controllers/clients/__init__.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/controllers/clients/argocd/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-03 09:12:14.000000 groot-client-0.0.1/groot/controllers/clients/argocd/__init__.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/controllers/clients/argocd/client/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-03 08:01:51.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      523 2023-04-03 08:44:40.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/config.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-03 08:01:51.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      628 2023-04-06 02:35:20.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/applications.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      440 2023-04-03 09:14:18.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/base.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1858 2023-04-03 08:01:51.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/certificate.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     5258 2023-04-03 08:01:51.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/repository.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      276 2023-04-03 09:21:25.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/settings.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      263 2023-04-06 07:29:17.000000 groot-client-0.0.1/groot/controllers/clients/argocd/client/services/version.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/controllers/clients/argocd/cmd/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-06 07:10:49.000000 groot-client-0.0.1/groot/controllers/clients/argocd/cmd/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     3589 2023-04-06 06:54:16.000000 groot-client-0.0.1/groot/controllers/clients/argocd/cmd/application.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     2003 2023-04-06 07:31:57.000000 groot-client-0.0.1/groot/controllers/clients/argocd/cmd/base.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/core/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1/groot/core/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       65 2023-03-31 09:12:11.000000 groot-client-0.0.1/groot/core/exc.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1144 2023-04-07 05:47:32.000000 groot-client-0.0.1/groot/core/version.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/ext/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1/groot/ext/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1196 2023-04-07 03:20:34.000000 groot-client-0.0.1/groot/main.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/plugins/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1/groot/plugins/__init__.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot/templates/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1/groot/templates/__init__.py
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      801 2023-04-06 06:54:39.000000 groot-client-0.0.1/groot/templates/argo_application.jinja2
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      234 2023-04-03 05:50:24.000000 groot-client-0.0.1/groot/templates/command1.jinja2
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/groot_client.egg-info/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1869 2023-04-07 05:52:03.000000 groot-client-0.0.1/groot_client.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)     1424 2023-04-07 05:52:03.000000 groot-client-0.0.1/groot_client.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        1 2023-04-07 05:52:03.000000 groot-client-0.0.1/groot_client.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       42 2023-04-07 05:52:03.000000 groot-client-0.0.1/groot_client.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       86 2023-04-07 05:52:03.000000 groot-client-0.0.1/groot_client.egg-info/requires.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)        6 2023-04-07 05:52:03.000000 groot-client-0.0.1/groot_client.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       95 2023-03-31 09:12:11.000000 groot-client-0.0.1/requirements-dev.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       76 2023-04-06 01:52:15.000000 groot-client-0.0.1/requirements.txt
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)       38 2023-04-07 05:52:03.685791 groot-client-0.0.1/setup.cfg
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      984 2023-04-07 05:52:00.000000 groot-client-0.0.1/setup.py
+│ │ -drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 05:52:03.685791 groot-client-0.0.1/tests/
+│ │ --rw-rw-r--   0 dev       (1000) dev       (1000)      913 2023-03-31 09:12:11.000000 groot-client-0.0.1/tests/test_groot.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       51 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/CHANGELOG.md
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        1 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/LICENSE.md
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      133 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/MANIFEST.in
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1465 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/PKG-INFO
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1064 2023-04-06 09:10:49.000000 groot-client-0.0.1.dev20230407013444/README.md
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.731734 groot-client-0.0.1.dev20230407013444/groot/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1344 2023-04-03 08:00:16.000000 groot-client-0.0.1.dev20230407013444/groot/__init__.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.731734 groot-client-0.0.1.dev20230407013444/groot/config/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1784 2023-04-06 06:29:04.000000 groot-client-0.0.1.dev20230407013444/groot/config/groot.yml
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.731734 groot-client-0.0.1.dev20230407013444/groot/controllers/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1491 2023-04-06 07:17:16.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/base.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.731734 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-06 07:09:59.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/__init__.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.731734 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-03 09:12:14.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/__init__.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.731734 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-03 08:01:51.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      523 2023-04-03 08:44:40.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/config.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-03 08:01:51.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      628 2023-04-06 02:35:20.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/applications.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      440 2023-04-03 09:14:18.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/base.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1858 2023-04-03 08:01:51.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/certificate.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     5258 2023-04-03 08:01:51.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/repository.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      276 2023-04-03 09:21:25.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/settings.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      263 2023-04-06 07:29:17.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/version.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/cmd/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-04-06 07:10:49.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/cmd/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     3589 2023-04-06 06:54:16.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/cmd/application.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     2003 2023-04-06 07:31:57.000000 groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/cmd/base.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot/core/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/groot/core/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       65 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/groot/core/exc.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      175 2023-04-07 01:32:44.000000 groot-client-0.0.1.dev20230407013444/groot/core/version.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot/ext/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/groot/ext/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1212 2023-04-06 08:54:00.000000 groot-client-0.0.1.dev20230407013444/groot/main.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot/plugins/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/groot/plugins/__init__.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot/templates/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        0 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/groot/templates/__init__.py
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      801 2023-04-06 06:54:39.000000 groot-client-0.0.1.dev20230407013444/groot/templates/argo_application.jinja2
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      234 2023-04-03 05:50:24.000000 groot-client-0.0.1.dev20230407013444/groot/templates/command1.jinja2
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1465 2023-04-07 01:35:01.000000 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)     1424 2023-04-07 01:35:01.000000 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        1 2023-04-07 01:35:01.000000 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       42 2023-04-07 01:35:01.000000 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       86 2023-04-07 01:35:01.000000 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)        6 2023-04-07 01:35:01.000000 groot-client-0.0.1.dev20230407013444/groot_client.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       95 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/requirements-dev.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       76 2023-04-06 01:52:15.000000 groot-client-0.0.1.dev20230407013444/requirements.txt
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)       38 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/setup.cfg
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      984 2023-04-06 09:50:48.000000 groot-client-0.0.1.dev20230407013444/setup.py
+│ │ +drwxrwxr-x   0 dev       (1000) dev       (1000)        0 2023-04-07 01:35:01.735734 groot-client-0.0.1.dev20230407013444/tests/
+│ │ +-rw-rw-r--   0 dev       (1000) dev       (1000)      913 2023-03-31 09:12:11.000000 groot-client-0.0.1.dev20230407013444/tests/test_groot.py
+│ │   --- groot-client-0.0.1/PKG-INFO
+│ ├── +++ groot-client-0.0.1.dev20230407013444/PKG-INFO
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: groot-client
+│ │ -Version: 0.0.1
+│ │ +Version: 0.0.1.dev20230407013444
+│ │  Summary: Groot is a simple and kind-hearted tree people who longs for peace and has strong vitality
+│ │  Home-page: https://gitlab-rd0.maezia.com/devopscm/groot
+│ │  Author: Chen Bin
+│ │  Author-email: bin.chen1@mobilityasia.com.cn
+│ │  License: unlicensed
+│ │  Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │ @@ -47,33 +47,20 @@
+│ │  ```
+│ │  
+│ │  
+│ │  ### Releasing to PyPi
+│ │  
+│ │  Before releasing to PyPi, you must configure your login credentials:
+│ │  
+│ │ -Version will be tagged a timestamp related to latest commit if you are in 'alpha' stage, 
+│ │ -    such as: `0.0.1.dev20230407013444`
+│ │  **~/.pypirc**:
+│ │  
+│ │  ```
+│ │ -[distutils]
+│ │ -index-servers =
+│ │ -    pypi
+│ │ -    jfrog-cariad
+│ │ -
+│ │  [pypi]
+│ │ -repository = https://upload.pypi.org/legacy/
+│ │ -username = __token__
+│ │ -password = <the api token generated by youself in pypi>
+│ │ -
+│ │ -[jfrog-cariad]
+│ │ -repository = https://jfrog-prod.maezia.com:443/artifactory/api/pypi/devops-pypi-internal-local/
+│ │ -username = <USERNAME>
+│ │ -password = <PASSWORD/API_TOKEN>
+│ │ +username = YOUR_USERNAME
+│ │ +password = YOUR_PASSWORD
+│ │  ```
+│ │  
+│ │  Then use the included helper function via the `Makefile`:
+│ │  
+│ │  ```
+│ │  $ make dist
+│ │   --- groot-client-0.0.1/README.md
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot_client.egg-info/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,7 +1,19 @@
+│ │ +Metadata-Version: 2.1
+│ │ +Name: groot-client
+│ │ +Version: 0.0.1.dev20230407013444
+│ │ +Summary: Groot is a simple and kind-hearted tree people who longs for peace and has strong vitality
+│ │ +Home-page: https://gitlab-rd0.maezia.com/devopscm/groot
+│ │ +Author: Chen Bin
+│ │ +Author-email: bin.chen1@mobilityasia.com.cn
+│ │ +License: unlicensed
+│ │ +Requires-Python: >=3.10
+│ │ +Description-Content-Type: text/markdown
+│ │ +License-File: LICENSE.md
+│ │ +
+│ │  # Groot is a simple and kind-hearted tree people who longs for peace and has strong vitality
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```
+│ │  $ pip install -r requirements.txt
+│ │  
+│ │ @@ -35,33 +47,20 @@
+│ │  ```
+│ │  
+│ │  
+│ │  ### Releasing to PyPi
+│ │  
+│ │  Before releasing to PyPi, you must configure your login credentials:
+│ │  
+│ │ -Version will be tagged a timestamp related to latest commit if you are in 'alpha' stage, 
+│ │ -    such as: `0.0.1.dev20230407013444`
+│ │  **~/.pypirc**:
+│ │  
+│ │  ```
+│ │ -[distutils]
+│ │ -index-servers =
+│ │ -    pypi
+│ │ -    jfrog-cariad
+│ │ -
+│ │  [pypi]
+│ │ -repository = https://upload.pypi.org/legacy/
+│ │ -username = __token__
+│ │ -password = <the api token generated by youself in pypi>
+│ │ -
+│ │ -[jfrog-cariad]
+│ │ -repository = https://jfrog-prod.maezia.com:443/artifactory/api/pypi/devops-pypi-internal-local/
+│ │ -username = <USERNAME>
+│ │ -password = <PASSWORD/API_TOKEN>
+│ │ +username = YOUR_USERNAME
+│ │ +password = YOUR_PASSWORD
+│ │  ```
+│ │  
+│ │  Then use the included helper function via the `Makefile`:
+│ │  
+│ │  ```
+│ │  $ make dist
+│ │   --- groot-client-0.0.1/groot/__init__.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/config/groot.yml
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/config/groot.yml
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/controllers/base.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/base.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,20 +1,19 @@
+│ │  
+│ │  from cement import Controller, ex
+│ │  from cement.utils.version import get_version_banner
+│ │ -from ..core.version import get_version, get_cur_commitid
+│ │ +from ..core.version import get_version
+│ │  
+│ │  VERSION_BANNER = """
+│ │  ╦  ┌─┐┌┬┐  ┌─┐┬─┐┌─┐┌─┐┌┬┐┬
+│ │  ║  ├─┤│││  │ ┬├┬┘│ ││ │ │ │
+│ │  ╩  ┴ ┴┴ ┴  └─┘┴└─└─┘└─┘ ┴ o
+│ │  Client Version: %s 
+│ │  %s
+│ │ -GitCommit: %s
+│ │ -""" % (get_version(), get_version_banner(), get_cur_commitid())
+│ │ +""" % (get_version(), get_version_banner())
+│ │  
+│ │  
+│ │  class Base(Controller):
+│ │      class Meta:
+│ │          label = 'base'
+│ │  
+│ │          # text displayed at the top of --help output
+│ │   --- groot-client-0.0.1/groot/controllers/clients/argocd/client/config.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/config.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/controllers/clients/argocd/client/services/applications.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/applications.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/controllers/clients/argocd/client/services/certificate.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/certificate.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/controllers/clients/argocd/client/services/repository.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/client/services/repository.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/controllers/clients/argocd/cmd/application.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/cmd/application.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/controllers/clients/argocd/cmd/base.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/controllers/clients/argocd/cmd/base.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot/main.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/main.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │  import os, sys
+│ │  from cement.core.exc import CaughtSignal
+│ │  from . import Groot
+│ │  from .core.exc import GrootError
+│ │  BASE_DIR=  os.path.dirname( os.path.abspath(__file__) )     
+│ │ +print(BASE_DIR)
+│ │  sys.path.append( BASE_DIR  )
+│ │  
+│ │  config_dict = {}
+│ │  
+│ │  def main():
+│ │      with Groot() as app:
+│ │          try:
+│ │   --- groot-client-0.0.1/groot/templates/argo_application.jinja2
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot/templates/argo_application.jinja2
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/groot_client.egg-info/SOURCES.txt
+│ ├── +++ groot-client-0.0.1.dev20230407013444/groot_client.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/setup.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/setup.py
+│ │┄ Files identical despite different names
+│ │   --- groot-client-0.0.1/tests/test_groot.py
+│ ├── +++ groot-client-0.0.1.dev20230407013444/tests/test_groot.py
+│ │┄ Files identical despite different names

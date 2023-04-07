@@ -1,0 +1,922 @@
+# Comparing `tmp/h5mapper-0.2.4.tar.gz` & `tmp/h5mapper-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "h5mapper-0.2.4.tar", last modified: Sat Nov 19 09:21:58 2022, max compression
++gzip compressed data, was "h5mapper-0.3.0.tar", last modified: Fri Apr  7 05:45:11 2023, max compression
+```
+
+## Comparing `h5mapper-0.2.4.tar` & `h5mapper-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,23 @@
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2022-11-19 09:21:58.647149 h5mapper-0.2.4/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     1070 2021-06-12 05:09:31.000000 h5mapper-0.2.4/LICENSE
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     8171 2022-11-19 09:21:58.647149 h5mapper-0.2.4/PKG-INFO
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     7307 2021-07-02 13:07:56.000000 h5mapper-0.2.4/README.md
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2022-11-19 09:21:58.647149 h5mapper-0.2.4/h5mapper/
+--rw-------   0 antoine   (1000) antoine   (1000)      205 2022-11-19 07:10:30.000000 h5mapper-0.2.4/h5mapper/__init__.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)    15971 2022-11-18 15:00:25.000000 h5mapper-0.2.4/h5mapper/core.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     4734 2022-03-04 13:12:59.000000 h5mapper-0.2.4/h5mapper/create.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     2227 2021-07-05 05:54:16.000000 h5mapper-0.2.4/h5mapper/create_container.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     6279 2022-11-18 15:00:43.000000 h5mapper-0.2.4/h5mapper/crud.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     8323 2022-11-19 07:30:57.000000 h5mapper-0.2.4/h5mapper/features.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     2374 2021-06-18 07:23:13.000000 h5mapper-0.2.4/h5mapper/file_walker.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     7531 2022-04-17 22:01:01.000000 h5mapper-0.2.4/h5mapper/serve.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     3877 2022-03-05 03:02:35.000000 h5mapper-0.2.4/h5mapper/typed_files.py
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      556 2021-10-05 04:31:27.000000 h5mapper-0.2.4/h5mapper/utils.py
+-drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2022-11-19 09:21:58.647149 h5mapper-0.2.4/h5mapper.egg-info/
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     8171 2022-11-19 09:21:58.000000 h5mapper-0.2.4/h5mapper.egg-info/PKG-INFO
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      428 2022-11-19 09:21:58.000000 h5mapper-0.2.4/h5mapper.egg-info/SOURCES.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)        1 2022-11-19 09:21:58.000000 h5mapper-0.2.4/h5mapper.egg-info/dependency_links.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)      108 2022-11-19 09:21:58.000000 h5mapper-0.2.4/h5mapper.egg-info/entry_points.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)       97 2022-11-19 09:21:58.000000 h5mapper-0.2.4/h5mapper.egg-info/requires.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)        9 2022-11-19 09:21:58.000000 h5mapper-0.2.4/h5mapper.egg-info/top_level.txt
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)       38 2022-11-19 09:21:58.647149 h5mapper-0.2.4/setup.cfg
+--rw-rw-r--   0 antoine   (1000) antoine   (1000)     1865 2021-10-06 06:53:17.000000 h5mapper-0.2.4/setup.py
++drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 05:45:11.890708 h5mapper-0.3.0/
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     1070 2021-06-12 05:09:31.000000 h5mapper-0.3.0/LICENSE
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     8117 2023-04-07 05:45:11.890708 h5mapper-0.3.0/PKG-INFO
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     7272 2023-01-29 14:46:01.000000 h5mapper-0.3.0/README.md
++drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 05:45:11.886708 h5mapper-0.3.0/h5mapper/
++-rw-------   0 antoine   (1000) antoine   (1000)      178 2023-04-07 05:42:48.000000 h5mapper-0.3.0/h5mapper/__init__.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)    16134 2023-01-15 11:13:05.000000 h5mapper-0.3.0/h5mapper/core.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     4854 2023-01-11 12:03:31.000000 h5mapper-0.3.0/h5mapper/create.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     2227 2021-07-05 05:54:16.000000 h5mapper-0.3.0/h5mapper/create_container.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     6279 2022-11-18 15:00:43.000000 h5mapper-0.3.0/h5mapper/crud.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     4685 2023-01-08 18:02:50.000000 h5mapper-0.3.0/h5mapper/features.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     2562 2023-01-08 18:02:50.000000 h5mapper-0.3.0/h5mapper/file_walker.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     6819 2023-01-29 14:47:43.000000 h5mapper-0.3.0/h5mapper/serve.py
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)      556 2021-10-05 04:31:27.000000 h5mapper-0.3.0/h5mapper/utils.py
++drwxrwxr-x   0 antoine   (1000) antoine   (1000)        0 2023-04-07 05:45:11.890708 h5mapper-0.3.0/h5mapper.egg-info/
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     8117 2023-04-07 05:45:11.000000 h5mapper-0.3.0/h5mapper.egg-info/PKG-INFO
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)      404 2023-04-07 05:45:11.000000 h5mapper-0.3.0/h5mapper.egg-info/SOURCES.txt
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)        1 2023-04-07 05:45:11.000000 h5mapper-0.3.0/h5mapper.egg-info/dependency_links.txt
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)      108 2023-04-07 05:45:11.000000 h5mapper-0.3.0/h5mapper.egg-info/entry_points.txt
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)       70 2023-04-07 05:45:11.000000 h5mapper-0.3.0/h5mapper.egg-info/requires.txt
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)        9 2023-04-07 05:45:11.000000 h5mapper-0.3.0/h5mapper.egg-info/top_level.txt
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)       38 2023-04-07 05:45:11.890708 h5mapper-0.3.0/setup.cfg
++-rw-rw-r--   0 antoine   (1000) antoine   (1000)     1865 2021-10-06 06:53:17.000000 h5mapper-0.3.0/setup.py
+```
+
+### Comparing `h5mapper-0.2.4/LICENSE` & `h5mapper-0.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `h5mapper-0.2.4/PKG-INFO` & `h5mapper-0.3.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,17 @@
+ Metadata-Version: 2.1
+ Name: h5mapper
+-Version: 0.2.4
++Version: 0.3.0
+ Summary: pythonic ORM tool for reading and writing HDF5 data
+ Home-page: https://github.com/ktonal/h5mapper
+ Download-URL: https://github.com/ktonal/h5mapper
+ Author: Antoine Daurat
+ Author-email: antoinedaurat@gmail.com
+ License: MIT License
+ Keywords: hdf5 h5py ORM deep-learning machine-learning
+-Platform: UNKNOWN
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research
+ Classifier: Intended Audience :: Other Audience
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+@@ -95,16 +94,17 @@
+ 
+ ```python
+ import h5mapper as h5m
+ 
+ class Experiment(h5m.TypedFile):
+ 
+     data = h5m.Group(
+-            images=h5m.Image(),
+-            labels=h5m.DirLabels()
++            # your custom h5m.Feature classes:
++            images=Image(),
++            labels=DirLabels()
+             )
+     logs = h5m.Group(
+             loss=h5m.Array()
+             )
+ ```
+ #### ``create``, ``add``
+ 
+@@ -145,15 +145,15 @@
+ Which works because `exp.data.images` is a `Dataset` and only `Datasets` have `refs`
+ 
+ 3/ with any ``item`` supported by the ``h5py.Dataset``
+ ```python
+ >> exp.data.labels[:32]
+ Out: np.array([0, 0, ....])
+ ```
+-Which also only works for `Datasets`.
++Which only works for `Dataset`s - not for `Group`s.
+ 
+ > Note that, in this last case, you are indexing into the **concatenation of all sub-arrays along their first axis**.
+ 
+ > The same interface is also implemented for ``set(source, data)`` and ``__setitem__``
+ 
+ ### Feature
+ 
+@@ -222,15 +222,14 @@
+ 
+ Primarly designed with `pytorch` users in mind, `h5m` plays very nicely with the `Dataset` class :
+ 
+ ```python
+ class MyDS(h5m.TypedFile, torch.utils.data.Dataset):
+     
+     x = MyInputFeature(42)
+-    labels = h5m.DirLabels()
+     
+     def __getitem__(self, item):
+         return self.x[item], self.labels[item]
+   
+     def __len__(self):
+         return len(self.x)
+ 
+@@ -257,15 +256,14 @@
+ )
+ ```  
+ 
+ ### Examples
+ 
+ in ``h5mapper/examples`` you'll find for now
+ - a train script with data, checkpoints and logs in `dataset_and_logs.py`
+-- two click command-lines for making image- and soundbanks
+ - a script for benchmarking batch-loading times of different options
+ 
+ ### Development
+ 
+ `h5mapper` is just getting started and you're welcome to contribute!
+ 
+ You'll find some tests you can run from the root of the repo with a simple
+@@ -275,8 +273,7 @@
+ 
+ If you'd like to get involved, just drop us an email : ktonalberlin@gmail.com
+ 
+ 
+ ### License
+ 
+ `h5mapper` is distributed under the terms of the MIT License. 
+-
+```
+
+### Comparing `h5mapper-0.2.4/README.md` & `h5mapper-0.3.0/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -72,16 +72,17 @@
+ 
+ ```python
+ import h5mapper as h5m
+ 
+ class Experiment(h5m.TypedFile):
+ 
+     data = h5m.Group(
+-            images=h5m.Image(),
+-            labels=h5m.DirLabels()
++            # your custom h5m.Feature classes:
++            images=Image(),
++            labels=DirLabels()
+             )
+     logs = h5m.Group(
+             loss=h5m.Array()
+             )
+ ```
+ #### ``create``, ``add``
+ 
+@@ -122,15 +123,15 @@
+ Which works because `exp.data.images` is a `Dataset` and only `Datasets` have `refs`
+ 
+ 3/ with any ``item`` supported by the ``h5py.Dataset``
+ ```python
+ >> exp.data.labels[:32]
+ Out: np.array([0, 0, ....])
+ ```
+-Which also only works for `Datasets`.
++Which only works for `Dataset`s - not for `Group`s.
+ 
+ > Note that, in this last case, you are indexing into the **concatenation of all sub-arrays along their first axis**.
+ 
+ > The same interface is also implemented for ``set(source, data)`` and ``__setitem__``
+ 
+ ### Feature
+ 
+@@ -199,15 +200,14 @@
+ 
+ Primarly designed with `pytorch` users in mind, `h5m` plays very nicely with the `Dataset` class :
+ 
+ ```python
+ class MyDS(h5m.TypedFile, torch.utils.data.Dataset):
+     
+     x = MyInputFeature(42)
+-    labels = h5m.DirLabels()
+     
+     def __getitem__(self, item):
+         return self.x[item], self.labels[item]
+   
+     def __len__(self):
+         return len(self.x)
+ 
+@@ -234,15 +234,14 @@
+ )
+ ```  
+ 
+ ### Examples
+ 
+ in ``h5mapper/examples`` you'll find for now
+ - a train script with data, checkpoints and logs in `dataset_and_logs.py`
+-- two click command-lines for making image- and soundbanks
+ - a script for benchmarking batch-loading times of different options
+ 
+ ### Development
+ 
+ `h5mapper` is just getting started and you're welcome to contribute!
+ 
+ You'll find some tests you can run from the root of the repo with a simple
+```
+
+### Comparing `h5mapper-0.2.4/h5mapper/core.py` & `h5mapper-0.3.0/h5mapper/core.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -74,15 +74,15 @@
+             the group corresponding to this proxy
+             
+         Returns
+         -------
+         proxy : Proxy
+             a proxy to `group` with the children attached as attributes
+         """
+-        attrs = {k: None if not isinstance(v, (np.ndarray, np.void)) and v == H5_NONE else v
++        attrs = {k: None if not isinstance(v, (np.ndarray, np.void, int, float, str)) and v == H5_NONE else v
+                  for k, v in group.attrs.items()}
+         # we "lift up" all x/__arr__ to attributes named "x"
+         if NP_KEY in group.keys() or isinstance(feature, Array):
+             root = Proxy(owner, feature, group.name, "/" + NP_KEY, attrs)
+             refs = Proxy(owner, None, group.name, "/" + REF_KEY)
+             setattr(root, "refs", refs)
+         else:
+@@ -103,15 +103,15 @@
+         return root
+ 
+     def __init__(self, owner, feature, group_name, key="", attrs={}):
+         self.name = "/".join([group_name.strip("/"), key.strip("/")])
+         self.group_name = group_name
+         self.owner: TypedFile = owner
+         self.feature = feature
+-        self.attrs = attrs
++        self._attrs = attrs
+         self.is_group = not bool(key)
+         if not self.is_group:
+             # copy some of the dataset properties
+             was_open = bool(self.owner.f_)
+             h5f = self.handle("r")
+             try:
+                 ds = h5f[self.name]
+@@ -119,14 +119,18 @@
+                 self.ndim, self.maxshape, self.chunks = ds.ndim, ds.maxshape, ds.chunks
+                 self.asstr = h5py.check_string_dtype(ds.dtype)
+             except KeyError:  # Dataset hasn't been created yet...
+                 pass
+             if not was_open:
+                 h5f.close()
+ 
++    @property
++    def attrs(self):
++        return self.handle()[self.group_name].attrs
++
+     def handle(self, mode=None):
+         """
+         to accommodate torch's DataLoader, h5py.File objects
+         are requested in __getitem__ and __setitem__ by proxies, but
+         to avoid I/O conflicts, they are instantiated only once by the root TypedFile object
+          
+         Returns
+@@ -274,15 +278,15 @@
+         return destination
+ 
+     def serve(self, batch, **loader_kwargs):
+         return self.owner.serve(batch, **loader_kwargs)
+ 
+     @property
+     def sources(self):
+-        return getattr(self.owner, SRC_KEY).id[self.refs[:].astype(np.bool)]
++        return getattr(self.owner, SRC_KEY).id[self.refs[:].astype(bool)]
+ 
+ 
+ class TypedFile:
+ 
+     def __init__(self, filename, mode="r", keep_open=False, **h5_kwargs):
+         self.ds_keys = set()
+         self.index = {}
+@@ -344,15 +348,15 @@
+                schema={},
+                n_workers=cpu_count(),
+                parallelism='mp',
+                keep_open=False,
+                **h5_kwargs
+                ):
+         _create(cls, filename, sources, mode, schema,
+-                n_workers, parallelism, keep_open,
++                n_workers, parallelism,
+                 **h5_kwargs
+                 )
+         return cls(filename, mode if mode != 'w' else "r+", keep_open, **h5_kwargs)
+ 
+     def handle(self, mode=None):
+         """
+         """
+@@ -375,14 +379,18 @@
+ 
+     def _attach_new_children(self, data, handle):
+         for new in data.keys():
+             feature = getattr(type(self), new, setattr(self, new, Feature()))
+             proxy = Proxy.from_group(self, feature, handle[new])
+             self.__dict__[new] = proxy
+ 
++    @property
++    def attrs(self):
++        return self.handle().attrs
++
+     def add(self, source, data):
+         h5f = self.handle(mode="r+" if self.mode not in ("w", "r+", "a") else self.mode)
+         kwargs = {k: getattr(v, "__ds_kwargs__", {}) for k, v in self.__dict__.items() if isinstance(v, Proxy)}
+         data = flatten_dict(data)
+         _add.source(h5f, source, data, kwargs, self.ds_keys, source not in self.index)
+         self.build_proxies()
+         return self
+```
+
+### Comparing `h5mapper-0.2.4/h5mapper/create.py` & `h5mapper-0.3.0/h5mapper/create.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,20 +1,26 @@
+ import h5py
+ import numpy as np
+ from multiprocess import cpu_count, Pool
+ from concurrent.futures import ThreadPoolExecutor
+ import os
+ from functools import partial
+-
+-from tqdm import tqdm
++from IPython import get_ipython
+ 
+ from .features import Feature
+-from .crud import _add, _load, H5_NONE, SRC_KEY, apply_and_store
++from .crud import _add, _load, SRC_KEY, apply_and_store
+ from .utils import flatten_dict
+ 
++shell = get_ipython().__class__.__name__
++if shell in ('ZMQInteractiveShell', "Shell"):
++    # local and colab notebooks
++    from tqdm.notebook import tqdm
++else:
++    from tqdm import tqdm
++
+ 
+ __all__ = [
+     "_create",
+     '_compute',
+ ]
+ 
+ 
+@@ -50,48 +56,47 @@
+ def _create(cls,
+             filename,
+             sources,
+             mode="w",
+             schema={},
+             n_workers=cpu_count(),
+             parallelism='mp',
+-            keep_open=False,
+             **h5_kwargs
+             ):
+     if not schema:
+         # get schema from the class attributes
+         schema = {attr: val for attr, val in cls.__dict__.items() if isinstance(val, Feature)}
+     if not schema:
+         raise ValueError("schema cannot be empty. Either provide one to create()"
+                          " or attach Feature attributes to this class.")
+     # avoid blocking errors from h5py
+     if os.path.exists(filename) and mode == 'w':
+         os.remove(filename)
+     f = h5py.File(filename, mode, **h5_kwargs)
+     f.require_group(SRC_KEY)
+-    # create groups from schema and write attrs
+-    groups = {key: f.create_group(key) if key not in f else f[key] for key in schema.keys()}
+-    for key, grp in groups.items():
+-        for k, v in schema[key].attrs.items():
+-            grp.attrs[k] = v if v is not None else H5_NONE
++    # create groups from schema
++    for key in schema:
++        if key not in f:
++            f.create_group(key)
+     f.flush()
+ 
+     # initialize ds_kwargs from schema
+     ds_kwargs = {key: getattr(feature, "__ds_kwargs__", {}).copy() for key, feature in schema.items()}
+     # get flavour of parallelism
+     try:
+         executor = get_executor(n_workers, parallelism)
+     except ValueError as e:
+         f.close()
+         raise e
+     # run loading routine
+     n_sources = len(sources)
+     batch_size = n_workers * 1
+     refed_paths = set()
+-    for i in tqdm(range(1 + n_sources // batch_size), leave=False):
++    for i in tqdm(range(1 + n_sources // batch_size),
++                  leave=True, desc="Extracting Files", unit="batch"):
+         start_loc = max([i * batch_size, 0])
+         end_loc = min([(i + 1) * batch_size, n_sources])
+         this_sources = sources[start_loc:end_loc]
+         try:
+             results = executor.map(partial(_load, schema=schema, guard_func=Feature.load), this_sources)
+         except Exception as e:
+             f.close()
+@@ -108,27 +113,30 @@
+             _add.source(f, this_sources[n], res, ds_kwargs, refed_paths)
+             refed_paths = refed_paths | set(res.keys())
+         f.flush()
+     if parallelism == 'mp':
+         executor.close()
+         executor.join()
+     # run after_create
+-    db = cls(filename, mode="r+", keep_open=False)
++    db = cls(filename, mode="r+", keep_open=True)
+     for key, feature in schema.items():
+         if getattr(type(feature), "after_create", Feature.after_create) != Feature.after_create:
+             feature.after_create(db, key)
+             f.flush()
++    if hasattr(cls, "after_create"):
++        db.after_create()
++        f.flush()
+     db.close()
+     # voila!
+     f.close()
+     return
+ 
+ 
+ def _compute(fdict, proxy, parallelism, n_workers, destination):
+-    sources = [src for src in proxy.owner.__src__.id[proxy.refs[:].astype(np.bool)]]
++    sources = [src for src in proxy.owner.__src__.id[proxy.refs[:].astype(bool)]]
+     executor = get_executor(n_workers, parallelism)
+     n_sources = len(sources)
+     batch_size = n_workers * 1
+     for i in tqdm(range(1 + n_sources // batch_size), leave=False):
+         start_loc = max([i * batch_size, 0])
+         end_loc = min([(i + 1) * batch_size, n_sources])
+         this_sources = sources[start_loc:end_loc]
+```
+
+### Comparing `h5mapper-0.2.4/h5mapper/create_container.py` & `h5mapper-0.3.0/h5mapper/create_container.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5mapper-0.2.4/h5mapper/crud.py` & `h5mapper-0.3.0/h5mapper/crud.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5mapper-0.2.4/h5mapper/file_walker.py` & `h5mapper-0.3.0/h5mapper/file_walker.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ import os
+ import re
+-from typing import Iterable
++from typing import Iterable, Union
+ 
+ __all__ = [
+     "FileWalker"
+ ]
+ 
+ 
+ class FileWalker:
+ 
+-    def __init__(self, regex, sources=None):
++    def __init__(self, regex: Union[str, re.Pattern],
++                 sources=None, abspath=True):
+         """
+         recursively find files from `sources` whose paths match the pattern passed in `regex`
+ 
+         Parameters
+         ----------
+         regex : str or re.Pattern
+             the pattern a path must match
+@@ -23,16 +24,17 @@
+             in which case, it will be walked recursively.
+ 
+         Examples
+         --------
+         >>> files = list(FileWalker(regex=r'.*mid$', sources=["my-root-dir", 'piece.mid']))
+ 
+         """
+-        self._regex = re.compile(regex)
++        self._regex = re.compile(regex) if not isinstance(regex, re.Pattern) else regex
+         self.sources = sources
++        self.abspath = abspath
+ 
+     def __iter__(self):
+         generators = []
+ 
+         if self.sources is not None and isinstance(self.sources, Iterable):
+             if isinstance(self.sources, str):
+                 if not os.path.exists(self.sources):
+@@ -56,14 +58,14 @@
+             for file in generator:
+                 yield file
+ 
+     def walk_root(self, root):
+         for directory, _, files in os.walk(root):
+             for file in filter(self.is_matching_file,
+                                (os.path.join(directory, f) for f in files)):
+-                yield file
++                yield file if not self.abspath else os.path.abspath(file)
+ 
+     def is_matching_file(self, filename):
+         # filter out any hidden files
+         if os.path.split(filename.strip("/"))[-1].startswith("."):
+             return False
+         return bool(re.search(self._regex, filename))
+```
+
+### Comparing `h5mapper-0.2.4/h5mapper/serve.py` & `h5mapper-0.3.0/h5mapper/serve.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -37,104 +37,50 @@
+             else slice(item-value.shape[self.dim], item)
+         data.data[self.pre_slices + (slc,)] = value
+         return value.shape[self.dim]
+ 
+ 
+ @dtc.dataclass
+ class Getter:
+-    """
+-    base class for implementing data getter
+-
+-    Parameters
+-    ----------
+ 
+-    Attributes
+-    ----------
+-    n : int or None
+-        the length of the underlying data
+-    """
+     n: Optional[int] = dtc.field(default=None, init=False)
+ 
+     def __call__(self, proxy, item):
+-        """
+-        apply this instance's logic to get data from ``proxy`` for a given ``item``
+-
+-        Parameters
+-        ----------
+-        proxy: h5m.Proxy
+-            the proxy to read from
+-        item: int
+-            the index emitted from a sampler
+-
+-        Returns
+-        -------
+-        data: Any
+-            the data corresponding to this item
+-        """
+-        return proxy[item]
++        X = proxy[item]
++        return X.copy() if isinstance(X, np.ndarray) else X
+ 
+     def __len__(self):
+         return self.n
+ 
+ 
+ class GetId(Getter):
+ 
+     def __call__(self, proxy, item):
+-        return proxy[proxy.refs[item]]
++        X = proxy[proxy.refs[item]]
++        return X.copy() if isinstance(X, np.ndarray) else X
+ 
+ 
+ @dtc.dataclass
+ class AsSlice(Getter):
+-    """
+-    maps an ``item`` to a slice of data
+-
+-    Parameters
+-    ----------
+-    dim : int
+-        the dimension to slice
+-    shift : int
+-        the slice will start at the index `item + shift`
+-    length : int
+-        the length of the slice
+-    stride : int
+-        sub-sampling factor. Every `stride` datapoints `item` increases of `1`
+-
+-    Examples
+-    --------
+-
+-    .. testcode::
+-
+-       import h5mapper as h5m
+-
+-       slicer = h5m.AsSlice(shift=2, length=3)
+-       data, item = list(range(10)), 2
+-
+-       # now use it like a function :
+-       sliced = slicer(data, item)
+-
+-       print(sliced)
+-
+-    will output:
+ 
+-    .. testoutput::
+-
+-       [4, 5, 6]
+-    """
+     dim: int = 0
+     shift: int = 0
+     length: int = 1
+     downsampling: int = 1
+ 
+     def __post_init__(self):
+         self.pre_slices = (slice(None),) * self.dim
+ 
+     def __call__(self, proxy, item):
+         i = item * self.downsampling
+         slc = slice(i + self.shift, i + self.shift + self.length)
+-        return proxy[self.pre_slices + (slc, )]
++        # !important!: .copy() prevent memory leaks in torch's Dataloader
++        # see https://github.com/h5py/h5py/issues/2010
++        X = proxy[self.pre_slices + (slc, )]
++        return X.copy() if isinstance(X, np.ndarray) else X
+ 
+     def __len__(self):
+         return (self.n - (abs(self.shift) + self.length) + 1) // self.downsampling
+ 
+     def shift_and_length_to_samples(self, frame_length, hop_length, center=False):
+         extra = -hop_length if center else \
+             ((frame_length // hop_length) - 1) * hop_length
+@@ -161,51 +107,58 @@
+             _, self.length = self.shift_and_length_to_samples(
+                 self.frame_size, self.hop_length, self.center)
+ 
+     def __call__(self, proxy, item):
+         sliced = super(AsFramedSlice, self).__call__(proxy, item)
+         if self.center:
+             sliced = np.pad(sliced, int(self.frame_size // 2), self.pad_mode)
+-        return librosa.util.frame(sliced, frame_length=self.frame_size, hop_length=self.hop_length, axis=0)
++        if isinstance(sliced, np.ndarray):
++            return librosa.util.frame(sliced, frame_length=self.frame_size, hop_length=self.hop_length, axis=0)
++        else:
++            return sliced.unfold(0, self.frame_size, self.hop_length)
+ 
+ 
+ @dtc.dataclass
+ class Input:
+     """read and transform data from a specific key/proxy in a .h5 file"""
+-    data: Union[str, np.ndarray, "Proxy"] = ''
++    data: Union[str, np.ndarray, "Proxy"] = None
+     getter: Getter = Getter()
+     setter: Optional[Setter] = None
+-    transform: Callable[[np.ndarray], np.ndarray] = lambda x: x
+-    inverse_transform: Callable[[np.ndarray], np.ndarray] = lambda x: x
++    transform: Optional[Callable[[np.ndarray], np.ndarray]] = None
+     to_tensor: bool = False
+-    device: str = 'cuda' if torch.cuda.is_available() else 'cpu'
+ 
+     def __post_init__(self):
+         pass
+ 
+     def get_object(self, file):
+         return self.data if file is None or not isinstance(self.data, str) \
+             else getattr(file, self.data)
+ 
+     def __len__(self):
+         return len(self.getter)
+ 
+     def __call__(self, item, file=None):
+-        data = self.getter(self.get_object(file), item)
++        data = self.getter(self.data, item)
+         if self.to_tensor:
+-            data = torch.from_numpy(data).to(self.device)
+-        return self.transform(data)
++            data = torch.from_numpy(data)
++        return self.transform(data) if self.transform is not None else data
+ 
+     def set(self, key, value):
+         return self.setter(self.data, key, value)
+ 
+ 
+-class Target(Input):
+-    """exactly equivalent to Input, just makes code simpler to read."""
+-    pass
++@dtc.dataclass
++class Target:
++    data: Union[str, np.ndarray, "Proxy"] = ''
++    setter: Setter = Setter()
++    transform: Optional[Callable[[np.ndarray], np.ndarray]] = None
++
++    def __call__(self, item, value, file=None):
++        value = self.transform(value) if self.transform is not None else value
++        return self.setter(self.data, item, value)
+ 
+ 
+ np_str_obj_array_pattern = re.compile(r'[SaUO]')
+ 
+ 
+ def process_batch(batch, test=lambda x: False, func=lambda x: x):
+     """
+@@ -236,41 +189,35 @@
+     The batch object can be of any type supported by torch's default collate function (Mapping, Sequence, etc.)
+     and should contain batch items (``h5m.Input`` or ``h5m.Target``).
+     """
+ 
+     def __init__(self, file, batch=tuple()):
+         super(Dataset, self).__init__()
+         self.file = file
+-
+-        def cache_lengths(feat):
+-            # pass the lengths of the db features to the getters
+-            if feat.getter.n is None:
+-                if isinstance(feat.getter, GetId):
+-                    n = sum(feat.get_object(file).refs[()].astype(np.bool))
+-                else:
+-                    n = len(feat.get_object(file))
+-                setattr(feat.getter, 'n', n)
+-            return feat
+-
+-        self.batch = process_batch(batch, _is_batchitem, cache_lengths)
+-
+-        # get the minimum length of all batchitems
+         self.N = float('inf')
+ 
+-        def set_n_to_min(feat):
+-            self.N = min(len(feat), self.N)
+-            return feat
++        def initialize_items(item: Union[Input, Target]):
++            if isinstance(item.data, str) and self.file is not None:
++                item.data = getattr(self.file, item.data)
++            if item.getter.n is None:
++                if isinstance(item.getter, GetId):
++                    # will raise if feat is not a proxy...
++                    n = sum(item.data.refs[()].astype(bool))
++                else:
++                    n = len(item.data)
++                setattr(item.getter, 'n', n)
++            self.N = min(len(item), self.N)
++            return item
+ 
+-        process_batch(self.batch, _is_batchitem, set_n_to_min)
++        self.batch = process_batch(batch, _is_batchitem, initialize_items)
+ 
+     def __getitem__(self, item):
+         def get_data(feat):
+-            return feat(item, self.file)
+-
+-        return process_batch(self.batch, _is_batchitem, get_data)
++            return feat(item)
++        return process_batch(tuple(self.batch), _is_batchitem, get_data)
+ 
+     def __len__(self):
+         return self.N
+ 
+     def __del__(self):
+         if hasattr(self.file, 'close'):
+-            self.file.close()
++            self.file.close()
+```
+
+### Comparing `h5mapper-0.2.4/h5mapper/utils.py` & `h5mapper-0.3.0/h5mapper/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `h5mapper-0.2.4/h5mapper.egg-info/PKG-INFO` & `h5mapper-0.3.0/h5mapper.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,17 @@
+ Metadata-Version: 2.1
+ Name: h5mapper
+-Version: 0.2.4
++Version: 0.3.0
+ Summary: pythonic ORM tool for reading and writing HDF5 data
+ Home-page: https://github.com/ktonal/h5mapper
+ Download-URL: https://github.com/ktonal/h5mapper
+ Author: Antoine Daurat
+ Author-email: antoinedaurat@gmail.com
+ License: MIT License
+ Keywords: hdf5 h5py ORM deep-learning machine-learning
+-Platform: UNKNOWN
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research
+ Classifier: Intended Audience :: Other Audience
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+@@ -95,16 +94,17 @@
+ 
+ ```python
+ import h5mapper as h5m
+ 
+ class Experiment(h5m.TypedFile):
+ 
+     data = h5m.Group(
+-            images=h5m.Image(),
+-            labels=h5m.DirLabels()
++            # your custom h5m.Feature classes:
++            images=Image(),
++            labels=DirLabels()
+             )
+     logs = h5m.Group(
+             loss=h5m.Array()
+             )
+ ```
+ #### ``create``, ``add``
+ 
+@@ -145,15 +145,15 @@
+ Which works because `exp.data.images` is a `Dataset` and only `Datasets` have `refs`
+ 
+ 3/ with any ``item`` supported by the ``h5py.Dataset``
+ ```python
+ >> exp.data.labels[:32]
+ Out: np.array([0, 0, ....])
+ ```
+-Which also only works for `Datasets`.
++Which only works for `Dataset`s - not for `Group`s.
+ 
+ > Note that, in this last case, you are indexing into the **concatenation of all sub-arrays along their first axis**.
+ 
+ > The same interface is also implemented for ``set(source, data)`` and ``__setitem__``
+ 
+ ### Feature
+ 
+@@ -222,15 +222,14 @@
+ 
+ Primarly designed with `pytorch` users in mind, `h5m` plays very nicely with the `Dataset` class :
+ 
+ ```python
+ class MyDS(h5m.TypedFile, torch.utils.data.Dataset):
+     
+     x = MyInputFeature(42)
+-    labels = h5m.DirLabels()
+     
+     def __getitem__(self, item):
+         return self.x[item], self.labels[item]
+   
+     def __len__(self):
+         return len(self.x)
+ 
+@@ -257,15 +256,14 @@
+ )
+ ```  
+ 
+ ### Examples
+ 
+ in ``h5mapper/examples`` you'll find for now
+ - a train script with data, checkpoints and logs in `dataset_and_logs.py`
+-- two click command-lines for making image- and soundbanks
+ - a script for benchmarking batch-loading times of different options
+ 
+ ### Development
+ 
+ `h5mapper` is just getting started and you're welcome to contribute!
+ 
+ You'll find some tests you can run from the root of the repo with a simple
+@@ -275,8 +273,7 @@
+ 
+ If you'd like to get involved, just drop us an email : ktonalberlin@gmail.com
+ 
+ 
+ ### License
+ 
+ `h5mapper` is distributed under the terms of the MIT License. 
+-
+```
+
+### Comparing `h5mapper-0.2.4/setup.py` & `h5mapper-0.3.0/setup.py`
+
+ * *Files identical despite different names*
+
