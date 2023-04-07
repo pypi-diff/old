@@ -1,0 +1,368 @@
+# Comparing `tmp/osint-python-starter-service-2.0.0.tar.gz` & `tmp/osint-python-starter-service-2.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "osint-python-starter-service-2.0.0.tar", last modified: Thu Apr  6 23:57:29 2023, max compression
++gzip compressed data, was "osint-python-starter-service-2.0.1.tar", last modified: Fri Apr  7 10:38:33 2023, max compression
+```
+
+## Comparing `osint-python-starter-service-2.0.0.tar` & `osint-python-starter-service-2.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,34 +1,34 @@
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:57:29.128998 osint-python-starter-service-2.0.0/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2022-04-23 22:07:41.000000 osint-python-starter-service-2.0.0/LICENSE
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      501 2023-04-06 23:57:29.128998 osint-python-starter-service-2.0.0/PKG-INFO
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       30 2022-06-04 20:59:27.000000 osint-python-starter-service-2.0.0/README.md
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:57:29.125664 osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      501 2023-04-06 23:57:29.000000 osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/PKG-INFO
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      925 2023-04-06 23:57:29.000000 osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/SOURCES.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        1 2023-04-06 23:57:29.000000 osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/dependency_links.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      108 2023-04-06 23:57:29.000000 osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/requires.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       16 2023-04-06 23:57:29.000000 osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/top_level.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       38 2023-04-06 23:57:29.128998 osint-python-starter-service-2.0.0/setup.cfg
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      778 2023-04-06 23:45:43.000000 osint-python-starter-service-2.0.0/setup.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:57:29.128998 osint-python-starter-service-2.0.0/starter_service/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2022-06-04 21:05:58.000000 osint-python-starter-service-2.0.0/starter_service/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      973 2023-04-06 22:41:55.000000 osint-python-starter-service-2.0.0/starter_service/api.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6750 2023-04-06 23:24:14.000000 osint-python-starter-service-2.0.0/starter_service/api_server.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     4731 2023-04-06 18:13:23.000000 osint-python-starter-service-2.0.0/starter_service/avro_parser.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2735 2023-04-06 23:22:10.000000 osint-python-starter-service-2.0.0/starter_service/base_service.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:57:29.128998 osint-python-starter-service-2.0.0/starter_service/classes/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-04 14:29:02.000000 osint-python-starter-service-2.0.0/starter_service/classes/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.0/starter_service/classes/article_raw_en.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.0/starter_service/classes/article_raw_lt.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.0/starter_service/classes/article_raw_nl.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.0/starter_service/classes/article_raw_xx.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1275 2023-04-04 14:58:16.000000 osint-python-starter-service-2.0.0/starter_service/env.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:57:29.128998 osint-python-starter-service-2.0.0/starter_service/examples/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 02:03:27.000000 osint-python-starter-service-2.0.0/starter_service/examples/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      684 2023-04-06 23:48:55.000000 osint-python-starter-service-2.0.0/starter_service/examples/error.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      895 2023-04-06 23:08:31.000000 osint-python-starter-service-2.0.0/starter_service/examples/manual_kafka.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1281 2023-04-06 23:03:14.000000 osint-python-starter-service-2.0.0/starter_service/examples/multi.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1030 2023-04-06 23:48:55.000000 osint-python-starter-service-2.0.0/starter_service/examples/single.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6839 2023-04-06 23:22:10.000000 osint-python-starter-service-2.0.0/starter_service/kafka_adapter.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1048 2023-04-06 23:52:13.000000 osint-python-starter-service-2.0.0/starter_service/messages.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6483 2023-04-06 23:52:50.000000 osint-python-starter-service-2.0.0/starter_service/schemas.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2022-04-23 22:07:41.000000 osint-python-starter-service-2.0.1/LICENSE
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2173 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/PKG-INFO
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1702 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/README.md
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2173 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/PKG-INFO
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      925 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/SOURCES.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        1 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/dependency_links.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      108 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/requires.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       16 2023-04-07 10:38:33.000000 osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/top_level.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       38 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/setup.cfg
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      778 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/setup.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/starter_service/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2022-06-04 21:05:58.000000 osint-python-starter-service-2.0.1/starter_service/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      973 2023-04-06 22:41:55.000000 osint-python-starter-service-2.0.1/starter_service/api.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6814 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/api_server.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     4731 2023-04-06 18:13:23.000000 osint-python-starter-service-2.0.1/starter_service/avro_parser.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2767 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/base_service.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/starter_service/classes/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-04 14:29:02.000000 osint-python-starter-service-2.0.1/starter_service/classes/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_en.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_lt.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_nl.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2569 2023-04-06 23:50:18.000000 osint-python-starter-service-2.0.1/starter_service/classes/article_raw_xx.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1275 2023-04-04 14:58:16.000000 osint-python-starter-service-2.0.1/starter_service/env.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-07 10:38:33.688321 osint-python-starter-service-2.0.1/starter_service/examples/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 02:03:27.000000 osint-python-starter-service-2.0.1/starter_service/examples/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      716 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/error.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      927 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/manual_kafka.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1313 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/multi.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1062 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/examples/single.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6887 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/kafka_adapter.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/messages.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     6499 2023-04-07 10:37:28.000000 osint-python-starter-service-2.0.1/starter_service/schemas.py
+```
+
+### Comparing `osint-python-starter-service-2.0.0/LICENSE` & `osint-python-starter-service-2.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/osint_python_starter_service.egg-info/SOURCES.txt` & `osint-python-starter-service-2.0.1/osint_python_starter_service.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/setup.py` & `osint-python-starter-service-2.0.1/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ with open('requirements.txt') as f:
+     required = f.read().splitlines()
+ setuptools.setup(
+     name="osint-python-starter-service",
+-    version="2.0.0",
++    version="2.0.1",
+     author="mindpetk",
+     author_email="petkeviciusm@gmail.com",
+     description="Python starter service",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/OSINT-VDU-TNO/python-starter-service",
+     include_package_data=True,
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/api.py` & `osint-python-starter-service-2.0.1/starter_service/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/api_server.py` & `osint-python-starter-service-2.0.1/starter_service/api_server.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -4,18 +4,18 @@
+ 
+ from fastapi import FastAPI, APIRouter
+ from fastapi.encoders import jsonable_encoder
+ from pydantic import ValidationError
+ from starlette.responses import Response, JSONResponse
+ from starlette.status import HTTP_200_OK
+ 
+-from api import API
+-from env import ENV
+-from messages import MessageHistory
+-from schemas import SchemaRegistry
++from starter_service.api import API
++from starter_service.env import ENV
++from starter_service.messages import MessageHistory
++from starter_service.schemas import SchemaRegistry
+ 
+ _schema = SchemaRegistry()
+ 
+ 
+ class APIServer:
+ 
+     def __init__(self, ready: callable = None, health: callable = None, kafka_status: str = None, base_service=None,
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/avro_parser.py` & `osint-python-starter-service-2.0.1/starter_service/avro_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/base_service.py` & `osint-python-starter-service-2.0.1/starter_service/base_service.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ import logging
+ import traceback
+ from abc import ABC, abstractmethod
+ 
+-from api_server import APIServer
+-from kafka_adapter import KafkaAdapter
++from starter_service.api_server import APIServer
++from starter_service.kafka_adapter import KafkaAdapter
+ 
+ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(name)s %(message)s')
+ 
+ 
+ class StarterService(ABC):
+ 
+     def __init__(self):
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/classes/article_raw_en.py` & `osint-python-starter-service-2.0.1/starter_service/classes/article_raw_en.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/classes/article_raw_lt.py` & `osint-python-starter-service-2.0.1/starter_service/classes/article_raw_lt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/classes/article_raw_nl.py` & `osint-python-starter-service-2.0.1/starter_service/classes/article_raw_nl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/classes/article_raw_xx.py` & `osint-python-starter-service-2.0.1/starter_service/classes/article_raw_xx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/env.py` & `osint-python-starter-service-2.0.1/starter_service/env.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/examples/error.py` & `osint-python-starter-service-2.0.1/starter_service/examples/error.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+ 
+ os.environ['CLIENT_ID'] = 'error'
+ os.environ['CONSUME'] = 'article_raw_en'
+ os.environ['PRODUCE'] = 'metadata_item_key_en'
+ os.environ['REST_API_ENABLED'] = 'True'
+ 
+-from base_service import StarterService
+-from api import API
++from starter_service.base_service import StarterService
++from starter_service.api import API
+ 
+ 
+ class SingleRoute(StarterService):
+ 
+     def health(self):
+         return "OK"
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/examples/manual_kafka.py` & `osint-python-starter-service-2.0.1/starter_service/examples/manual_kafka.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+ 
+ os.environ['CLIENT_ID'] = 'manual_kafka'
+ os.environ['CONSUME'] = 'article_raw_xx'
+ os.environ['PRODUCE'] = 'article_raw_en,article_raw_lt'
+ os.environ['REST_API_ENABLED'] = 'True'
+ 
+-from base_service import StarterService
+-from api import API
++from starter_service.base_service import StarterService
++from starter_service.api import API
+ 
+ 
+ class ManualKafka(StarterService):
+ 
+     def __init__(self):
+         super().__init__()
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/examples/multi.py` & `osint-python-starter-service-2.0.1/starter_service/examples/multi.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+ 
+ os.environ['CLIENT_ID'] = 'multi'
+ os.environ['CONSUME'] = 'article_raw_xx'
+ os.environ['PRODUCE'] = 'article_raw_en,article_raw_lt,article_raw_nl'
+ os.environ['REST_API_ENABLED'] = 'True'
+ 
+-from base_service import StarterService
+-from api import API
++from starter_service.base_service import StarterService
++from starter_service.api import API
+ 
+ 
+ class MultiRoutes(StarterService):
+ 
+     def __init__(self):
+         super().__init__()
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/examples/single.py` & `osint-python-starter-service-2.0.1/starter_service/examples/single.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+ 
+ os.environ['CLIENT_ID'] = 'single'
+ os.environ['CONSUME'] = 'article_raw_en'
+ os.environ['PRODUCE'] = 'metadata_item_key_en'
+ os.environ['REST_API_ENABLED'] = 'True'
+ 
+-from base_service import StarterService
+-from api import API
++from starter_service.base_service import StarterService
++from starter_service.api import API
+ 
+ 
+ class SingleRoute(StarterService):
+ 
+     def health(self):
+         return "OK"
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/kafka_adapter.py` & `osint-python-starter-service-2.0.1/starter_service/kafka_adapter.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -5,17 +5,17 @@
+ from threading import Thread
+ 
+ from test_bed_adapter import TestBedOptions, TestBedAdapter
+ from test_bed_adapter.kafka.consumer_manager import ConsumerManager
+ from test_bed_adapter.kafka.log_manager import LogManager
+ from test_bed_adapter.kafka.producer_manager import ProducerManager
+ 
+-from api import API
+-from env import ENV
+-from schemas import SchemaRegistry
++from starter_service.api import API
++from starter_service.env import ENV
++from starter_service.schemas import SchemaRegistry
+ 
+ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(name)s %(message)s')
+ 
+ _schema = SchemaRegistry()
+ 
+ 
+ class KafkaAdapter(Thread):
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/messages.py` & `osint-python-starter-service-2.0.1/starter_service/messages.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ import collections
+ 
+-from schemas import SchemaRegistry
++from starter_service.schemas import SchemaRegistry
+ 
+ _incoming_messages = collections.deque([], 20)
+ _outgoing_messages = collections.deque([], 20)
+ _schema = SchemaRegistry()
+ 
+ # TODO: Add a message history class to store the last 20 messages
+ class MessageHistory:
+```
+
+### Comparing `osint-python-starter-service-2.0.0/starter_service/schemas.py` & `osint-python-starter-service-2.0.1/starter_service/schemas.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ import json
+ import logging
+ import os
+ from pydoc import locate
+ from threading import Lock
+ 
+-from avro_parser import avsc_to_pydantic
++from starter_service.avro_parser import avsc_to_pydantic
+ 
+ _path = os.path.dirname(os.path.abspath(__file__))
+ _logger = logging.getLogger(__name__)
+ 
+ 
+ class Schema:
+```
+

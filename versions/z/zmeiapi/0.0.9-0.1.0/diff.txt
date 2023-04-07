@@ -1,0 +1,822 @@
+--- tmp/zmeiapi-0.0.9.tar.gz
++++ tmp/zmeiapi-0.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "zmeiapi-0.0.9.tar", last modified: Tue Mar 14 01:00:55 2023, max compression
+│ +gzip compressed data, was "zmeiapi-0.1.0.tar", last modified: Fri Apr  7 10:36:06 2023, max compression
+│   --- zmeiapi-0.0.9.tar
+├── +++ zmeiapi-0.1.0.tar
+│ ├── file list
+│ │ @@ -1,23 +1,42 @@
+│ │ -drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:55.490540 zmeiapi-0.0.9/
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     1101 2023-03-06 08:13:19.000000 zmeiapi-0.0.9/LICENSE.txt
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-03-14 01:00:55.486540 zmeiapi-0.0.9/PKG-INFO
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)        6 2023-03-06 09:47:27.000000 zmeiapi-0.0.9/README.md
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)       38 2023-03-14 01:00:55.490540 zmeiapi-0.0.9/setup.cfg
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)      783 2023-03-14 01:00:44.000000 zmeiapi-0.0.9/setup.py
+│ │ -drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:55.486540 zmeiapi-0.0.9/zmeiapi/
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     4317 2023-03-14 00:51:28.000000 zmeiapi-0.0.9/zmeiapi/BumatReader.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     3859 2023-03-09 14:32:01.000000 zmeiapi-0.0.9/zmeiapi/General.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)      459 2023-03-07 14:08:13.000000 zmeiapi-0.0.9/zmeiapi/Logger.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     7765 2023-03-07 14:21:04.000000 zmeiapi-0.0.9/zmeiapi/Material.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     1160 2023-03-07 14:08:13.000000 zmeiapi-0.0.9/zmeiapi/MaterialCreators.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)      300 2023-03-06 13:30:00.000000 zmeiapi-0.0.9/zmeiapi/Parameters.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     3378 2023-03-10 22:20:40.000000 zmeiapi-0.0.9/zmeiapi/Pin.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     1649 2023-03-07 14:08:13.000000 zmeiapi-0.0.9/zmeiapi/PinCreators.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     3292 2023-03-10 22:20:12.000000 zmeiapi-0.0.9/zmeiapi/SerpentOut.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)     4543 2023-03-09 06:52:27.000000 zmeiapi-0.0.9/zmeiapi/Surface.py
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:00.000000 zmeiapi-0.0.9/zmeiapi/__init__.py
+│ │ -drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:55.486540 zmeiapi-0.0.9/zmeiapi.egg-info/
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)      383 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)        1 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 vlad      (1000) vlad      (1000)        8 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1101 2023-03-06 08:13:19.000000 zmeiapi-0.1.0/LICENSE.txt
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)       27 2023-03-16 01:03:53.000000 zmeiapi-0.1.0/MANIFEST.in
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/PKG-INFO
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        6 2023-03-06 09:47:27.000000 zmeiapi-0.1.0/README.md
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)       38 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/setup.cfg
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)      816 2023-04-07 10:35:45.000000 zmeiapi-0.1.0/setup.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.076757 zmeiapi-0.1.0/zmeiapi/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:28:36.000000 zmeiapi-0.1.0/zmeiapi/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.076757 zmeiapi-0.1.0/zmeiapi/abstract_factories/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1176 2023-03-31 09:50:59.000000 zmeiapi-0.1.0/zmeiapi/abstract_factories/MaterialCreators.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1665 2023-03-31 09:50:59.000000 zmeiapi-0.1.0/zmeiapi/abstract_factories/PinCreators.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 00:25:17.000000 zmeiapi-0.1.0/zmeiapi/abstract_factories/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.076757 zmeiapi-0.1.0/zmeiapi/data/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)      122 2023-03-16 00:55:33.000000 zmeiapi-0.1.0/zmeiapi/data/Parameters.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 00:24:05.000000 zmeiapi-0.1.0/zmeiapi/data/__init__.py
+│ │ +-rw-r--r--   0 vlad      (1000) vlad      (1000)    12439 2022-12-17 12:37:40.000000 zmeiapi-0.1.0/zmeiapi/data/nuclides_dict.pkl
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.076757 zmeiapi-0.1.0/zmeiapi/factories/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 16:32:21.000000 zmeiapi-0.1.0/zmeiapi/factories/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/zmeiapi/objects/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1712 2023-04-05 13:11:45.000000 zmeiapi-0.1.0/zmeiapi/objects/BurnupInput.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     2380 2023-04-06 09:08:29.000000 zmeiapi-0.1.0/zmeiapi/objects/Cell.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     5987 2023-04-07 07:19:48.000000 zmeiapi-0.1.0/zmeiapi/objects/General.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     7338 2023-04-04 13:14:05.000000 zmeiapi-0.1.0/zmeiapi/objects/Lattice.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     7856 2023-04-07 08:21:07.000000 zmeiapi-0.1.0/zmeiapi/objects/Material.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     3383 2023-04-07 08:21:07.000000 zmeiapi-0.1.0/zmeiapi/objects/Pin.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     5526 2023-04-07 10:33:35.000000 zmeiapi-0.1.0/zmeiapi/objects/Surface.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 00:21:40.000000 zmeiapi-0.1.0/zmeiapi/objects/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/zmeiapi/readers/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     4486 2023-03-31 09:50:59.000000 zmeiapi-0.1.0/zmeiapi/readers/BumatReader.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)     3243 2023-03-31 09:50:59.000000 zmeiapi-0.1.0/zmeiapi/readers/SerpentOut.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 00:23:53.000000 zmeiapi-0.1.0/zmeiapi/readers/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/zmeiapi/utilities/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 16:36:15.000000 zmeiapi-0.1.0/zmeiapi/utilities/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.080757 zmeiapi-0.1.0/zmeiapi/zmei_io/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)      459 2023-03-07 14:08:13.000000 zmeiapi-0.1.0/zmeiapi/zmei_io/Logger.py
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-16 00:26:06.000000 zmeiapi-0.1.0/zmeiapi/zmei_io/__init__.py
+│ │ +drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-04-07 10:36:06.076757 zmeiapi-0.1.0/zmeiapi.egg-info/
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-04-07 10:36:06.000000 zmeiapi-0.1.0/zmeiapi.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)      815 2023-04-07 10:36:06.000000 zmeiapi-0.1.0/zmeiapi.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        1 2023-04-07 10:36:06.000000 zmeiapi-0.1.0/zmeiapi.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 vlad      (1000) vlad      (1000)        8 2023-04-07 10:36:06.000000 zmeiapi-0.1.0/zmeiapi.egg-info/top_level.txt
+│ │   --- zmeiapi-0.0.9/LICENSE.txt
+│ ├── +++ zmeiapi-0.1.0/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- zmeiapi-0.0.9/setup.py
+│ ├── +++ zmeiapi-0.1.0/setup.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -4,20 +4,21 @@
+│ │      README = readme_file.read()
+│ │  
+│ │  with open('HISTORY.md') as history_file:
+│ │      HISTORY = history_file.read()
+│ │  
+│ │  setup_args = dict(
+│ │      name='zmeiapi',
+│ │ -    version='0.0.9',
+│ │ +    version='0.1.0',
+│ │      description='Useful tools to work with Zmei calculation code',
+│ │      long_description_content_type="text/markdown",
+│ │      long_description=README + '\n\n' + HISTORY,
+│ │      license='MIT',
+│ │      packages=find_packages(),
+│ │ +    include_package_data = True,
+│ │      author='Vladislav Romanenko',
+│ │      author_email='vliromanenko@yandex.ru',
+│ │      keywords=['zmei-api'],
+│ │      url='https://github.com/vliromanenko/zmei-api',
+│ │      download_url='https://pypi.org/project/zmeiapi/'
+│ │  )
+│ │   --- zmeiapi-0.0.9/zmeiapi/BumatReader.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/readers/BumatReader.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  __version__ = '0.0.1'
+│ │  __author__ = 'Vlad Romanenko'
+│ │  
+│ │  
+│ │  import os
+│ │  import glob
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │  
+│ │  
+│ │  class BumatMaterialObject:
+│ │      def __init__(
+│ │              self,
+│ │              material_name,
+│ │              burnup,
+│ │ @@ -39,14 +39,18 @@
+│ │      def __init__(self, folder_path):
+│ │          self.bumat_filenames = glob.glob(os.path.join(folder_path, '*.bumat*'))
+│ │          if not self.bumat_filenames:
+│ │              logger.error(f"Bumat files not found")
+│ │              raise RuntimeError(f"Bumat files not found")
+│ │          self.bumat_filenames = sorted(self.bumat_filenames, key=self.__bumat_key_val)
+│ │  
+│ │ +        with open(self.bumat_filenames[0], 'r') as file:
+│ │ +            _lines = file.readlines()
+│ │ +        self.mat_indexes = self._get_mat_indexes(_lines)
+│ │ +
+│ │          self.bumat_mat_dict = {}
+│ │          for bumat_file in self.bumat_filenames:
+│ │              bumat_file_index = self.__bumat_key_val(bumat_file)
+│ │              self.bumat_mat_dict[bumat_file_index] = self._read_bumat_file(bumat_file)
+│ │  
+│ │      @staticmethod
+│ │      def __bumat_key_val(string: str) -> int:
+│ │   --- zmeiapi-0.0.9/zmeiapi/General.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/objects/General.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  __version__ = "0.0.1"
+│ │  __author__ = "Vlad Romanenko"
+│ │  
+│ │  
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │  
+│ │  
+│ │  class General:
+│ │      def __init__(self):
+│ │          self.title = "None"
+│ │          self.acelib = "None"
+│ │          self.nfylib = "None"
+│ │ @@ -17,19 +17,28 @@
+│ │          self.bc = 1
+│ │          self.pop = [10000, 100, 20]
+│ │          self.src = "n"
+│ │          self.repro = 0
+│ │          self.shbuf = [0, 0]
+│ │          self.poi = None
+│ │          self.cmm = 1
+│ │ -
+│ │ +        self.micro = 'defaultmg_ext'
+│ │ +        self.ene = ['g1', 1, 1E-09, 2.15E-06, 20.0]
+│ │ +        self.nfg = self.ene[0]
+│ │ +        self.div = None
+│ │ +        self.materials_lines = []
+│ │ +        self.pins_lines = []
+│ │ +        self.surfaces_lines = []
+│ │ +        self.cells_lines = []
+│ │ +        self.burnup_lines = []
+│ │ +        self.additional_lines = []
+│ │          pass
+│ │  
+│ │      def _compile_title(self, file):
+│ │ -        file.write(f'set title \"{self.acelib}\" \n')
+│ │ +        file.write(f'set title \"{self.title}\" \n')
+│ │  
+│ │      def _compile_acelib(self, file):
+│ │          file.write(f'set acelib \"{self.acelib}\" \n')
+│ │  
+│ │      def _compile_nfylib(self, file):
+│ │          file.write(f'set nfylib \"{self.nfylib}\" \n')
+│ │  
+│ │ @@ -86,38 +95,91 @@
+│ │              logger.error(f'Pop attribute must have a list type')
+│ │              raise AttributeError(f'Pop attribute must have a list type')
+│ │  
+│ │      def _compile_src(self, file):
+│ │          if self.src is None:
+│ │              pass
+│ │          elif self.src == "n":
+│ │ -            file.write(f'set src {self.src} \n')
+│ │ +            file.write(f'src {self.src} \n')
+│ │          else:
+│ │              logger.error(f'Src attribute possible values must be "n" or None')
+│ │              raise AttributeError(f'Src attribute possible values must be "n" or None')
+│ │  
+│ │ +    def _compile_poi(self, file):
+│ │ +        if self.poi is None:
+│ │ +            pass
+│ │ +        elif type(self.poi) == list and len(self.poi) == 2:
+│ │ +            file.write(f'set poi {int(self.poi[0])} {self.poi[1]}\n')
+│ │ +
+│ │ +    def _compile_micro(self, file):
+│ │ +        file.write(f'set micro {self.micro} \n')
+│ │ +
+│ │ +    def _compile_ene(self, file):
+│ │ +        file.write(f'ene {self.ene[0]} {int(self.ene[1])} \n')
+│ │ +        for i in range(2, len(self.ene)):
+│ │ +            file.write(f'{self.ene[i]} \n')
+│ │ +
+│ │ +    def _compile_nfg(self, file):
+│ │ +        file.write(f'set nfg {self.nfg} \n')
+│ │ +
+│ │ +    def _compile_cmm(self, file):
+│ │ +        file.write(f'set cmm {self.cmm} \n')
+│ │ +
+│ │ +    def _compile_repro(self, file):
+│ │ +        file.write(f'set repro {self.repro} \n')
+│ │ +
+│ │ +    def _compile_shbuf(self, file):
+│ │ +        file.write(f'set shbuf {self.shbuf[0]} {self.shbuf[1]} \n')
+│ │ +
+│ │ +    def _compile_div(self, file):
+│ │ +        if self.div is None:
+│ │ +            pass
+│ │ +        else:
+│ │ +            for key in self.div.keys():
+│ │ +                file.write(f'div {key} sep {int(self.div[key][0])} '
+│ │ +                           f'subr {int(self.div[key][1])} {self.div[key][2]} {self.div[key][3]} \n')
+│ │ +
+│ │ +    def _compile_additional_lines(self, file):
+│ │ +        for line in self.additional_lines:
+│ │ +            file.write(f'{line} \n')
+│ │ +
+│ │      def compile(self, filename):
+│ │          with open(filename, 'w') as file:
+│ │              self._compile_title(file)
+│ │              file.write('\n')
+│ │              self._compile_acelib(file)
+│ │              self._compile_nfylib(file)
+│ │              self._compile_declib(file)
+│ │              file.write('\n')
+│ │              self._compile_ures(file)
+│ │              file.write('\n')
+│ │ -            self._compile_include(file)
+│ │ +            self._compile_repro(file)
+│ │ +            self._compile_shbuf(file)
+│ │              file.write('\n')
+│ │ -            self._compile_gcu(file)
+│ │ +            self._compile_include(file)
+│ │              file.write('\n')
+│ │              self._compile_bc(file)
+│ │              file.write('\n')
+│ │              self._compile_pop(file)
+│ │              file.write('\n')
+│ │              self._compile_src(file)
+│ │              file.write('\n')
+│ │ +            self._compile_micro(file)
+│ │ +            file.write('\n')
+│ │ +            self._compile_ene(file)
+│ │ +            file.write('\n')
+│ │ +            self._compile_nfg(file)
+│ │ +            self._compile_gcu(file)
+│ │ +            self._compile_cmm(file)
+│ │ +            file.write('\n')
+│ │ +            self._compile_poi(file)
+│ │ +            file.write('\n')
+│ │ +            self._compile_div(file)
+│ │ +            file.write('\n')
+│ │ +            self._compile_additional_lines(file)
+│ │ +            file.write('\n')
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      general = General()
+│ │  
+│ │      general.compile('input')
+│ │   --- zmeiapi-0.0.9/zmeiapi/Material.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/objects/Material.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,61 +1,90 @@
+│ │  __version__ = '0.3.0'
+│ │  __author__ = 'Vlad Romanenko'
+│ │  
+│ │  
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │ +import pickle as pkl
+│ │ +from zmeiapi.data.Parameters import NUCLIDES_DICT_PATH
+│ │  
+│ │  
+│ │  class Material:
+│ │      """
+│ │      Material class provides a material object which contains all the necessary for Serpent information
+│ │      as long as the method to write material to file
+│ │  
+│ │      :param name: material name
+│ │ +
+│ │      :type name: str
+│ │ +
+│ │      :param nuclides: list of nuclides the material consists of, defaults to None
+│ │ +
+│ │      :type nuclides: one-dimensional list of strings
+│ │ +
+│ │      :param concentrations: list of nuclides' concentrations, defaults to None
+│ │ +
+│ │      :type concentrations: one-dimensional list of floats, len(concentrations)==len(nuclides)
+│ │ +
+│ │      :param density: material density, defaults to 'sum'
+│ │ +
+│ │      :type density: str or float
+│ │ +
+│ │      :param temp: material temperature, defaults to 600
+│ │ +
+│ │      :type temp: int or float
+│ │ +
+│ │      :param color: color of the material in Serpent, defaults to None
+│ │ +
+│ │      :type color: one-dimensional list of integers from 0 to 255
+│ │ +
+│ │      :param burn: burnable material indicator, defaults to 0
+│ │ +
+│ │      :type burn: integer, possible values 0 or 1
+│ │ +
+│ │      :param is_coolant: indicates if material represents water-based coolant, if yes lwtr card will be added to material
+│ │ +
+│ │      :type is_coolant: bool
+│ │ +
+│ │      :param is_fuel: indicates if material represents fuel
+│ │ +
+│ │      :type is_fuel: bool
+│ │ +
+│ │      :param nuclides_format: the format of the parameter nuclides, possible values: "Mendeleev_table" or "Serpent".
+│ │          Defaults to "Mendeleev_table".
+│ │ +
+│ │      :type nuclides_format: str
+│ │ +
+│ │      :var nuclides_dict: dictionary with the Serpent representation of nuclides names
+│ │ +
+│ │      :type nuclides_dict: dictionary, keys are str names of the nuclides ('H-1', 'Gd-152', ..)
+│ │          values are str names of nuclides in Serpent ('1001', '8016', ..)
+│ │ +
+│ │      :var nuclides_concentrations: dictionary with the nuclide-concentration values
+│ │ +
+│ │      :type nuclides_concentrations: dictionary, keys are str names of nuclides in Serpent ('1001', '8016', ..)
+│ │          values are lists with len==2, value[0] is a float (nuclide concentration),
+│ │          value[1] is a str (name of the nuclide)
+│ │ +
+│ │      :var lines: Serpent representation of material
+│ │ +
+│ │      :type lines: list[str]
+│ │      """
+│ │  
+│ │      instances = []
+│ │  
+│ │      @classmethod
+│ │      def write_instances_to_file(cls, filename):
+│ │          """
+│ │          Class method to write all instances into the file
+│ │ +
+│ │          :param filename: name of the file
+│ │ +
+│ │          :type filename: str
+│ │ +
+│ │          :return: None
+│ │ -        :rtype: None
+│ │          """
+│ │          with open(filename, 'w') as file:
+│ │              for instance in cls.instances:
+│ │                  file.writelines(instance.lines)
+│ │  
+│ │      def __init__(
+│ │              self,
+│ │ @@ -71,15 +100,15 @@
+│ │              nuclides_format="Mendeleev_table"
+│ │      ):
+│ │          """
+│ │          Constructor method
+│ │          """
+│ │  
+│ │          # importing pickle module to load all Serpent nuclides' names
+│ │ -        import pickle as pkl
+│ │ +        # import pickle as pkl
+│ │          self.__class__.instances.append(self)
+│ │          self.name = name
+│ │          self.nuclides = nuclides
+│ │          self.concentrations = concentrations
+│ │          self.density = density
+│ │          self.temp = temp
+│ │          self.color = color
+│ │ @@ -90,15 +119,15 @@
+│ │          self.nuclides_concentrations = {}
+│ │          self.lines = []
+│ │          self.temp_flag = '03c'
+│ │          self._temperature_checker()
+│ │          self._set_temperature_flag()
+│ │  
+│ │          # loading nuclides dictionary from the pickle file
+│ │ -        with open('nuclides_dict.pkl', 'rb') as file:
+│ │ +        with open(NUCLIDES_DICT_PATH, 'rb') as file:
+│ │              self.nuclides_dict = pkl.load(file)
+│ │  
+│ │          self._nuclides_and_concentrations_checker()
+│ │          self._create_nuclides_concentrations_dict()
+│ │  
+│ │          self._create_lines()
+│ │  
+│ │ @@ -112,16 +141,16 @@
+│ │              logger.error(f"Nuclides and concentrations must have a list type, execution will be stoped")
+│ │              raise AttributeError(f"Nuclides and concentrations must have a list type, execution will be stoped")
+│ │  
+│ │          if len(self.nuclides) == len(self.concentrations):
+│ │              pass
+│ │          else:
+│ │              logger.error(f"Something went wrong, "
+│ │ -                                 f"the length of nuclides and concentrations lists must be equal, "
+│ │ -                                 f"execution will be stoped")
+│ │ +                         f"the length of nuclides and concentrations lists must be equal, "
+│ │ +                         f"execution will be stoped")
+│ │              raise AttributeError(f"Something went wrong, "
+│ │                                   f"the length of nuclides and concentrations lists must be equal, "
+│ │                                   f"execution will be stoped")
+│ │  
+│ │      def _create_nuclides_concentrations_dict(self):
+│ │          # creating nuclides_concentrations dictionary for material
+│ │          for i, nuclide in enumerate(self.nuclides):
+│ │ @@ -142,15 +171,15 @@
+│ │                    f'temperature has been changed to 300K')
+│ │  
+│ │      def _set_temperature_flag(self):
+│ │          if self.temp > 300:
+│ │              self.temp_flag = f'{(self.temp // 300) * 3:.0f}'
+│ │          else:
+│ │              self.temp_flag = '3'
+│ │ -        self.temp_flag = f'{self.temp_flag:02}c'
+│ │ +        self.temp_flag = f'{int(self.temp_flag):02}c'
+│ │  
+│ │      def _create_lines(self) -> None:
+│ │          self.lines.append(f'% Material {self.name}\n')
+│ │          __second_line = f'mat {self.name} {self.density} '
+│ │          if self.is_coolant:
+│ │              __second_line = __second_line + f'moder lwtr{self.temp:.1f} 1001 '
+│ │          elif self.is_fuel and self.burn == 0:
+│ │ @@ -179,15 +208,17 @@
+│ │                  f'{self.nuclides_concentrations[key][0]:.5E} {_comment}'
+│ │              )
+│ │          self.lines.append('\n')
+│ │  
+│ │      def write_to_file(self, file) -> None:
+│ │          """
+│ │          Method writes the material in the form of Serpent material input description
+│ │ +
+│ │          :param file: the file object to write material into
+│ │ +
+│ │          :type file: file object
+│ │          """
+│ │          file.writelines(self.lines)
+│ │   --- zmeiapi-0.0.9/zmeiapi/MaterialCreators.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/abstract_factories/MaterialCreators.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  __version__ = "0.1.0"
+│ │  __author__ = 'Vlad Romanenko'
+│ │  
+│ │  
+│ │  from abc import ABC, abstractmethod
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │  
+│ │  
+│ │  class MaterialCreator(ABC):
+│ │      @abstractmethod
+│ │      def __init__(self, number, layer_number):
+│ │          self.number = number
+│ │          self.layer_number = layer_number
+│ │   --- zmeiapi-0.0.9/zmeiapi/Pin.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/objects/Pin.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,39 +1,48 @@
+│ │  __version__ = "0.1.2"
+│ │  __author__ = "Vlad Romanenko"
+│ │  
+│ │  
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │  
+│ │  
+│ │  class Pin:
+│ │      """
+│ │      Pin class provides a pin object which contains all the necessary for Serpent information
+│ │      as long as the method to write pin to file.
+│ │  
+│ │      :param name: name of the pin (the "p" letter and in some cases additional postfixes
+│ │          will be added to the name after creation)
+│ │ +
+│ │      :type name: str
+│ │ +
+│ │      :var materials: materials list
+│ │ +
+│ │      :type materials: list[str]
+│ │ +
+│ │      :var radiuses: list of radiuses for materialls in a pin
+│ │ +
+│ │      :type radiuses: list[str]
+│ │ +
+│ │      :var lines: pin lines to write into Serpent file
+│ │ +
+│ │      :type lines: list[str]
+│ │      """
+│ │      instances = []
+│ │  
+│ │      @classmethod
+│ │      def write_instances_to_file(cls, filename):
+│ │          """
+│ │          Class method to write all instances into the file
+│ │ +
+│ │          :param filename: name of the file
+│ │ +
+│ │          :type filename: str
+│ │ +
+│ │          :return: None
+│ │ -        :rtype: None
+│ │          """
+│ │          with open(filename, 'w') as file:
+│ │              for instance in cls.instances:
+│ │                  file.writelines(instance.lines)
+│ │  
+│ │      def __init__(self, name: str, materials: list, radiuses: list):
+│ │          self.__class__.instances.append(self)
+│ │   --- zmeiapi-0.0.9/zmeiapi/PinCreators.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/abstract_factories/PinCreators.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  __version__ = "0.1.1"
+│ │  __author__ = 'Vlad Romanenko'
+│ │  
+│ │  
+│ │  from abc import ABC, abstractmethod
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │  
+│ │  
+│ │  class PinCreator(ABC):
+│ │      @abstractmethod
+│ │      def __init__(self, number, layer_number, materials, radiuses):
+│ │          self.number = number
+│ │          self.layer_number = layer_number
+│ │   --- zmeiapi-0.0.9/zmeiapi/SerpentOut.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/readers/SerpentOut.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,93 +1,96 @@
+│ │ -class OutReader:
+│ │ -    def __init__(self, out_filename):
+│ │ -        self.out_filename = out_filename
+│ │ -        with open(self.out_filename, 'r') as file:
+│ │ -            self.lines = file.readlines()
+│ │ -
+│ │ -        self.blines = []
+│ │ -        self.bresults = []
+│ │ -
+│ │ -        self.results = {
+│ │ -            'ANA_KEFF': [],
+│ │ -            'IMP_KEFF': [],
+│ │ -            'INF_FLX': [],
+│ │ -            # xs results
+│ │ -            'MACRO_NG': [],
+│ │ -            'MACRO_E': [],
+│ │ -            'INF_ABS': [],
+│ │ -            'INF_FISS ': [],
+│ │ -            'INF_NSF': [],
+│ │ -            'INF_S0': [],
+│ │ -            'CMM_DIFFCOEF ': [],
+│ │ -            'INF_I135_YIELD': [],
+│ │ -            'INF_XE135_YIELD': [],
+│ │ -            'INF_PM149_YIELD': [],
+│ │ -            'INF_XE135_MICRO_ABS': [],
+│ │ -            'INF_SM149_MICRO_ABS': [],
+│ │ -            'INF_INVV': [],
+│ │ -            'BETA_EFF': [],
+│ │ -            'LAMBDA ': [],
+│ │ -            'BURN_STEP': [],
+│ │ -            'BURNUP ': [],
+│ │ -            'BURN_DAYS': []
+│ │ -        }
+│ │ -
+│ │ -        self.divide_file_to_burnup_steps()
+│ │ -        # '''
+│ │ -        for bstep, lines in enumerate(self.blines):
+│ │ -
+│ │ -            for key in self.results.keys():
+│ │ -                self.results[key].append([])
+│ │ -
+│ │ -            for line in self.blines[bstep]:
+│ │ -                for key in self.results.keys():
+│ │ -                    if line.startswith(key):
+│ │ -                        splited_line = line.split('=')
+│ │ -                        res_line = splited_line[-1].split()
+│ │ -                        if key == 'MACRO_NG':
+│ │ -                            self.results[key][bstep].append(res_line[0])
+│ │ -                            # print(key, self.results[key])
+│ │ -                        elif key == 'BURN_STEP':
+│ │ -                            self.results[key][bstep].append(res_line[0])
+│ │ -                        else:
+│ │ -                            # print(self.results[key])
+│ │ -                            self.results[key][bstep].append(res_line[1:-1])
+│ │ -                            self.results[key][bstep] = self.results[key][bstep][0]
+│ │ -                            # print(key, self.results[key])
+│ │ -            # self.bresults.append(self.results)
+│ │ -
+│ │ -        self.results_to_float()
+│ │ -        # self.print_res()
+│ │ -        # '''
+│ │ -
+│ │ -        pass
+│ │ -
+│ │ -    def divide_file_to_burnup_steps(self):
+│ │ -        with open(self.out_filename, 'r') as file:
+│ │ -            lines = file.read()
+│ │ -        self.blines = lines.split('% Increase counter:')[1:]
+│ │ -        for i, part in enumerate(self.blines):
+│ │ -            self.blines[i] = part.split('\n')
+│ │ -        pass
+│ │ -
+│ │ -    def results_to_float(self):
+│ │ -        # print(len(self.results))
+│ │ -        for key in self.results.keys():
+│ │ -            for bstep in range(len(self.results['ANA_KEFF'])):
+│ │ -                for i, el in enumerate(self.results[key][bstep]):
+│ │ -                    # pass
+│ │ -                    self.results[key][bstep][i] = float(el)
+│ │ -
+│ │ -    def print_res(self):
+│ │ -        for key in self.results.keys():
+│ │ -            print(key, self.results[key])
+│ │ -
+│ │ -
+│ │ -if __name__ == '__main__':
+│ │ -    serpent_results = OutReader('./22AU_0_0/22AU_0_0_res.m')
+│ │ -    # serpent_results = SerpentOut('./22AU_b_res.m')
+│ │ -    print(len(serpent_results.bresults))
+│ │ -    # for result in serpent_results.results:
+│ │ -    for key in serpent_results.results.keys():
+│ │ -        print(key, serpent_results.results[key])
+│ │ -    print('=======')
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │ +
+│ │ +
+│ │ +class OutReader:
+│ │ +    def __init__(self, out_filename):
+│ │ +        self.out_filename = out_filename
+│ │ +        with open(self.out_filename, 'r') as file:
+│ │ +            self.lines = file.readlines()
+│ │ +
+│ │ +        self.blines = []
+│ │ +        self.bresults = []
+│ │ +
+│ │ +        self.results = {
+│ │ +            'ANA_KEFF': [],
+│ │ +            'IMP_KEFF': [],
+│ │ +            'INF_FLX': [],
+│ │ +            # xs results
+│ │ +            'MACRO_NG': [],
+│ │ +            'MACRO_E': [],
+│ │ +            'INF_ABS': [],
+│ │ +            'INF_FISS ': [],
+│ │ +            'INF_NSF': [],
+│ │ +            'INF_S0': [],
+│ │ +            'CMM_DIFFCOEF ': [],
+│ │ +            'INF_I135_YIELD': [],
+│ │ +            'INF_XE135_YIELD': [],
+│ │ +            'INF_PM149_YIELD': [],
+│ │ +            'INF_XE135_MICRO_ABS': [],
+│ │ +            'INF_SM149_MICRO_ABS': [],
+│ │ +            'INF_INVV': [],
+│ │ +            'BETA_EFF': [],
+│ │ +            'LAMBDA ': [],
+│ │ +            'BURN_STEP': [],
+│ │ +            'BURNUP ': [],
+│ │ +            'BURN_DAYS': []
+│ │ +        }
+│ │ +
+│ │ +        self.divide_file_to_burnup_steps()
+│ │ +        # '''
+│ │ +        for bstep, lines in enumerate(self.blines):
+│ │ +
+│ │ +            for key in self.results.keys():
+│ │ +                self.results[key].append([])
+│ │ +
+│ │ +            for line in self.blines[bstep]:
+│ │ +                for key in self.results.keys():
+│ │ +                    if line.startswith(key):
+│ │ +                        splited_line = line.split('=')
+│ │ +                        res_line = splited_line[-1].split()
+│ │ +                        if key == 'MACRO_NG':
+│ │ +                            self.results[key][bstep].append(res_line[0])
+│ │ +                            # print(key, self.results[key])
+│ │ +                        elif key == 'BURN_STEP':
+│ │ +                            self.results[key][bstep].append(res_line[0])
+│ │ +                        else:
+│ │ +                            # print(self.results[key])
+│ │ +                            self.results[key][bstep].append(res_line[1:-1])
+│ │ +                            self.results[key][bstep] = self.results[key][bstep][0]
+│ │ +                            # print(key, self.results[key])
+│ │ +            # self.bresults.append(self.results)
+│ │ +
+│ │ +        self.results_to_float()
+│ │ +        # self.print_res()
+│ │ +        # '''
+│ │ +
+│ │ +        pass
+│ │ +
+│ │ +    def divide_file_to_burnup_steps(self):
+│ │ +        with open(self.out_filename, 'r') as file:
+│ │ +            lines = file.read()
+│ │ +        self.blines = lines.split('% Increase counter:')[1:]
+│ │ +        for i, part in enumerate(self.blines):
+│ │ +            self.blines[i] = part.split('\n')
+│ │ +        pass
+│ │ +
+│ │ +    def results_to_float(self):
+│ │ +        # print(len(self.results))
+│ │ +        for key in self.results.keys():
+│ │ +            for bstep in range(len(self.results['ANA_KEFF'])):
+│ │ +                for i, el in enumerate(self.results[key][bstep]):
+│ │ +                    # pass
+│ │ +                    self.results[key][bstep][i] = float(el)
+│ │ +
+│ │ +    def print_res(self):
+│ │ +        for key in self.results.keys():
+│ │ +            print(key, self.results[key])
+│ │ +
+│ │ +
+│ │ +if __name__ == '__main__':
+│ │ +    serpent_results = OutReader('./22AU_0_0/22AU_0_0_res.m')
+│ │ +    # serpent_results = SerpentOut('./22AU_b_res.m')
+│ │ +    print(len(serpent_results.bresults))
+│ │ +    # for result in serpent_results.results:
+│ │ +    for key in serpent_results.results.keys():
+│ │ +        print(key, serpent_results.results[key])
+│ │ +    print('=======')
+│ │   --- zmeiapi-0.0.9/zmeiapi/Surface.py
+│ ├── +++ zmeiapi-0.1.0/zmeiapi/objects/Surface.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  __version__ = "0.0.1"
+│ │  __author__ = "Vlad Romanenko"
+│ │  
+│ │  
+│ │  from abc import ABC, abstractmethod
+│ │ -from Logger import logger
+│ │ +from zmeiapi.zmei_io.Logger import logger
+│ │  
+│ │  
+│ │  class AbstractSurface(ABC):
+│ │      @abstractmethod
+│ │      def __init__(self, name: str, params: list[float | int]):
+│ │          self.name = name
+│ │          self.params = params
+│ │ @@ -26,15 +26,15 @@
+│ │  
+│ │      @abstractmethod
+│ │      def _check_surf_parameters(self):
+│ │          pass
+│ │  
+│ │      def _create_lines(self, surf_type: str):
+│ │          self.line += f'surf            '
+│ │ -        self.line += f'{self.name:15} {surf_type:15} '
+│ │ +        self.line += f's{self.name:15} {surf_type:15} '
+│ │          for param in self.params:
+│ │              self.line += f'{param:10} '
+│ │          self.line += f'\n'
+│ │          pass
+│ │  
+│ │  
+│ │  class Surface:
+│ │ @@ -118,16 +118,39 @@
+│ │  
+│ │          def _check_surf_parameters(self):
+│ │              if len(self.params) != 3 and len(self.params) != 5:
+│ │                  logger.error('Wrong parameters number, loot at the class description')
+│ │                  raise AttributeError('Wrong parameters number, loot at the class description')
+│ │              pass
+│ │  
+│ │ +    class Hexxc(AbstractSurface):
+│ │ +        def __init__(self, name:str, params: list[float | int]):
+│ │ +            super().__init__(name, params)
+│ │ +            super()._create_lines('hexxc')
+│ │ +
+│ │ +        def _check_surf_parameters(self):
+│ │ +            if len(self.params) != 3:
+│ │ +                logger.error('Wrong parameters number, loot at the class description')
+│ │ +                raise AttributeError('Wrong parameters number, loot at the class description')
+│ │ +
+│ │ +    class Hexxap(AbstractSurface):
+│ │ +        def __init__(self, name: str, params: list[float | int]):
+│ │ +            super().__init__(name, params)
+│ │ +            super()._create_lines('hexxc')
+│ │ +
+│ │ +        def _check_surf_parameters(self):
+│ │ +            if len(self.params) != 5:
+│ │ +                logger.error('Wrong parameters number, loot at the class description')
+│ │ +                raise AttributeError('Wrong parameters number, loot at the class description')
+│ │ +
+│ │  
+│ │  if __name__ == '__main__':
+│ │      surf = Surface().Cylz('surfc', [2, 3.0, 1.0])
+│ │      surf1 = Surface().Cylz('surfc', [1, 3, 1.0])
+│ │      surf2 = Surface().Cyl('surfc', [1, 3, 1.0])
+│ │  
+│ │ +    surf3 = Surface.Hexxc('surfc', [1, 3, 1.0])
+│ │ +
+│ │      print(surf)
+│ │      print(surf2)
+│ │ +    print(surf3)
+│ │      print(Surface.instances)

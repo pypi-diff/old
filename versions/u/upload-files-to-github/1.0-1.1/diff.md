@@ -1,0 +1,132 @@
+# Comparing `tmp/upload_files_to_github-1.0.tar.gz` & `tmp/upload-files-to-github-1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "upload_files_to_github-1.0.tar", last modified: Fri Apr  7 10:18:22 2023, max compression
++gzip compressed data, was "upload-files-to-github-1.1.tar", last modified: Fri Apr  7 10:39:53 2023, max compression
+```
+
+## Comparing `upload_files_to_github-1.0.tar` & `upload-files-to-github-1.1.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 10:18:22.017299 upload_files_to_github-1.0/
+--rw-r--r--   0 chiubowen   (501) staff       (20)      231 2023-04-07 10:18:22.017164 upload_files_to_github-1.0/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)       53 2023-04-07 10:18:21.000000 upload_files_to_github-1.0/README.md
+--rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 10:18:22.017341 upload_files_to_github-1.0/setup.cfg
+--rw-r--r--   0 chiubowen   (501) staff       (20)      574 2023-04-07 10:18:21.000000 upload_files_to_github-1.0/setup.py
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 10:18:22.016951 upload_files_to_github-1.0/upload_files_to_github.egg-info/
+--rw-r--r--   0 chiubowen   (501) staff       (20)      231 2023-04-07 10:18:22.000000 upload_files_to_github-1.0/upload_files_to_github.egg-info/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)      322 2023-04-07 10:18:22.000000 upload_files_to_github-1.0/upload_files_to_github.egg-info/SOURCES.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 10:18:22.000000 upload_files_to_github-1.0/upload_files_to_github.egg-info/dependency_links.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       72 2023-04-07 10:18:22.000000 upload_files_to_github-1.0/upload_files_to_github.egg-info/entry_points.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       93 2023-04-07 10:18:22.000000 upload_files_to_github-1.0/upload_files_to_github.egg-info/requires.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       23 2023-04-07 10:18:22.000000 upload_files_to_github-1.0/upload_files_to_github.egg-info/top_level.txt
+--rwxr-xr-x   0 chiubowen   (501) staff       (20)     2129 2023-04-07 10:18:21.000000 upload_files_to_github-1.0/upload_files_to_github.py
++drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 10:39:53.806340 upload-files-to-github-1.1/
++-rw-r--r--   0 chiubowen   (501) staff       (20)     2717 2023-04-07 10:39:53.806207 upload-files-to-github-1.1/PKG-INFO
++-rw-r--r--   0 chiubowen   (501) staff       (20)     2558 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/README.md
++-rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 10:39:53.806382 upload-files-to-github-1.1/setup.cfg
++-rw-r--r--   0 chiubowen   (501) staff       (20)      574 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/setup.py
++drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 10:39:53.806034 upload-files-to-github-1.1/upload_files_to_github.egg-info/
++-rw-r--r--   0 chiubowen   (501) staff       (20)     2717 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.egg-info/PKG-INFO
++-rw-r--r--   0 chiubowen   (501) staff       (20)      322 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.egg-info/SOURCES.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.egg-info/dependency_links.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       71 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.egg-info/entry_points.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       32 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.egg-info/requires.txt
++-rw-r--r--   0 chiubowen   (501) staff       (20)       23 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.egg-info/top_level.txt
++-rwxr-xr-x   0 chiubowen   (501) staff       (20)     2580 2023-04-07 10:39:53.000000 upload-files-to-github-1.1/upload_files_to_github.py
+```
+
+### Comparing `upload_files_to_github-1.0/setup.py` & `upload-files-to-github-1.1/setup.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ from setuptools import setup, find_packages
+ 
+ # Read requirements.txt
+ with open('requirements.txt') as f:
+     requirements = [line.strip() for line in f.readlines()]
+ 
+ setup(
+-    name="upload_files_to_github",
+-    version="1.0",
++    name="upload-files-to-github",
++    version="1.1",
+     packages=find_packages(),
+     py_modules=[ 'upload_files_to_github'],
+     install_requires=requirements,
+     entry_points={
+         'console_scripts': [
+             'upload_files_to_github = upload_files_to_github:main',
+         ],
+```
+
+### Comparing `upload_files_to_github-1.0/upload_files_to_github.py` & `upload-files-to-github-1.1/upload_files_to_github.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -3,14 +3,22 @@
+ import base64
+ import os
+ 
+ import requests
+ from dotenv import load_dotenv
+ 
+ 
++def get_all_files(directory):
++    all_files = []
++    for root, dirs, files in os.walk(directory):
++        for file in files:
++            all_files.append(os.path.join(root, file))
++    return all_files
++
++
+ def upload_files_to_github(files, repo, token, branch):
+     headers = {
+         "Authorization": f"token {token}",
+         "Accept": "application/vnd.github+json",
+         "X-GitHub-Api-Version": "2022-11-28",
+     }
+     repo_api_url = f"https://api.github.com/repos/{repo}"
+@@ -40,21 +48,28 @@
+         response = requests.put(file_url, json=update_data, headers=headers)
+         response.raise_for_status()
+ 
+         print(f"Successfully uploaded {file_path} to {repo}/{branch}/{file_path}")
+ 
+ 
+ if __name__ == "__main__":
+-    parser = argparse.ArgumentParser(description="Upload multiple files to a GitHub repository.")
++    parser = argparse.ArgumentParser(description="Upload multiple files or directories to a GitHub repository.")
+     parser.add_argument("--files", "-f", action="append", required=True,
+-                        help="List of file paths to upload, e.g., '-f path/name.txt'.")
++                        help="List of file or directory paths to upload, e.g., '-f path/name' or '-f path/dir/'.")
+     parser.add_argument("--repo", "-r", required=True, help="GitHub repository, format: 'user/repo'.")
+     parser.add_argument("--token", "-t", help="GitHub personal access token.")
+     parser.add_argument("--branch", "-b", default="main", help="Branch to upload the files (default: 'main').")
+     args = parser.parse_args()
+ 
+     load_dotenv()
+     token = args.token or os.getenv("GITHUB_ACCESS_TOKEN")
+     if not token:
+         raise ValueError("You must provide a valid GitHub token.")
+ 
+-    upload_files_to_github(args.files, args.repo, token, args.branch)
++    all_files = []
++    for file_or_dir in args.files:
++        if os.path.isdir(file_or_dir):
++            all_files.extend(get_all_files(file_or_dir))
++        else:
++            all_files.append(file_or_dir)
++
++    upload_files_to_github(all_files, args.repo, token, args.branch)
+```
+

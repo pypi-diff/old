@@ -1,0 +1,2285 @@
+# Comparing `tmp/django-reversion-compare-0.9.0.tar.gz` & `tmp/django-reversion-compare-0.9.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/django-reversion-compare-0.9.0.tar", last modified: Sun Jan 19 20:51:04 2020, max compression
++gzip compressed data, was "django-reversion-compare-0.9.1.tar", last modified: Sun Feb 16 16:30:43 2020, max compression
+```
+
+## Comparing `django-reversion-compare-0.9.0.tar` & `django-reversion-compare-0.9.1.tar`
+
+### file list
+
+```diff
+@@ -1,97 +1,36 @@
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/
+--rw-rw-r--   0 jens      (1000) jens      (1000)    32014 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/PKG-INFO
+--rw-rw-r--   0 jens      (1000) jens      (1000)     3057 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/SOURCES.txt
+--rw-rw-r--   0 jens      (1000) jens      (1000)        1 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/dependency_links.txt
+--rw-rw-r--   0 jens      (1000) jens      (1000)        1 2020-01-19 19:41:51.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/not-zip-safe
+--rw-rw-r--   0 jens      (1000) jens      (1000)       34 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/requires.txt
+--rw-rw-r--   0 jens      (1000) jens      (1000)       42 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/django_reversion_compare.egg-info/top_level.txt
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/de/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/de/LC_MESSAGES/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2534 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/de/LC_MESSAGES/django.mo
+--rw-rw-r--   0 jens      (1000) jens      (1000)     3918 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/de/LC_MESSAGES/django.po
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/el/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/el/LC_MESSAGES/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2696 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/el/LC_MESSAGES/django.mo
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4674 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/el/LC_MESSAGES/django.po
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fi/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fi/LC_MESSAGES/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2124 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fi/LC_MESSAGES/django.mo
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4611 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fi/LC_MESSAGES/django.po
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fr/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fr/LC_MESSAGES/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     1787 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fr/LC_MESSAGES/django.mo
+--rw-rw-r--   0 jens      (1000) jens      (1000)     3204 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/fr/LC_MESSAGES/django.po
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/nl/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/nl/LC_MESSAGES/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2282 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/nl/LC_MESSAGES/django.mo
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4180 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/nl/LC_MESSAGES/django.po
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/pl/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/locale/pl/LC_MESSAGES/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2253 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/pl/LC_MESSAGES/django.mo
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4844 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/locale/pl/LC_MESSAGES/django.po
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/templates/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2325 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/action_list_partial.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)     1812 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)      116 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_BooleanField.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)      269 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_DateTimeField.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)       92 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_generic_add.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)      904 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_generic_many_to_many.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)       95 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_generic_remove.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)      207 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_links_partial.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)      987 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_partial.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)      640 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/object_history.html
+--rw-rw-r--   0 jens      (1000) jens      (1000)       39 2020-01-19 20:50:13.000000 django-reversion-compare-0.9.0/reversion_compare/__init__.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     8858 2020-01-19 20:01:50.000000 django-reversion-compare-0.9.0/reversion_compare/admin.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)    18242 2020-01-19 20:28:22.000000 django-reversion-compare-0.9.0/reversion_compare/compare.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)      196 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/forms.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     6281 2020-01-19 20:11:54.000000 django-reversion-compare-0.9.0/reversion_compare/helpers.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     8624 2020-01-19 20:11:54.000000 django-reversion-compare-0.9.0/reversion_compare/mixins.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)       22 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare/models.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4715 2020-01-19 20:31:47.000000 django-reversion-compare-0.9.0/reversion_compare/views.py
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare_tests/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare_tests/management/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare_tests/management/commands/
+--rw-rw-r--   0 jens      (1000) jens      (1000)        0 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare_tests/management/commands/__init__.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     1324 2020-01-19 20:11:52.000000 django-reversion-compare-0.9.0/reversion_compare_tests/management/commands/run_testserver.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)        0 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare_tests/management/__init__.py
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare_tests/templates/
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare_tests/templates/reversion_compare_tests/
+--rw-rw-r--   0 jens      (1000) jens      (1000)      439 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare_tests/templates/reversion_compare_tests/simplemodel_detail.html
+-drwxrwxr-x   0 jens      (1000) jens      (1000)        0 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/reversion_compare_tests/utils/
+--rw-rw-r--   0 jens      (1000) jens      (1000)      476 2020-01-19 20:10:46.000000 django-reversion-compare-0.9.0/reversion_compare_tests/utils/__init__.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)      924 2020-01-19 20:11:52.000000 django-reversion-compare-0.9.0/reversion_compare_tests/utils/db_queries.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)    14697 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/utils/fixtures.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     3155 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/utils/test_cases.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)        0 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/reversion_compare_tests/__init__.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2464 2020-01-19 20:11:50.000000 django-reversion-compare-0.9.0/reversion_compare_tests/admin.py
+--rwxrwxr-x   0 jens      (1000) jens      (1000)      832 2020-01-19 20:01:50.000000 django-reversion-compare-0.9.0/reversion_compare_tests/manage.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4635 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/models.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     1687 2020-01-19 20:01:50.000000 django-reversion-compare-0.9.0/reversion_compare_tests/settings.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     3434 2020-01-19 20:29:20.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_custom_model.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     9341 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_factory_car_models.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     4522 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_factory_car_reverse_models.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2145 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_onetoone_field.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     7813 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_person_pet_models.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     6762 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_simple_model.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2593 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_template_field_model.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     6266 2020-01-19 20:30:54.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_variant_model.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)     6240 2020-01-19 20:31:47.000000 django-reversion-compare-0.9.0/reversion_compare_tests/test_view.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)      751 2020-01-19 20:07:51.000000 django-reversion-compare-0.9.0/reversion_compare_tests/urls.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)      183 2020-01-19 20:07:51.000000 django-reversion-compare-0.9.0/reversion_compare_tests/views.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)      584 2020-01-19 20:05:15.000000 django-reversion-compare-0.9.0/.coveragerc
+--rw-rw-r--   0 jens      (1000) jens      (1000)       45 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/.coveralls.yml
+--rw-rw-r--   0 jens      (1000) jens      (1000)     1790 2020-01-19 20:25:25.000000 django-reversion-compare-0.9.0/.travis.yml
+--rw-rw-r--   0 jens      (1000) jens      (1000)     2103 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/AUTHORS
+--rw-rw-r--   0 jens      (1000) jens      (1000)      504 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/LICENSE
+--rw-rw-r--   0 jens      (1000) jens      (1000)      279 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/MANIFEST.in
+--rw-rw-r--   0 jens      (1000) jens      (1000)    20928 2020-01-19 20:50:13.000000 django-reversion-compare-0.9.0/README.creole
+--rw-rw-r--   0 jens      (1000) jens      (1000)       74 2020-01-19 20:06:14.000000 django-reversion-compare-0.9.0/requirements-dev.txt
+--rw-rw-r--   0 jens      (1000) jens      (1000)       73 2020-01-19 19:41:34.000000 django-reversion-compare-0.9.0/requirements-test.txt
+--rw-rw-r--   0 jens      (1000) jens      (1000)      178 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/setup.cfg
+--rwxrwxr-x   0 jens      (1000) jens      (1000)     9656 2020-01-19 20:09:07.000000 django-reversion-compare-0.9.0/setup.py
+--rw-rw-r--   0 jens      (1000) jens      (1000)      738 2020-01-19 20:36:51.000000 django-reversion-compare-0.9.0/tox.ini
+--rw-rw-r--   0 jens      (1000) jens      (1000)    32014 2020-01-19 20:51:04.000000 django-reversion-compare-0.9.0/PKG-INFO
++-rw-r--r--   0        0        0      504 2020-01-19 19:41:34.027508 django-reversion-compare-0.9.1/LICENSE
++-rw-r--r--   0        0        0    25680 2020-02-16 16:30:36.704302 django-reversion-compare-0.9.1/README.rst
++-rw-r--r--   0        0        0     2092 2020-02-16 16:30:37.096313 django-reversion-compare-0.9.1/pyproject.toml
++-rw-r--r--   0        0        0       22 2020-02-16 16:27:42.365075 django-reversion-compare-0.9.1/reversion_compare/__init__.py
++-rw-r--r--   0        0        0     8799 2020-02-16 16:29:41.038927 django-reversion-compare-0.9.1/reversion_compare/admin.py
++-rw-r--r--   0        0        0    18232 2020-02-16 16:29:41.046927 django-reversion-compare-0.9.1/reversion_compare/compare.py
++-rw-r--r--   0        0        0      196 2020-01-19 19:41:34.031509 django-reversion-compare-0.9.1/reversion_compare/forms.py
++-rw-r--r--   0        0        0     6232 2020-02-16 16:29:41.054927 django-reversion-compare-0.9.1/reversion_compare/helpers.py
++-rw-r--r--   0        0        0     2534 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/de/LC_MESSAGES/django.mo
++-rw-r--r--   0        0        0     3918 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/de/LC_MESSAGES/django.po
++-rw-r--r--   0        0        0     2696 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/el/LC_MESSAGES/django.mo
++-rw-r--r--   0        0        0     4674 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/el/LC_MESSAGES/django.po
++-rw-r--r--   0        0        0     2124 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/fi/LC_MESSAGES/django.mo
++-rw-r--r--   0        0        0     4611 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/fi/LC_MESSAGES/django.po
++-rw-r--r--   0        0        0     1787 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/fr/LC_MESSAGES/django.mo
++-rw-r--r--   0        0        0     3204 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/fr/LC_MESSAGES/django.po
++-rw-r--r--   0        0        0     2282 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/nl/LC_MESSAGES/django.mo
++-rw-r--r--   0        0        0     4180 2020-01-19 19:41:34.035508 django-reversion-compare-0.9.1/reversion_compare/locale/nl/LC_MESSAGES/django.po
++-rw-r--r--   0        0        0     2253 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/locale/pl/LC_MESSAGES/django.mo
++-rw-r--r--   0        0        0     4844 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/locale/pl/LC_MESSAGES/django.po
++-rw-r--r--   0        0        0     8620 2020-02-16 16:23:22.133022 django-reversion-compare-0.9.1/reversion_compare/mixins.py
++-rw-r--r--   0        0        0       22 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/models.py
++-rw-r--r--   0        0        0      955 2020-02-16 16:29:41.062928 django-reversion-compare-0.9.1/reversion_compare/publish.py
++-rw-r--r--   0        0        0     2325 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/action_list_partial.html
++-rw-r--r--   0        0        0     1812 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare.html
++-rw-r--r--   0        0        0      116 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_BooleanField.html
++-rw-r--r--   0        0        0      269 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_DateTimeField.html
++-rw-r--r--   0        0        0       92 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_generic_add.html
++-rw-r--r--   0        0        0      904 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_generic_many_to_many.html
++-rw-r--r--   0        0        0       95 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_generic_remove.html
++-rw-r--r--   0        0        0      207 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_links_partial.html
++-rw-r--r--   0        0        0      987 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_partial.html
++-rw-r--r--   0        0        0      640 2020-01-19 19:41:34.039509 django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/object_history.html
++-rw-r--r--   0        0        0     4685 2020-02-16 16:29:41.066928 django-reversion-compare-0.9.1/reversion_compare/views.py
++-rw-r--r--   0        0        0    27724 2020-02-16 16:30:44.471541 django-reversion-compare-0.9.1/setup.py
++-rw-r--r--   0        0        0    27235 2020-02-16 16:30:44.473037 django-reversion-compare-0.9.1/PKG-INFO
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `django-reversion-compare-0.9.0/django_reversion_compare.egg-info/PKG-INFO` & `django-reversion-compare-0.9.1/PKG-INFO`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,617 +1,617 @@
+-Metadata-Version: 1.2
++Metadata-Version: 2.1
+ Name: django-reversion-compare
+-Version: 0.9.0
++Version: 0.9.1
+ Summary: history compare for django-reversion
+ Home-page: https://github.com/jedie/django-reversion-compare/
+-Author: ['Diemer, Jens', 'Hall, Dave', 'van der Boor, Diederik', 'Chainz, Adam', 'Cornehl, Denis', 'creativequality - https://github.com/creativequality', 'Engel, Jeremy', 'Fahed, Sami', 'Hohls, Derek', 'Hoppe, Johannes', 'Iakovlev, Maksim', 'Lagovas', 'Larin, Nikita', 'Lavin, Mark', 'Lisák, Peter', 'Marques de Araújo, Rodrigo Pinheiro', 'Matyukhin, Vyacheslav', 'Mihelac, Bojan', 'Minges, Alexander', 'Olsson, Anders', 'Pahaz, Blinov', 'Papastefanos, Serafeim', 'Puolitaival, Olli-Pekka', 'pypetey', 'Sae X', 'Sayargaliev, Rustem', 'Spencer, Samuel', 'Shannon, Michael', 'Tácito, Hugo', 'C. Barrionuevo da Luz, Fabio', 'w4rri0r3k', 'Wickström, Frank', 'Willems, Thomas']
+-Author-email: django-reversion-compare@jensdiemer.de
+-Maintainer: Jens Diemer
+-Maintainer-email: django-reversion-compare@jensdiemer.de
+-License: UNKNOWN
+-Download-URL: http://pypi.python.org/pypi/django-reversion-compare/
+-Description: ========================
+-        django-reversion-compare
+-        ========================
+-        
+-        **django-reversion-compare** is an extension to `django-reversion <https://github.com/etianen/django-reversion/>`_ that provides a history compare view to compare two versions of a model which is under reversion.
+-        
+-        Comparing model versions is not a easy task. Maybe there are different view how this should looks like.
+-        This project will gives you a generic way to see whats has been changed.
+-        
+-        Many parts are customizable by overwrite methods or subclassing, see above.
+-        
+-        +--------------------------------------+
+-        | |Build Status on github|             |
+-        +--------------------------------------+
+-        | |Build Status on travis-ci.org|      |
+-        +--------------------------------------+
+-        | |Coverage Status on coveralls.io|    |
+-        +--------------------------------------+
+-        | |Coverage Status on codecov.io|      |
+-        +--------------------------------------+
+-        | |Requirements Status on requires.io| |
+-        +--------------------------------------+
+-        
+-        .. |Build Status on github| image:: https://github.com/jedie/django-reversion-compare/workflows/test/badge.svg?branch=master
+-        .. |Build Status on travis-ci.org| image:: https://travis-ci.org/jedie/django-reversion-compare.svg
+-        .. _travis-ci.org/jedie/django-reversion-compare: https://travis-ci.org/jedie/django-reversion-compare/
+-        .. |Coverage Status on coveralls.io| image:: https://coveralls.io/repos/jedie/django-reversion-compare/badge.svg
+-        .. _coveralls.io/r/jedie/django-reversion-compare: https://coveralls.io/r/jedie/django-reversion-compare
+-        .. |Coverage Status on codecov.io| image:: https://codecov.io/gh/jedie/django-reversion-compare/branch/master/graph/badge.svg
+-        .. _codecov.io/gh/jedie/django-reversion-compare: https://codecov.io/gh/jedie/django-reversion-compare
+-        .. |Requirements Status on requires.io| image:: https://requires.io/github/jedie/django-reversion-compare/requirements.svg
+-        .. _requires.io/github/jedie/django-reversion-compare/requirements/: https://requires.io/github/jedie/django-reversion-compare/requirements/
+-        
+-        ------------
+-        Installation
+-        ------------
+-        
+-        Just use:
+-        
+-        ::
+-        
+-            pip install django-reversion-compare
+-        
+-        Optionally you can install `google-diff-match-patch <https://code.google.com/p/google-diff-match-patch/>`_, otherwise difflib would be used. The easiest way is to use the unofficial package `diff-match-patch <http://pypi.python.org/pypi/diff-match-patch/>`_, e.g.:
+-        
+-        ::
+-        
+-            pip install diff-match-patch
+-        
+-        Setup
+-        =====
+-        
+-        Add **reversion_compare** to **INSTALLED_APPS** in your settings.py, e.g.:
+-        
+-        ::
+-        
+-            INSTALLED_APPS = (
+-                'django...',
+-                ...
+-                'reversion', # https://github.com/etianen/django-reversion
+-                'reversion_compare', # https://github.com/jedie/django-reversion-compare
+-                ...
+-            )
+-            
+-            # Add reversion models to admin interface:
+-            ADD_REVERSION_ADMIN=True
+-            # optional settings:
+-            REVERSION_COMPARE_FOREIGN_OBJECTS_AS_ID=False
+-            REVERSION_COMPARE_IGNORE_NOT_REGISTERED=False
+-        
+-        Usage
+-        =====
+-        
+-        Inherit from **CompareVersionAdmin** instead of **VersionAdmin** to get the comparison feature.
+-        
+-        admin.py e.g.:
+-        
+-        ::
+-        
+-            from django.contrib import admin
+-            from reversion_compare.admin import CompareVersionAdmin
+-            
+-            from my_app.models import ExampleModel
+-            
+-            class ExampleModelAdmin(CompareVersionAdmin):
+-                pass
+-            
+-            admin.site.register(ExampleModel, ExampleModelAdmin)
+-        
+-        If you're using an existing third party app, then you can add patch django-reversion-compare into
+-        its admin class by using the **reversion_compare.helpers.patch_admin()** method. For example, to add
+-        version control to the built-in User model:
+-        
+-        ::
+-        
+-            from reversion_compare.helpers import patch_admin
+-            
+-            patch_admin(User)
+-        
+-        e.g.: Add django-cms Page model:
+-        
+-        ::
+-        
+-            from cms.models.pagemodel import Page
+-            from reversion_compare.helpers import patch_admin
+-            
+-            
+-            # Patch django-cms Page Model to add reversion-compare functionality:
+-            patch_admin(Page)
+-        
+-        Customize
+-        =========
+-        
+-        It's possible to change the look for every field or for a entire field type.
+-        You must only define a methods to your admin class with this name scheme:
+-        
+-        *  ``"compare_%s" % field_name`` 
+-        
+-        *  ``"compare_%s" % field.get_internal_type()`` 
+-        
+-        If there is no method with this name scheme, the ``fallback_compare()`` method will be used.
+-        
+-        An example for specifying a compare method for a model field by name:
+-        
+-        ::
+-        
+-            class YourAdmin(CompareVersionAdmin):
+-                def compare_foo_bar(self, obj_compare):
+-                    """ compare the foo_bar model field """
+-                    return "%r <-> %r" % (obj_compare.value1, obj_compare.value2)
+-        
+-        and example using **patch_admin** with custom version admin class:
+-        
+-        ::
+-        
+-            patch_admin(User, AdminClass=YourAdmin)
+-        
+-        ----------------
+-        Class Based View
+-        ----------------
+-        
+-        Beyond the Admin views, you can also create a Class Based View for displaying and comparing version
+-        differences. This is a single class-based-view that either displays the list of versions to select
+-        for an object or displays both the versions **and** their differences (if the versions to be compared
+-        have been selected). This class can be used just like a normal DetailView:
+-        
+-        Inherit from it in your class and add a model (or queryset), for example:
+-        
+-        ::
+-        
+-            from reversion_compare.views import HistoryCompareDetailView
+-            
+-            class SimpleModelHistoryCompareView(HistoryCompareDetailView):
+-                model = SimpleModel
+-        
+-        Then, assign that CBV to a url, for example:
+-        
+-        ::
+-        
+-            url(r'^test_view/(?P<pk>\d+)$', views.SimpleModelHistoryCompareView.as_view() ),
+-        
+-        Last step, you need to create a template to display both the version select form and
+-        the changes part (if the form is submitted). An example template is the following:
+-        
+-        ::
+-        
+-            <style type="text/css">
+-            /* minimal style for the diffs */
+-            del, ins {
+-                color: #000;
+-                text-decoration: none;
+-            }
+-            del { background-color: #ffe6e6; }
+-            ins { background-color: #e6ffe6; }
+-            sup.follow { color: #5555ff; }
+-            </style>
+-            
+-            {% include "reversion-compare/action_list_partial.html"  %}
+-            {% if request.GET.version_id1 %}
+-                {% include "reversion-compare/compare_partial.html"  %}
+-                {% include "reversion-compare/compare_links_partial.html"  %}
+-            {% endif %}
+-        
+-        Beyond the styling, you should include:
+-        
+-        * reversion-compare/action_list_partial.html partial template to display the version select form
+-        
+-        * reversion-compare/compare_partial.html partial template to display the actual version
+-        
+-        * reversion-compare/compare_links_partial.html to include previous/next comparison links
+-        
+-        compare_partial.html and compare_links_partial.html will show the compare-related information
+-        so it's better to display them only when the select-versions-tocompare-form has been submitted.
+-        If you want more control on the appearence of your templates you can check the above partials
+-        to understand how the availabble context variables are used and override them completely.
+-        
+-        -----------
+-        Screenshots
+-        -----------
+-        
+-        Here some screenshots of django-reversion-compare:
+-        
+-        ----
+-        
+-        How to select the versions to compare:
+-        
+-        |django-reversion-compare_v0_1_0-01.png|
+-        
+-        .. |django-reversion-compare_v0_1_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-01.png
+-        
+-        ----
+-        
+-        from **v0.1.0**: DateTimeField compare (last update), TextField compare (content) with small changes and a ForeignKey compare (child model instance was added):
+-        
+-        |django-reversion-compare_v0_1_0-02.png|
+-        
+-        .. |django-reversion-compare_v0_1_0-02.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-02.png
+-        
+-        ----
+-        
+-        from **v0.1.0**: Same as above, but the are more lines changed in TextField and the ForeignKey relation was removed:
+-        
+-        |django-reversion-compare_v0_1_0-03.png|
+-        
+-        .. |django-reversion-compare_v0_1_0-03.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-03.png
+-        
+-        ----
+-        
+-        Example screenshot from **v0.3.0**: a many-to-many field compare (friends, hobbies):
+-        
+-        |django-reversion-compare_v0_3_0-01.png|
+-        
+-        .. |django-reversion-compare_v0_3_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120516_django-reversion-compare_v0_3_0-01.png
+-        
+-        * In the first line, the m2m object has been changed.
+-        
+-        * line 2: A m2m object was deleted
+-        
+-        * line 3: A m2m object was removed from this entry (but not deleted)
+-        
+-        * line 4: This m2m object has not changed
+-        
+-        ----------------------------
+-        create developer environment
+-        ----------------------------
+-        
+-        e.g.:
+-        
+-        ::
+-        
+-            # Clone project (Use your fork SSH url!):
+-            ~$ git clone https://github.com/jedie/django-reversion-compare.git
+-            ~$ cd django-reversion-compare
+-            
+-            # create ".virtualenv" and install everything:
+-            django-reversion-compare$ ./create_env.sh
+-            
+-            # Activate virtual environment:
+-            django-reversion-compare$ source .virtualenv/bin/activate
+-            
+-            # Run all tests via "tox":
+-            (.virtualenv) django-reversion-compare$ tox
+-        
+-        **Note:**
+-        
+-        * Just call ``./create_env.sh`` again to update a existing virtualenv ;)
+-        
+-        * Please run ``./black.sh`` to reformat the code **before** creating a pull requests
+-        
+-        -------------
+-        running tests
+-        -------------
+-        
+-        Run all tests in all environment combinations via tox:
+-        
+-        ::
+-        
+-            $ python3 setup.py tox
+-        
+-        Run all tests in current environment via pytest:
+-        
+-        ::
+-        
+-            $ python3 setup.py test
+-        
+-        Helpfull for writing and debugging unittests is to run a local test server with the same data.
+-        e.g.:
+-        
+-        ::
+-        
+-            ~$ cd path/to/django-reversion-compare/
+-            /django-reversion-compare$ ./run_testserver.py
+-        
+-        **migration** will be run and a superuser will be created. Username: **test** Password: **12345678**
+-        
+-        ---------------------
+-        Version compatibility
+-        ---------------------
+-        
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | Reversion-Compare | django-reversion | Django             | Python                                         |
+-        +===================+==================+====================+================================================+
+-        | >=v0.9.0          | v2.0             | v2.2, v3.0         | v3.6, v3.7, v3.8, pypy3                        |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.8.6          | v2.0             | v1.11, v2.0        | v3.5, v3.6, v3.7, pypy3                        |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.8.4          | v2.0             | v1.8, v1.11, v2.0  | v3.5, v3.6, pypy3                              |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.8.3          | v2.0             | v1.8, v1.11        | v3.5, v3.6, pypy3                              |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | v0.8.x            | v2.0             | v1.8, v1.10, v1.11 | v2.7, v3.4, v3.5, v3.6 (only with Django 1.11) |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.7.2          | v2.0             | v1.8, v1.9, v1.10  | v2.7, v3.4, v3.5                               |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | v0.7.x            | v2.0             | v1.8, v1.9         | v2.7, v3.4, v3.5                               |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | v0.6.x            | v1.9, v1.10      | v1.8, v1.9         | v2.7, v3.4, v3.5                               |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.5.2          | v1.9             | v1.7, v1.8         | v2.7, v3.4                                     |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.4            | v1.8             | v1.7               | v2.7, v3.4                                     |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | <v0.4             | v1.6             | v1.4               | v2.7                                           |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        
+-        These are the unittests variants. See also: `/.travis.yml <https://github.com/jedie/django-reversion-compare/blob/master/.travis.yml>`_
+-        Maybe other versions are compatible, too.
+-        
+-        ---------
+-        Changelog
+-        ---------
+-        
+-        * *dev* `compare v0.9.0...master <https://github.com/jedie/django-reversion-compare/compare/v0.9.0...master>`_ 
+-        
+-            * TBC
+-        
+-        * v0.9.0 - 19.01.2020 `compare v0.8.7...v0.9.0 <https://github.com/jedie/django-reversion-compare/compare/v0.8.7...v0.9.0>`_ 
+-        
+-            * Test with Python 3.8 and Django 3.0, too.
+-        
+-            * Run tests via github actions, too.
+-        
+-            * Remove support for Python 3.5 and Django v1.11
+-        
+-            * `actually check if model is registered #115 <https://github.com/jedie/django-reversion-compare/pull/115>`_ contributed by willtho89
+-        
+-            * `Remove python2 compatibility decorators #113 <https://github.com/jedie/django-reversion-compare/pull/113>`_ contributed by jeremy-engel
+-        
+-            * `Show username and full name from custom user model #112 <https://github.com/jedie/django-reversion-compare/pull/112>`_ contributed by berekuk
+-        
+-            * `Fix django-suit NoneType is not iterable #111 <https://github.com/jedie/django-reversion-compare/pull/111>`_ contributed by creativequality
+-        
+-            * convert old format to f-strings via flynt
+-        
+-            * Code style:
+-        
+-                * sort imports with isort
+-        
+-                * apply autopep8
+-        
+-                * lint code in CI with flake8, isort and flynt
+-        
+-        * v0.8.7 - 06.01.2020 `compare v0.8.6...v0.8.7 <https://github.com/jedie/django-reversion-compare/compare/v0.8.6...v0.8.7>`_ 
+-        
+-            * Add new optional settings ``REVERSION_COMPARE_IGNORE_NOT_REGISTERED``, see: `issues #103 <https://github.com/jedie/django-reversion-compare/issues/103>`_
+-        
+-            * reformat code with 'black'
+-        
+-            * some code cleanup
+-        
+-        * v0.8.6 - 04.01.2019 `compare v0.8.5...v0.8.6 <https://github.com/jedie/django-reversion-compare/compare/v0.8.5...v0.8.6>`_ 
+-        
+-            * Bugfix: `Use ".pk" instead of ".id" when referring to related object. <https://github.com/jedie/django-reversion-compare/pull/110>`_ contributed by `Peter Lisák <https://github.com/peterlisak>`_
+-        
+-            * Run tests: Skip Django v1.8 and add Python v3.7
+-        
+-        * v0.8.5 - 13.09.2018 `compare v0.8.4...v0.8.5 <https://github.com/jedie/django-reversion-compare/compare/v0.8.4...v0.8.5>`_ 
+-        
+-            * `speed up delete checking <https://github.com/jedie/django-reversion-compare/pull/106>`_ contributed by `LegoStormtroopr <https://github.com/LegoStormtroopr>`_
+-        
+-        * v0.8.4 - 15.03.2018 `compare v0.8.3...v0.8.4 <https://github.com/jedie/django-reversion-compare/compare/v0.8.3...v0.8.4>`_ 
+-        
+-            * `Add Django 2.0 compatibility <https://github.com/jedie/django-reversion-compare/pull/102>`_ contributed by `samifahed <https://github.com/samifahed>`_
+-        
+-        * v0.8.3 - 21.12.2017 `compare v0.8.2...v0.8.3 <https://github.com/jedie/django-reversion-compare/compare/v0.8.2...v0.8.3>`_ 
+-        
+-            * refactor travis/tox/pytest/coverage stuff
+-        
+-            * Tests can be run via ``python3 setup.py tox`` and/or ``python3 setup.py test``
+-        
+-            * Test also with pypy3 on Travis CI.
+-        
+-        * `v0.8.2 - 06.12.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.1...v0.8.2>`_:
+-        
+-            * `Change ForeignKey relation compare <https://github.com/jedie/django-reversion-compare/pull/100>`_ contributed by `alaruss <https://github.com/alaruss>`_
+-        
+-            * `Work around a type error triggered by taggit <https://github.com/jedie/django-reversion-compare/pull/86>`_ contributed by `Athemis <https://github.com/Athemis>`_
+-        
+-            * minor code changes
+-        
+-        * `v0.8.1 - 02.10.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.0...v0.8.1>`_:
+-        
+-            * `Add added polish translation <https://github.com/jedie/django-reversion-compare/pull/99>`_ contributed by `w4rri0r3k <https://github.com/w4rri0r3k>`_
+-        
+-            * Bugfix "Django>=1.11" in setup.py
+-        
+-        * `v0.8.0 - 17.08.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.5...v0.8.0>`_:
+-        
+-            * Run tests with Django v1.11 and drop tests with Django v1.9
+-        
+-        * `v0.7.5 - 24.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.4...v0.7.5>`_:
+-        
+-            * `Using the 'render' function to ensure the execution of context processors properly <https://github.com/jedie/django-reversion-compare/pull/90>`_ contributed by `Rodrigo Pinheiro Marques de Araújo <https://github.com/fenrrir>`_
+-        
+-        * `v0.7.4 - 10.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.3...v0.7.4>`_:
+-        
+-            * Bugfix for Python 2: `compare unicode instead of bytes <https://github.com/jedie/django-reversion-compare/issues/89>`_ contributed by `Maksim Iakovlev <https://github.com/lampslave>`_
+-        
+-            * `remove 'Django20Warning' <https://github.com/jedie/django-reversion-compare/pull/88>`_ contributed by `Hugo Tácito <https://github.com/hugotacito>`_
+-        
+-            * `Add 'Finnish' localisations <https://github.com/jedie/django-reversion-compare/pull/87>`_ contributed by `Olli-Pekka Puolitaival <https://github.com/OPpuolitaival>`_
+-        
+-        * `v0.7.3 - 08.02.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.2...v0.7.3>`_:
+-        
+-            * `Fix case when model has template field which is ForeignKey <https://github.com/jedie/django-reversion-compare/pull/85>`_ contributed by `Lagovas <https://github.com/Lagovas>`_
+-        
+-        * `v0.7.2 - 20.10.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.1...v0.7.2>`_:
+-        
+-            * Add Django v1.10 support
+-        
+-        * `v0.7.1 - 29.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.0...v0.7.1>`_:
+-        
+-            * `Fix #79: missing import if **ADD_REVERSION_ADMIN != True** <https://github.com/jedie/django-reversion-compare/issues/79>`_
+-        
+-        * `v0.7.0 - 25.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.3...v0.7.0>`_:
+-        
+-            * `support only django-reversion >= 2.0 <https://github.com/jedie/django-reversion-compare/pull/76>`_ based on a contribution by `mshannon1123 <https://github.com/jedie/django-reversion-compare/pull/73>`_
+-        
+-            * remove internal **reversion_api**
+-        
+-            * Use tox
+-        
+-        * `v0.6.3 - 14.06.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.2...v0.6.3>`_:
+-        
+-            * `Remove unused and deprecated patters <https://github.com/jedie/django-reversion-compare/pull/69>`_ contributed by `codingjoe <https://github.com/codingjoe>`_
+-        
+-            * `Fix django 1.10 warning #66 <https://github.com/jedie/django-reversion-compare/pull/66>`_ contributed by `pypetey <https://github.com/pypetey>`_
+-        
+-        * `v0.6.2 - 27.04.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.1...v0.6.2>`_:
+-        
+-            * `Added choices field representation #63 <https://github.com/jedie/django-reversion-compare/pull/63>`_ contributed by `amureki <https://github.com/amureki>`_
+-        
+-            * `Check if related model has an integer as pk for ManyToMany fields. #64 <https://github.com/jedie/django-reversion-compare/pull/64>`_ contributed by `logaritmisk <https://github.com/logaritmisk>`_
+-        
+-        * `v0.6.1 - 16.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.0...v0.6.1>`_:
+-        
+-            * `pull #61 <https://github.com/jedie/django-reversion-compare/pull/61>`_: Fix error when ManyToMany relations didn't exist contributed by `Diederik van der Boor <https://github.com/vdboor>`_
+-        
+-        * `v0.6.0 - 03.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.5.6...v0.6.0>`_:
+-        
+-            * Added Dutch translation contributed by `Sae X <https://github.com/SaeX>`_
+-        
+-            * Add support for Django 1.9
+-        
+-            * Nicer boolean compare: `#57 <https://github.com/jedie/django-reversion-compare/issues/57>`_
+-        
+-            * Fix `#58 compare followed reverse foreign relation fields that are on a non-abstract parent class <https://github.com/jedie/django-reversion-compare/issues/58>`_ contributed by LegoStormtroopr
+-        
+-        * `v0.5.6 - 23.09.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.5...v0.5.6>`_:
+-        
+-            * NEW: Class-Based-View to create non-admin views and greek translation contributed by `Serafeim Papastefanos <https://github.com/spapas>`_.
+-        
+-        * `v0.5.5 - 24.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.4...v0.5.5>`_:
+-        
+-            * UnboundLocalError ('version') when creating deleted list in get_many_to_something() `#41 <https://github.com/jedie/django-reversion-compare/pull/41>`_
+-        
+-        * `v0.5.4 - 22.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.3...v0.5.4>`_:
+-        
+-            * One to one field custom related name fix `#42 <https://github.com/jedie/django-reversion-compare/pull/42>`_ (contributed by frwickst and aemdy)
+-        
+-        * `v0.5.3 - 13.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.2...v0.5.3>`_:
+-        
+-            * Update admin.py to avoid RemovedInDjango19Warning (contributed by luzfcb)
+-        
+-        * `v0.5.2 - 14.04.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.1...v0.5.2>`_:
+-        
+-            * contributed by Samuel Spencer:
+-        
+-                * Added Django 1.8 support: `pull #35 <https://github.com/jedie/django-reversion-compare/pull/35>`_
+-        
+-                * list of changes for reverse fields incorrectly includes a "deletion" for the item that was added in: `issues #34 <https://github.com/jedie/django-reversion-compare/issues/34>`_
+-        
+-        * `v0.5.1 - 28.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.0...v0.5.1>`_:
+-        
+-            * activate previous/next links and add unitests for them
+-        
+-        * `v0.5.0 - 27.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.4.0...v0.5.0>`_:
+-        
+-            * refactory unittests, test with Django v1.7 and Python 2.7 & 3.4
+-        
+-        * `v0.4.0 - 02.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.3.5...v0.4.0>`_:
+-        
+-            * Updates for django 1.7 support
+-        
+-            * Add ``settings.ADD_REVERSION_ADMIN``
+-        
+-        * v0.3.5 - 03.01.2013:
+-        
+-            * Remove date from version string. `issues 9 <https://github.com/jedie/django-reversion-compare/issues/9>`_
+-        
+-        * v0.3.4 - 20.06.2012:
+-        
+-            * Use VersionAdmin.revision_manager rather than default_revision_manager, contributed by Mark Lavin - see: `pull request 7 <https://github.com/jedie/django-reversion-compare/pull/7>`_
+-        
+-            * Use logging for all debug prints, contributed by Bojan Mihelac - see: `pull request 8 <https://github.com/jedie/django-reversion-compare/pull/8>`_
+-        
+-        * v0.3.3 - 11.06.2012:
+-        
+-            * Bugfix "ValueError: zero length field name in format" with Python 2.6 `issues 5 <https://github.com/jedie/django-reversion-compare/issues/5>`_
+-        
+-        * v0.3.2 - 04.06.2012:
+-        
+-            * Bugfix for Python 2.6 in unified_diff(), see: `AttributeError: 'module' object has no attribute '_format_range_unified' <https://github.com/jedie/django-reversion-compare/issues/5>`_
+-        
+-        * v0.3.1 - 01.06.2012:
+-        
+-            * Bugfix: force unicode in html diff
+-        
+-            * Bugfix in unittests
+-        
+-        * v0.3.0 - 16.05.2012:
+-        
+-            * Enhanced handling of m2m changes with follow and non-follow relations.
+-        
+-        * v0.2.2 - 15.05.2012:
+-        
+-            * Compare many-to-many in the right way.
+-        
+-        * v0.2.1 - 10.05.2012:
+-        
+-            * Bugfix for models which has no m2m field: `https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880 <https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880>`_
+-        
+-        * v0.2.0 - 09.05.2012:
+-        
+-            * many-to-many compare works, too.
+-        
+-        * v0.1.0 - 08.05.2012:
+-        
+-            * First release
+-        
+-        * v0.0.1 - 08.05.2012:
+-        
+-            * collect all compare stuff from old "diff" branch
+-        
+-            * see also: `https://github.com/etianen/django-reversion/issues/147 <https://github.com/etianen/django-reversion/issues/147>`_
+-        
+-        -----
+-        Links
+-        -----
+-        
+-        +-----------------+-------------------------------------------------------+
+-        | Github          | `https://github.com/jedie/django-reversion-compare`_  |
+-        +-----------------+-------------------------------------------------------+
+-        | Python Packages | `https://pypi.org/project/django-reversion-compare/`_ |
+-        +-----------------+-------------------------------------------------------+
+-        
+-        .. _https://github.com/jedie/django-reversion-compare: https://github.com/jedie/django-reversion-compare
+-        .. _https://pypi.org/project/django-reversion-compare/: https://pypi.org/project/django-reversion-compare/
+-        
+-        --------
+-        Donation
+-        --------
+-        
+-        * `paypal.me/JensDiemer <https://www.paypal.me/JensDiemer>`_
+-        
+-        * `Flattr This! <https://flattr.com/submit/auto?uid=jedie&url=https%3A%2F%2Fgithub.com%2Fjedie%2Fdjango-reversion-compare%2F>`_
+-        
+-        * Send `Bitcoins <https://www.bitcoin.org/>`_ to `1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F <https://blockexplorer.com/address/1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F>`_
++License: GPL-3.0-or-later
+ Keywords: django,django-reversion,reversion,diff,compare
+-Platform: UNKNOWN
++Author: Jens Diemer
++Author-email: django-reversion-compare@jensdiemer.de
++Requires-Python: >=3.6,<4.0
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: Environment :: Web Environment
++Classifier: Framework :: Django
++Classifier: Framework :: Django :: 2.2
+ Classifier: Intended Audience :: Developers
++Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+ Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+ Classifier: Operating System :: OS Independent
+-Classifier: Operating System :: MacOS :: MacOS X
+-Classifier: Operating System :: Microsoft :: Windows
+-Classifier: Operating System :: POSIX
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3 :: Only
+-Classifier: Programming Language :: Python :: Implementation :: CPython
+ Classifier: Programming Language :: Python :: Implementation :: PyPy
+-Classifier: Framework :: Django
+-Classifier: Framework :: Django :: 1.8
+-Classifier: Framework :: Django :: 1.11
+-Classifier: Framework :: Django :: 2.0
+ Classifier: Topic :: Database :: Front-Ends
+ Classifier: Topic :: Documentation
+-Classifier: Topic :: Internet
+ Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+-Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+-Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
++Classifier: Topic :: Software Development :: Libraries :: Python Modules
++Classifier: Topic :: Text Processing :: Markup
++Classifier: Topic :: Text Processing :: Markup :: HTML
++Classifier: Topic :: Utilities
++Requires-Dist: django (>=2.2,<3.0)
++Requires-Dist: django-reversion (>=2.0,<3.0)
++Description-Content-Type: text/x-rst
++
++========================
++django-reversion-compare
++========================
++
++**django-reversion-compare** is an extension to `django-reversion <https://github.com/etianen/django-reversion/>`_ that provides a history compare view to compare two versions of a model which is under reversion.
++
++Comparing model versions is not a easy task. Maybe there are different view how this should looks like.
++This project will gives you a generic way to see whats has been changed.
++
++Many parts are customizable by overwrite methods or subclassing, see above.
++
+++--------------------------------------+
++| |Build Status on github|             |
+++--------------------------------------+
++| |Build Status on travis-ci.org|      |
+++--------------------------------------+
++| |Coverage Status on coveralls.io|    |
+++--------------------------------------+
++| |Coverage Status on codecov.io|      |
+++--------------------------------------+
++| |Requirements Status on requires.io| |
+++--------------------------------------+
++
++.. |Build Status on github| image:: https://github.com/jedie/django-reversion-compare/workflows/test/badge.svg?branch=master
++.. |Build Status on travis-ci.org| image:: https://travis-ci.org/jedie/django-reversion-compare.svg
++.. _travis-ci.org/jedie/django-reversion-compare: https://travis-ci.org/jedie/django-reversion-compare/
++.. |Coverage Status on coveralls.io| image:: https://coveralls.io/repos/jedie/django-reversion-compare/badge.svg
++.. _coveralls.io/r/jedie/django-reversion-compare: https://coveralls.io/r/jedie/django-reversion-compare
++.. |Coverage Status on codecov.io| image:: https://codecov.io/gh/jedie/django-reversion-compare/branch/master/graph/badge.svg
++.. _codecov.io/gh/jedie/django-reversion-compare: https://codecov.io/gh/jedie/django-reversion-compare
++.. |Requirements Status on requires.io| image:: https://requires.io/github/jedie/django-reversion-compare/requirements.svg
++.. _requires.io/github/jedie/django-reversion-compare/requirements/: https://requires.io/github/jedie/django-reversion-compare/requirements/
++
++------------
++Installation
++------------
++
++Just use:
++
++::
++
++    pip install django-reversion-compare
++
++Optionally you can install `google-diff-match-patch <https://code.google.com/p/google-diff-match-patch/>`_, otherwise difflib would be used. The easiest way is to use the unofficial package `diff-match-patch <http://pypi.python.org/pypi/diff-match-patch/>`_, e.g.:
++
++::
++
++    pip install diff-match-patch
++
++Setup
++=====
++
++Add **reversion_compare** to **INSTALLED_APPS** in your settings.py, e.g.:
++
++::
++
++    INSTALLED_APPS = (
++        'django...',
++        ...
++        'reversion', # https://github.com/etianen/django-reversion
++        'reversion_compare', # https://github.com/jedie/django-reversion-compare
++        ...
++    )
++    
++    # Add reversion models to admin interface:
++    ADD_REVERSION_ADMIN=True
++    # optional settings:
++    REVERSION_COMPARE_FOREIGN_OBJECTS_AS_ID=False
++    REVERSION_COMPARE_IGNORE_NOT_REGISTERED=False
++
++Usage
++=====
++
++Inherit from **CompareVersionAdmin** instead of **VersionAdmin** to get the comparison feature.
++
++admin.py e.g.:
++
++::
++
++    from django.contrib import admin
++    from reversion_compare.admin import CompareVersionAdmin
++    
++    from my_app.models import ExampleModel
++    
++    class ExampleModelAdmin(CompareVersionAdmin):
++        pass
++    
++    admin.site.register(ExampleModel, ExampleModelAdmin)
++
++If you're using an existing third party app, then you can add patch django-reversion-compare into
++its admin class by using the **reversion_compare.helpers.patch_admin()** method. For example, to add
++version control to the built-in User model:
++
++::
++
++    from reversion_compare.helpers import patch_admin
++    
++    patch_admin(User)
++
++e.g.: Add django-cms Page model:
++
++::
++
++    from cms.models.pagemodel import Page
++    from reversion_compare.helpers import patch_admin
++    
++    
++    # Patch django-cms Page Model to add reversion-compare functionality:
++    patch_admin(Page)
++
++Customize
++=========
++
++It's possible to change the look for every field or for a entire field type.
++You must only define a methods to your admin class with this name scheme:
++
++*  ``"compare_%s" % field_name`` 
++
++*  ``"compare_%s" % field.get_internal_type()`` 
++
++If there is no method with this name scheme, the ``fallback_compare()`` method will be used.
++
++An example for specifying a compare method for a model field by name:
++
++::
++
++    class YourAdmin(CompareVersionAdmin):
++        def compare_foo_bar(self, obj_compare):
++            """ compare the foo_bar model field """
++            return "%r <-> %r" % (obj_compare.value1, obj_compare.value2)
++
++and example using **patch_admin** with custom version admin class:
++
++::
++
++    patch_admin(User, AdminClass=YourAdmin)
++
++----------------
++Class Based View
++----------------
++
++Beyond the Admin views, you can also create a Class Based View for displaying and comparing version
++differences. This is a single class-based-view that either displays the list of versions to select
++for an object or displays both the versions **and** their differences (if the versions to be compared
++have been selected). This class can be used just like a normal DetailView:
++
++Inherit from it in your class and add a model (or queryset), for example:
++
++::
++
++    from reversion_compare.views import HistoryCompareDetailView
++    
++    class SimpleModelHistoryCompareView(HistoryCompareDetailView):
++        model = SimpleModel
++
++Then, assign that CBV to a url, for example:
++
++::
++
++    url(r'^test_view/(?P<pk>\d+)$', views.SimpleModelHistoryCompareView.as_view() ),
++
++Last step, you need to create a template to display both the version select form and
++the changes part (if the form is submitted). An example template is the following:
++
++::
++
++    <style type="text/css">
++    /* minimal style for the diffs */
++    del, ins {
++        color: #000;
++        text-decoration: none;
++    }
++    del { background-color: #ffe6e6; }
++    ins { background-color: #e6ffe6; }
++    sup.follow { color: #5555ff; }
++    </style>
++    
++    {% include "reversion-compare/action_list_partial.html"  %}
++    {% if request.GET.version_id1 %}
++        {% include "reversion-compare/compare_partial.html"  %}
++        {% include "reversion-compare/compare_links_partial.html"  %}
++    {% endif %}
++
++Beyond the styling, you should include:
++
++* reversion-compare/action_list_partial.html partial template to display the version select form
++
++* reversion-compare/compare_partial.html partial template to display the actual version
++
++* reversion-compare/compare_links_partial.html to include previous/next comparison links
++
++compare_partial.html and compare_links_partial.html will show the compare-related information
++so it's better to display them only when the select-versions-tocompare-form has been submitted.
++If you want more control on the appearence of your templates you can check the above partials
++to understand how the availabble context variables are used and override them completely.
++
++-----------
++Screenshots
++-----------
++
++Here some screenshots of django-reversion-compare:
++
++----
++
++How to select the versions to compare:
++
++|django-reversion-compare_v0_1_0-01.png|
++
++.. |django-reversion-compare_v0_1_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-01.png
++
++----
++
++from **v0.1.0**: DateTimeField compare (last update), TextField compare (content) with small changes and a ForeignKey compare (child model instance was added):
++
++|django-reversion-compare_v0_1_0-02.png|
++
++.. |django-reversion-compare_v0_1_0-02.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-02.png
++
++----
++
++from **v0.1.0**: Same as above, but the are more lines changed in TextField and the ForeignKey relation was removed:
++
++|django-reversion-compare_v0_1_0-03.png|
++
++.. |django-reversion-compare_v0_1_0-03.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-03.png
++
++----
++
++Example screenshot from **v0.3.0**: a many-to-many field compare (friends, hobbies):
++
++|django-reversion-compare_v0_3_0-01.png|
++
++.. |django-reversion-compare_v0_3_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120516_django-reversion-compare_v0_3_0-01.png
++
++* In the first line, the m2m object has been changed.
++
++* line 2: A m2m object was deleted
++
++* line 3: A m2m object was removed from this entry (but not deleted)
++
++* line 4: This m2m object has not changed
++
++----------------------------
++create developer environment
++----------------------------
++
++e.g.:
++
++::
++
++    # Clone project (Use your fork SSH url!):
++    ~$ git clone https://github.com/jedie/django-reversion-compare.git
++    ~$ cd django-reversion-compare
++    ~/django-reversion-compare$ make install
++    ~/django-reversion-compare$ make
++    help                 List all commands
++    install-poetry       install or update poetry
++    install              install reversion_compare via poetry
++    lint                 Run code formatters and linter
++    fix-code-style       Fix code formatting
++    tox-listenvs         List all tox test environments
++    tox                  Run pytest via tox with all environments
++    tox-py36             Run pytest via tox with *python v3.6*
++    tox-py37             Run pytest via tox with *python v3.7*
++    tox-py38             Run pytest via tox with *python v3.8*
++    pytest               Run pytest
++    update-rst-readme    update README.rst from README.reversion_compare
++    publish              Release new version to PyPi
++    run-test-server      Start Django dev server with the test project
++
++Helpful for writing and debugging unittests is to run a local test server with the same data.
++e.g.:
++
++::
++
++    ~/django-reversion-compare$ make run-test-server
++
++**migration** will be run and a superuser will be created. Username: **test** Password: **12345678**
++
++Call manage commands from test project, e.g.:
++
++::
++
++    ~/django-reversion-compare$ poetry shell
++    django-reversion-compare-foobar-py3.6) ~/django-reversion-compare$ ./reversion_compare_tests/manage.py --help
++    ...
++
++---------------------
++Version compatibility
++---------------------
++
+++-------------------+------------------+--------------------+------------------------------------------------+
++| Reversion-Compare | django-reversion | Django             | Python                                         |
+++===================+==================+====================+================================================+
++| >=v0.9.0          | v2.0             | v2.2, v3.0         | v3.6, v3.7, v3.8, pypy3                        |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| >=v0.8.6          | v2.0             | v1.11, v2.0        | v3.5, v3.6, v3.7, pypy3                        |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| >=v0.8.4          | v2.0             | v1.8, v1.11, v2.0  | v3.5, v3.6, pypy3                              |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| >=v0.8.3          | v2.0             | v1.8, v1.11        | v3.5, v3.6, pypy3                              |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| v0.8.x            | v2.0             | v1.8, v1.10, v1.11 | v2.7, v3.4, v3.5, v3.6 (only with Django 1.11) |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| >=v0.7.2          | v2.0             | v1.8, v1.9, v1.10  | v2.7, v3.4, v3.5                               |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| v0.7.x            | v2.0             | v1.8, v1.9         | v2.7, v3.4, v3.5                               |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| v0.6.x            | v1.9, v1.10      | v1.8, v1.9         | v2.7, v3.4, v3.5                               |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| >=v0.5.2          | v1.9             | v1.7, v1.8         | v2.7, v3.4                                     |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| >=v0.4            | v1.8             | v1.7               | v2.7, v3.4                                     |
+++-------------------+------------------+--------------------+------------------------------------------------+
++| <v0.4             | v1.6             | v1.4               | v2.7                                           |
+++-------------------+------------------+--------------------+------------------------------------------------+
++
++These are the unittests variants. See also: `/.travis.yml <https://github.com/jedie/django-reversion-compare/blob/master/.travis.yml>`_
++Maybe other versions are compatible, too.
++
++---------
++Changelog
++---------
++
++* *dev* `compare v0.9.1...master <https://github.com/jedie/django-reversion-compare/compare/v0.9.1...master>`_ 
++
++    * TBC
++
++* v0.9.1 - 16.02.2020 `compare v0.9.0...v0.9.1 <https://github.com/jedie/django-reversion-compare/compare/v0.9.0...v0.9.1>`_ 
++
++    * Modernize project setup and use poetry
++
++    * Apply pyupgrade and fix/update some f-strings
++
++    * Update test project
++
++* v0.9.0 - 19.01.2020 `compare v0.8.7...v0.9.0 <https://github.com/jedie/django-reversion-compare/compare/v0.8.7...v0.9.0>`_ 
++
++    * Test with Python 3.8 and Django 3.0, too.
++
++    * Run tests via github actions, too.
++
++    * Remove support for Python 3.5 and Django v1.11
++
++    * `actually check if model is registered #115 <https://github.com/jedie/django-reversion-compare/pull/115>`_ contributed by willtho89
++
++    * `Remove python2 compatibility decorators #113 <https://github.com/jedie/django-reversion-compare/pull/113>`_ contributed by jeremy-engel
++
++    * `Show username and full name from custom user model #112 <https://github.com/jedie/django-reversion-compare/pull/112>`_ contributed by berekuk
++
++    * `Fix django-suit NoneType is not iterable #111 <https://github.com/jedie/django-reversion-compare/pull/111>`_ contributed by creativequality
++
++    * convert old format to f-strings via flynt
++
++    * Code style:
++
++        * sort imports with isort
++
++        * apply autopep8
++
++        * lint code in CI with flake8, isort and flynt
++
++* v0.8.7 - 06.01.2020 `compare v0.8.6...v0.8.7 <https://github.com/jedie/django-reversion-compare/compare/v0.8.6...v0.8.7>`_ 
++
++    * Add new optional settings ``REVERSION_COMPARE_IGNORE_NOT_REGISTERED``, see: `issues #103 <https://github.com/jedie/django-reversion-compare/issues/103>`_
++
++    * reformat code with 'black'
++
++    * some code cleanup
++
++* v0.8.6 - 04.01.2019 `compare v0.8.5...v0.8.6 <https://github.com/jedie/django-reversion-compare/compare/v0.8.5...v0.8.6>`_ 
++
++    * Bugfix: `Use ".pk" instead of ".id" when referring to related object. <https://github.com/jedie/django-reversion-compare/pull/110>`_ contributed by `Peter Lisák <https://github.com/peterlisak>`_
++
++    * Run tests: Skip Django v1.8 and add Python v3.7
++
++* v0.8.5 - 13.09.2018 `compare v0.8.4...v0.8.5 <https://github.com/jedie/django-reversion-compare/compare/v0.8.4...v0.8.5>`_ 
++
++    * `speed up delete checking <https://github.com/jedie/django-reversion-compare/pull/106>`_ contributed by `LegoStormtroopr <https://github.com/LegoStormtroopr>`_
++
++* v0.8.4 - 15.03.2018 `compare v0.8.3...v0.8.4 <https://github.com/jedie/django-reversion-compare/compare/v0.8.3...v0.8.4>`_ 
++
++    * `Add Django 2.0 compatibility <https://github.com/jedie/django-reversion-compare/pull/102>`_ contributed by `samifahed <https://github.com/samifahed>`_
++
++* v0.8.3 - 21.12.2017 `compare v0.8.2...v0.8.3 <https://github.com/jedie/django-reversion-compare/compare/v0.8.2...v0.8.3>`_ 
++
++    * refactor travis/tox/pytest/coverage stuff
++
++    * Tests can be run via ``python3 setup.py tox`` and/or ``python3 setup.py test``
++
++    * Test also with pypy3 on Travis CI.
++
++* `v0.8.2 - 06.12.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.1...v0.8.2>`_:
++
++    * `Change ForeignKey relation compare <https://github.com/jedie/django-reversion-compare/pull/100>`_ contributed by `alaruss <https://github.com/alaruss>`_
++
++    * `Work around a type error triggered by taggit <https://github.com/jedie/django-reversion-compare/pull/86>`_ contributed by `Athemis <https://github.com/Athemis>`_
++
++    * minor code changes
++
++* `v0.8.1 - 02.10.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.0...v0.8.1>`_:
++
++    * `Add added polish translation <https://github.com/jedie/django-reversion-compare/pull/99>`_ contributed by `w4rri0r3k <https://github.com/w4rri0r3k>`_
++
++    * Bugfix "Django>=1.11" in setup.py
++
++* `v0.8.0 - 17.08.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.5...v0.8.0>`_:
++
++    * Run tests with Django v1.11 and drop tests with Django v1.9
++
++* `v0.7.5 - 24.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.4...v0.7.5>`_:
++
++    * `Using the 'render' function to ensure the execution of context processors properly <https://github.com/jedie/django-reversion-compare/pull/90>`_ contributed by `Rodrigo Pinheiro Marques de Araújo <https://github.com/fenrrir>`_
++
++* `v0.7.4 - 10.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.3...v0.7.4>`_:
++
++    * Bugfix for Python 2: `compare unicode instead of bytes <https://github.com/jedie/django-reversion-compare/issues/89>`_ contributed by `Maksim Iakovlev <https://github.com/lampslave>`_
++
++    * `remove 'Django20Warning' <https://github.com/jedie/django-reversion-compare/pull/88>`_ contributed by `Hugo Tácito <https://github.com/hugotacito>`_
++
++    * `Add 'Finnish' localisations <https://github.com/jedie/django-reversion-compare/pull/87>`_ contributed by `Olli-Pekka Puolitaival <https://github.com/OPpuolitaival>`_
++
++* `v0.7.3 - 08.02.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.2...v0.7.3>`_:
++
++    * `Fix case when model has template field which is ForeignKey <https://github.com/jedie/django-reversion-compare/pull/85>`_ contributed by `Lagovas <https://github.com/Lagovas>`_
++
++* `v0.7.2 - 20.10.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.1...v0.7.2>`_:
++
++    * Add Django v1.10 support
++
++* `v0.7.1 - 29.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.0...v0.7.1>`_:
++
++    * `Fix #79: missing import if **ADD_REVERSION_ADMIN != True** <https://github.com/jedie/django-reversion-compare/issues/79>`_
++
++* `v0.7.0 - 25.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.3...v0.7.0>`_:
++
++    * `support only django-reversion >= 2.0 <https://github.com/jedie/django-reversion-compare/pull/76>`_ based on a contribution by `mshannon1123 <https://github.com/jedie/django-reversion-compare/pull/73>`_
++
++    * remove internal **reversion_api**
++
++    * Use tox
++
++* `v0.6.3 - 14.06.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.2...v0.6.3>`_:
++
++    * `Remove unused and deprecated patters <https://github.com/jedie/django-reversion-compare/pull/69>`_ contributed by `codingjoe <https://github.com/codingjoe>`_
++
++    * `Fix django 1.10 warning #66 <https://github.com/jedie/django-reversion-compare/pull/66>`_ contributed by `pypetey <https://github.com/pypetey>`_
++
++* `v0.6.2 - 27.04.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.1...v0.6.2>`_:
++
++    * `Added choices field representation #63 <https://github.com/jedie/django-reversion-compare/pull/63>`_ contributed by `amureki <https://github.com/amureki>`_
++
++    * `Check if related model has an integer as pk for ManyToMany fields. #64 <https://github.com/jedie/django-reversion-compare/pull/64>`_ contributed by `logaritmisk <https://github.com/logaritmisk>`_
++
++* `v0.6.1 - 16.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.0...v0.6.1>`_:
++
++    * `pull #61 <https://github.com/jedie/django-reversion-compare/pull/61>`_: Fix error when ManyToMany relations didn't exist contributed by `Diederik van der Boor <https://github.com/vdboor>`_
++
++* `v0.6.0 - 03.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.5.6...v0.6.0>`_:
++
++    * Added Dutch translation contributed by `Sae X <https://github.com/SaeX>`_
++
++    * Add support for Django 1.9
++
++    * Nicer boolean compare: `#57 <https://github.com/jedie/django-reversion-compare/issues/57>`_
++
++    * Fix `#58 compare followed reverse foreign relation fields that are on a non-abstract parent class <https://github.com/jedie/django-reversion-compare/issues/58>`_ contributed by LegoStormtroopr
++
++* `v0.5.6 - 23.09.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.5...v0.5.6>`_:
++
++    * NEW: Class-Based-View to create non-admin views and greek translation contributed by `Serafeim Papastefanos <https://github.com/spapas>`_.
++
++* `v0.5.5 - 24.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.4...v0.5.5>`_:
++
++    * UnboundLocalError ('version') when creating deleted list in get_many_to_something() `#41 <https://github.com/jedie/django-reversion-compare/pull/41>`_
++
++* `v0.5.4 - 22.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.3...v0.5.4>`_:
++
++    * One to one field custom related name fix `#42 <https://github.com/jedie/django-reversion-compare/pull/42>`_ (contributed by frwickst and aemdy)
++
++* `v0.5.3 - 13.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.2...v0.5.3>`_:
++
++    * Update admin.py to avoid RemovedInDjango19Warning (contributed by luzfcb)
++
++* `v0.5.2 - 14.04.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.1...v0.5.2>`_:
++
++    * contributed by Samuel Spencer:
++
++        * Added Django 1.8 support: `pull #35 <https://github.com/jedie/django-reversion-compare/pull/35>`_
++
++        * list of changes for reverse fields incorrectly includes a "deletion" for the item that was added in: `issues #34 <https://github.com/jedie/django-reversion-compare/issues/34>`_
++
++* `v0.5.1 - 28.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.0...v0.5.1>`_:
++
++    * activate previous/next links and add unitests for them
++
++* `v0.5.0 - 27.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.4.0...v0.5.0>`_:
++
++    * refactory unittests, test with Django v1.7 and Python 2.7 & 3.4
++
++* `v0.4.0 - 02.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.3.5...v0.4.0>`_:
++
++    * Updates for django 1.7 support
++
++    * Add ``settings.ADD_REVERSION_ADMIN``
++
++* v0.3.5 - 03.01.2013:
++
++    * Remove date from version string. `issues 9 <https://github.com/jedie/django-reversion-compare/issues/9>`_
++
++* v0.3.4 - 20.06.2012:
++
++    * Use VersionAdmin.revision_manager rather than default_revision_manager, contributed by Mark Lavin - see: `pull request 7 <https://github.com/jedie/django-reversion-compare/pull/7>`_
++
++    * Use logging for all debug prints, contributed by Bojan Mihelac - see: `pull request 8 <https://github.com/jedie/django-reversion-compare/pull/8>`_
++
++* v0.3.3 - 11.06.2012:
++
++    * Bugfix "ValueError: zero length field name in format" with Python 2.6 `issues 5 <https://github.com/jedie/django-reversion-compare/issues/5>`_
++
++* v0.3.2 - 04.06.2012:
++
++    * Bugfix for Python 2.6 in unified_diff(), see: `AttributeError: 'module' object has no attribute '_format_range_unified' <https://github.com/jedie/django-reversion-compare/issues/5>`_
++
++* v0.3.1 - 01.06.2012:
++
++    * Bugfix: force unicode in html diff
++
++    * Bugfix in unittests
++
++* v0.3.0 - 16.05.2012:
++
++    * Enhanced handling of m2m changes with follow and non-follow relations.
++
++* v0.2.2 - 15.05.2012:
++
++    * Compare many-to-many in the right way.
++
++* v0.2.1 - 10.05.2012:
++
++    * Bugfix for models which has no m2m field: `https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880 <https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880>`_
++
++* v0.2.0 - 09.05.2012:
++
++    * many-to-many compare works, too.
++
++* v0.1.0 - 08.05.2012:
++
++    * First release
++
++* v0.0.1 - 08.05.2012:
++
++    * collect all compare stuff from old "diff" branch
++
++    * see also: `https://github.com/etianen/django-reversion/issues/147 <https://github.com/etianen/django-reversion/issues/147>`_
++
++-----
++Links
++-----
++
+++-----------------+-------------------------------------------------------+
++| Github          | `https://github.com/jedie/django-reversion-compare`_  |
+++-----------------+-------------------------------------------------------+
++| Python Packages | `https://pypi.org/project/django-reversion-compare/`_ |
+++-----------------+-------------------------------------------------------+
++
++.. _https://github.com/jedie/django-reversion-compare: https://github.com/jedie/django-reversion-compare
++.. _https://pypi.org/project/django-reversion-compare/: https://pypi.org/project/django-reversion-compare/
++
++--------
++Donation
++--------
++
++* `paypal.me/JensDiemer <https://www.paypal.me/JensDiemer>`_
++
++* `Flattr This! <https://flattr.com/submit/auto?uid=jedie&url=https%3A%2F%2Fgithub.com%2Fjedie%2Fdjango-reversion-compare%2F>`_
++
++* Send `Bitcoins <https://www.bitcoin.org/>`_ to `1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F <https://blockexplorer.com/address/1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F>`_
++
++------------
++
++``Note: this file is generated from README.creole 2020-02-16 17:27:01 with "python-creole"``
+```
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/de/LC_MESSAGES/django.mo` & `django-reversion-compare-0.9.1/reversion_compare/locale/de/LC_MESSAGES/django.mo`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/de/LC_MESSAGES/django.po` & `django-reversion-compare-0.9.1/reversion_compare/locale/de/LC_MESSAGES/django.po`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/el/LC_MESSAGES/django.mo` & `django-reversion-compare-0.9.1/reversion_compare/locale/el/LC_MESSAGES/django.mo`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/el/LC_MESSAGES/django.po` & `django-reversion-compare-0.9.1/reversion_compare/locale/el/LC_MESSAGES/django.po`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/fi/LC_MESSAGES/django.mo` & `django-reversion-compare-0.9.1/reversion_compare/locale/fi/LC_MESSAGES/django.mo`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/fi/LC_MESSAGES/django.po` & `django-reversion-compare-0.9.1/reversion_compare/locale/fi/LC_MESSAGES/django.po`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/fr/LC_MESSAGES/django.mo` & `django-reversion-compare-0.9.1/reversion_compare/locale/fr/LC_MESSAGES/django.mo`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/fr/LC_MESSAGES/django.po` & `django-reversion-compare-0.9.1/reversion_compare/locale/fr/LC_MESSAGES/django.po`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/nl/LC_MESSAGES/django.mo` & `django-reversion-compare-0.9.1/reversion_compare/locale/nl/LC_MESSAGES/django.mo`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/nl/LC_MESSAGES/django.po` & `django-reversion-compare-0.9.1/reversion_compare/locale/nl/LC_MESSAGES/django.po`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/pl/LC_MESSAGES/django.mo` & `django-reversion-compare-0.9.1/reversion_compare/locale/pl/LC_MESSAGES/django.mo`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/locale/pl/LC_MESSAGES/django.po` & `django-reversion-compare-0.9.1/reversion_compare/locale/pl/LC_MESSAGES/django.po`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/action_list_partial.html` & `django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/action_list_partial.html`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare.html` & `django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare.html`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_generic_many_to_many.html` & `django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_generic_many_to_many.html`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/compare_partial.html` & `django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/compare_partial.html`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/templates/reversion-compare/object_history.html` & `django-reversion-compare-0.9.1/reversion_compare/templates/reversion-compare/object_history.html`
+
+ * *Files identical despite different names*
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/admin.py` & `django-reversion-compare-0.9.1/reversion_compare/admin.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,7 @@
+-
+ """
+     admin
+     ~~~~~
+ 
+     Admin extensions for django-reversion-compare
+ 
+     :copyleft: 2012-2019 by the django-reversion-compare team, see AUTHORS for more details.
+@@ -75,15 +74,15 @@
+     compare_template = "reversion-compare/compare.html"
+ 
+     # change template from django-reversion to add compare selection form:
+     object_history_template = "reversion-compare/object_history.html"
+ 
+     def get_urls(self):
+         """Returns the additional urls used by the Reversion admin."""
+-        urls = super(BaseCompareVersionAdmin, self).get_urls()
++        urls = super().get_urls()
+         admin_site = self.admin_site
+         opts = self.model._meta
+         info = opts.app_label, opts.model_name
+         reversion_urls = [
+             url("^([^/]+)/history/compare/$", admin_site.admin_view(self.compare_view), name="%s_%s_compare" % info)
+         ]
+         return reversion_urls + urls
+@@ -123,15 +122,15 @@
+             else:
+                 action_list[-1]["first"] = True
+                 action_list[-2]["second"] = True
+ 
+         # Compile the context.
+         context = {"action_list": action_list, "comparable": comparable, "compare_view": True}
+         context.update(extra_context or {})
+-        return super(BaseCompareVersionAdmin, self).history_view(request, object_id, context)
++        return super().history_view(request, object_id, context)
+ 
+     def compare_view(self, request, object_id, extra_context=None):
+         """
+         compare two versions.
+         Used self.make_compare() to create the html diff.
+         """
+         if self.compare is None:
+```
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/compare.py` & `django-reversion-compare-0.9.1/reversion_compare/compare.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -59,15 +59,15 @@
+         except Exception:
+             return repr(obj)
+ 
+     def _choices_repr(self, obj):
+         return force_text(dict(self.field.flatchoices).get(obj, obj), strings_only=True)
+ 
+     def _to_string_ManyToManyField(self):
+-        return ", ".join([self._obj_repr(item) for item in self.get_many_to_many()])
++        return ", ".join(self._obj_repr(item) for item in self.get_many_to_many())
+ 
+     def _to_string_ForeignKey(self):
+         return self._obj_repr(self.get_related())
+ 
+     def to_string(self):
+         internal_type = self.field.get_internal_type()
+         func_name = f"_to_string_{internal_type}"
+@@ -231,15 +231,15 @@
+             f"value..............: {self.value!r}",
+             "to string..........: %s" % repr(self.to_string()),
+             "related............: %s" % repr(self.get_related()),
+         ]
+         m2m_versions, missing_objects, missing_ids, deleted = self.get_many_to_many()
+         if m2m_versions or missing_objects or missing_ids:
+             result.append(
+-                "many-to-many.......: %s" % ", ".join(["%s (%s)" % (item, item.type) for item in m2m_versions])
++                "many-to-many.......: %s" % ", ".join(f"{item} ({item.type})" for item in m2m_versions)
+             )
+ 
+             if missing_objects:
+                 result.append("missing m2m objects: %s" % repr(missing_objects))
+             else:
+                 result.append("missing m2m objects: (has no)")
+```
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/helpers.py` & `django-reversion-compare-0.9.1/reversion_compare/helpers.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -68,15 +68,15 @@
+         - no fromfile/tofile and no fromfiledate/tofiledate info lines
+         - newline before diff control lines and not after
+ 
+     Example:
+ 
+     >>> for line in unified_diff('one two three four'.split(),
+     ...             'zero one tree four'.split(), lineterm=''):
+-    ...     print line                  # doctest: +NORMALIZE_WHITESPACE
++    ...     print(line)
+     @@ -1,4 +1,4 @@
+     +zero
+      one
+     -two
+     -three
+     +tree
+      four
+```
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/mixins.py` & `django-reversion-compare-0.9.1/reversion_compare/mixins.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -173,16 +173,16 @@
+         # obj_compare.debug()
+         value1, value2 = force_text(related1), force_text(related2)
+         return self.generic_add_remove(related1, related2, value1, value2)
+ 
+     def simple_compare_ManyToManyField(self, obj_compare):
+         """ comma separated list of all m2m objects """
+         m2m1, m2m2 = obj_compare.get_many_to_many()
+-        old = ", ".join([force_text(item) for item in m2m1])
+-        new = ", ".join([force_text(item) for item in m2m2])
++        old = ", ".join(force_text(item) for item in m2m1)
++        new = ", ".join(force_text(item) for item in m2m2)
+         html = html_diff(old, new)
+         return html
+ 
+     def compare_ManyToOneRel(self, obj_compare):
+         change_info = obj_compare.get_m2o_change_info()
+         context = {"change_info": change_info}
+         return render_to_string("reversion-compare/compare_generic_many_to_many.html", context)
+```
+
+### Comparing `django-reversion-compare-0.9.0/reversion_compare/views.py` & `django-reversion-compare-0.9.1/reversion_compare/views.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -56,15 +56,15 @@
+             for version in self._order_version_queryset(
+                 Version.objects.get_for_object(self.get_object()).select_related("revision__user")
+             )
+         ]
+         return action_list
+ 
+     def get_context_data(self, **kwargs):
+-        context = super(HistoryCompareDetailView, self).get_context_data()
++        context = super().get_context_data()
+         action_list = self._get_action_list()
+ 
+         if len(action_list) < 2:
+             # Less than two history items aren't enough to compare ;)
+             comparable = False
+         else:
+             comparable = True
+```
+
+### Comparing `django-reversion-compare-0.9.0/PKG-INFO` & `django-reversion-compare-0.9.1/setup.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,617 +1,45 @@
+-Metadata-Version: 1.2
+-Name: django-reversion-compare
+-Version: 0.9.0
+-Summary: history compare for django-reversion
+-Home-page: https://github.com/jedie/django-reversion-compare/
+-Author: ['Diemer, Jens', 'Hall, Dave', 'van der Boor, Diederik', 'Chainz, Adam', 'Cornehl, Denis', 'creativequality - https://github.com/creativequality', 'Engel, Jeremy', 'Fahed, Sami', 'Hohls, Derek', 'Hoppe, Johannes', 'Iakovlev, Maksim', 'Lagovas', 'Larin, Nikita', 'Lavin, Mark', 'Lisák, Peter', 'Marques de Araújo, Rodrigo Pinheiro', 'Matyukhin, Vyacheslav', 'Mihelac, Bojan', 'Minges, Alexander', 'Olsson, Anders', 'Pahaz, Blinov', 'Papastefanos, Serafeim', 'Puolitaival, Olli-Pekka', 'pypetey', 'Sae X', 'Sayargaliev, Rustem', 'Spencer, Samuel', 'Shannon, Michael', 'Tácito, Hugo', 'C. Barrionuevo da Luz, Fabio', 'w4rri0r3k', 'Wickström, Frank', 'Willems, Thomas']
+-Author-email: django-reversion-compare@jensdiemer.de
+-Maintainer: Jens Diemer
+-Maintainer-email: django-reversion-compare@jensdiemer.de
+-License: UNKNOWN
+-Download-URL: http://pypi.python.org/pypi/django-reversion-compare/
+-Description: ========================
+-        django-reversion-compare
+-        ========================
+-        
+-        **django-reversion-compare** is an extension to `django-reversion <https://github.com/etianen/django-reversion/>`_ that provides a history compare view to compare two versions of a model which is under reversion.
+-        
+-        Comparing model versions is not a easy task. Maybe there are different view how this should looks like.
+-        This project will gives you a generic way to see whats has been changed.
+-        
+-        Many parts are customizable by overwrite methods or subclassing, see above.
+-        
+-        +--------------------------------------+
+-        | |Build Status on github|             |
+-        +--------------------------------------+
+-        | |Build Status on travis-ci.org|      |
+-        +--------------------------------------+
+-        | |Coverage Status on coveralls.io|    |
+-        +--------------------------------------+
+-        | |Coverage Status on codecov.io|      |
+-        +--------------------------------------+
+-        | |Requirements Status on requires.io| |
+-        +--------------------------------------+
+-        
+-        .. |Build Status on github| image:: https://github.com/jedie/django-reversion-compare/workflows/test/badge.svg?branch=master
+-        .. |Build Status on travis-ci.org| image:: https://travis-ci.org/jedie/django-reversion-compare.svg
+-        .. _travis-ci.org/jedie/django-reversion-compare: https://travis-ci.org/jedie/django-reversion-compare/
+-        .. |Coverage Status on coveralls.io| image:: https://coveralls.io/repos/jedie/django-reversion-compare/badge.svg
+-        .. _coveralls.io/r/jedie/django-reversion-compare: https://coveralls.io/r/jedie/django-reversion-compare
+-        .. |Coverage Status on codecov.io| image:: https://codecov.io/gh/jedie/django-reversion-compare/branch/master/graph/badge.svg
+-        .. _codecov.io/gh/jedie/django-reversion-compare: https://codecov.io/gh/jedie/django-reversion-compare
+-        .. |Requirements Status on requires.io| image:: https://requires.io/github/jedie/django-reversion-compare/requirements.svg
+-        .. _requires.io/github/jedie/django-reversion-compare/requirements/: https://requires.io/github/jedie/django-reversion-compare/requirements/
+-        
+-        ------------
+-        Installation
+-        ------------
+-        
+-        Just use:
+-        
+-        ::
+-        
+-            pip install django-reversion-compare
+-        
+-        Optionally you can install `google-diff-match-patch <https://code.google.com/p/google-diff-match-patch/>`_, otherwise difflib would be used. The easiest way is to use the unofficial package `diff-match-patch <http://pypi.python.org/pypi/diff-match-patch/>`_, e.g.:
+-        
+-        ::
+-        
+-            pip install diff-match-patch
+-        
+-        Setup
+-        =====
+-        
+-        Add **reversion_compare** to **INSTALLED_APPS** in your settings.py, e.g.:
+-        
+-        ::
+-        
+-            INSTALLED_APPS = (
+-                'django...',
+-                ...
+-                'reversion', # https://github.com/etianen/django-reversion
+-                'reversion_compare', # https://github.com/jedie/django-reversion-compare
+-                ...
+-            )
+-            
+-            # Add reversion models to admin interface:
+-            ADD_REVERSION_ADMIN=True
+-            # optional settings:
+-            REVERSION_COMPARE_FOREIGN_OBJECTS_AS_ID=False
+-            REVERSION_COMPARE_IGNORE_NOT_REGISTERED=False
+-        
+-        Usage
+-        =====
+-        
+-        Inherit from **CompareVersionAdmin** instead of **VersionAdmin** to get the comparison feature.
+-        
+-        admin.py e.g.:
+-        
+-        ::
+-        
+-            from django.contrib import admin
+-            from reversion_compare.admin import CompareVersionAdmin
+-            
+-            from my_app.models import ExampleModel
+-            
+-            class ExampleModelAdmin(CompareVersionAdmin):
+-                pass
+-            
+-            admin.site.register(ExampleModel, ExampleModelAdmin)
+-        
+-        If you're using an existing third party app, then you can add patch django-reversion-compare into
+-        its admin class by using the **reversion_compare.helpers.patch_admin()** method. For example, to add
+-        version control to the built-in User model:
+-        
+-        ::
+-        
+-            from reversion_compare.helpers import patch_admin
+-            
+-            patch_admin(User)
+-        
+-        e.g.: Add django-cms Page model:
+-        
+-        ::
+-        
+-            from cms.models.pagemodel import Page
+-            from reversion_compare.helpers import patch_admin
+-            
+-            
+-            # Patch django-cms Page Model to add reversion-compare functionality:
+-            patch_admin(Page)
+-        
+-        Customize
+-        =========
+-        
+-        It's possible to change the look for every field or for a entire field type.
+-        You must only define a methods to your admin class with this name scheme:
+-        
+-        *  ``"compare_%s" % field_name`` 
+-        
+-        *  ``"compare_%s" % field.get_internal_type()`` 
+-        
+-        If there is no method with this name scheme, the ``fallback_compare()`` method will be used.
+-        
+-        An example for specifying a compare method for a model field by name:
+-        
+-        ::
+-        
+-            class YourAdmin(CompareVersionAdmin):
+-                def compare_foo_bar(self, obj_compare):
+-                    """ compare the foo_bar model field """
+-                    return "%r <-> %r" % (obj_compare.value1, obj_compare.value2)
+-        
+-        and example using **patch_admin** with custom version admin class:
+-        
+-        ::
+-        
+-            patch_admin(User, AdminClass=YourAdmin)
+-        
+-        ----------------
+-        Class Based View
+-        ----------------
+-        
+-        Beyond the Admin views, you can also create a Class Based View for displaying and comparing version
+-        differences. This is a single class-based-view that either displays the list of versions to select
+-        for an object or displays both the versions **and** their differences (if the versions to be compared
+-        have been selected). This class can be used just like a normal DetailView:
+-        
+-        Inherit from it in your class and add a model (or queryset), for example:
+-        
+-        ::
+-        
+-            from reversion_compare.views import HistoryCompareDetailView
+-            
+-            class SimpleModelHistoryCompareView(HistoryCompareDetailView):
+-                model = SimpleModel
+-        
+-        Then, assign that CBV to a url, for example:
+-        
+-        ::
+-        
+-            url(r'^test_view/(?P<pk>\d+)$', views.SimpleModelHistoryCompareView.as_view() ),
+-        
+-        Last step, you need to create a template to display both the version select form and
+-        the changes part (if the form is submitted). An example template is the following:
+-        
+-        ::
+-        
+-            <style type="text/css">
+-            /* minimal style for the diffs */
+-            del, ins {
+-                color: #000;
+-                text-decoration: none;
+-            }
+-            del { background-color: #ffe6e6; }
+-            ins { background-color: #e6ffe6; }
+-            sup.follow { color: #5555ff; }
+-            </style>
+-            
+-            {% include "reversion-compare/action_list_partial.html"  %}
+-            {% if request.GET.version_id1 %}
+-                {% include "reversion-compare/compare_partial.html"  %}
+-                {% include "reversion-compare/compare_links_partial.html"  %}
+-            {% endif %}
+-        
+-        Beyond the styling, you should include:
+-        
+-        * reversion-compare/action_list_partial.html partial template to display the version select form
+-        
+-        * reversion-compare/compare_partial.html partial template to display the actual version
+-        
+-        * reversion-compare/compare_links_partial.html to include previous/next comparison links
+-        
+-        compare_partial.html and compare_links_partial.html will show the compare-related information
+-        so it's better to display them only when the select-versions-tocompare-form has been submitted.
+-        If you want more control on the appearence of your templates you can check the above partials
+-        to understand how the availabble context variables are used and override them completely.
+-        
+-        -----------
+-        Screenshots
+-        -----------
+-        
+-        Here some screenshots of django-reversion-compare:
+-        
+-        ----
+-        
+-        How to select the versions to compare:
+-        
+-        |django-reversion-compare_v0_1_0-01.png|
+-        
+-        .. |django-reversion-compare_v0_1_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-01.png
+-        
+-        ----
+-        
+-        from **v0.1.0**: DateTimeField compare (last update), TextField compare (content) with small changes and a ForeignKey compare (child model instance was added):
+-        
+-        |django-reversion-compare_v0_1_0-02.png|
+-        
+-        .. |django-reversion-compare_v0_1_0-02.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-02.png
+-        
+-        ----
+-        
+-        from **v0.1.0**: Same as above, but the are more lines changed in TextField and the ForeignKey relation was removed:
+-        
+-        |django-reversion-compare_v0_1_0-03.png|
+-        
+-        .. |django-reversion-compare_v0_1_0-03.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-03.png
+-        
+-        ----
+-        
+-        Example screenshot from **v0.3.0**: a many-to-many field compare (friends, hobbies):
+-        
+-        |django-reversion-compare_v0_3_0-01.png|
+-        
+-        .. |django-reversion-compare_v0_3_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120516_django-reversion-compare_v0_3_0-01.png
+-        
+-        * In the first line, the m2m object has been changed.
+-        
+-        * line 2: A m2m object was deleted
+-        
+-        * line 3: A m2m object was removed from this entry (but not deleted)
+-        
+-        * line 4: This m2m object has not changed
+-        
+-        ----------------------------
+-        create developer environment
+-        ----------------------------
+-        
+-        e.g.:
+-        
+-        ::
+-        
+-            # Clone project (Use your fork SSH url!):
+-            ~$ git clone https://github.com/jedie/django-reversion-compare.git
+-            ~$ cd django-reversion-compare
+-            
+-            # create ".virtualenv" and install everything:
+-            django-reversion-compare$ ./create_env.sh
+-            
+-            # Activate virtual environment:
+-            django-reversion-compare$ source .virtualenv/bin/activate
+-            
+-            # Run all tests via "tox":
+-            (.virtualenv) django-reversion-compare$ tox
+-        
+-        **Note:**
+-        
+-        * Just call ``./create_env.sh`` again to update a existing virtualenv ;)
+-        
+-        * Please run ``./black.sh`` to reformat the code **before** creating a pull requests
+-        
+-        -------------
+-        running tests
+-        -------------
+-        
+-        Run all tests in all environment combinations via tox:
+-        
+-        ::
+-        
+-            $ python3 setup.py tox
+-        
+-        Run all tests in current environment via pytest:
+-        
+-        ::
+-        
+-            $ python3 setup.py test
+-        
+-        Helpfull for writing and debugging unittests is to run a local test server with the same data.
+-        e.g.:
+-        
+-        ::
+-        
+-            ~$ cd path/to/django-reversion-compare/
+-            /django-reversion-compare$ ./run_testserver.py
+-        
+-        **migration** will be run and a superuser will be created. Username: **test** Password: **12345678**
+-        
+-        ---------------------
+-        Version compatibility
+-        ---------------------
+-        
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | Reversion-Compare | django-reversion | Django             | Python                                         |
+-        +===================+==================+====================+================================================+
+-        | >=v0.9.0          | v2.0             | v2.2, v3.0         | v3.6, v3.7, v3.8, pypy3                        |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.8.6          | v2.0             | v1.11, v2.0        | v3.5, v3.6, v3.7, pypy3                        |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.8.4          | v2.0             | v1.8, v1.11, v2.0  | v3.5, v3.6, pypy3                              |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.8.3          | v2.0             | v1.8, v1.11        | v3.5, v3.6, pypy3                              |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | v0.8.x            | v2.0             | v1.8, v1.10, v1.11 | v2.7, v3.4, v3.5, v3.6 (only with Django 1.11) |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.7.2          | v2.0             | v1.8, v1.9, v1.10  | v2.7, v3.4, v3.5                               |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | v0.7.x            | v2.0             | v1.8, v1.9         | v2.7, v3.4, v3.5                               |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | v0.6.x            | v1.9, v1.10      | v1.8, v1.9         | v2.7, v3.4, v3.5                               |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.5.2          | v1.9             | v1.7, v1.8         | v2.7, v3.4                                     |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | >=v0.4            | v1.8             | v1.7               | v2.7, v3.4                                     |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        | <v0.4             | v1.6             | v1.4               | v2.7                                           |
+-        +-------------------+------------------+--------------------+------------------------------------------------+
+-        
+-        These are the unittests variants. See also: `/.travis.yml <https://github.com/jedie/django-reversion-compare/blob/master/.travis.yml>`_
+-        Maybe other versions are compatible, too.
+-        
+-        ---------
+-        Changelog
+-        ---------
+-        
+-        * *dev* `compare v0.9.0...master <https://github.com/jedie/django-reversion-compare/compare/v0.9.0...master>`_ 
+-        
+-            * TBC
+-        
+-        * v0.9.0 - 19.01.2020 `compare v0.8.7...v0.9.0 <https://github.com/jedie/django-reversion-compare/compare/v0.8.7...v0.9.0>`_ 
+-        
+-            * Test with Python 3.8 and Django 3.0, too.
+-        
+-            * Run tests via github actions, too.
+-        
+-            * Remove support for Python 3.5 and Django v1.11
+-        
+-            * `actually check if model is registered #115 <https://github.com/jedie/django-reversion-compare/pull/115>`_ contributed by willtho89
+-        
+-            * `Remove python2 compatibility decorators #113 <https://github.com/jedie/django-reversion-compare/pull/113>`_ contributed by jeremy-engel
+-        
+-            * `Show username and full name from custom user model #112 <https://github.com/jedie/django-reversion-compare/pull/112>`_ contributed by berekuk
+-        
+-            * `Fix django-suit NoneType is not iterable #111 <https://github.com/jedie/django-reversion-compare/pull/111>`_ contributed by creativequality
+-        
+-            * convert old format to f-strings via flynt
+-        
+-            * Code style:
+-        
+-                * sort imports with isort
+-        
+-                * apply autopep8
+-        
+-                * lint code in CI with flake8, isort and flynt
+-        
+-        * v0.8.7 - 06.01.2020 `compare v0.8.6...v0.8.7 <https://github.com/jedie/django-reversion-compare/compare/v0.8.6...v0.8.7>`_ 
+-        
+-            * Add new optional settings ``REVERSION_COMPARE_IGNORE_NOT_REGISTERED``, see: `issues #103 <https://github.com/jedie/django-reversion-compare/issues/103>`_
+-        
+-            * reformat code with 'black'
+-        
+-            * some code cleanup
+-        
+-        * v0.8.6 - 04.01.2019 `compare v0.8.5...v0.8.6 <https://github.com/jedie/django-reversion-compare/compare/v0.8.5...v0.8.6>`_ 
+-        
+-            * Bugfix: `Use ".pk" instead of ".id" when referring to related object. <https://github.com/jedie/django-reversion-compare/pull/110>`_ contributed by `Peter Lisák <https://github.com/peterlisak>`_
+-        
+-            * Run tests: Skip Django v1.8 and add Python v3.7
+-        
+-        * v0.8.5 - 13.09.2018 `compare v0.8.4...v0.8.5 <https://github.com/jedie/django-reversion-compare/compare/v0.8.4...v0.8.5>`_ 
+-        
+-            * `speed up delete checking <https://github.com/jedie/django-reversion-compare/pull/106>`_ contributed by `LegoStormtroopr <https://github.com/LegoStormtroopr>`_
+-        
+-        * v0.8.4 - 15.03.2018 `compare v0.8.3...v0.8.4 <https://github.com/jedie/django-reversion-compare/compare/v0.8.3...v0.8.4>`_ 
+-        
+-            * `Add Django 2.0 compatibility <https://github.com/jedie/django-reversion-compare/pull/102>`_ contributed by `samifahed <https://github.com/samifahed>`_
+-        
+-        * v0.8.3 - 21.12.2017 `compare v0.8.2...v0.8.3 <https://github.com/jedie/django-reversion-compare/compare/v0.8.2...v0.8.3>`_ 
+-        
+-            * refactor travis/tox/pytest/coverage stuff
+-        
+-            * Tests can be run via ``python3 setup.py tox`` and/or ``python3 setup.py test``
+-        
+-            * Test also with pypy3 on Travis CI.
+-        
+-        * `v0.8.2 - 06.12.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.1...v0.8.2>`_:
+-        
+-            * `Change ForeignKey relation compare <https://github.com/jedie/django-reversion-compare/pull/100>`_ contributed by `alaruss <https://github.com/alaruss>`_
+-        
+-            * `Work around a type error triggered by taggit <https://github.com/jedie/django-reversion-compare/pull/86>`_ contributed by `Athemis <https://github.com/Athemis>`_
+-        
+-            * minor code changes
+-        
+-        * `v0.8.1 - 02.10.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.0...v0.8.1>`_:
+-        
+-            * `Add added polish translation <https://github.com/jedie/django-reversion-compare/pull/99>`_ contributed by `w4rri0r3k <https://github.com/w4rri0r3k>`_
+-        
+-            * Bugfix "Django>=1.11" in setup.py
+-        
+-        * `v0.8.0 - 17.08.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.5...v0.8.0>`_:
+-        
+-            * Run tests with Django v1.11 and drop tests with Django v1.9
+-        
+-        * `v0.7.5 - 24.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.4...v0.7.5>`_:
+-        
+-            * `Using the 'render' function to ensure the execution of context processors properly <https://github.com/jedie/django-reversion-compare/pull/90>`_ contributed by `Rodrigo Pinheiro Marques de Araújo <https://github.com/fenrrir>`_
+-        
+-        * `v0.7.4 - 10.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.3...v0.7.4>`_:
+-        
+-            * Bugfix for Python 2: `compare unicode instead of bytes <https://github.com/jedie/django-reversion-compare/issues/89>`_ contributed by `Maksim Iakovlev <https://github.com/lampslave>`_
+-        
+-            * `remove 'Django20Warning' <https://github.com/jedie/django-reversion-compare/pull/88>`_ contributed by `Hugo Tácito <https://github.com/hugotacito>`_
+-        
+-            * `Add 'Finnish' localisations <https://github.com/jedie/django-reversion-compare/pull/87>`_ contributed by `Olli-Pekka Puolitaival <https://github.com/OPpuolitaival>`_
+-        
+-        * `v0.7.3 - 08.02.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.2...v0.7.3>`_:
+-        
+-            * `Fix case when model has template field which is ForeignKey <https://github.com/jedie/django-reversion-compare/pull/85>`_ contributed by `Lagovas <https://github.com/Lagovas>`_
+-        
+-        * `v0.7.2 - 20.10.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.1...v0.7.2>`_:
+-        
+-            * Add Django v1.10 support
+-        
+-        * `v0.7.1 - 29.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.0...v0.7.1>`_:
+-        
+-            * `Fix #79: missing import if **ADD_REVERSION_ADMIN != True** <https://github.com/jedie/django-reversion-compare/issues/79>`_
+-        
+-        * `v0.7.0 - 25.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.3...v0.7.0>`_:
+-        
+-            * `support only django-reversion >= 2.0 <https://github.com/jedie/django-reversion-compare/pull/76>`_ based on a contribution by `mshannon1123 <https://github.com/jedie/django-reversion-compare/pull/73>`_
+-        
+-            * remove internal **reversion_api**
+-        
+-            * Use tox
+-        
+-        * `v0.6.3 - 14.06.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.2...v0.6.3>`_:
+-        
+-            * `Remove unused and deprecated patters <https://github.com/jedie/django-reversion-compare/pull/69>`_ contributed by `codingjoe <https://github.com/codingjoe>`_
+-        
+-            * `Fix django 1.10 warning #66 <https://github.com/jedie/django-reversion-compare/pull/66>`_ contributed by `pypetey <https://github.com/pypetey>`_
+-        
+-        * `v0.6.2 - 27.04.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.1...v0.6.2>`_:
+-        
+-            * `Added choices field representation #63 <https://github.com/jedie/django-reversion-compare/pull/63>`_ contributed by `amureki <https://github.com/amureki>`_
+-        
+-            * `Check if related model has an integer as pk for ManyToMany fields. #64 <https://github.com/jedie/django-reversion-compare/pull/64>`_ contributed by `logaritmisk <https://github.com/logaritmisk>`_
+-        
+-        * `v0.6.1 - 16.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.0...v0.6.1>`_:
+-        
+-            * `pull #61 <https://github.com/jedie/django-reversion-compare/pull/61>`_: Fix error when ManyToMany relations didn't exist contributed by `Diederik van der Boor <https://github.com/vdboor>`_
+-        
+-        * `v0.6.0 - 03.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.5.6...v0.6.0>`_:
+-        
+-            * Added Dutch translation contributed by `Sae X <https://github.com/SaeX>`_
+-        
+-            * Add support for Django 1.9
+-        
+-            * Nicer boolean compare: `#57 <https://github.com/jedie/django-reversion-compare/issues/57>`_
+-        
+-            * Fix `#58 compare followed reverse foreign relation fields that are on a non-abstract parent class <https://github.com/jedie/django-reversion-compare/issues/58>`_ contributed by LegoStormtroopr
+-        
+-        * `v0.5.6 - 23.09.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.5...v0.5.6>`_:
+-        
+-            * NEW: Class-Based-View to create non-admin views and greek translation contributed by `Serafeim Papastefanos <https://github.com/spapas>`_.
+-        
+-        * `v0.5.5 - 24.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.4...v0.5.5>`_:
+-        
+-            * UnboundLocalError ('version') when creating deleted list in get_many_to_something() `#41 <https://github.com/jedie/django-reversion-compare/pull/41>`_
+-        
+-        * `v0.5.4 - 22.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.3...v0.5.4>`_:
+-        
+-            * One to one field custom related name fix `#42 <https://github.com/jedie/django-reversion-compare/pull/42>`_ (contributed by frwickst and aemdy)
+-        
+-        * `v0.5.3 - 13.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.2...v0.5.3>`_:
+-        
+-            * Update admin.py to avoid RemovedInDjango19Warning (contributed by luzfcb)
+-        
+-        * `v0.5.2 - 14.04.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.1...v0.5.2>`_:
+-        
+-            * contributed by Samuel Spencer:
+-        
+-                * Added Django 1.8 support: `pull #35 <https://github.com/jedie/django-reversion-compare/pull/35>`_
+-        
+-                * list of changes for reverse fields incorrectly includes a "deletion" for the item that was added in: `issues #34 <https://github.com/jedie/django-reversion-compare/issues/34>`_
+-        
+-        * `v0.5.1 - 28.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.0...v0.5.1>`_:
+-        
+-            * activate previous/next links and add unitests for them
+-        
+-        * `v0.5.0 - 27.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.4.0...v0.5.0>`_:
+-        
+-            * refactory unittests, test with Django v1.7 and Python 2.7 & 3.4
+-        
+-        * `v0.4.0 - 02.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.3.5...v0.4.0>`_:
+-        
+-            * Updates for django 1.7 support
+-        
+-            * Add ``settings.ADD_REVERSION_ADMIN``
+-        
+-        * v0.3.5 - 03.01.2013:
+-        
+-            * Remove date from version string. `issues 9 <https://github.com/jedie/django-reversion-compare/issues/9>`_
+-        
+-        * v0.3.4 - 20.06.2012:
+-        
+-            * Use VersionAdmin.revision_manager rather than default_revision_manager, contributed by Mark Lavin - see: `pull request 7 <https://github.com/jedie/django-reversion-compare/pull/7>`_
+-        
+-            * Use logging for all debug prints, contributed by Bojan Mihelac - see: `pull request 8 <https://github.com/jedie/django-reversion-compare/pull/8>`_
+-        
+-        * v0.3.3 - 11.06.2012:
+-        
+-            * Bugfix "ValueError: zero length field name in format" with Python 2.6 `issues 5 <https://github.com/jedie/django-reversion-compare/issues/5>`_
+-        
+-        * v0.3.2 - 04.06.2012:
+-        
+-            * Bugfix for Python 2.6 in unified_diff(), see: `AttributeError: 'module' object has no attribute '_format_range_unified' <https://github.com/jedie/django-reversion-compare/issues/5>`_
+-        
+-        * v0.3.1 - 01.06.2012:
+-        
+-            * Bugfix: force unicode in html diff
+-        
+-            * Bugfix in unittests
+-        
+-        * v0.3.0 - 16.05.2012:
+-        
+-            * Enhanced handling of m2m changes with follow and non-follow relations.
+-        
+-        * v0.2.2 - 15.05.2012:
+-        
+-            * Compare many-to-many in the right way.
+-        
+-        * v0.2.1 - 10.05.2012:
+-        
+-            * Bugfix for models which has no m2m field: `https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880 <https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880>`_
+-        
+-        * v0.2.0 - 09.05.2012:
+-        
+-            * many-to-many compare works, too.
+-        
+-        * v0.1.0 - 08.05.2012:
+-        
+-            * First release
+-        
+-        * v0.0.1 - 08.05.2012:
+-        
+-            * collect all compare stuff from old "diff" branch
+-        
+-            * see also: `https://github.com/etianen/django-reversion/issues/147 <https://github.com/etianen/django-reversion/issues/147>`_
+-        
+-        -----
+-        Links
+-        -----
+-        
+-        +-----------------+-------------------------------------------------------+
+-        | Github          | `https://github.com/jedie/django-reversion-compare`_  |
+-        +-----------------+-------------------------------------------------------+
+-        | Python Packages | `https://pypi.org/project/django-reversion-compare/`_ |
+-        +-----------------+-------------------------------------------------------+
+-        
+-        .. _https://github.com/jedie/django-reversion-compare: https://github.com/jedie/django-reversion-compare
+-        .. _https://pypi.org/project/django-reversion-compare/: https://pypi.org/project/django-reversion-compare/
+-        
+-        --------
+-        Donation
+-        --------
+-        
+-        * `paypal.me/JensDiemer <https://www.paypal.me/JensDiemer>`_
+-        
+-        * `Flattr This! <https://flattr.com/submit/auto?uid=jedie&url=https%3A%2F%2Fgithub.com%2Fjedie%2Fdjango-reversion-compare%2F>`_
+-        
+-        * Send `Bitcoins <https://www.bitcoin.org/>`_ to `1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F <https://blockexplorer.com/address/1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F>`_
+-Keywords: django,django-reversion,reversion,diff,compare
+-Platform: UNKNOWN
+-Classifier: Development Status :: 5 - Production/Stable
+-Classifier: Environment :: Web Environment
+-Classifier: Intended Audience :: Developers
+-Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+-Classifier: Operating System :: OS Independent
+-Classifier: Operating System :: MacOS :: MacOS X
+-Classifier: Operating System :: Microsoft :: Windows
+-Classifier: Operating System :: POSIX
+-Classifier: Programming Language :: Python
+-Classifier: Programming Language :: Python :: 3
+-Classifier: Programming Language :: Python :: 3.6
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3 :: Only
+-Classifier: Programming Language :: Python :: Implementation :: CPython
+-Classifier: Programming Language :: Python :: Implementation :: PyPy
+-Classifier: Framework :: Django
+-Classifier: Framework :: Django :: 1.8
+-Classifier: Framework :: Django :: 1.11
+-Classifier: Framework :: Django :: 2.0
+-Classifier: Topic :: Database :: Front-Ends
+-Classifier: Topic :: Documentation
+-Classifier: Topic :: Internet
+-Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+-Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+-Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
++# -*- coding: utf-8 -*-
++from setuptools import setup
++
++packages = \
++['reversion_compare']
++
++package_data = \
++{'': ['*'],
++ 'reversion_compare': ['locale/de/LC_MESSAGES/*',
++                       'locale/el/LC_MESSAGES/*',
++                       'locale/fi/LC_MESSAGES/*',
++                       'locale/fr/LC_MESSAGES/*',
++                       'locale/nl/LC_MESSAGES/*',
++                       'locale/pl/LC_MESSAGES/*',
++                       'templates/reversion-compare/*']}
++
++install_requires = \
++['django-reversion>=2.0,<3.0', 'django>=2.2,<3.0']
++
++entry_points = \
++{'console_scripts': ['publish = reversion_compare.publish:publish',
++                     'run_testserver = '
++                     'reversion_compare_tests.manage:start_test_server',
++                     'update_rst_readme = '
++                     'reversion_compare.publish:update_readme']}
++
++setup_kwargs = {
++    'name': 'django-reversion-compare',
++    'version': '0.9.1',
++    'description': 'history compare for django-reversion',
++    'long_description': '========================\ndjango-reversion-compare\n========================\n\n**django-reversion-compare** is an extension to `django-reversion <https://github.com/etianen/django-reversion/>`_ that provides a history compare view to compare two versions of a model which is under reversion.\n\nComparing model versions is not a easy task. Maybe there are different view how this should looks like.\nThis project will gives you a generic way to see whats has been changed.\n\nMany parts are customizable by overwrite methods or subclassing, see above.\n\n+--------------------------------------+\n| |Build Status on github|             |\n+--------------------------------------+\n| |Build Status on travis-ci.org|      |\n+--------------------------------------+\n| |Coverage Status on coveralls.io|    |\n+--------------------------------------+\n| |Coverage Status on codecov.io|      |\n+--------------------------------------+\n| |Requirements Status on requires.io| |\n+--------------------------------------+\n\n.. |Build Status on github| image:: https://github.com/jedie/django-reversion-compare/workflows/test/badge.svg?branch=master\n.. |Build Status on travis-ci.org| image:: https://travis-ci.org/jedie/django-reversion-compare.svg\n.. _travis-ci.org/jedie/django-reversion-compare: https://travis-ci.org/jedie/django-reversion-compare/\n.. |Coverage Status on coveralls.io| image:: https://coveralls.io/repos/jedie/django-reversion-compare/badge.svg\n.. _coveralls.io/r/jedie/django-reversion-compare: https://coveralls.io/r/jedie/django-reversion-compare\n.. |Coverage Status on codecov.io| image:: https://codecov.io/gh/jedie/django-reversion-compare/branch/master/graph/badge.svg\n.. _codecov.io/gh/jedie/django-reversion-compare: https://codecov.io/gh/jedie/django-reversion-compare\n.. |Requirements Status on requires.io| image:: https://requires.io/github/jedie/django-reversion-compare/requirements.svg\n.. _requires.io/github/jedie/django-reversion-compare/requirements/: https://requires.io/github/jedie/django-reversion-compare/requirements/\n\n------------\nInstallation\n------------\n\nJust use:\n\n::\n\n    pip install django-reversion-compare\n\nOptionally you can install `google-diff-match-patch <https://code.google.com/p/google-diff-match-patch/>`_, otherwise difflib would be used. The easiest way is to use the unofficial package `diff-match-patch <http://pypi.python.org/pypi/diff-match-patch/>`_, e.g.:\n\n::\n\n    pip install diff-match-patch\n\nSetup\n=====\n\nAdd **reversion_compare** to **INSTALLED_APPS** in your settings.py, e.g.:\n\n::\n\n    INSTALLED_APPS = (\n        \'django...\',\n        ...\n        \'reversion\', # https://github.com/etianen/django-reversion\n        \'reversion_compare\', # https://github.com/jedie/django-reversion-compare\n        ...\n    )\n    \n    # Add reversion models to admin interface:\n    ADD_REVERSION_ADMIN=True\n    # optional settings:\n    REVERSION_COMPARE_FOREIGN_OBJECTS_AS_ID=False\n    REVERSION_COMPARE_IGNORE_NOT_REGISTERED=False\n\nUsage\n=====\n\nInherit from **CompareVersionAdmin** instead of **VersionAdmin** to get the comparison feature.\n\nadmin.py e.g.:\n\n::\n\n    from django.contrib import admin\n    from reversion_compare.admin import CompareVersionAdmin\n    \n    from my_app.models import ExampleModel\n    \n    class ExampleModelAdmin(CompareVersionAdmin):\n        pass\n    \n    admin.site.register(ExampleModel, ExampleModelAdmin)\n\nIf you\'re using an existing third party app, then you can add patch django-reversion-compare into\nits admin class by using the **reversion_compare.helpers.patch_admin()** method. For example, to add\nversion control to the built-in User model:\n\n::\n\n    from reversion_compare.helpers import patch_admin\n    \n    patch_admin(User)\n\ne.g.: Add django-cms Page model:\n\n::\n\n    from cms.models.pagemodel import Page\n    from reversion_compare.helpers import patch_admin\n    \n    \n    # Patch django-cms Page Model to add reversion-compare functionality:\n    patch_admin(Page)\n\nCustomize\n=========\n\nIt\'s possible to change the look for every field or for a entire field type.\nYou must only define a methods to your admin class with this name scheme:\n\n*  ``"compare_%s" % field_name`` \n\n*  ``"compare_%s" % field.get_internal_type()`` \n\nIf there is no method with this name scheme, the ``fallback_compare()`` method will be used.\n\nAn example for specifying a compare method for a model field by name:\n\n::\n\n    class YourAdmin(CompareVersionAdmin):\n        def compare_foo_bar(self, obj_compare):\n            """ compare the foo_bar model field """\n            return "%r <-> %r" % (obj_compare.value1, obj_compare.value2)\n\nand example using **patch_admin** with custom version admin class:\n\n::\n\n    patch_admin(User, AdminClass=YourAdmin)\n\n----------------\nClass Based View\n----------------\n\nBeyond the Admin views, you can also create a Class Based View for displaying and comparing version\ndifferences. This is a single class-based-view that either displays the list of versions to select\nfor an object or displays both the versions **and** their differences (if the versions to be compared\nhave been selected). This class can be used just like a normal DetailView:\n\nInherit from it in your class and add a model (or queryset), for example:\n\n::\n\n    from reversion_compare.views import HistoryCompareDetailView\n    \n    class SimpleModelHistoryCompareView(HistoryCompareDetailView):\n        model = SimpleModel\n\nThen, assign that CBV to a url, for example:\n\n::\n\n    url(r\'^test_view/(?P<pk>\\d+)$\', views.SimpleModelHistoryCompareView.as_view() ),\n\nLast step, you need to create a template to display both the version select form and\nthe changes part (if the form is submitted). An example template is the following:\n\n::\n\n    <style type="text/css">\n    /* minimal style for the diffs */\n    del, ins {\n        color: #000;\n        text-decoration: none;\n    }\n    del { background-color: #ffe6e6; }\n    ins { background-color: #e6ffe6; }\n    sup.follow { color: #5555ff; }\n    </style>\n    \n    {% include "reversion-compare/action_list_partial.html"  %}\n    {% if request.GET.version_id1 %}\n        {% include "reversion-compare/compare_partial.html"  %}\n        {% include "reversion-compare/compare_links_partial.html"  %}\n    {% endif %}\n\nBeyond the styling, you should include:\n\n* reversion-compare/action_list_partial.html partial template to display the version select form\n\n* reversion-compare/compare_partial.html partial template to display the actual version\n\n* reversion-compare/compare_links_partial.html to include previous/next comparison links\n\ncompare_partial.html and compare_links_partial.html will show the compare-related information\nso it\'s better to display them only when the select-versions-tocompare-form has been submitted.\nIf you want more control on the appearence of your templates you can check the above partials\nto understand how the availabble context variables are used and override them completely.\n\n-----------\nScreenshots\n-----------\n\nHere some screenshots of django-reversion-compare:\n\n----\n\nHow to select the versions to compare:\n\n|django-reversion-compare_v0_1_0-01.png|\n\n.. |django-reversion-compare_v0_1_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-01.png\n\n----\n\nfrom **v0.1.0**: DateTimeField compare (last update), TextField compare (content) with small changes and a ForeignKey compare (child model instance was added):\n\n|django-reversion-compare_v0_1_0-02.png|\n\n.. |django-reversion-compare_v0_1_0-02.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-02.png\n\n----\n\nfrom **v0.1.0**: Same as above, but the are more lines changed in TextField and the ForeignKey relation was removed:\n\n|django-reversion-compare_v0_1_0-03.png|\n\n.. |django-reversion-compare_v0_1_0-03.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120508_django-reversion-compare_v0_1_0-03.png\n\n----\n\nExample screenshot from **v0.3.0**: a many-to-many field compare (friends, hobbies):\n\n|django-reversion-compare_v0_3_0-01.png|\n\n.. |django-reversion-compare_v0_3_0-01.png| image:: https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/django-reversion-compare/20120516_django-reversion-compare_v0_3_0-01.png\n\n* In the first line, the m2m object has been changed.\n\n* line 2: A m2m object was deleted\n\n* line 3: A m2m object was removed from this entry (but not deleted)\n\n* line 4: This m2m object has not changed\n\n----------------------------\ncreate developer environment\n----------------------------\n\ne.g.:\n\n::\n\n    # Clone project (Use your fork SSH url!):\n    ~$ git clone https://github.com/jedie/django-reversion-compare.git\n    ~$ cd django-reversion-compare\n    ~/django-reversion-compare$ make install\n    ~/django-reversion-compare$ make\n    help                 List all commands\n    install-poetry       install or update poetry\n    install              install reversion_compare via poetry\n    lint                 Run code formatters and linter\n    fix-code-style       Fix code formatting\n    tox-listenvs         List all tox test environments\n    tox                  Run pytest via tox with all environments\n    tox-py36             Run pytest via tox with *python v3.6*\n    tox-py37             Run pytest via tox with *python v3.7*\n    tox-py38             Run pytest via tox with *python v3.8*\n    pytest               Run pytest\n    update-rst-readme    update README.rst from README.reversion_compare\n    publish              Release new version to PyPi\n    run-test-server      Start Django dev server with the test project\n\nHelpful for writing and debugging unittests is to run a local test server with the same data.\ne.g.:\n\n::\n\n    ~/django-reversion-compare$ make run-test-server\n\n**migration** will be run and a superuser will be created. Username: **test** Password: **12345678**\n\nCall manage commands from test project, e.g.:\n\n::\n\n    ~/django-reversion-compare$ poetry shell\n    django-reversion-compare-foobar-py3.6) ~/django-reversion-compare$ ./reversion_compare_tests/manage.py --help\n    ...\n\n---------------------\nVersion compatibility\n---------------------\n\n+-------------------+------------------+--------------------+------------------------------------------------+\n| Reversion-Compare | django-reversion | Django             | Python                                         |\n+===================+==================+====================+================================================+\n| >=v0.9.0          | v2.0             | v2.2, v3.0         | v3.6, v3.7, v3.8, pypy3                        |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| >=v0.8.6          | v2.0             | v1.11, v2.0        | v3.5, v3.6, v3.7, pypy3                        |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| >=v0.8.4          | v2.0             | v1.8, v1.11, v2.0  | v3.5, v3.6, pypy3                              |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| >=v0.8.3          | v2.0             | v1.8, v1.11        | v3.5, v3.6, pypy3                              |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| v0.8.x            | v2.0             | v1.8, v1.10, v1.11 | v2.7, v3.4, v3.5, v3.6 (only with Django 1.11) |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| >=v0.7.2          | v2.0             | v1.8, v1.9, v1.10  | v2.7, v3.4, v3.5                               |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| v0.7.x            | v2.0             | v1.8, v1.9         | v2.7, v3.4, v3.5                               |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| v0.6.x            | v1.9, v1.10      | v1.8, v1.9         | v2.7, v3.4, v3.5                               |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| >=v0.5.2          | v1.9             | v1.7, v1.8         | v2.7, v3.4                                     |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| >=v0.4            | v1.8             | v1.7               | v2.7, v3.4                                     |\n+-------------------+------------------+--------------------+------------------------------------------------+\n| <v0.4             | v1.6             | v1.4               | v2.7                                           |\n+-------------------+------------------+--------------------+------------------------------------------------+\n\nThese are the unittests variants. See also: `/.travis.yml <https://github.com/jedie/django-reversion-compare/blob/master/.travis.yml>`_\nMaybe other versions are compatible, too.\n\n---------\nChangelog\n---------\n\n* *dev* `compare v0.9.1...master <https://github.com/jedie/django-reversion-compare/compare/v0.9.1...master>`_ \n\n    * TBC\n\n* v0.9.1 - 16.02.2020 `compare v0.9.0...v0.9.1 <https://github.com/jedie/django-reversion-compare/compare/v0.9.0...v0.9.1>`_ \n\n    * Modernize project setup and use poetry\n\n    * Apply pyupgrade and fix/update some f-strings\n\n    * Update test project\n\n* v0.9.0 - 19.01.2020 `compare v0.8.7...v0.9.0 <https://github.com/jedie/django-reversion-compare/compare/v0.8.7...v0.9.0>`_ \n\n    * Test with Python 3.8 and Django 3.0, too.\n\n    * Run tests via github actions, too.\n\n    * Remove support for Python 3.5 and Django v1.11\n\n    * `actually check if model is registered #115 <https://github.com/jedie/django-reversion-compare/pull/115>`_ contributed by willtho89\n\n    * `Remove python2 compatibility decorators #113 <https://github.com/jedie/django-reversion-compare/pull/113>`_ contributed by jeremy-engel\n\n    * `Show username and full name from custom user model #112 <https://github.com/jedie/django-reversion-compare/pull/112>`_ contributed by berekuk\n\n    * `Fix django-suit NoneType is not iterable #111 <https://github.com/jedie/django-reversion-compare/pull/111>`_ contributed by creativequality\n\n    * convert old format to f-strings via flynt\n\n    * Code style:\n\n        * sort imports with isort\n\n        * apply autopep8\n\n        * lint code in CI with flake8, isort and flynt\n\n* v0.8.7 - 06.01.2020 `compare v0.8.6...v0.8.7 <https://github.com/jedie/django-reversion-compare/compare/v0.8.6...v0.8.7>`_ \n\n    * Add new optional settings ``REVERSION_COMPARE_IGNORE_NOT_REGISTERED``, see: `issues #103 <https://github.com/jedie/django-reversion-compare/issues/103>`_\n\n    * reformat code with \'black\'\n\n    * some code cleanup\n\n* v0.8.6 - 04.01.2019 `compare v0.8.5...v0.8.6 <https://github.com/jedie/django-reversion-compare/compare/v0.8.5...v0.8.6>`_ \n\n    * Bugfix: `Use ".pk" instead of ".id" when referring to related object. <https://github.com/jedie/django-reversion-compare/pull/110>`_ contributed by `Peter Lisák <https://github.com/peterlisak>`_\n\n    * Run tests: Skip Django v1.8 and add Python v3.7\n\n* v0.8.5 - 13.09.2018 `compare v0.8.4...v0.8.5 <https://github.com/jedie/django-reversion-compare/compare/v0.8.4...v0.8.5>`_ \n\n    * `speed up delete checking <https://github.com/jedie/django-reversion-compare/pull/106>`_ contributed by `LegoStormtroopr <https://github.com/LegoStormtroopr>`_\n\n* v0.8.4 - 15.03.2018 `compare v0.8.3...v0.8.4 <https://github.com/jedie/django-reversion-compare/compare/v0.8.3...v0.8.4>`_ \n\n    * `Add Django 2.0 compatibility <https://github.com/jedie/django-reversion-compare/pull/102>`_ contributed by `samifahed <https://github.com/samifahed>`_\n\n* v0.8.3 - 21.12.2017 `compare v0.8.2...v0.8.3 <https://github.com/jedie/django-reversion-compare/compare/v0.8.2...v0.8.3>`_ \n\n    * refactor travis/tox/pytest/coverage stuff\n\n    * Tests can be run via ``python3 setup.py tox`` and/or ``python3 setup.py test``\n\n    * Test also with pypy3 on Travis CI.\n\n* `v0.8.2 - 06.12.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.1...v0.8.2>`_:\n\n    * `Change ForeignKey relation compare <https://github.com/jedie/django-reversion-compare/pull/100>`_ contributed by `alaruss <https://github.com/alaruss>`_\n\n    * `Work around a type error triggered by taggit <https://github.com/jedie/django-reversion-compare/pull/86>`_ contributed by `Athemis <https://github.com/Athemis>`_\n\n    * minor code changes\n\n* `v0.8.1 - 02.10.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.8.0...v0.8.1>`_:\n\n    * `Add added polish translation <https://github.com/jedie/django-reversion-compare/pull/99>`_ contributed by `w4rri0r3k <https://github.com/w4rri0r3k>`_\n\n    * Bugfix "Django>=1.11" in setup.py\n\n* `v0.8.0 - 17.08.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.5...v0.8.0>`_:\n\n    * Run tests with Django v1.11 and drop tests with Django v1.9\n\n* `v0.7.5 - 24.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.4...v0.7.5>`_:\n\n    * `Using the \'render\' function to ensure the execution of context processors properly <https://github.com/jedie/django-reversion-compare/pull/90>`_ contributed by `Rodrigo Pinheiro Marques de Araújo <https://github.com/fenrrir>`_\n\n* `v0.7.4 - 10.04.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.3...v0.7.4>`_:\n\n    * Bugfix for Python 2: `compare unicode instead of bytes <https://github.com/jedie/django-reversion-compare/issues/89>`_ contributed by `Maksim Iakovlev <https://github.com/lampslave>`_\n\n    * `remove \'Django20Warning\' <https://github.com/jedie/django-reversion-compare/pull/88>`_ contributed by `Hugo Tácito <https://github.com/hugotacito>`_\n\n    * `Add \'Finnish\' localisations <https://github.com/jedie/django-reversion-compare/pull/87>`_ contributed by `Olli-Pekka Puolitaival <https://github.com/OPpuolitaival>`_\n\n* `v0.7.3 - 08.02.2017 <https://github.com/jedie/django-reversion-compare/compare/v0.7.2...v0.7.3>`_:\n\n    * `Fix case when model has template field which is ForeignKey <https://github.com/jedie/django-reversion-compare/pull/85>`_ contributed by `Lagovas <https://github.com/Lagovas>`_\n\n* `v0.7.2 - 20.10.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.1...v0.7.2>`_:\n\n    * Add Django v1.10 support\n\n* `v0.7.1 - 29.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.7.0...v0.7.1>`_:\n\n    * `Fix #79: missing import if **ADD_REVERSION_ADMIN != True** <https://github.com/jedie/django-reversion-compare/issues/79>`_\n\n* `v0.7.0 - 25.08.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.3...v0.7.0>`_:\n\n    * `support only django-reversion >= 2.0 <https://github.com/jedie/django-reversion-compare/pull/76>`_ based on a contribution by `mshannon1123 <https://github.com/jedie/django-reversion-compare/pull/73>`_\n\n    * remove internal **reversion_api**\n\n    * Use tox\n\n* `v0.6.3 - 14.06.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.2...v0.6.3>`_:\n\n    * `Remove unused and deprecated patters <https://github.com/jedie/django-reversion-compare/pull/69>`_ contributed by `codingjoe <https://github.com/codingjoe>`_\n\n    * `Fix django 1.10 warning #66 <https://github.com/jedie/django-reversion-compare/pull/66>`_ contributed by `pypetey <https://github.com/pypetey>`_\n\n* `v0.6.2 - 27.04.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.1...v0.6.2>`_:\n\n    * `Added choices field representation #63 <https://github.com/jedie/django-reversion-compare/pull/63>`_ contributed by `amureki <https://github.com/amureki>`_\n\n    * `Check if related model has an integer as pk for ManyToMany fields. #64 <https://github.com/jedie/django-reversion-compare/pull/64>`_ contributed by `logaritmisk <https://github.com/logaritmisk>`_\n\n* `v0.6.1 - 16.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.6.0...v0.6.1>`_:\n\n    * `pull #61 <https://github.com/jedie/django-reversion-compare/pull/61>`_: Fix error when ManyToMany relations didn\'t exist contributed by `Diederik van der Boor <https://github.com/vdboor>`_\n\n* `v0.6.0 - 03.02.2016 <https://github.com/jedie/django-reversion-compare/compare/v0.5.6...v0.6.0>`_:\n\n    * Added Dutch translation contributed by `Sae X <https://github.com/SaeX>`_\n\n    * Add support for Django 1.9\n\n    * Nicer boolean compare: `#57 <https://github.com/jedie/django-reversion-compare/issues/57>`_\n\n    * Fix `#58 compare followed reverse foreign relation fields that are on a non-abstract parent class <https://github.com/jedie/django-reversion-compare/issues/58>`_ contributed by LegoStormtroopr\n\n* `v0.5.6 - 23.09.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.5...v0.5.6>`_:\n\n    * NEW: Class-Based-View to create non-admin views and greek translation contributed by `Serafeim Papastefanos <https://github.com/spapas>`_.\n\n* `v0.5.5 - 24.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.4...v0.5.5>`_:\n\n    * UnboundLocalError (\'version\') when creating deleted list in get_many_to_something() `#41 <https://github.com/jedie/django-reversion-compare/pull/41>`_\n\n* `v0.5.4 - 22.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.3...v0.5.4>`_:\n\n    * One to one field custom related name fix `#42 <https://github.com/jedie/django-reversion-compare/pull/42>`_ (contributed by frwickst and aemdy)\n\n* `v0.5.3 - 13.07.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.2...v0.5.3>`_:\n\n    * Update admin.py to avoid RemovedInDjango19Warning (contributed by luzfcb)\n\n* `v0.5.2 - 14.04.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.1...v0.5.2>`_:\n\n    * contributed by Samuel Spencer:\n\n        * Added Django 1.8 support: `pull #35 <https://github.com/jedie/django-reversion-compare/pull/35>`_\n\n        * list of changes for reverse fields incorrectly includes a "deletion" for the item that was added in: `issues #34 <https://github.com/jedie/django-reversion-compare/issues/34>`_\n\n* `v0.5.1 - 28.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.5.0...v0.5.1>`_:\n\n    * activate previous/next links and add unitests for them\n\n* `v0.5.0 - 27.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.4.0...v0.5.0>`_:\n\n    * refactory unittests, test with Django v1.7 and Python 2.7 & 3.4\n\n* `v0.4.0 - 02.02.2015 <https://github.com/jedie/django-reversion-compare/compare/v0.3.5...v0.4.0>`_:\n\n    * Updates for django 1.7 support\n\n    * Add ``settings.ADD_REVERSION_ADMIN``\n\n* v0.3.5 - 03.01.2013:\n\n    * Remove date from version string. `issues 9 <https://github.com/jedie/django-reversion-compare/issues/9>`_\n\n* v0.3.4 - 20.06.2012:\n\n    * Use VersionAdmin.revision_manager rather than default_revision_manager, contributed by Mark Lavin - see: `pull request 7 <https://github.com/jedie/django-reversion-compare/pull/7>`_\n\n    * Use logging for all debug prints, contributed by Bojan Mihelac - see: `pull request 8 <https://github.com/jedie/django-reversion-compare/pull/8>`_\n\n* v0.3.3 - 11.06.2012:\n\n    * Bugfix "ValueError: zero length field name in format" with Python 2.6 `issues 5 <https://github.com/jedie/django-reversion-compare/issues/5>`_\n\n* v0.3.2 - 04.06.2012:\n\n    * Bugfix for Python 2.6 in unified_diff(), see: `AttributeError: \'module\' object has no attribute \'_format_range_unified\' <https://github.com/jedie/django-reversion-compare/issues/5>`_\n\n* v0.3.1 - 01.06.2012:\n\n    * Bugfix: force unicode in html diff\n\n    * Bugfix in unittests\n\n* v0.3.0 - 16.05.2012:\n\n    * Enhanced handling of m2m changes with follow and non-follow relations.\n\n* v0.2.2 - 15.05.2012:\n\n    * Compare many-to-many in the right way.\n\n* v0.2.1 - 10.05.2012:\n\n    * Bugfix for models which has no m2m field: `https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880 <https://github.com/jedie/django-reversion-compare/commit/c8e042945a6e78e5540b6ae27666f9b0cfc94880>`_\n\n* v0.2.0 - 09.05.2012:\n\n    * many-to-many compare works, too.\n\n* v0.1.0 - 08.05.2012:\n\n    * First release\n\n* v0.0.1 - 08.05.2012:\n\n    * collect all compare stuff from old "diff" branch\n\n    * see also: `https://github.com/etianen/django-reversion/issues/147 <https://github.com/etianen/django-reversion/issues/147>`_\n\n-----\nLinks\n-----\n\n+-----------------+-------------------------------------------------------+\n| Github          | `https://github.com/jedie/django-reversion-compare`_  |\n+-----------------+-------------------------------------------------------+\n| Python Packages | `https://pypi.org/project/django-reversion-compare/`_ |\n+-----------------+-------------------------------------------------------+\n\n.. _https://github.com/jedie/django-reversion-compare: https://github.com/jedie/django-reversion-compare\n.. _https://pypi.org/project/django-reversion-compare/: https://pypi.org/project/django-reversion-compare/\n\n--------\nDonation\n--------\n\n* `paypal.me/JensDiemer <https://www.paypal.me/JensDiemer>`_\n\n* `Flattr This! <https://flattr.com/submit/auto?uid=jedie&url=https%3A%2F%2Fgithub.com%2Fjedie%2Fdjango-reversion-compare%2F>`_\n\n* Send `Bitcoins <https://www.bitcoin.org/>`_ to `1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F <https://blockexplorer.com/address/1823RZ5Md1Q2X5aSXRC5LRPcYdveCiVX6F>`_\n\n------------\n\n``Note: this file is generated from README.creole 2020-02-16 17:27:01 with "python-creole"``',
++    'author': 'Jens Diemer',
++    'author_email': 'django-reversion-compare@jensdiemer.de',
++    'maintainer': None,
++    'maintainer_email': None,
++    'url': 'https://github.com/jedie/django-reversion-compare/',
++    'packages': packages,
++    'package_data': package_data,
++    'install_requires': install_requires,
++    'entry_points': entry_points,
++    'python_requires': '>=3.6,<4.0',
++}
++
++
++setup(**setup_kwargs)
+```
+

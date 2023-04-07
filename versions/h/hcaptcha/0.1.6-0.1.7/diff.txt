@@ -1,0 +1,58 @@
+--- tmp/hcaptcha-0.1.6.tar.gz
++++ tmp/hcaptcha-0.1.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "hcaptcha-0.1.6.tar", max compression
+│ +gzip compressed data, was "hcaptcha-0.1.7.tar", max compression
+│   --- hcaptcha-0.1.6.tar
+├── +++ hcaptcha-0.1.7.tar
+│ ├── file list
+│ │ @@ -1,5 +1,5 @@
+│ │ --rw-r--r--   0        0        0       21 2023-04-06 18:01:56.802470 hcaptcha-0.1.6/hcaptcha/__init__.py
+│ │ --rw-r--r--   0        0        0     2926 2023-04-06 18:34:29.774278 hcaptcha-0.1.6/hcaptcha/hcaptcha.py
+│ │ --rw-r--r--   0        0        0      486 2023-04-07 10:37:49.147272 hcaptcha-0.1.6/pyproject.toml
+│ │ --rw-r--r--   0        0        0      759 2023-04-07 10:38:06.788780 hcaptcha-0.1.6/setup.py
+│ │ --rw-r--r--   0        0        0      536 2023-04-07 10:38:06.789611 hcaptcha-0.1.6/PKG-INFO
+│ │ +-rw-r--r--   0        0        0       21 2023-04-06 18:01:56.802470 hcaptcha-0.1.7/hcaptcha/__init__.py
+│ │ +-rw-r--r--   0        0        0     2926 2023-04-06 18:34:29.774278 hcaptcha-0.1.7/hcaptcha/hcaptcha.py
+│ │ +-rw-r--r--   0        0        0     1075 2023-04-07 10:43:23.887423 hcaptcha-0.1.7/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      759 2023-04-07 10:43:36.929761 hcaptcha-0.1.7/setup.py
+│ │ +-rw-r--r--   0        0        0      536 2023-04-07 10:43:36.932284 hcaptcha-0.1.7/PKG-INFO
+│ │   --- hcaptcha-0.1.6/hcaptcha/hcaptcha.py
+│ ├── +++ hcaptcha-0.1.7/hcaptcha/hcaptcha.py
+│ │┄ Files identical despite different names
+│ │   --- hcaptcha-0.1.6/setup.py
+│ ├── +++ hcaptcha-0.1.7/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -8,15 +8,15 @@
+│ │  {'': ['*']}
+│ │  
+│ │  install_requires = \
+│ │  ['aiodns>=3.0.0,<4.0.0', 'aiohttp>=3.8.4,<4.0.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'hcaptcha',
+│ │ -    'version': '0.1.6',
+│ │ +    'version': '0.1.7',
+│ │      'description': 'A Python package for integrating hCaptcha, a popular captcha service, into various applications for enhanced security and user verification.',
+│ │      'long_description': None,
+│ │      'author': 'Vaibhav Dhiman',
+│ │      'author_email': 'vaibhavsys@protonmail.com',
+│ │      'maintainer': None,
+│ │      'maintainer_email': None,
+│ │      'url': None,
+│ │   --- hcaptcha-0.1.6/PKG-INFO
+│ ├── +++ hcaptcha-0.1.7/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: hcaptcha
+│ │ -Version: 0.1.6
+│ │ +Version: 0.1.7
+│ │  Summary: A Python package for integrating hCaptcha, a popular captcha service, into various applications for enhanced security and user verification.
+│ │  License: MIT
+│ │  Author: Vaibhav Dhiman
+│ │  Author-email: vaibhavsys@protonmail.com
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3

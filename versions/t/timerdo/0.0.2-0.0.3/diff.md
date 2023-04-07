@@ -1,0 +1,95 @@
+# Comparing `tmp/timerdo-0.0.2.tar.gz` & `tmp/timerdo-0.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "timerdo-0.0.2.tar", last modified: Tue Nov 30 09:08:11 2021, max compression
++gzip compressed data, was "timerdo-0.0.3.tar", last modified: Fri Apr  7 10:44:27 2023, max compression
+```
+
+## Comparing `timerdo-0.0.2.tar` & `timerdo-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,53 @@
+-drwxrwxr-x   0 cmts      (1000) cmts      (1000)        0 2021-11-30 09:08:11.201429 timerdo-0.0.2/
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     1069 2021-10-24 13:32:01.000000 timerdo-0.0.2/LICENSE
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     7988 2021-11-30 09:08:11.201429 timerdo-0.0.2/PKG-INFO
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     7440 2021-11-29 16:39:02.000000 timerdo-0.0.2/README.md
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)       99 2021-11-06 10:46:58.000000 timerdo-0.0.2/pyproject.toml
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)       38 2021-11-30 09:08:11.201429 timerdo-0.0.2/setup.cfg
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     1070 2021-11-30 08:57:55.000000 timerdo-0.0.2/setup.py
+-drwxrwxr-x   0 cmts      (1000) cmts      (1000)        0 2021-11-30 09:08:11.201429 timerdo-0.0.2/test/
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     5084 2021-11-13 11:16:01.000000 timerdo-0.0.2/test/test_main.py
+-drwxrwxr-x   0 cmts      (1000) cmts      (1000)        0 2021-11-30 09:08:11.201429 timerdo-0.0.2/timerdo/
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)        1 2021-11-08 08:21:23.000000 timerdo-0.0.2/timerdo/__init__.py
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)      455 2021-11-13 11:16:01.000000 timerdo-0.0.2/timerdo/database.py
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     8717 2021-11-30 08:51:31.000000 timerdo-0.0.2/timerdo/edit.py
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     2568 2021-11-15 17:44:43.000000 timerdo-0.0.2/timerdo/functions_aux.py
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     9339 2021-11-15 17:44:43.000000 timerdo-0.0.2/timerdo/main.py
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     5480 2021-11-15 17:44:43.000000 timerdo-0.0.2/timerdo/reports.py
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     1020 2021-11-15 17:44:43.000000 timerdo-0.0.2/timerdo/tables.py
+-drwxrwxr-x   0 cmts      (1000) cmts      (1000)        0 2021-11-30 09:08:11.201429 timerdo-0.0.2/timerdo.egg-info/
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)     7988 2021-11-30 09:08:11.000000 timerdo-0.0.2/timerdo.egg-info/PKG-INFO
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)      381 2021-11-30 09:08:11.000000 timerdo-0.0.2/timerdo.egg-info/SOURCES.txt
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)        1 2021-11-30 09:08:11.000000 timerdo-0.0.2/timerdo.egg-info/dependency_links.txt
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)       46 2021-11-30 09:08:11.000000 timerdo-0.0.2/timerdo.egg-info/entry_points.txt
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)      342 2021-11-30 09:08:11.000000 timerdo-0.0.2/timerdo.egg-info/requires.txt
+--rw-rw-r--   0 cmts      (1000) cmts      (1000)        8 2021-11-30 09:08:11.000000 timerdo-0.0.2/timerdo.egg-info/top_level.txt
++-rw-r--r--   0        0        0       99 2023-04-07 10:44:07.420468 timerdo-0.0.3/.flake8
++-rw-r--r--   0        0        0      569 2023-04-07 10:44:07.420468 timerdo-0.0.3/.github/workflows/publish_docs.yml
++-rw-r--r--   0        0        0      506 2023-04-07 10:44:07.420468 timerdo-0.0.3/.github/workflows/publish_pypi.yml
++-rw-r--r--   0        0        0      566 2023-04-07 10:44:07.420468 timerdo-0.0.3/.github/workflows/test_suite.yml
++-rw-r--r--   0        0        0      101 2023-04-07 10:44:07.420468 timerdo-0.0.3/.gitignore
++-rw-r--r--   0        0        0      203 2023-04-07 10:44:07.420468 timerdo-0.0.3/Makefile
++-rw-r--r--   0        0        0     1537 2023-04-07 10:44:07.420468 timerdo-0.0.3/README.md
++-rw-r--r--   0        0        0     1211 2023-04-07 10:44:07.420468 timerdo-0.0.3/UNLICENSE
++-rw-r--r--   0        0        0        0 2023-04-07 10:44:07.420468 timerdo-0.0.3/docs/how_to_guides.md
++-rw-r--r--   0        0        0    37426 2023-04-07 10:44:07.424468 timerdo-0.0.3/docs/img/favicon.png
++-rw-r--r--   0        0        0    76201 2023-04-07 10:44:07.424468 timerdo-0.0.3/docs/img/logo.png
++-rw-r--r--   0        0        0     3681 2023-04-07 10:44:07.424468 timerdo-0.0.3/docs/index.md
++-rw-r--r--   0        0        0       48 2023-04-07 10:44:07.424468 timerdo-0.0.3/docs/stylesheets/extra.css
++-rw-r--r--   0        0        0        0 2023-04-07 10:44:07.424468 timerdo-0.0.3/docs/tutorials.md
++-rw-r--r--   0        0        0     7991 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/add_1.png
++-rw-r--r--   0        0        0    31536 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/add_help.png
++-rw-r--r--   0        0        0    75032 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/edit_help.png
++-rw-r--r--   0        0        0    44084 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/help.png
++-rw-r--r--   0        0        0     3278 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/pip_install.png
++-rw-r--r--   0        0        0    20946 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/projects.png
++-rw-r--r--   0        0        0    28272 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/projects_help.png
++-rw-r--r--   0        0        0    28113 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/report.png
++-rw-r--r--   0        0        0     7335 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/select_project.png
++-rw-r--r--   0        0        0     5791 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/start_1.png
++-rw-r--r--   0        0        0    23340 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/start_help.png
++-rw-r--r--   0        0        0     5714 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/stop_1.png
++-rw-r--r--   0        0        0    15677 2023-04-07 10:44:07.424468 timerdo-0.0.3/images/stop_help.png
++-rw-r--r--   0        0        0    22017 2023-04-07 10:44:07.428468 timerdo-0.0.3/images/task.png
++-rw-r--r--   0        0        0    18478 2023-04-07 10:44:07.428468 timerdo-0.0.3/images/task_help.png
++-rw-r--r--   0        0        0    22267 2023-04-07 10:44:07.428468 timerdo-0.0.3/images/timerdo.png
++-rw-r--r--   0        0        0    25066 2023-04-07 10:44:07.428468 timerdo-0.0.3/images/view.png
++-rw-r--r--   0        0        0    19519 2023-04-07 10:44:07.428468 timerdo-0.0.3/images/view_help.png
++-rw-r--r--   0        0        0       61 2023-04-07 10:44:07.428468 timerdo-0.0.3/includes/abbreviations.md
++-rw-r--r--   0        0        0     2218 2023-04-07 10:44:07.428468 timerdo-0.0.3/mkdocs.yml
++-rw-r--r--   0        0        0     1161 2023-04-07 10:44:07.428468 timerdo-0.0.3/pyproject.toml
++-rwxr-xr-x   0        0        0      210 2023-04-07 10:44:07.428468 timerdo-0.0.3/scripts/bootstrap.sh
++-rwxr-xr-x   0        0        0      154 2023-04-07 10:44:07.428468 timerdo-0.0.3/scripts/docs_preview.sh
++-rwxr-xr-x   0        0        0      101 2023-04-07 10:44:07.428468 timerdo-0.0.3/scripts/docs_publish.sh
++-rwxr-xr-x   0        0        0      240 2023-04-07 10:44:07.428468 timerdo-0.0.3/scripts/format.sh
++-rwxr-xr-x   0        0        0      110 2023-04-07 10:44:07.428468 timerdo-0.0.3/scripts/publish.sh
++-rwxr-xr-x   0        0        0      246 2023-04-07 10:44:07.428468 timerdo-0.0.3/scripts/tests.sh
++-rw-r--r--   0        0        0        0 2023-04-07 10:44:07.428468 timerdo-0.0.3/test/__init__.py
++-rw-r--r--   0        0        0     1128 2023-04-07 10:44:07.428468 timerdo-0.0.3/test/conftest.py
++-rw-r--r--   0        0        0     6115 2023-04-07 10:44:07.428468 timerdo-0.0.3/test/test_core.py
++-rw-r--r--   0        0        0     1486 2023-04-07 10:44:07.428468 timerdo-0.0.3/test/test_main.py
++-rw-r--r--   0        0        0      100 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/__init__.py
++-rw-r--r--   0        0        0      926 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/config.py
++-rw-r--r--   0        0        0     6128 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/core.py
++-rw-r--r--   0        0        0     1075 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/database.py
++-rw-r--r--   0        0        0      630 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/exceptions.py
++-rw-r--r--   0        0        0     3902 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/main.py
++-rw-r--r--   0        0        0     1681 2023-04-07 10:44:07.428468 timerdo-0.0.3/timerdo/models.py
++-rw-r--r--   0        0        0     2695 1970-01-01 00:00:00.000000 timerdo-0.0.3/PKG-INFO
+```
+

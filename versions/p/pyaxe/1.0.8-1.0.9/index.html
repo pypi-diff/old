@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/PyAxe-1.0.8-py3-none-any.whl.zip tmp/PyAxe-1.0.9-py3-none-any.whl.zip --html versions/p/pyaxe/1.0.8-1.0.9/index.html --text versions/p/pyaxe/1.0.8-1.0.9/diff.txt --markdown versions/p/pyaxe/1.0.8-1.0.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.83 KB</span></div>
+  <div><span class="source">tmp/PyAxe-1.0.8-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/PyAxe-1.0.9-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">2.9 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>40<del>877</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>33</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>40<ins>923</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>33</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3156<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-17<span class="dp">·</span>01:39<span class="dp">·</span>PyAxe/ACMake.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3156<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-17<span class="dp">·</span>01:39<span class="dp">·</span>PyAxe/ACMake.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/ACollection.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/ACollection.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1388<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Nov-10<span class="dp">·</span>01:38<span class="dp">·</span>PyAxe/ACommandLineTool.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1388<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Nov-10<span class="dp">·</span>01:38<span class="dp">·</span>PyAxe/ACommandLineTool.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2235<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/ACompress.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2235<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/ACompress.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>216<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/ACore.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>216<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/ACore.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>527<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/ADebug.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>527<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/ADebug.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4809<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AElementTree.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4809<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AElementTree.py</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 21 lines modified</td><td colspan="2">Offset 15, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1974<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AJenkins.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1974<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AJenkins.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8564<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-24<span class="dp">·</span>06:23<span class="dp">·</span>PyAxe/ALog.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8564<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-24<span class="dp">·</span>06:23<span class="dp">·</span>PyAxe/ALog.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4222<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AMySQL.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4222<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AMySQL.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1245<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Feb-09<span class="dp">·</span>11:24<span class="dp">·</span>PyAxe/ANet.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1245<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Feb-09<span class="dp">·</span>11:24<span class="dp">·</span>PyAxe/ANet.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18276<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Feb-13<span class="dp">·</span>11:57<span class="dp">·</span>PyAxe/AOS.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18276<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Feb-13<span class="dp">·</span>11:57<span class="dp">·</span>PyAxe/AOS.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1835<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/APyInstaller.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1835<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/APyInstaller.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1458<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/AStr.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1458<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/AStr.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>734</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>1<del>8</del>-<del>Nov</del>-<del>10</del><span class="dp">·</span>0<del>1</del>:3<del>8</del><span class="dp">·</span>PyAxe/ASVN.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>853</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>1<ins>9</ins>-<ins>Jun</ins>-<ins>26</ins><span class="dp">·</span>0<ins>9</ins>:3<ins>4</ins><span class="dp">·</span>PyAxe/ASVN.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4519<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/ATab.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4519<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/ATab.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7474<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/AUtil.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7474<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Apr-29<span class="dp">·</span>03:17<span class="dp">·</span>PyAxe/AUtil.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3027<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AVEnv.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3027<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>17-Nov-19<span class="dp">·</span>04:04<span class="dp">·</span>PyAxe/AVEnv.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1482<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Mar-24<span class="dp">·</span>01:53<span class="dp">·</span>PyAxe/AVS.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1482<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Mar-24<span class="dp">·</span>01:53<span class="dp">·</span>PyAxe/AVS.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8159<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Nov-10<span class="dp">·</span>01:38<span class="dp">·</span>PyAxe/AWorkbook.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8159<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>18-Nov-10<span class="dp">·</span>01:38<span class="dp">·</span>PyAxe/AWorkbook.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>437<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>26</del><span class="dp">·</span>PyAxe/__init__.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>437<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>34</ins><span class="dp">·</span>PyAxe/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>27</del><span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/DESCRIPTION.rst</td><td class="diffline">29 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>36</ins><span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/DESCRIPTION.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>622<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>27</del><span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/metadata.json</td><td class="diffline">30 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>622<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>36</ins><span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/metadata.json</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>27</del><span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/top_level.txt</td><td class="diffline">31 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>36</ins><span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>97<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>27</del><span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/WHEEL</td><td class="diffline">32 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>97<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>36</ins><span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>582<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>27</del><span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/METADATA</td><td class="diffline">33 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>582<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>36</ins><span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2453<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<del>4</del><span class="dp">·</span>0<del>6</del>:<del>27</del><span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/RECORD</td><td class="diffline">34 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>fat<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2453<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>19-Jun-2<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>36</ins><span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">33<span class="dp">·</span>files,<span class="dp">·</span>115<del>040</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>371<del>33</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>67.7%</td><td class="diffline">35 </td><td class="diffpresent">33<span class="dp">·</span>files,<span class="dp">·</span>115<ins>159</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>371<ins>79</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>67.7%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">753 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 75, 26 lines modified</td><td colspan="2">Offset 75, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe/AWorkbook.py</td><td class="diffline">75 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe/AWorkbook.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">76 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe/__init__.py</td><td class="diffline">77 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">78 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">79 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/DESCRIPTION.rst</td><td class="diffline">79 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/DESCRIPTION.rst</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">80 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">81 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/metadata.json</td><td class="diffline">81 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/metadata.json</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">82 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">83 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/top_level.txt</td><td class="diffline">83 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">84 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">85 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/WHEEL</td><td class="diffline">85 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">86 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">87 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/METADATA</td><td class="diffline">87 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">88 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">89 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<del>8</del>.dist-info/RECORD</td><td class="diffline">89 </td><td class="diffpresent">Filename:<span class="dp">·</span>PyAxe-1.0.<ins>9</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">90 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">91 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">745 B</span></div>
+    <div id="PyAxe-ASVN.py"><span class="source">PyAxe/ASVN.py</span>
+      <a class="anchor" href="#PyAxe-ASVN.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 124, 14 lines modified</td><td colspan="2">Offset 124, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">124 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret<span class="dp">·</span>=<span class="dp">·</span>{}<em>\xd</em></td><td class="diffline">124 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret<span class="dp">·</span>=<span class="dp">·</span>{}<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">125 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;#kind&#x27;]<span class="dp">·</span>=<span class="dp">·</span>entryNode.attrib[&#x27;kind&#x27;]<em>\xd</em></td><td class="diffline">125 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;#kind&#x27;]<span class="dp">·</span>=<span class="dp">·</span>entryNode.attrib[&#x27;kind&#x27;]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">126 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;#path&#x27;]<span class="dp">·</span>=<span class="dp">·</span>entryNode.attrib[&#x27;path&#x27;]<em>\xd</em></td><td class="diffline">126 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;#path&#x27;]<span class="dp">·</span>=<span class="dp">·</span>entryNode.attrib[&#x27;path&#x27;]<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">127 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;#revision&#x27;]<span class="dp">·</span>=<span class="dp">·</span>int(entryNode.attrib[&#x27;revision&#x27;])<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>整个工作拷贝的版本号<em>\xd</em></td><td class="diffline">127 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;#revision&#x27;]<span class="dp">·</span>=<span class="dp">·</span>int(entryNode.attrib[&#x27;revision&#x27;])<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>整个工作拷贝的版本号<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">128 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;url&#x27;]<span class="dp">·</span>=<span class="dp">·</span>entryNode.find(&#x27;url&#x27;).text<em>\xd</em></td><td class="diffline">128 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;url&#x27;]<span class="dp">·</span>=<span class="dp">·</span>entryNode.find(&#x27;url&#x27;).text<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">129 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">129 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">130 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repoNode<span class="dp">·</span>=<span class="dp">·</span>entryNode.find(&#x27;repo&#x27;)<em>\xd</em></td><td class="diffline">130 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repoNode<span class="dp">·</span>=<span class="dp">·</span>entryNode.find(&#x27;repo&#x27;)<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">131 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>repoNode<span class="dp">·</span>is<span class="dp">·</span>None:<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">132 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>entryNode.find(&#x27;repository&#x27;)<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>for<span class="dp">·</span>compatible<span class="dp">·</span>with<span class="dp">·</span>old<span class="dp">·</span>svn<span class="dp">·</span>version<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>v1.7.14<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">131 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo<span class="dp">·</span>=<span class="dp">·</span>{}<em>\xd</em></td><td class="diffline">133 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo<span class="dp">·</span>=<span class="dp">·</span>{}<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">132 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;repo&#x27;]<span class="dp">·</span>=<span class="dp">·</span>repo<em>\xd</em></td><td class="diffline">134 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ret[&#x27;repo&#x27;]<span class="dp">·</span>=<span class="dp">·</span>repo<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">133 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo[&#x27;root&#x27;]<span class="dp">·</span>=<span class="dp">·</span>repoNode.find(&#x27;root&#x27;).text<em>\xd</em></td><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo[&#x27;root&#x27;]<span class="dp">·</span>=<span class="dp">·</span>repoNode.find(&#x27;root&#x27;).text<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">134 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo[&#x27;uuid&#x27;]<span class="dp">·</span>=<span class="dp">·</span>repoNode.find(&#x27;uuid&#x27;).text<em>\xd</em></td><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo[&#x27;uuid&#x27;]<span class="dp">·</span>=<span class="dp">·</span>repoNode.find(&#x27;uuid&#x27;).text<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">135 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">137 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>relativeURLNode<span class="dp">·</span>=<span class="dp">·</span>entryNode.find(&#x27;relative-url&#x27;)<em>\xd</em></td><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>relativeURLNode<span class="dp">·</span>=<span class="dp">·</span>entryNode.find(&#x27;relative-url&#x27;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">137 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>relativeURLNode<span class="dp">·</span>is<span class="dp">·</span>None:<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>relative-url<span class="dp">·</span>not<span class="dp">·</span>supported<span class="dp">·</span>by<span class="dp">·</span>svn<span class="dp">·</span>1.7.14(installed<span class="dp">·</span>by<span class="dp">·</span>yum<span class="dp">·</span>in<span class="dp">·</span>CentOS-7)<em>\xd</em></td><td class="diffline">139 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>relativeURLNode<span class="dp">·</span>is<span class="dp">·</span>None:<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>relative-url<span class="dp">·</span>not<span class="dp">·</span>supported<span class="dp">·</span>by<span class="dp">·</span>svn<span class="dp">·</span>1.7.14(installed<span class="dp">·</span>by<span class="dp">·</span>yum<span class="dp">·</span>in<span class="dp">·</span>CentOS-7)<em>\xd</em></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">225 B</span></div>
+    <div id="PyAxe-__init__.py"><span class="source">PyAxe/__init__.py</span>
+      <a class="anchor" href="#PyAxe-__init__.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 8 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;1.0.<del>8</del>&#x27;<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;1.0.<ins>9</ins>&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACMake&#x27;,<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACMake&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACollection&#x27;,<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACollection&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACommandLineTool&#x27;,<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACommandLineTool&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACompress&#x27;,<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACompress&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACore&#x27;,<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ACore&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ADebug&#x27;,<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;ADebug&#x27;,<em>\xd</em></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">481 B</span></div>
+    <div><span class="source">PyAxe-1.0.8.dist-info/metadata.json</span> vs.</div>
+    <div id="PyAxe--.-.-.dist-info-metadata.json"><span class="source">PyAxe-1.0.9.dist-info/metadata.json</span>
+      <a class="anchor" href="#PyAxe--.-.-.dist-info-metadata.json">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">371 B</span></div>
+      <div id="PyAxe--.-.-.dist-info-metadata.json---Pretty-printed"><span class="source">Pretty-printed</span>
+        <a class="anchor" href="#PyAxe--.-.-.dist-info-metadata.json---Pretty-printed">¶</a>
+      </div>
+      </div>
+      <div class="comment multiline">Similarity: 0.9285714285714286%
+Differences: {&quot;&#x27;version&#x27;&quot;: &quot;&#x27;1.0.9&#x27;&quot;}
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 23, 9 lines modified</td><td colspan="2">Offset 23, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;generator&quot;:<span class="dp">·</span>&quot;bdist_wheel<span class="dp">·</span>(0.29.0)&quot;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;generator&quot;:<span class="dp">·</span>&quot;bdist_wheel<span class="dp">·</span>(0.29.0)&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;metadata_version&quot;:<span class="dp">·</span>&quot;2.0&quot;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;metadata_version&quot;:<span class="dp">·</span>&quot;2.0&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;name&quot;:<span class="dp">·</span>&quot;PyAxe&quot;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;name&quot;:<span class="dp">·</span>&quot;PyAxe&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;summary&quot;:<span class="dp">·</span>&quot;An<span class="dp">·</span>utility<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>building<span class="dp">·</span>command-line<span class="dp">·</span>tool<span class="dp">·</span>easily&quot;,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;summary&quot;:<span class="dp">·</span>&quot;An<span class="dp">·</span>utility<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>building<span class="dp">·</span>command-line<span class="dp">·</span>tool<span class="dp">·</span>easily&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;version&quot;:<span class="dp">·</span>&quot;1.0.<del>8</del>&quot;</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;version&quot;:<span class="dp">·</span>&quot;1.0.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">}</td><td class="diffline">31 </td><td class="diffpresent">}</td></tr>
+</table>    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">439 B</span></div>
+    <div><span class="source">PyAxe-1.0.8.dist-info/METADATA</span> vs.</div>
+    <div id="PyAxe--.-.-.dist-info-METADATA"><span class="source">PyAxe-1.0.9.dist-info/METADATA</span>
+      <a class="anchor" href="#PyAxe--.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 1% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.0</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>PyAxe</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>PyAxe</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.0.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>An<span class="dp">·</span>utility<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>building<span class="dp">·</span>command-line<span class="dp">·</span>tool<span class="dp">·</span>easily</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>An<span class="dp">·</span>utility<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>building<span class="dp">·</span>command-line<span class="dp">·</span>tool<span class="dp">·</span>easily</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/sunjinopensource/PyAxe/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/sunjinopensource/PyAxe/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sun<span class="dp">·</span>Jin</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sun<span class="dp">·</span>Jin</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>412640665@qq.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>412640665@qq.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.28 KB</span></div>
+    <div><span class="source">PyAxe-1.0.8.dist-info/RECORD</span> vs.</div>
+    <div id="PyAxe--.-.-.dist-info-RECORD"><span class="source">PyAxe-1.0.9.dist-info/RECORD</span>
+      <a class="anchor" href="#PyAxe--.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 18% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 13, 21 lines modified</td><td colspan="2">Offset 13, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">PyAxe/AINI.py,sha256=8CR777EQwZmqvwNfVgpeg8jb3gRs18Rb_m_746SRjHY,6673<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">PyAxe/AINI.py,sha256=8CR777EQwZmqvwNfVgpeg8jb3gRs18Rb_m_746SRjHY,6673<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">PyAxe/AJenkins.py,sha256=fBSQH-eLM-UeVnpYFi0r6m1IO1qA2qVYh9K8aOpZgc0,1974<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent">PyAxe/AJenkins.py,sha256=fBSQH-eLM-UeVnpYFi0r6m1IO1qA2qVYh9K8aOpZgc0,1974<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">PyAxe/ALog.py,sha256=Igsj1W8AhvxPPdhH2bgR6nL-Qt0uNQt3ESZRFnMLTjw,8564<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent">PyAxe/ALog.py,sha256=Igsj1W8AhvxPPdhH2bgR6nL-Qt0uNQt3ESZRFnMLTjw,8564<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">PyAxe/AMySQL.py,sha256=QRqB_bEB6mHqOv1CJYrg1v6SfmTdHTMXA-eW8J2eK6Q,4222<em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent">PyAxe/AMySQL.py,sha256=QRqB_bEB6mHqOv1CJYrg1v6SfmTdHTMXA-eW8J2eK6Q,4222<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">PyAxe/ANet.py,sha256=ExwjDGANt1OKoCUX0vawM7EVvWtUURDPTKEVRZZS0ss,1245<em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent">PyAxe/ANet.py,sha256=ExwjDGANt1OKoCUX0vawM7EVvWtUURDPTKEVRZZS0ss,1245<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">PyAxe/AOS.py,sha256=GjC9jcXQMHa0HF8Moc-KPCAK1NInsC7CZdApisuoEYI,18276<em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent">PyAxe/AOS.py,sha256=GjC9jcXQMHa0HF8Moc-KPCAK1NInsC7CZdApisuoEYI,18276<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">PyAxe/APyInstaller.py,sha256=mU1Bh0NKiQuNKsSbtNert0f3MXxmaZLLQc4ESJOtmhY,1835<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent">PyAxe/APyInstaller.py,sha256=mU1Bh0NKiQuNKsSbtNert0f3MXxmaZLLQc4ESJOtmhY,1835<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">PyAxe/ASVN.py,sha256=<del>mKwTJFc6KF6ofLsWX3kFS263LvDT5J</del>N<del>ZALnkwpbH</del>0<del>-</del><del>4</del>,13<del>734</del><em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent">PyAxe/ASVN.py,sha256=<ins>z</ins><ins>xXQpClpSTrdLh8f1YPTRdQlU0LXWw4</ins>N<ins>Ex0jxjXTz</ins>0<ins>U</ins>,13<ins>853</ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">PyAxe/AStr.py,sha256=XcItaFx16MxE0c5wb3XYzqzsqx5aKIJArjaky6nH2No,1458<em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent">PyAxe/AStr.py,sha256=XcItaFx16MxE0c5wb3XYzqzsqx5aKIJArjaky6nH2No,1458<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">PyAxe/ATab.py,sha256=CNCxT40JlxJwUdSb2Ey69tJqnZ5nDDakxklm9ED4mCw,4519<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent">PyAxe/ATab.py,sha256=CNCxT40JlxJwUdSb2Ey69tJqnZ5nDDakxklm9ED4mCw,4519<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">PyAxe/AUtil.py,sha256=kkb8RedifW5H4McPz3OXuP2EcdfssBfGkp5sEzuPC0U,7474<em>\xd</em></td><td class="diffline">23 </td><td class="diffpresent">PyAxe/AUtil.py,sha256=kkb8RedifW5H4McPz3OXuP2EcdfssBfGkp5sEzuPC0U,7474<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">PyAxe/AVEnv.py,sha256=FNpSToFSmkS2DW9lH-PH4JjVlpE5c24L1vRG2bfHtj8,3027<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent">PyAxe/AVEnv.py,sha256=FNpSToFSmkS2DW9lH-PH4JjVlpE5c24L1vRG2bfHtj8,3027<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">PyAxe/AVS.py,sha256=BQ8NrIA960rfEZA26t5IU3JYcbDgMTzmaIikNfmCPLs,1482<em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent">PyAxe/AVS.py,sha256=BQ8NrIA960rfEZA26t5IU3JYcbDgMTzmaIikNfmCPLs,1482<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">PyAxe/AWorkbook.py,sha256=fewUu37DyP2xPMleoX2GZr_O97yuP6D06gBsMKjssOU,8159<em>\xd</em></td><td class="diffline">26 </td><td class="diffpresent">PyAxe/AWorkbook.py,sha256=fewUu37DyP2xPMleoX2GZr_O97yuP6D06gBsMKjssOU,8159<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">PyAxe/__init__.py,sha256=<del>N</del><del>5HAmTT</del>j<del>ebm-</del>4<del>SJbLPXuVlhURbWFij8eEAGRKwVq4RM</del>,437<em>\xd</em></td><td class="diffline">27 </td><td class="diffpresent">PyAxe/__init__.py,sha256=<ins>rt6Bjc</ins>j<ins>_MX4</ins>4<ins>q</ins><ins>l95SKOpcgZNOEVMYRriUUpNqmg-6rY</ins>,437<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">PyAxe-1.0.<del>8</del>.dist-info/DESCRIPTION.rst,sha256=iUnWNZRUgK-V6c2TCJ6KQ3G2mKsQdhaCJe0Hb7c3xW4,96<em>\xd</em></td><td class="diffline">28 </td><td class="diffpresent">PyAxe-1.0.<ins>9</ins>.dist-info/DESCRIPTION.rst,sha256=iUnWNZRUgK-V6c2TCJ6KQ3G2mKsQdhaCJe0Hb7c3xW4,96<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">PyAxe-1.0.<del>8</del>.dist-info/METADATA,sha256=<del>O6LPn_CQmuhF6nLFcEHNcu6XXX0CnRxa54PhQsHeLI8</del>,582<em>\xd</em></td><td class="diffline">29 </td><td class="diffpresent">PyAxe-1.0.<ins>9</ins>.dist-info/METADATA,sha256=<ins>iR3OOpZ9sBM9beXqmjTvNS4egORxxMA7cXBkHBxxat0</ins>,582<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">PyAxe-1.0.<del>8</del>.dist-info/RECORD,,<em>\xd</em></td><td class="diffline">30 </td><td class="diffpresent">PyAxe-1.0.<ins>9</ins>.dist-info/RECORD,,<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">PyAxe-1.0.<del>8</del>.dist-info/WHEEL,sha256=Ds0ba8WsPJtjBPzEMyPOBG3qfPa6B4mlzB-vhzorIZs,97<em>\xd</em></td><td class="diffline">31 </td><td class="diffpresent">PyAxe-1.0.<ins>9</ins>.dist-info/WHEEL,sha256=Ds0ba8WsPJtjBPzEMyPOBG3qfPa6B4mlzB-vhzorIZs,97<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">PyAxe-1.0.<del>8</del>.dist-info/metadata.json,sha256=<del>oSEnk1</del>Z<del>rh9AWD-qEAP7dc9bSdc3aHAsV1oMGylTEHro</del>,622<em>\xd</em></td><td class="diffline">32 </td><td class="diffpresent">PyAxe-1.0.<ins>9</ins>.dist-info/metadata.json,sha256=<ins>Lvi51V</ins>Z<ins>IKe_2g3TuflEyKHJQ-NqDZ7jYGE3ZYsDfi1Q</ins>,622<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">PyAxe-1.0.<del>8</del>.dist-info/top_level.txt,sha256=SsECRZ6LQP-RgS0yjumVDqO1gwDvdS1pWoXwfm09uaE,6<em>\xd</em></td><td class="diffline">33 </td><td class="diffpresent">PyAxe-1.0.<ins>9</ins>.dist-info/top_level.txt,sha256=SsECRZ6LQP-RgS0yjumVDqO1gwDvdS1pWoXwfm09uaE,6<em>\xd</em></td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

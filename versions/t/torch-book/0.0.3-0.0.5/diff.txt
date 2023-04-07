@@ -1,0 +1,649 @@
+--- tmp/torch-book-0.0.3.tar.gz
++++ tmp/torch-book-0.0.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "torch-book-0.0.3.tar", last modified: Wed Nov  9 06:34:59 2022, max compression
+│ +gzip compressed data, was "torch-book-0.0.5.tar", last modified: Fri Apr  7 10:41:14 2023, max compression
+│   --- torch-book-0.0.3.tar
+├── +++ torch-book-0.0.5.tar
+│ ├── file list
+│ │ @@ -1,41 +1,42 @@
+│ │ --rw-r--r--   0        0        0    11357 2022-11-09 06:34:50.776788 torch-book-0.0.3/LICENSE
+│ │ --rw-r--r--   0        0        0     2458 2022-11-09 06:34:50.776788 torch-book-0.0.3/README.md
+│ │ --rw-r--r--   0        0        0     1300 2022-11-09 06:34:50.804789 torch-book-0.0.3/pyproject.toml
+│ │ --rw-r--r--   0        0        0       51 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/__init__.py
+│ │ --rw-r--r--   0        0        0    28711 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/_block.py
+│ │ --rw-r--r--   0        0        0     2800 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/_model.py
+│ │ --rw-r--r--   0        0        0     8660 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/_xinet.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/backend/__init__.py
+│ │ --rw-r--r--   0        0        0      533 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/backend/gpu.py
+│ │ --rw-r--r--   0        0        0     4177 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/classifier.py
+│ │ --rw-r--r--   0        0        0       17 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/contrib/__init__.py
+│ │ --rw-r--r--   0        0        0     4570 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/contrib/helper.py
+│ │ --rw-r--r--   0        0        0      318 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/contrib/model.py
+│ │ --rw-r--r--   0        0        0     3300 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/contrib/tools.py
+│ │ --rw-r--r--   0        0        0     1741 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/contrib/tvmc.py
+│ │ --rw-r--r--   0        0        0     2414 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/contrib/vtac.py
+│ │ --rw-r--r--   0        0        0       30 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/__init__.py
+│ │ --rw-r--r--   0        0        0     1362 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/image.py
+│ │ --rw-r--r--   0        0        0     1892 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/imagenet.py
+│ │ --rw-r--r--   0        0        0     1681 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/imdb.py
+│ │ --rw-r--r--   0        0        0     2804 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/mnt.py
+│ │ --rw-r--r--   0        0        0     5438 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/ptd.py
+│ │ --rw-r--r--   0        0        0     3016 2022-11-09 06:34:50.804789 torch-book-0.0.3/src/torch_book/data/simple_data.py
+│ │ --rw-r--r--   0        0        0     4461 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/data/simple_vision.py
+│ │ --rw-r--r--   0        0        0     3690 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/data/snli.py
+│ │ --rw-r--r--   0        0        0     4617 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/data/voc.py
+│ │ --rw-r--r--   0        0        0     3488 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/data/vocab.py
+│ │ --rw-r--r--   0        0        0     8394 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/data/wiki.py
+│ │ --rw-r--r--   0        0        0     4251 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/loader.py
+│ │ --rw-r--r--   0        0        0     2388 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/model.py
+│ │ --rw-r--r--   0        0        0     4408 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/optim.py
+│ │ --rw-r--r--   0        0        0     9036 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/plotx.py
+│ │ --rw-r--r--   0        0        0     1443 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/runner.py
+│ │ --rw-r--r--   0        0        0     5179 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/seq2seq.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/testing/__init__.py
+│ │ --rw-r--r--   0        0        0     2162 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/testing/linear.py
+│ │ --rw-r--r--   0        0        0      372 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/text.py
+│ │ --rw-r--r--   0        0        0     1206 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/tvm/imagenet.py
+│ │ --rw-r--r--   0        0        0    13507 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/utils.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-09 06:34:50.808789 torch-book-0.0.3/src/torch_book/vision/__init__.py
+│ │ --rw-r--r--   0        0        0     4095 1970-01-01 00:00:00.000000 torch-book-0.0.3/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    11357 2023-03-13 07:28:08.212810 torch-book-0.0.5/LICENSE
+│ │ +-rw-r--r--   0        0        0     2767 2023-03-13 07:28:08.212810 torch-book-0.0.5/README.md
+│ │ +-rw-r--r--   0        0        0     1350 2023-03-25 04:13:22.072384 torch-book-0.0.5/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       51 2023-03-28 04:28:32.622802 torch-book-0.0.5/src/torch_book/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/backend/__init__.py
+│ │ +-rw-r--r--   0        0        0      533 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/backend/gpu.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-30 09:18:19.307000 torch-book-0.0.5/src/torch_book/datasets/__init__.py
+│ │ +-rw-r--r--   0        0        0     1408 2023-03-30 09:20:35.086943 torch-book-0.0.5/src/torch_book/datasets/imagenet.py
+│ │ +-rw-r--r--   0        0        0     3960 2023-04-07 10:26:53.002386 torch-book-0.0.5/src/torch_book/datasets/simple_vision.py
+│ │ +-rw-r--r--   0        0        0       48 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/plotx/__init__.py
+│ │ +-rw-r--r--   0        0        0     2742 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/plotx/bbox.py
+│ │ +-rw-r--r--   0        0        0     2299 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/plotx/boardx.py
+│ │ +-rw-r--r--   0        0        0     4354 2023-03-20 07:39:52.481448 torch-book-0.0.5/src/torch_book/plotx/utils.py
+│ │ +-rw-r--r--   0        0        0      232 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     1908 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/convertor.py
+│ │ +-rw-r--r--   0        0        0     6194 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/det_utils.py
+│ │ +-rw-r--r--   0        0        0     7011 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/loader.py
+│ │ +-rw-r--r--   0        0        0       70 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/metrics/__init__.py
+│ │ +-rw-r--r--   0        0        0    39380 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/metrics/mAP.py
+│ │ +-rw-r--r--   0        0        0      928 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/metrics/main.py
+│ │ +-rw-r--r--   0        0        0     6918 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/parser.py
+│ │ +-rw-r--r--   0        0        0       75 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/plot/__init__.py
+│ │ +-rw-r--r--   0        0        0     2080 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/plot/board.py
+│ │ +-rw-r--r--   0        0        0     2691 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/preprocesser/README.md
+│ │ +-rw-r--r--   0        0        0     5188 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/preprocesser/coco_process.py
+│ │ +-rw-r--r--   0        0        0      108 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/preprocesser/download.sh
+│ │ +-rw-r--r--   0        0        0     4204 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/preprocesser/gen_det_labels.py
+│ │ +-rw-r--r--   0        0        0     2580 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/preprocesser/inria_process.py
+│ │ +-rw-r--r--   0        0        0       27 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/solver/__init__.py
+│ │ +-rw-r--r--   0        0        0     3459 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/solver/loss.py
+│ │ +-rw-r--r--   0        0        0      794 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/solver/lr_decay.py
+│ │ +-rw-r--r--   0        0        0     4141 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/solver/lr_scheduler.py
+│ │ +-rw-r--r--   0        0        0     4101 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/transformer.py
+│ │ +-rw-r--r--   0        0        0     2172 2023-03-13 07:28:08.208810 torch-book-0.0.5/src/torch_book/utils/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/__init__.py
+│ │ +-rw-r--r--   0        0        0     5844 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/_classifier2.py
+│ │ +-rw-r--r--   0        0        0     4059 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/_model.py
+│ │ +-rw-r--r--   0        0        0     5238 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/classifier.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/model.py
+│ │ +-rw-r--r--   0        0        0     3245 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/optim.py
+│ │ +-rw-r--r--   0        0        0      729 2023-03-13 07:28:08.212810 torch-book-0.0.5/src/torch_book/vision/utils.py
+│ │ +-rw-r--r--   0        0        0     4508 1970-01-01 00:00:00.000000 torch-book-0.0.5/PKG-INFO
+│ │   --- torch-book-0.0.3/LICENSE
+│ ├── +++ torch-book-0.0.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- torch-book-0.0.3/README.md
+│ ├── +++ torch-book-0.0.5/README.md
+│ │┄ Files 7% similar despite different names
+│ │ @@ -10,17 +10,20 @@
+│ │  [![Binder][binder-badge]][binder-link]
+│ │  [![Downloads][download-badge]][download-link]
+│ │  [![Documentation Status][status-badge]][status-link]
+│ │  [![PyPI - Downloads][install-badge]][install-link]
+│ │  ![repo size](https://img.shields.io/github/repo-size/xinetzone/torch-book.svg)
+│ │  [![Downloads Week](https://pepy.tech/badge/torch-book/week)](https://pepy.tech/project/torch-book)
+│ │  [![Documentation Status][rtd-badge]][rtd-link]
+│ │ +[![Upload Python Package][upload-python-package-badge]][upload-python-package-link]
+│ │  
+│ │  Torch 手册。
+│ │  
+│ │ +[upload-python-package-badge]: https://github.com/xinetzone/torch-book/actions/workflows/python-publish.yml/badge.svg
+│ │ +[upload-python-package-link]: https://github.com/xinetzone/torch-book/actions/workflows/python-publish.yml
+│ │  [pypi-badge]: https://img.shields.io/pypi/v/torch-book.svg
+│ │  [pypi-link]: https://pypi.org/project/torch-book/
+│ │  [issue-badge]: https://img.shields.io/github/issues/xinetzone/torch-book
+│ │  [issue-link]: https://github.com/xinetzone/torch-book/issues
+│ │  [fork-badge]: https://img.shields.io/github/forks/xinetzone/torch-book
+│ │  [fork-link]: https://github.com/xinetzone/torch-book/network
+│ │  [star-badge]: https://img.shields.io/github/stars/xinetzone/torch-book
+│ │   --- torch-book-0.0.3/pyproject.toml
+│ ├── +++ torch-book-0.0.5/pyproject.toml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  
+│ │  [project]
+│ │  authors = [{name = "xinetzone", email = "735613050@qq.com"}]
+│ │  dynamic = ["version", "description"]
+│ │  license = {file = "LICENSE"}
+│ │  name = "torch-book"
+│ │  readme = "README.md"
+│ │ -requires-python = ">=3.8"
+│ │ +requires-python = ">=3.10"
+│ │  
+│ │  dependencies = [
+│ │    "d2py"
+│ │  ]
+│ │  
+│ │  maintainers = [
+│ │    {name = "xinetzone", email = "735613050@qq.com"},
+│ │ @@ -38,15 +38,17 @@
+│ │    "sphinx-copybutton",
+│ │    "sphinxcontrib-mermaid",
+│ │    "sphinx-design",
+│ │    "sphinxcontrib-bibtex",
+│ │    "sphinx-thebe",
+│ │    "sphinx-comments",
+│ │    "matplotlib",
+│ │ -  "sphinx-automodapi"
+│ │ +  "sphinx-automodapi",
+│ │ +  "sphinx-plotly-directive",
+│ │ +  "sphinx-sitemap"
+│ │  ]
+│ │  
+│ │  coverage = [
+│ │    "pytest-cov",
+│ │    "pytest-regressions",
+│ │    "codecov",
+│ │    "torch_book[test]",
+│ │   --- torch-book-0.0.3/src/torch_book/backend/gpu.py
+│ ├── +++ torch-book-0.0.5/src/torch_book/backend/gpu.py
+│ │┄ Files identical despite different names
+│ │   --- torch-book-0.0.3/src/torch_book/classifier.py
+│ ├── +++ torch-book-0.0.5/src/torch_book/vision/_classifier2.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │ +import torch
+│ │  from torch.nn import functional as F
+│ │ -from torch import float32, randn, no_grad, nn
+│ │  from .model import Module
+│ │ -from .runner import Accumulator
+│ │  
+│ │ +float32 = torch.float32
+│ │  numpy = lambda x, *args, **kwargs: x.detach().numpy(*args, **kwargs)
+│ │  size = lambda x, *args, **kwargs: x.numel(*args, **kwargs)
+│ │  reshape = lambda x, *args, **kwargs: x.reshape(*args, **kwargs)
+│ │  to = lambda x, *args, **kwargs: x.to(*args, **kwargs)
+│ │  reduce_sum = lambda x, *args, **kwargs: x.sum(*args, **kwargs)
+│ │  argmax = lambda x, *args, **kwargs: x.argmax(*args, **kwargs)
+│ │  astype = lambda x, *args, **kwargs: x.type(*args, **kwargs)
+│ │ @@ -60,32 +60,90 @@
+│ │  
+│ │      def loss(self, Y_hat, Y, averaged=True):
+│ │          Y_hat = reshape(Y_hat, (-1, Y_hat.shape[-1]))
+│ │          Y = reshape(Y, (-1,))
+│ │          return F.cross_entropy(Y_hat, Y, 
+│ │                                 reduction='mean' if averaged else 'none')
+│ │  
+│ │ -    def layer_summary(self, X_shape):
+│ │ -        X = randn(*X_shape)
+│ │ -        for layer in self.net:
+│ │ -            X = layer(X)
+│ │ -            print(layer.__class__.__name__, 'output shape:\t', X.shape)
+│ │ -            
+│ │ -    def evaluate_accuracy(self, data_iter, device=None):
+│ │ -        """计算模型在数据集上的精度"""
+│ │ -        if isinstance(self, nn.Module):
+│ │ -            self.eval()  # 设置为评估模式
+│ │ -            if not device:
+│ │ -                device = next(iter(self.parameters())).device
+│ │ -        # 正确预测的数量，总预测的数量
+│ │ -        metric = Accumulator(2)
+│ │ -        with no_grad():
+│ │ -            for X, y in data_iter:
+│ │ -                if isinstance(X, list):
+│ │ -                    # BERT 微调所需的
+│ │ -                    X = [x.to(device) for x in X]
+│ │ -                else:
+│ │ -                    X = X.to(device)
+│ │ -                y = y.to(device)
+│ │ -                metric.add(self.accuracy(self(X), y), y.numel())
+│ │ -        return metric[0] / metric[1]
+│ │ -
+│ │ +@dataclass
+│ │ +class Classifier2(ModelABC):
+│ │ +    mod: nn.Module
+│ │ +    device = d2l.try_gpu()
+│ │ +
+│ │ +    def __post_init__(self):
+│ │ +        #print('training on', self.device)
+│ │ +        # self.mod.apply(init_weights)
+│ │ +        self.mod.to(self.device)
+│ │ +
+│ │ +    def apply_init(self, inputs, init=None):
+│ │ +        self.forward(*inputs) # 用于延迟初始化
+│ │ +        if init is not None:
+│ │ +            self.mod.apply(init)
+│ │ +
+│ │ +    def train_step(self, *args, **kwargs):
+│ │ +        ...
+│ │ +
+│ │ +    def valid_step(self, *args, **kwargs):
+│ │ +        ...
+│ │ +
+│ │ +    def configure(self, params,
+│ │ +                  lr=0.00142857, # 0.9
+│ │ +                  momentum=0.857142,
+│ │ +                  weight_decay=0.00857142, **kwargs):
+│ │ +        opt_kwargs = {
+│ │ +            "lr": lr,
+│ │ +            "momentum": momentum,
+│ │ +            "weight_decay": weight_decay,
+│ │ +        }
+│ │ +        return SGD(params, **opt_kwargs)
+│ │ +
+│ │ +    def fit(self, model, data_iter, max_epochs):
+│ │ +        self.prepare_data(data_iter)
+│ │ +        self.prepare_model(model)
+│ │ +        self.optim = model.configure_optimizers()
+│ │ +        self.epoch = 0
+│ │ +        self.train_batch_idx = 0
+│ │ +        self.val_batch_idx = 0
+│ │ +        for self.epoch in range(max_epochs):
+│ │ +            self.fit_epoch()
+│ │ +
+│ │ +
+│ │ +    def fit_epoch(self):
+│ │ +        self.mod.train()
+│ │ +        for batch in self.train_dataloader:
+│ │ +            loss = self.mod.train_step(self.prepare_batch(batch))
+│ │ +            self.optim.zero_grad()
+│ │ +            with torch.no_grad():
+│ │ +                loss.backward()
+│ │ +                if self.gradient_clip_val > 0:  # To be discussed later
+│ │ +                    self.clip_gradients(self.gradient_clip_val, self.model)
+│ │ +                self.optim.step()
+│ │ +            self.train_batch_idx += 1
+│ │ +        if self.val_dataloader is None:
+│ │ +            return
+│ │ +        self.model.eval()
+│ │ +        for batch in self.val_dataloader:
+│ │ +            with torch.no_grad():
+│ │ +                self.model.validation_step(self.prepare_batch(batch))
+│ │ +            self.val_batch_idx += 1
+│ │ +
+│ │ +    def prepare_batch(self, batch):
+│ │ +        """Defined in :numref:`sec_use_gpu`"""
+│ │ +        if self.gpus:
+│ │ +            batch = [d2l.to(a, self.gpus[0]) for a in batch]
+│ │ +        return batch
+│ │ +    
+│ │ +
+│ │ +    def prepare_model(self, model):
+│ │ +        """Defined in :numref:`sec_use_gpu`"""
+│ │ +        model.trainer = self
+│ │ +        model.board.xlim = [0, self.max_epochs]
+│ │ +        if self.gpus:
+│ │ +            model.to(self.gpus[0])
+│ │ +        self.model = model
+│ │ +
+│ │ +    def clip_gradients(self, grad_clip_val, model):
+│ │ +        params = [p for p in model.parameters() if p.requires_grad]
+│ │ +        norm = torch.sqrt(sum(torch.sum((p.grad ** 2)) for p in params))
+│ │ +        if norm > grad_clip_val:
+│ │ +            for param in params:
+│ │ +                param.grad[:] *= grad_clip_val / norm
+│ │   --- torch-book-0.0.3/src/torch_book/data/imagenet.py
+│ ├── +++ torch-book-0.0.5/src/torch_book/datasets/imagenet.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,59 +1,40 @@
+│ │ +from __future__ import annotations
+│ │ +from dataclasses import dataclass
+│ │  from pathlib import Path
+│ │ -from torch.utils.data import RandomSampler, SequentialSampler, DataLoader
+│ │ +import torch
+│ │  from torchvision.datasets.folder import ImageFolder
+│ │  from torchvision import transforms
+│ │  
+│ │  
+│ │ -class Transforms:
+│ │ -    def __init__(self, size=224):
+│ │ -        self.size = size
+│ │ -        normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+│ │ -                                        std=[0.229, 0.224, 0.225])
+│ │ -        # normalize = transforms.Normalize(mean=[123.68, 116.779, 103.939],
+│ │ -        #                                  std=[58.393, 57.12, 57.375])
+│ │ -
+│ │ -        self.train = transforms.Compose([
+│ │ -            transforms.RandomResizedCrop(self.size),
+│ │ -            transforms.RandomHorizontalFlip(),
+│ │ -            transforms.ToTensor(),
+│ │ -            normalize,
+│ │ -        ])
+│ │ -
+│ │ -        self.test = transforms.Compose([
+│ │ -            transforms.Resize(256),
+│ │ -            transforms.CenterCrop(self.size),
+│ │ -            transforms.ToTensor(),
+│ │ -            normalize,
+│ │ -        ])
+│ │ -
+│ │ -
+│ │ +@dataclass
+│ │  class ImageNet:
+│ │ -    def __init__(self, root, size=224):
+│ │ -        self.root = Path(root)
+│ │ -        self.transforms = Transforms(size)
+│ │ +    root: str
+│ │ +
+│ │ +    def __post_init__(self):
+│ │ +        self.root = Path(self.root)
+│ │ +        self.normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+│ │ +                                              std=[0.229, 0.224, 0.225])
+│ │  
+│ │      @property
+│ │      def trainset(self):
+│ │ -        return ImageFolder(self.root/"train", self.transforms.train)
+│ │ +        return ImageFolder(self.root/"train", transform=transforms.Compose([
+│ │ +            transforms.RandomResizedCrop(224),
+│ │ +            transforms.RandomHorizontalFlip(),
+│ │ +            transforms.ToTensor(),
+│ │ +            self.normalize]))
+│ │  
+│ │      @property
+│ │      def testset(self):
+│ │ -        return ImageFolder(self.root/"val", self.transforms.test)
+│ │ +        return ImageFolder(self.root/"val", transform=transforms.Compose([
+│ │ +            transforms.Resize(256),
+│ │ +            transforms.CenterCrop(224),
+│ │ +            transforms.ToTensor(),
+│ │ +            self.normalize]))
+│ │  
+│ │ -    def split(self, dtype, batch_size):
+│ │ -        if dtype == "train":
+│ │ -            dataset = self.trainset
+│ │ -            sampler = RandomSampler(dataset)
+│ │ -        else:
+│ │ -            dataset = self.testset
+│ │ -            sampler = SequentialSampler(dataset)
+│ │ -        return DataLoader(dataset,
+│ │ -                          batch_size=batch_size,
+│ │ -                          sampler=sampler)
+│ │ -
+│ │ -
+│ │ -if __name__ == "__main__":
+│ │ -    root = "/media/pc/data/4tb/lxw/tests/datasets/ILSVRC"
+│ │ -    dataset = ImageNet(root)
+│ │ -    trainset = dataset.split("train", batch_size=30)
+│ │ -    valset = dataset.split("val", batch_size=50)
+│ │ +    def train_loader(self, batch_size):
+│ │ +        train_sampler = torch.utils.data.RandomSampler(self.trainset)
+│ │ +        return torch.utils.data.DataLoader(self.trainset, batch_size=batch_size, sampler=train_sampler)
+│ │ +
+│ │ +    def test_loader(self, batch_size):
+│ │ +        test_sampler = torch.utils.data.SequentialSampler(self.testset)
+│ │ +        return torch.utils.data.DataLoader(self.testset, batch_size=batch_size, sampler=test_sampler)
+│ │   --- torch-book-0.0.3/src/torch_book/data/simple_vision.py
+│ ├── +++ torch-book-0.0.5/src/torch_book/datasets/simple_vision.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,111 +1,106 @@
+│ │ +from dataclasses import dataclass
+│ │  import numpy as np
+│ │ +import torch
+│ │  from torch.utils.data import DataLoader
+│ │  from torchvision import transforms, datasets
+│ │ -from torch.utils.data import DataLoader
+│ │ -from ..utils import DataModule
+│ │ -from ..plotx import show_images
+│ │ -
+│ │ -_numpy = lambda x, *args, **kwargs: x.detach().numpy(*args, **kwargs)
+│ │ -
+│ │ -class SimpleVison(DataModule):
+│ │ -    def __init__(self, batch_size=64, resize=(32, 32)):
+│ │ -        super().__init__()
+│ │ -        self.save_hyperparameters()
+│ │ -        self.labels = [] # 需要重写
+│ │ -        trans = transforms.Compose([transforms.Resize(resize),
+│ │ -                                    transforms.ToTensor()])
+│ │ -        self.train = self._train(trans)
+│ │ -        self.val = self._val(trans)
+│ │ -        
+│ │ -    def _train(self, transform):
+│ │ -        NotImplemented
+│ │ -
+│ │ -    def _val(self, transform):
+│ │ -        NotImplemented
+│ │ -
+│ │ -    def get_dataloader(self, train):
+│ │ -        data = self.train if train else self.val
+│ │ -        return DataLoader(data, self.batch_size, shuffle=train,
+│ │ -                          num_workers=self.num_workers)
+│ │ -
+│ │ -    def text_labels(self, indices):
+│ │ -        """Return text labels."""
+│ │ -        return [self.labels[int(i)] for i in indices]
+│ │ -
+│ │ -class FashionMNIST(SimpleVison):
+│ │ -    def __init__(self, batch_size=64, resize=(28, 28)):
+│ │ -        super().__init__()
+│ │ -        self.save_hyperparameters()
+│ │ -        self.labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat',
+│ │ -                       'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
+│ │ -
+│ │ -    def _train(self, transform):
+│ │ -        return datasets.FashionMNIST(root=self.root, train=True,
+│ │ -                                     transform=transform, download=True)
+│ │ -
+│ │ -    def _val(self, transform):
+│ │ -        return datasets.FashionMNIST(root=self.root, train=False,
+│ │ -                                     transform=transform, download=True)
+│ │ -        
+│ │ -    def visualize(self, batch, nrows=1, ncols=8, labels=[]):
+│ │ -        X, y = batch
+│ │ -        if not labels:
+│ │ -            labels = self.text_labels(y)
+│ │ -        show_images(X.squeeze(1), nrows, ncols, titles=labels)
+│ │  
+│ │ +@dataclass
+│ │ +class Cutout:
+│ │ +    """随机遮挡图片的若干尺寸的若干块，尺寸和块可以根据自己的需要设置。
+│ │ +
+│ │ +    参考：https://github.com/uoguelph-mlrg/Cutout
+│ │ +    Args:
+│ │ +
+│ │ +        n_holes (int): Number of patches to cut out of each image.
+│ │ +        length (int): The length (in pixels) of each square patch.
+│ │ +    """
+│ │ +    n_holes: int
+│ │ +    length: int
+│ │ +
+│ │ +    def __call__(self, img):
+│ │ +        h = img.size(1)
+│ │ +        w = img.size(2)
+│ │ +
+│ │ +        mask = np.ones((h, w), np.float32)
+│ │ +
+│ │ +        for n in range(self.n_holes):
+│ │ +        	# (x,y)表示方形补丁的中心位置
+│ │ +            y = np.random.randint(h)
+│ │ +            x = np.random.randint(w)
+│ │ +            y1 = np.clip(y - self.length // 2, 0, h)
+│ │ +            y2 = np.clip(y + self.length // 2, 0, h)
+│ │ +            x1 = np.clip(x - self.length // 2, 0, w)
+│ │ +            x2 = np.clip(x + self.length // 2, 0, w)
+│ │ +
+│ │ +            mask[y1: y2, x1: x2] = 0.
+│ │ +
+│ │ +        mask = torch.from_numpy(mask)
+│ │ +        mask = mask.expand_as(img)
+│ │ +        img = img * mask
+│ │ +        return img
+│ │  
+│ │ -class Cifar10(SimpleVison):
+│ │ +@dataclass
+│ │ +class Cifar10:
+│ │      """Download the Cifar10 dataset and then load it into memory."""
+│ │ -
+│ │ -    def __init__(self, batch_size=64, resize=(32, 32)):
+│ │ -        super().__init__()
+│ │ -        self.save_hyperparameters()
+│ │ -        self.mean = [0.4914, 0.4822, 0.4465]
+│ │ -        self.std = [0.2023, 0.1994, 0.2010]
+│ │ -        self.labels = ['airplane','automobile',
+│ │ +    root: str = "../data"
+│ │ +    batch_size: int = 64
+│ │ +    num_workers: int = 4
+│ │ +
+│ │ +    def __post_init__(self):
+│ │ +        # self.mean = [0.4914, 0.4822, 0.4465]
+│ │ +        # self.std = [0.2023, 0.1994, 0.2010]
+│ │ +        self.mean = [0.485, 0.456, 0.406]
+│ │ +        self.std = [0.229, 0.224, 0.225]
+│ │ +        self.labels = ['airplane', 'automobile',
+│ │                         'bird', 'cat',
+│ │                         'deer', 'dog',
+│ │                         'frog', 'horse',
+│ │                         'ship', 'truck']
+│ │ -        normal_trans = [transforms.ToTensor(),
+│ │ -                        # 标准化(ImageNet)图像的每个通道
+│ │ -                        transforms.Normalize(self.mean, self.std)]
+│ │ -        trans = transforms.Compose([  # 在高度和宽度上将图像放大到40像素的正方形
+│ │ -            transforms.Resize(40),
+│ │ -            # 随机裁剪出一个高度和宽度均为40像素的正方形图像，
+│ │ -            # 生成一个面积为原始图像面积0.64到1倍的小正方形，
+│ │ -            # 然后将其缩放为高度和宽度均为32像素的正方形
+│ │ +        _trans = [transforms.ToTensor(),
+│ │ +                  # 标准化(ImageNet)图像的每个通道
+│ │ +                  transforms.Normalize(self.mean, self.std)]
+│ │ +
+│ │ +        self.test_form = transforms.Compose(_trans)
+│ │ +        self.train_form = transforms.Compose([
+│ │ +            transforms.RandomCrop(36, padding=16),  #先四周填充0，在吧图像随机裁剪成32*32
+│ │ +            # 随机裁剪出一个高度和宽度均为 upsample 像素的正方形图像，
+│ │ +            # 生成一个面积为原始图像面积 0.64 到 1 倍的小正方形，
+│ │ +            # 然后将其缩放为高度和宽度均为 32 像素的正方形
+│ │              transforms.RandomResizedCrop(32,
+│ │ -                                         scale=(
+│ │ -                                             0.64, 1.0),
+│ │ +                                         scale=(0.64, 1.0),
+│ │                                           ratio=(1.0, 1.0)),
+│ │ -            transforms.RandomHorizontalFlip(),
+│ │ -            *normal_trans])
+│ │ -        test_sform = transforms.Compose(normal_trans)
+│ │ -        self.train = self._train(trans)
+│ │ -        self.val = self._val(test_sform)
+│ │ +            transforms.RandomHorizontalFlip(), *_trans])
+│ │ +            # *_trans, Cutout(n_holes=1, length=16)])
+│ │  
+│ │ -    def _train(self, transform):
+│ │ +    def train(self):
+│ │          return datasets.CIFAR10(root=self.root, train=True,
+│ │ -                                transform=transform, download=True)
+│ │ +                                transform=self.train_form, download=True)
+│ │  
+│ │ -    def _val(self, transform):
+│ │ +    def val(self):
+│ │          return datasets.CIFAR10(root=self.root, train=False,
+│ │ -                                transform=transform, download=True)
+│ │ -        
+│ │ -    def to_images(self, inputs, channel_layout="first"):
+│ │ -        inputs = _numpy(inputs)
+│ │ -        if channel_layout == 'first':
+│ │ -            inputs = inputs.transpose(0, 2, 3, 1)
+│ │ -        mean, std = (np.array(x) for x in [self.mean, self.std])
+│ │ -        inputs = std * inputs + mean
+│ │ -        inputs = np.clip(inputs, 0, 1)
+│ │ -        return inputs
+│ │ -    
+│ │ -    def visualize(self, batch, nrows=1, ncols=8, 
+│ │ -                  channel_layout="first", labels=[]):
+│ │ -        X, y = batch
+│ │ -        if not labels:
+│ │ -            labels = self.text_labels(y)
+│ │ -        imgs = self.to_images(X, channel_layout=channel_layout)
+│ │ -        show_images(imgs, nrows, ncols, titles=labels)
+│ │ +                                transform=self.test_form, download=True)
+│ │ +
+│ │ +    def train_loader(self):
+│ │ +        return DataLoader(self.train(), self.batch_size, shuffle=True,
+│ │ +                          num_workers=self.num_workers)
+│ │ +
+│ │ +    def val_loader(self):
+│ │ +        return DataLoader(self.val(), self.batch_size, shuffle=False,
+│ │ +                          num_workers=self.num_workers)
+│ │ +
+│ │ +    # def to_images(self, inputs, channel_layout="first"):
+│ │ +    #     inputs = _numpy(inputs)
+│ │ +    #     if channel_layout == 'first':
+│ │ +    #         inputs = inputs.transpose(0, 2, 3, 1)
+│ │ +    #     mean, std = (np.array(x) for x in [self.mean, self.std])
+│ │ +    #     inputs = std * inputs + mean
+│ │ +    #     inputs = np.clip(inputs, 0, 1)
+│ │ +    #     return inputs
+│ │ +
+│ │ +    # def visualize(self, batch, nrows=1, ncols=8,
+│ │ +    #               channel_layout="first", labels=[]):
+│ │ +    #     X, y = batch
+│ │ +    #     if not labels:
+│ │ +    #         labels = self.text_labels(y)
+│ │ +    #     imgs = self.to_images(X, channel_layout=channel_layout)
+│ │ +    #     show_images(imgs, nrows, ncols, titles=labels)
+│ │   --- torch-book-0.0.3/PKG-INFO
+│ ├── +++ torch-book-0.0.5/PKG-INFO
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: torch-book
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.5
+│ │  Summary: Dive into Torch Book.
+│ │  Author-email: xinetzone <735613050@qq.com>
+│ │  Maintainer-email: xinetzone <735613050@qq.com>
+│ │ -Requires-Python: >=3.8
+│ │ +Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Framework :: Sphinx
+│ │  Classifier: Framework :: Sphinx :: Theme
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -27,14 +27,16 @@
+│ │  Requires-Dist: sphinxcontrib-mermaid ; extra == "doc"
+│ │  Requires-Dist: sphinx-design ; extra == "doc"
+│ │  Requires-Dist: sphinxcontrib-bibtex ; extra == "doc"
+│ │  Requires-Dist: sphinx-thebe ; extra == "doc"
+│ │  Requires-Dist: sphinx-comments ; extra == "doc"
+│ │  Requires-Dist: matplotlib ; extra == "doc"
+│ │  Requires-Dist: sphinx-automodapi ; extra == "doc"
+│ │ +Requires-Dist: sphinx-plotly-directive ; extra == "doc"
+│ │ +Requires-Dist: sphinx-sitemap ; extra == "doc"
+│ │  Requires-Dist: pytest ; extra == "test"
+│ │  Requires-Dist: torch_book[doc] ; extra == "test"
+│ │  Project-URL: Home, https://github.com/xinetzone/torch-book
+│ │  Provides-Extra: coverage
+│ │  Provides-Extra: dev
+│ │  Provides-Extra: doc
+│ │  Provides-Extra: test
+│ │ @@ -51,17 +53,20 @@
+│ │  [![Binder][binder-badge]][binder-link]
+│ │  [![Downloads][download-badge]][download-link]
+│ │  [![Documentation Status][status-badge]][status-link]
+│ │  [![PyPI - Downloads][install-badge]][install-link]
+│ │  ![repo size](https://img.shields.io/github/repo-size/xinetzone/torch-book.svg)
+│ │  [![Downloads Week](https://pepy.tech/badge/torch-book/week)](https://pepy.tech/project/torch-book)
+│ │  [![Documentation Status][rtd-badge]][rtd-link]
+│ │ +[![Upload Python Package][upload-python-package-badge]][upload-python-package-link]
+│ │  
+│ │  Torch 手册。
+│ │  
+│ │ +[upload-python-package-badge]: https://github.com/xinetzone/torch-book/actions/workflows/python-publish.yml/badge.svg
+│ │ +[upload-python-package-link]: https://github.com/xinetzone/torch-book/actions/workflows/python-publish.yml
+│ │  [pypi-badge]: https://img.shields.io/pypi/v/torch-book.svg
+│ │  [pypi-link]: https://pypi.org/project/torch-book/
+│ │  [issue-badge]: https://img.shields.io/github/issues/xinetzone/torch-book
+│ │  [issue-link]: https://github.com/xinetzone/torch-book/issues
+│ │  [fork-badge]: https://img.shields.io/github/forks/xinetzone/torch-book
+│ │  [fork-link]: https://github.com/xinetzone/torch-book/network
+│ │  [star-badge]: https://img.shields.io/github/stars/xinetzone/torch-book
