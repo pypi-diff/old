@@ -1,0 +1,50 @@
+# Comparing `tmp/nate_indi-0.1.tar.gz` & `tmp/nate_indi-0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "nate_indi-0.1.tar", last modified: Fri Apr  7 06:56:08 2023, max compression
++gzip compressed data, was "nate_indi-0.2.tar", last modified: Fri Apr  7 07:03:41 2023, max compression
+```
+
+## Comparing `nate_indi-0.1.tar` & `nate_indi-0.2.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxr-xr-x   0 nathan     (501) staff       (20)        0 2023-04-07 06:56:08.132783 nate_indi-0.1/
+--rw-r--r--   0 nathan     (501) staff       (20)        4 2023-04-07 06:24:28.000000 nate_indi-0.1/LICENSE
+--rw-r--r--   0 nathan     (501) staff       (20)      239 2023-04-07 06:56:08.132406 nate_indi-0.1/PKG-INFO
+--rw-r--r--   0 nathan     (501) staff       (20)        0 2023-04-07 06:24:18.000000 nate_indi-0.1/README.rst
+-drwxr-xr-x   0 nathan     (501) staff       (20)        0 2023-04-07 06:56:08.128572 nate_indi-0.1/nate_indi/
+--rw-r--r--   0 nathan     (501) staff       (20)      133 2023-04-07 06:14:03.000000 nate_indi-0.1/nate_indi/__init__.py
+--rw-r--r--   0 nathan     (501) staff       (20)       37 2023-04-07 06:45:39.000000 nate_indi-0.1/nate_indi/macd.py
+-drwxr-xr-x   0 nathan     (501) staff       (20)        0 2023-04-07 06:56:08.131804 nate_indi-0.1/nate_indi.egg-info/
+--rw-r--r--   0 nathan     (501) staff       (20)      239 2023-04-07 06:56:08.000000 nate_indi-0.1/nate_indi.egg-info/PKG-INFO
+--rw-r--r--   0 nathan     (501) staff       (20)      267 2023-04-07 06:56:08.000000 nate_indi-0.1/nate_indi.egg-info/SOURCES.txt
+--rw-r--r--   0 nathan     (501) staff       (20)        1 2023-04-07 06:56:08.000000 nate_indi-0.1/nate_indi.egg-info/dependency_links.txt
+--rw-r--r--   0 nathan     (501) staff       (20)       51 2023-04-07 06:56:08.000000 nate_indi-0.1/nate_indi.egg-info/entry_points.txt
+--rw-r--r--   0 nathan     (501) staff       (20)       10 2023-04-07 06:56:08.000000 nate_indi-0.1/nate_indi.egg-info/requires.txt
+--rw-r--r--   0 nathan     (501) staff       (20)       10 2023-04-07 06:56:08.000000 nate_indi-0.1/nate_indi.egg-info/top_level.txt
+--rw-r--r--   0 nathan     (501) staff       (20)       38 2023-04-07 06:56:08.132926 nate_indi-0.1/setup.cfg
+--rw-r--r--   0 nathan     (501) staff       (20)      432 2023-04-07 06:55:36.000000 nate_indi-0.1/setup.py
++drwxr-xr-x   0 nathan     (501) staff       (20)        0 2023-04-07 07:03:41.962303 nate_indi-0.2/
++-rw-r--r--   0 nathan     (501) staff       (20)        4 2023-04-07 06:24:28.000000 nate_indi-0.2/LICENSE
++-rw-r--r--   0 nathan     (501) staff       (20)      239 2023-04-07 07:03:41.961882 nate_indi-0.2/PKG-INFO
++-rw-r--r--   0 nathan     (501) staff       (20)        0 2023-04-07 06:24:18.000000 nate_indi-0.2/README.rst
++drwxr-xr-x   0 nathan     (501) staff       (20)        0 2023-04-07 07:03:41.957256 nate_indi-0.2/nate_indi/
++-rw-r--r--   0 nathan     (501) staff       (20)      133 2023-04-07 06:14:03.000000 nate_indi-0.2/nate_indi/__init__.py
++-rw-r--r--   0 nathan     (501) staff       (20)       55 2023-04-07 07:01:42.000000 nate_indi-0.2/nate_indi/macd.py
++drwxr-xr-x   0 nathan     (501) staff       (20)        0 2023-04-07 07:03:41.960799 nate_indi-0.2/nate_indi.egg-info/
++-rw-r--r--   0 nathan     (501) staff       (20)      239 2023-04-07 07:03:41.000000 nate_indi-0.2/nate_indi.egg-info/PKG-INFO
++-rw-r--r--   0 nathan     (501) staff       (20)      267 2023-04-07 07:03:41.000000 nate_indi-0.2/nate_indi.egg-info/SOURCES.txt
++-rw-r--r--   0 nathan     (501) staff       (20)        1 2023-04-07 07:03:41.000000 nate_indi-0.2/nate_indi.egg-info/dependency_links.txt
++-rw-r--r--   0 nathan     (501) staff       (20)       51 2023-04-07 07:03:41.000000 nate_indi-0.2/nate_indi.egg-info/entry_points.txt
++-rw-r--r--   0 nathan     (501) staff       (20)       10 2023-04-07 07:03:41.000000 nate_indi-0.2/nate_indi.egg-info/requires.txt
++-rw-r--r--   0 nathan     (501) staff       (20)       10 2023-04-07 07:03:41.000000 nate_indi-0.2/nate_indi.egg-info/top_level.txt
++-rw-r--r--   0 nathan     (501) staff       (20)       38 2023-04-07 07:03:41.962423 nate_indi-0.2/setup.cfg
++-rw-r--r--   0 nathan     (501) staff       (20)      429 2023-04-07 07:03:21.000000 nate_indi-0.2/setup.py
+```
+

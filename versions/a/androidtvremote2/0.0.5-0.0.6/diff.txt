@@ -1,0 +1,313 @@
+--- tmp/androidtvremote2-0.0.5.tar.gz
++++ tmp/androidtvremote2-0.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "androidtvremote2-0.0.5.tar", last modified: Thu Apr  6 09:34:33 2023, max compression
+│ +gzip compressed data, was "androidtvremote2-0.0.6.tar", last modified: Fri Apr  7 07:01:30 2023, max compression
+│   --- androidtvremote2-0.0.5.tar
+├── +++ androidtvremote2-0.0.6.tar
+│ ├── file list
+│ │ @@ -1,26 +1,27 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:34:33.133868 androidtvremote2-0.0.5/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2440 2023-04-06 09:34:33.133868 androidtvremote2-0.0.5/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1986 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2483 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      226 2023-04-06 09:34:33.133868 androidtvremote2-0.0.5/setup.cfg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:34:33.129868 androidtvremote2-0.0.5/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:34:33.133868 androidtvremote2-0.0.5/src/androidtvremote2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      277 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14391 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/androidtv_remote.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3107 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1794 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/certificate_generator.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       93 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/const.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      315 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8318 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/pairing.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4186 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/polo_pb2.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6806 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/remote.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19528 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/src/androidtvremote2/remotemessage_pb2.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:34:33.133868 androidtvremote2-0.0.5/src/androidtvremote2.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2440 2023-04-06 09:34:33.000000 androidtvremote2-0.0.5/src/androidtvremote2.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      644 2023-04-06 09:34:33.000000 androidtvremote2-0.0.5/src/androidtvremote2.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 09:34:33.000000 androidtvremote2-0.0.5/src/androidtvremote2.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-06 09:34:33.000000 androidtvremote2-0.0.5/src/androidtvremote2.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 09:34:33.000000 androidtvremote2-0.0.5/src/androidtvremote2.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:34:33.133868 androidtvremote2-0.0.5/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       91 2023-04-06 09:34:23.000000 androidtvremote2-0.0.5/tests/test_androidtv_remote.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11357 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2444 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1990 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2483 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      226 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/src/androidtvremote2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      277 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14431 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/androidtv_remote.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3107 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1794 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/certificate_generator.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       93 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/const.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      315 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8318 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/pairing.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4186 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/polo_pb2.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7049 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/remote.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19528 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/androidtvremote2/remotemessage_pb2.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/src/androidtvremote2.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2444 2023-04-07 07:01:30.000000 androidtvremote2-0.0.6/src/androidtvremote2.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      656 2023-04-07 07:01:30.000000 androidtvremote2-0.0.6/src/androidtvremote2.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:01:30.000000 androidtvremote2-0.0.6/src/androidtvremote2.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-07 07:01:30.000000 androidtvremote2-0.0.6/src/androidtvremote2.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 07:01:30.000000 androidtvremote2-0.0.6/src/androidtvremote2.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7733 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/src/demo.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:01:30.946351 androidtvremote2-0.0.6/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       91 2023-04-07 07:01:21.000000 androidtvremote2-0.0.6/tests/test_androidtv_remote.py
+│ │   --- androidtvremote2-0.0.5/LICENSE
+│ ├── +++ androidtvremote2-0.0.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- androidtvremote2-0.0.5/PKG-INFO
+│ ├── +++ androidtvremote2-0.0.6/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: androidtvremote2
+│ │ -Version: 0.0.5
+│ │ +Version: 0.0.6
+│ │  Summary: A Python library for interacting with Android TV using the Android TV Remote protocol v2
+│ │  Author-email: tronikos <tronikos@gmail.com>
+│ │  License: Apache-2.0
+│ │  Project-URL: Homepage, https://github.com/tronikos/androidtvremote2
+│ │  Project-URL: Bug Tracker, https://github.com/tronikos/androidtvremote2/issues
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │ @@ -59,13 +59,13 @@
+│ │  
+│ │  # Run tests
+│ │  python -m pip install pytest
+│ │  pytest
+│ │  
+│ │  # Run demo
+│ │  python -m pip install pynput zeroconf
+│ │ -python demo.py
+│ │ +python src/demo.py
+│ │  
+│ │  # Build package
+│ │  python -m pip install build
+│ │  python -m build
+│ │  ```
+│ │   --- androidtvremote2-0.0.5/README.md
+│ ├── +++ androidtvremote2-0.0.6/README.md
+│ │┄ Files 5% similar despite different names
+│ │ @@ -47,13 +47,13 @@
+│ │  
+│ │  # Run tests
+│ │  python -m pip install pytest
+│ │  pytest
+│ │  
+│ │  # Run demo
+│ │  python -m pip install pynput zeroconf
+│ │ -python demo.py
+│ │ +python src/demo.py
+│ │  
+│ │  # Build package
+│ │  python -m pip install build
+│ │  python -m build
+│ │  ```
+│ │   --- androidtvremote2-0.0.5/pyproject.toml
+│ ├── +++ androidtvremote2-0.0.6/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "androidtvremote2"
+│ │ -version = "0.0.5"
+│ │ +version = "0.0.6"
+│ │  license = {text = "Apache-2.0"}
+│ │  authors = [
+│ │      { name="tronikos", email="tronikos@gmail.com" },
+│ │  ]
+│ │  description = "A Python library for interacting with Android TV using the Android TV Remote protocol v2"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/androidtv_remote.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/androidtv_remote.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -65,17 +65,17 @@
+│ │              for callback in self._current_app_updated_callbacks:
+│ │                  callback(current_app)
+│ │  
+│ │          def volume_info_updated(volume_info: dict[str, str | bool]):
+│ │              for callback in self._volume_info_updated_callbacks:
+│ │                  callback(volume_info)
+│ │  
+│ │ -        def is_available_updated(is_available: bool):
+│ │ +        def is_available_updated(is_available: bool, exc: Exception | None):
+│ │              for callback in self._is_available_updated_callbacks:
+│ │ -                callback(is_available)
+│ │ +                callback(is_available, exc)
+│ │  
+│ │          self._on_is_on_updated = is_on_updated
+│ │          self._on_current_app_updated = current_app_updated
+│ │          self._on_volume_info_updated = volume_info_updated
+│ │          self._on_is_available_updated = is_available_updated
+│ │  
+│ │      @property
+│ │ @@ -192,25 +192,25 @@
+│ │              raise ConnectionClosed("Connection closed") from con_lost_exc
+│ │  
+│ │      async def _async_reconnect(
+│ │          self, invalid_auth_callback: Callable | None = None
+│ │      ) -> None:
+│ │          while self._remote_message_protocol:
+│ │              exc = await self._remote_message_protocol.on_con_lost
+│ │ -            self._on_is_available_updated(False)
+│ │ +            self._on_is_available_updated(False, exc)
+│ │              LOGGER.debug("Disconnected from %s. Error: %s", self.host, exc)
+│ │ -            delay_seconds = 10
+│ │ +            delay_seconds = 0.1
+│ │              LOGGER.debug(
+│ │                  "Trying to reconnect to %s in %s seconds", self.host, delay_seconds
+│ │              )
+│ │              while self._remote_message_protocol:
+│ │                  await asyncio.sleep(delay_seconds)
+│ │                  try:
+│ │                      await self.async_connect()
+│ │ -                    self._on_is_available_updated(True)
+│ │ +                    self._on_is_available_updated(True, None)
+│ │                      break
+│ │                  except CannotConnect as exc:
+│ │                      delay_seconds = min(2 * delay_seconds, 300)
+│ │                      LOGGER.debug(
+│ │                          "Couldn't reconnect to %s. Will retry in %s seconds. Error: %s",
+│ │                          self.host,
+│ │                          delay_seconds,
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/base.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/base.py
+│ │┄ Files identical despite different names
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/certificate_generator.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/certificate_generator.py
+│ │┄ Files identical despite different names
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/pairing.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/pairing.py
+│ │┄ Files identical despite different names
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/polo_pb2.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/polo_pb2.py
+│ │┄ Files identical despite different names
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/remote.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/remote.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -12,15 +12,15 @@
+│ │  from google.protobuf import text_format
+│ │  from google.protobuf.message import DecodeError
+│ │  
+│ │  from .base import ProtobufProtocol
+│ │  from .const import LOGGER
+│ │  from .remotemessage_pb2 import RemoteDirection, RemoteKeyCode, RemoteMessage
+│ │  
+│ │ -LOG_PING_REQUESTS = False
+│ │ +LOG_PING_REQUESTS = True
+│ │  
+│ │  
+│ │  class RemoteProtocol(ProtobufProtocol):
+│ │      """Implement remote protocol with an Android TV.
+│ │  
+│ │      Messages transmitted between client and server are of type RemoteMessage, see remotegmessage.proto.
+│ │      Protocol is described in
+│ │ @@ -67,14 +67,15 @@
+│ │          This does not block; it buffers the data and arranges for it to be sent out asynchronously.
+│ │  
+│ │          :param key_code: int (e.g. 26) or str (e.g. KEYCODE_POWER or just "POWER") from the enum
+│ │                           RemoteKeyCode in remotemessage.proto.
+│ │          :param direction: "SHORT" (default) or "START_LONG" or "END_LONG".
+│ │          :raises ValueError: if key_code in str or direction isn't known.
+│ │          """
+│ │ +        self._reset_idle_disconnect_task()
+│ │          msg = RemoteMessage()
+│ │          if isinstance(key_code, str):
+│ │              if not key_code.startswith("KEYCODE_"):
+│ │                  key_code = "KEYCODE_" + key_code
+│ │              key_code = RemoteKeyCode.Value(key_code)
+│ │          if isinstance(direction, str):
+│ │              direction = RemoteDirection.Value(direction)
+│ │ @@ -83,14 +84,15 @@
+│ │          self._send_message(msg)
+│ │  
+│ │      def send_launch_app_command(self, app_link: str):
+│ │          """Launch an app on Android TV.
+│ │  
+│ │          This does not block; it buffers the data and arranges for it to be sent out asynchronously.
+│ │          """
+│ │ +        self._reset_idle_disconnect_task()
+│ │          msg = RemoteMessage()
+│ │          msg.remote_app_link_launch_request.app_link = app_link
+│ │          self._send_message(msg)
+│ │  
+│ │      def _handle_message(self, raw_msg):
+│ │          """Handle a message from the server."""
+│ │          self._reset_idle_disconnect_task()
+│ │ @@ -154,13 +156,15 @@
+│ │          if self._idle_disconnect_task is not None:
+│ │              self._idle_disconnect_task.cancel()
+│ │          self._idle_disconnect_task = self._loop.create_task(
+│ │              self._async_idle_disconnect()
+│ │          )
+│ │  
+│ │      async def _async_idle_disconnect(self):
+│ │ -        # Disconnect if there is no message from the server within
+│ │ -        # 16 seconds. Pings are every 5 seconds. This is similar to
+│ │ -        # the server behavior that closes connections after 3
+│ │ +        # Disconnect if there is no message from the server or client within
+│ │ +        # 16 seconds. Server pings every 5 seconds if there is no command sent.
+│ │ +        # This is similar to the server behavior that closes connections after 3
+│ │          # unanswered pings.
+│ │          await asyncio.sleep(16)
+│ │          self.transport.close()
+│ │ +        if not self.on_con_lost.done():
+│ │ +            self.on_con_lost.set_result(Exception("Closed idle connection"))
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2/remotemessage_pb2.py
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2/remotemessage_pb2.py
+│ │┄ Files identical despite different names
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2.egg-info/PKG-INFO
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: androidtvremote2
+│ │ -Version: 0.0.5
+│ │ +Version: 0.0.6
+│ │  Summary: A Python library for interacting with Android TV using the Android TV Remote protocol v2
+│ │  Author-email: tronikos <tronikos@gmail.com>
+│ │  License: Apache-2.0
+│ │  Project-URL: Homepage, https://github.com/tronikos/androidtvremote2
+│ │  Project-URL: Bug Tracker, https://github.com/tronikos/androidtvremote2/issues
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │ @@ -59,13 +59,13 @@
+│ │  
+│ │  # Run tests
+│ │  python -m pip install pytest
+│ │  pytest
+│ │  
+│ │  # Run demo
+│ │  python -m pip install pynput zeroconf
+│ │ -python demo.py
+│ │ +python src/demo.py
+│ │  
+│ │  # Build package
+│ │  python -m pip install build
+│ │  python -m build
+│ │  ```
+│ │   --- androidtvremote2-0.0.5/src/androidtvremote2.egg-info/SOURCES.txt
+│ ├── +++ androidtvremote2-0.0.6/src/androidtvremote2.egg-info/SOURCES.txt
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,11 +1,12 @@
+│ │  LICENSE
+│ │  README.md
+│ │  pyproject.toml
+│ │  setup.cfg
+│ │ +src/demo.py
+│ │  src/androidtvremote2/__init__.py
+│ │  src/androidtvremote2/androidtv_remote.py
+│ │  src/androidtvremote2/base.py
+│ │  src/androidtvremote2/certificate_generator.py
+│ │  src/androidtvremote2/const.py
+│ │  src/androidtvremote2/exceptions.py
+│ │  src/androidtvremote2/pairing.py

@@ -1,0 +1,238 @@
+# Comparing `tmp/odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2-py3-none-any.whl.zip` & `tmp/odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,31 +1,31 @@
+-Zip file size: 38864 bytes, number of entries: 29
+--rw-r--r--  2.0 unx     3669 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/README.rst
+--rw-r--r--  2.0 unx       69 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/__init__.py
+--rw-r--r--  2.0 unx      960 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/__manifest__.py
+--rw-r--r--  2.0 unx       19 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/controllers/__init__.py
+--rw-r--r--  2.0 unx     8018 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/controllers/main.py
+--rw-r--r--  2.0 unx    10960 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/i18n/es.po
+--rw-r--r--  2.0 unx     9810 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/i18n/sale_coupon_selection_wizard.pot
+--rw-r--r--  2.0 unx       25 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/models/__init__.py
+--rw-r--r--  2.0 unx     3089 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/models/sale_order.py
+--rw-r--r--  2.0 unx       80 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx      156 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx      547 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/readme/USAGE.rst
+--rw-r--r--  2.0 unx      440 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/security/ir.model.access.csv
+--rw-r--r--  2.0 unx     6358 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/static/description/icon.png
+--rw-r--r--  2.0 unx    13002 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/static/description/index.html
+--rw-r--r--  2.0 unx    11152 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/static/src/js/coupon_selection_wizard_mixin.js
+--rw-r--r--  2.0 unx     2264 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/static/src/js/coupon_selection_wizard_view.js
+--rw-r--r--  2.0 unx      795 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/static/src/scss/coupon_selection_wizard.scss
+--rw-r--r--  2.0 unx       50 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/tests/__init__.py
+--rw-r--r--  2.0 unx     5814 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/tests/test_sale_coupon_selection_wizard.py
+--rw-r--r--  2.0 unx      915 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/views/sale_order_views.xml
+--rw-r--r--  2.0 unx    14781 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/views/templates.xml
+--rw-r--r--  2.0 unx       38 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/wizards/__init__.py
+--rw-r--r--  2.0 unx     4639 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard.py
+--rw-r--r--  2.0 unx     2483 b- defN 23-Apr-06 19:24 odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard_views.xml
+--rw-r--r--  2.0 unx     4456 b- defN 23-Apr-06 19:25 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 19:25 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 19:25 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3530 b- defN 23-Apr-06 19:25 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/RECORD
+-29 files, 108216 bytes uncompressed, 32738 bytes compressed:  69.7%
++Zip file size: 38872 bytes, number of entries: 29
++-rw-r--r--  2.0 unx     3669 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/README.rst
++-rw-r--r--  2.0 unx       69 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/__init__.py
++-rw-r--r--  2.0 unx      960 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/__manifest__.py
++-rw-r--r--  2.0 unx       19 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/controllers/__init__.py
++-rw-r--r--  2.0 unx     8018 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/controllers/main.py
++-rw-r--r--  2.0 unx    11031 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/i18n/es.po
++-rw-r--r--  2.0 unx     9810 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/i18n/sale_coupon_selection_wizard.pot
++-rw-r--r--  2.0 unx       25 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/models/__init__.py
++-rw-r--r--  2.0 unx     3089 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/models/sale_order.py
++-rw-r--r--  2.0 unx       80 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx      156 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx      547 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/readme/USAGE.rst
++-rw-r--r--  2.0 unx      440 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/security/ir.model.access.csv
++-rw-r--r--  2.0 unx     6358 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/static/description/icon.png
++-rw-r--r--  2.0 unx    13002 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/static/description/index.html
++-rw-r--r--  2.0 unx    11152 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/static/src/js/coupon_selection_wizard_mixin.js
++-rw-r--r--  2.0 unx     2264 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/static/src/js/coupon_selection_wizard_view.js
++-rw-r--r--  2.0 unx      795 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/static/src/scss/coupon_selection_wizard.scss
++-rw-r--r--  2.0 unx       50 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/tests/__init__.py
++-rw-r--r--  2.0 unx     5814 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/tests/test_sale_coupon_selection_wizard.py
++-rw-r--r--  2.0 unx      915 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/views/sale_order_views.xml
++-rw-r--r--  2.0 unx    14781 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/views/templates.xml
++-rw-r--r--  2.0 unx       38 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/wizards/__init__.py
++-rw-r--r--  2.0 unx     4639 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard.py
++-rw-r--r--  2.0 unx     2483 b- defN 23-Apr-07 07:06 odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard_views.xml
++-rw-r--r--  2.0 unx     4456 b- defN 23-Apr-07 07:06 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 07:06 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 07:06 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3530 b- defN 23-Apr-07 07:06 odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/RECORD
++29 files, 108287 bytes uncompressed, 32746 bytes compressed:  69.8%
+```
+
+## zipnote {}
+
+```diff
+@@ -69,20 +69,20 @@
+ 
+ Filename: odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard.py
+ Comment: 
+ 
+ Filename: odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard_views.xml
+ Comment: 
+ 
+-Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/METADATA
++Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/WHEEL
++Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/top_level.txt
++Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/RECORD
++Filename: odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/sale_coupon_selection_wizard/i18n/es.po
+
+```diff
+@@ -6,19 +6,19 @@
+ msgstr ""
+ "Project-Id-Version: Odoo Server 13.0\n"
+ "Report-Msgid-Bugs-To: \n"
+ "POT-Creation-Date: 2021-11-18 16:03+0000\n"
+ "PO-Revision-Date: 2021-11-18 17:18+0100\n"
+ "Last-Translator: \n"
+ "Language-Team: \n"
++"Language: es\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ "Plural-Forms: \n"
+-"Language: es\n"
+ "X-Generator: Poedit 2.3\n"
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model_terms:ir.ui.view,arch_db:sale_coupon_selection_wizard.configure
+ msgid "<i class=\"fa fa-gift fa-2x\"/> Reward options"
+ msgstr "<i class=\"fa fa-gift fa-2x\"/> Regalos opcionales"
+ 
+@@ -89,15 +89,14 @@
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard_line__current_order_quantity
+ msgid "Current Order Quantity"
+ msgstr "Cantidad en pedido actual"
+ 
+ #. module: sale_coupon_selection_wizard
+-#: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard__coupon_reward_name
+ #: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard__display_name
+ #: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard_line__display_name
+ msgid "Display Name"
+ msgstr "Nombre mostrado"
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard__id
+@@ -186,14 +185,19 @@
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard_line__repeat_product
+ msgid "Repeat"
+ msgstr "Repetir"
+ 
+ #. module: sale_coupon_selection_wizard
++#: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard__coupon_reward_name
++msgid "Reward Name"
++msgstr ""
++
++#. module: sale_coupon_selection_wizard
+ #: model:ir.model,name:sale_coupon_selection_wizard.model_sale_order
+ msgid "Sales Order"
+ msgstr "Pedido de Venta"
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model:ir.model,name:sale_coupon_selection_wizard.model_coupon_selection_wizard
+ msgid "Select promotion to apply to the order"
+@@ -224,16 +228,16 @@
+ #, python-format
+ msgid "This promotion can't be applied to this order"
+ msgstr "Esta promoción no puede ser aplicada en este pedido"
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model_terms:ir.ui.view,arch_db:sale_coupon_selection_wizard.view_order_form
+ msgid ""
+-"When clicked, the content of the order will be checked to detect (and "
+-"apply) possible promotion programs."
++"When clicked, the content of the order will be checked to detect (and apply) "
++"possible promotion programs."
+ msgstr ""
+ "Cuando se pulse, el contenido del pedido será evaluado para detectar (y "
+ "aplicar) posibles promociones."
+ 
+ #. module: sale_coupon_selection_wizard
+ #: model:ir.model.fields,field_description:sale_coupon_selection_wizard.field_coupon_selection_wizard_line__wizard_id
+ msgid "Wizard"
+```
+
+## Comparing `odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/METADATA` & `odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-sale-coupon-selection-wizard
+-Version: 15.0.1.0.0.2
++Version: 15.0.1.0.0.3
+ Summary: A wizard that allows salesmen to easily pick the best promotions
+ Home-page: https://github.com/OCA/sale-promotion
+ Author: Tecnativa, Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+```
+
+## Comparing `odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/RECORD` & `odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/RECORD`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ odoo/addons/sale_coupon_selection_wizard/README.rst,sha256=3afnjnQdJuKjs1ncCGYZRQ3YJOCt6El8vt2Ng335cqE,3669
+ odoo/addons/sale_coupon_selection_wizard/__init__.py,sha256=dnUeA_K1torbiMNF3tt2dtECdk-FkWm01DByr9MBMIA,69
+ odoo/addons/sale_coupon_selection_wizard/__manifest__.py,sha256=mQvxHs5N1UVKVYnldhJKF5zkh7hGSI7z1L52guTyrNU,960
+ odoo/addons/sale_coupon_selection_wizard/controllers/__init__.py,sha256=4KFqEP2QHFbPN66eQJMdGsmNz2v7ywWv_FR1pW_kkLk,19
+ odoo/addons/sale_coupon_selection_wizard/controllers/main.py,sha256=5P7xFAxuCPbK-LIiwqScs3912gBCWO24nwgtsvQr8HA,8018
+-odoo/addons/sale_coupon_selection_wizard/i18n/es.po,sha256=4Lc_ELNLG0Vu3sGOl0sMXMyuMD69g9gcr59N8Xk3L7k,10960
++odoo/addons/sale_coupon_selection_wizard/i18n/es.po,sha256=HjvsgMEKQvbh7z5UWGOV3KoKhrEv-5neV7m3CPDsH3w,11031
+ odoo/addons/sale_coupon_selection_wizard/i18n/sale_coupon_selection_wizard.pot,sha256=ncqpnT9AD6h4zD1Ern-GB7AaaY0p3DFDvqMxOGnwtiI,9810
+ odoo/addons/sale_coupon_selection_wizard/models/__init__.py,sha256=LsPoCIAYodIFzh85VEjY5GiuzDQDQpiF38txDw10qT0,25
+ odoo/addons/sale_coupon_selection_wizard/models/sale_order.py,sha256=-mygawyXLC_UpQ6JZH8lQ-azHgjltfEuZhZvhCvcwFw,3089
+ odoo/addons/sale_coupon_selection_wizard/readme/CONTRIBUTORS.rst,sha256=rYVbPcfsRkpnG8l0G1SCUKNTszp-k29rt-zvGPS2-gE,80
+ odoo/addons/sale_coupon_selection_wizard/readme/DESCRIPTION.rst,sha256=lXwNAlcXZC8Pphem8aaHdd2YTi1MgGtdzjBPqhRt_BY,156
+ odoo/addons/sale_coupon_selection_wizard/readme/USAGE.rst,sha256=2jIjweRzE3dLqmY5wRGiRDAJ6MGW841alpljArfTLBY,547
+ odoo/addons/sale_coupon_selection_wizard/security/ir.model.access.csv,sha256=PDRPxgscXxAwO6uiEa7x0QVEmKa-c7cAF5cYd7moim4,440
+@@ -19,11 +19,11 @@
+ odoo/addons/sale_coupon_selection_wizard/tests/__init__.py,sha256=q9kWxCG8VuTATGbEDuulQSfnBEKXM019GAnmqdcP0FM,50
+ odoo/addons/sale_coupon_selection_wizard/tests/test_sale_coupon_selection_wizard.py,sha256=QylXeQNLg3ebqncRjjSmHbbI_0DFAc6LiSf93WWrQ9M,5814
+ odoo/addons/sale_coupon_selection_wizard/views/sale_order_views.xml,sha256=vq6dA5uxtrUn0_D-gncTOd_0vzdRef9yMDmNOgx7xtg,915
+ odoo/addons/sale_coupon_selection_wizard/views/templates.xml,sha256=g_X1_mu25bgFbC-Hs0TZJMB2T_x2CzmLAuroTLnLmvI,14781
+ odoo/addons/sale_coupon_selection_wizard/wizards/__init__.py,sha256=Ov9C838DFJQVfVoLNxwbW9GHZePJWQlgxPLFoKz0VoE,38
+ odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard.py,sha256=9iSXY2SNf1c8gBNqdDUY5eNM8i7PPyKGBKvGncM5dFg,4639
+ odoo/addons/sale_coupon_selection_wizard/wizards/coupon_selection_wizard_views.xml,sha256=64_gp1xVYVrLVSaVIY5vgxuin-V7HbgMNavaq6cFVWs,2483
+-odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/METADATA,sha256=GSSBKJ-syN1Dp6GTU5xnPG4jEY2uH4zXseGI74DpuIQ,4456
+-odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.2.dist-info/RECORD,,
++odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/METADATA,sha256=dKwa_A5fLat20-ujcTN4LjWP19YcUfOeQTNsn4zQA3Q,4456
++odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_sale_coupon_selection_wizard-15.0.1.0.0.3.dist-info/RECORD,,
+```
+

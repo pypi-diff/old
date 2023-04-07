@@ -1,0 +1,854 @@
+# Comparing `tmp/Kompira_sendevt-1.6.7-py3-none-any.whl.zip` & `tmp/Kompira_sendevt-1.6.8-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,21 +1,31 @@
+-Zip file size: 16008 bytes, number of entries: 19
++Zip file size: 43630 bytes, number of entries: 29
++-rwxrwxr-x  2.0 unx     6635 b- defN 22-Jan-21 06:27 Kompira_sendevt-1.6.8.data/scripts/kompira_dump.sh
++-rwxrwxr-x  2.0 unx      210 b- defN 23-Apr-07 06:56 Kompira_sendevt-1.6.8.data/scripts/kompira_init.sh
++-rwxrwxr-x  2.0 unx     1959 b- defN 21-Aug-27 12:15 Kompira_sendevt-1.6.8.data/scripts/kompira_jq.sh
++-rwxrwxr-x  2.0 unx      619 b- defN 23-Apr-07 06:58 Kompira_sendevt-1.6.8.data/scripts/manage.py
++-rwxrwxr-x  2.0 unx     6847 b- defN 23-Apr-07 06:56 Kompira_sendevt-1.6.8.data/scripts/prestart_kompirad.sh
++-rwxrwxr-x  2.0 unx    30702 b- defN 23-Apr-07 06:56 Kompira_sendevt-1.6.8.data/scripts/setup_utils.sh
++-rwxrwxr-x  2.0 unx    12838 b- defN 23-Apr-07 06:56 Kompira_sendevt-1.6.8.data/scripts/ssl_utils.sh
++-rwxrwxr-x  2.0 unx     5496 b- defN 23-Mar-30 00:49 Kompira_sendevt-1.6.8.data/scripts/sync_master.sh
++-rwxrwxr-x  2.0 unx      401 b- defN 21-Aug-27 12:15 Kompira_sendevt-1.6.8.data/scripts/wsgi.py
+ -rw-rw-r--  2.0 unx        0 b- defN 21-Aug-27 12:15 kompira_common/__init__.py
+--rw-rw-r--  2.0 unx     2945 b- defN 21-Aug-27 12:15 kompira_common/config.py
+--rw-rw-r--  2.0 unx     4443 b- defN 21-Aug-27 12:15 kompira_common/connector.py
++-rw-rw-r--  2.0 unx     3877 b- defN 23-Apr-07 06:56 kompira_common/config.py
++-rw-rw-r--  2.0 unx     4497 b- defN 23-Apr-07 06:56 kompira_common/config_argparse.py
++-rw-rw-r--  2.0 unx     8207 b- defN 23-Apr-07 06:56 kompira_common/connector.py
+ -rw-rw-r--  2.0 unx     2460 b- defN 22-Nov-21 07:44 kompira_common/daemon_ctrl.py
+ -rw-rw-r--  2.0 unx      288 b- defN 22-Jan-20 07:57 kompira_common/job_message.py
+ -rw-rw-r--  2.0 unx     4672 b- defN 21-Aug-27 12:15 kompira_common/license.py
+--rw-rw-r--  2.0 unx     5270 b- defN 22-Nov-21 07:44 kompira_common/mplog.py
++-rw-rw-r--  2.0 unx     5270 b- defN 22-Nov-22 01:24 kompira_common/mplog.py
+ -rw-rw-r--  2.0 unx      438 b- defN 21-Aug-27 12:15 kompira_common/qname.py
+ -rw-rw-r--  2.0 unx     1858 b- defN 21-Aug-27 12:15 kompira_common/setup_logger.py
+ -rw-rw-r--  2.0 unx      316 b- defN 21-Aug-27 12:15 kompira_common/singleton.py
+--rw-rw-r--  2.0 unx     2033 b- defN 22-Nov-21 07:44 kompira_common/utils.py
+--rw-rw-r--  2.0 unx     1845 b- defN 22-Nov-21 07:44 kompira_common/version.py
++-rw-rw-r--  2.0 unx     2792 b- defN 23-Apr-07 06:56 kompira_common/utils.py
++-rw-rw-r--  2.0 unx     1845 b- defN 23-Apr-07 06:56 kompira_common/version.py
+ -rw-rw-r--  2.0 unx        0 b- defN 21-Aug-27 12:15 kompira_sendevt/__init__.py
+--rw-rw-r--  2.0 unx     8269 b- defN 22-Oct-27 02:53 kompira_sendevt/kompira_sendevt.py
+--rw-rw-r--  2.0 unx      193 b- defN 22-Nov-21 07:45 Kompira_sendevt-1.6.7.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 22-Nov-21 07:45 Kompira_sendevt-1.6.7.dist-info/WHEEL
+--rw-rw-r--  2.0 unx       74 b- defN 22-Nov-21 07:45 Kompira_sendevt-1.6.7.dist-info/entry_points.txt
+--rw-rw-r--  2.0 unx       31 b- defN 22-Nov-21 07:45 Kompira_sendevt-1.6.7.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     1593 b- defN 22-Nov-21 07:45 Kompira_sendevt-1.6.7.dist-info/RECORD
+-19 files, 36820 bytes uncompressed, 13382 bytes compressed:  63.7%
++-rw-rw-r--  2.0 unx    10112 b- defN 23-Apr-07 06:56 kompira_sendevt/kompira_sendevt.py
++-rw-rw-r--  2.0 unx      193 b- defN 23-Apr-07 06:58 Kompira_sendevt-1.6.8.dist-info/METADATA
++-rw-rw-r--  2.0 unx       92 b- defN 23-Apr-07 06:58 Kompira_sendevt-1.6.8.dist-info/WHEEL
++-rw-rw-r--  2.0 unx       74 b- defN 23-Apr-07 06:58 Kompira_sendevt-1.6.8.dist-info/entry_points.txt
++-rw-rw-r--  2.0 unx       31 b- defN 23-Apr-07 06:58 Kompira_sendevt-1.6.8.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     2630 b- defN 23-Apr-07 06:58 Kompira_sendevt-1.6.8.dist-info/RECORD
++29 files, 115359 bytes uncompressed, 39310 bytes compressed:  65.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,13 +1,43 @@
++Filename: Kompira_sendevt-1.6.8.data/scripts/kompira_dump.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/kompira_init.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/kompira_jq.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/manage.py
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/prestart_kompirad.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/setup_utils.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/ssl_utils.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/sync_master.sh
++Comment: 
++
++Filename: Kompira_sendevt-1.6.8.data/scripts/wsgi.py
++Comment: 
++
+ Filename: kompira_common/__init__.py
+ Comment: 
+ 
+ Filename: kompira_common/config.py
+ Comment: 
+ 
++Filename: kompira_common/config_argparse.py
++Comment: 
++
+ Filename: kompira_common/connector.py
+ Comment: 
+ 
+ Filename: kompira_common/daemon_ctrl.py
+ Comment: 
+ 
+ Filename: kompira_common/job_message.py
+@@ -36,23 +66,23 @@
+ 
+ Filename: kompira_sendevt/__init__.py
+ Comment: 
+ 
+ Filename: kompira_sendevt/kompira_sendevt.py
+ Comment: 
+ 
+-Filename: Kompira_sendevt-1.6.7.dist-info/METADATA
++Filename: Kompira_sendevt-1.6.8.dist-info/METADATA
+ Comment: 
+ 
+-Filename: Kompira_sendevt-1.6.7.dist-info/WHEEL
++Filename: Kompira_sendevt-1.6.8.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: Kompira_sendevt-1.6.7.dist-info/entry_points.txt
++Filename: Kompira_sendevt-1.6.8.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: Kompira_sendevt-1.6.7.dist-info/top_level.txt
++Filename: Kompira_sendevt-1.6.8.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: Kompira_sendevt-1.6.7.dist-info/RECORD
++Filename: Kompira_sendevt-1.6.8.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## kompira_common/config.py
+
+```diff
+@@ -1,58 +1,85 @@
+ # -*- coding: utf-8 -*-
++import sys
++import os
++from os.path import dirname, join, normpath, isabs
+ from configparser import ConfigParser, NoSectionError, NoOptionError
+ 
+ 
++if os.name == 'nt':
++    KOMPIRA_HOME = 'C:\\Kompira'
++    KOMPIRA_LOG_DIR = 'C:\\Kompira\\Log'
++    KOMPIRA_CERTS_DIR = 'C:\\Kompira\\SSL\\Certs'
++else:
++    KOMPIRA_HOME = '/opt/kompira'
++    KOMPIRA_LOG_DIR = '/var/log/kompira'
++    KOMPIRA_CERTS_DIR = '/opt/kompira/ssl/certs'
++
++DEFAULT_SSL = None
++DEFAULT_SSL_VERIFY = False
++DEFAULT_SSL_CACERTFILE = join(KOMPIRA_CERTS_DIR, 'kompira-bundle-ca.crt')
++DEFAULT_SSL_CERTFILE = join(KOMPIRA_CERTS_DIR, 'amqp-client-kompira.crt')
++DEFAULT_SSL_KEYFILE = join(KOMPIRA_CERTS_DIR, 'amqp-client-kompira.key')
++
++
+ class InvalidSection(Exception):
+     pass
+ 
+ 
+ class InvalidKey(Exception):
+     pass
+ 
+ 
+ class Configuration:
+-    conf_files = ['kompira.conf', '/opt/kompira/kompira.conf']
++    conf_name = 'kompira.conf'
++    conf_dirs = [KOMPIRA_HOME, dirname(dirname(sys.argv[0])), '.']
+     conf_spec = {
+         # section name
+         'kompira': {
+             'site_id': (int, 1, 'site id'),
+         },
+         'logging': {
+             'loglevel': (str, 'INFO', 'logging level'),
+-            'logdir': (str, '/var/log/kompira', 'log directory'),
++            'logdir': (str, KOMPIRA_LOG_DIR, 'log directory'),
+             'logmaxsz': (int, 0, 'log max file size (daily backup if zero)'),
+             'logbackup': (int, 7, 'log backup count'),
+         },
+         'amqp-connection': {
+             # name, type, default-value, description
+             'server': (str, 'localhost', 'amqp server name'),
+-            'port': (int, 5672, 'amqp port'),
+-            'user': (str, 'guest', 'amqp user name'),
+-            'password': (str, 'guest', 'amqp user password'),
+-            'ssl': (bool, False, 'amqp ssl connection'),
+-            'heartbeat_interval': (
+-                int, 10, 'amqp heartbeat interval in seconds'
+-            ),
++            'port': (int, None, 'amqp port'),
++            'user': (str, None, 'amqp user name'),
++            'password': (str, None, 'amqp user password'),
++            'ssl': (bool, DEFAULT_SSL, 'amqp ssl connection'),
++            'ssl_verify': (bool, DEFAULT_SSL_VERIFY, 'verify server certificate'),
++            'ssl_cacertfile': (str, None, 'ssl ca certificate file'),
++            'ssl_certfile': (str, None, 'client certificate file'),
++            'ssl_keyfile': (str, None, 'client private key file'),
+             'max_retry': (int, 3, 'max retry count for connection'),
+             'retry_interval': (int, 30, 'retry interval in seconds'),
+-        },
+-        'agent': {
+-            'name': (str, 'default', 'name of job manager'),
+-            'pool_size': (int, 8, 'size of worker pool'),
+-            'disable_cache': (bool, False, 'disable connection cache'),
+-            'cache_duration': (int, 300, 'duration time (in secs.) of connection cache')
+-        },
++        }
+     }
+ 
++    @classmethod
++    def get_conf_files(cls):
++        conf_files = []
++        cwd = os.getcwd()
++        for conf_dir in cls.conf_dirs:
++            if not isabs(conf_dir):
++                conf_dir = join(cwd, conf_dir)
++            cond_path = normpath(join(conf_dir, cls.conf_name))
++            if cond_path not in conf_files:
++                conf_files.append(cond_path)
++        return conf_files
++
+     def __init__(self, conffile=None):
+         if conffile is None:
+-            conffile = self.conf_files
++            conffile = self.get_conf_files()
+         self._conf = ConfigParser()
+-        self._conf.read(conffile)
++        self._read_ok = self._conf.read(conffile)
+         self._sections = {}
+ 
+     def __getitem__(self, name):
+         if name not in self._sections.keys():
+             self._sections[name] = Section(self, name)
+         return self._sections[name]
+```
+
+## kompira_common/connector.py
+
+```diff
+@@ -1,43 +1,116 @@
+ # -*- coding: utf-8 -*-
+ import logging
+ import socket
+ import errno
++import ssl
+ from time import sleep
++from ssl import VerifyMode
+ 
+ import amqp
+ from amqp.exceptions import UnexpectedFrame
+ 
+-logger = logging.getLogger('kompira')
+-
++from .config import DEFAULT_SSL_CACERTFILE, DEFAULT_SSL_CERTFILE, DEFAULT_SSL_KEYFILE, DEFAULT_SSL_VERIFY
+ 
+-_parameters = {
+-    'host': 'localhost:5672',
+-    'userid': 'guest',
+-    'password': 'guest',
+-    'ssl': False
+-}
++logger = logging.getLogger('kompira')
+ 
+ 
+-def amqp_setup(host, user, password, ssl, heartbeat=None, **kwargs):
+-    _parameters['host'] = host
+-    _parameters['userid'] = user
+-    _parameters['password'] = password
+-    _parameters['ssl'] = ssl
+-    _parameters['heartbeat'] = heartbeat
+-    _parameters.update(**kwargs)
++DEFAULT_AMQP_PORT = 5672
++DEFAULT_AMQPS_PORT = 5671
++DEFAULT_USER_LOCAL = 'guest'
++DEFAULT_USER_REMOTE = 'kompira'
++
++
++class AMQPConnection(amqp.Connection):
++    _default_parameters = {}
++
++    @classmethod
++    def amqp_setup(cls, server='localhost', port=None, user=None, password=None, ssl=None, **kwargs):
++        """
++        AMQP サーバへの接続設定
++
++        - ローカルの AMQP サーバにはデフォルトで非 SSL で接続 (リモートには SSL)
++        - ローカルの AMQP サーバにはデフォルトで guest ユーザで認証 (リモートには kompira)
++        - パスワードはデフォルトでユーザ名と同じ
++        - ポート番号は SSL 接続か否かでデフォルト値を調整 (5671 if ssl else 5672)
++        """
++        is_local = server in ('localhost', '127.0.0.1')
++        if ssl is None:
++            ssl = not is_local
++        if user is None:
++            user = DEFAULT_USER_LOCAL if is_local else DEFAULT_USER_REMOTE
++        if password is None:
++            password = user
++        if port is None:
++            port = DEFAULT_AMQPS_PORT if ssl else DEFAULT_AMQP_PORT
++        host = f'{server}:{port}'
++        kwargs = kwargs.copy()
++        # ログインの認証方式はデフォルトでは PLAIN を用いる
++        login_method = kwargs.pop('login_method', 'PLAIN')
++        # SSL 接続時はオプションを辞書で渡す
++        ssl_verify = kwargs.pop('ssl_verify', DEFAULT_SSL_VERIFY)
++        ssl_cacertfile = kwargs.pop('ssl_cacertfile', None)
++        ssl_certfile = kwargs.pop('ssl_certfile', None)
++        ssl_keyfile = kwargs.pop('ssl_keyfile', None)
++        if ssl:
++            sslopts = {
++                'cert_reqs': VerifyMode.CERT_REQUIRED if ssl_verify else VerifyMode.CERT_NONE,
++                'ca_certs': DEFAULT_SSL_CACERTFILE if ssl_verify and ssl_cacertfile is None else ssl_cacertfile,
++                'certfile': DEFAULT_SSL_CERTFILE if ssl_verify and ssl_certfile is None else ssl_certfile,
++                'keyfile': DEFAULT_SSL_KEYFILE if ssl_verify and ssl_keyfile is None else ssl_keyfile,
++            }
++            ssl = ssl if isinstance(ssl, dict) else {}
++            for k, v in sslopts.items():
++                ssl.setdefault(k, v)
++            logger.debug('[amqp_setup] SSL options for AMQPS: %s', ssl)
++            # SSL 証明書が指定されている場合、存在と読み込み可能性をチェックする
++            for filename in (ssl.get(key) for key in ('ca_certs', 'certfile', 'keyfile')):
++                if filename:
++                    with open(filename, 'r') as f:
++                        pass
++            # SSL 証明書が指定されている場合は認証方式に EXTERNAL を用いる
++            if ssl.get('certfile'):
++                login_method = 'EXTERNAL'
++        cls._default_parameters['host'] = host
++        cls._default_parameters['userid'] = user
++        cls._default_parameters['password'] = password
++        cls._default_parameters['ssl'] = ssl
++        cls._default_parameters['login_method'] = login_method
++        cls._default_parameters.update(**kwargs)
++
++    def __init__(self, *args, **kwargs):
++        for key, val in self._default_parameters.items():
++            kwargs.setdefault(key, val)
++        super().__init__(*args, **kwargs)
++
++    def get_ssl_version(self):
++        '''
++        現コネクションにおける SSL バージョン("TLSv1.3" 等)を取得する
++        '''
++        if self.ssl:
++            try:
++                return self.transport.sock.version()
++            except Exception as e:
++                logger.exception('%s.get_ssl_version: caught %s', self.__class__.__name__, e)
++                return '<unknown>'
++        return None
+ 
+ 
+ class AMQPConnectorMixin(object):
++    @classmethod
++    def amqp_setup(cls, **kwargs):
++        AMQPConnection.amqp_setup(**kwargs)
++
+     def _connect(self):
+         self._consumers = []
+-        self._conn = amqp.Connection(on_blocked=self._on_blocked, on_unblocked=self._on_unblocked, **_parameters)
++        self._conn = AMQPConnection(on_blocked=self._on_blocked, on_unblocked=self._on_unblocked)
+         self._conn.connect()
+         self._chan = self._conn.channel()
+-        logger.info('[%s] established connection to AMQP', self.__class__.__name__)
++        ssl_version = self._conn.get_ssl_version()
++        logger.info('[%s] established connection to %s', self.__class__.__name__, f'AMQPS ({ssl_version})' if ssl_version else 'AMQP')
+ 
+     def _on_blocked(self, reason):
+         logger.warning('[%s] amqp connection blocked: %s', self.__class__.__name__, reason)
+ 
+     def _on_unblocked(self):
+         logger.info('[%s] amqp connection unblocked', self.__class__.__name__)
+ 
+@@ -76,21 +149,23 @@
+                 self._connect()
+                 #
+                 # 接続確立したらretry_countをリセットしておく
+                 #
+                 retry_count = max_retry
+                 self._loop()
+                 break
+-            except socket.error as e:
+-                logger.error('[%s] socket error: %s', self.__class__.__name__, e)
+-            except amqp.ConnectionError as e:
+-                logger.error('[%s] AMQP connection error: %s', self.__class__.__name__, e)
+             except KeyboardInterrupt:
+                 logger.info('[%s] keyboard interrupted', self.__class__.__name__)
+                 break
++            except amqp.ConnectionError as e:
++                logger.error('[%s] AMQP connection error: %s', self.__class__.__name__, e)
++            except ssl.SSLError as e:
++                logger.error('[%s] SSL error: %s', self.__class__.__name__, e)
++            except socket.error as e:
++                logger.exception('[%s] socket error: %s', self.__class__.__name__, e)
+             except Exception as e:
+                 logger.exception('[%s] %s', self.__class__.__name__, e)
+                 break
+             finally:
+                 self._close()
+             #
+             # 再接続処理
+```
+
+## kompira_common/utils.py
+
+```diff
+@@ -1,14 +1,16 @@
+ # -*- coding: utf-8 -*-
+ import pytz
+ import sys
+ import psutil
+ from contextlib import contextmanager
++from itertools import islice
+ from datetime import datetime
+-from multiprocessing import Manager
++from multiprocessing.managers import SyncManager
++from setproctitle import setproctitle, getproctitle
+ 
+ BASE_DATETIME = datetime(2020, 1, 1)
+ 
+ 
+ @contextmanager
+ def redirect_stdio(stdout, stderr):
+     _stdout = sys.stdout
+@@ -34,19 +36,40 @@
+ def ignore_exception(func, *args, **kwargs):
+     try:
+         return func(*args, **kwargs)
+     except Exception:
+         pass
+ 
+ 
++def truncate_repr(data, length=64, end='...'):
++    ext = '...' if len(data) > length else ''
++    return repr(data[:length]) + ext
++
++
++def truncate_join(iterable, limit=3, sep=', ', model='objects', end='...({} {})'):
++    count = len(iterable)
++    text = sep.join(str(o) for o in islice(iterable, limit))
++    tail = end.format(count, model) if count > limit else ''
++    return text + tail
++
++
++class KompiraMPManager(SyncManager):
++    @classmethod
++    def _run_server(cls, *args, **kwargs):
++        name = getproctitle().split(' ', 1)[0]
++        setproctitle(f'{name} [MP-Manager]')
++        return super()._run_server(*args, **kwargs)
++
++
+ _manager = None
+ def make_mpqueue(maxsize=0):
+     global _manager
+     if not isalive_mpmanager():
+-        _manager = Manager()
++        _manager = KompiraMPManager()
++        _manager.start()
+     return _manager.Queue(maxsize)
+ 
+ 
+ def shutdown_mpmanager():
+     global _manager
+     if _manager:
+         _manager.shutdown()
+```
+
+## kompira_common/version.py
+
+```diff
+@@ -1,11 +1,11 @@
+ # -*- coding: utf-8 -*-
+ from pkg_resources import packaging
+ 
+-_VERSION = (1, 6, 7, 'final', 0)
++_VERSION = (1, 6, 8, 'final', 0)
+ 
+ 
+ def get_version(version=_VERSION, form=None, no_commit_hash=False):
+     if form == 'branch':
+         return "{0}.{1}".format(version[0], version[1])
+ 
+     main = '.'.join(str(x) for x in version[:3])
+```
+
+## kompira_sendevt/kompira_sendevt.py
+
+```diff
+@@ -2,35 +2,44 @@
+ # -*- coding: utf-8 -*-
+ import sys
+ import io
+ import locale
+ import amqp
+ import json
+ import logging
+-import optparse
+ import codecs
++import ssl
+ 
+ from datetime import datetime
+ from os import pardir, umask
+ from os.path import abspath, dirname, join
+ from time import sleep
+ from uuid import uuid4
++from copy import deepcopy
+ 
+ sys.path.append(join(dirname(abspath(__file__)), pardir))
+ from kompira_common.config import Configuration
++from kompira_common.config_argparse import ConfigArgumentParser
++from kompira_common.connector import AMQPConnection
+ from kompira_common.qname import IOQ_NAME
+ from kompira_common.setup_logger import setup_logger, SIMPLE_FORMAT
+ from kompira_common.version import VERSION
+ 
+ COMMAND_NAME = 'kompira_sendevt'
+ logger = logging.getLogger('kompira')
+ 
+ 
++default_locale, default_encoding = locale.getdefaultlocale()
++default_encoding = default_encoding or 'UTF-8'
++if not default_locale or not sys.stdout.encoding:
++    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding=default_encoding)
++
++
+ class EventConfig(Configuration):
+-    conf_spec = Configuration.conf_spec
++    conf_spec = deepcopy(Configuration.conf_spec)
+     conf_spec.update(
+         {
+             # section name
+             'event': {
+                 'channel': (str,
+                             '/system/channels/Alert',
+                             'channel name for event'),
+@@ -43,136 +52,141 @@
+                 int, 1024 * 1024 * 1024,
+                 'log max file size (daily backup if zero)'
+             ),
+             'logbackup': (int, 10, 'log backup count')
+         })
+ 
+ 
+-def parse_args():
+-    usage = "usage: %prog [options] [<key1>=<value1> ...]"
+-    version = "(Kompira version " + VERSION + ")"
+-    default_locale, default_encoding = locale.getdefaultlocale()
+-    default_encoding = default_encoding or 'UTF-8'
+-    p = optparse.OptionParser(usage, version="%prog " + version)
+-    p.add_option('-c', '--config', dest='conf', help='Configuration file')
+-    p.add_option('-s', '--server', dest='server', help='AMQP server')
+-    p.add_option('-p', '--port', dest='port', help='AMQP port')
+-    p.add_option('--encoding', dest='encoding', help='Specify encoding of input data', default=default_encoding)
+-    p.add_option('--decode-stdin', dest='decode_stdin', action='store_true', help='Decode stdin data')
+-    p.add_option('--user', dest='user', help='User name')
+-    p.add_option('--password', dest='password', help='User password')
+-    p.add_option('--ssl', dest='ssl', action='store_true',
+-                 help='Connect in SSL mode')
+-    p.add_option('--channel', dest='channel', help='Channel name')
+-    p.add_option('--site-id', dest='site_id', help='Site ID')
+-    p.add_option('--max-retry', dest='max_retry',
+-                 help='max retry count for connection', type='int')
+-    p.add_option('--retry-interval', dest='retry_interval',
+-                 help='retry Interval in seconds', type='int')
+-    p.add_option('--dry-run', dest='dry_run',
+-                 help='Just check the json data(Do not send alert to Django)',
+-                 action="store_true", default=False)
+-    p.add_option('--debug', dest='debug_mode', action='store_true',
+-                 default=False, help='Starts in debug mode')
+-
+-    options, args = p.parse_args()
+-    if not default_locale or not sys.stdout.encoding:
+-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding=default_encoding)
+-    try:
+-        if len(args) < 1:
+-            if options.decode_stdin:
+-                msg = codecs.getreader(options.encoding)(sys.stdin.buffer).read()
++class EventConfigArgumentParser(ConfigArgumentParser):
++    config_class = EventConfig
++
++    def __init__(self):
++        super().__init__()
++        self.add_argument('--test-connection', dest='test_connection', action='store_true', help='Tests the connection to the AMQP server (No data is sent)')
++        self.add_argument('--encoding', dest='encoding', help='Specify encoding of input data', default=default_encoding)
++        self.add_argument('--decode-stdin', dest='decode_stdin', action='store_true', help='Decode stdin data')
++        self.add_argument('--dry-run', dest='dry_run', help='Just check the json data(Do not send alert to Django)', action="store_true", default=False)
++        self.add_argument('--debug', dest='debug_mode', action='store_true', default=False, help='Starts in debug mode')
++        self.add_argument('--version', action='version', version=f'%(prog)s (Kompira version {VERSION})')
++        self.add_argument('keyval', metavar='KEY=VAL', nargs='*', help='key-value pair to be sent')
++
++    def parse_message(self, input=None):
++        if input is None:
++            input = sys.stdin.buffer
++        args = self.parse_args()
++        try:
++            if len(args.keyval) < 1:
++                if args.decode_stdin:
++                    body = codecs.getreader(args.encoding)(input).read()
++                else:
++                    body = input.read()
+             else:
+-                msg = sys.stdin.buffer.read()
+-        else:
+-            msg = dict([arg.split('=', 1) for arg in args if arg])
+-    except ValueError:
+-        p.error("invalid message")
+-
+-    return options, msg
+-
+-
+-def make_settings(conf, opts):
+-    # 設定ファイルから読み込む
+-    settings = {
+-        'site_id': conf['kompira']['site_id'],
+-        'channel': conf['event']['channel'],
+-    }
+-    settings.update(dict(conf['amqp-connection']))
+-    settings.update(dict(conf['logging']))
+-
+-    # コマンドラインオプションで上書き
+-    for k in settings.keys():
+-        if hasattr(opts, k) and getattr(opts, k) is not None:
+-            settings[k] = getattr(opts, k)
+-
+-    return settings
+-
+-
+-def send_event(body, settings, dry_run):
+-    header = {'site_id': settings['site_id'],
+-              'channel': settings['channel'],
+-              'timestamp': str(datetime.now())}
+-    if dry_run:
+-        event = {
+-            'settings': settings,
++                body = dict(kv.split('=', 1) for kv in args.keyval if kv)
++        except ValueError:
++            self.error("invalid message")
++        return body
++
++
++class KompiraSendEvent(object):
++    queue_name = IOQ_NAME
++    routing_key = IOQ_NAME
++    queue_arguments = {'x-ha-policy': 'all'}
++    default_mesg_properties = {'delivery_mode': 2}
++
++    def __init__(self, amqp_opts, encoding='UTF-8', debug_mode=False):
++        self.amqp_opts = amqp_opts
++        self.encoding = encoding
++        self.debug_mode = debug_mode
++
++    def _get_destination(self, channel):
++        scheme = 'amqps' if self.amqp_opts['ssl'] else 'amqp'
++        user = f'{self.amqp_opts["user"]}@' if self.amqp_opts["user"] else ''
++        port = f':{self.amqp_opts["port"]}' if self.amqp_opts['port'] else ''
++        return f'{scheme}://{user}{self.amqp_opts["server"]}{port}{channel}'
++
++    def _dry_run(self, header, body):
++        info = {
++            'amqp_opts': self.amqp_opts,
+             'application header': header,
+         }
+         if isinstance(body, dict):
+-            event['message dict'] = body
++            info['message_dict'] = body
+         else:
+-            event['message body'] = stringify(body, True)
+-        print(stringify(event, encoding=sys.stdout.encoding, indent=2))
++            info['message_body'] = stringify(body, True)
++        print(stringify(info, encoding=sys.stdout.encoding, indent=2))
+         return True
+ 
+-    retry_count = settings['max_retry']
+-    interval = settings['retry_interval']
+-    if interval <= 0:
+-        retry_count = 0
+-    while True:
+-        try:
+-            _send_event(header, body, settings)
+-            return True
+-        except amqp.exceptions.AccessRefused as e:
+-            #
+-            # Accessエラーの場合、サーバ側の設定の問題のためリトライせずに終了する
+-            #
+-            logger.error('failed to send event: %s', e)
+-            return False
+-        except Exception as e:
+-            logger.error('failed to send event: %s', e)
+-            if retry_count == 0:
+-                break
+-            retry_count -= 1
+-            logger.info('retry connection...')
+-            sleep(interval)
+-    return False
++    def _send_message(self, conn, body, header, **mesg_properties):
++        with conn.channel() as chan:
++            chan.queue_declare(queue=self.queue_name, durable=True,
++                auto_delete=False, arguments=self.queue_arguments)
++            header.update(ssl=conn.get_ssl_version())
++            mesg = amqp.Message(body, application_headers=header, **mesg_properties)
++            chan.basic_publish(mesg, routing_key=self.routing_key)
++
++    def send_event(self, body, channel, site_id=1, test_connection=False, dry_run=False):
++        header = {
++            'site_id': site_id,
++            'channel': channel,
++            'timestamp': str(datetime.now())
++        }
++        if dry_run:
++            return self._dry_run(header, body)
+ 
++        # メッセージの準備
++        corr_id = str(uuid4())
++        logger.info('start: body=%s, dest=%s, site_id=%s, corr_id=%s',
++            stringify(body, True, self.encoding), self._get_destination(channel), site_id, corr_id)
++        mesg_properties = self.default_mesg_properties.copy()
++        mesg_properties['correlation_id'] = corr_id
++        if isinstance(body, dict):
++            body = json.dumps(body)
++            mesg_properties['content_type'] = 'application/json'
+ 
+-def _send_event(header, body, settings):
+-    with amqp.Connection('%s:%s' % (settings['server'], settings['port']),
+-                         settings['user'], settings['password'],
+-                         ssl=settings['ssl']) as conn:
+-        with conn.channel() as chan:
+-            chan.queue_declare(queue=IOQ_NAME, durable=True,
+-                               auto_delete=False,
+-                               arguments={'x-ha-policy': 'all'})
+-            corr_id = str(uuid4())
+-            if isinstance(body, dict):
+-                msg = amqp.Message(json.dumps(body),
+-                                   application_headers=header,
+-                                   content_type='application/json',
+-                                   correlation_id=corr_id,
+-                                   delivery_mode=2)
+-            else:
+-                msg = amqp.Message(body, application_headers=header,
+-                                   correlation_id=corr_id,
+-                                   delivery_mode=2)
+-            chan.basic_publish(msg, routing_key=IOQ_NAME)
+-            logger.info('sent message successfully: %s', corr_id)
++        # AMQP 接続とメッセージの送信（再送あり）
++        try:
++            AMQPConnection.amqp_setup(**self.amqp_opts)
++        except Exception as e:
++            # 証明書が存在しないかアクセスできない場合、クライアント側の設定不備のため異常終了する
++            sys.stderr.write(f'Failed to setup amqp: {e}\n')
++            logger.error('failed to setup amqp: %s', e)
++            return False
++        retry_count = self.amqp_opts['max_retry']
++        retry_interval = self.amqp_opts['retry_interval']
++        if retry_interval <= 0:
++            retry_count = 0
++        while True:
++            try:
++                ope = 'connect'
++                with AMQPConnection() as conn:
++                    if test_connection:
++                        ssl_version = conn.get_ssl_version()
++                        print('Connection OK: %s' % (f'AMQPS ({ssl_version})' if ssl_version else 'AMQP'))
++                    else:
++                        ope = 'send event'
++                        self._send_message(conn, body, header, **mesg_properties)
++                        logger.info('finished: sent message successfully: %s', corr_id)
++                return True
++            except (amqp.exceptions.AccessRefused, amqp.exceptions.NotAllowed, ssl.SSLError) as e:
++                # AccessRefused, NotAllowed または SSLError の場合、サーバ側の設定の問題のためリトライせずに終了する
++                sys.stderr.write(f'Failed to {ope}: {e}\n')
++                logger.error('failed to %s: %s', ope, e)
++                return False
++            except Exception as e:
++                sys.stderr.write(f'Failed to {ope}: {e}\n')
++                logger.error('failed to %s: %s', ope, e)
++                if test_connection:
++                    return False
++                if retry_count == 0:
++                    break
++                retry_count -= 1
++                logger.warning('waiting %s seconds for retry connection ...', retry_interval)
++                sleep(retry_interval)
++        logger.error('gave up retry connection')
++        return False
+ 
+ 
+ def stringify(s, quote=False, encoding='utf-8', ensure_ascii=False, indent=None, limit=300):
+     if isinstance(s, dict):
+         s = json.dumps(s, ensure_ascii=ensure_ascii, indent=indent)
+     else:
+         msg_len = len(s)
+@@ -194,31 +208,44 @@
+         s = s.encode(encoding, errors='backslashreplace').decode(encoding)
+     return s
+ 
+ 
+ def main():
+     try:
+         umask(0)  # ログファイルは全ユーザーから書き込み許可で作成される
+-        opts, msg = parse_args()
+-        conf = EventConfig(opts.conf)
+-        settings = make_settings(conf, opts)
++        parser = EventConfigArgumentParser()
++        args = parser.parse_args()
++        settings = parser.parse_settings(args)
++        logging_opts = settings['logging']
++        logger_opts = {
++            'debug_mode': args.debug_mode,
++            'loglevel': logging_opts['loglevel'],
++            'logdir': logging_opts['logdir'],
++            'logname': COMMAND_NAME,
++            'maxsz': logging_opts['logmaxsz'],
++            'backup': logging_opts['logbackup'],
++            'formatter': SIMPLE_FORMAT
++        }
+         try:
+-            setup_logger(logger, opts.debug_mode, settings['loglevel'],
+-                         settings['logdir'], COMMAND_NAME,
+-                         settings['logmaxsz'], settings['logbackup'], formatter=SIMPLE_FORMAT)
++            setup_logger(logger, **logger_opts)
+         except IOError as e:
+-            setup_logger(logger, True, settings['loglevel'],
+-                         settings['logdir'], COMMAND_NAME, formatter=SIMPLE_FORMAT)
++            logger_opts['debug_mode'] = True
++            setup_logger(logger, **logger_opts)
+             logger.warning(e)
+-        logger.info('start: message=%s, options=%s', stringify(msg, True, opts.encoding), opts)
+-        succeed = send_event(msg, settings, opts.dry_run)
+-        if not succeed:
+-            logger.error('gave up retry connection')
+-            exit(1)
+-        logger.info('finished')
++        if args.debug_mode:
++            logger.debug("config.conf_files=%s", parser.config.get_conf_files())
++            logger.debug("config._read_ok=%s", parser.config._read_ok)
++            logger.debug("settings=%s", settings)
++        amqp_opts = settings['amqp-connection']
++        channel = settings['event']['channel']
++        site_id = settings['kompira']['site_id']
++        body = '' if args.test_connection else parser.parse_message()
++        kompira_sendevt = KompiraSendEvent(amqp_opts, encoding=args.encoding, debug_mode=args.debug_mode)
++        succeed = kompira_sendevt.send_event(body, channel=channel, site_id=site_id, test_connection=args.test_connection, dry_run=args.dry_run)
++        exit(0 if succeed else 1)
+     except Exception as e:
+         logger.exception('failed to send event: %s', e)
+         exit(1)
+ 
+ 
+ if __name__ == '__main__':
+     main()
+```
+

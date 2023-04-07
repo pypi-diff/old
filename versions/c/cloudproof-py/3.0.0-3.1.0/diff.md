@@ -1,0 +1,154 @@
+# Comparing `tmp/cloudproof_py-3.0.0-py3-none-any.whl.zip` & `tmp/cloudproof_py-3.1.0-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,15 +1,16 @@
+-Zip file size: 19160 bytes, number of entries: 13
+--rw-r--r--  2.0 unx       60 b- defN 23-Mar-08 05:32 cloudproof_py/__init__.py
+--rw-r--r--  2.0 unx       27 b- defN 23-Mar-08 05:32 cloudproof_py/py.typed
+--rw-r--r--  2.0 unx      358 b- defN 23-Mar-08 05:32 cloudproof_py/cover_crypt/__init__.py
+--rw-r--r--  2.0 unx     9671 b- defN 23-Mar-08 05:32 cloudproof_py/findex/Findex.py
+--rw-r--r--  2.0 unx      295 b- defN 23-Mar-08 05:32 cloudproof_py/findex/__init__.py
+--rw-r--r--  2.0 unx      187 b- defN 23-Mar-08 05:32 cloudproof_py/findex/typing.py
+--rw-r--r--  2.0 unx     1045 b- defN 23-Mar-08 05:32 cloudproof_py/findex/utils.py
+--rw-r--r--  2.0 unx     5043 b- defN 23-Mar-08 05:32 cloudproof_py/kms/__init__.py
+--rw-r--r--  2.0 unx    32275 b- defN 23-Mar-08 05:32 cloudproof_py-3.0.0.dist-info/LICENSE.md
+--rw-r--r--  2.0 unx     3338 b- defN 23-Mar-08 05:32 cloudproof_py-3.0.0.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Mar-08 05:32 cloudproof_py-3.0.0.dist-info/WHEEL
+--rw-r--r--  2.0 unx       14 b- defN 23-Mar-08 05:32 cloudproof_py-3.0.0.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     1103 b- defN 23-Mar-08 05:32 cloudproof_py-3.0.0.dist-info/RECORD
+-13 files, 53508 bytes uncompressed, 17298 bytes compressed:  67.7%
++Zip file size: 19473 bytes, number of entries: 14
++-rw-r--r--  2.0 unx       60 b- defN 23-Apr-07 07:06 cloudproof_py/__init__.py
++-rw-r--r--  2.0 unx       27 b- defN 23-Apr-07 07:06 cloudproof_py/py.typed
++-rw-r--r--  2.0 unx      120 b- defN 23-Apr-07 07:06 cloudproof_py/cloudproof_fpe/__init__.py
++-rw-r--r--  2.0 unx      358 b- defN 23-Apr-07 07:06 cloudproof_py/cover_crypt/__init__.py
++-rw-r--r--  2.0 unx     9671 b- defN 23-Apr-07 07:06 cloudproof_py/findex/Findex.py
++-rw-r--r--  2.0 unx      295 b- defN 23-Apr-07 07:06 cloudproof_py/findex/__init__.py
++-rw-r--r--  2.0 unx      187 b- defN 23-Apr-07 07:06 cloudproof_py/findex/typing.py
++-rw-r--r--  2.0 unx     1045 b- defN 23-Apr-07 07:06 cloudproof_py/findex/utils.py
++-rw-r--r--  2.0 unx     5043 b- defN 23-Apr-07 07:06 cloudproof_py/kms/__init__.py
++-rw-r--r--  2.0 unx    32275 b- defN 23-Apr-07 07:07 cloudproof_py-3.1.0.dist-info/LICENSE.md
++-rw-r--r--  2.0 unx     3384 b- defN 23-Apr-07 07:07 cloudproof_py-3.1.0.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 07:07 cloudproof_py-3.1.0.dist-info/WHEEL
++-rw-r--r--  2.0 unx       14 b- defN 23-Apr-07 07:07 cloudproof_py-3.1.0.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx     1199 b- defN 23-Apr-07 07:07 cloudproof_py-3.1.0.dist-info/RECORD
++14 files, 53770 bytes uncompressed, 17455 bytes compressed:  67.5%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,13 +1,16 @@
+ Filename: cloudproof_py/__init__.py
+ Comment: 
+ 
+ Filename: cloudproof_py/py.typed
+ Comment: 
+ 
++Filename: cloudproof_py/cloudproof_fpe/__init__.py
++Comment: 
++
+ Filename: cloudproof_py/cover_crypt/__init__.py
+ Comment: 
+ 
+ Filename: cloudproof_py/findex/Findex.py
+ Comment: 
+ 
+ Filename: cloudproof_py/findex/__init__.py
+@@ -18,23 +21,23 @@
+ 
+ Filename: cloudproof_py/findex/utils.py
+ Comment: 
+ 
+ Filename: cloudproof_py/kms/__init__.py
+ Comment: 
+ 
+-Filename: cloudproof_py-3.0.0.dist-info/LICENSE.md
++Filename: cloudproof_py-3.1.0.dist-info/LICENSE.md
+ Comment: 
+ 
+-Filename: cloudproof_py-3.0.0.dist-info/METADATA
++Filename: cloudproof_py-3.1.0.dist-info/METADATA
+ Comment: 
+ 
+-Filename: cloudproof_py-3.0.0.dist-info/WHEEL
++Filename: cloudproof_py-3.1.0.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: cloudproof_py-3.0.0.dist-info/top_level.txt
++Filename: cloudproof_py-3.1.0.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: cloudproof_py-3.0.0.dist-info/RECORD
++Filename: cloudproof_py-3.1.0.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `cloudproof_py-3.0.0.dist-info/LICENSE.md` & `cloudproof_py-3.1.0.dist-info/LICENSE.md`
+
+ * *Files identical despite different names*
+
+## Comparing `cloudproof_py-3.0.0.dist-info/METADATA` & `cloudproof_py-3.1.0.dist-info/METADATA`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,22 +1,23 @@
+ Metadata-Version: 2.1
+ Name: cloudproof-py
+-Version: 3.0.0
+-Summary: Python library for Cosmian Cloud Proof
++Version: 3.1.0
++Summary: Python library for Cosmian Cloudproof
+ Author-email: Cosmian Tech <tech@cosmian.com>
+ Project-URL: Homepage, https://github.com/Cosmian/cloudproof_python
+ Project-URL: Bug Tracker, https://github.com/Cosmian/cloudproof_python/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.md
+ Requires-Dist: cover-crypt (<12.0.0,>=11.0.0)
+ Requires-Dist: findex (<4.0.0,>=3.0.0)
+ Requires-Dist: cosmian-kms (<5.0.0,>=4.3.3)
++Requires-Dist: cloudproof-fpe (<1.0.0,>=0.1.0)
+ 
+ # Cloudproof Python Library
+ 
+ [![PyPI version](https://badge.fury.io/py/cloudproof_py.svg)](https://badge.fury.io/py/cloudproof_py)
+ ![Build status](https://github.com/Cosmian/cloudproof_python/actions/workflows/ci.yml/badge.svg)
+ 
+ The library provides a Python API to the **Cloudproof Encryption** product of the [Cosmian Ubiquitous Encryption platform](https://cosmian.com).
+```
+
+## Comparing `cloudproof_py-3.0.0.dist-info/RECORD` & `cloudproof_py-3.1.0.dist-info/RECORD`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ cloudproof_py/__init__.py,sha256=uXSbC3NV3Hls_JWm9MgSgPrOO6KcvN2Bxg-PRZFcOL4,60
+ cloudproof_py/py.typed,sha256=bWew9mHgMy8LqMu7RuqQXFXLBxh2CRx0dUbSx-3wE48,27
++cloudproof_py/cloudproof_fpe/__init__.py,sha256=UslgvsU-fxh2K_fJVuSHtS3RTrJOK9YX34D0wpCKOsU,120
+ cloudproof_py/cover_crypt/__init__.py,sha256=HLqCXJrpxszO20XxMTocp0z9_N7xaN8H2OtyCoLgvVQ,358
+ cloudproof_py/findex/Findex.py,sha256=Zbic5PCV0eXo4ApiJFZPdp7b0-XfnsSrjIMZJOrPNm0,9671
+ cloudproof_py/findex/__init__.py,sha256=nFD5U0UTdFSxTEDpeV1myoS6gzs3kT2ZSwxlTnstDl8,295
+ cloudproof_py/findex/typing.py,sha256=Bk5rUJ1M0J_mmMU3at22W5dmtxWxx3teRGBIj0ePuww,187
+ cloudproof_py/findex/utils.py,sha256=HUDZjCrcbdSVtzcqPRQphSMibFiZawDbZfyIB5LVhLw,1045
+ cloudproof_py/kms/__init__.py,sha256=daf9n7A8siMYipT1Gt548a11WVhTRy-NotxetBkr0Do,5043
+-cloudproof_py-3.0.0.dist-info/LICENSE.md,sha256=_zfsPgqYDWuqWECzE0w-LQfkkgg28_DMNj87xgn6OUI,32275
+-cloudproof_py-3.0.0.dist-info/METADATA,sha256=eznu0fhgkVz-IA51dKk90dGIsuAjn9zwN4gM7NCKM3Q,3338
+-cloudproof_py-3.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-cloudproof_py-3.0.0.dist-info/top_level.txt,sha256=h-iYkc0ufdIay9vhafEoDq1V2VqtN27qb9YIFPgqppA,14
+-cloudproof_py-3.0.0.dist-info/RECORD,,
++cloudproof_py-3.1.0.dist-info/LICENSE.md,sha256=_zfsPgqYDWuqWECzE0w-LQfkkgg28_DMNj87xgn6OUI,32275
++cloudproof_py-3.1.0.dist-info/METADATA,sha256=ul4FX3M-MWglUtG0vd2zX4De_fUQDFhpw65gByTnOAY,3384
++cloudproof_py-3.1.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++cloudproof_py-3.1.0.dist-info/top_level.txt,sha256=h-iYkc0ufdIay9vhafEoDq1V2VqtN27qb9YIFPgqppA,14
++cloudproof_py-3.1.0.dist-info/RECORD,,
+```
+

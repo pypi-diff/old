@@ -1,0 +1,6576 @@
+# Comparing `tmp/siat-1.7.9-py3-none-any.whl.zip` & `tmp/siat-1.8-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,111 +1,114 @@
+-Zip file size: 1041756 bytes, number of entries: 109
++Zip file size: 1099663 bytes, number of entries: 112
+ -rw-rw-rw-  2.0 fat      840 b- defN 22-Sep-22 03:36 siat/__init__.py
+--rw-rw-rw-  2.0 fat     2069 b- defN 23-Jan-27 01:13 siat/allin.py
++-rw-rw-rw-  2.0 fat     2130 b- defN 23-Apr-06 11:44 siat/allin.py
+ -rw-rw-rw-  2.0 fat      747 b- defN 22-Oct-10 12:00 siat/alpha_vantage_test.py
+--rw-rw-rw-  2.0 fat    27471 b- defN 21-Nov-29 04:20 siat/assets_liquidity.py
++-rw-rw-rw-  2.0 fat    28555 b- defN 23-Feb-08 14:21 siat/assets_liquidity.py
+ -rw-rw-rw-  2.0 fat     1285 b- defN 21-Nov-29 06:22 siat/assets_liquidity_test.py
+ -rw-rw-rw-  2.0 fat    10110 b- defN 21-Nov-09 07:59 siat/barrons_scraping_test.py
+ -rw-rw-rw-  2.0 fat    36597 b- defN 22-Oct-30 14:34 siat/beta_adjustment.py
+ -rw-rw-rw-  2.0 fat    20433 b- defN 21-Dec-21 12:26 siat/beta_adjustment_china.py
+ -rw-rw-rw-  2.0 fat     2467 b- defN 21-Nov-23 05:02 siat/beta_adjustment_test.py
+ -rw-rw-rw-  2.0 fat     6032 b- defN 22-Oct-10 12:01 siat/blockchain.py
+--rw-rw-rw-  2.0 fat    98342 b- defN 23-Jan-11 08:29 siat/bond.py
+--rw-rw-rw-  2.0 fat    15425 b- defN 22-Oct-16 14:03 siat/bond_base.py
++-rw-rw-rw-  2.0 fat    98531 b- defN 23-Feb-12 14:52 siat/bond.py
++-rw-rw-rw-  2.0 fat    24155 b- defN 23-Feb-12 02:05 siat/bond_base.py
+ -rw-rw-rw-  2.0 fat     5246 b- defN 22-Jun-26 13:39 siat/bond_test.py
+--rw-rw-rw-  2.0 fat    27969 b- defN 21-Nov-24 15:58 siat/capm_beta.py
++-rw-rw-rw-  2.0 fat    28499 b- defN 23-Mar-03 14:56 siat/capm_beta.py
+ -rw-rw-rw-  2.0 fat     1745 b- defN 22-Feb-09 12:40 siat/capm_beta_test.py
+ -rw-rw-rw-  2.0 fat    38116 b- defN 20-Apr-30 11:36 siat/cmat_commons.py
+--rw-rw-rw-  2.0 fat    53150 b- defN 22-Dec-23 04:34 siat/common.py
++-rw-rw-rw-  2.0 fat    63743 b- defN 23-Apr-07 03:01 siat/common.py
++-rw-rw-rw-  2.0 fat    20722 b- defN 23-Apr-07 02:37 siat/compare_cross.py
++-rw-rw-rw-  2.0 fat     2072 b- defN 23-Apr-06 13:35 siat/compare_cross_test.py
+ -rw-rw-rw-  2.0 fat     3061 b- defN 20-Oct-28 13:43 siat/concepts_iwencai.py
+ -rw-rw-rw-  2.0 fat     4941 b- defN 20-Oct-28 14:21 siat/concepts_kpl.py
+ -rw-rw-rw-  2.0 fat      690 b- defN 21-Feb-15 16:46 siat/copyrights.py
+ -rw-rw-rw-  2.0 fat    27351 b- defN 21-Dec-07 09:29 siat/cryptocurrency.py
+ -rw-rw-rw-  2.0 fat     2669 b- defN 21-Dec-07 14:47 siat/cryptocurrency_test.py
+ -rw-rw-rw-  2.0 fat    41483 b- defN 20-Aug-13 03:32 siat/derivative.py
+ -rw-rw-rw-  2.0 fat    73848 b- defN 23-Jan-25 12:07 siat/economy-20230125.py
+--rw-rw-rw-  2.0 fat    73150 b- defN 23-Jan-25 16:01 siat/economy.py
++-rw-rw-rw-  2.0 fat    73720 b- defN 23-Mar-19 01:09 siat/economy.py
+ -rw-rw-rw-  2.0 fat    13339 b- defN 22-Jul-13 14:51 siat/economy_test.py
+ -rw-rw-rw-  2.0 fat    18941 b- defN 21-May-17 21:31 siat/esg.py
+ -rw-rw-rw-  2.0 fat     2944 b- defN 20-Sep-30 07:04 siat/esg_test.py
+ -rw-rw-rw-  2.0 fat    47177 b- defN 22-Nov-15 12:07 siat/fama_french.py
+ -rw-rw-rw-  2.0 fat     4678 b- defN 21-Nov-20 07:13 siat/fama_french_test.py
+ -rw-rw-rw-  2.0 fat    40695 b- defN 21-May-16 12:48 siat/financial_base.py
+ -rw-rw-rw-  2.0 fat    21528 b- defN 21-Jul-18 11:42 siat/financial_statements.py
+ -rw-rw-rw-  2.0 fat      716 b- defN 21-May-19 05:32 siat/financial_statements_test.py
+ -rw-rw-rw-  2.0 fat    76676 b- defN 22-Nov-27 02:21 siat/financials.py
+--rw-rw-rw-  2.0 fat   104862 b- defN 22-Oct-10 12:06 siat/financials_china.py
+--rw-rw-rw-  2.0 fat    42828 b- defN 22-Oct-10 12:06 siat/financials_china2.py
++-rw-rw-rw-  2.0 fat   105288 b- defN 23-Feb-21 01:55 siat/financials_china.py
++-rw-rw-rw-  2.0 fat    57998 b- defN 23-Feb-27 05:23 siat/financials_china2.py
+ -rw-rw-rw-  2.0 fat     2722 b- defN 22-May-23 09:18 siat/financials_china2_test.py
+ -rw-rw-rw-  2.0 fat     3507 b- defN 22-May-21 16:15 siat/financials_china2_test2.py
+ -rw-rw-rw-  2.0 fat     3118 b- defN 22-May-22 12:59 siat/financials_china2_test3.py
+ -rw-rw-rw-  2.0 fat    17193 b- defN 22-May-16 16:52 siat/financials_china_test.py
+ -rw-rw-rw-  2.0 fat    23829 b- defN 22-Jul-02 16:07 siat/financials_test.py
+ -rw-rw-rw-  2.0 fat     1201 b- defN 21-Nov-24 03:16 siat/fred_test.py
+ -rw-rw-rw-  2.0 fat    24637 b- defN 20-Oct-19 12:31 siat/fund.py
+--rw-rw-rw-  2.0 fat    63955 b- defN 23-Jan-17 13:18 siat/fund_china.py
++-rw-rw-rw-  2.0 fat    66934 b- defN 23-Feb-15 05:50 siat/fund_china.py
+ -rw-rw-rw-  2.0 fat     6649 b- defN 22-Apr-14 12:20 siat/fund_china_test.py
+ -rw-rw-rw-  2.0 fat     1116 b- defN 20-Oct-19 12:29 siat/fund_test.py
+ -rw-rw-rw-  2.0 fat    16442 b- defN 23-Jan-20 15:20 siat/future_china.py
+ -rw-rw-rw-  2.0 fat     1163 b- defN 22-Feb-04 16:59 siat/future_china_test.py
+ -rw-rw-rw-  2.0 fat     2402 b- defN 21-Nov-24 02:14 siat/global_index_test.py
+--rw-rw-rw-  2.0 fat    63016 b- defN 23-Feb-04 05:27 siat/grafix.py
++-rw-rw-rw-  2.0 fat    63490 b- defN 23-Mar-14 03:03 siat/grafix.py
+ -rw-rw-rw-  2.0 fat     3150 b- defN 22-Jun-25 09:45 siat/grafix_test.py
+ -rw-rw-rw-  2.0 fat    30544 b- defN 23-Feb-07 11:26 siat/holding_risk.py
+ -rw-rw-rw-  2.0 fat      474 b- defN 22-Apr-18 13:14 siat/holding_risk_test.py
+ -rw-rw-rw-  2.0 fat     3936 b- defN 21-Dec-20 12:37 siat/local_debug_test.py
+ -rw-rw-rw-  2.0 fat    31158 b- defN 22-Dec-19 07:40 siat/market_china.py
+--rw-rw-rw-  2.0 fat    84685 b- defN 22-Nov-07 13:20 siat/markowitz.py
++-rw-rw-rw-  2.0 fat    91638 b- defN 23-Apr-07 06:42 siat/markowitz.py
+ -rw-rw-rw-  2.0 fat     1593 b- defN 22-Jul-02 14:37 siat/markowitz_ccb_test.py
+ -rw-rw-rw-  2.0 fat     4032 b- defN 21-Dec-02 16:51 siat/markowitz_ef_test.py
+ -rw-rw-rw-  2.0 fat    33046 b- defN 21-Nov-30 12:09 siat/markowitz_old.py
+ -rw-rw-rw-  2.0 fat     5818 b- defN 21-Dec-05 17:36 siat/markowitz_test.py
+ -rw-rw-rw-  2.0 fat    86874 b- defN 22-Oct-10 12:10 siat/ml_cases.py
+ -rw-rw-rw-  2.0 fat     1673 b- defN 22-Oct-10 12:14 siat/ml_cases_example1.py
+--rw-rw-rw-  2.0 fat    86907 b- defN 22-Nov-06 16:01 siat/option_china.py
++-rw-rw-rw-  2.0 fat    92393 b- defN 23-Mar-05 06:28 siat/option_china.py
+ -rw-rw-rw-  2.0 fat    16355 b- defN 22-Feb-05 14:06 siat/option_china_test.py
+--rw-rw-rw-  2.0 fat    69625 b- defN 22-Oct-10 12:15 siat/option_pricing.py
++-rw-rw-rw-  2.0 fat    69625 b- defN 23-Mar-04 14:28 siat/option_pricing.py
+ -rw-rw-rw-  2.0 fat     2203 b- defN 21-Nov-21 10:40 siat/option_pricing_test.py
+ -rw-rw-rw-  2.0 fat     5908 b- defN 21-Nov-22 09:45 siat/option_sina_api_test.py
+ -rw-rw-rw-  2.0 fat     2610 b- defN 21-Nov-05 03:17 siat/proxy_test.py
+ -rw-rw-rw-  2.0 fat     1552 b- defN 21-Nov-08 07:54 siat/quandl_test.py
+--rw-rw-rw-  2.0 fat    47351 b- defN 22-Dec-23 06:19 siat/risk_adjusted_return.py
++-rw-rw-rw-  2.0 fat    49073 b- defN 23-Apr-07 02:58 siat/risk_adjusted_return.py
+ -rw-rw-rw-  2.0 fat     3416 b- defN 22-Feb-08 13:55 siat/risk_adjusted_return_test.py
+ -rw-rw-rw-  2.0 fat    75061 b- defN 23-Feb-08 02:59 siat/risk_evaluation.py
+ -rw-rw-rw-  2.0 fat     3731 b- defN 21-Nov-23 05:24 siat/risk_evaluation_test.py
+ -rw-rw-rw-  2.0 fat    12304 b- defN 21-May-16 12:52 siat/risk_free_rate.py
+ -rw-rw-rw-  2.0 fat     4285 b- defN 21-Feb-07 14:07 siat/risk_free_rate_test.py
+--rw-rw-rw-  2.0 fat    58803 b- defN 22-Dec-23 09:53 siat/sector_china.py
++-rw-rw-rw-  2.0 fat    93536 b- defN 23-Apr-05 10:51 siat/sector_china.py
+ -rw-rw-rw-  2.0 fat     4210 b- defN 21-Apr-12 14:26 siat/sector_china_test.py
+ -rw-rw-rw-  2.0 fat    29148 b- defN 20-Aug-13 03:41 siat/security_price.py
+--rw-rw-rw-  2.0 fat    69300 b- defN 23-Feb-07 14:12 siat/security_prices.py
++-rw-rw-rw-  2.0 fat    71984 b- defN 23-Mar-22 15:31 siat/security_prices.py
+ -rw-rw-rw-  2.0 fat    10779 b- defN 22-Apr-15 14:56 siat/security_prices_test.py
+ -rw-rw-rw-  2.0 fat     1335 b- defN 20-Aug-13 05:31 siat/setup.py
+ -rw-rw-rw-  2.0 fat     1418 b- defN 22-Nov-17 01:20 siat/shenwan index history test.py
+--rw-rw-rw-  2.0 fat   117060 b- defN 23-Feb-06 04:59 siat/stock.py
++-rw-rw-rw-  2.0 fat   117254 b- defN 23-Apr-07 03:21 siat/stock.py
+ -rw-rw-rw-  2.0 fat    31655 b- defN 22-Oct-10 12:18 siat/stock_advice_linear.py
+ -rw-rw-rw-  2.0 fat     1312 b- defN 21-Feb-16 03:29 siat/stock_base.py
+--rw-rw-rw-  2.0 fat    68107 b- defN 22-Dec-20 12:05 siat/stock_china.py
++-rw-rw-rw-  2.0 fat    68123 b- defN 23-Apr-04 07:09 siat/stock_china.py
+ -rw-rw-rw-  2.0 fat     1276 b- defN 21-May-17 02:23 siat/stock_china_test.py
+ -rw-rw-rw-  2.0 fat  1242926 b- defN 21-Nov-07 12:36 siat/stock_info.pickle
+ -rw-rw-rw-  2.0 fat     6122 b- defN 21-Nov-08 02:51 siat/stock_info_test.py
+ -rw-rw-rw-  2.0 fat     1014 b- defN 20-Oct-21 16:54 siat/stock_list_china_test.py
+ -rw-rw-rw-  2.0 fat    36738 b- defN 22-Oct-10 12:19 siat/stock_prices_kneighbors.py
+ -rw-rw-rw-  2.0 fat    13991 b- defN 22-Oct-10 13:02 siat/stock_prices_linear.py
+ -rw-rw-rw-  2.0 fat    25017 b- defN 20-Aug-13 04:56 siat/stock_profile.py
+ -rw-rw-rw-  2.0 fat    72626 b- defN 23-Feb-02 12:43 siat/stock_technical.py
+ -rw-rw-rw-  2.0 fat    19475 b- defN 22-Aug-02 15:06 siat/stock_test.py
+ -rw-rw-rw-  2.0 fat     1571 b- defN 22-Oct-09 14:52 siat/temp.py
+--rw-rw-rw-  2.0 fat    14488 b- defN 22-Dec-25 11:45 siat/transaction.py
++-rw-rw-rw-  2.0 fat    14492 b- defN 23-Apr-06 08:44 siat/transaction.py
+ -rw-rw-rw-  2.0 fat    18580 b- defN 22-Jun-28 06:08 siat/transaction_test.py
+ -rw-rw-rw-  2.0 fat   117953 b- defN 23-Jan-17 15:22 siat/translate-20230125.py
+ -rw-rw-rw-  2.0 fat   118133 b- defN 23-Feb-06 05:45 siat/translate-20230206.py
+--rw-rw-rw-  2.0 fat   118302 b- defN 23-Feb-08 01:33 siat/translate.py
++-rw-rw-rw-  2.0 fat   121657 b- defN 23-Feb-14 15:59 siat/translate-20230215.py
++-rw-rw-rw-  2.0 fat   124748 b- defN 23-Apr-04 06:59 siat/translate.py
+ -rw-rw-rw-  2.0 fat     3936 b- defN 21-Dec-20 12:37 siat/universal_test.py
+--rw-rw-rw-  2.0 fat    51206 b- defN 22-Dec-13 15:38 siat/valuation_china.py
++-rw-rw-rw-  2.0 fat    51268 b- defN 23-Mar-31 05:22 siat/valuation_china.py
+ -rw-rw-rw-  2.0 fat     1571 b- defN 22-Oct-09 14:52 siat/valuation_market_china_test.py
+--rw-rw-rw-  2.0 fat    14749 b- defN 23-Feb-08 01:45 siat/var_model_validation.py
+--rw-rw-rw-  2.0 fat     1399 b- defN 23-Feb-08 03:18 siat-1.7.9.dist-info/METADATA
+--rw-rw-rw-  2.0 fat       92 b- defN 23-Feb-08 03:18 siat-1.7.9.dist-info/WHEEL
+--rw-rw-rw-  2.0 fat        5 b- defN 23-Feb-08 03:18 siat-1.7.9.dist-info/top_level.txt
+-?rw-rw-r--  2.0 fat     8679 b- defN 23-Feb-08 03:18 siat-1.7.9.dist-info/RECORD
+-109 files, 4081838 bytes uncompressed, 1028520 bytes compressed:  74.8%
++-rw-rw-rw-  2.0 fat    14859 b- defN 23-Mar-08 12:59 siat/var_model_validation.py
++-rw-rw-rw-  2.0 fat     1397 b- defN 23-Apr-07 06:57 siat-1.8.dist-info/METADATA
++-rw-rw-rw-  2.0 fat       92 b- defN 23-Apr-07 06:57 siat-1.8.dist-info/WHEEL
++-rw-rw-rw-  2.0 fat        5 b- defN 23-Apr-07 06:57 siat-1.8.dist-info/top_level.txt
++?rw-rw-r--  2.0 fat     8918 b- defN 23-Apr-07 06:57 siat-1.8.dist-info/RECORD
++112 files, 4325742 bytes uncompressed, 1086069 bytes compressed:  74.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -45,14 +45,20 @@
+ 
+ Filename: siat/cmat_commons.py
+ Comment: 
+ 
+ Filename: siat/common.py
+ Comment: 
+ 
++Filename: siat/compare_cross.py
++Comment: 
++
++Filename: siat/compare_cross_test.py
++Comment: 
++
+ Filename: siat/concepts_iwencai.py
+ Comment: 
+ 
+ Filename: siat/concepts_kpl.py
+ Comment: 
+ 
+ Filename: siat/copyrights.py
+@@ -294,14 +300,17 @@
+ 
+ Filename: siat/translate-20230125.py
+ Comment: 
+ 
+ Filename: siat/translate-20230206.py
+ Comment: 
+ 
++Filename: siat/translate-20230215.py
++Comment: 
++
+ Filename: siat/translate.py
+ Comment: 
+ 
+ Filename: siat/universal_test.py
+ Comment: 
+ 
+ Filename: siat/valuation_china.py
+@@ -309,20 +318,20 @@
+ 
+ Filename: siat/valuation_market_china_test.py
+ Comment: 
+ 
+ Filename: siat/var_model_validation.py
+ Comment: 
+ 
+-Filename: siat-1.7.9.dist-info/METADATA
++Filename: siat-1.8.dist-info/METADATA
+ Comment: 
+ 
+-Filename: siat-1.7.9.dist-info/WHEEL
++Filename: siat-1.8.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: siat-1.7.9.dist-info/top_level.txt
++Filename: siat-1.8.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: siat-1.7.9.dist-info/RECORD
++Filename: siat-1.8.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## siat/allin.py
+
+```diff
+@@ -87,14 +87,17 @@
+ 
+ # 证券交易-套壳
+ from siat.transaction import *
+ 
+ # 持有资产风险-模型验证
+ from siat.var_model_validation import *
+ 
++# 跨种类比较分析
++from siat.compare_cross import *
++
+ # 机器学习-课程案例
+ from siat.ml_cases import *
+ 
+ # 股票技术分析
+ from siat.stock_technical import *
+```
+
+## siat/assets_liquidity.py
+
+```diff
+@@ -650,22 +650,34 @@
+     graph=True    
+     liquidity_type='roll_spread'
+     liqs=liquidity_rolling(portfolio,start,end,liquidity_type)
+ 
+ 
+ #==============================================================================
+ #==============================================================================
++def compare_liquidity(portfolio1,portfolio2,start,end,liquidity_type,window=30):
++    """
++    功能：套壳函数compare_liquidity_rolling，无差异，保持兼容性
++    """
++    
++    compare_liquidity_rolling(portfolio1=portfolio1,portfolio2=portfolio2, \
++                              start=start,end=end,liquidity_type=liquidity_type, \
++                                  window=window)
+ 
++    return
+ 
+-
++#==============================================================================
+ def compare_liquidity_rolling(portfolio1,portfolio2,start,end,liquidity_type,window=30):
+     """
+     功能：比较两个投资组合portfolio1和portfolio2在start至end期间的流动性指标liquidity_type
+     """
+     #投资组合1
++    pf1name=portfolio_name(portfolio1)
++    if pf1name == '投资组合':
++        pf1name == '组合1'
+     liqs1=liquidity_rolling(portfolio1,start,end,liquidity_type, \
+                       window=window,graph=False)
+     if liqs1 is None:
+         print("  #Error(compare_liquidity_rolling): portfolio info inaccesible for",portfolio1)
+         return 
+     
+     colname1='Ratio'
+@@ -673,14 +685,18 @@
+     datatag1=False
+     
+     zeroline=False
+     neg_liqs1=liqs1[liqs1['Ratio'] < 0]
+     if len(neg_liqs1) > 0: zeroline=True
+    
+     #投资组合2
++    pf2name=portfolio_name(portfolio2)
++    if pf2name == '投资组合':
++        pf2name == '组合2'    
++    
+     liqs2=liquidity_rolling(portfolio2,start,end,liquidity_type, \
+                       window=window,graph=False)
+     if liqs2 is None:
+         print("  #Error(compare_liquidity_rolling): portfolio info inaccesible for",portfolio2)
+         return     
+     
+     colname2='Ratio'
+@@ -689,35 +705,47 @@
+     
+     zeroline=False
+     neg_liqs2=liqs2[liqs2['Ratio'] < 0]
+     if len(neg_liqs2) > 0: zeroline=True
+ 
+     #绘图    
+     ylabeltxt=ectranslate(liquidity_type)
+-    titletxt="证券流动性风险的滚动趋势比较"
++    titletxt="证券流动性风险走势比较"
+     
+     _,_,tickerlist1,sharelist1=decompose_portfolio(portfolio1)
+     if len(tickerlist1)==1:
+         product1=str(codetranslate(tickerlist1))
+     else:
+         product1=str(codetranslate(tickerlist1))+'，持仓'+str(sharelist1)    
+     _,_,tickerlist2,sharelist2=decompose_portfolio(portfolio2)
+     if len(tickerlist2)==1:
+         product2=str(codetranslate(tickerlist2))
+     else:
+         product2=str(codetranslate(tickerlist2))+'，持仓'+str(sharelist2)     
+     
+     import datetime as dt; today=dt.date.today()
+-    footnote="证券1="+product1+"\n证券2="+product2+ \
++    """
++    footnote=pf1name+"："+product1+"\n"+pf2name+"："+product2+ \
+             "\n数据来源：新浪/stooq, "+str(today)
++    """
++    if liquidity_type == 'amihud_illiquidity':
++        notes="注：图中阿米胡德指标采用对数算法\n"
++    else:
++        notes=''
++    footnote= notes+"数据来源：新浪/stooq, "+str(today)    
+     power=0 #不绘制趋势线
+ 
+-    plot_line2_coaxial(liqs1,"证券1",colname1,label1, \
+-                       liqs2,"证券2",colname2,label2, \
++    plot_line2_coaxial(liqs1,pf1name,colname1,label1, \
++                       liqs2,pf2name,colname2,label2, \
+                 ylabeltxt,titletxt,footnote,power,datatag1,datatag2,zeroline)
++    
++    print("\n*** 投资组合的成分股与持仓比例")
++    print(pf1name+"："+product1)
++    print(pf2name+"："+product2)
++        
+     return
+     
+     
+ 
+ if __name__ =="__main__":
+     portfolio1={'Market':('US','^GSPC'),'PDD':1.0}
+     portfolio2={'Market':('US','^GSPC'),'BILI':1.0}
+```
+
+## siat/bond.py
+
+```diff
+@@ -1986,15 +1986,15 @@
+     """
+     功能：基于KPMG风险中性定价各个因素计算违约概率PD和预期损失率ELR
+     k1：票面利率coupon rate，注意不能低于rf
+     theta：违约时的回收率recovery rate at default。loss given default lgd=1-rrd
+     theta为零时表示违约时无可回收的资产
+     i1：无风险收益率risk-free rate，注意不能高于cr
+     
+-    局限性：仅适用于1年期债券
++    局限性：仅适用于1年期债券，多期债券可以使用累积概率方法进行推算
+     """
+     #检查k1与i1之间的合理关系
+     if k1 < i1:
+         print("  #Warning(): coupon rate should not be lower than risk-free rate",k1,i1)
+         return None,None
+ 
+     lgd=1-theta
+@@ -2044,14 +2044,16 @@
+     
+     #计算k1变化对于债券pd和elr的影响
+     for i in k1list:
+         k1t=k1 + i/10000.0
+         if k1t < i1: continue
+     
+         pdt,elr=calc_kpmg_rnpm1(k1t,theta,i1)
++        if pdt >= 1:
++            continue
+         
+         if i < 0:
+             xl='-'+str(abs(i))+'bp'
+         elif i > 0:
+             xl='+'+str(i)+'bp'
+         else:
+             xl=str(k1t*100)+'%'
+@@ -2140,14 +2142,16 @@
+     
+     #计算i1变化对于债券pd和elr的影响
+     for i in i1list:
+         i1t=i1 + i/10000.0
+         if (i1t >= k1) | (i1t <0): continue
+     
+         pdt,elr=calc_kpmg_rnpm1(k1,theta,i1t)
++        if pdt >= 1:
++            continue
+         
+         if i < 0:
+             xl='-'+str(abs(i))+'bp'
+         elif i > 0:
+             xl='+'+str(i)+'bp'
+         else:
+             xl=str(i1t*100)+'%'
+@@ -2235,14 +2239,16 @@
+     
+     #计算theta变化对于债券pd和elr的影响
+     for i in thetalist:
+         t1t=round(theta + i/100.0,4)
+         if (t1t >= 1) | (t1t <0): continue
+     
+         pdt,elr=calc_kpmg_rnpm1(k1,t1t,i1)
++        if pdt >= 1:
++            continue
+         
+         xl=str(round(t1t*100))+'%'
+ 
+         s=pd.Series({'k1':k1,'theta':xl,'i1':i1,'changeInPct':i,'pd':pdt*100,'elr':elr*100})
+         df=df.append(s, ignore_index=True)
+ 
+     #按照到期收益率升序排序
+```
+
+## siat/bond_base.py
+
+```diff
+@@ -150,15 +150,15 @@
+     功能：计算债券的美元久期年数
+     输入参数：
+     1、年票面利率cr
+     2、年到期收益率ytm，市场利率，贴现率
+     3、到期年数nyears
+     4、每年付息次数ctimes
+     5、票面价值fv
+-    输出：美元久期（年数）
++    输出：美元久期（金额）
+     """
+     
+     #转换为每期付息的参数
+     c=cr/ctimes; y=ytm/ctimes; F=fv; n=nyears*ctimes
+     
+     #计算久期期数
+     d=DD0(c,y,F,n)
+@@ -337,23 +337,66 @@
+     cyears=round(c/ctimes**2,2)
+     
+     return cyears                    
+ 
+ if __name__=='__main__':
+     cr=0.08; ytm=0.1; nyears=3; ctimes=2; fv=100
+     print(convexity(cr,ytm,nyears))
++#==============================================================================
++if __name__=='__main__':
++    coupon_rate=0.07
++    maturity_years=8
++    ytm=0.06
++    coupon_times=2
++    par_value=100
++    rate_diff=0.005
++    
++    dp=interest_rate_risk(coupon_rate,maturity_years,ytm,rate_diff)
++
++def interest_rate_risk(coupon_rate,maturity_years,ytm,rate_diff, \
++                       coupon_times=2,par_value=100,printout=True):
++    """
++    功能：若市场利率变化(上升/下降)rate_change(Δr)，导致债券市价的变化率(ΔP/P)
++    原理：债券市场价格的久期与凸度展开公式
++    注意：套壳函数ytm_risk
++    """
++    
++    value=ytm_risk(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                   bpyear=rate_diff,ctimes=coupon_times,fv=par_value)
++    
++    if printout:
++        calc_durations(coupon_rate,maturity_years,ytm,
++                          coupon_times=coupon_times,par_value=par_value, \
++                          mtypes=['macaulay_duration','convexity'])
++        
++        print("\n***利率变化带来的风险")
++        
++        if rate_diff > 0:
++            arrow='↑'
++        else:
++            arrow='↓'
++        print("市场利率变化(基点):",int(rate_diff*10000),arrow)
++        
++        if value > 0:
++            arrow2='↑'
++        else:
++            arrow2='↓'
++        print("债券市价的变化率  :",round(value*100,2),'\b% '+arrow2)
++    
++    return value
++
+ #==============================================================================    
+ def ytm_risk(cr,ytm,nyears,bpyear,ctimes=2,fv=100):
+     """
+     功能：计算债券的利率风险，即市场利率（到期收益率）变动将带来的债券价格变化率
+     输入参数：
+     1、年票面利率cr
+     2、年到期收益率ytm，市场利率，贴现率
+     3、到期年数nyears
+-    4、年华市场利率（到期收益率）变化的幅度bpyear，100个基点=1%
++    4、年华市场利率（到期收益率）变化的幅度bpyear(小数，不是基点)
+     5、每年付息次数ctimes
+     6、票面价值fv
+     输出：到期收益率变化幅度导致的债券价格变化率
+     """
+     #转换为每期付息的参数
+     c=cr/ctimes; y=ytm/ctimes; F=fv; n=nyears*ctimes
+     
+@@ -376,15 +419,15 @@
+     """
+     功能：获得银行间债券市场发行明细
+     输入：开始日期fromdate，截止日期todate
+     """
+     #检查期间的合理性
+     result,start,end=check_period(fromdate, todate)
+     if result is None:
+-        print("...Error(interbank_bond_issue_detail), invalid period:",fromdate,todate)
++        print("  #Error(interbank_bond_issue_detail), invalid period:",fromdate,todate)
+         return None
+     
+     #####银行间市场的债券发行数据
+     import akshare as ak
+     #获得债券发行信息第1页
+     print("\n...Searching for bond issuance: ",end='')
+     bond_issue=ak.get_bond_bank(page_num=1)    
+@@ -442,7 +485,190 @@
+     
+ if __name__=='__main__':
+     fromdate='2020-4-25'    
+     todate='2020-4-28'
+     ibbi=interbank_bond_issue_detail(fromdate,todate)
+     
+ #==============================================================================
++#==============================================================================
++#==============================================================================
++# 演示久期、凸度的影响因素
++#==============================================================================
++if __name__=='__main__':
++    coupon_rate=0.07
++    maturity_years=8
++    ytm=0.06
++    coupon_times=2
++    par_value=100
++    rate_change=0.0001
++    mtype='macaulay_duration'
++    
++    calc_macaulay(coupon_rate,maturity_years,ytm,mtype='macaulay_duration')
++    calc_macaulay(coupon_rate,maturity_years,ytm,mtype='modified_duration')
++    calc_macaulay(coupon_rate,maturity_years,ytm,mtype='dollar_duration')
++    calc_macaulay(coupon_rate,maturity_years,ytm,mtype='efficient_duration') 
++    calc_macaulay(coupon_rate,maturity_years,ytm,mtype='closed_form_duration')
++    calc_macaulay(coupon_rate,maturity_years,ytm,mtype='convexity')   
++    
++    calc_macaulay(0.1,3,0.12,1,1000,'macaulay_duration')
++    calc_macaulay(0.1,3,0.05,1,1000,'macaulay_duration')
++    calc_macaulay(0.1,3,0.20,1,1000,'macaulay_duration')    
++    
++    calc_macaulay(0.08,3,0.1,2,100,'closed_form_duration')    
++
++    calc_macaulay(0.08,3,0.1,2,100,'modified_duration') 
++    calc_macaulay(0.08,3,0.1,2,100,'dollar_duration')
++
++    calc_macaulay(0.095,8,0.1144,2,1000,'efficient_duration',rate_change=0.0005)
++
++    calc_macaulay(0.08,3,0.1,2,100,'convexity')
++
++def calc_macaulay(coupon_rate,maturity_years,ytm,
++                  coupon_times=2,par_value=100, \
++                  mtype='macaulay_duration', \
++                  rate_change=0.001):
++    """
++    功能：统一计算各种久期和凸度
++    输入参数：
++    coupon_rate：债券的票面年利率
++    maturity_years：距离到期的年数，需要折算
++    ytm：年到期收益率，可作为折现率
++    coupon_times=2：每年付息次数
++    par_value=100：债券面值
++    rate_change=0：利率变化，专用于有效久期
++    mtype='macaulay'：麦考利久期macaulay_duration，修正久期modified_duration，
++    美元久期dollar_duration，有效久期efficient_duration，
++    封闭久期closed_form_duration，凸度convexity
++    printout=False：是否打印结果
++    """
++    
++    # 检查计算类型
++    mtypelist=['macaulay_duration','modified_duration','dollar_duration', \
++               'efficient_duration','closed_form_duration','convexity']
++    if not (mtype in mtypelist):
++        print("  #Error(calc_macaulay): unsupported duration/convexity",mtype)
++        print("  Supported duration/convexity:",mtypelist)
++        return None
++    
++    value=999
++    # 麦考利久期：返回久期年数
++    if mtype=='macaulay_duration':
++        value=macD(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                   ctimes=coupon_times,fv=par_value)
++    
++    # 修正久期：返回年数
++    if mtype=='modified_duration':
++        value=MD(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                 ctimes=coupon_times,fv=par_value)
++    
++    # 美元久期：返回金额
++    if mtype=='dollar_duration':
++        #DD(cr,ytm,nyears,ctimes=2,fv=100)
++        value=DD(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                 ctimes=coupon_times,fv=par_value)
++    
++    # 有效久期：返回年数
++    if mtype=='efficient_duration':
++        #ED(cr,ytm,nyears,peryear,ctimes=2,fv=100)
++        value=ED(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                 peryear=rate_change, \
++                 ctimes=coupon_times,fv=par_value)
++    
++    # 封闭久期：返回年数
++    if mtype=='closed_form_duration':
++        #CFD(cr,ytm,nyears,ctimes=2,fv=100)
++        value=CFD(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                 ctimes=coupon_times,fv=par_value)
++    
++    # 凸度：返回年数
++    if mtype=='convexity':
++        #convexity(cr,ytm,nyears,ctimes=2,fv=100)
++        value=convexity(cr=coupon_rate,ytm=ytm,nyears=maturity_years, \
++                 ctimes=coupon_times,fv=par_value)
++    
++    if value==999:
++        print("  #Error(calc_macaulay): no valid result calculated!")
++        return None
++    
++    return value
++            
++
++#==============================================================================
++if __name__=='__main__':
++    coupon_rate=0.08
++    maturity_years=3
++    ytm=0.1
++    coupon_times=2
++    par_value=100
++    rate_change=0.0005
++    
++    calc_durations(coupon_rate,maturity_years,ytm)
++
++"""
++def calc_durations(coupon_rate,maturity_years,ytm,
++                  coupon_times=2,par_value=100, \
++                  mtypes=['macaulay_duration','modified_duration', \
++                  'dollar_duration'], \
++                  rate_change=0.001):
++"""
++def calc_durations(coupon_rate,maturity_years,ytm,
++                  coupon_times=1,par_value=100, \
++                  mtypes=['macaulay_duration'], \
++                  rate_change=0.001):
++    """
++    功能：一次性计算常见的久期，并打印
++    注意：默认仅处理麦考利久期。若要处理其他久期，可以规定mtypes列表中的选项
++    """
++    
++    mtypes_all=['macaulay_duration','modified_duration', \
++                'efficient_duration','closed_form_duration','dollar_duration', \
++                'convexity']
++    mtypes_all_cn=['麦考利久期(年数):','修正久期(年数)  :', \
++                '有效久期(年数)  :','封闭久期(年数)  :','美元久期(金额)  :', \
++                '凸度(年数)      :']
++    
++    #print("\n===== 久期计算 =====")
++    print("\n***债券信息")
++    print("面值            :",par_value)
++    print("票面利率(年化)  :",round(coupon_rate*100,2),'\b%')
++    print("每年付息次数    :",coupon_times)
++    print("到期时间(年数)  :",maturity_years)
++    print("到期收益率(年化):",round(ytm*100,2),'\b%')
++    
++    if 'efficient_duration' in mtypes:
++        print("假如年利率变化(基点):",rate_change*10000)
++    
++    print("\n***计算结果")
++    for mt in mtypes:
++        value=calc_macaulay(coupon_rate,maturity_years,ytm,
++                            coupon_times,par_value, \
++                            mtype=mt, \
++                            rate_change=rate_change)
++    
++        pos=mtypes_all.index(mt)
++        value_label=mtypes_all_cn[pos]
++        
++        print(value_label,value)
++        
++    return
++
++#==============================================================================
++
++
++def calc_convexity(coupon_rate,maturity_years,ytm,
++                  coupon_times=1,par_value=100):
++    """
++    功能：用于计算债券的凸度，并打印
++    注意：套壳函数calc_durations
++    """
++    calc_durations(coupon_rate,maturity_years,ytm,
++                      coupon_times=coupon_times,par_value=par_value, \
++                      mtypes=['convexity'])
++        
++    return
++
++#==============================================================================
++#==============================================================================
++#==============================================================================
++#==============================================================================
++
++
+```
+
+## siat/capm_beta.py
+
+```diff
+@@ -171,15 +171,15 @@
+     return  beta  
+     
+ if __name__=='__main__':
+     capm_beta('002504.SZ','000001.SS','12/31/2011','12/31/2018')    
+ 
+ #==============================================================================
+ 
+-def plot_trend(titletxt,footnotetxt,df,power=1):
++def plot_trend(titletxt,footnotetxt,df,power=1,axhline_value=1,axhline_label=''):
+     """
+     功能：绘制散点数据的平滑曲线图及其趋势线
+     titletxt: 标题
+     footnotetxt：脚注
+     df: 数据框，其索引为字符型年份，第1列与年份对应的数值1，
+     第2列与年份对应的数值2，。。。
+     power: 趋势线拟合的幂阶数，默认为三阶多项式
+@@ -233,14 +233,21 @@
+         p2=np.polyval(p,xx)
+         #绘图2：拟合出来的大量模拟点构成的平滑趋势曲线
+         plt.plot(x,p2,linestyle=':',linewidth=3)
+ 
+         #绘图3：原数据点
+         plt.plot(year,number,'*',label=rowlist[i])
+     
++    #是否绘制水平线
++    if axhline_label !="":
++        if '市场' in axhline_label:
++            axhline_label=''
++        plt.axhline(y=axhline_value,label=axhline_label,color='black',linestyle=':',linewidth=2)  
++        #plt.axhline(y=axhline_value,color='purple',linestyle=':',linewidth=1.5)
++    
+     #x轴刻度：使用原数据点的自变量
+     plt.xticks(year,rotation=45)
+     plt.legend(loc='best')
+     plt.title(titletxt)
+     plt.xlabel(footnotetxt)
+     plt.show()
+     
+@@ -314,15 +321,15 @@
+     
+     betas.set_index('Year',inplace=True)
+     
+     #绘图：年度贝塔系数趋势
+     df=pd.DataFrame(betas['Beta'])
+     title="股票的年度贝塔系数趋势: "+codetranslate(stkcd)
+     foot="\n数据来源：新浪/stooq/fred，基于"+codetranslate(mktidx)+'，'+str(today)
+-    plot_trend(title,foot,df,power=3)
++    plot_trend(title,foot,df,power=3,axhline_value=1,axhline_label='市场风险线')
+     
+     return betas   
+     
+ if __name__=='__main__':
+     yearlist=['2013','2014','2015','2016','2017','2018','2019']
+     capm_beta_yearly('AAPL','^GSPC',yearlist)    
+ 
+@@ -471,18 +478,18 @@
+         
+     print("\n",betas)
+     betas.set_index('Year',inplace=True)
+     
+     #绘图：年度贝塔系数变化
+     df=pd.DataFrame(betas['Beta'])
+     title="投资组合的年度贝塔系数"+ \
+-            "\n成分股: "+str(tickerlist)+"\n持仓权重: "+str(sharelist)
++            "\n成分股: "+str(codetranslate(tickerlist))+"\n持仓权重: "+str(sharelist)
+     import datetime; today = datetime.date.today()
+     foot="数据来源: 新浪/stooq/fred，"+str(today)
+-    plot_trend(title,foot,df,power=2)
++    plot_trend(title,foot,df,power=2,axhline_value=1,axhline_label='市场风险线')
+     
+     return  betas  
+     
+ if __name__=='__main__':
+     yearlist=['2013','2014','2015','2016','2017','2018','2019']
+     capm_beta_portfolio_yearly(['AAPL','MSFT'],[2,1],'^GSPC',yearlist)
+     capm_beta_portfolio_yearly(['600028.SS','600036.SS'],[2,1],'000001.SS',yearlist)    
+@@ -700,15 +707,18 @@
+         #print("  Calculated CAPM beta of",stkcd2,'on year',year)
+         
+     betas2.set_index('Year',inplace=True)
+     
+     #绘图：年度贝塔系数变化
+     plt.plot(betas1['Beta'],label=codetranslate(stkcd1),c='red',marker='o',lw=1)
+     plt.plot(betas2['Beta'],label=codetranslate(stkcd2),c='blue',marker='D',lw=2,linestyle='--')
+-    plt.axhline(y=1.0,color='b',linestyle=':',c='green',label='市场平均风险')  
++    
++    #plt.axhline(y=1.0,color='b',linestyle=':',c='green',label='市场平均风险')  
++    plt.axhline(y=1.0,color='b',linestyle=':',c='black')  
++    
+     plt.ylabel("贝塔系数",fontweight='bold')
+     plt.xticks(rotation=45,fontweight='bold')
+     trtitle="比较证券之间的贝塔系数"+"\n"+codetranslate(stkcd1)+" vs "+codetranslate(stkcd2)
+     plt.title(trtitle,fontweight='bold')
+     plt.legend(loc='best')
+     
+     import datetime; today = datetime.date.today()
+```
+
+## siat/common.py
+
+```diff
+@@ -799,15 +799,43 @@
+         result=False
+         
+     return result
+ 
+ if __name__ =="__main__":
+     print(check_date('2019-6-31'))
+ 
++#==============================================================================
++def check_date2(adate):
++    """
++    功能：检查一个日期是否为有效日期，并转换标准的形式YYYY-MM-DD以便比较大小
++    输入参数：一个日期
++    输出：合理日期为True，其他为False
++    """
++    #仅为测试使用，测试完毕需要注释掉
++    #adate='2019-6-31'
++
++    result=True
++    import pandas as pd
++    try:    
++        bdate=pd.to_datetime(adate)
++    except:
++        print("  #Error(check_date): invalid date",adate)
++        #print("Variable(s):",adate)
++        result=False
++        bdate=None
++    
++    if result:
++        import datetime as dt
++        fdate=dt.datetime.strftime(bdate,'%Y-%m-%d')
++        
++    return result,fdate
+ 
++if __name__ =="__main__":
++    adate='2023-1-25'
++    print(check_date('2019-6-31'))
+ #==============================================================================
+ def check_start_end_dates(start,end):
+     """
+     功能：检查一个期间的开始/结束日期是否合理
+     输入参数：开始和结束日期
+     输出：合理为True，其他为False
+     """
+@@ -960,16 +988,16 @@
+ if __name__=='__main__':
+     split_prefix_suffix('600519.SS')
+     split_prefix_suffix('600519.ss')
+     split_prefix_suffix('AAPL')
+     split_prefix_suffix('aapl')
+ #==================================================================================
+ if __name__=='__main__': 
+-    start='2021-11-1'
+-    end='2021-11-15'
++    start='2022-1-1'
++    end='2023-3-4'
+ 
+ shibor_period_list=['ON','1W','2W','1M','3M','6M','9M','1Y']
+ 
+ def get_shibor_rates_bs(start,end,rate_period='3M'):
+     """
+     功能：基于Baostock获得指定期间和期限的shibor利率
+     start：开始日期
+@@ -1042,19 +1070,19 @@
+     return result1
+     
+ if __name__=='__main__': 
+     get_shibor_rates_bs('2021-10-1','2021-11-28')   
+     
+ #=============================================================================
+ if __name__=='__main__': 
+-    date='2021-11-19'
++    date='2023-3-4'
+     rate_period='3M'
+-    daysahead=30
++    daysahead=360
+ 
+-def shibor_rate(date,rate_period='3M',daysahead=60):
++def shibor_rate(date,rate_period='3M',daysahead=360):
+     """
+     获取指定日期和期限的shibor利率
+     若无最新利率，则取最近日期的利率替代
+     
+     注意：这里得到的是年化利率，不带百分号，不是日利率！（日利率=年化利率/365）
+     """    
+     
+@@ -1085,15 +1113,15 @@
+     
+ if __name__=='__main__': 
+     shibor_rate('2021-11-19',rate_period='3M')
+     shibor_rate('2021-11-19',rate_period='ON')
+ #==============================================================================        
+ if __name__=='__main__':
+     start='2020-1-1'
+-    end='2021-11-30'
++    end='2023-3-4'
+     term='1Y'
+     
+ def treasury_yields_china(start,end,term='1Y'):
+     """
+     功能：抓取指定期间和期限的国债收益率
+     
+     注意：这里得到的是年化利率，不带百分号，不是日利率！（日利率=年化利率/365）
+@@ -1110,14 +1138,16 @@
+         print("  #Error(treasury_yields_china): invalid rate period",term)
+         print("  Supported rate periods:",term_list)
+         return None
+     
+     #抓取中债国债收益率
+     import akshare as ak
+     df = ak.bond_china_yield(start_date=start,end_date=end)
++    if len(df)==0:
++        return None
+     
+     df1=df[df['曲线名称']=='中债国债收益率曲线']
+     df1.columns=['curve','date']+term_list
+     df1.sort_values(by=['date'],ascending=['True'],inplace=True)
+     
+     df1['Date']=pd.to_datetime(df1['date'])
+     df1.set_index(['Date'],inplace=True)    
+@@ -1129,19 +1159,19 @@
+     return df2
+ 
+ if __name__=='__main__':
+     treasury_yields_china('2021-11-1','2021-11-28',term='1Y')
+     
+     
+ if __name__=='__main__':
+-    today='2021-11-20'
++    today='2023-3-4'
+     term='1Y'
+-    daysahead=30
++    daysahead=360
+     
+-def treasury_yield_china(today,term='1Y',daysahead=60):
++def treasury_yield_china(today,term='1Y',daysahead=360):
+     """
+     功能：抓取指定日期和期限的国债收益率
+     
+     注意：这里得到的是年化利率，不带百分号，不是日利率！（日利率=年化利率/365）
+     """
+     #检查日期
+     valid=check_date(today)
+@@ -1612,13 +1642,238 @@
+         value=int(mstring)
+     else:
+         value=float(mstring)
+         
+     return value
+ 
+ #==============================================================================
++if __name__=='__main__':
++    time_priority_weighted_average(df,'蔚来汽车',decimals=4)
++
++def time_priority_weighted_average(df,colname,decimals=4):
++    """
++    功能：对df中的colname列进行时间优先加权平均
++    算法：将df索引列的datetime转换为8位数字，然后将每列的8位数字减去初始行的8位数字
++    将其差作为权重
++    """
++    df['time_weight']=df.index.asi8
++    df0=df.head(1)
++    initial_weight=df0['time_weight'][0]
++    df['relative_weight']=df['time_weight']-initial_weight
++    
++    import numpy as np
++    try:
++        tpwavg=np.average(df[colname],weights=df['relative_weight'])
++    except:
++        return None
++    
++    return round(tpwavg,decimals)
++
++#==============================================================================
++
++if __name__=='__main__':
++    tickers=['NIO','LI','XPEV','TSLA']
++    df=compare_mrar(tickers,
++                    rar_name='sharpe',
++                    start='2022-1-1',end='2023-1-31',
++                    market='US',market_index='^GSPC',
++                    window=240,axhline_label='指标零线')    
++    titletxt="This is the title text"
++    footnote="This is the footnote"
++
++def descriptive_statistics(df,titletxt,footnote,decimals=4,sortby='tpw_mean', \
++                           recommend_only=False):
++    """
++    功能：进行描述性统计，并打印结果
++    df的要求：
++    索引列为datetime格式，不带时区
++    各个列为比较对象，均为数值型，降序排列
++    
++    sortby='tpw_mean'：按照近期时间优先加权(time priority weighted)平均数排序
++    recommend_only=False：是否仅打印推荐的证券
++    """
++    
++    # 检查df
++    if df is None:
++        print("  #Error(descriptive_statistics): df is None")
++        return
++    
++    if len(df) == 0:
++        print("  #Error(descriptive_statistics): df is empty")
++        return
++    
++    ds=df.describe(include='all',percentiles=[.5])
++    dst=ds.T   
++    #cols=['min','max','50%','mean','std']
++    cols=['min','max','50%','mean']
++    
++    dst['item']=dst.index
++    #cols2=['item','min','max','50%','mean','std']
++    cols2=['item','min','max','50%','mean']
++    
++    
++    dst2=dst[cols2]
++    for c in cols:
++        dst2[c]=dst2[c].apply(lambda x: round(x,decimals))
++    
++    if sortby != 'tpw_mean': 
++        if sortby=='median':
++            sortby='50%'
++        dst2.sort_values(by=sortby,ascending=False,inplace=True)
++
++    #cols2cn=['比较对象','最小值','最大值','中位数','平均值','标准差']
++    cols2cn=['比较对象','最小值','最大值','中位数','平均值']
++    dst2.columns=cols2cn
++    dst2['近期优先加权平均']=dst2['比较对象'].apply(lambda x:time_priority_weighted_average(df,x,4))
++    if sortby == "tpw_mean":
++        dst2.sort_values(by='近期优先加权平均',ascending=False,inplace=True)
++    
++    # 去掉带有缺失值的行
++    #dst3=dst2.dropna()
++    dst3=dst2
++    #dst3=dst3[not (dst3['比较对象'] in ['time_weight','relative_weight']) ]
++    dst3=dst3[(dst3['比较对象'] != 'time_weight') & (dst3['比较对象'] != 'relative_weight')]
++    
++    dst3.reset_index(drop=True,inplace=True)
++    dst3.index=dst3.index+1
++    
++    # 趋势标记
++    dst3['趋势']='➠'
++    dst3['趋势']=dst3.apply(lambda x: '➹' if (x['近期优先加权平均']>x['平均值']) & (x['近期优先加权平均']>x['中位数']) else x['趋势'],axis=1)
++    dst3['趋势']=dst3.apply(lambda x: '➷' if (x['近期优先加权平均']<x['平均值']) & (x['近期优先加权平均']<x['中位数']) else x['趋势'],axis=1)
++    
++    # 推荐标记
++    dst3['推荐标记']=''
++
++    if sortby == 'tpw_mean': #稳健推荐
++        dst3['推荐标记']=dst3.apply(lambda x: '✮' if (x['近期优先加权平均']>0) else x['推荐标记'],axis=1)
++        
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮' if (x['中位数']>0) & (x['平均值']>0) & (x['近期优先加权平均']>0) else x['推荐标记'],axis=1)   
++        
++        maxvalue=dst3['近期优先加权平均'].max()
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮✮' if (x['近期优先加权平均']==maxvalue) & (x['推荐标记']=='✮✮') else x['推荐标记'],axis=1)
++        
++    elif sortby == 'min': #保守推荐
++        dst3['推荐标记']=dst3.apply(lambda x: '✮' if (x['近期优先加权平均']>0) else x['推荐标记'],axis=1)
++        
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮' if (x['最小值']>0) else x['推荐标记'],axis=1)   
++        
++        maxvalue=dst3['最小值'].max()
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮✮' if (x['最小值']==maxvalue) & (x['推荐标记']=='✮✮') else x['推荐标记'],axis=1)
++        
++    elif sortby == 'mean': #进取推荐，均值
++        dst3['推荐标记']=dst3.apply(lambda x: '✮' if (x['平均值']>0) else x['推荐标记'],axis=1)
++        
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮' if (x['中位数']>0) & (x['推荐标记']=='✮') else x['推荐标记'],axis=1)   
++        
++        maxvalue=dst3['平均值'].max()
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮✮' if (x['平均值']==maxvalue) & (x['推荐标记']=='✮✮') else x['推荐标记'],axis=1)
++        
++    elif sortby == 'median': #进取推荐，中位数
++        dst3['推荐标记']=dst3.apply(lambda x: '✮' if (x['中位数']>0) else x['推荐标记'],axis=1)
++        
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮' if (x['平均值']>0) & (x['推荐标记']=='✮') else x['推荐标记'],axis=1)   
++        
++        maxvalue=dst3['中位数'].max()
++        dst3['推荐标记']=dst3.apply(lambda x: '✮✮✮' if (x['中位数']==maxvalue) & (x['推荐标记']=='✮✮') else x['推荐标记'],axis=1)   
++    else:
++        pass
++
++    # 下降趋势时，星星个数降一级，执行顺序不可颠倒
++    dst4=dst3
++
++    # 一颗星颗星-->无星
++    dst4['推荐标记']=dst4.apply(lambda x: '' if (x['推荐标记']=='✮') & (x['趋势']=='➷') else x['推荐标记'],axis=1)   
++    
++    # 两颗星颗星-->一颗星
++    dst4['推荐标记']=dst4.apply(lambda x: '✮' if (x['推荐标记']=='✮✮') & (x['趋势']=='➷') else x['推荐标记'],axis=1)   
++    
++    # 三颗星-->两颗星✮
++    #dst4['推荐标记']=dst4.apply(lambda x: '✮✮✩' if (x['推荐标记']=='✮✮✮') & (x['趋势']=='➷') else x['推荐标记'],axis=1)
++    dst4['推荐标记']=dst4.apply(lambda x: '✮✮' if (x['推荐标记']=='✮✮✮') & (x['趋势']=='➷') else x['推荐标记'],axis=1)
++    
++    # 上升趋势时，星星个数加一级，执行顺序不可颠倒
++    # 两颗星颗星-->三颗星
++    dst4['推荐标记']=dst4.apply(lambda x: '✮✮✮' if (x['推荐标记']=='✮✮') & (x['趋势']=='➹') else x['推荐标记'],axis=1)   
++    
++    # 一颗星颗星-->两颗星
++    dst4['推荐标记']=dst4.apply(lambda x: '✮✮' if (x['推荐标记']=='✮') & (x['趋势']=='➹') else x['推荐标记'],axis=1)   
++    
++    # 重排序：按照星星个数+数值，降序
++    dst5=dst4
++    if sortby == "tpw_mean":
++        dst5.sort_values(by=['推荐标记','近期优先加权平均'],ascending=[False,False],inplace=True)
++        #dst5.sort_values(by=['推荐标记','近期优先加权平均'],ascending=False,inplace=True)
++    elif sortby == "min":
++        dst5.sort_values(by=['推荐标记','最小值'],ascending=[False,False],inplace=True)
++    elif sortby == "mean":
++        dst5.sort_values(by=['推荐标记','平均值'],ascending=[False,False],inplace=True)
++    elif sortby == "median":
++        dst5.sort_values(by=['推荐标记','中位数'],ascending=[False,False],inplace=True)
++    else:
++        pass
++    
++    #是否过滤无推荐标志的证券，防止过多无推荐标志的记录使得打印列表过长
++    if recommend_only:
++        dst6=dst5[dst5['推荐标记'] != '']
++        dst_num=len(dst6)
++        #若无推荐标志也要显示头十个
++        if dst_num < 10:
++            dst6=dst5.head(10)
++        else:
++            dst6=dst5.head(dst_num+3)
++    else:
++        dst6=dst5
++    
++    dst6.reset_index(drop=True,inplace=True)
++    dst6.index=dst6.index+1
++    
++    print("\n"+titletxt+"\n")
++    #alignlist=['right','left']+['center']*(len(list(dst4))-1)
++    alignlist=['right','left']+['center']*(len(list(dst6))-3)+['center','left']
++    try:   
++        print(dst6.to_markdown(index=True,tablefmt='plain',colalign=alignlist))
++    except:
++        #解决汉字编码gbk出错问题
++        dst7=dst6.to_markdown(index=True,tablefmt='plain',colalign=alignlist)
++        dst8=dst7.encode("utf-8",errors="strict")
++        print(dst8)
++    
++    print("\n"+footnote)
++    
++    return dst5
++
+ 
+ #==============================================================================
++if __name__=='__main__':
++    alist=['NIO','LI','XPEV','TSLA']
++    print_list(alist)
++
++def print_list(alist,leading_blanks=1):
++    """
++    功能：打印一个字符串列表，不带引号，节省空间
++    """
++    print(' '*leading_blanks,end='')
++    
++    for i in alist:
++        print(i,end=' ')
++    print('\n')
++    
++    return
+ #==============================================================================
++# FUNCTION TO REMOVE TIMEZONE
++def remove_timezone(dt):
++   
++    # HERE `dt` is a python datetime
++    # object that used .replace() method
++    return dt.replace(tzinfo=None)
++#==============================================================================
++def remove_df_index_timezone(df):
++    df['timestamp']=df.index
++    df['timestamp'] = df['timestamp'].apply(remove_timezone)
++    df.index=df['timestamp']
++    del df['timestamp']
++    
++    return df
+ #==============================================================================
+ #==============================================================================
+```
+
+## siat/economy.py
+
+```diff
+@@ -43,15 +43,16 @@
+        if ds_gni is None: 
+            print("  #Error(get_econ_factors): info not found for",scope,'GNI')
+            return None
+        
+        import pandas as pd
+        ds_gni1=pd.DataFrame(ds_gni['VALUE'])
+        
+-       ds_gdp=get_econ_factors0(start,end,scope,'GDP') 
++       #ds_gdp=get_econ_factors0(start,end,scope,'GDP') 
++       ds_gdp=get_econ_factors0(start,end,scope,'Current GDP') 
+        if ds_gdp is None: return None
+        
+        ds_gdp1=pd.DataFrame(ds_gdp['VALUE'])
+        
+        ds1=pd.merge(ds_gni1,ds_gdp1,how='inner',left_index=True,right_index=True)
+        ds1.dropna(inplace=True)
+        ds1['VALUE']=ds1['VALUE_x']/ds1['VALUE_y']
+@@ -186,15 +187,15 @@
+     
+     ds1=get_econ_factors('2010-1-1','2020-8-31','China','GDP')
+     ds2=get_econ_factors('2010-1-1','2020-8-31','China','Real GDP')
+     ds3=get_econ_factors('2010-1-1','2020-8-31','India','Constant GDP')
+     get_econ_factors('2010-1-1','2020-8-31','?','Constant GDP')
+     get_econ_factors('2010-1-1','2020-8-31','China','?')
+ #==============================================================================
+-def economy_trend(start,end,scope='China',factor='GDP',datatag=False,power=3,zeroline=False):
++def economy_trend(start,end,scope='China',factor='GDP',datatag=False,power=0,zeroline=False):
+     """
+     功能：绘制宏观经济指标，单线，有趋势线    
+     """
+     #检查日期期间的合理性
+     valid,_,_=check_period(start,end)
+     if not valid:
+         print('  Error(trend_economy): period not valid:',start,end)
+@@ -204,15 +205,15 @@
+     ds=get_econ_factors(start,end,scope,factor)
+     if (ds is None):
+         print('  #Error(economy_trend): scope/economic factor not available:',scope,'/',factor)
+         return
+ 
+     #绘图
+     ylabeltxt=ectranslate(factor)
+-    titletxt=ectranslate(list(ds['name'])[0])+'的趋势：'+ectranslate(scope)
++    titletxt=ectranslate(list(ds['name'])[0])+'变化趋势：'+ectranslate(scope)
+     
+     import datetime
+     today=datetime.date.today()
+     footnote='单位: '+list(ds['units'])[0]+', '+list(ds['freq'])[0]+ \
+         '\n数据来源: OECD|IMF|WB|FRED, '+str(today)
+     ds.dropna(inplace=True)
+     plot_line(ds,'VALUE',ectranslate(factor),ylabeltxt,titletxt,footnote,datatag,power=power,zeroline=zeroline)
+@@ -292,15 +293,16 @@
+     lang=check_language()
+     if lang == 'English':
+         source_txt='\nSource: OECD|IMF|WB|FRED, '
+         addstr_txt='Starting date as benchmark 100\n'
+         unit_txt='Notes: '
+     else:
+         source_txt='\n数据来源: OECD|IMF|WB|FRED, '
+-        addstr_txt='开始时点作为基数100\n'
++        #addstr_txt='开始时点作为基数100\n'
++        addstr_txt=''
+         unit_txt='单位: '
+     
+     #是否单一国家代码+两个测度指标
+     if (security_num == 1) and (measure_num >= 2):
+         #国家ticker1：抓取经济指标measure1
+         result,measure1new=separate_measure(measure1,'Constant')
+         """
+@@ -737,15 +739,14 @@
+         ['UK','GDP','Quarterly','Current Price Gross Domestic Product','GBRGDPNQDSMEI','Local Currency, Seasonally Adjusted'],
+         ['Australia','GDP','Quarterly','Current Price Gross Domestic Product','AUSGDPNQDSMEI','Local Currency, Seasonally Adjusted'],
+         
+         # Ratio of GNP to GDP：年度指标，百分比%，未经季节性调整
+         ['China','GNP Ratio','Annual','Ratio of GNP to GDP','GNPGDPCNA156NUPN','Percent, Not Seasonally Adjusted'],
+         ['USA','GNP Ratio','Annual','Ratio of GNP to GDP','GNPGDPUSA156NUPN','Percent, Not Seasonally Adjusted'],
+         ['Japan','GNP Ratio','Annual','Ratio of GNP to GDP','GNPGDPJPA156NUPN','Percent, Not Seasonally Adjusted'],
+-
+         
+         # GDP Per Capita：人均GDP，年度指标，美元现价，未经季节性调整。未扣除通胀因素，受到汇率变化影响
+         ['China','GDP Per Capita','Annual','Gross Domestic Product Per Capita','PCAGDPCNA646NWDB','Current USD, Not Seasonally Adjusted'],
+         ['Japan','GDP Per Capita','Annual','Gross Domestic Product Per Capita','PCAGDPJPA646NWDB','Current USD, Not Seasonally Adjusted'],
+         ['USA','GDP Per Capita','Annual','Gross Domestic Product Per Capita','PCAGDPUSA646NWDB','Current USD, Not Seasonally Adjusted'],
+         ['Korea','GDP Per Capita','Annual','Gross Domestic Product Per Capita','PCAGDPKRA646NWDB','Current USD, Not Seasonally Adjusted'],
+         ['India','GDP Per Capita','Annual','Gross Domestic Product Per Capita','PCAGDPINA646NWDB','Current USD, Not Seasonally Adjusted'],
+@@ -870,45 +871,45 @@
+         ['Sweden','Exchange Rate','Daily','Local Currency/USD Foreign Exchange Rate','DEXSDUS','Swedish Kronor/1 US$, Not Seasonally Adjusted'],
+         ['Thailand','Exchange Rate','Daily','Local Currency/USD Foreign Exchange Rate','DEXTHUS','Thai Baht/1 US$, Not Seasonally Adjusted'],
+         ['New Zealand','Exchange Rate','Daily','USD/Local Currency Foreign Exchange Rate','DEXUSNZ','US Dollars/1 New Zealand Dollar, Not Seasonally Adjusted'],
+         ['China Taiwan','Exchange Rate','Daily','Local Currency/USD Foreign Exchange Rate','DEXTAUS','New Taiwan Dollars/1 US$, Not Seasonally Adjusted'],
+         ['Malaysia','Exchange Rate','Daily','Local Currency/USD Foreign Exchange Rate','DEXMAUS','Malaysian Ringgit/1 US$, Not Seasonally Adjusted'],
+         ['Denmark','Exchange Rate','Daily','Local Currency/USD Foreign Exchange Rate','DEXDNUS','Danish Kroner/1 US$, Not Seasonally Adjusted'],
+         
+-        # M0，本币，月度数据，未经季节性调整
++        # M0，本币，月度数据，未经季节性调整，discontinued
+         ['China','M0','Monthly','National Monetary Supply M0','MYAGM0CNM189N','National Currency, Seasonally Adjusted'],
+         
+-        # M1，本币，月度数据，经季节性调整
++        # M1，本币，月度数据，经季节性调整，discontinued
+         ['China','M1','Monthly','National Monetary Supply M1','MANMM101CNM189S','National Currency, Seasonally Adjusted'],
+         ['USA','M1','Monthly','National Monetary Supply M1','MANMM101USM189S','National Currency, Seasonally Adjusted'],
+         ['Japan','M1','Monthly','National Monetary Supply M1','MANMM101JPM189S','National Currency, Seasonally Adjusted'],
+         ['Euro Area','M1','Monthly','Euro Area Monetary Supply M1','MANMM101EZM189S','National Currency, Seasonally Adjusted'],
+         ['Korea','M1','Monthly','National Monetary Supply M1','MANMM101KRM189S','National Currency, Seasonally Adjusted'],
+         ['India','M1','Monthly','National Monetary Supply M1','MANMM101INM189S','National Currency, Seasonally Adjusted'],
+         
+-        # M2，本币，月度数据，未经季节性调整
++        # M2，本币，月度数据，未经季节性调整，discontinued
+         ['China','M2','Monthly','National Monetary Supply M2','MYAGM2CNM189N','National Currency, Not Seasonally Adjusted'],
+         ['Japan','M2','Monthly','National Monetary Supply M2','MYAGM2JPM189N','National Currency, Seasonally Adjusted'],
+         ['Korea','M2','Monthly','National Monetary Supply M2','MYAGM2KRM189N','National Currency, Not Seasonally Adjusted'],
+         ['France','M2','Monthly','National Monetary Supply M2','MYAGM2FRM189N','National Currency, Not Seasonally Adjusted'],
+         ['Italy','M2','Monthly','National Monetary Supply M2','MYAGM2ITM189N','National Currency, Not Seasonally Adjusted'],
+         ['Russia','M2','Monthly','National Monetary Supply M2','MYAGM2RUM189N','National Currency, Not Seasonally Adjusted'],
+         ['Indonesia','M2','Monthly','National Monetary Supply M2','MYAGM2IDM189N','National Currency, Not Seasonally Adjusted'],
+         ['Brazil','M2','Monthly','National Monetary Supply M2','MYAGM2BRM189N','National Currency, Not Seasonally Adjusted'],
+         ['USA','M2','Monthly','National Monetary Supply M2','M2NS','Billions of Dollars, Not Seasonally Adjusted'],
+ 
+-        # M3，本币，月度数据，经季节性调整
++        # M3，本币，月度数据，经季节性调整，discontinued
+         ['China','M3','Monthly','National Monetary Supply M3','MABMM301CNM189S','National Currency, Seasonally Adjusted'],
+         ['USA','M3','Monthly','National Monetary Supply M3','MABMM301USM189S','National Currency, Seasonally Adjusted'],
+         ['Japan','M3','Monthly','National Monetary Supply M3','MABMM301JPM189S','National Currency, Seasonally Adjusted'],
+         ['UK','M3','Monthly','National Monetary Supply M3','MABMM301GBM189S','National Currency, Seasonally Adjusted'],
+         ['Euro Area','M3','Monthly','Euro Area Monetary Supply M3','MABMM301EZM189S','National Currency, Seasonally Adjusted'],
+         ['Australia','M3','Monthly','National Monetary Supply M3','MABMM301AUM189S','National Currency, Seasonally Adjusted'],
+ 
+-        # Stock Market Cap to GDP：股票市场市值对GDP比率%，年度数据，未经季节性调整
++        # Stock Market Cap to GDP：股票市场市值对GDP比率%，年度数据，未经季节性调整，discontinued
+         ['China','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01CNA156NWDB','Percent, Not Seasonally Adjusted'],
+         ['USA','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01USA156NWDB','Percent, Not Seasonally Adjusted'],
+         ['Japan','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01JPA156NWDB','Percent, Not Seasonally Adjusted'],
+         ['Korea','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01KRA156NWDB','Percent, Not Seasonally Adjusted'],
+         ['India','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01INA156NWDB','Percent, Not Seasonally Adjusted'],
+         ['Singapore','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01SGA156NWDB','Percent, Not Seasonally Adjusted'],
+         ['Malaysia','SMC to GDP','Annual','Stock Market Capitalization to GDP','DDDM01MYA156NWDB','Percent, Not Seasonally Adjusted'],
+@@ -1015,18 +1016,19 @@
+ 
+ 
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+ if __name__ =="__main__":
+-    fromdate='2020-1-5'
+-    todate='2020-10-1'
++    fromdate='2022-1-1'
++    todate='2023-3-18'
++    df=pmi_china(fromdate,todate)
+ 
+-def pmi_china(fromdate,todate,loc='lower left'):
++def pmi_china(fromdate,todate,loc='lower center'):
+     """
+     功能：绘制中国的PMI指数制造业/非制造业单线图
+     """
+     #检查日期期间的合理性
+     valid,start,end=check_period(fromdate,todate)
+     if not valid:
+         print('  Error(pmi_china): period not valid:',fromdate,todate)
+@@ -1044,15 +1046,18 @@
+     
+     #获取PMI数据
+     import akshare as ak
+     df = ak.macro_china_pmi()
+     
+     #截取日期区间数据
+     import pandas as pd
+-    df['date']=pd.to_datetime(df['月份'])
++    df['date']=pd.to_datetime(df['月份'],format='%Y年%m月份')
++    from datetime import timedelta
++    df['date']=df['date'].apply(lambda x:x+timedelta(days=15))
++    
+     df.set_index('date',inplace=True)    
+     df1=df[df.index >= start]
+     df2=df1[df1.index <= end]
+     
+     #形成水平50线
+     df2['benchmark']=50   
+     
+@@ -1080,14 +1085,20 @@
+     #绘图：非制造业
+     colname1="非制造业PMI"
+     label1="非制造业"    
+     titletxt="中国采购经理人指数PMI：非制造业"
+     plot_line2(df2,ticker1,colname1,label1, \
+                df2,ticker2,colname2,label2, \
+                ylabeltxt,titletxt,footnote,loc1=loc)    
++    """
++    plot2_line2(df2,ticker1,colname1,label1, \
++               df2,ticker2,colname2,label2, \
++               ylabeltxt,titletxt,footnote,loc1=loc, \
++               date_range=True,date_freq='1M',date_fmt='%Y-%m')    
++    """
+     #返回数据
+     return df2
+ 
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+ if __name__ =="__main__":
+```
+
+## siat/financials_china.py
+
+```diff
+@@ -17,14 +17,15 @@
+ import warnings; warnings.filterwarnings('ignore')
+ #==============================================================================
+ #本模块的公共引用
+ from siat.common import *
+ from siat.translate import *
+ from siat.grafix import *
+ from siat.beta_adjustment_china import *
++from siat.financials_china2 import *
+ #==============================================================================
+ import matplotlib.pyplot as plt
+ 
+ #处理绘图汉字乱码问题
+ import sys; czxt=sys.platform
+ if czxt in ['win32','win64']:
+     plt.rcParams['font.sans-serif'] = ['SimHei']  # 设置默认字体
+@@ -546,27 +547,38 @@
+     
+     plt.legend(loc='best')
+     plt.title("杜邦分析对比图")
+     plt.xlim([min(tick_pos)-w,max(tick_pos)+w])
+     plt.show()    
+     
+     if printout:
++        df[name1]=df[name1]/scale1
++        df[name2]=df[name2]/scale2
++        
++        cols=['销售净利率','总资产周转率','权益乘数','净资产收益率']
++        for c in cols:
++            df[c]=df[c].apply(lambda x: round(x,4))
++        
++        """
+         #设置打印对齐
+         pd.set_option('display.max_columns', 1000)
+         pd.set_option('display.width', 1000)
+         pd.set_option('display.max_colwidth', 1000)
+         pd.set_option('display.unicode.ambiguous_as_wide', True)
+-        pd.set_option('display.unicode.east_asian_width', True)    
++        pd.set_option('display.unicode.east_asian_width', True)  
++        
+         print("===== 杜邦分析分项数据表 =====")
+-        df[name1]=df[name1]/scale1
+-        df[name2]=df[name2]/scale2
+-    
+-        print(df.to_string(index=False))
+         print("*** 数据来源：sina/EM，"+str(today))
+-    
++        """
++        title_txt="杜邦分析分项数据表"
++        footnote="*** 数据来源：sina/EM，"+str(today)
++        df_directprint(df,title_txt,footnote)
++        #print(df.to_string(index=False))
++        
++        
+     #合并所有历史记录
+     alldf=pd.concat(dpidflist)
+     alldf.dropna(inplace=True)
+     #del alldf['pROE']
+     
+     """
+     allnum=len(alldf)
+```
+
+## siat/financials_china2.py
+
+```diff
+@@ -9,38 +9,45 @@
+ 作者：王德宏 (WANG Dehong, Peter)
+ 作者单位：北京外国语大学国际商学院
+ 作者邮件：wdehong2000@163.com
+ 版权所有：王德宏
+ 用途限制：仅限研究与教学使用，不可商用！商用需要额外授权。
+ 特别声明：作者不对使用本工具进行证券投资导致的任何损益负责！
+ """
+-#本模块的公共引用
+-from siat.financials_china import *
+ #==============================================================================
++#本模块的公共引用
+ import pandas as pd
+ import akshare as ak
+ 
++# 不知为何，这条语句似乎失灵了！
++from siat.financials_china import *
+ #==============================================================================
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     
+     df=get_fin_stmt_ak_multi(tickers,fsdates)         
+     
+ def get_fin_stmt_ak_multi(tickers,fsdates):
+     """
+     功能：获得多个股票的全部财报，基于akshare，合成，排序：股票代码+财报日期降序
+     选择：仅保留fsdates日期的数据。注意：fsdates要比预计的多一项，以便计算期初数
+     """
+- 
++    from siat.financials_china import get_fin_stmt_ak
++    
+     #循环获取全部股票的财报，并合成
+     df=pd.DataFrame()
+     for t in tickers:
+         dft=get_fin_stmt_ak(t)
++        if dft is None:
++            print("  #Warning(get_fin_stmt_ak_multi): currently data unavailable for",t)
++            print("  Possible reasons: no access to data source or invalid ticker",t)
++            return None
++            
+         #按日期升序
+         dft.sort_index(ascending=True,inplace=True)
+         #选择指定的日期
+         dfs=dft[dft['endDate'].isin(fsdates)]
+         
+         #列改名
+         dfs.rename(columns={'所有者权益(或股东权益)合计':'所有者权益合计',
+@@ -100,28 +107,31 @@
+         dfs['资产现金回收率%']=round(dfs['经营活动现金流净额']/dfs['资产总计']*100,2)
+         dfs['现金流入流出比率%']=round(dfs['经营活动现金流入']/dfs['经营活动现金流出']*100,2)
+         
+         dfs['现金购销比率%']=round(dfs['购买商品、接受劳务支付的现金']/dfs['销售商品、提供劳务收到的现金']*100,2)
+         dfs['营业现金回笼率%']=round(dfs['销售商品、提供劳务收到的现金']/dfs['营业总收入']*100,2)
+         dfs['支付给职工的现金比率%']=round(dfs['支付给职工以及为职工支付的现金']/dfs['销售商品、提供劳务收到的现金']*100,2)
+         
++        # 自定义财务比率
++        
++        
+         #获取字段列表,增加期初项目
+         col_list=list(dfs)
+         for c in col_list:
+             #print(c)
+             dfs[c+"_期初"]=dfs[c].shift(1)
+         #给字段排序，便于检查对比
+         col_list_qc=list(dfs)
+         col_list2=sorted(col_list_qc)
+         dfs2=dfs[col_list2]
+         
+         #合成
+         df=df.append(dfs2)
+ 
+-    #删除空值行
++    #删除空值行：谨慎！！！
+     df.dropna(inplace=True)
+     
+     #删除多余的列，修改列名
+     del df['ticker_期初']
+     df.rename(columns={'endDate_期初':'endDate_上期'},inplace=True)
+     
+     #标注股票简称,去掉其中的(A股)字样
+@@ -149,22 +159,23 @@
+     col_list=['ticker',"股票简称",'endDate',"endDate_上期",item,item+"_期初"]
+     dfs=df[(df['ticker']==ticker) & (df['endDate']==fsdate)][col_list]
+     
+     try:
+         item_value=dfs[item].values[0]
+         item_value_qc=dfs[item+"_期初"].values[0]
+     except:
+-        print("  #Warning(select_item):",ticker+"的"+item+"未找到")
++        print("  #Warning(select_item):",ticker+"在"+fsdate+"的"+item+"未找到")
+         nann=float("nan")
+         return nann,nann,nann
+     
+     #全为零提示
++    """
+     if (item_value==0) & (item_value_qc==0):
+-        print("  #Warning(select_item):",ticker+"的"+item+"及其期初数均为零")
+-    
++        print("  #Warning(select_item):",ticker+"在"+fsdate+"的"+item+"及其期初数均为零")
++    """
+     return item_value,item_value_qc,dfs
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+     
+@@ -260,15 +271,16 @@
+         #print(pos,pos_new,rowlen_new,sub_cuan)
+         
+         if rowlen_new > rowlen:
+             rowlen=rowlen_new
+         pos=pos_new
+     
+     title_len=hzlen(title_txt)+2
+-    blanknum=int((rowlen - title_len)/2)    
++    #blanknum=int((rowlen - title_len)/2)    
++    blanknum=int((rowlen - title_len)/2)+(len(list(dfp))-2)    
+ 
+     return blanknum
+ 
+ if __name__=='__main__':
+     title_txt="===== 重要指标的同行业对比 ====="
+     blanknum=title_position(title_txt,dfp)
+     
+@@ -280,15 +292,15 @@
+     title_txt="万科A财报：重要指标的同行业对比\n（财报截止日期：2021-12-31）"
+     footnote="*数据来源：新浪财经，2022年5月23日\n**股票列表第一项为分析对象\n*日期列表第一项为分析日期"
+     title_break=False
+     foot_break=True
+     foot_center=False
+     foot_start=4
+ 
+-def df_directprint(dfp,title_txt,footnote,title_break=True,foot_break=True,foot_center=True,foot_start=4):
++def df_directprint(dfp,title_txt,footnote,title_break=True,foot_break=True,foot_center=False,foot_start=1):
+     """
+     功能：对dfp直接打印，让标题居中，让脚注居中或指定开始位置。
+     """
+     print('')
+     
+     #解析标题各行并居中打印
+     title_txt1=title_txt+'\n'
+@@ -309,15 +321,17 @@
+     pd.set_option('display.max_columns', 1000)
+     pd.set_option('display.width', 1000)
+     pd.set_option('display.max_colwidth', 1000)
+     pd.set_option('display.unicode.ambiguous_as_wide', True)
+     pd.set_option('display.unicode.east_asian_width', True)  
+ 
+     #打印数据框本身    
+-    print(dfp.to_string(index=False))
++    #print(dfp.to_string(index=False))
++    colalign=['left']+['right']*(len(list(dfp)) - 1)
++    print(dfp.to_markdown(tablefmt='Simple',index=False,colalign=colalign))
+         
+     #解析标题各行并打印
+     if foot_break: print('')
+     footnote1=footnote+'\n'
+     pos,pos_new=0,0
+     while pos_new != -1:
+         pos_new=footnote1.find('\n',pos)
+@@ -348,57 +362,68 @@
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+     
+     ticker="000002.SZ"
+     fsdate='2021-12-31'
+     items=["货币资金","应收票据","应收账款"]
+     dfp=fs_item_analysis_1(df,ticker,fsdate,items)
+ 
+-def fs_item_analysis_1(df,ticker,fsdate,items):
++def fs_item_analysis_1(df,ticker,fsdate,items,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期的资产项目、期初数、期末数、变动额和变动幅度%
+     """
+     
+     #循环获取科目
+     dfp=pd.DataFrame(columns=['报表项目','期初数', '期末数', '变动额', '变动幅度%'])
+     yiyuan=100000000
+     
+     import math
+     for i in items:
+         i_value,i_value_qc,dft=select_item(df,ticker,fsdate,i)
+         
++        """
+         if not(i_value != 0 or i_value_qc != 0): 
+-            print("  #Warning(income_cost_analysis_1): skip zero item",i)
++            print("  #Warning(income_cost_analysis_1): 因其零值而忽略"+i+"项目")
+             continue
++        """
+         
+         if not math.isnan(i_value):
+             i_value_yy=round(i_value/yiyuan,2)
+             i_value_qc_yy=round(i_value_qc/yiyuan,2)
+-            i_value_chg_yy=i_value_yy - i_value_qc_yy
++            i_value_chg_yy=round(i_value_yy - i_value_qc_yy,2)
+             if not(i_value_qc_yy==0):
+                 i_value_chg_pct=round(i_value_chg_yy/i_value_qc_yy*100,2)
+             #对于变动幅度符号的修正
+                 if (i_value_chg_pct < 0) and (i_value_qc_yy < 0):
+                     i_value_chg_pct=abs(i_value_chg_pct)
+             else:
+                 i_value_chg_pct='-'
+         else:
+             i_value_qc_yy,i_value_yy,i_value_chg_yy,i_value_chg_pct='-','-','-','-'
+         
+         row=pd.Series({'报表项目':i,'期初数':i_value_qc_yy, \
+                        '期末数':i_value_yy, '变动额':i_value_chg_yy, \
+                        '变动幅度%':i_value_chg_pct})
+         dfp=dfp.append(row,ignore_index=True)  
+-        
++    
++    dfp=dfp.replace(0,'-')        
+     
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要项目的变动情况\n（截至"+fsdate+"）"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要项目的变动情况\n（截至"+fsdate+"）"
+     import datetime; today=datetime.date.today()
+-    footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
+-    df_directprint(dfp,title_txt,footnote)
++    #footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
++    footnote="*单位：亿元，本期报表日期："+fsdate+'，数据来源：新浪财经' 
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)    
+     
+     return dfp
+ 
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+@@ -409,15 +434,15 @@
+     fsdates=['2021-12-31','2020-12-31','2019-12-31']
+     items=["应收账款","资产总计"]
+     find_fs_items(df,itemword1="应收账款",itemword2='')
+     find_fs_items(df,itemword1="资产",itemword2='计')
+     
+     dfp=fs_item_analysis_2(df,ticker,fsdates,items)
+ 
+-def fs_item_analysis_2(df,ticker,fsdates,items):
++def fs_item_analysis_2(df,ticker,fsdates,items,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期的报表项目、最近几年fsdates、占比%
+     """
+     fsdates1=sorted(fsdates,reverse=True)
+     
+     #循环获取科目
+     col_list=['报表项目(亿元)']+fsdates1
+@@ -434,36 +459,45 @@
+         dfp.loc[len(dfp)] = row_list
+     
+     last_row=[items[0]+"占比%"]
+     for fd in fsdates1:
+         rate=round(dfp[fd][0]/dfp[fd][1]*100,2)
+         last_row=last_row+[rate]
+     dfp.loc[len(dfp)] = last_row
++    
++    dfp=dfp.replace(0,'-')
+         
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要项目占比的变动趋势"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要项目占比的变动趋势"
+     import datetime; today=datetime.date.today()
+     footnote="*数据来源：新浪财经，"+str(today) 
+-    df_directprint(dfp,title_txt,footnote)    
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)    
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+     
+     ticker="000002.SZ"
+     fsdates=['2021-12-31','2020-12-31','2019-12-31']
+     
+     dfp=fs_item_analysis_3(df,ticker,fsdates)
+ 
+-def fs_item_analysis_3(df,ticker,fsdates):
++def fs_item_analysis_3(df,ticker,fsdates,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期的流动比率、最近几年fsdates
+     """
+     fsdates1=sorted(fsdates,reverse=True)
+     
+     #循环获取科目
+     col_list=['报表项目(亿元)']+fsdates1
+@@ -481,34 +515,41 @@
+     last_row=["流动比率%"]
+     for fd in fsdates1:
+         rate=round(dfp[fd][0]/dfp[fd][1]*100,2)
+         last_row=last_row+[rate]
+     dfp.loc[len(dfp)] = last_row
+         
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：流动比率的变动趋势"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：流动比率的变动趋势"
+     import datetime; today=datetime.date.today()
+     footnote="*数据来源：新浪财经，"+str(today) 
+-    df_directprint(dfp,title_txt,footnote) 
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)    
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+     
+     ticker="000002.SZ"
+     fsdates=['2021-12-31','2020-12-31','2019-12-31']
+     
+     dfp=fs_item_analysis_4(df,ticker,fsdates)
+ 
+-def fs_item_analysis_4(df,ticker,fsdates):
++def fs_item_analysis_4(df,ticker,fsdates,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期的流动比率、最近几年fsdates
+     """
+     fsdates1=sorted(fsdates,reverse=True)
+ 
+     #循环获取科目
+     col_list=['报表项目(亿元)']+fsdates1
+@@ -546,34 +587,41 @@
+     last_row=["速动比率%"]
+     for fd in fsdates1:
+         rate=round(dfp[fd][2]/dfp[fd][3]*100,2)
+         last_row=last_row+[rate]
+     dfp.loc[len(dfp)] = last_row
+     
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：速动比率的变动趋势"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：速动比率的变动趋势"
+     import datetime; today=datetime.date.today()
+     footnote="*数据来源：新浪财经，"+str(today) 
+-    df_directprint(dfp,title_txt,footnote) 
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)   
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+     
+     ticker="000002.SZ"
+     fsdates=['2021-12-31','2020-12-31','2019-12-31']
+     
+     dfp=fs_item_analysis_5(df,ticker,fsdates)
+ 
+-def fs_item_analysis_5(df,ticker,fsdates):
++def fs_item_analysis_5(df,ticker,fsdates,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期的流动比率、最近几年fsdates
+     """
+     
+     #循环获取科目
+     col_list=['报表项目(亿元)']+fsdates
+     dfp=pd.DataFrame(columns=col_list)
+@@ -591,19 +639,26 @@
+     last_row=["资产负债率%"]
+     for fd in fsdates1:
+         rate=round(dfp[fd][1]/dfp[fd][0]*100,2)
+         last_row=last_row+[rate]
+     dfp.loc[len(dfp)] = last_row
+     
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：资产负债率的变动趋势"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：资产负债率的变动趋势"
+     import datetime; today=datetime.date.today()
+     footnote="*数据来源：新浪财经，"+str(today) 
+-    df_directprint(dfp,title_txt,footnote) 
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)    
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+@@ -611,17 +666,17 @@
+     
+     ticker="000002.SZ"
+     fsdates=['2021-12-31','2020-12-31']
+     items=['应收账款','营业收入']
+     
+     dfp=fs_item_analysis_6(df,ticker,fsdates,items)
+ 
+-def fs_item_analysis_6_original(df,ticker,fsdates,items):
++def fs_item_analysis_6_original(df,ticker,fsdates,items,title_txt='',notes=''):
+     """
+-    废弃
++    废弃!!!
+     功能：比较给定财报日期的应收账款与营业收入增幅、最近几年fsdates
+     """
+     
+     #循环获取科目
+     items1=[]
+     for i in items:
+         items1=items1+[i+'(亿元)']
+@@ -640,35 +695,46 @@
+     
+     last_row=["增幅%"]
+     for i in items1:
+         rate=round((dfp[i][1]/dfp[i][0]-1)*100,2)
+         last_row=last_row+[rate]
+     dfp.loc[len(dfp)] = last_row
+     
++    # 替换nan
++    dfp=dfp.fillna('-')
++    dfp=dfp.replace(0,'-')
++    
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要关联项目的增幅对比"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要关联项目的增幅对比"
+     import datetime; today=datetime.date.today()
+     footnote="*数据来源：新浪财经，"+str(today) 
+-    df_directprint(dfp,title_txt,footnote) 
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)    
+     
+     return dfp
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+     
+     ticker="000002.SZ"
+     fsdates=['2021-12-31','2020-12-31']
+     items=['应收账款','营业收入']
+     
+     dfp=fs_item_analysis_6(df,ticker,fsdates,items)
+ 
+-def fs_item_analysis_6(df,ticker,fsdates,items):
++def fs_item_analysis_6(df,ticker,fsdates,items,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期的应收账款与营业收入增幅、最近几年fsdates
+     """
+     
+     col_list=['报表日期']+items
+     dfp=pd.DataFrame(columns=col_list)
+     yiyuan=100000000
+@@ -687,24 +753,35 @@
+         dfp.loc[len(dfp)] = row_list
+     
+     last_row=["增幅%"]
+     for i in items:
+         rate=round((dfp[i][1]/dfp[i][0]-1)*100,2)
+         last_row=last_row+[rate]
+     dfp.loc[len(dfp)] = last_row
++
++    # 替换nan
++    dfp=dfp.fillna('-')
++    dfp=dfp.replace(0,'-')
+     
+     #无序号打印
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要关联项目的增幅对比"
++    if title_txt=='':
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要关联项目的增幅对比"
+     import datetime; today=datetime.date.today()
+     if yiyuan_foot:
+         footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
+     else:
+         footnote="*数据来源：新浪财经，"+str(today)
+-    df_directprint(dfp,title_txt,footnote) 
++        
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext) 
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+@@ -712,17 +789,17 @@
+ 
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdate='2021-12-31'
+     items=['存货','资产总计','存货占比%']
+     
+     dfp=fs_item_analysis_7(df,tickers,fsdate,items)
+ 
+-def fs_item_analysis_7_original(df,tickers,fsdate,items):
++def fs_item_analysis_7_original(df,tickers,fsdate,items,title_txt=''):
+     """
+-    废弃
++    废弃!!!
+     功能：比较给定财报日期fsdate的项目和指标，与同业相比
+     """
+     
+     #循环获取科目
+     items1=[]
+     for i in items:
+         if not('%' in i):
+@@ -743,19 +820,23 @@
+             if not('%' in i) and not('(元)' in i):
+                 row_list=row_list+[round(i_value/yiyuan,2)]
+                 yiyuan_foot=True
+             else:
+                 row_list=row_list+[i_value]
+         dfp.loc[len(dfp)] = row_list
+     
++    #主要项目排序
++    
++    
+     #无序号打印
+-    title_txt="=== 重要指标的同行业对比 ==="
+-    ticker=tickers[0]
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要指标的同行业对比\n（截至"+fsdate+"）"
++    if title_txt=='':
++        title_txt="=== 重要指标的同行业对比 ==="
++        ticker=tickers[0]
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要指标的同行业对比\n（截至"+fsdate+"）"
+     import datetime; today=datetime.date.today()
+     if yiyuan_foot:
+         footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
+     else:
+         footnote="*数据来源：新浪财经，"+str(today)
+     df_directprint(dfp,title_txt,footnote) 
+     
+@@ -768,15 +849,15 @@
+ 
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdate='2021-12-31'
+     items=['存货','资产总计','存货占比%']
+     
+     dfp=fs_item_analysis_7(df,tickers,fsdate,items)
+ 
+-def fs_item_analysis_7(df,tickers,fsdate,items):
++def fs_item_analysis_7(df,tickers,fsdate,items,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期fsdate的项目和指标，与同业相比
+     """
+     
+     col_list=['上市公司']+items
+     dfp=pd.DataFrame(columns=col_list)
+     yiyuan=100000000
+@@ -789,41 +870,71 @@
+             i_value,_,_=select_item(df,t,fsdate,i)
+             if not('%' in i) and not('(元)' in i):
+                 row_list=row_list+[round(i_value/yiyuan,2)]
+                 yiyuan_foot=True
+             else:
+                 row_list=row_list+[i_value]
+         dfp.loc[len(dfp)] = row_list
++
++    dfp=dfp.replace(0,'-')
++    
++    #对主要项目排序
++    lastitem=items[1]
++    for i in items:
++        if '%' in i:
++            lastitem=i
++            break
++        else:
++            continue
++    
++    try:
++        dfp.sort_values(by=lastitem,ascending=False,inplace=True)
++    except:
++        #因混有字符串和数值而排序失败，全转换为字符串再度排序
++        dfp[lastitem]=dfp[lastitem].apply(lambda x: str(x))
++        dfp.sort_values(by=lastitem,ascending=False,inplace=True)
++        
++    dfp.reset_index(drop=True,inplace=True)
++    dfp.index=dfp.index+1
+     
+     #无序号打印
+-    title_txt="=== 重要指标的同行业对比 ==="
+-    ticker=tickers[0]
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要指标的同行业对比\n（截至"+fsdate+"）"
++    if title_txt=='':
++        title_txt="=== 重要指标的同行业对比 ==="
++        ticker=tickers[0]
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要指标的同行业对比\n（截至"+fsdate+"）"
+     import datetime; today=datetime.date.today()
+     if yiyuan_foot:
+-        footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
++        #footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
++        footnote="*单位：亿元，本期报表日期："+fsdate+'，数据来源：新浪财经'         
+     else:
+-        footnote="*数据来源：新浪财经，"+str(today)
+-    df_directprint(dfp,title_txt,footnote) 
++        #footnote="*数据来源：新浪财经，"+str(today)
++        footnote="*本期报表日期："+fsdate+'，数据来源：新浪财经' 
++        
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext)         
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
+ 
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdate='2021-12-31'
+     items=['资产总计','资产负债率%','流动比率%','速动比率%']    
+     dfp=fs_item_analysis_8(df,tickers,fsdate,items)
+ 
+-def fs_item_analysis_8(df,tickers,fsdate,items):
++def fs_item_analysis_8(df,tickers,fsdate,items,title_txt='',notes=''):
+     """
+     功能：比较给定财报日期fsdate的项目和指标，与同业相比
+     区别：项目不带‘(亿元)’字样，避免行过长
+     """
+     
+     #循环获取科目
+     col_list=['上市公司']+items
+@@ -839,246 +950,481 @@
+             if not('%' in i) and not('(元)' in i):
+                 row_list=row_list+[round(i_value/yiyuan,2)]
+                 yiyuan_foot=True
+             else:
+                 row_list=row_list+[i_value]
+         dfp.loc[len(dfp)] = row_list
+     
++    #对主要项目排序
++    lastitem=items[1]
++    for i in items:
++        if '%' in i:
++            lastitem=i
++            break
++        else:
++            continue
++    
++    try:
++        dfp.sort_values(by=lastitem,ascending=False,inplace=True)
++    except:
++        #因混有字符串和数值而排序失败，全转换为字符串再度排序
++        dfp[lastitem]=dfp[lastitem].apply(lambda x: str(x))
++        dfp.sort_values(by=lastitem,ascending=False,inplace=True)
++        
++    dfp.reset_index(drop=True,inplace=True)
++    dfp.index=dfp.index+1
++    
+     #无序号打印
+-    ticker=tickers[0]
+-    ticker_name=codetranslate(ticker).replace("(A股)",'')
+-    title_txt=ticker_name+"财报分析：重要指标的同行业对比\n（截至"+fsdate+"）"
++    if title_txt=='':
++        ticker=tickers[0]
++        ticker_name=codetranslate(ticker).replace("(A股)",'')
++        title_txt=ticker_name+"财报分析：重要指标的同行业对比\n（截至"+fsdate+"）"
+ 
+     import datetime; today=datetime.date.today()
+     if yiyuan_foot:
+-        footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
++        #footnote="*单位：亿元，数据来源：新浪财经，"+str(today) 
++        footnote="*单位：亿元，本期报表日期："+fsdate+'，数据来源：新浪财经'
+     else:
+-        footnote="*数据来源：新浪财经，"+str(today)
+-    df_directprint(dfp,title_txt,footnote) 
++        #footnote="*数据来源：新浪财经，"+str(today)
++        footnote="*本期报表日期："+fsdate+'，数据来源：新浪财经'
++    
++    if notes=='':
++        foottext=footnote
++    else:
++        foottext=notes+'\n'+footnote
++        
++    df_directprint(dfp,title_txt,foottext) 
+     
+     return dfp
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+-    fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
++    fsdates=['2020-12-31','2019-12-31','2021-12-31','2018-12-31']
++    asset_liab_structure_china(tickers,fsdates)
++
++def asset_liab_china(tickers,fsdates):
++    """
++    套壳函数asset_liab_structure_china
++    """
+     asset_liab_structure_china(tickers,fsdates)
+     
++    return
++
++    
+ def asset_liab_structure_china(tickers,fsdates):
+     """
+     功能：分析上市公司的资产负债基本结构，并与同业公司对比。
+     注意1：分析近三期情况，fsdates要给出四个报表日期，以便获得期初数。
+     注意2：可以分析连续的年报或季报，但不能混个年报和季报。
+     注意3：tickers中的第一家公司为主要分析对象。
+     注意4：fsdates中的日期要降序排列，第一个日期建议为最近的财报日。
+     """  
++    comparator=tickers[0]
++    comparee=tickers[1:]
++    print("  Important Notice:")
++    print("  Comparator:",codetranslate(comparator))
++    #print("  Comparee  :",codetranslate(comparee))
++    print("  Comparee  :",end='')
++    print_list(codetranslate(comparee))
++    
++    
++    # 检查日期个数是否为4个，最后一个作为上期对比。最终列示前3项的结果
++    if len(fsdates) <= 3:
++        print("  #Warning(asset_liab_structure_china): need 4 dates of consecutive periodic reports")
++        return
++        
+     #主要分析对象
+     ticker=tickers[0]
++    
++    #将日期规范化，以便排序正确
++    fsdates1=[]
++    for d in fsdates:
++        result,fd=check_date2(d)
++        if not result:
++            print("  #Warning(asset_liab_structure_china): invalid date",d)
++            return
++        fsdates1=fsdates1+[fd]
++    fsdates=fsdates1
++    
++    #检查是否定期报告日期
++    reportdates=['03-31','06-30','09-30','12-31']
++    for d in fsdates:
++        mm_dd=d[5:]
++        if not (mm_dd in reportdates):
++            print("  #Warning(asset_liab_structure_china): invalid date for financial statements in China",d)
++            return
++    
+     #最近的财报日
+     fsdates=sorted(fsdates,reverse=True)
+     fsdate=fsdates[0]
+     
+     #获取所有比较公司tickers的所有财报fsdates
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
++    if df is None:
++            print("  #Warning(asset_liab_structure_china): failed to retrieve info for the tickers in the dates")
++            print("  Possible reasons: no access to data source or invalid tickers")
++            return
+     
+-    #资产变动趋势1："货币资金","应收票据","应收账款"
+-    items1=["货币资金","应收票据","应收账款"]
+-    dfp1=fs_item_analysis_1(df,ticker,fsdate,items1)
++    title_head=codetranslate(comparator)+"资产负债结构："
+     
++    ### 资产负债表的主要项目
+     #资产变动趋势2
++    title_txt=title_head+"主要资产项目"
+     items2=["货币资金","应收账款","存货","长期股权投资","固定资产净额","资产总计"]
+-    dfp2=fs_item_analysis_1(df,ticker,fsdate,items2)
++    
++    notes1="注1：货币资金包括库存现金、银行存款和其他货币资金三个部分"
++    notes2="注2：其他货币资金包括银行汇(本)票存款、信用证保证金存款和信用卡存款等"
++    notes3="注3：长期股权投资是指企业对其子公司、合营企业及联营企业的权益性投资"
++    notes4="注4：固定资产净额 = 固定资产原值 - 累计折旧 - 资产减值准备"
++    notes=notes1+'\n'+notes2+'\n'+notes3+'\n'+notes4
++    dfp2=fs_item_analysis_1(df,ticker,fsdate,items2,title_txt,notes)
+     
+     #负债变动趋势
++    title_txt=title_head+"主要负债项目"
+     items3=["短期借款","长期借款","应付账款","预收款项","应交税费","应付职工薪酬","负债合计"]
+-    dfp3=fs_item_analysis_1(df,ticker,fsdate,items3)
++    dfp3=fs_item_analysis_1(df,ticker,fsdate,items3,title_txt)
+     
+     #所有者权益变动趋势
++    title_txt=title_head+"主要权益项目"
+     items4=["实收资本(或股本)","资本公积","盈余公积","未分配利润","所有者权益合计"]
+-    dfp4=fs_item_analysis_1(df,ticker,fsdate,items4)
++    
++    notes1="注1：实收资本(或股本，Paid-in Capital)指企业实际收到的投资人投入的资本"
++    notes2="注2：资本公积是由股东投入的因故不能计入实收资本(或股本)中的那部分投入资金"
++    notes3="     资本公积包括资本(股本)溢价、其他资本公积、资产评估增值、资本折算差额"
++    notes4="     资本(股本)溢价是公司发行权益证券时价格超出票面价值的部分"
++    notes5="     其他资本公积包括金融资产公允价值变动、被投资单位净利润以外的变动等"
++    notes6="     资产评估增值是重估企业资产时，重估价高于资产的账面净值的部分"
++    notes7="     资本折算差额是外币资本因汇率变动产生的差额"
++    notes8="注3：盈余公积是企业按照要求从税后利润中提取的、属于留存收益范畴的资金"
++    notes9="     是从历年利润中提取的留存于企业的内部积累，包括盈余公积和未分配利润"
++    notes10="     公司制企业的盈余公积包括法定盈余公积和任意盈余公积"
++    notes11="     法定盈余公积是指企业按照规定比例从净利润中必须提取的盈余公积"
++    notes12="     任意盈余公积是指企业内部可自主决定比例提取的盈余公积"
++    notes13="     企业提取的盈余公积可用于弥补亏损、转增资本、发放现金股利或利润等"
++    notes14="注4：未分配利润是净利润经弥补亏损、提取盈余公积和向投资者分配利润后的资金"
++    notesA=notes1+'\n'+notes2+'\n'+notes3+'\n'+notes4+'\n'+notes5+'\n'+notes6+'\n'+notes7
++    notesB=notes8+'\n'+notes9+'\n'+notes10+'\n'+notes11+'\n'+notes12+'\n'+notes13+'\n'+notes14
++    
++    notes=notesA+'\n'+notesB
++    dfp4=fs_item_analysis_1(df,ticker,fsdate,items4,title_txt,notes)
++    
++    ### 货币资金与应收项目    
++    #资产变动趋势1："货币资金","应收票据","应收账款"
++    title_txt=title_head+"货币资金与应收项目"
++    items1=["货币资金","应收票据","应收账款"]
++    dfp1=fs_item_analysis_1(df,ticker,fsdate,items1,title_txt)
+     
+     #应收账款占比变动分析
+     fsdates1=fsdates[:3]
+     items5=["应收账款","资产总计"]
+-    dfp5=fs_item_analysis_2(df,ticker,fsdates1,items5)
++    title_txt=title_head+"应收账款占比变动情况"
++    dfp5=fs_item_analysis_2(df,ticker,fsdates1,items5,title_txt)
+ 
+     #应收与营业收入增幅对比    
+     fsdates2=fsdates[:2]
+     items6=['应收账款',"应收票据",'营业总收入']
+-    dfp6=fs_item_analysis_6(df,ticker,fsdates2,items6)
++    title_txt=title_head+"应收项目与营业收入增幅对比"
++    dfp6=fs_item_analysis_6(df,ticker,fsdates2,items6,title_txt)
+ 
+     #应收账款占比同行对比
+     items7=['应收账款','资产总计','应收账款占比%']
+-    dfp7=fs_item_analysis_7(df,tickers,fsdate,items7)        
++    title_txt=title_head+"应收账款占比同行对比"
++    dfp7=fs_item_analysis_7(df,tickers,fsdate,items7,title_txt)        
+ 
++    ### 存货
+     #存货占比变动分析
+     items8=["存货","资产总计"]
+-    dfp8=fs_item_analysis_2(df,ticker,fsdates1,items8)
++    title_txt=title_head+"存货占比变动情况"
++    dfp8=fs_item_analysis_2(df,ticker,fsdates1,items8,title_txt)
+     """
+     items9=["存货","营业总收入"]
+     dfp9=fs_item_analysis_6(df,ticker,fsdates2,items9)
+     """
+     #存货与营业收入增幅对比分析            
+     items10=['存货','流动资产合计',"速动资产合计","资产总计"]
+-    dfp10=fs_item_analysis_6(df,ticker,fsdates2,items10)
++    title_txt=title_head+"存货与资产项目增幅对比"
++    dfp10=fs_item_analysis_6(df,ticker,fsdates2,items10,title_txt)
+ 
+     #存货占比与行业对比        
+     items11=['存货','资产总计','存货占比%']
+-    dfp11=fs_item_analysis_7(df,tickers,fsdate,items11)
++    title_txt=title_head+"存货占比情况同行对比"
++    dfp11=fs_item_analysis_7(df,tickers,fsdate,items11,title_txt)
+ 
++    ### 偿债能力
+     #流动比率变动分析
+-    dfp12=fs_item_analysis_3(df,ticker,fsdates1)    
++    title_txt=title_head+"流动比率变动情况"
++    dfp12=fs_item_analysis_3(df,ticker,fsdates1,title_txt)    
+ 
+     #速动比率变动分析
+-    dfp13=fs_item_analysis_4(df,ticker,fsdates1)    
++    title_txt=title_head+"速动比率变动情况"
++    dfp13=fs_item_analysis_4(df,ticker,fsdates1,title_txt)    
+ 
+     #资产负债率变动分析
+-    dfp14=fs_item_analysis_5(df,ticker,fsdates1)    
++    title_txt=title_head+"资产负债率变动情况"
++    dfp14=fs_item_analysis_5(df,ticker,fsdates1,title_txt)    
+ 
+     #资产负债率同行比较
++    title_txt=title_head+"资产负债率同行比较"
+     items15=['资产总计','资产负债率%','流动比率%','速动比率%']
+-    dfp15=fs_item_analysis_8(df,tickers,fsdate,items15)
++    dfp15=fs_item_analysis_8(df,tickers,fsdate,items15,title_txt)
+ 
+     return    
+     
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     income_cost_structure_china(tickers,fsdates)
++
++def income_cost_china(tickers,fsdates):    
++    """
++    套壳函数income_cost_structure_china
++    """
++    income_cost_structure_china(tickers,fsdates)
++    
++    return
+     
+ def income_cost_structure_china(tickers,fsdates):
+     """
+     功能：分析上市公司的收入成本基本结构，并与同业公司对比。
+     注意1：分析近三期情况，fsdates要给出四个报表日期，以便获得期初数。
+     注意2：可以分析连续的年报或季报，但不能混个年报和季报。
+     注意3：tickers中的第一家公司为主要分析对象。
+     注意4：fsdates中的日期要降序排列，第一个日期建议为最近的财报日。
+     """  
++    comparator=tickers[0]
++    comparee=tickers[1:]
++    print("  Important Notice:")
++    print("  Comparator:",codetranslate(comparator))
++    #print("  Comparee  :",codetranslate(comparee))
++    print("  Comparee  :",end='')
++    print_list(codetranslate(comparee))
++    
++    # 检查日期个数是否为4个，最后一个作为上期对比。最终列示前3项的结果
++    if len(fsdates) <= 3:
++        print("  #Warning(asset_liab_structure_china): need 4 dates of consecutive periodic reports")
++        return
++    
+     #主要分析对象
+     ticker=tickers[0]
+     #最近的财报日
+     fsdates=sorted(fsdates,reverse=True)
+     fsdate=fsdates[0]
+     
+     #获取所有比较公司tickers的所有财报fsdates
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
++    if df is None:
++            print("  #Warning(income_cost_structure_china): failed to retrieve info for the tickers in the dates")
++            print("  Possible reasons: no access to data source or invalid tickers")
++            return
++    
++    title_head=codetranslate(comparator)+"收入成本结构："
+     
+     #收入成本总体变动趋势
++    title_txt=title_head+"主要项目及其变动趋势"
+     items1=["营业总收入","营业总成本","营业成本","毛利润","营业利润","营业外收支","税前利润","所得税费用","净利润","归母净利润"]
+-    dfp1=fs_item_analysis_1(df,ticker,fsdate,items1)
++    dfp1=fs_item_analysis_1(df,ticker,fsdate,items1,title_txt)
+     
+     #成本变动趋势
++    title_txt=title_head+"主要成本费用及其变动趋势"
+     print('')
+     items2=["营业总成本","营业成本","营业税金及附加","销售费用","管理费用","研发费用",
+             "应付利息","公允价值变动损失","资产处置损失",
+             "资产减值损失","营业外支出"]
+-    dfp2=fs_item_analysis_1(df,ticker,'2021-12-31',items2)
++    dfp2=fs_item_analysis_1(df,ticker,'2021-12-31',items2,title_txt)
+     
+     #占比变动分析：近三年
++    title_txt=title_head+"营业总成本占营业总收入比例情况"
+     fsdates1=fsdates[:3]
+     items3=["营业总成本","营业总收入"]
+-    dfp3=fs_item_analysis_2(df,ticker,fsdates1,items3)
++    
++    notes1="注1：营业总成本包括营业成本、营业税金及附加、三大费用和资产减值损失"
++    notes2="注2：营业收入=主营业务收入和其他非主营业务收入"
++    notes3="注3：营业总收入=营业收入+非营业收入(投资收益、营业外收入等)"
++    notes=notes1+'\n'+notes2+'\n'+notes3
++    dfp3=fs_item_analysis_2(df,ticker,fsdates1,items3,title_txt,notes)
+     #====================================================================
++    title_txt=title_head+"营业成本占营业总成本比例情况"
+     items4=["营业成本","营业总成本"]
+-    dfp4=fs_item_analysis_2(df,ticker,fsdates1,items4)
+     
++    notes1="注1：营业成本是经营活动中发生的可归属于产品/劳务成本等的费用"
++    notes2="注2：营业总成本包括营业成本、营业税金及附加、三大费用和资产减值损失"
++    notes=notes1+'\n'+notes2
++    dfp4=fs_item_analysis_2(df,ticker,fsdates1,items4,title_txt,notes)
++    
++    title_txt=title_head+"营业成本占营业总收入比例情况"
+     items5=["营业成本","营业总收入"]
+-    dfp5=fs_item_analysis_2(df,ticker,fsdates1,items5)
++    dfp5=fs_item_analysis_2(df,ticker,fsdates1,items5,title_txt)
++
++    title_txt=title_head+"营业成本增幅分析"
++    fsdates2=fsdates[:2]
++    items12=['营业成本','营业总成本','营业总收入']
++    dfp12=fs_item_analysis_6(df,ticker,fsdates2,items12,title_txt)
++
+     #====================================================================
++    title_txt=title_head+"销售费用占营业总收入比例情况"
+     items6=["销售费用","营业总收入"]
+-    dfp6=fs_item_analysis_2(df,ticker,fsdates1,items6)
++    
++    notes="注：销售费用是企业销售过程中发生的各种费用"
++    dfp6=fs_item_analysis_2(df,ticker,fsdates1,items6,title_txt,notes)
+     #====================================================================
++    title_txt=title_head+"管理费用占营业总收入比例情况"
+     items7=["管理费用","营业总收入"]
+-    dfp7=fs_item_analysis_2(df,ticker,fsdates1,items7)
++    
++    notes="注：管理费用是行政管理部门为组织生产/经营活动发生的各种费用"
++    dfp7=fs_item_analysis_2(df,ticker,fsdates1,items7,title_txt,notes)
++    
++    title_txt=title_head+"费用率同行对比"
++    items14=['营业总收入','销售费用率%','管理费用率%','研发费用率%']
++    
++    notes1="注1：销售费用率 = 销售费用 / 营业总收入"
++    notes2="注2：管理费用率 = 管理费用 / 营业总收入"
++    notes3="注3：研发费用率 = 研发费用 / 营业总收入"
++    notes=notes1+'\n'+notes2+'\n'+notes3
++    
++    dfp12=fs_item_analysis_8(df,tickers,fsdate,items14,title_txt,notes)    
+     #====================================================================
++    title_txt=title_head+"毛利润占营业总收入比例情况"
+     items8=["毛利润","营业总收入"]
+-    dfp8=fs_item_analysis_2(df,ticker,fsdates1,items8)
++    dfp8=fs_item_analysis_2(df,ticker,fsdates1,items8,title_txt)
+     #====================================================================
++    title_txt=title_head+"营业利润占营业总收入比例情况"
+     items9=["营业利润","营业总收入"]
+-    dfp8=fs_item_analysis_2(df,ticker,fsdates1,items9)
++    dfp8=fs_item_analysis_2(df,ticker,fsdates1,items9,title_txt)
+     #====================================================================
++    title_txt=title_head+"税前利润占营业总收入比例情况"
+     items10=["税前利润","营业总收入"]
+-    dfp9=fs_item_analysis_2(df,ticker,fsdates1,items10)
++    dfp9=fs_item_analysis_2(df,ticker,fsdates1,items10,title_txt)
+     #====================================================================
++    title_txt=title_head+"净利润占营业总收入比例情况"
+     items11=["净利润","营业总收入"]
+-    dfp9=fs_item_analysis_2(df,ticker,fsdates1,items11)
+-
+-    #增幅分析：近两年    
+-    fsdates2=fsdates[:2]
+-    items12=['营业成本','营业总成本','营业总收入']
+-    dfp12=fs_item_analysis_6(df,ticker,fsdates2,items12)
++    dfp9=fs_item_analysis_2(df,ticker,fsdates1,items11,title_txt)
+ 
++    #增幅分析：近两年  
++    title_txt=title_head+"四种利润对比"
+     items13=['毛利润','营业利润','税前利润','净利润']
+-    dfp11=fs_item_analysis_6(df,ticker,fsdates2,items13)
++    dfp11=fs_item_analysis_6(df,ticker,fsdates2,items13,title_txt)
+ 
+     #同行比较
+-    items14=['营业总收入','销售费用率%','管理费用率%','研发费用率%']
+-    dfp12=fs_item_analysis_8(df,tickers,fsdate,items14)
+-
++    title_txt=title_head+"利润率同行对比"
+     #items15=['营业利润','营业利润率%','税前利润率%','实际所得税率%','净利润','净利润率%']
+     items15=['毛利润率%','营业利润率%','税前利润率%','净利润率%']
+-    dfp12=fs_item_analysis_8(df,tickers,fsdate,items15)
++    dfp12=fs_item_analysis_8(df,tickers,fsdate,items15,title_txt)
+ 
+     return    
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     tickers=["000002.SZ","600266.SS",'600383.SS','600048.SS']
+     fsdates=['2021-12-31','2020-12-31','2019-12-31','2018-12-31']
+     cash_flow_structure_china(tickers,fsdates)
++
++def cash_flow_china(tickers,fsdates):
++    """
++    套壳函数cash_flow_structure_china
++    """
++    cash_flow_structure_china(tickers,fsdates)
++    
++    return
++    
+     
+ def cash_flow_structure_china(tickers,fsdates):
+     """
+     功能：分析上市公司的现金流量基本结构，并与同业公司对比。
+     注意1：分析近三期情况，fsdates要给出四个报表日期，以便获得期初数。
+     注意2：可以分析连续的年报或季报，但不能混个年报和季报。
+     注意3：tickers中的第一家公司为主要分析对象。
+     注意4：fsdates中的日期要降序排列，第一个日期建议为最近的财报日。
+     """  
++    comparator=tickers[0]
++    comparee=tickers[1:]
++    print("  Important Notice:")
++    print("  Comparator:",codetranslate(comparator))
++    print("  Comparee  :",end='')
++    print_list(codetranslate(comparee))
++    
++    # 检查日期个数是否为4个，最后一个作为上期对比。最终列示前3项的结果
++    if len(fsdates) <= 3:
++        print("  #Warning(asset_liab_structure_china): need 4 dates of consecutive periodic reports")
++        return
++    
+     #主要分析对象
+     ticker=tickers[0]
+     #最近的财报日
+     fsdates=sorted(fsdates,reverse=True)
+     fsdate=fsdates[0]
+     
+     #获取所有比较公司tickers的所有财报fsdates
+     df=get_fin_stmt_ak_multi(tickers,fsdates) 
++    if df is None:
++            print("  #Warning(cash_flow_structure_china): failed to retrieve info for the tickers in the dates")
++            print("  Possible reasons: no access to data source or invalid tickers")
++            return    
++    
++    title_head=codetranslate(comparator)+"现金流结构："
+     
+     #总体变动趋势
++    title_txt=title_head+"主要项目及其变动趋势"
+     items1=["经营活动现金流净额","经营活动现金流入","经营活动现金流出",
+             "投资活动现金流净额","投资活动现金流入","投资活动现金流出",
+             "筹资活动现金流净额","筹资活动现金流入","筹资活动现金流出",
+             "汇率对现金流的影响","现金流量净增加额"]
+-    dfp1=fs_item_analysis_1(df,ticker,fsdate,items1)
++    dfp1=fs_item_analysis_1(df,ticker,fsdate,items1,title_txt)
+     
+     #占比变动分析：近三年
++    title_txt=title_head+"经营活动现金流入占比情况"
+     fsdates1=fsdates[:3]
+     items3=["经营活动现金流入","营业总收入"]
+-    dfp3=fs_item_analysis_2(df,ticker,fsdates1,items3)
++    dfp3=fs_item_analysis_2(df,ticker,fsdates1,items3,title_txt)
+ 
++    title_txt=title_head+"经营活动现金流净额占比情况"
+     items4=["经营活动现金流净额","营业利润"]
+-    dfp3=fs_item_analysis_2(df,ticker,fsdates1,items4)
++    dfp3=fs_item_analysis_2(df,ticker,fsdates1,items4,title_txt)
+ 
+     #增幅分析：近两年 
++    title_txt=title_head+"经营活动现金流增幅情况"
+     fsdates2=fsdates[:2]
+     items12=['经营活动现金流入','经营活动现金流出','经营活动现金流净额']
+-    dfp12=fs_item_analysis_6(df,ticker,fsdates2,items12)
++    dfp12=fs_item_analysis_6(df,ticker,fsdates2,items12,title_txt)
+ 
+     #同行比较
++    title_txt=title_head+"现金收入能力同行比较"
++    items16=['销售现金比率%','现金购销比率%','营业现金回笼率%']
++    
++    notes1="注1：销售现金比率 = 经营活动现金流入 / 营业总收入"
++    notes2="注2：现金购销比率 = 经营活动现金流出 / 经营活动现金流入"
++    notes3="注3：营业现金回笼率 = 经营活动现金流入 / 营业总收入"
++    notes=notes1+'\n'+notes2+'\n'+notes3
++    dfp12=fs_item_analysis_8(df,tickers,fsdate,items16,title_txt,notes)  
++    
++    title_txt=title_head+"现金偿债能力同行比较"
+     items14=['短期现金偿债能力%','长期现金偿债能力%']
+-    dfp12=fs_item_analysis_8(df,tickers,fsdate,items14)
+     
++    notes1="注1：短期现金偿债能力 = 经营活动现金流净额 / 流动负债合计"
++    notes2="注2：长期现金偿债能力 = 经营活动现金流净额 / 负债合计"
++    notes=notes1+'\n'+notes2
++    dfp12=fs_item_analysis_8(df,tickers,fsdate,items14,title_txt,notes)
++    
++    title_txt=title_head+"现金支付能力同行比较"
+     items15=['现金支付股利能力(元)','现金综合支付能力%','支付给职工的现金比率%']
+-    dfp12=fs_item_analysis_8(df,tickers,fsdate,items15)
+-
+-    items16=['销售现金比率%','现金购销比率%','营业现金回笼率%']
+-    dfp12=fs_item_analysis_8(df,tickers,fsdate,items16)
++    
++    notes1="注1：现金支付股利能力 = 经营活动现金流净额 / 流通股股数"
++    notes2="注2：现金综合支付能力 = 经营活动现金流净额 / 所有者权益合计"
++    notes3="注3：支付给职工的现金比率 = 支付给(为)职工支付的现金 / 经营活动现金流入"
++    notes=notes1+'\n'+notes2+'\n'+notes3
++    dfp12=fs_item_analysis_8(df,tickers,fsdate,items15,title_txt,notes)
+ 
++    title_txt=title_head+"财务指标含金量同行比较"
+     items17=['盈利现金比率%','现金流入流出比率%','资产现金回收率%']
+-    dfp12=fs_item_analysis_8(df,tickers,fsdate,items17)
++    
++    notes1="注1：盈利现金比率 = 经营活动现金流净额 / 净利润"
++    notes2="注2：现金流入流出比率 = 经营活动现金流入 / 经营活动现金流出"
++    notes3="注3：资产现金回收率 = 经营活动现金流净额 / 资产总计"
++    notes=notes1+'\n'+notes2+'\n'+notes3
++    dfp12=fs_item_analysis_8(df,tickers,fsdate,items17,title_txt,notes)
+     
+     return
+ 
+ #==============================================================================
+```
+
+## siat/fund_china.py
+
+```diff
+@@ -1600,14 +1600,79 @@
+     ###抓取沪深股市所有指数关联的公募基金列表（含ETF、增强、分级等）
+     #代码来源：https://blog.csdn.net/leeleilei/article/details/106124894
+     
+     ###pyecharts绘制可伸缩蜡烛图
+     #代码地址：https://segmentfault.com/a/1190000021999451?utm_source=sf-related
+     
+ #==============================================================================
++if __name__=='__main__':
++    etflist=choose_etf_china(etf_type='股票型',startpos=0,endpos=10,printout=True)
++
++def choose_etf_china(etf_type='股票型',startpos=0,endpos=10,printout=True):
++    """
++    功能：从数据库中挑选中国ETF基金
++    输入：
++    startpos=0,endpos=10：同型ETF列表的起始终止位置，同型ETF内部按照基金简称顺序排列
++    输出：基金代码列表
++    """    
++    
++    # 检查ETF类型
++    etf_types=['股票型','债券型','商品型','货币型','QDII','全部']
++    etf_type1=etf_type.upper()
++    if not (etf_type1 in etf_types):
++        print("  #Error(choose_etf_china): unsupported ETF type:",etf_type)
++        print("  Supported ETF types:",etf_types)
++        return None
++    
++    # 搜索处理ETF类型
++    import akshare as ak
++    names = ak.fund_name_em()
++
++    names['ETF']=names['基金简称'].apply(lambda x: 1 if 'ETF' in x else 0)
++    names_etf=names[names['ETF']==1]
++    
++    if etf_type != '全部':
++        ftypea=['QDII','债券型-中短债','债券型-可转债','债券型-长债','商品（不含QDII）','指数型-股票','货币型']
++        ftypes=['QDII','债券型','债券型','债券型','商品型','股票型','货币型']
++        names_etf['基金分类']=names_etf['基金类型'].apply(lambda x:ftypes[ftypea.index(x)])
++        names_etf2=names_etf[names_etf['基金分类']==etf_type]
++    else:
++        names_etf2=names_etf
++        
++    names_etf2.sort_values(by=['基金分类','基金代码'],ascending=[True,True],inplace=True)
++    etfcols=['基金代码','基金简称','基金分类','基金类型']
++    names_etf2=names_etf2[etfcols]
++    
++    names_etf3=names_etf2[startpos:endpos]
++    if len(names_etf3)==0:
++        print("  #Error(choose_etf_china): no records of ETF selected")
++        print("  Parameter startpos",startpos,'should be smaller than endpos',endpos)
++        return None
++    
++    names_etf4=names_etf3[etfcols]    
++    names_etf4.reset_index(drop=True,inplace=True)
++    names_etf4.index=names_etf4.index+1
++    
++    print("\n")
++    alignlist=['right','center','left']+['center']*(len(list(names_etf4))-2)
++    print(names_etf4.to_markdown(index=True,tablefmt='plain',colalign=alignlist))
++    print("\n*** ETF基金("+etf_type+")总数:",len(names_etf2),"\b。",end='')
++    
++    import datetime; today = datetime.date.today().strftime("%Y-%m-%d")
++    footnote=texttranslate("数据来源：新浪财经，")+today
++    print(footnote)
++
++    
++    return list(names_etf4['基金代码']),names_etf2
++
++#==============================================================================
++#==============================================================================
++#==============================================================================
++#==============================================================================
++#==============================================================================
+```
+
+## siat/grafix.py
+
+```diff
+@@ -115,14 +115,16 @@
+     #是否绘制水平线
+     #if zeroline and (min(df[colname]) < 0):
+     if zeroline:
+         if isinstance(zeroline,bool):
+             hline=0
+         elif isinstance(zeroline,float):
+             hline=zeroline
++        elif isinstance(zeroline,int):
++            hline=zeroline
+         else:
+             hline=0
+         plt.axhline(y=hline,ls=":",c="black",linewidth=2)
+         
+     #绘制趋势线
+     #print("--Debug(plot_line): power=",power)
+     if power > 0:
+@@ -312,19 +314,19 @@
+     #证券1：绘制数据标签
+     if datatag1:
+         for x, y in zip(df1.index, df1[colname1]):
+             plt.text(x,y+0.1,'%.2f' % y,ha='center',va='bottom',color='black')        
+ 
+     #是否绘制水平0线
+     if zeroline and ((min(df1[colname1]) < 0) or (min(df2[colname2]) < 0)):
+-        plt.axhline(y=0,ls=":",c="black",linewidth=1)
++        plt.axhline(y=0,ls=":",c="black",linewidth=2)
+ 
+     #是否绘制水平线
+     if yline != 999:
+-        plt.axhline(y=yline,ls=":",c="black",linewidth=1)        
++        plt.axhline(y=yline,ls=":",c="black",linewidth=2)        
+ 
+     #是否绘制垂直线
+     if xline != 999:
+         plt.axvline(x=xline,ls=":",c="black",linewidth=1)   
+     
+     #绘证券1：制趋势线
+     if power > 0:
+@@ -480,23 +482,23 @@
+     #证券1：绘制数据标签
+     if datatag1:
+         for x, y in zip(df1.index, df1[colname1]):
+             plt.text(x,y+0.1,'%.2f' % y,ha='center',va='bottom',color='black')        
+ 
+     #是否绘制水平0线
+     if zeroline and ((min(df1[colname1]) < 0) or (min(df2[colname2]) < 0)):
+-        plt.axhline(y=0,ls=":",c="black",linewidth=1)
++        plt.axhline(y=0,ls=":",c="black",linewidth=2.5)
+ 
+     #是否绘制水平线
+     if yline != 999:
+-        plt.axhline(y=yline,ls=":",c="black",linewidth=1)        
++        plt.axhline(y=yline,ls=":",c="black",linewidth=2.5)        
+ 
+     #是否绘制垂直线
+     if xline != 999:
+-        plt.axvline(x=xline,ls=":",c="black",linewidth=1)   
++        plt.axvline(x=xline,ls=":",c="black",linewidth=2.5)   
+     
+     #绘证券1：制趋势线
+     if power > 0:
+         lang=check_language()
+         trend_txt='趋势线'
+         if lang == 'English':
+             trend_txt='Trend line'        
+@@ -935,48 +937,57 @@
+         except:
+             df=df0
+     else:
+         df=df0
+         
+     #取得df字段名列表
+     collist=df.columns.values.tolist()  
++    if len(collist) > 16:
++        print ("  #Warning(draw_lines): too many columns to draw lines, max 16 lines")
++        return
+     
+     lslist=['-','--','-.',':','-','--','-.',':','-','--','-.',':','-','--','-.',':',]
+     #mklist=[',','d','_','.','o','v','^','<','>','1','2','3','4','s','p','*','h','H','+','x','D']
+     mklist=[',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',']
+     
+     #绘制折线图    
+     for c in collist:
+         pos=collist.index(c)
+-        lsc=lslist[pos]
++        try:
++            lsc=lslist[pos]
++        except:
++            print("  #Bug(draw_lines): lslist=",lslist,",pos=",pos)
+         mkc=mklist[pos]
+         
+         # 连接折现中非交易日的断开区间
+         import pandas as pd
+         dfg=pd.DataFrame(df[c]).copy(deep=True)
+         # 慎用dropna
+         #dfg=dfg.dropna(inplace=True)
+         if dfg is None:
+             print("  #Error(draw_lines): null dataframe for graphics in column",c)
+             continue
+         if len(dfg)==0:
+             print("  #Error(draw_lines): no data for graphics in column",c)
+             continue
+         
+-        plt.plot(dfg,label=c,linewidth=linewidth,ls=lsc,marker=mkc,markersize=3)
++        #plt.plot(dfg,label=c,linewidth=linewidth,ls=lsc,marker=mkc,markersize=3)
++        plt.plot(dfg,label=codetranslate(c),linewidth=linewidth,ls=lsc,marker=mkc,markersize=3)
+         #plt.plot(df[c],label=c,linewidth=1.5,marker=mkc,markersize=3)
+         #为折线加数据标签
+         if data_label==True:
+             for a,b in zip(df.index,df[c]):
+                 plt.text(a,b+0.02,str(round(b,2)), \
+                          ha='center',va='bottom',fontsize=7)
+     
+     #绘制水平辅助线
+     if axhline_label !="":
+-        plt.axhline(y=axhline_value,label=axhline_label,color='purple',linestyle=':',linewidth=1.5)  
++        if '零线' in axhline_label:
++            axhline_label=''
++        plt.axhline(y=axhline_value,label=axhline_label,color='black',linestyle=':',linewidth=2)  
+         #plt.axhline(y=axhline_value,color='purple',linestyle=':',linewidth=1.5)
+     
+     #坐标轴标记
+     y_label_t=ectranslate(y_label)
+     plt.ylabel(y_label_t,fontweight='bold',fontsize=ylabel_txt_size)
+     
+     x_label_t=ectranslate(x_label)
+@@ -1053,15 +1064,15 @@
+         if data_label==True:
+             for a,b in zip(df.index,df[c]):
+                 plt.text(a,b+0.02,str(round(b,2)), \
+                          ha='center',va='bottom',fontsize=7)
+     
+     #绘制水平辅助线
+     if axhline_label !="":
+-        plt.axhline(y=axhline_value,label=axhline_label,color='black',linestyle=':',linewidth=1)  
++        plt.axhline(y=axhline_value,label=axhline_label,color='black',linestyle='--',linewidth=2)  
+     
+     #坐标轴标记
+     plt.ylabel(y_label,fontweight='bold',fontsize=ylabel_txt_size)
+     if x_label != "":
+         plt.xlabel(x_label,fontweight='bold',fontsize=xlabel_txt_size)
+     #图示标题
+     plt.title(title_txt,fontweight='bold',fontsize=title_txt_size)
+```
+
+## siat/markowitz.py
+
+```diff
+@@ -22,14 +22,15 @@
+ from siat.security_prices import *
+ from siat.fama_french import *
+ 
+ import pandas as pd
+ import numpy as np
+ import datetime
+ #==============================================================================
++import seaborn as sns
+ import matplotlib.pyplot as plt
+ #统一设定绘制的图片大小：数值为英寸，1英寸=100像素
+ plt.rcParams['figure.figsize']=(12.8,7.2)
+ plt.rcParams['figure.dpi']=300
+ plt.rcParams['font.size'] = 13
+ plt.rcParams['xtick.labelsize']=11 #横轴字体大小
+ plt.rcParams['ytick.labelsize']=11 #纵轴字体大小
+@@ -47,22 +48,22 @@
+ plt.rcParams['axes.facecolor']='whitesmoke'
+ 
+ #处理绘图汉字乱码问题
+ import sys; czxt=sys.platform
+ if czxt in ['win32','win64']:
+     plt.rcParams['font.sans-serif'] = ['SimHei']  # 设置默认字体
+     mpfrc={'font.family': 'SimHei'}
++    sns.set_style('whitegrid',{'font.sans-serif':['simhei','Arial']})
+ 
+-if czxt in ['darwin']: #MacOSX
++if czxt in ['darwin','linux']: #MacOSX
++    #plt.rcParams['font.family'] = ['Arial Unicode MS'] #用来正常显示中文标签
+     plt.rcParams['font.family']= ['Heiti TC']
+     mpfrc={'font.family': 'Heiti TC'}
++    sns.set_style('whitegrid',{'font.sans-serif':['Arial Unicode MS','Arial']})
+ 
+-if czxt in ['linux']: #website Jupyter
+-    plt.rcParams['font.family']= ['Heiti TC']
+-    mpfrc={'font.family':'Heiti TC'}
+ 
+ # 解决保存图像时'-'显示为方块的问题
+ plt.rcParams['axes.unicode_minus'] = False 
+ #==============================================================================
+ #全局变量定义
+ RANDOM_SEED=1234567890
+ 
+@@ -179,15 +180,15 @@
+         CumulativeReturns = ((1+retgroup[name]).cumprod()-1)
+         if pos-len(lslist) < 0:
+             CumulativeReturns.plot(label=ectranslate(rlabel),ls=thisls)
+         else:
+             thismarker=markerlist[pos-len(lslist)]
+             CumulativeReturns.plot(label=ectranslate(rlabel),ls=thisls,marker=thismarker,markersize=4)
+             
+-    #plt.axhline(y=0,ls=":",c="red")
++    plt.axhline(y=0,ls=":",c="red")
+     plt.legend(loc='best')
+     plt.title(titletxt); plt.ylabel(ylabeltxt); plt.xlabel(xlabeltxt)
+     plt.show()
+     
+     return
+ 
+ if __name__=='__main__':
+@@ -204,38 +205,42 @@
+     
+     cumulative_returns_plot(retgroup,name_list,titletxt,ylabeltxt,xlabeltxt,label_list) 
+     
+     return
+ 
+ #==============================================================================
+ def portfolio_hpr(portfolio,thedate,pastyears=1, \
+-                     rate_period='1Y',rate_type='shibor',RF=True,printout=True):
++                     rate_period='1Y',rate_type='shibor',RF=True, \
++                         printout=True,graph=True):
+     """
+     功能：套壳函数portfolio_cumret
+     """
+     dflist=portfolio_cumret(portfolio=portfolio,thedate=thedate,pastyears=pastyears, \
+-                     rate_period=rate_period,rate_type=rate_type,RF=RF,printout=printout)
++                     rate_period=rate_period,rate_type=rate_type,RF=RF, \
++                         printout=printout,graph=graph)
+ 
+     return dflist
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     Market={'Market':('US','^GSPC','我的组合001')}
+     Stocks1={'AAPL':.3,'MSFT':.15,'AMZN':.15,'FB':.01,'GOOG':.01}
+     Stocks2={'XOM':.02,'JNJ':.02,'JPM':.01,'TSLA':.3,'SBUX':.03}
+     portfolio=dict(Market,**Stocks1,**Stocks2)
+     
+-    thedate='2019-12-31'
++    thedate='2023-2-17'
+     pastyears=1
+     rate_period='1Y'
+     rate_type='shibor'
++    RF=False
+     printout=True    
+ 
+ def portfolio_cumret(portfolio,thedate,pastyears=1, \
+-                     rate_period='1Y',rate_type='shibor',RF=False,printout=True):
++                     rate_period='1Y',rate_type='shibor',RF=False, \
++                         printout=True,graph=True):
+     """
+     功能：绘制投资组合的累计收益率趋势图，并与等权和市值加权组合比较
+     注意：中国部分历史区段的treasury历史可能无法取得；
+     无论是shibor还是treasury的近期利率均可能空缺，只能以最近期的数值填补
+     """
+     print("\n  Searching for portfolio info, which may take time ...")
+     # 解构投资组合
+@@ -243,15 +248,15 @@
+     pname=portfolio_name(portfolio)
+ 
+     #如果持仓份额总数不为1，则将其转换为总份额为1
+     import numpy as np
+     totalshares=np.sum(sharelist0)
+     if abs(totalshares - 1) >= 0.000001:
+         print("\n  #Warning(portfolio_cumret): total weights is",totalshares,", it requires 1.0 here")
+-        print("   Automatically converted into total weights 1")
++        print("  Automatically converted into total weights 1")
+         sharelist=list(sharelist0/totalshares) 
+     else:
+         sharelist=sharelist0
+ 
+     #..........................................................................    
+     # 计算历史数据的开始日期
+     start=get_start_date(thedate,pastyears)
+@@ -267,15 +272,16 @@
+             print("  Solution2: use RF=False in script command to ignore risk-free interest rate in calculation")
+             return None
+     else:
+         rf_df=None
+ 
+     #..........................................................................    
+     # 抓取投资组合股价
+-    prices=get_prices(tickerlist,start,thedate)
++    #prices=get_prices(tickerlist,start,thedate)
++    prices=get_prices_simple(tickerlist,start,thedate)
+     if prices is None:
+         print("  #Error(portfolio_cumret): failed to get portfolio prices",pname)
+         return None
+     if len(prices) == 0:
+         print("  #Error(portfolio_cumret): retrieved empty prices for",pname)
+         return None
+     #..........................................................................
+@@ -300,51 +306,53 @@
+     # 原投资组合的收益率
+     StockReturns['Portfolio'] = WeightedReturns.sum(axis=1)
+     #..........................................................................
+     lang = check_language()
+     #..........................................................................
+     
+     # 绘制原投资组合的收益率曲线，以便使用收益率%来显示
+-    plotsr = StockReturns['Portfolio']
+-    plotsr.plot(label=pname)
+-    plt.axhline(y=0,ls=":",c="red")
+-    
+-    if lang == 'Chinese':
+-        title_txt="投资组合: 日收益率的变化趋势"
+-        ylabel_txt="日收益率"
+-        source_txt="来源: Sina/EM/stooq, "
+-    else:
+-        title_txt="Investment Portfolio: Daily Return"
+-        ylabel_txt="Daily Return"
+-        source_txt="Source: sina/eastmoney/stooq, "
+-    
+-    plt.title(title_txt)
+-    plt.ylabel(ylabel_txt)
+-    
+-    stoday = datetime.date.today()
+-    plt.xlabel(source_txt+str(stoday))
+-    plt.legend()
+-    plt.show()
++    if graph:
++        plotsr = StockReturns['Portfolio']
++        plotsr.plot(label=pname)
++        plt.axhline(y=0,ls=":",c="red")
++        
++        if lang == 'Chinese':
++            title_txt="投资组合: 日收益率的变化趋势"
++            ylabel_txt="日收益率"
++            source_txt="来源: Sina/EM/stooq, "
++        else:
++            title_txt="Investment Portfolio: Daily Return"
++            ylabel_txt="Daily Return"
++            source_txt="Source: sina/eastmoney/stooq, "
++        
++        plt.title(title_txt)
++        plt.ylabel(ylabel_txt)
++        
++        stoday = datetime.date.today()
++        plt.xlabel(source_txt+str(stoday))
++        plt.legend()
++        plt.show()
+     #..........................................................................
+     
+     # 计算原投资组合的持有收益率，并绘图
+-    name_list=["Portfolio"]
+-    label_list=[pname]
+-    
+-    if lang == 'Chinese':    
+-        titletxt="投资组合: 持有收益率的变化趋势"
+-        ylabeltxt="持有收益率"
+-        xlabeltxt="来源: Sina/EM/stooq, "+str(stoday)
+-    else:
+-        titletxt="Investment Portfolio: Holding Return"
+-        ylabeltxt="Holding Return"
+-        xlabeltxt="Source: sina/eastmoney/stooq, "+str(stoday)
++        name_list=["Portfolio"]
++        label_list=[pname]
++        
++        if lang == 'Chinese':    
++            titletxt="投资组合: 持有收益率的变化趋势"
++            ylabeltxt="持有收益率"
++            xlabeltxt="来源: Sina/EM/stooq, "+str(stoday)
++        else:
++            titletxt="Investment Portfolio: Holding Return"
++            ylabeltxt="Holding Return"
++            xlabeltxt="Source: sina/eastmoney/stooq, "+str(stoday)
+     
+     #绘制持有收益率曲线
+-    cumulative_returns_plot(StockReturns,name_list,titletxt,ylabeltxt,xlabeltxt,label_list)
++    if graph:
++        cumulative_returns_plot(StockReturns,name_list,titletxt,ylabeltxt,xlabeltxt,label_list)
+     #..........................................................................
+     
+     # 构造等权重组合Portfolio_EW的持有收益率
+     numstocks = len(tickerlist)
+     # 平均分配每一项的权重
+     portfolio_weights_ew = np.repeat(1/numstocks, numstocks)
+     # 合成等权重组合的收益，按行横向加总
+@@ -359,27 +367,28 @@
+     portfolio_weights_lw = tamountlist_array / np.sum(tamountlist_array)
+     # 计算成交金额加权的组合收益
+     StockReturns['Portfolio_LW'] = stock_return.mul(portfolio_weights_lw, axis=1).sum(axis=1)
+ 
+     #绘制累计收益率对比曲线
+     if lang == 'Chinese':
+         title_txt="投资组合策略：业绩对比"
+-        Portfolio_EW_txt="等权重组合"
+-        Portfolio_LW_txt="流动性组合"
++        Portfolio_EW_txt="等权重策略"
++        Portfolio_LW_txt="流动性策略"
+     else:
+         title_txt="Investment Portfolio Strategies: Performance Comparison"
+         Portfolio_EW_txt="Equal-weight"
+         Portfolio_LW_txt="OMCap"
+     
+     name_list=['Portfolio', 'Portfolio_EW', 'Portfolio_LW']
+     label_list=[pname, Portfolio_EW_txt, Portfolio_LW_txt]
+     titletxt=title_txt
+     
+     #绘制各个投资组合的持有收益率曲线
+-    cumulative_returns_plot(StockReturns,name_list,titletxt,ylabeltxt,xlabeltxt,label_list)
++    if graph:
++        cumulative_returns_plot(StockReturns,name_list,titletxt,ylabeltxt,xlabeltxt,label_list)
+ 
+     #打印各个投资组合的持股比例
+     member_returns=stock_return
+     if printout:
+         portfolio_expectation_universal(pname,member_returns,portfolio_weights,member_prices)
+         portfolio_expectation_universal(Portfolio_EW_txt,member_returns,portfolio_weights_ew,member_prices)
+         portfolio_expectation_universal(Portfolio_LW_txt,member_returns,portfolio_weights_lw,member_prices)
+@@ -388,39 +397,40 @@
+     member_returns=stock_return
+     portfolio_returns=StockReturns[name_list]
+     
+     #投资组合名称改名
+     portfolio_returns=cvt_portfolio_name(pname,portfolio_returns)
+     
+     #打印现有投资组合策略的排名
+-    portfolio_ranks(portfolio_returns,pname)
++    if printout:
++        portfolio_ranks(portfolio_returns,pname)
+     
+     return [[portfolio,thedate,member_returns,rf_df,member_prices], \
+             [portfolio_returns,portfolio_weights,portfolio_weights_ew,portfolio_weights_lw]]
+ 
+ if __name__=='__main__':
+     X=portfolio_cumret(portfolio,'2021-9-30')
+ 
+ if __name__=='__main__':
+     pf_info=portfolio_cumret(portfolio,'2021-9-30')
+ 
+ #==============================================================================
+ 
+ def portfolio_expret(portfolio,today,pastyears=1, \
+-                     rate_period='1Y',rate_type='shibor',RF=False,printout=True):
++                     rate_period='1Y',rate_type='shibor',RF=False,printout=True,graph=True):
+     """
+     功能：绘制投资组合的持有期收益率趋势图，并与等权和市值加权组合比较
+     套壳原来的portfolio_cumret函数，以维持兼容性
+     expret: expanding return，以维持与前述章节名词的一致性
+     hpr: holding period return, 持有（期）收益率
+     注意：实验发现RF对于结果的影响极其微小难以观察，默认设为不使用无风险利率调整收益，以加快运行速度
+     """
+     #处理失败的返回值
+     results=portfolio_cumret(portfolio,today,pastyears, \
+-                     rate_period,rate_type,RF,printout)
++                     rate_period,rate_type,RF,printout,graph)
+     if results is None: return None
+     
+     [[portfolio,thedate,member_returns,rf_df,member_prices], \
+             [portfolio_returns,portfolio_weights,portfolio_weights_ew,portfolio_weights_lw]] = results
+ 
+     return [[portfolio,thedate,member_returns,rf_df,member_prices], \
+             [portfolio_returns,portfolio_weights,portfolio_weights_ew,portfolio_weights_lw]]
+@@ -448,15 +458,15 @@
+     # 计算相关矩阵
+     correlation_matrix = sr.corr()
+     
+     # 导入seaborn
+     import seaborn as sns
+     # 创建热图
+     sns.heatmap(correlation_matrix,annot=True,cmap="YlGnBu",linewidths=0.3,
+-            annot_kws={"size": 8})
++            annot_kws={"size": 16})
+     plt.title(pname+": 成份股收益率之间的相关系数")
+     plt.ylabel("成份股票")
+     
+     footnote1="观察期间: "+hstart+'至'+hend
+     import datetime as dt; stoday=dt.date.today()    
+     footnote2="\n来源：Sina/EM/stooq，"+str(stoday)
+     plt.xlabel(footnote1+footnote2)
+@@ -545,17 +555,18 @@
+     hend0=member_returns.index[-1]; hend=str(hend0.date())
+     tickerlist=list(member_returns)
+ 
+     #合成投资组合的历史收益率，按行横向加权求和
+     preturns=member_returns.copy() #避免改变输入的数据
+     preturns['Portfolio']=preturns.mul(portfolio_weights,axis=1).sum(axis=1)
+     
+-    #计算一手投资组合的价格
++    #计算一手投资组合的价格，最小持股份额的股票需要100股
+     import numpy as np
+     min_weight=np.min(portfolio_weights)
++    # 将最少持股的股票份额转换为1
+     portfolio_weights_1=portfolio_weights / min_weight * 1
+     portfolio_values=member_prices.mul(portfolio_weights_1,axis=1).sum(axis=1)
+     portfolio_value_thedate=portfolio_values[-1:].values[0]
+ 
+     #计算年化收益率：按列求均值
+     mean_return=preturns['Portfolio'].mean(axis=0)
+     annual_return = (1 + mean_return)**252 - 1
+@@ -567,15 +578,16 @@
+     
+     lang=check_language()
+     import datetime as dt; stoday=dt.date.today()    
+     if lang == 'Chinese':
+         print("\n  ======= 投资组合的收益与风险 =======")
+         print("  投资组合:",pname)
+         print("  分析日期:",str(hend))
+-        print("  组合价值:","约"+str(round(portfolio_value_thedate/10000,2))+"万/单位投资组合")
++    # 投资组合中即使持股比例最低的股票每次交易最少也需要1手（100股）
++        print("  期末1手组合单位价值:","约"+str(round(portfolio_value_thedate/10000*100,2))+"万")
+         print("  观察期间:",hstart+'至'+hend)
+         print("  年化收益率:",round(annual_return,4))
+         print("  年化标准差:",round(annual_std,4))
+         print("  ***投资组合持仓策略***")
+         print_tickerlist_sharelist(tickerlist,portfolio_weights,4)
+        
+         print("  *来源：Sina/EM/stooq，"+str(stoday))
+@@ -654,110 +666,116 @@
+     """
+     #临时保存，避免影响原值
+     pr=portfolio_returns.copy()
+     
+     #以pname组合作为基准
+     import numpy as np
+     mean_return_pname=pr[pname].mean(axis=0)
+-    annual_return_pname=(1 + mean_return_pname)**252 - 1
++    annual_return_pname=round(((1 + mean_return_pname)**252 - 1)*100,2)
++    """
+     if annual_return_pname > 0:
+-        pct_style=True
+-    else:
++        pct_style=True  #百分比模式
++    else:   #数值模式，直接加减
+         pct_style=False
++    """
++    pct_style=False
+     
+     std_return_pname=pr[pname].std(axis=0)
+-    annual_std_pname= std_return_pname*np.sqrt(252)
++    annual_std_pname= round((std_return_pname*np.sqrt(252))*100,2)
+     
+     import pandas as pd  
+-    prr=pd.DataFrame(columns=["名称","年化收益率","收益率变化","年化标准差","标准差变化","收益/风险"])    
++    #prr=pd.DataFrame(columns=["名称","年化收益率","收益率变化","年化标准差","标准差变化","收益/风险"])    
++    prr=pd.DataFrame(columns=["名称","年化收益率%","收益率变化","年化标准差%","标准差变化","收益/风险"])    
+     cols=list(pr)
+     for c in cols:
+-        #计算年化收益率：按列求均值
++        
++        #年化收益率：按列求均值
+         mean_return=pr[c].mean(axis=0)
+-        annual_return = (1 + mean_return)**252 - 1
++        annual_return = round(((1 + mean_return)**252 - 1)*100,2)
+         
+         if pct_style:
+-            return_chg=round((annual_return - annual_return_pname) / annual_return_pname *100,1)
++            return_chg=round((annual_return - annual_return_pname) / annual_return_pname * 100,2)
+         else:
+-            return_chg=round((annual_return - annual_return_pname),5)
+-            
++            return_chg=round((annual_return - annual_return_pname),2)
++        
++        #收益率变化    
+         if return_chg==0:
+             return_chg_str="基准"
+         elif return_chg > 0:
+             if pct_style:
+                 return_chg_str='+'+str(return_chg)+'%'
+             else:
+                 return_chg_str='+'+str(return_chg)
+         else:
+             if pct_style:
+                 return_chg_str='-'+str(-return_chg)+'%'
+             else:
+                 return_chg_str='-'+str(-return_chg)
+     
+-        #计算年化标准差
++        #年化标准差
+         std_return=pr[c].std(axis=0)
+-        annual_std = std_return*np.sqrt(252)
++        annual_std = round((std_return*np.sqrt(252))*100,2)
+         
+         sharpe_ratio=round(annual_return / annual_std,2)
+         
+         if pct_style:
+-            std_chg=round((annual_std - annual_std_pname) / annual_std_pname *100,1)
++            std_chg=round((annual_std - annual_std_pname) / annual_std_pname * 100,1)
+         else:
+-            std_chg=round((annual_std - annual_std_pname),5)
++            std_chg=round((annual_std - annual_std_pname),2)
++        
++        #标准差变化
+         if std_chg==0:
+             std_chg_str="基准"
+         elif std_chg > 0:
+             if pct_style:
+                 std_chg_str='+'+str(std_chg)+'%'
+             else:
+                 std_chg_str='+'+str(std_chg)
+         else:
+             if pct_style:
+                 std_chg_str='-'+str(-std_chg)+'%'
+             else:
+                 std_chg_str='-'+str(-std_chg)
+         
+-        row=pd.Series({"名称":c,"年化收益率":annual_return,"收益率变化":return_chg_str, \
+-                       "年化标准差":annual_std,"标准差变化":std_chg_str,"收益/风险":sharpe_ratio})
++        row=pd.Series({"名称":c,"年化收益率%":annual_return, \
++                       "收益率变化":return_chg_str, \
++                       "年化标准差%":annual_std,"标准差变化":std_chg_str,"收益/风险":sharpe_ratio})
+         prr=prr.append(row,ignore_index=True)          
+     
+-    #处理小数位数，以便与其他地方的小数位数一致
+-    """
+-    prr['年化收益率']=round(prr['年化收益率'],4)
+-    prr['年化标准差']=round(prr['年化标准差'],4)
+-    """
+-    prr['年化收益率']=prr['年化收益率'].apply(lambda x: round(x,4))
+-    prr['年化标准差']=prr['年化标准差'].apply(lambda x: round(x,4))
+-    
+-    
+     #先按风险降序排名，高者排前面
+-    prr.sort_values(by="年化标准差",ascending=False,inplace=True)
++    prr.sort_values(by="年化标准差%",ascending=False,inplace=True)
+     prr.reset_index(inplace=True)
+     prr['风险排名']=prr.index+1
+     
+     #再按收益降序排名，高者排前面
+-    prr.sort_values(by="年化收益率",ascending=False,inplace=True)
++    prr.sort_values(by="年化收益率%",ascending=False,inplace=True)
+     prr.reset_index(inplace=True)
+     prr['收益排名']=prr.index+1    
+     
+-    prr2=prr[["名称","收益排名","风险排名","年化收益率","年化标准差","收益率变化","标准差变化","收益/风险"]]
+-    prr2.sort_values(by="年化收益率",ascending=False,inplace=True)
++    #prr2=prr[["名称","收益排名","风险排名","年化收益率","年化标准差","收益率变化","标准差变化","收益/风险"]]
++    prr2=prr[["名称","收益排名","年化收益率%","收益率变化", \
++              "风险排名","年化标准差%","标准差变化", \
++                  "收益/风险"]]
++    prr2.sort_values(by="年化收益率%",ascending=False,inplace=True)
+     #prr2.reset_index(inplace=True)
+     
+     #打印
+     print("\n========= 投资组合策略排名：平衡收益与风险 =========\n")
+     #打印对齐
+     pd.set_option('display.max_columns', 1000)
+     pd.set_option('display.width', 1000)
+     pd.set_option('display.max_colwidth', 1000)
+     pd.set_option('display.unicode.ambiguous_as_wide', True)
+     pd.set_option('display.unicode.east_asian_width', True)
+     
+     #print(prr2.to_string(index=False,header=False))
+-    print(prr2.to_string(index=False))
++    #print(prr2.to_string(index=False))
++    
++    alignlist=['left']+['center']*(len(list(prr2))-2)+['right']
++    print(prr2.to_markdown(index=False,tablefmt='plain',colalign=alignlist))
+ 
+     return prr2   
+ 
+ if __name__=='__main__':
+     portfolio_ranks(portfolio_returns,pname)
+ 
+ #==============================================================================
+@@ -930,40 +948,40 @@
+     #RandomPortfolios['Returns_Volatility']=RandomPortfolios['Returns'] / RandomPortfolios['Volatility']
+     #pf_ratio = np.array(RandomPortfolios['Returns_Volatility'])
+     pf_ratio = np.array(RandomPortfolios['Returns'] / RandomPortfolios['Volatility'])
+     pf_returns = np.array(RandomPortfolios['Returns'])
+     pf_volatilities = np.array(RandomPortfolios['Volatility'])
+ 
+     #plt.style.use('seaborn-dark') #不支持中文
+-    plt.figure(figsize=(9, 5))
++    #plt.figure(figsize=(9, 5))
+     plt.scatter(pf_volatilities, pf_returns, c=pf_ratio,cmap='RdYlGn', edgecolors='black',marker='o') 
+     #plt.grid(True)
+     
+     import datetime as dt; stoday=dt.date.today()
+     lang = check_language()
+     if lang == 'Chinese':    
+         plt.colorbar(label='收益率/标准差')
+-        plt.title("投资组合: 马科维茨可行集")
+-        plt.ylabel("年化收益率")
++        plt.title("投资组合: 马科维茨有效(可行)集",fontsize=title_txt_size)
++        plt.ylabel("年化收益率",fontsize=ylabel_txt_size)
+         
+         footnote1="年化收益率标准差-->"
+         footnote2="\n\n基于"+pname+"之成份股构造"+str(simulation)+"个投资组合"
+         footnote3="\n观察期间："+hstart+"至"+hend
+         footnote4="\n来源: Sina/EM/stooq, "+str(stoday)
+     else:
+         plt.colorbar(label='Return/Std')
+-        plt.title("Investment Portfolio: Efficient Set")
+-        plt.ylabel("Annualized Return")
++        plt.title("Investment Portfolio: Efficient Set",fontsize=title_txt_size)
++        plt.ylabel("Annualized Return",fontsize=ylabel_txt_size)
+         
+         footnote1="Annualized Std -->\n\n"
+         footnote2="Based on "+pname+"\'s stocks, constructed "+str(simulation)+" portfolios\n"
+         footnote3="Period of observation: "+hstart+" to "+hend
+         footnote4="\nSource: sina/eastmoney/stooq, "+str(stoday)
+     
+-    plt.xlabel(footnote1+footnote2+footnote3+footnote4)
++    plt.xlabel(footnote1+footnote2+footnote3+footnote4,fontsize=xlabel_txt_size)
+     
+     plt.show()
+ 
+     return [pf_info,RandomPortfolios]
+ 
+ if __name__=='__main__':
+     Market={'Market':('US','^GSPC','我的组合001')}
+@@ -1400,46 +1418,48 @@
+     
+     #RandomPortfolios.plot(col_x,col_y,kind='scatter',color='y',edgecolors='k')
+     
+     pf_ratio = np.array(RandomPortfolios[col_y] / RandomPortfolios[col_x])
+     pf_returns = np.array(RandomPortfolios[col_y])
+     pf_volatilities = np.array(RandomPortfolios[col_x])
+ 
+-    plt.figure(figsize=(9, 5))
++    #plt.figure(figsize=(9, 5))
+     plt.scatter(pf_volatilities, pf_returns, c=pf_ratio,cmap='RdYlGn', edgecolors='black',marker='o') 
+     plt.colorbar(label=colorbartxt)
+ 
+     lang = check_language()
+     if lang == 'Chinese':
+-        plt.title("投资组合: 马科维茨可行集，基于"+title_ext)
+-        plt.ylabel(ylabeltxt)
++        plt.title("投资组合: 马科维茨有效(可行)集，基于"+title_ext,fontsize=title_txt_size)
++        plt.ylabel(ylabeltxt,fontsize=ylabel_txt_size)
+         
+         import datetime as dt; stoday=dt.date.today()
+         footnote1=x_axis_name+" -->\n\n"
+         footnote2="基于"+pname+"之成份股构造"+str(simulation)+"个投资组合"
+         footnote3="\n观察期间："+hstart+"至"+hend
+         footnote4="\n来源: Sina/EM/stooq/FRED, "+str(stoday)
+     else:
+-        plt.title("Portfolio: Efficient Set, Based on "+title_ext)
+-        plt.ylabel(ylabeltxt)
++        plt.title("Portfolio: Efficient Set, Based on "+title_ext,fontsize=title_txt_size)
++        plt.ylabel(ylabeltxt,fontsize=ylabel_txt_size)
+         
+         import datetime as dt; stoday=dt.date.today()
+         footnote1=x_axis_name+" -->\n\n"
+         footnote2="Based on "+pname+"\'s stocks, constructed "+str(simulation)+" portfolios"
+         footnote3="\nPeriod of observation: "+hstart+" to "+hend
+         footnote4="\nSource: sina/eastmoney/stooq/FRED, "+str(stoday)
+     
+-    plt.xlabel(footnote1+footnote2+footnote3+footnote4)
++    plt.xlabel(footnote1+footnote2+footnote3+footnote4,fontsize=xlabel_txt_size)
+     
+     #解析最大比率点和最低风险点信息，并绘点
+     [hiret_x,hiret_y,name_hiret]=hiret_point
+-    plt.scatter(hiret_x, hiret_y, color='red',marker='*',s=150,label=name_hiret)
++    #plt.scatter(hiret_x, hiret_y, color='red',marker='*',s=150,label=name_hiret)
++    plt.scatter(hiret_x, hiret_y, color='blue',marker='*',s=200,label=name_hiret)
+     
+     [lorisk_x,lorisk_y,name_lorisk]=lorisk_point
+-    plt.scatter(lorisk_x, lorisk_y, color='m',marker='8',s=100,label=name_lorisk)
++    #plt.scatter(lorisk_x, lorisk_y, color='m',marker='8',s=100,label=name_lorisk)
++    plt.scatter(lorisk_x, lorisk_y, color='red',marker='8',s=150,label=name_lorisk)
+     
+     plt.legend(loc='best')
+     plt.show()
+     
+     return
+ #==============================================================================
+ #==============================================================================
+@@ -1471,15 +1491,15 @@
+             pc=pclist[ppos]
+             portfolio_returns.rename(columns={p:pc},inplace=True)
+ 
+     return portfolio_returns
+ 
+ #==============================================================================
+ 
+-def portfolio_optimize_sharpe(es_info,RF=True):
++def portfolio_optimize_sharpe(es_info,RF=False):
+     """
+     功能：计算投资组合的最高夏普比率组合，并绘图
+     MSR: Maximium Sharpe Rate, 最高夏普指数方案
+     GMVS: Global Minimum Volatility by Sharpe, 全局最小波动方案
+     """
+ 
+     #需要定制：定义名称变量......................................................
+@@ -1532,15 +1552,15 @@
+     es_sharpe=portfolio_es_sharpe(pf_info,simulation=50000)
+     
+     MSR_weights,GMV_weights,portfolio_returns=portfolio_optimize_sharpe(es_sharpe)
+     
+ 
+ #==============================================================================
+ 
+-def portfolio_optimize_sortino(es_info,RF=True):
++def portfolio_optimize_sortino(es_info,RF=False):
+     """
+     功能：计算投资组合的最高索替诺比率组合，并绘图
+     MSO: Maximium Sortino ratio, 最高索替诺比率方案
+     GML: Global Minimum LPSD volatility, 全局最小LPSD下偏标准差方案
+     """
+ 
+     #需要定制：定义名称变量......................................................
+@@ -1580,15 +1600,15 @@
+     es_sortino=portfolio_es_sortino(pf_info,simulation=50000)
+     
+     MSO_weights,GML_weights,portfolio_returns=portfolio_optimize_sortino(es_Sortino)
+     
+     
+ #==============================================================================
+ 
+-def portfolio_optimize_alpha(es_info,RF=True):
++def portfolio_optimize_alpha(es_info,RF=False):
+     """
+     功能：计算投资组合的最高詹森阿尔法组合，并绘图
+     MAR: Maximium Alpha Ratio, 最高阿尔法指数方案
+     GMBA: Global Minimum Beta by Alpha, 全局最小贝塔系数方案
+     """
+ 
+     #需要定制：定义名称变量......................................................
+@@ -1765,15 +1785,15 @@
+ if __name__=='__main__':
+     ratio='sharpe'
+     ratio='alpha'
+     ratio='treynor'
+     simulation=1000
+     simulation=50000
+ 
+-def portfolio_optimize_strategy(pf_info,ratio='sharpe',simulation=50000,RF=False):
++def portfolio_optimize_strategy(pf_info,ratio='sharpe',simulation=50000,RF=False,graph=True):
+     """
+     功能：集成式投资组合优化策略
+     注意：实验发现RF对于结果的影响极其微小难以观察，默认设为不使用无风险利率调整收益
+     """   
+     
+     ratio_list=['treynor','sharpe','sortino','alpha']
+     if not (ratio in ratio_list):
+@@ -1822,15 +1842,16 @@
+     for p in top4:
+         if p in [pname,hi_name,lo_name]:
+             continue
+         else:
+             break
+     name_list=[pname,hi_name,lo_name,p]
+     
+-    portfolio_expret_plot(portfolio_returns,name_list,titletxt=titletxt,ylabeltxt=ylabeltxt)
++    if graph:
++        portfolio_expret_plot(portfolio_returns,name_list,titletxt=titletxt,ylabeltxt=ylabeltxt)
+     
+     return 
+     
+     
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+@@ -2023,40 +2044,147 @@
+     return
+ 
+ if __name__=='__main__':
+     stocks=['IBM','WMT','AAPL','C','MSFT']
+     fromdate,todate='2019-1-1','2020-8-1' 
+     df=portfolio_ef(stocks,fromdate,todate)
+ 
++#==============================================================================
++if __name__=='__main__':
++    tickers=['^GSPC','000001.SS','^HSI','^N225','^BSESN']
++    start='2023-1-1'
++    end='2023-3-22'
++    info_type='Volume'
++    df=security_correlation(tickers,start,end,info_type='Close')
++
++
++def cm2inch(x,y):
++    return x/2.54,y/2.54
++
++def security_correlation(tickers,start,end,info_type='Close'):
++    """
++    功能：股票/指数收盘价之间的相关性
++    info_type='Close': 默认Close, 还可为Open/High/Low/Volume
++    """
++    info_types=['Close','Open','High','Low','Volume']
++    info_types_cn=['收盘价','开盘价','最高价','最低价','成交量']
++    if not(info_type in info_types):
++        print("  #Error(security_correlation): invalid information type",info_type)
++        print("  Supported information type:",info_types)
++        return None
++    pos=info_types.index(info_type)
++    info_type_cn=info_types_cn[pos]
++    
++    #屏蔽函数内print信息输出的类
++    import os, sys
++    class HiddenPrints:
++        def __enter__(self):
++            self._original_stdout = sys.stdout
++            sys.stdout = open(os.devnull, 'w')
++
++        def __exit__(self, exc_type, exc_val, exc_tb):
++            sys.stdout.close()
++            sys.stdout = self._original_stdout
++
++    print("  Searching for security prices, please wait ...")
++    with HiddenPrints():
++        prices=get_prices_simple(tickers,start,end)
++    df=prices[info_type]
++    df.dropna(axis=0,inplace=True)
++    
++    # here put the import lib
++    import seaborn as sns
++    sns.set(font='SimHei')  # 解决Seaborn中文显示问题
++    #sns.set_style('whitegrid',{'font.sans-serif':['SimHei','Arial']}) 
++    #sns.set_style('whitegrid',{'font.sans-serif':['FangSong']}) 
++    
++    import numpy as np
++    from scipy.stats import pearsonr
+ 
++    collist=list(df)
++    for col in collist:
++        df.rename(columns={col:codetranslate(col)},inplace=True)
++    df_coor = df.corr()
+ 
+ 
++    #fig = plt.figure(figsize=(cm2inch(16,12)))
++    fig = plt.figure(figsize=(cm2inch(12,8)))
++    ax1 = plt.gca()
++    
++    #构造mask，去除重复数据显示
++    mask = np.zeros_like(df_coor)
++    mask[np.triu_indices_from(mask)] = True
++    mask2 = mask
++    mask = (np.flipud(mask)-1)*(-1)
++    mask = np.rot90(mask,k = -1)
++    
++    im1 = sns.heatmap(df_coor,annot=True,cmap="YlGnBu"
++                        , mask=mask#构造mask，去除重复数据显示
++                        ,vmax=1,vmin=-1
++                        , fmt='.2f',ax = ax1,annot_kws={"size": 6})
++    
++    ax1.tick_params(axis = 'both', length=0)
++    
++    #计算相关性显著性并显示
++    rlist = []
++    plist = []
++    for i in df.columns.values:
++        for j in df.columns.values:
++            r,p = pearsonr(df[i],df[j])
++            rlist.append(r)
++            plist.append(p)
++    
++    rarr = np.asarray(rlist).reshape(len(df.columns.values),len(df.columns.values))
++    parr = np.asarray(plist).reshape(len(df.columns.values),len(df.columns.values))
++    xlist = ax1.get_xticks()
++    ylist = ax1.get_yticks()
++    
++    widthx = 0
++    widthy = -0.15
++    
++    # 星号的大小
++    font_dict={'size':5}
++    
++    for m in ax1.get_xticks():
++        for n in ax1.get_yticks():
++            pv = (parr[int(m),int(n)])
++            rv = (rarr[int(m),int(n)])
++            if mask2[int(m),int(n)]<1.:
++                if abs(rv) > 0.5:
++                    if  pv< 0.05 and pv>= 0.01:
++                        ax1.text(n+widthx,m+widthy,'*',ha = 'center',color = 'white',fontdict=font_dict)
++                    if  pv< 0.01 and pv>= 0.001:
++                        ax1.text(n+widthx,m+widthy,'**',ha = 'center',color = 'white',fontdict=font_dict)
++                    if  pv< 0.001:
++                        #print([int(m),int(n)])
++                        ax1.text(n+widthx,m+widthy,'***',ha = 'center',color = 'white',fontdict=font_dict)
++                else: 
++                    if  pv< 0.05 and pv>= 0.01:
++                        ax1.text(n+widthx,m+widthy,'*',ha = 'center',color = 'k',fontdict=font_dict)
++                    elif  pv< 0.01 and pv>= 0.001:
++                        ax1.text(n+widthx,m+widthy,'**',ha = 'center',color = 'k',fontdict=font_dict)
++                    elif  pv< 0.001:
++                        ax1.text(n+widthx,m+widthy,'***',ha = 'center',color = 'k',fontdict=font_dict)
++    
++    plt.title("证券"+info_type_cn+"之间的相关性")
++    plt.tick_params(labelsize=6)
++    
++    footnote1="\n显著性数值：***非常显著(<0.001)，**很显著(<0.01)，*显著(<0.05)，其余为不显著"
++    footnote2="\n系数绝对值：>=0.8极强相关，0.6-0.8强相关，0.4-0.6相关，0.2-0.4弱相关，否则为极弱(不)相关"
+ 
++    footnote3="\n观察期间: "+start+'至'+end
++    import datetime as dt; stoday=dt.date.today()    
++    footnote4="；来源：Sina/EM/stooq/Yahoo，"+str(stoday)
++    
++    fontxlabel={'size':6}
++    plt.xlabel(footnote1+footnote2+footnote3+footnote4,fontxlabel)
++    #plt.xticks(rotation=45)
++    plt.show()
++    
++    return df_coor
+ 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
++#==============================================================================
++#==============================================================================
++#==============================================================================
++#==============================================================================
+```
+
+## siat/option_china.py
+
+```diff
+@@ -755,15 +755,15 @@
+         
+         contracts['name']=df1['instrument']
+         contracts['direction']=df1['direction']
+         #????contracts['Close']=df1['前结价']
+         contracts['Strike']=df1['instrument'].apply(lambda x:x[9:13]).astype('int')
+         
+         #行权日:到期月份第三周的周三
+-        mdate=nth_weekday(end_month,3,3)
++        mdate=nth_weekday(end_month,3,5)
+         #contracts['maturity']='20'+df1['instrument'].apply(lambda x:x[2:6])+'28'
+         contracts['maturity']=mdate
+         
+         #标的物
+         pos=option_fin_list.index(symbol)
+         ua=underlying_fin_list[pos]
+         contracts['underlying']=ua
+@@ -941,22 +941,22 @@
+ if __name__=='__main__': 
+     option="华泰柏瑞沪深300ETF期权"
+     end_month='2206'
+     contract='510300C2206M04500'
+     direction='call'
+     
+     today='2021-11-19'
+-    sample_days=30
++    sample_days=360
+     
+     rate_type='shibor'
+-    rate_period='3M'
+-    daysahead=30
++    rate_period='1Y'
++    daysahead=183
+ 
+ def option_fin_pricing_china(option,end_month,contract,today,direction='call', \
+-                             sample_days=30,rate_type='shibor',rate_period='1Y',printout=True):
++                             sample_days=183,rate_type='shibor',rate_period='1Y',printout=True):
+     """
+     功能：将中国金融期权定价的过程整合在一起，提供默认选项，改善小白的使用体验
+     注：波动率使用历史波动率
+     """
+     
+     #第1步：查找计算金融期权预期价格所需要的参数
+     ua,maturity,x=option_fin_contract_parms(option,end_month,contract,direction)
+@@ -1132,14 +1132,103 @@
+     #理论价格：40.7，实际收盘价：49.2
+     eprice=option_fin_pricing_china(option,end_month,contract,today='2021-11-19', \
+                              direction='put', \
+                              sample_days=365,rate_type='shibor',rate_period='1Y')        
+     #理论价格：42.6，实际收盘价：49.2
+     
+ #=============================================================================
++def option_fin_pricing_china2(option,end_month,contract,today,direction='call', \
++                             rate_type='shibor',printout=True):
++    """
++    功能：将中国金融期权定价的过程整合在一起，提供默认选项，改善小白的使用体验
++    注1：波动率使用历史波动率
++    注2：sample_days使用与距离到期日相同天数，rate_period使用与距离到期日近似的期间
++    
++    特别注意：因难以确定上述关系，本函数不建议使用，可能导致误差过大！！！
++    """
++    
++    #第1步：查找计算金融期权预期价格所需要的参数
++    ua,maturity,x=option_fin_contract_parms(option,end_month,contract,direction)
++    if ua is None:
++        print("  #Error(option_fin_pricing_china): info not found")
++        print("  Possible reasons: one or some of the following")
++        print("    Option not found for",option)
++        print("    Maturity year-month not found for",end_month)
++        print("    Contract not found for",contract,'as',direction.lower())
++        print("    Contract not found in the above option + maturity")
++        return None
++        
++    #第2步：计算当前日期距离合约到期日的天数
++    days,_=calc_days(today,maturity)
++    #print("days is",days)
++
++    #第3步：计算标的证券价格收益率的历史波动率：
++    sigma,s0,_=underlying_sigma(ua,today,days=days)
++    
++    #第3步：查找年化无风险利率
++    
++    rate_type=rate_type.upper()
++    if rate_type=='SHIBOR':
++        if days == 1:
++            rate_period='ON'
++        elif days <=7:
++            rate_period='1W'
++        elif days <=14:
++            rate_period='2W'
++        elif days <=30:
++            rate_period='1M'
++        elif days <=90:
++            rate_period='3M'
++        elif days <=183:
++            rate_period='6M'
++        else:
++            rate_period='1Y'
++        
++        rf=shibor_rate(today,rate_period) 
++    elif rate_type=='TREASURY':
++        rf=treasury_yield_china(today,rate_period='1Y')
++    else:
++        print("  #Error(option_fin_pricing_china): invalid rate type",rate_type.lower())
++        return None
++    
++    #第5步：计算期权合约的预期价格
++    #中国目前金融期权均为无红利的欧式期权，可以直接采用Black-Scholes期权定价模型
++    expected_price=bs_pricing(s0,x,days,rf,sigma,direction,printout=False)  
++    
++    if printout:
++        print("\n============ 中国金融期权定价 ============\n")
++        
++        print("*** 合约信息：")
++        print("    合约代码:",contract)
++        print("    期权品种:",option)
++        print("    标的证券:",ua)
++        print("    行权价格:",x)
++        print("    到期年月:",end_month)
++        print("    期权方向:",direction)
++        
++        print("*** 合约现状：")
++        print("    定价日期:",today,'\b，标的市价:',s0)
++        print("    距离到期:",days,'\b天')
++        print("    历史波动率期间:",sample_days,'\b天')
++        print("    历史波动率数值:",round(sigma,5))
++        
++        print("    无风险利率种类:",rate_type.lower(),'\b,',rate_period)
++        print("    年化无风险利率:",round(rf*100,4),'\b%')
++        
++        print("*** 定价结果：")
++        print("    定价模型: Black-Scholes")        
++        print("    理论价格:",round(expected_price,5))
++        
++        print("\n注：历史/隐含波动率的差异是定价误差的主要原因")
++        
++        import datetime; pgm_date = datetime.date.today()         
++        print("数据来源: 新浪/沪深所/中金所,",pgm_date)        
++        
++    return expected_price  
++
+ #=============================================================================
+ #=============================================================================
+ #沪深300股指期权价格运动
+ #=============================================================================
+ if __name__=='__main__': 
+     printout=True
+ 
+@@ -1794,15 +1883,17 @@
+     date='2022-9-26'
+     graph=True
+     loc1='best'
+     loc2='best'
+ 
+ def fin_option_maturity_risk_sse(option,exercise,trade_date, \
+                                  measure='delta', \
+-                                 twinx=False,graph=True,loc1='best',loc2='best', \
++                                 graph=True, \
++                                 twinx=False,zeroline=False, \
++                                 loc1='best',loc2='best', \
+                                  date_range=False,date_freq=False,date_fmt='%Y-%m'):
+     """
+     功能：绘制指定上交所金融期权的风险指标曲线，风险因素：到期日maturity(横轴)，各个风险指标(纵轴，看涨/看跌)
+     option: 期权名称
+     maturity: 到期年月YYMM
+     exercise: 行权点位
+     direction: 方向，看涨看跌
+@@ -1894,18 +1985,21 @@
+     
+     footnote0="到期时间（不同期权）\n"
+     footnote1=option+"期权"+"，行权股指点位"+str(exercise)+"，交易日"+trade_date
+     import datetime; today = datetime.date.today()
+     footnote2="数据来源: 新浪财经/东方财富, 制图"+str(today)
+     footnote=footnote0+footnote1+"\n"+footnote2
+     
++    if twinx:
++        zeroline=False
+     plot2_line2(df9C,ticker1,colname1,'', \
+                df9P,ticker2,colname2,'', \
+                ylabeltxt,titletxt,footnote, \
+                twinx=twinx, \
++               zeroline=zeroline,yline=0, \
+                loc1=loc1,loc2=loc2, \
+                date_range=date_range,date_freq=date_freq,date_fmt=date_fmt)        
+     
+     return df9
+ 
+ if __name__=='__main__':     
+     df=fin_option_maturity_risk_sse(option='300ETF',exercise=4500,trade_date='2022-9-26',measure='implied volatility')
+@@ -1919,15 +2013,17 @@
+     measure='implied volatility'
+     graph=True
+     loc1='best'
+     loc2='best'
+ 
+ def fin_option_exercise_risk_sse(option,maturity,trade_date, \
+                                  measure='delta', \
+-                                 graph=True,loc1='best',loc2='best'):
++                                 graph=True, \
++                                 zeroline=False, \
++                                 loc1='best',loc2='best'):
+     """
+     功能：绘制指定上交所金融期权的风险指标曲线，风险因素：行权点位exercise(横轴)，各个风险指标(纵轴，看涨/看跌)
+     option: 期权名称
+     maturity: 到期年月YYMM
+     exercise: 行权点位
+     direction: 方向，看涨看跌
+     """
+@@ -2012,14 +2108,17 @@
+     plt.plot(dftmp.exercise,dftmp[measure],'-',label=labeltxt, \
+              linestyle='-',color='blue',linewidth=2)    
+ 
+     dftmp=df9P
+     labeltxt="看跌期权"
+     plt.plot(dftmp.exercise,dftmp[measure],'-',label=labeltxt, \
+              linestyle='--',color='orange',linewidth=2)    
++    
++    if zeroline:
++        plt.axhline(y=0,label='',ls=":",c="black",linewidth=2.5)
+         
+     plt.legend(loc=loc1,fontsize=legend_txt_size)
+     ylabeltxt=ectranslate(measure)
+     plt.ylabel(ylabeltxt,fontsize=ylabel_txt_size)
+     
+     footnote1="行权股指点位"
+     footnote2=option+"期权"+"，到期时间"+maturity+"，交易日"+trade_date
+@@ -2050,16 +2149,18 @@
+     loc1='best'
+     loc2='best'
+     date_range=False
+     date_freq=False
+ 
+ def fin_option_time_risk_sse(option,maturity,exercise,start,end, \
+                              measure='delta', \
+-                             graph=True,loc1='best',loc2='best', \
+-                             date_range=False,date_freq=False,twinx=False):
++                             graph=True, \
++                             twinx=False, zeroline=False, \
++                             loc1='best',loc2='best', \
++                             date_range=False,date_freq=False):
+     """
+     功能：绘制指定上交所金融期权的风险指标曲线，风险因素：随时间推移start/end(横轴)，各个风险指标(纵轴，看涨/看跌)
+     option: 期权名称
+     maturity: 到期年月YYMM
+     exercise: 行权点位
+     start: 开始日期
+     end: 结束日期
+@@ -2187,22 +2288,60 @@
+         elif ndays <= 40:
+             date_range=True; date_freq='2D'
+         elif ndays <=60:
+             date_range=True; date_freq='3D'
+         elif ndays <=80:
+             date_range=True; date_freq='4D'
+     
++    if twinx:
++        zeroline=False
+     plot2_line2(df9C,ticker1,colname1,'', \
+                df9P,ticker2,colname2,'', \
+                ylabeltxt,titletxt,footnote, \
+                twinx=twinx, \
++               zeroline=zeroline,yline=0, \
+                loc1=loc1,loc2=loc2, \
+                date_range=date_range,date_freq=date_freq)        
+     
+     return df9
+ 
+ if __name__=='__main__':     
+     df=fin_option_time_risk_sse(option='300ETF',maturity='2209',exercise=4500,start='2022-8-26',end='2022-9-26',measure='implied volatility')
+ #==============================================================================
+ #=============================================================================
++#==============================================================================
++if __name__=='__main__':
++    end_month="2303"
++    numOfWeek=3
++    numOfWeekday=5
++
++    # 期权到期月份2303的第3个星期5
++    option_expire_date('2303',3,5)
++
++def option_expire_date(end_month,numOfWeek,numOfWeekday):
++    """
++    功能：给出期权的到期时间YYMM，第numOfWeek个星期的星期几nameOfWeekday
++    end_month：期权的到期月份YYMM
++    numOfWeek：第几个星期，整数
++    nameOfWeekday：星期几，整数
++    """
++    year=int("20"+end_month[:2])
++    month=int(end_month[2:4])
++    
++    import calendar
++    c = calendar.Calendar(firstweekday=calendar.SUNDAY)
++    monthcal = c.monthdatescalendar(year, month)
++    
++    try:
++        wanted_date = [day for week in monthcal for day in week if
++                        day.weekday() == numOfWeekday-1 and day.month == month][numOfWeek-1]
++        
++        import datetime
++        strdate=datetime.datetime.strftime(wanted_date,'%Y-%m-%d')
++        return strdate
++    
++    except IndexError:
++        print("  #Error(option_expire_date): invalid date --> weekday",numOfWeekday,'of week',numOfWeek,'in',end_month) 
++        return None
++
+ #=============================================================================
+ #=============================================================================
+```
+
+## siat/option_pricing.py
+
+```diff
+@@ -86,18 +86,18 @@
+     C0=S0*stats.norm.cdf(d1)-X*exp(-r*T)*stats.norm.cdf(d2)
+     
+     if not printout: return C0
+     print("\n===== Black-Scholes期权定价 =====")
+     print("适用情形： 欧式期权，标的资产无红利收益")
+     print("标的资产行权价:",X)
+     print("标的资产现价  :",S0)
+-    print("标的资产的年化波动率:",round(sigma,5))    
+-    print("距离到期日的年数    :",round(T,2))
+-    print("连续计算的无风险利率:",round(r*100,5),'\b%')
+-    print("看涨期权的预期价格  :",round(C0,5))
++    print("标的资产的年化波动率:",round(sigma,4))    
++    print("距离到期日的年数    :",round(T,4))
++    print("连续计算的无风险利率:",round(r*100,4),'\b%')
++    print("看涨期权的预期价格  :",round(C0,4))
+     
+     return C0
+     
+ if __name__=='__main__':
+     S0=40
+     X=42
+     Days=183
+@@ -130,17 +130,17 @@
+ 
+     if not printout: return C
+     print("\n=== Black-Scholes-Merton期权定价 ===")
+     print("适用情形： 欧式期权，标的资产有红利收益")
+     print("标的资产行权价:",X)
+     print("标的资产现价  :",S0)
+     print("标的资产的年化波动率  :",round(sigma,4))    
+-    print("距离到期日的年数      :",round(T,2))
++    print("距离到期日的年数      :",round(T,4))
+     print("连续计算的无风险利率  :",round(r,4)*100,'\b%')    
+-    print("红利及距离到期日的年数:",div1,"@",round(T1,2))
++    print("红利及距离到期日的年数:",div1,"@",round(T1,4))
+     print("看涨期权的预期价格    :",round(C,4))
+     
+     return C
+     
+ if __name__=='__main__':
+     S0=42
+     X=40
+@@ -173,18 +173,18 @@
+     P0=-S0*stats.norm.cdf(-d1)+X*exp(-r*T)*stats.norm.cdf(-d2)
+ 
+     if not printout: return P0
+     print("\n===== Black-Scholes期权定价 =====")
+     print("适用情形： 欧式期权，标的资产无红利收益")
+     print("标的资产行权价:",X)
+     print("标的资产现价  :",S0)
+-    print("标的资产的年化波动率:",round(sigma,5))    
+-    print("距离到期日的年数    :",round(T,2))
+-    print("连续计算的无风险利率:",round(r*100,5),'\b%')
+-    print("看跌期权的预期价格  :",round(P0,5))
++    print("标的资产的年化波动率:",round(sigma,4))    
++    print("距离到期日的年数    :",round(T,4))
++    print("连续计算的无风险利率:",round(r*100,4),'\b%')
++    print("看跌期权的预期价格  :",round(P0,4))
+     
+     return P0
+     
+ if __name__=='__main__':
+     S0=40
+     X=42
+     Days=183
+@@ -217,15 +217,15 @@
+ 
+     if not printout: return P
+     print("\n=== Black-Scholes-Merton期权定价 ===")
+     print("适用情形： 欧式期权，标的资产有红利收益")
+     print("标的资产行权价:",X)
+     print("标的资产现价  :",S0)
+     print("标的资产的年化波动率  :",round(sigma,4))    
+-    print("距离到期日的年数      :",round(T,2))
++    print("距离到期日的年数      :",round(T,4))
+     print("连续计算的无风险利率  :",round(r,4)*100,'\b%')
+     print("红利及距离到期日的年数:",div1,"@",round(T1,2))
+     print("看跌期权的预期价格    :",round(P,4))
+     
+     return P
+     
+ if __name__=='__main__':
+```
+
+## siat/risk_adjusted_return.py
+
+```diff
+@@ -1053,15 +1053,15 @@
+     功能：比较两个投资组合的风险调整收益率，并绘制曲线
+     注意：无风险收益率有两个月的延迟
+     """
+     
+     #检查日期的合理性
+     result,startdate,enddate=check_period(start,end)
+     if result is None:
+-        print("  #Error(compare_rar_rolling): invalid period",start,end)
++        print("  #Error(compare_rar_portfolio): invalid period",start,end)
+         return None     
+ 
+     #检查支持的指标
+     ratio_list=['treynor','sharpe','sortino','alpha']
+     name_list=['特雷诺比率','夏普比率','索替诺比率','詹森阿尔法']
+     if ratio_name not in ratio_list:
+         message="  #Error(compare_rar_portfolio): "+"unsupported rar ratio type"
+@@ -1149,39 +1149,59 @@
+     rarsbj=compare_rar_portfolio(pfbb,pfpd,'2019-11-1','2020-11-30')      
+ 
+ #==============================================================================
+ #==============================================================================
+ 
+ if __name__=='__main__':
+     tickers = ['000858.SZ','600779.SS','000596.SZ','603589.SS']
+-    rar_name="sharpe"
+     start='2022-1-1'
+     end='2022-10-31'
+-    market_index="000001.SS"
++    
++    rar_name="sharpe"
++    market_index="000300.SS"
+     market="China"
+-    window=60
++    RF=False
++    window=240
++    
++    axhline_value=0
++    axhline_label=''
++    graph=True
++    printout=True
++    sortby='tpw_mean'
++    
++    graph=False
+ 
+ def compare_mrar(tickers,rar_name,start,end, \
+-                 market="China",market_index="000001.SS",RF=False,window=60, \
+-                     graph=True):
++                 market="China",market_index="000300.SS",RF=False,window=60, \
++                 axhline_value=0,axhline_label='零线',graph=True,printout=True, \
++                 sortby='tpw_mean'):
+     """
+     功能：计算多只股票的rar比率，并绘图对比
+     比率：支持夏普比率、特雷诺比率、索替诺比率、阿尔法比率等
+     
+-    注意：当RF=False时有bug
++    注意：当RF=False时可能有bug
+     """    
+     #检查tickers是否为列表且不少于两只股票
+     tickers=upper_ticker(tickers)
+     
++    #检查rar指标的种类
++    rarlist=['treynor','sharpe','sortino','alpha']
++    if not (rar_name.lower() in rarlist):
++        print("  #Error(compare_mrar): unsupported rar name",rar_name)
++        return None
++    
++    # 去掉重复代码
++    tickers=list(set(tickers))
++    
+     #检查支持的比率种类
+     
+     #检查日期的合理性
+     
+     #将开始日期提前
+-    start1=date_adjust(start,-(int(window/20*30)+1))
++    start1=date_adjust(start,-(int(window/20*31)+1))
+     
+     import os,sys
+     class HiddenPrints:
+         def __enter__(self):
+             self._original_stdout = sys.stdout
+             sys.stdout = open(os.devnull, 'w')
+ 
+@@ -1197,55 +1217,81 @@
+         pf={'Market':(market,market_index),t:1.0}
+         #关闭print输出
+         with HiddenPrints():
+             df_tmp=rar_ratio_rolling(pf,start1,end,ratio_name=rar_name, \
+                                  RF=RF,window=window,graph=False)
+         
+         if df_tmp is None:
+-            print("  Warning(compare_mrar): data not available for",t)
++            print("  #Warning(compare_mrar): data not available for",t)
+             continue
+         else:
+             dft=df_tmp[['RAR']]
+-            dft.rename(columns={'RAR':codetranslate(t)},inplace=True)
++            #dft.rename(columns={'RAR':codetranslate(t)},inplace=True)
++            dft.rename(columns={'RAR':t},inplace=True)
+             
+         if len(df)==0:
+             #第一个
+             df=dft
+         else:
+             df=pd.merge(df,dft,how='outer',left_index=True,right_index=True)
+ 
+     if len(df)==0:
+-        print("  Warning(compare_mrar): no data available for",tickers,"between",start,end)        
++        print("  #Warning(compare_mrar): no data available for the above securities between",start,end)        
+         return None
+-
+-    # 若不绘图则返回
+-    if not graph:
+-        return df
+         
+     #绘制多条曲线
+     rar_list=['treynor','sortino','sharpe','alpha']
+     rar_list_e=['Treynor Ratio','Sortino Ratio','Sharpe Ratio','Jensen alpha']
+-    rar_list_c=['特雷诺比率','索替诺比率','夏普比率','阿尔法指数']
++    #rar_list_c=['特雷诺比率','索替诺比率','夏普比率','阿尔法指数']
++    rar_list_c=['特雷诺比率','索替诺比率','夏普比率','阿尔法指标']
++    
+     pos=rar_list.index(rar_name)
+     
+     import datetime; today = datetime.date.today()
+     
+     lang=check_language()
+     if lang == 'English':
+         
+         y_label=rar_list_e[pos]
+         x_label="Source: sina/stooq, "+str(today)
+         title_txt="Compare Multiple Risk-adjusted Return Performance"
+     else:
+         y_label=rar_list_c[pos]
+         x_label="数据来源: 新浪/stooq，"+str(today)
+-        title_txt="比较多只证券的风险调整收益指标"
++        title_txt="比较多只证券的风险调整收益滚动指标"
+ 
+-    draw_lines(df,y_label,x_label,axhline_value=0,axhline_label='', \
+-               title_txt=title_txt,data_label=False)
++    # 是否绘图
++    if graph:
++        draw_lines(df,y_label,x_label, \
++                   axhline_value=axhline_value,axhline_label=axhline_label, \
++                   title_txt=title_txt,data_label=False)
++
++    if printout:
++        
++        dfcols=list(df)
++        for c in dfcols:
++            ccn=codetranslate(c)+'('+c+')'
++            df.rename(columns={c:ccn},inplace=True)
++        
++        if sortby=='tpw_mean':
++            sortby_txt='按推荐标记+近期优先加权平均值降序排列'
++        elif sortby=='min':
++            sortby_txt='按推荐标记+最小值降序排列'
++        elif sortby=='mean':
++            sortby_txt='按推荐标记+平均值降序排列'
++        elif sortby=='median':
++            sortby_txt='按推荐标记+中位数值降序排列'
++        else:
++            pass
++        
++        title_txt='*** '+title_txt+'：'+y_label+'，'+sortby_txt
++        additional_note="*** 注：列表仅显示有星号标记或特定数量的证券。"
++        footnote='比较期间：'+start+'至'+end
++        descriptive_statistics(df,title_txt,additional_note+footnote,decimals=4, \
++                               sortby=sortby,recommend_only=True)
+ 
+     return df
+ 
+ if __name__=='__main__':
+     tickers = ['000858.SZ','600779.SS','000596.SZ','603589.SS','000001.SS']
+     df=compare_mrar(tickers,'sharpe','2022-1-1','2022-10-31')
+     df=compare_mrar(tickers,'alpha','2022-10-1','2022-10-31')
+```
+
+## siat/sector_china.py
+
+```diff
+@@ -16,14 +16,15 @@
+ #关闭所有警告
+ import warnings; warnings.filterwarnings('ignore')
+ from siat.common import *
+ from siat.translate import *
+ from siat.bond_base import *
+ from siat.stock import *
+ from siat.risk_adjusted_return import *
++from siat.financials_china2 import *
+ #==============================================================================
+ 
+ if __name__=='__main__':
+     indicator="新浪行业"
+     indicator="启明星行业"
+     indicator="地域"
+     indicator="行业"
+@@ -596,75 +597,276 @@
+     功能：输出申万指数代码df。
+     输入：
+     输出：df
+     """
+     import pandas as pd
+     industry=pd.DataFrame([
+         
+-        #市场表征指数F
++        #市场表征指数F，一级行业I，二级行业T，风格策略S
+         ['F','801001','申万50'],['F','801002','申万中小'],['F','801003','申万Ａ指'],
+         ['F','801005','申万创业'],['F','801250','申万制造'],['F','801260','申万消费'],
+         ['F','801270','申万投资'],['F','801280','申万服务'],['F','801300','申万300指数'],
+-        
+-        #一级行业指数
+         ['I','801010','农林牧渔'],['I','801030','基础化工'],['I','801040','钢铁'],
+         ['I','801050','有色金属'],['I','801080','电子'],['I','801110','家用电器'],
+         ['I','801120','食品饮料'],['I','801130','纺织服饰'],['I','801140','轻工制造'],
+         ['I','801150','医药生物'],['I','801160','公用事业'],['I','801170','交通运输'],
+         ['I','801180','房地产'],['I','801200','商贸零售'],['I','801210','社会服务'],
+         ['I','801230','综合'],['I','801710','建筑材料'],['I','801720','建筑装饰'],
+         ['I','801730','电力设备'],['I','801740','国防军工'],['I','801750','计算机'],
+-        ['I','801760','传媒'],['I','801770','通讯'],['I','801780','银行'],
++        ['I','801760','传媒'],['I','801770','通信'],['I','801780','银行'],
+         ['I','801790','非银金融'],['I','801880','汽车'],['I','801890','机械设备'],
+         ['I','801950','煤炭'],['I','801960','石油石化'],['I','801970','环保'],
+-        ['I','801980','美容护理'],
+-        
+-        #风格指数
+-        ['S','801811','大盘指数'],['S','801812','中盘指数'],['S','801813','小盘指数'],
+-        ['S','801821','高市盈率指数'],['S','801822','中市盈率指数'],['S','801823','低市盈率指数'],
+-        ['S','801831','高市净率指数'],['S','801832','中市净率指数'],['S','801833','低市净率指数'],
+-        ['S','801841','高股价指数'],['S','801842','中价股指数'],['S','801843','低价股指数'],
+-        ['S','801851','亏损股指数'],['S','801852','微利股指数'],['S','801853','绩优股指数'],
+-        ['S','801862','活跃指数'],['S','801863','新股指数'],
+-        
++        ['I','801980','美容护理'],['T','801012','农产品加工'],['T','801014','饲料'],
++        ['T','801015','渔业'],['T','801016','种植业'],['T','801017','养殖业'],
++        ['T','801018','动物保健Ⅱ'],['T','801032','化学纤维'],['T','801033','化学原料'],
++        ['T','801034','化学制品'],['T','801036','塑料'],['T','801037','橡胶'],
++        ['T','801038','农化制品'],['T','801039','非金属材料Ⅱ'],['T','801043','冶钢原料'],
++        ['T','801044','普钢'],['T','801045','特钢Ⅱ'],['T','801051','金属新材料'],
++        ['T','801053','贵金属'],['T','801054','小金属'],['T','801055','工业金属'],
++        ['T','801056','能源金属'],['T','801072','通用设备'],['T','801074','专用设备'],
++        ['T','801076','轨交设备Ⅱ'],['T','801077','工程机械'],['T','801078','自动化设备'],
++        ['T','801081','半导体'],['T','801082','其他电子Ⅱ'],['T','801083','元件'],
++        ['T','801084','光学光电子'],['T','801085','消费电子'],['T','801086','电子化学品Ⅱ'],
++        ['T','801092','汽车服务'],['T','801093','汽车零部件'],['T','801095','乘用车'],
++        ['T','801096','商用车'],['T','801101','计算机设备'],['T','801102','通信设备'],
++        ['T','801103','IT服务Ⅱ'],['T','801104','软件开发'],['T','801111','白色家电'],
++        ['T','801112','黑色家电'],['T','801113','小家电'],['T','801114','厨卫电器'],
++        ['T','801115','照明设备Ⅱ'],['T','801116','家电零部件Ⅱ'],['T','801124','食品加工'],
++        ['T','801125','白酒Ⅱ'],['T','801126','非白酒'],['T','801127','饮料乳品'],
++        ['T','801128','休闲食品'],['T','801129','调味发酵品Ⅱ'],['T','801131','纺织制造'],
++        ['T','801132','服装家纺'],['T','801133','饰品'],['T','801141','包装印刷'],
++        ['T','801142','家居用品'],['T','801143','造纸'],['T','801145','文娱用品'],
++        ['T','801151','化学制药'],['T','801152','生物制品'],['T','801153','医疗器械'],
++        ['T','801154','医药商业'],['T','801155','中药Ⅱ'],['T','801156','医疗服务'],
++        ['T','801161','电力'],['T','801163','燃气Ⅱ'],['T','801178','物流'],
++        ['T','801179','铁路公路'],['T','801181','房地产开发'],['T','801183','房地产服务'],
++        ['T','801191','多元金融'],['T','801193','证券Ⅱ'],['T','801194','保险Ⅱ'],
++        ['T','801202','贸易Ⅱ'],['T','801203','一般零售'],['T','801204','专业连锁Ⅱ'],
++        ['T','801206','互联网电商'],['T','801218','专业服务'],['T','801219','酒店餐饮'],
++        ['T','801223','通信服务'],['T','801231','综合Ⅱ'],['T','801711','水泥'],
++        ['T','801712','玻璃玻纤'],['T','801713','装修建材'],['T','801721','房屋建设Ⅱ'],
++        ['T','801722','装修装饰Ⅱ'],['T','801723','基础建设'],['T','801724','专业工程'],
++        ['T','801726','工程咨询服务Ⅱ'],['T','801731','电机Ⅱ'],['T','801733','其他电源设备Ⅱ'],
++        ['T','801735','光伏设备'],['T','801736','风电设备'],['T','801737','电池'],
++        ['T','801738','电网设备'],['T','801741','航天装备Ⅱ'],['T','801742','航空装备Ⅱ'],
++        ['T','801743','地面兵装Ⅱ'],['T','801744','航海装备Ⅱ'],['T','801745','军工电子Ⅱ'],
++        ['T','801764','游戏Ⅱ'],['T','801765','广告营销'],['T','801766','影视院线'],
++        ['T','801767','数字媒体'],['T','801769','出版'],['T','801782','国有大型银行Ⅱ'],
++        ['T','801783','股份制银行Ⅱ'],['T','801784','城商行Ⅱ'],['T','801785','农商行Ⅱ'],
++        ['T','801881','摩托车及其他'],['T','801951','煤炭开采'],['T','801952','焦炭Ⅱ'],
++        ['T','801962','油服工程'],['T','801963','炼化及贸易'],['T','801971','环境治理'],
++        ['T','801972','环保设备Ⅱ'],['T','801981','个护用品'],['T','801982','化妆品'],
++        ['T','801991','航空机场'],['T','801992','航运港口'],['T','801993','旅游及景区'],
++        ['T','801994','教育'],['T','801995','电视广播Ⅱ'],['S','801811','大盘指数'],
++        ['S','801812','中盘指数'],['S','801813','小盘指数'],['S','801821','高市盈率指数'],
++        ['S','801822','中市盈率指数'],['S','801823','低市盈率指数'],['S','801831','高市净率指数'],
++        ['S','801832','中市净率指数'],['S','801833','低市净率指数'],['S','801841','高价股指数'],
++        ['S','801842','中价股指数'],['S','801843','低价股指数'],['S','801851','亏损股指数'],
++        ['S','801852','微利股指数'],['S','801853','绩优股指数'],['S','801863','新股指数'],
++        ['3','850111','种子'],['3','850113','其他种植业'],['3','850122','水产养殖'],
++        ['3','850142','畜禽饲料'],['3','850151','果蔬加工'],['3','850152','粮油加工'],
++        ['3','850154','其他农产品加工'],['3','850172','生猪养殖'],['3','850173','肉鸡养殖'],
++        ['3','850181','动物保健Ⅲ'],['3','850322','氯碱'],['3','850323','无机盐'],
++        ['3','850324','其他化学原料'],['3','850325','煤化工'],['3','850326','钛白粉'],
++        ['3','850335','涂料油墨'],['3','850337','民爆制品'],['3','850338','纺织化学制品'],
++        ['3','850339','其他化学制品'],['3','850382','氟化工'],['3','850372','聚氨酯'],
++        ['3','850135','食品及饲料添加剂'],['3','850136','有机硅'],['3','850341','涤纶'],
++        ['3','850343','粘胶'],['3','850351','其他塑料制品'],['3','850353','改性塑料'],
++        ['3','850354','合成树脂'],['3','850355','膜材料'],['3','850362','其他橡胶制品'],
++        ['3','850363','炭黑'],['3','850331','氮肥'],['3','850332','磷肥及磷化工'],
++        ['3','850333','农药'],['3','850381','复合肥'],['3','850523','非金属材料Ⅲ'],
++        ['3','850442','板材'],['3','850521','其他金属新材料'],['3','850522','磁性材料'],
++        ['3','850551','铝'],['3','850552','铜'],['3','850553','铅锌'],
++        ['3','850531','黄金'],['3','850544','其他小金属'],['3','850812','分立器件'],
++        ['3','850813','半导体材料'],['3','850814','数字芯片设计'],['3','850815','模拟芯片设计'],
++        ['3','850817','集成电路封测'],['3','850818','半导体设备'],['3','850822','印制电路板'],
++        ['3','850823','被动元件'],['3','850831','面板'],['3','850832','LED'],
++        ['3','850833','光学元件'],['3','850841','其他电子Ⅲ'],['3','850853','品牌消费电子'],
++        ['3','850854','消费电子零部件及组装'],['3','850861','电子化学品Ⅲ'],['3','850922','车身附件及饰件'],
++        ['3','850923','底盘与发动机系统'],['3','850924','轮胎轮毂'],['3','850925','其他汽车零部件'],
++        ['3','850926','汽车电子电气系统'],['3','850232','汽车经销商'],['3','850233','汽车综合服务'],
++        ['3','858811','其他运输设备'],['3','858812','摩托车'],['3','850952','综合乘用车'],
++        ['3','850912','商用载货车'],['3','850913','商用载客车'],['3','851112','空调'],
++        ['3','851116','冰洗'],['3','851122','其他黑色家电'],['3','851131','厨房小家电'],
++        ['3','851141','厨房电器'],['3','851151','照明设备Ⅲ'],['3','851161','家电零部件Ⅲ'],
++        ['3','851241','肉制品'],['3','851246','预加工食品'],['3','851247','保健品'],
++        ['3','851251','白酒Ⅲ'],['3','851232','啤酒'],['3','851233','其他酒类'],
++        ['3','851271','软饮料'],['3','851243','乳品'],['3','851281','零食'],
++        ['3','851282','烘焙食品'],['3','851242','调味发酵品Ⅲ'],['3','851312','棉纺'],
++        ['3','851314','印染'],['3','851315','辅料'],['3','851316','其他纺织'],
++        ['3','851325','鞋帽及其他'],['3','851326','家纺'],['3','851329','非运动服装'],
++        ['3','851331','钟表珠宝'],['3','851412','大宗用纸'],['3','851413','特种纸'],
++        ['3','851422','印刷'],['3','851423','金属包装'],['3','851424','塑料包装'],
++        ['3','851425','纸包装'],['3','851436','瓷砖地板'],['3','851437','成品家居'],
++        ['3','851438','定制家居'],['3','851439','卫浴制品'],['3','851491','其他家居用品'],
++        ['3','851452','娱乐用品'],['3','851511','原料药'],['3','851512','化学制剂'],
++        ['3','851521','中药Ⅲ'],['3','851522','血液制品'],['3','851523','疫苗'],
++        ['3','851524','其他生物制品'],['3','851542','医药流通'],['3','851543','线下药店'],
++        ['3','851532','医疗设备'],['3','851533','医疗耗材'],['3','851534','体外诊断'],
++        ['3','851563','医疗研发外包'],['3','851564','医院'],['3','851611','火力发电'],
++        ['3','851612','水力发电'],['3','851614','热力服务'],['3','851616','光伏发电'],
++        ['3','851617','风力发电'],['3','851610','电能综合服务'],['3','851631','燃气Ⅲ'],
++        ['3','851782','原材料供应链服务'],['3','851783','中间产品及消费品供应链服务'],['3','851784','快递'],
++        ['3','851785','跨境物流'],['3','851786','仓储物流'],['3','851787','公路货运'],
++        ['3','851731','高速公路'],['3','851721','公交'],['3','851771','铁路运输'],
++        ['3','851741','航空运输'],['3','851761','航运'],['3','851711','港口'],
++        ['3','851811','住宅开发'],['3','851812','商业地产'],['3','851813','产业地产'],
++        ['3','851831','物业管理'],['3','852021','贸易Ⅲ'],['3','852031','百货'],
++        ['3','852032','超市'],['3','852033','多业态零售'],['3','852034','商业物业经营'],
++        ['3','852041','专业连锁Ⅲ'],['3','852062','跨境电商'],['3','852063','电商服务'],
++        ['3','852182','检测服务'],['3','852183','会展服务'],['3','852121','酒店'],
++        ['3','852111','人工景区'],['3','852112','自然景区'],['3','852131','旅游综合'],
++        ['3','859852','培训教育'],['3','857821','国有大型银行Ⅲ'],['3','857831','股份制银行Ⅲ'],
++        ['3','857841','城商行Ⅲ'],['3','857851','农商行Ⅲ'],['3','851931','证券Ⅲ'],
++        ['3','851941','保险Ⅲ'],['3','851922','金融控股'],['3','851927','资产管理'],
++        ['3','852311','综合Ⅲ'],['3','857111','水泥制造'],['3','857112','水泥制品'],
++        ['3','857121','玻璃制造'],['3','857122','玻纤制造'],['3','850615','耐火材料'],
++        ['3','850616','管材'],['3','850614','其他建材'],['3','850623','房屋建设Ⅲ'],
++        ['3','857221','装修装饰Ⅲ'],['3','857236','基建市政工程'],['3','857251','园林工程'],
++        ['3','857241','钢结构'],['3','857242','化学工程'],['3','857243','国际工程'],
++        ['3','857244','其他专业工程'],['3','857261','工程咨询服务Ⅲ'],['3','850741','电机Ⅲ'],
++        ['3','857334','火电设备'],['3','857336','其他电源设备Ⅲ'],['3','857352','光伏电池组件'],
++        ['3','857354','光伏辅材'],['3','857355','光伏加工设备'],['3','857362','风电零部件'],
++        ['3','857371','锂电池'],['3','857372','电池化学品'],['3','857373','锂电专用设备'],
++        ['3','857375','蓄电池及其他电池'],['3','857381','输变电设备'],['3','857382','配电设备'],
++        ['3','857321','电网自动化设备'],['3','857323','电工仪器仪表'],['3','857344','线缆部件及其他'],
++        ['3','850711','机床工具'],['3','850713','磨具磨料'],['3','850715','制冷空调设备'],
++        ['3','850716','其他通用设备'],['3','850731','仪器仪表'],['3','850751','金属制品'],
++        ['3','850725','能源及重型设备'],['3','850728','楼宇设备'],['3','850721','纺织服装设备'],
++        ['3','850726','印刷包装机械'],['3','850727','其他专用设备'],['3','850936','轨交设备Ⅲ'],
++        ['3','850771','工程机械整机'],['3','850772','工程机械器件'],['3','850781','机器人'],
++        ['3','850782','工控设备'],['3','850783','激光设备'],['3','850784','其他自动化设备'],
++        ['3','857411','航天装备Ⅲ'],['3','857421','航空装备Ⅲ'],['3','857431','地面兵装Ⅲ'],
++        ['3','850935','航海装备Ⅲ'],['3','857451','军工电子Ⅲ'],['3','850702','安防设备'],
++        ['3','850703','其他计算机设备'],['3','852226','IT服务Ⅲ'],['3','851041','垂直应用软件'],
++        ['3','851042','横向通用软件'],['3','857641','游戏Ⅲ'],['3','857651','营销代理'],
++        ['3','857661','影视动漫制作'],['3','857674','门户网站'],['3','857691','教育出版'],
++        ['3','857692','大众出版'],['3','859951','电视广播Ⅲ'],['3','852213','通信工程及服务'],
++        ['3','852214','通信应用增值服务'],['3','851024','通信网络设备及器件'],['3','851025','通信线缆及配套'],
++        ['3','851026','通信终端及配件'],['3','851027','其他通信设备'],['3','859511','动力煤'],
++        ['3','859512','焦煤'],['3','859521','焦炭Ⅲ'],['3','859621','油田服务'],
++        ['3','859622','油气及炼化工程'],['3','859631','炼油化工'],['3','859632','油品石化贸易'],
++        ['3','859633','其他石化'],['3','859711','大气治理'],['3','859712','水务及水治理'],
++        ['3','859713','固废治理'],['3','859714','综合环境治理'],['3','859721','环保设备Ⅲ'],
++        ['3','859811','生活用纸'],['3','859821','化妆品制造及其他'],['3','859822','品牌化妆品'],
+         
++        #手工添加：可能重复
+         ], columns=['type','code','name'])
+ 
+     return industry
++#==============================================================================
++def industry_sw_list_all():
++    """
++    功能：输出申万指数所有代码df。
++    输入：
++    输出：df，包括市场表征指数F，一级行业指数I，二级行业T，风格指数S，三级行业3
++    """
++    import pandas as pd
++    import akshare as ak
++    
++    symboltypes=["市场表征", "一级行业", "二级行业", "风格指数"] 
++    indextypecodes=['F','I','T','S']
++    industry=pd.DataFrame()
++    for s in symboltypes:
++        dft = ak.index_realtime_sw(symbol=s)
++        
++        pos=symboltypes.index(s)
++        dft['指数类别代码']=indextypecodes[pos]
++        dft['指数类别名称']=s
++        
++        if len(industry)==0:
++            industry=dft
++        else:
++            industry=pd.concat([industry,dft],ignore_index=True)
++    
++    industry2=industry[['指数类别代码','指数代码','指数名称']]    
++    industry2.columns=['type','code','name']   
++    
++    #获取申万一级行业指数代码和名称
++    #df1=ak.sw_index_first_info()
++    
++    #获取申万二级行业指数代码和名称
++    #df2 = ak.sw_index_second_info()
++    
++    #获取申万三级行业指数代码和名称
++    df3 = ak.sw_index_third_info()
++    df3['type']='3'
++    df3['code']=df3['行业代码'].apply(lambda x:x[:6])
++    df3['name']=df3['行业名称']
++    industry3=df3[['type','code','name']]
++    
++    industry_all=pd.concat([industry2,industry3],ignore_index=True)
++    # 删除完全重复的行
++    industry_all.drop_duplicates(inplace=True)
++
++    
++    return industry_all
+ 
+ if __name__=='__main__':
+     idf=industry_sw_list()
++    idf=industry_sw_list_all()
++
++#==============================================================================
++if __name__=='__main__':
++    idf=industry_sw_list_all()
++    
++    industry_sw_list_print(idf,numberPerLine=3)
++    
++def industry_sw_list_print(idf,numberPerLine=3):
++    """
++    功能：打印df定义形式，每3个一行，需要定期更新，并复制到函数industry_sw_list()
++    """
++
++    #遍历
++    counter=0
++    for index,row in idf.iterrows():
++        #print(row['type'],row['code'],row['name'])
++        print('[\''+row['type']+'\',\''+row['code']+'\',\''+row['name']+'\']',end=',')
++        counter=counter+1
++        if counter % numberPerLine ==0:
++            print()
++
++    return
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     itype='I'
+     numberPerLine=5
+     colalign='left'
+     
+     print_industry_sw(itype='I',numberPerLine=5,colalign='right')
+ 
+ def print_industry_sw(itype='I',numberPerLine=5,colalign='left'):
+     """
+-    打印所有申万行业列表，名称(代码)
++    按照类别打印申万行业列表，名称(代码)，每行5个
+     """
+     df=industry_sw_list()
+     df1=df[df['type']==itype]
+     df1['name_code']=df1.apply(lambda x: x['name']+'('+x['code']+')',axis=1)
+     
++    symboltypes=["市场表征", "一级行业", "二级行业", "三级行业", "风格指数"] 
++    indextypecodes=['F','I','T','3','S']
++    pos=indextypecodes.index(itype)
++    iname=symboltypes[pos]
++    
+     ilist=list(df1['name_code'])
+-    print("\n*** 申万行业分类：共计"+str(len(ilist))+'个行业(板块)')
++    print("\n*** 申万行业分类："+iname+"，共计"+str(len(ilist))+'个行业(板块)')
++    
++    if itype=='3':
++        numberPerLine=4
+     
+     printInLine_md(ilist,numberPerLine=numberPerLine,colalign=colalign)
+     
+     return
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     iname='食品饮料'
+     iname='银行'
++    iname='汽车'
+     numberPerLine=5
+     colalign='right'
+     
+     print_industry_component_sw(iname,numberPerLine=5,colalign='right')
+ 
+ def print_industry_component_sw(iname,numberPerLine=5,colalign='left'):
+     """
+@@ -672,14 +874,48 @@
+     """
+     
+     icode=industry_sw_code(iname)
+     
+     clist,cdf=industry_stock_sw(icode,top=1000)    
+ 
+     cdf['icode']=cdf['证券代码'].apply(lambda x: x+'.SS' if x[:1] in ['6'] else (x+'.SZ' if x[:1] in ['0','3'] else x+'.BJ' ))
++    
++    # 删除'证券名称'为None的行
++    cdf=cdf.mask(cdf.eq('None')).dropna()
++    cdf['name_code']=cdf.apply(lambda x: x['证券名称']+'('+x['icode']+')',axis=1)
++    
++    ilist=list(cdf['name_code'])
++    import datetime as dt; stoday=dt.date.today()    
++    print("\n*** "+iname+'行业(板块)包括的股票：共计'+str(len(ilist))+'只，'+str(stoday)+"统计")
++    
++    printInLine_md(ilist,numberPerLine=numberPerLine,colalign=colalign)
++    
++    return
++
++#==============================================================================
++if __name__=='__main__':
++    icode='850831'
++    numberPerLine=5
++    colalign='right'
++    
++    print_industry_component_sw2(icode,numberPerLine=5,colalign='right')
++
++def print_industry_component_sw2(icode,numberPerLine=5,colalign='left'):
++    """
++    打印申万行业的成分股，名称(代码)
++    输入：申万行业代码，一二三级均可
++    """
++    iname=industry_sw_name(icode)
++    
++    clist,cdf=industry_stock_sw(icode,top=1000)    
++
++    cdf['icode']=cdf['证券代码'].apply(lambda x: x+'.SS' if x[:1] in ['6'] else (x+'.SZ' if x[:1] in ['0','3'] else x+'.BJ' ))
++    
++    # 删除'证券名称'为None的行
++    cdf=cdf.mask(cdf.eq('None')).dropna()
+     cdf['name_code']=cdf.apply(lambda x: x['证券名称']+'('+x['icode']+')',axis=1)
+     
+     ilist=list(cdf['name_code'])
+     import datetime as dt; stoday=dt.date.today()    
+     print("\n*** "+iname+'行业(板块)包括的股票：共计'+str(len(ilist))+'只，'+str(stoday)+"统计")
+     
+     printInLine_md(ilist,numberPerLine=numberPerLine,colalign=colalign)
+@@ -695,15 +931,16 @@
+     """
+     industry=industry_sw_list()
+ 
+     try:
+         iname=industry[industry['code']==icode]['name'].values[0]
+     except:
+         #未查到
+-        print("  #Warning(industry_sw_name): industry code not found",icode)
++        if not icode.isdigit():
++            print("  #Warning(industry_sw_name): industry name not found for",icode)
+         iname=icode
+    
+     return iname
+ 
+ if __name__=='__main__':
+     icode='801862'
+     industry_sw_name(icode)
+@@ -717,15 +954,15 @@
+     """
+     industry=industry_sw_list()
+ 
+     try:
+         icode=industry[industry['name']==iname]['code'].values[0]
+     except:
+         #未查到
+-        print("  #Warning(industry_sw_code): industry name not found",iname)
++        #print("  #Warning(industry_sw_code): industry name not found",iname)
+         return None
+    
+     return icode
+ 
+ if __name__=='__main__':
+     iname='申万创业'
+     industry_sw_code(iname)
+@@ -741,29 +978,35 @@
+ 
+     icodelist=[]
+     if isinstance(inamelist,str):
+         icode=industry_sw_code(inamelist)
+         if not (icode is None):
+             icodelist=[icode]
+         else:
+-            print("  #Warning(industries_sw_code): industry name not found",inamelist)
+-            return None
++            if inamelist.isdigit():
++                return inamelist
++            else:
++                print("  #Warning(industries_sw_code): industry code not found for",inamelist)
++                return None
+ 
+     if isinstance(inamelist,list):
+         if len(inamelist) == 0:
+-            print("  #Warning(industries_sw_code): no industry code found in",inamelist)
++            print("  #Warning(industries_sw_code): no industry code found in for",inamelist)
+             return None
+         
+         for i in inamelist:
+             icode=industry_sw_code(i)
+             if not (icode is None):
+                 icodelist=icodelist+[icode]
+             else:
+-                print("  #Warning(industries_sw_code): industry code not found",i)
+-                return None
++                if i.isdigit():
++                    icodelist=icodelist+[i]
++                else:
++                    print("  #Warning(industries_sw_code): industry code not found",i)
++                    return None
+    
+     return icodelist
+ 
+ if __name__=='__main__':
+     inamelist='申万创业'
+     industry_sw_codes(inamelist)
+     
+@@ -862,17 +1105,101 @@
+     start='2018-1-1'
+     end='2022-10-31'
+     measure='Exp Ret%'
+     itype='I'
+     graph=True
+     axisamp=0.8
+     
+-    df=industry_sw_search_template(start,end,measure='Exp Ret%',axisamp=0.8)
++    df=industry_ranking_sw(start,end,measure='Exp Ret%',axisamp=0.8)
+     
+ #==============================================================================
++def industry_ranking_sw2(industrylist,start,end,measure='Exp Ret%', \
++                         period="day", \
++                         graph=True,axisamp=0.8):
++    """
++    完整版，全流程
++    功能：模板，遍历某些指定的申万指数，计算某项业绩指标，汇集排序
++    特点：不限类别，自由指定申万指数；指定行业指定指标横截面对比
++    period="day"; choice of {"day", "week", "month"}
++    绘图：柱状图，可选
++    """
++    #检查日期的合理性
++    result,start1,end1=check_period(start,end)
++    
++    #检查itype的合理性
++    
++    #获得指数代码
++    ilist=industrylist
++
++    #循环获取指标
++    import pandas as pd
++    import akshare as ak
++    import datetime
++    df=pd.DataFrame(columns=['date','ticker','start','end','item','value'])
++
++    print("\nSearching industry prices, it may take great time, please wait ...")
++    for i in ilist:
++        
++        print("  Processing industry",i,"\b, please wait ...")
++        #抓取指数价格，选取期间范围
++        try:
++            dft = ak.index_hist_sw(symbol=i,period="day")
++        except:
++            print("  #Warning(industry_ranking_sw2): industry not found for",i)
++            continue
++        
++        dft['ticker']=dft['代码']
++        dft['date']=dft['日期'].apply(lambda x: pd.to_datetime(x))
++        dft.set_index('date',inplace=True)
++        dft['Open']=dft['开盘']
++        dft['High']=dft['最高']
++        dft['Low']=dft['最低']
++        dft['Close']=dft['收盘']
++        dft['Adj Close']=dft['收盘']
++        dft['Volume']=dft['成交量']
++        dft['Amount']=dft['成交额']
++        
++        dft.sort_index(ascending=True,inplace=True)
++        #dft1=dft[(dft.index>=start1) & (dft.index<=end1)]
++        dft2=dft[['ticker','Open','High','Low','Close','Adj Close','Volume','Amount']]
++
++        #计算指标
++        dft3=all_calculate(dft2,i,start,end)
++        dft4=dft3.tail(1)
++        
++        #记录
++        idate=dft4.index.values[0]
++        idate=pd.to_datetime(idate)
++        iend=idate.strftime('%Y-%m-%d')
++        try:
++            ivalue=round(dft4[measure].values[0],2)
++            s=pd.Series({'date':idate,'ticker':i,'start':start,'end':iend,'item':measure,'value':ivalue})
++            df=df.append(s,ignore_index=True) 
++        except:
++            print("  #Error(industry_ranking_sw): measure not supported",measure)
++            return None
++        
++    df.sort_values(by='value',ascending=True,inplace=True)
++    df['name']=df['ticker'].apply(lambda x: industry_sw_name(x))
++    df.set_index('name',inplace=True)
++    
++    df.dropna(inplace=True)
++    
++    colname='value'
++    titletxt="行业板块分析：业绩排名"
++    import datetime; today=datetime.date.today()
++    footnote0=ectranslate(measure)+' ==>\n'
++    footnote1='申万行业分类，观察期：'+start+'至'+iend+'\n'
++    footnote2="数据来源: 申万宏源, "+str(today)
++    footnote=footnote0+footnote1+footnote2
++    
++    plot_barh(df,colname,titletxt,footnote,axisamp=axisamp) 
++    #plot_barh2(df,colname,titletxt,footnote)
++
++    return df
+ #==============================================================================
+ if __name__=='__main__':
+     start='2018-1-1'
+     end='2022-10-31'
+     measure='Exp Ret%'
+     itype='F'
+     period="day"
+@@ -959,14 +1286,78 @@
+ if __name__=='__main__':
+     df=get_industry_sw('F')
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     start='2018-1-1'
+     end='2022-10-31'
++    measure='Exp Ret%'
++    period="day"
++    industry_list=['850831','801785','801737','801194','801784','801783','801782']    
++    
++def get_industry_sw2(industry_list,period="day"):
++    """
++    功能：遍历指定的申万指数列表，下载数据
++    period="day"; choice of {"day", "week", "month"}
++    """
++    
++    #循环获取指标
++    import pandas as pd
++    import akshare as ak
++    import datetime
++    df=pd.DataFrame()
++
++    print("Searching industry information, please wait ...")
++    ilist=industry_list
++    num=len(ilist)
++    if num <= 10:
++        steps=5
++    else:
++        steps=10
++        
++    total=len(ilist)
++    for i in ilist:
++        
++        #print("  Retrieving information for industry",i)
++        
++        #抓取指数价格
++        try:
++            dft = ak.index_hist_sw(symbol=i,period="day")
++        except:
++            print("  #Warning(get_industry_sw): unsupported industry",i)
++            continue
++        
++        dft['ticker']=dft['代码']
++        dft['date']=dft['日期'].apply(lambda x: pd.to_datetime(x))
++        dft.set_index('date',inplace=True)
++        dft['Open']=dft['开盘']
++        dft['High']=dft['最高']
++        dft['Low']=dft['最低']
++        dft['Close']=dft['收盘']
++        dft['Adj Close']=dft['收盘']
++        dft['Volume']=dft['成交量']
++        dft['Amount']=dft['成交额']
++        
++        dft.sort_index(ascending=True,inplace=True)
++        dft2=dft[['ticker','Open','High','Low','Close','Adj Close','Volume','Amount']]
++        
++        df=df.append(dft2)
++        
++        current=ilist.index(i)
++        print_progress_percent(current,total,steps=steps,leading_blanks=2)
++    
++    #num=list(set(list(df['ticker'])))
++    print("  Successfully retrieved",len(df),"records in",len(ilist),"industries")
++    #print("  Successfully retrieved",len(df),"records in",num,"industries")
++    return df
++
++#==============================================================================
++if __name__=='__main__':
++    start='2018-1-1'
++    end='2022-10-31'
+     df=get_industry_sw('F')
+     
+ def calc_industry_sw(df,start,end):
+     """
+     功能：遍历某类申万指数，计算某项业绩指标，汇集排序
+     df: 来自于get_industry_sw
+     输出：最新时刻数据idf，全部时间序列数据idfall
+@@ -1109,20 +1500,21 @@
+ 
+ def compare_mindustry_sw(industry_list,measure,start,end, \
+                          itype='I',period="day",graph=True):
+     """
+     功能：比较多个行业industry_list某个指标measure在时间段start/end的时间序列趋势
+     industry_list: 至少有两项，若太多了则生成的曲线过于密集
+     特点：完整过程
+-    """    
++    """ 
++    """
+     #检查行业代码的个数不少于两个
+     if len(industry_list) < 2:
+         print("  #Warning(compare_mindustry_sw): need at least 2 indistries to compare")
+         return None
+-    
++    """
+     #检查行业代码是否在范围内
+     ilist_all=list(industry_sw_list()['code'])
+     for i in industry_list:
+         if not (i in ilist_all):
+             print("  #Warning(compare_mindustry_sw): unsupported industry",i)
+             return None
+     
+@@ -1200,14 +1592,114 @@
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     industry_list=['801050','801080']
+     measure='Exp Ret%'
+     start='2020-11-1'
+     end='2022-10-31'
++    period="day"
++    graph=True
++
++def compare_mindustry_sw2(industry_list,measure,start,end, \
++                         period="day",graph=True):
++    """
++    功能：比较多个行业industry_list某个指标measure在时间段start/end的时间序列趋势
++    industry_list: 至少有两项，若太多了则生成的曲线过于密集
++    特点：完整过程，无需规定申万行业类别；多个行业，单一指标
++    """ 
++    """
++    #检查行业代码的个数不少于两个
++    if len(industry_list) < 2:
++        print("  #Warning(compare_mindustry_sw): need at least 2 indistries to compare")
++        return None
++    """
++    #检查行业代码是否在范围内
++    ilist_all=list(industry_sw_list()['code'])
++    for i in industry_list:
++        if not (i in ilist_all):
++            if not i.isdigit():
++                print("  #Warning(compare_mindustry_sw): unsupported industry",i)
++                return None
++    
++    #检查日期期间的合理性
++    result,startpd,endpd=check_period(start,end)
++    if not result:
++        print("  #Error(compare_mindustry_sw): invalid date period",start,end)
++        return None
++    
++    #获取数据
++    ddf=get_industry_sw2(industry_list=industry_list,period=period)
++    
++    #计算指标
++    _,idf=calc_industry_sw(ddf,start,end)
++    
++    #转换数据表结构为横排并列，适应绘图要求
++    ilist=list(set(list(idf['ticker'])))
++    import pandas as pd
++    dfs=pd.DataFrame()
++    notfoundlist=[]
++    for i in ilist:
++        
++        dft=idf[idf['ticker']==i]
++        istart=idf['start'].values[0]
++        
++        try:
++            dft1=pd.DataFrame(dft[measure])
++        except:
++            print("  #Error(compare_mindustry_sw) unsupported measurement",measure)
++            return None
++        dft1.dropna(inplace=True)
++        if len(dft1)==0:
++            notfoundlist=notfoundlist+[i]
++            continue
++        
++        dft1.rename(columns={measure:industry_sw_name(i)},inplace=True)
++        if len(dfs)==0:
++            dfs=dft1
++        else:
++            dfs=pd.merge(dfs,dft1,how='outer',left_index=True,right_index=True)
++    
++    if len(notfoundlist) > 0:
++        print("  #Warning(compare_mindustry_sw): industry measure not found for",notfoundlist)
++        
++    #绘制多条曲线
++    idate=dfs.index.values[-1]
++    idate=pd.to_datetime(idate)
++    iend=idate.strftime('%Y-%m-%d')
++
++    #截取绘图区间
++    result,istartpd,iendpd=check_period(istart,iend)
++    dfs1=dfs[(dfs.index >= istartpd) & (dfs.index <= iendpd)]
++    
++    y_label=measure
++    import datetime; today = datetime.date.today()
++    if graph:
++        colname=measure
++        title_txt="行业(板块)分析：市场业绩趋势"
++        import datetime; today=datetime.date.today()
++        footnote1='\n申万行业分类，观察期：'+istart+'至'+iend+'\n'
++        footnote2="数据来源: 申万宏源, "+str(today)+'统计'
++        footnote=footnote1+footnote2
++
++        draw_lines(dfs1,y_label,x_label=footnote, \
++                   axhline_value=0,axhline_label='', \
++                   title_txt=title_txt, \
++                   data_label=False,resample_freq='H',smooth=True)
++    
++    return dfs
++    
++if __name__=='__main__':
++    mdf=compare_mindustry_sw2(industry_list,measure,start,end)
++
++#==============================================================================
++if __name__=='__main__':
++    industry_list=['801050','801080']
++    measure='Exp Ret%'
++    start='2020-11-1'
++    end='2022-10-31'
+     itype='I'
+     period="day"
+     graph=True
+ 
+ def compare_industry_sw(idfall,industry_list,measure,graph=True):
+     """
+     功能：比较多个行业industry_list某个指标measure在时间段start/end的时间序列趋势
+@@ -1216,25 +1708,27 @@
+     #获取数据
+     ddf=get_industry_sw(itype=itype,period=period,industry_list=industry_list)
+     
+     #计算指标
+     idf=calc_industry_sw(ddf,start,end,latest=False)
+     
+     """    
++    """
+     #检查行业代码的个数不少于两个
+     if len(industry_list) < 2:
+-        print("  #Warning(compare_mindustry_sw): need at least 2 indistries to compare")
++        print("  #Warning(compare_industry_sw): need at least 2 indistries to compare")
+         return None
+-    
++    """
+     #检查行业代码是否在范围内
+     ilist_all=list(industry_sw_list()['code'])
+     for i in industry_list:
+         if not (i in ilist_all):
+-            print("  #Warning(compare_mindustry_sw): unsupported or no such industry",i)
+-            return None
++            if not i.isdigit():
++                print("  #Warning(compare_mindustry_sw): unsupported or no such industry",i)
++                return None
+     
+     #转换数据表结构为横排并列，适应绘图要求
+     import pandas as pd
+     dfs=pd.DataFrame()
+     notfoundlist=[]
+     for i in industry_list:
+         
+@@ -1278,23 +1772,28 @@
+     #截取数据区间
+     result,istartpd,iendpd=check_period(istart,iend)
+     dfs1=dfs[(dfs.index >= istartpd) & (dfs.index <= iendpd)]
+     
+     if graph:
+         y_label=measure
+         colname=measure
+-        title_txt="行业板块分析：市场发展趋势"
++        title_txt="行业板块分析：市场业绩趋势"
+         
+         import datetime; today=datetime.date.today()
+         footnote1='\n申万行业分类，观察期：'+istart+'至'+iend+'\n'
+         footnote2="数据来源: 申万宏源, "+str(today)+'统计'
+         footnote=footnote1+footnote2
+ 
++        if 'Ret%' in measure:
++            axhline_label='收益零线'
++        else:
++            axhline_label=''
++
+         draw_lines(dfs1,y_label,x_label=footnote, \
+-                   axhline_value=0,axhline_label='', \
++                   axhline_value=0,axhline_label=axhline_label, \
+                    title_txt=title_txt, \
+                    data_label=False,resample_freq='H',smooth=True)
+ 
+     return dfs1
+     
+ if __name__=='__main__':
+     mdf=compare_industry_sw(idfall,industry_list,measure)
+@@ -1342,16 +1841,21 @@
+         iend=sdf.index[-1].strftime('%Y-%m-%d')
+         footnote1='\n申万行业分类，观察期：'+istart+'至'+iend+'\n'
+         import datetime; today=datetime.date.today()
+         #footnote2="数据来源: 申万宏源, "+str(today)+'统计（未计入无风险利率）'
+         footnote2="数据来源: 申万宏源, "+str(today)+'统计'
+         footnote=footnote1+footnote2
+ 
++        if 'Ret%' in base_return:
++            axhline_label='收益零线'
++        else:
++            axhline_label=''
++
+         draw_lines(sdf,y_label,x_label=footnote, \
+-                   axhline_value=0,axhline_label='', \
++                   axhline_value=0,axhline_label=axhline_label, \
+                    title_txt=title_txt, \
+                    data_label=False,resample_freq='H',smooth=True)
+     
+     return sdf
+ 
+ if __name__=='__main__':
+     industries=['801005', '801270', '801250', '801260']
+@@ -1411,60 +1915,72 @@
+             plot_barh2(dftail3,colname,titletxt,footnote)
+ 
+     return dftail3
+ 
+     
+ #==============================================================================
+ if __name__=='__main__':
+-    industry='801843'
++    industry='850831'
+     top=5
+ 
+-def industry_stock_sw(industry='801270',top=5):
++def industry_stock_sw(industry='801270',top=5,printout=False):
+     """
+     功能：获取申万行业指数的成分股
+     排序：按照权重从大到小，重仓优先
+     """
+     # 检查行业代码的合理性
+     inddf=industry_sw_list()
+     ilist=list(inddf['code'])
+     if not (industry in ilist):
+-        print("  #Warning(industry_stock_sw): industry code not found",industry)
+-        return None
++        if not industry.isdigit():
++            print("  #Warning(industry_stock_sw): industry code not found for",industry)
++            return None
+     
+     import akshare as ak
+     try:
+         cdf = ak.index_component_sw(industry)
+     except:
+         print("  #Warning(industry_stock_sw): industry code not found",industry)
+         return None
+ 
++    # 删除'证券名称'为None的行
++    cdf=cdf.mask(cdf.eq('None')).dropna()
++
+     #排名
+     cdf.sort_values(by='最新权重',ascending=False,inplace=True)    
+     cdf.reset_index(drop=True,inplace=True)
+     cdf['序号']=cdf.index+1
+     
+     if top > 0:
+         cdf1=cdf.head(top)
+     else:
+         cdf1=cdf.tail(-top)
++    cdf1['最新权重']=cdf1['最新权重'].apply(lambda x: round(x,2))
++    cdf1['证券代码']=cdf1['证券代码'].apply(lambda x: x+'.SS' if x[:1] in ['6'] else (x+'.SZ' if x[:1] in ['0','3'] else x+'.BJ' ))
+         
+     clist=list(cdf1['证券代码'])
+     clist1=[]
+     for c in clist:
+         first=c[:1]
+         if first == '6':
+             clist1=clist1+[c+'.SS']
+         else:
+             clist1=clist1+[c+'.SZ']
+     
++    if printout:
++        title_txt="申万行业指数成分股排名与权重："+industry_sw_name(industry)+'指数('+industry+')'
++        import datetime as dt; today=str(dt.date.today())
++        footnote="*** 数据来源：sina/EM，"+str(today)
++        df_directprint(cdf1,title_txt,footnote)        
++    
+     return clist1,cdf1
+     
+ if __name__=='__main__':
+     clist,cdf=industry_stock_sw(industry='801005',top=10)
+-    clist,cdf=industry_stock_sw(industry='801005',top=-10)
++    clist,cdf=industry_stock_sw(industry='850831',top=-10)
+ #==============================================================================
+ if __name__ =="__main__":
+     
+     # 新冠疫情三年
+     start='2020-2-1'; end='2022-12-20'
+     idf,idfall=get_industry_info_sw(start,end)
+ 
+@@ -1492,14 +2008,48 @@
+     # 计算基础数据，本步骤所需时间较长
+     idf,idfall=calc_industry_sw(df,start,end)
+     
+     return idf,idfall    
+ 
+ #==============================================================================
+ if __name__ =="__main__":
++    
++    # 新冠疫情三年
++    industry_list=['850831','801785','801737','801194','801784','801783','801782']
++    start='2023-1-1'; end='2023-4-3'
++
++def get_industry_info_sw2(industry_list,start,end):
++    """
++    功能：获得申万行业历史数据
++    start: 开始日期
++    end: 结束日期
++    特点：指定行业，可以混合各种指数
++    
++    返回：idf, idfall，供进一步分析使用。
++    """
++    
++    # 检查日期期间的合理性
++    result,startpd,endpd=check_period(start,end)
++    if not result:
++        print("  #Error(get_industry_info_sw2): invalid date period from",start,'to',end)
++        return None,None
++    
++    print("This may need great time depending on network/computer speed, take a break ...")
++    print("\n*** Step 1:")
++    # 获取行业历史数据，本步骤所需时间较长
++    df=get_industry_sw2(industry_list)
++    
++    print("\n*** Step 2:")
++    # 计算基础数据，本步骤所需时间较长
++    idf,idfall=calc_industry_sw(df,start,end)
++    
++    return idf,idfall    
++
++#==============================================================================
++if __name__ =="__main__":
+     start='2022-1-1'
+     end='2022-12-20'
+     tickers=['600600.SS','600132.SS','000729.SZ','002461.SZ','600573.SS']
+     measures=['Exp Ret%']    
+     market_index='000001.SS'
+     window=252
+     colalign='right'
+@@ -1535,22 +2085,34 @@
+     for m in allmeasures:
+         # 显示进度条
+         print_progress_percent2(m,allmeasures,steps=len(allmeasures),leading_blanks=4)
+         
+         if not (m in rar_list):
+             with HiddenPrints():
+                 dft=compare_msecurity(tickers,measure=m,start=start,end=end,graph=False)
++            
++            #修改列明为股票名称(股票代码)格式，以便与compare_mrar的结果一致
++            dft_new_cols=[]
++            for t in tickers:
++                c=codetranslate(t)+'('+t+')'
++                dft_new_cols=dft_new_cols+[c]
++            dft.columns=dft_new_cols
++            
+             dft['指标']=ectranslate(m)
+         else:
+             with HiddenPrints():
+                 dft=compare_mrar(tickers,rar_name=m,start=start,end=end, \
+                              market_index=market_index,window=window,graph=False)
+             mpos=rar_list.index(m)
+             mname=rar_list_c[mpos]
+             dft['指标']=mname
++        
++            del dft['time_weight']
++            del dft['relative_weight']
++        
+         dft1=dft.tail(1)
+         cols1=list(dft1)
+         cols1.remove('指标')
+         for c in cols1:
+             dft1[c]=dft1[c].apply(lambda x: round(float(x),4))
+             
+         if len(df) == 0:
+@@ -1566,23 +2128,179 @@
+     #df1['value']=df1.loc[:,cols].apply(lambda x: x.sum(),axis=1)
+     df1.sort_values('夏普比率',ascending=False,inplace=True)
+     #del df1['value']
+     
+     df1.reset_index(inplace=True)
+     df1.rename(columns={'index':'股票'},inplace=True)
+     
+-    alignlist=['center']+[colalign]*(len(allmeasures)-1)
++    alignlist=['left']+[colalign]*(len(allmeasures)-1)
+     
+-    print("\n*** 股票多重指标比较\n")
++    print("\n*** 股票多重指标比较：按夏普比率降序排列\n")
+     print(df1.to_markdown(index=False,tablefmt='plain',colalign=alignlist))
+     
+     print("\n*** 观察期：",start,'至',end,'\b，表中数据为',end+'快照')
+     print("    表中的夏普比率/索替诺比率/阿尔法值均为TTM滚动值")
+     import datetime; today=datetime.date.today()
+     print("    数据来源：新浪财经/东方财富，"+str(today)+'统计')
+     
+     return df1
+ #==============================================================================
++#==============================================================================
++if __name__=='__main__':
++    tickers=['801160','801120','801170','801710','801890','801040','801130','801180','801720','801970']
++    start='2022-1-1'
++    end='2023-3-22'
++    info_type='Close'
++    
++    df=get_industry_sw('I')
++    df=industry_correlation_sw(df,tickers,start,end,info_type='Close')
++
++def cm2inch(x,y):
++    return x/2.54,y/2.54
++
++def industry_correlation_sw(df,tickers,start,end,info_type='Close'):
++    """
++    功能：股票/指数收盘价之间的相关性
++    info_type='Close': 默认Close, 还可为Open/High/Low/Volume
++    """
++    # 检查行业个数
++    if not isinstance(tickers,list) or len(tickers) < 2:
++        print("  #Error(industry_correlation_sw): number of industries too few",tickers)
++        return None
++    
++    # 检查信息类型
++    info_types=['Close','Open','High','Low','Volume']
++    info_types_cn=['收盘价','开盘价','最高价','最低价','成交量']
++    if not(info_type in info_types):
++        print("  #Error(industry_correlation_sw): invalid information type",info_type)
++        print("  Supported information type:",info_types)
++        return None
++    pos=info_types.index(info_type)
++    info_type_cn=info_types_cn[pos]
++    
++    # 检查日期
++    result,startdt,enddt=check_period(start,end)
++    if not result: 
++        print("  #Error(industry_correlation_sw): invalid period",start,end)
++        return None
++    
++    # 合成行业行情信息
++    print("  Consolidating industry performance, please wait ...")
++    import pandas as pd
++    
++    """
++    tickercodes=industry_sw_codes(tickers)
++    if tickercodes is None:
++        tickercodes=tickers
++    """
++    
++    dfs=None
++    for ind in tickers:
++        dft=df[df['ticker']==ind]
++        if dft is None: 
++            print("  #Warning(industry_correlation_sw): unknown industry code",ind)
++            continue
++    
++        dft2=dft[(dft.index >= startdt) & (dft.index <= enddt)]
++        dft3=pd.DataFrame(dft2[info_type])
++        dft3.rename(columns={info_type:industry_sw_name(ind)},inplace=True)
++        
++        if dfs is None:
++            dfs=dft3
++        else:
++            dfs=pd.merge(dfs,dft3,how='inner',left_index=True,right_index=True)
++    dfs.dropna(axis=0,inplace=True)
++
++    df_coor = dfs.corr()
++
++    print("  Preparing cross-industry correlations, please wait ...")
++    # here put the import lib
++    import seaborn as sns
++    sns.set(font='SimHei')  # 解决Seaborn中文显示问题
++
++    fig = plt.figure(figsize=(cm2inch(12,8)))
++    ax1 = plt.gca()
++    
++    #构造mask，去除重复数据显示
++    import numpy as np
++    mask = np.zeros_like(df_coor)
++    mask[np.triu_indices_from(mask)] = True
++    mask2 = mask
++    mask = (np.flipud(mask)-1)*(-1)
++    mask = np.rot90(mask,k = -1)
++    
++    im1 = sns.heatmap(df_coor,annot=True,cmap="YlGnBu"
++                        , mask=mask#构造mask，去除重复数据显示
++                        ,vmax=1,vmin=-1
++                        , fmt='.2f',ax = ax1,annot_kws={"size": 6})
++    
++    ax1.tick_params(axis = 'both', length=0)
++    
++    #计算相关性显著性并显示
++    from scipy.stats import pearsonr
++    rlist = []
++    plist = []
++    for i in dfs.columns.values:
++        for j in dfs.columns.values:
++            r,p = pearsonr(dfs[i],dfs[j])
++            rlist.append(r)
++            plist.append(p)
++    
++    rarr = np.asarray(rlist).reshape(len(dfs.columns.values),len(dfs.columns.values))
++    parr = np.asarray(plist).reshape(len(dfs.columns.values),len(dfs.columns.values))
++    xlist = ax1.get_xticks()
++    ylist = ax1.get_yticks()
++    
++    widthx = 0
++    widthy = -0.15
++    
++    # 星号的大小
++    font_dict={'size':5}
++    
++    for m in ax1.get_xticks():
++        for n in ax1.get_yticks():
++            pv = (parr[int(m),int(n)])
++            rv = (rarr[int(m),int(n)])
++            if mask2[int(m),int(n)]<1.:
++                #if abs(rv) > 0.5:
++                if rv > 0.3:
++                    if  pv< 0.05 and pv>= 0.01:
++                        ax1.text(n+widthx,m+widthy,'*',ha = 'center',color = 'white',fontdict=font_dict)
++                    if  pv< 0.01 and pv>= 0.001:
++                        ax1.text(n+widthx,m+widthy,'**',ha = 'center',color = 'white',fontdict=font_dict)
++                    if  pv< 0.001:
++                        #print([int(m),int(n)])
++                        ax1.text(n+widthx,m+widthy,'***',ha = 'center',color = 'white',fontdict=font_dict)
++                else: 
++                    if  pv< 0.05 and pv>= 0.01:
++                        ax1.text(n+widthx,m+widthy,'*',ha = 'center',color = 'k',fontdict=font_dict)
++                    elif  pv< 0.01 and pv>= 0.001:
++                        ax1.text(n+widthx,m+widthy,'**',ha = 'center',color = 'k',fontdict=font_dict)
++                    elif  pv< 0.001:
++                        ax1.text(n+widthx,m+widthy,'***',ha = 'center',color = 'k',fontdict=font_dict)
++    
++    plt.title("行业板块"+info_type_cn+"之间的相关性")
++    plt.tick_params(labelsize=6)
++    
++    footnote1="\n显著性数值：***非常显著(<0.001)，**很显著(<0.01)，*显著(<0.05)，其余为不显著"
++    footnote2="\n系数绝对值：>=0.8极强相关，0.6-0.8强相关，0.4-0.6相关，0.2-0.4弱相关，否则为极弱(不)相关"
++
++    footnote3="\n观察期间: "+start+'至'+end
++    import datetime as dt; stoday=dt.date.today()    
++    footnote4="；来源：Sina/EM，"+str(stoday)+"；基于申万行业分类"
++    
++    fontxlabel={'size':6}
++    plt.xlabel(footnote1+footnote2+footnote3+footnote4,fontxlabel)
++    plt.show()
++    
++    return df_coor
++
++#==============================================================================
++#==============================================================================
++#==============================================================================
++#==============================================================================
++
++
+ 
+ #==============================================================================
+```
+
+## siat/security_prices.py
+
+```diff
+@@ -88,25 +88,27 @@
+     
+     #检查日期期间的合理性
+     result,start,end=check_period(fromdate,todate)
+     if not result:
+         print("  #Error(get_prices): invalid date period from",fromdate,'to',todate)
+         return None     
+ 
++    """
+     #尝试pandas_datareader+FRED（仅对部分国外市场指数有效） 
+     if ticker[0]=='^':
+         print("  Trying to capture info from fred for",ticker)
+         prices=get_index_fred(ticker,start,end)
+         if prices is None:
+             print("  #Warning(get_prices): info retrieving failed from fred for",ticker)
+         else:
+             if len(prices)==0:
+                 print("  #Warning(get_prices): zero record found in fred for",ticker)
+             else:
+                 return prices
++    """
+     
+     #尝试AkShare+Sina+EM（新浪，对中国内地股票、港股和美股有效，但不包括国外市场指数）
+     #printmsg=str(ticker)+" from "+fromdate+' to '+todate
+     print("  Trying to capture prices from sina/EM for",ticker)
+     try:
+         #prices=get_prices_ak(ticker,fromdate,todate,adjust=adj)
+         prices=get_prices_ak(ticker,fromdate,todate)
+@@ -819,14 +821,81 @@
+ 
+ if __name__=='__main__':
+     dfm=get_prices_ak(['600519.SS','000858.SZ'],'2020-12-1','2021-1-31')
+     dfm2=get_prices_ak(['600519.SS','AAPL'],'2020-12-1','2021-1-31')
+ 
+ #==============================================================================
+ if __name__=='__main__':
++    ticker=['600519.SS','000858.SZ']
++    fromdate='2020-12-1'
++    todate='2021-1-31'
++    adjust='none'    
++
++def get_prices_simple(ticker,fromdate,todate,adjust='none'):
++    """
++    功能：直接循环获取股票或指数的历史行情，多个股票
++    """
++    #检查是否为多个股票:单个股票代码
++    if isinstance(ticker,str):
++        df=get_prices(ticker,fromdate,todate,adjust=adjust)
++        return df
++    
++    #检查是否为多个股票:空的列表
++    if isinstance(ticker,list) and len(ticker) == 0:
++        pass
++        return None        
++    
++    #检查是否为多个股票:列表中只有一个代码
++    if isinstance(ticker,list) and len(ticker) == 1:
++        ticker1=ticker[0]
++        df=get_prices(ticker1,fromdate,todate,adjust=adjust)
++        return df       
++    
++    import pandas as pd
++    #处理列表中的第一个股票
++    i=0
++    df=None
++    while df is None:
++        t=ticker[i]
++        #df=get_prices(t,fromdate,todate,adjust=adjust)
++        df=get_prices(t,fromdate,todate)
++        if not (df is None):
++            columns=create_tuple_for_columns(df,t)
++            df.columns=pd.MultiIndex.from_tuples(columns)
++        else:
++            i=i+1
++    if (i+1) == len(ticker):
++        #已经到达股票代码列表末尾
++        return df
++    
++    #对抗时区不匹配问题
++    df.index=pd.to_datetime(df.index)
++    #处理列表中的其余股票
++    for t in ticker[(i+1):]:
++        #dft=get_prices(t,fromdate,todate,adjust=adjust)
++        dft=get_prices(t,fromdate,todate)
++        if dft is None: continue
++        if len(dft)==0: continue
++        
++        if not (dft is None):
++            columns=create_tuple_for_columns(dft,t)
++            dft.columns=pd.MultiIndex.from_tuples(columns)
++    
++        dft.index=pd.to_datetime(dft.index)
++        df=pd.merge(df,dft,how='inner',left_index=True,right_index=True)
++     
++    return df
++
++if __name__=='__main__':
++    dfm=get_prices_simple(['600519.SS','000858.SZ'],'2020-12-1','2021-1-31')
++    dfm2=get_prices_simple(['600519.SS','AAPL'],'2020-12-1','2021-1-31')
++
++#==============================================================================
++
++if __name__=='__main__':
+     ticker='AAPL'
+     start='2020-12-1'
+     end='2021-1-31'
+     retry_count=3
+     pause=1
+     
+     ticker='^RUT'
+@@ -1074,16 +1143,24 @@
+     """
+     df=get_prices_portfolio(tickerlist,sharelist,fromdate,todate,adj=adj)
+     return df
+ 
+ if __name__=='__main__':
+     tickerlist=['INTC','MSFT']
+     sharelist=[0.6,0.4]
+-    fromdate='2020-11-1'
+-    todate='2021-1-31'
++    
++    tickerlist=['JD']
++    sharelist=[1000]
++    
++    tickerlist=['601988.SS']
++    sharelist=[1000]
++    
++    fromdate='2023-1-1'
++    todate='2023-3-8'
++    adj=False
+ 
+ def get_prices_portfolio(tickerlist,sharelist,fromdate,todate,adj=False):
+     """
+     功能：抓取投资组合的每日价值
+     输入：股票代码列表，份额列表，开始日期，结束日期
+     tickerlist: 股票代码列表
+     sharelist：持有份额列表，与股票代码列表一一对应
+@@ -1091,15 +1168,15 @@
+     todate: 样本结束日期。既可以是今天日期，也可以是一个历史日期    
+     
+     输出：投资组合的价格序列，按照日期升序排列
+     """
+     
+     #检查股票列表个数与份额列表个数是否一致
+     if len(tickerlist) != len(sharelist):
+-        print("  Error(get_prices_portfolio): numbers of stocks and shares mismatch.")
++        print("  #Error(get_prices_portfolio): numbers of stocks and shares mismatch.")
+         return None        
+     
+     #抓取股票价格
+     p=get_prices(tickerlist,fromdate,todate,adj=adj)
+     if p is None: return None
+     
+     #结果非空时，检查整列为空的证券代码
+@@ -1145,15 +1222,24 @@
+         acprice=pd.DataFrame(acp.dot(sharelist))
+         acprice.rename(columns={0: 'Adj Close'}, inplace=True) 
+ 
+         #合成开盘价、收盘价和调整收盘价
+         ocprice=pd.merge(oprice,cprice,how='inner',left_index=True,right_index=True)
+         prices=pd.merge(ocprice,acprice,how='inner',left_index=True,right_index=True)
+     else:
+-        prices=p*sharelist[0]
++        #prices=p*sharelist[0]
++        prices=p
++        pcols=list(prices)
++        import pandas as pd
++        for pc in pcols:
++            #判断某列的数据类型
++            if pd.api.types.is_float_dtype(prices[pc]):
++                prices[pc]=prices[pc]*sharelist[0]
++            else:
++                continue
+     
+     #提取日期和星期几
+     prices['Date']=prices.index.strftime("%Y-%m-%d")
+     prices['Weekday']=prices.index.weekday+1
+ 
+     prices['Portfolio']=str(tickerlist)
+     prices['Shares']=str(sharelist)
+@@ -1865,12 +1951,13 @@
+     return lasttradedate,lasttradeclose
+ 
+ if __name__ =="__main__":
+     get_last_close('AAPL')
+ 
+ #==============================================================================
+ 
++
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+ #==============================================================================
+```
+
+## siat/stock.py
+
+```diff
+@@ -399,15 +399,15 @@
+     info=stock_profile("LBNDX",option="financial")
+     #期货
+     info=stock_profile("VXX",option="basic")
+     info=stock_profile("VXX",option="market")
+     info=stock_profile("VXX",option="financial")    
+ 
+ #==============================================================================
+-def security_price(ticker, fromdate, todate, adj=False, datatag=False, power=4):
++def security_price(ticker, fromdate, todate, adj=False, datatag=False, power=0):
+     """
+     功能：绘制证券价格折线图。为维持兼容性，套壳函数stock_price
+     """
+     df=stock_price(ticker=ticker,fromdate=fromdate,todate=todate,adj=adj,datatag=datatag,power=power)
+     
+     return df
+ 
+@@ -433,15 +433,15 @@
+     df=security_price("01810.HK","2022-11-1","2022-12-15")
+     
+     # 测试获取股价：美股
+     df=security_price("JD","2022-11-1","2022-12-15")
+     df=security_price("AAPL","2022-11-1","2022-12-15")
+ 
+ #==============================================================================
+-def stock_price(ticker, fromdate, todate, adj=False, datatag=False, power=4):
++def stock_price(ticker, fromdate, todate, adj=False, datatag=False, power=0):
+     """
+     功能：绘制证券价格折线图。
+     输入：证券代码ticker；开始日期fromdate，结束日期todate；
+     是否标注数据标签datatag，默认否；多项式趋势线的阶数，若为0则不绘制趋势线。
+     输出：绘制证券价格折线图
+     返回：证券价格数据表
+     """
+@@ -1216,15 +1216,15 @@
+     linewidth=1.5
+     scaling_option='start'
+     
+ def compare_msecurity(tickers,measure,start,end, \
+                       axhline_value=0,axhline_label='', \
+                       preprocess='none',linewidth=1.5, \
+                       scaling_option='start', \
+-                          graph=True):
++                      graph=True):
+     """
+     功能：比较并绘制多条证券指标曲线（多于2条），个数可为双数或单数
+     注意：
+     tickers中须含有2个及以上股票代码，
+     measure为单一指标，
+     axhline_label不为空时绘制水平线
+     
+@@ -1235,14 +1235,17 @@
+         logarithm: 对数处理，np.log(x)
+         scaling：缩放处理，三种选项scaling_option（mean均值，min最小值，start开始值）
+         start方式的图形更接近于持有收益率(Exp Ret%)，设为默认的缩放方式。
+     
+     """
+     tickers=upper_ticker(tickers)
+     
++    # 去掉重复代码
++    tickers=list(set(tickers))
++    
+     num=len(tickers)
+     if num <2:
+         print("  #Error(compare_msecurity): need more tickers")
+         return None
+ 
+     if not isinstance(measure,str): 
+         print("  #Error(compare_msecurity): support only one measure")
+@@ -1459,14 +1462,18 @@
+     else:
+         dfs2=dfs
+ 
+     # 填充非交易日的缺失值，使得绘制的曲线连续
+     dfs2.fillna(axis=0,method='ffill',inplace=True)
+     dfs2.fillna(axis=0,method='bfill',inplace=True)
+ 
++    if 'Ret%' in measure:
++        if axhline_label=='':
++            axhline_label='收益零线'
++
+     draw_lines(dfs2,y_label,x_label,axhline_value,axhline_label,title_txt, \
+                data_label=False,resample_freq='H',smooth=True,linewidth=linewidth)
+ 
+     return dfs
+ 
+ if __name__ =="__main__":
+     tickers=['000001.SS',"^HSI","^TWII"]
+@@ -1483,15 +1490,15 @@
+     ret_measure='Exp Ret%'
+     risk_type='Volatility'
+     graph=True
+     
+     
+ def compare_mrrr(tickers,start,end,ret_measure='Exp Ret%',risk_type='Volatility',graph=True):
+     """
+-    功能：比较多个证券的收益-风险性价比
++    功能：比较多个证券的简单收益-风险性价比，基于compare_msecurity
+     """    
+     try:
+         df_ret=compare_msecurity(tickers,ret_measure,start,end,graph=False)
+     except:
+         return None
+     cols=list(df_ret)
+```
+
+## siat/stock_china.py
+
+```diff
+@@ -899,15 +899,15 @@
+     # 个股基本信息======================================================================================
+     if category == 'profile':
+         
+         # 个股基本信息查询1=============================================================================        
+         try:
+             df6=ak.stock_profile_cninfo(symbol=ticker1)  
+         except:
+-            print("  #Warning(stock_detail_china): profile info not found for",ticker)
++            print("  #Warning(stock_profile_china): profile info not found for",ticker)
+             return
+     
+         # 整理信息
+         dftmp=df6.copy(deep=True)
+         delColList=['入选指数','办公地址','主营业务','经营范围','机构简介']
+         dftmp.drop(delColList,axis=1,inplace=True)
+         
+@@ -925,15 +925,15 @@
+         
+         dftmp3.reset_index(drop=True,inplace=True)
+         
+         # 个股基本信息查询2=============================================================================
+         try:
+             df1=ak.stock_individual_info_em(symbol=ticker1)  
+         except:
+-            print("  #Warning(stock_detail_china): invalid code for",ticker)
++            print("  #Warning(stock_profile_china): invalid code for",ticker)
+             return
+     
+         # 整理信息
+         dftmpb=df1.copy(deep=True)
+         for i in range(0, len(dftmpb)): 
+             item=dftmpb.iloc[i]['item'].strip()
+             value=dftmpb.iloc[i]['value']
+@@ -997,15 +997,15 @@
+         print_sentence(longtext,mid_symbol=['；','。'])
+ 
+     # 主营业务信息查询=============================================================================
+     if category == 'business':
+         try:
+             df2=ak.stock_zygc_ym(symbol=ticker1)  
+         except:
+-            print("  #Warning(stock_detail_china): business info not found for",ticker)
++            print("  #Warning(stock_profile_china): business info not found for",ticker)
+             return
+         
+         df2['分类']=df2['分类'].apply(lambda x: '***合计' if x=='合计' else x)
+     
+         # 整理信息
+         if business_period == 'annual':    #最近一期年报
+             df2['报告类别']=df2['报告期'].apply(lambda x: x[-2:])
+@@ -1042,15 +1042,15 @@
+             print('\n数据来源：益盟-F10,',str(today))
+ 
+     # 历史分红信息查询=============================================================================
+     if category == 'dividend':
+         try:
+             df3=ak.stock_dividents_cninfo(symbol=ticker1)  
+         except:
+-            print("  #Warning(stock_detail_china): dividend info not found for",ticker)
++            print("  #Warning(stock_profile_china): dividend info not found for",ticker)
+             return
+     
+         # 整理信息
+         df3.fillna('',inplace=True)
+         dftmp=df3.copy(deep=True)
+         dftmp.drop(['实施方案公告日期','股份到账日'],axis=1,inplace=True)
+         #del dftmp['分红类型']
+@@ -1075,15 +1075,15 @@
+ 
+ 
+     # 主要股东信息查询=============================================================================
+     if category == 'shareholder':
+         try:
+             df4=ak.stock_main_stock_holder(stock=ticker1)  
+         except:
+-            print("  #Warning(stock_detail_china): shareholder info not found for",ticker)
++            print("  #Warning(stock_profile_china): shareholder info not found for",ticker)
+             return
+     
+         # 整理信息
+         df4.fillna('',inplace=True)
+         dftmp=df4.head(10).copy(deep=True)
+         enddate=dftmp.head(1)['截至日期'][0]
+         shareholder_num=dftmp.head(1)['股东总数'][0]
+@@ -1110,15 +1110,15 @@
+ 
+ 
+     # 主要市场指标查询=============================================================================
+     if category == 'valuation':
+         try:
+             df5=ak.stock_a_lg_indicator(symbol=ticker1)  
+         except:
+-            print("  #Warning(stock_detail_china): market valuation info not found for",ticker)
++            print("  #Warning(stock_profile_china): valuation spyder failed or info not found for",ticker)
+             return
+     
+         # 整理信息
+         import pandas as pd
+         start=valuation_start
+         startpd=pd.to_datetime(start)
+```
+
+## siat/transaction.py
+
+```diff
+@@ -51,15 +51,15 @@
+     功能：基于两个数据表df1/df2中的列Close/Adj Close计算指标indicator，绘图比较
+     输入要求：数据表df1/df2中需要，索引为datetime，Close， Adj Close，ticker，source和footnote
+     当footnote为空时不需要显示
+     """
+     #检查日期期间
+     result,start,end=check_period(fromdate,todate)
+     if not result:
+-        print("  Error(compare_indicator): invalid date period from",fromdate,'to',todate)
++        print("  #Error(compare_indicator): invalid date period from",fromdate,'to',todate)
+         if graph: return      
+         else: return None
+     
+     #检查是否支持该indicator
+     indlist=['Close','Adj Close','Daily Ret','Daily Ret%','Daily Adj Ret','Daily Adj Ret%',
+              'log(Daily Ret)','log(Daily Adj Ret)','Weekly Ret','Weekly Ret%',
+              'Weekly Adj Ret','Weekly Adj Ret%','Monthly Ret','Monthly Ret%',
+@@ -84,15 +84,15 @@
+              'Weekly Adj Ret LPSD', 'Weekly Adj Ret LPSD%', 'Monthly Ret LPSD',
+              'Monthly Ret LPSD%', 'Monthly Adj Ret LPSD', 'Monthly Adj Ret LPSD%',
+              'Quarterly Ret LPSD', 'Quarterly Ret LPSD%', 'Quarterly Adj Ret LPSD',
+              'Quarterly Adj Ret LPSD%', 'Annual Ret LPSD', 'Annual Ret LPSD%',
+              'Annual Adj Ret LPSD', 'Annual Adj Ret LPSD%', 'Exp Ret LPSD',
+              'Exp Ret LPSD%', 'Exp Adj Ret LPSD', 'Exp Adj Ret LPSD%']
+     if indicator not in indlist:
+-        print("  Error(compare_indicator): unsupported indicator",indicator)
++        print("  #Error(compare_indicator): unsupported indicator",indicator)
+         print("  Supported indicators:",indlist)
+         if graph: return      
+         else: return None   
+     
+     print("  Calculating indicators ......")
+     #计算df1中的indicator
+     df1i=calc_indicators(df1,indicator)   
+@@ -187,15 +187,15 @@
+     功能：基于单个数据表df1中的列Close/Adj Close计算指标indicator，绘图
+     输入要求：数据表df1中需要，索引为datetime，Close， Adj Close，ticker和footnote
+     当footnote为空时不需要显示
+     """
+     #检查日期期间
+     result,start,end=check_period(fromdate,todate)
+     if not result:
+-        print("  Error(calc_indicator): invalid date period from",fromdate,'to',todate)
++        print("  #Error(calc_indicator): invalid date period from",fromdate,'to',todate)
+         if graph: return      
+         else: return None
+     
+     #检查是否支持该indicator
+     indlist=['Close','Adj Close','Daily Ret','Daily Ret%','Daily Adj Ret','Daily Adj Ret%',
+              'log(Daily Ret)','log(Daily Adj Ret)','Weekly Ret','Weekly Ret%',
+              'Weekly Adj Ret','Weekly Adj Ret%','Monthly Ret','Monthly Ret%',
+@@ -220,15 +220,15 @@
+              'Weekly Adj Ret LPSD', 'Weekly Adj Ret LPSD%', 'Monthly Ret LPSD',
+              'Monthly Ret LPSD%', 'Monthly Adj Ret LPSD', 'Monthly Adj Ret LPSD%',
+              'Quarterly Ret LPSD', 'Quarterly Ret LPSD%', 'Quarterly Adj Ret LPSD',
+              'Quarterly Adj Ret LPSD%', 'Annual Ret LPSD', 'Annual Ret LPSD%',
+              'Annual Adj Ret LPSD', 'Annual Adj Ret LPSD%', 'Exp Ret LPSD',
+              'Exp Ret LPSD%', 'Exp Adj Ret LPSD', 'Exp Adj Ret LPSD%']
+     if indicator not in indlist:
+-        print("  Error(calc_indicator): unsupported indicator",indicator)
++        print("  #Error(calc_indicator): unsupported indicator",indicator)
+         print("  Supported indicators:",indlist)
+         if graph: return      
+         else: return None   
+     
+     print("  Calculating indicators ......")
+     #计算df1中的indicator
+     df1i=calc_indicators(df1,indicator)
+```
+
+## siat/translate.py
+
+```diff
+@@ -123,15 +123,15 @@
+         ['zip','邮编'],['sector','领域'],
+         ['fullTimeEmployees','全职员工数'],['Employees','全职员工数'],
+         ['longBusinessSummary','业务介绍'],['city','城市'],['phone','电话'],
+         ['state','州/省'],['country','国家/地区'],['companyOfficers','高管'],
+         ['website','官网'],['address1','地址1'],['address2','地址2'],['industry','行业'],
+         ['previousClose','上个收盘价'],['regularMarketOpen','正常市场开盘价'],
+         ['twoHundredDayAverage','200天均价'],['fax','传真'], 
+-        ['trailingAnnualDividendYield','年化股利率TTM'],
++        ['trailingAnnualDividendYield','年化股息率TTM'],
+         ['payoutRatio','股息支付率'],['volume24Hr','24小时交易量'],
+         ['regularMarketDayHigh','正常市场日最高价'],
+         ['averageDailyVolume10Day','10天平均日交易量'],['totalAssets','总资产'],
+         ['regularMarketPreviousClose','正常市场上个收盘价'],
+         ['fiftyDayAverage','50天平均股价'],
+         ['trailingAnnualDividendRate','年化每股股利金额TTM'],['open','当日开盘价'],
+         ['averageVolume10days','10日平均交易量'],['expireDate','失效日'],
+@@ -142,17 +142,17 @@
+         ['trailingPE','市盈率TTM'],['regularMarketVolume','正常市场交易量'],
+         ['marketCap','市值'],['averageVolume','平均交易量'],
+         ['priceToSalesTrailing12Months','市销率TTM'],
+         ['TTM Price to Sales','市销率TTM'],
+         ['dayLow','当日最低价'],
+         ['ask','卖出价'],['askSize','卖出价股数'],['volume','当日交易量'],
+         ['fiftyTwoWeekHigh','52周最高价'],['forwardPE','预期市盈率'],
+-        ['fiveYearAvgDividendYield','5年平均股利率'],
++        ['fiveYearAvgDividendYield','5年平均股息率'],
+         ['fiftyTwoWeekLow','52周最低价'],['bid','买入价'],
+-        ['tradeable','今日是否可交易'],['dividendYield','股利率'],
++        ['tradeable','今日是否可交易'],['dividendYield','股息率'],
+         ['bidSize','买入价股数'],['dayHigh','当日最高价'],
+         ['exchange','交易所'],['shortName','简称'],['longName','全称'],
+         ['exchangeTimezoneName','交易所时区'],
+         ['exchangeTimezoneShortName','交易所时区简称'],['quoteType','证券类别'],
+         ['symbol','证券代码'],['messageBoardId','证券留言板编号'],
+         ['market','证券市场'],['annualHoldingsTurnover','一年內转手率'],
+         ['enterpriseToRevenue','市售率(EV/Revenue)'],['EV to Revenue','市售率(EV/Revenue)'],        
+@@ -234,25 +234,30 @@
+         ['ESGperformance','ESG风险评价'],['EPscore','环保风险'],
+         ['EPpercentile','环保风险分位数%'],['CSRscore','社会责任风险'],
+         ['CSRpercentile','社会责任风险分位数%'],['CGscore','公司治理风险'],
+         ['CGpercentile','公司治理风险分位数%'],
+         ['Peer Group','业务分类'],['Count','数目'],     
+         
+         ['China','中国'],['Japan','日本'],['USA','美国'],['India','印度'],
+-        ['Russia','俄罗斯'],['Korea','韩国'],
++        ['Russia','俄罗斯'],['Korea','韩国'],['Australia','澳大利亚'],
++        ['Germany','德国'],['UK','英国'],['GBR','英国'],['France','法国'],
++        ['Vietnam','越南'],['Indonesia','印度尼西亚'],['Malaysia','马来西亚'],
++        ['Singapore','新加坡'],
+         
+         ['Gross Domestic Product','国内生产总值'],['GDP','国内生产总值'],  
+         ['Constant GDP','GDP（美元不变价格）'],['Current GDP','GDP（美元现价）'],
+         ['Current Price Gross Domestic Product','国内生产总值(美元现价)'],
+         ['Real GDP at Constant National Prices','国内生产总值(真实GDP)'],
+         ['Constant GDP Per Capita','人均GDP（美元不变价格）'],
++        ['GDP Per Capita','人均GDP（美元现价）'],
++        ['Gross Domestic Product Per Capita','人均GDP（美元现价）'],
+         ['Constant Price GDP Per Capita','人均GDP（美元不变价格）'],
+         ['GNP','国民生产总值'],['GNP Ratio','GNP(GNI)与GDP的比例'],
+-        ['GNI/GDP Ratio','GNP(GNI)与GDP的比例'],
+-        ['Ratio of GNP to GDP','GNP(GNI)与GDP之间的比例关系'],
++        ['GNI/GDP Ratio','GNP(GNI)与GDP之比'],
++        ['Ratio of GNP to GDP','GNP(GNI)与GDP之比'],
+         
+         ['CPI','消费者价格指数'],['YoY CPI','CPI%（同比）'],
+         ['MoM CPI','CPI%（环比）'],['Constant CPI','CPI%（相对基准值）'],
+         ['Consumer Price Index','消费者价格指数'],
+         ['Consumer Price Index: All Items','消费者价格指数'],
+         ['Consumer Price Index: All Items Growth Rate','消费者价格指数增速'],
+         ['PPI','生产者价格指数'],['YoY PPI','PPI%（同比）'],
+@@ -750,14 +755,19 @@
+         ['MS','摩根示丹利'],['Morgan Stanley','摩根示丹利'],
+         ['USB','美国合众银行'],['U','美国合众银行'],
+         ['TD','道明银行'],['Toronto Dominion Bank','道明银行'],
+         ['PNC','PNC金融'],['PNC Financial Services Group','PNC金融'],
+         ['BK','纽约梅隆银行'],['The Bank of New York Mellon Cor','纽约梅隆银行'],    
+         ['GS','高盛'],['C','花旗集团'],
+         
++        ['SIVB','硅谷银行'],['WFC','富国银行'],['SBNY','签字银行'],
++        ['FRC','第一共和银行'],['CS','瑞士信贷'],['UBS','瑞银'],
++        ['SI','加密友好银行'],
++
++        
+         ['8306.T','三菱日联金融'],['MITSUBISHI UFJ FINANCIAL GROUP','三菱日联金融'],
+         ['8411.T','日股瑞穗金融'],['MIZUHO FINANCIAL GROUP','瑞穗金融'],
+         ['7182.T','日本邮政银行'],['JAPAN POST BANK CO LTD','日本邮政银行'], 
+ 
+         ['00005.HK','港股汇丰控股'],['HSBC HOLDINGS','汇丰控股'],
+         ['02888.HK','港股渣打银行'],['STANCHART','渣打银行'],  
+         
+@@ -968,14 +978,63 @@
+         ['050111','博时信债C'],['320019','诺安货币B基金'],
+         ['510580','易方达中证500ETF'],['510210.SS','上证综指ETF'],
+         ["510050.SS",'华夏上证50ETF基金'],['510880.SS','上证红利ETF基金'],
+         ["510180.SS",'上证180ETF基金'],['159901.SZ','深证100ETF基金'],
+         ["159902.SZ",'深证中小板ETF基金'],['159901.SZ','深证100ETF基金'],
+         ["159919.SZ",'嘉实沪深300ETF基金'],["510300.SS",'华泰柏瑞沪深300ETF基金'],
+         
++        ["159915.SZ",'易方达创业板ETF基金'],["510500.SS",'南方中证500ETF基金'],
++        ["588000.SS",'华夏上证科创板50ETF基金'],
++        
++        ["515220.SS",'国泰中证煤炭ETF基金'],["501011.SS",'添富中证中药ETF联接(LOF)A基金'],
++        ["512200.SS",'南方中证全指房地产ETF基金'],["515790.SS",'华泰柏瑞中证光伏产业ETF基金'],
++        ["516970.SS",'广发中证基建工程ETF基金'],["512400.SS",'南方中证申万有色金属ETF基金'],
++        ["512660.SS",'国泰中证军工ETF基金'],["159928.SZ",'汇添富中证主要消费ETF基金'],
++        ["516150.SS",'嘉实中证稀土产业ETF基金'],["516110.SS",'国泰中证800汽车与零部件ETF基金'],
++        ["512800.SS",'华宝中证银行ETF基金'],["515030.SS",'华夏中证新能源汽车ETF基金'],
++        ["159745.SZ",'国泰中证全指建筑材料ETF基金'],["512690.SS",'鹏华中证酒ETF基金'],
++        ["159869.SZ",'华夏中证动漫游戏ETF基金'],["159996.SZ",'国泰中证全指家电ETF基金'],
++        ["159852.SZ",'嘉实中证软件服务ETF基金'],["515880.SS",'国泰中证全指通信设备ETF基金'],
++        ["512980.SS",'广发中证传媒ETF基金'],["512170.SS",'华宝中证医疗ETF基金'],
++        ["515210.SS",'国泰中证钢铁ETF基金'],["512010.SS",'易方达沪深300医药ETF基金'],
++        ["159870.SZ",'鹏华中证细分化工产业ETF基金'],["512880.SS",'国泰中证全指证券公司ETF基金'],
++        ["159995.SZ",'华夏国证半导体芯片ETF基金'],["159605.SZ",'广发中证海外中国互联网30(QDII-ETF)基金'],
++        ["159766.SZ",'富国中证旅游主题ETF基金'],["159611.SZ",'广发中证全指电力公用事业ETF基金'],
++        ["516530.SS",'银华中证现代物流ETF基金'],
++        
++        ["515050.SS",'华夏中证5G通信主题ETF基金'],["510810.SS",'中证上海国企ETF基金'],
++        ["515900.SS",'博时央企创新驱动ETF基金'],["516680.SS",'建信中证细分有色金属产业ETF基金'],        
++        
++        ["513360.SS",'博时全球中国教育(QDII-ETF)基金'],["513080.SS",'华安法国CAC40ETF(QDII)基金'],
++        ["513060.SS",'博时恒生医疗保健(QDII-ETF)基金'],["513030.SS",'华安德国(DAX)ETF基金'],
++        ["510900.SS",'易方达恒生国企ETF基金'],["159920.SZ",'华夏恒生ETF(QDII)基金'],
++        ["513330.SS",'华夏恒生互联网科技业ETF(QDII)基金'],["513050.SS",'易方达中证海外中国互联网50(QDII-ETF)基金'],
++        ["513130.SS",'华泰柏瑞南方东英恒生科技(QDII-ETF)基金'],["159866.SZ",'工银瑞信大和日经225ETF(QDII)基金'],
++        ["513100.SS",'国泰纳斯达克100(QDII-ETF)基金'],
++        
++        ["511310.SS",'富国10年国债ETF基金'],["511020.SS",'平安活跃国债ETF基金'],
++        ["511260.SS",'国泰10年国债ETF基金'],["511010.SS",'国泰国债ETF'],
++        ["511520.SS",'富国政金债券ETF'],["159649.SZ",'华安国开债ETF基金'],
++        ["159816.SZ",'鹏华0-4年地方债ETF基金'],["511060.SS",'海富通5年地方债ETF基金'],
++        ["511270.SS",'海富通10年地方债ETF基金'],["159972.SZ",'鹏华5年地方债ETF'],
++        ["511220.SS",'海富通城投债ETF基金'],["511360.SS",'海富通短融ETF基金'],
++        ["511030.SS",'平安公司债ETF基金'],["511180.SS",'海富通上证可转债ETF基金'],
++        ["511380.SS",'博时可转债ETF基金'],
++        
++        ["510170.SS",'国联安上证商品ETF基金'],["159980.SZ",'大成有色金属期货ETF基金'],
++        ["159985.SZ",'华夏饲料豆粕期货ETF基金'],["159981.SZ",'建信易盛能源化工期货ETF基金'],
++        ["165513.SZ",'信诚全球商品ETF基金'],["159812.SZ",'前海开源黄金ETF基金'],
++        ["518803.SS",'国泰黄金ETF基金'],["159937.SZ",'博时黄金ETF'],
++        
++        ["159003.SZ",'招商快线ETF基金'],["260102.SZ",'景顺长城货币A基金'],
++        ["519888.SS",'汇添富收益快线货币A基金'],
++        
++        
++        
++        
+         ["004972",'长城收益宝货币A基金'],["004137",'博时合惠货币B基金'],
+         ["002890",'交银天利宝货币E基金'],["004417",'兴全货币B基金'],
+         ["005151",'红土创新优淳货币B基金'],["001909",'创金合信货币A基金'],
+         ["001821",'兴全天添益货币B基金'],["000836",'国投瑞银钱多宝货币A基金'],
+         ["000700",'泰达宏利货币B基金'],["001234",'国金众赢货币基金'],
+         ["100051",'富国可转债A基金'],["217022",'招商产业债券A基金'],
+         
+@@ -1192,14 +1251,18 @@
+         ['MS','Morgan Stanley'],['Morgan Stanley','Morgan Stanley'],
+         ['USB','US Bancorp'],['U','US Bancorp'],
+         ['TD','Toronto Dominion'],['Toronto Dominion Bank','Toronto Dominion'],
+         ['PNC','PNC Financial'],['PNC Financial Services Group','PNC Financial'],
+         ['BK','NY Mellon'],['The Bank of New York Mellon Cor','NY Mellon'],    
+         ['GS','Goldman Sachs'],['C','Citigroup'],
+         
++        ['SIVB','Silicon Valley Bank'],['WFC','Wells Fargo'],['SBNY','Signature Bank'],
++        ['FRC','First Republic Bank'],['CS','Credit Suisse'],['UBS','UBS Group'],
++        ['SI','Silvergate Capital'],
++        
+         ['8306.T','MITSUBISHI UFJ'],['MITSUBISHI UFJ FINANCIAL GROUP','MITSUBISHI UFJ'],
+         ['8411.T','MIZUHO FINANCIAL'],['MIZUHO FINANCIAL GROUP','MIZUHO FINANCIAL'],
+         ['7182.T','JAPAN POSTBANK'],['JAPAN POST BANK CO LTD','JAPAN POSTBANK'], 
+ 
+         ['00005.HK','HSBC(HK)'],['HSBC HOLDINGS','HSBC'],
+         ['02888.HK','Standard Chartered(HK)'],['STANCHART','Standard Chartered'],  
+         
+@@ -1575,16 +1638,46 @@
+     print(codetranslate('09988.HK'))
+ 
+ 
+ #==============================================================================
+ if __name__=='__main__':
+     symbol='00700.HK'
+     
++    symbol='1234567'
++    
++    symbol='sh510170'
++    
++    symbol='510170.SS'
++    
++    get_names(symbol)
++    
+ def get_names(symbol):
+     """
++    从文件中查询证券代码的短名称，速度较慢
++    """
++    # 查询股票名称
++    name=get_names0(symbol)
++    
++    #未查到时再查询其他种类的证券
++    if name == symbol:
++        
++        # 查询基金
++        name=get_fund_name_china(symbol)
++        
++        # 查询债券
++        
++    return name
++
++
++#==============================================================================
++if __name__=='__main__':
++    symbol='00700.HK'
++    
++def get_names0(symbol):
++    """
+     从文件中查询证券代码的短名称
+     """
+     
+     symbol2=symbol
+     result,prefix,suffix=split_prefix_suffix(symbol)
+     
+     #若后缀是港股、前缀为五位数且首位为0，则去掉首位0
+@@ -1644,14 +1737,48 @@
+             name=name.replace(w,'')
+     
+     return name
+ 
+ if __name__=='__main__':
+     get_names('00700.HK')
+     get_names('0700.HK')
++    
++#==============================================================================
++if __name__=='__main__':
++    fund='sh510170'
++    
++    get_fund_name_china('sh510170')
++    get_fund_name_china('510170.SS')
++
++def get_fund_name_china(fund):
++    """
++    功能：查询中国基金代码和类型
++    注意：实际仅需6位数字代码
++    """
++    # 代码中提取6位数字
++    fund1=fund.upper()
++    exchlist=['SH','SZ','.SS','.SZ']
++    for exch in exchlist:
++        fund1=fund1.replace(exch,'')
++    
++    import akshare as ak
++    names = ak.fund_name_em()
++    namedf=names[names['基金代码']==fund1]
++    
++    if len(namedf) >= 1:
++        fname=namedf['基金简称'].values[0]
++        ftype=namedf['基金类型'].values[0]
++    else:
++        fname=fund
++        ftype=''
++    
++    #return fname,ftype
++    return fname
++
++#==============================================================================    
+ #==============================================================================
+ def str_replace(str1):
+     """
+     删除给定字符串中的子串
+     """
+     replist=['Ltd.','Ltd','Co.','LTD.','CO.',' CO','LTD','Inc.','INC.', \
+              'CORPORATION','Corporation','LIMITED','Limited','Company', \
+```
+
+## siat/valuation_china.py
+
+```diff
+@@ -174,21 +174,21 @@
+     measures=['pb','pe']; methods='lyr'; values='value'; statistics='median'
+     
+     measures='pe'; methods=['lyr','ttm']; values='value'; statistics='median'
+ 
+ 
+ def valuation_market_china(start,end,measures=['pe','pb'], \
+                            methods='lyr',values='value',statistics='median', \
+-                           twinx='auto',loc1='best',loc2='best'):
++                           twinx=False,loc1='best',loc2='best'):
+     """
+     功能：比较中国全A股市场的估值指标变化趋势
+     ----------
+     start: 开始日期
+     end: 结束日期
+-    measures: 估值指标市盈率'pe'或市净率'pb'
++    measures: 估值指标市盈率'pe'或市净率'pb'，不支持股息率
+     methods: 滚动'ttm/静态取样'lyr'.
+     values: 直接采用估值指标数值'value'或分位数'quantile'
+     statistics: 采用中位数'median'或等权均值'equal-weighted'
+ 
+     """
+     
+     #解析比较的指标，以第一个双指标为准
+@@ -309,14 +309,15 @@
+     """
+     功能：列示申万行业指数估值最高和最低的行业
+     vtype: PE, PB, dividend
+     vsorting: 分位数绝对值
+     """
+     
+     import akshare as ak
++    # 如果出错，升级一下akshare
+     df = ak.index_value_name_funddb()    
+     
+     # 筛选申万行业指数
+     substr='(申万)'
+     df['申万标志']=df['指数名称'].apply(lambda x: substr in x)
+     df1=df[df['申万标志']]
+     df1['行业代码']=df1['指数代码'].apply(lambda x: x[:6])
+```
+
+## siat/var_model_validation.py
+
+```diff
+@@ -258,15 +258,18 @@
+     elif alpha_actual < alpha:
+         result="低估"
+     else: 
+         result="高估"
+     
+     #打印结果
+     print("\n======= VaR模型：回溯测试 =======")
+-    print("投资组合          :",tickerlist)
++    #print("投资组合          :",codetranslate(tickerlist))
++    print("投资组合          :",end='')
++    print_list(codetranslate(tickerlist))
++    
+     print("成分股票配置      :",sharelist)
+     print("持有日期          :",today)
+     print("当前头寸          :",format(round(position,2),','))
+     print("预计持有天数      :",future_days,"天")
+     print("置信度水平        : ",alpha*100,"%",sep='')
+     print("使用的历史样本数据:",pastyears,"年")
+     print("使用的VaR模型     :",type)
+```
+
+## Comparing `siat-1.7.9.dist-info/METADATA` & `siat-1.8.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: siat
+-Version: 1.7.9
++Version: 1.8
+ Summary: Securities Investment Analysis Tools (siat)
+ Home-page: https://pypi.org/project/siat/
+ Author: Prof. WANG Dehong, Business School, BFSU (北京外国语大学 国际商学院 王德宏 教授)
+ Author-email: wdehong2000@163.com
+ License: Copyright (C) WANG Dehong, 2023. For educational purpose only!
+ Platform: UNKNOWN
+ Requires-Dist: pandas-datareader
+```
+
+## Comparing `siat-1.7.9.dist-info/RECORD` & `siat-1.8.dist-info/RECORD`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,109 +1,112 @@
+ siat/__init__.py,sha256=2dNozwJxztiXwgRY76YQjykPJwAK1SnpN1nNON42c4k,840
+-siat/allin.py,sha256=Nj1-73be0q3sSUVou4pB1C_oWStpcjHYsIvV2sFfBzM,2069
++siat/allin.py,sha256=QqQLHiPZjWsx_xfkJnZTPTcxFNfoSwly9vNS9nguoqk,2130
+ siat/alpha_vantage_test.py,sha256=tKr-vmuFH3CZAqwmISz6jzjPHzV1JJl3sPfZdz8aTfM,747
+-siat/assets_liquidity.py,sha256=ZcATXkZG7Rd_SANmPvimxUkBSxgZb9kt7LTbMp-a8MY,27471
++siat/assets_liquidity.py,sha256=ma-1rO_t_Mg3j_suWcySHkBoAl-H71CR1dm7iEGAfwM,28555
+ siat/assets_liquidity_test.py,sha256=UWk6HIUlizU7LQZ890fGx8LwU1jMMrIZswg8cFUJWZ8,1285
+ siat/barrons_scraping_test.py,sha256=jSRVPxyYylcgG3fAsuqE-9WH3sDfJ3CdZUcU8VBVdoU,10110
+ siat/beta_adjustment.py,sha256=PW1DgBB17u8jjaDl4Bi6pEQ5RE_tIjg3kZB1xP8l9KI,36597
+ siat/beta_adjustment_china.py,sha256=FX5xdGHiVKo0f03RhWmkz398t5VbkvL8Eyw2xLz5Lvw,20433
+ siat/beta_adjustment_test.py,sha256=nBhvQQfqxooCHjy5hL0a8V0ZC58BjuCZVFpqpWpHeF0,2467
+ siat/blockchain.py,sha256=awF3GDtlwaJhku0a2kLuXOS8d3IzkjR_RyzlZWvD3L4,6032
+-siat/bond.py,sha256=c6TMcN3dOWxTqL0uBgBl4dqeEBkQUwKmuLoxTtmULhA,98342
+-siat/bond_base.py,sha256=4pX305H2oQ04EeO9gZN5-Z5uv8ZeLL1QwdcWnV34vR4,15425
++siat/bond.py,sha256=gYaS9pDBnYRsJCXNqx6lj1mfF8j-7TV1O5ZAwDhcWB0,98531
++siat/bond_base.py,sha256=mY1TscUH2kWzsR3Cnh5ea0Xu7-Nc8ZyFupraRipi4BM,24155
+ siat/bond_test.py,sha256=yUOFw7ddGU-kb1rJdnsjkJWziDNgUR7OLDA7F7Ub91A,5246
+-siat/capm_beta.py,sha256=kAWCx8_YSwL6u-GPIqc3ee2FNrWxIwwmCiFkTjS508g,27969
++siat/capm_beta.py,sha256=L40UbrSU4QQ5CxmEu8CpLT5WptsOUOfDRF7Pxdw6HZs,28499
+ siat/capm_beta_test.py,sha256=ImR0c5mc4hIl714XmHztdl7qg8v1E2lycKyiqnFj6qs,1745
+ siat/cmat_commons.py,sha256=Nj9Kf0alywaztVoMVeVVL_EZk5jRERJy8R8kBw88_Tg,38116
+-siat/common.py,sha256=krVmXcp5X-MqVybbE_cFoKy7Im_lr3P2Z8Z2trLZygg,53150
++siat/common.py,sha256=3qyrC3lAxD-nZ8nXW8rzZi9luUmgNV-pY1dj7Mz88OQ,63743
++siat/compare_cross.py,sha256=s17Zgur3dp834FiCGFJ4fKwpk9HM6xUteCMzGr57EWc,20722
++siat/compare_cross_test.py,sha256=r-Xq7LiI-Wfpz1a0NTvMgIfMvkHSYSNZ1SvEGs-VuGI,2072
+ siat/concepts_iwencai.py,sha256=m1YEDtECRT6FqtzlKm91pt2I9d3Z_XoP59BtWdRdu8I,3061
+ siat/concepts_kpl.py,sha256=SJ9UaJp5i79EXKZ3dPa_vBEoG_zgl1Ig5rZAm-ubgM4,4941
+ siat/copyrights.py,sha256=YMLjZb328YpFMR-s_GUu0HBgeGce3pV7DgRut8S3I7w,690
+ siat/cryptocurrency.py,sha256=SKh_S85cqd2tRgKBKls1Fpd6HdFd9JfmUTCa2e3mpsE,27351
+ siat/cryptocurrency_test.py,sha256=3AikTNJ7j-HwLGLIYEfyXZ3bLVuLeru9mwiwHQi2SdA,2669
+ siat/derivative.py,sha256=qV8n09799eqLc26ojR6vN5n_X-xd7rGwdYjgq-wBih8,41483
+ siat/economy-20230125.py,sha256=vxZZlPnLkh7SpGMVEPLwxjt0yYLSVmdZrO-s2NYLyoM,73848
+-siat/economy.py,sha256=-m8Jfz-tAIsetHT2L17QUdnQkzRe6gSYKMwr8kZB1O8,73150
++siat/economy.py,sha256=sXg0TBp9lh2Hfx5lq97Lk-Zq1OOj3llJqwYBmvoanHk,73720
+ siat/economy_test.py,sha256=6vjNlPz7W125pJb7simCddobSEp3jmLIMvVkLRZ7zW8,13339
+ siat/esg.py,sha256=Kzui78HKwnLvtxWcjjnSjME6IZKK9cR3zSZYqTtAO0k,18941
+ siat/esg_test.py,sha256=Z9m6GUt8O7oHZSEG9aDYpGdvvrv2AiRJdHTiU6jqmZ0,2944
+ siat/fama_french.py,sha256=qDpsZOj0BLuzXXdNwJ1IPhDyNVAnTJFHqn80Hkp85ZI,47177
+ siat/fama_french_test.py,sha256=M4O23lBKsJxhWHRluwCb3l7HSEn3OFTjzGMpehcevRg,4678
+ siat/financial_base.py,sha256=YxNVfhbgLQ4stLojI9nklB4sdQNuROcILcO3M2uz4Gs,40695
+ siat/financial_statements.py,sha256=KDUl9b92EV5IseLLnEmG3czDHAaay2SWM2MpzZXPHpk,21528
+ siat/financial_statements_test.py,sha256=FLhx8JD-tVVWSBGux6AMz1jioXX4U4bp9DmgFHYXb_w,716
+ siat/financials.py,sha256=4b0fJAu1Mm5aX_zCIvF01CzzBokrprQpIk1N3za1FNA,76676
+-siat/financials_china.py,sha256=nogCBjhk-1jzw-5N_zfxck7Z0UBdAB72pjkRq9V7wsQ,104862
+-siat/financials_china2.py,sha256=y0F2zys-DwezBjaXHO5485-DhhZ7B2n0F_dX5kcyMOo,42828
++siat/financials_china.py,sha256=0zNnifjaXqJhZYn6odc4NHhUgNY5rla8cGy9xL9EQ6w,105288
++siat/financials_china2.py,sha256=32--MBk7PBOSg7DUyxfjN63ZPEkmAsrYfuTHAenOphA,57998
+ siat/financials_china2_test.py,sha256=Erz5k4LyOplBBvYls2MypuqHpVNJ3daiLdyeJezNPu0,2722
+ siat/financials_china2_test2.py,sha256=C8CuYTMHN4Mhp-sTu-Bmg0zMXRCaYV6ezGDoYartRYQ,3507
+ siat/financials_china2_test3.py,sha256=UXYSA80DNSPRhHpovc2MA9JkpILWMAQaRatbWCHBNPs,3118
+ siat/financials_china_test.py,sha256=0MzvCOvoA_zrC3RVBMWMk-ZTagOXQdXM3OasqygtHog,17193
+ siat/financials_test.py,sha256=HJ3CPo_Xckz2wXi3AEP6ZNWCF1Duc1pLi0Y10USiImc,23829
+ siat/fred_test.py,sha256=KF50ssSbsfpa_kT6iuomD0vG4eXztAcOasZxg1OGX5w,1201
+ siat/fund.py,sha256=wMDORsCBV8ZXfgwbtq-0bu3qqWY66dHnbqgllW0gWCo,24637
+-siat/fund_china.py,sha256=Pp67Scp7lWnfRA6QW3hjohaj5uf6LahKlocVgCuei0M,63955
++siat/fund_china.py,sha256=KBVTvzgkjzD_AhxrZntx0p5muPQTL5oXT10_ed6fXnU,66934
+ siat/fund_china_test.py,sha256=-Bh6m0J0GPpIbYXx-H2vpzJoNFI6pE2C2jVPa8DazgE,6649
+ siat/fund_test.py,sha256=V4ADb8Gsp8gyeFTwcgRsJBpnUih_O-Q2V1ILc5oKjK8,1116
+ siat/future_china.py,sha256=s9LgTuy4nFIXgqtZKc71HaZIyFnSmyvxEloGHxlmLZ4,16442
+ siat/future_china_test.py,sha256=BrSzmDVaOHki6rntOtosmRn-6dkfOBuLulJNqh7MOpc,1163
+ siat/global_index_test.py,sha256=hnFp3wqqzzL-kAP8mgxDZ54Bd5Ijf6ENi5YJlGBgcXw,2402
+-siat/grafix.py,sha256=EHqCLpnEHoZP0KUZhnEJGaimll6n8yoKq4-eiWa0mPQ,63016
++siat/grafix.py,sha256=dRPQM6ZjGWrQqa2u4h0GZpQptK-1bUZR5HTaeSslZM4,63490
+ siat/grafix_test.py,sha256=kXvcpLgQNO7wd30g_bWljLj5UH7bIVI0_dUtXbfiKR0,3150
+ siat/holding_risk.py,sha256=108tiI7DDl8uUZkyUiq6Y-McKeim1mxYsgqgk7CcXw8,30544
+ siat/holding_risk_test.py,sha256=FRlw_9wFG98BYcg_cSj95HX5WZ1TvkGaOUdXD7-V86s,474
+ siat/local_debug_test.py,sha256=CDAOffW1Rvs-TcNN5giWVvHMlch1w4dp-w5SIV9jXL0,3936
+ siat/market_china.py,sha256=2_ov1KQwRtHQ6PXNO1TS4-wUPhBuoWla326g0x_xUgQ,31158
+-siat/markowitz.py,sha256=NM3Zd2AMOG_qrsHzANnoxYFFFFrCjcMAPE3292XwEM0,84685
++siat/markowitz.py,sha256=95STbz7wq97WpqwQ8VZm6ABTudRv_FEIrM6NZvMF98Y,91638
+ siat/markowitz_ccb_test.py,sha256=xBkkoaNHdq9KSUrNuHGgKTdNYUvgi84kNYcf719eoyE,1593
+ siat/markowitz_ef_test.py,sha256=wjNlICkgRIqnonPeSIHo4Mu2GRtb9dr21wDt2kMNEcI,4032
+ siat/markowitz_old.py,sha256=Lf7O_4QWT8RsdkHiUyc_7kKY3eZjKDtFR89Fz3pwYnY,33046
+ siat/markowitz_test.py,sha256=fDXoPp6DrKeneYjd0lbb0KfYUJj-VcOvVaPlfsIOstw,5818
+ siat/ml_cases.py,sha256=FYDk0O7l9hhHlbrlOVGgbH-h2DA503lhKFi9XugH1f0,86874
+ siat/ml_cases_example1.py,sha256=xRGb3YTQEDTOnaWNzZN_myU5umQnA2RdMNiPrxTmn9c,1673
+-siat/option_china.py,sha256=mk4os1SUE9rDJSIWnv2fVNUa4b707R12TIAUpCWdLns,86907
++siat/option_china.py,sha256=NHonANLpJdQTs6EjQwXtyhpdKYiGocYQ2vElW_Wlur0,92393
+ siat/option_china_test.py,sha256=UQ-YUHUjoGBQyanLcM-yzqeEIUQP_gCQIeT0W6rnUnA,16355
+-siat/option_pricing.py,sha256=i8f7l9tXrKVkm4gEptXK6nakm6BRXxYspZq1OA4pwQs,69625
++siat/option_pricing.py,sha256=ZvOziCkXODUjqSw2Q7Ux_gepw9UQaGMgvbI_YuceyX8,69625
+ siat/option_pricing_test.py,sha256=eeorV5Ja5vjlRXnP6fWJHetGU5Vb8SnLopkC6RV3GfA,2203
+ siat/option_sina_api_test.py,sha256=dn-k_wrQnAaNKHoROvWJEc7lqlU0bwiV2Aa4usWAFGM,5908
+ siat/proxy_test.py,sha256=erQJrmGs2X46z8Gb1h-7GYQ0rTUcaR8dxHExWoBz2eM,2610
+ siat/quandl_test.py,sha256=EcPoXnLuqzPl5dKyVEZi3j3PJZFpsnU_iNPhLWC9p-A,1552
+-siat/risk_adjusted_return.py,sha256=LJA0irszmIAPtk1tpwhSzOvtv3quOBvTdNW9R4W_uXY,47351
++siat/risk_adjusted_return.py,sha256=8vyjOCap9xEvWIpJnBEsDm8Ba3CD9QrEXy2qFG6zvVk,49073
+ siat/risk_adjusted_return_test.py,sha256=m_VHL5AtT74cJv5i7taTeTfnkX48y0AFJk5phawyYWg,3416
+ siat/risk_evaluation.py,sha256=lCDqCaSEppH0MFPFg-P14IYcF3IJqILbPfDmzf_AfcY,75061
+ siat/risk_evaluation_test.py,sha256=YEXM96gKzTfwN4U61AS4Rr1tV7KgUvn4rRC6f3iMw9s,3731
+ siat/risk_free_rate.py,sha256=r62zCl1qbI4lJU17GsgM-OmVx9oo3dltXeZVCNd6Uxg,12304
+ siat/risk_free_rate_test.py,sha256=CpmhUf8aEAEZeNu4gvWP2Mz2dLoIgBX5bI41vfUBEr8,4285
+-siat/sector_china.py,sha256=mTMspgBgd07pesdMhGm-SpTr-rcKts-kaEsIM3kXsjk,58803
++siat/sector_china.py,sha256=kcAgZig4MW-k6eJX-0B1uh2yhAvzzWsPKgqQdztyynI,93536
+ siat/sector_china_test.py,sha256=tvFQYptmj7jq6H5kNaRJtcP5Wgb-eWvaoSl33Y47ZsM,4210
+ siat/security_price.py,sha256=ibrdUJyt_n0c8oKRbVStE1_ptmWkzy4YIHjpc_fGiPQ,29148
+-siat/security_prices.py,sha256=sjN5detfjfCOo5yZs3yXPImIhTThG0kVJitc1mviUu4,69300
++siat/security_prices.py,sha256=Xl7EHz16qCUIzuPGpEi-g-tLGQKk3MqHmic556-Vs7U,71984
+ siat/security_prices_test.py,sha256=OEphoJ87NPKoNow1QA8EU_5MUYrJF-qKoWKNapVfZNI,10779
+ siat/setup.py,sha256=up65rQGLmTBkhtaMLowjoQXYmIsnycnm4g1SYmeQS6o,1335
+ siat/shenwan index history test.py,sha256=JCVAzOSEldHalhSFa3pqD8JI_8_djPMQOxpkuYU-Esg,1418
+-siat/stock.py,sha256=v8P6ekICZ84kazX7MH4FWdJ8mJ1d-4tZJd4oEJkCGL4,117060
++siat/stock.py,sha256=kW_R_CW9WbR0bzwwUlFwvWh0oJE3zA8gfKw_AJUWfCo,117254
+ siat/stock_advice_linear.py,sha256=-twT7IGP-NEplkL1WPSACcNJjggRB2j4mlAQCkzOAuo,31655
+ siat/stock_base.py,sha256=uISvbRyOGy8p9QREA96CVydgflBkn5L3OXOGKl8oanc,1312
+-siat/stock_china.py,sha256=au0XL1DVR3e1JZdU2gxyepJMPLy0dIb-LPSAiHERnOc,68107
++siat/stock_china.py,sha256=qsrGq5tUyToOGDfVRnMEeiGps2Tpz5o38LlK6kB6k3Y,68123
+ siat/stock_china_test.py,sha256=Qc1m19FAUSvBi9E0ZTVcYBveiGYFIlIFvthbidzCe1s,1276
+ siat/stock_info.pickle,sha256=gzhzPvCrX3tr24CzWPVAOXPJ21XQ5keU2cz6PfKwfJ8,1242926
+ siat/stock_info_test.py,sha256=gfG3DbhDACbtD8wnv_R6zhj0t11XaC8NX8uLD9Qv3Fo,6122
+ siat/stock_list_china_test.py,sha256=gv14UwMMvkZqtb6G7DCTSuehIwVHuVwu7w60p6gyHoo,1014
+ siat/stock_prices_kneighbors.py,sha256=WfZvo5EyeBsm-T37zDj7Sl9dPSRq5Bx4JxIJ9IUum6s,36738
+ siat/stock_prices_linear.py,sha256=-OUKRr27L2aStQgJSlJOrJ4gay_G7P-m-7t7cU2Yoqk,13991
+ siat/stock_profile.py,sha256=kEoYOsHm0Kc75gEVchDbPbJNfzPvNi6QKTxMySo_2Fg,25017
+ siat/stock_technical.py,sha256=MiW5LwWGBq8BqxjS8PD0wMSHPiwlIVixeeNJfq395J8,72626
+ siat/stock_test.py,sha256=E9YJAvOw1VEGJSDI4IZuEjl0tGoisOIlN-g9UqA_IZE,19475
+ siat/temp.py,sha256=gbJ0ioauuo4koTPH6WKUkqcXiQPafnbhU5eKJ6lpdLA,1571
+-siat/transaction.py,sha256=RWlD95l2-1d0ph9RK5YMIEVJDS5dMdU6LR9n4WtMfVc,14488
++siat/transaction.py,sha256=foTWS1qYXQFuzNTG2m7ec6aDgsJjzpKmyAbyxKcE8KU,14492
+ siat/transaction_test.py,sha256=Z8g1LJCN4-mnUByXMUMoFmN0t105cbmsz2QmvSuIkbU,18580
+ siat/translate-20230125.py,sha256=NPPSXhT38s5t9fzMvl_fvi4ckSB73ThLmZetVI-xGdU,117953
+ siat/translate-20230206.py,sha256=-vtI125WyaJhmPotOpDAmclt_XnYVaWU9ByLWZ6FyYE,118133
+-siat/translate.py,sha256=-fsY7dYgT_Y0EvNMcV-bW30Kt1lTehMv9ftA2uNrtnw,118302
++siat/translate-20230215.py,sha256=TJgtPE3n8IjljmZ4Pefy8dmHoNdFF-1zpML6BhA9FKE,121657
++siat/translate.py,sha256=-7-R7pLutkOVur5O0ihj3-_XyoWRF2VAJRorIsiZJVQ,124748
+ siat/universal_test.py,sha256=CDAOffW1Rvs-TcNN5giWVvHMlch1w4dp-w5SIV9jXL0,3936
+-siat/valuation_china.py,sha256=U9FQgFcbJcS-S0cwy8iJ9Z0Rf8sxCN5Pxhm1DItUUgQ,51206
++siat/valuation_china.py,sha256=J78FTnwyzOjNENq30MXaQdby6EtcBZi3AMeUKhGtuok,51268
+ siat/valuation_market_china_test.py,sha256=gbJ0ioauuo4koTPH6WKUkqcXiQPafnbhU5eKJ6lpdLA,1571
+-siat/var_model_validation.py,sha256=eY64qRL7EDo9YsMoF800N_GZElFf_qynlCfjZpfa5xQ,14749
+-siat-1.7.9.dist-info/METADATA,sha256=Ssxl6Cc6iPe2PA9tSV3Dt4_oIOPeyn938FxXiuhGFHA,1399
+-siat-1.7.9.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+-siat-1.7.9.dist-info/top_level.txt,sha256=r1cVyL7AIKqeAmEJjNR8FMT20OmEzufDstC2gv3NvEY,5
+-siat-1.7.9.dist-info/RECORD,,
++siat/var_model_validation.py,sha256=zB_Skk_tmzIR15l6oAW3am4HBGVIG-eZ8gJhCdXZ8Qw,14859
++siat-1.8.dist-info/METADATA,sha256=rQxs41of5i5h8ipoM4SKALb1571nSpC93lBBZ00gtic,1397
++siat-1.8.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
++siat-1.8.dist-info/top_level.txt,sha256=r1cVyL7AIKqeAmEJjNR8FMT20OmEzufDstC2gv3NvEY,5
++siat-1.8.dist-info/RECORD,,
+```
+
