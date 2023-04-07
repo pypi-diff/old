@@ -1,0 +1,4794 @@
+# Comparing `tmp/watertap-0.8.0rc1.tar.gz` & `tmp/watertap-0.8.0rc2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "watertap-0.8.0rc1.tar", last modified: Wed Apr  5 16:05:57 2023, max compression
++gzip compressed data, was "watertap-0.8.0rc2.tar", last modified: Fri Apr  7 00:38:54 2023, max compression
+```
+
+## Comparing `watertap-0.8.0rc1.tar` & `watertap-0.8.0rc2.tar`
+
+### file list
+
+```diff
+@@ -1,895 +1,895 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.596771 watertap-0.8.0rc1/
+--rw-r--r--   0 runner    (1001) docker     (123)     2658 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/LICENSE.md
+--rw-r--r--   0 runner    (1001) docker     (123)     2512 2023-04-05 16:05:57.596771 watertap-0.8.0rc1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2306 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      626 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-05 16:05:57.596771 watertap-0.8.0rc1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     8340 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.440770 watertap-0.8.0rc1/watertap/
+--rw-r--r--   0 runner    (1001) docker     (123)      894 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3003 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/conftest.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.444770 watertap-0.8.0rc1/watertap/core/
+--rw-r--r--   0 runner    (1001) docker     (123)     1552 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4140 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/control_volume_isothermal.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/initialization_mixin.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11167 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/membrane_channel0d.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10300 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/membrane_channel1d.py
+--rw-r--r--   0 runner    (1001) docker     (123)    38043 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/membrane_channel_base.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.444770 watertap-0.8.0rc1/watertap/core/plugins/
+--rw-r--r--   0 runner    (1001) docker     (123)      788 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/plugins/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9932 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/plugins/solvers.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.444770 watertap-0.8.0rc1/watertap/core/plugins/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)    10707 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/plugins/tests/test_solvers.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.444770 watertap-0.8.0rc1/watertap/core/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)      711 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_sidor_data.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     7428 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_wt_database.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16831 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_base.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20209 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_costing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6686 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_diso.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6435 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_electricity.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8709 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3610 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_pt.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8367 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_sido.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19742 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_sido_reactive.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6195 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/tests/test_zero_order_siso.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.448771 watertap-0.8.0rc1/watertap/core/util/
+--rw-r--r--   0 runner    (1001) docker     (123)      833 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5478 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/initialization.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.448771 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6223 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/infeasible.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5241 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/ipopt_initialization.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.448771 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3599 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/tests/test_infeasible.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4011 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/model_diagnostics/tests/test_ipopt_initialization.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2468 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/scaling.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.448771 watertap-0.8.0rc1/watertap/core/util/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5163 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/tests/test_initialization.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6474 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/util/tests/test_scaling.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7980 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/wt_database.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19506 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_base.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13455 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_costing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9016 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_diso.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3898 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_electricity.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12757 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5414 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_pt.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10322 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_sido.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17616 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_sido_reactive.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8385 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/core/zero_order_siso.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.448771 watertap-0.8.0rc1/watertap/costing/
+--rw-r--r--   0 runner    (1001) docker     (123)     1171 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.448771 watertap-0.8.0rc1/watertap/costing/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     3735 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/tests/test_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3761 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/tests/test_watertap_costing_package.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.452771 watertap-0.8.0rc1/watertap/costing/units/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9384 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/crystallizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6107 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/electrodialysis.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3268 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/energy_recovery_device.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15305 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/gac.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13865 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/ion_exchange.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5486 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/mixer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1618 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/nanofiltration.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3410 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/osmotically_assisted_reverse_osmosis.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1564 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/pressure_exchanger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4462 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/pump.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2838 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/reverse_osmosis.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.452771 watertap-0.8.0rc1/watertap/costing/units/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     3476 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/tests/test_configuration_errors.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3678 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/units/uv_aop.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4728 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/util.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14372 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/costing/watertap_costing_package.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.452771 watertap-0.8.0rc1/watertap/data/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.464771 watertap-0.8.0rc1/watertap/data/techno_economic/
+--rw-r--r--   0 runner    (1001) docker     (123)     1109 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/CANDO_P.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1411 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/aeration_basin.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      623 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/air_flotation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      776 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/anaerobic_digestion_oxidation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3419 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/anaerobic_digestion_reactive.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      842 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/anaerobic_mbr_mec.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2678 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/autothermal_hydrothermal_liquefaction.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      832 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/backwash_solids_handling.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      785 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/bio_active_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      757 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/bioreactor.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      329 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/blending_reservoir.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     9182 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/brine_concentrator.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      336 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/buffer_tank.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      826 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/cartridge_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/centrifuge.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4124 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/chemical_addition.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      919 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/chlorination.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1661 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/clarifier.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      630 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/cloth_media_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      334 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/co2_addition.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1810 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/coag_and_floc.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      933 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/cofermentation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4443 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/component_list.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      783 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/constructed_wetlands.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4367 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/conventional_activated_sludge.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      345 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/cooling_supply.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      710 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/cooling_tower.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      582 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/decarbonator.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      677 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/deep_well_injection.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2369 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/default_case_study.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1091 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/dissolved_air_flotation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1329 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/dmbr.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      859 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/dual_media_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1179 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/electrochemical_nutrient_removal.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2439 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/electrocoagulation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2094 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/electrodialysis_reversal.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      329 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/energy_recovery.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4877 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/evaporation_pond.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/feed_water_tank.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      792 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/filter_press.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4268 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/fixed_bed.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4259 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/gac.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/gas_sparged_membrane.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1311 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/hrcs.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3182 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/hydrothermal_gasification.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      344 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/injection_well_disposal.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/intrusion_mitigation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3269 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/ion_exchange.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1209 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/iron_and_manganese_removal.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      755 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/landfill.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1352 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/mabr.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/magprex.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3677 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/mbr.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1017 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/media_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      584 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/membrane_evaporator.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3064 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/metab.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      935 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/microbial_battery.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      935 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/microfiltration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      660 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/microscreen_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      342 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/municipal_drinking.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/municipal_wwtp.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3546 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/nanofiltration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1756 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/ozonation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3985 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/ozone_aop.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1202 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/peracetic_acid_disinfection.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      433 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/photothermal_membrane.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      897 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/primary_separator.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2123 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/pump.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      288 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/pump_electricity.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      980 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/screen.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4225 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/secondary_treatment_wwtp.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1580 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/sedimentation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      675 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/settling_pond.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      660 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/sludge_tank.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      333 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/smp.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/static_mixer.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      775 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/storage_tank.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      513 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/struvite_classifier.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1087 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/suboxic_activated_sludge_process.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      884 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/supercritical_salt_precipitation.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      974 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/surface_discharge.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      269 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/sw_onshore_intake.yaml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.468771 watertap-0.8.0rc1/watertap/data/techno_economic/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4905 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/tests/test_unit_parameter_files.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3081 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/tests/test_water_sources.py
+--rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/tramp_oil_tank.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/tri_media_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1013 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/ultra_filtration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1442 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/uv.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     3320 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/uv_aop.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      646 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/vfa_recovery.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/waiv.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      789 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/walnut_shell_filter.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     1290 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/water_pumping_station.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    10420 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/water_sources.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      971 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/data/techno_economic/well_field.yaml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.468771 watertap-0.8.0rc1/watertap/edb/
+--rw-r--r--   0 runner    (1001) docker     (123)     3880 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15256 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/commands.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.468771 watertap-0.8.0rc1/watertap/edb/data/
+--rw-r--r--   0 runner    (1001) docker     (123)     2805 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/data/base.json
+--rw-r--r--   0 runner    (1001) docker     (123)    42830 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/data/component.json
+--rw-r--r--   0 runner    (1001) docker     (123)    18754 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/data/reaction.json
+--rw-r--r--   0 runner    (1001) docker     (123)    46417 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/data_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20038 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/db_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1766 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/error.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7826 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/schemas.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.468771 watertap-0.8.0rc1/watertap/edb/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    27346 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/data.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14481 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/test_commands.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19813 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/test_data_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6005 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/test_db_api.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2535 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/test_edb.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1569 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/test_schemas.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1145 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/test_validate.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2402 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/tests/util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4277 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/edb/validate.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.468771 watertap-0.8.0rc1/watertap/examples/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.468771 watertap-0.8.0rc1/watertap/examples/chemistry/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7138 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/chem_scaling_utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.472771 watertap-0.8.0rc1/watertap/examples/chemistry/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1765 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/conftest.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1728 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test__fixtures.py
+--rw-r--r--   0 runner    (1001) docker     (123)    37938 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_chlorination.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3601 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_docs.py
+--rw-r--r--   0 runner    (1001) docker     (123)    46225 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_enrtl_water_pH.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3087 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_notebooks.py
+--rw-r--r--   0 runner    (1001) docker     (123)    97643 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_pH_dependent_solubility.py
+--rw-r--r--   0 runner    (1001) docker     (123)    25546 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_pure_water_pH.py
+--rw-r--r--   0 runner    (1001) docker     (123)    31795 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_recarbonation_process.py
+--rw-r--r--   0 runner    (1001) docker     (123)    79522 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_remineralization.py
+--rw-r--r--   0 runner    (1001) docker     (123)    50152 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_seawater_alkalinity.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23677 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_solids.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2141 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_tutorials.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21537 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_water_softening.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.472771 watertap-0.8.0rc1/watertap/examples/custom_model_demo/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4516 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/demo_simple_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4628 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/demo_simple_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8728 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/simple_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20534 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/simple_prop_pack.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.472771 watertap-0.8.0rc1/watertap/examples/custom_model_demo/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1701 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/tests/test_demo_simple_filter.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2158 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/custom_model_demo/tests/test_demo_simple_prop_pack.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.476771 watertap-0.8.0rc1/watertap/examples/edb/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7719 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/simple_acid.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8054 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/solid_precipitation_reactions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.476771 watertap-0.8.0rc1/watertap/examples/edb/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1765 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/tests/conftest.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1728 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/tests/test__fixtures.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8812 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/tests/test_edb_examples.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11395 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/the_basics.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6034 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/edb/vapor_liquid_equilibrium.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.476771 watertap-0.8.0rc1/watertap/examples/flowsheets/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.476771 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/
+--rw-r--r--   0 runner    (1001) docker     (123)    22084 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/RO_with_energy_recovery.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17848 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/default_configuration.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      402 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/mc_sweep_params.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     4169 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/monte_carlo_sampling_RO_ERD.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.476771 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15143 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_RO_with_energy_recovery_simulation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6271 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_monte_carlo_sampling_RO_ERD.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.476771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/
+--rw-r--r--   0 runner    (1001) docker     (123)    13480 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/ASM1_flowsheet.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18510 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15566 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet_noPHA.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5702 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm1_flowsheet.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6741 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2_noPHA_flowsheet.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7121 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2d_flowsheet.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/anaerobic_digestor/
+--rw-r--r--   0 runner    (1001) docker     (123)     4777 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/anaerobic_digestor/ADM1_flowsheet.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/anaerobic_digestor/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     5569 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/anaerobic_digestor/tests/test_adm1_flowsheet.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28357 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/case_study_basis.csv
+--rw-r--r--   0 runner    (1001) docker     (123)    61230 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/case_study_water_sources.csv
+--rw-r--r--   0 runner    (1001) docker     (123)    92257 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/constituent_removal.csv
+--rw-r--r--   0 runner    (1001) docker     (123)      872 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/electricity_costs.csv
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10747 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/municipal_treatment.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/test_municipal_treatment.py
+--rw-r--r--   0 runner    (1001) docker     (123)      838 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/plant_cost_indices.csv
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28810 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/seawater_RO_desalination.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8201 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/test_seawater_RO_desalination.py
+--rw-r--r--   0 runner    (1001) docker     (123)   141027 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/treatment_train_setup.csv
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.480771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.484771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/
+--rw-r--r--   0 runner    (1001) docker     (123)    10335 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion.py
+--rw-r--r--   0 runner    (1001) docker     (123)      943 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_global_costing.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     8939 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    14620 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.484771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3038 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/test_GLSD_anaerobic_digestion.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.484771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15637 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs.py
+--rw-r--r--   0 runner    (1001) docker     (123)      996 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_case_1575.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    24009 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    25511 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2169 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.484771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     5252 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_hrcs.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1450 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.484771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11791 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1257 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_case_1575.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    17320 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    23492 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2228 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.484771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4284 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_magprex.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1453 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.488771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18745 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1095 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_case_study.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2413 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14105 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    27256 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.488771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4438 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1422 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.488771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19985 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1044 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_case_study.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2539 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16642 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    31218 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.488771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6779 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1355 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.492771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12854 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration.py
+--rw-r--r--   0 runner    (1001) docker     (123)      942 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_global_costing.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    15983 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    22243 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2788 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.492771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2553 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_biomembrane_filtration.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1423 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.492771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8954 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1108 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_global_costing.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)   256190 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    24738 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)    27743 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_withRO.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7136 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.492771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3505 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4315 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination_withRO.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2421 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.496771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1150 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/case_1617.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    11471 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal.py
+--rw-r--r--   0 runner    (1001) docker     (123)    40318 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    18314 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2161 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.496771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3722 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_electrochemical_nutrient_removal.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1424 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.496771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17310 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_case_study.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     2278 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15737 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    24740 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.496771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/__int__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5199 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1278 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.496771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    27284 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1109 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_global_costing.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    98085 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    30525 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5789 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.496771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/flowsheets.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)     5082 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_metab.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1264 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.500771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1010 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_case_study.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    11585 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12629 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    16172 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.500771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     3387 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1390 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.500771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2888 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28265 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    18569 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11571 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process.py
+--rw-r--r--   0 runner    (1001) docker     (123)      942 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process_global.yaml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.500771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1273 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2555 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_suboxic_activated_sludge_process.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2637 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19872 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1059 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_global_costing.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    45638 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    21372 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1400 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4217 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_supercritical_sludge_to_gas.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3372 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    39593 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1701 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_global_costing.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    47718 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.png
+--rw-r--r--   0 runner    (1001) docker     (123)    39247 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1382 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2808 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_swine_wwt.py
+--rw-r--r--   0 runner    (1001) docker     (123)      943 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/wastewater_default_case_study.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)    16898 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/water_recovery.csv
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/crystallization/
+--rw-r--r--   0 runner    (1001) docker     (123)     9136 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/crystallization/sim_simple_crystallizer.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/
+--rw-r--r--   0 runner    (1001) docker     (123)    12360 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17291 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack_conc_recirc.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.504771 watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     8292 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6299 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack_conc_recirc.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.508771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.508771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5764 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1713 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_no_bypass.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4557 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_two_stage.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7576 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_single_stage.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3696 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3952 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening_two_stage.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3868 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_two_stage.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12582 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.508771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3673 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_flowsheets.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1597 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2398 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/chemical_flowsheet_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5903 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/electrolyte_scaling_utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.512771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.512771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    38223 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/posttreatment_ideal_naocl_chlorination_block.py
+--rw-r--r--   0 runner    (1001) docker     (123)    57278 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/pretreatment_stoich_softening_block.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.512771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5103 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_posttreatment.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4564 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_pretreatment.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8561 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/costing.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11751 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/desalination.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.512771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11721 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/full_example.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2461 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/test_full_example.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1433 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/feed_block.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9336 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/gypsum_saturation_index.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8855 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_NF.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7806 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_softening.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.512771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2938 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_desalination.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2185 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1840 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment_softening.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1744 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_translator_block.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4729 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/translator_block.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.516771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.516771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5333 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FTPx.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6975 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FpcTP.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6811 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/test_enrtl.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6360 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/property_models.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22435 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_ion_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20718 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_salt_prop_pack.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.516771 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6030 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2596 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_property_models.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5871 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_unit_models.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3820 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_0DRO.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3590 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_1DRO.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3065 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_ZONF.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6043 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_separator.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2186 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/util.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.516771 watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19717 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/ion_exchange_demo.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.516771 watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     8239 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/tests/test_ion_exchange_demo.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.516771 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    44440 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/lsrro.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12108 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/multi_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.520771 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1398 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/gha_divider.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.520771 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/
+--rw-r--r--   0 runner    (1001) docker     (123)     1797 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_125gL_35.0pct.csv
+--rw-r--r--   0 runner    (1001) docker     (123)     2086 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_35gL_70.0pct.csv
+--rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_70gL_55.00000000000001pct.csv
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.520771 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/
+--rw-r--r--   0 runner    (1001) docker     (123)     3093 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/1_stage_results_LSRRO.csv
+--rw-r--r--   0 runner    (1001) docker     (123)     4514 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/2_stage_results_LSRRO.csv
+--rw-r--r--   0 runner    (1001) docker     (123)     2257 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/test_lssro_multi_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4022 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/test_lssro_paper_analysis.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.520771 watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18245 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/oaro.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.520771 watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4595 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/tests/test_oaro.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.524771 watertap-0.8.0rc1/watertap/property_models/
+--rw-r--r--   0 runner    (1001) docker     (123)    30385 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/NDMA_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    37456 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/NaCl_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.524771 watertap-0.8.0rc1/watertap/property_models/activated_sludge/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15099 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm1_properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20059 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm1_reactions.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13642 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm2d_properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)    62673 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm2d_reactions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.524771 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14097 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm1_integration.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9998 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm1_reaction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9886 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm1_thermo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    37025 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm2d_reaction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9317 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm2d_thermo.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.524771 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16640 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/adm1_properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16620 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/adm1_properties_vapor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    68661 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/adm1_reactions.py
+--rw-r--r--   0 runner    (1001) docker     (123)    16901 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/modified_adm1_properties.py
+--rw-r--r--   0 runner    (1001) docker     (123)    99790 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/modified_adm1_reactions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.528771 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26663 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_adm1_reaction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8435 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_adm1_thermo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8299 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_adm1_vapor_thermo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    32185 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_reaction.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8721 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_thermo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    32179 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/coagulation_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    86270 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/cryst_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    88151 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/multicomp_aq_sol_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9878 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/seawater_ion_generic.py
+--rw-r--r--   0 runner    (1001) docker     (123)    67120 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/seawater_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21371 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/selective_oil_permeation_prop_pack.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.528771 watertap-0.8.0rc1/watertap/property_models/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26310 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/property_test_harness.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4903 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_NDMA_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10294 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_NaCl_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12834 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_coag_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    33362 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_cryst_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    52970 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_multicomp_aq_sol_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3155 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_seawater_ion_generic.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13379 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_seawater_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3925 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_selective_oil_permeation_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5382 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/tests/test_water_prop_pack.py
+--rw-r--r--   0 runner    (1001) docker     (123)    40486 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/property_models/water_prop_pack.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.528771 watertap-0.8.0rc1/watertap/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     1985 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tests/conftest.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.528771 watertap-0.8.0rc1/watertap/tools/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.532771 watertap-0.8.0rc1/watertap/tools/MPI/
+--rw-r--r--   0 runner    (1001) docker     (123)      842 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/MPI/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1519 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/MPI/dummy_mpi.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.532771 watertap-0.8.0rc1/watertap/tools/MPI/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/MPI/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1408 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/MPI/tests/test_dummy_mpi.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.532771 watertap-0.8.0rc1/watertap/tools/parameter_sweep/
+--rw-r--r--   0 runner    (1001) docker     (123)     1544 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    31948 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13682 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_differential.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26208 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_functions.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10260 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_reader.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11922 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_writer.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4146 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/sampling_types.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.532771 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    53080 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_differential_parameter_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)    73022 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_parameter_sweep.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6509 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_parameter_sweep_reader.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10551 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_parameter_sweep_writer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13849 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_recursive_parameter_sweep.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.532771 watertap-0.8.0rc1/watertap/ui/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/ui/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    24262 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/ui/fsapi.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.532771 watertap-0.8.0rc1/watertap/ui/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/ui/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3678 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/ui/tests/test_flowsheet_interfaces.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8936 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/ui/tests/test_fsapi.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.540771 watertap-0.8.0rc1/watertap/unit_models/
+--rw-r--r--   0 runner    (1001) docker     (123)     1410 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    36948 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/anaerobic_digestor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    45337 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/boron_removal.py
+--rw-r--r--   0 runner    (1001) docker     (123)    53363 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/coag_floc_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)    31814 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/crystallizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11538 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/cstr_injection.py
+--rw-r--r--   0 runner    (1001) docker     (123)    83173 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/electrodialysis_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)   121508 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/electrodialysis_1D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    57090 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/gac.py
+--rw-r--r--   0 runner    (1001) docker     (123)    49571 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/ion_exchange_0D.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.540771 watertap-0.8.0rc1/watertap/unit_models/mvc/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.540771 watertap-0.8.0rc1/watertap/unit_models/mvc/components/
+--rw-r--r--   0 runner    (1001) docker     (123)      831 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12104 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/complete_condenser.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14316 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/compressor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20308 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/evaporator.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1870 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/lmtd_chen_callback.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.540771 watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4253 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_chen_heat_exchanger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2763 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_complete_condenser.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3374 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_compressor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3800 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_evaporator.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.540771 watertap-0.8.0rc1/watertap/unit_models/mvc/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6165 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/mvc/tests/test_mvc.py
+--rw-r--r--   0 runner    (1001) docker     (123)    30585 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/nanofiltration_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    88829 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/nanofiltration_DSPMDE_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    28215 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/nanofiltration_ZO.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6468 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/osmotically_assisted_reverse_osmosis_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    35301 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/osmotically_assisted_reverse_osmosis_base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7464 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/pressure_changer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22935 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/pressure_exchanger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7260 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/reverse_osmosis_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9542 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/reverse_osmosis_1D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    32566 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/reverse_osmosis_base.py
+--rw-r--r--   0 runner    (1001) docker     (123)    24349 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/selective_oil_permeation.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.548771 watertap-0.8.0rc1/watertap/unit_models/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12652 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_anaerobic_digestor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    51916 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_boron_removal.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23642 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_coag_floc_model.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21468 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_crystallizer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10205 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_cstr_injection.py
+--rw-r--r--   0 runner    (1001) docker     (123)    65282 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_electrodialysis_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    87786 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_electrodialysis_1D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    35058 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_gac.py
+--rw-r--r--   0 runner    (1001) docker     (123)    31077 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_ion_exchange_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9781 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_nanofiltration_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    69254 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_nanofiltration_DSPMDE_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12741 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_nanofiltration_ZO.py
+--rw-r--r--   0 runner    (1001) docker     (123)    51244 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_osmotically_assisted_reverse_osmosis_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18825 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_pressure_changer.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21272 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_pressure_exchanger.py
+--rw-r--r--   0 runner    (1001) docker     (123)    37348 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_reverse_osmosis_0D.py
+--rw-r--r--   0 runner    (1001) docker     (123)    46588 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_reverse_osmosis_1D.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7985 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_selective_oil_permeation.py
+--rw-r--r--   0 runner    (1001) docker     (123)    42888 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/tests/test_uv_aop.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.548771 watertap-0.8.0rc1/watertap/unit_models/translators/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.548771 watertap-0.8.0rc1/watertap/unit_models/translators/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)    11692 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/translators/tests/test_translator_adm1_asm1.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18112 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/translators/tests/test_translator_asm1_adm1.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11399 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/translators/translator_adm1_asm1.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23643 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/translators/translator_asm1_adm1.py
+--rw-r--r--   0 runner    (1001) docker     (123)    43878 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/uv_aop.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.564771 watertap-0.8.0rc1/watertap/unit_models/zero_order/
+--rw-r--r--   0 runner    (1001) docker     (123)     5635 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/CANDOP_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5289 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1370 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/aeration_basin_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1366 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/air_flotation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1444 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/anaerobic_digestion_oxidation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3736 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/anaerobic_digestion_reactive_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4314 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/anaerobic_mbr_mec_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1522 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/aop_addition_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8742 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/autothermal_hydrothermal_liquefaction_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1506 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/backwash_solids_handling_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1421 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/bio_active_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1282 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/bioreactor_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1376 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/blending_reservoir_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7377 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/brine_concentrator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1351 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/buffer_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1400 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/cartridge_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4083 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/centrifuge_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5332 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/chemical_addition_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5980 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/chlorination_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5634 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/clarifier_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3126 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/cloth_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1350 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/co2_addition_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13559 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/coag_and_floc_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4495 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/cofermentation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2850 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/constructed_wetlands_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1383 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/conventional_activated_sludge_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1366 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/cooling_supply_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2214 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/cooling_tower_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1405 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/decarbonator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4655 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/deep_well_injection_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/dissolved_air_flotation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3154 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/dmbr_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/dual_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5780 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/electrochemical_nutrient_removal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21732 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/electrocoagulation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3594 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/electrodialysis_reversal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1434 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/energy_recovery_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8710 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/evaporation_pond_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/feed_water_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7171 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/feed_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5835 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/filter_press_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11492 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/fixed_bed_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9352 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/gac_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9802 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/gas_sparged_membrane_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3053 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/hrcs_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10570 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/hydrothermal_gasification_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1415 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/injection_well_disposal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1401 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/intrusion_mitigation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10612 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/ion_exchange_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7254 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/iron_and_manganese_removal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3830 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/landfill_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6288 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/mabr_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4362 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/magprex_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3497 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/mbr_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1384 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4087 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/membrane_evaporator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10946 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/metab_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4427 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/microbial_battery_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1366 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/microfiltration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1399 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/microscreen_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1600 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/municipal_drinking_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1380 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/municipal_wwtp_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7443 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/nanofiltration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5514 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/ozone_aop_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7489 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/ozone_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8689 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/peracetic_acid_disinfection_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3861 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/photothermal_membrane_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1384 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/primary_separator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5012 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/pump_electricity_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1317 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/pump_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1332 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/screen_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1396 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/secondary_treatment_wwtp_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9858 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/sedimentation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1364 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/settling_pond_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1349 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/sludge_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1315 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/smp_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1348 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/static_mixer_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4059 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/storage_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3224 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/struvite_classifier_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3876 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/suboxic_activated_sludge_process_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4980 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/supercritical_salt_precipitation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4214 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/surface_discharge_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1471 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/sw_onshore_intake_zo.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.596771 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8946 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_CANDOP_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13115 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_aeration_basin_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11074 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_air_flotation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12314 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_oxidation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12647 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_reactive_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10677 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_anaerobic_mbr_mec_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11235 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_autothermal_hydrothermal_liquefaction_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8198 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_backwash_solids_handling_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12328 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_bio_active_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5936 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_bioreactor_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5301 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_blending_reservoir_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13159 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_brine_concentrator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5054 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_buffer_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12369 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cartridge_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8032 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_centrifuge_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7891 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_chemical_addition_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11389 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_chlorination_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17956 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_clarifier_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7797 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cloth_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5649 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_co2_addition_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9539 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_coag_and_floc_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8067 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cofermentation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5214 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_constructed_wetlands_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8934 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_conventional_activated_sludge_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5198 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cooling_supply_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7629 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cooling_tower_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9458 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_decarbonator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6248 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_deep_well_injection_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12857 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_dissolved_air_flotation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8205 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_dmbr_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13198 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_dual_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8528 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_electrochemical_nutrient_removal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13880 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_electrocoagulation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7682 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_electrodialysis_reversal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_energy_recovery_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12799 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_evaporation_pond_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5090 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_feed_water_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5987 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_feed_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7762 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_filter_press_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17117 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_fixed_bed_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14023 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_gac_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9739 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_gas_sparged_membrane.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14504 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_hrcs_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10735 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_hydrothermal_gasification_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5353 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_injection_well_disposal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5307 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_intrusion_mitigation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14666 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ion_exchange_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9046 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_iron_and_manganese_removal_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6856 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_landfill_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8115 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_mabr_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13449 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_magprex_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20174 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_mbr_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12304 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7781 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_membrane_evaporator.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15097 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_metab_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10792 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_microbial_battery_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13745 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_microfiltration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11225 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_microscreen_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5029 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_municipal_drinking_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_municipal_wwtp_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18231 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_nanofiltration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15575 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ozone_aop_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13364 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ozone_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9812 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_peracetic_acid_disinfection_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6534 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_photothermal_membrane_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13377 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_primary_separator_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5807 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_pump_electricity_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5993 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_pump_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7656 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_screen_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9044 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_secondary_treatment_wwtp_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20840 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_sedimentation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11192 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_settling_pond_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13556 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_sludge_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5157 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_smp_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5402 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_static_mixer_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5705 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_storage_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5643 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_struvite_classifier_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7711 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_suboxic_activated_sludge_process_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8502 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_supercritical_salt_precipitation_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9888 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_surface_discharge.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5122 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_sw_onshore_intake_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4948 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_tramp_oil_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14777 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_tri_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14250 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ultra_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13104 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_uv_aop_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11478 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_uv_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13380 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_vfa_recovery_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7207 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_waiv_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7893 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_walnut_shell_filter_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9658 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_water_pumping_station_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10244 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_well_field_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2213 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_zo_documentation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tramp_oil_tank_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1397 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/tri_media_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1381 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/ultra_filtration_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4178 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/uv_aop_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4409 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/uv_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4478 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/vfa_recovery_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1382 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/waiv_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1393 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/walnut_shell_filter_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3606 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/water_pumping_station_zo.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4034 2023-04-05 16:04:24.000000 watertap-0.8.0rc1/watertap/unit_models/zero_order/well_field_zo.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 16:05:57.440770 watertap-0.8.0rc1/watertap.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2512 2023-04-05 16:05:57.000000 watertap-0.8.0rc1/watertap.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    51976 2023-04-05 16:05:57.000000 watertap-0.8.0rc1/watertap.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 16:05:57.000000 watertap-0.8.0rc1/watertap.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-04-05 16:05:57.000000 watertap-0.8.0rc1/watertap.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      336 2023-04-05 16:05:57.000000 watertap-0.8.0rc1/watertap.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-05 16:05:57.000000 watertap-0.8.0rc1/watertap.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.609373 watertap-0.8.0rc2/
++-rw-r--r--   0 runner    (1001) docker     (123)     2658 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/LICENSE.md
++-rw-r--r--   0 runner    (1001) docker     (123)     2512 2023-04-07 00:38:54.605373 watertap-0.8.0rc2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2306 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      626 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 00:38:54.609373 watertap-0.8.0rc2/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     8340 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.453363 watertap-0.8.0rc2/watertap/
++-rw-r--r--   0 runner    (1001) docker     (123)      894 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3003 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/conftest.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.457363 watertap-0.8.0rc2/watertap/core/
++-rw-r--r--   0 runner    (1001) docker     (123)     1552 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4140 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/control_volume_isothermal.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/initialization_mixin.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11167 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/membrane_channel0d.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10300 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/membrane_channel1d.py
++-rw-r--r--   0 runner    (1001) docker     (123)    38043 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/membrane_channel_base.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.457363 watertap-0.8.0rc2/watertap/core/plugins/
++-rw-r--r--   0 runner    (1001) docker     (123)      788 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/plugins/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9932 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/plugins/solvers.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.457363 watertap-0.8.0rc2/watertap/core/plugins/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)    10707 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/plugins/tests/test_solvers.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.461364 watertap-0.8.0rc2/watertap/core/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)      711 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_sidor_data.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     7428 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_wt_database.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16831 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_base.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20209 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_costing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6686 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_diso.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6435 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_electricity.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8709 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3610 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_pt.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8367 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_sido.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19742 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_sido_reactive.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6195 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/tests/test_zero_order_siso.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.461364 watertap-0.8.0rc2/watertap/core/util/
++-rw-r--r--   0 runner    (1001) docker     (123)      833 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5478 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/initialization.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.461364 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6223 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/infeasible.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5241 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/ipopt_initialization.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.461364 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3599 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/tests/test_infeasible.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4011 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/model_diagnostics/tests/test_ipopt_initialization.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2468 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/scaling.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.461364 watertap-0.8.0rc2/watertap/core/util/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5163 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/tests/test_initialization.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6474 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/util/tests/test_scaling.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7980 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/wt_database.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19506 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_base.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13455 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_costing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9016 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_diso.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3898 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_electricity.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12757 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5414 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_pt.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10322 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_sido.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17616 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_sido_reactive.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8385 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/core/zero_order_siso.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.461364 watertap-0.8.0rc2/watertap/costing/
++-rw-r--r--   0 runner    (1001) docker     (123)     1171 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.465364 watertap-0.8.0rc2/watertap/costing/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     3735 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/tests/test_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3761 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/tests/test_watertap_costing_package.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.465364 watertap-0.8.0rc2/watertap/costing/units/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9384 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/crystallizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6107 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/electrodialysis.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3268 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/energy_recovery_device.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15305 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/gac.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13865 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/ion_exchange.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5486 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/mixer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1618 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/nanofiltration.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3410 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/osmotically_assisted_reverse_osmosis.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1564 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/pressure_exchanger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4462 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/pump.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2838 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/reverse_osmosis.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.465364 watertap-0.8.0rc2/watertap/costing/units/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     3476 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/tests/test_configuration_errors.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3678 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/units/uv_aop.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4728 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/util.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14372 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/costing/watertap_costing_package.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.465364 watertap-0.8.0rc2/watertap/data/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.477365 watertap-0.8.0rc2/watertap/data/techno_economic/
++-rw-r--r--   0 runner    (1001) docker     (123)     1109 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/CANDO_P.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1411 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/aeration_basin.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      623 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/air_flotation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      776 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/anaerobic_digestion_oxidation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3419 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/anaerobic_digestion_reactive.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      842 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/anaerobic_mbr_mec.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2678 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/autothermal_hydrothermal_liquefaction.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      832 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/backwash_solids_handling.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      785 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/bio_active_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      757 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/bioreactor.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      329 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/blending_reservoir.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     9182 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/brine_concentrator.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      336 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/buffer_tank.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      826 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/cartridge_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/centrifuge.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4124 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/chemical_addition.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      919 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/chlorination.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1661 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/clarifier.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      630 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/cloth_media_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      334 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/co2_addition.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1810 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/coag_and_floc.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      933 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/cofermentation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4443 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/component_list.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      783 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/constructed_wetlands.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4367 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/conventional_activated_sludge.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      345 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/cooling_supply.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      710 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/cooling_tower.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      582 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/decarbonator.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      677 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/deep_well_injection.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2369 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/default_case_study.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1091 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/dissolved_air_flotation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1329 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/dmbr.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      859 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/dual_media_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1179 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/electrochemical_nutrient_removal.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2439 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/electrocoagulation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2094 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/electrodialysis_reversal.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      329 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/energy_recovery.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4877 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/evaporation_pond.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      335 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/feed_water_tank.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      792 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/filter_press.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4268 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/fixed_bed.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4259 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/gac.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/gas_sparged_membrane.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1311 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/hrcs.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3182 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/hydrothermal_gasification.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      344 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/injection_well_disposal.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/intrusion_mitigation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3269 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/ion_exchange.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1209 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/iron_and_manganese_removal.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      755 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/landfill.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1352 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/mabr.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/magprex.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3677 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/mbr.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1017 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/media_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      584 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/membrane_evaporator.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3064 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/metab.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      935 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/microbial_battery.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      935 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/microfiltration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      660 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/microscreen_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      342 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/municipal_drinking.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/municipal_wwtp.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3546 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/nanofiltration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1756 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/ozonation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3985 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/ozone_aop.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1202 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/peracetic_acid_disinfection.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      433 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/photothermal_membrane.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      897 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/primary_separator.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2123 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/pump.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      288 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/pump_electricity.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      980 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/screen.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4225 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/secondary_treatment_wwtp.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1580 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/sedimentation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      675 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/settling_pond.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      660 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/sludge_tank.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      333 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/smp.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/static_mixer.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      775 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/storage_tank.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      513 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/struvite_classifier.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1087 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/suboxic_activated_sludge_process.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      884 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/supercritical_salt_precipitation.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      974 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/surface_discharge.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      269 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/sw_onshore_intake.yaml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.477365 watertap-0.8.0rc2/watertap/data/techno_economic/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4905 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/tests/test_unit_parameter_files.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3081 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/tests/test_water_sources.py
++-rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/tramp_oil_tank.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/tri_media_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1013 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/ultra_filtration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1442 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/uv.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     3320 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/uv_aop.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      646 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/vfa_recovery.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/waiv.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      789 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/walnut_shell_filter.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1290 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/water_pumping_station.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    10420 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/water_sources.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      971 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/data/techno_economic/well_field.yaml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.477365 watertap-0.8.0rc2/watertap/edb/
++-rw-r--r--   0 runner    (1001) docker     (123)     3880 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15256 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/commands.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.477365 watertap-0.8.0rc2/watertap/edb/data/
++-rw-r--r--   0 runner    (1001) docker     (123)     2805 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/data/base.json
++-rw-r--r--   0 runner    (1001) docker     (123)    42830 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/data/component.json
++-rw-r--r--   0 runner    (1001) docker     (123)    18754 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/data/reaction.json
++-rw-r--r--   0 runner    (1001) docker     (123)    46417 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/data_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20038 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/db_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1766 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/error.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7826 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/schemas.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.481365 watertap-0.8.0rc2/watertap/edb/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    27346 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/data.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14481 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/test_commands.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19813 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/test_data_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6005 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/test_db_api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2535 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/test_edb.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1569 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/test_schemas.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1145 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/test_validate.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2402 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/tests/util.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4277 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/edb/validate.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.481365 watertap-0.8.0rc2/watertap/examples/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.481365 watertap-0.8.0rc2/watertap/examples/chemistry/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7138 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/chem_scaling_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.485365 watertap-0.8.0rc2/watertap/examples/chemistry/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1765 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/conftest.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1728 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test__fixtures.py
++-rw-r--r--   0 runner    (1001) docker     (123)    37938 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_chlorination.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3601 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_docs.py
++-rw-r--r--   0 runner    (1001) docker     (123)    46225 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_enrtl_water_pH.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3087 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_notebooks.py
++-rw-r--r--   0 runner    (1001) docker     (123)    97643 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_pH_dependent_solubility.py
++-rw-r--r--   0 runner    (1001) docker     (123)    25546 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_pure_water_pH.py
++-rw-r--r--   0 runner    (1001) docker     (123)    31795 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_recarbonation_process.py
++-rw-r--r--   0 runner    (1001) docker     (123)    79522 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_remineralization.py
++-rw-r--r--   0 runner    (1001) docker     (123)    50152 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_seawater_alkalinity.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23677 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_solids.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2141 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_tutorials.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21537 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_water_softening.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.485365 watertap-0.8.0rc2/watertap/examples/custom_model_demo/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4516 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/demo_simple_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4628 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/demo_simple_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8728 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/simple_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20534 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/simple_prop_pack.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.489365 watertap-0.8.0rc2/watertap/examples/custom_model_demo/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1701 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/tests/test_demo_simple_filter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2158 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/custom_model_demo/tests/test_demo_simple_prop_pack.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.489365 watertap-0.8.0rc2/watertap/examples/edb/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7719 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/simple_acid.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8054 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/solid_precipitation_reactions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.489365 watertap-0.8.0rc2/watertap/examples/edb/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1765 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/tests/conftest.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1728 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/tests/test__fixtures.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8812 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/tests/test_edb_examples.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11395 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/the_basics.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6034 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/edb/vapor_liquid_equilibrium.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.489365 watertap-0.8.0rc2/watertap/examples/flowsheets/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.489365 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/
++-rw-r--r--   0 runner    (1001) docker     (123)    22084 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/RO_with_energy_recovery.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17848 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/default_configuration.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      402 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/mc_sweep_params.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     4169 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/monte_carlo_sampling_RO_ERD.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.489365 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15143 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_RO_with_energy_recovery_simulation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6271 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_monte_carlo_sampling_RO_ERD.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.493366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.493366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/
++-rw-r--r--   0 runner    (1001) docker     (123)    13480 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/ASM1_flowsheet.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18510 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15566 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet_noPHA.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.493366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5702 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm1_flowsheet.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6741 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2_noPHA_flowsheet.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7121 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2d_flowsheet.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.493366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/anaerobic_digestor/
++-rw-r--r--   0 runner    (1001) docker     (123)     4777 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/anaerobic_digestor/ADM1_flowsheet.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.493366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/anaerobic_digestor/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     5569 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/anaerobic_digestor/tests/test_adm1_flowsheet.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28357 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/case_study_basis.csv
++-rw-r--r--   0 runner    (1001) docker     (123)    61230 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/case_study_water_sources.csv
++-rw-r--r--   0 runner    (1001) docker     (123)    92257 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/constituent_removal.csv
++-rw-r--r--   0 runner    (1001) docker     (123)      872 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/electricity_costs.csv
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10747 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/municipal_treatment.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2727 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/test_municipal_treatment.py
++-rw-r--r--   0 runner    (1001) docker     (123)      838 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/plant_cost_indices.csv
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28810 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/seawater_RO_desalination.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8201 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/test_seawater_RO_desalination.py
++-rw-r--r--   0 runner    (1001) docker     (123)   141027 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/treatment_train_setup.csv
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/
++-rw-r--r--   0 runner    (1001) docker     (123)    10335 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion.py
++-rw-r--r--   0 runner    (1001) docker     (123)      943 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_global_costing.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     8939 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    14620 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.497366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3038 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/test_GLSD_anaerobic_digestion.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.501366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15637 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      996 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_case_1575.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    24009 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    25511 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2169 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.501366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     5252 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_hrcs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1450 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.501366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11791 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1257 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_case_1575.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    17320 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    23492 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2228 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.501366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4284 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_magprex.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1453 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.505366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18745 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1095 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_case_study.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2413 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14105 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    27256 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.505366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4438 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1422 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.505366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19985 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1044 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_case_study.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2539 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16642 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    31218 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.505366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6779 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1355 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.505366 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12854 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration.py
++-rw-r--r--   0 runner    (1001) docker     (123)      942 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_global_costing.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    15983 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    22243 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2788 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.509367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2553 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_biomembrane_filtration.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1423 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.509367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8954 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1108 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_global_costing.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)   256190 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    24738 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)    27743 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_withRO.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7136 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.509367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3505 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4315 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination_withRO.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2421 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.513367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1150 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/case_1617.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    11471 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal.py
++-rw-r--r--   0 runner    (1001) docker     (123)    40318 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    18314 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2161 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.513367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3722 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_electrochemical_nutrient_removal.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1424 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.513367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17310 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_case_study.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2278 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15737 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    24740 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.513367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/__int__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5199 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1278 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.517367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    27284 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1109 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_global_costing.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    98085 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    30525 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5789 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.517367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/flowsheets.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     5082 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_metab.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1264 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.517367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1010 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_case_study.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    11585 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12629 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    16172 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.517367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     3387 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1390 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.517367 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2888 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28265 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    18569 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11571 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process.py
++-rw-r--r--   0 runner    (1001) docker     (123)      942 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process_global.yaml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.521368 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1273 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2555 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_suboxic_activated_sludge_process.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.521368 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2637 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19872 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1059 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_global_costing.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    45638 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    21372 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.521368 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1400 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4217 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_supercritical_sludge_to_gas.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.521368 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3372 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    39593 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1701 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_global_costing.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    47718 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.png
++-rw-r--r--   0 runner    (1001) docker     (123)    39247 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.525368 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1382 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2808 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_swine_wwt.py
++-rw-r--r--   0 runner    (1001) docker     (123)      943 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/wastewater_default_case_study.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)    16898 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/water_recovery.csv
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.525368 watertap-0.8.0rc2/watertap/examples/flowsheets/crystallization/
++-rw-r--r--   0 runner    (1001) docker     (123)     9136 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/crystallization/sim_simple_crystallizer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.525368 watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/
++-rw-r--r--   0 runner    (1001) docker     (123)    12360 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17291 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack_conc_recirc.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.525368 watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     8292 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6299 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack_conc_recirc.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.525368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.529368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5764 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1713 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_no_bypass.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4557 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_two_stage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7576 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_single_stage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3696 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3952 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening_two_stage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3868 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_two_stage.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12582 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.529368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3673 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_flowsheets.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1597 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2398 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/chemical_flowsheet_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5903 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/electrolyte_scaling_utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.529368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.529368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    38223 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/posttreatment_ideal_naocl_chlorination_block.py
++-rw-r--r--   0 runner    (1001) docker     (123)    57278 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/pretreatment_stoich_softening_block.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.529368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5103 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_posttreatment.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4564 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_pretreatment.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8561 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/costing.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11751 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/desalination.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.533368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11721 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/full_example.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2461 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/test_full_example.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1433 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/feed_block.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9336 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/gypsum_saturation_index.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8855 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_NF.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7806 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_softening.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.533368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2938 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_desalination.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2185 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1840 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment_softening.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1744 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_translator_block.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4729 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/translator_block.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.533368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.533368 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5333 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FTPx.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6975 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FpcTP.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6811 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/test_enrtl.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6360 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/property_models.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22435 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_ion_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20718 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_salt_prop_pack.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6030 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2596 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_property_models.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5871 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_unit_models.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3820 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_0DRO.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3590 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_1DRO.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3065 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_ZONF.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6043 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_separator.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2186 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/util.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19717 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/ion_exchange_demo.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     8239 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/tests/test_ion_exchange_demo.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    44440 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/lsrro.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12108 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/multi_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1398 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/gha_divider.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/
++-rw-r--r--   0 runner    (1001) docker     (123)     1797 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_125gL_35.0pct.csv
++-rw-r--r--   0 runner    (1001) docker     (123)     2086 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_35gL_70.0pct.csv
++-rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_70gL_55.00000000000001pct.csv
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/
++-rw-r--r--   0 runner    (1001) docker     (123)     3093 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/1_stage_results_LSRRO.csv
++-rw-r--r--   0 runner    (1001) docker     (123)     4514 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/2_stage_results_LSRRO.csv
++-rw-r--r--   0 runner    (1001) docker     (123)     2257 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/test_lssro_multi_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4022 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/test_lssro_paper_analysis.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.537369 watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18245 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/oaro.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.541369 watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4595 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/tests/test_oaro.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.541369 watertap-0.8.0rc2/watertap/property_models/
++-rw-r--r--   0 runner    (1001) docker     (123)    30385 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/NDMA_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    37456 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/NaCl_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.541369 watertap-0.8.0rc2/watertap/property_models/activated_sludge/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15099 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm1_properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20059 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm1_reactions.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13642 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm2d_properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)    62673 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm2d_reactions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.545369 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14097 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm1_integration.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9998 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm1_reaction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9886 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm1_thermo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    37025 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm2d_reaction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9317 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm2d_thermo.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.545369 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16640 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/adm1_properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16613 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/adm1_properties_vapor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    68661 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/adm1_reactions.py
++-rw-r--r--   0 runner    (1001) docker     (123)    16901 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/modified_adm1_properties.py
++-rw-r--r--   0 runner    (1001) docker     (123)    98654 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/modified_adm1_reactions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.545369 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26663 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_adm1_reaction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8435 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_adm1_thermo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8299 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_adm1_vapor_thermo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    34051 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_reaction.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8721 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_thermo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    32179 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/coagulation_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    86270 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/cryst_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    88151 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/multicomp_aq_sol_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9878 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/seawater_ion_generic.py
++-rw-r--r--   0 runner    (1001) docker     (123)    67120 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/seawater_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21371 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/selective_oil_permeation_prop_pack.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.549369 watertap-0.8.0rc2/watertap/property_models/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26310 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/property_test_harness.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4903 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_NDMA_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10294 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_NaCl_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12834 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_coag_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    33362 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_cryst_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    52970 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_multicomp_aq_sol_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3155 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_seawater_ion_generic.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13379 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_seawater_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3925 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_selective_oil_permeation_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5382 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/tests/test_water_prop_pack.py
++-rw-r--r--   0 runner    (1001) docker     (123)    40486 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/property_models/water_prop_pack.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.549369 watertap-0.8.0rc2/watertap/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     1985 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tests/conftest.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.549369 watertap-0.8.0rc2/watertap/tools/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.549369 watertap-0.8.0rc2/watertap/tools/MPI/
++-rw-r--r--   0 runner    (1001) docker     (123)      842 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/MPI/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1519 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/MPI/dummy_mpi.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.549369 watertap-0.8.0rc2/watertap/tools/MPI/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/MPI/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1408 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/MPI/tests/test_dummy_mpi.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.553370 watertap-0.8.0rc2/watertap/tools/parameter_sweep/
++-rw-r--r--   0 runner    (1001) docker     (123)     1544 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    31948 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13682 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_differential.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26208 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_functions.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10260 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_reader.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11922 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_writer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4146 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/sampling_types.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.553370 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    53080 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_differential_parameter_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)    73022 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_parameter_sweep.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6509 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_parameter_sweep_reader.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10551 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_parameter_sweep_writer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13849 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_recursive_parameter_sweep.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.553370 watertap-0.8.0rc2/watertap/ui/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/ui/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    24262 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/ui/fsapi.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.553370 watertap-0.8.0rc2/watertap/ui/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/ui/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3678 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/ui/tests/test_flowsheet_interfaces.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8936 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/ui/tests/test_fsapi.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.561370 watertap-0.8.0rc2/watertap/unit_models/
++-rw-r--r--   0 runner    (1001) docker     (123)     1410 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    36948 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/anaerobic_digestor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    45337 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/boron_removal.py
++-rw-r--r--   0 runner    (1001) docker     (123)    53363 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/coag_floc_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)    31814 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/crystallizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11538 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/cstr_injection.py
++-rw-r--r--   0 runner    (1001) docker     (123)    83173 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/electrodialysis_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)   121508 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/electrodialysis_1D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    57090 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/gac.py
++-rw-r--r--   0 runner    (1001) docker     (123)    49571 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/ion_exchange_0D.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.561370 watertap-0.8.0rc2/watertap/unit_models/mvc/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.561370 watertap-0.8.0rc2/watertap/unit_models/mvc/components/
++-rw-r--r--   0 runner    (1001) docker     (123)      831 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12104 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/complete_condenser.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14316 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/compressor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20308 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/evaporator.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1870 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/lmtd_chen_callback.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.561370 watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4253 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_chen_heat_exchanger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2763 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_complete_condenser.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3374 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_compressor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3800 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_evaporator.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.561370 watertap-0.8.0rc2/watertap/unit_models/mvc/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6165 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/mvc/tests/test_mvc.py
++-rw-r--r--   0 runner    (1001) docker     (123)    30585 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/nanofiltration_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    88829 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/nanofiltration_DSPMDE_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    28215 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/nanofiltration_ZO.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6468 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/osmotically_assisted_reverse_osmosis_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    35301 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/osmotically_assisted_reverse_osmosis_base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7464 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/pressure_changer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22935 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/pressure_exchanger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7260 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/reverse_osmosis_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9542 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/reverse_osmosis_1D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    32566 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/reverse_osmosis_base.py
++-rw-r--r--   0 runner    (1001) docker     (123)    24349 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/selective_oil_permeation.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.569371 watertap-0.8.0rc2/watertap/unit_models/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12652 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_anaerobic_digestor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    51916 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_boron_removal.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23642 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_coag_floc_model.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21468 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_crystallizer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10205 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_cstr_injection.py
++-rw-r--r--   0 runner    (1001) docker     (123)    65282 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_electrodialysis_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    87786 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_electrodialysis_1D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    35058 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_gac.py
++-rw-r--r--   0 runner    (1001) docker     (123)    31077 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_ion_exchange_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9781 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_nanofiltration_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    69254 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_nanofiltration_DSPMDE_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12741 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_nanofiltration_ZO.py
++-rw-r--r--   0 runner    (1001) docker     (123)    51244 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_osmotically_assisted_reverse_osmosis_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18825 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_pressure_changer.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21272 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_pressure_exchanger.py
++-rw-r--r--   0 runner    (1001) docker     (123)    37348 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_reverse_osmosis_0D.py
++-rw-r--r--   0 runner    (1001) docker     (123)    46588 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_reverse_osmosis_1D.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7985 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_selective_oil_permeation.py
++-rw-r--r--   0 runner    (1001) docker     (123)    42888 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/tests/test_uv_aop.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.569371 watertap-0.8.0rc2/watertap/unit_models/translators/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.569371 watertap-0.8.0rc2/watertap/unit_models/translators/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)    11692 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/translators/tests/test_translator_adm1_asm1.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18112 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/translators/tests/test_translator_asm1_adm1.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11399 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/translators/translator_adm1_asm1.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23643 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/translators/translator_asm1_adm1.py
++-rw-r--r--   0 runner    (1001) docker     (123)    43878 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/uv_aop.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.585372 watertap-0.8.0rc2/watertap/unit_models/zero_order/
++-rw-r--r--   0 runner    (1001) docker     (123)     5635 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/CANDOP_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5289 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1370 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/aeration_basin_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1366 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/air_flotation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1444 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/anaerobic_digestion_oxidation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3736 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/anaerobic_digestion_reactive_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4314 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/anaerobic_mbr_mec_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1522 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/aop_addition_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8742 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/autothermal_hydrothermal_liquefaction_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1506 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/backwash_solids_handling_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1421 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/bio_active_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1282 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/bioreactor_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1376 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/blending_reservoir_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7377 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/brine_concentrator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1351 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/buffer_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1400 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/cartridge_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4083 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/centrifuge_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5332 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/chemical_addition_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5980 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/chlorination_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5634 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/clarifier_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3126 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/cloth_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1350 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/co2_addition_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13559 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/coag_and_floc_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4495 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/cofermentation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2850 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/constructed_wetlands_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1383 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/conventional_activated_sludge_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1366 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/cooling_supply_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2214 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/cooling_tower_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1405 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/decarbonator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4655 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/deep_well_injection_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/dissolved_air_flotation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3154 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/dmbr_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1402 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/dual_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5780 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/electrochemical_nutrient_removal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21732 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/electrocoagulation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3594 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/electrodialysis_reversal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1434 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/energy_recovery_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8710 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/evaporation_pond_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/feed_water_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7171 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/feed_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5835 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/filter_press_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11492 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/fixed_bed_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9352 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/gac_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9802 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/gas_sparged_membrane_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3053 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/hrcs_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10570 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/hydrothermal_gasification_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1415 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/injection_well_disposal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1401 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/intrusion_mitigation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10612 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/ion_exchange_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7254 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/iron_and_manganese_removal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3830 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/landfill_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6288 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/mabr_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4362 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/magprex_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3497 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/mbr_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1384 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4087 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/membrane_evaporator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10946 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/metab_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4427 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/microbial_battery_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1366 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/microfiltration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1399 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/microscreen_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1600 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/municipal_drinking_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1380 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/municipal_wwtp_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7443 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/nanofiltration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5514 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/ozone_aop_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7489 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/ozone_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8689 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/peracetic_acid_disinfection_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3861 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/photothermal_membrane_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1384 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/primary_separator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5012 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/pump_electricity_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1317 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/pump_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1332 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/screen_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1396 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/secondary_treatment_wwtp_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9858 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/sedimentation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1364 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/settling_pond_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1349 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/sludge_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1315 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/smp_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1348 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/static_mixer_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4059 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/storage_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3224 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/struvite_classifier_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3876 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/suboxic_activated_sludge_process_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4980 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/supercritical_salt_precipitation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4214 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/surface_discharge_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1471 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/sw_onshore_intake_zo.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.605373 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8946 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_CANDOP_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13115 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_aeration_basin_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11074 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_air_flotation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12314 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_oxidation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12647 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_reactive_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10677 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_anaerobic_mbr_mec_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11235 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_autothermal_hydrothermal_liquefaction_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8198 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_backwash_solids_handling_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12328 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_bio_active_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5936 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_bioreactor_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5301 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_blending_reservoir_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13159 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_brine_concentrator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5054 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_buffer_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12369 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cartridge_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8032 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_centrifuge_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7891 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_chemical_addition_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11389 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_chlorination_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17956 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_clarifier_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7797 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cloth_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5649 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_co2_addition_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9539 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_coag_and_floc_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8067 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cofermentation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5214 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_constructed_wetlands_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8934 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_conventional_activated_sludge_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5198 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cooling_supply_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7629 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cooling_tower_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9458 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_decarbonator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6248 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_deep_well_injection_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12857 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_dissolved_air_flotation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8205 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_dmbr_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13198 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_dual_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8528 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_electrochemical_nutrient_removal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13880 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_electrocoagulation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7682 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_electrodialysis_reversal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5325 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_energy_recovery_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12799 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_evaporation_pond_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5090 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_feed_water_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5987 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_feed_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7762 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_filter_press_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17117 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_fixed_bed_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14023 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_gac_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9739 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_gas_sparged_membrane.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14504 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_hrcs_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10735 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_hydrothermal_gasification_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5353 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_injection_well_disposal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5307 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_intrusion_mitigation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14666 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ion_exchange_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9046 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_iron_and_manganese_removal_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6856 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_landfill_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8115 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_mabr_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13449 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_magprex_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20174 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_mbr_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12304 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7781 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_membrane_evaporator.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15097 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_metab_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10792 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_microbial_battery_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13745 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_microfiltration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11225 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_microscreen_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5029 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_municipal_drinking_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5340 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_municipal_wwtp_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18231 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_nanofiltration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15575 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ozone_aop_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13364 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ozone_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9812 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_peracetic_acid_disinfection_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6534 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_photothermal_membrane_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13377 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_primary_separator_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5807 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_pump_electricity_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5993 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_pump_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7656 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_screen_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9044 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_secondary_treatment_wwtp_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20840 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_sedimentation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11192 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_settling_pond_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13556 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_sludge_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5157 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_smp_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5402 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_static_mixer_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5705 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_storage_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5643 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_struvite_classifier_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7711 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_suboxic_activated_sludge_process_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8502 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_supercritical_salt_precipitation_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9888 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_surface_discharge.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5122 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_sw_onshore_intake_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4948 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_tramp_oil_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14777 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_tri_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14250 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ultra_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13104 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_uv_aop_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11478 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_uv_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13380 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_vfa_recovery_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7207 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_waiv_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7893 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_walnut_shell_filter_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9658 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_water_pumping_station_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10244 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_well_field_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2213 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_zo_documentation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tramp_oil_tank_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1397 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/tri_media_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1381 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/ultra_filtration_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4178 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/uv_aop_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4409 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/uv_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4478 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/vfa_recovery_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1382 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/waiv_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1393 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/walnut_shell_filter_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3606 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/water_pumping_station_zo.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4034 2023-04-07 00:37:31.000000 watertap-0.8.0rc2/watertap/unit_models/zero_order/well_field_zo.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:38:54.453363 watertap-0.8.0rc2/watertap.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2512 2023-04-07 00:38:54.000000 watertap-0.8.0rc2/watertap.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    51976 2023-04-07 00:38:54.000000 watertap-0.8.0rc2/watertap.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 00:38:54.000000 watertap-0.8.0rc2/watertap.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)     1864 2023-04-07 00:38:54.000000 watertap-0.8.0rc2/watertap.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      336 2023-04-07 00:38:54.000000 watertap-0.8.0rc2/watertap.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-07 00:38:54.000000 watertap-0.8.0rc2/watertap.egg-info/top_level.txt
+```
+
+### Comparing `watertap-0.8.0rc1/LICENSE.md` & `watertap-0.8.0rc2/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/PKG-INFO` & `watertap-0.8.0rc2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: watertap
+-Version: 0.8.0rc1
++Version: 0.8.0rc2
+ Summary: WaterTAP modeling library
+ Home-page: https://github.com/watertap-org/watertap
+ Author: NAWI team
+ License: BSD
+ Keywords: water systems,chemical engineering,process modeling,filtration,desalination,nawi
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: End Users/Desktop
+```
+
+### Comparing `watertap-0.8.0rc1/README.md` & `watertap-0.8.0rc2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/pyproject.toml` & `watertap-0.8.0rc2/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/setup.py` & `watertap-0.8.0rc2/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -47,15 +47,15 @@
+ 
+ # Arguments marked as "Required" below must be included for upload to PyPI.
+ # Fields marked as "Optional" may be commented out.
+ 
+ setup(
+     name="watertap",
+     url="https://github.com/watertap-org/watertap",
+-    version="0.8.0rc1",
++    version="0.8.0rc2",
+     description="WaterTAP modeling library",
+     long_description=long_description,
+     long_description_content_type="text/plain",
+     author="NAWI team",
+     license="BSD",
+     # Classifiers help users find your project by categorizing it.
+     #
+```
+
+### Comparing `watertap-0.8.0rc1/watertap/__init__.py` & `watertap-0.8.0rc2/watertap/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/conftest.py` & `watertap-0.8.0rc2/watertap/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/__init__.py` & `watertap-0.8.0rc2/watertap/core/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/control_volume_isothermal.py` & `watertap-0.8.0rc2/watertap/core/control_volume_isothermal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/initialization_mixin.py` & `watertap-0.8.0rc2/watertap/core/initialization_mixin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/membrane_channel0d.py` & `watertap-0.8.0rc2/watertap/core/membrane_channel0d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/membrane_channel1d.py` & `watertap-0.8.0rc2/watertap/core/membrane_channel1d.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/membrane_channel_base.py` & `watertap-0.8.0rc2/watertap/core/membrane_channel_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/plugins/__init__.py` & `watertap-0.8.0rc2/watertap/core/plugins/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/plugins/solvers.py` & `watertap-0.8.0rc2/watertap/core/plugins/solvers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/plugins/tests/test_solvers.py` & `watertap-0.8.0rc2/watertap/core/plugins/tests/test_solvers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_sidor_data.yaml` & `watertap-0.8.0rc2/watertap/core/tests/test_sidor_data.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_wt_database.py` & `watertap-0.8.0rc2/watertap/core/tests/test_wt_database.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_base.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_costing.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_costing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_diso.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_diso.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_electricity.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_electricity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_properties.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_pt.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_pt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_sido.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_sido.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_sido_reactive.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_sido_reactive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/tests/test_zero_order_siso.py` & `watertap-0.8.0rc2/watertap/core/tests/test_zero_order_siso.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/__init__.py` & `watertap-0.8.0rc2/watertap/core/util/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/initialization.py` & `watertap-0.8.0rc2/watertap/core/util/initialization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/model_diagnostics/infeasible.py` & `watertap-0.8.0rc2/watertap/core/util/model_diagnostics/infeasible.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/model_diagnostics/ipopt_initialization.py` & `watertap-0.8.0rc2/watertap/core/util/model_diagnostics/ipopt_initialization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/model_diagnostics/tests/test_infeasible.py` & `watertap-0.8.0rc2/watertap/core/util/model_diagnostics/tests/test_infeasible.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/model_diagnostics/tests/test_ipopt_initialization.py` & `watertap-0.8.0rc2/watertap/core/util/model_diagnostics/tests/test_ipopt_initialization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/scaling.py` & `watertap-0.8.0rc2/watertap/core/util/scaling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/tests/test_initialization.py` & `watertap-0.8.0rc2/watertap/core/util/tests/test_initialization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/util/tests/test_scaling.py` & `watertap-0.8.0rc2/watertap/core/util/tests/test_scaling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/wt_database.py` & `watertap-0.8.0rc2/watertap/core/wt_database.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_base.py` & `watertap-0.8.0rc2/watertap/core/zero_order_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_costing.py` & `watertap-0.8.0rc2/watertap/core/zero_order_costing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_diso.py` & `watertap-0.8.0rc2/watertap/core/zero_order_diso.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_electricity.py` & `watertap-0.8.0rc2/watertap/core/zero_order_electricity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_properties.py` & `watertap-0.8.0rc2/watertap/core/zero_order_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_pt.py` & `watertap-0.8.0rc2/watertap/core/zero_order_pt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_sido.py` & `watertap-0.8.0rc2/watertap/core/zero_order_sido.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_sido_reactive.py` & `watertap-0.8.0rc2/watertap/core/zero_order_sido_reactive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/core/zero_order_siso.py` & `watertap-0.8.0rc2/watertap/core/zero_order_siso.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/__init__.py` & `watertap-0.8.0rc2/watertap/costing/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/tests/test_util.py` & `watertap-0.8.0rc2/watertap/costing/tests/test_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/tests/test_watertap_costing_package.py` & `watertap-0.8.0rc2/watertap/costing/tests/test_watertap_costing_package.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/crystallizer.py` & `watertap-0.8.0rc2/watertap/costing/units/crystallizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/electrodialysis.py` & `watertap-0.8.0rc2/watertap/costing/units/electrodialysis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/energy_recovery_device.py` & `watertap-0.8.0rc2/watertap/costing/units/energy_recovery_device.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/gac.py` & `watertap-0.8.0rc2/watertap/costing/units/gac.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/ion_exchange.py` & `watertap-0.8.0rc2/watertap/costing/units/ion_exchange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/mixer.py` & `watertap-0.8.0rc2/watertap/costing/units/mixer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/nanofiltration.py` & `watertap-0.8.0rc2/watertap/costing/units/nanofiltration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/osmotically_assisted_reverse_osmosis.py` & `watertap-0.8.0rc2/watertap/costing/units/osmotically_assisted_reverse_osmosis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/pressure_exchanger.py` & `watertap-0.8.0rc2/watertap/costing/units/pressure_exchanger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/pump.py` & `watertap-0.8.0rc2/watertap/costing/units/pump.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/reverse_osmosis.py` & `watertap-0.8.0rc2/watertap/costing/units/reverse_osmosis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/tests/test_configuration_errors.py` & `watertap-0.8.0rc2/watertap/costing/units/tests/test_configuration_errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/units/uv_aop.py` & `watertap-0.8.0rc2/watertap/costing/units/uv_aop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/util.py` & `watertap-0.8.0rc2/watertap/costing/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/costing/watertap_costing_package.py` & `watertap-0.8.0rc2/watertap/costing/watertap_costing_package.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/CANDO_P.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/CANDO_P.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/aeration_basin.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/aeration_basin.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/air_flotation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/air_flotation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/anaerobic_digestion_oxidation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/anaerobic_digestion_oxidation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/anaerobic_digestion_reactive.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/anaerobic_digestion_reactive.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/anaerobic_mbr_mec.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/anaerobic_mbr_mec.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/autothermal_hydrothermal_liquefaction.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/autothermal_hydrothermal_liquefaction.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/backwash_solids_handling.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/backwash_solids_handling.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/bio_active_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/bio_active_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/bioreactor.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/bioreactor.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/brine_concentrator.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/brine_concentrator.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/cartridge_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/cartridge_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/centrifuge.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/centrifuge.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/chemical_addition.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/chemical_addition.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/chlorination.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/chlorination.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/clarifier.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/clarifier.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/cloth_media_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/cloth_media_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/coag_and_floc.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/coag_and_floc.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/cofermentation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/cofermentation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/component_list.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/component_list.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/constructed_wetlands.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/constructed_wetlands.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/conventional_activated_sludge.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/conventional_activated_sludge.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/cooling_tower.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/cooling_tower.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/decarbonator.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/decarbonator.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/deep_well_injection.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/deep_well_injection.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/default_case_study.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/default_case_study.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/dissolved_air_flotation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/dissolved_air_flotation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/dmbr.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/dmbr.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/dual_media_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/dual_media_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/electrochemical_nutrient_removal.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/electrochemical_nutrient_removal.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/electrocoagulation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/electrocoagulation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/electrodialysis_reversal.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/electrodialysis_reversal.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/evaporation_pond.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/evaporation_pond.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/filter_press.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/filter_press.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/fixed_bed.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/fixed_bed.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/gac.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/gac.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/hrcs.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/hrcs.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/hydrothermal_gasification.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/hydrothermal_gasification.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/ion_exchange.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/ion_exchange.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/iron_and_manganese_removal.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/iron_and_manganese_removal.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/landfill.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/landfill.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/mabr.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/mabr.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/magprex.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/magprex.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/mbr.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/mbr.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/media_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/media_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/membrane_evaporator.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/membrane_evaporator.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/metab.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/metab.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/microbial_battery.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/microbial_battery.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/microfiltration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/microfiltration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/microscreen_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/microscreen_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/nanofiltration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/nanofiltration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/ozonation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/ozonation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/ozone_aop.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/ozone_aop.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/peracetic_acid_disinfection.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/peracetic_acid_disinfection.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/primary_separator.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/primary_separator.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/pump.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/pump.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/screen.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/screen.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/secondary_treatment_wwtp.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/secondary_treatment_wwtp.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/sedimentation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/sedimentation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/settling_pond.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/settling_pond.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/sludge_tank.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/sludge_tank.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/storage_tank.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/storage_tank.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/struvite_classifier.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/struvite_classifier.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/suboxic_activated_sludge_process.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/suboxic_activated_sludge_process.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/supercritical_salt_precipitation.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/supercritical_salt_precipitation.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/surface_discharge.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/surface_discharge.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/tests/test_unit_parameter_files.py` & `watertap-0.8.0rc2/watertap/data/techno_economic/tests/test_unit_parameter_files.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/tests/test_water_sources.py` & `watertap-0.8.0rc2/watertap/data/techno_economic/tests/test_water_sources.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/tri_media_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/tri_media_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/ultra_filtration.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/ultra_filtration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/uv.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/uv.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/uv_aop.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/uv_aop.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/vfa_recovery.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/vfa_recovery.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/waiv.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/waiv.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/walnut_shell_filter.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/walnut_shell_filter.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/water_pumping_station.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/water_pumping_station.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/water_sources.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/water_sources.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/data/techno_economic/well_field.yaml` & `watertap-0.8.0rc2/watertap/data/techno_economic/well_field.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/__init__.py` & `watertap-0.8.0rc2/watertap/edb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/commands.py` & `watertap-0.8.0rc2/watertap/edb/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/data/base.json` & `watertap-0.8.0rc2/watertap/edb/data/base.json`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/data/component.json` & `watertap-0.8.0rc2/watertap/edb/data/component.json`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/data/reaction.json` & `watertap-0.8.0rc2/watertap/edb/data/reaction.json`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/data_model.py` & `watertap-0.8.0rc2/watertap/edb/data_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/db_api.py` & `watertap-0.8.0rc2/watertap/edb/db_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/error.py` & `watertap-0.8.0rc2/watertap/edb/error.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/schemas.py` & `watertap-0.8.0rc2/watertap/edb/schemas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/data.py` & `watertap-0.8.0rc2/watertap/edb/tests/data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/test_commands.py` & `watertap-0.8.0rc2/watertap/edb/tests/test_commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/test_data_model.py` & `watertap-0.8.0rc2/watertap/edb/tests/test_data_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/test_db_api.py` & `watertap-0.8.0rc2/watertap/edb/tests/test_db_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/test_edb.py` & `watertap-0.8.0rc2/watertap/edb/tests/test_edb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/test_schemas.py` & `watertap-0.8.0rc2/watertap/edb/tests/test_schemas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/test_validate.py` & `watertap-0.8.0rc2/watertap/edb/tests/test_validate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/tests/util.py` & `watertap-0.8.0rc2/watertap/edb/tests/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/edb/validate.py` & `watertap-0.8.0rc2/watertap/edb/validate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/chem_scaling_utils.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/chem_scaling_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/conftest.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test__fixtures.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test__fixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_chlorination.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_chlorination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_docs.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_docs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_enrtl_water_pH.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_enrtl_water_pH.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_notebooks.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_notebooks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_pH_dependent_solubility.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_pH_dependent_solubility.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_pure_water_pH.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_pure_water_pH.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_recarbonation_process.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_recarbonation_process.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_remineralization.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_remineralization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_seawater_alkalinity.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_seawater_alkalinity.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_solids.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_solids.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_tutorials.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_tutorials.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/chemistry/tests/test_water_softening.py` & `watertap-0.8.0rc2/watertap/examples/chemistry/tests/test_water_softening.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/custom_model_demo/demo_simple_filter.py` & `watertap-0.8.0rc2/watertap/examples/custom_model_demo/demo_simple_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/custom_model_demo/demo_simple_prop_pack.py` & `watertap-0.8.0rc2/watertap/examples/custom_model_demo/demo_simple_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/custom_model_demo/simple_filter.py` & `watertap-0.8.0rc2/watertap/examples/custom_model_demo/simple_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/custom_model_demo/simple_prop_pack.py` & `watertap-0.8.0rc2/watertap/examples/custom_model_demo/simple_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/custom_model_demo/tests/test_demo_simple_filter.py` & `watertap-0.8.0rc2/watertap/examples/custom_model_demo/tests/test_demo_simple_filter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/custom_model_demo/tests/test_demo_simple_prop_pack.py` & `watertap-0.8.0rc2/watertap/examples/custom_model_demo/tests/test_demo_simple_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/simple_acid.py` & `watertap-0.8.0rc2/watertap/examples/edb/simple_acid.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/solid_precipitation_reactions.py` & `watertap-0.8.0rc2/watertap/examples/edb/solid_precipitation_reactions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/tests/conftest.py` & `watertap-0.8.0rc2/watertap/examples/edb/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/tests/test__fixtures.py` & `watertap-0.8.0rc2/watertap/examples/edb/tests/test__fixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/tests/test_edb_examples.py` & `watertap-0.8.0rc2/watertap/examples/edb/tests/test_edb_examples.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/the_basics.py` & `watertap-0.8.0rc2/watertap/examples/edb/the_basics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/edb/vapor_liquid_equilibrium.py` & `watertap-0.8.0rc2/watertap/examples/edb/vapor_liquid_equilibrium.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/RO_with_energy_recovery.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/RO_with_energy_recovery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/default_configuration.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/default_configuration.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/monte_carlo_sampling_RO_ERD.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/monte_carlo_sampling_RO_ERD.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_RO_with_energy_recovery_simulation.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_RO_with_energy_recovery_simulation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_monte_carlo_sampling_RO_ERD.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/RO_with_energy_recovery/tests/test_monte_carlo_sampling_RO_ERD.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/ASM1_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/ASM1_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet_noPHA.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/ASM2D_flowsheet_noPHA.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm1_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm1_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2_noPHA_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2_noPHA_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2d_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/activated_sludge/tests/test_asm2d_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/anaerobic_digestor/ADM1_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/anaerobic_digestor/ADM1_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/anaerobic_digestor/tests/test_adm1_flowsheet.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/anaerobic_digestor/tests/test_adm1_flowsheet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/case_study_basis.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/case_study_basis.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/case_study_water_sources.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/case_study_water_sources.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/constituent_removal.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/constituent_removal.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/electricity_costs.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/electricity_costs.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/municipal_treatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/municipal_treatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/test_municipal_treatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/municipal_treatment/tests/test_municipal_treatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/plant_cost_indices.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/plant_cost_indices.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/seawater_RO_desalination.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/seawater_RO_desalination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/test_seawater_RO_desalination.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/seawater_RO_desalination/tests/test_seawater_RO_desalination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/treatment_train_setup.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/treatment_train_setup.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_global_costing.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_global_costing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/GLSD_anaerobic_digestion_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/test_GLSD_anaerobic_digestion.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/GLSD_anaerobic_digester/tests/test_GLSD_anaerobic_digestion.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_case_1575.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_case_1575.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/hrcs_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_hrcs.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_hrcs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_hrcs/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_case_1575.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_case_1575.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/magprex_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_magprex.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_magprex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1575_magprex/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_case_study.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_case_study.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/amo_1595_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1595_photothermal_membrane_candoP/tests/test_amo_1595_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_case_study.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_case_study.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/amo_1690_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/amo_1690/tests/test_amo_1690_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_global_costing.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_global_costing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/biomembrane_filtration_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_biomembrane_filtration.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_biomembrane_filtration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/biomembrane_filtration/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_global_costing.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_global_costing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_withRO.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_desalination_withRO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/dye_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination_withRO.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_desalination_withRO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/dye_desalination/tests/test_dye_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/case_1617.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/case_1617.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/electrochemical_nutrient_removal_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_electrochemical_nutrient_removal.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_electrochemical_nutrient_removal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/electrochemical_nutrient_removal/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_case_study.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_case_study.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/groundwater_treatment_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/groundwater_treatment/tests/test_groundwater_treatment_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_global_costing.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_global_costing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/metab_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_metab.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_metab.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/metab/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_case_study.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_case_study.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/peracetic_acid_disinfection_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/peracetic_acid_disinfection/tests/test_peracetic_acid_disinfection_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_ASM_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process_global.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/suboxic_activated_sludge_process_global.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_suboxic_activated_sludge_process.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/suboxic_activated_sludge_process/tests/test_suboxic_activated_sludge_process.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_global_costing.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_global_costing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/supercritical_sludge_to_gas_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_supercritical_sludge_to_gas.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/supercritical_sludge_to_gas/tests/test_supercritical_sludge_to_gas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_global_costing.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_global_costing.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.png` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/swine_wwt_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_swine_wwt.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/swine_wwt/tests/test_swine_wwt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/wastewater_default_case_study.yaml` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/wastewater_resource_recovery/wastewater_default_case_study.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/case_studies/water_recovery.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/case_studies/water_recovery.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/crystallization/sim_simple_crystallizer.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/crystallization/sim_simple_crystallizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack_conc_recirc.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/electrodialysis_1stack_conc_recirc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack_conc_recirc.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/electrodialysis/tests/test_electrodialysis_1stack_conc_recirc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_no_bypass.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_no_bypass.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_two_stage.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_NF_two_stage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_single_stage.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_single_stage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening_two_stage.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_softening_two_stage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_two_stage.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/flowsheet_two_stage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_flowsheets.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_flowsheets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/analysis/tests/test_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/chemical_flowsheet_util.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/chemical_flowsheet_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/electrolyte_scaling_utils.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/electrolyte_scaling_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/posttreatment_ideal_naocl_chlorination_block.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/posttreatment_ideal_naocl_chlorination_block.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/pretreatment_stoich_softening_block.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/pretreatment_stoich_softening_block.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_posttreatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_posttreatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_pretreatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/chemistry/tests/test_pretreatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/costing.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/costing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/desalination.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/desalination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/full_example.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/full_example.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/test_full_example.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/examples/test_full_example.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/feed_block.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/feed_block.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/gypsum_saturation_index.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/gypsum_saturation_index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_NF.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_NF.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_softening.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/pretreatment_softening.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_desalination.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_desalination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment_softening.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_pretreatment_softening.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_translator_block.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/tests/test_translator_block.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/translator_block.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/flowsheet_components/translator_block.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FTPx.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FTPx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FpcTP.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/entrl_config_FpcTP.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/test_enrtl.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/eNRTL/test_enrtl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/property_models.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/property_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_ion_prop_pack.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_ion_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_salt_prop_pack.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/seawater_salt_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_prop_pack.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_property_models.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_property_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_unit_models.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/tests/test_unit_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_0DRO.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_0DRO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_1DRO.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_1DRO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_ZONF.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_ZONF.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/model_components/unit_separator.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/model_components/unit_separator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/full_treatment_train/util.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/full_treatment_train/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/ion_exchange_demo.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/ion_exchange_demo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/ion_exchange/tests/test_ion_exchange_demo.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/ion_exchange/tests/test_ion_exchange_demo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/lsrro.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/lsrro.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/gha_divider.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/gha_divider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_125gL_35.0pct.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_125gL_35.0pct.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_35gL_70.0pct.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_35gL_70.0pct.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_70gL_55.00000000000001pct.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/paper_analysis_baselines/10_nodes_A_5LMHbar_optimize_Bmax_nomax_70gL_55.00000000000001pct.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/1_stage_results_LSRRO.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/1_stage_results_LSRRO.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/2_stage_results_LSRRO.csv` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/parameter_sweep_baselines/2_stage_results_LSRRO.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/test_lssro_multi_sweep.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/test_lssro_multi_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/lsrro/tests/test_lssro_paper_analysis.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/lsrro/tests/test_lssro_paper_analysis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/oaro.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/oaro.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/examples/flowsheets/oaro/tests/test_oaro.py` & `watertap-0.8.0rc2/watertap/examples/flowsheets/oaro/tests/test_oaro.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/NDMA_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/NDMA_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/NaCl_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/NaCl_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm1_properties.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm1_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm1_reactions.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm1_reactions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm2d_properties.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm2d_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/asm2d_reactions.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/asm2d_reactions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm1_integration.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm1_integration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm1_reaction.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm1_reaction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm1_thermo.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm1_thermo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm2d_reaction.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm2d_reaction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/activated_sludge/tests/test_asm2d_thermo.py` & `watertap-0.8.0rc2/watertap/property_models/activated_sludge/tests/test_asm2d_thermo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/adm1_properties.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/adm1_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/adm1_properties_vapor.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/adm1_properties_vapor.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -62,15 +62,15 @@
+ 
+         # Add Component objects
+         self.H2O = Component()
+ 
+         # All soluble components on kg COD/m^3 basis
+         self.S_h2 = Solute(doc="Hydrogen gas")
+         self.S_ch4 = Solute(doc="Methane gas")
+-        self.S_co2 = Solute(doc="Carbon dioxide carbon")
++        self.S_co2 = Solute(doc="Carbon dioxide")
+ 
+         # Heat capacity of water
+         self.cp_mass = pyo.Param(
+             mutable=False,
+             initialize=1.996,
+             doc="Specific heat capacity of water",
+             units=pyo.units.J / pyo.units.kg / pyo.units.K,
+```
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/adm1_reactions.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/adm1_reactions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/modified_adm1_properties.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/modified_adm1_properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/modified_adm1_reactions.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/modified_adm1_reactions.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -208,48 +208,47 @@
+         # TODO: Consider inheriting these parameters from ADM1 such that there is less repeated code
+ 
+         # Stoichiometric Parameters (Table 1.1 and 2.1 in Flores-Alsina et al., 2016)
+         self.Z_h2s = pyo.Param(
+             within=pyo.NonNegativeReals,
+             mutable=True,
+             default=0,
+-            doc="Reference component mass concentrations of hydrogen sulfide",
++            doc="Reference component mass concentration of hydrogen sulfide",
+             units=pyo.units.kg / pyo.units.m**3,
+         )
+-        self.f_sI_xc = pyo.Var(
++        self.f_xi_xb = pyo.Var(
+             initialize=0.1,
+             units=pyo.units.dimensionless,
+             domain=pyo.PositiveReals,
+-            doc="Soluble inerts from composites",
++            doc="Fraction of inert particulate organics from biomass",
+         )
+-        self.f_xI_xc = pyo.Var(
+-            initialize=0.20,  # replacing 0.25 with 0.2 in accordance with Rosen & Jeppsson, 2006
++        self.f_ch_xb = pyo.Var(
++            initialize=0.275,
+             units=pyo.units.dimensionless,
+             domain=pyo.PositiveReals,
+-            doc="Particulate inerts from composites",
++            doc="Fraction of carbohydrates from biomass",
+         )
+-        self.f_ch_xc = pyo.Var(
+-            initialize=0.2,
++        self.f_li_xb = pyo.Var(
++            initialize=0.350,
+             units=pyo.units.dimensionless,
+             domain=pyo.PositiveReals,
+-            doc="Carbohydrates from composites",
++            doc="Fraction of lipids from biomass",
+         )
+-        self.f_pr_xc = pyo.Var(
+-            initialize=0.2,
++        self.f_pr_xb = pyo.Var(
++            initialize=0.275,
+             units=pyo.units.dimensionless,
+             domain=pyo.PositiveReals,
+-            doc="Proteins from composites",
++            doc="Fraction of proteins from biomass",
+         )
+-        self.f_li_xc = pyo.Var(
+-            initialize=0.30,  # replacing 0.25 with 0.3 in accordance with Rosen & Jeppsson, 2006
++        self.f_si_xb = pyo.Var(
++            initialize=0,
+             units=pyo.units.dimensionless,
+-            domain=pyo.PositiveReals,
+-            doc="Lipids from composites",
++            domain=pyo.NonNegativeReals,
++            doc="Fraction of soluble inerts from biomass",
+         )
+-
+         self.f_fa_li = pyo.Var(
+             initialize=0.95,
+             units=pyo.units.dimensionless,
+             domain=pyo.PositiveReals,
+             doc="Fatty acids from lipids",
+         )
+         self.f_h2_su = pyo.Var(
+@@ -581,44 +580,14 @@
+         )
+         self.K_a_ac = pyo.Var(
+             initialize=1.74e-5,
+             units=pyo.units.kmol / pyo.units.m**3,
+             domain=pyo.PositiveReals,
+             doc="Acetate acid-base equilibrium constant",
+         )
+-        self.f_xi_xb = pyo.Var(
+-            initialize=0.1,
+-            units=pyo.units.dimensionless,
+-            domain=pyo.PositiveReals,
+-            doc="Fraction of inert particulate organics from biomass",
+-        )
+-        self.f_ch_xb = pyo.Var(
+-            initialize=0.275,
+-            units=pyo.units.dimensionless,
+-            domain=pyo.PositiveReals,
+-            doc="Fraction of carbohydrates from biomass",
+-        )
+-        self.f_li_xb = pyo.Var(
+-            initialize=0.350,
+-            units=pyo.units.dimensionless,
+-            domain=pyo.PositiveReals,
+-            doc="Fraction of lipids from biomass",
+-        )
+-        self.f_pr_xb = pyo.Var(
+-            initialize=0.275,
+-            units=pyo.units.dimensionless,
+-            domain=pyo.PositiveReals,
+-            doc="Fraction of proteins from biomass",
+-        )
+-        self.f_si_xb = pyo.Var(
+-            initialize=0,
+-            units=pyo.units.dimensionless,
+-            domain=pyo.NonNegativeReals,
+-            doc="Fraction of soluble inerts from biomass",
+-        )
+         self.K_I_h2s_ac = pyo.Var(
+             initialize=460e-3,
+             units=pyo.units.kg / pyo.units.m**3,
+             domain=pyo.PositiveReals,
+             doc="50% inhibitory concentration of H2S on acetogens",
+         )
+         self.K_I_h2s_c4 = pyo.Var(
+@@ -699,15 +668,15 @@
+             domain=pyo.PositiveReals,
+             doc="Saturation coefficient for polyphosphate",
+         )
+         self.q_PHA = pyo.Var(
+             initialize=3.0,
+             units=pyo.units.day**-1,
+             domain=pyo.PositiveReals,
+-            doc="rate constant for storage of polyhydroxyalkanoates",
++            doc="Rate constant for storage of polyhydroxyalkanoates",
+         )
+         self.Y_PO4 = pyo.Var(
+             initialize=12.903e-3,
+             units=pyo.units.dimensionless,
+             domain=pyo.PositiveReals,
+             doc="Yield of biomass on phosphate (kmol P/kg COD)",
+         )
+```
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_adm1_reaction.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_adm1_reaction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_adm1_thermo.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_adm1_thermo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_adm1_vapor_thermo.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_adm1_vapor_thermo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_reaction.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_reaction.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -336,25 +336,24 @@
+             ]
+             if i in stoic:
+                 assert pytest.approx(stoic[i], rel=1e-2) == value(v)
+             else:
+                 assert pytest.approx(value(v), rel=1e-2) == 0
+ 
+         assert isinstance(model.rparams.Z_h2s, Param)
+-        assert value(model.rparams.Z_h2s) == 0
+-        assert isinstance(model.rparams.f_sI_xc, Var)
+-        assert value(model.rparams.f_sI_xc) == 0.1
+-        assert isinstance(model.rparams.f_xI_xc, Var)
+-        assert value(model.rparams.f_xI_xc) == 0.20
+-        assert isinstance(model.rparams.f_ch_xc, Var)
+-        assert value(model.rparams.f_ch_xc) == 0.2
+-        assert isinstance(model.rparams.f_pr_xc, Var)
+-        assert value(model.rparams.f_pr_xc) == 0.2
+-        assert isinstance(model.rparams.f_li_xc, Var)
+-        assert value(model.rparams.f_li_xc) == 0.30
++        assert isinstance(model.rparams.f_xi_xb, Var)
++        assert value(model.rparams.f_xi_xb) == 0.1
++        assert isinstance(model.rparams.f_ch_xb, Var)
++        assert value(model.rparams.f_ch_xb) == 0.275
++        assert isinstance(model.rparams.f_li_xb, Var)
++        assert value(model.rparams.f_li_xb) == 0.35
++        assert isinstance(model.rparams.f_pr_xb, Var)
++        assert value(model.rparams.f_pr_xb) == 0.275
++        assert isinstance(model.rparams.f_si_xb, Var)
++        assert value(model.rparams.f_si_xb) == 0
+ 
+         assert isinstance(model.rparams.f_fa_li, Var)
+         assert value(model.rparams.f_fa_li) == 0.95
+         assert isinstance(model.rparams.f_h2_su, Var)
+         assert value(model.rparams.f_h2_su) == 0.1906
+         assert isinstance(model.rparams.f_bu_su, Var)
+         assert value(model.rparams.f_bu_su) == 0.1328
+@@ -470,14 +469,54 @@
+         assert isinstance(model.rparams.K_a_bu, Var)
+         assert value(model.rparams.K_a_bu) == 1.5e-5
+         assert isinstance(model.rparams.K_a_pro, Var)
+         assert value(model.rparams.K_a_pro) == 1.32e-5
+         assert isinstance(model.rparams.K_a_ac, Var)
+         assert value(model.rparams.K_a_ac) == 1.74e-5
+ 
++        assert isinstance(model.rparams.K_I_h2s_ac, Var)
++        assert value(model.rparams.K_I_h2s_ac) == 460e-3
++        assert isinstance(model.rparams.K_I_h2s_c4, Var)
++        assert value(model.rparams.K_I_h2s_c4) == 481e-3
++        assert isinstance(model.rparams.K_I_h2s_h2, Var)
++        assert value(model.rparams.K_I_h2s_h2) == 400e-3
++        assert isinstance(model.rparams.K_I_h2s_pro, Var)
++        assert value(model.rparams.K_I_h2s_pro) == 481e-3
++        assert isinstance(model.rparams.K_S_IP, Var)
++        assert value(model.rparams.K_S_IP) == 2e-5
++
++        assert isinstance(model.rparams.b_PAO, Var)
++        assert value(model.rparams.b_PAO) == 0.2
++        assert isinstance(model.rparams.b_PHA, Var)
++        assert value(model.rparams.b_PHA) == 0.2
++        assert isinstance(model.rparams.b_PP, Var)
++        assert value(model.rparams.b_PP) == 0.2
++
++        assert isinstance(model.rparams.f_ac_PHA, Var)
++        assert value(model.rparams.f_ac_PHA) == 0.4
++        assert isinstance(model.rparams.f_bu_PHA, Var)
++        assert value(model.rparams.f_bu_PHA) == 0.1
++        assert isinstance(model.rparams.f_pro_PHA, Var)
++        assert value(model.rparams.f_pro_PHA) == 0.4
++        assert isinstance(model.rparams.f_va_PHA, Var)
++        assert value(model.rparams.f_va_PHA) == 0.1
++
++        assert isinstance(model.rparams.K_A, Var)
++        assert value(model.rparams.K_A) == 4e-3
++        assert isinstance(model.rparams.K_PP, Var)
++        assert value(model.rparams.K_PP) == 0.32e-3
++        assert isinstance(model.rparams.q_PHA, Var)
++        assert value(model.rparams.q_PHA) == 3
++        assert isinstance(model.rparams.Y_PO4, Var)
++        assert value(model.rparams.Y_PO4) == 12.903e-3
++        assert isinstance(model.rparams.K_XPP, Var)
++        assert value(model.rparams.K_XPP) == 1 / 3
++        assert isinstance(model.rparams.Mg_XPP, Var)
++        assert value(model.rparams.Mg_XPP) == 1 / 3
++
+ 
+ class TestReactionBlock(object):
+     @pytest.fixture(scope="class")
+     def model(self):
+         model = ConcreteModel()
+         model.pparams = ModifiedADM1ParameterBlock()
+         model.vparams = ADM1_vaporParameterBlock()
+```
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_thermo.py` & `watertap-0.8.0rc2/watertap/property_models/anaerobic_digestion/tests/test_modified_adm1_thermo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/coagulation_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/coagulation_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/cryst_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/cryst_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/multicomp_aq_sol_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/multicomp_aq_sol_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/seawater_ion_generic.py` & `watertap-0.8.0rc2/watertap/property_models/seawater_ion_generic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/seawater_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/seawater_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/selective_oil_permeation_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/selective_oil_permeation_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/property_test_harness.py` & `watertap-0.8.0rc2/watertap/property_models/tests/property_test_harness.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_NDMA_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_NDMA_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_NaCl_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_NaCl_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_coag_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_coag_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_cryst_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_cryst_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_multicomp_aq_sol_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_multicomp_aq_sol_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_seawater_ion_generic.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_seawater_ion_generic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_seawater_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_seawater_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_selective_oil_permeation_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_selective_oil_permeation_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/tests/test_water_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/tests/test_water_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/property_models/water_prop_pack.py` & `watertap-0.8.0rc2/watertap/property_models/water_prop_pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tests/conftest.py` & `watertap-0.8.0rc2/watertap/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/MPI/__init__.py` & `watertap-0.8.0rc2/watertap/tools/MPI/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/MPI/dummy_mpi.py` & `watertap-0.8.0rc2/watertap/tools/MPI/dummy_mpi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/MPI/tests/test_dummy_mpi.py` & `watertap-0.8.0rc2/watertap/tools/MPI/tests/test_dummy_mpi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/__init__.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_differential.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_differential.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_functions.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_reader.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/parameter_sweep_writer.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/parameter_sweep_writer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/sampling_types.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/sampling_types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_differential_parameter_sweep.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_differential_parameter_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_parameter_sweep.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_parameter_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_parameter_sweep_reader.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_parameter_sweep_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_parameter_sweep_writer.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_parameter_sweep_writer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/tools/parameter_sweep/tests/test_recursive_parameter_sweep.py` & `watertap-0.8.0rc2/watertap/tools/parameter_sweep/tests/test_recursive_parameter_sweep.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/ui/fsapi.py` & `watertap-0.8.0rc2/watertap/ui/fsapi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/ui/tests/test_flowsheet_interfaces.py` & `watertap-0.8.0rc2/watertap/ui/tests/test_flowsheet_interfaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/ui/tests/test_fsapi.py` & `watertap-0.8.0rc2/watertap/ui/tests/test_fsapi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/__init__.py` & `watertap-0.8.0rc2/watertap/unit_models/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/anaerobic_digestor.py` & `watertap-0.8.0rc2/watertap/unit_models/anaerobic_digestor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/boron_removal.py` & `watertap-0.8.0rc2/watertap/unit_models/boron_removal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/coag_floc_model.py` & `watertap-0.8.0rc2/watertap/unit_models/coag_floc_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/crystallizer.py` & `watertap-0.8.0rc2/watertap/unit_models/crystallizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/cstr_injection.py` & `watertap-0.8.0rc2/watertap/unit_models/cstr_injection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/electrodialysis_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/electrodialysis_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/electrodialysis_1D.py` & `watertap-0.8.0rc2/watertap/unit_models/electrodialysis_1D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/gac.py` & `watertap-0.8.0rc2/watertap/unit_models/gac.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/ion_exchange_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/ion_exchange_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/__init__.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/complete_condenser.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/complete_condenser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/compressor.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/compressor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/evaporator.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/evaporator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/lmtd_chen_callback.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/lmtd_chen_callback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_chen_heat_exchanger.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_chen_heat_exchanger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_complete_condenser.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_complete_condenser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_compressor.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_compressor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/components/tests/test_evaporator.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/components/tests/test_evaporator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/mvc/tests/test_mvc.py` & `watertap-0.8.0rc2/watertap/unit_models/mvc/tests/test_mvc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/nanofiltration_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/nanofiltration_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/nanofiltration_DSPMDE_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/nanofiltration_DSPMDE_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/nanofiltration_ZO.py` & `watertap-0.8.0rc2/watertap/unit_models/nanofiltration_ZO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/osmotically_assisted_reverse_osmosis_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/osmotically_assisted_reverse_osmosis_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/osmotically_assisted_reverse_osmosis_base.py` & `watertap-0.8.0rc2/watertap/unit_models/osmotically_assisted_reverse_osmosis_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/pressure_changer.py` & `watertap-0.8.0rc2/watertap/unit_models/pressure_changer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/pressure_exchanger.py` & `watertap-0.8.0rc2/watertap/unit_models/pressure_exchanger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/reverse_osmosis_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/reverse_osmosis_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/reverse_osmosis_1D.py` & `watertap-0.8.0rc2/watertap/unit_models/reverse_osmosis_1D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/reverse_osmosis_base.py` & `watertap-0.8.0rc2/watertap/unit_models/reverse_osmosis_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/selective_oil_permeation.py` & `watertap-0.8.0rc2/watertap/unit_models/selective_oil_permeation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_anaerobic_digestor.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_anaerobic_digestor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_boron_removal.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_boron_removal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_coag_floc_model.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_coag_floc_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_crystallizer.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_crystallizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_cstr_injection.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_cstr_injection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_electrodialysis_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_electrodialysis_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_electrodialysis_1D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_electrodialysis_1D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_gac.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_gac.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_ion_exchange_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_ion_exchange_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_nanofiltration_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_nanofiltration_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_nanofiltration_DSPMDE_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_nanofiltration_DSPMDE_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_nanofiltration_ZO.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_nanofiltration_ZO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_osmotically_assisted_reverse_osmosis_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_osmotically_assisted_reverse_osmosis_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_pressure_changer.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_pressure_changer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_pressure_exchanger.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_pressure_exchanger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_reverse_osmosis_0D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_reverse_osmosis_0D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_reverse_osmosis_1D.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_reverse_osmosis_1D.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_selective_oil_permeation.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_selective_oil_permeation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/tests/test_uv_aop.py` & `watertap-0.8.0rc2/watertap/unit_models/tests/test_uv_aop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/translators/tests/test_translator_adm1_asm1.py` & `watertap-0.8.0rc2/watertap/unit_models/translators/tests/test_translator_adm1_asm1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/translators/tests/test_translator_asm1_adm1.py` & `watertap-0.8.0rc2/watertap/unit_models/translators/tests/test_translator_asm1_adm1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/translators/translator_adm1_asm1.py` & `watertap-0.8.0rc2/watertap/unit_models/translators/translator_adm1_asm1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/translators/translator_asm1_adm1.py` & `watertap-0.8.0rc2/watertap/unit_models/translators/translator_asm1_adm1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/uv_aop.py` & `watertap-0.8.0rc2/watertap/unit_models/uv_aop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/CANDOP_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/CANDOP_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/__init__.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/aeration_basin_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/aeration_basin_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/air_flotation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/air_flotation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/anaerobic_digestion_oxidation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/anaerobic_digestion_oxidation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/anaerobic_digestion_reactive_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/anaerobic_digestion_reactive_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/anaerobic_mbr_mec_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/anaerobic_mbr_mec_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/aop_addition_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/aop_addition_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/autothermal_hydrothermal_liquefaction_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/autothermal_hydrothermal_liquefaction_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/backwash_solids_handling_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/backwash_solids_handling_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/bio_active_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/bio_active_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/bioreactor_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/bioreactor_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/blending_reservoir_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/blending_reservoir_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/brine_concentrator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/brine_concentrator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/buffer_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/buffer_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/cartridge_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/cartridge_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/centrifuge_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/centrifuge_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/chemical_addition_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/chemical_addition_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/chlorination_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/chlorination_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/clarifier_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/clarifier_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/cloth_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/cloth_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/co2_addition_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/co2_addition_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/coag_and_floc_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/coag_and_floc_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/cofermentation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/cofermentation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/constructed_wetlands_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/constructed_wetlands_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/conventional_activated_sludge_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/conventional_activated_sludge_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/cooling_supply_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/cooling_supply_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/cooling_tower_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/cooling_tower_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/decarbonator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/decarbonator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/deep_well_injection_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/deep_well_injection_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/dissolved_air_flotation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/dissolved_air_flotation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/dmbr_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/dmbr_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/dual_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/dual_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/electrochemical_nutrient_removal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/electrochemical_nutrient_removal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/electrocoagulation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/electrocoagulation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/electrodialysis_reversal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/electrodialysis_reversal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/energy_recovery_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/energy_recovery_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/evaporation_pond_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/evaporation_pond_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/feed_water_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/feed_water_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/feed_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/feed_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/filter_press_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/filter_press_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/fixed_bed_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/fixed_bed_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/gac_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/gac_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/gas_sparged_membrane_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/gas_sparged_membrane_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/hrcs_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/hrcs_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/hydrothermal_gasification_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/hydrothermal_gasification_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/injection_well_disposal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/injection_well_disposal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/intrusion_mitigation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/intrusion_mitigation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/ion_exchange_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/ion_exchange_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/iron_and_manganese_removal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/iron_and_manganese_removal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/landfill_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/landfill_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/mabr_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/mabr_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/magprex_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/magprex_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/mbr_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/mbr_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/membrane_evaporator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/membrane_evaporator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/metab_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/metab_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/microbial_battery_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/microbial_battery_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/microfiltration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/microfiltration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/microscreen_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/microscreen_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/municipal_drinking_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/municipal_drinking_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/municipal_wwtp_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/municipal_wwtp_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/nanofiltration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/nanofiltration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/ozone_aop_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/ozone_aop_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/ozone_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/ozone_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/peracetic_acid_disinfection_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/peracetic_acid_disinfection_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/photothermal_membrane_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/photothermal_membrane_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/primary_separator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/primary_separator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/pump_electricity_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/pump_electricity_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/pump_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/pump_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/screen_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/screen_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/secondary_treatment_wwtp_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/secondary_treatment_wwtp_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/sedimentation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/sedimentation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/settling_pond_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/settling_pond_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/sludge_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/sludge_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/smp_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/smp_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/static_mixer_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/static_mixer_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/storage_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/storage_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/struvite_classifier_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/struvite_classifier_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/suboxic_activated_sludge_process_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/suboxic_activated_sludge_process_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/supercritical_salt_precipitation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/supercritical_salt_precipitation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/surface_discharge_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/surface_discharge_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/sw_onshore_intake_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/sw_onshore_intake_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_CANDOP_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_CANDOP_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_aeration_basin_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_aeration_basin_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_air_flotation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_air_flotation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_oxidation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_oxidation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_reactive_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_anaerobic_digestion_reactive_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_anaerobic_mbr_mec_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_anaerobic_mbr_mec_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_autothermal_hydrothermal_liquefaction_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_autothermal_hydrothermal_liquefaction_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_backwash_solids_handling_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_backwash_solids_handling_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_bio_active_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_bio_active_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_bioreactor_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_bioreactor_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_blending_reservoir_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_blending_reservoir_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_brine_concentrator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_brine_concentrator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_buffer_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_buffer_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cartridge_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cartridge_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_centrifuge_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_centrifuge_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_chemical_addition_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_chemical_addition_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_chlorination_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_chlorination_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_clarifier_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_clarifier_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cloth_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cloth_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_co2_addition_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_co2_addition_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_coag_and_floc_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_coag_and_floc_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cofermentation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cofermentation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_constructed_wetlands_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_constructed_wetlands_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_conventional_activated_sludge_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_conventional_activated_sludge_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cooling_supply_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cooling_supply_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_cooling_tower_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_cooling_tower_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_decarbonator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_decarbonator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_deep_well_injection_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_deep_well_injection_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_dissolved_air_flotation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_dissolved_air_flotation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_dmbr_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_dmbr_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_dual_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_dual_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_electrochemical_nutrient_removal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_electrochemical_nutrient_removal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_electrocoagulation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_electrocoagulation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_electrodialysis_reversal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_electrodialysis_reversal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_energy_recovery_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_energy_recovery_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_evaporation_pond_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_evaporation_pond_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_feed_water_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_feed_water_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_feed_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_feed_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_filter_press_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_filter_press_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_fixed_bed_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_fixed_bed_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_gac_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_gac_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_gas_sparged_membrane.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_gas_sparged_membrane.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_hrcs_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_hrcs_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_hydrothermal_gasification_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_hydrothermal_gasification_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_injection_well_disposal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_injection_well_disposal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_intrusion_mitigation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_intrusion_mitigation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ion_exchange_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ion_exchange_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_iron_and_manganese_removal_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_iron_and_manganese_removal_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_landfill_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_landfill_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_mabr_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_mabr_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_magprex_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_magprex_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_mbr_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_mbr_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_membrane_evaporator.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_membrane_evaporator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_metab_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_metab_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_microbial_battery_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_microbial_battery_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_microfiltration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_microfiltration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_microscreen_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_microscreen_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_municipal_drinking_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_municipal_drinking_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_municipal_wwtp_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_municipal_wwtp_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_nanofiltration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_nanofiltration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ozone_aop_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ozone_aop_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ozone_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ozone_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_peracetic_acid_disinfection_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_peracetic_acid_disinfection_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_photothermal_membrane_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_photothermal_membrane_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_primary_separator_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_primary_separator_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_pump_electricity_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_pump_electricity_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_pump_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_pump_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_screen_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_screen_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_secondary_treatment_wwtp_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_secondary_treatment_wwtp_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_sedimentation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_sedimentation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_settling_pond_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_settling_pond_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_sludge_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_sludge_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_smp_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_smp_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_static_mixer_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_static_mixer_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_storage_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_storage_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_struvite_classifier_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_struvite_classifier_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_suboxic_activated_sludge_process_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_suboxic_activated_sludge_process_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_supercritical_salt_precipitation_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_supercritical_salt_precipitation_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_surface_discharge.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_surface_discharge.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_sw_onshore_intake_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_sw_onshore_intake_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_tramp_oil_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_tramp_oil_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_tri_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_tri_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_ultra_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_ultra_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_uv_aop_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_uv_aop_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_uv_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_uv_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_vfa_recovery_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_vfa_recovery_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_waiv_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_waiv_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_walnut_shell_filter_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_walnut_shell_filter_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_water_pumping_station_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_water_pumping_station_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_well_field_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_well_field_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tests/test_zo_documentation.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tests/test_zo_documentation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tramp_oil_tank_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tramp_oil_tank_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/tri_media_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/tri_media_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/ultra_filtration_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/ultra_filtration_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/uv_aop_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/uv_aop_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/uv_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/uv_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/vfa_recovery_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/vfa_recovery_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/waiv_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/waiv_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/walnut_shell_filter_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/walnut_shell_filter_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/water_pumping_station_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/water_pumping_station_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap/unit_models/zero_order/well_field_zo.py` & `watertap-0.8.0rc2/watertap/unit_models/zero_order/well_field_zo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap.egg-info/PKG-INFO` & `watertap-0.8.0rc2/watertap.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: watertap
+-Version: 0.8.0rc1
++Version: 0.8.0rc2
+ Summary: WaterTAP modeling library
+ Home-page: https://github.com/watertap-org/watertap
+ Author: NAWI team
+ License: BSD
+ Keywords: water systems,chemical engineering,process modeling,filtration,desalination,nawi
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: End Users/Desktop
+```
+
+### Comparing `watertap-0.8.0rc1/watertap.egg-info/SOURCES.txt` & `watertap-0.8.0rc2/watertap.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `watertap-0.8.0rc1/watertap.egg-info/entry_points.txt` & `watertap-0.8.0rc2/watertap.egg-info/entry_points.txt`
+
+ * *Files identical despite different names*
+

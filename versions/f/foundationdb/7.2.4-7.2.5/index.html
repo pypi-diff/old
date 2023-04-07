@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/foundationdb-7.2.4.tar.gz tmp/foundationdb-7.2.5.tar.gz --html versions/f/foundationdb/7.2.4-7.2.5/index.html --text versions/f/foundationdb/7.2.4-7.2.5/diff.txt --markdown versions/f/foundationdb/7.2.4-7.2.5/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.38 KB</span></div>
+  <div><span class="source">tmp/foundationdb-7.2.4.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/foundationdb-7.2.5.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;foundationdb-7.2.<del>4</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Su</del>n<span class="dp">·</span>Mar<span class="dp">·</span><del>19</del><span class="dp">·</span><del>20</del>:<del>47</del>:<del>01</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;foundationdb-7.2.<ins>5</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Mo</ins>n<span class="dp">·</span>Mar<span class="dp">·</span><ins>20</ins><span class="dp">·</span><ins>01</ins>:<ins>00</ins>:<ins>18</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.05 KB</span></div>
+    <div><span class="source">foundationdb-7.2.4.tar</span> vs.</div>
+    <div id="foundationdb--.-.-.tar"><span class="source">foundationdb-7.2.5.tar</span>
+      <a class="anchor" href="#foundationdb--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.91 KB</span></div>
+      <div id="foundationdb--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-<del>19</del><span class="dp">·</span><del>20</del>:<del>47</del>:<del>01</del>.<del>5353</del>0<del>0</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-<ins>20</ins><span class="dp">·</span><ins>01</ins>:<ins>00</ins>:<ins>18</ins>.<ins>2717</ins>0<ins>9</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11665<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>18</del>:<del>06</del>.<del>2</del>3<del>325</del>7<span class="dp">·</span>foundationdb-7.2.<del>4</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11665<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>53</ins>:<ins>18</ins>.<ins>9</ins>3<ins>617</ins>7<span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1427<span class="dp">·</span>2023-03-<del>19</del><span class="dp">·</span><del>20</del>:<del>47</del>:<del>01</del>.<del>5353</del>0<del>0</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1427<span class="dp">·</span>2023-03-<ins>20</ins><span class="dp">·</span><ins>01</ins>:<ins>00</ins>:<ins>18</ins>.<ins>2717</ins>0<ins>9</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>59</del>.<del>23</del>2<del>848</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/README.rst</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>245<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>10</ins>.<ins>00</ins>2<ins>733</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-<del>19</del><span class="dp">·</span><del>20</del>:<del>47</del>:<del>01</del>.<del>5353</del>0<del>0</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/</td><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-<ins>20</ins><span class="dp">·</span><ins>01</ins>:<ins>00</ins>:<ins>18</ins>.<ins>2717</ins>0<ins>9</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4630<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>096837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4630<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>785722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25008<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>103837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/directory_impl.py</td><td class="diffline">7 </td><td class="diffpresent">-rwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25008<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>787722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/directory_impl.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35672<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>57</del>.<del>0</del>8<del>4</del><del>8</del>37<span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/fdboptions.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35672<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>06</ins>.8<ins>5</ins>37<ins>18</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/fdboptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62515<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>108837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/impl.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62515<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>791722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/impl.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2748<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>11</del>2<del>837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/locality.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2748<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>79</ins>2<ins>722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/locality.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30888<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>123837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/six.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30888<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>795722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/six.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1915<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>116837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/subspace_impl.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1915<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>798722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/subspace_impl.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5700<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>7.<del>117837</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/tenant_management.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5700<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>7.<ins>799722</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/tenant_management.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20598<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>19</del>:<del>5</del>9.<del>223848</del><span class="dp">·</span>foundationdb-7.2.<del>4</del>/fdb/tuple.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20598<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>55</ins>:<ins>0</ins>9.<ins>999733</ins><span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/fdb/tuple.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1416<span class="dp">·</span>2023-03-1<del>8</del><span class="dp">·</span><del>01</del>:<del>18</del>:<del>06</del>.<del>2</del>3<del>325</del>7<span class="dp">·</span>foundationdb-7.2.<del>4</del>/setup.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>foundationdb_ci<span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1416<span class="dp">·</span>2023-03-1<ins>9</ins><span class="dp">·</span><ins>20</ins>:<ins>53</ins>:<ins>18</ins>.<ins>9</ins>3<ins>517</ins>7<span class="dp">·</span>foundationdb-7.2.<ins>5</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/LICENSE</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--LICENSE"><span class="source">foundationdb-7.2.5/LICENSE</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">506 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/PKG-INFO</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--PKG-INFO"><span class="source">foundationdb-7.2.5/PKG-INFO</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>foundationdb</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>foundationdb</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>7.2.<del>4</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>7.2.<ins>5</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>FoundationDB<span class="dp">·</span>database</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>FoundationDB<span class="dp">·</span>database</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.foundationdb.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://www.foundationdb.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>FoundationDB</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>FoundationDB</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>fdb-dist@apple.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>fdb-dist@apple.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>Complete<span class="dp">·</span>documentation<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>FoundationDB<span class="dp">·</span>Python<span class="dp">·</span>API<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>found<span class="dp">·</span>at<span class="dp">·</span>https://apple.github.io/foundationdb/api-python.html.</td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>Complete<span class="dp">·</span>documentation<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>FoundationDB<span class="dp">·</span>Python<span class="dp">·</span>API<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>found<span class="dp">·</span>at<span class="dp">·</span>https://apple.github.io/foundationdb/api-python.html.</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/__init__.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-__init__.py"><span class="source">foundationdb-7.2.5/fdb/__init__.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/directory_impl.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-directory_impl.py"><span class="source">foundationdb-7.2.5/fdb/directory_impl.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-directory_impl.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/fdboptions.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-fdboptions.py"><span class="source">foundationdb-7.2.5/fdb/fdboptions.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-fdboptions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/impl.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-impl.py"><span class="source">foundationdb-7.2.5/fdb/impl.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-impl.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/locality.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-locality.py"><span class="source">foundationdb-7.2.5/fdb/locality.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-locality.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/six.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-six.py"><span class="source">foundationdb-7.2.5/fdb/six.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-six.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/subspace_impl.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-subspace_impl.py"><span class="source">foundationdb-7.2.5/fdb/subspace_impl.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-subspace_impl.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/tenant_management.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-tenant_management.py"><span class="source">foundationdb-7.2.5/fdb/tenant_management.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-tenant_management.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/fdb/tuple.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--fdb-tuple.py"><span class="source">foundationdb-7.2.5/fdb/tuple.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--fdb-tuple.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">576 B</span></div>
+      <div><span class="source">foundationdb-7.2.4/setup.py</span> vs.</div>
+      <div id="foundationdb--.-.-.tar---foundationdb--.-.--setup.py"><span class="source">foundationdb-7.2.5/setup.py</span>
+        <a class="anchor" href="#foundationdb--.-.-.tar---foundationdb--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 3, 15 lines modified</td><td colspan="2">Offset 3, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">try:</td><td class="diffline">3 </td><td class="diffpresent">try:</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(&quot;README.rst&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(&quot;README.rst&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_desc<span class="dp">·</span>=<span class="dp">·</span>f.read()</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_desc<span class="dp">·</span>=<span class="dp">·</span>f.read()</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">except:</td><td class="diffline">6 </td><td class="diffpresent">except:</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_desc<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_desc<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">setup(name=&quot;foundationdb&quot;,</td><td class="diffline">8 </td><td class="diffpresent">setup(name=&quot;foundationdb&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;7.2.<del>4</del>&quot;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;7.2.<ins>5</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;FoundationDB&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;FoundationDB&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;fdb-dist@apple.com&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;fdb-dist@apple.com&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>FoundationDB<span class="dp">·</span>database&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>FoundationDB<span class="dp">·</span>database&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://www.foundationdb.org&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://www.foundationdb.org&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;fdb&#x27;],</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&#x27;fdb&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>package_data={&#x27;fdb&#x27;:<span class="dp">·</span>[&quot;fdb/*.py&quot;]},</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>package_data={&#x27;fdb&#x27;:<span class="dp">·</span>[&quot;fdb/*.py&quot;]},</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_desc,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_desc,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

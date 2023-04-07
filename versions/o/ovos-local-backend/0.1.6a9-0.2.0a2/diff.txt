@@ -1,0 +1,907 @@
+--- tmp/ovos_local_backend-0.1.6a9-py3-none-any.whl.zip
++++ tmp/ovos_local_backend-0.2.0a2-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,30 +1,26 @@
+│ -Zip file size: 32282 bytes, number of entries: 28
+│ --rw-r--r--  2.0 unx       53 b- defN 23-Mar-30 06:34 ovos_local_backend/__init__.py
+│ --rw-r--r--  2.0 unx      555 b- defN 23-Mar-30 06:34 ovos_local_backend/__main__.py
+│ --rw-r--r--  2.0 unx     9030 b- defN 23-Mar-30 06:34 ovos_local_backend/configuration.py
+│ --rw-r--r--  2.0 unx      103 b- defN 23-Mar-30 06:34 ovos_local_backend/session.py
+│ --rw-r--r--  2.0 unx      177 b- defN 23-Mar-30 06:34 ovos_local_backend/version.py
+│ --rw-r--r--  2.0 unx     1920 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/__init__.py
+│ --rw-r--r--  2.0 unx     4584 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/admin.py
+│ --rw-r--r--  2.0 unx     4232 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/auth.py
+│ --rw-r--r--  2.0 unx     3370 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/decorators.py
+│ --rw-r--r--  2.0 unx     8123 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/device.py
+│ --rw-r--r--  2.0 unx     4727 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/external_apis.py
+│ --rw-r--r--  2.0 unx     1149 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/precise.py
+│ --rw-r--r--  2.0 unx     1944 b- defN 23-Mar-30 06:34 ovos_local_backend/backend/stt.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Mar-30 06:34 ovos_local_backend/database/__init__.py
+│ --rw-r--r--  2.0 unx     1195 b- defN 23-Mar-30 06:34 ovos_local_backend/database/metrics.py
+│ --rw-r--r--  2.0 unx      112 b- defN 23-Mar-30 06:34 ovos_local_backend/database/oauth.py
+│ --rw-r--r--  2.0 unx    14676 b- defN 23-Mar-30 06:34 ovos_local_backend/database/settings.py
+│ --rw-r--r--  2.0 unx     1659 b- defN 23-Mar-30 06:34 ovos_local_backend/database/utterances.py
+│ --rw-r--r--  2.0 unx     2895 b- defN 23-Mar-30 06:34 ovos_local_backend/database/wakewords.py
+│ --rw-r--r--  2.0 unx     9836 b- defN 23-Mar-30 06:34 ovos_local_backend/utils/__init__.py
+│ --rw-r--r--  2.0 unx     6203 b- defN 23-Mar-30 06:34 ovos_local_backend/utils/geolocate.py
+│ --rw-r--r--  2.0 unx     1020 b- defN 23-Mar-30 06:34 ovos_local_backend/utils/mail.py
+│ --rw-r--r--  2.0 unx    11349 b- defN 23-Mar-30 06:35 ovos_local_backend-0.1.6a9.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx      613 b- defN 23-Mar-30 06:35 ovos_local_backend-0.1.6a9.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Mar-30 06:35 ovos_local_backend-0.1.6a9.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       73 b- defN 23-Mar-30 06:35 ovos_local_backend-0.1.6a9.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx       19 b- defN 23-Mar-30 06:35 ovos_local_backend-0.1.6a9.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 unx     2592 b- defN 23-Mar-30 06:35 ovos_local_backend-0.1.6a9.dist-info/RECORD
+│ -28 files, 92301 bytes uncompressed, 28004 bytes compressed:  69.7%
+│ +Zip file size: 33674 bytes, number of entries: 24
+│ +-rw-r--r--  2.0 unx       53 b- defN 23-Apr-07 01:04 ovos_local_backend/__init__.py
+│ +-rw-r--r--  2.0 unx      555 b- defN 23-Apr-07 01:04 ovos_local_backend/__main__.py
+│ +-rw-r--r--  2.0 unx     9116 b- defN 23-Apr-07 01:04 ovos_local_backend/configuration.py
+│ +-rw-r--r--  2.0 unx    33972 b- defN 23-Apr-07 01:04 ovos_local_backend/database.py
+│ +-rw-r--r--  2.0 unx      103 b- defN 23-Apr-07 01:04 ovos_local_backend/session.py
+│ +-rw-r--r--  2.0 unx      177 b- defN 23-Apr-07 01:04 ovos_local_backend/version.py
+│ +-rw-r--r--  2.0 unx     2102 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/__init__.py
+│ +-rw-r--r--  2.0 unx     2220 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/admin.py
+│ +-rw-r--r--  2.0 unx     4453 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/auth.py
+│ +-rw-r--r--  2.0 unx    13647 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/crud.py
+│ +-rw-r--r--  2.0 unx     3388 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/decorators.py
+│ +-rw-r--r--  2.0 unx     7943 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/device.py
+│ +-rw-r--r--  2.0 unx     4663 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/external_apis.py
+│ +-rw-r--r--  2.0 unx     2253 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/precise.py
+│ +-rw-r--r--  2.0 unx     2107 b- defN 23-Apr-07 01:04 ovos_local_backend/backend/stt.py
+│ +-rw-r--r--  2.0 unx     9836 b- defN 23-Apr-07 01:04 ovos_local_backend/utils/__init__.py
+│ +-rw-r--r--  2.0 unx     6203 b- defN 23-Apr-07 01:04 ovos_local_backend/utils/geolocate.py
+│ +-rw-r--r--  2.0 unx     1020 b- defN 23-Apr-07 01:04 ovos_local_backend/utils/mail.py
+│ +-rw-r--r--  2.0 unx    11349 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx      689 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       73 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx       19 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx     2200 b- defN 23-Apr-07 01:05 ovos_local_backend-0.2.0a2.dist-info/RECORD
+│ +24 files, 118233 bytes uncompressed, 30038 bytes compressed:  74.6%
+├── zipnote {}
+│ @@ -3,14 +3,17 @@
+│  
+│  Filename: ovos_local_backend/__main__.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/configuration.py
+│  Comment: 
+│  
+│ +Filename: ovos_local_backend/database.py
+│ +Comment: 
+│ +
+│  Filename: ovos_local_backend/session.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/version.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/backend/__init__.py
+│ @@ -18,14 +21,17 @@
+│  
+│  Filename: ovos_local_backend/backend/admin.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/backend/auth.py
+│  Comment: 
+│  
+│ +Filename: ovos_local_backend/backend/crud.py
+│ +Comment: 
+│ +
+│  Filename: ovos_local_backend/backend/decorators.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/backend/device.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/backend/external_apis.py
+│ @@ -33,53 +39,35 @@
+│  
+│  Filename: ovos_local_backend/backend/precise.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/backend/stt.py
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend/database/__init__.py
+│ -Comment: 
+│ -
+│ -Filename: ovos_local_backend/database/metrics.py
+│ -Comment: 
+│ -
+│ -Filename: ovos_local_backend/database/oauth.py
+│ -Comment: 
+│ -
+│ -Filename: ovos_local_backend/database/settings.py
+│ -Comment: 
+│ -
+│ -Filename: ovos_local_backend/database/utterances.py
+│ -Comment: 
+│ -
+│ -Filename: ovos_local_backend/database/wakewords.py
+│ -Comment: 
+│ -
+│  Filename: ovos_local_backend/utils/__init__.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/utils/geolocate.py
+│  Comment: 
+│  
+│  Filename: ovos_local_backend/utils/mail.py
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.1.6a9.dist-info/LICENSE
+│ +Filename: ovos_local_backend-0.2.0a2.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.1.6a9.dist-info/METADATA
+│ +Filename: ovos_local_backend-0.2.0a2.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.1.6a9.dist-info/WHEEL
+│ +Filename: ovos_local_backend-0.2.0a2.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.1.6a9.dist-info/entry_points.txt
+│ +Filename: ovos_local_backend-0.2.0a2.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.1.6a9.dist-info/top_level.txt
+│ +Filename: ovos_local_backend-0.2.0a2.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: ovos_local_backend-0.1.6a9.dist-info/RECORD
+│ +Filename: ovos_local_backend-0.2.0a2.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── ovos_local_backend/configuration.py
+│ @@ -12,14 +12,16 @@
+│  #
+│  from os.path import exists, expanduser
+│  
+│  from json_database import JsonConfigXDG
+│  from ovos_utils.log import LOG
+│  
+│  DEFAULT_CONFIG = {
+│ +    "lang": "en-us",  # default language
+│ +    "database": "sqlite:///ovos_backend.db",
+│      "stt": {
+│          "module": "ovos-stt-plugin-server",
+│          "ovos-stt-plugin-server": {
+│              "url": "https://stt.openvoiceos.com/stt"
+│          }
+│      },
+│      "backend_port": 6712,
+├── ovos_local_backend/version.py
+│ @@ -1,7 +1,7 @@
+│  # The following lines are replaced during the release process.
+│  # START_VERSION_BLOCK
+│  VERSION_MAJOR = 0
+│ -VERSION_MINOR = 1
+│ -VERSION_BUILD = 6
+│ -VERSION_ALPHA = 9
+│ +VERSION_MINOR = 2
+│ +VERSION_BUILD = 0
+│ +VERSION_ALPHA = 2
+│  # END_VERSION_BLOCK
+├── ovos_local_backend/backend/__init__.py
+│ @@ -9,35 +9,41 @@
+│  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│  # See the License for the specific language governing permissions and
+│  # limitations under the License.
+│  #
+│  
+│  from flask import Flask
+│  from ovos_local_backend.configuration import CONFIGURATION
+│ +from ovos_local_backend.database import connect_db
+│  
+│  API_VERSION = CONFIGURATION["api_version"]
+│  
+│  
+│  def create_app():
+│      app = Flask(__name__)
+│  
+│ +    app, db = connect_db(app)
+│ +
+│      from ovos_local_backend.utils import nice_json
+│      from ovos_local_backend.backend.decorators import noindex
+│      from ovos_local_backend.backend.auth import get_auth_routes
+│      from ovos_local_backend.backend.device import get_device_routes
+│      from ovos_local_backend.backend.stt import get_stt_routes
+│      from ovos_local_backend.backend.precise import get_precise_routes
+│      from ovos_local_backend.backend.external_apis import get_services_routes
+│      from ovos_local_backend.backend.admin import get_admin_routes
+│ +    from ovos_local_backend.backend.crud import get_database_crud
+│ +
+│      app = get_auth_routes(app)
+│      app = get_device_routes(app)
+│      app = get_stt_routes(app)
+│      app = get_precise_routes(app)
+│      app = get_services_routes(app)
+│      app = get_admin_routes(app)
+│ +    app = get_database_crud(app)
+│  
+│      @app.route("/", methods=['GET'])
+│      @noindex
+│      def hello():
+│          return nice_json({
+│              "message": "Welcome to Mock Mycroft Backend",
+│              "donate": "https://liberapay.com/jarbasAI",
+├── ovos_local_backend/backend/admin.py
+│ @@ -7,108 +7,58 @@
+│  # Unless required by applicable law or agreed to in writing, software
+│  # distributed under the License is distributed on an "AS IS" BASIS,
+│  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│  # See the License for the specific language governing permissions and
+│  # limitations under the License.
+│  #
+│  import time
+│ +
+│ +import base64
+│ +from flask import request
+│  from ovos_local_backend.backend import API_VERSION
+│ -from ovos_local_backend.utils import nice_json
+│ -from ovos_local_backend.database.settings import DeviceDatabase
+│ -from ovos_local_backend.configuration import CONFIGURATION
+│  from ovos_local_backend.backend.decorators import noindex, requires_admin
+│ -from flask import request
+│ +import ovos_local_backend.database as db
+│  from ovos_local_backend.utils import generate_code
+│ +from ovos_local_backend.utils import nice_json
+│  from ovos_local_backend.utils.geolocate import get_request_location
+│  
+│  
+│ +
+│  def get_admin_routes(app):
+│      @app.route("/" + API_VERSION + "/admin/<uuid>/pair", methods=['GET'])
+│      @requires_admin
+│      @noindex
+│      def pair_device(uuid):
+│          code = generate_code()
+│          token = f"{code}:{uuid}"
+│          # add device to db
+│          location = get_request_location()
+│ -        with DeviceDatabase() as db:
+│ -            db.add_device(uuid, token, location=location)
+│ +        db.add_device(uuid, token, location=location)
+│  
+│          device = {"uuid": uuid,
+│                    "expires_at": time.time() + 99999999999999,
+│                    "accessToken": token,
+│                    "refreshToken": token}
+│          return nice_json(device)
+│  
+│      @app.route("/" + API_VERSION + "/admin/<uuid>/device", methods=['PUT'])
+│      @requires_admin
+│      @noindex
+│      def set_device(uuid):
+│ -        data = request.json
+│ -        with DeviceDatabase() as db:
+│ -            device = db.get_device(uuid)
+│ -            if not device:
+│ -                return {"error": "unknown device"}
+│ -            if "name" in data:
+│ -                device.name = data["name"]
+│ -            if "opt_in" in data:
+│ -                device.opt_in = data["opt_in"]
+│ -            if "device_location" in data:
+│ -                device.device_location = data["device_location"]
+│ -            if "email" in data:
+│ -                device.email = data["email"]
+│ -            if "isolated_skills" in data:
+│ -                device.isolated_skills = data["isolated_skills"]
+│ -            if "lang" in data:
+│ -                device.lang = data["lang"]
+│ -            db.update_device(device)
+│ -            return nice_json(device.serialize())
+│ +        device_data = db.update_device(uuid, **request.json)
+│ +        return nice_json(device_data)
+│  
+│      @app.route("/" + API_VERSION + "/admin/<uuid>/location", methods=['PUT'])
+│      @requires_admin
+│      @noindex
+│      def set_location(uuid):
+│ -        with DeviceDatabase() as db:
+│ -            device = db.get_device(uuid)
+│ -            if not device:
+│ -                return {"error": "unknown device"}
+│ -            device.location = request.json
+│ -            db.update_device(device)
+│ -            return nice_json(device.serialize())
+│ +        device_data = db.update_device(uuid, location=request.json)
+│ +        return nice_json(device_data)
+│  
+│      @app.route("/" + API_VERSION + "/admin/<uuid>/prefs", methods=['PUT'])
+│      @requires_admin
+│      @noindex
+│      def set_prefs(uuid):
+│ -        data = request.json
+│ -        with DeviceDatabase() as db:
+│ -            device = db.get_device(uuid)
+│ -            if not device:
+│ -                return {"error": "unknown device"}
+│ -            if "time_format" in data:
+│ -                device.time_format = data["time_format"]
+│ -            if "date_format" in data:
+│ -                device.date_format = data["date_format"]
+│ -            if "system_unit" in data:
+│ -                device.system_unit = data["system_unit"]
+│ -            if "lang" in data:
+│ -                device.lang = data["lang"]
+│ -            if "tts_module" in data:
+│ -                device.default_tts = data["tts_module"]
+│ -                if "tts_config" in data:
+│ -                    device.default_tts_cfg = data["tts_config"]
+│ -                elif data["tts_module"] in CONFIGURATION["tts_configs"]:
+│ -                    device.default_tts_cfg = CONFIGURATION["tts_configs"][data["tts_module"]]
+│ -                else:
+│ -                    device.default_tts_cfg = {}
+│ -            if "wake_word" in data:
+│ -                device.default_ww = data["wake_word"]
+│ -                if "ww_config" in data:
+│ -                    device.default_ww_cfg = data["ww_config"]
+│ -                elif data["ww_module"] in CONFIGURATION["ww_configs"]:
+│ -                    device.default_ww_cfg = CONFIGURATION["ww_configs"][data["ww_module"]]
+│ -                else:
+│ -                    device.default_ww_cfg = {}
+│ -            db.update_device(device)
+│ -            return nice_json(device.serialize())
+│ +        device_data = db.update_device(uuid, **request.json)
+│ +        return nice_json(device_data)
+│  
+│      return app
+├── ovos_local_backend/backend/auth.py
+│ @@ -16,15 +16,16 @@
+│  
+│  import requests
+│  from flask import request
+│  from oauthlib.oauth2 import WebApplicationClient
+│  
+│  from ovos_local_backend.backend import API_VERSION
+│  from ovos_local_backend.backend.decorators import noindex, requires_auth
+│ -from ovos_backend_client.database import OAuthTokenDatabase, OAuthApplicationDatabase
+│ +from ovos_local_backend.database import add_oauth_application, add_oauth_token, get_oauth_application, get_oauth_token
+│ +
+│  from ovos_local_backend.utils import nice_json
+│  
+│  os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+│  
+│  
+│  def get_auth_routes(app):
+│      @app.route(f"/{API_VERSION}/auth/token", methods=['GET'])
+│ @@ -46,44 +47,48 @@
+│      @app.route(f"/{API_VERSION}/auth/<oauth_id>/auth_url", methods=['GET'])
+│      @requires_auth
+│      @noindex
+│      def oauth_url(oauth_id):
+│          """ send auth url to user to confirm authorization,
+│          once user opens it callback is triggered
+│          """
+│ +        auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│ +        uid = auth.split(":")[-1]
+│ +        token_id = f"{uid}|{oauth_id}"
+│ +
+│          params = dict(request.args)
+│ -        params["callback_endpoint"] = request.base_url + f"/{API_VERSION}/auth/callback/{oauth_id}"
+│ +        params["callback_endpoint"] = request.base_url + f"/{API_VERSION}/auth/callback/{token_id}"
+│  
+│          client = WebApplicationClient(params["client_id"])
+│          request_uri = client.prepare_request_uri(
+│              params["auth_endpoint"],
+│              redirect_uri=params["callback_endpoint"],
+│              scope=params["scope"],
+│          )
+│ -        with OAuthApplicationDatabase() as db:
+│ -            db.add_application(oauth_id,
+│ -                               params["client_id"],
+│ -                               params["client_secret"],
+│ -                               params["auth_endpoint"],
+│ -                               params["token_endpoint"],
+│ -                               params["refresh_endpoint"],
+│ -                               params["callback_endpoint"],
+│ -                               params["scope"])
+│ +
+│ +        add_oauth_application(token_id=token_id,
+│ +                               client_id=params["client_id"],
+│ +                               client_secret=params["client_secret"],
+│ +                               auth_endpoint=params["auth_endpoint"],
+│ +                               token_endpoint=params["token_endpoint"],
+│ +                               refresh_endpoint=params["refresh_endpoint"],
+│ +                               callback_endpoint=params["callback_endpoint"],
+│ +                               scope=params["scope"])
+│  
+│          return request_uri, 200
+│  
+│ -    @app.route(f"/{API_VERSION}/auth/callback/<oauth_id>", methods=['GET'])
+│ +    @app.route(f"/{API_VERSION}/auth/callback/<token_id>", methods=['GET'])
+│      @noindex
+│ -    def oauth_callback(oauth_id):
+│ +    def oauth_callback(token_id):
+│          """ user completed oauth, save token to db
+│          """
+│          params = dict(request.args)
+│          code = params["code"]
+│  
+│ -        data = OAuthApplicationDatabase()[oauth_id]
+│ +        data = get_oauth_application(token_id)
+│          client_id = data["client_id"]
+│          client_secret = data["client_secret"]
+│          token_endpoint = data["token_endpoint"]
+│  
+│          # Prepare and send a request to get tokens! Yay tokens!
+│          client = WebApplicationClient(client_id)
+│          token_url, headers, body = client.prepare_token_request(
+│ @@ -95,21 +100,20 @@
+│          token_response = requests.post(
+│              token_url,
+│              headers=headers,
+│              data=body,
+│              auth=(client_id, client_secret),
+│          ).json()
+│  
+│ -        with OAuthTokenDatabase() as db:
+│ -            db.add_token(oauth_id, token_response)
+│ -
+│ +        add_oauth_token(token_id, token_response)
+│          return nice_json(params)
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/token/<oauth_id>", methods=['GET'])
+│      @requires_auth
+│      @noindex
+│      def oauth_token(uuid, oauth_id):
+│          """a device is requesting a token for a previously approved OAuth app"""
+│ -        data = OAuthTokenDatabase().get(oauth_id) or {}
+│ +        token_id = f"@{uuid}|{oauth_id}"
+│ +        data = get_oauth_token(token_id)
+│          return nice_json(data)
+│  
+│      return app
+├── ovos_local_backend/backend/decorators.py
+│ @@ -9,31 +9,34 @@
+│  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│  # See the License for the specific language governing permissions and
+│  # limitations under the License.
+│  #
+│  from functools import wraps
+│  from flask import make_response, request, Response
+│  from ovos_local_backend.configuration import CONFIGURATION
+│ -from ovos_local_backend.database.settings import DeviceDatabase
+│  
+│  
+│  def check_auth(uid, token):
+│      """This function is called to check if a access token is valid."""
+│ -    device = DeviceDatabase().get_device(uid)
+│ +    from ovos_local_backend.database import get_device
+│ +
+│ +    device = get_device(uid)
+│      if device and device.token == token:
+│          return True
+│      return False
+│  
+│  
+│  def requires_opt_in(f):
+│      @wraps(f)
+│      def decorated(*args, **kwargs):
+│ +        from ovos_local_backend.database import get_device
+│ +
+│          auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│          uuid = kwargs.get("uuid") or auth.split(":")[-1]  # this split is only valid here, not selene
+│ -        device = DeviceDatabase().get_device(uuid)
+│ +        device = get_device(uuid)
+│          if device and device.opt_in:
+│              return f(*args, **kwargs)
+│  
+│      return decorated
+│  
+│  
+│  def requires_auth(f):
+├── ovos_local_backend/backend/device.py
+│ @@ -11,63 +11,69 @@
+│  # limitations under the License.
+│  #
+│  import time
+│  
+│  from flask import request
+│  
+│  from ovos_local_backend.backend import API_VERSION
+│ -from ovos_local_backend.backend.decorators import noindex, requires_auth
+│ +from ovos_local_backend.backend.decorators import noindex, requires_auth, requires_opt_in
+│  from ovos_local_backend.configuration import CONFIGURATION
+│ -from ovos_local_backend.database.metrics import save_metric
+│ -from ovos_local_backend.database.settings import DeviceDatabase, SkillSettings, SettingsDatabase
+│  from ovos_local_backend.utils import generate_code, nice_json
+│  from ovos_local_backend.utils.geolocate import get_request_location
+│  from ovos_local_backend.utils.mail import send_email
+│ +from ovos_local_backend.database import (
+│ +    add_metric,
+│ +    get_device,
+│ +    add_device,
+│ +    SkillSettings,
+│ +    update_skill_settings,
+│ +    get_skill_settings_for_device
+│ +)
+│ +
+│ +
+│ +
+│ +@requires_opt_in
+│ +def save_metric(uuid, name, data):
+│ +    add_metric(uuid, name, data)
+│ +
+│  
+│  
+│  def get_device_routes(app):
+│      @app.route(f"/{API_VERSION}/device/<uuid>/settingsMeta", methods=['PUT'])
+│      @requires_auth
+│      def settingsmeta(uuid):
+│          """ new style skill settings meta (upload only) """
+│          s = SkillSettings.deserialize(request.json)
+│ -
+│ -        # save new settings meta to db
+│ -        with SettingsDatabase() as db:
+│ -            # keep old settings, update meta only
+│ -            old_s = db.get_setting(s.skill_id, uuid)
+│ -            if old_s:
+│ -                s.settings = old_s.settings
+│ -            db.add_setting(uuid, s.skill_id, s.settings, s.meta,
+│ -                           s.display_name, s.remote_id)
+│ -
+│ +        # ignore s.settings on purpose
+│ +        update_skill_settings(s.remote_id, 
+│ +                              metadata_json=s.meta, 
+│ +                              display_name=s.display_name)
+│          return nice_json({"success": True, "uuid": uuid})
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/skill/settings", methods=['GET'])
+│      @requires_auth
+│      def skill_settings_v2(uuid):
+│          """ new style skill settings (download only)"""
+│ -        db = SettingsDatabase()
+│ -        return {s.skill_id: s.settings for s in db.get_device_settings(uuid)}
+│ +        return {s.skill_id: s.settings for s in get_skill_settings_for_device(uuid)}
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/skill", methods=['GET', 'PUT'])
+│      @requires_auth
+│      def skill_settings(uuid):
+│          """ old style skill settings/settingsmeta - supports 2 way sync
+│           PUT - json for 1 skill
+│           GET - list of all skills """
+│          if request.method == 'PUT':
+│ -            # update local db
+│ -            with SettingsDatabase() as db:
+│ -                s = SkillSettings.deserialize(request.json)
+│ -                db.add_setting(uuid, s.skill_id, s.settings, s.meta,
+│ -                               s.display_name, s.remote_id)
+│ +            s = SkillSettings.deserialize(request.json)
+│ +            update_skill_settings(s.remote_id,
+│ +                                  settings_json=s.settings,
+│ +                                  metadata_json=s.meta,
+│ +                                  display_name=s.display_name)
+│              return nice_json({"success": True, "uuid": uuid})
+│          else:
+│ -            return nice_json([s.serialize() for s in SettingsDatabase().get_device_settings(uuid)])
+│ +            return nice_json([s.serialize() for s in get_skill_settings_for_device(uuid)])
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/skillJson", methods=['PUT'])
+│      @requires_auth
+│      def skill_json(uuid):
+│          """ device is communicating to the backend what skills are installed
+│          drop the info and don't track it! maybe if we add a UI and it becomes useful..."""
+│          # everything works in skill settings without using this
+│ @@ -83,24 +89,24 @@
+│          #             'skill_gid': 'fallback-unknown|21.02'}]
+│          return data
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/location", methods=['GET'])
+│      @requires_auth
+│      @noindex
+│      def location(uuid):
+│ -        device = DeviceDatabase().get_device(uuid)
+│ +        device = get_device(uuid)
+│          if device:
+│              return device.location
+│          return get_request_location()
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/setting", methods=['GET'])
+│      @requires_auth
+│      @noindex
+│      def setting(uuid=""):
+│ -        device = DeviceDatabase().get_device(uuid)
+│ +        device = get_device(uuid)
+│          if device:
+│              return device.selene_settings
+│          return {}
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>", methods=['PATCH', 'GET'])
+│      @requires_auth
+│      @noindex
+│ @@ -111,15 +117,15 @@
+│              # {'coreVersion': '21.2.2',
+│              # 'platform': 'unknown',
+│              # 'platform_build': None,
+│              # 'enclosureVersion': None}
+│              return {}
+│  
+│          # get from local db
+│ -        device = DeviceDatabase().get_device(uuid)
+│ +        device = get_device(uuid)
+│          if device:
+│              return device.selene_device
+│  
+│          # dummy valid data
+│          token = request.headers.get('Authorization', '').replace("Bearer ", "")
+│          uuid = token.split(":")[-1]
+│          return {
+│ @@ -163,16 +169,15 @@
+│          token = request.json["token"]
+│  
+│          # add device to db
+│          try:
+│              location = get_request_location()
+│          except:
+│              location = CONFIGURATION["default_location"]
+│ -        with DeviceDatabase() as db:
+│ -            db.add_device(uuid, token, location=location)
+│ +        add_device(uuid, token, location=location)
+│  
+│          device = {"uuid": uuid,
+│                    "expires_at": time.time() + 99999999999999,
+│                    "accessToken": token,
+│                    "refreshToken": token}
+│          return nice_json(device)
+│  
+│ @@ -181,15 +186,15 @@
+│      @requires_auth
+│      def send_mail(uuid=""):
+│  
+│          data = request.json
+│          skill_id = data["sender"]  # TODO - auto append to body ?
+│  
+│          target_email = None
+│ -        device = DeviceDatabase().get_device(uuid)
+│ +        device = get_device(uuid)
+│          if device:
+│              target_email = device.email
+│          send_email(data["title"], data["body"], target_email)
+│  
+│      @app.route(f"/{API_VERSION}/device/<uuid>/metric/<name>", methods=['POST'])
+│      @noindex
+│      @requires_auth
+├── ovos_local_backend/backend/external_apis.py
+│ @@ -1,38 +1,38 @@
+│  from flask import request
+│  
+│  from ovos_local_backend.backend import API_VERSION
+│  from ovos_local_backend.backend.decorators import noindex, requires_auth
+│  from ovos_local_backend.configuration import CONFIGURATION
+│ -from ovos_local_backend.database.settings import DeviceDatabase
+│ +from ovos_local_backend.database import get_device
+│  from ovos_local_backend.utils import dict_to_camel_case, ExternalApiManager
+│  
+│  
+│  def _get_lang():
+│      auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│      uid = auth.split(":")[-1]  # this split is only valid here, not selene
+│ -    device = DeviceDatabase().get_device(uid)
+│ +    device = get_device(uid)
+│      if device:
+│          return device.lang
+│      return CONFIGURATION.get("lang", "en-us")
+│  
+│  
+│  def _get_units():
+│      auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│      uid = auth.split(":")[-1]  # this split is only valid here, not selene
+│ -    device = DeviceDatabase().get_device(uid)
+│ +    device = get_device(uid)
+│      if device:
+│          return device.system_unit
+│      return CONFIGURATION.get("system_unit", "metric")
+│  
+│  
+│  def _get_latlon():
+│      auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│      uid = auth.split(":")[-1]  # this split is only valid here, not selene
+│ -    device = DeviceDatabase().get_device(uid)
+│ +    device = get_device(uid)
+│      if device:
+│          loc = device.location
+│      else:
+│          loc = CONFIGURATION["default_location"]
+│      lat = loc["coordinate"]["latitude"]
+│      lon = loc["coordinate"]["longitude"]
+│      return lat, lon
+├── ovos_local_backend/backend/precise.py
+│ @@ -1,33 +1,69 @@
+│  from flask import request
+│  
+│ -from ovos_local_backend.backend.decorators import noindex, requires_auth
+│ +from ovos_local_backend.backend import API_VERSION
+│ +from ovos_local_backend.backend.decorators import noindex, requires_auth, requires_opt_in
+│  from ovos_local_backend.configuration import CONFIGURATION
+│ -from ovos_local_backend.database.wakewords import save_ww_recording
+│ +from ovos_local_backend.database import add_ww_recording
+│ +
+│ +
+│ +@requires_opt_in
+│ +def save_ww_recording(uuid, uploads):
+│ +    meta = {}
+│ +    audio = None
+│ +    for ww_file in uploads:
+│ +        # Werkzeug FileStorage objects
+│ +        fn = uploads[ww_file].filename
+│ +        if fn == 'audio':
+│ +            audio = uploads[ww_file].read()
+│ +        if fn == 'metadata':
+│ +            meta = json.load(uploads[ww_file])
+│ +
+│ +    if not audio:
+│ +        return False  # TODO - some error? just ignore entry for now
+│ +
+│ +    # classic mycroft devices send
+│ +    # {"name": "hey-mycroft",
+│ +    # "engine": "0f4df281688583e010c26831abdc2222",
+│ +    # "time": "1592192357852",
+│ +    # "sessionId": "7d18e208-05b5-401e-add6-ee23ae821967",
+│ +    # "accountId": "0",
+│ +    # "model": "5223842df0cdee5bca3eff8eac1b67fc"}
+│ +
+│ +    add_ww_recording(uuid,
+│ +                     audio,
+│ +                     meta.get("name", "").replace("_", " "),
+│ +                     meta)
+│ +    return True
+│  
+│  
+│  def get_precise_routes(app):
+│      @app.route('/precise/upload', methods=['POST'])
+│      @noindex
+│      @requires_auth
+│      def precise_upload():
+│ +        success = False
+│          if CONFIGURATION["record_wakewords"]:
+│              auth = request.headers.get('Authorization', '').replace("Bearer ", "")
+│              uuid = auth.split(":")[-1]  # this split is only valid here, not selene
+│ -            save_ww_recording(uuid, request.files)
+│ +            success = save_ww_recording(uuid, request.files)
+│  
+│ -        return {"success": True,
+│ +        return {"success": success,
+│                  "sent_to_mycroft": False,
+│                  "saved": CONFIGURATION["record_wakewords"]}
+│  
+│ -    @app.route('/device/<uuid>/wake-word-file', methods=['POST'])
+│ +    @app.route(f'/{API_VERSION}/device/<uuid>/wake-word-file', methods=['POST'])
+│      @noindex
+│      @requires_auth
+│      def precise_upload_v2(uuid):
+│ +        success = False
+│ +        if 'audio' not in request.files:
+│ +            return "No Audio to upload", 400
+│ +
+│          if CONFIGURATION["record_wakewords"]:
+│ -            save_ww_recording(uuid, request.files)
+│ +            success = save_ww_recording(uuid, request.files)
+│  
+│ -        return {"success": True,
+│ +        return {"success": success,
+│                  "sent_to_mycroft": False,
+│                  "saved": CONFIGURATION["record_wakewords"]}
+│  
+│      return app
+├── ovos_local_backend/backend/stt.py
+│ @@ -12,23 +12,29 @@
+│  #
+│  import json
+│  from tempfile import NamedTemporaryFile
+│  
+│  from flask import request
+│  from speech_recognition import Recognizer, AudioFile
+│  from ovos_local_backend.backend import API_VERSION
+│ -from ovos_local_backend.backend.decorators import noindex, requires_auth
+│ +from ovos_local_backend.backend.decorators import noindex, requires_auth, requires_opt_in
+│  from ovos_local_backend.configuration import CONFIGURATION
+│ -from ovos_local_backend.database.utterances import save_stt_recording
+│ +from ovos_local_backend.database import add_stt_recording
+│  from ovos_plugin_manager.stt import OVOSSTTFactory
+│  
+│  recognizer = Recognizer()
+│  engine = OVOSSTTFactory.create(CONFIGURATION["stt"])
+│  
+│  
+│ +@requires_opt_in
+│ +def save_stt_recording(uuid, audio, utterance):
+│ +    audio_bytes = audio.get_wav_data()
+│ +    add_stt_recording(uuid, audio_bytes, utterance)
+│ +
+│ +
+│  def get_stt_routes(app):
+│      @app.route("/" + API_VERSION + "/stt", methods=['POST'])
+│      @noindex
+│      @requires_auth
+│      def stt():
+│          flac_audio = request.data
+│          lang = str(request.args.get("lang", "en-us"))
+│   --- ovos_local_backend-0.1.6a9.dist-info/LICENSE
+├── +++ ovos_local_backend-0.2.0a2.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- ovos_local_backend-0.1.6a9.dist-info/METADATA
+├── +++ ovos_local_backend-0.2.0a2.dist-info/METADATA
+│┄ Files 25% similar despite different names
+│ @@ -1,24 +1,26 @@
+│  Metadata-Version: 2.1
+│  Name: ovos-local-backend
+│ -Version: 0.1.6a9
+│ +Version: 0.2.0a2
+│  Summary: mock mycroft backend
+│  Home-page: https://github.com/OpenVoiceOS/OVOS-local-backend
+│  Author: jarbasAI
+│  Author-email: jarbasai@mailfence.com
+│  License: Apache-2.0
+│  Platform: UNKNOWN
+│  Requires-Dist: Flask (>=0.12)
+│  Requires-Dist: json-database (~=0.7)
+│  Requires-Dist: requests (>=2.26.0)
+│  Requires-Dist: pyOpenSSL
+│  Requires-Dist: ovos-utils (>=0.0.25a7)
+│ -Requires-Dist: ovos-plugin-manager
+│ +Requires-Dist: ovos-plugin-manager (>=0.0.23a3)
+│  Requires-Dist: ovos-stt-plugin-server
+│  Requires-Dist: geocoder
+│  Requires-Dist: timezonefinder
+│  Requires-Dist: requests-cache
+│  Requires-Dist: oauthlib (~=3.0)
+│ +Requires-Dist: Flask-SQLAlchemy
+│ +Requires-Dist: sqlalchemy-json
+│  
+│  UNKNOWN
+│   --- ovos_local_backend-0.1.6a9.dist-info/RECORD
+├── +++ ovos_local_backend-0.2.0a2.dist-info/RECORD
+│┄ Files 10% similar despite different names
+│ @@ -1,28 +1,24 @@
+│  ovos_local_backend/__init__.py,sha256=YMbBqDky5TUJdq4mx2Phaq6Vzx2Hd-bIf1YTTFSPxOA,53
+│  ovos_local_backend/__main__.py,sha256=FaCVoPxLlHy_IAfpIqpe8MVpu3HbyP5Xk0hA5-r-Wxo,555
+│ -ovos_local_backend/configuration.py,sha256=AJJj-cWiy2DqW1ASkJ5FKApCOskUxgycF7dEJtGsRL8,9030
+│ +ovos_local_backend/configuration.py,sha256=oYkIwhO1lySY1OOcHieA5QBzKyRuxSYOTgH0lr9RHWA,9116
+│ +ovos_local_backend/database.py,sha256=XPZJVzLP0RvxhQKx4pKm4B5KNupa2GIjkQF2a39s-ok,33972
+│  ovos_local_backend/session.py,sha256=5--wfP8Vu0njYU90S_hJoyr4SnnRrG_w-bmpOO9_1hw,103
+│ -ovos_local_backend/version.py,sha256=jf0GujOVqYEjT_f-5zGQ2wrgdMnZKGEbeJTBGgPyuMM,177
+│ -ovos_local_backend/backend/__init__.py,sha256=Rzr_96N2PlImgJvkT3ux5eQzPB8yt4rcY6NjVDa85BA,1920
+│ -ovos_local_backend/backend/admin.py,sha256=u3WGj7tffKC8oXaJ5yqwLA_P23j4BcrbkmwTguZbmHY,4584
+│ -ovos_local_backend/backend/auth.py,sha256=dTfn4N2ihaGxIqS8MUqlLmOZQDoz1g8WCNhdrv3GGtQ,4232
+│ -ovos_local_backend/backend/decorators.py,sha256=1dbyVvROqeHRFQaUo_kYtYngorJJiNwsgPH4usI8uZU,3370
+│ -ovos_local_backend/backend/device.py,sha256=SlhnVf0S9xerDIYyhjmXp6zf_QmiCNP8PYItqdJYRos,8123
+│ -ovos_local_backend/backend/external_apis.py,sha256=JXoPzoEBimE0GIkamAHGxIjZuHgis3RzW6tUid9jyIA,4727
+│ -ovos_local_backend/backend/precise.py,sha256=xGXe_8tRCIpEvu6WJc78CAeIVacVKh5qdn9tyPdPvnQ,1149
+│ -ovos_local_backend/backend/stt.py,sha256=brcpSMZpART9JKm757qL04BuZwdQW3s08MNeU2u1TWo,1944
+│ -ovos_local_backend/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│ -ovos_local_backend/database/metrics.py,sha256=b16LcheJGOi8gkd5tRQxGSPGV8xQ2GKJyfVdDkLAIf4,1195
+│ -ovos_local_backend/database/oauth.py,sha256=HJ4OiCRiE9qcpmTqtOfUf0J9axd2N9G6zQP5nOO-tgU,112
+│ -ovos_local_backend/database/settings.py,sha256=Ocumm0wGzrLriU_tINe_WGQAvnWwCiElQoe0bCzs17g,14676
+│ -ovos_local_backend/database/utterances.py,sha256=TnvIZ6BMDhxrF2KR62AB__y9Y_vqW2wijQXbnsG7wxA,1659
+│ -ovos_local_backend/database/wakewords.py,sha256=xAto6ZOGcColkJAAiij6JAQNmi1GlLWyHQ3fpN5A08I,2895
+│ +ovos_local_backend/version.py,sha256=VQMNdeYRkfF7zChGp-GQpnzaLk-m2ZfMR2zUOZLZaWs,177
+│ +ovos_local_backend/backend/__init__.py,sha256=ZN4jJ4El_w--VNqRbEAT6l2EteDP3aT60tKdpUdF5GM,2102
+│ +ovos_local_backend/backend/admin.py,sha256=koalkJOiUf00Gq--yB6Ig56dTHtpOmgn1yseLt50B78,2220
+│ +ovos_local_backend/backend/auth.py,sha256=Aur9qrHKkA6M5GdISKGaI5io1K71XOb0WkbwF1bPtF0,4453
+│ +ovos_local_backend/backend/crud.py,sha256=NjjD7kkGkyimzAjPJm9e1B0-tybpjY7lPImqpxkeP2A,13647
+│ +ovos_local_backend/backend/decorators.py,sha256=Yfitr0bFHKWw8kLxuj4nx6kb75ulvL62KIBGNjIfsm8,3388
+│ +ovos_local_backend/backend/device.py,sha256=rfdkSferWQcekUKGzqterwE4XpKZk80_zrdyr1F9SLs,7943
+│ +ovos_local_backend/backend/external_apis.py,sha256=4DDJHQKbW27U2r43gTY4nFfFYgwru7xEmK8VzMJL2_M,4663
+│ +ovos_local_backend/backend/precise.py,sha256=n0V0qpakf6htLpm-o17XqvAu9-eVCp3RCT_fIZUAfqE,2253
+│ +ovos_local_backend/backend/stt.py,sha256=W08Clr4PCY8Pkmw7bAyLNgomsMGD8hs7oavyDk8svkk,2107
+│  ovos_local_backend/utils/__init__.py,sha256=TpuV-D9-t3Jj9PETINAjH45Buy3U1cKrgZ9BiywPKkY,9836
+│  ovos_local_backend/utils/geolocate.py,sha256=uMjb_FYmn81t38FDDH7vVO8Zq8x5XjVTSgkXYx9XVHE,6203
+│  ovos_local_backend/utils/mail.py,sha256=OXc3cvKRmQ3t0COmSdtkZYGQydnrzxvwngahfqrNg7s,1020
+│ -ovos_local_backend-0.1.6a9.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349
+│ -ovos_local_backend-0.1.6a9.dist-info/METADATA,sha256=SDtvz8Pido04V_dCv9cYqBMI1ml8vfI49oC6vnm2I6U,613
+│ -ovos_local_backend-0.1.6a9.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ -ovos_local_backend-0.1.6a9.dist-info/entry_points.txt,sha256=0EEK_6ggH1Jn8ShRNLQSNGS8ZnLz9j3uyc2Z0ezJF0c,73
+│ -ovos_local_backend-0.1.6a9.dist-info/top_level.txt,sha256=wzhQzBnq6wL0_UNQ2JBeakplDf_Mv-e7qBaZ7TR2Rlk,19
+│ -ovos_local_backend-0.1.6a9.dist-info/RECORD,,
+│ +ovos_local_backend-0.2.0a2.dist-info/LICENSE,sha256=fYHkowW9JcaEcqCPTXYBayNJ9J1lGdYVb7Mf9oy6oEY,11349
+│ +ovos_local_backend-0.2.0a2.dist-info/METADATA,sha256=fiKfAtaAEKC2SJjuSIQczXr5XEONgwSaKWR-uBiXigI,689
+│ +ovos_local_backend-0.2.0a2.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+│ +ovos_local_backend-0.2.0a2.dist-info/entry_points.txt,sha256=0EEK_6ggH1Jn8ShRNLQSNGS8ZnLz9j3uyc2Z0ezJF0c,73
+│ +ovos_local_backend-0.2.0a2.dist-info/top_level.txt,sha256=wzhQzBnq6wL0_UNQ2JBeakplDf_Mv-e7qBaZ7TR2Rlk,19
+│ +ovos_local_backend-0.2.0a2.dist-info/RECORD,,
