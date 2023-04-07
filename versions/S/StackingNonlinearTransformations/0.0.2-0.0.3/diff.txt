@@ -1,0 +1,31 @@
+--- tmp/StackingNonlinearTransformations-0.0.2-py3.8.egg
++++ tmp/StackingNonlinearTransformations-0.0.3-py3.8.egg
+├── zipinfo {}
+│ @@ -1,8 +1,8 @@
+│  Zip file size: 11279 bytes, number of entries: 6
+│ --rw-rw-rw-  2.0 fat    56672 b- defN 23-Apr-07 12:49 EGG-INFO/PKG-INFO
+│ --rw-rw-rw-  2.0 fat      287 b- defN 23-Apr-07 12:49 EGG-INFO/SOURCES.txt
+│ --rw-rw-rw-  2.0 fat        1 b- defN 23-Apr-07 12:49 EGG-INFO/dependency_links.txt
+│ --rw-rw-rw-  2.0 fat       39 b- defN 23-Apr-07 12:49 EGG-INFO/requires.txt
+│ --rw-rw-rw-  2.0 fat        1 b- defN 23-Apr-07 12:49 EGG-INFO/top_level.txt
+│ --rw-rw-rw-  2.0 fat        2 b- defN 23-Apr-07 12:49 EGG-INFO/zip-safe
+│ +-rw-rw-rw-  2.0 fat    56672 b- defN 23-Apr-07 12:54 EGG-INFO/PKG-INFO
+│ +-rw-rw-rw-  2.0 fat      287 b- defN 23-Apr-07 12:54 EGG-INFO/SOURCES.txt
+│ +-rw-rw-rw-  2.0 fat        1 b- defN 23-Apr-07 12:54 EGG-INFO/dependency_links.txt
+│ +-rw-rw-rw-  2.0 fat       39 b- defN 23-Apr-07 12:54 EGG-INFO/requires.txt
+│ +-rw-rw-rw-  2.0 fat        1 b- defN 23-Apr-07 12:54 EGG-INFO/top_level.txt
+│ +-rw-rw-rw-  2.0 fat        2 b- defN 23-Apr-07 12:54 EGG-INFO/zip-safe
+│  6 files, 57002 bytes uncompressed, 10549 bytes compressed:  81.5%
+├── EGG-INFO/PKG-INFO
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: StackingNonlinearTransformations
+│ -Version: 0.0.2
+│ +Version: 0.0.3
+│  Summary: Stacking algorithm optimization 
+│  Home-page: https://gitee.com/caoxinyu123/prostate_cancer_related_research/blob/STN/StackingNonlinearTransformations.py
+│  Author: caoxinyu
+│  Author-email: 398424191@qqc.om
+│  License: UNKNOWN
+│  Platform: UNKNOWN
+│  Classifier: Programming Language :: Python :: 3

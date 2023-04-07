@@ -1,0 +1,165 @@
+# Comparing `tmp/Flask Boilerplate Creator-0.0.2.tar.gz` & `tmp/Flask Boilerplate Creator-0.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "Flask Boilerplate Creator-0.0.2.tar", last modified: Fri Apr  7 04:25:58 2023, max compression
++gzip compressed data, was "Flask Boilerplate Creator-0.0.3.tar", last modified: Fri Apr  7 04:52:19 2023, max compression
+```
+
+## Comparing `Flask Boilerplate Creator-0.0.2.tar` & `Flask Boilerplate Creator-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 04:25:58.299695 Flask Boilerplate Creator-0.0.2/
+-drwxrwxrwx   0        0        0        0 2023-04-07 04:25:58.278428 Flask Boilerplate Creator-0.0.2/Flask_Boilerplate_Creator.egg-info/
+--rw-rw-rw-   0        0        0     1876 2023-04-07 04:25:58.000000 Flask Boilerplate Creator-0.0.2/Flask_Boilerplate_Creator.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      298 2023-04-07 04:25:58.000000 Flask Boilerplate Creator-0.0.2/Flask_Boilerplate_Creator.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 04:25:58.000000 Flask Boilerplate Creator-0.0.2/Flask_Boilerplate_Creator.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        4 2023-04-07 04:25:58.000000 Flask Boilerplate Creator-0.0.2/Flask_Boilerplate_Creator.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0     1093 2023-04-07 04:02:55.000000 Flask Boilerplate Creator-0.0.2/LICENSE
+--rw-rw-rw-   0        0        0     1876 2023-04-07 04:25:58.292587 Flask Boilerplate Creator-0.0.2/PKG-INFO
+--rw-rw-rw-   0        0        0     1181 2023-04-07 04:25:06.000000 Flask Boilerplate Creator-0.0.2/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-07 04:25:58.289595 Flask Boilerplate Creator-0.0.2/flask-boilerplate-creator/
+--rw-rw-rw-   0        0        0     8764 2023-04-07 04:24:30.000000 Flask Boilerplate Creator-0.0.2/flask-boilerplate-creator/__init__.py
+--rw-rw-rw-   0        0        0       59 2023-04-07 02:54:15.000000 Flask Boilerplate Creator-0.0.2/flask-boilerplate-creator/__main__.py
+--rw-rw-rw-   0        0        0       42 2023-04-07 04:25:58.300704 Flask Boilerplate Creator-0.0.2/setup.cfg
+--rw-rw-rw-   0        0        0      903 2023-04-07 04:24:22.000000 Flask Boilerplate Creator-0.0.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 04:52:19.166823 Flask Boilerplate Creator-0.0.3/
++drwxrwxrwx   0        0        0        0 2023-04-07 04:52:19.141228 Flask Boilerplate Creator-0.0.3/Flask_Boilerplate_Creator.egg-info/
++-rw-rw-rw-   0        0        0     1868 2023-04-07 04:52:18.000000 Flask Boilerplate Creator-0.0.3/Flask_Boilerplate_Creator.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      298 2023-04-07 04:52:18.000000 Flask Boilerplate Creator-0.0.3/Flask_Boilerplate_Creator.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 04:52:18.000000 Flask Boilerplate Creator-0.0.3/Flask_Boilerplate_Creator.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        4 2023-04-07 04:52:18.000000 Flask Boilerplate Creator-0.0.3/Flask_Boilerplate_Creator.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0     1093 2023-04-07 04:02:55.000000 Flask Boilerplate Creator-0.0.3/LICENSE
++-rw-rw-rw-   0        0        0     1868 2023-04-07 04:52:19.158708 Flask Boilerplate Creator-0.0.3/PKG-INFO
++-rw-rw-rw-   0        0        0     1181 2023-04-07 04:25:06.000000 Flask Boilerplate Creator-0.0.3/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 04:52:19.155826 Flask Boilerplate Creator-0.0.3/flask-boilerplate-creator/
++-rw-rw-rw-   0        0        0     8764 2023-04-07 04:50:30.000000 Flask Boilerplate Creator-0.0.3/flask-boilerplate-creator/__init__.py
++-rw-rw-rw-   0        0        0       59 2023-04-07 02:54:15.000000 Flask Boilerplate Creator-0.0.3/flask-boilerplate-creator/__main__.py
++-rw-rw-rw-   0        0        0       42 2023-04-07 04:52:19.167819 Flask Boilerplate Creator-0.0.3/setup.cfg
++-rw-rw-rw-   0        0        0      895 2023-04-07 04:50:23.000000 Flask Boilerplate Creator-0.0.3/setup.py
+```
+
+### Comparing `Flask Boilerplate Creator-0.0.2/Flask_Boilerplate_Creator.egg-info/PKG-INFO` & `Flask Boilerplate Creator-0.0.3/Flask_Boilerplate_Creator.egg-info/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ Metadata-Version: 2.1
+ Name: Flask-Boilerplate-Creator
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Create boilerplate structure of flask web application
+ Home-page: https://github.com/hakiKhuva/flask-boilerplate-creator
+ Author: Harkishan Khuva
+ Author-email: hakitechy@gmail.com
+ License: MIT
+ Keywords: fbc,flask-boilerplate-creator,flask boilerplate creator
+ Platform: UNKNOWN
+-Classifier: Environment :: Web Environment
++Classifier: Environment :: Console
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `Flask Boilerplate Creator-0.0.2/LICENSE` & `Flask Boilerplate Creator-0.0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `Flask Boilerplate Creator-0.0.2/PKG-INFO` & `Flask Boilerplate Creator-0.0.3/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ Metadata-Version: 2.1
+ Name: Flask Boilerplate Creator
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Create boilerplate structure of flask web application
+ Home-page: https://github.com/hakiKhuva/flask-boilerplate-creator
+ Author: Harkishan Khuva
+ Author-email: hakitechy@gmail.com
+ License: MIT
+ Keywords: fbc,flask-boilerplate-creator,flask boilerplate creator
+ Platform: UNKNOWN
+-Classifier: Environment :: Web Environment
++Classifier: Environment :: Console
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `Flask Boilerplate Creator-0.0.2/README.md` & `Flask Boilerplate Creator-0.0.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Flask Boilerplate Creator-0.0.2/flask-boilerplate-creator/__init__.py` & `Flask Boilerplate Creator-0.0.3/flask-boilerplate-creator/__init__.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ """
+ Generate boilerplate structure for flask web app
+ 
+ author: Harkishan Khuva <harkishankhuva.pythonanywhere.com>
+ created date: 07/04/2023 IST
+-version: 0.0.2
++version: 0.0.3
+ """
+ 
+ # :: IMPORTS
+ import os
+ import sys
+ import shutil
+ import typing
+```
+
+### Comparing `Flask Boilerplate Creator-0.0.2/setup.py` & `Flask Boilerplate Creator-0.0.3/setup.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,23 +1,23 @@
+ from setuptools import setup
+ 
+ setup(
+     name="Flask Boilerplate Creator",
+-    version="0.0.2",
++    version="0.0.3",
+     description="Create boilerplate structure of flask web application",
+     author="Harkishan Khuva",
+     author_email="hakitechy@gmail.com",
+     license="MIT",
+     keywords=["fbc", "flask-boilerplate-creator", "flask boilerplate creator"],
+     packages=["fbc"],
+     package_dir={
+         "fbc": "flask-boilerplate-creator"
+     },
+     classifiers=[
+-        "Environment :: Web Environment",
++        "Environment :: Console",
+         "Intended Audience :: Developers",
+         "Programming Language :: Python :: 3",
+         "License :: OSI Approved :: MIT License",
+         "Operating System :: OS Independent",
+     ],
+     url="https://github.com/hakiKhuva/flask-boilerplate-creator",
+     python_requires=">=3.8",
+```
+

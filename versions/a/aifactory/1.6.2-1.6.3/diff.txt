@@ -1,0 +1,70 @@
+--- tmp/aifactory-1.6.2.tar.gz
++++ tmp/aifactory-1.6.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "aifactory-1.6.2.tar", last modified: Fri Apr  7 04:47:59 2023, max compression
+│ +gzip compressed data, was "aifactory-1.6.3.tar", last modified: Fri Apr  7 04:53:50 2023, max compression
+│   --- aifactory-1.6.2.tar
+├── +++ aifactory-1.6.3.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 04:47:59.385351 aifactory-1.6.2/
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 04:47:59.385223 aifactory-1.6.2/PKG-INFO
+│ │ -drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 04:47:59.384527 aifactory-1.6.2/aifactory/
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)        0 2022-08-02 00:40:18.000000 aifactory-1.6.2/aifactory/__init__.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     3743 2022-11-14 05:11:27.000000 aifactory-1.6.2/aifactory/api.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     3710 2022-11-14 05:11:05.000000 aifactory-1.6.2/aifactory/demo.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)    14314 2023-03-30 07:01:37.000000 aifactory-1.6.2/aifactory/grade.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     5966 2022-11-05 14:24:05.000000 aifactory-1.6.2/aifactory/make_zip.py
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)     3318 2023-04-07 04:47:13.000000 aifactory-1.6.2/aifactory/score.py
+│ │ -drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 04:47:59.385058 aifactory-1.6.2/aifactory.egg-info/
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 04:47:59.000000 aifactory-1.6.2/aifactory.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      289 2023-04-07 04:47:59.000000 aifactory-1.6.2/aifactory.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)        1 2023-04-07 04:47:59.000000 aifactory-1.6.2/aifactory.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)       41 2023-04-07 04:47:59.000000 aifactory-1.6.2/aifactory.egg-info/requires.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)       17 2023-04-07 04:47:59.000000 aifactory-1.6.2/aifactory.egg-info/top_level.txt
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)       38 2023-04-07 04:47:59.385389 aifactory-1.6.2/setup.cfg
+│ │ --rw-r--r--   0 kyj        (501) staff       (20)      430 2023-04-07 04:47:38.000000 aifactory-1.6.2/setup.py
+│ │ +drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 04:53:50.963797 aifactory-1.6.3/
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 04:53:50.963668 aifactory-1.6.3/PKG-INFO
+│ │ +drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 04:53:50.962800 aifactory-1.6.3/aifactory/
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)        0 2022-08-02 00:40:18.000000 aifactory-1.6.3/aifactory/__init__.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     3743 2022-11-14 05:11:27.000000 aifactory-1.6.3/aifactory/api.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     3710 2022-11-14 05:11:05.000000 aifactory-1.6.3/aifactory/demo.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)    14314 2023-03-30 07:01:37.000000 aifactory-1.6.3/aifactory/grade.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     5966 2022-11-05 14:24:05.000000 aifactory-1.6.3/aifactory/make_zip.py
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)     3333 2023-04-07 04:53:44.000000 aifactory-1.6.3/aifactory/score.py
+│ │ +drwxr-xr-x   0 kyj        (501) staff       (20)        0 2023-04-07 04:53:50.963499 aifactory-1.6.3/aifactory.egg-info/
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      228 2023-04-07 04:53:50.000000 aifactory-1.6.3/aifactory.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      289 2023-04-07 04:53:50.000000 aifactory-1.6.3/aifactory.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)        1 2023-04-07 04:53:50.000000 aifactory-1.6.3/aifactory.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)       41 2023-04-07 04:53:50.000000 aifactory-1.6.3/aifactory.egg-info/requires.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)       17 2023-04-07 04:53:50.000000 aifactory-1.6.3/aifactory.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)       38 2023-04-07 04:53:50.963835 aifactory-1.6.3/setup.cfg
+│ │ +-rw-r--r--   0 kyj        (501) staff       (20)      430 2023-04-07 04:53:33.000000 aifactory-1.6.3/setup.py
+│ │   --- aifactory-1.6.2/aifactory/api.py
+│ ├── +++ aifactory-1.6.3/aifactory/api.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.2/aifactory/demo.py
+│ ├── +++ aifactory-1.6.3/aifactory/demo.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.2/aifactory/grade.py
+│ ├── +++ aifactory-1.6.3/aifactory/grade.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.2/aifactory/make_zip.py
+│ ├── +++ aifactory-1.6.3/aifactory/make_zip.py
+│ │┄ Files identical despite different names
+│ │   --- aifactory-1.6.2/aifactory/score.py
+│ ├── +++ aifactory-1.6.3/aifactory/score.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -96,10 +96,11 @@
+│ │            time.sleep(10)
+│ │          except Exception as e:          
+│ │            print(" error :" + str(e))
+│ │            break    
+│ │        return
+│ │      print(res.status_code)  
+│ │      print(res.text)
+│ │ +    print(res)
+│ │    except Exception as e:          
+│ │      print(" error :" + str(e))

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/commit_check-0.5.3-py3-none-any.whl.zip tmp/commit_check-0.5.4-py3-none-any.whl.zip --html versions/c/commit-check/0.5.3-0.5.4/index.html --text versions/c/commit-check/0.5.3-0.5.4/diff.txt --markdown versions/c/commit-check/0.5.3-0.5.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.19 KB</span></div>
+  <div><span class="source">tmp/commit_check-0.5.3-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/commit_check-0.5.4-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">2.41 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>111<del>36</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>13</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>111<ins>62</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>13</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1735<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1735<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1117<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/author.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1117<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/author.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>926<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/branch.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>926<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/branch.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1407<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/commit.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1407<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/commit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2675<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/error.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2675<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/error.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2919<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/main.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2919<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4748<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check/util.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4748<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1095<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/LICENSE</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1095<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<del>605</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/METADATA</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<ins>716</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/WHEEL</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/entry_points.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/top_level.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><del>?</del>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1060<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>24</del><span class="dp">·</span><del>1</del>4:<del>23</del><span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/RECORD</td><td class="diffline">14 </td><td class="diffpresent"><ins>-</ins>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1060<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>07</ins><span class="dp">·</span><ins>0</ins>4:<ins>57</ins><span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">13<span class="dp">·</span>files,<span class="dp">·</span>26<del>448</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>93<del>66</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>64.6%</td><td class="diffline">15 </td><td class="diffpresent">13<span class="dp">·</span>files,<span class="dp">·</span>26<ins>559</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>93<ins>92</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>64.6%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">832 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 26 lines modified</td><td colspan="2">Offset 15, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check/main.py</td><td class="diffline">15 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check/main.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">16 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check/util.py</td><td class="diffline">17 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check/util.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">18 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/LICENSE</td><td class="diffline">19 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">20 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/METADATA</td><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/WHEEL</td><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/entry_points.txt</td><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/top_level.txt</td><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<del>3</del>.dist-info/RECORD</td><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>commit_check-0.5.<ins>4</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">31 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">111 B</span></div>
+    <div><span class="source">commit_check-0.5.3.dist-info/LICENSE</span> vs.</div>
+    <div id="commit_check--.-.-.dist-info-LICENSE"><span class="source">commit_check-0.5.4.dist-info/LICENSE</span>
+      <a class="anchor" href="#commit_check--.-.-.dist-info-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.1 KB</span></div>
+    <div><span class="source">commit_check-0.5.3.dist-info/METADATA</span> vs.</div>
+    <div id="commit_check--.-.-.dist-info-METADATA"><span class="source">commit_check-0.5.4.dist-info/METADATA</span>
+      <a class="anchor" href="#commit_check--.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 4% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>commit-check</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>commit-check</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Check<span class="dp">·</span>commit<span class="dp">·</span>message<span class="dp">·</span>formatting,<span class="dp">·</span>branch<span class="dp">·</span>naming,<span class="dp">·</span>commit<span class="dp">·</span>author,<span class="dp">·</span>email,<span class="dp">·</span>and<span class="dp">·</span>more.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Check<span class="dp">·</span>commit<span class="dp">·</span>message<span class="dp">·</span>formatting,<span class="dp">·</span>branch<span class="dp">·</span>naming,<span class="dp">·</span>commit<span class="dp">·</span>author,<span class="dp">·</span>email,<span class="dp">·</span>and<span class="dp">·</span>more.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Peter<span class="dp">·</span>Shen<span class="dp">·</span>&lt;xianpeng.shen@gmail.com&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Peter<span class="dp">·</span>Shen<span class="dp">·</span>&lt;xianpeng.shen@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>source,<span class="dp">·</span>https://github.com/commit-check/commit-check</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>source,<span class="dp">·</span>https://github.com/commit-check/commit-check</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>tracker,<span class="dp">·</span>https://github.com/commit-check/commit-check/issues</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>tracker,<span class="dp">·</span>https://github.com/commit-check/commit-check/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>commit<span class="dp">·</span>conventions,conventional<span class="dp">·</span>commits,branch<span class="dp">·</span>naming,commit-check,message,lint<span class="dp">·</span>message</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>commit<span class="dp">·</span>conventions,conventional<span class="dp">·</span>commits,branch<span class="dp">·</span>naming,commit-check,message,lint<span class="dp">·</span>message</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 107, 17 lines modified</td><td colspan="2">Offset 107, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Make<span class="dp">·</span>sure<span class="dp">·</span>``pre-commit``<span class="dp">·</span>is<span class="dp">·</span>`installed<span class="dp">·</span>&lt;https://pre-commit.com/#install&gt;`_.</td><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Make<span class="dp">·</span>sure<span class="dp">·</span>``pre-commit``<span class="dp">·</span>is<span class="dp">·</span>`installed<span class="dp">·</span>&lt;https://pre-commit.com/#install&gt;`_.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">108 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>yaml</td><td class="diffline">108 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>yaml</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">109 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo:<span class="dp">·</span>https://github.com/commit-check/commit-check</td><td class="diffline">109 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>repo:<span class="dp">·</span>https://github.com/commit-check/commit-check</td></tr>
+<tr class="diffunmodified"><td class="diffline">110 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>rev:<span class="dp">·</span>the<span class="dp">·</span>tag<span class="dp">·</span>or<span class="dp">·</span>revision</td><td class="diffline">110 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>rev:<span class="dp">·</span>the<span class="dp">·</span>tag<span class="dp">·</span>or<span class="dp">·</span>revision</td></tr>
+<tr class="diffchanged"><td class="diffline">111 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>hooks:</td><td class="diffline">111 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>hooks:<ins><span class="dp">·</span>#<span class="dp">·</span>support<span class="dp">·</span>hooks</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>id:<span class="dp">·</span>check-message</td><td class="diffline">112 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>id:<span class="dp">·</span>check-message</td></tr>
+<tr class="diffunmodified"><td class="diffline">113 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>id:<span class="dp">·</span>check-branch</td><td class="diffline">113 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>id:<span class="dp">·</span>check-branch</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">114 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>id:<span class="dp">·</span>check-author-name</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">115 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>id:<span class="dp">·</span>check-author-email</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">114 </td><td class="diffpresent">Running<span class="dp">·</span>as<span class="dp">·</span>CLI</td><td class="diffline">116 </td><td class="diffpresent">Running<span class="dp">·</span>as<span class="dp">·</span>CLI</td></tr>
+<tr class="diffunmodified"><td class="diffline">115 </td><td class="diffpresent">~~~~~~~~~~~~~~</td><td class="diffline">117 </td><td class="diffpresent">~~~~~~~~~~~~~~</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">116 </td><td class="diffpresent">Global<span class="dp">·</span>installation</td><td class="diffline">118 </td><td class="diffpresent">Global<span class="dp">·</span>installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">117 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>bash</td><td class="diffline">119 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>bash</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 182, 15 lines modified</td><td colspan="2">Offset 184, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">182 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>commit<span class="dp">·</span>message<span class="dp">·</span>should<span class="dp">·</span>be<span class="dp">·</span>structured<span class="dp">·</span>as<span class="dp">·</span>follows:</td><td class="diffline">184 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>commit<span class="dp">·</span>message<span class="dp">·</span>should<span class="dp">·</span>be<span class="dp">·</span>structured<span class="dp">·</span>as<span class="dp">·</span>follows:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">183 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&lt;type&gt;[optional<span class="dp">·</span>scope]:<span class="dp">·</span>&lt;description&gt;</td><td class="diffline">185 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&lt;type&gt;[optional<span class="dp">·</span>scope]:<span class="dp">·</span>&lt;description&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">184 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[optional<span class="dp">·</span>body]</td><td class="diffline">186 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[optional<span class="dp">·</span>body]</td></tr>
+<tr class="diffunmodified"><td class="diffline">185 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[optional<span class="dp">·</span>footer(s)]</td><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>[optional<span class="dp">·</span>footer(s)]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">186 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>More<span class="dp">·</span>details<span class="dp">·</span>please<span class="dp">·</span>refer<span class="dp">·</span>to<span class="dp">·</span>https://www.conventionalcommits.org</td><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>More<span class="dp">·</span>details<span class="dp">·</span>please<span class="dp">·</span>refer<span class="dp">·</span>to<span class="dp">·</span>https://www.conventionalcommits.org</td></tr>
+<tr class="diffchanged"><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Suggest<span class="dp">·</span><del>to<span class="dp">·</span>run</del><span class="dp">·</span><del>=&gt;</del><span class="dp">·</span><del>git</del><span class="dp">·</span>commit<span class="dp">·</span><del>--</del>a<del>m</del>e<del>nd</del><span class="dp">·</span><del>--no-</del>ver<del>ify</del></td><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Suggest<ins>:</ins><span class="dp">·</span><ins>please</ins><span class="dp">·</span><ins>che</ins><ins>ck</ins><span class="dp">·</span><ins>y</ins><ins>our</ins><span class="dp">·</span>commit<span class="dp">·</span><ins>me</ins><ins>ss</ins>a<ins>ge<span class="dp">·</span>w</ins><ins>h</ins>e<ins>th</ins><ins>er</ins><span class="dp">·</span><ins>matche</ins><ins>s<span class="dp">·</span>abo</ins>ve<ins><span class="dp">·</span></ins>r<ins>e</ins><ins>gex</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">188 </td><td class="diffpresent">Check<span class="dp">·</span>branch<span class="dp">·</span>naming<span class="dp">·</span>failed</td><td class="diffline">190 </td><td class="diffpresent">Check<span class="dp">·</span>branch<span class="dp">·</span>naming<span class="dp">·</span>failed</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">189 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>text</td><td class="diffline">191 </td><td class="diffpresent">..<span class="dp">·</span>code-block::<span class="dp">·</span>text</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">190 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Commit<span class="dp">·</span>rejected<span class="dp">·</span>by<span class="dp">·</span>Commit-Check.</td><td class="diffline">192 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Commit<span class="dp">·</span>rejected<span class="dp">·</span>by<span class="dp">·</span>Commit-Check.</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 206, 15 lines modified</td><td colspan="2">Offset 208, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Commit<span class="dp">·</span>rejected.</td><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Commit<span class="dp">·</span>rejected.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Invalid<span class="dp">·</span>branch<span class="dp">·</span>name<span class="dp">·</span>=&gt;<span class="dp">·</span>test</td><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Invalid<span class="dp">·</span>branch<span class="dp">·</span>name<span class="dp">·</span>=&gt;<span class="dp">·</span>test</td></tr>
+<tr class="diffunmodified"><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>It<span class="dp">·</span>doesn&#x27;t<span class="dp">·</span>match<span class="dp">·</span>regex:<span class="dp">·</span>^(bugfix|feature|release|hotfix|task)\/.+|(master)|(main)|(HEAD)|(PR-.+)</td><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>It<span class="dp">·</span>doesn&#x27;t<span class="dp">·</span>match<span class="dp">·</span>regex:<span class="dp">·</span>^(bugfix|feature|release|hotfix|task)\/.+|(master)|(main)|(HEAD)|(PR-.+)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Branches<span class="dp">·</span>must<span class="dp">·</span>begin<span class="dp">·</span>with<span class="dp">·</span>these<span class="dp">·</span>types:<span class="dp">·</span>bugfix/<span class="dp">·</span>feature/<span class="dp">·</span>release/<span class="dp">·</span>hotfix/<span class="dp">·</span>task/</td><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Branches<span class="dp">·</span>must<span class="dp">·</span>begin<span class="dp">·</span>with<span class="dp">·</span>these<span class="dp">·</span>types:<span class="dp">·</span>bugfix/<span class="dp">·</span>feature/<span class="dp">·</span>release/<span class="dp">·</span>hotfix/<span class="dp">·</span>task/</td></tr>
+<tr class="diffchanged"><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Suggest<del><span class="dp">·</span>t</del><del>o</del><span class="dp">·</span>run<span class="dp">·</span><del>=&gt;</del><span class="dp">·</span>git<span class="dp">·</span>checkout<span class="dp">·</span>-b<span class="dp">·</span>type/branch_name</td><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Suggest<ins>:</ins><span class="dp">·</span>run<span class="dp">·</span><ins>comma</ins><ins>nd</ins><span class="dp">·</span><ins>`</ins>git<span class="dp">·</span>checkout<span class="dp">·</span>-b<span class="dp">·</span>type/branch_name<ins>`</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">211 </td><td class="diffpresent">Badging<span class="dp">·</span>your<span class="dp">·</span>repository</td><td class="diffline">213 </td><td class="diffpresent">Badging<span class="dp">·</span>your<span class="dp">·</span>repository</td></tr>
+<tr class="diffunmodified"><td class="diffline">212 </td><td class="diffpresent">-----------------------</td><td class="diffline">214 </td><td class="diffpresent">-----------------------</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">213 </td><td class="diffpresent">You<span class="dp">·</span>can<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>badge<span class="dp">·</span>to<span class="dp">·</span>your<span class="dp">·</span>repository<span class="dp">·</span>to<span class="dp">·</span>show<span class="dp">·</span>your<span class="dp">·</span>contributors<span class="dp">·</span>/<span class="dp">·</span>users<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>use<span class="dp">·</span>commit-check!</td><td class="diffline">215 </td><td class="diffpresent">You<span class="dp">·</span>can<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>badge<span class="dp">·</span>to<span class="dp">·</span>your<span class="dp">·</span>repository<span class="dp">·</span>to<span class="dp">·</span>show<span class="dp">·</span>your<span class="dp">·</span>contributors<span class="dp">·</span>/<span class="dp">·</span>users<span class="dp">·</span>that<span class="dp">·</span>you<span class="dp">·</span>use<span class="dp">·</span>commit-check!</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.68 KB</span></div>
+    <div><span class="source">commit_check-0.5.3.dist-info/RECORD</span> vs.</div>
+    <div id="commit_check--.-.-.dist-info-RECORD"><span class="source">commit_check-0.5.4.dist-info/RECORD</span>
+      <a class="anchor" href="#commit_check--.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 10% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">commit_check/__init__.py,sha256=kTDjVl3aBz6rp3HHv10dhOm7B1_ZmTMHzNg_0earx0k,1735</td><td class="diffline">1 </td><td class="diffpresent">commit_check/__init__.py,sha256=kTDjVl3aBz6rp3HHv10dhOm7B1_ZmTMHzNg_0earx0k,1735</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">commit_check/author.py,sha256=Vo642jgwY_4Y9Ea48dFd_Dvfr5uzzBW9yVNTETFHnCA,1117</td><td class="diffline">2 </td><td class="diffpresent">commit_check/author.py,sha256=Vo642jgwY_4Y9Ea48dFd_Dvfr5uzzBW9yVNTETFHnCA,1117</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">commit_check/branch.py,sha256=4Vt5qf3NniQdMA5x19kE3xLClyLDGFKRZhP_veXn7y0,926</td><td class="diffline">3 </td><td class="diffpresent">commit_check/branch.py,sha256=4Vt5qf3NniQdMA5x19kE3xLClyLDGFKRZhP_veXn7y0,926</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">commit_check/commit.py,sha256=NXVEGT6u9sziXgtcD0PYKihAksugi8sS9xJJUfFTyqA,1407</td><td class="diffline">4 </td><td class="diffpresent">commit_check/commit.py,sha256=NXVEGT6u9sziXgtcD0PYKihAksugi8sS9xJJUfFTyqA,1407</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">commit_check/error.py,sha256=z3WQRKII6WPqEBgBQVeclg8AYqwr4lqX1ssQs3bKZLQ,2675</td><td class="diffline">5 </td><td class="diffpresent">commit_check/error.py,sha256=z3WQRKII6WPqEBgBQVeclg8AYqwr4lqX1ssQs3bKZLQ,2675</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">commit_check/main.py,sha256=mSC05heXp0ZDGWT-yQKVa8WyuXVAnwO0aRN7xs51P5I,2919</td><td class="diffline">6 </td><td class="diffpresent">commit_check/main.py,sha256=mSC05heXp0ZDGWT-yQKVa8WyuXVAnwO0aRN7xs51P5I,2919</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">commit_check/util.py,sha256=bWnRFp7G-OBBxEmn_xe0laVbFEJzOMPAcclIZKITROU,4748</td><td class="diffline">7 </td><td class="diffpresent">commit_check/util.py,sha256=bWnRFp7G-OBBxEmn_xe0laVbFEJzOMPAcclIZKITROU,4748</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">commit_check-0.5.<del>3</del>.dist-info/LICENSE,sha256=VAJ9TE1ov8aUKmeoBRYqciMs0CXag1TeDCoLhwbeQmA,1095</td><td class="diffline">8 </td><td class="diffpresent">commit_check-0.5.<ins>4</ins>.dist-info/LICENSE,sha256=VAJ9TE1ov8aUKmeoBRYqciMs0CXag1TeDCoLhwbeQmA,1095</td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">commit_check-0.5.3.dist-info/METADATA,sha256=hvGxx5WwIKvA5REd-VFBTTv0I3hIEDyZkVAv8nuEhYQ,8605</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">commit_check-0.5.<del>3</del>.dist-info/<del>WHEEL</del>,sha256=<del>2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimb</del>o,<del>92</del></td><td class="diffline">9 </td><td class="diffpresent">commit_check-0.5.<ins>4</ins>.dist-info/<ins>MET</ins><ins>ADATA</ins>,sha256=<ins>6X-6yxLsKL_kytZ5jlTpFEfgQBAjAUcml0taBeCLiD</ins>o,<ins>87</ins><ins>16</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">commit_check-0.5.4.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">commit_check-0.5.<del>3</del>.dist-info/entry_points.txt,sha256=2IMogDXLAFnwmH_-_EFBwYixY9sTvcwxze59OFs8ybA,56</td><td class="diffline">11 </td><td class="diffpresent">commit_check-0.5.<ins>4</ins>.dist-info/entry_points.txt,sha256=2IMogDXLAFnwmH_-_EFBwYixY9sTvcwxze59OFs8ybA,56</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">commit_check-0.5.<del>3</del>.dist-info/top_level.txt,sha256=Wf46u-ooHBMJNHbhfrBNQw3wC5_m8wt-o_Lfbc4QpRg,13</td><td class="diffline">12 </td><td class="diffpresent">commit_check-0.5.<ins>4</ins>.dist-info/top_level.txt,sha256=Wf46u-ooHBMJNHbhfrBNQw3wC5_m8wt-o_Lfbc4QpRg,13</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">commit_check-0.5.<del>3</del>.dist-info/RECORD,,</td><td class="diffline">13 </td><td class="diffpresent">commit_check-0.5.<ins>4</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

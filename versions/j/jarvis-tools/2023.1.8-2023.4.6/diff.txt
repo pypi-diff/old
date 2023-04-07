@@ -1,0 +1,1698 @@
+--- tmp/jarvis-tools-2023.1.8.tar.gz
++++ tmp/jarvis-tools-2023.4.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/jarvis-tools-2023.1.8.tar", last modified: Mon Jan  9 21:58:26 2023, max compression
+│ +gzip compressed data, was "dist/jarvis-tools-2023.4.6.tar", last modified: Fri Apr  7 04:53:25 2023, max compression
+│   --- jarvis-tools-2023.1.8.tar
+├── +++ jarvis-tools-2023.4.6.tar
+│ ├── file list
+│ │ @@ -1,279 +1,279 @@
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:14.000000 jarvis-tools-2023.1.8/jarvis/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:14.000000 jarvis-tools-2023.1.8/jarvis/ai/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/ai/descriptors/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       48 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/descriptors/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    48394 2021-07-23 21:33:58.000000 jarvis-tools-2023.1.8/jarvis/ai/descriptors/cfid.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1370 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/descriptors/coulomb.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      511 2022-05-21 15:06:08.000000 jarvis-tools-2023.1.8/jarvis/ai/descriptors/elemental.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/ai/gcn/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/gcn/__init__.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/lgbm/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       28 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/lgbm/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1148 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/lgbm/classification.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     9541 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/lgbm/regression.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       44 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5144 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/classification.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    11368 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/hyper_params.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2969 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/regression.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3585 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/pkgs/utils.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/ai/uncertainty/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       34 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/uncertainty/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     7487 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/ai/uncertainty/lgbm_quantile_uncertainty.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:48.000000 jarvis-tools-2023.1.8/jarvis/ai/__init__.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/analysis/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/analysis/darkmatter/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       51 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/darkmatter/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      786 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/darkmatter/metrics.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/analysis/defects/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/defects/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2328 2021-08-18 22:05:59.000000 jarvis-tools-2023.1.8/jarvis/analysis/defects/substitutions.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     9305 2021-07-23 21:33:58.000000 jarvis-tools-2023.1.8/jarvis/analysis/defects/surface.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5048 2022-05-21 15:07:48.000000 jarvis-tools-2023.1.8/jarvis/analysis/defects/vacancy.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:15.000000 jarvis-tools-2023.1.8/jarvis/analysis/diffraction/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/diffraction/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6825 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/diffraction/atomic_scattering_params.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     7327 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/diffraction/xrd.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/elastic/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       43 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/elastic/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6602 2022-05-06 22:27:09.000000 jarvis-tools-2023.1.8/jarvis/analysis/elastic/tensor.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/interface/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       53 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/interface/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    14764 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/interface/zur.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/magnetism/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       46 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/magnetism/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     8101 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/magnetism/magmom_setup.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/periodic/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/periodic/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5907 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/periodic/ptable.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/phonon/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/phonon/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3934 2022-12-06 20:07:55.000000 jarvis-tools-2023.1.8/jarvis/analysis/phonon/dos.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1189 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/phonon/force_constants.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6473 2023-01-09 20:58:01.000000 jarvis-tools-2023.1.8/jarvis/analysis/phonon/ir.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/solarefficiency/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       59 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/solarefficiency/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    35436 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/solarefficiency/am1.5G.dat
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    14217 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/solarefficiency/solar.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/stem/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       38 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/stem/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     7315 2022-05-21 15:11:22.000000 jarvis-tools-2023.1.8/jarvis/analysis/stem/convolution_apprx.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/stm/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       67 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/stm/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    10094 2021-07-01 05:40:25.000000 jarvis-tools-2023.1.8/jarvis/analysis/stm/tersoff_hamann.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:16.000000 jarvis-tools-2023.1.8/jarvis/analysis/structure/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       46 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/structure/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    21798 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/structure/neighbors.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    25663 2021-12-17 15:03:20.000000 jarvis-tools-2023.1.8/jarvis/analysis/structure/spacegroup.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:17.000000 jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       42 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    13515 2022-08-28 17:31:19.000000 jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/energetics.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4527 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/unary.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4781 2021-06-21 21:20:14.000000 jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/unary_qe_tb.json
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:17.000000 jarvis-tools-2023.1.8/jarvis/analysis/topological/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       50 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/topological/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    11892 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/analysis/topological/spillage.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:49.000000 jarvis-tools-2023.1.8/jarvis/analysis/__init__.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:17.000000 jarvis-tools-2023.1.8/jarvis/core/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)  1421253 2021-06-19 18:54:50.000000 jarvis-tools-2023.1.8/jarvis/core/Elements.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:51.000000 jarvis-tools-2023.1.8/jarvis/core/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    28393 2021-06-19 18:54:51.000000 jarvis-tools-2023.1.8/jarvis/core/atom_init.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    66720 2022-08-28 18:59:14.000000 jarvis-tools-2023.1.8/jarvis/core/atoms.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4313 2022-05-21 15:13:20.000000 jarvis-tools-2023.1.8/jarvis/core/circuits.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5258 2021-07-06 06:09:50.000000 jarvis-tools-2023.1.8/jarvis/core/composition.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)  1162701 2021-06-19 18:54:51.000000 jarvis-tools-2023.1.8/jarvis/core/element_charge.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    22721 2022-07-18 17:09:48.000000 jarvis-tools-2023.1.8/jarvis/core/graphs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    10693 2022-08-28 18:10:43.000000 jarvis-tools-2023.1.8/jarvis/core/image.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    37783 2021-10-05 17:33:43.000000 jarvis-tools-2023.1.8/jarvis/core/kpoints.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    17427 2023-01-09 20:58:01.000000 jarvis-tools-2023.1.8/jarvis/core/lattice.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    47766 2021-07-23 21:33:59.000000 jarvis-tools-2023.1.8/jarvis/core/magpie.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    11981 2021-07-23 21:33:59.000000 jarvis-tools-2023.1.8/jarvis/core/specie.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2891 2023-01-09 20:58:01.000000 jarvis-tools-2023.1.8/jarvis/core/spectrum.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     8933 2022-02-24 23:02:40.000000 jarvis-tools-2023.1.8/jarvis/core/utils.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:19.000000 jarvis-tools-2023.1.8/jarvis/db/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       53 2021-06-19 18:54:52.000000 jarvis-tools-2023.1.8/jarvis/db/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    19084 2023-01-09 20:58:01.000000 jarvis-tools-2023.1.8/jarvis/db/figshare.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      378 2021-06-19 18:54:52.000000 jarvis-tools-2023.1.8/jarvis/db/jsonutils.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     7761 2021-06-20 06:25:45.000000 jarvis-tools-2023.1.8/jarvis/db/lammps_to_xml.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    10649 2021-06-19 18:54:52.000000 jarvis-tools-2023.1.8/jarvis/db/qe_to_xml.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    16857 2021-06-19 18:54:52.000000 jarvis-tools-2023.1.8/jarvis/db/restapi.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    75218 2021-06-19 18:54:52.000000 jarvis-tools-2023.1.8/jarvis/db/vasp_to_xml.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     9586 2021-06-19 18:54:52.000000 jarvis-tools-2023.1.8/jarvis/db/webpages.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:19.000000 jarvis-tools-2023.1.8/jarvis/io/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:19.000000 jarvis-tools-2023.1.8/jarvis/io/boltztrap/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       67 2021-06-19 18:54:55.000000 jarvis-tools-2023.1.8/jarvis/io/boltztrap/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6511 2021-06-19 18:54:55.000000 jarvis-tools-2023.1.8/jarvis/io/boltztrap/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6767 2021-06-19 18:54:55.000000 jarvis-tools-2023.1.8/jarvis/io/boltztrap/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:19.000000 jarvis-tools-2023.1.8/jarvis/io/calphad/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:55.000000 jarvis-tools-2023.1.8/jarvis/io/calphad/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4228 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/calphad/write_decorated_poscar.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/lammps/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       52 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/lammps/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    14622 2021-08-06 21:54:48.000000 jarvis-tools-2023.1.8/jarvis/io/lammps/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    20748 2021-08-06 21:54:48.000000 jarvis-tools-2023.1.8/jarvis/io/lammps/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/nexus/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       47 2021-09-28 18:06:38.000000 jarvis-tools-2023.1.8/jarvis/io/nexus/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4519 2022-12-07 19:52:37.000000 jarvis-tools-2023.1.8/jarvis/io/nexus/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       36 2021-09-28 18:06:38.000000 jarvis-tools-2023.1.8/jarvis/io/nexus/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/pennylane/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/pennylane/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2196 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/pennylane/inputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/phonopy/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       43 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/phonopy/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4501 2023-01-09 20:58:01.000000 jarvis-tools-2023.1.8/jarvis/io/phonopy/fcmat2hr.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6844 2023-01-09 20:58:01.000000 jarvis-tools-2023.1.8/jarvis/io/phonopy/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5696 2021-06-19 18:55:19.000000 jarvis-tools-2023.1.8/jarvis/io/phonopy/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/prismatic/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       50 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/prismatic/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      674 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/prismatic/inputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/qe/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       57 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/qe/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    15180 2022-12-10 19:10:57.000000 jarvis-tools-2023.1.8/jarvis/io/qe/inputs.py
+│ │ --rwxr-xr-x   0 knc6     (54782) users      (100)    26674 2022-05-21 15:16:55.000000 jarvis-tools-2023.1.8/jarvis/io/qe/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/qiskit/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       56 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/qiskit/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    12100 2022-09-17 18:37:16.000000 jarvis-tools-2023.1.8/jarvis/io/qiskit/inputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/tequila/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       60 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/tequila/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2702 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/tequila/inputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:20.000000 jarvis-tools-2023.1.8/jarvis/io/vasp/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       56 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/vasp/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1522 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/vasp/default_potcars.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    21148 2022-07-18 17:07:16.000000 jarvis-tools-2023.1.8/jarvis/io/vasp/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    77837 2022-07-18 17:08:30.000000 jarvis-tools-2023.1.8/jarvis/io/vasp/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:22.000000 jarvis-tools-2023.1.8/jarvis/io/wannier/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/wannier/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     4550 2021-06-19 18:55:19.000000 jarvis-tools-2023.1.8/jarvis/io/wannier/default_semicore.json
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6929 2021-06-19 18:55:19.000000 jarvis-tools-2023.1.8/jarvis/io/wannier/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    34195 2021-06-19 18:54:56.000000 jarvis-tools-2023.1.8/jarvis/io/wannier/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:22.000000 jarvis-tools-2023.1.8/jarvis/io/wanniertools/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       60 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/io/wanniertools/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    10376 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/io/wanniertools/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3818 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/io/wanniertools/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:22.000000 jarvis-tools-2023.1.8/jarvis/io/wien2k/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       55 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/io/wien2k/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3192 2021-12-17 15:03:19.000000 jarvis-tools-2023.1.8/jarvis/io/wien2k/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3254 2021-07-23 21:33:59.000000 jarvis-tools-2023.1.8/jarvis/io/wien2k/outputs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:22.000000 jarvis-tools-2023.1.8/jarvis/io/zeopp/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       35 2021-07-01 05:40:26.000000 jarvis-tools-2023.1.8/jarvis/io/zeopp/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2184 2021-10-14 00:41:09.000000 jarvis-tools-2023.1.8/jarvis/io/zeopp/inputs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       76 2021-06-19 18:54:55.000000 jarvis-tools-2023.1.8/jarvis/io/__init__.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/boltztrap/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       56 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/boltztrap/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      608 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/boltztrap/run.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3463 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/displace.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6416 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelast.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6449 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelast_min.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6418 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelast_nobox.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6415 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelastcomb.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     6389 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelastreax.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2653 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/relax.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      145 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/run0.mod
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      917 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/templates.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       55 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    13948 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/lammps/lammps.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/nexus/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       34 2022-12-07 20:41:49.000000 jarvis-tools-2023.1.8/jarvis/tasks/nexus/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3243 2022-12-12 23:19:44.000000 jarvis-tools-2023.1.8/jarvis/tasks/nexus/qmc.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/phonopy/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       54 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/phonopy/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      765 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/phonopy/run.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:23.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       29 2022-01-11 17:34:47.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    18538 2022-12-07 19:19:22.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/converg.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3665 2022-12-12 23:02:08.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/master_super.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3388 2022-01-11 15:01:27.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/qe.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     9317 2022-12-12 23:02:08.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/super.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     7387 2022-05-06 22:27:09.000000 jarvis-tools-2023.1.8/jarvis/tasks/qe/super_tetra.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tasks/vasp/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/vasp/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    66478 2022-08-23 21:07:21.000000 jarvis-tools-2023.1.8/jarvis/tasks/vasp/vasp.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5873 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tasks/queue_jobs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      943 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/test_ai_uncertainty.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    67390 2021-07-23 21:33:59.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/test_desc.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2206 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/test_pkgs.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/darkmatter/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/darkmatter/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      464 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/darkmatter/test_metrics.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      444 2021-08-18 22:06:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/test_subs.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3252 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/test_surface.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1216 2021-07-01 05:40:26.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/test_vacancy.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:24.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/elastic/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/elastic/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2577 2022-03-10 17:24:29.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/elastic/test_tensor.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/interface/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/interface/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     8683 2021-07-23 21:33:59.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/interface/test_zur.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/magnetism/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/magnetism/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      589 2021-07-23 21:33:59.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/magnetism/test_magnetism.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5121 2022-08-23 21:40:41.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/test_dos.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      326 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/test_fc.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1279 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/test_ir.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/solar/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/solar/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1397 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/solar/test_solar.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/stm/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/stm/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1660 2022-08-28 17:53:45.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/stm/test_stm.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      390 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/test_energetics.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1301 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/test_neighbors.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     3585 2021-06-19 18:54:58.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/test_spacegroup.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/thermodynamics/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:59.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/thermodynamics/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1554 2022-08-28 17:29:20.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/thermodynamics/test_energetics.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:25.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/topological/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/topological/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      424 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/topological/test_spillage.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/__init__.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5666 2021-07-23 21:34:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/p.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     5483 2022-08-28 19:00:04.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_atoms.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      262 2021-06-20 06:25:45.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_circuits.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      481 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_composition.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2844 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_graph.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    11116 2021-07-23 21:34:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_kpoints.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1507 2021-07-23 21:34:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_latice.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      339 2021-07-13 15:03:29.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_pdb.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      551 2021-07-01 05:40:26.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_specie.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      541 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_utils.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/db/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:00.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/db/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     1496 2021-07-23 21:34:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/db/test_figshare.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/tasks/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/tasks/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      804 2021-06-19 18:55:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/tasks/test_lammps.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      696 2021-06-19 18:55:05.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/tasks/test_vasp.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/testfiles/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:57.000000 jarvis-tools-2023.1.8/jarvis/tests/__init__.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      245 2023-01-09 21:07:18.000000 jarvis-tools-2023.1.8/jarvis/__init__.py
+│ │ -drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/jarvis_tools.egg-info/
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    18166 2023-01-09 21:58:11.000000 jarvis-tools-2023.1.8/jarvis_tools.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     7499 2023-01-09 21:58:12.000000 jarvis-tools-2023.1.8/jarvis_tools.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        1 2023-01-09 21:58:12.000000 jarvis-tools-2023.1.8/jarvis_tools.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      265 2023-01-09 21:58:12.000000 jarvis-tools-2023.1.8/jarvis_tools.egg-info/requires.txt
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)        7 2023-01-09 21:58:12.000000 jarvis-tools-2023.1.8/jarvis_tools.egg-info/top_level.txt
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    14481 2021-12-20 16:57:45.000000 jarvis-tools-2023.1.8/README.rst
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)      195 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/setup.cfg
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)     2502 2023-01-09 21:07:18.000000 jarvis-tools-2023.1.8/setup.py
+│ │ --rw-r--r--   0 knc6     (54782) users      (100)    18166 2023-01-09 21:58:26.000000 jarvis-tools-2023.1.8/PKG-INFO
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:25.000000 jarvis-tools-2023.4.6/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:12.000000 jarvis-tools-2023.4.6/jarvis/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:12.000000 jarvis-tools-2023.4.6/jarvis/ai/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:12.000000 jarvis-tools-2023.4.6/jarvis/ai/descriptors/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       48 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/descriptors/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    48400 2023-03-24 19:10:21.000000 jarvis-tools-2023.4.6/jarvis/ai/descriptors/cfid.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1370 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/descriptors/coulomb.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      511 2022-05-21 15:06:08.000000 jarvis-tools-2023.4.6/jarvis/ai/descriptors/elemental.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:12.000000 jarvis-tools-2023.4.6/jarvis/ai/gcn/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/gcn/__init__.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:12.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:12.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/lgbm/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       28 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/lgbm/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1148 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/lgbm/classification.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     9541 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/lgbm/regression.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       44 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5144 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/classification.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    11368 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/hyper_params.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2969 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/regression.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3585 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/pkgs/utils.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/ai/uncertainty/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       34 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/uncertainty/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     7487 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/ai/uncertainty/lgbm_quantile_uncertainty.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:48.000000 jarvis-tools-2023.4.6/jarvis/ai/__init__.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/analysis/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/analysis/darkmatter/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       51 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/darkmatter/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      786 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/darkmatter/metrics.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/analysis/defects/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/defects/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2328 2021-08-18 22:05:59.000000 jarvis-tools-2023.4.6/jarvis/analysis/defects/substitutions.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     9305 2021-07-23 21:33:58.000000 jarvis-tools-2023.4.6/jarvis/analysis/defects/surface.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5048 2022-05-21 15:07:48.000000 jarvis-tools-2023.4.6/jarvis/analysis/defects/vacancy.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/analysis/diffraction/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/diffraction/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6825 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/diffraction/atomic_scattering_params.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     7327 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/diffraction/xrd.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:13.000000 jarvis-tools-2023.4.6/jarvis/analysis/elastic/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       43 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/elastic/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6602 2022-05-06 22:27:09.000000 jarvis-tools-2023.4.6/jarvis/analysis/elastic/tensor.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:14.000000 jarvis-tools-2023.4.6/jarvis/analysis/interface/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       53 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/interface/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    14764 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/interface/zur.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:14.000000 jarvis-tools-2023.4.6/jarvis/analysis/magnetism/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       46 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/magnetism/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     8101 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/magnetism/magmom_setup.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:14.000000 jarvis-tools-2023.4.6/jarvis/analysis/periodic/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/periodic/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5907 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/periodic/ptable.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:14.000000 jarvis-tools-2023.4.6/jarvis/analysis/phonon/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/phonon/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3934 2022-12-06 20:07:55.000000 jarvis-tools-2023.4.6/jarvis/analysis/phonon/dos.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1189 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/phonon/force_constants.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6473 2023-01-09 20:58:01.000000 jarvis-tools-2023.4.6/jarvis/analysis/phonon/ir.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:15.000000 jarvis-tools-2023.4.6/jarvis/analysis/solarefficiency/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       59 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/solarefficiency/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    35436 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/solarefficiency/am1.5G.dat
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    14217 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/solarefficiency/solar.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:15.000000 jarvis-tools-2023.4.6/jarvis/analysis/stem/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       38 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/stem/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     7315 2022-05-21 15:11:22.000000 jarvis-tools-2023.4.6/jarvis/analysis/stem/convolution_apprx.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:15.000000 jarvis-tools-2023.4.6/jarvis/analysis/stm/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       67 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/stm/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    10094 2021-07-01 05:40:25.000000 jarvis-tools-2023.4.6/jarvis/analysis/stm/tersoff_hamann.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:15.000000 jarvis-tools-2023.4.6/jarvis/analysis/structure/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       46 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/structure/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    21798 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/structure/neighbors.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    25663 2021-12-17 15:03:20.000000 jarvis-tools-2023.4.6/jarvis/analysis/structure/spacegroup.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:16.000000 jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       42 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    14613 2023-04-07 04:22:25.000000 jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/energetics.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4527 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/unary.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4781 2021-06-21 21:20:14.000000 jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/unary_qe_tb.json
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:16.000000 jarvis-tools-2023.4.6/jarvis/analysis/topological/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       50 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/topological/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    11892 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/analysis/topological/spillage.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:49.000000 jarvis-tools-2023.4.6/jarvis/analysis/__init__.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:17.000000 jarvis-tools-2023.4.6/jarvis/core/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)  1421253 2021-06-19 18:54:50.000000 jarvis-tools-2023.4.6/jarvis/core/Elements.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       49 2021-06-19 18:54:51.000000 jarvis-tools-2023.4.6/jarvis/core/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    28393 2021-06-19 18:54:51.000000 jarvis-tools-2023.4.6/jarvis/core/atom_init.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    66720 2022-08-28 18:59:14.000000 jarvis-tools-2023.4.6/jarvis/core/atoms.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4313 2022-05-21 15:13:20.000000 jarvis-tools-2023.4.6/jarvis/core/circuits.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5258 2021-07-06 06:09:50.000000 jarvis-tools-2023.4.6/jarvis/core/composition.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)  1162701 2021-06-19 18:54:51.000000 jarvis-tools-2023.4.6/jarvis/core/element_charge.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    22721 2022-07-18 17:09:48.000000 jarvis-tools-2023.4.6/jarvis/core/graphs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    10693 2022-08-28 18:10:43.000000 jarvis-tools-2023.4.6/jarvis/core/image.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    37783 2021-10-05 17:33:43.000000 jarvis-tools-2023.4.6/jarvis/core/kpoints.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    17427 2023-01-09 20:58:01.000000 jarvis-tools-2023.4.6/jarvis/core/lattice.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    47766 2021-07-23 21:33:59.000000 jarvis-tools-2023.4.6/jarvis/core/magpie.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    11981 2021-07-23 21:33:59.000000 jarvis-tools-2023.4.6/jarvis/core/specie.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2891 2023-01-09 20:58:01.000000 jarvis-tools-2023.4.6/jarvis/core/spectrum.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     8933 2022-02-24 23:02:40.000000 jarvis-tools-2023.4.6/jarvis/core/utils.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:18.000000 jarvis-tools-2023.4.6/jarvis/db/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       53 2021-06-19 18:54:52.000000 jarvis-tools-2023.4.6/jarvis/db/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    19682 2023-03-24 19:10:21.000000 jarvis-tools-2023.4.6/jarvis/db/figshare.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      378 2021-06-19 18:54:52.000000 jarvis-tools-2023.4.6/jarvis/db/jsonutils.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     7761 2021-06-20 06:25:45.000000 jarvis-tools-2023.4.6/jarvis/db/lammps_to_xml.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    10649 2021-06-19 18:54:52.000000 jarvis-tools-2023.4.6/jarvis/db/qe_to_xml.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    16857 2021-06-19 18:54:52.000000 jarvis-tools-2023.4.6/jarvis/db/restapi.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    75218 2021-06-19 18:54:52.000000 jarvis-tools-2023.4.6/jarvis/db/vasp_to_xml.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     9586 2021-06-19 18:54:52.000000 jarvis-tools-2023.4.6/jarvis/db/webpages.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:18.000000 jarvis-tools-2023.4.6/jarvis/io/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:18.000000 jarvis-tools-2023.4.6/jarvis/io/boltztrap/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       67 2021-06-19 18:54:55.000000 jarvis-tools-2023.4.6/jarvis/io/boltztrap/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6511 2021-06-19 18:54:55.000000 jarvis-tools-2023.4.6/jarvis/io/boltztrap/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6767 2021-06-19 18:54:55.000000 jarvis-tools-2023.4.6/jarvis/io/boltztrap/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:18.000000 jarvis-tools-2023.4.6/jarvis/io/calphad/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:55.000000 jarvis-tools-2023.4.6/jarvis/io/calphad/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4228 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/calphad/write_decorated_poscar.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:18.000000 jarvis-tools-2023.4.6/jarvis/io/lammps/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       52 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/lammps/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    14622 2021-08-06 21:54:48.000000 jarvis-tools-2023.4.6/jarvis/io/lammps/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    20748 2021-08-06 21:54:48.000000 jarvis-tools-2023.4.6/jarvis/io/lammps/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:18.000000 jarvis-tools-2023.4.6/jarvis/io/nexus/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       47 2021-09-28 18:06:38.000000 jarvis-tools-2023.4.6/jarvis/io/nexus/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4519 2022-12-07 19:52:37.000000 jarvis-tools-2023.4.6/jarvis/io/nexus/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       36 2021-09-28 18:06:38.000000 jarvis-tools-2023.4.6/jarvis/io/nexus/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:19.000000 jarvis-tools-2023.4.6/jarvis/io/pennylane/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/pennylane/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2196 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/pennylane/inputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:19.000000 jarvis-tools-2023.4.6/jarvis/io/phonopy/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       43 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/phonopy/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4501 2023-01-09 20:58:01.000000 jarvis-tools-2023.4.6/jarvis/io/phonopy/fcmat2hr.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6844 2023-01-09 20:58:01.000000 jarvis-tools-2023.4.6/jarvis/io/phonopy/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5696 2021-06-19 18:55:19.000000 jarvis-tools-2023.4.6/jarvis/io/phonopy/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:19.000000 jarvis-tools-2023.4.6/jarvis/io/prismatic/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       50 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/prismatic/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      674 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/prismatic/inputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:19.000000 jarvis-tools-2023.4.6/jarvis/io/qe/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       57 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/qe/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    15328 2023-03-24 17:09:02.000000 jarvis-tools-2023.4.6/jarvis/io/qe/inputs.py
+│ │ +-rwxr-xr-x   0 knc6     (54782) users      (100)    26674 2022-05-21 15:16:55.000000 jarvis-tools-2023.4.6/jarvis/io/qe/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:19.000000 jarvis-tools-2023.4.6/jarvis/io/qiskit/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       56 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/qiskit/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    12100 2022-09-17 18:37:16.000000 jarvis-tools-2023.4.6/jarvis/io/qiskit/inputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:20.000000 jarvis-tools-2023.4.6/jarvis/io/tequila/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       60 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/tequila/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2702 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/tequila/inputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:20.000000 jarvis-tools-2023.4.6/jarvis/io/vasp/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       56 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/vasp/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1522 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/vasp/default_potcars.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    21148 2022-07-18 17:07:16.000000 jarvis-tools-2023.4.6/jarvis/io/vasp/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    77837 2022-07-18 17:08:30.000000 jarvis-tools-2023.4.6/jarvis/io/vasp/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:20.000000 jarvis-tools-2023.4.6/jarvis/io/wannier/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/wannier/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     4550 2021-06-19 18:55:19.000000 jarvis-tools-2023.4.6/jarvis/io/wannier/default_semicore.json
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6929 2021-06-19 18:55:19.000000 jarvis-tools-2023.4.6/jarvis/io/wannier/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    34195 2021-06-19 18:54:56.000000 jarvis-tools-2023.4.6/jarvis/io/wannier/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:20.000000 jarvis-tools-2023.4.6/jarvis/io/wanniertools/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       60 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/io/wanniertools/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    10376 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/io/wanniertools/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3818 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/io/wanniertools/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:20.000000 jarvis-tools-2023.4.6/jarvis/io/wien2k/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       55 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/io/wien2k/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3192 2021-12-17 15:03:19.000000 jarvis-tools-2023.4.6/jarvis/io/wien2k/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3254 2021-07-23 21:33:59.000000 jarvis-tools-2023.4.6/jarvis/io/wien2k/outputs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:21.000000 jarvis-tools-2023.4.6/jarvis/io/zeopp/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       35 2021-07-01 05:40:26.000000 jarvis-tools-2023.4.6/jarvis/io/zeopp/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2184 2021-10-14 00:41:09.000000 jarvis-tools-2023.4.6/jarvis/io/zeopp/inputs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       76 2021-06-19 18:54:55.000000 jarvis-tools-2023.4.6/jarvis/io/__init__.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:21.000000 jarvis-tools-2023.4.6/jarvis/tasks/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:21.000000 jarvis-tools-2023.4.6/jarvis/tasks/boltztrap/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       56 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/boltztrap/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      608 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/boltztrap/run.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:21.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:21.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3463 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/displace.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6416 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelast.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6449 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelast_min.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6418 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelast_nobox.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6415 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelastcomb.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     6389 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelastreax.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2653 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/relax.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      145 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/run0.mod
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      917 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/templates.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       55 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    13948 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/lammps/lammps.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:21.000000 jarvis-tools-2023.4.6/jarvis/tasks/nexus/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       34 2022-12-07 20:41:49.000000 jarvis-tools-2023.4.6/jarvis/tasks/nexus/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3243 2022-12-12 23:19:44.000000 jarvis-tools-2023.4.6/jarvis/tasks/nexus/qmc.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:22.000000 jarvis-tools-2023.4.6/jarvis/tasks/phonopy/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       54 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/phonopy/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      765 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/phonopy/run.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:22.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       29 2022-01-11 17:34:47.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    19582 2023-03-24 17:09:02.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/converg.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3665 2022-12-12 23:02:08.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/master_super.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3505 2023-03-24 17:09:02.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/qe.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    10588 2023-03-24 17:09:02.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/super.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     7387 2022-05-06 22:27:09.000000 jarvis-tools-2023.4.6/jarvis/tasks/qe/super_tetra.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:22.000000 jarvis-tools-2023.4.6/jarvis/tasks/vasp/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       61 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/vasp/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    66478 2022-08-23 21:07:21.000000 jarvis-tools-2023.4.6/jarvis/tasks/vasp/vasp.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       47 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5873 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tasks/queue_jobs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:22.000000 jarvis-tools-2023.4.6/jarvis/tests/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:22.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      943 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/test_ai_uncertainty.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    67390 2021-07-23 21:33:59.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/test_desc.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2206 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/test_pkgs.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/darkmatter/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/darkmatter/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      464 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/darkmatter/test_metrics.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      444 2021-08-18 22:06:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/test_subs.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3252 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/test_surface.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1216 2021-07-01 05:40:26.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/test_vacancy.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/elastic/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/elastic/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2577 2022-03-10 17:24:29.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/elastic/test_tensor.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/interface/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/interface/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     8683 2021-07-23 21:33:59.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/interface/test_zur.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/magnetism/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/magnetism/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      589 2021-07-23 21:33:59.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/magnetism/test_magnetism.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5121 2022-08-23 21:40:41.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/test_dos.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      326 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/test_fc.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1279 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/test_ir.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:23.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/solar/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/solar/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1397 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/solar/test_solar.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:24.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/stm/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/stm/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1660 2022-08-28 17:53:45.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/stm/test_stm.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:24.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      390 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/test_energetics.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1301 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/test_neighbors.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     3585 2021-06-19 18:54:58.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/test_spacegroup.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:24.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/thermodynamics/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:59.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/thermodynamics/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1554 2022-08-28 17:29:20.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/thermodynamics/test_energetics.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:24.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/topological/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/topological/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      424 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/topological/test_spillage.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/__init__.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:24.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5666 2021-07-23 21:34:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/p.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     5483 2022-08-28 19:00:04.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_atoms.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      262 2021-06-20 06:25:45.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_circuits.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      481 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_composition.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2844 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_graph.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    11116 2021-07-23 21:34:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_kpoints.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1507 2021-07-23 21:34:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_latice.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      339 2021-07-13 15:03:29.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_pdb.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      551 2021-07-01 05:40:26.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_specie.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      541 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_utils.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:25.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/db/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:00.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/db/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     1496 2021-07-23 21:34:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/db/test_figshare.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:25.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/tasks/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:55:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/tasks/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      804 2021-06-19 18:55:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/tasks/test_lammps.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      696 2021-06-19 18:55:05.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/tasks/test_vasp.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        0 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/testfiles/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)       35 2021-06-19 18:54:57.000000 jarvis-tools-2023.4.6/jarvis/tests/__init__.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      245 2023-04-07 04:26:33.000000 jarvis-tools-2023.4.6/jarvis/__init__.py
+│ │ +drwxr-xr-x   0 knc6     (54782) users      (100)        0 2023-04-07 04:53:25.000000 jarvis-tools-2023.4.6/jarvis_tools.egg-info/
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    18166 2023-04-07 04:53:08.000000 jarvis-tools-2023.4.6/jarvis_tools.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     7499 2023-04-07 04:53:09.000000 jarvis-tools-2023.4.6/jarvis_tools.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        1 2023-04-07 04:53:08.000000 jarvis-tools-2023.4.6/jarvis_tools.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      265 2023-04-07 04:53:08.000000 jarvis-tools-2023.4.6/jarvis_tools.egg-info/requires.txt
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)        7 2023-04-07 04:53:08.000000 jarvis-tools-2023.4.6/jarvis_tools.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    14481 2023-04-07 04:25:58.000000 jarvis-tools-2023.4.6/README.rst
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)      195 2023-04-07 04:53:25.000000 jarvis-tools-2023.4.6/setup.cfg
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)     2502 2023-04-07 04:26:18.000000 jarvis-tools-2023.4.6/setup.py
+│ │ +-rw-r--r--   0 knc6     (54782) users      (100)    18166 2023-04-07 04:53:25.000000 jarvis-tools-2023.4.6/PKG-INFO
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/descriptors/cfid.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/descriptors/cfid.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -135,18 +135,18 @@
+│ │          des = v * Specie(k, source=source).get_descrp_arr
+│ │          arr.append(des)
+│ │      names = list(Specie("H", source=source)._data["H"].keys())
+│ │      if mean_only:
+│ │          chem = np.mean(np.array(arr), axis=0) / sum
+│ │          names = ["Mean_" + source + "_" + str(n) for n in names]
+│ │      elif max_only:
+│ │ -        chem = np.max(np.array(arr), axis=0) / sum
+│ │ +        chem = np.max(np.array(arr), axis=0)  # / sum
+│ │          names = ["Max_" + source + "_" + str(n) for n in names]
+│ │      elif min_only:
+│ │ -        chem = np.min(np.array(arr), axis=0) / sum
+│ │ +        chem = np.min(np.array(arr), axis=0)  # / sum
+│ │          names = ["Min_" + source + "_" + str(n) for n in names]
+│ │      else:
+│ │          chem = (
+│ │              list(np.mean(np.array(arr), axis=0) / sum)
+│ │              + list(np.max(np.array(arr), axis=0) / sum)
+│ │              + list(np.min(np.array(arr), axis=0) / sum)
+│ │          )
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/descriptors/coulomb.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/descriptors/coulomb.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/pkgs/lgbm/classification.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/pkgs/lgbm/classification.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/pkgs/lgbm/regression.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/pkgs/lgbm/regression.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/classification.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/classification.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/hyper_params.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/hyper_params.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/pkgs/sklearn/regression.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/pkgs/sklearn/regression.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/pkgs/utils.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/pkgs/utils.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/ai/uncertainty/lgbm_quantile_uncertainty.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/ai/uncertainty/lgbm_quantile_uncertainty.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/darkmatter/metrics.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/darkmatter/metrics.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/defects/substitutions.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/defects/substitutions.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/defects/surface.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/defects/surface.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/defects/vacancy.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/defects/vacancy.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/diffraction/atomic_scattering_params.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/diffraction/atomic_scattering_params.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/diffraction/xrd.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/diffraction/xrd.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/elastic/tensor.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/elastic/tensor.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/interface/zur.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/interface/zur.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/magnetism/magmom_setup.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/magnetism/magmom_setup.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/periodic/ptable.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/periodic/ptable.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/phonon/dos.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/phonon/dos.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/phonon/force_constants.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/phonon/force_constants.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/phonon/ir.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/phonon/ir.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/solarefficiency/am1.5G.dat
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/solarefficiency/am1.5G.dat
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/solarefficiency/solar.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/solarefficiency/solar.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/stem/convolution_apprx.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/stem/convolution_apprx.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/stm/tersoff_hamann.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/stm/tersoff_hamann.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/structure/neighbors.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/structure/neighbors.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/structure/spacegroup.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/structure/spacegroup.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/energetics.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/energetics.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -403,14 +403,18 @@
+│ │          ax.set_xticks([])
+│ │          ax.set_yticks([])
+│ │          ax.axis("off")
+│ │  
+│ │  
+│ │  def jid_hull(jid="", dataset=[]):
+│ │      """Get ehull for a jid and a dataset e.g. dft_3d."""
+│ │ +    from jarvis.db.figshare import data
+│ │ +
+│ │ +    if isinstance(dataset, str):
+│ │ +        dataset = data(dataset)
+│ │      for i in dataset:
+│ │          if i["jid"] == jid:
+│ │              system = list(set(i["atoms"]["elements"]))
+│ │      z = []
+│ │      for i in dataset:
+│ │          formula = i["formula"]
+│ │          comp = Composition.from_string(formula)
+│ │ @@ -421,7 +425,39 @@
+│ │  
+│ │      pdj = PhaseDiagram(z)
+│ │      # pdj.plot()
+│ │      info = pdj.get_ehull_all()
+│ │      for i in info:
+│ │          if i[0][2] == jid:
+│ │              return i
+│ │ +
+│ │ +
+│ │ +def formula_hull(formula_energy_id=[], dataset=[]):
+│ │ +    """Get ehull for a formula_energy_id pair and a dataset e.g. dft_3d."""
+│ │ +    # e.g. ["Al2O3",-1.0,"JVASP-xyz"]
+│ │ +    # for i in dataset:
+│ │ +    #    if i["jid"] == jid:
+│ │ +    #        system = list(set(i["atoms"]["elements"]))
+│ │ +    from jarvis.db.figshare import data
+│ │ +
+│ │ +    if isinstance(dataset, str):
+│ │ +        dataset = data(dataset)
+│ │ +
+│ │ +    c = Composition.from_string(formula_energy_id[0])
+│ │ +    system = list(c.to_dict().keys())
+│ │ +    z = []
+│ │ +    z.append(formula_energy_id)
+│ │ +
+│ │ +    for i in dataset:
+│ │ +        formula = i["formula"]
+│ │ +        comp = Composition.from_string(formula)
+│ │ +        # atom_frac = comp.atomic_fraction
+│ │ +        all_elms = list(comp.to_dict())
+│ │ +        if (set(all_elms)).issubset(set(system)):
+│ │ +            z.append([i["formula"], i["formation_energy_peratom"], i["jid"]])
+│ │ +
+│ │ +    pdj = PhaseDiagram(z)
+│ │ +    # pdj.plot()
+│ │ +    info = pdj.get_ehull_all()
+│ │ +    for i in info:
+│ │ +        if i[0][2] == formula_energy_id[-1]:
+│ │ +            return i
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/unary.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/unary.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/thermodynamics/unary_qe_tb.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/thermodynamics/unary_qe_tb.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/analysis/topological/spillage.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/analysis/topological/spillage.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/Elements.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/Elements.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/atom_init.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/atom_init.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/atoms.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/atoms.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/circuits.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/circuits.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/composition.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/composition.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/element_charge.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/element_charge.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/graphs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/graphs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/image.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/image.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/kpoints.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/kpoints.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/lattice.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/lattice.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/magpie.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/magpie.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/specie.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/specie.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/spectrum.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/spectrum.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/core/utils.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/core/utils.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/db/figshare.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/db/figshare.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -38,14 +38,28 @@
+│ │          "dft_3d": [
+│ │              "https://ndownloader.figshare.com/files/38521619",
+│ │              "jdft_3d-12-12-2022.json",
+│ │              "Obtaining 3D dataset 76k ...",
+│ │              "https://www.nature.com/articles/s41524-020-00440-1"
+│ │              + "\nOther versions:https://doi.org/10.6084/m9.figshare.6815699",
+│ │          ],
+│ │ +        # https://doi.org/10.6084/m9.figshare.6815705
+│ │ +        "dft_2d_2021": [
+│ │ +            "https://ndownloader.figshare.com/files/26808917",
+│ │ +            "d2-3-12-2021.json",
+│ │ +            "Obtaining 2D dataset 1.1k ...",
+│ │ +            "https://www.nature.com/articles/s41524-020-00440-1",
+│ │ +        ],
+│ │ +        # https://doi.org/10.6084/m9.figshare.6815699
+│ │ +        "dft_3d_2021": [
+│ │ +            "https://ndownloader.figshare.com/files/29204826",
+│ │ +            "jdft_3d-8-18-2021.json",
+│ │ +            "Obtaining 3D dataset 55k ...",
+│ │ +            "https://www.nature.com/articles/s41524-020-00440-1",
+│ │ +        ],
+│ │          # https://doi.org/10.6084/m9.figshare.6815699
+│ │          "cfid_3d": [
+│ │              "https://ndownloader.figshare.com/files/29205201",
+│ │              "cfid_3d-8-18-2021.json",
+│ │              "Obtaining 3D dataset 55k ...",
+│ │              "https://www.nature.com/articles/s41524-020-00440-1"
+│ │              + "\nOther versions:https://doi.org/10.6084/m9.figshare.6815699",
+│ │   --- jarvis-tools-2023.1.8/jarvis/db/lammps_to_xml.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/db/lammps_to_xml.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/db/qe_to_xml.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/db/qe_to_xml.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/db/restapi.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/db/restapi.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/db/vasp_to_xml.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/db/vasp_to_xml.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/db/webpages.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/db/webpages.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/boltztrap/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/boltztrap/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/boltztrap/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/boltztrap/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/calphad/write_decorated_poscar.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/calphad/write_decorated_poscar.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/lammps/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/lammps/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/lammps/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/lammps/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/nexus/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/nexus/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/pennylane/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/pennylane/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/phonopy/fcmat2hr.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/phonopy/fcmat2hr.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/phonopy/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/phonopy/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/phonopy/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/phonopy/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/prismatic/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/prismatic/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/qe/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/qe/inputs.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -23,20 +23,25 @@
+│ │          atoms=None,
+│ │          kpoints=None,
+│ │          psp_dir=None,
+│ │          input_params={},
+│ │          url=None,
+│ │          sanitize=True,
+│ │          sanitize_tol=2e-4,
+│ │ +        psp_temp_name=None,
+│ │      ):
+│ │          """Initialize input parameters for qunatum espresso."""
+│ │ +        if psp_temp_name is None:
+│ │ +            psp_temp_name = "QE_PSPs"
+│ │          if input_params == {}:
+│ │              input_params = GenericInputs().geometry_optimization()
+│ │          if psp_dir is None:
+│ │ -            psp_dir = str(os.path.join(os.path.dirname(__file__), "QE_PSPs"))
+│ │ +            psp_dir = str(
+│ │ +                os.path.join(os.path.dirname(__file__), psp_temp_name)
+│ │ +            )
+│ │              # Download GBRV PSPs by default
+│ │              if url is None:
+│ │                  url = (
+│ │                      "http://www.physics.rutgers.edu/"
+│ │                      "gbrv/all_pbesol_UPF_v1.5.tar.gz"
+│ │                  )
+│ │                  print("Please cite for PSPs:")
+│ │ @@ -184,15 +189,15 @@
+│ │                  )
+│ │          return kp
+│ │  
+│ │      def get_psp(self, element):
+│ │          """Obtain psuedopotential for an element."""
+│ │          element = str(element).lower()
+│ │          for i in os.listdir(self.psp_dir):
+│ │ -            el = str(i.split("_")[0]).lower()
+│ │ +            el = str(i.split(".")[0].split("_")[0]).lower()
+│ │              if el == element:
+│ │                  return i
+│ │  
+│ │      def atomic_species_string(self):
+│ │          """Obtain string for QE atomic species."""
+│ │          line = ""
+│ │          for i in self.species:
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/qe/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/qe/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/qiskit/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/qiskit/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/tequila/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/tequila/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/vasp/default_potcars.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/vasp/default_potcars.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/vasp/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/vasp/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/vasp/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/vasp/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wannier/default_semicore.json
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wannier/default_semicore.json
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wannier/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wannier/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wannier/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wannier/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wanniertools/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wanniertools/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wanniertools/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wanniertools/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wien2k/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wien2k/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/wien2k/outputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/wien2k/outputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/io/zeopp/inputs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/io/zeopp/inputs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/boltztrap/run.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/boltztrap/run.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/displace.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/displace.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelast.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelast.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelast_min.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelast_min.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelast_nobox.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelast_nobox.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelastcomb.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelastcomb.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/inelastreax.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/inelastreax.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/relax.mod
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/relax.mod
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/templates/templates.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/templates/templates.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/lammps/lammps.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/lammps/lammps.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/nexus/qmc.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/nexus/qmc.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/phonopy/run.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/phonopy/run.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/qe/converg.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/qe/converg.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -12,14 +12,16 @@
+│ │      length=0,
+│ │      encut=40,
+│ │      ecutrho=250,
+│ │      tol=0.001,
+│ │      increment=5,
+│ │      qe_cmd="/cluster/deb9/bin/mpirun -n 16 /cluster/bin/pw.x",
+│ │      psp_dir=None,
+│ │ +    url=None,
+│ │ +    psp_temp_name=None,
+│ │  ):
+│ │      """Converge k-points for a material."""
+│ │      scf_init = {
+│ │          "control": {
+│ │              "calculation": "'scf'",
+│ │              "restart_mode": "'from_scratch'",
+│ │              "prefix": "'KPOINTS'",
+│ │ @@ -75,14 +77,16 @@
+│ │                  atoms=atoms,
+│ │                  psp_dir=psp_dir,
+│ │                  input_params=scf_init,
+│ │                  output_file="scf_init.out",
+│ │                  qe_cmd=qe_cmd,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │ +                url=url,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              print("Energy", info_scf["total_energy"])
+│ │              en2 = float(info_scf["total_energy"])
+│ │              time.sleep(sleep)
+│ │              while abs(en2 - en1) > tol:
+│ │ @@ -111,14 +115,16 @@
+│ │                          atoms=atoms,
+│ │                          input_params=scf_init,
+│ │                          psp_dir=psp_dir,
+│ │                          output_file="scf_init.out",
+│ │                          qe_cmd=qe_cmd,
+│ │                          jobname=prefix,
+│ │                          kpoints=kpoints,
+│ │ +                        psp_temp_name=psp_temp_name,
+│ │ +                        url=url,
+│ │                          input_file=prefix + "_ascf_init.in",
+│ │                      )
+│ │  
+│ │                      info_scf = qejob_scf_init.runjob()
+│ │                      en2 = float(info_scf["total_energy"])
+│ │                      print("Energy", info_scf["total_energy"])
+│ │                      time.sleep(sleep)
+│ │ @@ -149,14 +155,16 @@
+│ │              scf_init["system"]["ntyp"] = ""
+│ │              qejob_scf_init = QEjob(
+│ │                  atoms=atoms,
+│ │                  psp_dir=psp_dir,
+│ │                  input_params=scf_init,
+│ │                  output_file="scf_init.out",
+│ │                  qe_cmd=qe_cmd,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │ +                url=url,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              en3 = float(info_scf["total_energy"])
+│ │              print("Energy", info_scf["total_energy"])
+│ │ @@ -174,14 +182,16 @@
+│ │              scf_init["system"]["ntyp"] = ""
+│ │              qejob_scf_init = QEjob(
+│ │                  atoms=atoms,
+│ │                  psp_dir=psp_dir,
+│ │                  input_params=scf_init,
+│ │                  output_file="scf_init.out",
+│ │                  qe_cmd=qe_cmd,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │ +                url=url,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              en4 = info_scf["total_energy"]
+│ │              print("Energy", info_scf["total_energy"])
+│ │ @@ -200,14 +210,16 @@
+│ │                  atoms=atoms,
+│ │                  psp_dir=psp_dir,
+│ │                  input_params=scf_init,
+│ │                  output_file="scf_init.out",
+│ │                  qe_cmd=qe_cmd,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │ +                url=url,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              en5 = info_scf["total_energy"]
+│ │              print("Energy", info_scf["total_energy"])
+│ │              time.sleep(sleep)
+│ │  
+│ │ @@ -224,14 +236,16 @@
+│ │                  atoms=atoms,
+│ │                  input_params=scf_init,
+│ │                  psp_dir=psp_dir,
+│ │                  output_file="scf_init.out",
+│ │                  qe_cmd=qe_cmd,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │ +                url=url,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              en6 = info_scf["total_energy"]
+│ │              print("Energy", info_scf["total_energy"])
+│ │              time.sleep(sleep)
+│ │  
+│ │ @@ -248,14 +262,16 @@
+│ │                  atoms=atoms,
+│ │                  input_params=scf_init,
+│ │                  output_file="scf_init.out",
+│ │                  psp_dir=psp_dir,
+│ │                  qe_cmd=qe_cmd,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │ +                url=url,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              en7 = info_scf["total_energy"]
+│ │              print("Energy", info_scf["total_energy"])
+│ │              time.sleep(sleep)
+│ │  
+│ │ @@ -306,29 +322,32 @@
+│ │                  )
+│ │                  fkp.write(line)
+│ │                  fkp.close()
+│ │                  en1 = en3
+│ │                  length1 = length3
+│ │              else:
+│ │                  print(
+│ │ -                    "KPOINTS convergence achieved for ", length1,
+│ │ +                    "KPOINTS convergence achieved for ",
+│ │ +                    length1,
+│ │                  )
+│ │                  convg_kp2 = True
+│ │  
+│ │              return length1
+│ │  
+│ │  
+│ │  def converg_cutoff(
+│ │      atoms=None,
+│ │      length=10,
+│ │      encut=40,
+│ │      ecutrho=250,
+│ │      tol=0.001,
+│ │      increment=5,
+│ │      psp_dir=None,
+│ │ +    url=None,
+│ │ +    psp_temp_name=None,
+│ │      qe_cmd="/cluster/deb9/bin/mpirun -n 16 /cluster/bin/pw.x",
+│ │  ):
+│ │      """Converge cutoff for a material."""
+│ │      scf_init = {
+│ │          "control": {
+│ │              "calculation": "'scf'",
+│ │              "restart_mode": "'from_scratch'",
+│ │ @@ -377,14 +396,16 @@
+│ │              atoms=atoms,
+│ │              psp_dir=psp_dir,
+│ │              input_params=scf_init,
+│ │              output_file="scf_init.out",
+│ │              qe_cmd=qe_cmd,
+│ │              jobname=prefix,
+│ │              kpoints=kpoints,
+│ │ +            url=url,
+│ │ +            psp_temp_name=psp_temp_name,
+│ │              input_file=prefix + "_ascf_init.in",
+│ │          )
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          print("Energy", info_scf["total_energy"])
+│ │          en2 = float(info_scf["total_energy"])
+│ │          time.sleep(sleep)
+│ │          while abs(en2 - en1) > tol:
+│ │ @@ -399,14 +420,16 @@
+│ │                  atoms=atoms,
+│ │                  input_params=scf_init,
+│ │                  psp_dir=psp_dir,
+│ │                  output_file="scf_init.out",
+│ │                  qe_cmd=qe_cmd,
+│ │                  jobname=prefix,
+│ │                  kpoints=kpoints,
+│ │ +                url=url,
+│ │ +                psp_temp_name=psp_temp_name,
+│ │                  input_file=prefix + "_ascf_init.in",
+│ │              )
+│ │  
+│ │              info_scf = qejob_scf_init.runjob()
+│ │              en2 = float(info_scf["total_energy"])
+│ │              print("Energy", info_scf["total_energy"])
+│ │              time.sleep(sleep)
+│ │ @@ -425,14 +448,16 @@
+│ │              atoms=atoms,
+│ │              input_params=scf_init,
+│ │              output_file="scf_init.out",
+│ │              qe_cmd=qe_cmd,
+│ │              psp_dir=psp_dir,
+│ │              jobname=prefix,
+│ │              kpoints=kpoints,
+│ │ +            url=url,
+│ │ +            psp_temp_name=psp_temp_name,
+│ │              input_file=prefix + "_ascf_init.in",
+│ │          )
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          en3 = float(info_scf["total_energy"])
+│ │          print("Energy", info_scf["total_energy"])
+│ │          time.sleep(sleep)
+│ │  
+│ │ @@ -445,14 +470,16 @@
+│ │              atoms=atoms,
+│ │              input_params=scf_init,
+│ │              psp_dir=psp_dir,
+│ │              output_file="scf_init.out",
+│ │              qe_cmd=qe_cmd,
+│ │              jobname=prefix,
+│ │              kpoints=kpoints,
+│ │ +            url=url,
+│ │ +            psp_temp_name=psp_temp_name,
+│ │              input_file=prefix + "_ascf_init.in",
+│ │          )
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          en4 = info_scf["total_energy"]
+│ │          print("Energy", info_scf["total_energy"])
+│ │          time.sleep(sleep)
+│ │  
+│ │ @@ -465,14 +492,16 @@
+│ │              atoms=atoms,
+│ │              input_params=scf_init,
+│ │              output_file="scf_init.out",
+│ │              qe_cmd=qe_cmd,
+│ │              psp_dir=psp_dir,
+│ │              jobname=prefix,
+│ │              kpoints=kpoints,
+│ │ +            url=url,
+│ │ +            psp_temp_name=psp_temp_name,
+│ │              input_file=prefix + "_ascf_init.in",
+│ │          )
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          en5 = info_scf["total_energy"]
+│ │          print("Energy", info_scf["total_energy"])
+│ │          time.sleep(sleep)
+│ │  
+│ │ @@ -485,14 +514,16 @@
+│ │              atoms=atoms,
+│ │              input_params=scf_init,
+│ │              output_file="scf_init.out",
+│ │              psp_dir=psp_dir,
+│ │              qe_cmd=qe_cmd,
+│ │              jobname=prefix,
+│ │              kpoints=kpoints,
+│ │ +            url=url,
+│ │ +            psp_temp_name=psp_temp_name,
+│ │              input_file=prefix + "_ascf_init.in",
+│ │          )
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          en6 = info_scf["total_energy"]
+│ │          print("Energy", info_scf["total_energy"])
+│ │          time.sleep(sleep)
+│ │  
+│ │ @@ -505,14 +536,16 @@
+│ │              atoms=atoms,
+│ │              input_params=scf_init,
+│ │              output_file="scf_init.out",
+│ │              qe_cmd=qe_cmd,
+│ │              jobname=prefix,
+│ │              psp_dir=psp_dir,
+│ │              kpoints=kpoints,
+│ │ +            url=url,
+│ │ +            psp_temp_name=psp_temp_name,
+│ │              input_file=prefix + "_ascf_init.in",
+│ │          )
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          en7 = info_scf["total_energy"]
+│ │          print("Energy", info_scf["total_energy"])
+│ │          time.sleep(sleep)
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/qe/master_super.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/qe/master_super.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/qe/qe.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/qe/qe.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -17,32 +17,35 @@
+│ │          qe_cmd="pw.x",
+│ │          jobname="test",
+│ │          psp_dir=None,
+│ │          url=None,
+│ │          output_file="qe.out",
+│ │          input_file="qe.in",
+│ │          stderr_file="std.err",
+│ │ +        psp_temp_name=None,
+│ │      ):
+│ │          """Intitialize class."""
+│ │          self.atoms = atoms
+│ │          self.kpoints = kpoints
+│ │          self.input_params = input_params
+│ │          self.qe_cmd = qe_cmd
+│ │          self.jobname = jobname
+│ │          self.psp_dir = psp_dir
+│ │          self.url = url
+│ │ +        self.psp_temp_name = psp_temp_name
+│ │          self.input_file = input_file
+│ │          self.output_file = output_file
+│ │          self.stderr_file = stderr_file
+│ │          self.qeinput = QEinfile(
+│ │              atoms=self.atoms,
+│ │              kpoints=self.kpoints,
+│ │              psp_dir=self.psp_dir,
+│ │              input_params=self.input_params,
+│ │              url=self.url,
+│ │ +            psp_temp_name=self.psp_temp_name,
+│ │          )
+│ │  
+│ │      def write_input(self):
+│ │          """Write inputs."""
+│ │          self.qeinput.write_file(self.input_file)
+│ │  
+│ │      def runjob(self):
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/qe/super.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/qe/super.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -67,69 +67,87 @@
+│ │          atoms=None,
+│ │          kp=None,
+│ │          qp=None,
+│ │          qe_cmd="pw.x",
+│ │          relax_calc="'vc-relax'",
+│ │          pressure=None,
+│ │          psp_dir=None,
+│ │ +        url=None,
+│ │ +        psp_temp_name=None,
+│ │ +        clean_files=True,
+│ │      ):
+│ │          """Initialize the class."""
+│ │          self.atoms = atoms
+│ │          self.kp = kp
+│ │          self.qp = qp
+│ │          # self.kp = kp
+│ │          # self.qp = qp
+│ │          self.relax_calc = relax_calc
+│ │          self.qe_cmd = qe_cmd
+│ │          self.psp_dir = psp_dir
+│ │ +        self.url = url
+│ │          self.pressure = pressure
+│ │ +        self.psp_temp_name = psp_temp_name
+│ │ +        self.clean_files = clean_files
+│ │  
+│ │      def to_dict(self):
+│ │          """Get dictionary."""
+│ │          info = {}
+│ │          info["atoms"] = self.atoms.to_dict()
+│ │  
+│ │          info["kp"] = self.kp.to_dict()
+│ │          info["qp"] = self.qp.to_dict()
+│ │          info["qe_cmd"] = self.qe_cmd
+│ │          info["psp_dir"] = self.psp_dir
+│ │ +        info["psp_temp_name"] = self.psp_temp_name
+│ │ +        info["url"] = self.url
+│ │          info["relax_calc"] = self.relax_calc
+│ │          info["pressure"] = self.pressure
+│ │          return info
+│ │  
+│ │      @classmethod
+│ │      def from_dict(self, info={}):
+│ │          """Load from a dictionary."""
+│ │          return SuperCond(
+│ │              atoms=Atoms.from_dict(info["atoms"]),
+│ │              kp=Kpoints3D.from_dict(info["kp"]),
+│ │              qp=Kpoints3D.from_dict(info["qp"]),
+│ │              qe_cmd=info["qe_cmd"],
+│ │              pressure=info["pressure"],
+│ │              relax_calc=info["relax_calc"],
+│ │ +            psp_dir=info["psp_dir"],
+│ │ +            url=info["url"],
+│ │ +            psp_temp_name=info["psp_temp_name"],
+│ │          )
+│ │  
+│ │      def runjob(self):
+│ │          """Calculate Tc using QE."""
+│ │          # Still under development,
+│ │          atoms = self.atoms
+│ │          kp = self.kp
+│ │          qp = self.qp
+│ │          if not kp._kpoints:
+│ │              kp_len = converg_kpoints(
+│ │ -                atoms=atoms, qe_cmd=self.qe_cmd, psp_dir=self.psp_dir
+│ │ +                atoms=atoms,
+│ │ +                qe_cmd=self.qe_cmd,
+│ │ +                psp_dir=self.psp_dir,
+│ │ +                url=self.url,
+│ │ +                psp_temp_name=self.psp_temp_name,
+│ │              )
+│ │              kp = Kpoints3D().automatic_length_mesh(
+│ │                  lattice_mat=atoms.lattice_mat, length=kp_len
+│ │              )
+│ │              kpts = kp._kpoints[0]
+│ │              kpts = non_prime_kpoints(kpts)
+│ │              kp = Kpoints3D(kpoints=[kpts])
+│ │              print("kpts", kpts)
+│ │ -
+│ │ +        else:
+│ │ +            kpts = kp._kpoints[0]
+│ │ +            kpts = non_prime_kpoints(kpts)
+│ │ +        print("kpts xyz", kpts)
+│ │          nq1 = get_factors(kpts[0])[0]
+│ │          nq2 = get_factors(kpts[1])[0]
+│ │          nq3 = get_factors(kpts[2])[0]
+│ │          qp = Kpoints3D(kpoints=[[nq1, nq2, nq3]])
+│ │          self.kp = kp
+│ │          self.qp = qp
+│ │          relax = {
+│ │ @@ -175,14 +193,17 @@
+│ │              atoms=atoms,
+│ │              input_params=relax,
+│ │              output_file="relax.out",
+│ │              qe_cmd=self.qe_cmd,
+│ │              jobname="relax",
+│ │              kpoints=kp,
+│ │              input_file="arelax.in",
+│ │ +            url=self.url,
+│ │ +            psp_dir=self.psp_dir,
+│ │ +            psp_temp_name=self.psp_temp_name,
+│ │          )
+│ │  
+│ │          info = qejob_relax.runjob()
+│ │          xml_path = info["xml_path"]
+│ │          xml_dat = DataFileSchema(xml_path)
+│ │          final_strt = xml_dat.final_structure
+│ │  
+│ │ @@ -227,14 +248,17 @@
+│ │              atoms=final_strt,
+│ │              input_params=scf_init,
+│ │              output_file="scf_init.out",
+│ │              qe_cmd=self.qe_cmd,
+│ │              jobname="scf_init",
+│ │              kpoints=kp,
+│ │              input_file="ascf_init.in",
+│ │ +            url=self.url,
+│ │ +            psp_temp_name=self.psp_temp_name,
+│ │ +            psp_dir=self.psp_dir,
+│ │          )
+│ │  
+│ │          info_scf = qejob_scf_init.runjob()
+│ │          print(info_scf)
+│ │          # kpts = kp._kpoints[0]
+│ │          qpts = qp._kpoints[0]
+│ │          nq1 = qpts[0]  # get_factors(kpts[0])[0]
+│ │ @@ -260,14 +284,17 @@
+│ │              atoms=final_strt,
+│ │              input_params=ph,
+│ │              output_file="ph.out",
+│ │              qe_cmd=self.qe_cmd.replace("pw.x", "ph.x"),
+│ │              jobname="ph",
+│ │              kpoints=None,
+│ │              input_file="aph.in",
+│ │ +            url=self.url,
+│ │ +            psp_temp_name=self.psp_temp_name,
+│ │ +            psp_dir=self.psp_dir,
+│ │          )
+│ │  
+│ │          qejob_ph.runjob()
+│ │          # import sys
+│ │          # sys.exit()
+│ │          qr = {
+│ │              "input": {
+│ │ @@ -282,14 +309,17 @@
+│ │              input_params=qr,
+│ │              output_file="q2r.out",
+│ │              # qe_cmd="/home/knc6/Software/qe/q-e/bin/q2r.x",
+│ │              qe_cmd=self.qe_cmd.replace("pw.x", "q2r.x"),
+│ │              jobname="qr",
+│ │              kpoints=None,
+│ │              input_file="aqr.in",
+│ │ +            url=self.url,
+│ │ +            psp_temp_name=self.psp_temp_name,
+│ │ +            psp_dir=self.psp_dir,
+│ │          )
+│ │  
+│ │          qejob_qr.runjob()
+│ │  
+│ │          kpts = kp._kpoints[0]
+│ │          matdyn = {
+│ │              "input": {
+│ │ @@ -311,11 +341,17 @@
+│ │              input_params=matdyn,
+│ │              output_file="matdyn.out",
+│ │              # qe_cmd="/home/knc6/Software/qe/q-e/bin/matdyn.x",
+│ │              qe_cmd=self.qe_cmd.replace("pw.x", "matdyn.x"),
+│ │              jobname="matdyn",
+│ │              kpoints=None,
+│ │              input_file="amatdyn.in",
+│ │ +            url=self.url,
+│ │ +            psp_temp_name=self.psp_temp_name,
+│ │ +            psp_dir=self.psp_dir,
+│ │          )
+│ │  
+│ │          qejob_matdyn.runjob()
+│ │          parse_lambda()
+│ │ +        cmd = "rm -r _ph0 *.wfc* */wfc* */*UPF */*upf */charge-density.dat"
+│ │ +        if self.clean_files:
+│ │ +            os.system(cmd)
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/qe/super_tetra.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/qe/super_tetra.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/vasp/vasp.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/vasp/vasp.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tasks/queue_jobs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tasks/queue_jobs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/test_ai_uncertainty.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/test_ai_uncertainty.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/test_desc.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/test_desc.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/ai/test_pkgs.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/ai/test_pkgs.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/test_surface.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/test_surface.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/defects/test_vacancy.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/defects/test_vacancy.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/elastic/test_tensor.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/elastic/test_tensor.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/interface/test_zur.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/interface/test_zur.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/magnetism/test_magnetism.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/magnetism/test_magnetism.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/test_dos.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/test_dos.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/phonon/test_ir.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/phonon/test_ir.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/solar/test_solar.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/solar/test_solar.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/stm/test_stm.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/stm/test_stm.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/test_neighbors.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/test_neighbors.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/structure/test_spacegroup.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/structure/test_spacegroup.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/analysis/thermodynamics/test_energetics.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/analysis/thermodynamics/test_energetics.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/p.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/p.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_atoms.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_atoms.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_graph.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_graph.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_kpoints.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_kpoints.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_latice.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_latice.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_specie.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_specie.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/core/test_utils.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/core/test_utils.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/db/test_figshare.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/db/test_figshare.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/tasks/test_lammps.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/tasks/test_lammps.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis/tests/testfiles/tasks/test_vasp.py
+│ ├── +++ jarvis-tools-2023.4.6/jarvis/tests/testfiles/tasks/test_vasp.py
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/jarvis_tools.egg-info/PKG-INFO
+│ ├── +++ jarvis-tools-2023.4.6/jarvis_tools.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: jarvis-tools
+│ │ -Version: 2023.1.8
+│ │ +Version: 2023.4.6
+│ │  Summary: jarvis-tools: an open-source software package for data-driven atomistic materials design. https://jarvis.nist.gov/
+│ │  Home-page: https://github.com/usnistgov/jarvis
+│ │  Author: Kamal Choudhary
+│ │  Author-email: kamal.choudhary@nist.gov
+│ │  License: NIST
+│ │  Description: .. class:: center
+│ │          
+│ │ @@ -43,15 +43,15 @@
+│ │          
+│ │          
+│ │          ========================================================================================
+│ │          
+│ │          JARVIS-Tools
+│ │          =========================================================================================
+│ │          
+│ │ -        The JARVIS-Tools is an open-access software package for atomistic data-driven materials desgin. JARVIS-Tools can be used for a) setting up calculations, b) analysis and informatics, c) plotting, d) database development and e) web-page development.
+│ │ +        The JARVIS-Tools is an open-access software package for atomistic data-driven materials design. JARVIS-Tools can be used for a) setting up calculations, b) analysis and informatics, c) plotting, d) database development and e) web-page development.
+│ │          
+│ │          JARVIS-Tools empowers NIST-JARVIS (Joint Automated Repository for Various Integrated Simulations) repository which is an integrated framework for computational science using density functional theory, classical force-field/molecular dynamics and machine-learning. The NIST-JARVIS official website is: https://jarvis.nist.gov . This project is a part of the Materials Genome Initiative (MGI) at NIST (https://mgi.nist.gov/). 
+│ │          
+│ │          For more details, checkout our latest article:  `The joint automated repository for various integrated simulations (JARVIS) for data-driven materials design <https://www.nature.com/articles/s41524-020-00440-1>`__ and `YouTube videos <https://www.youtube.com/watch?v=P0ZcHXOC6W0&feature=emb_title&ab_channel=JARVIS-repository>`__ 
+│ │          
+│ │          .. image:: https://www.ctcms.nist.gov/~knc6/images/logo/jarvis-mission.png
+│ │             :target: https://jarvis.nist.gov/
+│ │   --- jarvis-tools-2023.1.8/jarvis_tools.egg-info/SOURCES.txt
+│ ├── +++ jarvis-tools-2023.4.6/jarvis_tools.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- jarvis-tools-2023.1.8/README.rst
+│ ├── +++ jarvis-tools-2023.4.6/README.rst
+│ │┄ Files 1% similar despite different names
+│ │ @@ -35,15 +35,15 @@
+│ │  
+│ │  
+│ │  ========================================================================================
+│ │  
+│ │  JARVIS-Tools
+│ │  =========================================================================================
+│ │  
+│ │ -The JARVIS-Tools is an open-access software package for atomistic data-driven materials desgin. JARVIS-Tools can be used for a) setting up calculations, b) analysis and informatics, c) plotting, d) database development and e) web-page development.
+│ │ +The JARVIS-Tools is an open-access software package for atomistic data-driven materials design. JARVIS-Tools can be used for a) setting up calculations, b) analysis and informatics, c) plotting, d) database development and e) web-page development.
+│ │  
+│ │  JARVIS-Tools empowers NIST-JARVIS (Joint Automated Repository for Various Integrated Simulations) repository which is an integrated framework for computational science using density functional theory, classical force-field/molecular dynamics and machine-learning. The NIST-JARVIS official website is: https://jarvis.nist.gov . This project is a part of the Materials Genome Initiative (MGI) at NIST (https://mgi.nist.gov/). 
+│ │  
+│ │  For more details, checkout our latest article:  `The joint automated repository for various integrated simulations (JARVIS) for data-driven materials design <https://www.nature.com/articles/s41524-020-00440-1>`__ and `YouTube videos <https://www.youtube.com/watch?v=P0ZcHXOC6W0&feature=emb_title&ab_channel=JARVIS-repository>`__ 
+│ │  
+│ │  .. image:: https://www.ctcms.nist.gov/~knc6/images/logo/jarvis-mission.png
+│ │     :target: https://jarvis.nist.gov/
+│ │   --- jarvis-tools-2023.1.8/setup.py
+│ ├── +++ jarvis-tools-2023.4.6/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -7,15 +7,15 @@
+│ │  
+│ │  base_dir = os.path.dirname(__file__)
+│ │  with open(os.path.join(base_dir, "README.rst")) as f:
+│ │      long_d = f.read()
+│ │  
+│ │  setup(
+│ │      name="jarvis-tools",
+│ │ -    version="2023.01.08",
+│ │ +    version="2023.04.06",
+│ │      long_description=long_d,
+│ │      install_requires=[
+│ │          "numpy>=1.19.5",
+│ │          "scipy>=1.4.1",
+│ │          "matplotlib>=3.0.0",
+│ │          "spglib>=1.14.1",
+│ │          "joblib>=0.14.1",
+│ │   --- jarvis-tools-2023.1.8/PKG-INFO
+│ ├── +++ jarvis-tools-2023.4.6/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: jarvis-tools
+│ │ -Version: 2023.1.8
+│ │ +Version: 2023.4.6
+│ │  Summary: jarvis-tools: an open-source software package for data-driven atomistic materials design. https://jarvis.nist.gov/
+│ │  Home-page: https://github.com/usnistgov/jarvis
+│ │  Author: Kamal Choudhary
+│ │  Author-email: kamal.choudhary@nist.gov
+│ │  License: NIST
+│ │  Description: .. class:: center
+│ │          
+│ │ @@ -43,15 +43,15 @@
+│ │          
+│ │          
+│ │          ========================================================================================
+│ │          
+│ │          JARVIS-Tools
+│ │          =========================================================================================
+│ │          
+│ │ -        The JARVIS-Tools is an open-access software package for atomistic data-driven materials desgin. JARVIS-Tools can be used for a) setting up calculations, b) analysis and informatics, c) plotting, d) database development and e) web-page development.
+│ │ +        The JARVIS-Tools is an open-access software package for atomistic data-driven materials design. JARVIS-Tools can be used for a) setting up calculations, b) analysis and informatics, c) plotting, d) database development and e) web-page development.
+│ │          
+│ │          JARVIS-Tools empowers NIST-JARVIS (Joint Automated Repository for Various Integrated Simulations) repository which is an integrated framework for computational science using density functional theory, classical force-field/molecular dynamics and machine-learning. The NIST-JARVIS official website is: https://jarvis.nist.gov . This project is a part of the Materials Genome Initiative (MGI) at NIST (https://mgi.nist.gov/). 
+│ │          
+│ │          For more details, checkout our latest article:  `The joint automated repository for various integrated simulations (JARVIS) for data-driven materials design <https://www.nature.com/articles/s41524-020-00440-1>`__ and `YouTube videos <https://www.youtube.com/watch?v=P0ZcHXOC6W0&feature=emb_title&ab_channel=JARVIS-repository>`__ 
+│ │          
+│ │          .. image:: https://www.ctcms.nist.gov/~knc6/images/logo/jarvis-mission.png
+│ │             :target: https://jarvis.nist.gov/
