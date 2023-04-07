@@ -1,0 +1,52 @@
+# Comparing `tmp/dialogx-1.0.tar.gz` & `tmp/dialogx-1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dialogx-1.0.tar", last modified: Thu Apr  6 13:37:08 2023, max compression
++gzip compressed data, was "dialogx-1.1.tar", last modified: Fri Apr  7 08:16:30 2023, max compression
+```
+
+## Comparing `dialogx-1.0.tar` & `dialogx-1.1.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 13:37:08.933049 dialogx-1.0/
+--rw-rw-rw-   0        0        0      373 2023-04-06 13:37:08.933049 dialogx-1.0/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-06 13:37:08.901799 dialogx-1.0/dialogx/
+--rw-rw-rw-   0        0        0     4595 2023-04-06 12:56:16.000000 dialogx-1.0/dialogx/__init__.py
+--rw-rw-rw-   0        0        0      664 2023-04-06 11:27:38.000000 dialogx-1.0/dialogx/ctrlIcons.py
+--rw-rw-rw-   0        0        0      473 2023-04-06 13:34:36.000000 dialogx-1.0/dialogx/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 13:37:08.933049 dialogx-1.0/dialogx.egg-info/
+--rw-rw-rw-   0        0        0      373 2023-04-06 13:37:08.000000 dialogx-1.0/dialogx.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      211 2023-04-06 13:37:08.000000 dialogx-1.0/dialogx.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 13:37:08.000000 dialogx-1.0/dialogx.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        7 2023-04-06 13:37:08.000000 dialogx-1.0/dialogx.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        8 2023-04-06 13:37:08.000000 dialogx-1.0/dialogx.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 13:37:08.933049 dialogx-1.0/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-07 08:16:30.888142 dialogx-1.1/
++-rw-rw-rw-   0        0        0      373 2023-04-07 08:16:30.888142 dialogx-1.1/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 08:16:30.849881 dialogx-1.1/dialogx/
++-rw-rw-rw-   0        0        0     4595 2023-04-07 08:07:34.000000 dialogx-1.1/dialogx/__init__.py
++-rw-rw-rw-   0        0        0      664 2023-04-06 11:27:38.000000 dialogx-1.1/dialogx/ctrlIcons.py
++drwxrwxrwx   0        0        0        0 2023-04-07 08:16:30.888142 dialogx-1.1/dialogx.egg-info/
++-rw-rw-rw-   0        0        0      373 2023-04-07 08:16:30.000000 dialogx-1.1/dialogx.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      203 2023-04-07 08:16:30.000000 dialogx-1.1/dialogx.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 08:16:30.000000 dialogx-1.1/dialogx.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        7 2023-04-07 08:16:30.000000 dialogx-1.1/dialogx.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        8 2023-04-07 08:16:30.000000 dialogx-1.1/dialogx.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 08:16:30.888142 dialogx-1.1/setup.cfg
++-rw-rw-rw-   0        0        0      473 2023-04-07 08:10:20.000000 dialogx-1.1/setup.py
+```
+
+### Comparing `dialogx-1.0/dialogx/__init__.py` & `dialogx-1.1/dialogx/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dialogx-1.0/dialogx/ctrlIcons.py` & `dialogx-1.1/dialogx/ctrlIcons.py`
+
+ * *Files identical despite different names*
+

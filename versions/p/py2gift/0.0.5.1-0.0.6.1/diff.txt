@@ -1,0 +1,2697 @@
+--- tmp/py2gift-0.0.5.1.tar.gz
++++ tmp/py2gift-0.0.6.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "py2gift-0.0.5.1.tar", last modified: Tue Apr 20 09:47:51 2021, max compression
+│ +gzip compressed data, was "py2gift-0.0.6.1.tar", last modified: Fri Apr  7 08:22:21 2023, max compression
+│   --- py2gift-0.0.5.1.tar
+├── +++ py2gift-0.0.6.1.tar
+│ ├── file list
+│ │ @@ -1,33 +1,34 @@
+│ │ -drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:47:51.660098 py2gift-0.0.5.1/
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     2348 2020-04-25 09:47:06.000000 py2gift-0.0.5.1/CONTRIBUTING.md
+│ │ --rw-r--r--   0 manu      (1000) users      (100)    11357 2020-04-25 09:47:06.000000 py2gift-0.0.5.1/LICENSE
+│ │ --rw-r--r--   0 manu      (1000) users      (100)      111 2020-04-25 09:47:06.000000 py2gift-0.0.5.1/MANIFEST.in
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     4805 2021-04-20 09:47:51.660098 py2gift-0.0.5.1/PKG-INFO
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     3727 2021-04-20 09:47:15.000000 py2gift-0.0.5.1/README.md
+│ │ -drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:47:51.659098 py2gift-0.0.5.1/examples/
+│ │ --rw-r--r--   0 manu      (1000) users      (100)       22 2020-06-20 14:59:41.000000 py2gift-0.0.5.1/examples/__init__.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     2712 2020-12-08 08:49:13.000000 py2gift-0.0.5.1/examples/my_module.py
+│ │ -drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:47:51.660098 py2gift-0.0.5.1/py2gift/
+│ │ --rw-r--r--   0 manu      (1000) users      (100)       24 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/__init__.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     3496 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/_nbdev.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     8362 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/core.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     1127 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/file.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)      856 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/hash.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     9651 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/input_file.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     5873 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/markdown.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     2268 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/notebook.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     7927 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/question.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)    10499 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/tex.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     2033 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/time.py
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     7252 2021-04-20 09:47:06.000000 py2gift-0.0.5.1/py2gift/util.py
+│ │ -drwxr-xr-x   0 manu      (1000) users      (100)        0 2021-04-20 09:47:51.660098 py2gift-0.0.5.1/py2gift.egg-info/
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     4805 2021-04-20 09:47:51.000000 py2gift-0.0.5.1/py2gift.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 manu      (1000) users      (100)      543 2021-04-20 09:47:51.000000 py2gift-0.0.5.1/py2gift.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 manu      (1000) users      (100)        1 2021-04-20 09:47:51.000000 py2gift-0.0.5.1/py2gift.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 manu      (1000) users      (100)       20 2021-04-20 09:47:51.000000 py2gift-0.0.5.1/py2gift.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 manu      (1000) users      (100)        1 2020-06-22 14:32:37.000000 py2gift-0.0.5.1/py2gift.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 manu      (1000) users      (100)       69 2021-04-20 09:47:51.000000 py2gift-0.0.5.1/py2gift.egg-info/requires.txt
+│ │ --rw-r--r--   0 manu      (1000) users      (100)       17 2021-04-20 09:47:51.000000 py2gift-0.0.5.1/py2gift.egg-info/top_level.txt
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     2414 2021-04-20 09:46:51.000000 py2gift-0.0.5.1/settings.ini
+│ │ --rw-r--r--   0 manu      (1000) users      (100)       38 2021-04-20 09:47:51.660098 py2gift-0.0.5.1/setup.cfg
+│ │ --rw-r--r--   0 manu      (1000) users      (100)     1921 2020-04-25 09:47:06.000000 py2gift-0.0.5.1/setup.py
+│ │ +drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:22:21.011247 py2gift-0.0.6.1/
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     2348 2023-03-05 16:23:54.000000 py2gift-0.0.6.1/CONTRIBUTING.md
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)    11357 2023-02-27 19:28:53.000000 py2gift-0.0.6.1/LICENSE
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)      111 2023-02-27 19:28:53.000000 py2gift-0.0.6.1/MANIFEST.in
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     4502 2023-04-07 08:22:21.011247 py2gift-0.0.6.1/PKG-INFO
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     3847 2023-03-20 08:45:11.000000 py2gift-0.0.6.1/README.md
+│ │ +drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:22:21.004247 py2gift-0.0.6.1/examples/
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)       22 2023-02-27 19:28:55.000000 py2gift-0.0.6.1/examples/__init__.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     2712 2023-02-27 19:28:54.000000 py2gift-0.0.6.1/examples/my_module.py
+│ │ +drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:22:21.008247 py2gift-0.0.6.1/py2gift/
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)       24 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/__init__.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)    16255 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/_modidx.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     3496 2023-02-27 19:28:54.000000 py2gift-0.0.6.1/py2gift/_nbdev.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     7542 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/core.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)      938 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/file.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     1143 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/hash.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)    10673 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/input_file.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     6047 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/markdown.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     2584 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/notebook.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     8365 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/question.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     8952 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/tex.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     2358 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/time.py
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     6432 2023-04-07 08:21:32.000000 py2gift-0.0.6.1/py2gift/util.py
+│ │ +drwxr-xr-x   0 manu      (1000) users      (100)        0 2023-04-07 08:22:21.010247 py2gift-0.0.6.1/py2gift.egg-info/
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     4502 2023-04-07 08:22:20.000000 py2gift-0.0.6.1/py2gift.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)      562 2023-04-07 08:22:20.000000 py2gift-0.0.6.1/py2gift.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)        1 2023-04-07 08:22:20.000000 py2gift-0.0.6.1/py2gift.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)       36 2023-04-07 08:22:20.000000 py2gift-0.0.6.1/py2gift.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)        1 2023-03-10 17:10:50.000000 py2gift-0.0.6.1/py2gift.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)       64 2023-04-07 08:22:20.000000 py2gift-0.0.6.1/py2gift.egg-info/requires.txt
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)       17 2023-04-07 08:22:20.000000 py2gift-0.0.6.1/py2gift.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)      889 2023-04-07 08:21:13.000000 py2gift-0.0.6.1/settings.ini
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)       38 2023-04-07 08:22:21.011247 py2gift-0.0.6.1/setup.cfg
+│ │ +-rw-r--r--   0 manu      (1000) users      (100)     2596 2023-03-05 18:30:22.000000 py2gift-0.0.6.1/setup.py
+│ │   --- py2gift-0.0.5.1/CONTRIBUTING.md
+│ ├── +++ py2gift-0.0.6.1/CONTRIBUTING.md
+│ │┄ Files identical despite different names
+│ │   --- py2gift-0.0.5.1/LICENSE
+│ ├── +++ py2gift-0.0.6.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- py2gift-0.0.5.1/PKG-INFO
+│ ├── +++ py2gift-0.0.6.1/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,62 +1,102 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: py2gift
+│ │ -Version: 0.0.5.1
+│ │ +Version: 0.0.6.1
+│ │  Summary: Make input files for gift-wrapper programmatically
+│ │  Home-page: https://github.com/manuvazquez/py2gift/tree/master/
+│ │  Author: Manuel A. Vázquez
+│ │  Author-email: manuavazquez@gmail.com
+│ │  License: Apache Software License 2.0
+│ │ -Description: # py2gift
+│ │ -        > Write GIFT (Moodle-compatible quizzes) files using Python.
+│ │ -        
+│ │ -        
+│ │ -        `py2gift` is a library meant to write [question banks](https://docs.moodle.org/38/en/Question_bank) in [GIFT](https://docs.moodle.org/38/en/GIFT_format) format ([Moodle](https://moodle.org/)) *programmatically* in Python. Ultimately, questions can be written (though this is not a requirement) from a [Jupyter](https://jupyter.org/) notebook. The advantages are:
+│ │ -        
+│ │ -        * you can use all your Python skills to *compute* whatever is required for the statement, solution and feedback of a question
+│ │ -        * it makes easy to write different (random) versions of the same question
+│ │ -        * questions can be previewed (pictures, $\LaTeX$...) in the notebook
+│ │ -        * no need to install anything: you can click this mybinder badge, 
+│ │ -        [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manuvazquez/py2gift/master?filepath=examples)
+│ │ -        , open any of the provided examples, and start writing your questions right now from the browser (the file generated at the end of the notebook, accesible through a link, can be imported in *Moodle*).
+│ │ -        
+│ │ -        This library relies on [gift-wrapper](https://github.com/manuvazquez/gift-wrapper) and it has been created using [nbdev](https://github.com/fastai/nbdev). The latter fact means you can [explore the *actual* source code](https://manuvazquez.github.io/py2gift/) through jupyter notebooks and see the inner workings of each individual piece.
+│ │ -        
+│ │ -        ## Setup
+│ │ -        
+│ │ -        Since the library is in [PyPI](https://pypi.org/project/py2gift/)
+│ │ -        
+│ │ -        ```
+│ │ -        pip install py2gift
+│ │ -        ```
+│ │ -        
+│ │ -        should do.
+│ │ -        
+│ │ -        ### Manual
+│ │ -        
+│ │ -        If you'd rather clone this repository, the command below should install all the required packages 
+│ │ -        
+│ │ -        ```
+│ │ -        pip install pandas numpy matplotlib ruamel.yaml gift-wrapper
+│ │ -        ```
+│ │ -        
+│ │ -        ## How to use it
+│ │ -        
+│ │ -        Writing a question involves specifying the statement and, *optionally*, the feedback in different notebook cells. In any case, *variables*, specified with the prefix `!`, can be included, and those are meant to be *filled in* from within a Python class. This comes very handy when you want to create different versions of a single question in which some input data (maybe in the form of a picture) *randomly* changes from question to question. Then, you can instruct `py2gift` to call your Python code a number of times, each one giving rise to a different version of the same question (as long as some *variable* is set at random, e.g., by exploiting the functionality in `np.random`). The solution, whose format depends on the question type, must also be set from within the code.
+│ │ -        
+│ │ -        Underneath, images are handled by *gift-wrapper*, and hence *paths* (e.g., `images/scheme.svg`) to either `.tex` (that can be compiled with *pdflatex*) or `.svg` files can be included in the statement, solution or feedback of a question. Moreover, they can be included through one of the variables (prefix `!`), and hence random (but nonetheless meaningful) pictures are a possibility.
+│ │ -        
+│ │ -        Notice that the difference between two instances of the same question can be minor or significant. Ultimately, it depends on how sophisticated your Python code is (if the latter can solve the question/problem in a very general form, and you are also able to present it in the `statement`, then it is fine).
+│ │ -        
+│ │ -        Besides the above mentioned *core* functionality, `py2gift` provides some extra functions to ease the process of writing questions (modules `tex`, `util`, `time`, `hash`). However, a thorough description of the functionality would be very dry and you are probably better off by taking a look at one of the *sample* notebooks ([minimal](examples/minimal.ipynb) or [example_1](examples/example_1.ipynb)). Also, you can take a look at the [documentation](https://manuvazquez.github.io/py2gift/).
+│ │ -        
+│ │  Keywords: gift moodle python
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │ -Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Natural Language :: English
+│ │ -Classifier: Programming Language :: Python :: 3.6
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │ -Requires-Python: >=3.6
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: License :: OSI Approved :: Apache Software License
+│ │ +Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │ +Provides-Extra: dev
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +py2gift
+│ │ +================
+│ │ +
+│ │ +<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+│ │ +
+│ │ +`py2gift` is a library meant to write [question
+│ │ +banks](https://docs.moodle.org/38/en/Question_bank) in
+│ │ +[GIFT](https://docs.moodle.org/38/en/GIFT_format) format
+│ │ +([Moodle](https://moodle.org/)) *programmatically* in Python.
+│ │ +Ultimately, questions can be written (though this is not a requirement)
+│ │ +from a [Jupyter](https://jupyter.org/) notebook. The advantages are:
+│ │ +
+│ │ +- you can use all your Python skills to *compute* whatever is required
+│ │ +  for the statement, solution and feedback of a question
+│ │ +- it makes easy to write different (random) versions of the same
+│ │ +  question
+│ │ +- questions can be previewed (pictures, $\LaTeX$…) in the notebook
+│ │ +- no need to install anything: you can click this mybinder badge,
+│ │ +  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manuvazquez/py2gift/master?filepath=examples)
+│ │ +  , open any of the provided examples, and start writing your questions
+│ │ +  right now from the browser (the file generated at the end of the
+│ │ +  notebook, accesible through a link, can be imported in *Moodle*).
+│ │ +
+│ │ +This library relies on
+│ │ +[gift-wrapper](https://github.com/manuvazquez/gift-wrapper) and it has
+│ │ +been created using [nbdev](https://github.com/fastai/nbdev). The latter
+│ │ +fact means you can [explore the *actual* source
+│ │ +code](https://manuvazquez.github.io/py2gift/) through jupyter notebooks
+│ │ +and see the inner workings of each individual piece.
+│ │ +
+│ │ +## Setup
+│ │ +
+│ │ +Since the library is in [PyPI](https://pypi.org/project/py2gift/)
+│ │ +
+│ │ +    pip install py2gift
+│ │ +
+│ │ +should do.
+│ │ +
+│ │ +### Manual
+│ │ +
+│ │ +If you’d rather clone this repository, the command below should install
+│ │ +all the required packages
+│ │ +
+│ │ +    pip install pandas numpy matplotlib ruamel.yaml gift-wrapper
+│ │ +
+│ │ +## How to use it
+│ │ +
+│ │ +Writing a question involves specifying the statement and, *optionally*,
+│ │ +the feedback in different notebook cells. In any case, *variables*,
+│ │ +specified with the prefix `!`, can be included, and those are meant to
+│ │ +be *filled in* from within a Python class. This comes very handy when
+│ │ +you want to create different versions of a single question in which some
+│ │ +input data (maybe in the form of a picture) *randomly* changes from
+│ │ +question to question. Then, you can instruct `py2gift` to call your
+│ │ +Python code a number of times, each one giving rise to a different
+│ │ +version of the same question (as long as some *variable* is set at
+│ │ +random, e.g., by exploiting the functionality in `np.random`). The
+│ │ +solution, whose format depends on the question type, must also be set
+│ │ +from within the code.
+│ │ +
+│ │ +Underneath, images are handled by *gift-wrapper*, and hence *paths*
+│ │ +(e.g., `images/scheme.svg`) to either `.tex` (that can be compiled with
+│ │ +*pdflatex*) or `.svg` files can be included in the statement, solution
+│ │ +or feedback of a question. Moreover, they can be included through one of
+│ │ +the variables (prefix `!`), and hence random (but nonetheless
+│ │ +meaningful) pictures are a possibility.
+│ │ +
+│ │ +Notice that the difference between two instances of the same question
+│ │ +can be minor or significant. Ultimately, it depends on how sophisticated
+│ │ +your Python code is (if the latter can solve the question/problem in a
+│ │ +very general form, and you are also able to present it in the
+│ │ +`statement`, then it is fine).
+│ │ +
+│ │ +Besides the above mentioned *core* functionality, `py2gift` provides
+│ │ +some extra functions to ease the process of writing questions (modules
+│ │ +`tex`, `util`, `time`, `hash`). However, a thorough description of the
+│ │ +functionality would be very dry and you are probably better off by
+│ │ +taking a look at one of the *sample* notebooks
+│ │ +([minimal](https://github.com/manuvazquez/py2gift/blob/master/examples/minimal.ipynb)
+│ │ +or
+│ │ +[example_1](https://github.com/manuvazquez/py2gift/blob/master/examples/example_1.ipynb)).
+│ │ +Also, you can take a look at the
+│ │ +[documentation](https://manuvazquez.github.io/py2gift/).
+│ │   --- py2gift-0.0.5.1/README.md
+│ ├── +++ py2gift-0.0.6.1/README.md
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,42 +1,83 @@
+│ │ -# py2gift
+│ │ -> Write GIFT (Moodle-compatible quizzes) files using Python.
+│ │ +py2gift
+│ │ +================
+│ │  
+│ │ +<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+│ │  
+│ │ -`py2gift` is a library meant to write [question banks](https://docs.moodle.org/38/en/Question_bank) in [GIFT](https://docs.moodle.org/38/en/GIFT_format) format ([Moodle](https://moodle.org/)) *programmatically* in Python. Ultimately, questions can be written (though this is not a requirement) from a [Jupyter](https://jupyter.org/) notebook. The advantages are:
+│ │ -
+│ │ -* you can use all your Python skills to *compute* whatever is required for the statement, solution and feedback of a question
+│ │ -* it makes easy to write different (random) versions of the same question
+│ │ -* questions can be previewed (pictures, $\LaTeX$...) in the notebook
+│ │ -* no need to install anything: you can click this mybinder badge, 
+│ │ -[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manuvazquez/py2gift/master?filepath=examples)
+│ │ -, open any of the provided examples, and start writing your questions right now from the browser (the file generated at the end of the notebook, accesible through a link, can be imported in *Moodle*).
+│ │ -
+│ │ -This library relies on [gift-wrapper](https://github.com/manuvazquez/gift-wrapper) and it has been created using [nbdev](https://github.com/fastai/nbdev). The latter fact means you can [explore the *actual* source code](https://manuvazquez.github.io/py2gift/) through jupyter notebooks and see the inner workings of each individual piece.
+│ │ +`py2gift` is a library meant to write [question
+│ │ +banks](https://docs.moodle.org/38/en/Question_bank) in
+│ │ +[GIFT](https://docs.moodle.org/38/en/GIFT_format) format
+│ │ +([Moodle](https://moodle.org/)) *programmatically* in Python.
+│ │ +Ultimately, questions can be written (though this is not a requirement)
+│ │ +from a [Jupyter](https://jupyter.org/) notebook. The advantages are:
+│ │ +
+│ │ +- you can use all your Python skills to *compute* whatever is required
+│ │ +  for the statement, solution and feedback of a question
+│ │ +- it makes easy to write different (random) versions of the same
+│ │ +  question
+│ │ +- questions can be previewed (pictures, $\LaTeX$…) in the notebook
+│ │ +- no need to install anything: you can click this mybinder badge,
+│ │ +  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manuvazquez/py2gift/master?filepath=examples)
+│ │ +  , open any of the provided examples, and start writing your questions
+│ │ +  right now from the browser (the file generated at the end of the
+│ │ +  notebook, accesible through a link, can be imported in *Moodle*).
+│ │ +
+│ │ +This library relies on
+│ │ +[gift-wrapper](https://github.com/manuvazquez/gift-wrapper) and it has
+│ │ +been created using [nbdev](https://github.com/fastai/nbdev). The latter
+│ │ +fact means you can [explore the *actual* source
+│ │ +code](https://manuvazquez.github.io/py2gift/) through jupyter notebooks
+│ │ +and see the inner workings of each individual piece.
+│ │  
+│ │  ## Setup
+│ │  
+│ │  Since the library is in [PyPI](https://pypi.org/project/py2gift/)
+│ │  
+│ │ -```
+│ │ -pip install py2gift
+│ │ -```
+│ │ +    pip install py2gift
+│ │  
+│ │  should do.
+│ │  
+│ │  ### Manual
+│ │  
+│ │ -If you'd rather clone this repository, the command below should install all the required packages 
+│ │ +If you’d rather clone this repository, the command below should install
+│ │ +all the required packages
+│ │  
+│ │ -```
+│ │ -pip install pandas numpy matplotlib ruamel.yaml gift-wrapper
+│ │ -```
+│ │ +    pip install pandas numpy matplotlib ruamel.yaml gift-wrapper
+│ │  
+│ │  ## How to use it
+│ │  
+│ │ -Writing a question involves specifying the statement and, *optionally*, the feedback in different notebook cells. In any case, *variables*, specified with the prefix `!`, can be included, and those are meant to be *filled in* from within a Python class. This comes very handy when you want to create different versions of a single question in which some input data (maybe in the form of a picture) *randomly* changes from question to question. Then, you can instruct `py2gift` to call your Python code a number of times, each one giving rise to a different version of the same question (as long as some *variable* is set at random, e.g., by exploiting the functionality in `np.random`). The solution, whose format depends on the question type, must also be set from within the code.
+│ │ -
+│ │ -Underneath, images are handled by *gift-wrapper*, and hence *paths* (e.g., `images/scheme.svg`) to either `.tex` (that can be compiled with *pdflatex*) or `.svg` files can be included in the statement, solution or feedback of a question. Moreover, they can be included through one of the variables (prefix `!`), and hence random (but nonetheless meaningful) pictures are a possibility.
+│ │ -
+│ │ -Notice that the difference between two instances of the same question can be minor or significant. Ultimately, it depends on how sophisticated your Python code is (if the latter can solve the question/problem in a very general form, and you are also able to present it in the `statement`, then it is fine).
+│ │ -
+│ │ -Besides the above mentioned *core* functionality, `py2gift` provides some extra functions to ease the process of writing questions (modules `tex`, `util`, `time`, `hash`). However, a thorough description of the functionality would be very dry and you are probably better off by taking a look at one of the *sample* notebooks ([minimal](examples/minimal.ipynb) or [example_1](examples/example_1.ipynb)). Also, you can take a look at the [documentation](https://manuvazquez.github.io/py2gift/).
+│ │ +Writing a question involves specifying the statement and, *optionally*,
+│ │ +the feedback in different notebook cells. In any case, *variables*,
+│ │ +specified with the prefix `!`, can be included, and those are meant to
+│ │ +be *filled in* from within a Python class. This comes very handy when
+│ │ +you want to create different versions of a single question in which some
+│ │ +input data (maybe in the form of a picture) *randomly* changes from
+│ │ +question to question. Then, you can instruct `py2gift` to call your
+│ │ +Python code a number of times, each one giving rise to a different
+│ │ +version of the same question (as long as some *variable* is set at
+│ │ +random, e.g., by exploiting the functionality in `np.random`). The
+│ │ +solution, whose format depends on the question type, must also be set
+│ │ +from within the code.
+│ │ +
+│ │ +Underneath, images are handled by *gift-wrapper*, and hence *paths*
+│ │ +(e.g., `images/scheme.svg`) to either `.tex` (that can be compiled with
+│ │ +*pdflatex*) or `.svg` files can be included in the statement, solution
+│ │ +or feedback of a question. Moreover, they can be included through one of
+│ │ +the variables (prefix `!`), and hence random (but nonetheless
+│ │ +meaningful) pictures are a possibility.
+│ │ +
+│ │ +Notice that the difference between two instances of the same question
+│ │ +can be minor or significant. Ultimately, it depends on how sophisticated
+│ │ +your Python code is (if the latter can solve the question/problem in a
+│ │ +very general form, and you are also able to present it in the
+│ │ +`statement`, then it is fine).
+│ │ +
+│ │ +Besides the above mentioned *core* functionality, `py2gift` provides
+│ │ +some extra functions to ease the process of writing questions (modules
+│ │ +`tex`, `util`, `time`, `hash`). However, a thorough description of the
+│ │ +functionality would be very dry and you are probably better off by
+│ │ +taking a look at one of the *sample* notebooks
+│ │ +([minimal](https://github.com/manuvazquez/py2gift/blob/master/examples/minimal.ipynb)
+│ │ +or
+│ │ +[example_1](https://github.com/manuvazquez/py2gift/blob/master/examples/example_1.ipynb)).
+│ │ +Also, you can take a look at the
+│ │ +[documentation](https://manuvazquez.github.io/py2gift/).
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- py2gift-0.0.5.1/examples/my_module.py
+│ ├── +++ py2gift-0.0.6.1/examples/my_module.py
+│ │┄ Files identical despite different names
+│ │   --- py2gift-0.0.5.1/py2gift/_nbdev.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/_nbdev.py
+│ │┄ Files identical despite different names
+│ │   --- py2gift-0.0.5.1/py2gift/core.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/core.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,308 +1,209 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 00_core.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/00_core.ipynb.
+│ │  
+│ │ -__all__ = ['main', 'init_parameters_from_settings', 'build', 'build_question', 'generator_to_markdown',
+│ │ -           'latex_to_markdown']
+│ │ +# %% auto 0
+│ │ +__all__ = ['main', 'init_parameters_from_settings', 'build', 'build_question', 'generator_to_markdown', 'latex_to_markdown']
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/00_core.ipynb 5
+│ │  import sys
+│ │  import argparse
+│ │  import pathlib
+│ │  import importlib.util
+│ │  import string
+│ │  import collections
+│ │  from types import ModuleType
+│ │ -from typing import Optional, Union
+│ │  
+│ │  import numpy as np
+│ │  import yaml
+│ │  
+│ │ -# to avoid tqdm's experimental warning
+│ │ -import warnings
+│ │ -warnings.filterwarnings("ignore", message='Using `tqdm.autonotebook.tqdm` in notebook mode')
+│ │ -
+│ │  import py2gift.util
+│ │  import py2gift.question
+│ │  import py2gift.input_file
+│ │  
+│ │  import gift_wrapper.core
+│ │  import gift_wrapper.question
+│ │  
+│ │  # some classes in `gift_wrapper.question` are "patched" when this module is imported
+│ │  import py2gift.markdown
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/00_core.ipynb 8
+│ │  def main():
+│ │ -
+│ │ +    "Parses command-line arguments to be passed to `build`"
+│ │ +    
+│ │      parser = argparse.ArgumentParser(description='Python to GIFT converter')
+│ │  
+│ │      parser.add_argument(
+│ │          'input_file', type=argparse.FileType('r'), default='global_settings.yaml', help='settings file', nargs='?')
+│ │  
+│ │      parser.add_argument('-c', '--code_directory', default='.', help='directory with the required source code')
+│ │  
+│ │      parser.add_argument(
+│ │          '-m', '--main_module', default='questions.py', help='file with the questions generators')
+│ │  
+│ │      parser.add_argument(
+│ │          '-l', '--local', default=False, action='store_true', help="don't try to copy the images to the server")
+│ │  
+│ │      command_line_arguments = parser.parse_args()
+│ │ -
+│ │ +    
+│ │      code_directory = pathlib.Path(command_line_arguments.code_directory)
+│ │      main_module = pathlib.Path(command_line_arguments.main_module)
+│ │  
+│ │      sys.path.insert(0, code_directory.absolute().as_posix())
+│ │      spec = importlib.util.spec_from_file_location(main_module.stem, (code_directory / main_module).absolute())
+│ │      questions_generators = importlib.util.module_from_spec(spec)
+│ │      spec.loader.exec_module(questions_generators)
+│ │ -
+│ │ +    
+│ │      build(command_line_arguments.input_file.name, command_line_arguments.local, questions_generators)
+│ │  
+│ │ -# Cell
+│ │ -def init_parameters_from_settings(cls_settings: dict) -> dict:
+│ │ -    """
+│ │ -    Returns a dictionary with the initialization parameters for a question.
+│ │ -
+│ │ -    **Parameters**
+│ │ -
+│ │ -    - cls_settings: dict
+│ │ -
+│ │ -        Settings for the class, which should include `statement`, `feedback` and, optionally, `time`.
+│ │ -
+│ │ -    **Returns**
+│ │ -
+│ │ -    - out: dict
+│ │ -
+│ │ -        A dictionary with the *exact* parameters that must be passed when instantiating the class.
+│ │ -    """
+│ │ +# %% ../nbs/00_core.ipynb 11
+│ │ +def init_parameters_from_settings(
+│ │ +    cls_settings: dict # Settings for the class, which should include `statement`, `feedback` and, optionally, `time`
+│ │ +) -> dict: # *Exact* parameters that must be passed when instantiating the class.
+│ │ +    "Returns a dictionary with the initialization parameters for a question"
+│ │  
+│ │      init_parameters = {
+│ │          'statement': py2gift.question.TemplatedLatexText(cls_settings['statement']),
+│ │          'feedback': py2gift.question.TemplatedLatexText(cls_settings['feedback'])
+│ │      }
+│ │ -
+│ │ +    
+│ │      if 'time' in cls_settings:
+│ │ -
+│ │ +        
+│ │          init_parameters['time'] = cls_settings['time']
+│ │  
+│ │      init_parameters.update(cls_settings.get('init parameters', {}))
+│ │ -
+│ │ +    
+│ │      return init_parameters
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/00_core.ipynb 25
+│ │  def build(
+│ │ -    settings: Union[str, dict], local_run: bool, questions_module: ModuleType,
+│ │ -    parameters_file: Union[str, dict] = 'parameters.yaml', no_checks: bool = False,
+│ │ -    embed_images: bool = False) -> None:
+│ │ -    """
+│ │ -    Generates a GIFT file.
+│ │ -
+│ │ -    **Parameters**
+│ │ -
+│ │ -    - settings: str or dict
+│ │ -
+│ │ -        Settings for all the questions (generators).
+│ │ -
+│ │ -    - local_run: bool
+│ │ -
+│ │ -        If True, pictures will not be copied to a remote host.
+│ │ -
+│ │ -    - questions_module: ModuleType
+│ │ -
+│ │ -        A module or structure that holds the classes referenced in the settings.
+│ │ -
+│ │ -    - parameters_file: str or dict
+│ │ -
+│ │ -        File or dictionary with the parameters for "gift-wrapper".
+│ │ -
+│ │ -    - no_checks: bool
+│ │ -
+│ │ -        Whether or not LaTeX formulas should be checked.
+│ │ -
+│ │ -    - embed_images: bool
+│ │ -
+│ │ -        If True, images will be embedded in the questions (rather than linked).
+│ │ -    """
+│ │ -
+│ │ +    settings: str | dict, # Settings for all the questions (generators)
+│ │ +    local_run: bool, # If `True`, pictures will not be copied to a remote host
+│ │ +    questions_module: ModuleType, # A module or structure to hold the classes referenced in the settings
+│ │ +    parameters_file: str | dict = 'parameters.yaml', # Parameters to be passed to "gift-wrapper"
+│ │ +    no_checks: bool = False, # If `True` LaTeX formulas are not be checked
+│ │ +    embed_images: bool = False # If `True`, images will be embedded in the questions (rather than linked)
+│ │ +) -> None:
+│ │ +    "Generates a GIFT file"
+│ │ +    
+│ │      # if settings is the name of a file...
+│ │      if type(settings) == str:
+│ │  
+│ │          with open(settings) as f:
+│ │  
+│ │              settings = yaml.load(f, Loader=yaml.FullLoader)
+│ │ -
+│ │ +    
+│ │      else:
+│ │ -
+│ │ +        
+│ │          assert type(settings) == dict
+│ │  
+│ │      output_file = settings['output file']
+│ │  
+│ │      category_questions = collections.defaultdict(list)
+│ │  
+│ │      for cat in settings['categories']:
+│ │  
+│ │          questions = []
+│ │  
+│ │          for c in cat['classes']:
+│ │  
+│ │              this_class_questions = []
+│ │ -
+│ │ +            
+│ │              # either `parameters` or `number of instances` is present, but not both
+│ │              assert ('parameters' in c) ^ ('number of instances' in c), (
+│ │                  'either "parameters" or "number of instances" must be specified')
+│ │ -
+│ │ +            
+│ │              question_generator = getattr(questions_module, c['name'])(**init_parameters_from_settings(c))
+│ │ -
+│ │ +            
+│ │              if 'parameters' in c:
+│ │  
+│ │                  for p in c['parameters']:
+│ │  
+│ │                      this_class_questions.append(question_generator(**p))
+│ │ -
+│ │ +            
+│ │              else:
+│ │ -
+│ │ +                
+│ │                  for _ in range(c['number of instances']):
+│ │ -
+│ │ +                    
+│ │                      this_class_questions.append(question_generator())
+│ │  
+│ │              questions.extend(py2gift.util.add_name(this_class_questions, base_name=c['question base name']))
+│ │ -
+│ │ +        
+│ │          category_questions[cat['name'] if type(cat['name']) != list else tuple(cat['name'])].extend(questions)
+│ │  
+│ │      # --------
+│ │  
+│ │      py2gift.util.write_multiple_categories(
+│ │          category_questions, settings['pictures base directory'], output_file=output_file)
+│ │ -
+│ │ +    
+│ │      gift_wrapper.core.wrap(
+│ │          parameters_file, output_file, local_run=local_run, no_checks=no_checks, embed_images=embed_images)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/00_core.ipynb 47
+│ │  def build_question(
+│ │ -    question_generator: py2gift.question.QuestionGenerator, category_name: str, settings: dict, n_question: int=0
+│ │ -) -> dict:
+│ │ -    """
+│ │ -    Returns the settings for building a question using "gift-wrapper".
+│ │ -
+│ │ -    ***Parameters***
+│ │ -
+│ │ -    - `question_generator`: class
+│ │ -
+│ │ -        The question generator that will generate the appropirate settings.
+│ │ -    - `category_name`: str
+│ │ -
+│ │ -        The name of category the class belongs to.
+│ │ -    - `settings`: dict
+│ │ -
+│ │ -        User settings.
+│ │ -    - `n_question`: int
+│ │ -
+│ │ -        The number of instance to be returned.
+│ │ -
+│ │ -    ***Returns***
+│ │ -
+│ │ -    - `out`: dict
+│ │ -
+│ │ -        A dictionary with the settings that allow building the question using "gift-wrapper".
+│ │ -
+│ │ -    """
+│ │ -
+│ │ +    question_generator: py2gift.question.QuestionGenerator, # The question generator that will generate the appropirate settings
+│ │ +    category_name: str, # The name of category the class belongs to
+│ │ +    settings: dict, # User settings
+│ │ +    n_question: int = 0 # The number of instances to be returned
+│ │ +) -> dict: # Settings that allow building the question using "gift-wrapper"
+│ │ +    'Returns the settings for building a question using "gift-wrapper"'
+│ │ +    
+│ │      class_name = question_generator.__name__
+│ │ -
+│ │ +    
+│ │      class_settings = py2gift.input_file.extract_class_settings(category_name, class_name, settings)
+│ │ -
+│ │ +    
+│ │      # an instance
+│ │      question_generator = question_generator(**init_parameters_from_settings(class_settings))
+│ │  
+│ │      assert ('parameters' in class_settings) ^ ('number of instances' in class_settings), (
+│ │          'either "parameters" or "number of instances" must be specified')
+│ │  
+│ │      if 'parameters' in class_settings:
+│ │          # notice that `parameters` yields a list
+│ │          return question_generator(**class_settings['parameters'][n_question])
+│ │      else:
+│ │          return question_generator()
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/00_core.ipynb 60
+│ │  def generator_to_markdown(
+│ │ -    settings: Union[str, pathlib.Path, dict], category: str, cls: py2gift.question):
+│ │ -    """
+│ │ -    Returns markdown text from a generator.
+│ │ -
+│ │ -
+│ │ -    ***Parameters***
+│ │ -
+│ │ -    - `settings`: str, Pathlib, dict
+│ │ -
+│ │ -        The settings file or corresponding dictionary.
+│ │ -
+│ │ -    - `category`: str
+│ │ -
+│ │ -        The category of the question.
+│ │ -
+│ │ -    - `cls`: py2gift.question.QuestionGenerator
+│ │ -
+│ │ -        The class implementing the generator.
+│ │ -
+│ │ -    ***Returns***
+│ │ -
+│ │ -    out: str
+│ │ -
+│ │ -        Markdown text.
+│ │ -
+│ │ -    """
+│ │ -
+│ │ +    settings: str | pathlib.Path | dict, # Settings
+│ │ +    category: str, # Category of the question
+│ │ +    cls: py2gift.question # Class implementing the generator
+│ │ +) -> str: # Markdown text
+│ │ +    "Returns markdown text from a generator"
+│ │ +    
+│ │      # if settings is the name of a file...
+│ │      if type(settings) == str:
+│ │ -
+│ │ +        
+│ │          settings = py2gift.util.yaml_to_dict(settings)
+│ │ -
+│ │ +    
+│ │      else:
+│ │ -
+│ │ +        
+│ │          assert type(settings) == dict
+│ │  
+│ │      question_settings = build_question(cls, category, settings)
+│ │  
+│ │      return py2gift.markdown.settings_to_markdown(question_settings)
+│ │  
+│ │ -# Cell
+│ │ -def latex_to_markdown(input_file: Union[str, pathlib.Path], delete_input_file_afterwards: bool = False) -> str:
+│ │ -    """
+│ │ -    Returns markdown text that shows the result of compiling a TeX file.
+│ │ -
+│ │ -
+│ │ -    ***Parameters***
+│ │ -
+│ │ -    - `input_file`: str, Pathlib
+│ │ -
+│ │ -        The TeX file.
+│ │ -
+│ │ -    - `delete_input_file_afterwards`: bool
+│ │ -
+│ │ -        If True the TeX file is deleted after conversion to svg.
+│ │ -
+│ │ -    ***Returns***
+│ │ -
+│ │ -    - `out`: str
+│ │ -
+│ │ -        Markdown text.
+│ │ -
+│ │ -    """
+│ │ -
+│ │ +# %% ../nbs/00_core.ipynb 64
+│ │ +def latex_to_markdown(
+│ │ +    input_file: str | pathlib.Path, # TeX file
+│ │ +    delete_input_file_afterwards: bool = False # If `True` the TeX file is deleted after conversion to svg
+│ │ +) -> str: # Markdown text
+│ │ +    "Returns markdown text that shows the result of compiling a TeX file"
+│ │ +    
+│ │      output_file = gift_wrapper.image.pdf_to_svg(gift_wrapper.image.tex_to_pdf(input_file))
+│ │ -
+│ │ +    
+│ │      suffixes = ['.aux', '.log', '.pdf']
+│ │ -
+│ │ +    
+│ │      if delete_input_file_afterwards:
+│ │ -
+│ │ +        
+│ │          suffixes.append('.tex')
+│ │ -
+│ │ +    
+│ │      for suffix in suffixes:
+│ │ -
+│ │ +        
+│ │          file_to_delete = output_file.with_suffix(suffix)
+│ │ -
+│ │ +        
+│ │          if file_to_delete.exists():
+│ │ -
+│ │ +        
+│ │              file_to_delete.unlink()
+│ │ -
+│ │ -    return r'![](' + output_file.as_posix() + ')'
+│ │ +    
+│ │ +    return r'![](' + output_file.as_posix() + ')'
+│ │   --- py2gift-0.0.5.1/py2gift/file.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/file.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,59 +1,31 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 25_file.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/25_file.ipynb.
+│ │  
+│ │ +# %% auto 0
+│ │  __all__ = ['supplement_file_name', 'unique_name']
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/25_file.ipynb 2
+│ │  import pathlib
+│ │  import uuid
+│ │  from typing import Union
+│ │  
+│ │ -# Cell
+│ │ -def supplement_file_name(file: Union[str, pathlib.Path], sup: str) -> pathlib.Path:
+│ │ -    """
+│ │ -    Adds a string between the file name in a path and the suffix.
+│ │ -
+│ │ -    **Parameters**
+│ │ -
+│ │ -    - `file` : str
+│ │ -
+│ │ -        File name
+│ │ -
+│ │ -    - `sup` : str
+│ │ -
+│ │ -        String to be added
+│ │ -
+│ │ -    **Returns**
+│ │ -
+│ │ -    - `out`: pathlib.Path
+│ │ -
+│ │ -        "Supplemented" file
+│ │ -
+│ │ -    """
+│ │ +# %% ../nbs/25_file.ipynb 5
+│ │ +def supplement_file_name(
+│ │ +    file: str | pathlib.Path, # File name
+│ │ +    sup: str # String to be added
+│ │ +) -> pathlib.Path: # "Supplemented" file name
+│ │ +    "Adds a string between the file name in a path and the suffix"
+│ │  
+│ │      file = pathlib.Path(file)
+│ │  
+│ │      # the `suffix` is incorporated into the file name
+│ │      return file.with_name(file.stem + f'_{sup}' + file.suffix)
+│ │  
+│ │  assert supplement_file_name('/a/b/quixote.tex', 'foo') == pathlib.Path('/a/b/quixote_foo.tex')
+│ │  
+│ │ -# Cell
+│ │ -def unique_name(file: Union[str, pathlib.Path]) -> pathlib.Path:
+│ │ -    """
+│ │ -    Builds a unique file name out of a given one.
+│ │ -
+│ │ -    **Parameters**
+│ │ -
+│ │ -    - `file` : str
+│ │ -
+│ │ -        Input file name.
+│ │ -
+│ │ -    **Returns**
+│ │ -
+│ │ -    - `out`: pathlib.Path
+│ │ -
+│ │ -        Unique file name.
+│ │ -
+│ │ -    """
+│ │ -
+│ │ -    return supplement_file_name(file, uuid.uuid1())
+│ │ +# %% ../nbs/25_file.ipynb 8
+│ │ +def unique_name(
+│ │ +    file: str | pathlib.Path # Input file name
+│ │ +) -> pathlib.Path: # Unique file name
+│ │ +    "Builds a unique file name out of a given one"
+│ │ +    
+│ │ +    return supplement_file_name(file, uuid.uuid1())
+│ │   --- py2gift-0.0.5.1/py2gift/input_file.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/input_file.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,119 +1,116 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 40_input_file.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/40_input_file.ipynb.
+│ │  
+│ │ +# %% auto 0
+│ │  __all__ = ['extract_class_settings', 'Settings', 'initialize', 'set_class_preamble', 'set_class_closing', 'set_class',
+│ │             'write_header', 'write_class_preamble', 'write_class_closing', 'function_to_make_hierarchical_category_name']
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ +# %% ../nbs/40_input_file.ipynb 2
+│ │  import sys
+│ │  import pathlib
+│ │  import pprint
+│ │  import inspect
+│ │  from typing import Union, Optional, Callable, List
+│ │ -
+│ │ -# to avoid tqdm's experimental warning
+│ │  import warnings
+│ │ -warnings.filterwarnings("ignore", message='Using `tqdm.autonotebook.tqdm` in notebook mode')
+│ │  
+│ │  import py2gift.util
+│ │  
+│ │  import yaml
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 8
+│ │  def extract_class_settings(category_name: Union[str, list], class_name: str, settings: dict):
+│ │ -
+│ │ +    
+│ │      category_found = False
+│ │ -
+│ │ +    
+│ │      for cat in settings['categories']:
+│ │ -
+│ │ +        
+│ │          if cat['name'] == category_name:
+│ │ -
+│ │ +            
+│ │              category_found = True
+│ │ -
+│ │ +            
+│ │              for cls in cat['classes']:
+│ │ -
+│ │ +                
+│ │                  if cls['name'] == class_name:
+│ │ -
+│ │ +                    
+│ │                      return cls
+│ │ -
+│ │ +    
+│ │      else:
+│ │ -
+│ │ +        
+│ │          if category_found:
+│ │ -
+│ │ +            
+│ │              print(f'cannot find the requested class, {class_name}')
+│ │              sys.exit(1)
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              print(f'cannot find the requested category, {category_name}')
+│ │              sys.exit(1)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 13
+│ │  class Settings:
+│ │ -
+│ │ +    
+│ │      def __init__(self, output_file: str = 'quiz.yaml', pictures_directory: str = 'quiz/pics', test_mode: bool = False) -> None:
+│ │ -
+│ │ +        
+│ │          self.test_mode = test_mode
+│ │ -
+│ │ +        
+│ │          self.store = {}
+│ │ -
+│ │ +        
+│ │          self.store['output file'] = output_file
+│ │          self.store['pictures base directory'] = pictures_directory
+│ │          self.store['categories'] = None
+│ │ -
+│ │ +        
+│ │          self._classes = set()
+│ │ -
+│ │ +    
+│ │      def to_dict(self) -> dict:
+│ │ -
+│ │ +        
+│ │          return self.store
+│ │ -
+│ │ +    
+│ │      def __repr__(self) -> str:
+│ │ -
+│ │ +        
+│ │          return pprint.pformat(self.store)
+│ │ -
+│ │ +    
+│ │      @property
+│ │      def fake_module(self) -> 'ClassesContainer':
+│ │ -
+│ │ +    
+│ │          # [0] is the caller of the method (`stack`)
+│ │          caller_globals = inspect.stack()[1].frame.f_globals
+│ │ -
+│ │ +        
+│ │          class ClassesContainer:
+│ │ -
+│ │ +            
+│ │              pass
+│ │ -
+│ │ +        
+│ │          class_container = ClassesContainer()
+│ │ -
+│ │ +        
+│ │          for c in self._classes:
+│ │ -
+│ │ +            
+│ │              assert c in caller_globals, f'class "{c}" was not defined'
+│ │ -
+│ │ +            
+│ │              setattr(class_container, c, caller_globals[c])
+│ │ -
+│ │ +        
+│ │          return class_container
+│ │  
+│ │ -
+│ │ +        
+│ │      def add_category(self, category_name: str, base_category: Optional[str] = None) -> Union[str, List[str]]:
+│ │          """
+│ │          Adds a category if it doesn't exist.
+│ │ -
+│ │ +        
+│ │          Parameters
+│ │          ----------
+│ │          category_name: str
+│ │              The name of the category to be added.
+│ │          base_category: str, optional
+│ │              Parent of the category
+│ │ -
+│ │ +            
+│ │          Returns
+│ │          -------
+│ │          out: str or list of str
+│ │              The category *actually* added.
+│ │ -
+│ │ +        
+│ │          """
+│ │ -
+│ │ +        
+│ │          assert type(category_name) == str
+│ │  
+│ │          if self.test_mode:
+│ │  
+│ │              category_name = 'test'
+│ │  
+│ │          else:
+│ │ @@ -122,255 +119,254 @@
+│ │  
+│ │                  category_name = [base_category, f'{base_category}/{category_name}']
+│ │  
+│ │  
+│ │          if self.store['categories'] is None:
+│ │  
+│ │              self.store['categories'] = []
+│ │ -
+│ │ +        
+│ │          # only if the category doesn't exist...
+│ │          if self.locate(category_name=category_name) is None:
+│ │  
+│ │              # ...is it added
+│ │              self.store['categories'].append({'name': category_name, 'classes': None})
+│ │  
+│ │          return category_name
+│ │ -
+│ │ +    
+│ │      def locate(self, category_name: Union[str, list], class_name: Optional[str] = None) -> dict:
+│ │          """
+│ │          Returns the requested category or class (inside a category) or `None` if it can't be found.
+│ │ -
+│ │ +        
+│ │          Parameters
+│ │          ----------
+│ │          category_name: str
+│ │              The name of the category.
+│ │          class_name: str, optional
+│ │              The name of the class.
+│ │ -
+│ │ +            
+│ │          Returns
+│ │          -------
+│ │          out: dict
+│ │              The dictionary for the category or class.
+│ │ -
+│ │ +        
+│ │          """
+│ │ -
+│ │ +        
+│ │          for cat in self.store['categories']:
+│ │ -
+│ │ +            
+│ │              if cat['name'] == category_name:
+│ │ -
+│ │ +                
+│ │                  # if no particular class was requested...
+│ │                  if class_name is None:
+│ │ -
+│ │ +                    
+│ │                      return cat
+│ │ -
+│ │ +                
+│ │                  # if a particular class was requested...
+│ │                  else:
+│ │ -
+│ │ +                
+│ │                      # the found category is saved for use below
+│ │                      category_settings = cat
+│ │ -
+│ │ +                
+│ │                      # this is the only way out of the loop without return
+│ │                      break
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              return None
+│ │ -
+│ │ -
+│ │ +        
+│ │ +            
+│ │          # at this point the category has been found and `class_name` is not `Ǹone`
+│ │ -
+│ │ +        
+│ │          # if the category doesn't have any class...
+│ │          if category_settings['classes'] is None:
+│ │ -
+│ │ +            
+│ │              return None
+│ │ -
+│ │ +        
+│ │          for cls in category_settings['classes']:
+│ │  
+│ │              if cls['name'] == class_name:
+│ │  
+│ │                  return cls
+│ │  
+│ │          else:
+│ │  
+│ │              return None
+│ │ -
+│ │ +        
+│ │      def add_or_update_class(
+│ │          self, category_name: Union[str, list], class_name: str, question_base_name: str,
+│ │          init_parameters: Optional[dict] = None, parameters: Optional[List[dict]] = None,
+│ │          n_instances: Optional[int] = None, time: Optional[int]=None) -> None:
+│ │  
+│ │          d = {'name': class_name, 'question base name': question_base_name}
+│ │  
+│ │          if init_parameters:
+│ │  
+│ │              d['init parameters'] = init_parameters
+│ │ -
+│ │ +            
+│ │          assert (parameters is not None) ^ (n_instances is not None)
+│ │  
+│ │          if parameters:
+│ │  
+│ │              d['parameters'] = parameters
+│ │  
+│ │          else:
+│ │  
+│ │              d['number of instances'] = n_instances
+│ │  
+│ │          if time:
+│ │  
+│ │              d['time'] = time
+│ │ -
+│ │ +        
+│ │          class_settings = self.locate(category_name, class_name)
+│ │ -
+│ │ +        
+│ │          if class_settings is None:
+│ │ -
+│ │ +            
+│ │              category_settings = self.locate(category_name)
+│ │ -
+│ │ +            
+│ │              assert category_settings is not None, f'category "{category_name}" not found'
+│ │ -
+│ │ +            
+│ │              if category_settings['classes'] is None:
+│ │ -
+│ │ +                
+│ │                  category_settings['classes'] = []
+│ │ -
+│ │ +            
+│ │              category_settings['classes'].append(d)
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              class_settings.update(d)
+│ │ -
+│ │ +        
+│ │          self._classes.add(class_name)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 32
+│ │  def initialize(output_file: str, pictures_directory: str, ) -> dict:
+│ │ -
+│ │ +    
+│ │      settings = {}
+│ │ -
+│ │ +    
+│ │      settings['output file'] = output_file
+│ │      settings['pictures base directory'] = pictures_directory
+│ │      settings['categories'] = None
+│ │ -
+│ │ +    
+│ │      return settings
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 34
+│ │  def set_class_preamble(
+│ │      settings: dict, category_name: str, base_category: Optional[str] = None, test_mode: bool = False
+│ │  ) -> Union[str, list]:
+│ │ -
+│ │ +    
+│ │      if test_mode:
+│ │  
+│ │          category_name = 'test'
+│ │  
+│ │      else:
+│ │  
+│ │          if base_category:
+│ │  
+│ │              category_name = [base_category, f'{base_category}/{category_name}']
+│ │ -
+│ │ -
+│ │ +    
+│ │ +    
+│ │      if settings['categories'] is None:
+│ │ -
+│ │ +        
+│ │          settings['categories'] = []
+│ │ -
+│ │ +        
+│ │      settings['categories'].append({'name': category_name, 'classes': None})
+│ │ -
+│ │ +    
+│ │      return category_name
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ +# %% ../nbs/40_input_file.ipynb 36
+│ │  def set_class_closing(settings: dict, n_instances: int, time: Optional[int] = None) -> None:
+│ │ -
+│ │ +    
+│ │      if settings['categories'][-1]['classes'] is None:
+│ │ -
+│ │ +        
+│ │          settings['categories'][-1]['classes'] = [{}]
+│ │ -
+│ │ +    
+│ │      settings['categories'][-1]['classes'][-1]['number of instances'] = n_instances
+│ │      settings['categories'][-1]['classes'][-1]['time'] = time
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 38
+│ │  def set_class(
+│ │      settings: dict, class_name: str, question_base_name: str, init_parameters: Optional[dict] = None,
+│ │      parameters: Optional[List[dict]] = None, n_instances: Optional[int] = None, time: Optional[int]=None) -> None:
+│ │ -
+│ │ +    
+│ │      assert (parameters is not None) ^ (n_instances is not None)
+│ │  
+│ │      d = {'name': class_name, 'question base name': question_base_name}
+│ │ -
+│ │ +    
+│ │      if init_parameters:
+│ │ -
+│ │ +        
+│ │          d['init parameters'] = init_parameters
+│ │ -
+│ │ +    
+│ │      if parameters:
+│ │ -
+│ │ +        
+│ │          d['parameters'] = parameters
+│ │ -
+│ │ +    
+│ │      else:
+│ │ -
+│ │ +        
+│ │          d['number of instances'] = n_instances
+│ │ -
+│ │ +    
+│ │      if time:
+│ │ -
+│ │ +        
+│ │          d['time'] = time
+│ │ -
+│ │ +    
+│ │      settings['categories'][-1]['classes'] = [d]
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 45
+│ │  def write_header(file: Union[str, pathlib.Path], output_file: str, pictures_directory: str, ) -> None:
+│ │ -
+│ │ +    
+│ │      settings = initialize(output_file, pictures_directory)
+│ │ -
+│ │ +    
+│ │      py2gift.util.dict_to_yaml(settings, file)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 51
+│ │  def write_class_preamble(
+│ │      file: Union[str, pathlib.Path], category_name: str, base_category: Optional[str] = None, test_mode: bool = False
+│ │  ) -> Union[str, list]:
+│ │      """
+│ │      Writes the preamble for a class which includes the name of the category. Strictly speaking, it's not necessary to create a new category every time a class is added, but this is more general and a category can show up many times in the input file.
+│ │  
+│ │  
+│ │      **Parameters**
+│ │ -
+│ │ +    
+│ │      - `file`: str, Pathlib
+│ │ -
+│ │ +        
+│ │          Input file to be *appended to*.
+│ │ -
+│ │ +    
+│ │      - `category_name`: str
+│ │ -
+│ │ +        
+│ │          Name of the category in which the class will be encompassed.
+│ │ -
+│ │ +        
+│ │      - `base_category`: str, optional
+│ │ -
+│ │ +        
+│ │          The parent category for `category_name`.
+│ │ -
+│ │ +        
+│ │      - `test_mode`: bool
+│ │ -
+│ │ +        
+│ │          If `True` the last two parameters are overriden and the category is simply called `test`.
+│ │  
+│ │      **Returns**
+│ │ -
+│ │ +    
+│ │      - `category_name`: str or list
+│ │ -
+│ │ +        
+│ │          The final name for the category (notice that it might get tweaked due to `test_mode`).
+│ │  
+│ │      """
+│ │ -
+│ │ -
+│ │ +    
+│ │ +    
+│ │      settings = py2gift.util.yaml_to_dict(file)
+│ │      category_name = set_class_preamble(settings, category_name, base_category, test_mode)
+│ │      py2gift.util.dict_to_yaml(settings, file)
+│ │ -
+│ │ +    
+│ │      return category_name
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 62
+│ │  def write_class_closing(file: Union[str, pathlib.Path], n_instances: int, time: Optional[int] = None) -> None:
+│ │ -
+│ │ +    
+│ │      settings = py2gift.util.yaml_to_dict(file)
+│ │      category_name = set_class_closing(settings, n_instances, time)
+│ │      py2gift.util.dict_to_yaml(settings, file)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/40_input_file.ipynb 67
+│ │  def function_to_make_hierarchical_category_name(base_category: str) -> Callable[[str], list]:
+│ │ -
+│ │ +    
+│ │      def make_subcategory(category: str) -> list:
+│ │ -
+│ │ +    
+│ │          return [base_category, f'{base_category}/{category}']
+│ │ -
+│ │ -    return make_subcategory
+│ │ +    
+│ │ +    return make_subcategory
+│ │   --- py2gift-0.0.5.1/py2gift/markdown.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/markdown.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,56 +1,54 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 80_markdown.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/80_markdown.ipynb.
+│ │  
+│ │ -__all__ = ['markdown_header', 'html_question_to_markdown', 'numerical_to_markdown', 'multiple_choice_to_markdown',
+│ │ -           'SvgToMarkdown', 'from_question', 'pre_processors', 'settings_to_markdown']
+│ │ +# %% auto 0
+│ │ +__all__ = ['pre_processors', 'markdown_header', 'html_question_to_markdown', 'numerical_to_markdown',
+│ │ +           'multiple_choice_to_markdown', 'SvgToMarkdown', 'from_question', 'settings_to_markdown']
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 3
+│ │  import string
+│ │  import functools
+│ │  from typing import Union, List
+│ │ -
+│ │ -# to avoid tqdm's experimental warning
+│ │  import warnings
+│ │ -warnings.filterwarnings("ignore", message='Using `tqdm.autonotebook.tqdm` in notebook mode')
+│ │  
+│ │  import gift_wrapper.question
+│ │  import gift_wrapper.latex
+│ │  import gift_wrapper.parsing
+│ │  import gift_wrapper.transformer
+│ │  
+│ │  import py2gift.util
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 7
+│ │  def markdown_header(
+│ │          text: str,
+│ │          template: string.Template = string.Template('<span style="font-family:Papyrus; font-size:2em;">$text</span>')
+│ │      ) -> str:
+│ │      """
+│ │      Returns a markdown header for a given text.
+│ │  
+│ │      **Parameters**
+│ │ -
+│ │ +    
+│ │      - `text` : str
+│ │ -
+│ │ +        
+│ │          Text for the header.
+│ │ -
+│ │ +    
+│ │      - `template` : string template
+│ │ -
+│ │ +        
+│ │          The template that defines the appearance of the header, and in which `text` will be embedded.
+│ │  
+│ │      **Returns**
+│ │ -
+│ │ +    
+│ │      - `out` : str
+│ │          Markdown-compatible text.
+│ │  
+│ │      """
+│ │  
+│ │      return f'\n{template.substitute(text=text)}\n\n'
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 16
+│ │  def html_question_to_markdown(self):
+│ │  
+│ │      statement = self.statement
+│ │  
+│ │      # if a `time` estimate was passed...
+│ │      if self.time:
+│ │  
+│ │ @@ -88,24 +86,24 @@
+│ │      statement = apply_substitutions(statement, latex_in_text_substitutions)
+│ │      feedback = apply_substitutions(feedback, latex_in_text_substitutions)
+│ │  
+│ │      return f'{markdown_header("Statement")}{statement}\n{feedback}\n'
+│ │  
+│ │  gift_wrapper.question.HtmlQuestion.to_markdown = html_question_to_markdown
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 19
+│ │  def numerical_to_markdown(self):
+│ │  
+│ │      res = super(gift_wrapper.question.Numerical, self).to_markdown()
+│ │  
+│ │      return res + f'{markdown_header("Solution")} {self.solution_value} (error: {self.solution_error[1:]})\n'
+│ │  
+│ │  gift_wrapper.question.Numerical.to_markdown = numerical_to_markdown
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 22
+│ │  def multiple_choice_to_markdown(self):
+│ │  
+│ │      res = super(gift_wrapper.question.MultipleChoice, self).to_markdown()
+│ │  
+│ │      res += markdown_header('Choices')
+│ │  
+│ │      if 'perfect' in self.answers:
+│ │ @@ -132,15 +130,15 @@
+│ │              # res += f'* {a}\n'
+│ │              res += f'* {self.template_wrong_answers.substitute(color="red", text=a)}\n'
+│ │  
+│ │      return res
+│ │  
+│ │  gift_wrapper.question.MultipleChoice.to_markdown = multiple_choice_to_markdown
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 25
+│ │  class SvgToMarkdown(gift_wrapper.transformer.Transformer):
+│ │      """
+│ │      Processor to reformat svg files for including them in markdown strings.
+│ │      """
+│ │  
+│ │      def __init__(self):
+│ │  
+│ │ @@ -150,65 +148,65 @@
+│ │  
+│ │              pass
+│ │  
+│ │          self.function = functools.partial(
+│ │              gift_wrapper.transformer.process_paths, pattern=gift_wrapper.parsing.svg_file,
+│ │              process_match=process_match, replacement=r'![](' + r'\1)')
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 26
+│ │  def from_question(
+│ │      q: gift_wrapper.question.HtmlQuestion, processors: List[gift_wrapper.transformer.Transformer]) -> str:
+│ │      """
+│ │      Returns the markdown representation of a question.
+│ │  
+│ │      **Parameters**
+│ │ -
+│ │ +    
+│ │      - `q` : gift_wrapper.question.HtmlQuestion
+│ │ -
+│ │ +        
+│ │          The question object.
+│ │ -
+│ │ +    
+│ │      - `processors` : list
+│ │ -
+│ │ +        
+│ │          Processors to be applied.
+│ │  
+│ │      **Returns**
+│ │ -
+│ │ +    
+│ │      - `out` : str
+│ │          Markdown-compatible text.
+│ │  
+│ │      """
+│ │ -
+│ │ +    
+│ │      markdown = q.to_markdown()
+│ │  
+│ │      for f in processors:
+│ │  
+│ │          markdown = f(markdown)
+│ │  
+│ │      return markdown
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 27
+│ │  pre_processors = [
+│ │      gift_wrapper.transformer.TexToSvg({'already compiled': set(), 'already transferred': set()}), SvgToMarkdown()]
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/80_markdown.ipynb 29
+│ │  def settings_to_markdown(settings: dict) -> str:
+│ │      """
+│ │      Returns a markdown representation of the question given the corresponding settings.
+│ │  
+│ │      **Parameters**
+│ │ -
+│ │ +    
+│ │      - `settings` : dict
+│ │ -
+│ │ +        
+│ │          User settings (usually read from a YAML file).
+│ │  
+│ │      **Returns**
+│ │ -
+│ │ +    
+│ │      - `markdown`: str
+│ │ -
+│ │ +        
+│ │          Markdown representation
+│ │  
+│ │      """
+│ │  
+│ │      class_name = gift_wrapper.question.user_settings_to_class_init(settings, 'unnamed')
+│ │      cls = getattr(gift_wrapper.question, class_name)
+│ │  
+│ │ -    return from_question(cls(**settings), pre_processors)
+│ │ +    return from_question(cls(**settings), pre_processors)
+│ │   --- py2gift-0.0.5.1/py2gift/notebook.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/notebook.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,88 +1,88 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 60_notebook.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/60_notebook.ipynb.
+│ │  
+│ │ +# %% auto 0
+│ │  __all__ = ['ClassesContainer', 'MyMagics']
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/60_notebook.ipynb 2
+│ │  import argparse
+│ │  import json
+│ │  
+│ │  from IPython.core.magic import Magics, magics_class, line_magic, cell_magic, line_cell_magic
+│ │  
+│ │  import py2gift.input_file
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/60_notebook.ipynb 5
+│ │  class ClassesContainer:
+│ │ -
+│ │ +    
+│ │      def add(cls, class_to_add):
+│ │ -
+│ │ +        
+│ │          setattr(cls, class_to_add.__name__, class_to_add)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/60_notebook.ipynb 12
+│ │  # The class MUST call this class decorator at creation time
+│ │  @magics_class
+│ │  class MyMagics(Magics):
+│ │ -
+│ │ +    
+│ │      statement_key = 'statement'
+│ │      feedback_key = 'feedback'
+│ │ -
+│ │ +    
+│ │      def __init__(self, shell=None,  **kwargs):
+│ │ -
+│ │ +        
+│ │          super().__init__(shell=shell, **kwargs)
+│ │ -
+│ │ -
+│ │ +        
+│ │ +        
+│ │          self.location_parser = argparse.ArgumentParser(description='Specification')
+│ │          self.location_parser.add_argument('settings', help='Settings object')
+│ │          self.location_parser.add_argument('-c', '--cls', default=None, help='class')
+│ │ -
+│ │ +        
+│ │          # the name of a category can contain spaces; notice that this will yield a *list* rather than a string
+│ │          self.location_parser.add_argument('-C', '--category', default=None, nargs='+', help='category')
+│ │ -
+│ │ +    
+│ │      def process(self, line: str, cell: str, key: str):
+│ │ -
+│ │ +        
+│ │          line_arguments = self.location_parser.parse_args(line.split())
+│ │ -
+│ │ +        
+│ │  #         print(f'line_arguments.category={line_arguments.category}')
+│ │ -
+│ │ +        
+│ │          if line_arguments.category:
+│ │ -
+│ │ +            
+│ │              category = json.loads(' '.join(line_arguments.category))
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              category = None
+│ │ -
+│ │ +        
+│ │          settings = self.shell.user_ns[line_arguments.settings]
+│ │ -
+│ │ +        
+│ │          if category is None:
+│ │ -
+│ │ +            
+│ │              category = settings.store['categories'][-1]['name']
+│ │ -
+│ │ -
+│ │ +            
+│ │ +        
+│ │          cls = line_arguments.cls
+│ │ -
+│ │ +        
+│ │          if cls is None:
+│ │ -
+│ │ +            
+│ │              cls = settings.locate(category_name=category)['classes'][-1]['name']
+│ │ -
+│ │ +        
+│ │  
+│ │  #         print(f'category={category}, class={cls}')
+│ │ -
+│ │ +        
+│ │          settings.locate(category_name=category, class_name=cls)[key] = cell
+│ │  
+│ │      @cell_magic
+│ │      def statement(self, line, cell):
+│ │  
+│ │          self.process(line, cell, self.statement_key)
+│ │ -
+│ │ +        
+│ │          return f'statement recorded'
+│ │ -
+│ │ +    
+│ │      @cell_magic
+│ │      def feedback(self, line, cell):
+│ │ -
+│ │ +        
+│ │          self.process(line, cell, self.feedback_key)
+│ │ -
+│ │ +        
+│ │          return f'feedback recorded'
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ -get_ipython().register_magics(MyMagics)
+│ │ +# %% ../nbs/60_notebook.ipynb 31
+│ │ +get_ipython().register_magics(MyMagics)
+│ │   --- py2gift-0.0.5.1/py2gift/question.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/question.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,110 +1,107 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 30_question.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/30_question.ipynb.
+│ │  
+│ │ +# %% auto 0
+│ │  __all__ = ['TemplatedLatexText', 'QuestionGenerator', 'NumericalQuestionGenerator', 'MultipleChoiceQuestionGenerator',
+│ │             'MultipleChoiceTheoreticalQuestionGenerator']
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ +# %% ../nbs/30_question.ipynb 2
+│ │  import abc
+│ │  import string
+│ │  import re
+│ │  import pathlib
+│ │  from typing import List, Union, Optional, Tuple
+│ │ +import warnings
+│ │  
+│ │  import numpy as np
+│ │  
+│ │ -# to avoid tqdm's experimental warning
+│ │ -import warnings
+│ │ -warnings.filterwarnings("ignore", message='Using `tqdm.autonotebook.tqdm` in notebook mode')
+│ │ -
+│ │  import py2gift.tex
+│ │  import py2gift.util
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/30_question.ipynb 7
+│ │  class TemplatedLatexText:
+│ │ -
+│ │ +    
+│ │      wildcard_symbol = '!'
+│ │ -
+│ │ +    
+│ │      type_to_processing_function = {
+│ │          type('string'): lambda x: x,
+│ │          type(pathlib.Path('foo')): lambda x: str(x),
+│ │          type(np.array([1,2])): py2gift.tex.from_matrix,
+│ │          type([1,2]): py2gift.tex.from_matrix,
+│ │          type(3): py2gift.tex.from_number,
+│ │          type(4.2): py2gift.tex.from_number,
+│ │          type(np.array([2, 3], dtype=int)[0]): py2gift.tex.from_number,
+│ │          type(np.array([2.0, 3.0], dtype=float)[0]): py2gift.tex.from_number
+│ │      }
+│ │ -
+│ │ +    
+│ │      def __init__(self, raw_text: str) -> None:
+│ │ -
+│ │ +        
+│ │          self.template = string.Template(self.pre_process(raw_text))
+│ │ -
+│ │ +        
+│ │          try:
+│ │ -
+│ │ +            
+│ │              # this is fine if there are no "placeholder"s that need to be substituted
+│ │              self._final = self.template.substitute()
+│ │ -
+│ │ +            
+│ │          # if there are "placeholders" that need to be taken care of...
+│ │          except KeyError:
+│ │ -
+│ │ +        
+│ │              self._final = None
+│ │ -
+│ │ +    
+│ │      def pre_process(self, text: str) -> str:
+│ │  
+│ │          return text.replace('$', '$$').replace(self.wildcard_symbol, '$')
+│ │ -
+│ │ +    
+│ │      def fill(self, **kwargs) -> None:
+│ │ -
+│ │ +        
+│ │          processed_args = dict()
+│ │ -
+│ │ +        
+│ │          for k,v in kwargs.items():
+│ │ -
+│ │ +            
+│ │              # the type of the passed value
+│ │              t = type(v)
+│ │ -
+│ │ +            
+│ │              assert t in self.type_to_processing_function, (
+│ │                  f'the type of {k} ({t}) cannot be handled (turned into a string)')
+│ │ -
+│ │ +            
+│ │              processed_args[k] = self.type_to_processing_function[t](v)
+│ │ -
+│ │ -
+│ │ +            
+│ │ +        
+│ │  #         self._final = self.template.substitute(**kwargs)
+│ │          self._final = self.template.substitute(**processed_args)
+│ │ -
+│ │ +    
+│ │      @property
+│ │      def final(self) -> str:
+│ │ -
+│ │ +        
+│ │          assert self._final is not None, f'text has unfilled slots'
+│ │ -
+│ │ +        
+│ │          return self._final
+│ │ -
+│ │ +    
+│ │      def __repr__(self) -> str:
+│ │ -
+│ │ +        
+│ │          if self._final:
+│ │ -
+│ │ +            
+│ │              return self._final
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              return f'un-filled template:\n{self.template.template}'
+│ │ -
+│ │ +    
+│ │      @property
+│ │      def is_full(self) -> bool:
+│ │ -
+│ │ +        
+│ │          return self._final is not None
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/30_question.ipynb 34
+│ │  class QuestionGenerator(metaclass=abc.ABCMeta):
+│ │  
+│ │      def __init__(
+│ │          self, statement: TemplatedLatexText, feedback: TemplatedLatexText,
+│ │          time: Optional[int] = None, prng: np.random.RandomState = np.random.RandomState(42)) -> None:
+│ │ -
+│ │ +        
+│ │          self.statement = statement
+│ │          self.feedback = feedback
+│ │          self.time = time
+│ │          self.prng = prng
+│ │  
+│ │      @property
+│ │      @abc.abstractmethod
+│ │ @@ -121,30 +118,30 @@
+│ │      def partially_assemble_question(self, statement: str, feedback: str) -> dict:
+│ │  
+│ │          question = dict()
+│ │  
+│ │          question['class'] = self.class_name
+│ │          question['statement'] = statement
+│ │          question['feedback'] = feedback
+│ │ -
+│ │ +        
+│ │          if self.time:
+│ │ -
+│ │ +            
+│ │              question['time'] = str(self.time)
+│ │  
+│ │          return question
+│ │  
+│ │      def __call__(self, **kwargs):
+│ │  
+│ │          # arguments are passed directly to `setup`
+│ │          self.setup(**kwargs)
+│ │  
+│ │          assert self.statement.is_full, f'unassigned variables in the statement'
+│ │          assert self.feedback.is_full, f'unassigned variables in the feedback'
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/30_question.ipynb 36
+│ │  class NumericalQuestionGenerator(QuestionGenerator):
+│ │  
+│ │      def __init__(
+│ │          self, statement: TemplatedLatexText, feedback: TemplatedLatexText,
+│ │          time: Optional[int] = None, prng: np.random.RandomState = np.random.RandomState(42)) -> None:
+│ │  
+│ │          super().__init__(statement, feedback, time, prng)
+│ │ @@ -157,18 +154,18 @@
+│ │  
+│ │          return 'Numerical'
+│ │  
+│ │      def assemble_question(
+│ │          self, statement: str, feedback: str, solution: float, error: Optional[float] = None) -> dict:
+│ │  
+│ │          question = self.partially_assemble_question(statement, feedback)
+│ │ -
+│ │ +        
+│ │          # some yaml "writers" (e.g., ruamel.yaml) don't play well with numpy floats
+│ │          if type(solution) == np.float64:
+│ │ -
+│ │ +            
+│ │              solution = solution.item()
+│ │  
+│ │          question['solution'] = dict()
+│ │          question['solution']['value'] = solution
+│ │  
+│ │          if error is None:
+│ │  
+│ │ @@ -186,15 +183,15 @@
+│ │          assert self.solution is not None, 'solution was not defined, please try setting `self.solution` to a number'
+│ │          assert self.error is not None, (
+│ │              'error (tolerance) was not defined, please try setting `self.error` to a number')
+│ │  
+│ │          return self.assemble_question(
+│ │              statement=self.statement.final, feedback=self.feedback.final, solution=self.solution, error=self.error)
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/30_question.ipynb 38
+│ │  class MultipleChoiceQuestionGenerator(QuestionGenerator):
+│ │  
+│ │      def __init__(
+│ │          self, statement: TemplatedLatexText, feedback: TemplatedLatexText,
+│ │          time: Optional[int] = None, prng: np.random.RandomState = np.random.RandomState(42)) -> None:
+│ │  
+│ │          super().__init__(statement, feedback, time, prng)
+│ │ @@ -210,66 +207,65 @@
+│ │      def assemble_question(
+│ │              self, statement: str, feedback: str, perfect_answer: str,
+│ │              wrong_answers: Union[List[str], List[Tuple[str, float]]]) -> dict:
+│ │  
+│ │          question = self.partially_assemble_question(statement, feedback)
+│ │  
+│ │          question['answers'] = dict()
+│ │ -
+│ │ +        
+│ │          if self.right_answer:
+│ │ -
+│ │ +        
+│ │              question['answers']['perfect'] = perfect_answer
+│ │ -
+│ │ +        
+│ │          question['answers']['wrong'] = wrong_answers
+│ │  
+│ │          return question
+│ │  
+│ │      def __call__(self, **kwargs):
+│ │  
+│ │          super().__call__(**kwargs)
+│ │ -
+│ │ +        
+│ │          if self.right_answer:
+│ │  
+│ │              assert isinstance(self.right_answer, str), f'right answer "{self.right_answer}" is not a string'
+│ │  
+│ │          assert self.wrong_answers is not None, (
+│ │              'wrong answers were not given, please try setting `self.wrong_answers` to a list of strings')
+│ │ -
+│ │ +        
+│ │          # in order to check that every wrong answer is different
+│ │          wrong_answers_texts = []
+│ │ -
+│ │ +        
+│ │          for e in self.wrong_answers:
+│ │ -
+│ │ +            
+│ │              assert isinstance(e, str) or isinstance(e, list), (
+│ │                  f'"{e}" is not a string or list encompassing a string and a number')
+│ │ -
+│ │ +            
+│ │              if isinstance(e, list):
+│ │ -
+│ │ +                
+│ │                  wrong_answers_texts.append(e[0])
+│ │ -
+│ │ +                
+│ │                  assert isinstance(e[0], str)
+│ │                  assert isinstance(e[1], int) or isinstance(e[1], float)
+│ │ -
+│ │ +            
+│ │              else:
+│ │ -
+│ │ +                
+│ │                  wrong_answers_texts.append(e)
+│ │ -
+│ │ +                
+│ │          # all the answers are different
+│ │          assert np.unique(wrong_answers_texts).size == np.array(wrong_answers_texts).size, (
+│ │              f'all the wrong answers are not different: {wrong_answers_texts}')
+│ │ -
+│ │ +                
+│ │  
+│ │          return self.assemble_question(
+│ │              statement=self.statement.final, feedback=self.feedback.final, perfect_answer=self.right_answer,
+│ │              wrong_answers=self.wrong_answers)
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ +# %% ../nbs/30_question.ipynb 40
+│ │  class MultipleChoiceTheoreticalQuestionGenerator(MultipleChoiceQuestionGenerator):
+│ │  
+│ │      def setup(self, right_answer: str, wrong_answers: List[str]):
+│ │  
+│ │          self.statement = self.unprocessed_statement.safe_substitute()
+│ │          self.feedback = self.unprocessed_feedback.safe_substitute()
+│ │  
+│ │          self.right_answer = right_answer
+│ │ -        self.wrong_answers = wrong_answers
+│ │ +        self.wrong_answers = wrong_answers
+│ │   --- py2gift-0.0.5.1/py2gift/time.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/time.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,82 +1,83 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 50_time.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/50_time.ipynb.
+│ │  
+│ │ +# %% auto 0
+│ │  __all__ = ['TimeKeeper']
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/50_time.ipynb 2
+│ │  import json
+│ │  from typing import Union
+│ │  
+│ │  import pandas as pd
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/50_time.ipynb 5
+│ │  class TimeKeeper:
+│ │ -
+│ │ +    
+│ │      def __init__(self) -> None:
+│ │ -
+│ │ +        
+│ │          self.df = pd.DataFrame(columns=['time'])
+│ │          self.df.index.name = 'category'
+│ │ -
+│ │ -
+│ │ +        
+│ │ +        
+│ │          # for making sure calls to `record` and `record_question` are not mixed
+│ │          self.record_type = None
+│ │ -
+│ │ +    
+│ │      def process_category_name(self, category_name: Union[str, list]) -> str:
+│ │ -
+│ │ +        
+│ │          # if the category is a string (rather than a list)...
+│ │          if type(category_name)==str:
+│ │ -
+│ │ +            
+│ │              # ...an attempt...
+│ │              try:
+│ │ -
+│ │ +            
+│ │                  # ...to interpret it is made
+│ │                  category_name = json.loads(category_name)
+│ │ -
+│ │ +                
+│ │                  # if it is still a string...
+│ │                  if type(category_name)==str:
+│ │ -
+│ │ +                    
+│ │                      # ...that's it
+│ │                      return category_name
+│ │ -
+│ │ +                
+│ │                  # if it's not a string, then it is assumed it is a list
+│ │ -
+│ │ +            
+│ │              except json.JSONDecodeError:
+│ │ -
+│ │ +                
+│ │                  return category_name
+│ │ -
+│ │ +        
+│ │          return category_name[-1].split('/')[-1]
+│ │ -
+│ │ +    
+│ │      def record(self, minutes: int, category_name: Union[str, list]) -> None:
+│ │ -
+│ │ +        
+│ │          if self.record_type is None:
+│ │ -
+│ │ +            
+│ │              self.record_type = 'category'
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              assert self.record_type == 'category', 'you cannot mix questions and categories'
+│ │ -
+│ │ +        
+│ │          self.df.loc[self.process_category_name(category_name)] = minutes
+│ │ -
+│ │ +        
+│ │      def record_question(self, minutes: int, question_name: str) -> None:
+│ │ -
+│ │ +        
+│ │          if self.record_type is None:
+│ │ -
+│ │ +            
+│ │              self.record_type = 'question'
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              assert self.record_type == 'question', 'you cannot mix questions and categories'
+│ │ -
+│ │ +        
+│ │          self.df.loc[question_name] = minutes
+│ │ -
+│ │ +    
+│ │      def __str__(self) -> str:
+│ │ -
+│ │ +        
+│ │          return f'Accumulated time: {self.df["time"].sum()} minutes'
+│ │ -
+│ │ +    
+│ │      def plot(self):
+│ │ -
+│ │ +        
+│ │          ax = self.df.plot.pie(y='time')
+│ │          ax.legend().remove()
+│ │          ax.set_ylabel(None)
+│ │ -
+│ │ -        return ax
+│ │ +        
+│ │ +        return ax
+│ │   --- py2gift-0.0.5.1/py2gift/util.py
+│ ├── +++ py2gift-0.0.6.1/py2gift/util.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,78 +1,47 @@
+│ │ -# AUTOGENERATED! DO NOT EDIT! File to edit: 20_util.ipynb (unless otherwise specified).
+│ │ +# AUTOGENERATED! DO NOT EDIT! File to edit: ../nbs/20_util.ipynb.
+│ │  
+│ │ -__all__ = ['render_latex', 'AccessorEndowedClass', 'int_to_roman', 'dict_to_yaml', 'yaml_to_dict',
+│ │ -           'write_multiple_categories', 'add_name', 'wrong_numerical_solutions_from_correct_one']
+│ │ +# %% auto 0
+│ │ +__all__ = ['render_latex', 'AccessorEndowedClass', 'int_to_roman', 'dict_to_yaml', 'yaml_to_dict', 'write_multiple_categories',
+│ │ +           'add_name', 'wrong_numerical_solutions_from_correct_one']
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/20_util.ipynb 5
+│ │  import pathlib
+│ │  import re
+│ │  import sys
+│ │ -from typing import List, Dict, Union, Optional
+│ │  
+│ │  import numpy as np
+│ │  import IPython.display
+│ │  import ruamel.yaml
+│ │  import yaml
+│ │  import pandas as pd
+│ │  from pandas.core.accessor import _register_accessor as register_accessor
+│ │  
+│ │ -# to avoid tqdm's experimental warning
+│ │ -import warnings
+│ │ -warnings.filterwarnings("ignore", message='Using `tqdm.autonotebook.tqdm` in notebook mode')
+│ │ -
+│ │  import gift_wrapper.core
+│ │  import gift_wrapper.image
+│ │  
+│ │ -# Cell
+│ │ -def render_latex(text: str) -> str:
+│ │ -    """
+│ │ -    Returns latex-aware markdown text.
+│ │ -
+│ │ -
+│ │ -    ***Parameters***
+│ │ -
+│ │ -    - `text`: str
+│ │ -
+│ │ -        Input text.
+│ │ -
+│ │ -    ***Returns***
+│ │ -
+│ │ -    - `out`: str
+│ │ -
+│ │ -        Markdown text.
+│ │ -    """
+│ │ -
+│ │ +# %% ../nbs/20_util.ipynb 8
+│ │ +def render_latex(
+│ │ +    text: str # Input text
+│ │ +) -> str: # Markdown text
+│ │ +    "Returns latex-aware markdown text"
+│ │ +    
+│ │      return IPython.display.Markdown(re.sub(r'\$([^\$]*)\$', '$' + '\\\Large ' + r'\1' + '$', text))
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/20_util.ipynb 13
+│ │  class AccessorEndowedClass:
+│ │ -
+│ │ +    
+│ │      _accessors = set()
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ -# taken from https://www.w3resource.com/python-exercises/class-exercises/python-class-exercise-1.php
+│ │ -def int_to_roman(num: int) -> str:
+│ │ -    """
+│ │ -    Returns an integer number in roman format.
+│ │ -
+│ │ -    ***Parameters***
+│ │ -
+│ │ -    - `num`: int
+│ │ -
+│ │ -        Input integer.
+│ │ -
+│ │ -    ***Returns***
+│ │ -
+│ │ -    - `out`: str
+│ │ -
+│ │ -        Roman number for the input.
+│ │ -    """
+│ │ -
+│ │ +# %% ../nbs/20_util.ipynb 22
+│ │ +def int_to_roman(
+│ │ +    num: int # Input
+│ │ +) -> str: # Roman number for the input
+│ │ +    "Returns an integer number in roman format"
+│ │ +    
+│ │      val = [
+│ │          1000, 900, 500, 400,
+│ │          100, 90, 50, 40,
+│ │          10, 9, 5, 4,
+│ │          1
+│ │      ]
+│ │      syb = [
+│ │ @@ -89,214 +58,136 @@
+│ │              num -= val[i]
+│ │          i += 1
+│ │      return roman_num
+│ │  
+│ │  assert int_to_roman(12) == 'XII'
+│ │  assert int_to_roman(9) == 'IX'
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ -def dict_to_yaml(d: dict, output_file: Union[str, pathlib.Path]) -> None:
+│ │ -
+│ │ +# %% ../nbs/20_util.ipynb 27
+│ │ +def dict_to_yaml(
+│ │ +    d: dict, # Input
+│ │ +    output_file: str | pathlib.Path # Ouput
+│ │ +) -> None:
+│ │ +    "Writes a dictionary in a YAML file"
+│ │ +    
+│ │      yaml = ruamel.yaml.YAML()
+│ │      yaml.indent(sequence=4, offset=2)
+│ │  
+│ │      with open(output_file, 'w') as f:
+│ │  
+│ │          yaml.dump(d, f)
+│ │  
+│ │ -# Cell
+│ │ -
+│ │ -def yaml_to_dict(file: Union[str, pathlib.Path]) -> dict:
+│ │ +# %% ../nbs/20_util.ipynb 31
+│ │ +def yaml_to_dict(
+│ │ +    file: str | pathlib.Path # Input file
+│ │ +) -> dict: # Output
+│ │ +    "Reads a dictionary from a YAML file"
+│ │  
+│ │      with open(file) as f:
+│ │  
+│ │          d = yaml.load(f, Loader=yaml.FullLoader)
+│ │ -
+│ │ +        
+│ │      return d
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/20_util.ipynb 35
+│ │  def write_multiple_categories(
+│ │ -        category_questions: Dict[str, List[dict]], pictures_base_directory: str, output_file: str = 'out.yaml') -> None:
+│ │ -    """
+│ │ -    Writes a file suitable as input to `gift-wrapper`.
+│ │ -
+│ │ -    ***Parameters***
+│ │ -
+│ │ -    - `category_questions` : dict
+│ │ -
+│ │ -        Every key is the name of a category, and every value is a list of questions
+│ │ -        (every question is itself a dictionary).
+│ │ -
+│ │ -    - `pictures_base_directory` : str
+│ │ -
+│ │ -        The "pictures base directory" parameter that must be passed to `gift-wrapper`
+│ │ -
+│ │ -    - `output_file` : str
+│ │ -
+│ │ -        Output file
+│ │ -
+│ │ -    """
+│ │ +    category_questions: dict[str, list[dict]], # Every key is the name of a category, and every value is a list of questions (every question is itself a dictionary)
+│ │ +    pictures_base_directory: str, # The "pictures base directory" parameter that must be passed to `gift-wrapper`
+│ │ +    output_file: str | None = 'out.yaml' # Output file
+│ │ +) -> None:
+│ │ +    "Writes a file suitable as input to `gift-wrapper`"
+│ │  
+│ │      file = dict()
+│ │      file['pictures base directory'] = pictures_base_directory
+│ │      file['categories'] = []
+│ │  
+│ │      for category_name, questions in category_questions.items():
+│ │  
+│ │          file['categories'].append({'name': category_name, 'questions': questions})
+│ │ -
+│ │ +    
+│ │      dict_to_yaml(file, output_file)
+│ │  
+│ │ -# Cell
+│ │ -def add_name(questions: List[dict], base_name: str) -> List[dict]:
+│ │ -    """
+│ │ -    Adds a name to every question based on a pattern.
+│ │ -
+│ │ -    **Parameters**
+│ │ -
+│ │ -    - `questions` : list
+│ │ -
+│ │ -        List of questions; every question is a dictionary.
+│ │ -
+│ │ -    - `base_name` : str
+│ │ -
+│ │ -        All the questions will be given this name and a different (Roman) number.
+│ │ -
+│ │ -    **Returns**
+│ │ -
+│ │ -    - `out`: list
+│ │ -
+│ │ -        List with the same questions after adding the corresponding name to each one.
+│ │ -
+│ │ -    """
+│ │ +# %% ../nbs/20_util.ipynb 44
+│ │ +def add_name(
+│ │ +    questions: list[dict], # List of questions; every question is a dictionary
+│ │ +    base_name: str # All the questions will be given this name and a different (Roman) number
+│ │ +) -> list[dict]: # List with the same questions after adding the corresponding name to each one
+│ │ +    "Adds a name to every question based on a pattern"
+│ │  
+│ │      res = []
+│ │  
+│ │      for i_q, q in enumerate(questions):
+│ │  
+│ │          res.append({**q, 'name': f'{base_name} {int_to_roman(i_q + 1)}'})
+│ │  
+│ │      return res
+│ │  
+│ │  assert add_name([{'k1': 'aa', 'k2': 1}, {'k3': 'pi', 'foo': 'variance'}], 'Viterbi') == [
+│ │      {'k1': 'aa', 'k2': 1, 'name': 'Viterbi I'}, {'k3': 'pi', 'foo': 'variance', 'name': 'Viterbi II'}]
+│ │  
+│ │ -# Cell
+│ │ +# %% ../nbs/20_util.ipynb 47
+│ │  def wrong_numerical_solutions_from_correct_one(
+│ │ -    solution: float, n: int, min_sep: float, max_sep: float, lower_bound: float = -np.inf,
+│ │ -    upper_bound: float = np.inf, precision: int = 4, to_str: bool = True, fixed_point_format: bool = False,
+│ │ -    bin_width: Optional[float] = None, unique: bool = False, prng: np.random.RandomState = np.random.RandomState(42)
+│ │ -) -> Union[List[float], List[str]]:
+│ │ -    """
+│ │ -    Generates random numerical wrong answers given the correct one.
+│ │ -
+│ │ -
+│ │ -    **Parameters**
+│ │ -
+│ │ -    - `solution`: float
+│ │ -
+│ │ -        The actual solution.
+│ │ -
+│ │ -    - `n`: int
+│ │ -
+│ │ -        The number of wrong solutions.
+│ │ -
+│ │ -    - `min_sep`: float
+│ │ -
+│ │ -        Minimum separation.
+│ │ -
+│ │ -    - `max_sep`: float
+│ │ -
+│ │ -        Maximum separation.
+│ │ -
+│ │ -    - `lower_bound`: float, optional
+│ │ -
+│ │ -        A lower bound on the returned numbers.
+│ │ -
+│ │ -    - `upper_bound`: float, optional
+│ │ -
+│ │ -        A upper bound on the returned numbers.
+│ │ -
+│ │ -    - `precision`: int, optional
+│ │ -
+│ │ -        The number of decimal places.
+│ │ -
+│ │ -    - `to_str`: bool, optional
+│ │ -
+│ │ -        If True, every element in the result will be converted to a string.
+│ │ -
+│ │ -    - `fixed_point_format`: bool
+│ │ -
+│ │ -        Only meaningful when to_str is True. In such case, if True a fixed-point format (f) is used
+│ │ -        regardless of the actual type.
+│ │ -
+│ │ -    - `bin_width`: float, optional
+│ │ -
+│ │ -        The granularity on the answers: every one will be a multiple of this parameter.
+│ │ -
+│ │ -    - `unique`: bool, optional
+│ │ -
+│ │ -        If True, all the answers will be different.
+│ │ -
+│ │ -    - `prng`: RandomState, optional
+│ │ -
+│ │ -        A pseudo-random numbers generator.
+│ │ -
+│ │ -    **Returns**
+│ │ -
+│ │ -    - `out`: list of float, or list of str
+│ │ -
+│ │ -        The random wrong solutions.
+│ │ -
+│ │ -    """
+│ │ -
+│ │ +    solution: float, # The actual solution
+│ │ +    n: int, # The number of wrong solutions
+│ │ +    min_sep: float, # Minimum separation
+│ │ +    max_sep: float, # Maximum separation
+│ │ +    lower_bound: float | None = -np.inf, # A lower bound on the returned numbers
+│ │ +    upper_bound: float | None = np.inf, # A upper bound on the returned numbers
+│ │ +    precision: int | None = 4, # The number of decimal places
+│ │ +    to_str: bool | None = True, # If `True`, every element in the result will be converted to a string
+│ │ +    fixed_point_format: bool | None = False, # Only meaningful when `to_str` is `True`. In such case, if `True` a fixed-point format (`f`) is used regardless of the actual type
+│ │ +    bin_width: float | None = None, # The granularity on the answers: every one will be a multiple of this parameter
+│ │ +    unique: bool | None = False, # If `True`, all the answers will be different
+│ │ +    prng: np.random.RandomState | None = np.random.RandomState(42) # A pseudo-random numbers generator
+│ │ +) -> list[float] | list[str]: # The random wrong solutions
+│ │ +    "Generates random numerical wrong answers given the correct one"
+│ │ +    
+│ │      max_iterations = 1_000
+│ │ -
+│ │ +    
+│ │      # in the current implementation all the answers are generated by pivoting around the solution; in order to prevent the correct solution being approximately in the middle, more wrong answers than requested are generated and, in the end, the requested number is randomly picked
+│ │      n_generated = n + 5
+│ │ -
+│ │ +    
+│ │      assert (solution - min_sep > lower_bound) or (solution + min_sep < upper_bound)
+│ │ -
+│ │ +    
+│ │      if bin_width:
+│ │ -
+│ │ +        
+│ │          assert bin_width < (max_sep - min_sep)
+│ │ -
+│ │ +    
+│ │      res = []
+│ │ -
+│ │ +    
+│ │      for i in range(max_iterations):
+│ │ -
+│ │ +        
+│ │          if bin_width:
+│ │ -
+│ │ +        
+│ │              candidates = np.arange(min_sep, max_sep, bin_width)
+│ │              steps = prng.choice(candidates, size=2).round(precision)
+│ │ -
+│ │ +        
+│ │          else:
+│ │ -
+│ │ +            
+│ │              # one number to be added to the `solution` solution and one to be subracted
+│ │              steps = prng.uniform(min_sep, max_sep, size=2)
+│ │  
+│ │          next_values = [v.round(precision)
+│ │                         for v in [solution + steps[0], solution - steps[1]] if lower_bound < v < upper_bound]
+│ │          if unique:
+│ │ -
+│ │ +            
+│ │              next_values = [e for e in next_values if e not in set(res)]
+│ │ -
+│ │ +        
+│ │          res.extend(next_values)
+│ │  
+│ │          if len(res) >= n:
+│ │ -
+│ │ +        
+│ │              break
+│ │ -
+│ │ +            
+│ │      else:
+│ │ -
+│ │ +        
+│ │          raise Exception(f"Parameters are too much constraining, can't find the solution after {max_iterations}")
+│ │ -
+│ │ +    
+│ │      if to_str:
+│ │ -
+│ │ +        
+│ │          format_specifier = f'.{precision}{"f" if fixed_point_format else "g"}'
+│ │ -
+│ │ +        
+│ │  #         res = [str(e) for e in res]
+│ │          res = [f'{e:{format_specifier}}' for e in res]
+│ │ -
+│ │ +    
+│ │  #     return res[:n]
+│ │ -    return prng.choice(res, n, replace=False).tolist()
+│ │ +    return prng.choice(res, n, replace=False).tolist()
+│ │   --- py2gift-0.0.5.1/py2gift.egg-info/PKG-INFO
+│ ├── +++ py2gift-0.0.6.1/py2gift.egg-info/PKG-INFO
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,62 +1,102 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: py2gift
+│ │ -Version: 0.0.5.1
+│ │ +Version: 0.0.6.1
+│ │  Summary: Make input files for gift-wrapper programmatically
+│ │  Home-page: https://github.com/manuvazquez/py2gift/tree/master/
+│ │  Author: Manuel A. Vázquez
+│ │  Author-email: manuavazquez@gmail.com
+│ │  License: Apache Software License 2.0
+│ │ -Description: # py2gift
+│ │ -        > Write GIFT (Moodle-compatible quizzes) files using Python.
+│ │ -        
+│ │ -        
+│ │ -        `py2gift` is a library meant to write [question banks](https://docs.moodle.org/38/en/Question_bank) in [GIFT](https://docs.moodle.org/38/en/GIFT_format) format ([Moodle](https://moodle.org/)) *programmatically* in Python. Ultimately, questions can be written (though this is not a requirement) from a [Jupyter](https://jupyter.org/) notebook. The advantages are:
+│ │ -        
+│ │ -        * you can use all your Python skills to *compute* whatever is required for the statement, solution and feedback of a question
+│ │ -        * it makes easy to write different (random) versions of the same question
+│ │ -        * questions can be previewed (pictures, $\LaTeX$...) in the notebook
+│ │ -        * no need to install anything: you can click this mybinder badge, 
+│ │ -        [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manuvazquez/py2gift/master?filepath=examples)
+│ │ -        , open any of the provided examples, and start writing your questions right now from the browser (the file generated at the end of the notebook, accesible through a link, can be imported in *Moodle*).
+│ │ -        
+│ │ -        This library relies on [gift-wrapper](https://github.com/manuvazquez/gift-wrapper) and it has been created using [nbdev](https://github.com/fastai/nbdev). The latter fact means you can [explore the *actual* source code](https://manuvazquez.github.io/py2gift/) through jupyter notebooks and see the inner workings of each individual piece.
+│ │ -        
+│ │ -        ## Setup
+│ │ -        
+│ │ -        Since the library is in [PyPI](https://pypi.org/project/py2gift/)
+│ │ -        
+│ │ -        ```
+│ │ -        pip install py2gift
+│ │ -        ```
+│ │ -        
+│ │ -        should do.
+│ │ -        
+│ │ -        ### Manual
+│ │ -        
+│ │ -        If you'd rather clone this repository, the command below should install all the required packages 
+│ │ -        
+│ │ -        ```
+│ │ -        pip install pandas numpy matplotlib ruamel.yaml gift-wrapper
+│ │ -        ```
+│ │ -        
+│ │ -        ## How to use it
+│ │ -        
+│ │ -        Writing a question involves specifying the statement and, *optionally*, the feedback in different notebook cells. In any case, *variables*, specified with the prefix `!`, can be included, and those are meant to be *filled in* from within a Python class. This comes very handy when you want to create different versions of a single question in which some input data (maybe in the form of a picture) *randomly* changes from question to question. Then, you can instruct `py2gift` to call your Python code a number of times, each one giving rise to a different version of the same question (as long as some *variable* is set at random, e.g., by exploiting the functionality in `np.random`). The solution, whose format depends on the question type, must also be set from within the code.
+│ │ -        
+│ │ -        Underneath, images are handled by *gift-wrapper*, and hence *paths* (e.g., `images/scheme.svg`) to either `.tex` (that can be compiled with *pdflatex*) or `.svg` files can be included in the statement, solution or feedback of a question. Moreover, they can be included through one of the variables (prefix `!`), and hence random (but nonetheless meaningful) pictures are a possibility.
+│ │ -        
+│ │ -        Notice that the difference between two instances of the same question can be minor or significant. Ultimately, it depends on how sophisticated your Python code is (if the latter can solve the question/problem in a very general form, and you are also able to present it in the `statement`, then it is fine).
+│ │ -        
+│ │ -        Besides the above mentioned *core* functionality, `py2gift` provides some extra functions to ease the process of writing questions (modules `tex`, `util`, `time`, `hash`). However, a thorough description of the functionality would be very dry and you are probably better off by taking a look at one of the *sample* notebooks ([minimal](examples/minimal.ipynb) or [example_1](examples/example_1.ipynb)). Also, you can take a look at the [documentation](https://manuvazquez.github.io/py2gift/).
+│ │ -        
+│ │  Keywords: gift moodle python
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │ -Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Natural Language :: English
+│ │ -Classifier: Programming Language :: Python :: 3.6
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │ -Requires-Python: >=3.6
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: License :: OSI Approved :: Apache Software License
+│ │ +Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │ +Provides-Extra: dev
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +py2gift
+│ │ +================
+│ │ +
+│ │ +<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+│ │ +
+│ │ +`py2gift` is a library meant to write [question
+│ │ +banks](https://docs.moodle.org/38/en/Question_bank) in
+│ │ +[GIFT](https://docs.moodle.org/38/en/GIFT_format) format
+│ │ +([Moodle](https://moodle.org/)) *programmatically* in Python.
+│ │ +Ultimately, questions can be written (though this is not a requirement)
+│ │ +from a [Jupyter](https://jupyter.org/) notebook. The advantages are:
+│ │ +
+│ │ +- you can use all your Python skills to *compute* whatever is required
+│ │ +  for the statement, solution and feedback of a question
+│ │ +- it makes easy to write different (random) versions of the same
+│ │ +  question
+│ │ +- questions can be previewed (pictures, $\LaTeX$…) in the notebook
+│ │ +- no need to install anything: you can click this mybinder badge,
+│ │ +  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/manuvazquez/py2gift/master?filepath=examples)
+│ │ +  , open any of the provided examples, and start writing your questions
+│ │ +  right now from the browser (the file generated at the end of the
+│ │ +  notebook, accesible through a link, can be imported in *Moodle*).
+│ │ +
+│ │ +This library relies on
+│ │ +[gift-wrapper](https://github.com/manuvazquez/gift-wrapper) and it has
+│ │ +been created using [nbdev](https://github.com/fastai/nbdev). The latter
+│ │ +fact means you can [explore the *actual* source
+│ │ +code](https://manuvazquez.github.io/py2gift/) through jupyter notebooks
+│ │ +and see the inner workings of each individual piece.
+│ │ +
+│ │ +## Setup
+│ │ +
+│ │ +Since the library is in [PyPI](https://pypi.org/project/py2gift/)
+│ │ +
+│ │ +    pip install py2gift
+│ │ +
+│ │ +should do.
+│ │ +
+│ │ +### Manual
+│ │ +
+│ │ +If you’d rather clone this repository, the command below should install
+│ │ +all the required packages
+│ │ +
+│ │ +    pip install pandas numpy matplotlib ruamel.yaml gift-wrapper
+│ │ +
+│ │ +## How to use it
+│ │ +
+│ │ +Writing a question involves specifying the statement and, *optionally*,
+│ │ +the feedback in different notebook cells. In any case, *variables*,
+│ │ +specified with the prefix `!`, can be included, and those are meant to
+│ │ +be *filled in* from within a Python class. This comes very handy when
+│ │ +you want to create different versions of a single question in which some
+│ │ +input data (maybe in the form of a picture) *randomly* changes from
+│ │ +question to question. Then, you can instruct `py2gift` to call your
+│ │ +Python code a number of times, each one giving rise to a different
+│ │ +version of the same question (as long as some *variable* is set at
+│ │ +random, e.g., by exploiting the functionality in `np.random`). The
+│ │ +solution, whose format depends on the question type, must also be set
+│ │ +from within the code.
+│ │ +
+│ │ +Underneath, images are handled by *gift-wrapper*, and hence *paths*
+│ │ +(e.g., `images/scheme.svg`) to either `.tex` (that can be compiled with
+│ │ +*pdflatex*) or `.svg` files can be included in the statement, solution
+│ │ +or feedback of a question. Moreover, they can be included through one of
+│ │ +the variables (prefix `!`), and hence random (but nonetheless
+│ │ +meaningful) pictures are a possibility.
+│ │ +
+│ │ +Notice that the difference between two instances of the same question
+│ │ +can be minor or significant. Ultimately, it depends on how sophisticated
+│ │ +your Python code is (if the latter can solve the question/problem in a
+│ │ +very general form, and you are also able to present it in the
+│ │ +`statement`, then it is fine).
+│ │ +
+│ │ +Besides the above mentioned *core* functionality, `py2gift` provides
+│ │ +some extra functions to ease the process of writing questions (modules
+│ │ +`tex`, `util`, `time`, `hash`). However, a thorough description of the
+│ │ +functionality would be very dry and you are probably better off by
+│ │ +taking a look at one of the *sample* notebooks
+│ │ +([minimal](https://github.com/manuvazquez/py2gift/blob/master/examples/minimal.ipynb)
+│ │ +or
+│ │ +[example_1](https://github.com/manuvazquez/py2gift/blob/master/examples/example_1.ipynb)).
+│ │ +Also, you can take a look at the
+│ │ +[documentation](https://manuvazquez.github.io/py2gift/).
+│ │   --- py2gift-0.0.5.1/py2gift.egg-info/SOURCES.txt
+│ ├── +++ py2gift-0.0.6.1/py2gift.egg-info/SOURCES.txt
+│ │┄ Files 20% similar despite different names
+│ │ @@ -3,14 +3,15 @@
+│ │  MANIFEST.in
+│ │  README.md
+│ │  settings.ini
+│ │  setup.py
+│ │  examples/__init__.py
+│ │  examples/my_module.py
+│ │  py2gift/__init__.py
+│ │ +py2gift/_modidx.py
+│ │  py2gift/_nbdev.py
+│ │  py2gift/core.py
+│ │  py2gift/file.py
+│ │  py2gift/hash.py
+│ │  py2gift/input_file.py
+│ │  py2gift/markdown.py
+│ │  py2gift/notebook.py
+│ │   --- py2gift-0.0.5.1/setup.py
+│ ├── +++ py2gift-0.0.6.1/setup.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,47 +1,57 @@
+│ │  from pkg_resources import parse_version
+│ │  from configparser import ConfigParser
+│ │ -import setuptools
+│ │ +import setuptools, shlex
+│ │  assert parse_version(setuptools.__version__)>=parse_version('36.2')
+│ │  
+│ │  # note: all settings are in settings.ini; edit there, not here
+│ │  config = ConfigParser(delimiters=['='])
+│ │ -config.read('settings.ini')
+│ │ +config.read('settings.ini', encoding='utf-8')
+│ │  cfg = config['DEFAULT']
+│ │  
+│ │  cfg_keys = 'version description keywords author author_email'.split()
+│ │  expected = cfg_keys + "lib_name user branch license status min_python audience language".split()
+│ │  for o in expected: assert o in cfg, "missing expected setting: {}".format(o)
+│ │  setup_cfg = {o:cfg[o] for o in cfg_keys}
+│ │  
+│ │  licenses = {
+│ │      'apache2': ('Apache Software License 2.0','OSI Approved :: Apache Software License'),
+│ │ +    'mit': ('MIT License', 'OSI Approved :: MIT License'),
+│ │ +    'gpl2': ('GNU General Public License v2', 'OSI Approved :: GNU General Public License v2 (GPLv2)'),
+│ │ +    'gpl3': ('GNU General Public License v3', 'OSI Approved :: GNU General Public License v3 (GPLv3)'),
+│ │ +    'bsd3': ('BSD License', 'OSI Approved :: BSD License'),
+│ │  }
+│ │  statuses = [ '1 - Planning', '2 - Pre-Alpha', '3 - Alpha',
+│ │      '4 - Beta', '5 - Production/Stable', '6 - Mature', '7 - Inactive' ]
+│ │ -py_versions = '2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8'.split()
+│ │ +py_versions = '3.6 3.7 3.8 3.9 3.10'.split()
+│ │  
+│ │ -requirements = cfg.get('requirements','').split()
+│ │ -lic = licenses[cfg['license']]
+│ │ +requirements = shlex.split(cfg.get('requirements', ''))
+│ │ +if cfg.get('pip_requirements'): requirements += shlex.split(cfg.get('pip_requirements', ''))
+│ │  min_python = cfg['min_python']
+│ │ +lic = licenses.get(cfg['license'].lower(), (cfg['license'], None))
+│ │ +dev_requirements = (cfg.get('dev_requirements') or '').split()
+│ │  
+│ │  setuptools.setup(
+│ │      name = cfg['lib_name'],
+│ │      license = lic[0],
+│ │      classifiers = [
+│ │          'Development Status :: ' + statuses[int(cfg['status'])],
+│ │          'Intended Audience :: ' + cfg['audience'].title(),
+│ │ -        'License :: ' + lic[1],
+│ │          'Natural Language :: ' + cfg['language'].title(),
+│ │ -    ] + ['Programming Language :: Python :: '+o for o in py_versions[py_versions.index(min_python):]],
+│ │ +    ] + ['Programming Language :: Python :: '+o for o in py_versions[py_versions.index(min_python):]] + (['License :: ' + lic[1] ] if lic[1] else []),
+│ │      url = cfg['git_url'],
+│ │      packages = setuptools.find_packages(),
+│ │      include_package_data = True,
+│ │      install_requires = requirements,
+│ │ +    extras_require={ 'dev': dev_requirements },
+│ │      dependency_links = cfg.get('dep_links','').split(),
+│ │      python_requires  = '>=' + cfg['min_python'],
+│ │ -    long_description = open('README.md').read(),
+│ │ +    long_description = open('README.md', encoding='utf-8').read(),
+│ │      long_description_content_type = 'text/markdown',
+│ │      zip_safe = False,
+│ │ -    entry_points = { 'console_scripts': cfg.get('console_scripts','').split() },
+│ │ +    entry_points = {
+│ │ +        'console_scripts': cfg.get('console_scripts','').split(),
+│ │ +        'nbdev': [f'{cfg.get("lib_path")}={cfg.get("lib_path")}._modidx:d']
+│ │ +    },
+│ │      **setup_cfg)
+│ │  
+│ │ +

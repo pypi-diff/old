@@ -1,0 +1,496 @@
+--- tmp/vpalette-2.0.1.tar.gz
++++ tmp/vpalette-2.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "vpalette-2.0.1.tar", last modified: Sun May 10 08:18:39 2020, max compression
+│ +gzip compressed data, was "vpalette-2.1.0.tar", max compression
+│   --- vpalette-2.0.1.tar
+├── +++ vpalette-2.1.0.tar
+│ ├── file list
+│ │ @@ -1,8 +1,7 @@
+│ │ --rw-r--r--   0        0        0     1104 2020-05-06 16:36:48.992089 vpalette-2.0.1/LICENSE.txt
+│ │ --rw-r--r--   0        0        0      983 2020-05-10 08:18:15.635273 vpalette-2.0.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2646 2020-05-10 08:18:15.633279 vpalette-2.0.1/README.md
+│ │ --rw-r--r--   0        0        0       58 2020-05-10 08:18:15.637268 vpalette-2.0.1/vpalette/__init__.py
+│ │ --rw-r--r--   0        0        0     8717 2020-05-06 17:32:47.282206 vpalette-2.0.1/vpalette/colors.py
+│ │ --rw-r--r--   0        0        0     2989 2020-05-06 17:32:47.280213 vpalette-2.0.1/vpalette/palette.py
+│ │ --rw-r--r--   0        0        0     3261 2020-05-10 08:18:39.492975 vpalette-2.0.1/setup.py
+│ │ --rw-r--r--   0        0        0     3453 2020-05-10 08:18:39.492975 vpalette-2.0.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1083 2023-04-07 08:23:08.533338 vpalette-2.1.0/LICENSE.txt
+│ │ +-rw-r--r--   0        0        0     2869 2023-04-07 08:23:08.533338 vpalette-2.1.0/README.md
+│ │ +-rw-r--r--   0        0        0     1092 2023-04-07 08:23:08.533338 vpalette-2.1.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       55 2023-04-07 08:23:08.533338 vpalette-2.1.0/vpalette/__init__.py
+│ │ +-rw-r--r--   0        0        0    11565 2023-04-07 08:23:08.533338 vpalette-2.1.0/vpalette/colors.py
+│ │ +-rw-r--r--   0        0        0     2801 2023-04-07 08:23:08.533338 vpalette-2.1.0/vpalette/palette.py
+│ │ +-rw-r--r--   0        0        0     4116 1970-01-01 00:00:00.000000 vpalette-2.1.0/PKG-INFO
+│ │   --- vpalette-2.0.1/LICENSE.txt
+│ ├── +++ vpalette-2.1.0/LICENSE.txt
+│ │┄ Ordering differences only
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,21 +1,21 @@
+│ │ -The MIT License (MIT)
+│ │ -
+│ │ -Copyright (c) 2016-2018 Plotly, Inc
+│ │ -
+│ │ -Permission is hereby granted, free of charge, to any person obtaining a copy
+│ │ -of this software and associated documentation files (the "Software"), to deal
+│ │ -in the Software without restriction, including without limitation the rights
+│ │ -to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+│ │ -copies of the Software, and to permit persons to whom the Software is
+│ │ -furnished to do so, subject to the following conditions:
+│ │ -
+│ │ -The above copyright notice and this permission notice shall be included in
+│ │ -all copies or substantial portions of the Software.
+│ │ -
+│ │ -THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+│ │ -IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │ -FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │ -AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │ -LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │ -OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+│ │ -THE SOFTWARE.
+│ │ +The MIT License (MIT)
+│ │ +
+│ │ +Copyright (c) 2016-2018 Plotly, Inc
+│ │ +
+│ │ +Permission is hereby granted, free of charge, to any person obtaining a copy
+│ │ +of this software and associated documentation files (the "Software"), to deal
+│ │ +in the Software without restriction, including without limitation the rights
+│ │ +to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+│ │ +copies of the Software, and to permit persons to whom the Software is
+│ │ +furnished to do so, subject to the following conditions:
+│ │ +
+│ │ +The above copyright notice and this permission notice shall be included in
+│ │ +all copies or substantial portions of the Software.
+│ │ +
+│ │ +THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+│ │ +IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │ +FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │ +AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │ +LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │ +OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+│ │ +THE SOFTWARE.
+│ │   --- vpalette-2.0.1/README.md
+│ ├── +++ vpalette-2.1.0/README.md
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,86 +1,91 @@
+│ │ -# Palettes
+│ │ -[![Build Status](https://travis-ci.com/villoro/v-palette.svg?branch=master)](https://travis-ci.com/villoro/v-palette)
+│ │ -
+│ │ -Utility to easily use palettes
+│ │ -
+│ │ -## Colors
+│ │ -
+│ │ -There are two palettes **material** and **flat**.
+│ │ -
+│ │ -### Material Colors
+│ │ -<img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/material_grid.svg?sanitize=true">
+│ │ -
+│ │ -You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/material_grid.svg). More info at [material.io](https://material.io/design/color/the-color-system.html#color-usage-palettes).
+│ │ -
+│ │ -### Flat Colors
+│ │ -<img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/flat_grid.svg?sanitize=true">
+│ │ -
+│ │ -You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/flat_grid.svg). More info at [html color codes](https://htmlcolorcodes.com/color-chart/flat-design-color-chart/).
+│ │ -
+│ │ -## Installation
+│ │ -
+│ │ -You can install it with pip by running:
+│ │ -
+│ │ -    pip install v-palette
+│ │ -
+│ │ -
+│ │ -## Usage
+│ │ -
+│ │ -You can retrive one color or a list of colors using `get_colors` function:
+│ │ -
+│ │ -```python
+│ │ -from v_palette import get_colors
+│ │ -
+│ │ -# 1. Retrive one color
+│ │ -get_colors(("red", 100)) # out: '#FFCDD2'
+│ │ -
+│ │ -# 2. Retrive some colors
+│ │ -get_colors([("red", 100), ("blue", 100)]) # out: ['#FFCDD2', '#BBDEFB']
+│ │ -
+│ │ -# 3. Retrive colors from others palettes
+│ │ -get_colors([("emerald", 100), ("silver", 100)]) # out: ['#D5F5E3', '#F2F3F4']
+│ │ -get_colors([("emerald", 100), ("silver", 100)], palette="flat") # out: ['#D5F5E3', '#F2F3F4']
+│ │ -```
+│ │ -
+│ │ -> The parameter `palette` is not necessary if the color you want is not present in the material palette. Since if the color is not found in the default palette it will look at the others palettes.
+│ │ -
+│ │ -## Development
+│ │ -
+│ │ -This package relies on [poetry](https://villoro.com/post/poetry) and `pre-commit`. In order to develop you need to install both libraries with:
+│ │ -
+│ │ -```sh
+│ │ -pip install poetry pre-commit
+│ │ -poetry install
+│ │ -pre-commit install
+│ │ -```
+│ │ -
+│ │ -Then you need to add `poetry run` before any python shell command. For example:
+│ │ -
+│ │ -```sh
+│ │ -# DO
+│ │ -poetry run python master.py
+│ │ -
+│ │ -# don't do
+│ │ -python master.py
+│ │ -```
+│ │ -
+│ │ -## Authors
+│ │ -* [Arnau Villoro](https://villoro.com)
+│ │ -
+│ │ -## License
+│ │ -The content of this repository is licensed under a [MIT](https://opensource.org/licenses/MIT).
+│ │ -
+│ │ -## Nomenclature
+│ │ -Branches and commits use some prefixes to keep everything better organized.
+│ │ -
+│ │ -### Branches
+│ │ -* **f/:** features
+│ │ -* **r/:** releases
+│ │ -* **h/:** hotfixs
+│ │ -
+│ │ -### Commits
+│ │ -* **[NEW]** new features
+│ │ -* **[FIX]** fixes
+│ │ -* **[REF]** refactors
+│ │ -* **[PYL]** [pylint](https://www.pylint.org/) improvements
+│ │ -* **[TST]** tests
+│ │ +# Palettes
+│ │ +[![Build Status](https://travis-ci.com/villoro/v-palette.svg?branch=master)](https://travis-ci.com/villoro/v-palette)
+│ │ +
+│ │ +Utility to easily use palettes
+│ │ +
+│ │ +## Colors
+│ │ +
+│ │ +There are two palettes **material** and **flat**.
+│ │ +
+│ │ +### Material Colors
+│ │ +<img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/material_grid.svg?sanitize=true">
+│ │ +
+│ │ +You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/material_grid.svg). More info at [material.io](https://material.io/design/color/the-color-system.html#color-usage-palettes).
+│ │ +
+│ │ +### Flat Colors
+│ │ +<img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/flat_grid.svg?sanitize=true">
+│ │ +
+│ │ +You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/flat_grid.svg). More info at [html color codes](https://htmlcolorcodes.com/color-chart/flat-design-color-chart/).
+│ │ +
+│ │ +### Tailwind Colors
+│ │ +<img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/tailwind.svg?sanitize=true">
+│ │ +
+│ │ +You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/tailwind.svg). More info at [tailwind colors](https://uicolors.app/browse/tailwind-colors).
+│ │ +
+│ │ +## Installation
+│ │ +
+│ │ +You can install it with pip by running:
+│ │ +
+│ │ +    pip install v-palette
+│ │ +
+│ │ +
+│ │ +## Usage
+│ │ +
+│ │ +You can retrive one color or a list of colors using `get_colors` function:
+│ │ +
+│ │ +```python
+│ │ +from v_palette import get_colors
+│ │ +
+│ │ +# 1. Retrive one color
+│ │ +get_colors(("red", 100)) # out: '#FFCDD2'
+│ │ +
+│ │ +# 2. Retrive some colors
+│ │ +get_colors([("red", 100), ("blue", 100)]) # out: ['#FFCDD2', '#BBDEFB']
+│ │ +
+│ │ +# 3. Retrive colors from others palettes
+│ │ +get_colors([("emerald", 100), ("silver", 100)]) # out: ['#D5F5E3', '#F2F3F4']
+│ │ +get_colors([("emerald", 100), ("silver", 100)], palette="flat") # out: ['#D5F5E3', '#F2F3F4']
+│ │ +```
+│ │ +
+│ │ +> The parameter `palette` is not necessary if the color you want is not present in the material palette. Since if the color is not found in the default palette it will look at the others palettes.
+│ │ +
+│ │ +## Development
+│ │ +
+│ │ +This package relies on [poetry](https://villoro.com/post/poetry) and `pre-commit`. In order to develop you need to install both libraries with:
+│ │ +
+│ │ +```sh
+│ │ +pip install poetry pre-commit
+│ │ +poetry install
+│ │ +pre-commit install
+│ │ +```
+│ │ +
+│ │ +Then you need to add `poetry run` before any python shell command. For example:
+│ │ +
+│ │ +```sh
+│ │ +# DO
+│ │ +poetry run python master.py
+│ │ +
+│ │ +# don't do
+│ │ +python master.py
+│ │ +```
+│ │ +
+│ │ +## Authors
+│ │ +* [Arnau Villoro](https://villoro.com)
+│ │ +
+│ │ +## License
+│ │ +The content of this repository is licensed under a [MIT](https://opensource.org/licenses/MIT).
+│ │ +
+│ │ +## Nomenclature
+│ │ +Branches and commits use some prefixes to keep everything better organized.
+│ │ +
+│ │ +### Branches
+│ │ +* **f/:** features
+│ │ +* **r/:** releases
+│ │ +* **h/:** hotfixs
+│ │ +
+│ │ +### Commits
+│ │ +* **[NEW]** new features
+│ │ +* **[FIX]** fixes
+│ │ +* **[REF]** refactors
+│ │ +* **[PYL]** [pylint](https://www.pylint.org/) improvements
+│ │ +* **[TST]** tests
+│ │   --- vpalette-2.0.1/vpalette/palette.py
+│ ├── +++ vpalette-2.1.0/vpalette/palette.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,90 +1,90 @@
+│ │ -"""
+│ │ -    This library provides an easy way to call colors from palettes using python.
+│ │ -
+│ │ -    Available colors:
+│ │ -        - Material: https://material.io/guidelines/style/color.html#color-color-palette
+│ │ -        - Flat: https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+│ │ -"""
+│ │ -
+│ │ -from .colors import COLORS
+│ │ -
+│ │ -
+│ │ -_VALID_INDEXS = [50] + [100 * x for x in range(1, 10)]
+│ │ -
+│ │ -
+│ │ -def get_valid_colors():
+│ │ -    """ Gives a list of valid colors """
+│ │ -
+│ │ -    valid_colors = []
+│ │ -    for data in COLORS.values():
+│ │ -        valid_colors += list(data.keys())
+│ │ -
+│ │ -    return list(set(valid_colors))
+│ │ -
+│ │ -
+│ │ -def get_one_color(name, index, palette="material"):
+│ │ -    """
+│ │ -        Gives one color based on it's name and index.
+│ │ -
+│ │ -        Available colors:
+│ │ -        - Material: https://material.io/guidelines/style/color.html#color-color-palette
+│ │ -        - Flat: https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+│ │ -
+│ │ -        If the color is not found it will look at the other palettes.
+│ │ -
+│ │ -        Args:
+│ │ -            name:       name of the color
+│ │ -            index:      intesity of the color
+│ │ -            palette:    name of the palette with colors ['material', 'flat']
+│ │ -    """
+│ │ -
+│ │ -    name = name.lower()
+│ │ -
+│ │ -    # Check index
+│ │ -    if index not in _VALID_INDEXS:
+│ │ -        raise ValueError(f"Index {index} is not valid. Valid indexs are {_VALID_INDEXS}")
+│ │ -
+│ │ -    # Try to return it from the asked palette
+│ │ -    if name in COLORS[palette]:
+│ │ -        return COLORS[palette][name][index]
+│ │ -
+│ │ -    # Check if it is possible to retrive the color from other palettes
+│ │ -    for other_palette, data in COLORS.items():
+│ │ -
+│ │ -        if name in COLORS[other_palette]:
+│ │ -            return COLORS[other_palette][name][index]
+│ │ -
+│ │ -    # If color not found raise error
+│ │ -    raise ValueError(f"Color '{name}' is not valid. Valid colors are: {get_valid_colors()}")
+│ │ -
+│ │ -
+│ │ -def get_colors(data, palette="material"):
+│ │ -    """
+│ │ -        Gives hex colors.
+│ │ -
+│ │ -        You can pass a tuple with name and index. Example:
+│ │ -            get_colors(("red", 100)) --> "#FFCDD2"
+│ │ -
+│ │ -        Or a list of tuples with name and index. Examples:
+│ │ -            get_colors([("red", 100)]) --> ["#FFCDD2"]
+│ │ -            get_colors([("red", 100), ("blue", 100)]) --> ["#FFCDD2", "#BBDEFB"]
+│ │ -
+│ │ -        Available colors:
+│ │ -        - Material: https://material.io/guidelines/style/color.html#color-color-palette
+│ │ -        - Flat: https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+│ │ -
+│ │ -        Args:
+│ │ -            data:       tuple with (name, index) or a list of this tuples
+│ │ -            palette:    name of the palette with colors ['material', 'flat']
+│ │ -
+│ │ -        Returns:
+│ │ -            if input was a list --> list of hex colors
+│ │ -            if input was a tuple --> hex color
+│ │ -    """
+│ │ -
+│ │ -    # If it is a list, return a list of colors
+│ │ -    if isinstance(data, list):
+│ │ -        return [get_one_color(name, index, palette) for name, index in data]
+│ │ -
+│ │ -    # If it is a tuple, return one color
+│ │ -    return get_one_color(data[0], data[1], palette)
+│ │ +"""
+│ │ +    This library provides an easy way to call colors from palettes using python.
+│ │ +
+│ │ +    Available colors:
+│ │ +        - Material: https://material.io/guidelines/style/color.html#color-color-palette
+│ │ +        - Flat: https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+│ │ +"""
+│ │ +
+│ │ +from .colors import COLORS
+│ │ +
+│ │ +
+│ │ +_VALID_INDEXS = [50] + [100 * x for x in range(1, 10)]
+│ │ +
+│ │ +
+│ │ +def get_valid_colors():
+│ │ +    """Gives a list of valid colors"""
+│ │ +
+│ │ +    valid_colors = []
+│ │ +    for data in COLORS.values():
+│ │ +        valid_colors += list(data.keys())
+│ │ +
+│ │ +    return list(set(valid_colors))
+│ │ +
+│ │ +
+│ │ +def get_one_color(name, index, palette="material"):
+│ │ +    """
+│ │ +    Gives one color based on it's name and index.
+│ │ +
+│ │ +    Available colors:
+│ │ +    - Material: https://material.io/guidelines/style/color.html#color-color-palette
+│ │ +    - Flat: https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+│ │ +
+│ │ +    If the color is not found it will look at the other palettes.
+│ │ +
+│ │ +    Args:
+│ │ +        name:       name of the color
+│ │ +        index:      intesity of the color
+│ │ +        palette:    name of the palette with colors ['material', 'flat']
+│ │ +    """
+│ │ +
+│ │ +    name = name.lower()
+│ │ +
+│ │ +    # Check index
+│ │ +    if index not in _VALID_INDEXS:
+│ │ +        raise ValueError(f"Index {index} is not valid. Valid indexs are {_VALID_INDEXS}")
+│ │ +
+│ │ +    # Try to return it from the asked palette
+│ │ +    if name in COLORS[palette]:
+│ │ +        return COLORS[palette][name][index]
+│ │ +
+│ │ +    # Check if it is possible to retrive the color from other palettes
+│ │ +    for other_palette, data in COLORS.items():
+│ │ +
+│ │ +        if name in COLORS[other_palette]:
+│ │ +            return COLORS[other_palette][name][index]
+│ │ +
+│ │ +    # If color not found raise error
+│ │ +    raise ValueError(f"Color '{name}' is not valid. Valid colors are: {get_valid_colors()}")
+│ │ +
+│ │ +
+│ │ +def get_colors(data, palette="material"):
+│ │ +    """
+│ │ +    Gives hex colors.
+│ │ +
+│ │ +    You can pass a tuple with name and index. Example:
+│ │ +        get_colors(("red", 100)) --> "#FFCDD2"
+│ │ +
+│ │ +    Or a list of tuples with name and index. Examples:
+│ │ +        get_colors([("red", 100)]) --> ["#FFCDD2"]
+│ │ +        get_colors([("red", 100), ("blue", 100)]) --> ["#FFCDD2", "#BBDEFB"]
+│ │ +
+│ │ +    Available colors:
+│ │ +    - Material: https://material.io/guidelines/style/color.html#color-color-palette
+│ │ +    - Flat: https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+│ │ +
+│ │ +    Args:
+│ │ +        data:       tuple with (name, index) or a list of this tuples
+│ │ +        palette:    name of the palette with colors ['material', 'flat']
+│ │ +
+│ │ +    Returns:
+│ │ +        if input was a list --> list of hex colors
+│ │ +        if input was a tuple --> hex color
+│ │ +    """
+│ │ +
+│ │ +    # If it is a list, return a list of colors
+│ │ +    if isinstance(data, list):
+│ │ +        return [get_one_color(name, index, palette) for name, index in data]
+│ │ +
+│ │ +    # If it is a tuple, return one color
+│ │ +    return get_one_color(data[0], data[1], palette)
+│ │   --- vpalette-2.0.1/PKG-INFO
+│ ├── +++ vpalette-2.1.0/PKG-INFO
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,28 +1,35 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: vpalette
+│ │ -Version: 2.0.1
+│ │ +Version: 2.1.0
+│ │  Summary: Utility to easily use material design colors
+│ │  Home-page: https://github.com/villoro/vpalette
+│ │  License: MIT
+│ │  Author: Arnau Villoro
+│ │  Author-email: arnau@villoro.com
+│ │  Maintainer: Arnau Villoro
+│ │  Maintainer-email: arnau@villoro.com
+│ │ -Requires-Python: >=3.6.1,<4.0.0
+│ │ +Requires-Python: >=3.8.0,<4.0.0
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Intended Audience :: Education
+│ │  Classifier: Intended Audience :: Manufacturing
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: Programming Language :: Python :: 3.8
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │  Project-URL: Repository, https://github.com/villoro/vpalette
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Palettes
+│ │  [![Build Status](https://travis-ci.com/villoro/v-palette.svg?branch=master)](https://travis-ci.com/villoro/v-palette)
+│ │  
+│ │  Utility to easily use palettes
+│ │ @@ -37,14 +44,19 @@
+│ │  You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/material_grid.svg). More info at [material.io](https://material.io/design/color/the-color-system.html#color-usage-palettes).
+│ │  
+│ │  ### Flat Colors
+│ │  <img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/flat_grid.svg?sanitize=true">
+│ │  
+│ │  You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/flat_grid.svg). More info at [html color codes](https://htmlcolorcodes.com/color-chart/flat-design-color-chart/).
+│ │  
+│ │ +### Tailwind Colors
+│ │ +<img src="https://raw.githubusercontent.com/villoro/v-palette/master/assets/tailwind.svg?sanitize=true">
+│ │ +
+│ │ +You can view them in a [svg file](https://github.com/villoro/v-palette/blob/master/assets/tailwind.svg). More info at [tailwind colors](https://uicolors.app/browse/tailwind-colors).
+│ │ +
+│ │  ## Installation
+│ │  
+│ │  You can install it with pip by running:
+│ │  
+│ │      pip install v-palette

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/typst-0.1.3.tar.gz tmp/typst-0.1.4.tar.gz --html versions/t/typst/0.1.3-0.1.4/index.html --text versions/t/typst/0.1.3-0.1.4/diff.txt --markdown versions/t/typst/0.1.3-0.1.4/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.7 KB</span></div>
+  <div><span class="source">tmp/typst-0.1.3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/typst-0.1.4.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">12.6 KB</span></div>
+    <div><span class="source">typst-0.1.3.tar</span> vs.</div>
+    <div id="typst--.-.-.tar"><span class="source">typst-0.1.4.tar</span>
+      <a class="anchor" href="#typst--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.39 KB</span></div>
+      <div id="typst--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#typst--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 23 lines modified</td><td colspan="2">Offset 1, 27 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>66<del>4</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>typst-0.1.<del>3</del>/Cargo.toml</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>66<ins>8</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2752<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/.github/workflows/CI.yml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2752<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/.github/workflows/CI.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>685<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/.gitignore</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>685<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9723<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/LICENSE</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9723<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>766<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>766<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>421<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>421<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>74<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>74<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>483<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/__init__.pyi</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>483<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/__init__.pyi</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>331992<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/DejaVuSansMono-Bold.ttf</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>331992<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/DejaVuSansMono-Bold.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>253580<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/DejaVuSansMono-BoldOblique.ttf</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>253580<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/DejaVuSansMono-BoldOblique.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>251932<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/DejaVuSansMono-Oblique.ttf</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>251932<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/DejaVuSansMono-Oblique.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>340712<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/DejaVuSansMono.ttf</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>340712<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/DejaVuSansMono.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>806856<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/LinLibertine_R.ttf</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>806856<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/LinLibertine_R.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>748600<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/LinLibertine_RB.ttf</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>748600<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/LinLibertine_RB.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>533532<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/LinLibertine_RBI.ttf</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>533532<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/LinLibertine_RBI.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>721340<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/LinLibertine_RI.ttf</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>721340<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/LinLibertine_RI.ttf</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>499128<span class="dp">·</span>2023-04-07<span class="dp">·</span>08:16:41.000000<span class="dp">·</span>typst-0.1.4/python/typst/fonts/NewCM10-Bold.otf</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>445800<span class="dp">·</span>2023-04-07<span class="dp">·</span>08:16:41.000000<span class="dp">·</span>typst-0.1.4/python/typst/fonts/NewCM10-BoldItalic.otf</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>464808<span class="dp">·</span>2023-04-07<span class="dp">·</span>08:16:41.000000<span class="dp">·</span>typst-0.1.4/python/typst/fonts/NewCM10-Italic.otf</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>547508<span class="dp">·</span>2023-04-07<span class="dp">·</span>08:16:41.000000<span class="dp">·</span>typst-0.1.4/python/typst/fonts/NewCM10-Regular.otf</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span>2161432<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/NewCMMath-Book.otf</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span>2161432<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/NewCMMath-Book.otf</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span>1229208<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/fonts/NewCMMath-Regular.otf</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span>1229208<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/fonts/NewCMMath-Regular.otf</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/python/typst/py.typed</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/python/typst/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>94<del>07</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/src/compiler.rs</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>94<ins>15</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/src/compiler.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3946<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/src/lib.rs</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3946<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3884<del>3</del><span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>0<del>3</del>:<del>40</del>:<del>52</del>.000000<span class="dp">·</span>typst-0.1.<del>3</del>/Cargo.lock</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3884<ins>9</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>0<ins>8</ins>:<ins>16</ins>:<ins>41</ins>.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/Cargo.lock</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1228<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>typst-0.1.<del>3</del>/PKG-INFO</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1228<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>typst-0.1.<ins>4</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">948 B</span></div>
+      <div><span class="source">typst-0.1.3/Cargo.toml</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--Cargo.toml"><span class="source">typst-0.1.4/Cargo.toml</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--Cargo.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 21% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 24 lines modified</td><td colspan="2">Offset 1, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[package]</td><td class="diffline">1 </td><td class="diffpresent">[package]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-py&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-py&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>3</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>4</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">edition<span class="dp">·</span>=<span class="dp">·</span>&quot;2021&quot;</td><td class="diffline">4 </td><td class="diffpresent">edition<span class="dp">·</span>=<span class="dp">·</span>&quot;2021&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Python<span class="dp">·</span>binding<span class="dp">·</span>to<span class="dp">·</span>typst&quot;</td><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Python<span class="dp">·</span>binding<span class="dp">·</span>to<span class="dp">·</span>typst&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache-2.0&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache-2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/messense/typst-py&quot;</td><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/messense/typst-py&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">#<span class="dp">·</span>See<span class="dp">·</span>more<span class="dp">·</span>keys<span class="dp">·</span>and<span class="dp">·</span>their<span class="dp">·</span>definitions<span class="dp">·</span>at<span class="dp">·</span>https://doc.rust-lang.org/cargo/reference/manifest.html</td><td class="diffline">9 </td><td class="diffpresent">#<span class="dp">·</span>See<span class="dp">·</span>more<span class="dp">·</span>keys<span class="dp">·</span>and<span class="dp">·</span>their<span class="dp">·</span>definitions<span class="dp">·</span>at<span class="dp">·</span>https://doc.rust-lang.org/cargo/reference/manifest.html</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">[lib]</td><td class="diffline">10 </td><td class="diffpresent">[lib]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">crate-type<span class="dp">·</span>=<span class="dp">·</span>[&quot;cdylib&quot;]</td><td class="diffline">11 </td><td class="diffpresent">crate-type<span class="dp">·</span>=<span class="dp">·</span>[&quot;cdylib&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">[dependencies]</td><td class="diffline">12 </td><td class="diffpresent">[dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">pyo3<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.18.1&quot;,<span class="dp">·</span>features<span class="dp">·</span>=<span class="dp">·</span>[&quot;abi3-py37&quot;]<span class="dp">·</span>}</td><td class="diffline">13 </td><td class="diffpresent">pyo3<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.18.1&quot;,<span class="dp">·</span>features<span class="dp">·</span>=<span class="dp">·</span>[&quot;abi3-py37&quot;]<span class="dp">·</span>}</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">typst<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>git<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/typst/typst.git&quot;,<span class="dp">·</span>tag<span class="dp">·</span>=<span class="dp">·</span>&quot;v0.1&quot;<span class="dp">·</span>}</td><td class="diffline">14 </td><td class="diffpresent">typst<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>git<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/typst/typst.git&quot;,<span class="dp">·</span>tag<span class="dp">·</span>=<span class="dp">·</span>&quot;v0.1<ins>.0</ins>&quot;<span class="dp">·</span>}</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">typst-library<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>git<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/typst/typst.git&quot;,<span class="dp">·</span>tag<span class="dp">·</span>=<span class="dp">·</span>&quot;v0.1&quot;<span class="dp">·</span>}</td><td class="diffline">15 </td><td class="diffpresent">typst-library<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>git<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/typst/typst.git&quot;,<span class="dp">·</span>tag<span class="dp">·</span>=<span class="dp">·</span>&quot;v0.1<ins>.0</ins>&quot;<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">comemo<span class="dp">·</span>=<span class="dp">·</span>&quot;0.2&quot;</td><td class="diffline">16 </td><td class="diffpresent">comemo<span class="dp">·</span>=<span class="dp">·</span>&quot;0.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">dirs<span class="dp">·</span>=<span class="dp">·</span>&quot;5&quot;</td><td class="diffline">17 </td><td class="diffpresent">dirs<span class="dp">·</span>=<span class="dp">·</span>&quot;5&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">elsa<span class="dp">·</span>=<span class="dp">·</span>&quot;1.7&quot;</td><td class="diffline">18 </td><td class="diffpresent">elsa<span class="dp">·</span>=<span class="dp">·</span>&quot;1.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">memmap2<span class="dp">·</span>=<span class="dp">·</span>&quot;0.5&quot;</td><td class="diffline">19 </td><td class="diffpresent">memmap2<span class="dp">·</span>=<span class="dp">·</span>&quot;0.5&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">once_cell<span class="dp">·</span>=<span class="dp">·</span>&quot;1&quot;</td><td class="diffline">20 </td><td class="diffpresent">once_cell<span class="dp">·</span>=<span class="dp">·</span>&quot;1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">same-file<span class="dp">·</span>=<span class="dp">·</span>&quot;1&quot;</td><td class="diffline">21 </td><td class="diffpresent">same-file<span class="dp">·</span>=<span class="dp">·</span>&quot;1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">siphasher<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3&quot;</td><td class="diffline">22 </td><td class="diffpresent">siphasher<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">typst-0.1.3/.github/workflows/CI.yml</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--.github-workflows-CI.yml"><span class="source">typst-0.1.4/.github/workflows/CI.yml</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--.github-workflows-CI.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">typst-0.1.3/.gitignore</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--.gitignore"><span class="source">typst-0.1.4/.gitignore</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">77.0 B</span></div>
+      <div><span class="source">typst-0.1.3/LICENSE</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--LICENSE"><span class="source">typst-0.1.4/LICENSE</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">typst-0.1.3/README.md</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--README.md"><span class="source">typst-0.1.4/README.md</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/DejaVuSansMono-Bold.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono-Bold.ttf"><span class="source">typst-0.1.4/python/typst/fonts/DejaVuSansMono-Bold.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono-Bold.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/DejaVuSansMono-BoldOblique.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono-BoldOblique.ttf"><span class="source">typst-0.1.4/python/typst/fonts/DejaVuSansMono-BoldOblique.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono-BoldOblique.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/DejaVuSansMono-Oblique.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono-Oblique.ttf"><span class="source">typst-0.1.4/python/typst/fonts/DejaVuSansMono-Oblique.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono-Oblique.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/DejaVuSansMono.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono.ttf"><span class="source">typst-0.1.4/python/typst/fonts/DejaVuSansMono.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-DejaVuSansMono.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/LinLibertine_R.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_R.ttf"><span class="source">typst-0.1.4/python/typst/fonts/LinLibertine_R.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_R.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/LinLibertine_RB.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_RB.ttf"><span class="source">typst-0.1.4/python/typst/fonts/LinLibertine_RB.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_RB.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/LinLibertine_RBI.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_RBI.ttf"><span class="source">typst-0.1.4/python/typst/fonts/LinLibertine_RBI.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_RBI.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/LinLibertine_RI.ttf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_RI.ttf"><span class="source">typst-0.1.4/python/typst/fonts/LinLibertine_RI.ttf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-LinLibertine_RI.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/NewCMMath-Book.otf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-NewCMMath-Book.otf"><span class="source">typst-0.1.4/python/typst/fonts/NewCMMath-Book.otf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-NewCMMath-Book.otf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">typst-0.1.3/python/typst/fonts/NewCMMath-Regular.otf</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--python-typst-fonts-NewCMMath-Regular.otf"><span class="source">typst-0.1.4/python/typst/fonts/NewCMMath-Regular.otf</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--python-typst-fonts-NewCMMath-Regular.otf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.36 KB</span></div>
+      <div><span class="source">typst-0.1.3/src/compiler.rs</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--src-compiler.rs"><span class="source">typst-0.1.4/src/compiler.rs</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--src-compiler.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 236, 22 lines modified</td><td colspan="2">Offset 236, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">236 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>///<span class="dp">·</span>Search<span class="dp">·</span>for<span class="dp">·</span>fonts<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>macOS<span class="dp">·</span>system<span class="dp">·</span>font<span class="dp">·</span>directories.</td><td class="diffline">236 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>///<span class="dp">·</span>Search<span class="dp">·</span>for<span class="dp">·</span>fonts<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>macOS<span class="dp">·</span>system<span class="dp">·</span>font<span class="dp">·</span>directories.</td></tr>
+<tr class="diffunmodified"><td class="diffline">237 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#[cfg(target_os<span class="dp">·</span>=<span class="dp">·</span>&quot;macos&quot;)]</td><td class="diffline">237 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#[cfg(target_os<span class="dp">·</span>=<span class="dp">·</span>&quot;macos&quot;)]</td></tr>
+<tr class="diffunmodified"><td class="diffline">238 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>fn<span class="dp">·</span>search_system(&amp;mut<span class="dp">·</span>self)<span class="dp">·</span>{</td><td class="diffline">238 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>fn<span class="dp">·</span>search_system(&amp;mut<span class="dp">·</span>self)<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">239 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(&quot;/Library/Fonts&quot;);</td><td class="diffline">239 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(&quot;/Library/Fonts&quot;);</td></tr>
+<tr class="diffunmodified"><td class="diffline">240 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(&quot;/System/Library/Fonts&quot;);</td><td class="diffline">240 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(&quot;/System/Library/Fonts&quot;);</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">241 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>//<span class="dp">·</span>Downloadable<span class="dp">·</span>fonts,<span class="dp">·</span>location<span class="dp">·</span>varies<span class="dp">·</span>on<span class="dp">·</span>major<span class="dp">·</span>macOS<span class="dp">·</span>releases</td><td class="diffline">241 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>//<span class="dp">·</span>Downloadable<span class="dp">·</span>fonts,<span class="dp">·</span>location<span class="dp">·</span>varies<span class="dp">·</span>on<span class="dp">·</span>major<span class="dp">·</span>macOS<span class="dp">·</span>releases</td></tr>
+<tr class="diffchanged"><td class="diffline">242 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>f</del><del>or</del><span class="dp">·</span><del>en</del>t<del>ry<span class="dp">·</span>in<span class="dp">·</span>walkdir</del>::<del>W</del>a<del>lkD</del>ir<del>::new</del>(&quot;/System/Library/AssetsV2&quot;<del>).max_depth(1</del>)<span class="dp">·</span>{</td><td class="diffline">242 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>if</ins><span class="dp">·</span><ins>le</ins>t<ins><span class="dp">·</span>Ok(dir)<span class="dp">·</span>=<span class="dp">·</span>fs</ins>::<ins>r</ins><ins>e</ins>a<ins>d_d</ins>ir(&quot;/System/Library/AssetsV2&quot;)<span class="dp">·</span>{</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">243 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>entry<span class="dp">·</span>in<span class="dp">·</span>dir<span class="dp">·</span>{</td></tr>
+<tr class="diffchanged"><td class="diffline">243 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>let<span class="dp">·</span>Ok(entry)<span class="dp">·</span>=<span class="dp">·</span>entry<span class="dp">·</span>else<span class="dp">·</span>{<span class="dp">·</span>continue<span class="dp">·</span>};</td><td class="diffline">244 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>let<span class="dp">·</span>Ok(entry)<span class="dp">·</span>=<span class="dp">·</span>entry<span class="dp">·</span>else<span class="dp">·</span>{<span class="dp">·</span>continue<span class="dp">·</span>};</td></tr>
+<tr class="diffchanged"><td class="diffline">244 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>let</del><span class="dp">·</span><del>Some(filename)</del><span class="dp">·</span><del>=</del><span class="dp">·</span><del>entry.path().</del><del>f</del>i<del>le_name(</del><del>)</del><span class="dp">·</span><del>els</del>e<del><span class="dp">·</span>{<span class="dp">·</span>co</del>nt<del>inue<span class="dp">·</span></del><del>};</del></td><td class="diffline">245 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span></ins>i<ins>f</ins><span class="dp">·</span>ent<ins>ry</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">245 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>if</del><span class="dp">·</span>filename</td><td class="diffline">246 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins><ins><span class="dp">·</span><span class="dp">·</span></ins><span class="dp">·</span><ins>.</ins>file<ins>_</ins>name<ins>()</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">246 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.to_string_lossy()</td><td class="diffline">247 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>.to_string_lossy()</td></tr>
+<tr class="diffchanged"><td class="diffline">247 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>.starts_with(&quot;com_apple_MobileAsset_Font&quot;)</td><td class="diffline">248 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>.starts_with(&quot;com_apple_MobileAsset_Font&quot;)</td></tr>
+<tr class="diffchanged"><td class="diffline">248 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{</td><td class="diffline">249 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>{</td></tr>
+<tr class="diffchanged"><td class="diffline">249 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(entry.path());</td><td class="diffline">250 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>self.search_dir(entry.path());</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">251 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">250 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">252 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">251 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">253 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">252 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(&quot;/Network/Library/Fonts&quot;);</td><td class="diffline">254 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(&quot;/Network/Library/Fonts&quot;);</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">253 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>let<span class="dp">·</span>Some(dir)<span class="dp">·</span>=<span class="dp">·</span>dirs::font_dir()<span class="dp">·</span>{</td><td class="diffline">255 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>let<span class="dp">·</span>Some(dir)<span class="dp">·</span>=<span class="dp">·</span>dirs::font_dir()<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">254 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(dir);</td><td class="diffline">256 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.search_dir(dir);</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">typst-0.1.3/src/lib.rs</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--src-lib.rs"><span class="source">typst-0.1.4/src/lib.rs</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--src-lib.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.64 KB</span></div>
+      <div><span class="source">typst-0.1.3/Cargo.lock</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--Cargo.lock"><span class="source">typst-0.1.4/Cargo.lock</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--Cargo.lock">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 220, 17 lines modified</td><td colspan="2">Offset 220, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">220 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;ecow&quot;</td><td class="diffline">220 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;ecow&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">221 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td><td class="diffline">221 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">222 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td><td class="diffline">222 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">223 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;e60e2840fbfc397c7972b11a6e6bd99a0248921cc1e31f293c5f6c5ac24831da&quot;</td><td class="diffline">223 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;e60e2840fbfc397c7972b11a6e6bd99a0248921cc1e31f293c5f6c5ac24831da&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">224 </td><td class="diffpresent">[[package]]</td><td class="diffline">224 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">225 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;elsa&quot;</td><td class="diffline">225 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;elsa&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">226 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.8.<del>0</del>&quot;</td><td class="diffline">226 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.8.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">227 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td><td class="diffline">227 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">228 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;<del>f74</del>0<del>7</del><del>7</del>c<del>3c3a</del>e<del>db99a</del>2<del>6839</del>1<del>969828559666</del>2<del>518ea13e5</del>e<del>edcf</del>8<del>b</del><del>dd43</del>b<del>0d045</del>3<del>b</del>&quot;</td><td class="diffline">228 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;<ins>b5e</ins>0<ins>a</ins>c<ins>a8dc</ins>e<ins>8</ins><ins>856e4</ins>2<ins>01</ins><ins>95bd</ins>1<ins>3b6a64de3334</ins>2<ins>35ccc9214</ins>e<ins>824b</ins>8<ins>6b12</ins>b<ins>f2628</ins>3&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">229 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">229 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">230 </td><td class="diffpresent"><span class="dp">·</span>&quot;stable_deref_trait&quot;,</td><td class="diffline">230 </td><td class="diffpresent"><span class="dp">·</span>&quot;stable_deref_trait&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">231 </td><td class="diffpresent">]</td><td class="diffline">231 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">232 </td><td class="diffpresent">[[package]]</td><td class="diffline">232 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">233 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;fancy-regex&quot;</td><td class="diffline">233 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;fancy-regex&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">234 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.7.1&quot;</td><td class="diffline">234 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.7.1&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 270, 17 lines modified</td><td colspan="2">Offset 270, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">270 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;a9c384f161156f5260c24a097c56119f9be8c798586aecc13afbcbe7b7e26bf8&quot;</td><td class="diffline">270 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;a9c384f161156f5260c24a097c56119f9be8c798586aecc13afbcbe7b7e26bf8&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">271 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">271 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">272 </td><td class="diffpresent"><span class="dp">·</span>&quot;percent-encoding&quot;,</td><td class="diffline">272 </td><td class="diffpresent"><span class="dp">·</span>&quot;percent-encoding&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">273 </td><td class="diffpresent">]</td><td class="diffline">273 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">274 </td><td class="diffpresent">[[package]]</td><td class="diffline">274 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">275 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;getrandom&quot;</td><td class="diffline">275 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;getrandom&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">276 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.2.<del>8</del>&quot;</td><td class="diffline">276 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.2.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">277 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td><td class="diffline">277 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">278 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;c<del>0</del>5<del>aeb6</del>a2<del>2</del>b<del>8f625</del>40<del>c194aac98</del>0<del>f</del>2<del>115</del>a<del>f</del><del>06</del>7<del>bf</del><del>e15a0</del>7<del>3</del><del>4d7</del>2<del>77a768d396b31</del>&quot;</td><td class="diffline">278 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;c<ins>8</ins>5<ins>e1d9</ins>a<ins>b</ins>2<ins>ea</ins><ins>d</ins>b<ins>a7e50</ins>40<ins>d</ins><ins>4e09cbd6d</ins>0<ins>7</ins>2<ins>b76</ins>a<ins>55</ins>7<ins>ad64e</ins>7<ins>97c</ins>2<ins>cb9d4da21d7e4</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">279 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">279 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">280 </td><td class="diffpresent"><span class="dp">·</span>&quot;cfg-if&quot;,</td><td class="diffline">280 </td><td class="diffpresent"><span class="dp">·</span>&quot;cfg-if&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">281 </td><td class="diffpresent"><span class="dp">·</span>&quot;libc&quot;,</td><td class="diffline">281 </td><td class="diffpresent"><span class="dp">·</span>&quot;libc&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">282 </td><td class="diffpresent"><span class="dp">·</span>&quot;wasi&quot;,</td><td class="diffline">282 </td><td class="diffpresent"><span class="dp">·</span>&quot;wasi&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">283 </td><td class="diffpresent">]</td><td class="diffline">283 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">284 </td><td class="diffpresent">[[package]]</td><td class="diffline">284 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1142, 15 lines modified</td><td colspan="2">Offset 1142, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1142 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2.0.2&quot;</td><td class="diffline">1142 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2.0.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1143 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td><td class="diffline">1143 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;registry+https://github.com/rust-lang/crates.io-index&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1144 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;6af6ae20167a9ece4bcb41af5b80f8a1f1df981f6391189ce00fd257af04126a&quot;</td><td class="diffline">1144 </td><td class="diffpresent">checksum<span class="dp">·</span>=<span class="dp">·</span>&quot;6af6ae20167a9ece4bcb41af5b80f8a1f1df981f6391189ce00fd257af04126a&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1145 </td><td class="diffpresent">[[package]]</td><td class="diffline">1145 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">1146 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst&quot;</td><td class="diffline">1146 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1147 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td><td class="diffline">1147 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">1148 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/typst/typst.git?tag=v0.1#b3faef4b80a674294091066e20501e3a5d0f6103&quot;</td><td class="diffline">1148 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/typst/typst.git?tag=v0.1<ins>.0</ins>#b3faef4b80a674294091066e20501e3a5d0f6103&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1149 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">1149 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">1150 </td><td class="diffpresent"><span class="dp">·</span>&quot;bitflags&quot;,</td><td class="diffline">1150 </td><td class="diffpresent"><span class="dp">·</span>&quot;bitflags&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1151 </td><td class="diffpresent"><span class="dp">·</span>&quot;bytemuck&quot;,</td><td class="diffline">1151 </td><td class="diffpresent"><span class="dp">·</span>&quot;bytemuck&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1152 </td><td class="diffpresent"><span class="dp">·</span>&quot;comemo&quot;,</td><td class="diffline">1152 </td><td class="diffpresent"><span class="dp">·</span>&quot;comemo&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1153 </td><td class="diffpresent"><span class="dp">·</span>&quot;ecow&quot;,</td><td class="diffline">1153 </td><td class="diffpresent"><span class="dp">·</span>&quot;ecow&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1154 </td><td class="diffpresent"><span class="dp">·</span>&quot;flate2&quot;,</td><td class="diffline">1154 </td><td class="diffpresent"><span class="dp">·</span>&quot;flate2&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1155 </td><td class="diffpresent"><span class="dp">·</span>&quot;if_chain&quot;,</td><td class="diffline">1155 </td><td class="diffpresent"><span class="dp">·</span>&quot;if_chain&quot;,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1179, 15 lines modified</td><td colspan="2">Offset 1179, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1179 </td><td class="diffpresent"><span class="dp">·</span>&quot;usvg&quot;,</td><td class="diffline">1179 </td><td class="diffpresent"><span class="dp">·</span>&quot;usvg&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1180 </td><td class="diffpresent"><span class="dp">·</span>&quot;xmp-writer&quot;,</td><td class="diffline">1180 </td><td class="diffpresent"><span class="dp">·</span>&quot;xmp-writer&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1181 </td><td class="diffpresent">]</td><td class="diffline">1181 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1182 </td><td class="diffpresent">[[package]]</td><td class="diffline">1182 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">1183 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-library&quot;</td><td class="diffline">1183 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-library&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1184 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td><td class="diffline">1184 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">1185 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/typst/typst.git?tag=v0.1#b3faef4b80a674294091066e20501e3a5d0f6103&quot;</td><td class="diffline">1185 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/typst/typst.git?tag=v0.1<ins>.0</ins>#b3faef4b80a674294091066e20501e3a5d0f6103&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1186 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">1186 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">1187 </td><td class="diffpresent"><span class="dp">·</span>&quot;comemo&quot;,</td><td class="diffline">1187 </td><td class="diffpresent"><span class="dp">·</span>&quot;comemo&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1188 </td><td class="diffpresent"><span class="dp">·</span>&quot;csv&quot;,</td><td class="diffline">1188 </td><td class="diffpresent"><span class="dp">·</span>&quot;csv&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1189 </td><td class="diffpresent"><span class="dp">·</span>&quot;ecow&quot;,</td><td class="diffline">1189 </td><td class="diffpresent"><span class="dp">·</span>&quot;ecow&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1190 </td><td class="diffpresent"><span class="dp">·</span>&quot;hayagriva&quot;,</td><td class="diffline">1190 </td><td class="diffpresent"><span class="dp">·</span>&quot;hayagriva&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1191 </td><td class="diffpresent"><span class="dp">·</span>&quot;hypher&quot;,</td><td class="diffline">1191 </td><td class="diffpresent"><span class="dp">·</span>&quot;hypher&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1192 </td><td class="diffpresent"><span class="dp">·</span>&quot;kurbo&quot;,</td><td class="diffline">1192 </td><td class="diffpresent"><span class="dp">·</span>&quot;kurbo&quot;,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1209, 26 lines modified</td><td colspan="2">Offset 1209, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1209 </td><td class="diffpresent"><span class="dp">·</span>&quot;unicode-segmentation&quot;,</td><td class="diffline">1209 </td><td class="diffpresent"><span class="dp">·</span>&quot;unicode-segmentation&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1210 </td><td class="diffpresent"><span class="dp">·</span>&quot;xi-unicode&quot;,</td><td class="diffline">1210 </td><td class="diffpresent"><span class="dp">·</span>&quot;xi-unicode&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1211 </td><td class="diffpresent">]</td><td class="diffline">1211 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1212 </td><td class="diffpresent">[[package]]</td><td class="diffline">1212 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">1213 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-macros&quot;</td><td class="diffline">1213 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-macros&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1214 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td><td class="diffline">1214 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.0&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">1215 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/typst/typst.git?tag=v0.1#b3faef4b80a674294091066e20501e3a5d0f6103&quot;</td><td class="diffline">1215 </td><td class="diffpresent">source<span class="dp">·</span>=<span class="dp">·</span>&quot;git+https://github.com/typst/typst.git?tag=v0.1<ins>.0</ins>#b3faef4b80a674294091066e20501e3a5d0f6103&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1216 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">1216 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">1217 </td><td class="diffpresent"><span class="dp">·</span>&quot;heck&quot;,</td><td class="diffline">1217 </td><td class="diffpresent"><span class="dp">·</span>&quot;heck&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1218 </td><td class="diffpresent"><span class="dp">·</span>&quot;proc-macro2&quot;,</td><td class="diffline">1218 </td><td class="diffpresent"><span class="dp">·</span>&quot;proc-macro2&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1219 </td><td class="diffpresent"><span class="dp">·</span>&quot;quote&quot;,</td><td class="diffline">1219 </td><td class="diffpresent"><span class="dp">·</span>&quot;quote&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1220 </td><td class="diffpresent"><span class="dp">·</span>&quot;syn<span class="dp">·</span>1.0.109&quot;,</td><td class="diffline">1220 </td><td class="diffpresent"><span class="dp">·</span>&quot;syn<span class="dp">·</span>1.0.109&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1221 </td><td class="diffpresent"><span class="dp">·</span>&quot;unscanny&quot;,</td><td class="diffline">1221 </td><td class="diffpresent"><span class="dp">·</span>&quot;unscanny&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1222 </td><td class="diffpresent">]</td><td class="diffline">1222 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1223 </td><td class="diffpresent">[[package]]</td><td class="diffline">1223 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">1224 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-py&quot;</td><td class="diffline">1224 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;typst-py&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">1225 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>3</del>&quot;</td><td class="diffline">1225 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>4</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1226 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">1226 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">1227 </td><td class="diffpresent"><span class="dp">·</span>&quot;comemo&quot;,</td><td class="diffline">1227 </td><td class="diffpresent"><span class="dp">·</span>&quot;comemo&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1228 </td><td class="diffpresent"><span class="dp">·</span>&quot;dirs&quot;,</td><td class="diffline">1228 </td><td class="diffpresent"><span class="dp">·</span>&quot;dirs&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1229 </td><td class="diffpresent"><span class="dp">·</span>&quot;elsa&quot;,</td><td class="diffline">1229 </td><td class="diffpresent"><span class="dp">·</span>&quot;elsa&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1230 </td><td class="diffpresent"><span class="dp">·</span>&quot;memmap2&quot;,</td><td class="diffline">1230 </td><td class="diffpresent"><span class="dp">·</span>&quot;memmap2&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1231 </td><td class="diffpresent"><span class="dp">·</span>&quot;once_cell&quot;,</td><td class="diffline">1231 </td><td class="diffpresent"><span class="dp">·</span>&quot;once_cell&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1232 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3&quot;,</td><td class="diffline">1232 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">453 B</span></div>
+      <div><span class="source">typst-0.1.3/PKG-INFO</span> vs.</div>
+      <div id="typst--.-.-.tar---typst--.-.--PKG-INFO"><span class="source">typst-0.1.4/PKG-INFO</span>
+        <a class="anchor" href="#typst--.-.-.tar---typst--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>typst</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>typst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>4</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Rust</td><td class="diffline">4 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Rust</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>CPython</td><td class="diffline">5 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>CPython</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>PyPy</td><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>PyPy</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">7 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>binding<span class="dp">·</span>to<span class="dp">·</span>typst</td><td class="diffline">8 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>binding<span class="dp">·</span>to<span class="dp">·</span>typst</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>Apache-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
