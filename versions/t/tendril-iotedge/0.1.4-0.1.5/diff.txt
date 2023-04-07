@@ -1,0 +1,865 @@
+--- tmp/tendril-iotedge-0.1.4.tar.gz
++++ tmp/tendril-iotedge-0.1.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/tendril-iotedge-0.1.4.tar", last modified: Tue Mar 28 11:12:33 2023, max compression
+│ +gzip compressed data, was "tendril-iotedge-0.1.5.tar", last modified: Fri Apr  7 02:36:09 2023, max compression
+│   --- tendril-iotedge-0.1.4.tar
+├── +++ tendril-iotedge-0.1.5.tar
+│ ├── file list
+│ │ @@ -1,70 +1,77 @@
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     2122 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/.gitignore
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      638 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/.readthedocs.yml
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      629 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/.travis.yml
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)        0 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/CHANGELOG.rst
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)    34520 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/LICENSE
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      173 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/MANIFEST.in
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     3925 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/PKG-INFO
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     2192 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/README.rst
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/docs/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     7660 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/Makefile
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/docs/_static/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     2727 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/_static/custom.css
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)   128918 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/_static/favicon.ico
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)    96804 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/_static/logo.png
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     9889 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/_static/logo_packed.png
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/docs/_templates/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1713 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/_templates/about.html
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/docs/api/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      128 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/api/index.rst
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)    13460 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/conf.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      895 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/index.rst
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1536 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/installation.rst
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/docs/usage/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       35 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/usage/standalone.rst
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       49 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/docs/usage/tendril.rst
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      131 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/setup.cfg
+│ │ --rwxrwxr-x   0 chintal   (1000) chintal   (1000)     3214 2023-03-16 07:26:30.000000 tendril-iotedge-0.1.4/setup.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/src/
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/src/tendril/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       66 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/__init__.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/src/tendril/apiserver/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/apiserver/__init__.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/src/tendril/apiserver/routers/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/apiserver/routers/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1962 2023-03-28 08:43:52.000000 tendril-iotedge-0.1.4/src/tendril/apiserver/routers/iotedge.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.282682 tendril-iotedge-0.1.4/src/tendril/common/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/common/__init__.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril/common/iotedge/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/common/iotedge/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      949 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/common/iotedge/exceptions.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      660 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/common/iotedge/formats.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril/config/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1112 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/config/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1830 2023-03-28 11:11:29.000000 tendril-iotedge-0.1.4/src/tendril/config/iotedge.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril/db/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/db/__init__.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril/db/models/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/db/models/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      819 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/db/models/deviceconfig.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril/iotedge/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     2634 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/announce.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      285 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/config.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      572 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/heartbeat.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril/iotedge/profiles/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      258 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/profiles/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      801 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/profiles/base.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     3010 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/profiles/manager.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1973 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/src/tendril/iotedge/registration.py
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     3925 2023-03-28 11:12:33.000000 tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1352 2023-03-28 11:12:33.000000 tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)        1 2023-03-28 11:12:33.000000 tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      565 2023-03-28 11:12:33.000000 tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/requires.txt
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)        8 2023-03-28 11:12:33.000000 tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/top_level.txt
+│ │ -drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-03-28 11:12:33.286683 tendril-iotedge-0.1.4/tests/
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)        0 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/tests/__init__.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)     1060 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/tests/coveralls.py
+│ │ --rw-rw-r--   0 chintal   (1000) chintal   (1000)      787 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.4/tox.ini
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.155695 tendril-iotedge-0.1.5/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     2122 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/.gitignore
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      638 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/.readthedocs.yml
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      629 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/.travis.yml
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)        0 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/CHANGELOG.rst
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)    34520 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/LICENSE
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      173 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/MANIFEST.in
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     3485 2023-04-07 02:36:09.159695 tendril-iotedge-0.1.5/PKG-INFO
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     2192 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/README.rst
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.107696 tendril-iotedge-0.1.5/docs/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     7660 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/Makefile
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.119696 tendril-iotedge-0.1.5/docs/_static/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     2727 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/_static/custom.css
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)   128918 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/_static/favicon.ico
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)    96804 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/_static/logo.png
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     9889 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/_static/logo_packed.png
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.119696 tendril-iotedge-0.1.5/docs/_templates/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1713 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/_templates/about.html
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.119696 tendril-iotedge-0.1.5/docs/api/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      128 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/api/index.rst
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)    13460 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/conf.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      895 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/index.rst
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1536 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/installation.rst
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.123696 tendril-iotedge-0.1.5/docs/usage/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       35 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/usage/standalone.rst
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       49 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/docs/usage/tendril.rst
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      131 2023-04-07 02:36:09.159695 tendril-iotedge-0.1.5/setup.cfg
+│ │ +-rwxrwxr-x   0 chintal   (1000) chintal   (1000)     3214 2023-03-16 07:26:30.000000 tendril-iotedge-0.1.5/setup.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.091696 tendril-iotedge-0.1.5/src/
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.123696 tendril-iotedge-0.1.5/src/tendril/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       66 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/__init__.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.123696 tendril-iotedge-0.1.5/src/tendril/apiserver/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/apiserver/__init__.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.127696 tendril-iotedge-0.1.5/src/tendril/apiserver/routers/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/apiserver/routers/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1855 2023-04-05 18:31:23.000000 tendril-iotedge-0.1.5/src/tendril/apiserver/routers/iotcore.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     2266 2023-04-05 09:34:19.000000 tendril-iotedge-0.1.5/src/tendril/apiserver/routers/iotedge.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.131695 tendril-iotedge-0.1.5/src/tendril/common/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/common/__init__.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.131695 tendril-iotedge-0.1.5/src/tendril/common/iotcore/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)        0 2023-04-05 15:45:45.000000 tendril-iotedge-0.1.5/src/tendril/common/iotcore/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       54 2023-04-05 15:48:55.000000 tendril-iotedge-0.1.5/src/tendril/common/iotcore/formats.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.135695 tendril-iotedge-0.1.5/src/tendril/common/iotedge/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/common/iotedge/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      949 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/common/iotedge/exceptions.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      759 2023-04-05 04:03:03.000000 tendril-iotedge-0.1.5/src/tendril/common/iotedge/formats.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.135695 tendril-iotedge-0.1.5/src/tendril/config/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1112 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/config/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1830 2023-03-28 11:11:29.000000 tendril-iotedge-0.1.5/src/tendril/config/iotedge.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.139695 tendril-iotedge-0.1.5/src/tendril/db/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/db/__init__.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.139695 tendril-iotedge-0.1.5/src/tendril/db/models/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/db/models/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     4351 2023-04-05 17:19:08.000000 tendril-iotedge-0.1.5/src/tendril/db/models/deviceconfig.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.139695 tendril-iotedge-0.1.5/src/tendril/iotcore/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)        0 2023-04-05 16:12:42.000000 tendril-iotedge-0.1.5/src/tendril/iotcore/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1074 2023-04-05 18:01:28.000000 tendril-iotedge-0.1.5/src/tendril/iotcore/settings.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.147695 tendril-iotedge-0.1.5/src/tendril/iotedge/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)       65 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     2670 2023-04-03 17:43:43.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/announce.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      422 2023-04-05 04:43:55.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/config.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      565 2023-04-03 17:40:48.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/heartbeat.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.151695 tendril-iotedge-0.1.5/src/tendril/iotedge/profiles/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      258 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/profiles/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      963 2023-04-05 18:20:26.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/profiles/base.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     3655 2023-04-05 16:24:45.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/profiles/manager.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1980 2023-04-03 17:40:48.000000 tendril-iotedge-0.1.5/src/tendril/iotedge/registration.py
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.155695 tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     3485 2023-04-07 02:36:08.000000 tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1534 2023-04-07 02:36:09.000000 tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)        1 2023-04-07 02:36:08.000000 tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      565 2023-04-07 02:36:08.000000 tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)        8 2023-04-07 02:36:08.000000 tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 chintal   (1000) chintal   (1000)        0 2023-04-07 02:36:09.155695 tendril-iotedge-0.1.5/tests/
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)        0 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/tests/__init__.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)     1060 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/tests/coveralls.py
+│ │ +-rw-rw-r--   0 chintal   (1000) chintal   (1000)      787 2023-03-15 16:03:10.000000 tendril-iotedge-0.1.5/tox.ini
+│ │   --- tendril-iotedge-0.1.4/.gitignore
+│ ├── +++ tendril-iotedge-0.1.5/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/.readthedocs.yml
+│ ├── +++ tendril-iotedge-0.1.5/.readthedocs.yml
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/.travis.yml
+│ ├── +++ tendril-iotedge-0.1.5/.travis.yml
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/LICENSE
+│ ├── +++ tendril-iotedge-0.1.5/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/PKG-INFO
+│ ├── +++ tendril-iotedge-0.1.5/PKG-INFO
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,73 +1,17 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: tendril-iotedge
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.5
+│ │  Summary: Tendril IoT Edge Server Infrastructure
+│ │  Home-page: https://github.com/tendril-framework/tendril-iotedge
+│ │  Author: Chintalagiri Shashank
+│ │  Author-email: shashank@chintal.in
+│ │ -License: UNKNOWN
+│ │  Project-URL: Documentation, https://tendril-iotedge.readthedocs.io/en/latest
+│ │  Project-URL: Bug Tracker, https://github.com/tendril-framework/tendril-iotedge/issues
+│ │  Project-URL: Source Repository, https://github.com/tendril-framework/tendril-iotedge
+│ │ -Description: 
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/pypi/v/tendril-iotedge.svg?logo=pypi
+│ │ -            :target: https://pypi.org/project/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/pypi/pyversions/tendril-iotedge.svg?logo=pypi
+│ │ -            :target: https://pypi.org/project/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/travis/tendril-framework/tendril-iotedge.svg?logo=travis
+│ │ -            :target: https://travis-ci.org/tendril-framework/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/coveralls/github/tendril-framework/tendril-iotedge.svg?logo=coveralls
+│ │ -            :target: https://coveralls.io/github/tendril-framework/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/codacy/grade/363acc44e8c240dc9db79935860191b4?logo=codacy
+│ │ -            :target: https://www.codacy.com/app/chintal/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/requires/github/tendril-framework/tendril-iotedge.svg
+│ │ -            :target: https://requires.io/github/tendril-framework/tendril-iotedge/requirements
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/pypi/l/tendril-iotedge.svg
+│ │ -            :target: https://www.gnu.org/licenses/agpl-3.0.en.html
+│ │ -        
+│ │ -        
+│ │ -        
+│ │ -        .. inclusion-marker-do-not-remove
+│ │ -        
+│ │ -        Introduction
+│ │ -        ------------
+│ │ -        
+│ │ -        TODO Some brief introduction
+│ │ -        
+│ │ -        
+│ │ -        Package Information
+│ │ -        -------------------
+│ │ -        
+│ │ -        The latest version of the documentation, including installation, usage, and
+│ │ -        API/developer notes can be found at
+│ │ -        `ReadTheDocs <https://tendril-iotedge.readthedocs.io/en/latest/index.html>`_.
+│ │ -        
+│ │ -        The latest version of the sources can be found at
+│ │ -        `GitHub <https://github.com/tendril-framework/tendril-iotedge>`_. Please use 
+│ │ -        GitHub's features to report bugs, request features, or submit pull/merge requests.
+│ │ -        
+│ │ -        The principle author for ``tendril-iotedge`` is Chintalagiri Shashank. The 
+│ │ -        author can be contacted if necessary via the information on the
+│ │ -        `author's github profile <https://github.com/chintal>`_ . See the AUTHORS file
+│ │ -        for a full list of collaborators and/or contributing authors, if any.
+│ │ -        
+│ │ -        ``tendril-iotedge`` is distributed under the terms of the
+│ │ -        `AGPLv3 license <https://www.gnu.org/licenses/agpl-3.0.en.html>`_ .
+│ │ -        A copy of the text of the license is included along with the sources.
+│ │ -        
+│ │ -        
+│ │ -        
+│ │  Keywords: tendril
+│ │  Platform: any
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -81,7 +25,63 @@
+│ │  Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+│ │  Description-Content-Type: text/x-rst
+│ │  Provides-Extra: docs
+│ │  Provides-Extra: tests
+│ │  Provides-Extra: build
+│ │  Provides-Extra: publish
+│ │  Provides-Extra: dev
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +
+│ │ +
+│ │ +.. image:: https://img.shields.io/pypi/v/tendril-iotedge.svg?logo=pypi
+│ │ +    :target: https://pypi.org/project/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/pypi/pyversions/tendril-iotedge.svg?logo=pypi
+│ │ +    :target: https://pypi.org/project/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/travis/tendril-framework/tendril-iotedge.svg?logo=travis
+│ │ +    :target: https://travis-ci.org/tendril-framework/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/coveralls/github/tendril-framework/tendril-iotedge.svg?logo=coveralls
+│ │ +    :target: https://coveralls.io/github/tendril-framework/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/codacy/grade/363acc44e8c240dc9db79935860191b4?logo=codacy
+│ │ +    :target: https://www.codacy.com/app/chintal/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/requires/github/tendril-framework/tendril-iotedge.svg
+│ │ +    :target: https://requires.io/github/tendril-framework/tendril-iotedge/requirements
+│ │ +
+│ │ +.. image:: https://img.shields.io/pypi/l/tendril-iotedge.svg
+│ │ +    :target: https://www.gnu.org/licenses/agpl-3.0.en.html
+│ │ +
+│ │ +
+│ │ +
+│ │ +.. inclusion-marker-do-not-remove
+│ │ +
+│ │ +Introduction
+│ │ +------------
+│ │ +
+│ │ +TODO Some brief introduction
+│ │ +
+│ │ +
+│ │ +Package Information
+│ │ +-------------------
+│ │ +
+│ │ +The latest version of the documentation, including installation, usage, and
+│ │ +API/developer notes can be found at
+│ │ +`ReadTheDocs <https://tendril-iotedge.readthedocs.io/en/latest/index.html>`_.
+│ │ +
+│ │ +The latest version of the sources can be found at
+│ │ +`GitHub <https://github.com/tendril-framework/tendril-iotedge>`_. Please use 
+│ │ +GitHub's features to report bugs, request features, or submit pull/merge requests.
+│ │ +
+│ │ +The principle author for ``tendril-iotedge`` is Chintalagiri Shashank. The 
+│ │ +author can be contacted if necessary via the information on the
+│ │ +`author's github profile <https://github.com/chintal>`_ . See the AUTHORS file
+│ │ +for a full list of collaborators and/or contributing authors, if any.
+│ │ +
+│ │ +``tendril-iotedge`` is distributed under the terms of the
+│ │ +`AGPLv3 license <https://www.gnu.org/licenses/agpl-3.0.en.html>`_ .
+│ │ +A copy of the text of the license is included along with the sources.
+│ │ +
+│ │ +
+│ │   --- tendril-iotedge-0.1.4/README.rst
+│ ├── +++ tendril-iotedge-0.1.5/README.rst
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/Makefile
+│ ├── +++ tendril-iotedge-0.1.5/docs/Makefile
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/_static/custom.css
+│ ├── +++ tendril-iotedge-0.1.5/docs/_static/custom.css
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/_static/favicon.ico
+│ ├── +++ tendril-iotedge-0.1.5/docs/_static/favicon.ico
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/_static/logo.png
+│ ├── +++ tendril-iotedge-0.1.5/docs/_static/logo.png
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/_static/logo_packed.png
+│ ├── +++ tendril-iotedge-0.1.5/docs/_static/logo_packed.png
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/_templates/about.html
+│ ├── +++ tendril-iotedge-0.1.5/docs/_templates/about.html
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/conf.py
+│ ├── +++ tendril-iotedge-0.1.5/docs/conf.py
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/index.rst
+│ ├── +++ tendril-iotedge-0.1.5/docs/index.rst
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/docs/installation.rst
+│ ├── +++ tendril-iotedge-0.1.5/docs/installation.rst
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/setup.py
+│ ├── +++ tendril-iotedge-0.1.5/setup.py
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/src/tendril/apiserver/routers/iotedge.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/apiserver/routers/iotedge.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,23 +1,24 @@
+│ │  
+│ │  
+│ │  from fastapi import APIRouter
+│ │  from fastapi import Depends
+│ │  
+│ │ -from tendril.common.iotedge.formats import IoTDeviceIDTModel
+│ │  from tendril.common.iotedge.formats import IoTDevicePingTModel
+│ │  from tendril.common.iotedge.formats import IoTDeviceAnnounceTModel
+│ │  from tendril.common.iotedge.formats import IoTDeviceAnnounceResponseTModel
+│ │ +from tendril.common.iotedge.formats import IoTDeviceSettingRequestTModel
+│ │ +from tendril.iotedge.profiles import device_config_unified_model
+│ │  
+│ │  from tendril.authn.users import auth_spec
+│ │  from tendril.authn.users import authn_dependency
+│ │ -from tendril.authn.users import AuthUserModel
+│ │  
+│ │  from tendril.iotedge.announce import announce_device
+│ │  from tendril.iotedge.heartbeat import ping
+│ │ +from tendril.iotedge.config import get_config
+│ │  
+│ │  from tendril.config import IOTEDGE_API_ENABLED
+│ │  from tendril.config import IOTEDGE_ANNOUNCE_ENDPOINT_OPEN
+│ │  
+│ │  from tendril.utils import log
+│ │  logger = log.get_logger(__name__, log.DEFAULT)
+│ │  
+│ │ @@ -25,38 +26,48 @@
+│ │  if IOTEDGE_ANNOUNCE_ENDPOINT_OPEN:
+│ │      kwargs = {}
+│ │  else:
+│ │      kwargs = {
+│ │          'dependencies': [Depends(authn_dependency)]
+│ │      }
+│ │  
+│ │ +
+│ │  iotedge_announce_router = APIRouter(prefix='/iot', **kwargs,
+│ │                                      tags=['IOT Device Edge Announce API'])
+│ │  
+│ │ +
+│ │  iotedge_router = APIRouter(prefix='/iot',
+│ │                             tags=["IOT Device Edge Core API"],
+│ │                             dependencies=[Depends(authn_dependency),
+│ │                                           auth_spec()])
+│ │  
+│ │  
+│ │  @iotedge_announce_router.post("/announce",
+│ │                                response_model=IoTDeviceAnnounceResponseTModel)
+│ │  async def iot_device_announce(announce: IoTDeviceAnnounceTModel):
+│ │      return announce_device(device_id=announce.id,
+│ │ -                              appname=announce.appname,
+│ │ -                              have_credentials=announce.have_credentials)
+│ │ +                           appname=announce.appname,
+│ │ +                           have_credentials=announce.have_credentials)
+│ │  
+│ │  
+│ │  @iotedge_router.post("/ping")
+│ │  async def iot_device_ping(message: IoTDevicePingTModel):
+│ │      result = ping(device_id=message.id, status=message.status)
+│ │      return 'pong'
+│ │  
+│ │  
+│ │ +@iotedge_router.get("/settings", response_model=device_config_unified_model)
+│ │ +async def iot_device_settings(req: IoTDeviceSettingRequestTModel):
+│ │ +    result = get_config(device_id=req.id, appname=req.appname)
+│ │ +    return result
+│ │ +
+│ │ +
+│ │ +routers = []
+│ │ +
+│ │ +
+│ │  if IOTEDGE_API_ENABLED:
+│ │ -    routers = [
+│ │ +    routers.extend([
+│ │          iotedge_announce_router,
+│ │          iotedge_router
+│ │ -    ]
+│ │ +    ])
+│ │  else:
+│ │      logger.info("Not creating IoTEdge API routers.")
+│ │ -    routers = []
+│ │   --- tendril-iotedge-0.1.4/src/tendril/common/iotedge/exceptions.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/common/iotedge/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/src/tendril/common/iotedge/formats.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/common/iotedge/formats.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  
+│ │  
+│ │ -from typing import Pattern
+│ │ +from typing import Literal
+│ │  from typing import Optional
+│ │  from tendril.utils.pydantic import TendrilTBaseModel
+│ │  from tendril.common.interests.states import InterestLifecycleStatus
+│ │  
+│ │  
+│ │  IoTDeviceIDTModel = str
+│ │  IoTDeviceAppnameTModel = str
+│ │ @@ -23,7 +23,11 @@
+│ │      status: Optional[dict]
+│ │  
+│ │  
+│ │  class IoTDeviceAnnounceResponseTModel(IoTDeviceMessageTModel):
+│ │      status: InterestLifecycleStatus
+│ │      interest_id: int
+│ │      password: Optional[str]
+│ │ +
+│ │ +
+│ │ +class IoTDeviceSettingRequestTModel(IoTDeviceMessageTModel):
+│ │ +    appname: IoTDeviceAppnameTModel
+│ │   --- tendril-iotedge-0.1.4/src/tendril/config/__init__.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/config/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/src/tendril/config/iotedge.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/config/iotedge.py
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/src/tendril/iotedge/announce.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/iotedge/announce.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -14,16 +14,16 @@
+│ │  @with_db
+│ │  def announce_device(device_id, appname, have_credentials, session=None):
+│ │      # TODO Handle other device lifecycle states
+│ │      rv = {}
+│ │      device = get_registration(device_id, appname, session=session)
+│ │      if device:
+│ │          logger.debug(f"Got announce from a registered device {device_id} "
+│ │ -                     f"in state {device.interest.status}.")
+│ │ -        if device.interest.status == InterestLifecycleStatus.ACTIVE:
+│ │ +                     f"in state {device.model_instance.status}.")
+│ │ +        if device.model_instance.status == InterestLifecycleStatus.ACTIVE:
+│ │              if not have_credentials:
+│ │                  # If there is a password waiting for one-time transmission,
+│ │                  # transmit it.
+│ │                  password = transit.read(namespace="ott:dp", key=device_id)
+│ │                  if not password:
+│ │                      logger.warning(f"Active registered device {device_id} does not have a token")
+│ │                      # If there is no password waiting for one-time transmission,
+│ │ @@ -31,25 +31,25 @@
+│ │                      # manually reset password and load it up for one-time transmission.
+│ │                      # Raise manual password reset request here. Changing device status to
+│ │                      # NEW should get the job done as presently implemented.
+│ │                  else:
+│ │                      logger.info(f"Found password for {device_id} on transit cache.")
+│ │                      transit.delete(namespace="ott:dp", key=device_id)
+│ │                      rv['password'] = password
+│ │ -        if device.interest.status == InterestLifecycleStatus.NEW:
+│ │ +        if device.model_instance.status == InterestLifecycleStatus.NEW:
+│ │              # We're waiting for activation and don't need to do anything here.
+│ │              pass
+│ │      else:
+│ │          logger.info(f"Registering new device '{device_id}' "
+│ │                      f"of type '{appname}' from announce.")
+│ │          if have_credentials:
+│ │              logger.warning(f"Unregistered device {device_id} seems to already have a token")
+│ │              # Raise some kind of error here. The device might need to checked for compromise.
+│ │          device = register(device_id, appname, info={}, session=session)
+│ │          # When the device is activated, the interest activation will create a password
+│ │          # and store it on transit for one time transmission within this endpoint itself.
+│ │      rv.update({
+│ │ -        'interest_id': device.interest.id,
+│ │ -        'id': device.interest.name,
+│ │ -        'status': device.interest.status
+│ │ +        'interest_id': device.model_instance.id,
+│ │ +        'id': device.model_instance.name,
+│ │ +        'status': device.model_instance.status
+│ │      })
+│ │      return rv
+│ │   --- tendril-iotedge-0.1.4/src/tendril/iotedge/heartbeat.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/iotedge/heartbeat.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -7,17 +7,17 @@
+│ │  from tendril.utils.db import with_db
+│ │  from tendril.utils import log
+│ │  logger = log.get_logger(__name__, log.DEFAULT)
+│ │  
+│ │  
+│ │  def mark_seen(func):
+│ │      @wraps(func)
+│ │ -    def inner(device=None, appname=None, session=None, **kwargs):
+│ │ +    def inner(device=None, session=None, **kwargs):
+│ │          logger.debug(f"Mark device {device} as seen")
+│ │ -        func(device=device, session=session, **kwargs)
+│ │ +        return func(device=device, session=session, **kwargs)
+│ │      return inner
+│ │  
+│ │  
+│ │  @with_db
+│ │  @registered_device()
+│ │  @mark_seen
+│ │  def ping(device=None, appname=None, status=None, session=None):
+│ │   --- tendril-iotedge-0.1.4/src/tendril/iotedge/profiles/base.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/iotedge/profiles/base.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,32 +1,37 @@
+│ │  
+│ │  
+│ │  from sqlalchemy.orm.exc import NoResultFound
+│ │ +
+│ │ +from tendril import interests
+│ │  from tendril.db.models.deviceconfig import DeviceConfigurationModel
+│ │  from tendril.utils.db import with_db
+│ │  
+│ │  
+│ │  class DeviceProfile(object):
+│ │      appname = None
+│ │      interest_type = 'device'
+│ │      config_model = DeviceConfigurationModel
+│ │  
+│ │ -    def __init__(self, interest):
+│ │ -        self.interest = interest
+│ │ +    def __init__(self, model_instance):
+│ │ +        self.model_instance = model_instance
+│ │ +
+│ │ +    def interest(self):
+│ │ +        return interests.type_codes[self.interest_type](self.model_instance)
+│ │  
+│ │      @with_db
+│ │      def config(self, session=None):
+│ │ -        session.add(self.interest.model_instance)
+│ │ -        cfg = self.interest.model_instance.config
+│ │ +        session.add(self.model_instance)
+│ │ +        cfg = self.model_instance.config
+│ │          if not cfg:
+│ │              cfg = self.config_model()
+│ │ -            self.interest.model_instance.config = cfg
+│ │ +            self.model_instance.config = cfg
+│ │              session.add(cfg)
+│ │              session.flush()
+│ │          return cfg
+│ │  
+│ │      def __repr__(self):
+│ │ -        return f"<{self.interest.appname} {self.interest.name}>"
+│ │ +        return f"<{self.__class__.__name__} {self.model_instance.appname} {self.model_instance.name}>"
+│ │  
+│ │  
+│ │  def load(manager):
+│ │      pass
+│ │   --- tendril-iotedge-0.1.4/src/tendril/iotedge/profiles/manager.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/iotedge/profiles/manager.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -16,32 +16,38 @@
+│ │  # GNU Affero General Public License for more details.
+│ │  #
+│ │  # You should have received a copy of the GNU Affero General Public License
+│ │  # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+│ │  """
+│ │  Tendril IoT Device Profiles Manager (:mod:`tendril.iotedge.profiles.manager`)
+│ │  =============================================================================
+│ │ +
+│ │ +<< Consider moving Device Profiles to iotcore or iotcommon. Presently,
+│ │ +   iotedge is the foundational package for the tendril-iot stack. >>
+│ │  """
+│ │  
+│ │  
+│ │  import importlib
+│ │ -import networkx
+│ │ +from typing import Union
+│ │ +from pydantic import Field
+│ │ +from typing_extensions import Annotated
+│ │  
+│ │  from tendril.utils.versions import get_namespace_package_names
+│ │  from tendril.common.iotedge.exceptions import DeviceTypeUnrecognized
+│ │  
+│ │  from tendril.utils import log
+│ │  logger = log.get_logger(__name__, log.DEBUG)
+│ │  
+│ │  
+│ │  class IoTDeviceProfilesManager(object):
+│ │      def __init__(self, prefix):
+│ │          self._prefix = prefix
+│ │          self._device_profiles = {}
+│ │          self._docs = []
+│ │ +        self.device_config_unified_model = None
+│ │          self._load_profiles()
+│ │  
+│ │      def _load_profiles(self):
+│ │          logger.info("Loading device profiles from {0}".format(self._prefix))
+│ │          modules = list(get_namespace_package_names(self._prefix))
+│ │          for m_name in modules:
+│ │              if m_name in [__name__, f"{self._prefix}.db", f"{self._prefix}.template"]:
+│ │ @@ -56,25 +62,31 @@
+│ │          self._docs.append((name, doc))
+│ │  
+│ │      @property
+│ │      def device_profiles(self):
+│ │          return self._device_profiles
+│ │  
+│ │      @property
+│ │ -    def device_type_names(self):
+│ │ +    def device_appnames(self):
+│ │          return self._device_profiles.keys()
+│ │  
+│ │ -    def profile(self, type_name, device_id=None):
+│ │ +    @property
+│ │ +    def device_config_tmodels(self):
+│ │ +        return {x.appname: x.config_model.tmodel() for x in self._device_profiles.values()}
+│ │ +
+│ │ +    def profile(self, appname, device_id=None):
+│ │          try:
+│ │ -            return self._device_profiles[type_name]
+│ │ +            return self._device_profiles[appname]
+│ │          except KeyError:
+│ │ -            raise DeviceTypeUnrecognized(type_name, device_id)
+│ │ +            raise DeviceTypeUnrecognized(appname, device_id)
+│ │  
+│ │      def finalize(self):
+│ │ -        pass
+│ │ +        logger.info("Building device configuration message models")
+│ │ +        self.device_config_unified_model = Annotated[Union[tuple(self.device_config_tmodels.values())],
+│ │ +                                                     Field(discriminator='appname')]
+│ │  
+│ │      def __getattr__(self, item):
+│ │          if item == '__file__':
+│ │              return None
+│ │          if item == '__path__':
+│ │              return None
+│ │          if item == '__len__':
+│ │   --- tendril-iotedge-0.1.4/src/tendril/iotedge/registration.py
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril/iotedge/registration.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -49,10 +49,10 @@
+│ │          @wraps(func)
+│ │          def get_registered_device(device_id=None, session=None, **kwargs):
+│ │              if appname:
+│ │                  device = get_registration(device_id, appname=appname, session=session)
+│ │              else:
+│ │                  device = get_registration(device_id, session=session)
+│ │                  kwargs['appname'] = device.appname
+│ │ -            func(device=device, session=session, **kwargs)
+│ │ +            return func(device=device, session=session, **kwargs)
+│ │          return get_registered_device
+│ │      return decorator
+│ │   --- tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/PKG-INFO
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/PKG-INFO
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,73 +1,17 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: tendril-iotedge
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.5
+│ │  Summary: Tendril IoT Edge Server Infrastructure
+│ │  Home-page: https://github.com/tendril-framework/tendril-iotedge
+│ │  Author: Chintalagiri Shashank
+│ │  Author-email: shashank@chintal.in
+│ │ -License: UNKNOWN
+│ │  Project-URL: Documentation, https://tendril-iotedge.readthedocs.io/en/latest
+│ │  Project-URL: Bug Tracker, https://github.com/tendril-framework/tendril-iotedge/issues
+│ │  Project-URL: Source Repository, https://github.com/tendril-framework/tendril-iotedge
+│ │ -Description: 
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/pypi/v/tendril-iotedge.svg?logo=pypi
+│ │ -            :target: https://pypi.org/project/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/pypi/pyversions/tendril-iotedge.svg?logo=pypi
+│ │ -            :target: https://pypi.org/project/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/travis/tendril-framework/tendril-iotedge.svg?logo=travis
+│ │ -            :target: https://travis-ci.org/tendril-framework/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/coveralls/github/tendril-framework/tendril-iotedge.svg?logo=coveralls
+│ │ -            :target: https://coveralls.io/github/tendril-framework/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/codacy/grade/363acc44e8c240dc9db79935860191b4?logo=codacy
+│ │ -            :target: https://www.codacy.com/app/chintal/tendril-iotedge
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/requires/github/tendril-framework/tendril-iotedge.svg
+│ │ -            :target: https://requires.io/github/tendril-framework/tendril-iotedge/requirements
+│ │ -        
+│ │ -        .. image:: https://img.shields.io/pypi/l/tendril-iotedge.svg
+│ │ -            :target: https://www.gnu.org/licenses/agpl-3.0.en.html
+│ │ -        
+│ │ -        
+│ │ -        
+│ │ -        .. inclusion-marker-do-not-remove
+│ │ -        
+│ │ -        Introduction
+│ │ -        ------------
+│ │ -        
+│ │ -        TODO Some brief introduction
+│ │ -        
+│ │ -        
+│ │ -        Package Information
+│ │ -        -------------------
+│ │ -        
+│ │ -        The latest version of the documentation, including installation, usage, and
+│ │ -        API/developer notes can be found at
+│ │ -        `ReadTheDocs <https://tendril-iotedge.readthedocs.io/en/latest/index.html>`_.
+│ │ -        
+│ │ -        The latest version of the sources can be found at
+│ │ -        `GitHub <https://github.com/tendril-framework/tendril-iotedge>`_. Please use 
+│ │ -        GitHub's features to report bugs, request features, or submit pull/merge requests.
+│ │ -        
+│ │ -        The principle author for ``tendril-iotedge`` is Chintalagiri Shashank. The 
+│ │ -        author can be contacted if necessary via the information on the
+│ │ -        `author's github profile <https://github.com/chintal>`_ . See the AUTHORS file
+│ │ -        for a full list of collaborators and/or contributing authors, if any.
+│ │ -        
+│ │ -        ``tendril-iotedge`` is distributed under the terms of the
+│ │ -        `AGPLv3 license <https://www.gnu.org/licenses/agpl-3.0.en.html>`_ .
+│ │ -        A copy of the text of the license is included along with the sources.
+│ │ -        
+│ │ -        
+│ │ -        
+│ │  Keywords: tendril
+│ │  Platform: any
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -81,7 +25,63 @@
+│ │  Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+│ │  Description-Content-Type: text/x-rst
+│ │  Provides-Extra: docs
+│ │  Provides-Extra: tests
+│ │  Provides-Extra: build
+│ │  Provides-Extra: publish
+│ │  Provides-Extra: dev
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +
+│ │ +
+│ │ +.. image:: https://img.shields.io/pypi/v/tendril-iotedge.svg?logo=pypi
+│ │ +    :target: https://pypi.org/project/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/pypi/pyversions/tendril-iotedge.svg?logo=pypi
+│ │ +    :target: https://pypi.org/project/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/travis/tendril-framework/tendril-iotedge.svg?logo=travis
+│ │ +    :target: https://travis-ci.org/tendril-framework/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/coveralls/github/tendril-framework/tendril-iotedge.svg?logo=coveralls
+│ │ +    :target: https://coveralls.io/github/tendril-framework/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/codacy/grade/363acc44e8c240dc9db79935860191b4?logo=codacy
+│ │ +    :target: https://www.codacy.com/app/chintal/tendril-iotedge
+│ │ +
+│ │ +.. image:: https://img.shields.io/requires/github/tendril-framework/tendril-iotedge.svg
+│ │ +    :target: https://requires.io/github/tendril-framework/tendril-iotedge/requirements
+│ │ +
+│ │ +.. image:: https://img.shields.io/pypi/l/tendril-iotedge.svg
+│ │ +    :target: https://www.gnu.org/licenses/agpl-3.0.en.html
+│ │ +
+│ │ +
+│ │ +
+│ │ +.. inclusion-marker-do-not-remove
+│ │ +
+│ │ +Introduction
+│ │ +------------
+│ │ +
+│ │ +TODO Some brief introduction
+│ │ +
+│ │ +
+│ │ +Package Information
+│ │ +-------------------
+│ │ +
+│ │ +The latest version of the documentation, including installation, usage, and
+│ │ +API/developer notes can be found at
+│ │ +`ReadTheDocs <https://tendril-iotedge.readthedocs.io/en/latest/index.html>`_.
+│ │ +
+│ │ +The latest version of the sources can be found at
+│ │ +`GitHub <https://github.com/tendril-framework/tendril-iotedge>`_. Please use 
+│ │ +GitHub's features to report bugs, request features, or submit pull/merge requests.
+│ │ +
+│ │ +The principle author for ``tendril-iotedge`` is Chintalagiri Shashank. The 
+│ │ +author can be contacted if necessary via the information on the
+│ │ +`author's github profile <https://github.com/chintal>`_ . See the AUTHORS file
+│ │ +for a full list of collaborators and/or contributing authors, if any.
+│ │ +
+│ │ +``tendril-iotedge`` is distributed under the terms of the
+│ │ +`AGPLv3 license <https://www.gnu.org/licenses/agpl-3.0.en.html>`_ .
+│ │ +A copy of the text of the license is included along with the sources.
+│ │ +
+│ │ +
+│ │   --- tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/SOURCES.txt
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/SOURCES.txt
+│ │┄ Files 21% similar despite different names
+│ │ @@ -19,24 +19,29 @@
+│ │  docs/_templates/about.html
+│ │  docs/api/index.rst
+│ │  docs/usage/standalone.rst
+│ │  docs/usage/tendril.rst
+│ │  src/tendril/__init__.py
+│ │  src/tendril/apiserver/__init__.py
+│ │  src/tendril/apiserver/routers/__init__.py
+│ │ +src/tendril/apiserver/routers/iotcore.py
+│ │  src/tendril/apiserver/routers/iotedge.py
+│ │  src/tendril/common/__init__.py
+│ │ +src/tendril/common/iotcore/__init__.py
+│ │ +src/tendril/common/iotcore/formats.py
+│ │  src/tendril/common/iotedge/__init__.py
+│ │  src/tendril/common/iotedge/exceptions.py
+│ │  src/tendril/common/iotedge/formats.py
+│ │  src/tendril/config/__init__.py
+│ │  src/tendril/config/iotedge.py
+│ │  src/tendril/db/__init__.py
+│ │  src/tendril/db/models/__init__.py
+│ │  src/tendril/db/models/deviceconfig.py
+│ │ +src/tendril/iotcore/__init__.py
+│ │ +src/tendril/iotcore/settings.py
+│ │  src/tendril/iotedge/__init__.py
+│ │  src/tendril/iotedge/announce.py
+│ │  src/tendril/iotedge/config.py
+│ │  src/tendril/iotedge/heartbeat.py
+│ │  src/tendril/iotedge/registration.py
+│ │  src/tendril/iotedge/profiles/__init__.py
+│ │  src/tendril/iotedge/profiles/base.py
+│ │   --- tendril-iotedge-0.1.4/src/tendril_iotedge.egg-info/requires.txt
+│ ├── +++ tendril-iotedge-0.1.5/src/tendril_iotedge.egg-info/requires.txt
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/tests/coveralls.py
+│ ├── +++ tendril-iotedge-0.1.5/tests/coveralls.py
+│ │┄ Files identical despite different names
+│ │   --- tendril-iotedge-0.1.4/tox.ini
+│ ├── +++ tendril-iotedge-0.1.5/tox.ini
+│ │┄ Files identical despite different names

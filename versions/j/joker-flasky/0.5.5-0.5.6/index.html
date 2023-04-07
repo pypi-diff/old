@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/joker-flasky-0.5.5.tar.gz tmp/joker-flasky-0.5.6.tar.gz --html versions/j/joker-flasky/0.5.5-0.5.6/index.html --text versions/j/joker-flasky/0.5.5-0.5.6/diff.txt --markdown versions/j/joker-flasky/0.5.5-0.5.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">14.6 KB</span></div>
+  <div><span class="source">tmp/joker-flasky-0.5.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/joker-flasky-0.5.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;joker-flasky-0.5.<del>5</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Thu</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;joker-flasky-0.5.<ins>6</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">14.3 KB</span></div>
+    <div><span class="source">joker-flasky-0.5.5.tar</span> vs.</div>
+    <div id="joker-flasky--.-.-.tar"><span class="source">joker-flasky-0.5.6.tar</span>
+      <a class="anchor" href="#joker-flasky--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">10.7 KB</span></div>
+      <div id="joker-flasky--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 42 lines modified</td><td colspan="2">Offset 1, 42 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>8</del>90<del>973</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>90<ins>242</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2018-11-06<span class="dp">·</span>12:36:13.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35149<span class="dp">·</span>2018-11-06<span class="dp">·</span>12:36:13.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2022-05-11<span class="dp">·</span>15:56:47.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2022-05-11<span class="dp">·</span>15:56:47.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1473<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.89<del>0</del><del>727</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1473<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>89<ins>861</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>986<span class="dp">·</span>2022-05-24<span class="dp">·</span>12:19:22.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>986<span class="dp">·</span>2022-05-24<span class="dp">·</span>12:19:22.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>88061</del>6<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>06937</ins>6<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>885527</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>079040</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:<del>18</del>:<del>28</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:<ins>27</ins>:<ins>43</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1315<span class="dp">·</span>2022-01-21<span class="dp">·</span>14:04:10.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/app.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1315<span class="dp">·</span>2022-01-21<span class="dp">·</span>14:04:10.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5275<span class="dp">·</span>2022-05-06<span class="dp">·</span>15:22:35.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/auth.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5275<span class="dp">·</span>2022-05-06<span class="dp">·</span>15:22:35.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/auth.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>919<span class="dp">·</span>2022-05-05<span class="dp">·</span>06:06:00.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/context.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>919<span class="dp">·</span>2022-05-05<span class="dp">·</span>06:06:00.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/context.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1524<span class="dp">·</span>2021-09-04<span class="dp">·</span>07:05:32.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/develop.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1524<span class="dp">·</span>2021-09-04<span class="dp">·</span>07:05:32.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/develop.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>699<span class="dp">·</span>2022-05-13<span class="dp">·</span>10:17:47.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/environ.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>699<span class="dp">·</span>2022-05-13<span class="dp">·</span>10:17:47.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/environ.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>384<span class="dp">·</span>2022-05-06<span class="dp">·</span>15:22:35.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/loggers.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>384<span class="dp">·</span>2022-05-06<span class="dp">·</span>15:22:35.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/loggers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1348<span class="dp">·</span>2022-05-11<span class="dp">·</span>13:11:04.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/pages.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1348<span class="dp">·</span>2022-05-11<span class="dp">·</span>13:11:04.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/pages.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>330<span class="dp">·</span>2022-03-04<span class="dp">·</span>12:46:49.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/security.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>330<span class="dp">·</span>2022-03-04<span class="dp">·</span>12:46:49.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/security.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>2021-09-04<span class="dp">·</span>16:31:12.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/serialize.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>2021-09-04<span class="dp">·</span>16:31:12.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/serialize.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>8</del>8<del>6638</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/templates/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>8<ins>1884</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/templates/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1842<span class="dp">·</span>2022-05-24<span class="dp">·</span>11:30:42.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/templates/help.html</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1842<span class="dp">·</span>2022-05-24<span class="dp">·</span>11:30:42.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/templates/help.html</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2168<span class="dp">·</span>2022-05-11<span class="dp">·</span>12:26:38.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/templates/helplist.html</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2168<span class="dp">·</span>2022-05-11<span class="dp">·</span>12:26:38.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/templates/helplist.html</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1730<span class="dp">·</span>2022-05-13<span class="dp">·</span>12:40:19.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/templates/login.html</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1730<span class="dp">·</span>2022-05-13<span class="dp">·</span>12:40:19.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/templates/login.html</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>583<span class="dp">·</span>2022-05-11<span class="dp">·</span>15:54:35.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/templates/upload.html</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>583<span class="dp">·</span>2022-05-11<span class="dp">·</span>15:54:35.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/templates/upload.html</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>8</del>8<del>7483</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/tools/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>8<ins>4142</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/tools/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2021-09-04<span class="dp">·</span>16:34:51.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/tools/__init__.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2021-09-04<span class="dp">·</span>16:34:51.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/tools/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1032<span class="dp">·</span>2022-05-09<span class="dp">·</span>15:09:48.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/tools/docs.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1032<span class="dp">·</span>2022-05-09<span class="dp">·</span>15:09:48.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/tools/docs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2056<span class="dp">·</span>2022-01-21<span class="dp">·</span>14:04:37.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/tools/validation.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2056<span class="dp">·</span>2022-01-21<span class="dp">·</span>14:04:37.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/tools/validation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>8</del>8<del>8207</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/views/</td><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>8<ins>6176</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/views/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2021-09-04<span class="dp">·</span>10:56:53.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/views/__init__.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2021-09-04<span class="dp">·</span>10:56:53.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/views/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2223<span class="dp">·</span>2021-12-08<span class="dp">·</span>12:08:11.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/views/admin_views.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2223<span class="dp">·</span>2021-12-08<span class="dp">·</span>12:08:11.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/views/admin_views.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>549<span class="dp">·</span>2021-09-19<span class="dp">·</span>09:52:20.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/views/ctxmap_views.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>549<span class="dp">·</span>2021-09-19<span class="dp">·</span>09:52:20.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/views/ctxmap_views.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9787<span class="dp">·</span>2022-05-24<span class="dp">·</span>12:15:56.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker/flasky/viewutils.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9787<span class="dp">·</span>2022-05-24<span class="dp">·</span>12:15:56.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker/flasky/viewutils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.89<del>0</del>3<del>89</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/</td><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>893<ins>16</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1473<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/PKG-INFO</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1473<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>905<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/SOURCES.txt</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>905<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/dependency_links.txt</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/namespace_packages.txt</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/namespace_packages.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-05-24<span class="dp">·</span>12:20:10.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/not-zip-safe</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-05-24<span class="dp">·</span>12:20:10.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>93<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/requires.txt</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>93<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/joker_flasky.egg-info/top_level.txt</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/joker_flasky.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:<del>17</del>:<del>09</del>.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/requirements.txt</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:<ins>24</ins>:<ins>17</ins>.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>6</del><span class="dp">·</span>02:2<del>0</del>:<del>53</del>.<del>8</del>9<del>1052</del><span class="dp">·</span>joker-flasky-0.5.<del>5</del>/setup.cfg</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>02:2<ins>8</ins>:<ins>10</ins>.<ins>0</ins>9<ins>0373</ins><span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1688<span class="dp">·</span>2022-05-07<span class="dp">·</span>13:29:28.000000<span class="dp">·</span>joker-flasky-0.5.<del>5</del>/setup.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>Hailong<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(502)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1688<span class="dp">·</span>2022-05-07<span class="dp">·</span>13:29:28.000000<span class="dp">·</span>joker-flasky-0.5.<ins>6</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/LICENSE</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--LICENSE"><span class="source">joker-flasky-0.5.6/LICENSE</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">539 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/PKG-INFO</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--PKG-INFO"><span class="source">joker-flasky-0.5.6/PKG-INFO</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>joker-flasky</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>joker-flasky</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>reusable<span class="dp">·</span>components<span class="dp">·</span>for<span class="dp">·</span>flask-based<span class="dp">·</span>web<span class="dp">·</span>development</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>reusable<span class="dp">·</span>components<span class="dp">·</span>for<span class="dp">·</span>flask-based<span class="dp">·</span>web<span class="dp">·</span>development</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/README.md</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--README.md"><span class="source">joker-flasky-0.5.6/README.md</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/app.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-app.py"><span class="source">joker-flasky-0.5.6/joker/flasky/app.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/auth.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-auth.py"><span class="source">joker-flasky-0.5.6/joker/flasky/auth.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-auth.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/context.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-context.py"><span class="source">joker-flasky-0.5.6/joker/flasky/context.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-context.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/develop.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-develop.py"><span class="source">joker-flasky-0.5.6/joker/flasky/develop.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-develop.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/environ.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-environ.py"><span class="source">joker-flasky-0.5.6/joker/flasky/environ.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-environ.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/pages.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-pages.py"><span class="source">joker-flasky-0.5.6/joker/flasky/pages.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-pages.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/serialize.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-serialize.py"><span class="source">joker-flasky-0.5.6/joker/flasky/serialize.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-serialize.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/templates/help.html</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-help.html"><span class="source">joker-flasky-0.5.6/joker/flasky/templates/help.html</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-help.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/templates/helplist.html</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-helplist.html"><span class="source">joker-flasky-0.5.6/joker/flasky/templates/helplist.html</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-helplist.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/templates/login.html</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-login.html"><span class="source">joker-flasky-0.5.6/joker/flasky/templates/login.html</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-login.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/templates/upload.html</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-upload.html"><span class="source">joker-flasky-0.5.6/joker/flasky/templates/upload.html</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-templates-upload.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/tools/docs.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-tools-docs.py"><span class="source">joker-flasky-0.5.6/joker/flasky/tools/docs.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-tools-docs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/tools/validation.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-tools-validation.py"><span class="source">joker-flasky-0.5.6/joker/flasky/tools/validation.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-tools-validation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/views/admin_views.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-views-admin_views.py"><span class="source">joker-flasky-0.5.6/joker/flasky/views/admin_views.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-views-admin_views.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/views/ctxmap_views.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-views-ctxmap_views.py"><span class="source">joker-flasky-0.5.6/joker/flasky/views/ctxmap_views.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-views-ctxmap_views.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker/flasky/viewutils.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-viewutils.py"><span class="source">joker-flasky-0.5.6/joker/flasky/viewutils.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker-flasky-viewutils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">583 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker_flasky.egg-info/PKG-INFO</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker_flasky.egg-info-PKG-INFO"><span class="source">joker-flasky-0.5.6/joker_flasky.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker_flasky.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>joker-flasky</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>joker-flasky</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.5.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>reusable<span class="dp">·</span>components<span class="dp">·</span>for<span class="dp">·</span>flask-based<span class="dp">·</span>web<span class="dp">·</span>development</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>reusable<span class="dp">·</span>components<span class="dp">·</span>for<span class="dp">·</span>flask-based<span class="dp">·</span>web<span class="dp">·</span>development</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>(GPL)</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/joker_flasky.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--joker_flasky.egg-info-SOURCES.txt"><span class="source">joker-flasky-0.5.6/joker_flasky.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--joker_flasky.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">joker-flasky-0.5.5/setup.py</span> vs.</div>
+      <div id="joker-flasky--.-.-.tar---joker-flasky--.-.--setup.py"><span class="source">joker-flasky-0.5.6/setup.py</span>
+        <a class="anchor" href="#joker-flasky--.-.-.tar---joker-flasky--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

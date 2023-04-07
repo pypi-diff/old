@@ -1,0 +1,237 @@
+--- tmp/nonebot_plugin_warframe_mode-1.0.4.tar.gz
++++ tmp/nonebot_plugin_warframe_mode-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nonebot_plugin_warframe_mode-1.0.4.tar", last modified: Tue Mar 28 09:57:41 2023, max compression
+│ +gzip compressed data, was "nonebot_plugin_warframe_mode-1.1.0.tar", last modified: Fri Apr  7 02:32:17 2023, max compression
+│   --- nonebot_plugin_warframe_mode-1.0.4.tar
+├── +++ nonebot_plugin_warframe_mode-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,15 +1,15 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-28 09:57:41.821685 nonebot_plugin_warframe_mode-1.0.4/
+│ │ --rw-rw-rw-   0        0        0     1091 2023-03-28 09:41:48.000000 nonebot_plugin_warframe_mode-1.0.4/LICENSE
+│ │ --rw-rw-rw-   0        0        0     1973 2023-03-28 09:57:41.821685 nonebot_plugin_warframe_mode-1.0.4/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1451 2023-03-28 09:56:50.000000 nonebot_plugin_warframe_mode-1.0.4/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-28 09:57:41.821685 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode/
+│ │ --rw-rw-rw-   0        0        0     4043 2023-03-28 09:53:17.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7663 2023-03-28 09:53:45.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode/data_source.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-28 09:57:41.821685 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1973 2023-03-28 09:57:41.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      370 2023-03-28 09:57:41.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-28 09:57:41.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       63 2023-03-28 09:57:41.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       29 2023-03-28 09:57:41.000000 nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-28 09:57:41.821685 nonebot_plugin_warframe_mode-1.0.4/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      999 2023-03-28 09:49:15.000000 nonebot_plugin_warframe_mode-1.0.4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:32:17.049802 nonebot_plugin_warframe_mode-1.1.0/
+│ │ +-rw-rw-rw-   0        0        0     1091 2023-03-28 09:41:48.000000 nonebot_plugin_warframe_mode-1.1.0/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     2023 2023-04-07 02:32:17.049802 nonebot_plugin_warframe_mode-1.1.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1506 2023-04-07 02:25:51.000000 nonebot_plugin_warframe_mode-1.1.0/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:32:17.034180 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode/
+│ │ +-rw-rw-rw-   0        0        0    14519 2023-04-07 02:05:03.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3738 2023-04-07 01:22:16.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode/data_source.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 02:32:17.034180 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     2023 2023-04-07 02:32:16.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      370 2023-04-07 02:32:16.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 02:32:16.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       63 2023-04-07 02:32:16.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       29 2023-04-07 02:32:16.000000 nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 02:32:17.049802 nonebot_plugin_warframe_mode-1.1.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      999 2023-04-07 02:07:45.000000 nonebot_plugin_warframe_mode-1.1.0/setup.py
+│ │   --- nonebot_plugin_warframe_mode-1.0.4/LICENSE
+│ ├── +++ nonebot_plugin_warframe_mode-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- nonebot_plugin_warframe_mode-1.0.4/PKG-INFO
+│ ├── +++ nonebot_plugin_warframe_mode-1.1.0/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nonebot_plugin_warframe_mode
+│ │ -Version: 1.0.4
+│ │ +Version: 1.1.0
+│ │  Summary: 基于nonebot2的WM市场查询的插件
+│ │  Home-page: https://github.com/mmxd12/nonebot_plugin_warframe_mode
+│ │  Author: mmxd12
+│ │  Author-email: mys0627@outlook.com
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -25,14 +25,16 @@
+│ │      ```
+│ │  
+│ │  - NoneBot2 插件商店安装
+│ │  
+│ │      ```shell
+│ │      nb plugin install nonebot-plugin-warframe_mode
+│ │      ```
+│ │ +	
+│ │ +-打开nonebot2的根目录中的pyproject.toml文件，在[tool.nonebot]这项中找到plugins在其后面[]里写入"nonebot_plugin_warframe_mode"
+│ │  
+│ │  # 使用
+│ │  
+│ │  - 前缀：`/`
+│ │  - 指令菜单：`救命 菜单`
+│ │    ```text
+│ │    注意：所有指令需要搭配前缀使用！
+│ │ @@ -46,27 +48,21 @@
+│ │    新闻| 事件 |警报
+│ │    突击| 裂缝 |入侵
+│ │    奸商| 特价 |地球
+│ │    电波| 仲裁 |扎里曼
+│ │    地球赏金|金星赏金|火卫二赏金
+│ │    火卫二平原|金星平原|地球平原
+│ │    ===================
+│ │ -  当前版本1.0.4-Beta
+│ │ +  当前版本1.1.0-Beta
+│ │    ```
+│ │    
+│ │  # 注意
+│ │  - python版本需要3.9以上，内置新语法！
+│ │  -[如果有bug请大佬们往issues走](https://github.com/mmxd12/nonebot_plugin_warframe_mode/issues)
+│ │ +-如需修改指令前缀或者监听的ip请在.env.prod文件里面修改
+│ │  
+│ │  
+│ │  # 特别感谢
+│ │  
+│ │  - [NoneBot2](https://github.com/nonebot/nonebot2)： 插件使用的开发框架。
+│ │  - [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)： 无理头●▽●。
+│ │  - [warframe-info-api](https://github.com/WsureWarframe/warframe-info-api)：所使用的指令均来自WsureWarframe的api（非常的nbヾ(≧∇≦*)ゝ）
+│ │ -
+│ │ -
+│ │ -# Example Package
+│ │ -
+│ │ -This is a simple example package. You can use
+│ │ -[Github-flavored Markdown](https://github.com/mmxd12/nonebot_plugin_warframe_mode)
+│ │ -to write your content.
+│ │   --- nonebot_plugin_warframe_mode-1.0.4/README.md
+│ ├── +++ nonebot_plugin_warframe_mode-1.1.0/README.md
+│ │┄ Files 11% similar despite different names
+│ │ @@ -12,14 +12,16 @@
+│ │      ```
+│ │  
+│ │  - NoneBot2 插件商店安装
+│ │  
+│ │      ```shell
+│ │      nb plugin install nonebot-plugin-warframe_mode
+│ │      ```
+│ │ +	
+│ │ +-打开nonebot2的根目录中的pyproject.toml文件，在[tool.nonebot]这项中找到plugins在其后面[]里写入"nonebot_plugin_warframe_mode"
+│ │  
+│ │  # 使用
+│ │  
+│ │  - 前缀：`/`
+│ │  - 指令菜单：`救命 菜单`
+│ │    ```text
+│ │    注意：所有指令需要搭配前缀使用！
+│ │ @@ -33,27 +35,21 @@
+│ │    新闻| 事件 |警报
+│ │    突击| 裂缝 |入侵
+│ │    奸商| 特价 |地球
+│ │    电波| 仲裁 |扎里曼
+│ │    地球赏金|金星赏金|火卫二赏金
+│ │    火卫二平原|金星平原|地球平原
+│ │    ===================
+│ │ -  当前版本1.0.4-Beta
+│ │ +  当前版本1.1.0-Beta
+│ │    ```
+│ │    
+│ │  # 注意
+│ │  - python版本需要3.9以上，内置新语法！
+│ │  -[如果有bug请大佬们往issues走](https://github.com/mmxd12/nonebot_plugin_warframe_mode/issues)
+│ │ +-如需修改指令前缀或者监听的ip请在.env.prod文件里面修改
+│ │  
+│ │  
+│ │  # 特别感谢
+│ │  
+│ │  - [NoneBot2](https://github.com/nonebot/nonebot2)： 插件使用的开发框架。
+│ │  - [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)： 无理头●▽●。
+│ │  - [warframe-info-api](https://github.com/WsureWarframe/warframe-info-api)：所使用的指令均来自WsureWarframe的api（非常的nbヾ(≧∇≦*)ゝ）
+│ │ -
+│ │ -
+│ │ -# Example Package
+│ │ -
+│ │ -This is a simple example package. You can use
+│ │ -[Github-flavored Markdown](https://github.com/mmxd12/nonebot_plugin_warframe_mode)
+│ │ -to write your content.
+│ │   --- nonebot_plugin_warframe_mode-1.0.4/nonebot_plugin_warframe_mode.egg-info/PKG-INFO
+│ ├── +++ nonebot_plugin_warframe_mode-1.1.0/nonebot_plugin_warframe_mode.egg-info/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: nonebot-plugin-warframe-mode
+│ │ -Version: 1.0.4
+│ │ +Version: 1.1.0
+│ │  Summary: 基于nonebot2的WM市场查询的插件
+│ │  Home-page: https://github.com/mmxd12/nonebot_plugin_warframe_mode
+│ │  Author: mmxd12
+│ │  Author-email: mys0627@outlook.com
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -25,14 +25,16 @@
+│ │      ```
+│ │  
+│ │  - NoneBot2 插件商店安装
+│ │  
+│ │      ```shell
+│ │      nb plugin install nonebot-plugin-warframe_mode
+│ │      ```
+│ │ +	
+│ │ +-打开nonebot2的根目录中的pyproject.toml文件，在[tool.nonebot]这项中找到plugins在其后面[]里写入"nonebot_plugin_warframe_mode"
+│ │  
+│ │  # 使用
+│ │  
+│ │  - 前缀：`/`
+│ │  - 指令菜单：`救命 菜单`
+│ │    ```text
+│ │    注意：所有指令需要搭配前缀使用！
+│ │ @@ -46,27 +48,21 @@
+│ │    新闻| 事件 |警报
+│ │    突击| 裂缝 |入侵
+│ │    奸商| 特价 |地球
+│ │    电波| 仲裁 |扎里曼
+│ │    地球赏金|金星赏金|火卫二赏金
+│ │    火卫二平原|金星平原|地球平原
+│ │    ===================
+│ │ -  当前版本1.0.4-Beta
+│ │ +  当前版本1.1.0-Beta
+│ │    ```
+│ │    
+│ │  # 注意
+│ │  - python版本需要3.9以上，内置新语法！
+│ │  -[如果有bug请大佬们往issues走](https://github.com/mmxd12/nonebot_plugin_warframe_mode/issues)
+│ │ +-如需修改指令前缀或者监听的ip请在.env.prod文件里面修改
+│ │  
+│ │  
+│ │  # 特别感谢
+│ │  
+│ │  - [NoneBot2](https://github.com/nonebot/nonebot2)： 插件使用的开发框架。
+│ │  - [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)： 无理头●▽●。
+│ │  - [warframe-info-api](https://github.com/WsureWarframe/warframe-info-api)：所使用的指令均来自WsureWarframe的api（非常的nbヾ(≧∇≦*)ゝ）
+│ │ -
+│ │ -
+│ │ -# Example Package
+│ │ -
+│ │ -This is a simple example package. You can use
+│ │ -[Github-flavored Markdown](https://github.com/mmxd12/nonebot_plugin_warframe_mode)
+│ │ -to write your content.
+│ │   --- nonebot_plugin_warframe_mode-1.0.4/setup.py
+│ ├── +++ nonebot_plugin_warframe_mode-1.1.0/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r", encoding="utf-8") as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name = "nonebot_plugin_warframe_mode", ##模块名字
+│ │ -    version = "1.0.4", ##版本号
+│ │ +    version = "1.1.0", ##版本号
+│ │      author="mmxd12", ##作者名字
+│ │      author_email="mys0627@outlook.com", ##作者邮箱
+│ │      description="""基于nonebot2的WM市场查询的插件""", ##模块简介
+│ │      long_description=long_description,  # 加长版描述？
+│ │      long_description_content_type="text/markdown",  # 描述使用Markdown
+│ │      url="https://github.com/mmxd12/nonebot_plugin_warframe_mode", ##模块链接
+│ │      packages=setuptools.find_packages(),
