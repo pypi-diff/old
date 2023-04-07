@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/biobrary-0.0.6.3.tar.gz tmp/biobrary-0.1.1.tar.gz --html versions/b/biobrary/0.0.6.3-0.1.1/index.html --text versions/b/biobrary/0.0.6.3-0.1.1/diff.txt --markdown versions/b/biobrary/0.0.6.3-0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.9 KB</span></div>
+  <div><span class="source">tmp/biobrary-0.0.6.3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/biobrary-0.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">335 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;<del>/home/fanghl/fanghl_dirtree/works/github/biobrary/dist/tmp90jqk4b1/</del>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Tue</del><span class="dp">·</span><del>Dec</del><span class="dp">·</span><del>28</del><span class="dp">·</span>12:<del>50</del>:<del>0</del>9<span class="dp">·</span>202<del>1</del>,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;biobrary-0.<ins>1</ins>.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span><ins>Apr</ins><span class="dp">·</span><ins><span class="dp">·</span>7</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>2</ins>9<span class="dp">·</span>202<ins>3</ins>,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.52 KB</span></div>
+    <div><span class="source">biobrary-0.0.6.3.tar</span> vs.</div>
+    <div id="biobrary--.-.-.-.tar"><span class="source">biobrary-0.1.1.tar</span>
+      <a class="anchor" href="#biobrary--.-.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.67 KB</span></div>
+      <div id="biobrary--.-.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 27 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr<del>w</del>xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.<del>000000</del><span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr<ins>-</ins>xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.<ins>998445</ins><span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>14</del><span class="dp">·</span><del>11</del>:<del>11</del>:<del>21</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span><ins>06</ins>:<ins>30</ins>:<ins>35</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>18</del>4<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.<del>000000</del><span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>35</ins>4<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.<ins>998445</ins><span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>8</del>4<del>5</del><span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>25</del><span class="dp">·</span><del>10</del>:<del>53</del>:<del>41</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>9</ins>4<ins>2</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span><ins>06</ins>:<ins>30</ins>:<ins>35</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr<del>w</del>xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.<del>000000</del><span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary/</td><td class="diffline">5 </td><td class="diffpresent">drwxr<ins>-</ins>xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.<ins>996445</ins><span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary/</td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10708<span class="dp">·</span>2021-12-28<span class="dp">·</span>12:47:29.000000<span class="dp">·</span>biobrary-0.0.6.3/biobrary/CircleNode.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>213</del><span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span>07:1<del>2</del>:<del>55</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>140</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>07:1<ins>6</ins>:<ins>13</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>324<span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span>0<del>7</del>:<del>12</del>:<del>5</del>5.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary/amino_acids_mw.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>324<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>6</ins>:<ins>30</ins>:<ins>3</ins>5.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary/amino_acids_mw.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span>0<del>7</del>:<del>12</del>:<del>5</del>5.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary/biocodon.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1051<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>6</ins>:<ins>30</ins>:<ins>3</ins>5.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary/biocodon.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:46:28.997445<span class="dp">·</span>biobrary-0.1.1/biobrary/bioparse/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>104<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:04:13.000000<span class="dp">·</span>biobrary-0.1.1/biobrary/bioparse/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12457<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:03:30.000000<span class="dp">·</span>biobrary-0.1.1/biobrary/bioparse/blast_parse.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1438<span class="dp">·</span>2023-04-07<span class="dp">·</span>06:41:04.000000<span class="dp">·</span>biobrary-0.1.1/biobrary/bioparse/fasta_parse.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:02:32.000000<span class="dp">·</span>biobrary-0.1.1/biobrary/bioparse/gbk_parse.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>19985</del><span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span>07:<del>12</del>:5<del>5</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary/bioparser.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span>2261</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>07:<ins>01</ins>:5<ins>1</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary/bioparse<ins>/gff_pa</ins>r<ins>se</ins>.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14178<span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span>0<del>7</del>:<del>12</del>:<del>5</del>5.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary/score_matrix.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14178<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>6</ins>:<ins>30</ins>:<ins>3</ins>5.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary/score_matrix.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>12:46:28.998445<span class="dp">·</span>biobrary-0.1.1/biobrary/tree/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10708<span class="dp">·</span>2023-04-07<span class="dp">·</span>06:30:35.000000<span class="dp">·</span>biobrary-0.1.1/biobrary/tree/CircleNode.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>07:13:44.000000<span class="dp">·</span>biobrary-0.1.1/biobrary/tree/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr<del>w</del>xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.<del>000000</del><span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary.egg-info/</td><td class="diffline">19 </td><td class="diffpresent">drwxr<ins>-</ins>xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.<ins>997445</ins><span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>18</del>4<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary.egg-info/PKG-INFO</td><td class="diffline">20 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>35</ins>4<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>349</del><span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary.egg-info/SOURCES.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>516</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary.egg-info/dependency_links.txt</td><td class="diffline">22 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>26</del><span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary.egg-info/requires.txt</td><td class="diffline">23 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>38</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/biobrary.egg-info/top_level.txt</td><td class="diffline">24 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/biobrary.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>48</del><span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span><del>07</del>:<del>12</del>:<del>55</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/pyproject.toml</td><td class="diffline">25 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>551</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span><ins>12</ins>:<ins>44</ins>:<ins>00</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>449</del><span class="dp">·</span>202<del>1</del>-<del>12</del>-<del>28</del><span class="dp">·</span>12:<del>50</del>:<del>09</del>.<del>000000</del><span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/setup.cfg</td><td class="diffline">26 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>235</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>12:<ins>46</ins>:<ins>28</ins>.<ins>999445</ins><span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r<del>w</del>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>39</del><span class="dp">·</span>202<del>1</del>-<del>10</del>-<del>15</del><span class="dp">·</span>0<del>7</del>:<del>1</del>2:<del>55</del>.000000<span class="dp">·</span>biobrary-<del>0.</del>0.<del>6</del>.<del>3</del>/setup.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r<ins>-</ins>-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>fanghl<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>68</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-<ins>07</ins><span class="dp">·</span>0<ins>8</ins>:<ins>4</ins>2:<ins>11</ins>.000000<span class="dp">·</span>biobrary-0.<ins>1</ins>.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">98.0 B</span></div>
+      <div id="biobrary--.-.-.-.tar---filetype-from-file---"><span class="source">filetype from file(1)</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---filetype-from-file---">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">POSIX<span class="dp">·</span>tar<span class="dp">·</span>archive<del><span class="dp">·</span>(GNU)</del></td><td class="diffline">1 </td><td class="diffpresent">POSIX<span class="dp">·</span>tar<span class="dp">·</span>archive</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">biobrary-0.0.6.3/LICENSE</span> vs.</div>
+      <div id="biobrary--.-.-.-.tar---biobrary--.-.-.--LICENSE"><span class="source">biobrary-0.1.1/LICENSE</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---biobrary--.-.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.01 KB</span></div>
+      <div><span class="source">biobrary-0.0.6.3/PKG-INFO</span> vs.</div>
+      <div id="biobrary--.-.-.-.tar---biobrary--.-.-.--PKG-INFO"><span class="source">biobrary-0.1.1/README.md</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---biobrary--.-.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 25 lines modified</td><td colspan="2">Offset 1, 17 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>biobrary</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.6.3</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computing<span class="dp">·</span>works</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/benjaminfang/biobrary</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Benjamin<span class="dp">·</span>Fang</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>benjaminfang.ol@outlook.com</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">12 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>Biobrary</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>Biobrary</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Introduction</td><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>Introduction</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Biobrary<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>library,<span class="dp">·</span>which<span class="dp">·</span>contain<span class="dp">·</span>data<span class="dp">·</span>and<span class="dp">·</span>methods<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computation.</td><td class="diffline">3 </td><td class="diffpresent">Biobrary<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>library,<span class="dp">·</span>which<span class="dp">·</span>contain<span class="dp">·</span>data<span class="dp">·</span>and<span class="dp">·</span>methods<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computation.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">##<span class="dp">·</span>Requirement<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">*<span class="dp">·</span>ete3</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pyqt5<span class="dp">·</span>is<span class="dp">·</span>needed<span class="dp">·</span>by<span class="dp">·</span>ete3.<span class="dp">·</span>you<span class="dp">·</span>maybe<span class="dp">·</span>need<span class="dp">·</span>install<span class="dp">·</span>it<span class="dp">·</span>manually.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">##<span class="dp">·</span>Install<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">8 </td><td class="diffpresent">##<span class="dp">·</span>Install<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">*<span class="dp">·</span>using<span class="dp">·</span>pip<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent">*<span class="dp">·</span>using<span class="dp">·</span>pip<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">`pip<span class="dp">·</span>install<span class="dp">·</span>biobrary<span class="dp">·</span>--user`</td><td class="diffline">10 </td><td class="diffpresent">`pip<span class="dp">·</span>install<span class="dp">·</span>biobrary<span class="dp">·</span>--user`</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">*<span class="dp">·</span>manally<span class="dp">·</span>install<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">11 </td><td class="diffpresent">*<span class="dp">·</span>manally<span class="dp">·</span>install<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">`git<span class="dp">·</span>clone<span class="dp">·</span>https://github.com/benjaminfang/biobrary.git`<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">12 </td><td class="diffpresent">`git<span class="dp">·</span>clone<span class="dp">·</span>https://github.com/benjaminfang/biobrary.git`<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">`cd<span class="dp">·</span>biobrary`<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">13 </td><td class="diffpresent">`cd<span class="dp">·</span>biobrary`<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 53, 9 lines modified</td><td colspan="2">Offset 45, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">*<span class="dp">·</span>amino_acids_mw<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">45 </td><td class="diffpresent">*<span class="dp">·</span>amino_acids_mw<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">*<span class="dp">·</span>CircleNode<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">46 </td><td class="diffpresent">*<span class="dp">·</span>CircleNode<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>phylogenic<span class="dp">·</span>tree<span class="dp">·</span>traverse<span class="dp">·</span>and<span class="dp">·</span>operations.<span class="dp">·</span>And<span class="dp">·</span>divide<span class="dp">·</span>tree<span class="dp">·</span>to<span class="dp">·</span>circle<span class="dp">·</span>node<span class="dp">·</span>according</td><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>phylogenic<span class="dp">·</span>tree<span class="dp">·</span>traverse<span class="dp">·</span>and<span class="dp">·</span>operations.<span class="dp">·</span>And<span class="dp">·</span>divide<span class="dp">·</span>tree<span class="dp">·</span>to<span class="dp">·</span>circle<span class="dp">·</span>node<span class="dp">·</span>according</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>to<span class="dp">·</span>phylogenic<span class="dp">·</span>distance.</td><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>to<span class="dp">·</span>phylogenic<span class="dp">·</span>distance.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">120 B</span></div>
+      <div><span class="source">biobrary-0.0.6.3/biobrary/CircleNode.py</span> vs.</div>
+      <div id="biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary-CircleNode.py"><span class="source">biobrary-0.1.1/biobrary/tree/CircleNode.py</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary-CircleNode.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">biobrary-0.0.6.3/biobrary/biocodon.py</span> vs.</div>
+      <div id="biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary-biocodon.py"><span class="source">biobrary-0.1.1/biobrary/biocodon.py</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary-biocodon.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">biobrary-0.0.6.3/biobrary/score_matrix.py</span> vs.</div>
+      <div id="biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary-score_matrix.py"><span class="source">biobrary-0.1.1/biobrary/score_matrix.py</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary-score_matrix.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.29 KB</span></div>
+      <div><span class="source">biobrary-0.0.6.3/biobrary.egg-info/PKG-INFO</span> vs.</div>
+      <div id="biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary.egg-info-PKG-INFO"><span class="source">biobrary-0.1.1/PKG-INFO</span>
+        <a class="anchor" href="#biobrary--.-.-.-.tar---biobrary--.-.-.--biobrary.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 17% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 25 lines modified</td><td colspan="2">Offset 1, 30 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>biobrary</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>biobrary</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>0.</del><del>6</del>.<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>1</ins>.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computing<span class="dp">·</span>works</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computing<span class="dp">·</span>works</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Benjamin<span class="dp">·</span>Fang<span class="dp">·</span>&lt;benjaminfang.ol@outlook.com&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">Home<del>-</del>page<del>:</del><span class="dp">·</span>https://github.com/benjaminfang/biobrary</td><td class="diffline">7 </td><td class="diffpresent"><ins>Project-URL:<span class="dp">·</span></ins>Homepage<ins>,</ins><span class="dp">·</span>https://github.com/benjaminfang/biobrary</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">Keywords:<span class="dp">·</span>biobrary,bioparse,tree</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Benjamin<span class="dp">·</span>Fang</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>benjaminfang.ol@outlook.com</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.<del>7</del></td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">11 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">12 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>Biobrary</td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>Biobrary</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Introduction</td><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Introduction</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Biobrary<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>library,<span class="dp">·</span>which<span class="dp">·</span>contain<span class="dp">·</span>data<span class="dp">·</span>and<span class="dp">·</span>methods<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computation.</td><td class="diffline">15 </td><td class="diffpresent">Biobrary<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>library,<span class="dp">·</span>which<span class="dp">·</span>contain<span class="dp">·</span>data<span class="dp">·</span>and<span class="dp">·</span>methods<span class="dp">·</span>for<span class="dp">·</span>biological<span class="dp">·</span>computation.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent">##<span class="dp">·</span>Requirement<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">*<span class="dp">·</span>ete3</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pyqt5<span class="dp">·</span>is<span class="dp">·</span>needed<span class="dp">·</span>by<span class="dp">·</span>ete3.<span class="dp">·</span>you<span class="dp">·</span>maybe<span class="dp">·</span>need<span class="dp">·</span>install<span class="dp">·</span>it<span class="dp">·</span>manually.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">##<span class="dp">·</span>Install<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">20 </td><td class="diffpresent">##<span class="dp">·</span>Install<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">*<span class="dp">·</span>using<span class="dp">·</span>pip<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">21 </td><td class="diffpresent">*<span class="dp">·</span>using<span class="dp">·</span>pip<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">`pip<span class="dp">·</span>install<span class="dp">·</span>biobrary<span class="dp">·</span>--user`</td><td class="diffline">22 </td><td class="diffpresent">`pip<span class="dp">·</span>install<span class="dp">·</span>biobrary<span class="dp">·</span>--user`</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">*<span class="dp">·</span>manally<span class="dp">·</span>install<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">23 </td><td class="diffpresent">*<span class="dp">·</span>manally<span class="dp">·</span>install<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">`git<span class="dp">·</span>clone<span class="dp">·</span>https://github.com/benjaminfang/biobrary.git`<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">`git<span class="dp">·</span>clone<span class="dp">·</span>https://github.com/benjaminfang/biobrary.git`<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">`cd<span class="dp">·</span>biobrary`<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">25 </td><td class="diffpresent">`cd<span class="dp">·</span>biobrary`<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 53, 9 lines modified</td><td colspan="2">Offset 58, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">*<span class="dp">·</span>amino_acids_mw<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">58 </td><td class="diffpresent">*<span class="dp">·</span>amino_acids_mw<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">*<span class="dp">·</span>CircleNode<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">59 </td><td class="diffpresent">*<span class="dp">·</span>CircleNode<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>phylogenic<span class="dp">·</span>tree<span class="dp">·</span>traverse<span class="dp">·</span>and<span class="dp">·</span>operations.<span class="dp">·</span>And<span class="dp">·</span>divide<span class="dp">·</span>tree<span class="dp">·</span>to<span class="dp">·</span>circle<span class="dp">·</span>node<span class="dp">·</span>according</td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>phylogenic<span class="dp">·</span>tree<span class="dp">·</span>traverse<span class="dp">·</span>and<span class="dp">·</span>operations.<span class="dp">·</span>And<span class="dp">·</span>divide<span class="dp">·</span>tree<span class="dp">·</span>to<span class="dp">·</span>circle<span class="dp">·</span>node<span class="dp">·</span>according</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>to<span class="dp">·</span>phylogenic<span class="dp">·</span>distance.</td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>to<span class="dp">·</span>phylogenic<span class="dp">·</span>distance.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,982 @@
+--- tmp/psygnal-0.8.1.tar.gz
++++ tmp/psygnal-0.9.0.tar.gz
+│   --- psygnal-0.8.1.tar
+├── +++ psygnal-0.9.0.tar
+│ ├── file list
+│ │ @@ -1,42 +1,49 @@
+│ │ --rw-r--r--   0        0        0    21578 2020-02-02 00:00:00.000000 psygnal-0.8.1/CHANGELOG.md
+│ │ --rw-r--r--   0        0        0     2053 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/__init__.py
+│ │ --rw-r--r--   0        0        0     5164 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_dataclass_utils.py
+│ │ --rw-r--r--   0        0        0     4212 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_evented_decorator.py
+│ │ --rw-r--r--   0        0        0    18274 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_evented_model.py
+│ │ --rw-r--r--   0        0        0     9106 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_group.py
+│ │ --rw-r--r--   0        0        0    16183 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_group_descriptor.py
+│ │ --rw-r--r--   0        0        0    48097 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_signal.py
+│ │ --rw-r--r--   0        0        0     7341 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_throttler.py
+│ │ --rw-r--r--   0        0        0     2282 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_throttler.pyi
+│ │ --rw-r--r--   0        0        0    16153 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/_weak_callback.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/py.typed
+│ │ --rw-r--r--   0        0        0     4396 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/utils.py
+│ │ --rw-r--r--   0        0        0     1064 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/__init__.py
+│ │ --rw-r--r--   0        0        0     5746 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/_evented_dict.py
+│ │ --rw-r--r--   0        0        0    15427 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/_evented_list.py
+│ │ --rw-r--r--   0        0        0     7182 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/_evented_proxy.py
+│ │ --rw-r--r--   0        0        0     9967 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/_evented_set.py
+│ │ --rw-r--r--   0        0        0     4203 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/_selectable_evented_list.py
+│ │ --rw-r--r--   0        0        0     6513 2020-02-02 00:00:00.000000 psygnal-0.8.1/src/psygnal/containers/_selection.py
+│ │ --rw-r--r--   0        0        0     6012 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_bench.py
+│ │ --rw-r--r--   0        0        0     1630 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_dataclass_utils.py
+│ │ --rw-r--r--   0        0        0     5284 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_evented_decorator.py
+│ │ --rw-r--r--   0        0        0    13116 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_evented_model.py
+│ │ --rw-r--r--   0        0        0     4934 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_group.py
+│ │ --rw-r--r--   0        0        0     5074 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_group_descriptor.py
+│ │ --rw-r--r--   0        0        0    22538 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_psygnal.py
+│ │ --rw-r--r--   0        0        0     2924 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_qt_compat.py
+│ │ --rw-r--r--   0        0        0     1492 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_throttler.py
+│ │ --rw-r--r--   0        0        0     3303 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_utils.py
+│ │ --rw-r--r--   0        0        0     4177 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/test_weak_callable.py
+│ │ --rw-r--r--   0        0        0     4009 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/containers/test_evented_dict.py
+│ │ --rw-r--r--   0        0        0    11859 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/containers/test_evented_list.py
+│ │ --rw-r--r--   0        0        0     5085 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/containers/test_evented_proxy.py
+│ │ --rw-r--r--   0        0        0     3787 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/containers/test_evented_set.py
+│ │ --rw-r--r--   0        0        0     4453 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/containers/test_selectable_evented_list.py
+│ │ --rw-r--r--   0        0        0     2611 2020-02-02 00:00:00.000000 psygnal-0.8.1/tests/containers/test_selection.py
+│ │ --rw-r--r--   0        0        0     1313 2020-02-02 00:00:00.000000 psygnal-0.8.1/.gitignore
+│ │ --rw-r--r--   0        0        0     1514 2020-02-02 00:00:00.000000 psygnal-0.8.1/LICENSE
+│ │ --rw-r--r--   0        0        0     3903 2020-02-02 00:00:00.000000 psygnal-0.8.1/README.md
+│ │ --rw-r--r--   0        0        0     5427 2020-02-02 00:00:00.000000 psygnal-0.8.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     6592 2020-02-02 00:00:00.000000 psygnal-0.8.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    22798 2020-02-02 00:00:00.000000 psygnal-0.9.0/CHANGELOG.md
+│ │ +-rw-r--r--   0        0        0     2151 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/__init__.py
+│ │ +-rw-r--r--   0        0        0     5164 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_dataclass_utils.py
+│ │ +-rw-r--r--   0        0        0     4212 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_evented_decorator.py
+│ │ +-rw-r--r--   0        0        0    18334 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_evented_model.py
+│ │ +-rw-r--r--   0        0        0      475 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_exceptions.py
+│ │ +-rw-r--r--   0        0        0     9106 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_group.py
+│ │ +-rw-r--r--   0        0        0    16214 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_group_descriptor.py
+│ │ +-rw-r--r--   0        0        0     3250 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_queue.py
+│ │ +-rw-r--r--   0        0        0    50080 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_signal.py
+│ │ +-rw-r--r--   0        0        0     7341 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_throttler.py
+│ │ +-rw-r--r--   0        0        0     2282 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_throttler.pyi
+│ │ +-rw-r--r--   0        0        0    16226 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_weak_callback.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/py.typed
+│ │ +-rw-r--r--   0        0        0     2939 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/qt.py
+│ │ +-rw-r--r--   0        0        0     4396 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_pyinstaller_util/__init__.py
+│ │ +-rw-r--r--   0        0        0      152 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_pyinstaller_util/_pyinstaller_hook.py
+│ │ +-rw-r--r--   0        0        0     1500 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/_pyinstaller_util/hook-psygnal.py
+│ │ +-rw-r--r--   0        0        0     1064 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/__init__.py
+│ │ +-rw-r--r--   0        0        0     5746 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/_evented_dict.py
+│ │ +-rw-r--r--   0        0        0    15427 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/_evented_list.py
+│ │ +-rw-r--r--   0        0        0     7182 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/_evented_proxy.py
+│ │ +-rw-r--r--   0        0        0     9967 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/_evented_set.py
+│ │ +-rw-r--r--   0        0        0     4203 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/_selectable_evented_list.py
+│ │ +-rw-r--r--   0        0        0     6513 2020-02-02 00:00:00.000000 psygnal-0.9.0/src/psygnal/containers/_selection.py
+│ │ +-rw-r--r--   0        0        0     6012 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_bench.py
+│ │ +-rw-r--r--   0        0        0     1630 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_dataclass_utils.py
+│ │ +-rw-r--r--   0        0        0     5296 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_evented_decorator.py
+│ │ +-rw-r--r--   0        0        0    13116 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_evented_model.py
+│ │ +-rw-r--r--   0        0        0     4934 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_group.py
+│ │ +-rw-r--r--   0        0        0     5078 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_group_descriptor.py
+│ │ +-rw-r--r--   0        0        0    24859 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_psygnal.py
+│ │ +-rw-r--r--   0        0        0     1454 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_pyinstaller_hook.py
+│ │ +-rw-r--r--   0        0        0     4238 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_qt_compat.py
+│ │ +-rw-r--r--   0        0        0     1492 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_throttler.py
+│ │ +-rw-r--r--   0        0        0     3303 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_utils.py
+│ │ +-rw-r--r--   0        0        0     4427 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/test_weak_callable.py
+│ │ +-rw-r--r--   0        0        0     4009 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/containers/test_evented_dict.py
+│ │ +-rw-r--r--   0        0        0    11859 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/containers/test_evented_list.py
+│ │ +-rw-r--r--   0        0        0     5085 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/containers/test_evented_proxy.py
+│ │ +-rw-r--r--   0        0        0     3787 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/containers/test_evented_set.py
+│ │ +-rw-r--r--   0        0        0     4453 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/containers/test_selectable_evented_list.py
+│ │ +-rw-r--r--   0        0        0     2611 2020-02-02 00:00:00.000000 psygnal-0.9.0/tests/containers/test_selection.py
+│ │ +-rw-r--r--   0        0        0     1313 2020-02-02 00:00:00.000000 psygnal-0.9.0/.gitignore
+│ │ +-rw-r--r--   0        0        0     1514 2020-02-02 00:00:00.000000 psygnal-0.9.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     3903 2020-02-02 00:00:00.000000 psygnal-0.9.0/README.md
+│ │ +-rw-r--r--   0        0        0     5646 2020-02-02 00:00:00.000000 psygnal-0.9.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     6641 2020-02-02 00:00:00.000000 psygnal-0.9.0/PKG-INFO
+│ │   --- psygnal-0.8.1/CHANGELOG.md
+│ ├── +++ psygnal-0.9.0/CHANGELOG.md
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,31 @@
+│ │  # Changelog
+│ │  
+│ │ -## [0.8.1](https://github.com/pyapp-kit/psygnal/tree/0.8.1) (2023-02-23)
+│ │ +## [0.9.0](https://github.com/pyapp-kit/psygnal/tree/0.9.0) (2023-04-07)
+│ │  
+│ │ -[Full Changelog](https://github.com/pyapp-kit/psygnal/compare/v0.8.0...0.8.1)
+│ │ +[Full Changelog](https://github.com/pyapp-kit/psygnal/compare/v0.8.1...0.9.0)
+│ │ +
+│ │ +**Implemented enhancements:**
+│ │ +
+│ │ +- feat: add thread parameter to connection method, allowed "queued connections" [\#200](https://github.com/pyapp-kit/psygnal/pull/200) ([tlambert03](https://github.com/tlambert03))
+│ │ +
+│ │ +**Tests & CI:**
+│ │ +
+│ │ +- ci\(dependabot\): bump pypa/cibuildwheel from 2.12.0 to 2.12.1 [\#197](https://github.com/pyapp-kit/psygnal/pull/197) ([dependabot[bot]](https://github.com/apps/dependabot))
+│ │ +- ci\(dependabot\): bump actions/setup-python from 3 to 4 [\#193](https://github.com/pyapp-kit/psygnal/pull/193) ([dependabot[bot]](https://github.com/apps/dependabot))
+│ │ +
+│ │ +**Merged pull requests:**
+│ │ +
+│ │ +- docs: add docs on connecting across thread [\#203](https://github.com/pyapp-kit/psygnal/pull/203) ([tlambert03](https://github.com/tlambert03))
+│ │ +- chore: deprecate async keyword in emit method [\#201](https://github.com/pyapp-kit/psygnal/pull/201) ([tlambert03](https://github.com/tlambert03))
+│ │ +- build: add pyinstaller hook to simplify frozing apps using pyinstaller  [\#194](https://github.com/pyapp-kit/psygnal/pull/194) ([Czaki](https://github.com/Czaki))
+│ │ +
+│ │ +## [v0.8.1](https://github.com/pyapp-kit/psygnal/tree/v0.8.1) (2023-02-23)
+│ │ +
+│ │ +[Full Changelog](https://github.com/pyapp-kit/psygnal/compare/v0.8.0...v0.8.1)
+│ │  
+│ │  **Fixed bugs:**
+│ │  
+│ │  - fix: fix strict signal group checking when signatures aren't hashable [\#192](https://github.com/pyapp-kit/psygnal/pull/192) ([tlambert03](https://github.com/tlambert03))
+│ │  
+│ │  **Tests & CI:**
+│ │   --- psygnal-0.8.1/src/psygnal/__init__.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/__init__.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -30,14 +30,15 @@
+│ │  
+│ │  __all__ = [
+│ │      "__version__",
+│ │      "_compiled",
+│ │      "debounced",
+│ │      "EmissionInfo",
+│ │      "EmitLoopError",
+│ │ +    "emit_queued",
+│ │      "evented",
+│ │      "EventedModel",
+│ │      "get_evented_namespace",
+│ │      "is_evented",
+│ │      "Signal",
+│ │      "SignalGroup",
+│ │      "SignalGroupDescriptor",
+│ │ @@ -49,25 +50,28 @@
+│ │  if os.getenv("PSYGNAL_UNCOMPILED"):
+│ │      import warnings
+│ │  
+│ │      warnings.warn(
+│ │          "PSYGNAL_UNCOMPILED no longer has any effect. If you wish to run psygnal "
+│ │          "without compiled files, you can run:\n\n"
+│ │          'python -c "import psygnal.utils; psygnal.utils.decompile()"\n\n'
+│ │ -        "(You will need to reinstall psygnal to get the compiled version back.)"
+│ │ +        "(You will need to reinstall psygnal to get the compiled version back.)",
+│ │ +        stacklevel=2,
+│ │      )
+│ │  
+│ │  from ._evented_decorator import evented
+│ │ +from ._exceptions import EmitLoopError
+│ │  from ._group import EmissionInfo, SignalGroup
+│ │  from ._group_descriptor import (
+│ │      SignalGroupDescriptor,
+│ │      get_evented_namespace,
+│ │      is_evented,
+│ │  )
+│ │ -from ._signal import EmitLoopError, Signal, SignalInstance, _compiled
+│ │ +from ._queue import emit_queued
+│ │ +from ._signal import Signal, SignalInstance, _compiled
+│ │  from ._throttler import debounced, throttled
+│ │  
+│ │  
+│ │  def __getattr__(name: str) -> Any:
+│ │      if name == "EventedModel":
+│ │          from ._evented_model import EventedModel
+│ │   --- psygnal-0.8.1/src/psygnal/_dataclass_utils.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_dataclass_utils.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/_evented_decorator.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_evented_decorator.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/_evented_model.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_evented_model.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -197,15 +197,17 @@
+│ │              if prop not in cls.__property_setters__:
+│ │                  raise ValueError(
+│ │                      "Fields with dependencies must be property.setters."
+│ │                      f"{prop!r} is not."
+│ │                  )
+│ │              for field in fields:
+│ │                  if field not in cls.__fields__:
+│ │ -                    warnings.warn(f"Unrecognized field dependency: {field!r}")
+│ │ +                    warnings.warn(
+│ │ +                        f"Unrecognized field dependency: {field!r}", stacklevel=2
+│ │ +                    )
+│ │                  deps.setdefault(field, set()).add(prop)
+│ │      if getattr(cls.__config__, GUESS_PROPERTY_DEPENDENCIES, False):
+│ │          # if property_dependencies haven't been explicitly defined, we can glean
+│ │          # them from the property.fget code object:
+│ │          # SKIP THIS MAGIC FOR NOW?
+│ │          for prop, setter in cls.__property_setters__.items():
+│ │              if setter.fget is not None:
+│ │   --- psygnal-0.8.1/src/psygnal/_group.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_group.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/_group_descriptor.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_group_descriptor.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -413,11 +413,12 @@
+│ │          return self._instance_map[obj_id]
+│ │  
+│ │      def _create_group(self, owner: type) -> type[SignalGroup]:
+│ │          Group = self._signal_group or _build_dataclass_signal_group(owner, self._eqop)
+│ │          if self._warn_on_no_fields and not Group._signals_:
+│ │              warnings.warn(
+│ │                  f"No mutable fields found on class {owner}: no events will be "
+│ │ -                "emitted. (Is this a dataclass, attrs, msgspec, or pydantic model?)"
+│ │ +                "emitted. (Is this a dataclass, attrs, msgspec, or pydantic model?)",
+│ │ +                stacklevel=2,
+│ │              )
+│ │          self._do_patch_setattr(owner)
+│ │          return Group
+│ │   --- psygnal-0.8.1/src/psygnal/_signal.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_signal.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -23,47 +23,31 @@
+│ │      get_type_hints,
+│ │      overload,
+│ │  )
+│ │  
+│ │  from mypy_extensions import mypyc_attr
+│ │  from typing_extensions import get_args, get_origin
+│ │  
+│ │ -from psygnal._weak_callback import (
+│ │ -    WeakCallback,
+│ │ -    _WeakSetattr,
+│ │ -    _WeakSetitem,
+│ │ -    weak_callback,
+│ │ -)
+│ │ +from ._exceptions import EmitLoopError
+│ │ +from ._queue import QueuedCallback
+│ │ +from ._weak_callback import WeakCallback, _WeakSetattr, _WeakSetitem, weak_callback
+│ │  
+│ │  if TYPE_CHECKING:
+│ │      from typing_extensions import Literal
+│ │  
+│ │      from ._group import EmissionInfo
+│ │      from ._weak_callback import RefErrorChoice
+│ │  
+│ │      ReducerFunc = Callable[[tuple, tuple], tuple]
+│ │  
+│ │  __all__ = ["Signal", "SignalInstance", "_compiled"]
+│ │  _NULL = object()
+│ │  F = TypeVar("F", bound=Callable)
+│ │  
+│ │  
+│ │ -class EmitLoopError(Exception):
+│ │ -    """Error type raised when an exception occurs during a callback."""
+│ │ -
+│ │ -    def __init__(self, slot_repr: str, args: tuple, exc: BaseException) -> None:
+│ │ -        self.slot_repr = slot_repr
+│ │ -        self.args = args
+│ │ -        self.__cause__ = exc  # mypyc doesn't set this, but uncompiled code would
+│ │ -        super().__init__(
+│ │ -            f"calling {self.slot_repr} with args={args!r} caused "
+│ │ -            f"{type(exc).__name__}: {exc}."
+│ │ -        )
+│ │ -
+│ │ -
+│ │  class Signal:
+│ │      """Declares a signal emitter on a class.
+│ │  
+│ │      This is class implements the [descriptor
+│ │      protocol](https://docs.python.org/3/howto/descriptor.html#descriptorhowto)
+│ │      and is designed to be used as a class attribute, with the supported signature types
+│ │      provided in the constructor:
+│ │ @@ -128,15 +112,16 @@
+│ │          self._check_types_on_connect = check_types_on_connect
+│ │  
+│ │          if types and isinstance(types[0], Signature):
+│ │              self._signature = types[0]
+│ │              if len(types) > 1:
+│ │                  warnings.warn(
+│ │                      "Only a single argument is accepted when directly providing a"
+│ │ -                    f" `Signature`.  These args were ignored: {types[1:]}"
+│ │ +                    f" `Signature`.  These args were ignored: {types[1:]}",
+│ │ +                    stacklevel=2,
+│ │                  )
+│ │          else:
+│ │              self._signature = _build_signature(*cast("tuple[Type[Any], ...]", types))
+│ │  
+│ │      @property
+│ │      def signature(self) -> Signature:
+│ │          """[Signature][inspect.Signature] supported by this Signal."""
+│ │ @@ -352,39 +337,42 @@
+│ │          instance = f" on {self.instance!r}" if self.instance is not None else ""
+│ │          return f"<{type(self).__name__}{name}{instance}>"
+│ │  
+│ │      @overload
+│ │      def connect(
+│ │          self,
+│ │          *,
+│ │ +        thread: threading.Thread | Literal["main", "current"] | None = ...,
+│ │          check_nargs: bool | None = ...,
+│ │          check_types: bool | None = ...,
+│ │          unique: bool | str = ...,
+│ │          max_args: int | None = None,
+│ │          on_ref_error: RefErrorChoice = ...,
+│ │      ) -> Callable[[F], F]:
+│ │          ...  # pragma: no cover
+│ │  
+│ │      @overload
+│ │      def connect(
+│ │          self,
+│ │          slot: F,
+│ │          *,
+│ │ +        thread: threading.Thread | Literal["main", "current"] | None = ...,
+│ │          check_nargs: bool | None = ...,
+│ │          check_types: bool | None = ...,
+│ │          unique: bool | str = ...,
+│ │          max_args: int | None = None,
+│ │          on_ref_error: RefErrorChoice = ...,
+│ │      ) -> F:
+│ │          ...  # pragma: no cover
+│ │  
+│ │      def connect(
+│ │          self,
+│ │          slot: F | None = None,
+│ │          *,
+│ │ +        thread: threading.Thread | Literal["main", "current"] | None = None,
+│ │          check_nargs: bool | None = None,
+│ │          check_types: bool | None = None,
+│ │          unique: bool | str = False,
+│ │          max_args: int | None = None,
+│ │          on_ref_error: RefErrorChoice = "warn",
+│ │      ) -> Callable[[F], F] | F:
+│ │          """Connect a callback (`slot`) to this signal.
+│ │ @@ -402,23 +390,40 @@
+│ │  
+│ │          ```python
+│ │          @signal.connect
+│ │          def my_function():
+│ │              ...
+│ │          ```
+│ │  
+│ │ +        !!!important
+│ │ +            If a signal is connected with `thread != None`, then it is up to the user
+│ │ +            to ensure that `psygnal.emit_queued` is called, or that one of the backend
+│ │ +            convenience functions is used (e.g. `psygnal.qt.start_emitting_from_queue`).
+│ │ +            Otherwise, callbacks that are connected to signals that are emitted from
+│ │ +            another thread will never be called.
+│ │ +
+│ │          Parameters
+│ │          ----------
+│ │          slot : Callable
+│ │              A callable to connect to this signal.  If the callable accepts less
+│ │              arguments than the signature of this slot, then they will be discarded when
+│ │              calling the slot.
+│ │          check_nargs : Optional[bool]
+│ │              If `True` and the provided `slot` requires more positional arguments than
+│ │              the signature of this Signal, raise `TypeError`. by default `True`.
+│ │ +        thread: Thread | Literal["main", "current"] | None
+│ │ +            If `None` (the default), this slot will be invoked immediately when a signal
+│ │ +            is emitted, from whatever thread emitted the signal. If a thread object is
+│ │ +            provided, then the callback will only be immediately invoked if the signal
+│ │ +            is emitted from that thread.  Otherwise, the callback will be added to a
+│ │ +            queue. **Note!**, when using the `thread` parameter, the user is responsible
+│ │ +            for calling `psygnal.emit_queued()` in the corresponding thread, otherwise
+│ │ +            the slot will never be invoked. (See note above). (The strings `"main"` and
+│ │ +            `"current"` are also accepted, and will be interpreted as the
+│ │ +            `threading.main_thread()` and `threading.current_thread()`, respectively).
+│ │          check_types : Optional[bool]
+│ │              If `True`, An additional check will be performed to make sure that types
+│ │              declared in the slot signature are compatible with the signature
+│ │              declared by this signal, by default `False`.
+│ │          unique : Union[bool, str, None]
+│ │              If `True`, returns without connecting if the slot has already been
+│ │              connected.  If the literal string "raise" is passed to `unique`, then a
+│ │ @@ -483,15 +488,18 @@
+│ │                  # Callable[ParamSpec, R] or a general TypeVar('F', bound=Callable).
+│ │                  cb = weak_callback(  # type: ignore [var-annotated]
+│ │                      slot,
+│ │                      max_args=max_args,
+│ │                      finalize=self._try_discard,
+│ │                      on_ref_error=_on_ref_err,
+│ │                  )
+│ │ -                self._slots.append(cb)
+│ │ +                if thread is None:
+│ │ +                    self._slots.append(cb)
+│ │ +                else:
+│ │ +                    self._slots.append(QueuedCallback(cb, thread=thread))
+│ │              return slot
+│ │  
+│ │          return _wrapper if slot is None else _wrapper(slot)
+│ │  
+│ │      def _try_discard(self, callback: WeakCallback, missing_ok: bool = True) -> None:
+│ │          """Try to discard a callback from the list of slots.
+│ │  
+│ │ @@ -739,15 +747,16 @@
+│ │          is_qt : bool
+│ │              Whether the slot is a Qt slot.
+│ │          """
+│ │          try:
+│ │              slot_sig = _get_signature_possibly_qt(slot)
+│ │          except ValueError as e:
+│ │              warnings.warn(
+│ │ -                f"{e}. To silence this warning, connect with " "`check_nargs=False`"
+│ │ +                f"{e}. To silence this warning, connect with " "`check_nargs=False`",
+│ │ +                stacklevel=2,
+│ │              )
+│ │              return None, None, False
+│ │          minargs, maxargs = _acceptable_posarg_range(slot_sig)
+│ │  
+│ │          n_spec_params = len(spec.parameters)
+│ │          # if `slot` requires more arguments than we will provide, raise.
+│ │          if minargs > n_spec_params:
+│ │ @@ -846,24 +855,29 @@
+│ │              `check_args` and `check_types` both add overhead when calling emit.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          *args : Any
+│ │              These arguments will be passed when calling each slot (unless the slot
+│ │              accepts fewer arguments, in which case extra args will be discarded.)
+│ │ -        check_nargs : Optional[bool]
+│ │ +        check_nargs : bool
+│ │              If `False` and the provided arguments cannot be successfully bound to the
+│ │              signature of this Signal, raise `TypeError`.  Incurs some overhead.
+│ │              by default False.
+│ │ -        check_types : Optional[bool]
+│ │ +        check_types : bool
+│ │              If `False` and the provided arguments do not match the types declared by
+│ │              the signature of this Signal, raise `TypeError`.  Incurs some overhead.
+│ │              by default False.
+│ │ -        asynchronous : Optional[bool]
+│ │ +        asynchronous : bool
+│ │              If `True`, run signal emission in another thread. by default `False`.
+│ │ +            **DEPRECATED:**. *If you need to emit from a thread, please just create
+│ │ +            your own [`threading.Thread`][] and call
+│ │ +            [`SignalInstance.emit`][psygnal.SignalInstance.emit]. See also the `thread`
+│ │ +            parameter in the [`SignalInstance.connect`][psygnal.SignalInstance.connect]
+│ │ +            method.*
+│ │  
+│ │          Raises
+│ │          ------
+│ │          TypeError
+│ │              If `check_nargs` and/or `check_types` are `True`, and the corresponding
+│ │              checks fail.
+│ │          """
+│ │ @@ -894,14 +908,22 @@
+│ │  
+│ │          if SignalInstance._debug_hook is not None:
+│ │              from ._group import EmissionInfo
+│ │  
+│ │              SignalInstance._debug_hook(EmissionInfo(self, args))
+│ │  
+│ │          if asynchronous:
+│ │ +            warnings.warn(
+│ │ +                "The `asynchronous` parameter is deprecated and will be removed in a "
+│ │ +                "future release. If you need this, please create your own "
+│ │ +                "`threading.Thread` and call `SignalInstance.emit`. See also the new "
+│ │ +                "`thread` parameter in the `SignalInstance.connect` method.",
+│ │ +                FutureWarning,
+│ │ +                stacklevel=2,
+│ │ +            )
+│ │              sd = EmitThread(self, args)
+│ │              sd.start()
+│ │              return sd
+│ │  
+│ │          self._run_emit_loop(args)
+│ │          return None
+│ │   --- psygnal-0.8.1/src/psygnal/_throttler.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_throttler.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/_throttler.pyi
+│ ├── +++ psygnal-0.9.0/src/psygnal/_throttler.pyi
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/_weak_callback.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/_weak_callback.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -198,15 +198,18 @@
+│ │          _cb = None if finalize is None else _kill_and_finalize(self, finalize)
+│ │          try:
+│ │              return weakref.ref(obj, _cb)
+│ │          except TypeError:
+│ │              if self._on_ref_error == "raise":
+│ │                  raise
+│ │              if self._on_ref_error == "warn":
+│ │ -                warn(f"failed to create weakref for {obj!r}, returning strong ref")
+│ │ +                warn(
+│ │ +                    f"failed to create weakref for {obj!r}, returning strong ref",
+│ │ +                    stacklevel=2,
+│ │ +                )
+│ │  
+│ │              def _strong_ref() -> _T:
+│ │                  return obj
+│ │  
+│ │              return _strong_ref
+│ │  
+│ │      @staticmethod
+│ │   --- psygnal-0.8.1/src/psygnal/utils.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/utils.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/__init__.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/_evented_dict.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/_evented_dict.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/_evented_list.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/_evented_list.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/_evented_proxy.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/_evented_proxy.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/_evented_set.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/_evented_set.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/_selectable_evented_list.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/_selectable_evented_list.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/src/psygnal/containers/_selection.py
+│ ├── +++ psygnal-0.9.0/src/psygnal/containers/_selection.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_bench.py
+│ ├── +++ psygnal-0.9.0/tests/test_bench.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_dataclass_utils.py
+│ ├── +++ psygnal-0.9.0/tests/test_dataclass_utils.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_evented_decorator.py
+│ ├── +++ psygnal-0.9.0/tests/test_evented_decorator.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -187,29 +187,29 @@
+│ │  def test_no_signals_warn() -> None:
+│ │      with pytest.warns(UserWarning, match="No mutable fields found on class"):
+│ │  
+│ │          @evented
+│ │          class Foo:
+│ │              ...
+│ │  
+│ │ -        Foo().events  # type: ignore
+│ │ +        _ = Foo().events  # type: ignore
+│ │  
+│ │      with pytest.warns(UserWarning, match="No mutable fields found on class"):
+│ │  
+│ │          class Foo2:
+│ │              events = SignalGroupDescriptor()
+│ │  
+│ │ -        Foo2().events
+│ │ +        _ = Foo2().events
+│ │  
+│ │      @dataclass
+│ │      class Foo3:
+│ │          events = SignalGroupDescriptor(warn_on_no_fields=False)
+│ │  
+│ │      # no warning
+│ │ -    Foo3().events
+│ │ +    _ = Foo3().events
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class FooPicklable:
+│ │      bar: int
+│ │      events: ClassVar[SignalGroupDescriptor] = SignalGroupDescriptor(
+│ │          cache_on_instance=False
+│ │   --- psygnal-0.8.1/tests/test_evented_model.py
+│ ├── +++ psygnal-0.9.0/tests/test_evented_model.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_group.py
+│ ├── +++ psygnal-0.9.0/tests/test_group.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_group_descriptor.py
+│ ├── +++ psygnal-0.9.0/tests/test_group_descriptor.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -112,15 +112,15 @@
+│ │          a: int
+│ │          _events: ClassVar = SignalGroupDescriptor(patch_setattr=patch_setattr)
+│ │  
+│ │      with patch.object(
+│ │          _group_descriptor, "evented_setattr", wraps=_group_descriptor.evented_setattr
+│ │      ) as mock_decorator:
+│ │          foo = Foo(a=1)
+│ │ -        foo._events
+│ │ +        _ = foo._events
+│ │          if not _compiled:  # can't patch otherwise
+│ │              assert mock_decorator.call_count == int(patch_setattr)
+│ │  
+│ │      assert _group_descriptor.is_evented(Foo.__setattr__) == patch_setattr
+│ │      mock = Mock()
+│ │      foo._events.a.connect(mock)
+│ │      foo.a = 2
+│ │   --- psygnal-0.8.1/tests/test_psygnal.py
+│ ├── +++ psygnal-0.9.0/tests/test_psygnal.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -4,14 +4,15 @@
+│ │  from contextlib import suppress
+│ │  from functools import partial, wraps
+│ │  from inspect import Signature
+│ │  from typing import Optional
+│ │  from unittest.mock import MagicMock, Mock, call
+│ │  
+│ │  import pytest
+│ │ +from typing_extensions import Literal
+│ │  
+│ │  from psygnal import EmitLoopError, Signal, SignalInstance, _compiled
+│ │  from psygnal._weak_callback import WeakCallback
+│ │  
+│ │  
+│ │  def stupid_decorator(fun):
+│ │      def _fun(*args):
+│ │ @@ -134,24 +135,24 @@
+│ │  
+│ │  def test_misc():
+│ │      emitter = Emitter()
+│ │      assert isinstance(Emitter.one_int, Signal)
+│ │      assert isinstance(emitter.one_int, SignalInstance)
+│ │  
+│ │      with pytest.raises(AttributeError):
+│ │ -        emitter.one_int.asdf
+│ │ +        _ = emitter.one_int.asdf
+│ │  
+│ │      with pytest.raises(AttributeError):
+│ │ -        emitter.one_int.asdf
+│ │ +        _ = emitter.one_int.asdf
+│ │  
+│ │  
+│ │  def test_getattr():
+│ │      s = Signal()
+│ │      with pytest.raises(AttributeError):
+│ │ -        s.not_a_thing
+│ │ +        _ = s.not_a_thing
+│ │  
+│ │  
+│ │  def test_signature_provided():
+│ │      s = Signal(Signature())
+│ │      assert s.signature == Signature()
+│ │  
+│ │      with pytest.warns(UserWarning):
+│ │ @@ -206,30 +207,34 @@
+│ │          with emitter.one_int.blocked():
+│ │              emitter.one_int.emit(1)
+│ │          emitter.one_int.emit(2)
+│ │      emitter.one_int.emit(3)
+│ │      mock.assert_called_once_with(3)
+│ │  
+│ │  
+│ │ -def test_disconnect():
+│ │ +@pytest.mark.parametrize("thread", [None, "main"])
+│ │ +def test_disconnect(thread: Literal[None, "main"]) -> None:
+│ │      emitter = Emitter()
+│ │      mock = MagicMock()
+│ │      with pytest.raises(ValueError) as e:
+│ │          emitter.one_int.disconnect(mock, missing_ok=False)
+│ │      assert "slot is not connected" in str(e)
+│ │      emitter.one_int.disconnect(mock)
+│ │  
+│ │ -    emitter.one_int.connect(mock)
+│ │ -    emitter.one_int.emit(1)
+│ │ -    mock.assert_called_once_with(1)
+│ │ +    emitter.one_int.connect(mock, thread=thread)
+│ │ +    assert len(emitter.one_int) == 1
+│ │ +    if thread is None:
+│ │ +        emitter.one_int.emit(1)
+│ │ +        mock.assert_called_once_with(1)
+│ │ +        mock.reset_mock()
+│ │  
+│ │ -    mock.reset_mock()
+│ │      emitter.one_int.disconnect(mock)
+│ │      emitter.one_int.emit(1)
+│ │      mock.assert_not_called()
+│ │ +    assert len(emitter.one_int) == 0
+│ │  
+│ │  
+│ │  @pytest.mark.parametrize(
+│ │      "type_", ["function", "lambda", "method", "partial_method", "setattr", "setitem"]
+│ │  )
+│ │  def test_slot_types(type_: str) -> None:
+│ │      emitter = Emitter()
+│ │ @@ -564,15 +569,16 @@
+│ │          a.append(arg)
+│ │  
+│ │      mock = MagicMock(wraps=slow_append)
+│ │      e.no_arg.connect(mock, unique=False)
+│ │  
+│ │      assert not Signal.current_emitter()
+│ │      value = 42
+│ │ -    thread = e.no_arg.emit(value, asynchronous=True)
+│ │ +    with pytest.warns(FutureWarning):
+│ │ +        thread = e.no_arg.emit(value, asynchronous=True)
+│ │      mock.assert_called_once()
+│ │      assert Signal.current_emitter() is e.no_arg
+│ │  
+│ │      # dude, you have to wait.
+│ │      assert not a
+│ │  
+│ │      if thread:
+│ │ @@ -830,7 +836,69 @@
+│ │      cb = partial(obj.f_int_int, 1) if slot == "partial" else getattr(obj, slot)
+│ │      emitter.one_int.connect(cb)
+│ │      assert len(emitter.one_int) == 1
+│ │      emitter.one_int.emit(1)
+│ │      assert len(emitter.one_int) == 1
+│ │      emitter.one_int.disconnect(cb)
+│ │      assert len(emitter.one_int) == 0
+│ │ +
+│ │ +
+│ │ +def test_queued_connections():
+│ │ +    from threading import Thread, current_thread
+│ │ +
+│ │ +    from psygnal import emit_queued
+│ │ +
+│ │ +    this_thread = current_thread()
+│ │ +
+│ │ +    emitter = Emitter()
+│ │ +
+│ │ +    # function to run in another thread
+│ │ +    def _run():
+│ │ +        emit_queued()
+│ │ +        emitter.one_int.emit(2)
+│ │ +
+│ │ +    other_thread = Thread(target=_run)
+│ │ +
+│ │ +    this_thread_mock = Mock()
+│ │ +    other_thread_mock = Mock()
+│ │ +    any_thread_mock = Mock()
+│ │ +
+│ │ +    # mock1 wants to be called in this thread
+│ │ +    @emitter.one_int.connect(thread=this_thread)
+│ │ +    def cb1(arg):
+│ │ +        this_thread_mock(arg, current_thread())
+│ │ +
+│ │ +    # mock2 wants to be called in other_thread
+│ │ +    @emitter.one_int.connect(thread=other_thread)
+│ │ +    def cb2(arg):
+│ │ +        other_thread_mock(arg, current_thread())
+│ │ +
+│ │ +    # mock3 wants to be called in whatever thread the emitter is in
+│ │ +    @emitter.one_int.connect
+│ │ +    def cb3(arg):
+│ │ +        any_thread_mock(arg, current_thread())
+│ │ +
+│ │ +    # emit in this thread
+│ │ +    emitter.one_int.emit(1)
+│ │ +    this_thread_mock.assert_called_once_with(1, this_thread)
+│ │ +    # other_thread_mock not called because it's waiting for other_thread
+│ │ +    other_thread_mock.assert_not_called()
+│ │ +    # any_thread_mock called because it's waiting for any thread
+│ │ +    any_thread_mock.assert_called_once_with(1, this_thread)
+│ │ +
+│ │ +    # Now we run `_run` in other_thread
+│ │ +    this_thread_mock.reset_mock()
+│ │ +    any_thread_mock.reset_mock()
+│ │ +    other_thread.start()
+│ │ +    other_thread.join()
+│ │ +
+│ │ +    # now mock2 should be called TWICE.  Once for the .emit(1) queued from this thread,
+│ │ +    # and once for the .emit(2) in other_thread
+│ │ +    other_thread_mock.assert_has_calls([call(1, other_thread), call(2, other_thread)])
+│ │ +    # stuff queued for any_thread_mock should have also been called
+│ │ +    any_thread_mock.assert_called_once_with(2, other_thread)
+│ │ +
+│ │ +    # stuff queued for this thread should NOT have been called
+│ │ +    this_thread_mock.assert_not_called()
+│ │ +    # ... until we call emit_queued() from this thread
+│ │ +    emit_queued()
+│ │ +    this_thread_mock.assert_called_once_with(2, this_thread)
+│ │   --- psygnal-0.8.1/tests/test_throttler.py
+│ ├── +++ psygnal-0.9.0/tests/test_throttler.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_utils.py
+│ ├── +++ psygnal-0.9.0/tests/test_utils.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/test_weak_callable.py
+│ ├── +++ psygnal-0.9.0/tests/test_weak_callable.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -159,7 +159,20 @@
+│ │      p = partial(func, 1)
+│ │      cb = weak_callback(p, strong_func=strong)
+│ │      dp = cb.dereference()
+│ │  
+│ │      assert dp.func is p.func
+│ │      assert dp.args == p.args
+│ │      assert dp.keywords == p.keywords
+│ │ +
+│ │ +
+│ │ +def test_queued_callbacks():
+│ │ +    from psygnal._queue import QueuedCallback
+│ │ +
+│ │ +    def func(x):
+│ │ +        return x
+│ │ +
+│ │ +    cb = weak_callback(func)
+│ │ +    qcb = QueuedCallback(cb, thread="current")
+│ │ +
+│ │ +    assert qcb.dereference() is func
+│ │ +    assert qcb(1) == 1
+│ │   --- psygnal-0.8.1/tests/containers/test_evented_dict.py
+│ ├── +++ psygnal-0.9.0/tests/containers/test_evented_dict.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/containers/test_evented_list.py
+│ ├── +++ psygnal-0.9.0/tests/containers/test_evented_list.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/containers/test_evented_proxy.py
+│ ├── +++ psygnal-0.9.0/tests/containers/test_evented_proxy.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/containers/test_evented_set.py
+│ ├── +++ psygnal-0.9.0/tests/containers/test_evented_set.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/containers/test_selectable_evented_list.py
+│ ├── +++ psygnal-0.9.0/tests/containers/test_selectable_evented_list.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/tests/containers/test_selection.py
+│ ├── +++ psygnal-0.9.0/tests/containers/test_selection.py
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/.gitignore
+│ ├── +++ psygnal-0.9.0/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/LICENSE
+│ ├── +++ psygnal-0.9.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/README.md
+│ ├── +++ psygnal-0.9.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- psygnal-0.8.1/pyproject.toml
+│ ├── +++ psygnal-0.9.0/pyproject.toml
+│ │┄ Files 5% similar despite different names
+│ │ @@ -54,35 +54,39 @@
+│ │  docs = [
+│ │      "griffe==0.25.5",
+│ │      "mkdocs-material==8.5.10",
+│ │      "mkdocs-minify-plugin",
+│ │      "mkdocs==1.4.2",
+│ │      "mkdocstrings-python==0.8.3",
+│ │      "mkdocstrings==0.20.0",
+│ │ -    "mkdocs-spellcheck[all]"
+│ │ +    "mkdocs-spellcheck[all]",
+│ │  ]
+│ │  proxy = ["wrapt"]
+│ │  pydantic = ["pydantic"]
+│ │  test = [
+│ │      "dask",
+│ │      "numpy",
+│ │      "pydantic",
+│ │ +    "pyinstaller>=4.0",
+│ │      "pytest>=6.0",
+│ │      "pytest-codspeed",
+│ │      "pytest-cov",
+│ │      "wrapt",
+│ │      "msgspec ; python_version >= '3.8'",
+│ │  ]
+│ │  testqt = ["pytest-qt", "qtpy"]
+│ │  
+│ │  [project.urls]
+│ │  homepage = "https://github.com/pyapp-kit/psygnal"
+│ │  repository = "https://github.com/pyapp-kit/psygnal"
+│ │  documentation = "https://psygnal.readthedocs.io"
+│ │  
+│ │ +[project.entry-points.pyinstaller40]
+│ │ +hook-dirs = "psygnal._pyinstaller_util._pyinstaller_hook:get_hook_dirs"
+│ │ +
+│ │  [tool.hatch.version]
+│ │  source = "vcs"
+│ │  
+│ │  [tool.hatch.build.targets.sdist]
+│ │  include = ["src", "tests", "CHANGELOG.md"]
+│ │  
+│ │  [tool.hatch.build.targets.wheel]
+│ │ @@ -96,22 +100,21 @@
+│ │  dependencies = [
+│ │      "hatch-mypyc>=0.13.0",
+│ │      "mypy>=0.991",
+│ │      "pydantic",
+│ │      "types-attrs",
+│ │      "msgspec ; python_version >= '3.8'",
+│ │  ]
+│ │ -include = [
+│ │ -    "src/psygnal/_dataclass_utils.py",
+│ │ -    "src/psygnal/_evented_decorator.py",
+│ │ -    "src/psygnal/_group_descriptor.py",
+│ │ -    "src/psygnal/_group.py",
+│ │ -    "src/psygnal/_signal.py",
+│ │ -    "src/psygnal/_throttler.py",
+│ │ -    "src/psygnal/_weak_callback.py",
+│ │ +exclude = [
+│ │ +    "src/psygnal/__init__.py",
+│ │ +    "src/psygnal/_evented_model.py",
+│ │ +    "src/psygnal/utils.py",
+│ │ +    "src/psygnal/containers",
+│ │ +    "src/psygnal/qt.py",
+│ │ +    "src/psygnal/_pyinstaller_util",
+│ │  ]
+│ │  
+│ │  [tool.cibuildwheel]
+│ │  # Skip 32-bit builds & PyPy wheels on all platforms
+│ │  skip = ["*-manylinux_i686", "*-musllinux_i686", "*-win32", "pp*"]
+│ │  test-extras = ["test"]
+│ │  test-command = "pytest {project}/tests -v"
+│ │ @@ -148,26 +151,27 @@
+│ │      "D213", # Multi-line docstring summary should start at the second line
+│ │      "D401", # First line should be in imperative mood
+│ │      "D413", # Missing blank line after last section
+│ │      "D416", # Section name should end with a colon
+│ │  ]
+│ │  
+│ │  [tool.ruff.per-file-ignores]
+│ │ -"tests/*.py" = ["D", "S101"]
+│ │ +"tests/*.py" = ["D", "S"]
+│ │  "benchmarks/*.py" = ["D"]
+│ │  "setup.py" = ["D"]
+│ │  
+│ │  
+│ │  # https://docs.pytest.org/en/6.2.x/customize.html
+│ │  [tool.pytest.ini_options]
+│ │  minversion = "6.0"
+│ │  testpaths = ["tests"]
+│ │  filterwarnings = [
+│ │      "error",
+│ │      "ignore:The distutils package is deprecated:DeprecationWarning:",
+│ │ +    "ignore:.*BackendFinder.find_spec()",                             # pyinstaller import
+│ │  ]
+│ │  
+│ │  # https://mypy.readthedocs.io/en/stable/config_file.html
+│ │  [tool.mypy]
+│ │  files = "src/**/*.py"
+│ │  strict = true
+│ │  disallow_any_generics = false
+│ │ @@ -192,14 +196,15 @@
+│ │      "@overload",
+│ │      "except ImportError",
+│ │      "\\.\\.\\.",
+│ │      "raise NotImplementedError()",
+│ │  ]
+│ │  [tool.coverage.run]
+│ │  source = ["src"]
+│ │ +omit = ["src/psygnal/_pyinstaller_util/hook-psygnal.py"]
+│ │  
+│ │  # https://github.com/mgedmin/check-manifest#configuration
+│ │  [tool.check-manifest]
+│ │  ignore = [
+│ │      ".ruff_cache/**/*",
+│ │      ".github_changelog_generator",
+│ │      ".pre-commit-config.yaml",
+│ │   --- psygnal-0.8.1/PKG-INFO
+│ ├── +++ psygnal-0.9.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: psygnal
+│ │ -Version: 0.8.1
+│ │ +Version: 0.9.0
+│ │  Summary: Fast python callback/event system modeled after Qt Signals
+│ │  Project-URL: homepage, https://github.com/pyapp-kit/psygnal
+│ │  Project-URL: repository, https://github.com/pyapp-kit/psygnal
+│ │  Project-URL: documentation, https://psygnal.readthedocs.io
+│ │  Author-email: Talley Lambert <talley.lambert@gmail.com>
+│ │  License: BSD 3-Clause License
+│ │  License-File: LICENSE
+│ │ @@ -52,14 +52,15 @@
+│ │  Provides-Extra: pydantic
+│ │  Requires-Dist: pydantic; extra == 'pydantic'
+│ │  Provides-Extra: test
+│ │  Requires-Dist: dask; extra == 'test'
+│ │  Requires-Dist: msgspec; python_version >= '3.8' and extra == 'test'
+│ │  Requires-Dist: numpy; extra == 'test'
+│ │  Requires-Dist: pydantic; extra == 'test'
+│ │ +Requires-Dist: pyinstaller>=4.0; extra == 'test'
+│ │  Requires-Dist: pytest-codspeed; extra == 'test'
+│ │  Requires-Dist: pytest-cov; extra == 'test'
+│ │  Requires-Dist: pytest>=6.0; extra == 'test'
+│ │  Requires-Dist: wrapt; extra == 'test'
+│ │  Provides-Extra: testqt
+│ │  Requires-Dist: pytest-qt; extra == 'testqt'
+│ │  Requires-Dist: qtpy; extra == 'testqt'

@@ -1,0 +1,267 @@
+# Comparing `tmp/gandai-0.0.9.tar.gz` & `tmp/gandai-0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gandai-0.0.9.tar", last modified: Sun Jan 22 21:37:55 2023, max compression
++gzip compressed data, was "gandai-0.1.tar", last modified: Fri Apr  7 12:54:30 2023, max compression
+```
+
+## Comparing `gandai-0.0.9.tar` & `gandai-0.1.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,36 @@
+-drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-01-22 21:37:55.897497 gandai-0.0.9/
+--rw-r--r--   0 parker     (501) staff       (20)      192 2023-01-22 21:37:55.897142 gandai-0.0.9/PKG-INFO
+-drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-01-22 21:37:55.883460 gandai-0.0.9/gandai/
+--rw-r--r--   0 parker     (501) staff       (20)        0 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/__init__.py
+-drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-01-22 21:37:55.888719 gandai-0.0.9/gandai/adapters/
+--rw-r--r--   0 parker     (501) staff       (20)    12376 2023-01-12 13:15:07.000000 gandai-0.0.9/gandai/adapters/Grata.py
+--rw-r--r--   0 parker     (501) staff       (20)        0 2023-01-08 13:52:40.000000 gandai-0.0.9/gandai/adapters/__init__.py
+--rw-r--r--   0 parker     (501) staff       (20)     3679 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/adapters/sourcescrub.py
+--rw-r--r--   0 parker     (501) staff       (20)     1489 2023-01-22 21:33:55.000000 gandai-0.0.9/gandai/datastore.py
+--rw-r--r--   0 parker     (501) staff       (20)      732 2023-01-08 14:26:45.000000 gandai-0.0.9/gandai/helpers.py
+-drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-01-22 21:37:55.895648 gandai-0.0.9/gandai/models/
+--rw-r--r--   0 parker     (501) staff       (20)     1719 2023-01-10 01:57:58.000000 gandai-0.0.9/gandai/models/Auth.py
+--rw-r--r--   0 parker     (501) staff       (20)       83 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/models/Bot.py
+--rw-r--r--   0 parker     (501) staff       (20)      705 2023-01-08 11:45:08.000000 gandai-0.0.9/gandai/models/Comment.py
+--rw-r--r--   0 parker     (501) staff       (20)      862 2022-12-27 19:48:28.000000 gandai-0.0.9/gandai/models/Company.py
+--rw-r--r--   0 parker     (501) staff       (20)     1053 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/models/Event.py
+--rw-r--r--   0 parker     (501) staff       (20)     1802 2023-01-11 12:37:35.000000 gandai-0.0.9/gandai/models/Search.py
+--rw-r--r--   0 parker     (501) staff       (20)      406 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/models/Target.py
+--rw-r--r--   0 parker     (501) staff       (20)      633 2023-01-08 11:50:24.000000 gandai-0.0.9/gandai/models/User.py
+--rw-r--r--   0 parker     (501) staff       (20)        0 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/models/__init__.py
+-drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-01-22 21:37:55.896769 gandai-0.0.9/gandai/services/
+--rw-r--r--   0 parker     (501) staff       (20)     1003 2023-01-10 15:05:02.000000 gandai-0.0.9/gandai/services/Query.py
+--rw-r--r--   0 parker     (501) staff       (20)        0 2023-01-08 11:45:04.000000 gandai-0.0.9/gandai/services/__init__.py
+-drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-01-22 21:37:55.886767 gandai-0.0.9/gandai.egg-info/
+--rw-r--r--   0 parker     (501) staff       (20)      192 2023-01-22 21:37:55.000000 gandai-0.0.9/gandai.egg-info/PKG-INFO
+--rw-r--r--   0 parker     (501) staff       (20)      565 2023-01-22 21:37:55.000000 gandai-0.0.9/gandai.egg-info/SOURCES.txt
+--rw-r--r--   0 parker     (501) staff       (20)        1 2023-01-22 21:37:55.000000 gandai-0.0.9/gandai.egg-info/dependency_links.txt
+--rw-r--r--   0 parker     (501) staff       (20)        7 2023-01-22 21:37:55.000000 gandai-0.0.9/gandai.egg-info/top_level.txt
+--rw-r--r--   0 parker     (501) staff       (20)      284 2023-01-22 21:30:19.000000 gandai-0.0.9/pyproject.toml
+--rw-r--r--   0 parker     (501) staff       (20)       38 2023-01-22 21:37:55.897589 gandai-0.0.9/setup.cfg
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.253601 gandai-0.1/
++-rw-r--r--   0 parker     (501) staff       (20)       25 2023-03-30 16:03:27.000000 gandai-0.1/MANIFEST.in
++-rw-r--r--   0 parker     (501) staff       (20)      213 2023-04-07 12:54:30.253474 gandai-0.1/PKG-INFO
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.250910 gandai-0.1/gandai/
++-rw-r--r--   0 parker     (501) staff       (20)        0 2023-03-02 13:58:25.000000 gandai-0.1/gandai/__init__.py
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.251861 gandai-0.1/gandai/adapters/
++-rw-r--r--   0 parker     (501) staff       (20)        0 2023-03-03 12:29:00.000000 gandai-0.1/gandai/adapters/__init__.py
++-rw-r--r--   0 parker     (501) staff       (20)     1222 2023-04-06 10:55:20.000000 gandai-0.1/gandai/adapters/dealcloud.py
++-rw-r--r--   0 parker     (501) staff       (20)     1824 2023-03-18 19:53:14.000000 gandai-0.1/gandai/adapters/filters.py
++-rw-r--r--   0 parker     (501) staff       (20)     9798 2023-04-06 16:56:22.000000 gandai-0.1/gandai/adapters/grata.py
++-rw-r--r--   0 parker     (501) staff       (20)     1578 2023-04-06 14:54:25.000000 gandai-0.1/gandai/datastore.py
++-rw-r--r--   0 parker     (501) staff       (20)      140 2023-03-30 16:03:27.000000 gandai-0.1/gandai/example.env
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.252075 gandai-0.1/gandai/migrations/
++-rw-r--r--   0 parker     (501) staff       (20)        0 2023-04-05 18:51:06.000000 gandai-0.1/gandai/migrations/__init__.py
++-rw-r--r--   0 parker     (501) staff       (20)     1764 2023-04-07 12:52:41.000000 gandai-0.1/gandai/migrations/dealcloud_to_gandai.py
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.253133 gandai-0.1/gandai/models/
++-rw-r--r--   0 parker     (501) staff       (20)     1704 2023-03-30 16:03:27.000000 gandai-0.1/gandai/models/Auth.py
++-rw-r--r--   0 parker     (501) staff       (20)       83 2023-03-02 13:58:25.000000 gandai-0.1/gandai/models/Bot.py
++-rw-r--r--   0 parker     (501) staff       (20)      857 2023-04-06 15:01:55.000000 gandai-0.1/gandai/models/Comment.py
++-rw-r--r--   0 parker     (501) staff       (20)      862 2023-03-17 12:15:55.000000 gandai-0.1/gandai/models/Company.py
++-rw-r--r--   0 parker     (501) staff       (20)     2399 2023-04-06 15:42:10.000000 gandai-0.1/gandai/models/Event.py
++-rw-r--r--   0 parker     (501) staff       (20)     4127 2023-04-06 14:41:06.000000 gandai-0.1/gandai/models/Search.py
++-rw-r--r--   0 parker     (501) staff       (20)      406 2023-03-02 13:58:25.000000 gandai-0.1/gandai/models/Target.py
++-rw-r--r--   0 parker     (501) staff       (20)      633 2023-03-03 12:29:00.000000 gandai-0.1/gandai/models/User.py
++-rw-r--r--   0 parker     (501) staff       (20)        0 2023-03-02 13:58:25.000000 gandai-0.1/gandai/models/__init__.py
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.253331 gandai-0.1/gandai/services/
++-rw-r--r--   0 parker     (501) staff       (20)     4142 2023-04-06 15:49:39.000000 gandai-0.1/gandai/services/Query.py
++-rw-r--r--   0 parker     (501) staff       (20)        0 2023-03-02 13:58:25.000000 gandai-0.1/gandai/services/__init__.py
++drwxr-xr-x   0 parker     (501) staff       (20)        0 2023-04-07 12:54:30.251347 gandai-0.1/gandai.egg-info/
++-rw-r--r--   0 parker     (501) staff       (20)      213 2023-04-07 12:54:30.000000 gandai-0.1/gandai.egg-info/PKG-INFO
++-rw-r--r--   0 parker     (501) staff       (20)      658 2023-04-07 12:54:30.000000 gandai-0.1/gandai.egg-info/SOURCES.txt
++-rw-r--r--   0 parker     (501) staff       (20)        1 2023-04-07 12:54:30.000000 gandai-0.1/gandai.egg-info/dependency_links.txt
++-rw-r--r--   0 parker     (501) staff       (20)        7 2023-04-07 12:54:30.000000 gandai-0.1/gandai.egg-info/top_level.txt
++-rw-r--r--   0 parker     (501) staff       (20)      376 2023-04-07 12:52:02.000000 gandai-0.1/pyproject.toml
++-rw-r--r--   0 parker     (501) staff       (20)       38 2023-04-07 12:54:30.253636 gandai-0.1/setup.cfg
++-rw-r--r--   0 parker     (501) staff       (20)      159 2023-03-06 14:38:11.000000 gandai-0.1/setup.py
+```
+
+### Comparing `gandai-0.0.9/gandai/models/Auth.py` & `gandai-0.1/gandai/models/Auth.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,65 +1,64 @@
+ import pandas as pd
+ import random
+ from dataclasses import asdict, dataclass, field
+ from hashlib import md5
+ from time import time
+-
+-
+-from dacite import from_dict
++import os
+ from twilio.rest import Client
+ 
+ from gandai.datastore import Cloudstore
+-# from gandai.models.User import user_exists # create_user 
++
++# from gandai.models.User import user_exists # create_user
+ 
+ ds = Cloudstore()
+-twilio_client = Client(ds["env/TWILIO_APP"], ds["env/TWILIO_TOKEN"])
++twilio_client = Client(os.getenv("TWILIO_APP"), os.getenv("TWILIO_TOKEN"))
+ 
+ 
+ @dataclass
+ class Auth:
+     key: str = field(init=False)
+     phone: str
+     code: str  # 6 digit
+     expires: int = field(init=False)
+     token: str = field(init=False)
+ 
+     def __post_init__(self):
+         assert len(str(self.code)) == 6
+         assert len(str(self.phone)) == 10
+-        SEVEN_DAYS = (7 * 86400)
++        SEVEN_DAYS = 7 * 86400
+         self.expires = int(time()) + SEVEN_DAYS
+         self.key = f"auth/{self.phone}/{self.expires}"
+         self.token = md5(self.key.encode()).hexdigest()
+ 
+ 
+ def _send_code(auth: Auth) -> None:
+     message = twilio_client.messages.create(
+         to=auth.phone,
+-        from_=ds["env/TWILIO_NUMBER"],
++        from_=os.getenv("TWILIO_NUMBER"),
+         body=f"{auth.code} is your G&AI Research authentication code.",
+     )
+     print(f"Login Sent to {auth.phone}")
+ 
+ 
+ def send_code(phone: str) -> None:
+     # Event.create(actor_key=phone)
+     auth_code = str(random.randint(100000, 999999))
+     auth = Auth(phone=phone, code=auth_code)
+     ds[auth.key] = asdict(auth)
+     _send_code(auth)
+ 
+ 
+-def authenticate(code: int) -> Auth:
++def authenticate(code: str) -> Auth:
+     keys = ds.keys("auth/")[1::]
+     df = pd.DataFrame(ds.load_async(keys))
+-    df = df[df['expires'] > int(time())]
+-    df = df[df['code'] == code]
+-    if len(df) > 0: 
++    df = df[df["expires"] > int(time())]
++    df = df[df["code"] == code]
++    if len(df) > 0:
+         # could parse to Auth and back to dict
+-        return df.to_dict(orient='records')[0]
++        return df.to_dict(orient="records")[0]
+     else:
+         return None
+ 
+ 
+ def validate(token: str) -> bool:
+     pass
+```
+
+### Comparing `gandai-0.0.9/gandai/models/Comment.py` & `gandai-0.1/gandai/models/Company.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,28 +1,33 @@
+ from dataclasses import asdict, dataclass, field
+-from time import time
++from typing import List
+ 
+-from gandai.datastore import Cloudstore
+-
+-ds = Cloudstore()
+ 
++@dataclass(order=True)
++class Company:
++    key: str = field(init=False)  # primary key
++    name: str
++    domain: str  # unique
++    description: str  # unique
++    # revenue: int  # in millions
++    # tags: List[str]  # idea affiliated-search_keys as tag
++    _match_tokens: List[str]
+ 
+-@dataclass
+-class Comment:
+-    key: str = field(init=False)
+-    search_key: str
+-    actor_key: str  #
+-    domain: str  # domain
+-    body: str
+-    created: int = field(init=False)
++    sort_index: float = field(init=False, repr=False)
+ 
+     def __post_init__(self):
+-        self.created = int(time())
+-        self.key = f"searches/{self.search_key}/comments/{self.created}"
++        # assert(self.revenue < (10**4))
++        self.key = self.domain
++        self.sort_index = self.revenue
++
++
++from gandai.datastore import Cloudstore
++
++ds = Cloudstore()
+ 
+ 
+-def post_comment(actor_key: str, search_key: str, domain: str, body: str) -> dict:
+-    comment = Comment(
+-        actor_key=actor_key, search_key=search_key, domain=domain, body=body
+-    )
+-    ds[comment.key] = asdict(comment)
+-    return asdict(comment)
++# def load_all_orgs() -> List[Organization]:
++#     keys = ds.keys("organizations/")
++#     data = await asyncio.gather(*[get(k) for k in keys])
++#     orgs = list(futures)
++#     orgs = [from_dict(Organization, org) for org in orgs]
++#     return orgs
+```
+
+### Comparing `gandai-0.0.9/gandai/models/User.py` & `gandai-0.1/gandai/models/User.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gandai-0.0.9/gandai.egg-info/SOURCES.txt` & `gandai-0.1/gandai.egg-info/SOURCES.txt`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,19 +1,23 @@
++MANIFEST.in
+ pyproject.toml
++setup.py
+ gandai/__init__.py
+ gandai/datastore.py
+-gandai/helpers.py
++gandai/example.env
+ gandai.egg-info/PKG-INFO
+ gandai.egg-info/SOURCES.txt
+ gandai.egg-info/dependency_links.txt
+ gandai.egg-info/top_level.txt
+-gandai/adapters/Grata.py
+ gandai/adapters/__init__.py
++gandai/adapters/dealcloud.py
++gandai/adapters/filters.py
+ gandai/adapters/grata.py
+-gandai/adapters/sourcescrub.py
++gandai/migrations/__init__.py
++gandai/migrations/dealcloud_to_gandai.py
+ gandai/models/Auth.py
+ gandai/models/Bot.py
+ gandai/models/Comment.py
+ gandai/models/Company.py
+ gandai/models/Event.py
+ gandai/models/Search.py
+ gandai/models/Target.py
+```
+

@@ -1,0 +1,2591 @@
+# Comparing `tmp/Simba-UW-tf-dev-1.55.5.tar.gz` & `tmp/Simba-UW-tf-dev-1.55.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/Simba-UW-tf-dev-1.55.5.tar", last modified: Thu Apr  6 23:19:16 2023, max compression
++gzip compressed data, was "dist/Simba-UW-tf-dev-1.55.6.tar", last modified: Fri Apr  7 12:49:03 2023, max compression
+```
+
+## Comparing `Simba-UW-tf-dev-1.55.5.tar` & `Simba-UW-tf-dev-1.55.6.tar`
+
+### file list
+
+```diff
+@@ -1,380 +1,381 @@
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/
+--rw-r--r--   0 simon      (501) staff       (20)      579 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/PKG-INFO
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/
+--rw-r--r--   0 simon      (501) staff       (20)    32569 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.5/simba/video_processing.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/blob_storage/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-21 20:39:46.000000 Simba-UW-tf-dev-1.55.5/simba/blob_storage/.DS_Store
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/
+--rw-r--r--   0 simon      (501) staff       (20)    10851 2023-03-21 20:14:50.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/unsupervised_ui.py
+--rw-r--r--   0 simon      (501) staff       (20)     6566 2023-03-21 14:26:03.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/misc.py
+--rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     7227 2023-03-21 11:41:26.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/dataset_creator.py
+--rw-r--r--   0 simon      (501) staff       (20)     4061 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/data_extractors.py
+--rw-r--r--   0 simon      (501) staff       (20)    11192 2023-03-21 20:14:50.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/dbcv.py
+--rw-r--r--   0 simon      (501) staff       (20)    11456 2023-03-21 18:17:26.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/visualizers.py
+--rw-r--r--   0 simon      (501) staff       (20)     7526 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/umap_embedder.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/visualization_tools/
+--rw-r--r--   0 simon      (501) staff       (20)     2019 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/visualization_tools/vtk_embeddings.py
+--rw-r--r--   0 simon      (501) staff       (20)      150 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/ui_tools.py
+--rw-r--r--   0 simon      (501) staff       (20)    49992 2023-03-22 15:08:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/pop_up_classes.py
+--rw-r--r--   0 simon      (501) staff       (20)    16189 2023-03-21 15:42:27.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/cluster_statistics.py
+--rw-r--r--   0 simon      (501) staff       (20)     6642 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/hdbscan_clusterer.py
+--rw-r--r--   0 simon      (501) staff       (20)     3789 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/tsne.py
+--rw-r--r--   0 simon      (501) staff       (20)     5630 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/unsupervised/cluster_visualizer.py
+--rw-r--r--   0 simon      (501) staff       (20)    19024 2023-04-06 19:25:58.000000 Simba-UW-tf-dev-1.55.5/simba/enums.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     7463 2023-03-15 19:17:12.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/agg_boundary_stats.py
+--rw-r--r--   0 simon      (501) staff       (20)     8562 2023-03-15 19:17:04.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/find_bounderies.py
+--rw-r--r--   0 simon      (501) staff       (20)    24561 2023-04-06 11:22:38.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/boundary_menus.py
+--rw-r--r--   0 simon      (501) staff       (20)     9530 2023-03-15 16:54:41.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/boundary_statistics.py
+--rw-r--r--   0 simon      (501) staff       (20)    12627 2023-03-15 16:54:41.000000 Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/visualize_boundaries.py
+--rw-r--r--   0 simon      (501) staff       (20)    32772 2023-04-04 14:38:01.000000 Simba-UW-tf-dev-1.55.5/simba/.DS_Store
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/
+--rw-r--r--   0 simon      (501) staff       (20)    42807 2023-04-04 12:57:34.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_14bp.py
+--rw-r--r--   0 simon      (501) staff       (20)    21541 2023-03-15 19:11:32.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_7bp.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/
+--rw-r--r--   0 simon      (501) staff       (20)     2732 2023-04-04 19:46:36.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/read_in_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    14141 2023-03-15 17:20:08.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/fish_feature_extractor_2022.py
+--rw-r--r--   0 simon      (501) staff       (20)     2053 2023-04-04 03:00:41.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/convex_hull_3_scratch_3.py
+--rw-r--r--   0 simon      (501) staff       (20)     5762 2023-04-04 01:54:33.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/convex_hull_scratch_1.py
+--rw-r--r--   0 simon      (501) staff       (20)    19620 2023-04-03 12:08:14.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/fish_feature_extractor_2023.py
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-14 19:36:02.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     7127 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/egocentrical_aligner.py
+--rw-r--r--   0 simon      (501) staff       (20)     4708 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/graph_creator.py
+--rw-r--r--   0 simon      (501) staff       (20)     3954 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/termite_rois.csv
+--rw-r--r--   0 simon      (501) staff       (20)      732 2023-03-20 12:13:51.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/mutual_exclusive.py
+--rw-r--r--   0 simon      (501) staff       (20)     1862 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/graph_3d_plotter.py
+--rw-r--r--   0 simon      (501) staff       (20)     2692 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/add_probability_cnt_features.py
+--rw-r--r--   0 simon      (501) staff       (20)     2058 2023-04-03 23:51:37.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/convex_hull_scratch_2.py
+--rw-r--r--   0 simon      (501) staff       (20)    28028 2023-04-04 13:11:31.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_8bps_2_animals.py
+--rw-r--r--   0 simon      (501) staff       (20)    10244 2023-04-06 18:38:15.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     2347 2023-04-04 12:57:34.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/perimeter_jit.py
+--rw-r--r--   0 simon      (501) staff       (20)    10734 2023-04-06 14:57:55.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_subsets.py
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__init__.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/
+--rw-r--r--   0 simon      (501) staff       (20)      905 2023-04-04 11:31:57.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.nbi
+--rw-r--r--   0 simon      (501) staff       (20)   238196 2023-04-04 11:31:57.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.1.nbc
+--rw-r--r--   0 simon      (501) staff       (20)    69038 2023-04-04 11:32:25.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.1.nbc
+--rw-r--r--   0 simon      (501) staff       (20)   238298 2023-04-04 11:32:29.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.1.nbc
+--rw-r--r--   0 simon      (501) staff       (20)    69338 2023-04-04 11:32:26.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.2.nbc
+--rw-r--r--   0 simon      (501) staff       (20)      917 2023-04-04 11:32:29.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.nbi
+--rw-r--r--   0 simon      (501) staff       (20)     2179 2023-04-04 11:32:26.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.nbi
+--rw-r--r--   0 simon      (501) staff       (20)    36798 2023-03-15 17:04:48.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/extract_features_9bp.py
+--rw-r--r--   0 simon      (501) staff       (20)     8428 2023-03-15 19:11:54.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_user_defined.py
+--rw-r--r--   0 simon      (501) staff       (20)     5323 2023-03-19 18:30:53.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/unit_tests.py
+--rw-r--r--   0 simon      (501) staff       (20)    46473 2023-04-04 13:07:58.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_16bp.py
+--rw-r--r--   0 simon      (501) staff       (20)    24093 2023-04-04 13:11:31.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_8bp.py
+--rw-r--r--   0 simon      (501) staff       (20)    16763 2023-03-15 19:11:50.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_4bp.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/
+--rw-r--r--   0 simon      (501) staff       (20)      617 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/features_scripts.iml
+--rw-r--r--   0 simon      (501) staff       (20)      138 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/encodings.xml
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/inspectionProfiles/
+--rw-r--r--   0 simon      (501) staff       (20)      822 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/inspectionProfiles/Project_Default.xml
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/libraries/
+--rw-r--r--   0 simon      (501) staff       (20)      128 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/libraries/R_User_Library.xml
+--rw-r--r--   0 simon      (501) staff       (20)      273 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/.gitignore
+--rw-r--r--   0 simon      (501) staff       (20)     8081 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/workspace.xml
+--rw-r--r--   0 simon      (501) staff       (20)      291 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/modules.xml
+--rw-r--r--   0 simon      (501) staff       (20)       23 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/.name
+--rw-r--r--   0 simon      (501) staff       (20)      294 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/misc.xml
+--rw-r--r--   0 simon      (501) staff       (20)     6044 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/plotly_create_h5.py
+--rw-r--r--   0 simon      (501) staff       (20)    15351 2023-04-06 14:48:36.000000 Simba-UW-tf-dev-1.55.5/simba/requirements.txt
+--rw-r--r--   0 simon      (501) staff       (20)     5832 2023-03-15 19:16:48.000000 Simba-UW-tf-dev-1.55.5/simba/severity_processor.py
+--rw-r--r--   0 simon      (501) staff       (20)     5941 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.5/simba/user_pose_config_creator.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/mixins/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-15 17:26:03.000000 Simba-UW-tf-dev-1.55.5/simba/mixins/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)    41856 2023-04-05 17:24:50.000000 Simba-UW-tf-dev-1.55.5/simba/mixins/pop_up_mixin.py
+--rw-r--r--   0 simon      (501) staff       (20)     8182 2023-04-05 13:03:24.000000 Simba-UW-tf-dev-1.55.5/simba/mixins/config_reader.py
+--rw-r--r--   0 simon      (501) staff       (20)     6781 2023-04-06 14:21:49.000000 Simba-UW-tf-dev-1.55.5/simba/mixins/feature_extraction_mixin.py
+--rw-r--r--   0 simon      (501) staff       (20)    34512 2023-04-06 19:49:53.000000 Simba-UW-tf-dev-1.55.5/simba/machine_model_settings_pop_up.py
+--rw-r--r--   0 simon      (501) staff       (20)     5266 2023-03-15 15:43:20.000000 Simba-UW-tf-dev-1.55.5/simba/remove_keypoints_in_pose.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/
+--rw-r--r--   0 simon      (501) staff       (20)     6326 2023-03-17 16:27:19.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/deepethogram_importer.py
+--rw-r--r--   0 simon      (501) staff       (20)     9947 2023-03-18 15:35:38.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/BORIS_appender.py
+--rw-r--r--   0 simon      (501) staff       (20)     9170 2023-03-22 19:35:38.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/observer_importer.py
+--rw-r--r--   0 simon      (501) staff       (20)    16922 2023-03-28 20:30:38.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/tools.py
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-04-01 14:10:06.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/__init__.py
+--rw-r--r--   0 simon      (501) staff       (20)    18283 2023-04-01 14:14:21.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/third_party_appender.py
+--rw-r--r--   0 simon      (501) staff       (20)     8336 2023-03-15 19:12:46.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/ethovision_import.py
+--rw-r--r--   0 simon      (501) staff       (20)     6919 2023-03-19 15:03:14.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/BENTO_appender.py
+--rw-r--r--   0 simon      (501) staff       (20)     5426 2023-03-19 16:33:18.000000 Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/solomon_importer.py
+--rw-r--r--   0 simon      (501) staff       (20)     7261 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/multi_cropper.py
+--rw-r--r--   0 simon      (501) staff       (20)    13056 2023-03-19 16:33:18.000000 Simba-UW-tf-dev-1.55.5/simba/FSTTC_calculator.py
+--rw-r--r--   0 simon      (501) staff       (20)    12620 2023-04-06 11:43:07.000000 Simba-UW-tf-dev-1.55.5/simba/create_project_pop_up.py
+--rw-r--r--   0 simon      (501) staff       (20)    13421 2023-04-06 11:40:29.000000 Simba-UW-tf-dev-1.55.5/simba/video_info_table.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-15 17:25:58.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     8507 2023-03-15 19:09:16.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_clf_statistics.py
+--rw-r--r--   0 simon      (501) staff       (20)    13530 2023-03-15 19:08:52.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)    18253 2023-04-06 11:29:26.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_menues.py
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/__init__.py
+--rw-r--r--   0 simon      (501) staff       (20)     1660 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_tools.py
+--rw-r--r--   0 simon      (501) staff       (20)    16374 2023-03-15 19:09:04.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_visualizer.py
+--rw-r--r--   0 simon      (501) staff       (20)    13160 2023-03-20 13:43:59.000000 Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_movement_statistics.py
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/__init__.py
+--rw-r--r--   0 simon      (501) staff       (20)     2813 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/extract_frames_fast.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/utils/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-14 20:15:03.000000 Simba-UW-tf-dev-1.55.5/simba/utils/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     5626 2023-03-28 20:35:14.000000 Simba-UW-tf-dev-1.55.5/simba/utils/warnings.py
+--rw-r--r--   0 simon      (501) staff       (20)     3825 2023-04-06 19:25:38.000000 Simba-UW-tf-dev-1.55.5/simba/utils/lookups.py
+--rw-r--r--   0 simon      (501) staff       (20)    11967 2023-04-06 19:37:44.000000 Simba-UW-tf-dev-1.55.5/simba/utils/errors.py
+--rw-r--r--   0 simon      (501) staff       (20)    21581 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/labelling_interface.py
+--rw-r--r--   0 simon      (501) staff       (20)     9937 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.5/simba/timebins_movement_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)    45524 2023-04-04 20:09:14.000000 Simba-UW-tf-dev-1.55.5/simba/train_model_functions.py
+--rw-r--r--   0 simon      (501) staff       (20)    49699 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/SimBA_dash_app.py
+--rw-r--r--   0 simon      (501) staff       (20)     7520 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.5/simba/timebins_clf_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)     8240 2023-03-17 16:23:58.000000 Simba-UW-tf-dev-1.55.5/simba/calculate_px_dist.py
+--rw-r--r--   0 simon      (501) staff       (20)     6548 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/movement_processor.py
+--rw-r--r--   0 simon      (501) staff       (20)     2904 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pybursts.py
+--rw-r--r--   0 simon      (501) staff       (20)     5265 2023-03-29 18:04:02.000000 Simba-UW-tf-dev-1.55.5/simba/run_model_new.py
+--rw-r--r--   0 simon      (501) staff       (20)     3104 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/rw_dfs.py
+--rw-r--r--   0 simon      (501) staff       (20)     6684 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/reverse_2_animal_tracking.py
+--rw-r--r--   0 simon      (501) staff       (20)     9743 2023-03-17 16:34:02.000000 Simba-UW-tf-dev-1.55.5/simba/Directing_animals_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)     4357 2023-03-30 16:19:09.000000 Simba-UW-tf-dev-1.55.5/simba/Validate_model_one_video_run_clf.py
+--rw-r--r--   0 simon      (501) staff       (20)     9548 2023-04-06 00:40:25.000000 Simba-UW-tf-dev-1.55.5/simba/tkinter_functions.py
+--rw-r--r--   0 simon      (501) staff       (20)    13767 2023-03-24 12:49:19.000000 Simba-UW-tf-dev-1.55.5/simba/setting_menu.py
+--rw-r--r--   0 simon      (501) staff       (20)     6614 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/interpolate_pose.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/
+--rw-r--r--   0 simon      (501) staff       (20)     8571 2023-03-30 10:06:59.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/gantt_creator.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/tools/
+--rw-r--r--   0 simon      (501) staff       (20)     5353 2023-03-30 15:38:37.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/tools/tkinter_tools.py
+--rw-r--r--   0 simon      (501) staff       (20)    17962 2023-03-24 13:40:30.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_plotter_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    14592 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/shap_agg_stats_visualizer.py
+--rw-r--r--   0 simon      (501) staff       (20)    12928 2023-03-30 10:08:46.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/gantt_creator_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    15777 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_clf_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)     8884 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/probability_plot_creator.py
+--rw-r--r--   0 simon      (501) staff       (20)    16058 2023-03-22 14:43:52.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/misc_visualizations.py
+--rw-r--r--   0 simon      (501) staff       (20)    13501 2023-03-15 17:12:38.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/plot_clf_results.py
+--rw-r--r--   0 simon      (501) staff       (20)    17696 2023-03-29 16:22:09.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/plot_clf_results_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    16328 2023-03-24 13:47:50.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_feature_visualizer.py
+--rw-r--r--   0 simon      (501) staff       (20)    12588 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_location.py
+--rw-r--r--   0 simon      (501) staff       (20)    12585 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/probability_plot_creator_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)     5341 2023-03-30 15:46:49.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/interactive_probability_grapher.py
+--rw-r--r--   0 simon      (501) staff       (20)     5832 2023-03-29 17:02:51.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/plot_pose_in_dir.py
+--rw-r--r--   0 simon      (501) staff       (20)    12184 2023-03-31 13:53:09.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/single_run_model_validation_video.py
+--rw-r--r--   0 simon      (501) staff       (20)    11202 2023-03-19 16:21:53.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/frame_mergerer_ffmpeg.py
+--rw-r--r--   0 simon      (501) staff       (20)    12442 2023-03-17 16:34:02.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/Directing_animals_visualizer_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)     9856 2023-03-17 16:23:58.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/clf_validator.py
+--rw-r--r--   0 simon      (501) staff       (20)    17290 2023-04-06 00:33:50.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/path_plotter_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    19958 2023-03-24 13:47:50.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_feature_visualizer_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    10157 2023-03-17 16:27:19.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/data_plotter.py
+--rw-r--r--   0 simon      (501) staff       (20)    12444 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/path_plotter.py
+--rw-r--r--   0 simon      (501) staff       (20)     8609 2023-03-15 13:37:59.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/ez_lineplot.py
+--rw-r--r--   0 simon      (501) staff       (20)    12970 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/distance_plotter_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)    15626 2023-03-29 17:05:49.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_plotter.py
+--rw-r--r--   0 simon      (501) staff       (20)    13165 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_clf.py
+--rw-r--r--   0 simon      (501) staff       (20)     8891 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/distance_plotter.py
+--rw-r--r--   0 simon      (501) staff       (20)    13554 2023-04-01 13:12:31.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/single_run_model_validation_video_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)     9839 2023-03-17 16:34:02.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/Directing_animals_visualizer.py
+--rw-r--r--   0 simon      (501) staff       (20)    16155 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_location_mp.py
+--rw-r--r--   0 simon      (501) staff       (20)     5029 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/run_dash_tkinter.py
+--rw-r--r--   0 simon      (501) staff       (20)     7454 2023-03-13 22:11:36.000000 Simba-UW-tf-dev-1.55.5/simba/interpolate_smooth_post_hoc.py
+--rw-r--r--   0 simon      (501) staff       (20)    24474 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/dash_app.py
+--rw-r--r--   0 simon      (501) staff       (20)     6350 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/reverse_tracking_order.py
+--rw-r--r--   0 simon      (501) staff       (20)     5772 2023-03-20 13:55:20.000000 Simba-UW-tf-dev-1.55.5/simba/concatenator_pop_up.py
+--rw-r--r--   0 simon      (501) staff       (20)     2824 2023-03-24 16:12:51.000000 Simba-UW-tf-dev-1.55.5/simba/extract_annotation_frames.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/
+--rw-r--r--   0 simon      (501) staff       (20)     7385 2023-03-24 13:34:06.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_time_bin_calculator.py
+--rw-r--r--   0 simon      (501) staff       (20)     2248 2023-03-24 13:34:06.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_movement_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-20 12:47:56.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)    43831 2023-03-15 17:12:38.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_define.py
+--rw-r--r--   0 simon      (501) staff       (20)     3384 2023-03-20 12:41:16.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_reset.py
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/__init__.py
+--rw-r--r--   0 simon      (501) staff       (20)    21382 2023-03-31 10:40:20.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)    11920 2023-03-31 10:48:40.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_feature_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)     3537 2023-03-15 17:12:38.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_multiply.py
+--rw-r--r--   0 simon      (501) staff       (20)      961 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_size_calculations.py
+--rw-r--r--   0 simon      (501) staff       (20)     3505 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_zoom.py
+--rw-r--r--   0 simon      (501) staff       (20)    11335 2023-04-05 11:07:42.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_directing_analyzer.py
+--rw-r--r--   0 simon      (501) staff       (20)    10128 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_move_shape.py
+--rw-r--r--   0 simon      (501) staff       (20)     5097 2023-04-05 20:01:02.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_menus.py
+--rw-r--r--   0 simon      (501) staff       (20)    15175 2023-03-20 12:28:41.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_clf_calculator.py
+--rw-r--r--   0 simon      (501) staff       (20)    22682 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_image.py
+--rw-r--r--   0 simon      (501) staff       (20)    57395 2023-04-06 00:28:01.000000 Simba-UW-tf-dev-1.55.5/simba/misc_tools.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/
+--rw-r--r--   0 simon      (501) staff       (20)     2494 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/read_DANNCE_mat.py
+--rw-r--r--   0 simon      (501) staff       (20)    25782 2023-03-20 12:51:35.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/sleap_importer_slp.py
+--rw-r--r--   0 simon      (501) staff       (20)    24720 2023-03-13 15:26:36.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/sleap_importer_h5.py
+--rw-r--r--   0 simon      (501) staff       (20)    26507 2023-03-21 12:58:39.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/dlc_multi_animal_importer.py
+--rw-r--r--   0 simon      (501) staff       (20)    23731 2023-03-20 12:55:04.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/sleap_importer_csv.py
+--rw-r--r--   0 simon      (501) staff       (20)    16536 2023-03-20 13:30:18.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/import_trk.py
+--rw-r--r--   0 simon      (501) staff       (20)     7837 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/import_mars.py
+--rw-r--r--   0 simon      (501) staff       (20)     8905 2023-03-20 13:49:13.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/dlc_importer_csv.py
+--rw-r--r--   0 simon      (501) staff       (20)     8173 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_importers/trk_importer.py
+--rw-r--r--   0 simon      (501) staff       (20)   232876 2023-04-06 14:21:49.000000 Simba-UW-tf-dev-1.55.5/simba/pop_up_classes.py
+--rw-r--r--   0 simon      (501) staff       (20)     4692 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/extract_seqframes.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/
+--rw-r--r--   0 simon      (501) staff       (20)    14340 2023-03-30 11:05:37.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/.DS_Store
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/bp_names/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-16 13:26:00.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/bp_names/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     1316 2023-03-20 15:55:45.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/bp_names/bp_names.csv
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/no_animals/
+--rw-r--r--   0 simon      (501) staff       (20)       24 2023-03-20 15:55:45.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/no_animals/no_animals.csv
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-16 13:26:19.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/no_animals/.DS_Store
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/configuration_names/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-16 13:26:14.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/configuration_names/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)      267 2023-03-20 15:55:45.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/configuration_names/pose_config_names.csv
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/
+--rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-30 10:45:10.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)    39805 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/8.png
+--rw-r--r--   0 simon      (501) staff       (20)    62501 2023-03-30 10:39:05.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/9.png
+--rw-r--r--   0 simon      (501) staff       (20)     6172 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/12.png
+--rw-r--r--   0 simon      (501) staff       (20)    69501 2023-03-30 10:44:04.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/11.png
+--rw-r--r--   0 simon      (501) staff       (20)    69410 2023-03-30 10:40:01.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/10.png
+--rw-r--r--   0 simon      (501) staff       (20)    16000 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/4.png
+--rw-r--r--   0 simon      (501) staff       (20)    28150 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/5.png
+--rw-r--r--   0 simon      (501) staff       (20)    31140 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/7.png
+--rw-r--r--   0 simon      (501) staff       (20)    30634 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/6.png
+--rw-r--r--   0 simon      (501) staff       (20)    15417 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/2.png
+--rw-r--r--   0 simon      (501) staff       (20)    15786 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/3.png
+--rw-r--r--   0 simon      (501) staff       (20)    18939 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/1.png
+--rw-r--r--   0 simon      (501) staff       (20)     7273 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/get_coordinates_tools_v2.py
+--rw-r--r--   0 simon      (501) staff       (20)    16252 2023-03-15 19:16:56.000000 Simba-UW-tf-dev-1.55.5/simba/pup_retrieval_protocol.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/
+--rw-r--r--   0 simon      (501) staff       (20)     7712 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/outlier_corrector_movement.py
+--rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-15 17:05:05.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/__init__.py
+--rw-r--r--   0 simon      (501) staff       (20)     8264 2023-03-15 17:05:35.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/outlier_corrector_location.py
+--rw-r--r--   0 simon      (501) staff       (20)     4362 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/skip_outlier_correction.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/
+--rw-r--r--   0 simon      (501) staff       (20)      617 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/outlier_scripts.iml
+--rw-r--r--   0 simon      (501) staff       (20)      138 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/encodings.xml
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/inspectionProfiles/
+--rw-r--r--   0 simon      (501) staff       (20)      668 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/inspectionProfiles/Project_Default.xml
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/libraries/
+--rw-r--r--   0 simon      (501) staff       (20)      128 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/libraries/R_User_Library.xml
+--rw-r--r--   0 simon      (501) staff       (20)     8102 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/workspace.xml
+--rw-r--r--   0 simon      (501) staff       (20)      289 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/modules.xml
+--rw-r--r--   0 simon      (501) staff       (20)      294 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/misc.xml
+--rw-r--r--   0 simon      (501) staff       (20)     2569 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/pose_reset.py
+--rw-r--r--   0 simon      (501) staff       (20)    17642 2023-04-04 23:10:52.000000 Simba-UW-tf-dev-1.55.5/simba/train_mutiple_models.py
+--rw-r--r--   0 simon      (501) staff       (20)    60142 2023-04-06 20:06:44.000000 Simba-UW-tf-dev-1.55.5/simba/SimBA.py
+--rw-r--r--   0 simon      (501) staff       (20)    27431 2023-04-04 14:39:01.000000 Simba-UW-tf-dev-1.55.5/simba/labelling_advanced_interface.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)   109483 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/model_names.parquet
+--rw-r--r--   0 simon      (501) staff       (20)    14175 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/features.csv
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/
+--rw-r--r--   0 simon      (501) staff       (20)     1177 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/down_arrow.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     1733 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/intruder_shape.jpg
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/feature_categories/
+--rw-r--r--   0 simon      (501) staff       (20)      109 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/feature_categories/.~lock.shap_feature_categories.csv#
+--rw-r--r--   0 simon      (501) staff       (20)    17420 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/feature_categories/shap_feature_categories.csv
+--rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)     1665 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_shape.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     2415 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_intruder_shape.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     2012 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/animal_distances.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     4422 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/baseline_scale.jpg
+--rw-r--r--   0 simon      (501) staff       (20)   353824 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/ubuntu.regular.ttf
+--rw-r--r--   0 simon      (501) staff       (20)     6672 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/side_scale.jpg
+--rw-r--r--   0 simon      (501) staff       (20)   189004 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/UbuntuMono-Regular.ttf
+--rw-r--r--   0 simon      (501) staff       (20)     2737 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/side_scale_5.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     1785 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/intruder_movement.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     1435 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_movement.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     3134 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/color_bar.jpg
+--rw-r--r--   0 simon      (501) staff       (20)     2120 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_intruder_movement.jpg
+--rw-r--r--   0 simon      (501) staff       (20)    16388 2023-04-06 18:20:18.000000 Simba-UW-tf-dev-1.55.5/simba/assets/.DS_Store
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/lookups/
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/lookups/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)   270783 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/lookups/model_names.parquet
+--rw-r--r--   0 simon      (501) staff       (20)     2426 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/lookups/feature_extraction_headers.csv
+--rw-r--r--   0 simon      (501) staff       (20)    14175 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/lookups/features.csv
+--rw-r--r--   0 simon      (501) staff       (20)    14175 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/lookups/unsupervised_example_x.csv
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/stl/
+--rw-r--r--   0 simon      (501) staff       (20)   551576 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/stl/operant_tray.stl
+--rw-r--r--   0 simon      (501) staff       (20)    67647 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/stl/operant_lever.stl
+--rw-r--r--   0 simon      (501) staff       (20)    92896 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/stl/operant_walls.stl
+--rw-r--r--   0 simon      (501) staff       (20)  4759984 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/stl/grid_floor.stl
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/img/
+--rw-r--r--   0 simon      (501) staff       (20)   399272 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/img/about_me.png
+--rw-r--r--   0 simon      (501) staff       (20)   322242 2023-04-06 16:38:51.000000 Simba-UW-tf-dev-1.55.5/simba/assets/img/bg_2.png
+--rw-r--r--   0 simon      (501) staff       (20)   454535 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/img/splash.png
+--rw-r--r--   0 simon      (501) staff       (20)    69267 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/img/splash.pptx
+--rw-r--r--   0 simon      (501) staff       (20)   204362 2023-04-06 15:01:45.000000 Simba-UW-tf-dev-1.55.5/simba/assets/img/bg.png
+--rw-r--r--   0 simon      (501) staff       (20)   189004 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/UbuntuMono-Regular.ttf
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/
+--rw-r--r--   0 simon      (501) staff       (20)     1350 2023-03-17 17:59:27.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/factory.png
+--rw-r--r--   0 simon      (501) staff       (20)     1413 2023-03-21 13:03:06.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/cluster.png
+--rw-r--r--   0 simon      (501) staff       (20)     1340 2023-03-17 16:51:08.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/load.png
+--rw-r--r--   0 simon      (501) staff       (20)     4507 2023-03-20 14:13:48.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/gif.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4566 2023-03-18 18:12:27.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/pose.png
+--rw-rw-r--   0 simon      (501) staff       (20)     1943 2023-03-18 18:14:10.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/features.png
+--rw-r--r--   0 simon      (501) staff       (20)     6148 2023-04-05 17:25:36.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/.DS_Store
+--rw-rw-r--   0 simon      (501) staff       (20)     4896 2023-03-17 19:17:29.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/settings.png
+--rw-r--r--   0 simon      (501) staff       (20)     1252 2023-03-19 16:48:40.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/link.png
+--rw-r--r--   0 simon      (501) staff       (20)    14250 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/dash_simba.css
+--rw-r--r--   0 simon      (501) staff       (20)      917 2023-04-05 16:43:13.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/documentation.png
+--rw-r--r--   0 simon      (501) staff       (20)     4503 2023-03-20 14:08:00.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/fps.png
+--rw-r--r--   0 simon      (501) staff       (20)     1299 2023-03-21 13:02:07.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/dimensionality_reduction.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4823 2023-03-17 19:03:29.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/roi.png
+--rw-r--r--   0 simon      (501) staff       (20)      920 2023-03-20 14:25:03.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/superimpose.png
+--rw-r--r--   0 simon      (501) staff       (20)     1136 2023-03-18 20:25:31.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/label.png
+--rw-r--r--   0 simon      (501) staff       (20)     1016 2023-03-20 14:28:47.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/change.png
+--rw-r--r--   0 simon      (501) staff       (20)     1124 2023-03-17 18:05:26.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/crop.png
+--rw-r--r--   0 simon      (501) staff       (20)     1057 2023-03-20 14:03:42.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/path.png
+--rw-r--r--   0 simon      (501) staff       (20)      950 2023-03-17 18:07:33.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/clip.png
+--rw-r--r--   0 simon      (501) staff       (20)     2121 2023-04-04 14:37:43.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/restart.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4653 2023-03-17 18:11:59.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/calipher.png
+--rw-r--r--   0 simon      (501) staff       (20)     1291 2023-03-21 20:16:55.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/add_on.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4695 2023-03-17 17:57:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/create.png
+--rw-r--r--   0 simon      (501) staff       (20)    78182 2023-03-20 16:35:36.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/SimBA_logo.ico
+--rw-r--r--   0 simon      (501) staff       (20)     1067 2023-03-20 14:22:44.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/print.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4653 2023-03-18 20:27:58.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/clf.png
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/
+--rw-r--r--   0 simon      (501) staff       (20)     6027 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/mosaic.png
+--rw-r--r--   0 simon      (501) staff       (20)     5654 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/vertical.png
+--rw-r--r--   0 simon      (501) staff       (20)     5542 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/horizontal.png
+--rw-r--r--   0 simon      (501) staff       (20)     5939 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/mixed_mosaic.png
+--rw-r--r--   0 simon      (501) staff       (20)     2060 2023-03-20 14:26:12.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/merge.png
+--rw-------   0 simon      (501) staff       (20)     4725 2023-03-18 20:27:47.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/clf_2.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4795 2023-03-17 18:10:10.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/visualize.png
+--rw-r--r--   0 simon      (501) staff       (20)     2142 2023-03-20 14:10:28.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat.png
+--rw-r--r--   0 simon      (501) staff       (20)     1474 2023-03-17 19:20:24.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/boris.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4804 2023-03-19 16:43:01.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/frames.png
+--rw-r--r--   0 simon      (501) staff       (20)     2425 2023-03-19 16:44:55.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/video.png
+--rw-r--r--   0 simon      (501) staff       (20)     2089 2023-03-20 14:05:58.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/sample.png
+--rw-r--r--   0 simon      (501) staff       (20)     1471 2023-03-21 13:04:02.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/metrics.png
+--rw-r--r--   0 simon      (501) staff       (20)     4555 2023-03-20 14:21:02.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/grey.png
+--rw-r--r--   0 simon      (501) staff       (20)      930 2023-03-18 18:07:29.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/exit.png
+--rw-r--r--   0 simon      (501) staff       (20)     4751 2023-03-18 20:31:58.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/outlier.png
+--rw-r--r--   0 simon      (501) staff       (20)     4392 2023-03-20 14:16:15.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/clahe.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4637 2023-03-17 19:03:55.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/trash.png
+--rw-r--r--   0 simon      (501) staff       (20)     1239 2023-03-19 16:51:21.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/about.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4666 2023-03-17 18:01:21.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/convert.png
+--rw-r--r--   0 simon      (501) staff       (20)    93229 2023-03-20 16:01:42.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/SimBA_logo.icns
+--rw-r--r--   0 simon      (501) staff       (20)      991 2023-03-20 19:02:33.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/reorganize.png
+--rw-rw-r--   0 simon      (501) staff       (20)     4784 2023-03-17 18:50:35.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/browse.png
+--rw-r--r--   0 simon      (501) staff       (20)    30707 2023-03-20 16:33:38.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/SimBA_logo.png
+--rw-r--r--   0 simon      (501) staff       (20)     2293 2023-03-17 19:24:38.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/ethovision.png
+--rw-r--r--   0 simon      (501) staff       (20)     1018 2023-04-05 15:24:49.000000 Simba-UW-tf-dev-1.55.5/simba/assets/icons/close.png
+--rw-r--r--   0 simon      (501) staff       (20)    13672 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/dash_simba_base.css
+--rw-r--r--   0 simon      (501) staff       (20)    31812 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/assets/TheGoldenLab.PNG
+--rw-r--r--   0 simon      (501) staff       (20)    21392 2023-03-22 19:01:48.000000 Simba-UW-tf-dev-1.55.5/simba/drop_bp_cords.py
+--rw-r--r--   0 simon      (501) staff       (20)     8116 2023-03-19 18:27:51.000000 Simba-UW-tf-dev-1.55.5/simba/read_config_unit_tests.py
+--rw-r--r--   0 simon      (501) staff       (20)    11564 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/project_config_creator.py
+--rw-r--r--   0 simon      (501) staff       (20)    27444 2023-03-15 15:58:40.000000 Simba-UW-tf-dev-1.55.5/simba/set_hyperparameters.py
+--rw-r--r--   0 simon      (501) staff       (20)    20780 2023-04-04 23:58:36.000000 Simba-UW-tf-dev-1.55.5/simba/train_single_model.py
+--rw-r--r--   0 simon      (501) staff       (20)     6426 2023-03-17 16:57:53.000000 Simba-UW-tf-dev-1.55.5/simba/create_clf_log.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/
+--rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-17 14:43:38.000000 Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/.DS_Store
+--rw-r--r--   0 simon      (501) staff       (20)    24896 2023-04-06 11:29:26.000000 Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/batch_process_menus.py
+--rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/__init__.py
+--rw-r--r--   0 simon      (501) staff       (20)    10936 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/batch_process_create_ffmpeg_commands.py
+--rw-r--r--   0 simon      (501) staff       (20)     9563 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.5/simba/Kleinberg_calculator.py
+--rw-r--r--   0 simon      (501) staff       (20)     8392 2023-04-03 14:06:05.000000 Simba-UW-tf-dev-1.55.5/simba/reorganize_keypoint_in_pose.py
+--rw-r--r--   0 simon      (501) staff       (20)      165 2023-03-25 11:18:21.000000 Simba-UW-tf-dev-1.55.5/simba/~$features.pptx
+--rw-r--r--   0 simon      (501) staff       (20)     6557 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.5/simba/play_annotation_video.py
+-drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/
+--rw-rw-r--   0 simon      (501) staff       (20)      579 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/PKG-INFO
+--rw-rw-r--   0 simon      (501) staff       (20)    12849 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/SOURCES.txt
+--rw-rw-r--   0 simon      (501) staff       (20)       44 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/entry_points.txt
+--rw-rw-r--   0 simon      (501) staff       (20)      640 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/requires.txt
+--rw-rw-r--   0 simon      (501) staff       (20)        6 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/top_level.txt
+--rw-rw-r--   0 simon      (501) staff       (20)        1 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/dependency_links.txt
+--rw-rw-r--   0 simon      (501) staff       (20)     7652 2020-05-13 13:27:38.000000 Simba-UW-tf-dev-1.55.5/LICENSE.md
+--rw-rw-r--   0 simon      (501) staff       (20)      136 2021-04-10 10:44:06.000000 Simba-UW-tf-dev-1.55.5/MANIFEST.in
+--rw-rw-r--   0 simon      (501) staff       (20)     9598 2020-05-13 13:27:40.000000 Simba-UW-tf-dev-1.55.5/README.md
+--rw-rw-r--   0 simon      (501) staff       (20)     1897 2023-04-06 23:19:11.000000 Simba-UW-tf-dev-1.55.5/setup.py
+--rw-r--r--   0 simon      (501) staff       (20)       38 2023-04-06 23:19:16.000000 Simba-UW-tf-dev-1.55.5/setup.cfg
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/
++-rw-r--r--   0 simon      (501) staff       (20)      579 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/PKG-INFO
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/
++-rw-r--r--   0 simon      (501) staff       (20)    32569 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.6/simba/video_processing.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/blob_storage/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-21 20:39:46.000000 Simba-UW-tf-dev-1.55.6/simba/blob_storage/.DS_Store
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/
++-rw-r--r--   0 simon      (501) staff       (20)    10851 2023-03-21 20:14:50.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/unsupervised_ui.py
++-rw-r--r--   0 simon      (501) staff       (20)     6566 2023-03-21 14:26:03.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/misc.py
++-rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     7227 2023-03-21 11:41:26.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/dataset_creator.py
++-rw-r--r--   0 simon      (501) staff       (20)     4061 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/data_extractors.py
++-rw-r--r--   0 simon      (501) staff       (20)    11192 2023-03-21 20:14:50.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/dbcv.py
++-rw-r--r--   0 simon      (501) staff       (20)    11456 2023-03-21 18:17:26.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/visualizers.py
++-rw-r--r--   0 simon      (501) staff       (20)     7526 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/umap_embedder.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/visualization_tools/
++-rw-r--r--   0 simon      (501) staff       (20)     2019 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/visualization_tools/vtk_embeddings.py
++-rw-r--r--   0 simon      (501) staff       (20)      150 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/ui_tools.py
++-rw-r--r--   0 simon      (501) staff       (20)    49992 2023-03-22 15:08:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/pop_up_classes.py
++-rw-r--r--   0 simon      (501) staff       (20)    16189 2023-03-21 15:42:27.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/cluster_statistics.py
++-rw-r--r--   0 simon      (501) staff       (20)     6642 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/hdbscan_clusterer.py
++-rw-r--r--   0 simon      (501) staff       (20)     3789 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/tsne.py
++-rw-r--r--   0 simon      (501) staff       (20)     5630 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/unsupervised/cluster_visualizer.py
++-rw-r--r--   0 simon      (501) staff       (20)    19024 2023-04-06 19:25:58.000000 Simba-UW-tf-dev-1.55.6/simba/enums.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     7463 2023-03-15 19:17:12.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/agg_boundary_stats.py
++-rw-r--r--   0 simon      (501) staff       (20)     8562 2023-03-15 19:17:04.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/find_bounderies.py
++-rw-r--r--   0 simon      (501) staff       (20)    24561 2023-04-06 11:22:38.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/boundary_menus.py
++-rw-r--r--   0 simon      (501) staff       (20)     9530 2023-03-15 16:54:41.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/boundary_statistics.py
++-rw-r--r--   0 simon      (501) staff       (20)    12627 2023-03-15 16:54:41.000000 Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/visualize_boundaries.py
++-rw-r--r--   0 simon      (501) staff       (20)    32772 2023-04-07 11:26:42.000000 Simba-UW-tf-dev-1.55.6/simba/.DS_Store
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/
++-rw-r--r--   0 simon      (501) staff       (20)    42807 2023-04-04 12:57:34.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_14bp.py
++-rw-r--r--   0 simon      (501) staff       (20)    21541 2023-03-15 19:11:32.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_7bp.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/
++-rw-r--r--   0 simon      (501) staff       (20)     2732 2023-04-04 19:46:36.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/read_in_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    14141 2023-03-15 17:20:08.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/fish_feature_extractor_2022.py
++-rw-r--r--   0 simon      (501) staff       (20)     2053 2023-04-04 03:00:41.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/convex_hull_3_scratch_3.py
++-rw-r--r--   0 simon      (501) staff       (20)     5762 2023-04-04 01:54:33.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/convex_hull_scratch_1.py
++-rw-r--r--   0 simon      (501) staff       (20)    19620 2023-04-03 12:08:14.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/fish_feature_extractor_2023.py
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-14 19:36:02.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     7127 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/egocentrical_aligner.py
++-rw-r--r--   0 simon      (501) staff       (20)     4708 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/graph_creator.py
++-rw-r--r--   0 simon      (501) staff       (20)     3954 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/termite_rois.csv
++-rw-r--r--   0 simon      (501) staff       (20)      732 2023-03-20 12:13:51.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/mutual_exclusive.py
++-rw-r--r--   0 simon      (501) staff       (20)     1862 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/graph_3d_plotter.py
++-rw-r--r--   0 simon      (501) staff       (20)     2692 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/add_probability_cnt_features.py
++-rw-r--r--   0 simon      (501) staff       (20)     2058 2023-04-03 23:51:37.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/convex_hull_scratch_2.py
++-rw-r--r--   0 simon      (501) staff       (20)    28028 2023-04-04 13:11:31.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_8bps_2_animals.py
++-rw-r--r--   0 simon      (501) staff       (20)    10244 2023-04-06 18:38:15.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     2347 2023-04-04 12:57:34.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/perimeter_jit.py
++-rw-r--r--   0 simon      (501) staff       (20)    10734 2023-04-06 14:57:55.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_subsets.py
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__init__.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/
++-rw-r--r--   0 simon      (501) staff       (20)      905 2023-04-04 11:31:57.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.nbi
++-rw-r--r--   0 simon      (501) staff       (20)   238196 2023-04-04 11:31:57.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.1.nbc
++-rw-r--r--   0 simon      (501) staff       (20)    69038 2023-04-04 11:32:25.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.1.nbc
++-rw-r--r--   0 simon      (501) staff       (20)   238298 2023-04-04 11:32:29.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.1.nbc
++-rw-r--r--   0 simon      (501) staff       (20)    69338 2023-04-04 11:32:26.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.2.nbc
++-rw-r--r--   0 simon      (501) staff       (20)      917 2023-04-04 11:32:29.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.nbi
++-rw-r--r--   0 simon      (501) staff       (20)     2179 2023-04-04 11:32:26.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.nbi
++-rw-r--r--   0 simon      (501) staff       (20)    36798 2023-03-15 17:04:48.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/extract_features_9bp.py
++-rw-r--r--   0 simon      (501) staff       (20)     8428 2023-03-15 19:11:54.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_user_defined.py
++-rw-r--r--   0 simon      (501) staff       (20)     5323 2023-03-19 18:30:53.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/unit_tests.py
++-rw-r--r--   0 simon      (501) staff       (20)    46473 2023-04-04 13:07:58.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_16bp.py
++-rw-r--r--   0 simon      (501) staff       (20)    24093 2023-04-04 13:11:31.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_8bp.py
++-rw-r--r--   0 simon      (501) staff       (20)    16763 2023-03-15 19:11:50.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_4bp.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/
++-rw-r--r--   0 simon      (501) staff       (20)      617 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/features_scripts.iml
++-rw-r--r--   0 simon      (501) staff       (20)      138 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/encodings.xml
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/inspectionProfiles/
++-rw-r--r--   0 simon      (501) staff       (20)      822 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/inspectionProfiles/Project_Default.xml
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/libraries/
++-rw-r--r--   0 simon      (501) staff       (20)      128 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/libraries/R_User_Library.xml
++-rw-r--r--   0 simon      (501) staff       (20)      273 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/.gitignore
++-rw-r--r--   0 simon      (501) staff       (20)     8081 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/workspace.xml
++-rw-r--r--   0 simon      (501) staff       (20)      291 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/modules.xml
++-rw-r--r--   0 simon      (501) staff       (20)       23 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/.name
++-rw-r--r--   0 simon      (501) staff       (20)      294 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/misc.xml
++-rw-r--r--   0 simon      (501) staff       (20)     6044 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/plotly_create_h5.py
++-rw-r--r--   0 simon      (501) staff       (20)    15351 2023-04-06 14:48:36.000000 Simba-UW-tf-dev-1.55.6/simba/requirements.txt
++-rw-r--r--   0 simon      (501) staff       (20)     5832 2023-03-15 19:16:48.000000 Simba-UW-tf-dev-1.55.6/simba/severity_processor.py
++-rw-r--r--   0 simon      (501) staff       (20)     5941 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.6/simba/user_pose_config_creator.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/mixins/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-15 17:26:03.000000 Simba-UW-tf-dev-1.55.6/simba/mixins/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)    41856 2023-04-05 17:24:50.000000 Simba-UW-tf-dev-1.55.6/simba/mixins/pop_up_mixin.py
++-rw-r--r--   0 simon      (501) staff       (20)     8182 2023-04-05 13:03:24.000000 Simba-UW-tf-dev-1.55.6/simba/mixins/config_reader.py
++-rw-r--r--   0 simon      (501) staff       (20)     6781 2023-04-06 14:21:49.000000 Simba-UW-tf-dev-1.55.6/simba/mixins/feature_extraction_mixin.py
++-rw-r--r--   0 simon      (501) staff       (20)    34512 2023-04-06 19:49:53.000000 Simba-UW-tf-dev-1.55.6/simba/machine_model_settings_pop_up.py
++-rw-r--r--   0 simon      (501) staff       (20)     5266 2023-03-15 15:43:20.000000 Simba-UW-tf-dev-1.55.6/simba/remove_keypoints_in_pose.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/
++-rw-r--r--   0 simon      (501) staff       (20)     6326 2023-03-17 16:27:19.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/deepethogram_importer.py
++-rw-r--r--   0 simon      (501) staff       (20)     9947 2023-03-18 15:35:38.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/BORIS_appender.py
++-rw-r--r--   0 simon      (501) staff       (20)     9170 2023-03-22 19:35:38.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/observer_importer.py
++-rw-r--r--   0 simon      (501) staff       (20)    16922 2023-03-28 20:30:38.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/tools.py
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-04-01 14:10:06.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/__init__.py
++-rw-r--r--   0 simon      (501) staff       (20)    18283 2023-04-01 14:14:21.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/third_party_appender.py
++-rw-r--r--   0 simon      (501) staff       (20)     8336 2023-03-15 19:12:46.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/ethovision_import.py
++-rw-r--r--   0 simon      (501) staff       (20)     6919 2023-03-19 15:03:14.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/BENTO_appender.py
++-rw-r--r--   0 simon      (501) staff       (20)     5426 2023-03-19 16:33:18.000000 Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/solomon_importer.py
++-rw-r--r--   0 simon      (501) staff       (20)     7261 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/multi_cropper.py
++-rw-r--r--   0 simon      (501) staff       (20)    13056 2023-03-19 16:33:18.000000 Simba-UW-tf-dev-1.55.6/simba/FSTTC_calculator.py
++-rw-r--r--   0 simon      (501) staff       (20)    12620 2023-04-06 11:43:07.000000 Simba-UW-tf-dev-1.55.6/simba/create_project_pop_up.py
++-rw-r--r--   0 simon      (501) staff       (20)    13421 2023-04-06 11:40:29.000000 Simba-UW-tf-dev-1.55.6/simba/video_info_table.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-15 17:25:58.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     8507 2023-03-15 19:09:16.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_clf_statistics.py
++-rw-r--r--   0 simon      (501) staff       (20)    13530 2023-03-15 19:08:52.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)    18253 2023-04-06 11:29:26.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_menues.py
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/__init__.py
++-rw-r--r--   0 simon      (501) staff       (20)     1660 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_tools.py
++-rw-r--r--   0 simon      (501) staff       (20)    16374 2023-03-15 19:09:04.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_visualizer.py
++-rw-r--r--   0 simon      (501) staff       (20)    13160 2023-03-20 13:43:59.000000 Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_movement_statistics.py
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/__init__.py
++-rw-r--r--   0 simon      (501) staff       (20)     2813 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/extract_frames_fast.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/utils/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-14 20:15:03.000000 Simba-UW-tf-dev-1.55.6/simba/utils/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     5626 2023-03-28 20:35:14.000000 Simba-UW-tf-dev-1.55.6/simba/utils/warnings.py
++-rw-r--r--   0 simon      (501) staff       (20)     3825 2023-04-06 19:25:38.000000 Simba-UW-tf-dev-1.55.6/simba/utils/lookups.py
++-rw-r--r--   0 simon      (501) staff       (20)    11967 2023-04-06 19:37:44.000000 Simba-UW-tf-dev-1.55.6/simba/utils/errors.py
++-rw-r--r--   0 simon      (501) staff       (20)    21581 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/labelling_interface.py
++-rw-r--r--   0 simon      (501) staff       (20)     9937 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.6/simba/timebins_movement_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)    45524 2023-04-04 20:09:14.000000 Simba-UW-tf-dev-1.55.6/simba/train_model_functions.py
++-rw-r--r--   0 simon      (501) staff       (20)    49699 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/SimBA_dash_app.py
++-rw-r--r--   0 simon      (501) staff       (20)     7520 2023-03-19 16:35:16.000000 Simba-UW-tf-dev-1.55.6/simba/timebins_clf_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)     8240 2023-03-17 16:23:58.000000 Simba-UW-tf-dev-1.55.6/simba/calculate_px_dist.py
++-rw-r--r--   0 simon      (501) staff       (20)     6548 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/movement_processor.py
++-rw-r--r--   0 simon      (501) staff       (20)     2904 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pybursts.py
++-rw-r--r--   0 simon      (501) staff       (20)     5265 2023-03-29 18:04:02.000000 Simba-UW-tf-dev-1.55.6/simba/run_model_new.py
++-rw-r--r--   0 simon      (501) staff       (20)     3104 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/rw_dfs.py
++-rw-r--r--   0 simon      (501) staff       (20)     6684 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/reverse_2_animal_tracking.py
++-rw-r--r--   0 simon      (501) staff       (20)     9743 2023-03-17 16:34:02.000000 Simba-UW-tf-dev-1.55.6/simba/Directing_animals_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)     4357 2023-03-30 16:19:09.000000 Simba-UW-tf-dev-1.55.6/simba/Validate_model_one_video_run_clf.py
++-rw-r--r--   0 simon      (501) staff       (20)     9548 2023-04-06 00:40:25.000000 Simba-UW-tf-dev-1.55.6/simba/tkinter_functions.py
++-rw-r--r--   0 simon      (501) staff       (20)    13767 2023-03-24 12:49:19.000000 Simba-UW-tf-dev-1.55.6/simba/setting_menu.py
++-rw-r--r--   0 simon      (501) staff       (20)     6614 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/interpolate_pose.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/
++-rw-r--r--   0 simon      (501) staff       (20)     8571 2023-03-30 10:06:59.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/gantt_creator.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/tools/
++-rw-r--r--   0 simon      (501) staff       (20)     5353 2023-03-30 15:38:37.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/tools/tkinter_tools.py
++-rw-r--r--   0 simon      (501) staff       (20)    17962 2023-03-24 13:40:30.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_plotter_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    14592 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/shap_agg_stats_visualizer.py
++-rw-r--r--   0 simon      (501) staff       (20)    12928 2023-03-30 10:08:46.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/gantt_creator_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    15777 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_clf_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)     8884 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/probability_plot_creator.py
++-rw-r--r--   0 simon      (501) staff       (20)    16058 2023-03-22 14:43:52.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/misc_visualizations.py
++-rw-r--r--   0 simon      (501) staff       (20)    13501 2023-03-15 17:12:38.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/plot_clf_results.py
++-rw-r--r--   0 simon      (501) staff       (20)    17696 2023-03-29 16:22:09.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/plot_clf_results_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    16328 2023-03-24 13:47:50.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_feature_visualizer.py
++-rw-r--r--   0 simon      (501) staff       (20)    12588 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_location.py
++-rw-r--r--   0 simon      (501) staff       (20)    12585 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/probability_plot_creator_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)     5341 2023-03-30 15:46:49.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/interactive_probability_grapher.py
++-rw-r--r--   0 simon      (501) staff       (20)     5832 2023-03-29 17:02:51.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/plot_pose_in_dir.py
++-rw-r--r--   0 simon      (501) staff       (20)    12184 2023-03-31 13:53:09.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/single_run_model_validation_video.py
++-rw-r--r--   0 simon      (501) staff       (20)    11202 2023-03-19 16:21:53.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/frame_mergerer_ffmpeg.py
++-rw-r--r--   0 simon      (501) staff       (20)    12442 2023-03-17 16:34:02.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/Directing_animals_visualizer_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)     9856 2023-03-17 16:23:58.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/clf_validator.py
++-rw-r--r--   0 simon      (501) staff       (20)    17290 2023-04-06 00:33:50.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/path_plotter_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    19958 2023-03-24 13:47:50.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_feature_visualizer_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    10157 2023-03-17 16:27:19.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/data_plotter.py
++-rw-r--r--   0 simon      (501) staff       (20)    12444 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/path_plotter.py
++-rw-r--r--   0 simon      (501) staff       (20)     8609 2023-03-15 13:37:59.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/ez_lineplot.py
++-rw-r--r--   0 simon      (501) staff       (20)    12970 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/distance_plotter_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)    15626 2023-03-29 17:05:49.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_plotter.py
++-rw-r--r--   0 simon      (501) staff       (20)    13165 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_clf.py
++-rw-r--r--   0 simon      (501) staff       (20)     8891 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/distance_plotter.py
++-rw-r--r--   0 simon      (501) staff       (20)    13554 2023-04-01 13:12:31.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/single_run_model_validation_video_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)     9839 2023-03-17 16:34:02.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/Directing_animals_visualizer.py
++-rw-r--r--   0 simon      (501) staff       (20)    16155 2023-03-20 13:34:43.000000 Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_location_mp.py
++-rw-r--r--   0 simon      (501) staff       (20)     5029 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/run_dash_tkinter.py
++-rw-r--r--   0 simon      (501) staff       (20)     7454 2023-03-13 22:11:36.000000 Simba-UW-tf-dev-1.55.6/simba/interpolate_smooth_post_hoc.py
++-rw-r--r--   0 simon      (501) staff       (20)    24474 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/dash_app.py
++-rw-r--r--   0 simon      (501) staff       (20)     6350 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/reverse_tracking_order.py
++-rw-r--r--   0 simon      (501) staff       (20)     5772 2023-03-20 13:55:20.000000 Simba-UW-tf-dev-1.55.6/simba/concatenator_pop_up.py
++-rw-r--r--   0 simon      (501) staff       (20)     2824 2023-03-24 16:12:51.000000 Simba-UW-tf-dev-1.55.6/simba/extract_annotation_frames.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/
++-rw-r--r--   0 simon      (501) staff       (20)     7385 2023-03-24 13:34:06.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_time_bin_calculator.py
++-rw-r--r--   0 simon      (501) staff       (20)     2248 2023-03-24 13:34:06.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_movement_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-20 12:47:56.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)    43831 2023-03-15 17:12:38.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_define.py
++-rw-r--r--   0 simon      (501) staff       (20)     3384 2023-03-20 12:41:16.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_reset.py
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/__init__.py
++-rw-r--r--   0 simon      (501) staff       (20)    21382 2023-03-31 10:40:20.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)    11920 2023-03-31 10:48:40.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_feature_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)     3537 2023-03-15 17:12:38.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_multiply.py
++-rw-r--r--   0 simon      (501) staff       (20)      961 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_size_calculations.py
++-rw-r--r--   0 simon      (501) staff       (20)     3505 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_zoom.py
++-rw-r--r--   0 simon      (501) staff       (20)    11335 2023-04-05 11:07:42.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_directing_analyzer.py
++-rw-r--r--   0 simon      (501) staff       (20)    10128 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_move_shape.py
++-rw-r--r--   0 simon      (501) staff       (20)     5097 2023-04-05 20:01:02.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_menus.py
++-rw-r--r--   0 simon      (501) staff       (20)    15175 2023-03-20 12:28:41.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_clf_calculator.py
++-rw-r--r--   0 simon      (501) staff       (20)    22682 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_image.py
++-rw-r--r--   0 simon      (501) staff       (20)    57395 2023-04-06 00:28:01.000000 Simba-UW-tf-dev-1.55.6/simba/misc_tools.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/
++-rw-r--r--   0 simon      (501) staff       (20)     2494 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/read_DANNCE_mat.py
++-rw-r--r--   0 simon      (501) staff       (20)    25782 2023-03-20 12:51:35.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/sleap_importer_slp.py
++-rw-r--r--   0 simon      (501) staff       (20)    24720 2023-03-13 15:26:36.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/sleap_importer_h5.py
++-rw-r--r--   0 simon      (501) staff       (20)    26507 2023-03-21 12:58:39.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/dlc_multi_animal_importer.py
++-rw-r--r--   0 simon      (501) staff       (20)    23731 2023-03-20 12:55:04.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/sleap_importer_csv.py
++-rw-r--r--   0 simon      (501) staff       (20)    16536 2023-03-20 13:30:18.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/import_trk.py
++-rw-r--r--   0 simon      (501) staff       (20)     7837 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/import_mars.py
++-rw-r--r--   0 simon      (501) staff       (20)     8905 2023-03-20 13:49:13.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/dlc_importer_csv.py
++-rw-r--r--   0 simon      (501) staff       (20)     8173 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_importers/trk_importer.py
++-rw-r--r--   0 simon      (501) staff       (20)   232876 2023-04-06 14:21:49.000000 Simba-UW-tf-dev-1.55.6/simba/pop_up_classes.py
++-rw-r--r--   0 simon      (501) staff       (20)     4692 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/extract_seqframes.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/
++-rw-r--r--   0 simon      (501) staff       (20)    14340 2023-03-30 11:05:37.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/.DS_Store
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/bp_names/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-16 13:26:00.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/bp_names/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     1316 2023-03-20 15:55:45.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/bp_names/bp_names.csv
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/no_animals/
++-rw-r--r--   0 simon      (501) staff       (20)       24 2023-03-20 15:55:45.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/no_animals/no_animals.csv
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-16 13:26:19.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/no_animals/.DS_Store
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/configuration_names/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-16 13:26:14.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/configuration_names/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)      267 2023-03-20 15:55:45.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/configuration_names/pose_config_names.csv
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/
++-rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-30 10:45:10.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)    39805 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/8.png
++-rw-r--r--   0 simon      (501) staff       (20)    62501 2023-03-30 10:39:05.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/9.png
++-rw-r--r--   0 simon      (501) staff       (20)     6172 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/12.png
++-rw-r--r--   0 simon      (501) staff       (20)    69501 2023-03-30 10:44:04.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/11.png
++-rw-r--r--   0 simon      (501) staff       (20)    69410 2023-03-30 10:40:01.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/10.png
++-rw-r--r--   0 simon      (501) staff       (20)    16000 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/4.png
++-rw-r--r--   0 simon      (501) staff       (20)    28150 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/5.png
++-rw-r--r--   0 simon      (501) staff       (20)    31140 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/7.png
++-rw-r--r--   0 simon      (501) staff       (20)    30634 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/6.png
++-rw-r--r--   0 simon      (501) staff       (20)    15417 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/2.png
++-rw-r--r--   0 simon      (501) staff       (20)    15786 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/3.png
++-rw-r--r--   0 simon      (501) staff       (20)    18939 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/1.png
++-rw-r--r--   0 simon      (501) staff       (20)     7273 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/get_coordinates_tools_v2.py
++-rw-r--r--   0 simon      (501) staff       (20)    16252 2023-03-15 19:16:56.000000 Simba-UW-tf-dev-1.55.6/simba/pup_retrieval_protocol.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/
++-rw-r--r--   0 simon      (501) staff       (20)     7712 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/outlier_corrector_movement.py
++-rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-15 17:05:05.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/__init__.py
++-rw-r--r--   0 simon      (501) staff       (20)     8264 2023-03-15 17:05:35.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/outlier_corrector_location.py
++-rw-r--r--   0 simon      (501) staff       (20)     4362 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/skip_outlier_correction.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/
++-rw-r--r--   0 simon      (501) staff       (20)      617 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/outlier_scripts.iml
++-rw-r--r--   0 simon      (501) staff       (20)      138 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/encodings.xml
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/inspectionProfiles/
++-rw-r--r--   0 simon      (501) staff       (20)      668 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/inspectionProfiles/Project_Default.xml
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/libraries/
++-rw-r--r--   0 simon      (501) staff       (20)      128 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/libraries/R_User_Library.xml
++-rw-r--r--   0 simon      (501) staff       (20)     8102 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/workspace.xml
++-rw-r--r--   0 simon      (501) staff       (20)      289 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/modules.xml
++-rw-r--r--   0 simon      (501) staff       (20)      294 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/misc.xml
++-rw-r--r--   0 simon      (501) staff       (20)     2569 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/pose_reset.py
++-rw-r--r--   0 simon      (501) staff       (20)    17642 2023-04-04 23:10:52.000000 Simba-UW-tf-dev-1.55.6/simba/train_mutiple_models.py
++-rw-r--r--   0 simon      (501) staff       (20)    60456 2023-04-07 12:46:45.000000 Simba-UW-tf-dev-1.55.6/simba/SimBA.py
++-rw-r--r--   0 simon      (501) staff       (20)    27431 2023-04-04 14:39:01.000000 Simba-UW-tf-dev-1.55.6/simba/labelling_advanced_interface.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)   109483 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/model_names.parquet
++-rw-r--r--   0 simon      (501) staff       (20)    14175 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/features.csv
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/
++-rw-r--r--   0 simon      (501) staff       (20)     1177 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/down_arrow.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     1733 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/intruder_shape.jpg
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/feature_categories/
++-rw-r--r--   0 simon      (501) staff       (20)      109 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/feature_categories/.~lock.shap_feature_categories.csv#
++-rw-r--r--   0 simon      (501) staff       (20)    17420 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/feature_categories/shap_feature_categories.csv
++-rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)     1665 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_shape.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     2415 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_intruder_shape.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     2012 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/animal_distances.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     4422 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/baseline_scale.jpg
++-rw-r--r--   0 simon      (501) staff       (20)   353824 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/ubuntu.regular.ttf
++-rw-r--r--   0 simon      (501) staff       (20)     6672 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/side_scale.jpg
++-rw-r--r--   0 simon      (501) staff       (20)   189004 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/UbuntuMono-Regular.ttf
++-rw-r--r--   0 simon      (501) staff       (20)     2737 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/side_scale_5.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     1785 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/intruder_movement.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     1435 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_movement.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     3134 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/color_bar.jpg
++-rw-r--r--   0 simon      (501) staff       (20)     2120 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_intruder_movement.jpg
++-rw-r--r--   0 simon      (501) staff       (20)    16388 2023-04-07 11:26:42.000000 Simba-UW-tf-dev-1.55.6/simba/assets/.DS_Store
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/lookups/
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/lookups/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)   270783 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/lookups/model_names.parquet
++-rw-r--r--   0 simon      (501) staff       (20)     2426 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/lookups/feature_extraction_headers.csv
++-rw-r--r--   0 simon      (501) staff       (20)    14175 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/lookups/features.csv
++-rw-r--r--   0 simon      (501) staff       (20)    14175 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/lookups/unsupervised_example_x.csv
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/stl/
++-rw-r--r--   0 simon      (501) staff       (20)   551576 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/stl/operant_tray.stl
++-rw-r--r--   0 simon      (501) staff       (20)    67647 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/stl/operant_lever.stl
++-rw-r--r--   0 simon      (501) staff       (20)    92896 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/stl/operant_walls.stl
++-rw-r--r--   0 simon      (501) staff       (20)  4759984 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/stl/grid_floor.stl
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/img/
++-rw-r--r--   0 simon      (501) staff       (20)   399272 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/img/about_me.png
++-rw-r--r--   0 simon      (501) staff       (20)   322242 2023-04-06 16:38:51.000000 Simba-UW-tf-dev-1.55.6/simba/assets/img/bg_2.png
++-rw-r--r--   0 simon      (501) staff       (20)   454535 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/img/splash.png
++-rw-r--r--   0 simon      (501) staff       (20)    69267 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/img/splash.pptx
++-rw-r--r--   0 simon      (501) staff       (20)   204362 2023-04-06 15:01:45.000000 Simba-UW-tf-dev-1.55.6/simba/assets/img/bg.png
++-rw-r--r--   0 simon      (501) staff       (20)   189004 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/UbuntuMono-Regular.ttf
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/
++-rw-r--r--   0 simon      (501) staff       (20)     1350 2023-03-17 17:59:27.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/factory.png
++-rw-r--r--   0 simon      (501) staff       (20)     1413 2023-03-21 13:03:06.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/cluster.png
++-rw-r--r--   0 simon      (501) staff       (20)     1340 2023-03-17 16:51:08.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/load.png
++-rw-r--r--   0 simon      (501) staff       (20)     4507 2023-03-20 14:13:48.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/gif.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4566 2023-03-18 18:12:27.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/pose.png
++-rw-rw-r--   0 simon      (501) staff       (20)     1943 2023-03-18 18:14:10.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/features.png
++-rw-r--r--   0 simon      (501) staff       (20)     6148 2023-04-05 17:25:36.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/.DS_Store
++-rw-rw-r--   0 simon      (501) staff       (20)     4896 2023-03-17 19:17:29.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/settings.png
++-rw-r--r--   0 simon      (501) staff       (20)     1252 2023-03-19 16:48:40.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/link.png
++-rw-r--r--   0 simon      (501) staff       (20)    14250 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/dash_simba.css
++-rw-r--r--   0 simon      (501) staff       (20)      917 2023-04-05 16:43:13.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/documentation.png
++-rw-r--r--   0 simon      (501) staff       (20)     4503 2023-03-20 14:08:00.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/fps.png
++-rw-r--r--   0 simon      (501) staff       (20)     1299 2023-03-21 13:02:07.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/dimensionality_reduction.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4823 2023-03-17 19:03:29.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/roi.png
++-rw-r--r--   0 simon      (501) staff       (20)      920 2023-03-20 14:25:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/superimpose.png
++-rw-r--r--   0 simon      (501) staff       (20)     1136 2023-03-18 20:25:31.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/label.png
++-rw-r--r--   0 simon      (501) staff       (20)     1016 2023-03-20 14:28:47.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/change.png
++-rw-r--r--   0 simon      (501) staff       (20)     1124 2023-03-17 18:05:26.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/crop.png
++-rw-r--r--   0 simon      (501) staff       (20)     1057 2023-03-20 14:03:42.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/path.png
++-rw-r--r--   0 simon      (501) staff       (20)      950 2023-03-17 18:07:33.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/clip.png
++-rw-r--r--   0 simon      (501) staff       (20)     2121 2023-04-04 14:37:43.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/restart.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4653 2023-03-17 18:11:59.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/calipher.png
++-rw-r--r--   0 simon      (501) staff       (20)     1291 2023-03-21 20:16:55.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/add_on.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4695 2023-03-17 17:57:16.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/create.png
++-rw-r--r--   0 simon      (501) staff       (20)    78182 2023-03-20 16:35:36.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/SimBA_logo.ico
++-rw-r--r--   0 simon      (501) staff       (20)     1067 2023-03-20 14:22:44.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/print.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4653 2023-03-18 20:27:58.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/clf.png
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/
++-rw-r--r--   0 simon      (501) staff       (20)     6027 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/mosaic.png
++-rw-r--r--   0 simon      (501) staff       (20)     5654 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/vertical.png
++-rw-r--r--   0 simon      (501) staff       (20)     5542 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/horizontal.png
++-rw-r--r--   0 simon      (501) staff       (20)     5939 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/mixed_mosaic.png
++-rw-r--r--   0 simon      (501) staff       (20)     2060 2023-03-20 14:26:12.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/merge.png
++-rw-r--r--   0 simon      (501) staff       (20)     1252 2023-04-07 11:25:59.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/clean.png
++-rw-------   0 simon      (501) staff       (20)     4725 2023-03-18 20:27:47.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/clf_2.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4795 2023-03-17 18:10:10.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/visualize.png
++-rw-r--r--   0 simon      (501) staff       (20)     2142 2023-03-20 14:10:28.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat.png
++-rw-r--r--   0 simon      (501) staff       (20)     1474 2023-03-17 19:20:24.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/boris.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4804 2023-03-19 16:43:01.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/frames.png
++-rw-r--r--   0 simon      (501) staff       (20)     2425 2023-03-19 16:44:55.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/video.png
++-rw-r--r--   0 simon      (501) staff       (20)     2089 2023-03-20 14:05:58.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/sample.png
++-rw-r--r--   0 simon      (501) staff       (20)     1471 2023-03-21 13:04:02.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/metrics.png
++-rw-r--r--   0 simon      (501) staff       (20)     4555 2023-03-20 14:21:02.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/grey.png
++-rw-r--r--   0 simon      (501) staff       (20)      930 2023-03-18 18:07:29.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/exit.png
++-rw-r--r--   0 simon      (501) staff       (20)     4751 2023-03-18 20:31:58.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/outlier.png
++-rw-r--r--   0 simon      (501) staff       (20)     4392 2023-03-20 14:16:15.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/clahe.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4637 2023-03-17 19:03:55.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/trash.png
++-rw-r--r--   0 simon      (501) staff       (20)     1239 2023-03-19 16:51:21.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/about.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4666 2023-03-17 18:01:21.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/convert.png
++-rw-r--r--   0 simon      (501) staff       (20)    93229 2023-03-20 16:01:42.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/SimBA_logo.icns
++-rw-r--r--   0 simon      (501) staff       (20)      991 2023-03-20 19:02:33.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/reorganize.png
++-rw-rw-r--   0 simon      (501) staff       (20)     4784 2023-03-17 18:50:35.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/browse.png
++-rw-r--r--   0 simon      (501) staff       (20)    30707 2023-03-20 16:33:38.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/SimBA_logo.png
++-rw-r--r--   0 simon      (501) staff       (20)     2293 2023-03-17 19:24:38.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/ethovision.png
++-rw-r--r--   0 simon      (501) staff       (20)     1018 2023-04-05 15:24:49.000000 Simba-UW-tf-dev-1.55.6/simba/assets/icons/close.png
++-rw-r--r--   0 simon      (501) staff       (20)    13672 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/dash_simba_base.css
++-rw-r--r--   0 simon      (501) staff       (20)    31812 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/assets/TheGoldenLab.PNG
++-rw-r--r--   0 simon      (501) staff       (20)    21392 2023-03-22 19:01:48.000000 Simba-UW-tf-dev-1.55.6/simba/drop_bp_cords.py
++-rw-r--r--   0 simon      (501) staff       (20)     8116 2023-03-19 18:27:51.000000 Simba-UW-tf-dev-1.55.6/simba/read_config_unit_tests.py
++-rw-r--r--   0 simon      (501) staff       (20)    11564 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/project_config_creator.py
++-rw-r--r--   0 simon      (501) staff       (20)    27444 2023-03-15 15:58:40.000000 Simba-UW-tf-dev-1.55.6/simba/set_hyperparameters.py
++-rw-r--r--   0 simon      (501) staff       (20)    20780 2023-04-04 23:58:36.000000 Simba-UW-tf-dev-1.55.6/simba/train_single_model.py
++-rw-r--r--   0 simon      (501) staff       (20)     6426 2023-03-17 16:57:53.000000 Simba-UW-tf-dev-1.55.6/simba/create_clf_log.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/
++-rw-r--r--   0 simon      (501) staff       (20)     8196 2023-03-17 14:43:38.000000 Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/.DS_Store
++-rw-r--r--   0 simon      (501) staff       (20)    24896 2023-04-06 11:29:26.000000 Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/batch_process_menus.py
++-rw-r--r--   0 simon      (501) staff       (20)        0 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/__init__.py
++-rw-r--r--   0 simon      (501) staff       (20)    10936 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/batch_process_create_ffmpeg_commands.py
++-rw-r--r--   0 simon      (501) staff       (20)     9563 2023-03-19 16:33:17.000000 Simba-UW-tf-dev-1.55.6/simba/Kleinberg_calculator.py
++-rw-r--r--   0 simon      (501) staff       (20)     8392 2023-04-03 14:06:05.000000 Simba-UW-tf-dev-1.55.6/simba/reorganize_keypoint_in_pose.py
++-rw-r--r--   0 simon      (501) staff       (20)      165 2023-03-25 11:18:21.000000 Simba-UW-tf-dev-1.55.6/simba/~$features.pptx
++-rw-r--r--   0 simon      (501) staff       (20)     6557 2023-03-10 20:04:56.000000 Simba-UW-tf-dev-1.55.6/simba/play_annotation_video.py
++drwxr-xr-x   0 simon      (501) staff       (20)        0 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/
++-rw-rw-r--   0 simon      (501) staff       (20)      579 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/PKG-INFO
++-rw-rw-r--   0 simon      (501) staff       (20)    12878 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/SOURCES.txt
++-rw-rw-r--   0 simon      (501) staff       (20)       44 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/entry_points.txt
++-rw-rw-r--   0 simon      (501) staff       (20)      640 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/requires.txt
++-rw-rw-r--   0 simon      (501) staff       (20)        6 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/top_level.txt
++-rw-rw-r--   0 simon      (501) staff       (20)        1 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/dependency_links.txt
++-rw-rw-r--   0 simon      (501) staff       (20)     7652 2020-05-13 13:27:38.000000 Simba-UW-tf-dev-1.55.6/LICENSE.md
++-rw-rw-r--   0 simon      (501) staff       (20)      136 2021-04-10 10:44:06.000000 Simba-UW-tf-dev-1.55.6/MANIFEST.in
++-rw-rw-r--   0 simon      (501) staff       (20)     9598 2020-05-13 13:27:40.000000 Simba-UW-tf-dev-1.55.6/README.md
++-rw-rw-r--   0 simon      (501) staff       (20)     1897 2023-04-07 12:49:01.000000 Simba-UW-tf-dev-1.55.6/setup.py
++-rw-r--r--   0 simon      (501) staff       (20)       38 2023-04-07 12:49:03.000000 Simba-UW-tf-dev-1.55.6/setup.cfg
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/PKG-INFO` & `Simba-UW-tf-dev-1.55.6/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Simba-UW-tf-dev
+-Version: 1.55.5
++Version: 1.55.6
+ Summary: Toolkit for computer classification of complex social behaviors in experimental animals
+ Home-page: https://github.com/sgoldenlab/simba
+ Author: Simon Nilsson, Jia Jie Choong, Sophia Hwang
+ Author-email: sronilsson@gmail.com
+ License: GNU Lesser General Public License v3 (LGPLv3)
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/video_processing.py` & `Simba-UW-tf-dev-1.55.6/simba/video_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/blob_storage/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/blob_storage/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/unsupervised_ui.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/unsupervised_ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/misc.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/misc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/dataset_creator.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/dataset_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/data_extractors.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/data_extractors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/dbcv.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/dbcv.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/visualizers.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/visualizers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/umap_embedder.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/umap_embedder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/visualization_tools/vtk_embeddings.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/visualization_tools/vtk_embeddings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/pop_up_classes.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/pop_up_classes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/cluster_statistics.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/cluster_statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/hdbscan_clusterer.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/hdbscan_clusterer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/tsne.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/tsne.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/unsupervised/cluster_visualizer.py` & `Simba-UW-tf-dev-1.55.6/simba/unsupervised/cluster_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/enums.py` & `Simba-UW-tf-dev-1.55.6/simba/enums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/agg_boundary_stats.py` & `Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/agg_boundary_stats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/find_bounderies.py` & `Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/find_bounderies.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/boundary_menus.py` & `Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/boundary_menus.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/boundary_statistics.py` & `Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/boundary_statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/bounding_box_tools/visualize_boundaries.py` & `Simba-UW-tf-dev-1.55.6/simba/bounding_box_tools/visualize_boundaries.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/.DS_Store`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -358,15 +358,15 @@
+ 00001650: 3230 7d2c 207b 3737 302c 2034 3336 7d7d  20}, {770, 436}}
+ 00001660: 0908 1725 313d 4960 6d79 7a7b 7c7d 7e99  ...%1=I`myz{|}~.
+ 00001670: 0000 0000 0000 0101 0000 0000 0000 000f  ................
+ 00001680: 0000 0000 0000 0000 0000 0000 0000 009a  ................
+ 00001690: 0000 0005 0075 0074 0069 006c 0073 6473  .....u.t.i.l.sds
+ 000016a0: 636c 626f 6f6c 0000 0000 0500 7500 7400  clbool......u.t.
+ 000016b0: 6900 6c00 736c 6731 5363 6f6d 7000 0000  i.l.slg1Scomp...
+-000016c0: 0000 00d8 4500 0000 0500 7500 7400 6900  ....E.....u.t.i.
++000016c0: 0000 00dd 1900 0000 0500 7500 7400 6900  ..........u.t.i.
+ 000016d0: 6c00 736c 7376 4362 6c6f 6200 0002 9762  l.slsvCblob....b
+ 000016e0: 706c 6973 7430 30d8 0102 0304 0506 0708  plist00.........
+ 000016f0: 090a 0b19 494a 0a4c 5f10 1276 6965 774f  ....IJ.L_..viewO
+ 00001700: 7074 696f 6e73 5665 7273 696f 6e5f 100f  ptionsVersion_..
+ 00001710: 7368 6f77 4963 6f6e 5072 6576 6965 7757  showIconPreviewW
+ 00001720: 636f 6c75 6d6e 735f 1011 6361 6c63 756c  columns_..calcul
+ 00001730: 6174 6541 6c6c 5369 7a65 7358 7465 7874  ateAllSizesXtext
+@@ -442,19 +442,19 @@
+ 00001b90: 0147 0148 014a 014b 0154 0156 0157 0159  .G.H.J.K.T.V.W.Y
+ 00001ba0: 015a 0163 0165 0166 0168 0169 0172 0174  .Z.c.e.f.h.i.r.t
+ 00001bb0: 0175 0177 0178 0181 0183 0184 0187 0188  .u.w.x..........
+ 00001bc0: 0191 0192 0193 0194 019d 01a2 01a3 0000  ................
+ 00001bd0: 0000 0000 0201 0000 0000 0000 0049 0000  .............I..
+ 00001be0: 0000 0000 0000 0000 0000 0000 01ac 0000  ................
+ 00001bf0: 0005 0075 0074 0069 006c 0073 6d6f 4444  ...u.t.i.l.smoDD
+-00001c00: 626c 6f62 0000 0008 2e15 0281 c3e9 c441  blob...........A
++00001c00: 626c 6f62 0000 0008 3da3 0784 abef c441  blob....=......A
+ 00001c10: 0000 0005 0075 0074 0069 006c 0073 6d6f  .....u.t.i.l.smo
+-00001c20: 6444 626c 6f62 0000 0008 2e15 0281 c3e9  dDblob..........
++00001c20: 6444 626c 6f62 0000 0008 3da3 0784 abef  dDblob....=.....
+ 00001c30: c441 0000 0005 0075 0074 0069 006c 0073  .A.....u.t.i.l.s
+-00001c40: 7068 3153 636f 6d70 0000 0000 0001 0000  ph1Scomp........
++00001c40: 7068 3153 636f 6d70 0000 0000 0001 1000  ph1Scomp........
+ 00001c50: 0000 0005 0075 0074 0069 006c 0073 7653  .....u.t.i.l.svS
+ 00001c60: 726e 6c6f 6e67 0000 0001 0000 0000 0000  rnlong..........
+ 00001c70: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001c80: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001c90: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001ca0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001cb0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+@@ -509,40 +509,40 @@
+ 00001fc0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001fd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001fe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001ff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00002000: 0000 0000 0000 0000 0000 0013 0000 000b  ................
+ 00002010: 005f 005f 0070 0079 0063 0061 0063 0068  ._._.p.y.c.a.c.h
+ 00002020: 0065 005f 005f 6c67 3153 636f 6d70 0000  .e._._lg1Scomp..
+-00002030: 0000 0040 e94c 0000 000b 005f 005f 0070  ...@.L....._._.p
++00002030: 0000 0041 2043 0000 000b 005f 005f 0070  ...A C....._._.p
+ 00002040: 0079 0063 0061 0063 0068 0065 005f 005f  .y.c.a.c.h.e._._
+-00002050: 6d6f 4444 626c 6f62 0000 0008 5e3e ac08  moDDblob....^>..
+-00002060: 33ee c441 0000 000b 005f 005f 0070 0079  3..A....._._.p.y
++00002050: 6d6f 4444 626c 6f62 0000 0008 2451 082e  moDDblob....$Q..
++00002060: 1af0 c441 0000 000b 005f 005f 0070 0079  ...A....._._.p.y
+ 00002070: 0063 0061 0063 0068 0065 005f 005f 6d6f  .c.a.c.h.e._._mo
+-00002080: 6444 626c 6f62 0000 0008 376c 9302 91eb  dDblob....7l....
++00002080: 6444 626c 6f62 0000 0008 2451 082e 1af0  dDblob....$Q....
+ 00002090: c441 0000 000b 005f 005f 0070 0079 0063  .A....._._.p.y.c
+ 000020a0: 0061 0063 0068 0065 005f 005f 7068 3153  .a.c.h.e._._ph1S
+-000020b0: 636f 6d70 0000 0000 004e d000 0000 0006  comp.....N......
++000020b0: 636f 6d70 0000 0000 004f 0000 0000 0006  comp.....O......
+ 000020c0: 0061 0073 0073 0065 0074 0073 6277 7370  .a.s.s.e.t.sbwsp
+ 000020d0: 626c 6f62 0000 00c9 6270 6c69 7374 3030  blob....bplist00
+ 000020e0: d701 0203 0405 0607 0808 0a08 0a0d 0a5d  ...............]
+ 000020f0: 5368 6f77 5374 6174 7573 4261 725b 5368  ShowStatusBar[Sh
+ 00002100: 6f77 5061 7468 6261 725b 5368 6f77 546f  owPathbar[ShowTo
+ 00002110: 6f6c 6261 725b 5368 6f77 5461 6256 6965  olbar[ShowTabVie
+ 00002120: 775f 1014 436f 6e74 6169 6e65 7253 686f  w_..ContainerSho
+ 00002130: 7753 6964 6562 6172 5c57 696e 646f 7742  wSidebar\WindowB
+ 00002140: 6f75 6e64 735b 5368 6f77 5369 6465 6261  ounds[ShowSideba
+-00002150: 7208 0809 0809 5f10 187b 7b32 302c 2031  r....._..{{20, 1
+-00002160: 3232 7d2c 207b 3130 3736 2c20 3632 317d  22}, {1076, 621}
++00002150: 7208 0809 0809 5f10 187b 7b34 3134 2c20  r....._..{{414, 
++00002160: 3136 317d 2c20 7b37 3730 2c20 3433 367d  161}, {770, 436}
+ 00002170: 7d09 0817 2531 3d49 606d 797a 7b7c 7d7e  }...%1=I`myz{|}~
+ 00002180: 9900 0000 0000 0001 0100 0000 0000 0000  ................
+ 00002190: 0f00 0000 0000 0000 0000 0000 0000 0000  ................
+ 000021a0: 9a00 0000 0600 6100 7300 7300 6500 7400  ......a.s.s.e.t.
+-000021b0: 736c 6731 5363 6f6d 7000 0000 0000 7bf0  slg1Scomp.....{.
+-000021c0: 4d00 0000 0600 6100 7300 7300 6500 7400  M.....a.s.s.e.t.
++000021b0: 736c 6731 5363 6f6d 7000 0000 0000 82d2  slg1Scomp.......
++000021c0: 0100 0000 0600 6100 7300 7300 6500 7400  ......a.s.s.e.t.
+ 000021d0: 736c 7376 4362 6c6f 6200 0002 b062 706c  slsvCblob....bpl
+ 000021e0: 6973 7430 30da 0102 0304 0506 0708 090a  ist00...........
+ 000021f0: 0b0c 0d18 4849 484a 0c4c 5f10 1276 6965  ....HIHJ.L_..vie
+ 00002200: 774f 7074 696f 6e73 5665 7273 696f 6e5f  wOptionsVersion_
+ 00002210: 100f 7368 6f77 4963 6f6e 5072 6576 6965  ..showIconPrevie
+ 00002220: 7757 636f 6c75 6d6e 735f 1011 6361 6c63  wWcolumns_..calc
+ 00002230: 756c 6174 6541 6c6c 5369 7a65 735f 100f  ulateAllSizes_..
+@@ -628,15 +628,15 @@
+ 00002730: 0000 0000 0000 0000 0000 0000 01dd 0000  ................
+ 00002740: 0006 0061 0073 0073 0065 0074 0073 6d6f  ...a.s.s.e.t.smo
+ 00002750: 4444 626c 6f62 0000 0008 cf95 8ce8 d0e1  DDblob..........
+ 00002760: c441 0000 0006 0061 0073 0073 0065 0074  .A.....a.s.s.e.t
+ 00002770: 0073 6d6f 6444 626c 6f62 0000 0008 cf95  .smodDblob......
+ 00002780: 8ce8 d0e1 c441 0000 0006 0061 0073 0073  .....A.....a.s.s
+ 00002790: 0065 0074 0073 7068 3153 636f 6d70 0000  .e.t.sph1Scomp..
+-000027a0: 0000 007f 7000 0000 0006 0061 0073 0073  ....p......a.s.s
++000027a0: 0000 0086 7000 0000 0006 0061 0073 0073  ....p......a.s.s
+ 000027b0: 0065 0074 0073 7653 726e 6c6f 6e67 0000  .e.t.svSrnlong..
+ 000027c0: 0001 0000 0014 0062 0061 0074 0063 0068  .......b.a.t.c.h
+ 000027d0: 005f 0070 0072 006f 0063 0065 0073 0073  ._.p.r.o.c.e.s.s
+ 000027e0: 005f 0076 0069 0064 0065 006f 0073 6277  ._.v.i.d.e.o.sbw
+ 000027f0: 7370 626c 6f62 0000 00ca 6270 6c69 7374  spblob....bplist
+ 00002800: 3030 d701 0203 0405 0607 0808 0a08 0a0d  00..............
+ 00002810: 0a5d 5368 6f77 5374 6174 7573 4261 725b  .]ShowStatusBar[
+@@ -649,15 +649,15 @@
+ 00002880: 322c 2033 3733 7d2c 207b 3737 302c 2034  2, 373}, {770, 4
+ 00002890: 3336 7d7d 0908 1725 313d 4960 6d79 7a7b  36}}...%1=I`myz{
+ 000028a0: 7c7d 7e9a 0000 0000 0000 0101 0000 0000  |}~.............
+ 000028b0: 0000 000f 0000 0000 0000 0000 0000 0000  ................
+ 000028c0: 0000 009b 0000 0014 0062 0061 0074 0063  .........b.a.t.c
+ 000028d0: 0068 005f 0070 0072 006f 0063 0065 0073  .h._.p.r.o.c.e.s
+ 000028e0: 0073 005f 0076 0069 0064 0065 006f 0073  .s._.v.i.d.e.o.s
+-000028f0: 6c67 3153 636f 6d70 0000 0000 0001 7d6b  lg1Scomp......}k
++000028f0: 6c67 3153 636f 6d70 0000 0000 0001 7e39  lg1Scomp......~9
+ 00002900: 0000 0014 0062 0061 0074 0063 0068 005f  .....b.a.t.c.h._
+ 00002910: 0070 0072 006f 0063 0065 0073 0073 005f  .p.r.o.c.e.s.s._
+ 00002920: 0076 0069 0064 0065 006f 0073 6c73 7643  .v.i.d.e.o.slsvC
+ 00002930: 626c 6f62 0000 0307 6270 6c69 7374 3030  blob....bplist00
+ 00002940: d801 0203 0405 0607 0809 0a0b 1956 570a  .............VW.
+ 00002950: 5958 6963 6f6e 5369 7a65 5f10 0f73 686f  YXiconSize_..sho
+ 00002960: 7749 636f 6e50 7265 7669 6577 5763 6f6c  wIconPreviewWcol
+@@ -746,16 +746,16 @@
+ 00002e90: 6e01 7701 7801 7a01 7b01 7d01 8601 8701  n.w.x.z.{.}.....
+ 00002ea0: 8a01 8b01 8d01 9601 9701 9901 9a01 9c01  ................
+ 00002eb0: 9d01 a601 ab00 0000 0000 0002 0100 0000  ................
+ 00002ec0: 0000 0000 4900 0000 0000 0000 0000 0000  ....I...........
+ 00002ed0: 0000 0001 ac00 0000 1400 6200 6100 7400  ..........b.a.t.
+ 00002ee0: 6300 6800 5f00 7000 7200 6f00 6300 6500  c.h._.p.r.o.c.e.
+ 00002ef0: 7300 7300 5f00 7600 6900 6400 6500 6f00  s.s._.v.i.d.e.o.
+-00002f00: 736d 6f44 4462 6c6f 6200 0000 08ea 4ee6  smoDDblob.....N.
+-00002f10: 2fd2 e3c4 4100 0000 1400 6200 6100 7400  /...A.....b.a.t.
++00002f00: 736d 6f44 4462 6c6f 6200 0000 0864 dc1a  smoDDblob....d..
++00002f10: 4b72 efc4 4100 0000 1400 6200 6100 7400  Kr..A.....b.a.t.
+ 00002f20: 6300 6800 5f00 7000 7200 6f00 6300 6500  c.h._.p.r.o.c.e.
+ 00002f30: 7300 7300 5f00 7600 6900 6400 6500 6f00  s.s._.v.i.d.e.o.
+ 00002f40: 736d 6f64 4462 6c6f 6200 0000 08ea 4ee6  smodDblob.....N.
+ 00002f50: 2fd2 e3c4 4100 0000 1400 6200 6100 7400  /...A.....b.a.t.
+ 00002f60: 6300 6800 5f00 7000 7200 6f00 6300 6500  c.h._.p.r.o.c.e.
+ 00002f70: 7300 7300 5f00 7600 6900 6400 6500 6f00  s.s._.v.i.d.e.o.
+ 00002f80: 7370 6831 5363 6f6d 7000 0000 0000 01f0  sph1Scomp.......
+@@ -811,15 +811,15 @@
+ 000032a0: 3737 302c 2034 3336 7d7d 0908 1725 313d  770, 436}}...%1=
+ 000032b0: 4960 6d79 7a7b 7c7d 7e99 0000 0000 0000  I`myz{|}~.......
+ 000032c0: 0101 0000 0000 0000 000f 0000 0000 0000  ................
+ 000032d0: 0000 0000 0000 0000 009a 0000 0012 0062  ...............b
+ 000032e0: 006f 0075 006e 0064 0069 006e 0067 005f  .o.u.n.d.i.n.g._
+ 000032f0: 0062 006f 0078 005f 0074 006f 006f 006c  .b.o.x._.t.o.o.l
+ 00003300: 0073 6c67 3153 636f 6d70 0000 0000 0002  .slg1Scomp......
+-00003310: 8100 0000 0012 0062 006f 0075 006e 0064  .......b.o.u.n.d
++00003310: 81ee 0000 0012 0062 006f 0075 006e 0064  .......b.o.u.n.d
+ 00003320: 0069 006e 0067 005f 0062 006f 0078 005f  .i.n.g._.b.o.x._
+ 00003330: 0074 006f 006f 006c 0073 6c73 7643 626c  .t.o.o.l.slsvCbl
+ 00003340: 6f62 0000 0278 6270 6c69 7374 3030 d801  ob...xbplist00..
+ 00003350: 0203 0405 0607 0809 0a0b 1846 470a 4958  ...........FG.IX
+ 00003360: 6963 6f6e 5369 7a65 5f10 0f73 686f 7749  iconSize_..showI
+ 00003370: 636f 6e50 7265 7669 6577 5763 6f6c 756d  conPreviewWcolum
+ 00003380: 6e73 5f10 1163 616c 6375 6c61 7465 416c  ns_..calculateAl
+@@ -898,15 +898,15 @@
+ 00003810: 7a01 7b01 7d01 8601 8701 8901 8a01 8c01  z.{.}...........
+ 00003820: 9501 9601 9801 9901 9b01 9c01 a501 aa00  ................
+ 00003830: 0000 0000 0002 0100 0000 0000 0000 4900  ..............I.
+ 00003840: 0000 0000 0000 0000 0000 0000 0001 ab00  ................
+ 00003850: 0000 1200 6200 6f00 7500 6e00 6400 6900  ....b.o.u.n.d.i.
+ 00003860: 6e00 6700 5f00 6200 6f00 7800 5f00 7400  n.g._.b.o.x._.t.
+ 00003870: 6f00 6f00 6c00 736d 6f44 4462 6c6f 6200  o.o.l.smoDDblob.
+-00003880: 0000 0882 ae10 9c28 e1c4 4100 0000 1200  .......(..A.....
++00003880: 0000 083c 8921 7f71 efc4 4100 0000 1200  ...<.!.q..A.....
+ 00003890: 6200 6f00 7500 6e00 6400 6900 6e00 6700  b.o.u.n.d.i.n.g.
+ 000038a0: 5f00 6200 6f00 7800 5f00 7400 6f00 6f00  _.b.o.x._.t.o.o.
+ 000038b0: 6c00 736d 6f64 4462 6c6f 6200 0000 0882  l.smodDblob.....
+ 000038c0: ae10 9c28 e1c4 4100 0000 1200 6200 6f00  ...(..A.....b.o.
+ 000038d0: 7500 6e00 6400 6900 6e00 6700 5f00 6200  u.n.d.i.n.g._.b.
+ 000038e0: 6f00 7800 5f00 7400 6f00 6f00 6c00 7370  o.x._.t.o.o.l.sp
+ 000038f0: 6831 5363 6f6d 7000 0000 0000 0310 0000  h1Scomp.........
+@@ -930,18 +930,18 @@
+ 00003a10: 0101 0000 0000 0000 000f 0000 0000 0000  ................
+ 00003a20: 0000 0000 0000 0000 009a 0000 000f 0063  ...............c
+ 00003a30: 0075 0065 005f 006c 0069 0067 0068 0074  .u.e._.l.i.g.h.t
+ 00003a40: 005f 0074 006f 006f 006c 0073 6473 636c  ._.t.o.o.l.sdscl
+ 00003a50: 626f 6f6c 0000 0000 0f00 6300 7500 6500  bool......c.u.e.
+ 00003a60: 5f00 6c00 6900 6700 6800 7400 5f00 7400  _.l.i.g.h.t._.t.
+ 00003a70: 6f00 6f00 6c00 736c 6731 5363 6f6d 7000  o.o.l.slg1Scomp.
+-00003a80: 0000 0000 0207 a400 0000 0f00 6300 7500  ............c.u.
++00003a80: 0000 0000 01fc 0100 0000 0f00 6300 7500  ............c.u.
+ 00003a90: 6500 5f00 6c00 6900 6700 6800 7400 5f00  e._.l.i.g.h.t._.
+ 00003aa0: 7400 6f00 6f00 6c00 736d 6f44 4462 6c6f  t.o.o.l.smoDDblo
+-00003ab0: 6200 0000 08a5 41e2 4f4d e4c4 4100 0000  b.....A.OM..A...
++00003ab0: 6200 0000 086b af1d 4b72 efc4 4100 0000  b....k..Kr..A...
+ 00003ac0: 0f00 6300 7500 6500 5f00 6c00 6900 6700  ..c.u.e._.l.i.g.
+ 00003ad0: 6800 7400 5f00 7400 6f00 6f00 6c00 736d  h.t._.t.o.o.l.sm
+ 00003ae0: 6f64 4462 6c6f 6200 0000 08a5 41e2 4f4d  odDblob.....A.OM
+ 00003af0: e4c4 4100 0000 0f00 6300 7500 6500 5f00  ..A.....c.u.e._.
+ 00003b00: 6c00 6900 6700 6800 7400 5f00 7400 6f00  l.i.g.h.t._.t.o.
+ 00003b10: 6f00 6c00 7370 6831 5363 6f6d 7000 0000  o.l.sph1Scomp...
+ 00003b20: 0000 0280 0000 0000 0f00 6300 7500 6500  ..........c.u.e.
+@@ -965,15 +965,15 @@
+ 00003c40: 0f00 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003c50: 9b00 0000 1200 6600 6500 6100 7400 7500  ......f.e.a.t.u.
+ 00003c60: 7200 6500 5f00 6500 7800 7400 7200 6100  r.e._.e.x.t.r.a.
+ 00003c70: 6300 7400 6f00 7200 7364 7363 6c62 6f6f  c.t.o.r.sdsclboo
+ 00003c80: 6c00 0000 0012 0066 0065 0061 0074 0075  l......f.e.a.t.u
+ 00003c90: 0072 0065 005f 0065 0078 0074 0072 0061  .r.e._.e.x.t.r.a
+ 00003ca0: 0063 0074 006f 0072 0073 6c67 3153 636f  .c.t.o.r.slg1Sco
+-00003cb0: 6d70 0000 0000 0011 95dd 0000 0012 0066  mp.............f
++00003cb0: 6d70 0000 0000 0011 b6b2 0000 0012 0066  mp.............f
+ 00003cc0: 0065 0061 0074 0075 0072 0065 005f 0065  .e.a.t.u.r.e._.e
+ 00003cd0: 0078 0074 0072 0061 0063 0074 006f 0072  .x.t.r.a.c.t.o.r
+ 00003ce0: 0073 6c73 7643 626c 6f62 0000 02b8 6270  .slsvCblob....bp
+ 00003cf0: 6c69 7374 3030 da01 0203 0405 0607 0809  list00..........
+ 00003d00: 0a0b 0c0d 1a48 4948 4a4b 0c5f 1012 7669  .....HIHJK._..vi
+ 00003d10: 6577 4f70 7469 6f6e 7356 6572 7369 6f6e  ewOptionsVersion
+ 00003d20: 5f10 0f73 686f 7749 636f 6e50 7265 7669  _..showIconPrevi
+@@ -1022,22 +1022,22 @@
+ 00003fd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003fe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003ff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00004000: 0000 0000 0000 0000 0000 0015 0000 0012  ................
+ 00004010: 0066 0065 0061 0074 0075 0072 0065 005f  .f.e.a.t.u.r.e._
+ 00004020: 0065 0078 0074 0072 0061 0063 0074 006f  .e.x.t.r.a.c.t.o
+ 00004030: 0072 0073 6d6f 4444 626c 6f62 0000 0008  .r.smoDDblob....
+-00004040: 0a53 f0c1 2cee c441 0000 0012 0066 0065  .S..,..A.....f.e
++00004040: ef06 84b9 8aef c441 0000 0012 0066 0065  .......A.....f.e
+ 00004050: 0061 0074 0075 0072 0065 005f 0065 0078  .a.t.u.r.e._.e.x
+ 00004060: 0074 0072 0061 0063 0074 006f 0072 0073  .t.r.a.c.t.o.r.s
+-00004070: 6d6f 6444 626c 6f62 0000 0008 0a53 f0c1  modDblob.....S..
+-00004080: 2cee c441 0000 0012 0066 0065 0061 0074  ,..A.....f.e.a.t
++00004070: 6d6f 6444 626c 6f62 0000 0008 8d23 5871  modDblob.....#Xq
++00004080: d5ee c441 0000 0012 0066 0065 0061 0074  ...A.....f.e.a.t
+ 00004090: 0075 0072 0065 005f 0065 0078 0074 0072  .u.r.e._.e.x.t.r
+ 000040a0: 0061 0063 0074 006f 0072 0073 7068 3153  .a.c.t.o.r.sph1S
+-000040b0: 636f 6d70 0000 0000 0013 a000 0000 0012  comp............
++000040b0: 636f 6d70 0000 0000 0013 d000 0000 0012  comp............
+ 000040c0: 0066 0065 0061 0074 0075 0072 0065 005f  .f.e.a.t.u.r.e._
+ 000040d0: 0065 0078 0074 0072 0061 0063 0074 006f  .e.x.t.r.a.c.t.o
+ 000040e0: 0072 0073 7653 726e 6c6f 6e67 0000 0001  .r.svSrnlong....
+ 000040f0: 0000 0006 006d 0069 0078 0069 006e 0073  .....m.i.x.i.n.s
+ 00004100: 6277 7370 626c 6f62 0000 00c9 6270 6c69  bwspblob....bpli
+ 00004110: 7374 3030 d701 0203 0405 0607 0808 0a08  st00............
+ 00004120: 0a0d 0a5d 5368 6f77 5374 6174 7573 4261  ...]ShowStatusBa
+@@ -1049,21 +1049,21 @@
+ 00004180: 6465 6261 7208 0809 0809 5f10 187b 7b33  debar....._..{{3
+ 00004190: 3934 2c20 3138 317d 2c20 7b37 3730 2c20  94, 181}, {770, 
+ 000041a0: 3433 367d 7d09 0817 2531 3d49 606d 797a  436}}...%1=I`myz
+ 000041b0: 7b7c 7d7e 9900 0000 0000 0001 0100 0000  {|}~............
+ 000041c0: 0000 0000 0f00 0000 0000 0000 0000 0000  ................
+ 000041d0: 0000 0000 9a00 0000 0600 6d00 6900 7800  ..........m.i.x.
+ 000041e0: 6900 6e00 736c 6731 5363 6f6d 7000 0000  i.n.slg1Scomp...
+-000041f0: 0000 0157 8700 0000 0600 6d00 6900 7800  ...W......m.i.x.
++000041f0: 0000 017f 5200 0000 0600 6d00 6900 7800  ....R.....m.i.x.
+ 00004200: 6900 6e00 736d 6f44 4462 6c6f 6200 0000  i.n.smoDDblob...
+-00004210: 08e3 add4 2ce5 edc4 4100 0000 0600 6d00  ....,...A.....m.
++00004210: 082f 8ef9 7e86 efc4 4100 0000 0600 6d00  ./..~...A.....m.
+ 00004220: 6900 7800 6900 6e00 736d 6f64 4462 6c6f  i.x.i.n.smodDblo
+-00004230: 6200 0000 085c f314 48ba e9c4 4100 0000  b....\..H...A...
++00004230: 6200 0000 08e6 8907 31f3 eec4 4100 0000  b.......1...A...
+ 00004240: 0600 6d00 6900 7800 6900 6e00 7370 6831  ..m.i.x.i.n.sph1
+-00004250: 5363 6f6d 7000 0000 0000 01a0 0000 0000  Scomp...........
++00004250: 5363 6f6d 7000 0000 0000 01b0 0000 0000  Scomp...........
+ 00004260: 0600 6d00 6900 7800 6900 6e00 7376 5372  ..m.i.x.i.n.svSr
+ 00004270: 6e6c 6f6e 6700 0000 0100 0000 0d00 6f00  nlong.........o.
+ 00004280: 7500 7400 6c00 6900 6500 7200 5f00 7400  u.t.l.i.e.r._.t.
+ 00004290: 6f00 6f00 6c00 7362 7773 7062 6c6f 6200  o.o.l.sbwspblob.
+ 000042a0: 0000 c962 706c 6973 7430 30d7 0102 0304  ...bplist00.....
+ 000042b0: 0506 0708 080a 080a 0d0a 5d53 686f 7753  ..........]ShowS
+ 000042c0: 7461 7475 7342 6172 5b53 686f 7750 6174  tatusBar[ShowPat
+@@ -1193,15 +1193,15 @@
+ 00004a80: 6964 6562 6172 0808 0908 095f 1019 7b7b  idebar....._..{{
+ 00004a90: 3135 392c 2031 3233 7d2c 207b 3130 3736  159, 123}, {1076
+ 00004aa0: 2c20 3632 317d 7d09 0817 2531 3d49 606d  , 621}}...%1=I`m
+ 00004ab0: 797a 7b7c 7d7e 9a00 0000 0000 0001 0100  yz{|}~..........
+ 00004ac0: 0000 0000 0000 0f00 0000 0000 0000 0000  ................
+ 00004ad0: 0000 0000 0000 9b00 0000 0800 7000 6c00  ............p.l.
+ 00004ae0: 6f00 7400 7400 6900 6e00 676c 6731 5363  o.t.t.i.n.glg1Sc
+-00004af0: 6f6d 7000 0000 0000 0a09 8900 0000 0800  omp.............
++00004af0: 6f6d 7000 0000 0000 0a09 df00 0000 0800  omp.............
+ 00004b00: 7000 6c00 6f00 7400 7400 6900 6e00 676c  p.l.o.t.t.i.n.gl
+ 00004b10: 7376 4362 6c6f 6200 0002 bb62 706c 6973  svCblob....bplis
+ 00004b20: 7430 30da 0102 0304 0506 0708 090a 0b0c  t00.............
+ 00004b30: 0d1a 4849 4a4b 4c0c 5f10 1276 6965 774f  ..HIJKL._..viewO
+ 00004b40: 7074 696f 6e73 5665 7273 696f 6e5f 100f  ptionsVersion_..
+ 00004b50: 7368 6f77 4963 6f6e 5072 6576 6965 7757  showIconPreviewW
+ 00004b60: 636f 6c75 6d6e 735f 1011 6361 6c63 756c  columns_..calcul
+@@ -1276,16 +1276,16 @@
+ 00004fb0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00004fc0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00004fd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00004fe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00004ff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00005000: 0000 0000 0000 0000 0000 0015 0000 0008  ................
+ 00005010: 0070 006c 006f 0074 0074 0069 006e 0067  .p.l.o.t.t.i.n.g
+-00005020: 6d6f 4444 626c 6f62 0000 0008 f43f 1ffb  moDDblob.....?..
+-00005030: 92ed c441 0000 0008 0070 006c 006f 0074  ...A.....p.l.o.t
++00005020: 6d6f 4444 626c 6f62 0000 0008 9f4b 5477  moDDblob.....KTw
++00005030: 25ef c441 0000 0008 0070 006c 006f 0074  %..A.....p.l.o.t
+ 00005040: 0074 0069 006e 0067 6d6f 6444 626c 6f62  .t.i.n.gmodDblob
+ 00005050: 0000 0008 71d8 6108 a4eb c441 0000 0008  ....q.a....A....
+ 00005060: 0070 006c 006f 0074 0074 0069 006e 0067  .p.l.o.t.t.i.n.g
+ 00005070: 7068 3153 636f 6d70 0000 0000 000c 4000  ph1Scomp......@.
+ 00005080: 0000 0008 0070 006c 006f 0074 0074 0069  .....p.l.o.t.t.i
+ 00005090: 006e 0067 7653 726e 6c6f 6e67 0000 0001  .n.gvSrnlong....
+ 000050a0: 0000 0013 0070 006f 0073 0065 005f 0063  .....p.o.s.e._.c
+@@ -1533,15 +1533,15 @@
+ 00005fc0: 0001 0000 0000 0000 0000 0000 0000 0000  ................
+ 00005fd0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00005fe0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00005ff0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00006000: 0000 0000 0000 0000 0000 0009 0000 0009  ................
+ 00006010: 0072 006f 0069 005f 0074 006f 006f 006c  .r.o.i._.t.o.o.l
+ 00006020: 0073 6c67 3153 636f 6d70 0000 0000 0004  .slg1Scomp......
+-00006030: 458b 0000 0009 0072 006f 0069 005f 0074  E......r.o.i._.t
++00006030: 4733 0000 0009 0072 006f 0069 005f 0074  G3.....r.o.i._.t
+ 00006040: 006f 006f 006c 0073 6c73 7643 626c 6f62  .o.o.l.slsvCblob
+ 00006050: 0000 0279 6270 6c69 7374 3030 d801 0203  ...ybplist00....
+ 00006060: 0405 0607 0809 0a0b 1646 4748 0a5f 1012  .........FGH._..
+ 00006070: 7669 6577 4f70 7469 6f6e 7356 6572 7369  viewOptionsVersi
+ 00006080: 6f6e 5f10 0f73 686f 7749 636f 6e50 7265  on_..showIconPre
+ 00006090: 7669 6577 5763 6f6c 756d 6e73 5f10 1163  viewWcolumns_..c
+ 000060a0: 616c 6375 6c61 7465 416c 6c53 697a 6573  alculateAllSizes
+@@ -1616,16 +1616,16 @@
+ 000064f0: 4601 4701 5001 5201 5401 5501 5601 5f01  F.G.P.R.T.U.V._.
+ 00006500: 6101 6301 6401 6501 6e01 7001 7201 7301  a.c.d.e.n.p.r.s.
+ 00006510: 7401 7d01 7f01 8101 8201 8301 8c01 8e01  t.}.............
+ 00006520: 9101 9201 9301 9401 9d01 a201 ab00 0000  ................
+ 00006530: 0000 0002 0100 0000 0000 0000 4900 0000  ............I...
+ 00006540: 0000 0000 0000 0000 0000 0001 ac00 0000  ................
+ 00006550: 0900 7200 6f00 6900 5f00 7400 6f00 6f00  ..r.o.i._.t.o.o.
+-00006560: 6c00 736d 6f44 4462 6c6f 6200 0000 0842  l.smoDDblob....B
+-00006570: 0a69 0479 ebc4 4100 0000 0900 7200 6f00  .i.y..A.....r.o.
++00006560: 6c00 736d 6f44 4462 6c6f 6200 0000 0885  l.smoDDblob.....
++00006570: 794e 7f05 efc4 4100 0000 0900 7200 6f00  yN....A.....r.o.
+ 00006580: 6900 5f00 7400 6f00 6f00 6c00 736d 6f64  i._.t.o.o.l.smod
+ 00006590: 4462 6c6f 6200 0000 0874 10b2 54f1 e6c4  Dblob....t..T...
+ 000065a0: 4100 0000 0900 7200 6f00 6900 5f00 7400  A.....r.o.i._.t.
+ 000065b0: 6f00 6f00 6c00 7370 6831 5363 6f6d 7000  o.o.l.sph1Scomp.
+ 000065c0: 0000 0000 0520 0000 0000 0900 7200 6f00  ..... ......r.o.
+ 000065d0: 6900 5f00 7400 6f00 6f00 6c00 7376 5372  i._.t.o.o.l.svSr
+ 000065e0: 6e6c 6f6e 6700 0000 0100 0000 1b00 7400  nlong.........t.
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_14bp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_14bp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_7bp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_7bp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/read_in_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/read_in_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/fish_feature_extractor_2022.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/fish_feature_extractor_2022.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/convex_hull_3_scratch_3.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/convex_hull_3_scratch_3.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/convex_hull_scratch_1.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/convex_hull_scratch_1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/fish_feature_extractor_2023.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/fish_feature_extractor_2023.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/egocentrical_aligner.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/egocentrical_aligner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/graph_creator.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/graph_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/termite_rois.csv` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/termite_rois.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/mutual_exclusive.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/mutual_exclusive.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/graph_3d_plotter.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/graph_3d_plotter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/add_probability_cnt_features.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/add_probability_cnt_features.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/misc/convex_hull_scratch_2.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/misc/convex_hull_scratch_2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_8bps_2_animals.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_8bps_2_animals.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/perimeter_jit.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/perimeter_jit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_subsets.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_subsets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.nbi` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.nbi`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.1.nbc` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.quickhull_2d-16.py36m.1.nbc`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.1.nbc` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.1.nbc`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.1.nbc` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.1.nbc`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.2.nbc` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.2.nbc`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.nbi` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.convex_hull_perimeter_2d-16.py36m.nbi`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.nbi` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/__pycache__/perimeter_jit.process-7.py36m.nbi`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/extract_features_9bp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/extract_features_9bp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_user_defined.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_user_defined.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/unit_tests.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/unit_tests.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_16bp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_16bp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_8bp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_8bp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/feature_extractor_4bp.py` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/feature_extractor_4bp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/features_scripts.iml` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/features_scripts.iml`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/inspectionProfiles/Project_Default.xml` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/inspectionProfiles/Project_Default.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/feature_extractors/.idea/workspace.xml` & `Simba-UW-tf-dev-1.55.6/simba/feature_extractors/.idea/workspace.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotly_create_h5.py` & `Simba-UW-tf-dev-1.55.6/simba/plotly_create_h5.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/requirements.txt` & `Simba-UW-tf-dev-1.55.6/simba/requirements.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/severity_processor.py` & `Simba-UW-tf-dev-1.55.6/simba/severity_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/user_pose_config_creator.py` & `Simba-UW-tf-dev-1.55.6/simba/user_pose_config_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/mixins/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/mixins/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/mixins/pop_up_mixin.py` & `Simba-UW-tf-dev-1.55.6/simba/mixins/pop_up_mixin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/mixins/config_reader.py` & `Simba-UW-tf-dev-1.55.6/simba/mixins/config_reader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/mixins/feature_extraction_mixin.py` & `Simba-UW-tf-dev-1.55.6/simba/mixins/feature_extraction_mixin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/machine_model_settings_pop_up.py` & `Simba-UW-tf-dev-1.55.6/simba/machine_model_settings_pop_up.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/remove_keypoints_in_pose.py` & `Simba-UW-tf-dev-1.55.6/simba/remove_keypoints_in_pose.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/deepethogram_importer.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/deepethogram_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/BORIS_appender.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/BORIS_appender.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/observer_importer.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/observer_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/tools.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/third_party_appender.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/third_party_appender.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/ethovision_import.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/ethovision_import.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/BENTO_appender.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/BENTO_appender.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/third_party_label_appenders/solomon_importer.py` & `Simba-UW-tf-dev-1.55.6/simba/third_party_label_appenders/solomon_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/multi_cropper.py` & `Simba-UW-tf-dev-1.55.6/simba/multi_cropper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/FSTTC_calculator.py` & `Simba-UW-tf-dev-1.55.6/simba/FSTTC_calculator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/create_project_pop_up.py` & `Simba-UW-tf-dev-1.55.6/simba/create_project_pop_up.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/video_info_table.py` & `Simba-UW-tf-dev-1.55.6/simba/video_info_table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_clf_statistics.py` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_clf_statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_menues.py` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_menues.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_tools.py` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_visualizer.py` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/cue_light_tools/cue_light_movement_statistics.py` & `Simba-UW-tf-dev-1.55.6/simba/cue_light_tools/cue_light_movement_statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/extract_frames_fast.py` & `Simba-UW-tf-dev-1.55.6/simba/extract_frames_fast.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/utils/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/utils/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/utils/warnings.py` & `Simba-UW-tf-dev-1.55.6/simba/utils/warnings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/utils/lookups.py` & `Simba-UW-tf-dev-1.55.6/simba/utils/lookups.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/utils/errors.py` & `Simba-UW-tf-dev-1.55.6/simba/utils/errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/labelling_interface.py` & `Simba-UW-tf-dev-1.55.6/simba/labelling_interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/timebins_movement_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/timebins_movement_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/train_model_functions.py` & `Simba-UW-tf-dev-1.55.6/simba/train_model_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/SimBA_dash_app.py` & `Simba-UW-tf-dev-1.55.6/simba/SimBA_dash_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/timebins_clf_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/timebins_clf_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/calculate_px_dist.py` & `Simba-UW-tf-dev-1.55.6/simba/calculate_px_dist.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/movement_processor.py` & `Simba-UW-tf-dev-1.55.6/simba/movement_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pybursts.py` & `Simba-UW-tf-dev-1.55.6/simba/pybursts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/run_model_new.py` & `Simba-UW-tf-dev-1.55.6/simba/run_model_new.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/rw_dfs.py` & `Simba-UW-tf-dev-1.55.6/simba/rw_dfs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/reverse_2_animal_tracking.py` & `Simba-UW-tf-dev-1.55.6/simba/reverse_2_animal_tracking.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/Directing_animals_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/Directing_animals_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/Validate_model_one_video_run_clf.py` & `Simba-UW-tf-dev-1.55.6/simba/Validate_model_one_video_run_clf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/tkinter_functions.py` & `Simba-UW-tf-dev-1.55.6/simba/tkinter_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/setting_menu.py` & `Simba-UW-tf-dev-1.55.6/simba/setting_menu.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/interpolate_pose.py` & `Simba-UW-tf-dev-1.55.6/simba/interpolate_pose.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/gantt_creator.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/gantt_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/tools/tkinter_tools.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/tools/tkinter_tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_plotter_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_plotter_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/shap_agg_stats_visualizer.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/shap_agg_stats_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/gantt_creator_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/gantt_creator_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_clf_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_clf_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/probability_plot_creator.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/probability_plot_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/misc_visualizations.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/misc_visualizations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/plot_clf_results.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/plot_clf_results.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/plot_clf_results_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/plot_clf_results_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_feature_visualizer.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_feature_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_location.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_location.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/probability_plot_creator_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/probability_plot_creator_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/interactive_probability_grapher.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/interactive_probability_grapher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/plot_pose_in_dir.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/plot_pose_in_dir.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/single_run_model_validation_video.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/single_run_model_validation_video.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/frame_mergerer_ffmpeg.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/frame_mergerer_ffmpeg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/Directing_animals_visualizer_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/Directing_animals_visualizer_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/clf_validator.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/clf_validator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/path_plotter_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/path_plotter_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_feature_visualizer_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_feature_visualizer_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/data_plotter.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/data_plotter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/path_plotter.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/path_plotter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/ez_lineplot.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/ez_lineplot.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/distance_plotter_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/distance_plotter_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/ROI_plotter.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/ROI_plotter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_clf.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_clf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/distance_plotter.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/distance_plotter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/single_run_model_validation_video_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/single_run_model_validation_video_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/Directing_animals_visualizer.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/Directing_animals_visualizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/plotting/heat_mapper_location_mp.py` & `Simba-UW-tf-dev-1.55.6/simba/plotting/heat_mapper_location_mp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/run_dash_tkinter.py` & `Simba-UW-tf-dev-1.55.6/simba/run_dash_tkinter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/interpolate_smooth_post_hoc.py` & `Simba-UW-tf-dev-1.55.6/simba/interpolate_smooth_post_hoc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/dash_app.py` & `Simba-UW-tf-dev-1.55.6/simba/dash_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/reverse_tracking_order.py` & `Simba-UW-tf-dev-1.55.6/simba/reverse_tracking_order.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/concatenator_pop_up.py` & `Simba-UW-tf-dev-1.55.6/simba/concatenator_pop_up.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/extract_annotation_frames.py` & `Simba-UW-tf-dev-1.55.6/simba/extract_annotation_frames.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_time_bin_calculator.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_time_bin_calculator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_movement_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_movement_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_define.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_define.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_reset.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_reset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_feature_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_feature_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_multiply.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_multiply.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_size_calculations.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_size_calculations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_zoom.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_zoom.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_directing_analyzer.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_directing_analyzer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_move_shape.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_move_shape.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_menus.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_menus.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_clf_calculator.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_clf_calculator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/roi_tools/ROI_image.py` & `Simba-UW-tf-dev-1.55.6/simba/roi_tools/ROI_image.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/misc_tools.py` & `Simba-UW-tf-dev-1.55.6/simba/misc_tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/read_DANNCE_mat.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/read_DANNCE_mat.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/sleap_importer_slp.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/sleap_importer_slp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/sleap_importer_h5.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/sleap_importer_h5.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/dlc_multi_animal_importer.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/dlc_multi_animal_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/sleap_importer_csv.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/sleap_importer_csv.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/import_trk.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/import_trk.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/import_mars.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/import_mars.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/dlc_importer_csv.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/dlc_importer_csv.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_importers/trk_importer.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_importers/trk_importer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pop_up_classes.py` & `Simba-UW-tf-dev-1.55.6/simba/pop_up_classes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/extract_seqframes.py` & `Simba-UW-tf-dev-1.55.6/simba/extract_seqframes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/bp_names/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/bp_names/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/bp_names/bp_names.csv` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/bp_names/bp_names.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/no_animals/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/no_animals/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/configuration_names/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/configuration_names/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/8.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/8.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/9.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/9.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/12.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/12.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/11.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/11.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/10.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/10.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/4.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/4.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/5.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/5.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/7.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/7.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/6.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/6.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/2.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/3.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/3.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_configurations/schematics/1.png` & `Simba-UW-tf-dev-1.55.6/simba/pose_configurations/schematics/1.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/get_coordinates_tools_v2.py` & `Simba-UW-tf-dev-1.55.6/simba/get_coordinates_tools_v2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pup_retrieval_protocol.py` & `Simba-UW-tf-dev-1.55.6/simba/pup_retrieval_protocol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/outlier_corrector_movement.py` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/outlier_corrector_movement.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/outlier_corrector_location.py` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/outlier_corrector_location.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/skip_outlier_correction.py` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/skip_outlier_correction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/outlier_scripts.iml` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/outlier_scripts.iml`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/inspectionProfiles/Project_Default.xml` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/inspectionProfiles/Project_Default.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/outlier_tools/.idea/workspace.xml` & `Simba-UW-tf-dev-1.55.6/simba/outlier_tools/.idea/workspace.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/pose_reset.py` & `Simba-UW-tf-dev-1.55.6/simba/pose_reset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/train_mutiple_models.py` & `Simba-UW-tf-dev-1.55.6/simba/train_mutiple_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/SimBA.py` & `Simba-UW-tf-dev-1.55.6/simba/SimBA.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -815,34 +815,39 @@
+         links_menu.add_command(label='Install graphviz', command=lambda: webbrowser.open_new(str(r'https://bobswift.atlassian.net/wiki/spaces/GVIZ/pages/20971549/How+to+install+Graphviz+software')))
+         help_menu.add_cascade(label="Links",menu=links_menu, compound='left', image=self.menu_icons['link']['img'])
+         help_menu.add_command(label='About', compound='left', image=self.menu_icons['about']['img'], command=AboutSimBAPopUp)
+ 
+         self.frame = Frame(background, bd=2, relief=SUNKEN, width=750, height=300)
+         y_sb = Scrollbar(self.frame, orient=VERTICAL)
+         self.frame.pack(expand=True)
+-        self.txt = Text(self.frame, bg='white', insertborderwidth=2, height=40, width=100, yscrollcommand=y_sb)
++        self.txt = Text(self.frame, bg='white', insertborderwidth=2, height=30, width=100, yscrollcommand=y_sb)
+         self.txt.tag_configure("center", justify='center', foreground='blue', font=("Rockwell", 16, 'bold'))
+         self.txt.insert(INSERT, Defaults.WELCOME_MSG.value + emojis['relaxed'] + '\n' * 2)
+         self.txt.tag_add("center", "1.0", "2.25")
+         y_sb.pack(side=RIGHT, fill=Y)
+         self.txt.pack(expand=True, fill='both')
+         y_sb.config(command=self.txt.yview)
+         self.txt.config(state=DISABLED, font=Formats.TKINTER_FONT.value)
++
++        clear_txt_btn = Button(self.frame, text=' CLEAR', compound=LEFT, image=self.menu_icons['clean']['img'], font=Formats.LABELFRAME_HEADER_FORMAT.value, command=lambda: self.clean_txt())
++        clear_txt_btn.pack(side=BOTTOM, fill=X)
++
+         sys.stdout = StdRedirector(self.txt)
+ 
+     def restart(self):
+         confirm_restart = askyesno(title='RESTART', message='Are you sure that you want restart SimBA?')
+         if confirm_restart:
+             self.root.destroy()
+             python = sys.executable
+             os.execl(python, python, *sys.argv)
+ 
++    def clean_txt(self):
++        self.txt.config(state=NORMAL)
++        self.txt.delete('1.0', END)
+ 
+-
+-# writes text out in GUI
+ class StdRedirector(object):
+     def __init__(self, text_widget):
+         self.text_space = text_widget
+ 
+     def write(self, string):
+         self.text_space.config(state=NORMAL)
+         self.text_space.insert("end", string)
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/labelling_advanced_interface.py` & `Simba-UW-tf-dev-1.55.6/simba/labelling_advanced_interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/model_names.parquet` & `Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/model_names.parquet`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/unsupervised/features.csv` & `Simba-UW-tf-dev-1.55.6/simba/assets/unsupervised/features.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/down_arrow.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/down_arrow.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/intruder_shape.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/intruder_shape.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/feature_categories/shap_feature_categories.csv` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/feature_categories/shap_feature_categories.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_shape.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_shape.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_intruder_shape.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_intruder_shape.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/animal_distances.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/animal_distances.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/baseline_scale.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/baseline_scale.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/ubuntu.regular.ttf` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/ubuntu.regular.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/side_scale.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/side_scale.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/UbuntuMono-Regular.ttf` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/UbuntuMono-Regular.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/side_scale_5.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/side_scale_5.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/intruder_movement.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/intruder_movement.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_movement.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_movement.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/color_bar.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/color_bar.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/shap/resident_intruder_movement.jpg` & `Simba-UW-tf-dev-1.55.6/simba/assets/shap/resident_intruder_movement.jpg`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/assets/.DS_Store`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -505,27 +505,27 @@
+ 00001f80: 6f75 6e64 735b 5368 6f77 5369 6465 6261  ounds[ShowSideba
+ 00001f90: 7208 0809 0809 5f10 187b 7b32 302c 2031  r....._..{{20, 1
+ 00001fa0: 3232 7d2c 207b 3130 3736 2c20 3632 317d  22}, {1076, 621}
+ 00001fb0: 7d09 0817 2531 3d49 606d 797a 7b7c 7d7e  }...%1=I`myz{|}~
+ 00001fc0: 9900 0000 0000 0001 0100 0000 0000 0000  ................
+ 00001fd0: 0f00 0000 0000 0000 0000 0000 0000 0000  ................
+ 00001fe0: 9a00 0000 0300 6900 6d00 676c 6731 5363  ......i.m.glg1Sc
+-00001ff0: 6f6d 7000 0000 0000 0f4c f200 0000 0300  omp......L......
++00001ff0: 6f6d 7000 0000 0000 161e ce00 0000 0300  omp.............
+ 00002000: 6900 6d00 0000 0000 0000 0012 0000 0005  i.m.............
+ 00002010: 0069 0063 006f 006e 0073 6277 7370 626c  .i.c.o.n.sbwspbl
+ 00002020: 6f62 0000 00c9 6270 6c69 7374 3030 d701  ob....bplist00..
+ 00002030: 0203 0405 0607 0808 0a08 0a0d 0a5d 5368  .............]Sh
+ 00002040: 6f77 5374 6174 7573 4261 725b 5368 6f77  owStatusBar[Show
+ 00002050: 5061 7468 6261 725b 5368 6f77 546f 6f6c  Pathbar[ShowTool
+ 00002060: 6261 725b 5368 6f77 5461 6256 6965 775f  bar[ShowTabView_
+ 00002070: 1014 436f 6e74 6169 6e65 7253 686f 7753  ..ContainerShowS
+ 00002080: 6964 6562 6172 5c57 696e 646f 7742 6f75  idebar\WindowBou
+ 00002090: 6e64 735b 5368 6f77 5369 6465 6261 7208  nds[ShowSidebar.
+-000020a0: 0809 0809 5f10 187b 7b32 302c 2031 3232  ...._..{{20, 122
+-000020b0: 7d2c 207b 3130 3736 2c20 3632 317d 7d09  }, {1076, 621}}.
++000020a0: 0809 0809 5f10 187b 7b34 3134 2c20 3136  ...._..{{414, 16
++000020b0: 317d 2c20 7b37 3730 2c20 3433 367d 7d09  1}, {770, 436}}.
+ 000020c0: 0817 2531 3d49 606d 797a 7b7c 7d7e 9900  ..%1=I`myz{|}~..
+ 000020d0: 0000 0000 0001 0100 0000 0000 0000 0f00  ................
+ 000020e0: 0000 0000 0000 0000 0000 0000 0000 9a00  ................
+ 000020f0: 0000 0500 6900 6300 6f00 6e00 736c 6731  ....i.c.o.n.slg1
+ 00002100: 5363 6f6d 7000 0000 0000 058b 9300 0000  Scomp...........
+ 00002110: 0500 6900 6300 6f00 6e00 736c 7376 4362  ..i.c.o.n.slsvCb
+ 00002120: 6c6f 6200 0002 b062 706c 6973 7430 30da  lob....bplist00.
+@@ -633,15 +633,15 @@
+ 00002780: 6f75 6e64 735b 5368 6f77 5369 6465 6261  ounds[ShowSideba
+ 00002790: 7208 0809 0809 5f10 187b 7b32 302c 2031  r....._..{{20, 1
+ 000027a0: 3232 7d2c 207b 3130 3736 2c20 3632 317d  22}, {1076, 621}
+ 000027b0: 7d09 0817 2531 3d49 606d 797a 7b7c 7d7e  }...%1=I`myz{|}~
+ 000027c0: 9900 0000 0000 0001 0100 0000 0000 0000  ................
+ 000027d0: 0f00 0000 0000 0000 0000 0000 0000 0000  ................
+ 000027e0: 9a00 0000 0300 6900 6d00 676c 6731 5363  ......i.m.glg1Sc
+-000027f0: 6f6d 7000 0000 0000 0f4c f200 0000 0300  omp......L......
++000027f0: 6f6d 7000 0000 0000 161e ce00 0000 0300  omp.............
+ 00002800: 6900 6d00 676c 7376 4362 6c6f 6200 0002  i.m.glsvCblob...
+ 00002810: 7962 706c 6973 7430 30d8 0102 0304 0506  ybplist00.......
+ 00002820: 0708 0909 0b16 4647 4849 5f10 1075 7365  ......FGHI_..use
+ 00002830: 5265 6c61 7469 7665 4461 7465 735f 100f  RelativeDates_..
+ 00002840: 7368 6f77 4963 6f6e 5072 6576 6965 7757  showIconPreviewW
+ 00002850: 636f 6c75 6d6e 735f 1011 6361 6c63 756c  columns_..calcul
+ 00002860: 6174 6541 6c6c 5369 7a65 7358 7465 7874  ateAllSizesXtext
+@@ -715,19 +715,19 @@
+ 00002ca0: 0146 0147 0148 0151 0153 0155 0156 0157  .F.G.H.Q.S.U.V.W
+ 00002cb0: 0160 0162 0164 0165 0166 016f 0171 0173  .`.b.d.e.f.o.q.s
+ 00002cc0: 0174 0175 017e 0180 0182 0183 0184 018d  .t.u.~..........
+ 00002cd0: 018f 0192 0193 0194 0195 019e 01a3 0000  ................
+ 00002ce0: 0000 0000 0201 0000 0000 0000 0049 0000  .............I..
+ 00002cf0: 0000 0000 0000 0000 0000 0000 01ac 0000  ................
+ 00002d00: 0003 0069 006d 0067 6d6f 4444 626c 6f62  ...i.m.gmoDDblob
+-00002d10: 0000 0008 b8f4 ead3 d4e1 c441 0000 0003  ...........A....
++00002d10: 0000 0008 aa6d bd8d 96ef c441 0000 0003  .....m.....A....
+ 00002d20: 0069 006d 0067 6d6f 6444 626c 6f62 0000  .i.m.gmodDblob..
+-00002d30: 0008 b8f4 ead3 d4e1 c441 0000 0003 0069  .........A.....i
++00002d30: 0008 aa6d bd8d 96ef c441 0000 0003 0069  ...m.....A.....i
+ 00002d40: 006d 0067 7068 3153 636f 6d70 0000 0000  .m.gph1Scomp....
+-00002d50: 000f 6000 0000 0003 0069 006d 0067 7653  ..`......i.m.gvS
++00002d50: 0016 3000 0000 0003 0069 006d 0067 7653  ..0......i.m.gvS
+ 00002d60: 726e 6c6f 6e67 0000 0001 0000 0007 006c  rnlong.........l
+ 00002d70: 006f 006f 006b 0075 0070 0073 6277 7370  .o.o.k.u.p.sbwsp
+ 00002d80: 626c 6f62 0000 00c8 6270 6c69 7374 3030  blob....bplist00
+ 00002d90: d701 0203 0405 0607 0808 0a08 0a0d 0a5d  ...............]
+ 00002da0: 5368 6f77 5374 6174 7573 4261 725b 5368  ShowStatusBar[Sh
+ 00002db0: 6f77 5061 7468 6261 725b 5368 6f77 546f  owPathbar[ShowTo
+ 00002dc0: 6f6c 6261 725b 5368 6f77 5461 6256 6965  olbar[ShowTabVie
+@@ -889,15 +889,15 @@
+ 00003780: 6f75 6e64 735b 5368 6f77 5369 6465 6261  ounds[ShowSideba
+ 00003790: 7208 0809 0809 5f10 187b 7b32 302c 2031  r....._..{{20, 1
+ 000037a0: 3232 7d2c 207b 3130 3736 2c20 3632 317d  22}, {1076, 621}
+ 000037b0: 7d09 0817 2531 3d49 606d 797a 7b7c 7d7e  }...%1=I`myz{|}~
+ 000037c0: 9900 0000 0000 0001 0100 0000 0000 0000  ................
+ 000037d0: 0f00 0000 0000 0000 0000 0000 0000 0000  ................
+ 000037e0: 9a00 0000 0300 6900 6d00 676c 6731 5363  ......i.m.glg1Sc
+-000037f0: 6f6d 7000 0000 0000 0f4c f200 0000 0300  omp......L......
++000037f0: 6f6d 7000 0000 0000 161e ce00 0000 0300  omp.............
+ 00003800: 6900 6d00 0000 0006 0000 0000 0000 380b  i.m...........8.
+ 00003810: 0000 0045 0000 100b 0000 300b 0000 200c  ...E......0... .
+ 00003820: 0000 180b 0000 0000 0000 0000 0000 0000  ................
+ 00003830: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003840: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003850: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003860: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+@@ -1017,9 +1017,9 @@
+ 00003f80: 6f75 6e64 735b 5368 6f77 5369 6465 6261  ounds[ShowSideba
+ 00003f90: 7208 0809 0809 5f10 187b 7b32 302c 2031  r....._..{{20, 1
+ 00003fa0: 3232 7d2c 207b 3130 3736 2c20 3632 317d  22}, {1076, 621}
+ 00003fb0: 7d09 0817 2531 3d49 606d 797a 7b7c 7d7e  }...%1=I`myz{|}~
+ 00003fc0: 9900 0000 0000 0001 0100 0000 0000 0000  ................
+ 00003fd0: 0f00 0000 0000 0000 0000 0000 0000 0000  ................
+ 00003fe0: 9a00 0000 0300 6900 6d00 676c 6731 5363  ......i.m.glg1Sc
+-00003ff0: 6f6d 7000 0000 0000 0f4c f200 0000 0300  omp......L......
++00003ff0: 6f6d 7000 0000 0000 161e ce00 0000 0300  omp.............
+ 00004000: 6900 6d00                                i.m.
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/lookups/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/assets/lookups/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/lookups/model_names.parquet` & `Simba-UW-tf-dev-1.55.6/simba/assets/lookups/model_names.parquet`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/lookups/feature_extraction_headers.csv` & `Simba-UW-tf-dev-1.55.6/simba/assets/lookups/feature_extraction_headers.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/lookups/features.csv` & `Simba-UW-tf-dev-1.55.6/simba/assets/lookups/features.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/lookups/unsupervised_example_x.csv` & `Simba-UW-tf-dev-1.55.6/simba/assets/lookups/unsupervised_example_x.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/stl/operant_tray.stl` & `Simba-UW-tf-dev-1.55.6/simba/assets/stl/operant_tray.stl`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/stl/operant_lever.stl` & `Simba-UW-tf-dev-1.55.6/simba/assets/stl/operant_lever.stl`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/stl/operant_walls.stl` & `Simba-UW-tf-dev-1.55.6/simba/assets/stl/operant_walls.stl`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/stl/grid_floor.stl` & `Simba-UW-tf-dev-1.55.6/simba/assets/stl/grid_floor.stl`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/img/about_me.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/img/about_me.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/img/bg_2.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/img/bg_2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/img/splash.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/img/splash.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/img/splash.pptx` & `Simba-UW-tf-dev-1.55.6/simba/assets/img/splash.pptx`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/img/bg.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/img/bg.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/UbuntuMono-Regular.ttf` & `Simba-UW-tf-dev-1.55.6/simba/assets/UbuntuMono-Regular.ttf`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/factory.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/factory.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/cluster.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/cluster.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/load.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/load.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/gif.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/gif.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/pose.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/pose.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/features.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/features.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/settings.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/settings.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/link.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/link.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/dash_simba.css` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/dash_simba.css`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/documentation.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/documentation.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/fps.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/fps.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/dimensionality_reduction.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/dimensionality_reduction.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/roi.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/roi.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/superimpose.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/superimpose.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/label.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/label.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/change.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/change.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/crop.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/crop.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/path.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/path.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/clip.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/clip.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/restart.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/restart.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/calipher.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/calipher.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/add_on.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/add_on.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/create.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/create.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/SimBA_logo.ico` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/SimBA_logo.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/print.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/print.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/clf.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/clf.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/mosaic.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/mosaic.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/vertical.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/vertical.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/horizontal.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/horizontal.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat_icons/mixed_mosaic.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat_icons/mixed_mosaic.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/merge.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/merge.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/clf_2.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/clf_2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/visualize.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/visualize.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/concat.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/concat.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/boris.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/boris.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/frames.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/frames.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/video.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/video.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/sample.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/sample.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/metrics.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/metrics.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/grey.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/grey.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/exit.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/exit.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/outlier.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/outlier.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/clahe.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/clahe.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/trash.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/trash.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/about.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/about.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/convert.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/convert.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/SimBA_logo.icns` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/SimBA_logo.icns`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/reorganize.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/reorganize.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/browse.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/browse.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/SimBA_logo.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/SimBA_logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/ethovision.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/ethovision.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/icons/close.png` & `Simba-UW-tf-dev-1.55.6/simba/assets/icons/close.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/dash_simba_base.css` & `Simba-UW-tf-dev-1.55.6/simba/assets/dash_simba_base.css`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/assets/TheGoldenLab.PNG` & `Simba-UW-tf-dev-1.55.6/simba/assets/TheGoldenLab.PNG`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/drop_bp_cords.py` & `Simba-UW-tf-dev-1.55.6/simba/drop_bp_cords.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/read_config_unit_tests.py` & `Simba-UW-tf-dev-1.55.6/simba/read_config_unit_tests.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/project_config_creator.py` & `Simba-UW-tf-dev-1.55.6/simba/project_config_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/set_hyperparameters.py` & `Simba-UW-tf-dev-1.55.6/simba/set_hyperparameters.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/train_single_model.py` & `Simba-UW-tf-dev-1.55.6/simba/train_single_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/create_clf_log.py` & `Simba-UW-tf-dev-1.55.6/simba/create_clf_log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/.DS_Store` & `Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/.DS_Store`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/batch_process_menus.py` & `Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/batch_process_menus.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/batch_process_videos/batch_process_create_ffmpeg_commands.py` & `Simba-UW-tf-dev-1.55.6/simba/batch_process_videos/batch_process_create_ffmpeg_commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/Kleinberg_calculator.py` & `Simba-UW-tf-dev-1.55.6/simba/Kleinberg_calculator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/reorganize_keypoint_in_pose.py` & `Simba-UW-tf-dev-1.55.6/simba/reorganize_keypoint_in_pose.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/simba/play_annotation_video.py` & `Simba-UW-tf-dev-1.55.6/simba/play_annotation_video.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/PKG-INFO` & `Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Simba-UW-tf-dev
+-Version: 1.55.5
++Version: 1.55.6
+ Summary: Toolkit for computer classification of complex social behaviors in experimental animals
+ Home-page: https://github.com/sgoldenlab/simba
+ Author: Simon Nilsson, Jia Jie Choong, Sophia Hwang
+ Author-email: sronilsson@gmail.com
+ License: GNU Lesser General Public License v3 (LGPLv3)
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/SOURCES.txt` & `Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/SOURCES.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -75,14 +75,15 @@
+ simba/assets/icons/about.png
+ simba/assets/icons/add_on.png
+ simba/assets/icons/boris.png
+ simba/assets/icons/browse.png
+ simba/assets/icons/calipher.png
+ simba/assets/icons/change.png
+ simba/assets/icons/clahe.png
++simba/assets/icons/clean.png
+ simba/assets/icons/clf.png
+ simba/assets/icons/clf_2.png
+ simba/assets/icons/clip.png
+ simba/assets/icons/close.png
+ simba/assets/icons/cluster.png
+ simba/assets/icons/concat.png
+ simba/assets/icons/convert.png
+```
+
+### Comparing `Simba-UW-tf-dev-1.55.5/Simba_UW_tf_dev.egg-info/requires.txt` & `Simba-UW-tf-dev-1.55.6/Simba_UW_tf_dev.egg-info/requires.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/LICENSE.md` & `Simba-UW-tf-dev-1.55.6/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/README.md` & `Simba-UW-tf-dev-1.55.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Simba-UW-tf-dev-1.55.5/setup.py` & `Simba-UW-tf-dev-1.55.6/setup.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -6,15 +6,15 @@
+ Licensed under GNU Lesser General Public License v3.0
+ """
+ 
+ import setuptools
+ 
+ setuptools.setup(
+     name="Simba-UW-tf-dev",
+-    version="1.55.5",
++    version="1.55.6",
+     author="Simon Nilsson, Jia Jie Choong, Sophia Hwang",
+     author_email="sronilsson@gmail.com",
+     description="Toolkit for computer classification of complex social behaviors in experimental animals",
+     url="https://github.com/sgoldenlab/simba",
+     install_requires=['Pillow == 5.4.1', 'pyyaml == 5.3.1','shapely == 1.7','wxpython == 4.0.4',
+               'dtreeviz == 0.8.1','eli5 == 0.10.1','graphviz == 0.11',
+               'imblearn == 0.0','imgaug == 0.4.0','imutils == 0.5.2','matplotlib == 3.0.3', 'numpy == 1.18.1',
+```
+
