@@ -1,0 +1,105 @@
+--- tmp/pymCADRE-1.1.0.tar.gz
++++ tmp/pymCADRE-1.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/pymCADRE-1.1.0.tar", last modified: Wed Oct 13 12:38:06 2021, max compression
+│ +gzip compressed data, was "/Users/leonidou/Downloads/pymCADRE-main/dist/tmpr5d8da2a/pymCADRE-1.2.0.tar", last modified: Wed Oct 13 12:43:36 2021, max compression
+│   --- pymCADRE-1.1.0.tar
+├── +++ pymCADRE-1.2.0.tar
+│ ├── file list
+│ │ @@ -1,13 +1,12 @@
+│ │ -drwxr-xr-x   0 leonidou   (501) staff       (20)        0 2021-10-13 12:38:06.781581 pymCADRE-1.1.0/
+│ │ --rw-rw-r--   0 leonidou   (501) staff       (20)    35149 2021-10-13 11:22:14.000000 pymCADRE-1.1.0/LICENSE
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)     4106 2021-10-13 12:38:06.781319 pymCADRE-1.1.0/PKG-INFO
+│ │ --rw-rw-r--   0 leonidou   (501) staff       (20)     3278 2021-10-13 11:22:14.000000 pymCADRE-1.1.0/README.md
+│ │ -drwxr-xr-x   0 leonidou   (501) staff       (20)        0 2021-10-13 12:38:06.780946 pymCADRE-1.1.0/pymCADRE.egg-info/
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)     4106 2021-10-13 12:38:06.000000 pymCADRE-1.1.0/pymCADRE.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)      200 2021-10-13 12:38:06.000000 pymCADRE-1.1.0/pymCADRE.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)        1 2021-10-13 12:38:06.000000 pymCADRE-1.1.0/pymCADRE.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)       33 2021-10-13 12:38:06.000000 pymCADRE-1.1.0/pymCADRE.egg-info/requires.txt
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)        1 2021-10-13 12:38:06.000000 pymCADRE-1.1.0/pymCADRE.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 leonidou   (501) staff       (20)      104 2021-10-13 11:22:14.000000 pymCADRE-1.1.0/pyproject.toml
+│ │ --rw-r--r--   0 leonidou   (501) staff       (20)       38 2021-10-13 12:38:06.781707 pymCADRE-1.1.0/setup.cfg
+│ │ --rw-rw-r--   0 leonidou   (501) staff       (20)     1293 2021-10-13 12:37:49.000000 pymCADRE-1.1.0/setup.py
+│ │ +drwxr-xr-x   0 leonidou   (501) staff       (20)        0 2021-10-13 12:43:36.981055 pymCADRE-1.2.0/
+│ │ +-rw-rw-r--   0 leonidou   (501) staff       (20)    35149 2021-10-13 11:22:14.000000 pymCADRE-1.2.0/LICENSE
+│ │ +-rw-r--r--   0 leonidou   (501) staff       (20)     4106 2021-10-13 12:43:36.980809 pymCADRE-1.2.0/PKG-INFO
+│ │ +-rw-rw-r--   0 leonidou   (501) staff       (20)     3278 2021-10-13 11:22:14.000000 pymCADRE-1.2.0/README.md
+│ │ +drwxr-xr-x   0 leonidou   (501) staff       (20)        0 2021-10-13 12:43:36.980362 pymCADRE-1.2.0/pymCADRE.egg-info/
+│ │ +-rw-r--r--   0 leonidou   (501) staff       (20)     4106 2021-10-13 12:43:36.000000 pymCADRE-1.2.0/pymCADRE.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 leonidou   (501) staff       (20)      169 2021-10-13 12:43:36.000000 pymCADRE-1.2.0/pymCADRE.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 leonidou   (501) staff       (20)        1 2021-10-13 12:43:36.000000 pymCADRE-1.2.0/pymCADRE.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 leonidou   (501) staff       (20)        1 2021-10-13 12:43:36.000000 pymCADRE-1.2.0/pymCADRE.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 leonidou   (501) staff       (20)      104 2021-10-13 11:22:14.000000 pymCADRE-1.2.0/pyproject.toml
+│ │ +-rw-r--r--   0 leonidou   (501) staff       (20)       38 2021-10-13 12:43:36.981149 pymCADRE-1.2.0/setup.cfg
+│ │ +-rw-rw-r--   0 leonidou   (501) staff       (20)     1110 2021-10-13 12:43:02.000000 pymCADRE-1.2.0/setup.py
+│ │   --- pymCADRE-1.1.0/LICENSE
+│ ├── +++ pymCADRE-1.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pymCADRE-1.1.0/PKG-INFO
+│ ├── +++ pymCADRE-1.2.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pymCADRE
+│ │ -Version: 1.1.0
+│ │ +Version: 1.2.0
+│ │  Summary: The pymCADRE tool is an advanced re-implementation of the metabolic Context-specificity Assessed by Deterministic Reaction Evaluation (mCADRE) algorithm in Python. It constructs tissue-specific metabolic models by leveraging gene expression data and literature-based evidence, along with network topology information.
+│ │  Home-page: https://github.com/draeger-lab/pymCADRE
+│ │  Author: Nantia Leonidou
+│ │  Author-email: nantia.leonidou@uni-tuebingen.de
+│ │  License:  GPL-3.0
+│ │  Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │   --- pymCADRE-1.1.0/README.md
+│ ├── +++ pymCADRE-1.2.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- pymCADRE-1.1.0/pymCADRE.egg-info/PKG-INFO
+│ ├── +++ pymCADRE-1.2.0/pymCADRE.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pymCADRE
+│ │ -Version: 1.1.0
+│ │ +Version: 1.2.0
+│ │  Summary: The pymCADRE tool is an advanced re-implementation of the metabolic Context-specificity Assessed by Deterministic Reaction Evaluation (mCADRE) algorithm in Python. It constructs tissue-specific metabolic models by leveraging gene expression data and literature-based evidence, along with network topology information.
+│ │  Home-page: https://github.com/draeger-lab/pymCADRE
+│ │  Author: Nantia Leonidou
+│ │  Author-email: nantia.leonidou@uni-tuebingen.de
+│ │  License:  GPL-3.0
+│ │  Platform: UNKNOWN
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │   --- pymCADRE-1.1.0/setup.py
+│ ├── +++ pymCADRE-1.2.0/setup.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,30 +1,23 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  with open("README.md", "r", encoding="utf-8") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setup(
+│ │      name='pymCADRE',
+│ │ -    version='1.1.0',    
+│ │ +    version='1.2.0',    
+│ │      description='The pymCADRE tool is an advanced re-implementation of the metabolic Context-specificity Assessed by Deterministic Reaction Evaluation (mCADRE) algorithm in Python. It constructs tissue-specific metabolic models by leveraging gene expression data and literature-based evidence, along with network topology information.',
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url='https://github.com/draeger-lab/pymCADRE',
+│ │      author='Nantia Leonidou',
+│ │      author_email='nantia.leonidou@uni-tuebingen.de',
+│ │      license=' GPL-3.0',
+│ │      packages=find_packages(where='pmCADRE_code/code', include=['check','prune','rank']),
+│ │ -    install_requires=['pandas',
+│ │ -                      'numpy',
+│ │ -                      'cobrapy',
+│ │ -                      'requests',
+│ │ -                      'os'
+│ │ -                      ],
+│ │ -
+│ │      classifiers=[
+│ │          "Programming Language :: Python :: 3.8",
+│ │          "Topic :: Software Development :: Version Control :: Git",
+│ │          "Framework :: Jupyter",
+│ │          "Operating System :: MacOS",
+│ │          "Operating System :: Unix"

@@ -1,0 +1,3301 @@
+# Comparing `tmp/PhyloSuite-1.2.3.post1.tar.gz` & `tmp/PhyloSuite-1.2.3rc4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\PhyloSuite-1.2.3.post1.tar", last modified: Fri Apr  7 00:51:28 2023, max compression
++gzip compressed data, was "dist\PhyloSuite-1.2.3rc4.tar", last modified: Wed Jan  4 01:38:58 2023, max compression
+```
+
+## Comparing `PhyloSuite-1.2.3.post1.tar` & `PhyloSuite-1.2.3rc4.tar`
+
+### file list
+
+```diff
+@@ -1,396 +1,393 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/
+--rw-rw-rw-   0        0        0    35823 2019-09-07 09:01:13.000000 PhyloSuite-1.2.3.post1/LICENSE
+--rw-rw-rw-   0        0        0      242 2023-02-15 08:11:12.000000 PhyloSuite-1.2.3.post1/MANIFEST.in
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/
+--rw-rw-rw-   0        0        0     2088 2020-01-03 12:37:09.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation.enw
+--rw-rw-rw-   0        0        0     2536 2020-01-03 12:36:58.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation.ris
+--rw-rw-rw-   0        0        0     3886 2020-01-03 12:41:51.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation.xml
+--rw-rw-rw-   0        0        0      382 2023-02-13 14:50:57.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation_imeta.enw
+--rw-rw-rw-   0        0        0      440 2023-02-14 03:43:13.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation_imeta.ris
+--rw-rw-rw-   0        0        0     2285 2023-02-14 03:40:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation_imeta.xml
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/
+--rw-rw-rw-   0        0        0     6080 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/citation.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/
+--rw-rw-rw-   0        0        0     8555 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/clustertree.py
+--rw-rw-rw-   0        0        0     6288 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/clustvalidation.py
+--rw-rw-rw-   0        0        0     1542 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/
+--rw-rw-rw-   0        0        0     9020 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/arraytable.py
+--rw-rw-rw-   0        0        0     6037 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/seqgroup.py
+--rw-rw-rw-   0        0        0    98099 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/tree.py
+--rw-rw-rw-   0        0        0     1446 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/
+--rw-rw-rw-   0        0        0    20476 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/control.py
+--rw-rw-rw-   0        0        0    23604 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/evoltree.py
+--rw-rw-rw-   0        0        0    15173 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/model.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/
+--rw-rw-rw-   0        0        0    13344 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/codemlparser.py
+--rw-rw-rw-   0        0        0     3177 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/slrparser.py
+--rw-rw-rw-   0        0        0     1630 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/__init__.py
+--rw-rw-rw-   0        0        0    12335 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/utils.py
+--rw-rw-rw-   0        0        0     1801 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/ncbi_taxonomy/
+--rw-rw-rw-   0        0        0    35219 2023-02-11 09:09:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/ncbi_taxonomy/ncbiquery.py
+--rw-rw-rw-   0        0        0     1509 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/ncbi_taxonomy/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/
+--rw-rw-rw-   0        0        0   749400 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/_nexml.py
+--rw-rw-rw-   0        0        0     7101 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/_nexml_tree.py
+--rw-rw-rw-   0        0        0     3264 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/orthoxml/
+--rw-rw-rw-   0        0        0    85296 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/orthoxml/_orthoxml.py
+--rw-rw-rw-   0        0        0     1509 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/orthoxml/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/
+--rw-rw-rw-   0        0        0     4449 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/fasta.py
+--rw-rw-rw-   0        0        0    20803 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/newick.py
+--rw-rw-rw-   0        0        0     6363 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/paml.py
+--rw-rw-rw-   0        0        0     8130 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/phylip.py
+--rw-rw-rw-   0        0        0     5184 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/text_arraytable.py
+--rw-rw-rw-   0        0        0     1446 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/
+--rw-rw-rw-   0        0        0     2573 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/evolevents.py
+--rw-rw-rw-   0        0        0    30595 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/phylotree.py
+--rw-rw-rw-   0        0        0     8169 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/reconciliation.py
+--rw-rw-rw-   0        0        0     9007 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/spoverlap.py
+--rw-rw-rw-   0        0        0     1587 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/
+--rw-rw-rw-   0        0        0    26457 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/phylomeDB.py
+--rw-rw-rw-   0        0        0    61120 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/phylomeDB3.py
+--rw-rw-rw-   0        0        0     2411 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/
+--rw-rw-rw-   0        0        0   190180 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/_phyloxml.py
+--rw-rw-rw-   0        0        0     5845 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/_phyloxml_tree.py
+--rw-rw-rw-   0        0        0     2456 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/
+--rw-rw-rw-   0        0        0     8266 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/common.py
+--rw-rw-rw-   0        0        0    51563 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/datasets.py
+--rw-rw-rw-   0        0        0     9998 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/ete.py
+--rw-rw-rw-   0        0        0      996 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/my_test.py
+--rw-rw-rw-   0        0        0      210 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_all.py
+--rw-rw-rw-   0        0        0      463 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_api.py
+--rw-rw-rw-   0        0        0     2289 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_arraytable.py
+--rw-rw-rw-   0        0        0     3550 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_circle_label.py
+--rw-rw-rw-   0        0        0     1017 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_clustertree.py
+--rw-rw-rw-   0        0        0      923 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_compare_tree.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/
+--rw-rw-rw-   0        0        0     1451 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_genetree.py
+--rw-rw-rw-   0        0        0     3902 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_manual_alg.py
+--rw-rw-rw-   0        0        0     3425 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_modeltest.py
+--rw-rw-rw-   0        0        0     2624 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_sptree.py
+--rw-rw-rw-   0        0        0       63 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/__init__.py
+--rw-rw-rw-   0        0        0      243 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/__main__.py
+--rw-rw-rw-   0        0        0     2203 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_evol.py
+--rw-rw-rw-   0        0        0     9669 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_evol.py
+--rw-rw-rw-   0        0        0     1484 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_interop.py
+--rw-rw-rw-   0        0        0     5601 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ncbiquery.py
+--rw-rw-rw-   0        0        0    17082 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_phylotree.py
+--rw-rw-rw-   0        0        0     3778 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_seqgroup.py
+--rw-rw-rw-   0        0        0    79064 2022-12-22 06:31:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_tree.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/
+--rw-rw-rw-   0        0        0     1370 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/barchart_and_piechart_faces.py
+--rw-rw-rw-   0        0        0     1354 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/bubble_map.py
+--rw-rw-rw-   0        0        0     1625 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/face_grid.py
+--rw-rw-rw-   0        0        0     4011 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/face_positions.py
+--rw-rw-rw-   0        0        0      799 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/face_rotation.py
+--rw-rw-rw-   0        0        0      839 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/floating_piecharts.py
+--rw-rw-rw-   0        0        0     5155 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/img_faces.py
+--rw-rw-rw-   0        0        0     4163 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/item_faces.py
+--rw-rw-rw-   0        0        0     5696 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/new_seq_face.py
+--rw-rw-rw-   0        0        0     1195 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/node_background.py
+--rw-rw-rw-   0        0        0     2038 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/node_style.py
+--rw-rw-rw-   0        0        0     1429 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/phylotree_visualization.py
+--rw-rw-rw-   0        0        0     3814 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/random_draw.py
+--rw-rw-rw-   0        0        0     2300 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/seq_motif_faces.py
+--rw-rw-rw-   0        0        0     5093 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/test_all_treeview.py
+--rw-rw-rw-   0        0        0     1356 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/tree_faces.py
+--rw-rw-rw-   0        0        0     1950 2022-12-22 06:31:26.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/tree_stacking.py
+--rw-rw-rw-   0        0        0     1488 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/tree_stacking2.py
+--rw-rw-rw-   0        0        0        0 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/__init__.py
+--rw-rw-rw-   0        0        0     2131 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_xml_parsers.py
+--rw-rw-rw-   0        0        0    54107 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/tree_diff.py
+--rw-rw-rw-   0        0        0        0 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/
+--rw-rw-rw-   0        0        0     8266 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/common.py
+--rw-rw-rw-   0        0        0     9846 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete.py
+--rw-rw-rw-   0        0        0     4841 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_annotate.py
+--rw-rw-rw-   0        0        0    48239 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/
+--rw-rw-rw-   0        0        0     7168 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/apps.py
+--rw-rw-rw-   0        0        0    18183 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/configcheck.py
+--rw-rw-rw-   0        0        0    88890 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/configobj.py
+--rw-rw-rw-   0        0        0     4295 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/curses_gui.py
+--rw-rw-rw-   0        0        0    15996 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/db.py
+--rw-rw-rw-   0        0        0     2131 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/errors.py
+--rw-rw-rw-   0        0        0     3540 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/getch.py
+--rw-rw-rw-   0        0        0    16370 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/interface.py
+--rw-rw-rw-   0        0        0     2724 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/logger.py
+--rw-rw-rw-   0        0        0     8498 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/master_job.py
+--rw-rw-rw-   0        0        0    23315 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/master_task.py
+--rw-rw-rw-   0        0        0    10439 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/ordereddict.py
+--rw-rw-rw-   0        0        0    28022 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/scheduler.py
+--rw-rw-rw-   0        0        0    11038 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/seqio.py
+--rw-rw-rw-   0        0        0     5978 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/sge.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/
+--rw-rw-rw-   0        0        0     3233 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/clustalo.py
+--rw-rw-rw-   0        0        0    22121 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/cog_creator.py
+--rw-rw-rw-   0        0        0    10555 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/cog_selector.py
+--rw-rw-rw-   0        0        0    11871 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/concat_alg.py
+--rw-rw-rw-   0        0        0     3039 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/dialigntx.py
+--rw-rw-rw-   0        0        0     1474 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/dummyalg.py
+--rw-rw-rw-   0        0        0     2783 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/dummytree.py
+--rw-rw-rw-   0        0        0     3670 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/fasttree.py
+--rw-rw-rw-   0        0        0     2908 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/iqtree.py
+--rw-rw-rw-   0        0        0     4092 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/jmodeltest.py
+--rw-rw-rw-   0        0        0     2976 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/mafft.py
+--rw-rw-rw-   0        0        0    10549 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/merger.py
+--rw-rw-rw-   0        0        0     9329 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/meta_aligner.py
+--rw-rw-rw-   0        0        0     3066 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/msf.py
+--rw-rw-rw-   0        0        0     2956 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/muscle.py
+--rw-rw-rw-   0        0        0     5739 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/phyml.py
+--rw-rw-rw-   0        0        0     2413 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/pmodeltest.py
+--rw-rw-rw-   0        0        0     6215 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/prottest.py
+--rw-rw-rw-   0        0        0     6445 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/prottest2.py
+--rw-rw-rw-   0        0        0    11401 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/raxml.py
+--rw-rw-rw-   0        0        0     1526 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/tcoffee.py
+--rw-rw-rw-   0        0        0     4158 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/trimal.py
+--rw-rw-rw-   0        0        0     4331 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/uhire.py
+--rw-rw-rw-   0        0        0      648 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/__init__.py
+--rw-rw-rw-   0        0        0    20613 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/utils.py
+--rw-rw-rw-   0        0        0    47320 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/validate.py
+--rw-rw-rw-   0        0        0     8342 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/visualize.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/
+--rw-rw-rw-   0        0        0    25825 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/common.py
+--rw-rw-rw-   0        0        0    20533 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/genetree.py
+--rw-rw-rw-   0        0        0    12687 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/supermatrix.py
+--rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/__init__.py
+--rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/__init__.py
+--rw-rw-rw-   0        0        0     8118 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_compare.py
+--rw-rw-rw-   0        0        0    42798 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_evol.py
+--rw-rw-rw-   0        0        0     1713 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_expand.py
+--rw-rw-rw-   0        0        0     2246 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_extract.py
+--rw-rw-rw-   0        0        0     2038 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_generate.py
+--rw-rw-rw-   0        0        0    15107 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_maptrees.py
+--rw-rw-rw-   0        0        0     4959 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_mod.py
+--rw-rw-rw-   0        0        0     8531 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_ncbiquery.py
+--rw-rw-rw-   0        0        0     2089 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_split.py
+--rw-rw-rw-   0        0        0     2344 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_upgrade_tools.py
+--rw-rw-rw-   0        0        0    24626 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_view.py
+--rw-rw-rw-   0        0        0     1324 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/utils.py
+--rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/
+--rw-rw-rw-   0        0        0    98303 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/CustomWidgets.py
+--rw-rw-rw-   0        0        0     5586 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/drawer.py
+--rw-rw-rw-   0        0        0   192279 2022-12-22 06:31:19.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/ete_resources_rc.py
+--rw-rw-rw-   0        0        0    79820 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/faces.py
+--rw-rw-rw-   0        0        0     9590 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/layouts.py
+--rw-rw-rw-   0        0        0    11651 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Lg_attribute.py
+--rw-rw-rw-   0        0        0    25697 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Lg_compare_tree_setting.py
+--rw-rw-rw-   0        0        0    30165 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/main.py
+--rw-rw-rw-   0        0        0    11882 2022-12-22 06:31:20.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/node_gui_actions.py
+--rw-rw-rw-   0        0        0     5029 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt.py
+--rw-rw-rw-   0        0        0    15804 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_circular_render.py
+--rw-rw-rw-   0        0        0    25242 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_face_render.py
+--rw-rw-rw-   0        0        0   193420 2022-12-22 06:31:20.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_gui.py
+--rw-rw-rw-   0        0        0     3872 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_rect_render.py
+--rw-rw-rw-   0        0        0    54336 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_render.py
+--rw-rw-rw-   0        0        0    10117 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/shape2fig.py
+--rw-rw-rw-   0        0        0    41790 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/svg_colors.py
+--rw-rw-rw-   0        0        0     2224 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/templates.py
+--rw-rw-rw-   0        0        0     3063 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor.py
+--rw-rw-rw-   0        0        0     3597 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor2.py
+--rw-rw-rw-   0        0        0     3392 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor3.py
+--rw-rw-rw-   0        0        0    16866 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor_attr.py
+--rw-rw-rw-   0        0        0     5841 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor_tax.py
+--rw-rw-rw-   0        0        0     4175 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_selector.py
+--rw-rw-rw-   0        0        0    23346 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_compare_setting.py
+--rw-rw-rw-   0        0        0    24397 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_ete_qt4app.py
+--rw-rw-rw-   0        0        0     4231 2022-12-22 06:31:20.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_about.py
+--rw-rw-rw-   0        0        0    15043 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_mainwindow.py
+--rw-rw-rw-   0        0        0     2634 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_open_newick.py
+--rw-rw-rw-   0        0        0     5120 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_search_dialog.py
+--rw-rw-rw-   0        0        0     7271 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_show_codeml.py
+--rw-rw-rw-   0        0        0     6196 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_show_newick.py
+--rw-rw-rw-   0        0        0     1553 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/__init__.py
+--rw-rw-rw-   0        0        0     7913 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/utils.py
+--rw-rw-rw-   0        0        0       73 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/version.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/webplugin/
+--rw-rw-rw-   0        0        0    15146 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/webplugin/webapp.py
+--rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/webplugin/__init__.py
+--rw-rw-rw-   0        0        0     4478 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/_ph.py
+--rw-rw-rw-   0        0        0     2422 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/ete3/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/manual/
+--rw-rw-rw-   0        0        0  5098808 2020-08-06 13:20:06.000000 PhyloSuite-1.2.3.post1/PhyloSuite/manual/Manual.pdf
+--rw-rw-rw-   0        0        0    16036 2023-02-21 13:26:15.000000 PhyloSuite-1.2.3.post1/PhyloSuite/NEWS_version.md
+--rw-rw-rw-   0        0        0     6113 2023-04-07 00:00:02.000000 PhyloSuite-1.2.3.post1/PhyloSuite/PhyloSuite.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/
+--rw-rw-rw-   0        0        0    27020 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/codonusage.py
+--rw-rw-rw-   0        0        0   171168 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/CustomWidget.py
+--rw-rw-rw-   0        0        0   254663 2023-02-21 13:08:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/factory.py
+--rw-rw-rw-   0        0        0     6981 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/findANDreplace.py
+--rw-rw-rw-   0        0        0   399894 2023-02-12 14:09:32.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/handleGB.py
+--rw-rw-rw-   0        0        0     5582 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Launcher.py
+--rw-rw-rw-   0        0        0    13336 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_addFiles.py
+--rw-rw-rw-   0        0        0    39871 2022-09-09 02:14:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ASTRAL-old.py
+--rw-rw-rw-   0        0        0    46006 2023-02-21 13:12:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ASTRAL.py
+--rw-rw-rw-   0        0        0     1040 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ClipQuery.py
+--rw-rw-rw-   0        0        0     9687 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/LG_colorsets.py
+--rw-rw-rw-   0        0        0    23008 2023-02-21 13:13:57.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_compareTable.py
+--rw-rw-rw-   0        0        0    51254 2023-02-21 13:13:57.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Concatenate.py
+--rw-rw-rw-   0        0        0    13878 2023-02-21 13:14:40.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ConvertFmt.py
+--rw-rw-rw-   0        0        0    10560 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_displaySettings.py
+--rw-rw-rw-   0        0        0    44614 2023-04-07 00:44:44.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_drawGO.py
+--rw-rw-rw-   0        0        0    52677 2023-02-21 13:14:40.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_extracter.py
+--rw-rw-rw-   0        0        0    24725 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_extractSettings.py
+--rw-rw-rw-   0        0        0    46743 2023-02-21 13:17:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_FastTree.py
+--rw-rw-rw-   0        0        0    28159 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_gbEditor.py
+--rw-rw-rw-   0        0        0    40832 2023-02-21 13:17:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Gblocks.py
+--rw-rw-rw-   0        0        0    40109 2023-02-21 13:17:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_HmmCleaner.py
+--rw-rw-rw-   0        0        0    88137 2023-02-21 13:17:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_IQTREE.py
+--rw-rw-rw-   0        0        0    50622 2023-02-21 13:17:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_macse.py
+--rw-rw-rw-   0        0        0    69730 2023-02-21 13:17:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_mafft.py
+--rw-rw-rw-   0        0        0     4363 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Manual_update.py
+--rw-rw-rw-   0        0        0    61737 2023-02-21 13:19:40.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ModelFinder.py
+--rw-rw-rw-   0        0        0    90992 2023-02-21 13:19:40.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Mrbayes.py
+--rw-rw-rw-   0        0        0     5039 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_NCBI_DB.py
+--rw-rw-rw-   0        0        0      606 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_NmlPoPup.py
+--rw-rw-rw-   0        0        0    57952 2023-02-21 13:22:45.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_parseANNT.py
+--rw-rw-rw-   0        0        0    18033 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_PartitionEditer.py
+--rw-rw-rw-   0        0        0    74771 2023-02-21 13:22:45.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_PartitionFinder.py
+--rw-rw-rw-   0        0        0    39346 2023-02-21 13:21:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_RSCUfig.py
+--rw-rw-rw-   0        0        0    52918 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_seqViewer.py
+--rw-rw-rw-   0        0        0    30542 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_SerhNCBI.py
+--rw-rw-rw-   0        0        0   141381 2023-02-18 08:09:20.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_settings.py
+--rw-rw-rw-   0        0        0    18974 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_tiger.py
+--rw-rw-rw-   0        0        0    60010 2022-12-30 12:40:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/LG_TreeSuite.py
+--rw-rw-rw-   0        0        0    54438 2023-02-21 13:22:45.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_trimAl.py
+--rw-rw-rw-   0        0        0   110272 2023-02-21 13:31:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_workflow.py
+--rw-rw-rw-   0        0        0   220840 2023-02-19 02:14:35.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/main.py
+--rw-rw-rw-   0        0        0    35137 2023-02-19 01:32:14.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/plugins.py
+--rw-rw-rw-   0        0        0   188993 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/preset_values.py
+--rw-rw-rw-   0        0        0    11991 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/rscuStack.py
+--rw-rw-rw-   0        0        0     6016 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/rscuSum.py
+--rw-rw-rw-   0        0        0     5783 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/tiger_index.py
+--rw-rw-rw-   0        0        0     9492 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/tiger_output.py
+--rw-rw-rw-   0        0        0     6293 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/tiger_rate.py
+--rw-rw-rw-   0        0        0    11220 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/update.py
+--rw-rw-rw-   0        0        0     2199 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/src/__init__.py
+--rw-rw-rw-   0        0        0    16929 2022-09-14 04:05:21.000000 PhyloSuite-1.2.3.post1/PhyloSuite/style.qss
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/tests/
+--rw-rw-rw-   0        0        0  1135194 2019-05-09 01:23:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/tests/marine_turtle_mitogenomes.gb
+--rw-rw-rw-   0        0        0  1227865 2019-05-12 01:04:34.000000 PhyloSuite-1.2.3.post1/PhyloSuite/tests/Test_run.pdf
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/
+--rw-rw-rw-   0        0        0     4016 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/about.ui
+--rw-rw-rw-   0        0        0     7732 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/addFile.ui
+--rw-rw-rw-   0        0        0    22705 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/ASTRAL.ui
+--rw-rw-rw-   0        0        0     3105 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/authenticationdialog.ui
+--rw-rw-rw-   0        0        0     4556 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/clipboard_query.ui
+--rw-rw-rw-   0        0        0     3605 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/color_sets.ui
+--rw-rw-rw-   0        0        0     9586 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/compareTable.ui
+--rw-rw-rw-   0        0        0    12930 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Concatenate.ui
+--rw-rw-rw-   0        0        0     7621 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/ConvertFmt.ui
+--rw-rw-rw-   0        0        0     3408 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/dirichlet_mrbayes.ui
+--rw-rw-rw-   0        0        0     6226 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/display_setting.ui
+--rw-rw-rw-   0        0        0    43305 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/drawGO.ui
+--rw-rw-rw-   0        0        0     8357 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/exe_path.ui
+--rw-rw-rw-   0        0        0    52754 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/extracter.ui
+--rw-rw-rw-   0        0        0    26817 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/extract_setting.ui
+--rw-rw-rw-   0        0        0    21289 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/FastTree.ui
+--rw-rw-rw-   0        0        0     5901 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/gbEditor.ui
+--rw-rw-rw-   0        0        0    22636 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/gblocks.ui
+--rw-rw-rw-   0        0        0    18708 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/HmmCleaner.ui
+--rw-rw-rw-   0        0        0    39532 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/IQ_TREE.ui
+--rw-rw-rw-   0        0        0     5938 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/launcher.ui
+--rw-rw-rw-   0        0        0    47674 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MACSE.ui
+--rw-rw-rw-   0        0        0    29252 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/mafft.ui
+--rw-rw-rw-   0        0        0    69051 2023-02-14 06:58:18.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MainWindow.ui
+--rw-rw-rw-   0        0        0     4087 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Manual_update.ui
+--rw-rw-rw-   0        0        0     6991 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/mergeGBfile.ui
+--rw-rw-rw-   0        0        0    25255 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/ModelFinder.ui
+--rw-rw-rw-   0        0        0    31095 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MrBayes.ui
+--rw-rw-rw-   0        0        0 11452728 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/myRes_rc.py
+--rw-rw-rw-   0        0        0     7942 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/NCBI.ui
+--rw-rw-rw-   0        0        0     8247 2022-12-27 02:37:19.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/NCBI_db.ui
+--rw-rw-rw-   0        0        0     3269 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/nexViewer.ui
+--rw-rw-rw-   0        0        0     3166 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/NmlPoPup.ui
+--rw-rw-rw-   0        0        0    14983 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/parseANNT.ui
+--rw-rw-rw-   0        0        0     2844 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/parseANNT_settings.ui
+--rw-rw-rw-   0        0        0    29153 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/partitionfinder.ui
+--rw-rw-rw-   0        0        0     4729 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/partition_defination.ui
+--rw-rw-rw-   0        0        0     6116 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/partition_editor.ui
+--rw-rw-rw-   0        0        0    10821 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/PF_exe_path.ui
+--rw-rw-rw-   0        0        0    64135 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/plot.ui
+--rw-rw-rw-   0        0        0    11605 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Plot_options.ui
+--rw-rw-rw-   0        0        0     2615 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/popUp.ui
+--rw-rw-rw-   0        0        0    30994 2022-12-22 06:31:44.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/RSCUfig.ui
+--rw-rw-rw-   0        0        0    13884 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/SeqViewer.ui
+--rw-rw-rw-   0        0        0     2475 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/seqViewSetting.ui
+--rw-rw-rw-   0        0        0    31899 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/settings.ui
+--rw-rw-rw-   0        0        0    16524 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Tiger.ui
+--rw-rw-rw-   0        0        0    22164 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/TreeSuite.ui
+--rw-rw-rw-   0        0        0    38340 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/trimAl.ui
+--rw-rw-rw-   0        0        0     3537 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/tRNA_reANNT.ui
+--rw-rw-rw-   0        0        0     3724 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_about.py
+--rw-rw-rw-   0        0        0     8041 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_addFile.py
+--rw-rw-rw-   0        0        0    22320 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_ASTRAL.py
+--rw-rw-rw-   0        0        0     5623 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_clipboard_query.py
+--rw-rw-rw-   0        0        0     4377 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_color_sets.py
+--rw-rw-rw-   0        0        0     9324 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_compareTable.py
+--rw-rw-rw-   0        0        0    13737 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_Concatenate.py
+--rw-rw-rw-   0        0        0     8470 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_ConvertFmt.py
+--rw-rw-rw-   0        0        0     4139 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_dirichlet_mrbayes.py
+--rw-rw-rw-   0        0        0     6454 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_display_setting.py
+--rw-rw-rw-   0        0        0    41325 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_drawGO.py
+--rw-rw-rw-   0        0        0     8447 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_exe_path.py
+--rw-rw-rw-   0        0        0    44416 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_extracter.py
+--rw-rw-rw-   0        0        0    21419 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_extract_setting.py
+--rw-rw-rw-   0        0        0    19913 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_FastTree.py
+--rw-rw-rw-   0        0        0     6175 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_gbEditor.py
+--rw-rw-rw-   0        0        0    24773 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_gblocks.py
+--rw-rw-rw-   0        0        0    19157 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_HmmCleaner.py
+--rw-rw-rw-   0        0        0    34106 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_IQ_TREE.py
+--rw-rw-rw-   0        0        0     6671 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_launcher.py
+--rw-rw-rw-   0        0        0    41130 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MACSE.py
+--rw-rw-rw-   0        0        0    24404 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_mafft.py
+--rw-rw-rw-   0        0        0    45444 2022-09-21 14:48:04.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MainWindow - 副本.py
+--rw-rw-rw-   0        0        0    46303 2023-02-14 06:58:24.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MainWindow.py
+--rw-rw-rw-   0        0        0     4401 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_Manual_update.py
+--rw-rw-rw-   0        0        0    23962 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_ModelFinder.py
+--rw-rw-rw-   0        0        0    28021 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MrBayes.py
+--rw-rw-rw-   0        0        0     9199 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_NCBI.py
+--rw-rw-rw-   0        0        0     8188 2022-12-27 02:37:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_NCBI_db.py
+--rw-rw-rw-   0        0        0     4035 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_nexViewer.py
+--rw-rw-rw-   0        0        0     3827 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_NmlPoPup.py
+--rw-rw-rw-   0        0        0      203 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_notify.py
+--rw-rw-rw-   0        0        0    16244 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_parseANNT.py
+--rw-rw-rw-   0        0        0     3558 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_parseANNT_settings.py
+--rw-rw-rw-   0        0        0    27853 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_partitionfinder.py
+--rw-rw-rw-   0        0        0     5975 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_partition_defination.py
+--rw-rw-rw-   0        0        0     7025 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_partition_editor.py
+--rw-rw-rw-   0        0        0    11497 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_PF_exe_path.py
+--rw-rw-rw-   0        0        0    45437 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_plot.py
+--rw-rw-rw-   0        0        0     3145 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_popUp.py
+--rw-rw-rw-   0        0        0    27709 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_RSCUfig.py
+--rw-rw-rw-   0        0        0    13198 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_SeqViewer.py
+--rw-rw-rw-   0        0        0     3510 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_seqViewSetting.py
+--rw-rw-rw-   0        0        0    33438 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_settings.py
+--rw-rw-rw-   0        0        0    16808 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_Tiger.py
+--rw-rw-rw-   0        0        0    23254 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_TreeSuite.py
+--rw-rw-rw-   0        0        0    33653 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_trimAl.py
+--rw-rw-rw-   0        0        0     4302 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_tRNA_reANNT.py
+--rw-rw-rw-   0        0        0     2251 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_untitled.py
+--rw-rw-rw-   0        0        0    13677 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_work_flow.py
+--rw-rw-rw-   0        0        0     1720 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/untitled.ui
+--rw-rw-rw-   0        0        0    14515 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/work_flow.ui
+--rw-rw-rw-   0        0        0     2199 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/__init__.py
+--rw-rw-rw-   0        0        0        0 2019-09-07 09:01:11.000000 PhyloSuite-1.2.3.post1/PhyloSuite/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/
+--rw-rw-rw-   0        0        0        1 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       60 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0     6075 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      300 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/requires.txt
+--rw-rw-rw-   0        0        0    13856 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0       11 2023-04-07 00:51:27.000000 PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0     6075 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/PKG-INFO
+--rw-rw-rw-   0        0        0     4600 2020-08-06 02:01:56.000000 PhyloSuite-1.2.3.post1/README.md
+--rw-rw-rw-   0        0        0      114 2023-04-07 00:51:28.000000 PhyloSuite-1.2.3.post1/setup.cfg
+--rw-rw-rw-   0        0        0     5163 2023-04-07 00:51:12.000000 PhyloSuite-1.2.3.post1/setup.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/
++-rw-rw-rw-   0        0        0    35823 2019-09-07 09:01:13.000000 PhyloSuite-1.2.3rc4/LICENSE
++-rw-rw-rw-   0        0        0      333 2022-11-21 05:33:12.000000 PhyloSuite-1.2.3rc4/MANIFEST.in
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/
++-rw-rw-rw-   0        0        0     6080 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/citation.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/
++-rw-rw-rw-   0        0        0     8555 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/clustertree.py
++-rw-rw-rw-   0        0        0     6288 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/clustvalidation.py
++-rw-rw-rw-   0        0        0     1542 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/
++-rw-rw-rw-   0        0        0     9020 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/arraytable.py
++-rw-rw-rw-   0        0        0     6037 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/seqgroup.py
++-rw-rw-rw-   0        0        0    98099 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/tree.py
++-rw-rw-rw-   0        0        0     1446 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/
++-rw-rw-rw-   0        0        0    20476 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/control.py
++-rw-rw-rw-   0        0        0    23604 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/evoltree.py
++-rw-rw-rw-   0        0        0    15173 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/model.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/
++-rw-rw-rw-   0        0        0    13344 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/codemlparser.py
++-rw-rw-rw-   0        0        0     3177 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/slrparser.py
++-rw-rw-rw-   0        0        0     1630 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/__init__.py
++-rw-rw-rw-   0        0        0    12335 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/utils.py
++-rw-rw-rw-   0        0        0     1801 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/ncbi_taxonomy/
++-rw-rw-rw-   0        0        0    35220 2023-01-01 05:52:10.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/ncbi_taxonomy/ncbiquery.py
++-rw-rw-rw-   0        0        0     1509 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/ncbi_taxonomy/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/
++-rw-rw-rw-   0        0        0   749400 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/_nexml.py
++-rw-rw-rw-   0        0        0     7101 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/_nexml_tree.py
++-rw-rw-rw-   0        0        0     3264 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/orthoxml/
++-rw-rw-rw-   0        0        0    85296 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/orthoxml/_orthoxml.py
++-rw-rw-rw-   0        0        0     1509 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/orthoxml/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/
++-rw-rw-rw-   0        0        0     4449 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/fasta.py
++-rw-rw-rw-   0        0        0    20803 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/newick.py
++-rw-rw-rw-   0        0        0     6363 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/paml.py
++-rw-rw-rw-   0        0        0     8130 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/phylip.py
++-rw-rw-rw-   0        0        0     5184 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/text_arraytable.py
++-rw-rw-rw-   0        0        0     1446 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/
++-rw-rw-rw-   0        0        0     2573 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/evolevents.py
++-rw-rw-rw-   0        0        0    30595 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/phylotree.py
++-rw-rw-rw-   0        0        0     8169 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/reconciliation.py
++-rw-rw-rw-   0        0        0     9007 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/spoverlap.py
++-rw-rw-rw-   0        0        0     1587 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/
++-rw-rw-rw-   0        0        0    26457 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/phylomeDB.py
++-rw-rw-rw-   0        0        0    61120 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/phylomeDB3.py
++-rw-rw-rw-   0        0        0     2411 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/
++-rw-rw-rw-   0        0        0   190180 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/_phyloxml.py
++-rw-rw-rw-   0        0        0     5845 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/_phyloxml_tree.py
++-rw-rw-rw-   0        0        0     2456 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/
++-rw-rw-rw-   0        0        0     8266 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/common.py
++-rw-rw-rw-   0        0        0    51563 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/datasets.py
++-rw-rw-rw-   0        0        0     9998 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/ete.py
++-rw-rw-rw-   0        0        0      996 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/my_test.py
++-rw-rw-rw-   0        0        0      210 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_all.py
++-rw-rw-rw-   0        0        0      463 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_api.py
++-rw-rw-rw-   0        0        0     2289 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_arraytable.py
++-rw-rw-rw-   0        0        0     3550 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_circle_label.py
++-rw-rw-rw-   0        0        0     1017 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_clustertree.py
++-rw-rw-rw-   0        0        0      923 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_compare_tree.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/
++-rw-rw-rw-   0        0        0     1451 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_genetree.py
++-rw-rw-rw-   0        0        0     3902 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_manual_alg.py
++-rw-rw-rw-   0        0        0     3425 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_modeltest.py
++-rw-rw-rw-   0        0        0     2624 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_sptree.py
++-rw-rw-rw-   0        0        0       63 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/__init__.py
++-rw-rw-rw-   0        0        0      243 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/__main__.py
++-rw-rw-rw-   0        0        0     2203 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_evol.py
++-rw-rw-rw-   0        0        0     9669 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_evol.py
++-rw-rw-rw-   0        0        0     1484 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_interop.py
++-rw-rw-rw-   0        0        0     5601 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ncbiquery.py
++-rw-rw-rw-   0        0        0    17082 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_phylotree.py
++-rw-rw-rw-   0        0        0     3778 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_seqgroup.py
++-rw-rw-rw-   0        0        0    79064 2022-12-22 06:31:28.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_tree.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/
++-rw-rw-rw-   0        0        0     1370 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/barchart_and_piechart_faces.py
++-rw-rw-rw-   0        0        0     1354 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/bubble_map.py
++-rw-rw-rw-   0        0        0     1625 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/face_grid.py
++-rw-rw-rw-   0        0        0     4011 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/face_positions.py
++-rw-rw-rw-   0        0        0      799 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/face_rotation.py
++-rw-rw-rw-   0        0        0      839 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/floating_piecharts.py
++-rw-rw-rw-   0        0        0     5155 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/img_faces.py
++-rw-rw-rw-   0        0        0     4163 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/item_faces.py
++-rw-rw-rw-   0        0        0     5696 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/new_seq_face.py
++-rw-rw-rw-   0        0        0     1195 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/node_background.py
++-rw-rw-rw-   0        0        0     2038 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/node_style.py
++-rw-rw-rw-   0        0        0     1429 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/phylotree_visualization.py
++-rw-rw-rw-   0        0        0     3814 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/random_draw.py
++-rw-rw-rw-   0        0        0     2300 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/seq_motif_faces.py
++-rw-rw-rw-   0        0        0     5093 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/test_all_treeview.py
++-rw-rw-rw-   0        0        0     1356 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/tree_faces.py
++-rw-rw-rw-   0        0        0     1950 2022-12-22 06:31:26.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/tree_stacking.py
++-rw-rw-rw-   0        0        0     1488 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/tree_stacking2.py
++-rw-rw-rw-   0        0        0        0 2022-12-22 06:31:25.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/__init__.py
++-rw-rw-rw-   0        0        0     2131 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_xml_parsers.py
++-rw-rw-rw-   0        0        0    54107 2022-12-22 06:31:31.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/tree_diff.py
++-rw-rw-rw-   0        0        0        0 2022-12-22 06:31:32.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/
++-rw-rw-rw-   0        0        0     8266 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/common.py
++-rw-rw-rw-   0        0        0     9846 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete.py
++-rw-rw-rw-   0        0        0     4841 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_annotate.py
++-rw-rw-rw-   0        0        0    48239 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/
++-rw-rw-rw-   0        0        0     7168 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/apps.py
++-rw-rw-rw-   0        0        0    18183 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/configcheck.py
++-rw-rw-rw-   0        0        0    88890 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/configobj.py
++-rw-rw-rw-   0        0        0     4295 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/curses_gui.py
++-rw-rw-rw-   0        0        0    15996 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/db.py
++-rw-rw-rw-   0        0        0     2131 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/errors.py
++-rw-rw-rw-   0        0        0     3540 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/getch.py
++-rw-rw-rw-   0        0        0    16370 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/interface.py
++-rw-rw-rw-   0        0        0     2724 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/logger.py
++-rw-rw-rw-   0        0        0     8498 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/master_job.py
++-rw-rw-rw-   0        0        0    23315 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/master_task.py
++-rw-rw-rw-   0        0        0    10439 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/ordereddict.py
++-rw-rw-rw-   0        0        0    28022 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/scheduler.py
++-rw-rw-rw-   0        0        0    11038 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/seqio.py
++-rw-rw-rw-   0        0        0     5978 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/sge.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/
++-rw-rw-rw-   0        0        0     3233 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/clustalo.py
++-rw-rw-rw-   0        0        0    22121 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/cog_creator.py
++-rw-rw-rw-   0        0        0    10555 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/cog_selector.py
++-rw-rw-rw-   0        0        0    11871 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/concat_alg.py
++-rw-rw-rw-   0        0        0     3039 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/dialigntx.py
++-rw-rw-rw-   0        0        0     1474 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/dummyalg.py
++-rw-rw-rw-   0        0        0     2783 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/dummytree.py
++-rw-rw-rw-   0        0        0     3670 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/fasttree.py
++-rw-rw-rw-   0        0        0     2908 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/iqtree.py
++-rw-rw-rw-   0        0        0     4092 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/jmodeltest.py
++-rw-rw-rw-   0        0        0     2976 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/mafft.py
++-rw-rw-rw-   0        0        0    10549 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/merger.py
++-rw-rw-rw-   0        0        0     9329 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/meta_aligner.py
++-rw-rw-rw-   0        0        0     3066 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/msf.py
++-rw-rw-rw-   0        0        0     2956 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/muscle.py
++-rw-rw-rw-   0        0        0     5739 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/phyml.py
++-rw-rw-rw-   0        0        0     2413 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/pmodeltest.py
++-rw-rw-rw-   0        0        0     6215 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/prottest.py
++-rw-rw-rw-   0        0        0     6445 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/prottest2.py
++-rw-rw-rw-   0        0        0    11401 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/raxml.py
++-rw-rw-rw-   0        0        0     1526 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/tcoffee.py
++-rw-rw-rw-   0        0        0     4158 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/trimal.py
++-rw-rw-rw-   0        0        0     4331 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/uhire.py
++-rw-rw-rw-   0        0        0      648 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/__init__.py
++-rw-rw-rw-   0        0        0    20613 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/utils.py
++-rw-rw-rw-   0        0        0    47320 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/validate.py
++-rw-rw-rw-   0        0        0     8342 2022-12-22 06:31:37.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/visualize.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/
++-rw-rw-rw-   0        0        0    25825 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/common.py
++-rw-rw-rw-   0        0        0    20533 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/genetree.py
++-rw-rw-rw-   0        0        0    12687 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/supermatrix.py
++-rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/__init__.py
++-rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/__init__.py
++-rw-rw-rw-   0        0        0     8118 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_compare.py
++-rw-rw-rw-   0        0        0    42798 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_evol.py
++-rw-rw-rw-   0        0        0     1713 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_expand.py
++-rw-rw-rw-   0        0        0     2246 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_extract.py
++-rw-rw-rw-   0        0        0     2038 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_generate.py
++-rw-rw-rw-   0        0        0    15107 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_maptrees.py
++-rw-rw-rw-   0        0        0     4959 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_mod.py
++-rw-rw-rw-   0        0        0     8531 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_ncbiquery.py
++-rw-rw-rw-   0        0        0     2089 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_split.py
++-rw-rw-rw-   0        0        0     2344 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_upgrade_tools.py
++-rw-rw-rw-   0        0        0    24626 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_view.py
++-rw-rw-rw-   0        0        0     1324 2022-12-22 06:31:36.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/utils.py
++-rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/
++-rw-rw-rw-   0        0        0    98303 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/CustomWidgets.py
++-rw-rw-rw-   0        0        0     5586 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/drawer.py
++-rw-rw-rw-   0        0        0   192279 2022-12-22 06:31:19.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/ete_resources_rc.py
++-rw-rw-rw-   0        0        0    79820 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/faces.py
++-rw-rw-rw-   0        0        0     9590 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/layouts.py
++-rw-rw-rw-   0        0        0    11651 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Lg_attribute.py
++-rw-rw-rw-   0        0        0    25697 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Lg_compare_tree_setting.py
++-rw-rw-rw-   0        0        0    30165 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/main.py
++-rw-rw-rw-   0        0        0    11882 2022-12-22 06:31:20.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/node_gui_actions.py
++-rw-rw-rw-   0        0        0     5029 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt.py
++-rw-rw-rw-   0        0        0    15804 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_circular_render.py
++-rw-rw-rw-   0        0        0    25242 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_face_render.py
++-rw-rw-rw-   0        0        0   193420 2022-12-22 06:31:20.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_gui.py
++-rw-rw-rw-   0        0        0     3872 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_rect_render.py
++-rw-rw-rw-   0        0        0    54336 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_render.py
++-rw-rw-rw-   0        0        0    10117 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/shape2fig.py
++-rw-rw-rw-   0        0        0    41790 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/svg_colors.py
++-rw-rw-rw-   0        0        0     2224 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/templates.py
++-rw-rw-rw-   0        0        0     3063 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor.py
++-rw-rw-rw-   0        0        0     3597 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor2.py
++-rw-rw-rw-   0        0        0     3392 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor3.py
++-rw-rw-rw-   0        0        0    16866 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor_attr.py
++-rw-rw-rw-   0        0        0     5841 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor_tax.py
++-rw-rw-rw-   0        0        0     4175 2022-12-22 06:31:23.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_selector.py
++-rw-rw-rw-   0        0        0    23346 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_compare_setting.py
++-rw-rw-rw-   0        0        0    24397 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_ete_qt4app.py
++-rw-rw-rw-   0        0        0     4231 2022-12-22 06:31:20.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_about.py
++-rw-rw-rw-   0        0        0    15043 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_mainwindow.py
++-rw-rw-rw-   0        0        0     2634 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_open_newick.py
++-rw-rw-rw-   0        0        0     5120 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_search_dialog.py
++-rw-rw-rw-   0        0        0     7271 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_show_codeml.py
++-rw-rw-rw-   0        0        0     6196 2022-12-22 06:31:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_show_newick.py
++-rw-rw-rw-   0        0        0     1553 2022-12-22 06:31:22.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/__init__.py
++-rw-rw-rw-   0        0        0     7913 2022-12-22 06:31:24.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/utils.py
++-rw-rw-rw-   0        0        0       73 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/version.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/webplugin/
++-rw-rw-rw-   0        0        0    15146 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/webplugin/webapp.py
++-rw-rw-rw-   0        0        0     1445 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/webplugin/__init__.py
++-rw-rw-rw-   0        0        0     4478 2022-12-22 06:31:33.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/_ph.py
++-rw-rw-rw-   0        0        0     2422 2022-12-22 06:31:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/ete3/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/manual/
++-rw-rw-rw-   0        0        0  5098808 2020-08-06 13:20:06.000000 PhyloSuite-1.2.3rc4/PhyloSuite/manual/Manual.pdf
++-rw-rw-rw-   0        0        0    15652 2022-12-31 09:03:16.000000 PhyloSuite-1.2.3rc4/PhyloSuite/NEWS_version.md
++-rw-rw-rw-   0        0        0     6111 2022-12-31 03:56:40.000000 PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite.py
++-rw-rw-rw-   0        0        0     2088 2020-01-03 12:37:09.000000 PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite_citation.enw
++-rw-rw-rw-   0        0        0     2536 2020-01-03 12:36:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite_citation.ris
++-rw-rw-rw-   0        0        0     3886 2020-01-03 12:41:51.000000 PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite_citation.xml
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/
++-rw-rw-rw-   0        0        0    27020 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/codonusage.py
++-rw-rw-rw-   0        0        0   171168 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/CustomWidget.py
++-rw-rw-rw-   0        0        0   252840 2023-01-01 05:52:10.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/factory.py
++-rw-rw-rw-   0        0        0     6981 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/findANDreplace.py
++-rw-rw-rw-   0        0        0   399520 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/handleGB.py
++-rw-rw-rw-   0        0        0     5582 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Launcher.py
++-rw-rw-rw-   0        0        0    13336 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_addFiles.py
++-rw-rw-rw-   0        0        0    39871 2022-09-09 02:14:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ASTRAL-old.py
++-rw-rw-rw-   0        0        0    46278 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ASTRAL.py
++-rw-rw-rw-   0        0        0     1040 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ClipQuery.py
++-rw-rw-rw-   0        0        0     9687 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/LG_colorsets.py
++-rw-rw-rw-   0        0        0    23282 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_compareTable.py
++-rw-rw-rw-   0        0        0    51528 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Concatenate.py
++-rw-rw-rw-   0        0        0    14152 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ConvertFmt.py
++-rw-rw-rw-   0        0        0    10560 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_displaySettings.py
++-rw-rw-rw-   0        0        0    44254 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_drawGO.py
++-rw-rw-rw-   0        0        0    51351 2022-09-14 03:14:39.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_extracter-old.py
++-rw-rw-rw-   0        0        0    53035 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_extracter.py
++-rw-rw-rw-   0        0        0    24725 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_extractSettings.py
++-rw-rw-rw-   0        0        0    47015 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_FastTree.py
++-rw-rw-rw-   0        0        0    28159 2022-12-22 06:31:35.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_gbEditor.py
++-rw-rw-rw-   0        0        0    41104 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Gblocks.py
++-rw-rw-rw-   0        0        0    40381 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_HmmCleaner.py
++-rw-rw-rw-   0        0        0    88409 2022-12-28 13:08:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_IQTREE.py
++-rw-rw-rw-   0        0        0    50894 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_macse.py
++-rw-rw-rw-   0        0        0    70002 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_mafft.py
++-rw-rw-rw-   0        0        0     4363 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Manual_update.py
++-rw-rw-rw-   0        0        0    62089 2022-12-28 14:17:16.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ModelFinder.py
++-rw-rw-rw-   0        0        0    91264 2022-12-28 12:43:05.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Mrbayes.py
++-rw-rw-rw-   0        0        0     5039 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_NCBI_DB.py
++-rw-rw-rw-   0        0        0      606 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_NmlPoPup.py
++-rw-rw-rw-   0        0        0    58226 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_parseANNT.py
++-rw-rw-rw-   0        0        0    18033 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_PartitionEditer.py
++-rw-rw-rw-   0        0        0    75043 2022-12-31 08:22:53.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_PartitionFinder.py
++-rw-rw-rw-   0        0        0    39620 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_RSCUfig.py
++-rw-rw-rw-   0        0        0    52918 2022-12-22 06:31:38.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_seqViewer.py
++-rw-rw-rw-   0        0        0    30542 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_SerhNCBI.py
++-rw-rw-rw-   0        0        0   141381 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_settings.py
++-rw-rw-rw-   0        0        0    18974 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_tiger.py
++-rw-rw-rw-   0        0        0    60010 2022-12-30 12:40:28.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/LG_TreeSuite.py
++-rw-rw-rw-   0        0        0    54710 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_trimAl.py
++-rw-rw-rw-   0        0        0   109987 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_workflow.py
++-rw-rw-rw-   0        0        0   218608 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/main.py
++-rw-rw-rw-   0        0        0    35089 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/plugins.py
++-rw-rw-rw-   0        0        0   188993 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/preset_values.py
++-rw-rw-rw-   0        0        0    11991 2022-12-22 06:31:41.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/rscuStack.py
++-rw-rw-rw-   0        0        0     6016 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/rscuSum.py
++-rw-rw-rw-   0        0        0     5783 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/tiger_index.py
++-rw-rw-rw-   0        0        0     9492 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/tiger_output.py
++-rw-rw-rw-   0        0        0     6293 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/tiger_rate.py
++-rw-rw-rw-   0        0        0    11220 2022-12-22 06:31:42.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/update.py
++-rw-rw-rw-   0        0        0     2199 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/src/__init__.py
++-rw-rw-rw-   0        0        0    16929 2022-09-14 04:05:21.000000 PhyloSuite-1.2.3rc4/PhyloSuite/style.qss
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/tests/
++-rw-rw-rw-   0        0        0  1135194 2019-05-09 01:23:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/tests/marine_turtle_mitogenomes.gb
++-rw-rw-rw-   0        0        0  1227865 2019-05-12 01:04:34.000000 PhyloSuite-1.2.3rc4/PhyloSuite/tests/Test_run.pdf
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/
++-rw-rw-rw-   0        0        0     4016 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/about.ui
++-rw-rw-rw-   0        0        0     7732 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/addFile.ui
++-rw-rw-rw-   0        0        0    22705 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/ASTRAL.ui
++-rw-rw-rw-   0        0        0     3105 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/authenticationdialog.ui
++-rw-rw-rw-   0        0        0     4556 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/clipboard_query.ui
++-rw-rw-rw-   0        0        0     3605 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/color_sets.ui
++-rw-rw-rw-   0        0        0     9586 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/compareTable.ui
++-rw-rw-rw-   0        0        0    12930 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Concatenate.ui
++-rw-rw-rw-   0        0        0     7621 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/ConvertFmt.ui
++-rw-rw-rw-   0        0        0     3408 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/dirichlet_mrbayes.ui
++-rw-rw-rw-   0        0        0     6226 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/display_setting.ui
++-rw-rw-rw-   0        0        0    43305 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/drawGO.ui
++-rw-rw-rw-   0        0        0     8357 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/exe_path.ui
++-rw-rw-rw-   0        0        0    52754 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/extracter.ui
++-rw-rw-rw-   0        0        0    26817 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/extract_setting.ui
++-rw-rw-rw-   0        0        0    21289 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/FastTree.ui
++-rw-rw-rw-   0        0        0     5901 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/gbEditor.ui
++-rw-rw-rw-   0        0        0    22636 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/gblocks.ui
++-rw-rw-rw-   0        0        0    18708 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/HmmCleaner.ui
++-rw-rw-rw-   0        0        0    39532 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/IQ_TREE.ui
++-rw-rw-rw-   0        0        0     5938 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/launcher.ui
++-rw-rw-rw-   0        0        0    47674 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MACSE.ui
++-rw-rw-rw-   0        0        0    29252 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/mafft.ui
++-rw-rw-rw-   0        0        0    67960 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MainWindow.ui
++-rw-rw-rw-   0        0        0     4087 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Manual_update.ui
++-rw-rw-rw-   0        0        0     6991 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/mergeGBfile.ui
++-rw-rw-rw-   0        0        0    25255 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/ModelFinder.ui
++-rw-rw-rw-   0        0        0    31095 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MrBayes.ui
++-rw-rw-rw-   0        0        0 11452728 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/myRes_rc.py
++-rw-rw-rw-   0        0        0     7942 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/NCBI.ui
++-rw-rw-rw-   0        0        0     8247 2022-12-27 02:37:19.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/NCBI_db.ui
++-rw-rw-rw-   0        0        0     3269 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/nexViewer.ui
++-rw-rw-rw-   0        0        0     3166 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/NmlPoPup.ui
++-rw-rw-rw-   0        0        0    14983 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/parseANNT.ui
++-rw-rw-rw-   0        0        0     2844 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/parseANNT_settings.ui
++-rw-rw-rw-   0        0        0    29153 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/partitionfinder.ui
++-rw-rw-rw-   0        0        0     4729 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/partition_defination.ui
++-rw-rw-rw-   0        0        0     6116 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/partition_editor.ui
++-rw-rw-rw-   0        0        0    10821 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/PF_exe_path.ui
++-rw-rw-rw-   0        0        0    64135 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/plot.ui
++-rw-rw-rw-   0        0        0    11605 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Plot_options.ui
++-rw-rw-rw-   0        0        0     2615 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/popUp.ui
++-rw-rw-rw-   0        0        0    30994 2022-12-22 06:31:44.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/RSCUfig.ui
++-rw-rw-rw-   0        0        0    13884 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/SeqViewer.ui
++-rw-rw-rw-   0        0        0     2475 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/seqViewSetting.ui
++-rw-rw-rw-   0        0        0    31899 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/settings.ui
++-rw-rw-rw-   0        0        0    16524 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Tiger.ui
++-rw-rw-rw-   0        0        0    22164 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/TreeSuite.ui
++-rw-rw-rw-   0        0        0    38340 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/trimAl.ui
++-rw-rw-rw-   0        0        0     3537 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/tRNA_reANNT.ui
++-rw-rw-rw-   0        0        0     3724 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_about.py
++-rw-rw-rw-   0        0        0     8041 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_addFile.py
++-rw-rw-rw-   0        0        0    22320 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_ASTRAL.py
++-rw-rw-rw-   0        0        0     5623 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_clipboard_query.py
++-rw-rw-rw-   0        0        0     4377 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_color_sets.py
++-rw-rw-rw-   0        0        0     9324 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_compareTable.py
++-rw-rw-rw-   0        0        0    13737 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_Concatenate.py
++-rw-rw-rw-   0        0        0     8470 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_ConvertFmt.py
++-rw-rw-rw-   0        0        0     4139 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_dirichlet_mrbayes.py
++-rw-rw-rw-   0        0        0     6454 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_display_setting.py
++-rw-rw-rw-   0        0        0    41325 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_drawGO.py
++-rw-rw-rw-   0        0        0     8447 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_exe_path.py
++-rw-rw-rw-   0        0        0    44416 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_extracter.py
++-rw-rw-rw-   0        0        0    21419 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_extract_setting.py
++-rw-rw-rw-   0        0        0    19913 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_FastTree.py
++-rw-rw-rw-   0        0        0     6175 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_gbEditor.py
++-rw-rw-rw-   0        0        0    24773 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_gblocks.py
++-rw-rw-rw-   0        0        0    19157 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_HmmCleaner.py
++-rw-rw-rw-   0        0        0    34106 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_IQ_TREE.py
++-rw-rw-rw-   0        0        0     6671 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_launcher.py
++-rw-rw-rw-   0        0        0    41130 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MACSE.py
++-rw-rw-rw-   0        0        0    24404 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_mafft.py
++-rw-rw-rw-   0        0        0    45444 2022-09-21 14:48:04.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MainWindow - 副本.py
++-rw-rw-rw-   0        0        0    45444 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MainWindow.py
++-rw-rw-rw-   0        0        0     4401 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_Manual_update.py
++-rw-rw-rw-   0        0        0    23962 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_ModelFinder.py
++-rw-rw-rw-   0        0        0    28021 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MrBayes.py
++-rw-rw-rw-   0        0        0     9199 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_NCBI.py
++-rw-rw-rw-   0        0        0     8188 2022-12-27 02:37:27.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_NCBI_db.py
++-rw-rw-rw-   0        0        0     4035 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_nexViewer.py
++-rw-rw-rw-   0        0        0     3827 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_NmlPoPup.py
++-rw-rw-rw-   0        0        0      203 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_notify.py
++-rw-rw-rw-   0        0        0    16244 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_parseANNT.py
++-rw-rw-rw-   0        0        0     3558 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_parseANNT_settings.py
++-rw-rw-rw-   0        0        0    27853 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_partitionfinder.py
++-rw-rw-rw-   0        0        0     5975 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_partition_defination.py
++-rw-rw-rw-   0        0        0     7025 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_partition_editor.py
++-rw-rw-rw-   0        0        0    11497 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_PF_exe_path.py
++-rw-rw-rw-   0        0        0    45437 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_plot.py
++-rw-rw-rw-   0        0        0     3145 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_popUp.py
++-rw-rw-rw-   0        0        0    27709 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_RSCUfig.py
++-rw-rw-rw-   0        0        0    13198 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_SeqViewer.py
++-rw-rw-rw-   0        0        0     3510 2022-12-22 06:31:43.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_seqViewSetting.py
++-rw-rw-rw-   0        0        0    33438 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_settings.py
++-rw-rw-rw-   0        0        0    16808 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_Tiger.py
++-rw-rw-rw-   0        0        0    23254 2022-12-22 06:31:50.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_TreeSuite.py
++-rw-rw-rw-   0        0        0    33653 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_trimAl.py
++-rw-rw-rw-   0        0        0     4302 2022-12-22 06:31:47.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_tRNA_reANNT.py
++-rw-rw-rw-   0        0        0     2251 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_untitled.py
++-rw-rw-rw-   0        0        0    13677 2022-12-22 06:31:48.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_work_flow.py
++-rw-rw-rw-   0        0        0     1720 2022-12-22 06:31:46.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/untitled.ui
++-rw-rw-rw-   0        0        0    14515 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/work_flow.ui
++-rw-rw-rw-   0        0        0     2199 2022-12-22 06:31:49.000000 PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/__init__.py
++-rw-rw-rw-   0        0        0        0 2019-09-07 09:01:11.000000 PhyloSuite-1.2.3rc4/PhyloSuite/__init__.py
++drwxrwxrwx   0        0        0        0 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/
++-rw-rw-rw-   0        0        0        1 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       60 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0     6072 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      300 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/requires.txt
++-rw-rw-rw-   0        0        0    13714 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0       11 2023-01-04 01:38:57.000000 PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0     6072 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/PKG-INFO
++-rw-rw-rw-   0        0        0     4600 2020-08-06 02:01:56.000000 PhyloSuite-1.2.3rc4/README.md
++-rw-rw-rw-   0        0        0      114 2023-01-04 01:38:58.000000 PhyloSuite-1.2.3rc4/setup.cfg
++-rw-rw-rw-   0        0        0     5161 2023-01-03 15:42:08.000000 PhyloSuite-1.2.3rc4/setup.py
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/LICENSE` & `PhyloSuite-1.2.3rc4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation.enw` & `PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite_citation.enw`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation.ris` & `PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite_citation.ris`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/citation/PhyloSuite_citation.xml` & `PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite_citation.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/citation.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/citation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/clustertree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/clustertree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/clustvalidation.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/clustvalidation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/clustering/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/clustering/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/arraytable.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/arraytable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/seqgroup.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/seqgroup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/tree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/tree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/coretype/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/coretype/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/control.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/control.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/evoltree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/evoltree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/model.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/codemlparser.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/codemlparser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/slrparser.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/slrparser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/parser/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/parser/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/utils.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/evol/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/evol/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/ncbi_taxonomy/ncbiquery.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/ncbi_taxonomy/ncbiquery.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -823,15 +823,15 @@
+         for line in tar.extractfile("merged.dmp"):
+             line = str(line.decode())
+             out_line = '\t'.join([_f.strip() for _f in line.split('|')[:2]])
+             merged.write(out_line+'\n')
+     try:
+         upload_data(dbfile, targz_file_path)
+     except:
+-        pass
++        raise
+     else:
+         # os.system(f"rm {targz_file_path}{os.sep}syn.tab "
+         #           f"{targz_file_path}{os.sep}merged.tab "
+         #           f"{targz_file_path}{os.sep}taxa.tab")
+         if os.path.exists(f"{targz_file_path}{os.sep}syn.tab"):
+             os.remove(f"{targz_file_path}{os.sep}syn.tab")
+         if os.path.exists(f"{targz_file_path}{os.sep}merged.tab"):
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/ncbi_taxonomy/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/ncbi_taxonomy/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/_nexml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/_nexml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/_nexml_tree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/_nexml_tree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/nexml/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/nexml/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/orthoxml/_orthoxml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/orthoxml/_orthoxml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/orthoxml/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/orthoxml/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/fasta.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/fasta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/newick.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/newick.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/paml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/paml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/phylip.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/phylip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/text_arraytable.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/text_arraytable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/parser/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/parser/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/evolevents.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/evolevents.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/phylotree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/phylotree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/reconciliation.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/reconciliation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/spoverlap.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/spoverlap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylo/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylo/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/phylomeDB.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/phylomeDB.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/phylomeDB3.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/phylomeDB3.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phylomedb/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phylomedb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/_phyloxml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/_phyloxml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/_phyloxml_tree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/_phyloxml_tree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/phyloxml/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/phyloxml/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/common.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/datasets.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/datasets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/ete.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/ete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/my_test.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/my_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_arraytable.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_arraytable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_circle_label.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_circle_label.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_clustertree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_clustertree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_compare_tree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_compare_tree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_genetree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_genetree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_manual_alg.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_manual_alg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_modeltest.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_modeltest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_build/test_sptree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_build/test_sptree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ete_evol.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ete_evol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_evol.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_evol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_interop.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_interop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_ncbiquery.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_ncbiquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_phylotree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_phylotree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_seqgroup.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_seqgroup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_tree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_tree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/barchart_and_piechart_faces.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/barchart_and_piechart_faces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/bubble_map.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/bubble_map.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/face_grid.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/face_grid.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/face_positions.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/face_positions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/face_rotation.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/face_rotation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/floating_piecharts.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/floating_piecharts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/img_faces.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/img_faces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/item_faces.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/item_faces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/new_seq_face.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/new_seq_face.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/node_background.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/node_background.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/node_style.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/node_style.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/phylotree_visualization.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/phylotree_visualization.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/random_draw.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/random_draw.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/seq_motif_faces.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/seq_motif_faces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/test_all_treeview.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/test_all_treeview.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/tree_faces.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/tree_faces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/tree_stacking.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/tree_stacking.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_treeview/tree_stacking2.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_treeview/tree_stacking2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/test_xml_parsers.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/test_xml_parsers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/test/tree_diff.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/test/tree_diff.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/common.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_annotate.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_annotate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/apps.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/apps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/configcheck.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/configcheck.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/configobj.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/configobj.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/curses_gui.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/curses_gui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/db.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/db.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/errors.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/getch.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/getch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/interface.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/interface.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/logger.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/master_job.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/master_job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/master_task.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/master_task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/ordereddict.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/ordereddict.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/scheduler.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/scheduler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/seqio.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/seqio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/sge.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/sge.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/clustalo.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/clustalo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/cog_creator.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/cog_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/cog_selector.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/cog_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/concat_alg.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/concat_alg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/dialigntx.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/dialigntx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/dummyalg.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/dummyalg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/dummytree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/dummytree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/fasttree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/fasttree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/iqtree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/iqtree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/jmodeltest.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/jmodeltest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/mafft.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/mafft.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/merger.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/merger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/meta_aligner.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/meta_aligner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/msf.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/msf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/muscle.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/muscle.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/phyml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/phyml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/pmodeltest.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/pmodeltest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/prottest.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/prottest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/prottest2.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/prottest2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/raxml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/raxml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/tcoffee.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/tcoffee.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/trimal.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/trimal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/uhire.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/uhire.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/task/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/task/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/utils.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/validate.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/validate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/visualize.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/visualize.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/common.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/genetree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/genetree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/supermatrix.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/supermatrix.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/workflow/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/workflow/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_build_lib/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_build_lib/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_compare.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_compare.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_evol.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_evol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_expand.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_expand.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_extract.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_extract.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_generate.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_generate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_maptrees.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_maptrees.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_mod.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_mod.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_ncbiquery.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_ncbiquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_split.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_split.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_upgrade_tools.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_upgrade_tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/ete_view.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/ete_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/utils.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/tools/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/tools/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/CustomWidgets.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/CustomWidgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/drawer.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/drawer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/ete_resources_rc.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/ete_resources_rc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/faces.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/faces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/layouts.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/layouts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Lg_attribute.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Lg_attribute.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Lg_compare_tree_setting.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Lg_compare_tree_setting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/main.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/node_gui_actions.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/node_gui_actions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_circular_render.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_circular_render.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_face_render.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_face_render.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_gui.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_gui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_rect_render.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_rect_render.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/qt4_render.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/qt4_render.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/shape2fig.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/shape2fig.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/svg_colors.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/svg_colors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/templates.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/templates.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor2.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor3.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor3.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor_attr.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor_attr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_editor_tax.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_editor_tax.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_annotation_selector.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_annotation_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_compare_setting.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_compare_setting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/Ui_ete_qt4app.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/Ui_ete_qt4app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_about.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_about.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_mainwindow.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_mainwindow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_open_newick.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_open_newick.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_search_dialog.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_search_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_show_codeml.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_show_codeml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/_show_newick.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/_show_newick.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/treeview/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/treeview/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/utils.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/webplugin/webapp.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/webplugin/webapp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/webplugin/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/webplugin/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/_ph.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/_ph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/ete3/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/ete3/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/manual/Manual.pdf` & `PhyloSuite-1.2.3rc4/PhyloSuite/manual/Manual.pdf`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/NEWS_version.md` & `PhyloSuite-1.2.3rc4/PhyloSuite/NEWS_version.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,9 @@
+ # Release Note
+ 
+-## PhyloSuite v1.2.3 (2023-02-10, Friday)
+-+ Added the citation for the newest PhyloSuite (v1.2.3) paper (iMeta, doi: https://doi.org/10.1002/imt2.87)
+-+ Optimized the progress bar for ModelFinder
+-+ Fixed some bugs in several functions, such as the "configure NCBI taxonomic database", etc.
+-+ Added optimal partitioning strategy and models summary for PartitionFinder2 and ModelFinder
+-
+ ## PhyloSuite v1.2.3pre3 (2022-11-20, Sunday)
+ + Added a protein database to the download function via IDs
+ + fixed the “memory error” bug for MrBayes
+ + fixed a bug that prevented setting-up PhyloSuite in Linux
+ + fixed a bug for automatically checking the update function
+ + fixed a bug that wrongly detected linked/unlinked branch lengths for IQ-TREE and MrBayes
+ + optimized the progress bar of ModelFinder
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/PhyloSuite.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/PhyloSuite.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -4,25 +4,24 @@
+ import os
+ import platform
+ import re
+ import sys
+ import traceback
+ from copy import deepcopy
+ 
+-thisPath = os.path.abspath(os.path.dirname(sys.argv[0]))
+-thisPath = os.path.abspath(os.path.dirname(__file__)) if not os.path.exists(thisPath + os.sep + "style.qss") else thisPath
+-sys.path.append(thisPath)
+-
+ from PyQt5.QtGui import QPixmap, QFont, QIcon
+ from PyQt5.QtCore import QSettings, Qt, QCoreApplication
+ from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox, QSplashScreen
+ from src.Launcher import Launcher
+ from src.factory import QSingleApplication, Factory
+ from src.main import MyMainWindow
+ 
++thisPath = os.path.abspath(os.path.dirname(sys.argv[0]))
++thisPath = os.path.abspath(os.path.dirname(__file__)) if not os.path.exists(thisPath + os.sep + "style.qss") else thisPath
++sys.path.append(thisPath)
+ # judge permission of thisPath
+ thisPath = Factory().get_this_path(thisPath)
+ 
+ def start():
+     if platform.system().lower() == "windows":
+         multiprocessing.freeze_support() # windows必须调用这个，不然会出错
+     app = QSingleApplication(sys.argv)
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/codonusage.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/codonusage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/CustomWidget.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/CustomWidget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/factory.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/factory.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -329,38 +329,14 @@
+                 qss_content = f.read()
+         else:
+             qss_content = qss
+         if not noset:
+             object.setStyleSheet(qss_content)
+         return qss_content
+ 
+-    def checkNCBIdb(self, parent):
+-        if not self.NCBI_tax_db_is_installed():
+-            reply = QMessageBox.information(
+-                parent,
+-                "Information",
+-                "<p style='line-height:25px; height:25px'>NCBI taxonomy database is not downloaded, "
+-                "which may affect several functions. Do you wishok to install now?</p>",
+-                QMessageBox.Ok,
+-                QMessageBox.Ignore)
+-            if reply == QMessageBox.Ok:
+-                return True
+-            else:
+-                return False
+-
+-    def get_PS_citation(self):
+-        return "1. Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, "\
+-                "and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular "\
+-                "sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, "\
+-                "2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"\
+-                "2. Xiang, Chuan‐Yu, Fangluan Gao, Ivan Jakovlić, Hong‐Peng Lei, Ye Hu, Hong Zhang, Hong Zou, "\
+-                "Gui‐Tang Wang, and Dong Zhang, Using PhyloSuite for molecular phylogeny and tree‐based analyses. "\
+-                "iMeta, 2023. e87. DOI: https://doi.org/10.1002/imt2.87."
+-
+-
+ class Factory(QObject, Factory_sub, object):
+ 
+     def __init__(self, parent=None):
+         super(Factory, self).__init__(parent)
+         thisPath = os.path.dirname(os.path.abspath(os.path.dirname(sys.argv[0])))  #上一级目录
+         thisPath = os.path.dirname(os.path.abspath(os.path.dirname(__file__))) if not os.path.exists(
+             thisPath + os.sep + "style.qss") else thisPath
+@@ -1421,15 +1397,14 @@
+                         elif os.path.splitext(i)[1].upper() in [".PHY", ".PHYLIP", ".FA", ".FAS", ".FASTA", ".NEX", ".NEXUS",
+                                                                 ".NXS", ".ALN"]:
+                             list_msa.append(subResults + os.sep + i)
+                         elif os.path.splitext(i)[1].upper() == ".IQTREE":
+                             model = ["MB_normal", subResults + os.sep + i]
+                     model = [
+                         mf_part_text, mf_part_model] if mf_part_model else model
+-                    list_msa = sorted(list_msa, key=lambda x: ["F", "P", "A", "N"].index(os.path.splitext(x)[1][1].upper()))
+                     input_MSA = list_msa[0] if list_msa else None
+                     if (model != ["", None]) or input_MSA:
+                         dict_subResults[
+                             os.path.normpath(subResults)] = [[input_MSA], model]
+                 if dict_subResults:
+                     dict_autoInputs[os.path.normpath(MfPath)] = dict_subResults
+             for PfPath in self.fetchResuilts(rootpath, "PartFind_results"):
+@@ -1543,15 +1518,14 @@
+         elif mode == "MrBayes":
+             for MfPath in self.fetchResuilts(rootpath, "ModelFinder_results"):
+                 dict_subResults = OrderedDict()  # 按修改时间排序
+                 for subResults in self.fetchSubResults(MfPath):
+                     input_MSAs = [subResults + os.sep + i for i in os.listdir(subResults) if
+                                   os.path.splitext(i)[1].upper() in [".PHY", ".PHYLIP", ".FA", ".FAS", ".FASTA", ".NEX", ".NEXUS",
+                                                                      ".ALN"]]
+-                    input_MSAs = sorted(input_MSAs, key=lambda x: ["F", "P", "A", "N"].index(os.path.splitext(x)[1][1].upper()))
+                     input_MSA = input_MSAs[0] if input_MSAs else None
+                     list_input_model_file = [subResults + os.sep + i for i in os.listdir(subResults) if
+                                              os.path.splitext(i)[1].upper() == ".IQTREE"]
+                     input_model_file = list_input_model_file[
+                         0] if list_input_model_file else ""
+                     list_part_model = [subResults + os.sep + i for i in os.listdir(subResults) if
+                                        "best_scheme.nex" in i]
+@@ -1940,15 +1914,14 @@
+                     elif os.path.splitext(i)[1].upper() in [".PHY", ".PHYLIP", ".FA", ".FAS", ".FASTA", ".NEX", ".NEXUS",
+                                                             ".NXS", ".ALN"]:
+                         list_msa.append(resultsPath + os.sep + i)
+                     elif os.path.splitext(i)[1].upper() == ".IQTREE":
+                         model = ["MB_normal", resultsPath + os.sep + i]
+                 model = [
+                     mf_part_text, mf_part_model] if mf_part_model else model
+-                list_msa = sorted(list_msa, key=lambda x: ["F", "P", "A", "N"].index(os.path.splitext(x)[1][1].upper()))
+                 input_MSA = list_msa[0] if list_msa else None
+                 if (model != ["", None]) or input_MSA: autoInputs = [[input_MSA], model]
+             if resultsParentName == "PartFind_results":
+                 input_MSAs = [resultsPath + os.sep + i for i in os.listdir(resultsPath) if
+                               os.path.splitext(i)[1].upper() in [".PHY", ".PHYLIP"]]
+                 input_MSA = input_MSAs[0] if input_MSAs else None
+                 path = resultsPath + os.sep + "analysis" + \
+@@ -2009,15 +1982,14 @@
+                         autoInputs = [list_alignments, ""]
+         elif mode == "MrBayes":
+             if resultsParentName == "ModelFinder_results":
+                 input_MSAs = [resultsPath + os.sep + i for i in os.listdir(resultsPath) if
+                               os.path.splitext(i)[1].upper() in [".PHY", ".PHYLIP", ".FA", ".FAS", ".FASTA", ".NEX",
+                                                                  ".NEXUS",
+                                                                  ".ALN"]]
+-                input_MSAs = sorted(input_MSAs, key=lambda x: ["F", "P", "A", "N"].index(os.path.splitext(x)[1][1].upper()))
+                 input_MSA = input_MSAs[0] if input_MSAs else None
+                 list_input_model_file = [resultsPath + os.sep + i for i in os.listdir(resultsPath) if
+                                          os.path.splitext(i)[1].upper() == ".IQTREE"]
+                 input_model_file = list_input_model_file[
+                     0] if list_input_model_file else ""
+                 list_part_model = [resultsPath + os.sep + i for i in os.listdir(resultsPath) if
+                                    "best_scheme.nex" in i]
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/findANDreplace.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/findANDreplace.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/handleGB.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/handleGB.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -806,24 +806,21 @@
+         return first, second, third
+ 
+     def judge_ddfs(self, list_codon, code_table):
+         nuc = ["A", "T", "C", "G"]
+         codon_ffds_site = []
+         # judge first codon site
+         AAs = [str(Seq("".join([i, list_codon[1], list_codon[2]])).translate(table=code_table)) for i in nuc]
+-        if len(set(AAs)) == 1:
+-            codon_ffds_site.append(0)
++        if len(set(AAs)) == 1: codon_ffds_site.append(0)
+         # judge second codon site
+         AAs = [str(Seq("".join([list_codon[0], i, list_codon[2]])).translate(table=code_table)) for i in nuc]
+-        if len(set(AAs)) == 1:
+-            codon_ffds_site.append(1)
++        if len(set(AAs)) == 1: codon_ffds_site.append(1)
+         # judge third codon site
+         AAs = [str(Seq("".join([list_codon[0], list_codon[1], i])).translate(table=code_table)) for i in nuc]
+-        if len(set(AAs)) == 1:
+-            codon_ffds_site.append(2)
++        if len(set(AAs)) == 1: codon_ffds_site.append(2)
+         return codon_ffds_site
+ 
+     def extract_ffds1(self, code_table):
+         '''
+         Extract fourfold degenerate sequences from a codon sequence (obsolete)
+         :param seq: nucleotide sequences
+         :param code_table: NCBI code table, like Vertebrate Mitochondrial or 2
+@@ -843,24 +840,22 @@
+         :return: fourfold degenerate sequences
+         '''
+         bases = ['T', 'C', 'A', 'G']
+         codons = [a + b + c for a in bases for b in bases for c in bases]
+         dict_ffds = {} # {'TCT': [3], 'TCC': [3]}
+         for codon in codons:
+             codon_ffds_site = self.judge_ddfs(list(codon), code_table)
+-            if codon_ffds_site:
+-                dict_ffds[codon] = codon_ffds_site
++            if codon_ffds_site: dict_ffds[codon] = codon_ffds_site
+         # print(dict_ffds)
+-        ffds = []
++        ffds = ""
+         if len(self.sequence)%3 == 0:
+             for a, b, c in zip(*[iter(self.sequence)]*3):
+                 codon_ = "".join([a, b, c])
+-                if codon_ in dict_ffds:
+-                    ffds.append("".join([codon_[site] for site in dict_ffds[codon_]]))
+-        return "".join(ffds)
++                if codon_ in dict_ffds: ffds += "".join([codon_[site] for site in dict_ffds[codon_]])
++        return ffds
+ 
+ 
+ class CodonBias(object):
+     '''
+     未解决的问题是aa_stat_fun里面那个n=1的时候；
+     '''
+ 
+@@ -1016,32 +1011,29 @@
+             hzs = list(aa_stat[aa] for aa in self.dict_fold_codons[fold])
+             avg[fold] = sum(hzs) / len(hzs)
+             enc += (len(self.dict_fold_codons[fold]) / avg[fold])
+         return enc
+ 
+ 
+ class Order2itol(object):
+-    def __init__(self, dict_order=None, dict_args=None):
++    def __init__(self, dict_order, dict_args):
+         self.dict_args = dict_args
+         self.dict_order = dict_order
+-        if dict_order and dict_args:
+-            self.align_order()
+-            self.number_NCR()
+-            self.exec()
+-            self.make_header()
++        self.align_order()
++        self.number_NCR()
++        self.exec()
++        self.make_header()
+ 
+-    def align_order(self, dict_order=None):
+-        self.dict_order = dict_order if dict_order else self.dict_order
++    def align_order(self):
+         for i in self.dict_order:
+             list_order = self.dict_order[i]
+             for num, j in enumerate(list_order):
+                 if self.dict_args["start_gene_with"] in j:
+                     self.dict_order[i] = list_order[num:] + list_order[:num]
+                     break
+-        return self.dict_order
+ 
+     def number_NCR(self):
+         list_dict_order = list(self.dict_order.keys())
+         for i in list_dict_order:
+             list_order = self.dict_order[i]
+             count = 1
+             for num, j in enumerate(list_order):
+@@ -4036,15 +4028,14 @@
+         overview.append("Genes found in species:\n %s\n\n" % "\n".join([",".join(i) for i in name_genes]))
+         with open(self.exportPath + os.sep + 'overview.csv', 'w', encoding="utf-8") as f4:
+             f4.write("".join(overview))
+ 
+         filesPath = self.factory.creat_dirs(self.exportPath + os.sep + 'files')
+         with open(filesPath + os.sep + 'linear_order.txt', 'w', encoding="utf-8") as f:
+             t = "\t"
+-            self.dict_order = Order2itol(dict_args=self.dict_args).align_order(self.dict_order)
+             linear_order = "\n".join([f">{species}\n{t.join(self.dict_order[species])}"
+                                       for species in self.dict_order])
+             f.write(linear_order)
+         with open(filesPath + os.sep + 'complete_seq.fas', 'w', encoding="utf-8") as f:
+             f.write("".join(self.complete_seq))
+         if self.PCG_seq:
+             with open(filesPath + os.sep + 'PCG_seqs.fas', 'w', encoding="utf-8") as f6:
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Launcher.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Launcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_addFiles.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_addFiles.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ASTRAL-old.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ASTRAL-old.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ASTRAL.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ASTRAL.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -318,15 +318,15 @@
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (
+                 str(time_start), str(time_end),
+                 self.time_used)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(
+-                    self.description + f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                    self.description + "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                                        "If you use ASTRAL, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             ## 判断是否运行成功
+             unfinished = False
+             if (not os.path.exists(self.output_astral_tree)) or (os.stat(self.output_astral_tree).st_size == 0):
+                 self.unfinishedSig.emit()
+                 unfinished = True
+             if (not self.interrupt) and (not unfinished):
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ClipQuery.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ClipQuery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/LG_colorsets.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/LG_colorsets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_compareTable.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_compareTable.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -359,15 +359,15 @@
+             self.focusSig.emit(self.exportPath)
+             time_end = datetime.datetime.now()
+             description = """The sequences were pairwise aligned with MAFFT (Katoh and Standley, 2013) first, then the genetic distances (identity) among sequences were calculated with the “DistanceCalculator” function in Biopython (Cock, et al., 2009) using the “identity” model."""
+             mafft_ref = "Katoh, K., Standley, D.M., 2013. MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Mol. Biol. Evol. 30, 772-780."
+             biopython_ref = "Cock, P.J., Antao, T., Chang, J.T., Chapman, B.A., Cox, C.J., Dalke, A., Friedberg, I., Hamelryck, T., Kauff, F., Wilczynski, B., et al. (2009). Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics 25, 1422-1423."
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                   str(time_end - time_start))
+-            ps_cite = f"If you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++            ps_cite = "If you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n\n"
+             text = ps_cite + self.time_used_des if not self.checkBox.isChecked() else description + "\n\n" + ps_cite + "If you use MAFFT, please cite:\n%s\n\nIf you use Biopython, please cite:\n%s\n\n"%(mafft_ref, biopython_ref) + self.time_used_des
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(text)
+         except BaseException:
+             self.exceptionInfo = ''.join(
+                 traceback.format_exception(
+                     *sys.exc_info()))  # 捕获报错内容，只能在这里捕获，没有报错的地方无法捕获
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Concatenate.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Concatenate.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -580,15 +580,15 @@
+             #     self.dict_args["partition_file"] = self.seqMatrix.partition_detail
+             #     Partition2fig(**self.dict_args)
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                            self.time_used)
+             with open(self.dict_args["exportPath"] + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+-                f.write(f"If you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n" + self.time_used_des)
++                f.write("If you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n\n" + self.time_used_des)
+             if not self.seqMatrix.unaligned and not self.seqMatrix.interrupt:
+                 if self.workflow:
+                     ##work flow跑的
+                     self.startButtonStatusSig.emit(
+                         [
+                             self.pushButton,
+                             self.progressBar,
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ConvertFmt.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ConvertFmt.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -151,15 +151,15 @@
+                 self.startButtonStatusSig.emit(
+                     [self.pushButton, self.progressBar, "stop", self.dict_args["export_path"], self.qss_file, self])
+             self.focusSig.emit(self.dict_args["export_path"])
+             time_end = datetime.datetime.now()
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                   str(time_end - time_start))
+             with open(self.dict_args["export_path"] + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+-                f.write(f"If you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n" + self.time_used_des)
++                f.write("If you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n\n" + self.time_used_des)
+         except BaseException:
+             self.exceptionInfo = ''.join(
+                 traceback.format_exception(
+                     *sys.exc_info()))  # 捕获报错内容，只能在这里捕获，没有报错的地方无法捕获
+             self.exception_signal.emit(self.exceptionInfo)  # 激发这个信号
+             self.startButtonStatusSig.emit(
+                 [self.pushButton, self.progressBar, "except", self.dict_args["export_path"], self.qss_file, self])
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_displaySettings.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_displaySettings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_drawGO.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_drawGO.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -7,23 +7,18 @@
+ from io import StringIO
+ 
+ from PyQt5.QtCore import *
+ from PyQt5.QtGui import *
+ from PyQt5.QtPrintSupport import QPrinter
+ from PyQt5.QtSvg import QSvgGenerator
+ from PyQt5.QtWidgets import *
+-try:
+-    from ete3.treeview.CustomWidgets import QGraphicsRoundRectItem, QGraphicsDiamondItem, QGraphicsLeftArrowItem, \
+-        QGraphicsRightArrowItem, QGraphicsLeftArrowItem2, QGraphicsRightArrowItem2, QGraphicsLeftTriangleItem, \
+-        QGraphicsRightTriangleItem, QGraphicsTopTriangleItem, QGraphicsBottomTriangleItem
+-except:
+-    from PhyloSuite.ete3.treeview.CustomWidgets import QGraphicsRoundRectItem, QGraphicsDiamondItem, QGraphicsLeftArrowItem, \
+-        QGraphicsRightArrowItem, QGraphicsLeftArrowItem2, QGraphicsRightArrowItem2, QGraphicsLeftTriangleItem, \
+-        QGraphicsRightTriangleItem, QGraphicsTopTriangleItem, QGraphicsBottomTriangleItem
+ 
++from ete3.treeview.CustomWidgets import QGraphicsRoundRectItem, QGraphicsDiamondItem, QGraphicsLeftArrowItem, \
++    QGraphicsRightArrowItem, QGraphicsLeftArrowItem2, QGraphicsRightArrowItem2, QGraphicsLeftTriangleItem, \
++    QGraphicsRightTriangleItem, QGraphicsTopTriangleItem, QGraphicsBottomTriangleItem
+ from src.factory import Factory, WorkThread
+ from src.CustomWidget import MyComboBox
+ import inspect
+ import os
+ import sys
+ import traceback
+ import subprocess
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_extracter.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_extracter.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -289,15 +289,18 @@
+             self.startButtonStatusSig.emit(
+                 [self.pushButton_2, self.progressBar, stopStatus, self.dict_args["exportPath"], self.qss_file, self])
+             self.focusSig.emit(self.dict_args["exportPath"])
+             time_end = datetime.datetime.now()
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                   str(time_end - time_start))
+             with open(self.dict_args["exportPath"] + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+-                f.write(f"If you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n" + self.time_used_des
++                f.write("If you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, "
++                        "and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular "
++                        "sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, "
++                        "2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n\n" + self.time_used_des
+                         + "For the summary of this extraction, please see \"overview.csv\"")
+         except BaseException:
+             self.exceptionInfo = ''.join(
+                 traceback.format_exception(
+                     *sys.exc_info()))  # 捕获报错内容，只能在这里捕获，没有报错的地方无法捕获
+             self.exception_signal.emit(self.exceptionInfo)  # 激发这个信号
+             self.startButtonStatusSig.emit(
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_extractSettings.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_extractSettings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_FastTree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_FastTree.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -371,15 +371,15 @@
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (
+                 str(time_start), str(time_end),
+                 self.time_used)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(
+-                    self.description + f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                    self.description + "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                                        "If you use FastTree, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if (not self.interrupt) and (not has_error):
+                 self.pool = None
+                 self.interrupt = False
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_gbEditor.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_gbEditor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Gblocks.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Gblocks.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -255,15 +255,15 @@
+                     break
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                            self.time_used)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(self.description +
+-                        f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                        "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                         "If you use Gblocks, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if not self.interrupt:
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+                         [
+                             self.pushButton,
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_HmmCleaner.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_HmmCleaner.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -298,15 +298,15 @@
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (
+                 str(time_start), str(time_end),
+                 self.time_used)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(
+-                    self.description + f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                    self.description + "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                                        "If you use HmmCleaner, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if (not self.interrupt) and (not has_error):
+                 self.pool = None
+                 self.interrupt = False
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_IQTREE.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_IQTREE.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -395,15 +395,15 @@
+                     f.write("".join(all_tree_contents))
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                            self.time_used)
+ 
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+-                f.write(self.description + f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                f.write(self.description + "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                         "If you use IQ-TREE and Ultrafast bootstrap, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if not self.interrupt:
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+                         [
+                             self.pushButton,
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_macse.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_macse.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -396,15 +396,15 @@
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (
+             str(time_start), str(time_end),
+             self.time_used)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(
+-                    self.description + f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                    self.description + "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                                        "If you use MACSE, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if (not self.interrupt) and (not has_error):
+                 self.pool = None
+                 self.interrupt = False
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_mafft.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_mafft.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -418,15 +418,15 @@
+             runState = self.align()
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                            self.time_used)
+             with open(self.dict_args["exportPath"] + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(self.description +
+-                        f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                        "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                         "If you use MAFFT, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             # 判断比对是否成功
+             mafft_results = [self.dict_args["exportPath"] + os.sep + result for result in
+                              os.listdir(self.dict_args["exportPath"]) if "_mafft" in result]
+             empty_files = [os.path.basename(file) for file in mafft_results if os.stat(file).st_size == 0]
+             if empty_files:
+                 self.emptySig.emit(empty_files)
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Manual_update.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Manual_update.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_ModelFinder.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_ModelFinder.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -346,25 +346,25 @@
+                     list_partition_table.append([f"P{num+1}: ({name.strip(' ')})",
+                                                  model])
+                 self.factory.write_csv_file(f"{self.exportPath}{os.sep}best_scheme_and_models.csv",
+                                             list_partition_table,
+                                             silence=True)
+             if softWare in ["BEAST1 (NUC)", "BEAST2 (NUC)", "BEAST (AA)"]:
+                 str1 = self.description + " " + self.parseResults() +\
+-                    f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n" \
++                    "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n" \
+                     "If you use ModelFinder, please cite:\n" + self.reference + \
+                     "\n\nhttps://justinbagley.rbind.io/2016/10/11/setting-dna-substitution-models-beast/\nDetails for setting substitution models in %s\n" % softWare
+                 array = [[i] for i in str1.split(
+                     "\n")] + self.model2beast_des() + [[j] for j in ("\n\n" + self.time_used_des).split("\n")]
+                 self.factory.write_csv_file(
+                     self.exportPath + os.sep + "summary.csv", array, self, silence=True)
+             else:
+                 with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                     f.write(self.description + " " + self.parseResults() +
+-                            f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                            "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                             "If you use ModelFinder, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if not self.interrupt:
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+                         [
+                             self.pushButton,
+@@ -741,42 +741,39 @@
+         rgx_part_model = re.compile(r"^Loading (\d+) partitions\.\.\.")
+         rgx_merge_model = re.compile(r"(?m)^Merging models to increase model fit \(about (\d+) total partition schemes\)\.\.\.")
+         rgx_merge_num = re.compile(r"(?m)^ *(\d+) +[^ ]+ +\d+\.\d+ +[^ ]+")
+         rgx_finished = re.compile(r"^Date and Time:")
+         self.totleModels = None
+         self.totlePartitions_2 = None
+         self.part_scheme_num = None
+-        self.rgx_model_num = 0
+         list_partition_names = []  # 存放partition的名字
+         num = 0  # partition出现的次数，当num等于2倍partition的个数的时候，就完成
+         is_error = False  ##判断是否出了error
+         while True:
+             QApplication.processEvents()
+             if self.isRunning():
+                 try:
+                     out_line = self.MF_popen.stdout.readline().decode("utf-8", errors="ignore")
+                 except UnicodeDecodeError:
+                     out_line = self.MF_popen.stdout.readline().decode("gbk", errors="ignore")
+                 if out_line == "" and self.MF_popen.poll() is not None:
+                     break
+                 list_outline = out_line.strip().split()
+-                if rgx_merge_num.search(out_line):
+-                    self.rgx_model_num = int(rgx_merge_num.search(out_line).group(1))
+                 if rgx_test_model.search(out_line):
+                     self.totleModels = int(
+                         rgx_test_model.search(out_line).group(1))
+                     self.progressSig.emit(5)
+                     self.workflow_progress.emit(5)
+                 elif rgx_part_model.search(out_line):
+                     self.totlePartitions_2 = 2 * \
+                         int(rgx_part_model.search(out_line).group(1))
+                     self.progressSig.emit(5)
+                     self.workflow_progress.emit(5)
+                 elif rgx_merge_model.search(out_line):
+-                    self.part_scheme_num = int(rgx_merge_model.search(out_line).group(1)) + self.rgx_model_num
++                    self.part_scheme_num = int(rgx_merge_model.search(out_line).group(1))
+                 elif self.totleModels and (len(list_outline) == 7) and list_outline[0].isdigit() and list_outline[3].isdigit():
+                     # 普通模式
+                     model_num = int(list_outline[0])
+                     self.progressSig.emit(
+                         5 + model_num * 90 / self.totleModels)
+                     self.workflow_progress.emit(
+                         5 + model_num * 90 / self.totleModels)
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_Mrbayes.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_Mrbayes.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1845,15 +1845,15 @@
+             self.description = self.description.replace(
+                 "xxxx generations", "%s generations" % generation)
+         else:
+             self.description = self.description.replace(
+                 "xxxx generations", " generations")
+         with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+             f.write(self.description +
+-                    f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                    "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                     "If you use MrBayes, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+ 
+     def judgeFinish(self):
+         # log = self.textEdit_log.toPlainText()
+         tre_file = glob.glob(self.exportPath + os.sep + "*.tre")
+         if not tre_file:
+             return False
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_NCBI_DB.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_NCBI_DB.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_NmlPoPup.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_NmlPoPup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_parseANNT.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_parseANNT.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -943,15 +943,15 @@
+                     self.qss_file,
+                     self])
+             self.focusSig.emit(self.dict_args["exportPath"])
+             time_end = datetime.datetime.now()
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                   str(time_end - time_start))
+             with open(self.dict_args["exportPath"] + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+-                f.write(f"If you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n" + self.time_used_des)
++                f.write("If you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n\n" + self.time_used_des)
+         except BaseException:
+             self.exceptionInfo = ''.join(
+                 traceback.format_exception(
+                     *sys.exc_info()))  # 捕获报错内容，只能在这里捕获，没有报错的地方无法捕获
+             self.exception_signal.emit(self.exceptionInfo)  # 激发这个信号
+             self.startButtonStatusSig.emit(
+                 [
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_PartitionEditer.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_PartitionEditer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_PartitionFinder.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_PartitionFinder.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -351,15 +351,15 @@
+             if rgx_version.search(content):
+                 self.version = rgx_version.search(content).group(1)
+             else:
+                 self.version = ""
+             self.description = self.description.replace("$version$", self.version)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(self.description +
+-                        f"\n\nIf you use PhyloSuite v1.2.3 v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                        "\n\nIf you use PhyloSuite v1.2.3 v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                         "If you use PartitionFinder 2, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             # 生成partition表格
+             best_scheme = glob.glob(f"{self.exportPath}{os.sep}*{os.sep}best_scheme.txt")
+             if best_scheme:
+                 list_partition_table = [["Subset partitions", "Sites", "Best model"]]
+                 best_scheme_file = best_scheme[0]
+                 with open(best_scheme_file, encoding="utf-8", errors="ignore") as f:
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_RSCUfig.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_RSCUfig.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -246,15 +246,15 @@
+                             self.qss_file,
+                             self])
+             self.focusSig.emit(self.exportPath)
+             time_end = datetime.datetime.now()
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (str(time_start), str(time_end),
+                                                                                   str(time_end - time_start))
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+-                f.write(f"If you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n" + self.time_used_des)
++                f.write("If you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n\n" + self.time_used_des)
+         except BaseException:
+             self.exceptionInfo = ''.join(
+                 traceback.format_exception(
+                     *sys.exc_info()))  # 捕获报错内容，只能在这里捕获，没有报错的地方无法捕获
+             self.exception_signal.emit(self.exceptionInfo)  # 激发这个信号
+             self.startButtonStatusSig.emit(
+                 [
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_seqViewer.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_seqViewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_SerhNCBI.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_SerhNCBI.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_settings.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_tiger.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_tiger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/LG_TreeSuite.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/LG_TreeSuite.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_trimAl.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_trimAl.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -395,15 +395,15 @@
+             time_end = datetime.datetime.now()
+             self.time_used = str(time_end - time_start)
+             self.time_used_des = "Start at: %s\nFinish at: %s\nTotal time used: %s\n\n" % (
+                 str(time_start), str(time_end),
+                 self.time_used)
+             with open(self.exportPath + os.sep + "summary and citation.txt", "w", encoding="utf-8") as f:
+                 f.write(
+-                    self.description + f"\n\nIf you use PhyloSuite v1.2.3, please cite:\n{self.factory.get_PS_citation()}\n\n"
++                    self.description + "\n\nIf you use PhyloSuite v1.2.3, please cite:\nZhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.\n"
+                                        "If you use trimAl, please cite:\n" + self.reference + "\n\n" + self.time_used_des)
+             if (not self.interrupt) and (not has_error):
+                 self.pool = None
+                 self.interrupt = False
+                 if self.workflow:
+                     # work flow跑的
+                     self.startButtonStatusSig.emit(
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/Lg_workflow.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/Lg_workflow.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -929,20 +929,17 @@
+             self.report = self.report.replace(i, "<font style='font-weight:bold; color:red;'>" + i + "</font>")
+         report_html = '''<html>
+ <head>
+ <meta http-equiv=content-type content=text/html;charset=ISO-8859-1>
+ </head>
+ <body>
+ <div><span style="color:red; font-weight:bold;">PhyloSuite</span> (Zhang et al., 2020) was used to conduct, manage and streamline the analyses with the help of several plug-in programs: <br> ''' + self.report.replace("\n", "<br>") + "<br><br><font style='font-weight:bold; font-size:18px'>References</font>" + \
+-  "<br>1. Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable" \
++  "<br>Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable" \
+   " desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular " \
+-  "Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096.<br>" \
+-  "2. Xiang, Chuan‐Yu, Fangluan Gao, Ivan Jakovlić, Hong‐Peng Lei, Ye Hu, Hong Zhang, " \
+-  "Hong Zou, Gui‐Tang Wang, and Dong Zhang, Using PhyloSuite for molecular phylogeny and " \
+-  "tree‐based analyses. iMeta, 2023. e87. DOI: https://doi.org/10.1002/imt2.87." + self.reference_report.replace("\n", "<br>") + "<br><br>" + self.time_used_des.replace("\n", "<br>") + self.exe_time_count.replace("\n", "<br>") + "<br>" + '''</div>
++  "Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096." + self.reference_report.replace("\n", "<br>") + "<br><br>" + self.time_used_des.replace("\n", "<br>") + self.exe_time_count.replace("\n", "<br>") + "<br>" + '''</div>
+ </body>
+ </html>'''
+         self.dict_reports["reports"] = report_html
+         self.dict_reports["time"] = datetime.datetime.now()
+         # self.reportSig.emit(self.dict_reports)
+         qsettings = QSettings(self.thisPath + '/settings/workflow_settings.ini', QSettings.IniFormat)
+         qsettings.setFallbacksEnabled(False)
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/main.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/main.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1138,18 +1138,14 @@
+                 "Please Wait", "loading...", parent=self)
+             self.seqViewer = Seq_viewer(filePath, [filePath], self.progressSig, self.progressDialog, self)
+             # 添加最大化按钮
+             self.seqViewer.setWindowFlags(self.seqViewer.windowFlags() | Qt.WindowMinMaxButtonsHint)
+             # self.seqViewer.setWindowModality(Qt.ApplicationModal)
+             self.seqViewer.show()
+         elif os.path.splitext(filePath)[1].upper() in [".TREEFILE", ".NWK", ".TRE"]:
+-            set_NCBI_db = self.factory.checkNCBIdb(self)
+-            if set_NCBI_db:
+-                self.updateTaxonomyDB()
+-                return
+             tre = self.factory.read_tree(filePath, parent=self)
+             if tre:
+                 tre.show(name="PhyloSuite-ETE", parent=self)
+         elif not os.path.isdir(filePath):
+             self.factory.openPath(filePath, self)
+ 
+     def rmTableRow(self, parent=None):
+@@ -1948,18 +1944,14 @@
+         # 添加最大化按钮
+         self.tiger.setWindowFlags(self.tiger.windowFlags() | Qt.WindowMinMaxButtonsHint)
+         self.tiger.show()
+ 
+     @pyqtSlot()
+     def on_TreeAnnotation_triggered(self):
+         filePath, workPath = self.fetchWorkPath(mode="all")
+-        set_NCBI_db = self.factory.checkNCBIdb(self)
+-        if set_NCBI_db:
+-            self.updateTaxonomyDB()
+-            return
+         GUI_TIMEOUT = None
+         # autoInputs = self.factory.init_judge(mode="format conversion", filePath=filePath, parent=self)
+         scene = _TreeScene()
+         scene.init_values(None, TreeStyle(), None, None)
+         self.PhyloSuite_ETE = _GUI(scene)
+         self.PhyloSuite_ETE.setObjectName("PhyloSuite_ETE")
+         self.PhyloSuite_ETE.setParent(self)
+@@ -2486,15 +2478,15 @@
+             'recycled name', self.dict_recycled_name)
+         # if hasattr(self, "dict_workflow_reports"):
+         #     self.mainwindow_settings.setValue(
+         #         'workflow_reports', self.dict_workflow_reports)
+ 
+     def guiRestore(self):
+         # Restore geometry
+-        self.resize(self.mainwindow_settings.value('size', QSize(1250, 750)))
++        self.resize(self.mainwindow_settings.value('size', QSize(1195, 650)))
+         self.factory.centerWindow(self)
+         if self.width() < 1120:
+             self.resize(QSize(1195, 650))
+         # self.move(self.mainwindow_settings.value('pos', QPoint(471, 207)))
+         self.list_repeat_name_num = self.mainwindow_settings.value(
+             'numbered recycled name', [])
+         # 清零无效的路径
+@@ -3851,65 +3843,35 @@
+         self.feched_ids = gbIO.fetch_records_by_tax(0, 100, self.progressSig, taxonomy=tax_)
+         # print(ids)
+ 
+     def saveCitation(self, qtext):
+         if qtext.strip() == "XML":
+             fileName = QFileDialog.getSaveFileName(
+                 self, "PhyloSuite", "PhyloSuite_citation", "XML Format(*.xml)")
+-            xml_path = f"{self.factory.src_path}{os.sep}citation{os.sep}PhyloSuite_citation.xml"
++            xml_path = self.factory.src_path + os.sep + "PhyloSuite_citation.xml"
+             if fileName[0] and (os.path.normpath(fileName[0]) != os.path.normpath(xml_path)):
+                 shutil.copy(xml_path, fileName[0])
+                 QMessageBox.information(
+                     self,
+                     "PhyloSuite",
+                     "<p style='line-height:25px; height:25px'>File saved successfully!</p>")
+         elif qtext.strip() == "RIS":
+             fileName = QFileDialog.getSaveFileName(
+                 self, "PhyloSuite", "PhyloSuite_citation", "RIS Format(*.ris)")
+-            ris_path = f"{self.factory.src_path}{os.sep}citation{os.sep}PhyloSuite_citation.ris"
++            ris_path = self.factory.src_path + os.sep + "PhyloSuite_citation.ris"
+             if fileName[0] and (os.path.normpath(fileName[0]) != os.path.normpath(ris_path)):
+                 shutil.copy(ris_path, fileName[0])
+                 QMessageBox.information(
+                     self,
+                     "PhyloSuite",
+                     "<p style='line-height:25px; height:25px'>File saved successfully!</p>")
+         elif qtext.strip() == "ENW":
+             fileName = QFileDialog.getSaveFileName(
+                 self, "PhyloSuite", "PhyloSuite_citation", "ENW Format(*.enw)")
+-            ris_path = f"{self.factory.src_path}{os.sep}citation{os.sep}PhyloSuite_citation.enw"
+-            if fileName[0] and (os.path.normpath(fileName[0]) != os.path.normpath(ris_path)):
+-                shutil.copy(ris_path, fileName[0])
+-                QMessageBox.information(
+-                    self,
+-                    "PhyloSuite",
+-                    "<p style='line-height:25px; height:25px'>File saved successfully!</p>")
+-        elif qtext.strip() == "XML_imeta":
+-            fileName = QFileDialog.getSaveFileName(
+-                self, "PhyloSuite", "PhyloSuite_citation_iMeta", "XML Format(*.xml)")
+-            xml_path = f"{self.factory.src_path}{os.sep}citation{os.sep}PhyloSuite_citation_imeta.xml"
+-            if fileName[0] and (os.path.normpath(fileName[0]) != os.path.normpath(xml_path)):
+-                shutil.copy(xml_path, fileName[0])
+-                QMessageBox.information(
+-                    self,
+-                    "PhyloSuite",
+-                    "<p style='line-height:25px; height:25px'>File saved successfully!</p>")
+-        elif qtext.strip() == "RIS_imeta":
+-            fileName = QFileDialog.getSaveFileName(
+-                self, "PhyloSuite", "PhyloSuite_citation_iMeta", "RIS Format(*.ris)")
+-            ris_path = f"{self.factory.src_path}{os.sep}citation{os.sep}PhyloSuite_citation_imeta.ris"
+-            if fileName[0] and (os.path.normpath(fileName[0]) != os.path.normpath(ris_path)):
+-                shutil.copy(ris_path, fileName[0])
+-                QMessageBox.information(
+-                    self,
+-                    "PhyloSuite",
+-                    "<p style='line-height:25px; height:25px'>File saved successfully!</p>")
+-        elif qtext.strip() == "ENW_imeta":
+-            fileName = QFileDialog.getSaveFileName(
+-                self, "PhyloSuite", "PhyloSuite_citation_iMeta", "ENW Format(*.enw)")
+-            ris_path = f"{self.factory.src_path}{os.sep}citation{os.sep}PhyloSuite_citation_imeta.enw"
++            ris_path = self.factory.src_path + os.sep + "PhyloSuite_citation.enw"
+             if fileName[0] and (os.path.normpath(fileName[0]) != os.path.normpath(ris_path)):
+                 shutil.copy(ris_path, fileName[0])
+                 QMessageBox.information(
+                     self,
+                     "PhyloSuite",
+                     "<p style='line-height:25px; height:25px'>File saved successfully!</p>")
+         elif qtext.strip() == "here":
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/plugins.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/plugins.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -15,24 +15,24 @@
+             "Github": {
+                 "mafft": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/mafft-win64.zip",
+                 "Rscript": "https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe",
+                 "python27": "https://repo.continuum.io/archive/Anaconda2-5.2.0-Windows-x86_64.exe",
+                 "gblocks": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/Gblocks_win.zip",
+                 "iq-tree": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/iqtree-win64.zip",
+                 "MrBayes": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/mrbayes-win.zip",
+-                "compiled PF2": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_large_plugins/main/PartitionFinder_win64.zip",
++                "compiled PF2": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_plugins/master/PartitionFinder_win64.zip",
+                 "PF2": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/partitionfinder.zip",
+                 "macse": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/macse.jar.zip",
+                 "trimAl": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/trimal.zip",
+                 "tbl2asn": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/tbl2asn.zip",
+                 "CodonW": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/Win32CodonW.zip",
+                 "ASTRAL": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/ASTRAL_win.zip",
+                 "ASTRAL-PRO": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/ASTRAL_win.zip",
+                 "FastTree": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/FastTree_win.zip",
+-                "plot engine": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_large_plugins/main/plot_engine_Win64.zip"
++                "plot engine": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/plot_engine_Win64.zip"
+             },
+             "Gitlab": {
+                 "mafft": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/mafft-win64.zip",
+                 "Rscript": "https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe",
+                 "python27": "https://repo.continuum.io/archive/Anaconda2-5.2.0-Windows-x86_64.exe",
+                 "gblocks": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/Gblocks_win.zip",
+                 "iq-tree": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/iqtree-win64.zip",
+@@ -89,24 +89,24 @@
+             "Github": {
+                 "mafft": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/mafft-win32.zip",
+                 "Rscript": "https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe",
+                 "python27": "https://repo.continuum.io/archive/Anaconda2-5.2.0-Windows-x86.exe",
+                 "gblocks": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/Gblocks_win.zip",
+                 "iq-tree": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/iqtree-win32.zip",
+                 "MrBayes": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/mrbayes-win.zip",
+-                "compiled PF2": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_large_plugins/main/PartitionFinder_win32.zip",
++                "compiled PF2": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_plugins/master/PartitionFinder_win32.zip",
+                 "PF2": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/partitionfinder.zip",
+                 "macse": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/macse.jar.zip",
+                 "trimAl": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/trimal.zip",
+                 "tbl2asn": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/tbl2asn.zip",
+                 "CodonW": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/Win32CodonW.zip",
+                 "ASTRAL": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/ASTRAL_win.zip",
+                 "ASTRAL-PRO": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/ASTRAL_win.zip",
+                 "FastTree": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/FastTree_win.zip",
+-                "plot engine": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_large_plugins/main/plot_engine_Win32.zip"
++                "plot engine": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/plot_engine_Win32.zip"
+             },
+             "Gitlab": {
+                 "mafft": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/mafft-win32.zip",
+                 "Rscript": "https://cran.r-project.org/bin/windows/base/old/3.4.4/R-3.4.4-win.exe",
+                 "python27": "https://repo.continuum.io/archive/Anaconda2-5.2.0-Windows-x86.exe",
+                 "gblocks": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/Gblocks_win.zip",
+                 "iq-tree": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/iqtree-win32.zip",
+@@ -165,22 +165,22 @@
+             "Github": {
+                 "mafft": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/mafft-mac64.zip",
+                 "Rscript": "https://cran.r-project.org/bin/macosx/R-3.5.1.pkg",
+                 "python27": "https://repo.continuum.io/archive/Anaconda2-5.2.0-MacOSX-x86_64.pkg",
+                 "gblocks": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/Gblocks_OSX_0.91b.zip",
+                 "iq-tree": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/iqtree-mac64.zip",
+                 "MrBayes": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/mrbayes-mac64.zip",
+-                "compiled PF2": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_large_plugins/main/PartitionFinder_mac.zip",
++                "compiled PF2": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_plugins/master/PartitionFinder_mac.zip",
+                 "PF2": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/partitionfinder.zip",
+                 "macse": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/macse.jar.zip",
+                 "CodonW": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/MacOSCodonW.zip",
+                 "ASTRAL": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/ASTRAL_mac.zip",
+                 "ASTRAL-PRO": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/ASTRAL_mac.zip",
+                 "FastTree": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/FastTree_mac.zip",
+-                "plot engine": "https://media.githubusercontent.com/media/dongzhang0725/PhyloSuite_large_plugins/main/plot_engine_Mac.zip"
++                "plot engine": "https://raw.githubusercontent.com/dongzhang0725/PhyloSuite_plugins/master/plot_engine_Mac.zip"
+             },
+             "Gitlab": {
+                 "mafft": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/mafft-mac64.zip",
+                 "Rscript": "https://cran.r-project.org/bin/macosx/R-3.5.1.pkg",
+                 "python27": "https://repo.continuum.io/archive/Anaconda2-5.2.0-MacOSX-x86_64.pkg",
+                 "gblocks": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/Gblocks_OSX_0.91b.zip",
+                 "iq-tree": "https://gitlab.com/PhyloSuite/PhyloSuite_plugins/raw/master/iqtree-mac64.zip",
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/preset_values.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/preset_values.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/rscuStack.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/rscuStack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/rscuSum.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/rscuSum.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/tiger_index.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/tiger_index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/tiger_output.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/tiger_output.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/tiger_rate.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/tiger_rate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/update.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/update.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/src/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/src/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/style.qss` & `PhyloSuite-1.2.3rc4/PhyloSuite/style.qss`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/tests/marine_turtle_mitogenomes.gb` & `PhyloSuite-1.2.3rc4/PhyloSuite/tests/marine_turtle_mitogenomes.gb`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/tests/Test_run.pdf` & `PhyloSuite-1.2.3rc4/PhyloSuite/tests/Test_run.pdf`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/about.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/about.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/addFile.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/addFile.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/ASTRAL.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/ASTRAL.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/authenticationdialog.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/authenticationdialog.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/clipboard_query.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/clipboard_query.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/color_sets.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/color_sets.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/compareTable.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/compareTable.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Concatenate.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Concatenate.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/ConvertFmt.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/ConvertFmt.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/dirichlet_mrbayes.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/dirichlet_mrbayes.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/display_setting.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/display_setting.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/drawGO.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/drawGO.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/exe_path.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/exe_path.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/extracter.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/extracter.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/extract_setting.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/extract_setting.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/FastTree.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/FastTree.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/gbEditor.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/gbEditor.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/gblocks.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/gblocks.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/HmmCleaner.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/HmmCleaner.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/IQ_TREE.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/IQ_TREE.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/launcher.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/launcher.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MACSE.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MACSE.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/mafft.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/mafft.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MainWindow.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MainWindow.ui`
+
+ * *Files 2% similar despite different names*
+
+#### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MainWindow.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MainWindow.ui`
+
+```diff
+@@ -630,15 +630,15 @@
+                                 <pointsize>7</pointsize>
+                               </font>
+                             </property>
+                             <property name="styleSheet">
+                               <string notr="true"/>
+                             </property>
+                             <property name="text">
+-                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;PhyloSuite v1.2.3&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Calibri,sans-serif'; font-size:14pt; font-weight:600;&quot;&gt;A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Home page: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://dongzhang0725.github.io&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://dongzhang0725.github.io&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; OR &lt;/span&gt;&lt;a href=&quot;http://phylosuite.jushengwu.com/&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://phylosuite.jushengwu.com/&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (China) &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Usage and test run: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Test run can be found &lt;/span&gt;&lt;a href=&quot;here&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. You may view a brief demo for each function via the inbuilt &lt;/span&gt;&lt;img src=&quot;:/picture/resourses/help.gif&quot;/&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; button. &lt;/span&gt;&lt;a href=&quot;Quick Start&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;Quick Start&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Bug report:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/phylosuite&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;Google group&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, &lt;/span&gt;&lt;a href=&quot;https://github.com/dongzhang0725/PhyloSuite/issues&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub issue&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; or send email to dongzhang0725@gmail.com.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Citation:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;1. Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: https://doi.org/10.1111/1755-0998.13096. (&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Download as: &lt;/span&gt;&lt;a href=&quot;RIS&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;RIS&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; | &lt;/span&gt;&lt;a href=&quot; XML&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;XML&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; | &lt;/span&gt;&lt;a href=&quot;ENW&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;ENW&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;2. Xiang, Chuan‐Yu, Fangluan Gao, Ivan Jakovlić, Hong‐Peng Lei, Ye Hu, Hong Zhang, Hong Zou, Gui‐Tang Wang, and Dong Zhang, Using PhyloSuite for molecular phylogeny and tree‐based analyses. iMeta, 2023. e87. DOI: https://doi.org/10.1002/imt2.87. (&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Download as: &lt;/span&gt;&lt;a href=&quot;RIS_imeta&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;RIS&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; | &lt;/span&gt;&lt;a href=&quot;XML_imeta&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;XML&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; | &lt;/span&gt;&lt;a href=&quot;ENW_imeta&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;ENW&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
++                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;PhyloSuite v1.2.3&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Calibri,sans-serif'; font-size:14pt; font-weight:600;&quot;&gt;A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Home page: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://dongzhang0725.github.io&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://dongzhang0725.github.io&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; OR &lt;/span&gt;&lt;a href=&quot;http://phylosuite.jushengwu.com/&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;http://phylosuite.jushengwu.com/&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (China) &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Usage and test run: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Test run can be found &lt;/span&gt;&lt;a href=&quot;here&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. You may view a brief demo for each function via the inbuilt &lt;/span&gt;&lt;img src=&quot;:/picture/resourses/help.gif&quot;/&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; button. &lt;/span&gt;&lt;a href=&quot;Quick Start&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;Quick Start&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Bug report:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/phylosuite&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;Google group&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, &lt;/span&gt;&lt;a href=&quot;https://github.com/dongzhang0725/PhyloSuite/issues&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub issue&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; or send email to dongzhang0725@gmail.com.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Citation:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096. (&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Download as: &lt;/span&gt;&lt;a href=&quot;RIS&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;RIS&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; | &lt;/span&gt;&lt;a href=&quot; XML&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;XML&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; | &lt;/span&gt;&lt;a href=&quot;ENW&quot;&gt;&lt;span style=&quot; font-size:14pt; text-decoration: underline; color:#0000ff;&quot;&gt;ENW&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="wordWrap">
+                               <bool>true</bool>
+                             </property>
+                             <property name="openExternalLinks">
+                               <bool>false</bool>
+                             </property>
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Manual_update.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Manual_update.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/mergeGBfile.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/mergeGBfile.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/ModelFinder.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/ModelFinder.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/MrBayes.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/MrBayes.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/myRes_rc.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/myRes_rc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/NCBI.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/NCBI.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/NCBI_db.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/NCBI_db.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/nexViewer.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/nexViewer.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/NmlPoPup.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/NmlPoPup.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/parseANNT.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/parseANNT.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/parseANNT_settings.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/parseANNT_settings.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/partitionfinder.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/partitionfinder.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/partition_defination.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/partition_defination.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/partition_editor.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/partition_editor.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/PF_exe_path.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/PF_exe_path.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/plot.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/plot.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Plot_options.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Plot_options.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/popUp.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/popUp.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/RSCUfig.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/RSCUfig.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/SeqViewer.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/SeqViewer.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/seqViewSetting.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/seqViewSetting.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/settings.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/settings.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Tiger.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Tiger.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/TreeSuite.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/TreeSuite.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/trimAl.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/trimAl.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/tRNA_reANNT.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/tRNA_reANNT.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_about.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_about.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_addFile.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_addFile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_ASTRAL.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_ASTRAL.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_clipboard_query.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_clipboard_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_color_sets.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_color_sets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_compareTable.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_compareTable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_Concatenate.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_Concatenate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_ConvertFmt.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_ConvertFmt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_dirichlet_mrbayes.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_dirichlet_mrbayes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_display_setting.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_display_setting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_drawGO.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_drawGO.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_exe_path.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_exe_path.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_extracter.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_extracter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_extract_setting.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_extract_setting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_FastTree.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_FastTree.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_gbEditor.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_gbEditor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_gblocks.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_gblocks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_HmmCleaner.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_HmmCleaner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_IQ_TREE.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_IQ_TREE.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_launcher.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_launcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MACSE.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MACSE.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_mafft.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_mafft.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MainWindow - 副本.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MainWindow - 副本.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MainWindow.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MainWindow.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -631,15 +631,15 @@
+         self.label_17.setText(_translate("MainWindow", "<html><head/><body><p><a href=\"open file\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">Open file(s)/Input ID(s)</span></a><span style=\" font-size:14pt;\"> to import</span></p></body></html>"))
+         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">Drop </span><span style=\" font-size:14pt; font-weight:600; color:#ffaa00;\">GenBank</span><span style=\" font-size:14pt;\"> file(s) here to open</span></p></body></html>"))
+         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">Drop </span><span style=\" font-size:14pt; font-weight:600; color:#ffaa00;\">Fasta</span><span style=\" font-size:14pt;\"> file(s) here to open</span></p></body></html>"))
+         self.pushButton.setText(_translate("MainWindow", "Click here to open in explorer"))
+         self.label_24.setText(_translate("MainWindow", "<html><head/><body><p><a href=\"open_file\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">Open file(s)</span></a><span style=\" font-size:14pt;\"> to import</span></p></body></html>"))
+         self.label_18.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt;\">Drop </span><span style=\" font-size:14pt; font-weight:600; color:#ffaa00;\">file(s)</span><span style=\" font-size:14pt;\"> here to open</span></p></body></html>"))
+         self.label_4.setText(_translate("MainWindow", "<html><head/><body><ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;\"><li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:13pt; font-weight:600; color:#ffaa00;\">*.fas, *.fasta</li><li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:13pt; font-weight:600; color:#ffaa00;\">*.phy, *.phylip</li><li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:13pt; font-weight:600; color:#ffaa00;\">*.nex, *.nxs, *.nexus</li><li style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:13pt; font-weight:600; color:#ffaa00;\">*.docx *.doc, *.odt, *.docm, *.dotx, *.dotm, *.dot</li></ul></body></html>"))
+-        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt; font-weight:600;\">PhyloSuite v1.2.3</span></p><p align=\"center\"><span style=\" font-family:\'Calibri,sans-serif\'; font-size:14pt; font-weight:600;\">A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies</span></p><p><span style=\" font-size:14pt; font-weight:600;\">Home page: </span></p><p><a href=\"https://dongzhang0725.github.io\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">https://dongzhang0725.github.io</span></a><span style=\" font-size:14pt;\"> OR </span><a href=\"http://phylosuite.jushengwu.com/\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">http://phylosuite.jushengwu.com/</span></a><span style=\" font-size:14pt;\"> (China) </span></p><p><span style=\" font-size:14pt; font-weight:600;\">Usage and test run: </span></p><p><span style=\" font-size:14pt;\">Test run can be found </span><a href=\"here\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">here</span></a><span style=\" font-size:14pt;\">. You may view a brief demo for each function via the inbuilt </span><img src=\":/picture/resourses/help.gif\"/><span style=\" font-size:14pt;\"> button. </span><a href=\"Quick Start\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">Quick Start</span></a></p><p><span style=\" font-size:14pt; font-weight:600;\">Bug report:</span></p><p><a href=\"https://groups.google.com/forum/#!forum/phylosuite\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">Google group</span></a><span style=\" font-size:14pt;\">, </span><a href=\"https://github.com/dongzhang0725/PhyloSuite/issues\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">GitHub issue</span></a><span style=\" font-size:14pt;\"> or send email to dongzhang0725@gmail.com.</span></p><p><span style=\" font-size:14pt; font-weight:600;\">Citation:</span></p><p><span style=\" font-size:14pt;\">1. Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: https://doi.org/10.1111/1755-0998.13096. (</span><span style=\" font-size:14pt; font-weight:600;\">Download as: </span><a href=\"RIS\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">RIS</span></a><span style=\" font-size:14pt;\"> | </span><a href=\" XML\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">XML</span></a><span style=\" font-size:14pt;\"> | </span><a href=\"ENW\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">ENW</span></a><span style=\" font-size:14pt;\">)</span></p><p><span style=\" font-size:14pt;\">2. Xiang, Chuan‐Yu, Fangluan Gao, Ivan Jakovlić, Hong‐Peng Lei, Ye Hu, Hong Zhang, Hong Zou, Gui‐Tang Wang, and Dong Zhang, Using PhyloSuite for molecular phylogeny and tree‐based analyses. iMeta, 2023. e87. DOI: https://doi.org/10.1002/imt2.87. (</span><span style=\" font-size:14pt; font-weight:600;\">Download as: </span><a href=\"RIS_imeta\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">RIS</span></a><span style=\" font-size:14pt;\"> | </span><a href=\"XML_imeta\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">XML</span></a><span style=\" font-size:14pt;\"> | </span><a href=\"ENW_imeta\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">ENW</span></a><span style=\" font-size:14pt;\">)</span></p><p><br/></p></body></html>"))
++        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:20pt; font-weight:600;\">PhyloSuite v1.2.3</span></p><p align=\"center\"><span style=\" font-family:\'Calibri,sans-serif\'; font-size:14pt; font-weight:600;\">A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies</span></p><p><span style=\" font-size:14pt; font-weight:600;\">Home page: </span></p><p><a href=\"https://dongzhang0725.github.io\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">https://dongzhang0725.github.io</span></a><span style=\" font-size:14pt;\"> OR </span><a href=\"http://phylosuite.jushengwu.com/\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">http://phylosuite.jushengwu.com/</span></a><span style=\" font-size:14pt;\"> (China) </span></p><p><span style=\" font-size:14pt; font-weight:600;\">Usage and test run: </span></p><p><span style=\" font-size:14pt;\">Test run can be found </span><a href=\"here\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">here</span></a><span style=\" font-size:14pt;\">. You may view a brief demo for each function via the inbuilt </span><img src=\":/picture/resourses/help.gif\"/><span style=\" font-size:14pt;\"> button. </span><a href=\"Quick Start\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">Quick Start</span></a></p><p><span style=\" font-size:14pt; font-weight:600;\">Bug report:</span></p><p><a href=\"https://groups.google.com/forum/#!forum/phylosuite\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">Google group</span></a><span style=\" font-size:14pt;\">, </span><a href=\"https://github.com/dongzhang0725/PhyloSuite/issues\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">GitHub issue</span></a><span style=\" font-size:14pt;\"> or send email to dongzhang0725@gmail.com.</span></p><p><span style=\" font-size:14pt; font-weight:600;\">Citation:</span></p><p><span style=\" font-size:14pt;\">Zhang, D., F. Gao, I. Jakovlić, H. Zou, J. Zhang, W.X. Li, and G.T. Wang, PhyloSuite: An integrated and scalable desktop platform for streamlined molecular sequence data management and evolutionary phylogenetics studies. Molecular Ecology Resources, 2020. 20(1): p. 348–355. DOI: 10.1111/1755-0998.13096. (</span><span style=\" font-size:14pt; font-weight:600;\">Download as: </span><a href=\"RIS\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">RIS</span></a><span style=\" font-size:14pt;\"> | </span><a href=\" XML\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">XML</span></a><span style=\" font-size:14pt;\"> | </span><a href=\"ENW\"><span style=\" font-size:14pt; text-decoration: underline; color:#0000ff;\">ENW</span></a><span style=\" font-size:14pt;\">)</span></p><p><br/></p></body></html>"))
+         self.label_flow_sum.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:13pt; color:#ffffff;\">Name:</span></p></body></html>"))
+         self.toolButton_del.setToolTip(_translate("MainWindow", "Remove current workflow results"))
+         self.toolButton_del.setText(_translate("MainWindow", "..."))
+         self.toolButton_wrap.setToolTip(_translate("MainWindow", "Use Wraps"))
+         self.toolButton_wrap.setText(_translate("MainWindow", "..."))
+         self.toolButton_save.setToolTip(_translate("MainWindow", "Save to file"))
+         self.toolButton_save.setText(_translate("MainWindow", "..."))
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_Manual_update.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_Manual_update.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_ModelFinder.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_ModelFinder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_MrBayes.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_MrBayes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_NCBI.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_NCBI.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_NCBI_db.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_NCBI_db.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_nexViewer.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_nexViewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_NmlPoPup.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_NmlPoPup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_parseANNT.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_parseANNT.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_parseANNT_settings.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_parseANNT_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_partitionfinder.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_partitionfinder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_partition_defination.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_partition_defination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_partition_editor.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_partition_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_PF_exe_path.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_PF_exe_path.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_plot.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_plot.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_popUp.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_popUp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_RSCUfig.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_RSCUfig.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_SeqViewer.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_SeqViewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_seqViewSetting.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_seqViewSetting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_settings.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_Tiger.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_Tiger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_TreeSuite.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_TreeSuite.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_trimAl.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_trimAl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_tRNA_reANNT.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_tRNA_reANNT.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_untitled.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_untitled.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/Ui_work_flow.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/Ui_work_flow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/untitled.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/untitled.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/work_flow.ui` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/work_flow.ui`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite/uifiles/__init__.py` & `PhyloSuite-1.2.3rc4/PhyloSuite/uifiles/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/PKG-INFO` & `PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: PhyloSuite
+-Version: 1.2.3.post1
++Version: 1.2.3rc4
+ Summary: A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies.
+ Home-page: https://github.com/dongzhang0725/PhyloSuite
+ Author: Dong Zhang
+ Author-email: dongzhang0725@gmail.com
+ License: GNU Affero General Public License v3 or later (AGPLv3+)
+ Description: 
+         # PhyloSuite
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PhyloSuite.egg-info/SOURCES.txt` & `PhyloSuite-1.2.3rc4/PhyloSuite.egg-info/SOURCES.txt`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,28 +1,25 @@
+ LICENSE
+ MANIFEST.in
+ README.md
+ setup.cfg
+ setup.py
+ PhyloSuite/NEWS_version.md
+ PhyloSuite/PhyloSuite.py
++PhyloSuite/PhyloSuite_citation.enw
++PhyloSuite/PhyloSuite_citation.ris
++PhyloSuite/PhyloSuite_citation.xml
+ PhyloSuite/__init__.py
+ PhyloSuite/style.qss
+ PhyloSuite.egg-info/PKG-INFO
+ PhyloSuite.egg-info/SOURCES.txt
+ PhyloSuite.egg-info/dependency_links.txt
+ PhyloSuite.egg-info/entry_points.txt
+ PhyloSuite.egg-info/requires.txt
+ PhyloSuite.egg-info/top_level.txt
+-PhyloSuite/citation/PhyloSuite_citation.enw
+-PhyloSuite/citation/PhyloSuite_citation.ris
+-PhyloSuite/citation/PhyloSuite_citation.xml
+-PhyloSuite/citation/PhyloSuite_citation_imeta.enw
+-PhyloSuite/citation/PhyloSuite_citation_imeta.ris
+-PhyloSuite/citation/PhyloSuite_citation_imeta.xml
+ PhyloSuite/ete3/__init__.py
+ PhyloSuite/ete3/_ph.py
+ PhyloSuite/ete3/citation.py
+ PhyloSuite/ete3/utils.py
+ PhyloSuite/ete3/version.py
+ PhyloSuite/ete3/clustering/__init__.py
+ PhyloSuite/ete3/clustering/clustertree.py
+@@ -231,14 +228,15 @@
+ PhyloSuite/src/Lg_RSCUfig.py
+ PhyloSuite/src/Lg_SerhNCBI.py
+ PhyloSuite/src/Lg_addFiles.py
+ PhyloSuite/src/Lg_compareTable.py
+ PhyloSuite/src/Lg_displaySettings.py
+ PhyloSuite/src/Lg_drawGO.py
+ PhyloSuite/src/Lg_extractSettings.py
++PhyloSuite/src/Lg_extracter-old.py
+ PhyloSuite/src/Lg_extracter.py
+ PhyloSuite/src/Lg_gbEditor.py
+ PhyloSuite/src/Lg_macse.py
+ PhyloSuite/src/Lg_mafft.py
+ PhyloSuite/src/Lg_parseANNT.py
+ PhyloSuite/src/Lg_seqViewer.py
+ PhyloSuite/src/Lg_settings.py
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/PKG-INFO` & `PhyloSuite-1.2.3rc4/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: PhyloSuite
+-Version: 1.2.3.post1
++Version: 1.2.3rc4
+ Summary: A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies.
+ Home-page: https://github.com/dongzhang0725/PhyloSuite
+ Author: Dong Zhang
+ Author-email: dongzhang0725@gmail.com
+ License: GNU Affero General Public License v3 or later (AGPLv3+)
+ Description: 
+         # PhyloSuite
+```
+
+### Comparing `PhyloSuite-1.2.3.post1/README.md` & `PhyloSuite-1.2.3rc4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `PhyloSuite-1.2.3.post1/setup.py` & `PhyloSuite-1.2.3rc4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+ # Package meta-data.
+ NAME = 'PhyloSuite'
+ DESCRIPTION = 'A desktop platform for streamlined molecular sequence data management and state of the art evolutionary phylogenetics studies.'
+ URL = 'https://github.com/dongzhang0725/PhyloSuite'
+ EMAIL = 'dongzhang0725@gmail.com'
+ AUTHOR = 'Dong Zhang'
+ REQUIRES_PYTHON = '>=3.6.0, <=3.7.0'
+-VERSION = '1.2.3post1'
++VERSION = '1.2.3rc4'
+ 
+ platform_ = platform.system().lower()
+ 
+ # 如何配置：https://stackoverflow.com/questions/16055403/setuptools-platform-specific-dependencies
+ # What packages are required for this module to be executed?
+ REQUIRED = [
+     'biopython==1.76',
+```
+
