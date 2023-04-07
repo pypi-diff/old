@@ -1,0 +1,235 @@
+# Comparing `tmp/metator-1.2.6.tar.gz` & `tmp/metator-1.2.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "metator-1.2.6.tar", last modified: Wed Apr  5 17:38:10 2023, max compression
++gzip compressed data, was "metator-1.2.7.tar", last modified: Fri Apr  7 07:54:29 2023, max compression
+```
+
+## Comparing `metator-1.2.6.tar` & `metator-1.2.7.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 17:38:10.405203 metator-1.2.6/
+--rw-r--r--   0 runner    (1001) docker     (123)    35128 2023-04-05 17:38:00.000000 metator-1.2.6/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       98 2023-04-05 17:38:00.000000 metator-1.2.6/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)    15836 2023-04-05 17:38:10.405203 metator-1.2.6/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)    13074 2023-04-05 17:38:00.000000 metator-1.2.6/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 17:38:10.405203 metator-1.2.6/metator/
+--rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-05 17:38:00.000000 metator-1.2.6/metator/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23031 2023-04-05 17:38:00.000000 metator-1.2.6/metator/align.py
+--rw-r--r--   0 runner    (1001) docker     (123)    59703 2023-04-05 17:38:00.000000 metator-1.2.6/metator/commands.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13337 2023-04-05 17:38:00.000000 metator-1.2.6/metator/contact_map.py
+--rw-r--r--   0 runner    (1001) docker     (123)    24780 2023-04-05 17:38:00.000000 metator-1.2.6/metator/figures.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22681 2023-04-05 17:38:00.000000 metator-1.2.6/metator/io.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2537 2023-04-05 17:38:00.000000 metator-1.2.6/metator/log.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2135 2023-04-05 17:38:00.000000 metator-1.2.6/metator/main.py
+--rw-r--r--   0 runner    (1001) docker     (123)    22814 2023-04-05 17:38:00.000000 metator-1.2.6/metator/network.py
+--rw-r--r--   0 runner    (1001) docker     (123)    30454 2023-04-05 17:38:00.000000 metator-1.2.6/metator/partition.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10608 2023-04-05 17:38:00.000000 metator-1.2.6/metator/quality_check.py
+--rw-r--r--   0 runner    (1001) docker     (123)    21556 2023-04-05 17:38:00.000000 metator-1.2.6/metator/regions.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17803 2023-04-05 17:38:00.000000 metator-1.2.6/metator/scaffold.py
+--rw-r--r--   0 runner    (1001) docker     (123)    41050 2023-04-05 17:38:00.000000 metator-1.2.6/metator/validation.py
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-05 17:38:10.000000 metator-1.2.6/metator/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-05 17:38:10.405203 metator-1.2.6/metator.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)    15836 2023-04-05 17:38:10.000000 metator-1.2.6/metator.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      542 2023-04-05 17:38:10.000000 metator-1.2.6/metator.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-05 17:38:10.000000 metator-1.2.6/metator.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       47 2023-04-05 17:38:10.000000 metator-1.2.6/metator.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-05 17:38:10.000000 metator-1.2.6/metator.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-05 17:38:10.000000 metator-1.2.6/metator.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-05 17:38:00.000000 metator-1.2.6/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-05 17:38:10.405203 metator-1.2.6/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1834 2023-04-05 17:38:00.000000 metator-1.2.6/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:54:29.843555 metator-1.2.7/
++-rw-r--r--   0 runner    (1001) docker     (123)    35128 2023-04-07 07:54:18.000000 metator-1.2.7/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       98 2023-04-07 07:54:18.000000 metator-1.2.7/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)    15836 2023-04-07 07:54:29.843555 metator-1.2.7/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    13074 2023-04-07 07:54:18.000000 metator-1.2.7/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:54:29.843555 metator-1.2.7/metator/
++-rw-r--r--   0 runner    (1001) docker     (123)      599 2023-04-07 07:54:18.000000 metator-1.2.7/metator/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23031 2023-04-07 07:54:18.000000 metator-1.2.7/metator/align.py
++-rw-r--r--   0 runner    (1001) docker     (123)    59703 2023-04-07 07:54:18.000000 metator-1.2.7/metator/commands.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13337 2023-04-07 07:54:18.000000 metator-1.2.7/metator/contact_map.py
++-rw-r--r--   0 runner    (1001) docker     (123)    24780 2023-04-07 07:54:18.000000 metator-1.2.7/metator/figures.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22681 2023-04-07 07:54:18.000000 metator-1.2.7/metator/io.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2537 2023-04-07 07:54:18.000000 metator-1.2.7/metator/log.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2135 2023-04-07 07:54:18.000000 metator-1.2.7/metator/main.py
++-rw-r--r--   0 runner    (1001) docker     (123)    22814 2023-04-07 07:54:18.000000 metator-1.2.7/metator/network.py
++-rw-r--r--   0 runner    (1001) docker     (123)    30454 2023-04-07 07:54:18.000000 metator-1.2.7/metator/partition.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10608 2023-04-07 07:54:18.000000 metator-1.2.7/metator/quality_check.py
++-rw-r--r--   0 runner    (1001) docker     (123)    21556 2023-04-07 07:54:18.000000 metator-1.2.7/metator/regions.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17803 2023-04-07 07:54:18.000000 metator-1.2.7/metator/scaffold.py
++-rw-r--r--   0 runner    (1001) docker     (123)    41117 2023-04-07 07:54:18.000000 metator-1.2.7/metator/validation.py
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-07 07:54:29.000000 metator-1.2.7/metator/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:54:29.843555 metator-1.2.7/metator.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    15836 2023-04-07 07:54:29.000000 metator-1.2.7/metator.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      542 2023-04-07 07:54:29.000000 metator-1.2.7/metator.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:54:29.000000 metator-1.2.7/metator.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       47 2023-04-07 07:54:29.000000 metator-1.2.7/metator.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-07 07:54:29.000000 metator-1.2.7/metator.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-07 07:54:29.000000 metator-1.2.7/metator.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-07 07:54:18.000000 metator-1.2.7/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-07 07:54:29.843555 metator-1.2.7/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1834 2023-04-07 07:54:18.000000 metator-1.2.7/setup.py
+```
+
+### Comparing `metator-1.2.6/LICENSE` & `metator-1.2.7/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/PKG-INFO` & `metator-1.2.7/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: metator
+-Version: 1.2.6
++Version: 1.2.7
+ Summary: A pipeline for binning metagenomic datasets from metaHiC data.
+ Home-page: https://github.com/koszullab/metator
+ Author: amaury.bignaud@pasteur.fr
+ License: GPLv3
+ Description: # MetaTOR
+         
+         [![PyPI version](https://badge.fury.io/py/metator.svg)](https://badge.fury.io/py/metator)
+```
+
+### Comparing `metator-1.2.6/README.md` & `metator-1.2.7/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/__init__.py` & `metator-1.2.7/metator/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/align.py` & `metator-1.2.7/metator/align.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/commands.py` & `metator-1.2.7/metator/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/contact_map.py` & `metator-1.2.7/metator/contact_map.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/figures.py` & `metator-1.2.7/metator/figures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/io.py` & `metator-1.2.7/metator/io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/log.py` & `metator-1.2.7/metator/log.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/main.py` & `metator-1.2.7/metator/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/network.py` & `metator-1.2.7/metator/network.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/partition.py` & `metator-1.2.7/metator/partition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/quality_check.py` & `metator-1.2.7/metator/quality_check.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/regions.py` & `metator-1.2.7/metator/regions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/scaffold.py` & `metator-1.2.7/metator/scaffold.py`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/metator/validation.py` & `metator-1.2.7/metator/validation.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -60,20 +60,21 @@
+         Dataframe with the contigs informations.
+ 
+     Returns:
+     --------
+     pandas.core.frame.DataFrame
+         Dataframe with the contigs informations.
+     """
+-    contigs_data = contigs_data.set_index("Name")
++    contigs_data = contigs_data.set_index("Name", drop=False)
+     for bin_name in bin_summary:
+         fasta_file = join(final_fasta_dir, f"{bin_name}.fa")
+         fasta = pyfastx.Fasta(fasta_file)
+         for seq in fasta:
+             contigs_data.loc[seq.name, "Final_bin"] = bin_name
++    contigs_data = contigs_data.reset_index(drop=True)
+     return contigs_data
+ 
+ 
+ def get_bin_coverage(bin_summary, contigs_data):
+     """Function to compute the coverage of each bin.
+ 
+     Parameters:
+```
+
+### Comparing `metator-1.2.6/metator.egg-info/PKG-INFO` & `metator-1.2.7/metator.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: metator
+-Version: 1.2.6
++Version: 1.2.7
+ Summary: A pipeline for binning metagenomic datasets from metaHiC data.
+ Home-page: https://github.com/koszullab/metator
+ Author: amaury.bignaud@pasteur.fr
+ License: GPLv3
+ Description: # MetaTOR
+         
+         [![PyPI version](https://badge.fury.io/py/metator.svg)](https://badge.fury.io/py/metator)
+```
+
+### Comparing `metator-1.2.6/metator.egg-info/SOURCES.txt` & `metator-1.2.7/metator.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `metator-1.2.6/setup.py` & `metator-1.2.7/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -25,15 +25,15 @@
+     "Operating System :: Unix",
+ ]
+ 
+ name = "metator"
+ 
+ MAJOR = 1
+ MINOR = 2
+-MAINTENANCE = 6
++MAINTENANCE = 7
+ VERSION = "{}.{}.{}".format(MAJOR, MINOR, MAINTENANCE)
+ 
+ LICENSE = "GPLv3"
+ URL = "https://github.com/koszullab/metator"
+ 
+ DESCRIPTION = __doc__.strip("\n")
+```
+

@@ -1,0 +1,257 @@
+# Comparing `tmp/ggtag-0.1.1.tar.gz` & `tmp/ggtag-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ggtag-0.1.1.tar", last modified: Thu Apr  6 14:43:36 2023, max compression
++gzip compressed data, was "ggtag-0.1.2.tar", last modified: Fri Apr  7 07:51:40 2023, max compression
+```
+
+## Comparing `ggtag-0.1.1.tar` & `ggtag-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,41 +1,41 @@
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.510329 ggtag-0.1.1/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       72 2023-03-24 11:10:45.000000 ggtag-0.1.1/MANIFEST.in
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1378 2023-04-06 14:43:36.510329 ggtag-0.1.1/PKG-INFO
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      883 2023-04-06 14:36:27.000000 ggtag-0.1.1/README.md
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     2301 2023-03-30 06:13:07.000000 ggtag-0.1.1/cggtag.c
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.506329 ggtag-0.1.1/ggtag.egg-info/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1378 2023-04-06 14:43:36.000000 ggtag-0.1.1/ggtag.egg-info/PKG-INFO
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      644 2023-04-06 14:43:36.000000 ggtag-0.1.1/ggtag.egg-info/SOURCES.txt
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)        1 2023-04-06 14:43:36.000000 ggtag-0.1.1/ggtag.egg-info/dependency_links.txt
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       13 2023-04-06 14:43:36.000000 ggtag-0.1.1/ggtag.egg-info/top_level.txt
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     4267 2023-04-06 07:34:30.000000 ggtag-0.1.1/ggtag.py
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.506329 ggtag-0.1.1/host/
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.506329 ggtag-0.1.1/host/include/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      877 2023-04-06 14:43:36.000000 ggtag-0.1.1/host/include/ggtag.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      233 2023-04-06 14:43:36.000000 ggtag-0.1.1/host/include/utils.h
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.506329 ggtag-0.1.1/host/src/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    24874 2023-04-06 14:43:36.000000 ggtag-0.1.1/host/src/ggtag.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      254 2023-04-06 14:43:36.000000 ggtag-0.1.1/host/src/rfid.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    28757 2023-04-06 14:43:36.000000 ggtag-0.1.1/host/src/utils.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       38 2023-04-06 14:43:36.510329 ggtag-0.1.1/setup.cfg
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1167 2023-04-06 14:43:18.000000 ggtag-0.1.1/setup.py
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.506329 ggtag-0.1.1/shared/
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.510329 ggtag-0.1.1/shared/include/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     7274 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/GUI_Paint.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/debug.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     3107 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/fonts.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1237 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/protocol.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17866 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/qrcodegen.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/rfid.h
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)   199033 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/include/stb_truetype.h
+-drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-06 14:43:36.510329 ggtag-0.1.1/shared/src/
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    31639 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/GUI_Paint.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      453 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/debug.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)  1250359 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/fa.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    25780 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/font12.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    47973 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/font16.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    64320 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/font20.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    96590 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/font24.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17398 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/font8.c
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     8696 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/protocol.cpp
+--rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    41771 2023-04-06 14:43:36.000000 ggtag-0.1.1/shared/src/qrcodegen.c
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.912639 ggtag-0.1.2/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       72 2023-03-24 11:10:45.000000 ggtag-0.1.2/MANIFEST.in
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1378 2023-04-07 07:51:40.912639 ggtag-0.1.2/PKG-INFO
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      883 2023-04-06 14:36:27.000000 ggtag-0.1.2/README.md
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     2301 2023-03-30 06:13:07.000000 ggtag-0.1.2/cggtag.c
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.908639 ggtag-0.1.2/ggtag.egg-info/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1378 2023-04-07 07:51:40.000000 ggtag-0.1.2/ggtag.egg-info/PKG-INFO
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      644 2023-04-07 07:51:40.000000 ggtag-0.1.2/ggtag.egg-info/SOURCES.txt
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)        1 2023-04-07 07:51:40.000000 ggtag-0.1.2/ggtag.egg-info/dependency_links.txt
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       13 2023-04-07 07:51:40.000000 ggtag-0.1.2/ggtag.egg-info/top_level.txt
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     4267 2023-04-06 07:34:30.000000 ggtag-0.1.2/ggtag.py
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.908639 ggtag-0.1.2/host/
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.908639 ggtag-0.1.2/host/include/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      877 2023-04-07 07:51:40.000000 ggtag-0.1.2/host/include/ggtag.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      233 2023-04-07 07:51:40.000000 ggtag-0.1.2/host/include/utils.h
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.908639 ggtag-0.1.2/host/src/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    24874 2023-04-07 07:51:40.000000 ggtag-0.1.2/host/src/ggtag.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      254 2023-04-07 07:51:40.000000 ggtag-0.1.2/host/src/rfid.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    28757 2023-04-07 07:51:40.000000 ggtag-0.1.2/host/src/utils.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)       38 2023-04-07 07:51:40.912639 ggtag-0.1.2/setup.cfg
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1205 2023-04-06 14:53:21.000000 ggtag-0.1.2/setup.py
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.908639 ggtag-0.1.2/shared/
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.908639 ggtag-0.1.2/shared/include/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     7274 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/GUI_Paint.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/debug.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     3107 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/fonts.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     1237 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/protocol.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17866 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/qrcodegen.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      171 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/rfid.h
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)   199033 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/include/stb_truetype.h
++drwxrwxr-x   0 rgerganov  (1000) rgerganov  (1000)        0 2023-04-07 07:51:40.912639 ggtag-0.1.2/shared/src/
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    31639 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/GUI_Paint.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)      453 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/debug.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)  1250359 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/fa.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    25780 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/font12.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    47973 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/font16.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    64320 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/font20.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    96590 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/font24.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    17398 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/font8.c
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)     8696 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/protocol.cpp
++-rw-rw-r--   0 rgerganov  (1000) rgerganov  (1000)    41771 2023-04-07 07:51:40.000000 ggtag-0.1.2/shared/src/qrcodegen.c
+```
+
+### Comparing `ggtag-0.1.1/PKG-INFO` & `ggtag-0.1.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ggtag
+-Version: 0.1.1
++Version: 0.1.2
+ Summary: Python bindings for ggtag
+ Home-page: https://github.com/rgerganov/ggtag
+ Author: Radoslav Gerganov
+ Author-email: rgerganov@gmail.com
+ License: UNKNOWN
+ Description: Python bindings for `ggtag`.
+```
+
+### Comparing `ggtag-0.1.1/README.md` & `ggtag-0.1.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/cggtag.c` & `ggtag-0.1.2/cggtag.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/ggtag.egg-info/PKG-INFO` & `ggtag-0.1.2/ggtag.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ggtag
+-Version: 0.1.1
++Version: 0.1.2
+ Summary: Python bindings for ggtag
+ Home-page: https://github.com/rgerganov/ggtag
+ Author: Radoslav Gerganov
+ Author-email: rgerganov@gmail.com
+ License: UNKNOWN
+ Description: Python bindings for `ggtag`.
+```
+
+### Comparing `ggtag-0.1.1/ggtag.egg-info/SOURCES.txt` & `ggtag-0.1.2/ggtag.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/ggtag.py` & `ggtag-0.1.2/ggtag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/host/include/ggtag.h` & `ggtag-0.1.2/host/include/ggtag.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/host/src/ggtag.cpp` & `ggtag-0.1.2/host/src/ggtag.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/host/src/utils.cpp` & `ggtag-0.1.2/host/src/utils.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/setup.py` & `ggtag-0.1.2/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ from setuptools import setup, Extension
+ 
+ def main():
+     with open("README.md", "r") as fh:
+         long_description = fh.read()
+ 
+     setup(name="ggtag",
+-          version="0.1.1",
++          version="0.1.2",
+           description="Python bindings for ggtag",
+           long_description=long_description,
+           long_description_content_type="text/markdown",
+           author="Radoslav Gerganov",
+           author_email="rgerganov@gmail.com",
+           include_dirs = ['host/include', 'shared/include'],
+           py_modules = ['ggtag'],
+@@ -24,11 +24,12 @@
+                 "shared/src/fa.c",
+                 "shared/src/font8.c",
+                 "shared/src/font12.c",
+                 "shared/src/font16.c",
+                 "shared/src/font20.c",
+                 "shared/src/font24.c",
+                 "shared/src/qrcodegen.c",
++                "shared/src/debug.c",
+                 ])])
+ 
+ if __name__ == "__main__":
+     main()
+```
+
+### Comparing `ggtag-0.1.1/shared/include/GUI_Paint.h` & `ggtag-0.1.2/shared/include/GUI_Paint.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/include/fonts.h` & `ggtag-0.1.2/shared/include/fonts.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/include/protocol.h` & `ggtag-0.1.2/shared/include/protocol.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/include/qrcodegen.h` & `ggtag-0.1.2/shared/include/qrcodegen.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/include/stb_truetype.h` & `ggtag-0.1.2/shared/include/stb_truetype.h`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/GUI_Paint.c` & `ggtag-0.1.2/shared/src/GUI_Paint.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/fa.c` & `ggtag-0.1.2/shared/src/fa.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/font12.c` & `ggtag-0.1.2/shared/src/font12.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/font16.c` & `ggtag-0.1.2/shared/src/font16.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/font20.c` & `ggtag-0.1.2/shared/src/font20.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/font24.c` & `ggtag-0.1.2/shared/src/font24.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/font8.c` & `ggtag-0.1.2/shared/src/font8.c`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/protocol.cpp` & `ggtag-0.1.2/shared/src/protocol.cpp`
+
+ * *Files identical despite different names*
+
+### Comparing `ggtag-0.1.1/shared/src/qrcodegen.c` & `ggtag-0.1.2/shared/src/qrcodegen.c`
+
+ * *Files identical despite different names*
+

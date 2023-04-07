@@ -1,0 +1,807 @@
+# Comparing `tmp/morefs-0.1.0.tar.gz` & `tmp/morefs-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "morefs-0.1.0.tar", last modified: Wed Oct 19 15:53:18 2022, max compression
++gzip compressed data, was "morefs-0.1.1.tar", last modified: Fri Apr  7 07:58:36 2023, max compression
+```
+
+## Comparing `morefs-0.1.0.tar` & `morefs-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,41 +1,41 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.078882 morefs-0.1.0/
+--rw-r--r--   0 runner    (1001) docker     (121)      694 2022-10-19 15:52:50.000000 morefs-0.1.0/.cruft.json
+--rw-r--r--   0 runner    (1001) docker     (121)       19 2022-10-19 15:52:50.000000 morefs-0.1.0/.gitattributes
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.074882 morefs-0.1.0/.github/
+--rw-r--r--   0 runner    (1001) docker     (121)      737 2022-10-19 15:52:50.000000 morefs-0.1.0/.github/dependabot.yml
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.074882 morefs-0.1.0/.github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (121)      725 2022-10-19 15:52:50.000000 morefs-0.1.0/.github/workflows/release.yml
+--rw-r--r--   0 runner    (1001) docker     (121)     1267 2022-10-19 15:52:50.000000 morefs-0.1.0/.github/workflows/tests.yml
+--rw-r--r--   0 runner    (1001) docker     (121)      298 2022-10-19 15:52:50.000000 morefs-0.1.0/.github/workflows/update-template.yaml
+--rw-r--r--   0 runner    (1001) docker     (121)     2035 2022-10-19 15:52:50.000000 morefs-0.1.0/.gitignore
+--rw-r--r--   0 runner    (1001) docker     (121)     1380 2022-10-19 15:52:50.000000 morefs-0.1.0/.pre-commit-config.yaml
+--rw-r--r--   0 runner    (1001) docker     (121)     5396 2022-10-19 15:52:50.000000 morefs-0.1.0/CODE_OF_CONDUCT.rst
+--rw-r--r--   0 runner    (1001) docker     (121)     2642 2022-10-19 15:52:50.000000 morefs-0.1.0/CONTRIBUTING.rst
+--rw-r--r--   0 runner    (1001) docker     (121)    11340 2022-10-19 15:52:50.000000 morefs-0.1.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)     2791 2022-10-19 15:53:18.078882 morefs-0.1.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)     2041 2022-10-19 15:52:50.000000 morefs-0.1.0/README.rst
+--rw-r--r--   0 runner    (1001) docker     (121)     1798 2022-10-19 15:52:50.000000 morefs-0.1.0/noxfile.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1704 2022-10-19 15:52:50.000000 morefs-0.1.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (121)     1721 2022-10-19 15:53:18.078882 morefs-0.1.0/setup.cfg
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.074882 morefs-0.1.0/src/
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.074882 morefs-0.1.0/src/morefs/
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-10-19 15:52:50.000000 morefs-0.1.0/src/morefs/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     2931 2022-10-19 15:52:50.000000 morefs-0.1.0/src/morefs/asyn_local.py
+--rw-r--r--   0 runner    (1001) docker     (121)     9497 2022-10-19 15:52:50.000000 morefs-0.1.0/src/morefs/dict.py
+--rw-r--r--   0 runner    (1001) docker     (121)     4098 2022-10-19 15:52:50.000000 morefs-0.1.0/src/morefs/memory.py
+--rw-r--r--   0 runner    (1001) docker     (121)     5482 2022-10-19 15:52:50.000000 morefs-0.1.0/src/morefs/overlay.py
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-10-19 15:52:50.000000 morefs-0.1.0/src/morefs/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.074882 morefs-0.1.0/src/morefs.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     2791 2022-10-19 15:53:18.000000 morefs-0.1.0/src/morefs.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      747 2022-10-19 15:53:18.000000 morefs-0.1.0/src/morefs.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-10-19 15:53:18.000000 morefs-0.1.0/src/morefs.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      168 2022-10-19 15:53:18.000000 morefs-0.1.0/src/morefs.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-10-19 15:53:17.000000 morefs-0.1.0/src/morefs.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (121)      854 2022-10-19 15:53:18.000000 morefs-0.1.0/src/morefs.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        7 2022-10-19 15:53:18.000000 morefs-0.1.0/src/morefs.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-19 15:53:18.078882 morefs-0.1.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (121)       41 2022-10-19 15:52:50.000000 morefs-0.1.0/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     4130 2022-10-19 15:52:50.000000 morefs-0.1.0/tests/test_asyn_local.py
+--rw-r--r--   0 runner    (1001) docker     (121)     7531 2022-10-19 15:52:50.000000 morefs-0.1.0/tests/test_dictfs.py
+--rw-r--r--   0 runner    (1001) docker     (121)     5207 2022-10-19 15:52:50.000000 morefs-0.1.0/tests/test_memfs.py
+--rw-r--r--   0 runner    (1001) docker     (121)      316 2022-10-19 15:52:50.000000 morefs-0.1.0/tests/test_morefs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.512231 morefs-0.1.1/
++-rw-r--r--   0 runner    (1001) docker     (123)      694 2023-04-07 07:58:08.000000 morefs-0.1.1/.cruft.json
++-rw-r--r--   0 runner    (1001) docker     (123)       19 2023-04-07 07:58:08.000000 morefs-0.1.1/.gitattributes
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.508231 morefs-0.1.1/.github/
++-rw-r--r--   0 runner    (1001) docker     (123)      737 2023-04-07 07:58:08.000000 morefs-0.1.1/.github/dependabot.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.508231 morefs-0.1.1/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)      725 2023-04-07 07:58:08.000000 morefs-0.1.1/.github/workflows/release.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1203 2023-04-07 07:58:08.000000 morefs-0.1.1/.github/workflows/tests.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      298 2023-04-07 07:58:08.000000 morefs-0.1.1/.github/workflows/update-template.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     2035 2023-04-07 07:58:08.000000 morefs-0.1.1/.gitignore
++-rw-r--r--   0 runner    (1001) docker     (123)     1477 2023-04-07 07:58:08.000000 morefs-0.1.1/.pre-commit-config.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     5396 2023-04-07 07:58:08.000000 morefs-0.1.1/CODE_OF_CONDUCT.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     2642 2023-04-07 07:58:08.000000 morefs-0.1.1/CONTRIBUTING.rst
++-rw-r--r--   0 runner    (1001) docker     (123)    11340 2023-04-07 07:58:08.000000 morefs-0.1.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     2791 2023-04-07 07:58:36.512231 morefs-0.1.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2041 2023-04-07 07:58:08.000000 morefs-0.1.1/README.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1798 2023-04-07 07:58:08.000000 morefs-0.1.1/noxfile.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1856 2023-04-07 07:58:08.000000 morefs-0.1.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)     1560 2023-04-07 07:58:36.512231 morefs-0.1.1/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.504231 morefs-0.1.1/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.508231 morefs-0.1.1/src/morefs/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:08.000000 morefs-0.1.1/src/morefs/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2917 2023-04-07 07:58:08.000000 morefs-0.1.1/src/morefs/asyn_local.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9445 2023-04-07 07:58:08.000000 morefs-0.1.1/src/morefs/dict.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4102 2023-04-07 07:58:08.000000 morefs-0.1.1/src/morefs/memory.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5728 2023-04-07 07:58:08.000000 morefs-0.1.1/src/morefs/overlay.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:08.000000 morefs-0.1.1/src/morefs/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.512231 morefs-0.1.1/src/morefs.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2791 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      747 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      168 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)      869 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 07:58:36.000000 morefs-0.1.1/src/morefs.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 07:58:36.512231 morefs-0.1.1/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-07 07:58:08.000000 morefs-0.1.1/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4060 2023-04-07 07:58:08.000000 morefs-0.1.1/tests/test_asyn_local.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7531 2023-04-07 07:58:08.000000 morefs-0.1.1/tests/test_dictfs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5207 2023-04-07 07:58:08.000000 morefs-0.1.1/tests/test_memfs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      310 2023-04-07 07:58:08.000000 morefs-0.1.1/tests/test_morefs.py
+```
+
+### Comparing `morefs-0.1.0/.cruft.json` & `morefs-0.1.1/.cruft.json`
+
+ * *Files 20% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9%*
+
+ * *Differences: {"'commit'": "'c4e24f909659b6ce9c34a1da631290f0c70ff2f2'"}*
+
+```diff
+@@ -1,10 +1,10 @@
+ {
+     "checkout": null,
+-    "commit": "5fb8af99d07678287dfc10ad1394452b57d23970",
++    "commit": "c4e24f909659b6ce9c34a1da631290f0c70ff2f2",
+     "context": {
+         "cookiecutter": {
+             "_template": "https://github.com/iterative/py-template",
+             "author": "Iterative",
+             "copyright_year": "2022",
+             "development_status": "Development Status :: 4 - Beta",
+             "docs": "False",
+```
+
+### Comparing `morefs-0.1.0/.github/dependabot.yml` & `morefs-0.1.1/.github/dependabot.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/.github/workflows/release.yml` & `morefs-0.1.1/.github/workflows/release.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/.github/workflows/tests.yml` & `morefs-0.1.1/.github/workflows/tests.yml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -17,18 +17,17 @@
+   tests:
+     timeout-minutes: 10
+     runs-on: ${{ matrix.os }}
+     strategy:
+       fail-fast: false
+       matrix:
+         os: [ubuntu-20.04, windows-latest, macos-latest]
+-        pyv: ['3.8', '3.9', '3.10']
++        pyv: ['3.8', '3.9', '3.10', '3.11']
+         include:
+         - {os: ubuntu-latest, pyv: 'pypy3.8'}
+-        - {os: ubuntu-latest, pyv: '3.11.0-rc - 3.11', nox_pyv: '3.11'}
+ 
+     steps:
+     - name: Check out the repository
+       uses: actions/checkout@v3
+       with:
+         fetch-depth: 0
+```
+
+### Comparing `morefs-0.1.0/.gitignore` & `morefs-0.1.1/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/.pre-commit-config.yaml` & `morefs-0.1.1/.pre-commit-config.yaml`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ default_language_version:
+   python: python3
+ repos:
+   - repo: https://github.com/psf/black
+-    rev: 22.8.0
++    rev: 23.1.0
+     hooks:
+       - id: black
+   - repo: https://github.com/pre-commit/pre-commit-hooks
+-    rev: v4.3.0
++    rev: v4.4.0
+     hooks:
+       - id: check-added-large-files
+       - id: check-case-conflict
+       - id: check-docstring-first
+       - id: check-executables-have-shebangs
+       - id: check-json
+       - id: check-merge-conflict
+@@ -20,32 +20,35 @@
+       - id: debug-statements
+       - id: end-of-file-fixer
+       - id: mixed-line-ending
+         args: ['--fix=lf']
+       - id: sort-simple-yaml
+       - id: trailing-whitespace
+   - repo: https://github.com/codespell-project/codespell
+-    rev: v2.2.1
++    rev: v2.2.2
+     hooks:
+       - id: codespell
+-        args:
+-        - --ignore-words-list
+-        - fo,cachable
++        additional_dependencies: ["tomli"]
+   - repo: https://github.com/asottile/pyupgrade
+-    rev: v2.38.0
++    rev: v3.3.1
+     hooks:
+       - id: pyupgrade
++        args: [--py38-plus]
+   - repo: https://github.com/PyCQA/isort
+-    rev: 5.10.1
++    rev: 5.12.0
+     hooks:
+       - id: isort
+   - repo: https://github.com/pycqa/flake8
+-    rev: 5.0.4
++    rev: 6.0.0
+     hooks:
+       - id: flake8
+         additional_dependencies:
+-          - flake8-bandit==4.1.1
+-          - flake8-broken-line==0.5.0
+-          - flake8-bugbear==22.9.11
+-          - flake8-comprehensions==3.10.0
++          - flake8-bugbear==23.1.20
++          - flake8-comprehensions==3.10.1
+           - flake8-debugger==4.1.2
+           - flake8-string-format==0.3.0
++  - repo: https://github.com/pycqa/bandit
++    rev: 1.7.4
++    hooks:
++      - id: bandit
++        args: [-c, pyproject.toml]
++        additional_dependencies: ["toml"]
+```
+
+### Comparing `morefs-0.1.0/CODE_OF_CONDUCT.rst` & `morefs-0.1.1/CODE_OF_CONDUCT.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/CONTRIBUTING.rst` & `morefs-0.1.1/CONTRIBUTING.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/LICENSE` & `morefs-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/PKG-INFO` & `morefs-0.1.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: morefs
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: A collection of self-contained fsspec-based filesystems
+ Home-page: https://github.com/iterative/morefs
+ Maintainer-email: saugat@iterative.ai
+ License: Apache-2.0
+ Platform: any
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.8
+```
+
+### Comparing `morefs-0.1.0/README.rst` & `morefs-0.1.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/noxfile.py` & `morefs-0.1.1/noxfile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/pyproject.toml` & `morefs-0.1.1/pyproject.toml`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ [build-system]
+ requires = ["setuptools>=48", "setuptools_scm[toml]>=6.3.1"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools_scm]
+ 
+ [tool.black]
+-line-length = 79
++line-length = 88
+ include = '\.pyi?$'
+ exclude = '''
+ /(
+     \.eggs
+   | \.git
+   | \.hg
+   | \.mypy_cache
+@@ -21,15 +21,15 @@
+   | dist
+ )/
+ '''
+ 
+ [tool.isort]
+ profile = "black"
+ known_first_party = ["morefs"]
+-line_length = 79
++line_length = 88
+ 
+ [tool.pytest.ini_options]
+ addopts = "-ra"
+ 
+ [tool.coverage.run]
+ branch = true
+ source = ["morefs", "tests"]
+@@ -60,20 +60,30 @@
+ # Warnings
+ warn_no_return = true
+ warn_redundant_casts = true
+ warn_unreachable = true
+ ignore_missing_imports = true
+ files = ["src", "tests"]
+ 
++[tool.pylint.format]
++max-line-length = 88
++
+ [tool.pylint.message_control]
+ disable = [
+     "format", "refactoring", "spelling", "design", "invalid-name",
+     "unused-wildcard-import", "cyclic-import", "wrong-import-order",
+     "wrong-import-position", "ungrouped-imports", "multiple-imports",
+     "missing-function-docstring", "missing-module-docstring",
+     "missing-class-docstring",
+ ]
+ enable = ["c-extension-no-member", "no-else-return"]
+ 
+ [tool.pylint.variables]
+ dummy-variables-rgx = "_+$|(_[a-zA-Z0-9_]*[a-zA-Z0-9]+?$)|dummy|^ignored_|^unused_"
+ ignored-argument-names = "_.*|^ignored_|^unused_|args|kwargs"
++
++[tool.codespell]
++ignore-words-list = "fo,cachable"
++
++[tool.bandit]
++exclude_dirs = ["tests"]
++skips = ["B101"]
+```
+
+### Comparing `morefs-0.1.0/setup.cfg` & `morefs-0.1.1/setup.cfg`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -28,22 +28,22 @@
+ 
+ [options.extras_require]
+ memfs = 
+ 	pygtrie>=2.3.2
+ asynclocalfs = 
+ 	fsspec>=2022.10.0
+ 	typing_extensions>=3.10.0; python_version < '3.10'
+-	aiofile==3.8.1
++	aiofile>=3.8.5,<4
+ asynclocal = 
+ 	%(asynclocalfs)s
+ all = 
+ 	%(memfs)s
+ 	%(asynclocalfs)s
+ tests = 
+-	pytest==7.1.2
++	pytest==7.2.0
+ 	pytest-sugar==0.9.5
+ 	pytest-cov==3.0.0
+ 	pytest-mock==3.8.2
+ 	pytest-asyncio==0.19.0
+ 	pylint==2.15.0
+ 	mypy==0.971
+ 	%(all)s
+@@ -63,19 +63,19 @@
+ exclude = 
+ 	tests
+ 	tests.*
+ where = src
+ 
+ [flake8]
+ ignore = 
+-	E203, # Whitespace before ':'
+-	E266, # Too many leading '#' for block comment
+-	W503, # Line break occurred before a binary operator
+-	P1,  # unindexed parameters in the str.format, see:
+-max_line_length = 79
++	E203
++	E266
++	W503
++	P1
++max_line_length = 88
+ max-complexity = 15
+ select = B,C,E,F,W,T4,B902,T,P
+ show_source = true
+ count = true
+ 
+ [egg_info]
+ tag_build =
+```
+
+### Comparing `morefs-0.1.0/src/morefs/asyn_local.py` & `morefs-0.1.1/src/morefs/asyn_local.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -55,17 +55,15 @@
+     _rmdir = wrap(LocalFileSystem.rmdir)
+     _touch = wrap(LocalFileSystem.touch)
+     _symlink = wrap(LocalFileSystem.symlink)
+     _write_bytes = wrap(LocalFileSystem.write_bytes)
+     _write_text = wrap(LocalFileSystem.write_text)
+     sign = LocalFileSystem.sign
+ 
+-    async def _get_file(
+-        self, src, dst, **kwargs
+-    ):  # pylint: disable=arguments-renamed
++    async def _get_file(self, src, dst, **kwargs):  # pylint: disable=arguments-renamed
+         if not iscoroutinefunction(getattr(dst, "write", None)):
+             src = self._strip_protocol(src)
+             return await self._get_file_async(src, dst)
+ 
+         async with self.open_async(src, "rb") as fsrc:
+             while True:
+                 buf = await fsrc.read(length=shutil.COPY_BUFSIZE)
+```
+
+### Comparing `morefs-0.1.0/src/morefs/dict.py` & `morefs-0.1.1/src/morefs/dict.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -14,30 +14,26 @@
+     def __init__(self, paths: Iterable[str] = ()) -> None:
+         super().__init__()
+         self.paths = tuple(paths)
+ 
+     def new_child(self, paths: Iterable[str]) -> None:
+         self.set(paths, type(self)(paths=paths))
+ 
+-    def set(
+-        self, paths: Iterable[str], value: Any, overwrite: bool = False
+-    ) -> None:
++    def set(self, paths: Iterable[str], value: Any, overwrite: bool = False) -> None:
+         if not paths:
+             raise ValueError("no path supplied")
+ 
+         *rest, key = paths
+         child = self.get(rest)
+ 
+         if not overwrite and key in child:
+             raise ValueError("cannot overwrite - item exists")
+         child[key] = value
+ 
+-    def get(  # type: ignore[override]
+-        self, paths: Iterable[str]
+-    ) -> "ContainerOrFile":
++    def get(self, paths: Iterable[str]) -> "ContainerOrFile":  # type: ignore[override]
+         child = self
+         for path in paths:
+             child = child[path]
+         return child
+ 
+     def delete(self, paths: Iterable[str]) -> None:
+         if not paths:
+@@ -63,26 +59,22 @@
+         if path.startswith("dictfs://"):
+             path = path[len("dictfs://") :]
+         if "::" in path or "://" in path:
+             return path.rstrip("/")
+         path = path.lstrip("/").rstrip("/")
+         return "/" + path if path else cls.root_marker
+ 
+-    def __init__(self, store: Store = None) -> None:
++    def __init__(self, store: Optional[Store] = None) -> None:
+         super().__init__()
+         if store is None:
+             store = Store()
+         self.store = store
+ 
+     def _info(
+-        self,
+-        path: str,
+-        item: ContainerOrFile,
+-        file: bool = False,
+-        **kwargs: Any
++        self, path: str, item: ContainerOrFile, file: bool = False, **kwargs: Any
+     ) -> Dict[str, Any]:
+         if isinstance(item, dict):
+             return {"name": path, "size": 0, "type": "directory"}
+         assert isinstance(item, DictFile)
+         return item.to_json(file=file)
+ 
+     @classmethod
+@@ -131,16 +123,15 @@
+         entries: Iterable[Tuple[str, ContainerOrFile]] = item.items()
+         if kwargs.get("sort"):
+             entries = sorted(entries)
+ 
+         if not detail:
+             return [self.join_paths((*paths, key)) for key, _ in entries]
+         return [
+-            self._info(self.join_paths((*paths, key)), value)
+-            for key, value in entries
++            self._info(self.join_paths((*paths, key)), value) for key, value in entries
+         ]
+ 
+     def _rm(self, path: str) -> None:
+         info = self.info(path)
+         paths = self.path_parts(path)
+         normpath = self.join_paths(paths)
+         if info["type"] == "directory":
+@@ -256,15 +247,15 @@
+     def created(self, path: str) -> Optional[datetime]:
+         return self.info(path).get("created")
+ 
+     def rm(
+         self,
+         path: Union[str, List[str]],
+         recursive: bool = False,
+-        maxdepth: int = None,
++        maxdepth: Optional[int] = None,
+     ) -> None:
+         if isinstance(path, str):
+             paths = [path]
+         else:
+             paths = path
+ 
+         if recursive and not maxdepth:
+```
+
+### Comparing `morefs-0.1.0/src/morefs/memory.py` & `morefs-0.1.1/src/morefs/memory.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -24,17 +24,19 @@
+         return _MemFS._strip_protocol(path)  # pylint: disable=protected-access
+ 
+     @staticmethod
+     def _info(path, filelike=None, **kwargs):
+         if filelike:
+             return {
+                 "name": path,
+-                "size": filelike.size
+-                if hasattr(filelike, "size")
+-                else filelike.getbuffer().nbytes,
++                "size": (
++                    filelike.size
++                    if hasattr(filelike, "size")
++                    else filelike.getbuffer().nbytes
++                ),
+                 "type": "file",
+                 "created": getattr(filelike, "created", None),
+             }
+         return {"name": path, "size": 0, "type": "directory"}
+ 
+     def ls(self, path, detail=False, **kwargs):
+         path = self._strip_protocol(path)
+@@ -50,17 +52,15 @@
+             out.append(info)
+ 
+         try:
+             self.trie.traverse(node_factory, prefix=path)
+         except KeyError as exc:
+             if path in ("", "/"):
+                 return []
+-            raise FileNotFoundError(
+-                errno.ENOENT, "No such file", path
+-            ) from exc
++            raise FileNotFoundError(errno.ENOENT, "No such file", path) from exc
+ 
+         return out
+ 
+     def info(self, path, **kwargs):
+         path = self._strip_protocol(path)
+         if path in ("", "/") or self.trie.has_subtrie(path):
+             return self._info(path, **kwargs)
+@@ -83,17 +83,15 @@
+             raise FileNotFoundError(errno.ENOENT, "No such file", path) from e
+ 
+     def rm(self, path, recursive=False, maxdepth=None):
+         paths = self.expand_path(path, recursive=recursive, maxdepth=maxdepth)
+         for p in paths:
+             self.store.pop(p, None)
+ 
+-    def _open(  # pylint: disable=arguments-differ
+-        self, path, mode="rb", **kwargs
+-    ):
++    def _open(self, path, mode="rb", **kwargs):  # pylint: disable=arguments-differ
+         path = self._strip_protocol(path)
+         try:
+             info = self.info(path)
+             if info["type"] == "directory":
+                 raise IsADirectoryError(errno.EISDIR, "Is a directory", path)
+         except FileNotFoundError:
+             if mode in ["rb", "ab", "rb+"]:
+```
+
+### Comparing `morefs-0.1.0/src/morefs/overlay.py` & `morefs-0.1.1/src/morefs/overlay.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -5,21 +5,20 @@
+ 
+ import fsspec
+ 
+ 
+ class OverlayFileSystem(fsspec.AbstractFileSystem):
+     cachable = False
+ 
+-    def __init__(self, *fses, **kwargs):
++    def __init__(self, *fses: fsspec.AbstractFileSystem, **kwargs):
+         storage_options = {
+-            key: value
+-            for key, value in kwargs.items()
+-            if key.startswith("fs_")
++            key: value for key, value in kwargs.items() if key.startswith("fs_")
+         }
+         self.fses: List[fsspec.AbstractFileSystem] = list(fses)
++        self.fses.extend(kwargs.pop("filesystems", []))
+         for proto, options in kwargs.items():
+             if proto.startswith("fs_"):
+                 continue
+             if options is None:
+                 options = {}
+             self.fses.append(fsspec.filesystem(proto, **options))
+         super().__init__(*self.fses, **storage_options)
+@@ -75,29 +74,25 @@
+ 
+         return inner
+ 
+     @staticmethod
+     def _raise_readonly(path, *args, **kwargs):
+         raise OSError(errno.EROFS, os.strerror(errno.EROFS), path)
+ 
+-    info = _iterate_fs_with("info")
+-    created = _iterate_fs_with("created")
+-    modified = _iterate_fs_with("modified")
++    info = _iterate_fs_with("info")  # pylint: disable=no-value-for-parameter
++    created = _iterate_fs_with("created")  # pylint: disable=no-value-for-parameter
++    modified = _iterate_fs_with("modified")  # pylint: disable=no-value-for-parameter
+ 
+     def mkdir(self, path, create_parents=True, **kwargs):
+         # if create_parents is False:
+         if self.exists(path):
+-            raise FileExistsError(
+-                errno.EEXIST, os.strerror(errno.EEXIST), path
+-            )
++            raise FileExistsError(errno.EEXIST, os.strerror(errno.EEXIST), path)
+         parent = self._parent(path)
+         if not create_parents and not self.isdir(parent):
+-            raise FileNotFoundError(
+-                errno.ENOENT, os.strerror(errno.ENOENT), path
+-            )
++            raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), path)
+         self.upper_fs.mkdir(path, create_parents=True, **kwargs)
+ 
+     def makedirs(self, path, exist_ok=False):
+         self.upper_fs.makedirs(path, exist_ok=exist_ok)
+ 
+     def rmdir(self, path):
+         self.upper_fs.rmdir(path)
+@@ -109,26 +104,22 @@
+         src_fs = None
+         for fs in self.fses:
+             if fs.exists(path1):
+                 src_fs = fs
+                 break
+ 
+         if not src_fs:
+-            raise FileNotFoundError(
+-                errno.ENOENT, os.strerror(errno.ENOENT), path1
+-            )
++            raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), path1)
+         if src_fs == self.upper_fs:
+             return src_fs.cp_file(path1, path2)
+ 
+         with src_fs.open(path1) as src, self.upper_fs.open(path2, "wb") as dst:
+             shutil.copyfileobj(src, dst)
+ 
+-    def _open(
+-        self, path, mode="rb", **kwargs
+-    ):  # pylint: disable=arguments-differ
++    def _open(self, path, mode="rb", **kwargs):  # pylint: disable=arguments-differ
+         if "rb" in mode:
+             for fs in self.fses:
+                 try:
+                     # pylint: disable=protected-access
+                     return fs._open(path, mode=mode, **kwargs)
+                 except (
+                     FileNotFoundError,
+@@ -161,7 +152,13 @@
+                     ):
+                         continue
+         # pylint: disable=protected-access
+         return self.upper_fs._open(path, mode=mode, **kwargs)
+ 
+     def sign(self, path, expiration=100, **kwargs):
+         return self.upper_fs.sign(path, expiration, **kwargs)
++
++    if hasattr(fsspec.AbstractFileSystem, "fsid"):
++
++        @property
++        def fsid(self):
++            return "overlay_" + "+".join(fs.fsid for fs in self.fses)
+```
+
+### Comparing `morefs-0.1.0/src/morefs.egg-info/PKG-INFO` & `morefs-0.1.1/src/morefs.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: morefs
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: A collection of self-contained fsspec-based filesystems
+ Home-page: https://github.com/iterative/morefs
+ Maintainer-email: saugat@iterative.ai
+ License: Apache-2.0
+ Platform: any
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.8
+```
+
+### Comparing `morefs-0.1.0/src/morefs.egg-info/SOURCES.txt` & `morefs-0.1.1/src/morefs.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/tests/test_asyn_local.py` & `morefs-0.1.1/tests/test_asyn_local.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -25,31 +25,25 @@
+     }
+     localfs.mkdir(tmp_path / "dir")
+     localfs.pipe(struct)
+ 
+     assert set(await fs._ls(tmp_path, detail=False)) == {
+         localfs._strip_protocol(tmp_path / f) for f in ["foo", "bar", "dir"]
+     }
+-    assert await fs._ls(tmp_path, detail=False) == localfs.ls(
+-        tmp_path, detail=False
+-    )
++    assert await fs._ls(tmp_path, detail=False) == localfs.ls(tmp_path, detail=False)
+ 
+     assert await fs._info(tmp_path / "foo") == localfs.info(tmp_path / "foo")
+     assert await fs._info(tmp_path / "dir") == localfs.info(tmp_path / "dir")
+ 
+-    assert await fs._ls(tmp_path, detail=True) == localfs.ls(
+-        tmp_path, detail=True
+-    )
++    assert await fs._ls(tmp_path, detail=True) == localfs.ls(tmp_path, detail=True)
+ 
+     assert await fs._find(tmp_path, detail=False) == localfs.find(
+         tmp_path, detail=False
+     )
+-    assert await fs._find(tmp_path, detail=True) == localfs.find(
+-        tmp_path, detail=True
+-    )
++    assert await fs._find(tmp_path, detail=True) == localfs.find(tmp_path, detail=True)
+ 
+     assert await fs._isfile(tmp_path / "foo")
+     assert await fs._isdir(tmp_path / "dir")
+     assert await fs._exists(tmp_path / "bar")
+     assert not await fs._exists(tmp_path / "not-existing-file")
+     assert await fs._lexists(tmp_path / "foo")
+ 
+@@ -68,20 +62,16 @@
+     }
+     assert fs.ls(tmp_path, detail=False) == localfs.ls(tmp_path, detail=False)
+ 
+     assert fs.info(tmp_path / "foo") == localfs.info(tmp_path / "foo")
+     assert fs.info(tmp_path / "dir") == localfs.info(tmp_path / "dir")
+ 
+     assert fs.ls(tmp_path, detail=True) == localfs.ls(tmp_path, detail=True)
+-    assert fs.find(tmp_path, detail=False) == localfs.find(
+-        tmp_path, detail=False
+-    )
+-    assert fs.find(tmp_path, detail=True) == localfs.find(
+-        tmp_path, detail=True
+-    )
++    assert fs.find(tmp_path, detail=False) == localfs.find(tmp_path, detail=False)
++    assert fs.find(tmp_path, detail=True) == localfs.find(tmp_path, detail=True)
+ 
+     assert fs.isfile(tmp_path / "foo")
+     assert fs.isdir(tmp_path / "dir")
+     assert fs.exists(tmp_path / "bar")
+     assert not fs.exists(tmp_path / "not-existing-file")
+     assert fs.lexists(tmp_path / "foo")
+```
+
+### Comparing `morefs-0.1.0/tests/test_dictfs.py` & `morefs-0.1.1/tests/test_dictfs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `morefs-0.1.0/tests/test_memfs.py` & `morefs-0.1.1/tests/test_memfs.py`
+
+ * *Files identical despite different names*
+

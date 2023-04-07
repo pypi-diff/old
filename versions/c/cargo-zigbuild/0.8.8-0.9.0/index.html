@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/cargo_zigbuild-0.8.8-py3-none-win_arm64.whl.zip tmp/cargo_zigbuild-0.9.0-py3-none-win_arm64.whl.zip --html versions/c/cargo-zigbuild/0.8.8-0.9.0/index.html --text versions/c/cargo-zigbuild/0.8.8-0.9.0/diff.txt --markdown versions/c/cargo-zigbuild/0.8.8-0.9.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">21.1 MB</span></div>
+  <div><span class="source">tmp/cargo_zigbuild-0.8.8-py3-none-win_arm64.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/cargo_zigbuild-0.9.0-py3-none-win_arm64.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.23 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>5<del>28900</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>5</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>5<ins>45191</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>5</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3302<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<del>26</del><span class="dp">·</span>1<del>4</del>:<del>07</del><span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/METADATA</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3302<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<ins>31</ins><span class="dp">·</span>1<ins>6</ins>:<ins>28</ins><span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>95<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<del>26</del><span class="dp">·</span>1<del>4</del>:<del>07</del><span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/WHEEL</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>95<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<ins>31</ins><span class="dp">·</span>1<ins>6</ins>:<ins>28</ins><span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1086<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<del>26</del><span class="dp">·</span>1<del>4</del>:<del>07</del><span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/license_files/LICENSE</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1086<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<ins>31</ins><span class="dp">·</span>1<ins>6</ins>:<ins>28</ins><span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/license_files/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>12<del>01152</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<del>26</del><span class="dp">·</span>1<del>4</del>:<del>07</del><span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.data/scripts/cargo-zigbuild.exe</td><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>12<ins>53888</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<ins>31</ins><span class="dp">·</span>1<ins>6</ins>:<ins>28</ins><span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.data/scripts/cargo-zigbuild.exe</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>448<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<del>26</del><span class="dp">·</span>1<del>4</del>:<del>07</del><span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/RECORD</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>4.6<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>448<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-May-<ins>31</ins><span class="dp">·</span>1<ins>6</ins>:<ins>28</ins><span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">5<span class="dp">·</span>files,<span class="dp">·</span>12<del>06083</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>5<del>28066</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>56.<del>2</del>%</td><td class="diffline">7 </td><td class="diffpresent">5<span class="dp">·</span>files,<span class="dp">·</span>12<ins>58819</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>5<ins>44357</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>56.<ins>8</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">675 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/METADATA</td><td class="diffline">1 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">2 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/WHEEL</td><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/license_files/LICENSE</td><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/license_files/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.data/scripts/cargo-zigbuild.exe</td><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.data/scripts/cargo-zigbuild.exe</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<del>8</del>.<del>8</del>.dist-info/RECORD</td><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>cargo_zigbuild-0.<ins>9</ins>.<ins>0</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">11 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">492 B</span></div>
+    <div><span class="source">cargo_zigbuild-0.8.8.dist-info/METADATA</span> vs.</div>
+    <div id="cargo_zigbuild--.-.-.dist-info-METADATA"><span class="source">cargo_zigbuild-0.9.0.dist-info/METADATA</span>
+      <a class="anchor" href="#cargo_zigbuild--.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cargo-zigbuild</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cargo-zigbuild</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>8</del>.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>9</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>ziglang&gt;=0.9.0</td><td class="diffline">4 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>ziglang&gt;=0.9.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">5 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Summary:<span class="dp">·</span>Compile<span class="dp">·</span>Cargo<span class="dp">·</span>project<span class="dp">·</span>with<span class="dp">·</span>zig<span class="dp">·</span>as<span class="dp">·</span>linker</td><td class="diffline">6 </td><td class="diffpresent">Summary:<span class="dp">·</span>Compile<span class="dp">·</span>Cargo<span class="dp">·</span>project<span class="dp">·</span>with<span class="dp">·</span>zig<span class="dp">·</span>as<span class="dp">·</span>linker</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>zig,cargo</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>zig,cargo</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown;<span class="dp">·</span>charset=UTF-8;<span class="dp">·</span>variant=GFM</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown;<span class="dp">·</span>charset=UTF-8;<span class="dp">·</span>variant=GFM</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source<span class="dp">·</span>Code,<span class="dp">·</span>https://github.com/messense/cargo-zigbuild</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source<span class="dp">·</span>Code,<span class="dp">·</span>https://github.com/messense/cargo-zigbuild</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">143 B</span></div>
+    <div><span class="source">cargo_zigbuild-0.8.8.dist-info/license_files/LICENSE</span> vs.</div>
+    <div id="cargo_zigbuild--.-.-.dist-info-license_files-LICENSE"><span class="source">cargo_zigbuild-0.9.0.dist-info/license_files/LICENSE</span>
+      <a class="anchor" href="#cargo_zigbuild--.-.-.dist-info-license_files-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">21.1 MB</span></div>
+    <div><span class="source">cargo_zigbuild-0.8.8.data/scripts/cargo-zigbuild.exe</span> vs.</div>
+    <div id="cargo_zigbuild--.-.-.data-scripts-cargo-zigbuild.exe"><span class="source">cargo_zigbuild-0.9.0.data/scripts/cargo-zigbuild.exe</span>
+      <a class="anchor" href="#cargo_zigbuild--.-.-.data-scripts-cargo-zigbuild.exe">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 4% similar despite different names
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">21.1 MB</span></div>
+      <div id="cargo_zigbuild--.-.-.data-scripts-cargo-zigbuild.exe---objdump"><span class="source">objdump</span>
+        <a class="anchor" href="#cargo_zigbuild--.-.-.data-scripts-cargo-zigbuild.exe---objdump">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 36 lines modified</td><td colspan="2">Offset 1, 36 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">architecture:<span class="dp">·</span>aarch64,<span class="dp">·</span>flags<span class="dp">·</span>0x0000012f:</td><td class="diffline">1 </td><td class="diffpresent">architecture:<span class="dp">·</span>aarch64,<span class="dp">·</span>flags<span class="dp">·</span>0x0000012f:</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">HAS_RELOC,<span class="dp">·</span>EXEC_P,<span class="dp">·</span>HAS_LINENO,<span class="dp">·</span>HAS_DEBUG,<span class="dp">·</span>HAS_LOCALS,<span class="dp">·</span>D_PAGED</td><td class="diffline">2 </td><td class="diffpresent">HAS_RELOC,<span class="dp">·</span>EXEC_P,<span class="dp">·</span>HAS_LINENO,<span class="dp">·</span>HAS_DEBUG,<span class="dp">·</span>HAS_LOCALS,<span class="dp">·</span>D_PAGED</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">start<span class="dp">·</span>address<span class="dp">·</span>0x00000001400<del>cec5</del>0</td><td class="diffline">3 </td><td class="diffpresent">start<span class="dp">·</span>address<span class="dp">·</span>0x00000001400<ins>d87a</ins>0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Characteristics<span class="dp">·</span>0x22</td><td class="diffline">4 </td><td class="diffpresent">Characteristics<span class="dp">·</span>0x22</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">»</span>       executable</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">»</span>       executable</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">»</span>       large<span class="dp">·</span>address<span class="dp">·</span>aware</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">»</span>       large<span class="dp">·</span>address<span class="dp">·</span>aware</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">Time/Date<span class="dp">»</span>      <span class="dp">»</span>      T<del>hu</del><span class="dp">·</span>May<span class="dp">·</span><del>26</del><span class="dp">·</span>1<del>4</del>:<del>07</del>:<del>56</del><span class="dp">·</span>2022</td><td class="diffline">7 </td><td class="diffpresent">Time/Date<span class="dp">»</span>      <span class="dp">»</span>      T<ins>ue</ins><span class="dp">·</span>May<span class="dp">·</span><ins>31</ins><span class="dp">·</span>1<ins>6</ins>:<ins>28</ins>:<ins>45</ins><span class="dp">·</span>2022</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Magic<span class="dp">»</span>  <span class="dp">»</span>  <span class="dp">»</span>  020b<span class="dp">»</span>      (PE32+)</td><td class="diffline">8 </td><td class="diffpresent">Magic<span class="dp">»</span>  <span class="dp">»</span>  <span class="dp">»</span>  020b<span class="dp">»</span>      (PE32+)</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">MajorLinkerVersion<span class="dp">»</span>     14</td><td class="diffline">9 </td><td class="diffpresent">MajorLinkerVersion<span class="dp">»</span>     14</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">MinorLinkerVersion<span class="dp">»</span>     0</td><td class="diffline">10 </td><td class="diffpresent">MinorLinkerVersion<span class="dp">»</span>     0</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">SizeOfCode<span class="dp">»</span>     <span class="dp">»</span>     00000000000d<del>50</del>00</td><td class="diffline">11 </td><td class="diffpresent">SizeOfCode<span class="dp">»</span>     <span class="dp">»</span>     00000000000d<ins>ec</ins>00</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">SizeOfInitializedData<span class="dp">»</span>  000000000005<del>00</del>00</td><td class="diffline">12 </td><td class="diffpresent">SizeOfInitializedData<span class="dp">»</span>  000000000005<ins>32</ins>00</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">SizeOfUninitializedData<span class="dp">»</span>0000000000000000</td><td class="diffline">13 </td><td class="diffpresent">SizeOfUninitializedData<span class="dp">»</span>0000000000000000</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">AddressOfEntryPoint<span class="dp">»</span>    00000000000<del>cec5</del>0</td><td class="diffline">14 </td><td class="diffpresent">AddressOfEntryPoint<span class="dp">»</span>    00000000000<ins>d87a</ins>0</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">BaseOfCode<span class="dp">»</span>     <span class="dp">»</span>     0000000000001000</td><td class="diffline">15 </td><td class="diffpresent">BaseOfCode<span class="dp">»</span>     <span class="dp">»</span>     0000000000001000</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">ImageBase<span class="dp">»</span>      <span class="dp">»</span>      0000000140000000</td><td class="diffline">16 </td><td class="diffpresent">ImageBase<span class="dp">»</span>      <span class="dp">»</span>      0000000140000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">SectionAlignment<span class="dp">»</span>       00001000</td><td class="diffline">17 </td><td class="diffpresent">SectionAlignment<span class="dp">»</span>       00001000</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">FileAlignment<span class="dp">»</span>  <span class="dp">»</span>  00000200</td><td class="diffline">18 </td><td class="diffpresent">FileAlignment<span class="dp">»</span>  <span class="dp">»</span>  00000200</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">MajorOSystemVersion<span class="dp">»</span>    6</td><td class="diffline">19 </td><td class="diffpresent">MajorOSystemVersion<span class="dp">»</span>    6</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">MinorOSystemVersion<span class="dp">»</span>    0</td><td class="diffline">20 </td><td class="diffpresent">MinorOSystemVersion<span class="dp">»</span>    0</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">MajorImageVersion<span class="dp">»</span>      0</td><td class="diffline">21 </td><td class="diffpresent">MajorImageVersion<span class="dp">»</span>      0</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">MinorImageVersion<span class="dp">»</span>      0</td><td class="diffline">22 </td><td class="diffpresent">MinorImageVersion<span class="dp">»</span>      0</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">MajorSubsystemVersion<span class="dp">»</span>  6</td><td class="diffline">23 </td><td class="diffpresent">MajorSubsystemVersion<span class="dp">»</span>  6</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">MinorSubsystemVersion<span class="dp">»</span>  0</td><td class="diffline">24 </td><td class="diffpresent">MinorSubsystemVersion<span class="dp">»</span>  0</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Win32Version<span class="dp">»</span>   <span class="dp">»</span>   00000000</td><td class="diffline">25 </td><td class="diffpresent">Win32Version<span class="dp">»</span>   <span class="dp">»</span>   00000000</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">SizeOfImage<span class="dp">»</span>    <span class="dp">»</span>    001<del>2a</del>000</td><td class="diffline">26 </td><td class="diffpresent">SizeOfImage<span class="dp">»</span>    <span class="dp">»</span>    001<ins>38</ins>000</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">SizeOfHeaders<span class="dp">»</span>  <span class="dp">»</span>  00000400</td><td class="diffline">27 </td><td class="diffpresent">SizeOfHeaders<span class="dp">»</span>  <span class="dp">»</span>  00000400</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">CheckSum<span class="dp">»</span>       <span class="dp">»</span>       00000000</td><td class="diffline">28 </td><td class="diffpresent">CheckSum<span class="dp">»</span>       <span class="dp">»</span>       00000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">Subsystem<span class="dp">»</span>      <span class="dp">»</span>      00000003<span class="dp">»</span>      (Windows<span class="dp">·</span>CUI)</td><td class="diffline">29 </td><td class="diffpresent">Subsystem<span class="dp">»</span>      <span class="dp">»</span>      00000003<span class="dp">»</span>      (Windows<span class="dp">·</span>CUI)</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">DllCharacteristics<span class="dp">»</span>     00008160</td><td class="diffline">30 </td><td class="diffpresent">DllCharacteristics<span class="dp">»</span>     00008160</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       HIGH_ENTROPY_VA</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       HIGH_ENTROPY_VA</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       DYNAMIC_BASE</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       DYNAMIC_BASE</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       NX_COMPAT</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       NX_COMPAT</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 40, 3810 lines modified</td><td colspan="2">Offset 40, 3921 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">SizeOfHeapReserve<span class="dp">»</span>      0000000000100000</td><td class="diffline">40 </td><td class="diffpresent">SizeOfHeapReserve<span class="dp">»</span>      0000000000100000</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">SizeOfHeapCommit<span class="dp">»</span>       0000000000001000</td><td class="diffline">41 </td><td class="diffpresent">SizeOfHeapCommit<span class="dp">»</span>       0000000000001000</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">LoaderFlags<span class="dp">»</span>    <span class="dp">»</span>    00000000</td><td class="diffline">42 </td><td class="diffpresent">LoaderFlags<span class="dp">»</span>    <span class="dp">»</span>    00000000</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">NumberOfRvaAndSizes<span class="dp">»</span>    00000010</td><td class="diffline">43 </td><td class="diffpresent">NumberOfRvaAndSizes<span class="dp">»</span>    00000010</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">The<span class="dp">·</span>Data<span class="dp">·</span>Directory</td><td class="diffline">44 </td><td class="diffpresent">The<span class="dp">·</span>Data<span class="dp">·</span>Directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">Entry<span class="dp">·</span>0<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Export<span class="dp">·</span>Directory<span class="dp">·</span>[.edata<span class="dp">·</span>(or<span class="dp">·</span>where<span class="dp">·</span>ever<span class="dp">·</span>we<span class="dp">·</span>found<span class="dp">·</span>it)]</td><td class="diffline">45 </td><td class="diffpresent">Entry<span class="dp">·</span>0<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Export<span class="dp">·</span>Directory<span class="dp">·</span>[.edata<span class="dp">·</span>(or<span class="dp">·</span>where<span class="dp">·</span>ever<span class="dp">·</span>we<span class="dp">·</span>found<span class="dp">·</span>it)]</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">Entry<span class="dp">·</span>1<span class="dp">·</span>0000000000<del>0fc43</del>0<span class="dp">·</span>000000dc<span class="dp">·</span>Import<span class="dp">·</span>Directory<span class="dp">·</span>[parts<span class="dp">·</span>of<span class="dp">·</span>.idata]</td><td class="diffline">46 </td><td class="diffpresent">Entry<span class="dp">·</span>1<span class="dp">·</span>0000000000<ins>106d5</ins>0<span class="dp">·</span>000000dc<span class="dp">·</span>Import<span class="dp">·</span>Directory<span class="dp">·</span>[parts<span class="dp">·</span>of<span class="dp">·</span>.idata]</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">Entry<span class="dp">·</span>2<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Resource<span class="dp">·</span>Directory<span class="dp">·</span>[.rsrc]</td><td class="diffline">47 </td><td class="diffpresent">Entry<span class="dp">·</span>2<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Resource<span class="dp">·</span>Directory<span class="dp">·</span>[.rsrc]</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">Entry<span class="dp">·</span>3<span class="dp">·</span>00000000001<del>1f</del>000<span class="dp">·</span>0000<del>6c</del>0<del>0</del><span class="dp">·</span>Exception<span class="dp">·</span>Directory<span class="dp">·</span>[.pdata]</td><td class="diffline">48 </td><td class="diffpresent">Entry<span class="dp">·</span>3<span class="dp">·</span>00000000001<ins>2c</ins>000<span class="dp">·</span>0000<ins>72</ins>0<ins>8</ins><span class="dp">·</span>Exception<span class="dp">·</span>Directory<span class="dp">·</span>[.pdata]</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">Entry<span class="dp">·</span>4<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Security<span class="dp">·</span>Directory</td><td class="diffline">49 </td><td class="diffpresent">Entry<span class="dp">·</span>4<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Security<span class="dp">·</span>Directory</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">Entry<span class="dp">·</span>5<span class="dp">·</span>00000000001<del>28</del>000<span class="dp">·</span>000012<del>6c</del><span class="dp">·</span>Base<span class="dp">·</span>Relocation<span class="dp">·</span>Directory<span class="dp">·</span>[.reloc]</td><td class="diffline">50 </td><td class="diffpresent">Entry<span class="dp">·</span>5<span class="dp">·</span>00000000001<ins>36</ins>000<span class="dp">·</span>000012<ins>b0</ins><span class="dp">·</span>Base<span class="dp">·</span>Relocation<span class="dp">·</span>Directory<span class="dp">·</span>[.reloc]</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">Entry<span class="dp">·</span>6<span class="dp">·</span>0000000000<del>0fc2d</del>4<span class="dp">·</span>0000001c<span class="dp">·</span>Debug<span class="dp">·</span>Directory</td><td class="diffline">51 </td><td class="diffpresent">Entry<span class="dp">·</span>6<span class="dp">·</span>0000000000<ins>106bf</ins>4<span class="dp">·</span>0000001c<span class="dp">·</span>Debug<span class="dp">·</span>Directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">Entry<span class="dp">·</span>7<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Description<span class="dp">·</span>Directory</td><td class="diffline">52 </td><td class="diffpresent">Entry<span class="dp">·</span>7<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Description<span class="dp">·</span>Directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">Entry<span class="dp">·</span>8<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Special<span class="dp">·</span>Directory</td><td class="diffline">53 </td><td class="diffpresent">Entry<span class="dp">·</span>8<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Special<span class="dp">·</span>Directory</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">Entry<span class="dp">·</span>9<span class="dp">·</span>0000000000<del>0fc23</del>8<span class="dp">·</span>00000028<span class="dp">·</span>Thread<span class="dp">·</span>Storage<span class="dp">·</span>Directory<span class="dp">·</span>[.tls]</td><td class="diffline">54 </td><td class="diffpresent">Entry<span class="dp">·</span>9<span class="dp">·</span>0000000000<ins>106b5</ins>8<span class="dp">·</span>00000028<span class="dp">·</span>Thread<span class="dp">·</span>Storage<span class="dp">·</span>Directory<span class="dp">·</span>[.tls]</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">Entry<span class="dp">·</span>a<span class="dp">·</span>0000000000<del>0fc10</del>0<span class="dp">·</span>00000138<span class="dp">·</span>Load<span class="dp">·</span>Configuration<span class="dp">·</span>Directory</td><td class="diffline">55 </td><td class="diffpresent">Entry<span class="dp">·</span>a<span class="dp">·</span>0000000000<ins>106a2</ins>0<span class="dp">·</span>00000138<span class="dp">·</span>Load<span class="dp">·</span>Configuration<span class="dp">·</span>Directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">Entry<span class="dp">·</span>b<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Bound<span class="dp">·</span>Import<span class="dp">·</span>Directory</td><td class="diffline">56 </td><td class="diffpresent">Entry<span class="dp">·</span>b<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Bound<span class="dp">·</span>Import<span class="dp">·</span>Directory</td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">Entry<span class="dp">·</span>c<span class="dp">·</span>0000000000<del>0fc8d</del>0<span class="dp">·</span>000003c0<span class="dp">·</span>Import<span class="dp">·</span>Address<span class="dp">·</span>Table<span class="dp">·</span>Directory</td><td class="diffline">57 </td><td class="diffpresent">Entry<span class="dp">·</span>c<span class="dp">·</span>0000000000<ins>1071f</ins>0<span class="dp">·</span>000003c0<span class="dp">·</span>Import<span class="dp">·</span>Address<span class="dp">·</span>Table<span class="dp">·</span>Directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">Entry<span class="dp">·</span>d<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Delay<span class="dp">·</span>Import<span class="dp">·</span>Directory</td><td class="diffline">58 </td><td class="diffpresent">Entry<span class="dp">·</span>d<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Delay<span class="dp">·</span>Import<span class="dp">·</span>Directory</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">Entry<span class="dp">·</span>e<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>CLR<span class="dp">·</span>Runtime<span class="dp">·</span>Header</td><td class="diffline">59 </td><td class="diffpresent">Entry<span class="dp">·</span>e<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>CLR<span class="dp">·</span>Runtime<span class="dp">·</span>Header</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">Entry<span class="dp">·</span>f<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Reserved</td><td class="diffline">60 </td><td class="diffpresent">Entry<span class="dp">·</span>f<span class="dp">·</span>0000000000000000<span class="dp">·</span>00000000<span class="dp">·</span>Reserved</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent">There<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>import<span class="dp">·</span>table<span class="dp">·</span>in<span class="dp">·</span>.rdata<span class="dp">·</span>at<span class="dp">·</span>0x140<del>0fc43</del>0</td><td class="diffline">61 </td><td class="diffpresent">There<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>import<span class="dp">·</span>table<span class="dp">·</span>in<span class="dp">·</span>.rdata<span class="dp">·</span>at<span class="dp">·</span>0x140<ins>106d5</ins>0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">The<span class="dp">·</span>Import<span class="dp">·</span>Tables<span class="dp">·</span>(interpreted<span class="dp">·</span>.rdata<span class="dp">·</span>section<span class="dp">·</span>contents)</td><td class="diffline">62 </td><td class="diffpresent">The<span class="dp">·</span>Import<span class="dp">·</span>Tables<span class="dp">·</span>(interpreted<span class="dp">·</span>.rdata<span class="dp">·</span>section<span class="dp">·</span>contents)</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span>vma:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Hint<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Time<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Forward<span class="dp">·</span><span class="dp">·</span>DLL<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>First</td><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span>vma:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Hint<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Time<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Forward<span class="dp">·</span><span class="dp">·</span>DLL<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>First</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Table<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Stamp<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Chain<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Name<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Thunk</td><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Table<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Stamp<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Chain<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Name<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Thunk</td></tr>
+<tr class="diffchanged"><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc43</del>0<span class="dp">»</span>       00<del>0fc51</del>0<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd51</del>8<span class="dp">·</span>00<del>0fc8d</del>0</td><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106d5</ins>0<span class="dp">»</span>       00<ins>106e3</ins>0<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107e3</ins>8<span class="dp">·</span>00<ins>1071f</ins>0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>KERNEL32.dll</td><td class="diffline">66 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>KERNEL32.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">67 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">»</span>       <del>fcc9</del>0<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span>AcquireSRWLockExclusive</td><td class="diffline">68 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>075b</ins>0<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span>AcquireSRWLockExclusive</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc44</del>4<span class="dp">»</span>       00<del>0fc76</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd52</del>5<span class="dp">·</span>00<del>0fcb2</del>8</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106d6</ins>4<span class="dp">»</span>       00<ins>10708</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107e4</ins>5<span class="dp">·</span>00<ins>10744</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>bcrypt.dll</td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>bcrypt.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd28</del>4<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29<span class="dp">·</span><span class="dp">·</span>BCryptGenRandom</td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>07ba</ins>4<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>29<span class="dp">·</span><span class="dp">·</span>BCryptGenRandom</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc45</del>8<span class="dp">»</span>       00<del>0fc77</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>000<del>fd</del>5<del>3</del>0<span class="dp">·</span>00<del>0fcb3</del>8</td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106d7</ins>8<span class="dp">»</span>       00<ins>10709</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>1</ins>0<ins>7e</ins>50<span class="dp">·</span>00<ins>10745</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>SHELL32.dll</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>SHELL32.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd29</del>6<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span>346<span class="dp">·</span><span class="dp">·</span>SHGetKnownFolderPath</td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>07bb</ins>6<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span>346<span class="dp">·</span><span class="dp">·</span>SHGetKnownFolderPath</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc46</del>c<span class="dp">»</span>       00<del>0fc78</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>000<del>fd</del>5<del>3</del>c<span class="dp">·</span>00<del>0fcb4</del>8</td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106d8</ins>c<span class="dp">»</span>       00<ins>1070a</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>1</ins>0<ins>7e</ins>5c<span class="dp">·</span>00<ins>10746</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>ole32.dll</td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>ole32.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">79 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">80 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd2a</del>e<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span>140<span class="dp">·</span><span class="dp">·</span>CoTaskMemFree</td><td class="diffline">80 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>07bc</ins>e<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span>140<span class="dp">·</span><span class="dp">·</span>CoTaskMemFree</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc48</del>0<span class="dp">»</span>       00<del>0fc79</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd54</del>6<span class="dp">·</span>00<del>0fcb5</del>8</td><td class="diffline">81 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106da</ins>0<span class="dp">»</span>       00<ins>1070b</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107e6</ins>6<span class="dp">·</span>00<ins>10747</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>VCRUNTIME140.dll</td><td class="diffline">82 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>VCRUNTIME140.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">83 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd2</del>be<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span><span class="dp">·</span>_CxxThrowException</td><td class="diffline">84 </td><td class="diffpresent"><span class="dp">»</span>       <ins>107</ins>b<ins>d</ins>e<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span><span class="dp">·</span>_CxxThrowException</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc49</del>4<span class="dp">»</span>       00<del>0fc7e</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd55</del>7<span class="dp">·</span>00<del>0fcba</del>8</td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106db</ins>4<span class="dp">»</span>       00<ins>10710</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107e7</ins>7<span class="dp">·</span>00<ins>1074c</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-runtime-l1-1-0.dll</td><td class="diffline">86 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-runtime-l1-1-0.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">88 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd35</del>e<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<span class="dp">·</span><span class="dp">·</span>__p___argc</td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>07c7</ins>e<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<span class="dp">·</span><span class="dp">·</span>__p___argc</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc4a</del>8<span class="dp">»</span>       00<del>0fc88</del>0<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd57</del>9<span class="dp">·</span>00<del>0fcc4</del>0</td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106dc</ins>8<span class="dp">»</span>       00<ins>1071a</ins>0<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107e9</ins>9<span class="dp">·</span>00<ins>10756</ins>0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-stdio-l1-1-0.dll</td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-stdio-l1-1-0.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">92 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd4b</del>8<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span><span class="dp">·</span>__p__commode</td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>07dd</ins>8<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span><span class="dp">·</span>__p__commode</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc4b</del>c<span class="dp">»</span>       00<del>0fc89</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd59</del>9<span class="dp">·</span>00<del>0fcc5</del>8</td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106dd</ins>c<span class="dp">»</span>       00<ins>1071b</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107eb</ins>9<span class="dp">·</span>00<ins>10757</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-math-l1-1-0.dll</td><td class="diffline">94 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-math-l1-1-0.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">95 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">96 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd4</del>d6<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span><span class="dp">·</span>__setusermatherr</td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">»</span>       <ins>107</ins>d<ins>f</ins>6<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span><span class="dp">·</span>__setusermatherr</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc4d</del>0<span class="dp">»</span>       00<del>0fc8a</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd5b</del>8<span class="dp">·</span>00<del>0fcc6</del>8</td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106df</ins>0<span class="dp">»</span>       00<ins>1071c</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107ed</ins>8<span class="dp">·</span>00<ins>10758</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-locale-l1-1-0.dll</td><td class="diffline">98 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-locale-l1-1-0.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">99 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">100 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd4</del>ea<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span><span class="dp">·</span>_configthreadlocale</td><td class="diffline">100 </td><td class="diffpresent"><span class="dp">»</span>       <ins>107</ins>e<ins>0</ins>a<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span><span class="dp">·</span>_configthreadlocale</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc4e</del>4<span class="dp">»</span>       00<del>0fc8b</del>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<del>0fd5d</del>9<span class="dp">·</span>00<del>0fcc7</del>8</td><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106e0</ins>4<span class="dp">»</span>       00<ins>1071d</ins>8<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00<ins>107ef</ins>9<span class="dp">·</span>00<ins>10759</ins>8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-heap-l1-1-0.dll</td><td class="diffline">102 </td><td class="diffpresent"><span class="dp">»</span>       DLL<span class="dp">·</span>Name:<span class="dp">·</span>api-ms-win-crt-heap-l1-1-0.dll</td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td><td class="diffline">103 </td><td class="diffpresent"><span class="dp">»</span>       vma:<span class="dp">·</span><span class="dp">·</span>Hint/Ord<span class="dp">·</span>Member-Name<span class="dp">·</span>Bound-To</td></tr>
+<tr class="diffchanged"><td class="diffline">104 </td><td class="diffpresent"><span class="dp">»</span>       <del>fd50</del>0<span class="dp">»</span>  <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span><span class="dp">·</span>_set_new_mode</td><td class="diffline">104 </td><td class="diffpresent"><span class="dp">»</span>       <ins>1</ins><ins>07e2</ins>0<span class="dp">»</span> <span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span><span class="dp">·</span>_set_new_mode</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span>00<del>0fc4f</del>8<span class="dp">»</span>       00000000<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00000000</td><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span>00<ins>106e1</ins>8<span class="dp">»</span>       00000000<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00000000<span class="dp">·</span>00000000</td></tr>
+<tr class="diffchanged"><td class="diffline">106 </td><td class="diffpresent">warning,<span class="dp">·</span>.pdata<span class="dp">·</span>section<span class="dp">·</span>size<span class="dp">·</span>(2<del>7648</del>)<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>a<span class="dp">·</span>multiple<span class="dp">·</span>of<span class="dp">·</span>20</td><td class="diffline">106 </td><td class="diffpresent">warning,<span class="dp">·</span>.pdata<span class="dp">·</span>section<span class="dp">·</span>size<span class="dp">·</span>(2<ins>9192</ins>)<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>a<span class="dp">·</span>multiple<span class="dp">·</span>of<span class="dp">·</span>20</td></tr>
+<tr class="error"><td colspan="4">
+Max diff block lines reached; 22079630/22085426 bytes (99.97%) of diff not shown.
+</td></tr></table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

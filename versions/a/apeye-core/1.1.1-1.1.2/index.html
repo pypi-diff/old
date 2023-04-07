@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/apeye_core-1.1.1.tar.gz tmp/apeye_core-1.1.2.tar.gz --html versions/a/apeye-core/1.1.1-1.1.2/index.html --text versions/a/apeye-core/1.1.1-1.1.2/diff.txt --markdown versions/a/apeye-core/1.1.1-1.1.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.95 KB</span></div>
+  <div><span class="source">tmp/apeye_core-1.1.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/apeye_core-1.1.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.9 KB</span></div>
+    <div><span class="source">apeye_core-1.1.1.tar</span> vs.</div>
+    <div id="apeye_core--.-.-.tar"><span class="source">apeye_core-1.1.2.tar</span>
+      <a class="anchor" href="#apeye_core--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.29 KB</span></div>
+      <div id="apeye_core--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/requirements.txt</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<del>725</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/apeye_core/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<ins>818</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/apeye_core/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5878<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/apeye_core/_tld.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5878<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/apeye_core/_tld.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18573<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/apeye_core/email_validator.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18573<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/apeye_core/email_validator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241256<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/apeye_core/public_suffix_list.dat</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241256<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/apeye_core/public_suffix_list.dat</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/apeye_core/py.typed</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/apeye_core/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1038<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/.gitignore</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1038<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1507<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/LICENSE</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1507<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4529<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/README.rst</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4529<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2868<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/pyproject.toml</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2868<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7632<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<del>1</del>/PKG-INFO</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7632<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>apeye_core-1.1.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.25 KB</span></div>
+      <div><span class="source">apeye_core-1.1.1/apeye_core/__init__.py</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-__init__.py"><span class="source">apeye_core-1.1.2/apeye_core/__init__.py</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 76, 15 lines modified</td><td colspan="2">Offset 76, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent">if<span class="dp">·</span>TYPE_CHECKING:</td><td class="diffline">76 </td><td class="diffpresent">if<span class="dp">·</span>TYPE_CHECKING:</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">»</span>       #<span class="dp">·</span>stdlib</td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">»</span>       #<span class="dp">·</span>stdlib</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent"><span class="dp">»</span>       from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>NoReturn</td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">»</span>       from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>NoReturn</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent">__author__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;Dominic<span class="dp">·</span>Davis-Foster&quot;</td><td class="diffline">79 </td><td class="diffpresent">__author__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;Dominic<span class="dp">·</span>Davis-Foster&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">__copyright__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;2020-2022<span class="dp">·</span>Dominic<span class="dp">·</span>Davis-Foster&quot;</td><td class="diffline">80 </td><td class="diffpresent">__copyright__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;2020-2022<span class="dp">·</span>Dominic<span class="dp">·</span>Davis-Foster&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent">__license__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD<span class="dp">·</span>3-Clause<span class="dp">·</span>License&quot;</td><td class="diffline">81 </td><td class="diffpresent">__license__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD<span class="dp">·</span>3-Clause<span class="dp">·</span>License&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">82 </td><td class="diffpresent">__version__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<del>1</del>&quot;</td><td class="diffline">82 </td><td class="diffpresent">__version__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent">__email__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;dominic@davis-foster.co.uk&quot;</td><td class="diffline">83 </td><td class="diffpresent">__email__:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>&quot;dominic@davis-foster.co.uk&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[&quot;URL&quot;,<span class="dp">·</span>&quot;URLPath&quot;,<span class="dp">·</span>&quot;Domain&quot;,<span class="dp">·</span>&quot;URLType&quot;,<span class="dp">·</span>&quot;URLPathType&quot;]</td><td class="diffline">84 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[&quot;URL&quot;,<span class="dp">·</span>&quot;URLPath&quot;,<span class="dp">·</span>&quot;Domain&quot;,<span class="dp">·</span>&quot;URLType&quot;,<span class="dp">·</span>&quot;URLPathType&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent">#<span class="dp">·</span>NOTE:<span class="dp">·</span>Use<span class="dp">·</span>the<span class="dp">·</span>relevant<span class="dp">·</span>version<span class="dp">·</span>numbers<span class="dp">·</span>for<span class="dp">·</span>apeye<span class="dp">·</span>itself.</td><td class="diffline">85 </td><td class="diffpresent">#<span class="dp">·</span>NOTE:<span class="dp">·</span>Use<span class="dp">·</span>the<span class="dp">·</span>relevant<span class="dp">·</span>version<span class="dp">·</span>numbers<span class="dp">·</span>for<span class="dp">·</span>apeye<span class="dp">·</span>itself.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">URLType<span class="dp">·</span>=<span class="dp">·</span>TypeVar(&quot;URLType&quot;,<span class="dp">·</span>bound=&quot;URL&quot;)</td><td class="diffline">86 </td><td class="diffpresent">URLType<span class="dp">·</span>=<span class="dp">·</span>TypeVar(&quot;URLType&quot;,<span class="dp">·</span>bound=&quot;URL&quot;)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 113, 21 lines modified</td><td colspan="2">Offset 113, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">113 </td><td class="diffpresent"><span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">113 </td><td class="diffpresent"><span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">114 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__str__(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td><td class="diffline">114 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__str__(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td></tr>
+<tr class="diffunmodified"><td class="diffline">115 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">115 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">116 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       Return<span class="dp">·</span>the<span class="dp">·</span>string<span class="dp">·</span>representation<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>path,<span class="dp">·</span>suitable<span class="dp">·</span>for<span class="dp">·</span>passing<span class="dp">·</span>to<span class="dp">·</span>system<span class="dp">·</span>calls.</td><td class="diffline">116 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       Return<span class="dp">·</span>the<span class="dp">·</span>string<span class="dp">·</span>representation<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>path,<span class="dp">·</span>suitable<span class="dp">·</span>for<span class="dp">·</span>passing<span class="dp">·</span>to<span class="dp">·</span>system<span class="dp">·</span>calls.</td></tr>
+<tr class="diffunmodified"><td class="diffline">117 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">117 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">118 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>not<span class="dp">·</span>hasattr(self,<span class="dp">·</span>&quot;_root&quot;):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">119 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self._load_parts()<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore[attr-defined]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">118 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       try:</td><td class="diffline">120 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       try:</td></tr>
+<tr class="diffunmodified"><td class="diffline">119 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>self._str<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</td><td class="diffline">121 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>self._str<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</td></tr>
+<tr class="diffunmodified"><td class="diffline">120 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       except<span class="dp">·</span>AttributeError:</td><td class="diffline">122 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       except<span class="dp">·</span>AttributeError:</td></tr>
+<tr class="diffunmodified"><td class="diffline">121 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self._str<span class="dp">·</span>=<span class="dp">·</span>self._format_parsed_parts(self._drv,<span class="dp">·</span>self._root,<span class="dp">·</span>self._parts)<span class="dp">·</span>or<span class="dp">·</span>&#x27;&#x27;<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</td><td class="diffline">123 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self._str<span class="dp">·</span>=<span class="dp">·</span>self._format_parsed_parts(self._drv,<span class="dp">·</span>self._root,<span class="dp">·</span>self._parts)<span class="dp">·</span>or<span class="dp">·</span>&#x27;&#x27;<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</td></tr>
+<tr class="diffunmodified"><td class="diffline">122 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>self._str</td><td class="diffline">124 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>self._str</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">123 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__repr__(self):</td><td class="diffline">125 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__repr__(self)<ins><span class="dp">·</span>-&gt;<span class="dp">·</span>str</ins>:</td></tr>
+<tr class="diffunmodified"><td class="diffline">124 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>super().__repr__()</td><td class="diffline">126 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>super().__repr__()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">125 </td><td class="diffpresent"><span class="dp">»</span>       @classmethod</td><td class="diffline">127 </td><td class="diffpresent"><span class="dp">»</span>       @classmethod</td></tr>
+<tr class="diffunmodified"><td class="diffline">126 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>_format_parsed_parts(cls,<span class="dp">·</span>drv,<span class="dp">·</span>root,<span class="dp">·</span>parts):</td><td class="diffline">128 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>_format_parsed_parts(cls,<span class="dp">·</span>drv,<span class="dp">·</span>root,<span class="dp">·</span>parts):</td></tr>
+<tr class="diffunmodified"><td class="diffline">127 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>drv<span class="dp">·</span>or<span class="dp">·</span>root:</td><td class="diffline">129 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>drv<span class="dp">·</span>or<span class="dp">·</span>root:</td></tr>
+<tr class="diffunmodified"><td class="diffline">128 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>drv<span class="dp">·</span>+<span class="dp">·</span>root<span class="dp">·</span>+<span class="dp">·</span>&#x27;/&#x27;.join(parts[1:])</td><td class="diffline">130 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>drv<span class="dp">·</span>+<span class="dp">·</span>root<span class="dp">·</span>+<span class="dp">·</span>&#x27;/&#x27;.join(parts[1:])</td></tr>
+<tr class="diffunmodified"><td class="diffline">129 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       else:</td><td class="diffline">131 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       else:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/apeye_core/_tld.py</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-_tld.py"><span class="source">apeye_core-1.1.2/apeye_core/_tld.py</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-_tld.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/apeye_core/email_validator.py</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-email_validator.py"><span class="source">apeye_core-1.1.2/apeye_core/email_validator.py</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-email_validator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/apeye_core/public_suffix_list.dat</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-public_suffix_list.dat"><span class="source">apeye_core-1.1.2/apeye_core/public_suffix_list.dat</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--apeye_core-public_suffix_list.dat">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/.gitignore</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--.gitignore"><span class="source">apeye_core-1.1.2/.gitignore</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/LICENSE</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--LICENSE"><span class="source">apeye_core-1.1.2/LICENSE</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">907 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/README.rst</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--README.rst"><span class="source">apeye_core-1.1.2/README.rst</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 87, 15 lines modified</td><td colspan="2">Offset 87, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent">..<span class="dp">·</span>|license|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/license/domdfcoding/apeye-core</td><td class="diffline">87 </td><td class="diffpresent">..<span class="dp">·</span>|license|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/license/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/blob/master/LICENSE</td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/blob/master/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>License</td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">..<span class="dp">·</span>|language|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/languages/top/domdfcoding/apeye-core</td><td class="diffline">90 </td><td class="diffpresent">..<span class="dp">·</span>|language|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/languages/top/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>top<span class="dp">·</span>language</td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>top<span class="dp">·</span>language</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">92 </td><td class="diffpresent">..<span class="dp">·</span>|commits-since|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/commits-since/domdfcoding/apeye-core/v1.1.<del>1</del></td><td class="diffline">92 </td><td class="diffpresent">..<span class="dp">·</span>|commits-since|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/commits-since/domdfcoding/apeye-core/v1.1.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/pulse</td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/pulse</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>commits<span class="dp">·</span>since<span class="dp">·</span>tagged<span class="dp">·</span>version</td><td class="diffline">94 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>commits<span class="dp">·</span>since<span class="dp">·</span>tagged<span class="dp">·</span>version</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent">..<span class="dp">·</span>|commits-latest|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/last-commit/domdfcoding/apeye-core</td><td class="diffline">95 </td><td class="diffpresent">..<span class="dp">·</span>|commits-latest|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/last-commit/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/commit/master</td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/commit/master</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>last<span class="dp">·</span>commit</td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>last<span class="dp">·</span>commit</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">536 B</span></div>
+      <div><span class="source">apeye_core-1.1.1/pyproject.toml</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--pyproject.toml"><span class="source">apeye_core-1.1.2/pyproject.toml</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;hatch-requirements-txt&quot;,]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;hatch-requirements-txt&quot;,]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;apeye-core&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;apeye-core&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<del>1</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Core<span class="dp">·</span>(offline)<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>apeye<span class="dp">·</span>library.&quot;</td><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Core<span class="dp">·</span>(offline)<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>apeye<span class="dp">·</span>library.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.rst&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.rst&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.6.1&quot;</td><td class="diffline">9 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.6.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;url&quot;,]</td><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;url&quot;,]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">11 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.36 KB</span></div>
+      <div><span class="source">apeye_core-1.1.1/PKG-INFO</span> vs.</div>
+      <div id="apeye_core--.-.-.tar---apeye_core--.-.--PKG-INFO"><span class="source">apeye_core-1.1.2/PKG-INFO</span>
+        <a class="anchor" href="#apeye_core--.-.-.tar---apeye_core--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>apeye-core</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>apeye-core</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.1.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.1.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Core<span class="dp">·</span>(offline)<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>apeye<span class="dp">·</span>library.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Core<span class="dp">·</span>(offline)<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>apeye<span class="dp">·</span>library.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/domdfcoding/apeye-core</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issue<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/issues</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issue<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source<span class="dp">·</span>Code,<span class="dp">·</span>https://github.com/domdfcoding/apeye-core</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source<span class="dp">·</span>Code,<span class="dp">·</span>https://github.com/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Dominic<span class="dp">·</span>Davis-Foster<span class="dp">·</span>&lt;dominic@davis-foster.co.uk&gt;</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Dominic<span class="dp">·</span>Davis-Foster<span class="dp">·</span>&lt;dominic@davis-foster.co.uk&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2022,<span class="dp">·</span>Dominic<span class="dp">·</span>Davis-Foster</td><td class="diffline">9 </td><td class="diffpresent">License:<span class="dp">·</span>Copyright<span class="dp">·</span>(c)<span class="dp">·</span>2022,<span class="dp">·</span>Dominic<span class="dp">·</span>Davis-Foster</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 143, 15 lines modified</td><td colspan="2">Offset 143, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent">..<span class="dp">·</span>|license|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/license/domdfcoding/apeye-core</td><td class="diffline">143 </td><td class="diffpresent">..<span class="dp">·</span>|license|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/license/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/blob/master/LICENSE</td><td class="diffline">144 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/blob/master/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>License</td><td class="diffline">145 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">146 </td><td class="diffpresent">..<span class="dp">·</span>|language|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/languages/top/domdfcoding/apeye-core</td><td class="diffline">146 </td><td class="diffpresent">..<span class="dp">·</span>|language|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/languages/top/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">147 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>top<span class="dp">·</span>language</td><td class="diffline">147 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>top<span class="dp">·</span>language</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">148 </td><td class="diffpresent">..<span class="dp">·</span>|commits-since|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/commits-since/domdfcoding/apeye-core/v1.1.<del>1</del></td><td class="diffline">148 </td><td class="diffpresent">..<span class="dp">·</span>|commits-since|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/commits-since/domdfcoding/apeye-core/v1.1.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/pulse</td><td class="diffline">149 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/pulse</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>commits<span class="dp">·</span>since<span class="dp">·</span>tagged<span class="dp">·</span>version</td><td class="diffline">150 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>commits<span class="dp">·</span>since<span class="dp">·</span>tagged<span class="dp">·</span>version</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent">..<span class="dp">·</span>|commits-latest|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/last-commit/domdfcoding/apeye-core</td><td class="diffline">151 </td><td class="diffpresent">..<span class="dp">·</span>|commits-latest|<span class="dp">·</span>image::<span class="dp">·</span>https://img.shields.io/github/last-commit/domdfcoding/apeye-core</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/commit/master</td><td class="diffline">152 </td><td class="diffpresent"><span class="dp">»</span>       :target:<span class="dp">·</span>https://github.com/domdfcoding/apeye-core/commit/master</td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>last<span class="dp">·</span>commit</td><td class="diffline">153 </td><td class="diffpresent"><span class="dp">»</span>       :alt:<span class="dp">·</span>GitHub<span class="dp">·</span>last<span class="dp">·</span>commit</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
