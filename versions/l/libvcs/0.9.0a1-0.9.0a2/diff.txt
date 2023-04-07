@@ -1,0 +1,603 @@
+--- tmp/libvcs-0.9.0a1.tar.gz
++++ tmp/libvcs-0.9.0a2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "libvcs-0.9.0a1.tar", last modified: Sat Aug 15 15:10:14 2020, max compression
+│ +gzip compressed data, was "libvcs-0.9.0a2.tar", last modified: Mon Jun 14 17:37:42 2021, max compression
+│   --- libvcs-0.9.0a1.tar
+├── +++ libvcs-0.9.0a2.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ --rw-r--r--   0        0        0     1081 2020-01-25 14:22:23.128261 libvcs-0.9.0a1/LICENSE
+│ │ --rw-r--r--   0        0        0     3092 2020-08-15 13:03:30.723873 libvcs-0.9.0a1/README.rst
+│ │ --rw-r--r--   0        0        0      441 2020-08-15 15:09:22.728202 libvcs-0.9.0a1/libvcs/__about__.py
+│ │ --rw-r--r--   0        0        0      432 2020-08-15 13:03:30.743874 libvcs-0.9.0a1/libvcs/__init__.py
+│ │ --rw-r--r--   0        0        0     4419 2020-08-15 14:55:58.800717 libvcs-0.9.0a1/libvcs/base.py
+│ │ --rw-r--r--   0        0        0     1493 2020-08-15 13:03:30.743874 libvcs-0.9.0a1/libvcs/exc.py
+│ │ --rw-r--r--   0        0        0    15610 2020-08-15 15:00:17.163746 libvcs-0.9.0a1/libvcs/git.py
+│ │ --rw-r--r--   0        0        0     1196 2020-08-15 14:55:59.912707 libvcs-0.9.0a1/libvcs/hg.py
+│ │ --rw-r--r--   0        0        0     2514 2020-08-15 13:03:30.743874 libvcs-0.9.0a1/libvcs/shortcuts.py
+│ │ --rw-r--r--   0        0        0     5153 2020-08-15 14:56:00.428702 libvcs-0.9.0a1/libvcs/svn.py
+│ │ --rw-r--r--   0        0        0     6118 2020-08-15 14:34:23.206570 libvcs-0.9.0a1/libvcs/util.py
+│ │ --rw-r--r--   0        0        0     1798 2020-08-15 15:09:17.236472 libvcs-0.9.0a1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     3750 2020-08-15 15:10:14.556102 libvcs-0.9.0a1/setup.py
+│ │ --rw-r--r--   0        0        0     4390 2020-08-15 15:10:14.556455 libvcs-0.9.0a1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1081 2020-11-14 13:44:41.266585 libvcs-0.9.0a2/LICENSE
+│ │ +-rw-r--r--   0        0        0     3092 2020-11-14 13:44:41.266585 libvcs-0.9.0a2/README.rst
+│ │ +-rw-r--r--   0        0        0      441 2021-06-14 17:37:36.635970 libvcs-0.9.0a2/libvcs/__about__.py
+│ │ +-rw-r--r--   0        0        0      334 2021-06-14 17:32:45.635970 libvcs-0.9.0a2/libvcs/__init__.py
+│ │ +-rw-r--r--   0        0        0     4321 2021-06-14 17:32:48.635970 libvcs-0.9.0a2/libvcs/base.py
+│ │ +-rw-r--r--   0        0        0     1396 2021-06-14 17:32:12.345970 libvcs-0.9.0a2/libvcs/exc.py
+│ │ +-rw-r--r--   0        0        0    15317 2021-06-14 17:32:30.485970 libvcs-0.9.0a2/libvcs/git.py
+│ │ +-rw-r--r--   0        0        0     1121 2021-06-14 17:32:18.805970 libvcs-0.9.0a2/libvcs/hg.py
+│ │ +-rw-r--r--   0        0        0     2325 2021-06-14 17:32:35.515970 libvcs-0.9.0a2/libvcs/shortcuts.py
+│ │ +-rw-r--r--   0        0        0     5055 2021-06-14 17:32:25.345970 libvcs-0.9.0a2/libvcs/svn.py
+│ │ +-rw-r--r--   0        0        0     6049 2021-06-14 17:32:41.995970 libvcs-0.9.0a2/libvcs/util.py
+│ │ +-rw-r--r--   0        0        0     1961 2021-06-14 17:37:25.935970 libvcs-0.9.0a2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3750 2021-06-14 17:37:42.093250 libvcs-0.9.0a2/setup.py
+│ │ +-rw-r--r--   0        0        0     4390 2021-06-14 17:37:42.093612 libvcs-0.9.0a2/PKG-INFO
+│ │   --- libvcs-0.9.0a1/LICENSE
+│ ├── +++ libvcs-0.9.0a2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- libvcs-0.9.0a1/README.rst
+│ ├── +++ libvcs-0.9.0a2/README.rst
+│ │┄ Files identical despite different names
+│ │   --- libvcs-0.9.0a1/libvcs/base.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/base.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,8 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Base class for Repository objects."""
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │ -
+│ │  import logging
+│ │  import os
+│ │  from typing import NamedTuple
+│ │  from urllib import parse as urlparse
+│ │  
+│ │  from .util import RepoLoggingAdapter, mkdir_p, run
+│ │   --- libvcs-0.9.0a1/libvcs/exc.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/exc.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,14 +1,12 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Exceptions for libvcs.
+│ │  
+│ │  If you see this, we're publishing to S3 automatically
+│ │  
+│ │  """
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │  
+│ │  
+│ │  class LibVCSException(Exception):
+│ │      """Standard exception raised by libvcs."""
+│ │  
+│ │      pass
+│ │   --- libvcs-0.9.0a1/libvcs/git.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/git.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,28 +1,27 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Git Repo object for libvcs.
+│ │  
+│ │ -From https://github.com/saltstack/salt (Apache License):
+│ │ +.. todo::
+│ │  
+│ │ -- [`GitRepo.remote`](libvcs.git.GitRepo.remote) (renamed to ``remote``)
+│ │ -- [`GitRepo.remote`](libvcs.git.GitRepo.remote_set) (renamed to ``set_remote``)
+│ │ +    From https://github.com/saltstack/salt (Apache License):
+│ │  
+│ │ -From pip (MIT Licnese):
+│ │ +    - [`GitRepo.remote`](libvcs.git.GitRepo.remote) (renamed to ``remote``)
+│ │ +    - [`GitRepo.remote`](libvcs.git.GitRepo.remote_set) (renamed to ``set_remote``)
+│ │  
+│ │ -- [`GitRepo.remote`](libvcs.git.GitRepo.remote_set) (renamed to ``set_remote``)
+│ │ -- [`GitRepo.convert_pip_url`](libvcs.git.GitRepo.convert_pip_url`) (``get_url_rev``)
+│ │ -- [`GitRepo.get_revision`](libvcs.git.GitRepo.get_revision)
+│ │ -- [`GitRepo.get_git_version`](libvcs.git.GitRepo.get_git_version)
+│ │ -"""  # NOQA: E501
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │ +    From pip (MIT Licnese):
+│ │  
+│ │ +    - [`GitRepo.remote`](libvcs.git.GitRepo.remote_set) (renamed to ``set_remote``)
+│ │ +    - [`GitRepo.convert_pip_url`](libvcs.git.GitRepo.convert_pip_url`) (``get_url_rev``)
+│ │ +    - [`GitRepo.get_revision`](libvcs.git.GitRepo.get_revision)
+│ │ +    - [`GitRepo.get_git_version`](libvcs.git.GitRepo.get_git_version)
+│ │ +"""  # NOQA: E501
+│ │  import logging
+│ │  import os
+│ │  import re
+│ │ -from typing import NamedTuple, Optional
+│ │ +from typing import Dict, NamedTuple, Optional
+│ │  from urllib import parse as urlparse
+│ │  
+│ │  from . import exc
+│ │  from .base import BaseRepo, VCSLocation, convert_pip_url as base_convert_pip_url
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │ @@ -48,16 +47,15 @@
+│ │  
+│ │  
+│ │  def extract_status(value) -> GitStatus:
+│ │      """Returns ``git status -sb --porcelain=2`` extracted to a dict
+│ │  
+│ │      Returns
+│ │      -------
+│ │ -    dict
+│ │ -        Dictionary of git repo's status
+│ │ +    Dictionary of git repo's status
+│ │      """
+│ │      pattern = re.compile(
+│ │          r"""[\n\r]?
+│ │          (
+│ │              #
+│ │              \W+
+│ │              branch.oid\W+
+│ │ @@ -140,16 +138,14 @@
+│ │              URL of repo
+│ │  
+│ │          tls_verify : bool
+│ │              Should certificate for https be checked (default False)
+│ │          """
+│ │          if 'git_shallow' not in kwargs:
+│ │              self.git_shallow = False
+│ │ -        if 'git_submodules' not in kwargs:
+│ │ -            self.git_submodules = []
+│ │          if 'tls_verify' not in kwargs:
+│ │              self.tls_verify = False
+│ │  
+│ │          BaseRepo.__init__(self, url, repo_dir, **kwargs)
+│ │  
+│ │      @classmethod
+│ │      def from_pip_url(cls, pip_url, *args, **kwargs):
+│ │ @@ -180,15 +176,14 @@
+│ │  
+│ │          self.info('Cloning.')
+│ │          self.run(cmd, log_in_real_time=True)
+│ │  
+│ │          self.info('Initializing submodules.')
+│ │          self.run(['submodule', 'init'], log_in_real_time=True)
+│ │          cmd = ['submodule', 'update', '--recursive', '--init']
+│ │ -        cmd.extend(self.git_submodules)
+│ │          self.run(cmd, log_in_real_time=True)
+│ │  
+│ │      def update_repo(self):
+│ │          self.ensure_dir()
+│ │  
+│ │          if not os.path.isdir(os.path.join(self.path, '.git')):
+│ │              self.obtain()
+│ │ @@ -330,53 +325,50 @@
+│ │              try:
+│ │                  process = self.run(['checkout', git_tag])
+│ │              except exc.CommandError:
+│ │                  self.error("Failed to checkout tag: '%s'" % git_tag)
+│ │                  return
+│ │  
+│ │          cmd = ['submodule', 'update', '--recursive', '--init']
+│ │ -        cmd.extend(self.git_submodules)
+│ │          self.run(cmd, log_in_real_time=True)
+│ │  
+│ │ -    def remotes(self, flat=False):
+│ │ +    def remotes(self, flat=False) -> Dict:
+│ │          """Return remotes like git remote -v.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          flat : bool
+│ │              Return a dict of ``tuple`` instead of ``dict``, default `False`.
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        dict
+│ │ -            dict of git upstream / remote URLs
+│ │ +        dict of git upstream / remote URLs
+│ │          """
+│ │          remotes = {}
+│ │  
+│ │          cmd = self.run(['remote'])
+│ │          ret = filter(None, cmd.split('\n'))
+│ │  
+│ │          for remote_name in ret:
+│ │              remotes[remote_name] = (
+│ │                  self.remote(remote_name) if flat else self.remote(remote_name)._asdict()
+│ │              )
+│ │          return remotes
+│ │  
+│ │ -    def remote(self, name, **kwargs):
+│ │ +    def remote(self, name, **kwargs) -> GitRemote:
+│ │          """Get the fetch and push URL for a specified remote name.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          name : str
+│ │              The remote name used to define the fetch and push URL
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        libvcs.git.GitRemote
+│ │ -            Remote name and url in tuple form
+│ │ +        Remote name and url in tuple form
+│ │          """
+│ │  
+│ │          try:
+│ │              ret = self.run(['remote', 'show', '-n', name])
+│ │              lines = ret.split('\n')
+│ │              remote_fetch_url = lines[1].replace('Fetch URL: ', '').strip()
+│ │              remote_push_url = lines[2].replace('Push  URL: ', '').strip()
+│ │ @@ -406,26 +398,25 @@
+│ │          if self.remote(name) and overwrite:
+│ │              self.run(['remote', 'set-url', name, url])
+│ │          else:
+│ │              self.run(['remote', 'add', name, url])
+│ │          return self.remote(name=name)
+│ │  
+│ │      @staticmethod
+│ │ -    def chomp_protocol(url):
+│ │ +    def chomp_protocol(url) -> str:
+│ │          """Return clean VCS url from RFC-style url
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │ -        url : str 
+│ │ +        url : str
+│ │              PIP-style url
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        str
+│ │ -            URL as VCS software would accept it
+│ │ +        URL as VCS software would accept it
+│ │          """
+│ │          if '+' in url:
+│ │              url = url.split('+', 1)[1]
+│ │          scheme, netloc, path, query, frag = urlparse.urlsplit(url)
+│ │          rev = None
+│ │          if '@' in path:
+│ │              path, rev = path.rsplit('@', 1)
+│ │ @@ -434,62 +425,59 @@
+│ │              url = url.replace('ssh://', 'git+ssh://')
+│ │          elif '://' not in url:
+│ │              assert 'file:' not in url
+│ │              url = url.replace('git+', 'git+ssh://')
+│ │              url = url.replace('ssh://', '')
+│ │          return url
+│ │  
+│ │ -    def get_git_version(self):
+│ │ +    def get_git_version(self) -> str:
+│ │          """Return current version of git binary
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        str
+│ │ -            git version
+│ │ +        git version
+│ │          """
+│ │          VERSION_PFX = 'git version '
+│ │          version = self.run(['version'])
+│ │          if version.startswith(VERSION_PFX):
+│ │              version = version[len(VERSION_PFX) :].split()[0]
+│ │          else:
+│ │              version = ''
+│ │          return '.'.join(version.split('.')[:3])
+│ │  
+│ │ -    def status(self):
+│ │ +    def status(self) -> dict:
+│ │          """Retrieve status of project in dict format.
+│ │  
+│ │          Wraps ``git status --sb --porcelain=2``. Does not include changed files, yet.
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        dict
+│ │ -            Status of current checked out repository
+│ │ +        Status of current checked out repository
+│ │  
+│ │          Examples
+│ │          --------
+│ │  
+│ │          >>> git_repo.status()
+│ │ -        { 
+│ │ +        {
+│ │              "branch_oid": 'de6185fde0806e5c7754ca05676325a1ea4d6348',
+│ │              "branch_head": 'fix-current-remote-name',
+│ │              "branch_upstream": 'origin/fix-current-remote-name',
+│ │              "branch_ab": '+0 -0',
+│ │              "branch_ahead": '0',
+│ │              "branch_behind": '0'
+│ │          }
+│ │          """
+│ │          return extract_status(self.run(['status', '-sb', '--porcelain=2']))
+│ │  
+│ │ -    def get_current_remote_name(self):
+│ │ +    def get_current_remote_name(self) -> str:
+│ │          """Retrieve name of the remote / upstream of currently checked out branch.
+│ │  
+│ │          Returns
+│ │          -------
+│ │ -        str
+│ │ -            If upstream the same, returns ``branch_name``.
+│ │ -            If upstream mismatches, returns ``remote_name/branch_name``.
+│ │ +        If upstream the same, returns ``branch_name``.
+│ │ +        If upstream mismatches, returns ``remote_name/branch_name``.
+│ │          """
+│ │          match = self.status()
+│ │  
+│ │          if match.branch_upstream is None:  # no upstream set
+│ │              return match.branch_head
+│ │          return match.branch_upstream.replace('/' + match.branch_head, '')
+│ │   --- libvcs-0.9.0a1/libvcs/hg.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/hg.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,18 +1,17 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Mercurial Repo object for libvcs.
+│ │  
+│ │ -The following is from pypa/pip (MIT license):
+│ │ +.. todo::
+│ │  
+│ │ -- [`MercurialRepo.convert_pip_url`](libvcs.hg.convert_pip_url)
+│ │ -- [`MercurialRepo.get_url`](libvcs.hg.MercurialRepo.get_url)
+│ │ -- [`MercurialRepo.get_revision`](libvcs.hg.MercurialRepo.get_revision)
+│ │ -"""  # NOQA E5
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │ +   The following is from pypa/pip (MIT license):
+│ │  
+│ │ +   - [`MercurialRepo.convert_pip_url`](libvcs.hg.convert_pip_url)
+│ │ +   - [`MercurialRepo.get_url`](libvcs.hg.MercurialRepo.get_url)
+│ │ +   - [`MercurialRepo.get_revision`](libvcs.hg.MercurialRepo.get_revision)
+│ │ +"""  # NOQA E5
+│ │  import logging
+│ │  import os
+│ │  
+│ │  from .base import BaseRepo
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │   --- libvcs-0.9.0a1/libvcs/shortcuts.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/shortcuts.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,25 +1,19 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Shortcuts"""
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │ +from typing import Union
+│ │  
+│ │  from libvcs import GitRepo, MercurialRepo, SubversionRepo
+│ │  from libvcs.exc import InvalidPipURL, InvalidVCS
+│ │  
+│ │  
+│ │ -def create_repo(url, vcs, **kwargs):
+│ │ +def create_repo(url, vcs, **kwargs) -> Union[GitRepo, MercurialRepo, SubversionRepo]:
+│ │      r"""Return a object representation of a VCS repository.
+│ │  
+│ │ -    Returns
+│ │ -    -------
+│ │ -    `libvcs.svn.SubversionRepo`, `libvcs.git.GitRepo`, or `libvcs.hg.MercurialRepo`.
+│ │ -
+│ │      Examples
+│ │      --------
+│ │ -
+│ │      >>> from libvcs.shortcuts import create_repo
+│ │      >>>
+│ │      >>> r = create_repo(
+│ │      ...     url='https://www.github.com/you/myrepo',
+│ │      ...     vcs='git',
+│ │      ...     repo_dir='/tmp/myrepo'
+│ │      ... )
+│ │ @@ -42,21 +36,19 @@
+│ │          return MercurialRepo(url, **kwargs)
+│ │      elif vcs == 'svn':
+│ │          return SubversionRepo(url, **kwargs)
+│ │      else:
+│ │          raise InvalidVCS('VCS %s is not a valid VCS' % vcs)
+│ │  
+│ │  
+│ │ -def create_repo_from_pip_url(pip_url, **kwargs):
+│ │ +def create_repo_from_pip_url(
+│ │ +    pip_url, **kwargs
+│ │ +) -> Union[GitRepo, MercurialRepo, SubversionRepo]:
+│ │      r"""Return a object representation of a VCS repository via pip-style url.
+│ │  
+│ │ -    Returns
+│ │ -    -------
+│ │ -    `libvcs.svn.SubversionRepo`, `libvcs.git.GitRepo`, or `libvcs.hg.MercurialRepo`.
+│ │ -
+│ │      Examples
+│ │      --------
+│ │  
+│ │      >>> from libvcs.shortcuts import create_repo_from_pip_url
+│ │  
+│ │      >>> r = create_repo_from_pip_url(
+│ │      ...         pip_url='git+https://www.github.com/you/myrepo',
+│ │   --- libvcs-0.9.0a1/libvcs/svn.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/svn.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,24 +1,21 @@
+│ │  #!/usr/bin/env python
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Subversion object for libvcs.
+│ │  
+│ │  The follow are from saltstack/salt (Apache license):
+│ │  
+│ │  - [`SubversionRepo.get_revision_file`](libvcs.svn.SubversionRepo.get_revision_file)
+│ │  
+│ │  The following are pypa/pip (MIT license):
+│ │  
+│ │  - [`SubversionRepo.convert_pip_url`](libvcs.svn.SubversionRepo.convert_pip_url)
+│ │  - [`SubversionRepo.get_url`](libvcs.svn.SubversionRepo.get_url)
+│ │  - [`SubversionRepo.get_revision`](libvcs.svn.SubversionRepo.get_revision)
+│ │  - [`get_rev_options`](libvcs.svn.get_rev_options)
+│ │  """  # NOQA: E5
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │ -
+│ │  import logging
+│ │  import os
+│ │  import re
+│ │  from urllib import parse as urlparse
+│ │  
+│ │  from .base import BaseRepo, VCSLocation, convert_pip_url as base_convert_pip_url
+│ │   --- libvcs-0.9.0a1/libvcs/util.py
+│ ├── +++ libvcs-0.9.0a2/libvcs/util.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,11 +1,8 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │  """Utility functions for libvcs."""
+│ │ -from __future__ import absolute_import, print_function, unicode_literals
+│ │ -
+│ │  import datetime
+│ │  import errno
+│ │  import logging
+│ │  import os
+│ │  import subprocess
+│ │  import sys
+│ │  
+│ │ @@ -13,15 +10,15 @@
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  console_encoding = sys.__stdout__.encoding
+│ │  
+│ │  
+│ │  def console_to_str(s):
+│ │ -    """ From pypa/pip project, pip.backwardwardcompat. License MIT. """
+│ │ +    """From pypa/pip project, pip.backwardwardcompat. License MIT."""
+│ │      try:
+│ │          return s.decode(console_encoding)
+│ │      except UnicodeDecodeError:
+│ │          return s.decode('utf_8')
+│ │      except AttributeError:  # for tests, #13
+│ │          return s
+│ │  
+│ │ @@ -131,15 +128,15 @@
+│ │      cmd,
+│ │      shell=False,
+│ │      cwd=None,
+│ │      log_in_real_time=True,
+│ │      check_returncode=True,
+│ │      callback=None,
+│ │  ):
+│ │ -    """ Run 'cmd' in a shell and return the combined contents of stdout and
+│ │ +    """Run 'cmd' in a shell and return the combined contents of stdout and
+│ │      stderr (Blocking).  Throws an exception if the command exits non-zero.
+│ │  
+│ │      Parameters
+│ │      ----------
+│ │      cmd : list or str, or single str, if shell=True
+│ │         the command to run
+│ │  
+│ │ @@ -167,15 +164,19 @@
+│ │  
+│ │              def progress_cb(output, timestamp):
+│ │                  sys.stdout.write(output)
+│ │                  sys.stdout.flush()
+│ │              run(['git', 'pull'], callback=progrses_cb)
+│ │      """
+│ │      proc = subprocess.Popen(
+│ │ -        cmd, shell=shell, stderr=subprocess.PIPE, stdout=subprocess.PIPE, cwd=cwd,
+│ │ +        cmd,
+│ │ +        shell=shell,
+│ │ +        stderr=subprocess.PIPE,
+│ │ +        stdout=subprocess.PIPE,
+│ │ +        cwd=cwd,
+│ │      )
+│ │  
+│ │      all_output = []
+│ │      code = None
+│ │      line = None
+│ │      while code is None:
+│ │          code = proc.poll()
+│ │   --- libvcs-0.9.0a1/pyproject.toml
+│ ├── +++ libvcs-0.9.0a2/pyproject.toml
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  [tool.black]
+│ │  skip-string-normalization = true
+│ │  
+│ │  [tool.poetry]
+│ │  name = "libvcs"
+│ │ -version = "0.9.0a1"
+│ │ +version = "0.9.0a2"
+│ │  description = "vcs abstraction layer"
+│ │  license = "MIT"
+│ │  authors = ["Tony Narlock <tony@git-pull.com>"]
+│ │  keywords = ["libvcs", "git", "mercurial", "hg", "svn"]
+│ │  classifiers = [
+│ │    "Development Status :: 4 - Beta",
+│ │    "License :: OSI Approved :: MIT License",
+│ │ @@ -35,34 +35,36 @@
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.6"
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │  ### Docs ###
+│ │  sphinx = "*"
+│ │ -recommonmark = {version = "^0.6.0"}
+│ │ -alagitpull = {version = "~0.1.0"}
+│ │ -sphinx-issues = {version = "^1.2.0"}
+│ │ +recommonmark = "^0.6.0"
+│ │ +alagitpull = "~0.1.0"
+│ │ +sphinx-issues = "^1.2.0"
+│ │ +sphinx-autodoc-typehints = "^1.11.0"
+│ │  
+│ │  ### Testing ###
+│ │  pytest = "*"
+│ │  pytest-rerunfailures = "*"
+│ │  pytest-mock = "*"
+│ │  
+│ │  ### Coverage ###
+│ │  codecov = "*"
+│ │  coverage = "*"
+│ │  pytest-cov = "*"
+│ │  
+│ │  ### Format ###
+│ │ -black = {version="==19.10b0"}
+│ │ +black = {version="==21.6b0", python="^3.6.2"}
+│ │  isort = "*"
+│ │  
+│ │  ### Lint ###
+│ │  flake8 = "*"
+│ │ +"backports.functools_lru_cache" = "!=1.6.2,!=1.6.3" # https://github.com/jaraco/backports.functools_lru_cache/pull/16
+│ │  
+│ │  [tool.poetry.extras]
+│ │ -docs = ["sphinx", "recommonmark", "sphinx-issues", "alagitpull"]
+│ │ +docs = ["sphinx", "recommonmark", "sphinx-issues", "alagitpull", "sphinx-autodoc-typehints"]
+│ │  test = ["pytest", "pathlib2", "pytest-rerunfailures", "pytest-mock"]
+│ │  coverage = ["codecov", "coverage", "pytest-cov"]
+│ │  format = ["black", "isort"]
+│ │  lint = ["flake8"]
+│ │   --- libvcs-0.9.0a1/setup.py
+│ ├── +++ libvcs-0.9.0a2/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -5,15 +5,15 @@
+│ │  ['libvcs']
+│ │  
+│ │  package_data = \
+│ │  {'': ['*']}
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'libvcs',
+│ │ -    'version': '0.9.0a1',
+│ │ +    'version': '0.9.0a2',
+│ │      'description': 'vcs abstraction layer',
+│ │      'long_description': '``libvcs`` - abstraction layer for vcs, powers `vcspull`_.\n\n|pypi| |docs| |build-status| |coverage| |license|\n\nSetup\n-----\n\n.. code-block:: sh\n\n   $ pip install libvcs\n\nOpen up python:\n\n.. code-block:: sh\n\n   $ python\n\n   # or for nice autocomplete and syntax highlighting\n   $ pip install ptpython\n   $ ptpython\n\nUsage\n-----\nCreate a `Repo`_ object of the project to inspect / checkout / update:\n\n.. code-block:: python\n\n   >>> from libvcs.shortcuts import create_repo_from_pip_url, create_repo\n\n   # repo is an object representation of a vcs repository.\n   >>> r = create_repo(url=\'https://www.github.com/vcs-python/libtmux\',\n   ...                 vcs=\'git\',\n   ...                 repo_dir=\'/tmp/libtmux\')\n\n   # or via pip-style URL\n   >>> r = create_repo_from_pip_url(\n   ...         pip_url=\'git+https://www.github.com/vcs-python/libtmux\',\n   ...         repo_dir=\'/tmp/libtmux\')\n\nUpdate / clone repo:\n\n.. code-block:: python\n\n   # it may or may not be checked out/cloned on the system yet\n   >>> r.update_repo()\n\nGet revision:\n\n.. code-block:: python\n\n   >>> r.get_revision()\n   u\'5c227e6ab4aab44bf097da2e088b0ff947370ab8\'\n\nDonations\n---------\nYour donations fund development of new features, testing and support.\nYour money will go directly to maintenance and development of the project.\nIf you are an individual, feel free to give whatever feels right for the\nvalue you get out of the project.\n\nSee donation options at https://www.git-pull.com/support.html.\n\nMore information \n----------------\n- Python support: Python 2.7, >= 3.4, pypy\n- VCS supported: git(1), svn(1), hg(1)\n- Source: https://github.com/vcs-python/libvcs\n- Docs: https://libvcs.git-pull.com\n- Changelog: https://libvcs.git-pull.com/history.html\n- API: https://libvcs.git-pull.com/api.html\n- Issues: https://github.com/vcs-python/libvcs/issues\n- Test Coverage: https://codecov.io/gh/vcs-python/libvcs\n- pypi: https://pypi.python.org/pypi/libvcs\n- Open Hub: https://www.openhub.net/p/libvcs\n- License: `MIT`_.\n\n.. _MIT: https://opensource.org/licenses/MIT\n.. _Documentation: https://libvcs.git-pull.com/\n.. _API: https://libvcs.git-pull.com/api.html\n.. _pip: http://www.pip-installer.org/en/latest/\n.. _vcspull: https://www.github.com/vcs-python/vcspull/\n.. _Repo: https://libvcs.git-pull.com/api.html#creating-a-repo-object\n\n.. |pypi| image:: https://img.shields.io/pypi/v/libvcs.svg\n    :alt: Python Package\n    :target: http://badge.fury.io/py/libvcs\n\n.. |docs| image:: https://github.com/vcs-python/libvcs/workflows/Publish%20Docs/badge.svg\n   :alt: Docs\n   :target: https://github.com/vcs-python/libvcs/actions?query=workflow%3A"Publish+Docs"\n\n.. |build-status| image:: https://github.com/vcs-python/libvcs/workflows/tests/badge.svg\n   :alt: Build Status\n   :target: https://github.com/vcs-python/libvcs/actions?query=workflow%3A"tests"\n\n.. |coverage| image:: https://codecov.io/gh/vcs-python/libvcs/branch/master/graph/badge.svg\n    :alt: Code Coverage\n    :target: https://codecov.io/gh/vcs-python/libvcs\n    \n.. |license| image:: https://img.shields.io/github/license/vcs-python/libvcs.svg\n    :alt: License \n',
+│ │      'author': 'Tony Narlock',
+│ │      'author_email': 'tony@git-pull.com',
+│ │      'maintainer': None,
+│ │      'maintainer_email': None,
+│ │      'url': 'http://github.com/vcs-python/libvcs/',
+│ │   --- libvcs-0.9.0a1/PKG-INFO
+│ ├── +++ libvcs-0.9.0a2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: libvcs
+│ │ -Version: 0.9.0a1
+│ │ +Version: 0.9.0a2
+│ │  Summary: vcs abstraction layer
+│ │  Home-page: http://github.com/vcs-python/libvcs/
+│ │  License: MIT
+│ │  Keywords: libvcs,git,mercurial,hg,svn
+│ │  Author: Tony Narlock
+│ │  Author-email: tony@git-pull.com
+│ │  Requires-Python: >=3.6,<4.0

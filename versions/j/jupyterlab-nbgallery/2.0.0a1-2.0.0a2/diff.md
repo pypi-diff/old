@@ -1,0 +1,2325 @@
+# Comparing `tmp/jupyterlab_nbgallery-2.0.0a1.tar.gz` & `tmp/jupyterlab_nbgallery-2.0.0a2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jupyterlab_nbgallery-2.0.0a1.tar", last modified: Tue Mar 28 12:17:35 2023, max compression
++gzip compressed data, was "jupyterlab_nbgallery-2.0.0a2.tar", last modified: Fri Apr  7 10:31:34 2023, max compression
+```
+
+## Comparing `jupyterlab_nbgallery-2.0.0a1.tar` & `jupyterlab_nbgallery-2.0.0a2.tar`
+
+### file list
+
+```diff
+@@ -1,119 +1,119 @@
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.589952 jupyterlab_nbgallery-2.0.0a1/
+--rw-r--r--   0 jovyan    (1000) users      (100)     1066 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/LICENSE
+--rw-r--r--   0 jovyan    (1000) users      (100)      388 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/MANIFEST.in
+--rw-r--r--   0 jovyan    (1000) users      (100)     2694 2023-03-28 12:17:35.585952 jupyterlab_nbgallery-2.0.0a1/PKG-INFO
+--rw-r--r--   0 jovyan    (1000) users      (100)     2014 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/README.md
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.569952 jupyterlab_nbgallery-2.0.0a1/jupyter-config/
+--rw-r--r--   0 jovyan    (1000) users      (100)       96 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/jupyter-config/jupyterlab_nbgallery.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.569952 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery/
+--rw-r--r--   0 jovyan    (1000) users      (100)      596 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery/__init__.py
+--rw-r--r--   0 jovyan    (1000) users      (100)       76 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery/_version.py
+--rw-r--r--   0 jovyan    (1000) users      (100)     3587 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery/handlers.py
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.573952 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2694 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/PKG-INFO
+--rw-r--r--   0 jovyan    (1000) users      (100)     4503 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/SOURCES.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)        1 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/dependency_links.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)        1 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/not-zip-safe
+--rw-r--r--   0 jovyan    (1000) users      (100)       61 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/requires.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)       21 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/top_level.txt
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.569952 jupyterlab_nbgallery-2.0.0a1/labextension/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.573952 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2596 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.573952 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/
+--rw-r--r--   0 jovyan    (1000) users      (100)      335 2023-03-28 12:16:56.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/autodownload.json
+--rw-r--r--   0 jovyan    (1000) users      (100)     2505 2023-03-28 12:16:56.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.573952 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)     3438 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/542.51fb91347d8a3d9a657a.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     1969 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/568.16e46c33ea6dee49a0d7.js
+--rw-r--r--   0 jovyan    (1000) users      (100)    90038 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js.LICENSE.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)     6916 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/remoteEntry.3b39a47185ccd6dd26b9.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      178 2023-03-28 12:16:56.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/third-party-licenses.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.573952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2618 2023-03-28 12:16:58.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.573952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2527 2023-03-28 12:16:55.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.577952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)     1213 2023-03-28 12:16:58.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/248.5e3dec99dfd0a4f4cac5.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     3446 2023-03-28 12:16:58.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/542.e4d405f3b0e4f693ab53.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     6651 2023-03-28 12:16:58.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/remoteEntry.3c172e71981c8722b3b2.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      182 2023-03-28 12:16:55.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     2452 2023-03-28 12:16:58.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/third-party-licenses.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.577952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2579 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.577952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/
+--rw-r--r--   0 jovyan    (1000) users      (100)      680 2023-03-28 12:16:56.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/environment-registration.json
+--rw-r--r--   0 jovyan    (1000) users      (100)     2488 2023-03-28 12:16:56.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.577952 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)     3460 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/542.feae6c397f33f9138fea.js
+--rw-r--r--   0 jovyan    (1000) users      (100)    90062 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/638.36e464d3233849b6b07a.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/638.36e464d3233849b6b07a.js.LICENSE.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)     1520 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/784.20b8a2ad4acfd350b90c.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     7046 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/remoteEntry.1a965fed730a2160bd3e.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      190 2023-03-28 12:16:56.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-03-28 12:17:05.000000 jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/third-party-licenses.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.577952 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2698 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.577952 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2607 2023-03-28 12:16:57.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.581952 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)     4018 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/542.18fd91d86aaf6286edd0.js
+--rw-r--r--   0 jovyan    (1000) users      (100)    10322 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/56.4cac067549099539bfd3.js
+--rw-r--r--   0 jovyan    (1000) users      (100)    90036 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/638.95e0186307171588df5b.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/638.95e0186307171588df5b.js.LICENSE.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)     7166 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/remoteEntry.f27f6bea83d4af450090.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      177 2023-03-28 12:16:57.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-03-28 12:17:06.000000 jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/third-party-licenses.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.581952 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2444 2023-03-28 12:17:27.000000 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.581952 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2379 2023-03-28 12:17:26.000000 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.581952 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)      931 2023-03-28 12:17:27.000000 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/568.c9be5995dc68aad7d3d1.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     6305 2023-03-28 12:17:27.000000 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/remoteEntry.2e054c19c350354e70b0.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      118 2023-03-28 12:17:26.000000 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)       20 2023-03-28 12:17:27.000000 jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/third-party-licenses.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.581952 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2527 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.565952 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.569952 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.581952 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/
+--rw-r--r--   0 jovyan    (1000) users      (100)      345 2023-03-28 12:17:29.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/instrumentation.json
+--rw-r--r--   0 jovyan    (1000) users      (100)     2466 2023-03-28 12:17:29.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.585952 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)     1721 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/568.3252d012ac78742aa152.js
+--rw-r--r--   0 jovyan    (1000) users      (100)    90044 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/638.b95125ed695cee42aae4.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/638.b95125ed695cee42aae4.js.LICENSE.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)     8425 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/701.d81800f5926ab62cc8b2.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     7557 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/remoteEntry.dbe6ded7718aebd9e3bc.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      118 2023-03-28 12:17:29.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     2479 2023-03-28 12:17:34.000000 jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/third-party-licenses.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.585952 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2709 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/package.json
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.569952 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/schemas/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.569952 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/schemas/@jupyterlab-nbgallery/
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.585952 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/
+--rw-r--r--   0 jovyan    (1000) users      (100)     2618 2023-03-28 12:17:30.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/package.json.orig
+-drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-03-28 12:17:35.585952 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/
+--rw-r--r--   0 jovyan    (1000) users      (100)     4026 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/542.d1718a50e23f3808ba62.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     4115 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/568.39c2bc83f0eb58b2c9fa.js
+--rw-r--r--   0 jovyan    (1000) users      (100)    90044 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/638.e5080f99954048969f76.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/638.e5080f99954048969f76.js.LICENSE.txt
+--rw-r--r--   0 jovyan    (1000) users      (100)     7097 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/remoteEntry.3dcf202ddb367695afb0.js
+--rw-r--r--   0 jovyan    (1000) users      (100)      181 2023-03-28 12:17:30.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/style.js
+--rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-03-28 12:17:35.000000 jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/third-party-licenses.json
+--rw-r--r--   0 jovyan    (1000) users      (100)     1103 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/package.json
+--rw-r--r--   0 jovyan    (1000) users      (100)      145 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/pyproject.toml
+--rw-r--r--   0 jovyan    (1000) users      (100)       38 2023-03-28 12:17:35.589952 jupyterlab_nbgallery-2.0.0a1/setup.cfg
+--rw-r--r--   0 jovyan    (1000) users      (100)     3928 2023-03-28 12:16:10.000000 jupyterlab_nbgallery-2.0.0a1/setup.py
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.132135 jupyterlab_nbgallery-2.0.0a2/
++-rw-r--r--   0 jovyan    (1000) users      (100)     1066 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/LICENSE
++-rw-r--r--   0 jovyan    (1000) users      (100)      388 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/MANIFEST.in
++-rw-r--r--   0 jovyan    (1000) users      (100)     2694 2023-04-07 10:31:34.128134 jupyterlab_nbgallery-2.0.0a2/PKG-INFO
++-rw-r--r--   0 jovyan    (1000) users      (100)     2014 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/README.md
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.112135 jupyterlab_nbgallery-2.0.0a2/jupyter-config/
++-rw-r--r--   0 jovyan    (1000) users      (100)       96 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/jupyter-config/jupyterlab_nbgallery.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.112135 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery/
++-rw-r--r--   0 jovyan    (1000) users      (100)      596 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery/__init__.py
++-rw-r--r--   0 jovyan    (1000) users      (100)       76 2023-04-07 10:30:10.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery/_version.py
++-rw-r--r--   0 jovyan    (1000) users      (100)     3640 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery/handlers.py
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.116135 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2694 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/PKG-INFO
++-rw-r--r--   0 jovyan    (1000) users      (100)     4503 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/SOURCES.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)        1 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/dependency_links.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)        1 2023-04-07 09:29:38.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/not-zip-safe
++-rw-r--r--   0 jovyan    (1000) users      (100)       61 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/requires.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)       21 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/top_level.txt
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.112135 jupyterlab_nbgallery-2.0.0a2/labextension/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.116135 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2596 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.116135 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/
++-rw-r--r--   0 jovyan    (1000) users      (100)      335 2023-04-07 10:30:54.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/autodownload.json
++-rw-r--r--   0 jovyan    (1000) users      (100)     2505 2023-04-07 10:30:54.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.116135 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)     3438 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/542.51fb91347d8a3d9a657a.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     1968 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/568.088b227a0b6b6168ee16.js
++-rw-r--r--   0 jovyan    (1000) users      (100)    90038 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js.LICENSE.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)     6914 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/remoteEntry.fa15592bca73423b04a4.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      178 2023-04-07 10:30:54.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/third-party-licenses.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.116135 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2618 2023-04-07 10:30:56.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.116135 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2527 2023-04-07 10:30:54.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.120134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)     1213 2023-04-07 10:30:56.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/248.1d3351413b89920be9fb.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     3446 2023-04-07 10:30:56.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/542.e4d405f3b0e4f693ab53.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     6651 2023-04-07 10:30:56.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/remoteEntry.dd7691336809bc6771e3.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      182 2023-04-07 10:30:54.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     2452 2023-04-07 10:30:56.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/third-party-licenses.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.120134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2579 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.120134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/
++-rw-r--r--   0 jovyan    (1000) users      (100)      680 2023-04-07 10:30:55.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/environment-registration.json
++-rw-r--r--   0 jovyan    (1000) users      (100)     2488 2023-04-07 10:30:55.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.120134 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)     3460 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/542.feae6c397f33f9138fea.js
++-rw-r--r--   0 jovyan    (1000) users      (100)    90062 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/638.36e464d3233849b6b07a.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/638.36e464d3233849b6b07a.js.LICENSE.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)     1519 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/784.c5c708b87c266cbabd98.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     7044 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/remoteEntry.00e0256ee314fd224ea3.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      190 2023-04-07 10:30:55.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/third-party-licenses.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.120134 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2698 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.120134 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2607 2023-04-07 10:30:55.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.124134 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)     4018 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/542.18fd91d86aaf6286edd0.js
++-rw-r--r--   0 jovyan    (1000) users      (100)    10415 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/56.8dc3eaf446ef31335c65.js
++-rw-r--r--   0 jovyan    (1000) users      (100)    90036 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/638.95e0186307171588df5b.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/638.95e0186307171588df5b.js.LICENSE.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)     7164 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/remoteEntry.3280b8022411403d2f46.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      177 2023-04-07 10:30:55.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-04-07 10:31:04.000000 jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/third-party-licenses.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.124134 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2444 2023-04-07 10:31:25.000000 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.124134 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2379 2023-04-07 10:31:24.000000 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.124134 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)      931 2023-04-07 10:31:25.000000 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/568.1dcbb7bee8ca1152cf60.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     6305 2023-04-07 10:31:25.000000 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/remoteEntry.02ddda09f0305fa467f4.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      118 2023-04-07 10:31:24.000000 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)       20 2023-04-07 10:31:25.000000 jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/third-party-licenses.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.124134 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2527 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.108134 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.124134 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/
++-rw-r--r--   0 jovyan    (1000) users      (100)      345 2023-04-07 10:31:28.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/instrumentation.json
++-rw-r--r--   0 jovyan    (1000) users      (100)     2466 2023-04-07 10:31:28.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.128134 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)     1720 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/568.0d3998aabd22f1867c40.js
++-rw-r--r--   0 jovyan    (1000) users      (100)    90044 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/638.b95125ed695cee42aae4.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/638.b95125ed695cee42aae4.js.LICENSE.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)     8425 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/701.d81800f5926ab62cc8b2.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     7555 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/remoteEntry.53ed33a8ef1f603e0fc8.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      118 2023-04-07 10:31:28.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     2479 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/third-party-licenses.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.128134 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2709 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/package.json
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.112135 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/schemas/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.112135 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/schemas/@jupyterlab-nbgallery/
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.128134 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/
++-rw-r--r--   0 jovyan    (1000) users      (100)     2618 2023-04-07 10:31:28.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/package.json.orig
++drwxr-sr-x   0 jovyan    (1000) users      (100)        0 2023-04-07 10:31:34.128134 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/
++-rw-r--r--   0 jovyan    (1000) users      (100)     4026 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/542.d1718a50e23f3808ba62.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     4114 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/568.00695541aaa15d567580.js
++-rw-r--r--   0 jovyan    (1000) users      (100)    90044 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/638.e5080f99954048969f76.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      476 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/638.e5080f99954048969f76.js.LICENSE.txt
++-rw-r--r--   0 jovyan    (1000) users      (100)     7095 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/remoteEntry.03bf745401d2317e1d7d.js
++-rw-r--r--   0 jovyan    (1000) users      (100)      181 2023-04-07 10:31:28.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/style.js
++-rw-r--r--   0 jovyan    (1000) users      (100)     3692 2023-04-07 10:31:33.000000 jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/third-party-licenses.json
++-rw-r--r--   0 jovyan    (1000) users      (100)     1103 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/package.json
++-rw-r--r--   0 jovyan    (1000) users      (100)      145 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/pyproject.toml
++-rw-r--r--   0 jovyan    (1000) users      (100)       38 2023-04-07 10:31:34.132135 jupyterlab_nbgallery-2.0.0a2/setup.cfg
++-rw-r--r--   0 jovyan    (1000) users      (100)     3928 2023-04-07 09:27:02.000000 jupyterlab_nbgallery-2.0.0a2/setup.py
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/LICENSE` & `jupyterlab_nbgallery-2.0.0a2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/PKG-INFO` & `jupyterlab_nbgallery-2.0.0a2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jupyterlab_nbgallery
+-Version: 2.0.0a1
++Version: 2.0.0a2
+ Summary: A JupyterLab Extension for NBGallery integration
+ Home-page: https://github.com/nbgallery/lab-extensions
+ Author: NBGallery
+ License: MIT
+ Keywords: Jupyter,JupyterLab
+ Platform: Linux
+ Platform: Mac OS X
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/README.md` & `jupyterlab_nbgallery-2.0.0a2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery/__init__.py` & `jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery/handlers.py` & `jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery/handlers.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -41,15 +41,15 @@
+ class EnvironmentHandler(APIHandler):
+     # The following decorator should be present on all verb methods (head, get, post,
+     # patch, put, delete, options) to ensure only authorized user can request the
+     # Jupyter server
+     @tornado.web.authenticated
+     def get(self):
+         self.finish(json.dumps({"NBGALLERY_URL": os.getenv("NBGALLERY_URL"), "NBGALLERY_CLIENT_NAME": os.getenv(
+-            "NBGALLERY_CLIENT_NAME"), "NBGALLERY_ENABLE_AUTODOWNLOAD": os.getenv("NBGALLERY_ENABLE_AUTODOWNLOAD")}))
++            "NBGALLERY_CLIENT_NAME"), "NBGALLERY_ENABLE_AUTODOWNLOAD": os.getenv("NBGALLERY_ENABLE_AUTODOWNLOAD"), "DEFAULT_TAGS": os.getenv("NBGALLERY_DEFAULT_TAGS")}))
+ 
+ 
+ class InstrumentationHandler(APIHandler):
+     # The following decorator should be present on all verb methods (head, get, post,
+     # patch, put, delete, options) to ensure only authorized user can request the
+     # Jupyter server
+     @tornado.web.authenticated
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/PKG-INFO` & `jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jupyterlab-nbgallery
+-Version: 2.0.0a1
++Version: 2.0.0a2
+ Summary: A JupyterLab Extension for NBGallery integration
+ Home-page: https://github.com/nbgallery/lab-extensions
+ Author: NBGallery
+ License: MIT
+ Keywords: Jupyter,JupyterLab
+ Platform: Linux
+ Platform: Mac OS X
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/jupyterlab_nbgallery.egg-info/SOURCES.txt` & `jupyterlab_nbgallery-2.0.0a2/jupyterlab_nbgallery.egg-info/SOURCES.txt`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -14,64 +14,64 @@
+ jupyterlab_nbgallery.egg-info/not-zip-safe
+ jupyterlab_nbgallery.egg-info/requires.txt
+ jupyterlab_nbgallery.egg-info/top_level.txt
+ labextension/autodownload/package.json
+ labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/autodownload.json
+ labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/package.json.orig
+ labextension/autodownload/static/542.51fb91347d8a3d9a657a.js
+-labextension/autodownload/static/568.16e46c33ea6dee49a0d7.js
++labextension/autodownload/static/568.088b227a0b6b6168ee16.js
+ labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js
+ labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js.LICENSE.txt
+-labextension/autodownload/static/remoteEntry.3b39a47185ccd6dd26b9.js
++labextension/autodownload/static/remoteEntry.fa15592bca73423b04a4.js
+ labextension/autodownload/static/style.js
+ labextension/autodownload/static/third-party-licenses.json
+ labextension/environment-life/package.json
+ labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/package.json.orig
+-labextension/environment-life/static/248.5e3dec99dfd0a4f4cac5.js
++labextension/environment-life/static/248.1d3351413b89920be9fb.js
+ labextension/environment-life/static/542.e4d405f3b0e4f693ab53.js
+-labextension/environment-life/static/remoteEntry.3c172e71981c8722b3b2.js
++labextension/environment-life/static/remoteEntry.dd7691336809bc6771e3.js
+ labextension/environment-life/static/style.js
+ labextension/environment-life/static/third-party-licenses.json
+ labextension/environment-registration/package.json
+ labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/environment-registration.json
+ labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/package.json.orig
+ labextension/environment-registration/static/542.feae6c397f33f9138fea.js
+ labextension/environment-registration/static/638.36e464d3233849b6b07a.js
+ labextension/environment-registration/static/638.36e464d3233849b6b07a.js.LICENSE.txt
+-labextension/environment-registration/static/784.20b8a2ad4acfd350b90c.js
+-labextension/environment-registration/static/remoteEntry.1a965fed730a2160bd3e.js
++labextension/environment-registration/static/784.c5c708b87c266cbabd98.js
++labextension/environment-registration/static/remoteEntry.00e0256ee314fd224ea3.js
+ labextension/environment-registration/static/style.js
+ labextension/environment-registration/static/third-party-licenses.json
+ labextension/gallerymenu/package.json
+ labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/package.json.orig
+ labextension/gallerymenu/static/542.18fd91d86aaf6286edd0.js
+-labextension/gallerymenu/static/56.4cac067549099539bfd3.js
++labextension/gallerymenu/static/56.8dc3eaf446ef31335c65.js
+ labextension/gallerymenu/static/638.95e0186307171588df5b.js
+ labextension/gallerymenu/static/638.95e0186307171588df5b.js.LICENSE.txt
+-labextension/gallerymenu/static/remoteEntry.f27f6bea83d4af450090.js
++labextension/gallerymenu/static/remoteEntry.3280b8022411403d2f46.js
+ labextension/gallerymenu/static/style.js
+ labextension/gallerymenu/static/third-party-licenses.json
+ labextension/inject-uuid/package.json
+ labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/package.json.orig
+-labextension/inject-uuid/static/568.c9be5995dc68aad7d3d1.js
+-labextension/inject-uuid/static/remoteEntry.2e054c19c350354e70b0.js
++labextension/inject-uuid/static/568.1dcbb7bee8ca1152cf60.js
++labextension/inject-uuid/static/remoteEntry.02ddda09f0305fa467f4.js
+ labextension/inject-uuid/static/style.js
+ labextension/inject-uuid/static/third-party-licenses.json
+ labextension/instrumentation/package.json
+ labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/instrumentation.json
+ labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/package.json.orig
+-labextension/instrumentation/static/568.3252d012ac78742aa152.js
++labextension/instrumentation/static/568.0d3998aabd22f1867c40.js
+ labextension/instrumentation/static/638.b95125ed695cee42aae4.js
+ labextension/instrumentation/static/638.b95125ed695cee42aae4.js.LICENSE.txt
+ labextension/instrumentation/static/701.d81800f5926ab62cc8b2.js
+-labextension/instrumentation/static/remoteEntry.dbe6ded7718aebd9e3bc.js
++labextension/instrumentation/static/remoteEntry.53ed33a8ef1f603e0fc8.js
+ labextension/instrumentation/static/style.js
+ labextension/instrumentation/static/third-party-licenses.json
+ labextension/userpreferences/package.json
+ labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/package.json.orig
+ labextension/userpreferences/static/542.d1718a50e23f3808ba62.js
+-labextension/userpreferences/static/568.39c2bc83f0eb58b2c9fa.js
++labextension/userpreferences/static/568.00695541aaa15d567580.js
+ labextension/userpreferences/static/638.e5080f99954048969f76.js
+ labextension/userpreferences/static/638.e5080f99954048969f76.js.LICENSE.txt
+-labextension/userpreferences/static/remoteEntry.3dcf202ddb367695afb0.js
++labextension/userpreferences/static/remoteEntry.03bf745401d2317e1d7d.js
+ labextension/userpreferences/static/style.js
+ labextension/userpreferences/static/third-party-licenses.json
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/package.json`
+
+ * *Files 4% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.8967427248677249%*
+
+ * *Differences: {"'dependencies'": "{'@jupyterlab/notebook': '>=3.6.0', '@jupyterlab/mainmenu': '>=3.6.0 ||', "*
+
+ * *                   "'fa-icons': '^0.2.0', delete: ['@jupyterlab/coreutils']}",*
+
+ * * "'description'": "'All the menu capabilities needed for saving/forking notebooks and submitting "*
+
+ * *                  "change request to Notebook Gallery'",*
+
+ * * "'jupyterlab'": "{'outputDir': '../labextension/userpreferences', '_build': {'load': "*
+
+ * *                 "'static/remoteEntry.03bf745401d2317e1d7d.js'}}",*
+
+ * * "'name'": "'@jupyterlab-n […]*
+
+```diff
+@@ -1,19 +1,21 @@
+ {
+     "author": "Team@NBG",
+     "bugs": {
+         "url": "https://github.com/nbgallery/lab-extensions/issues"
+     },
+     "dependencies": {
+         "@jupyterlab/application": ">=3.6.0",
+-        "@jupyterlab/coreutils": ">=5.2.0",
++        "@jupyterlab/mainmenu": ">=3.6.0 ||",
++        "@jupyterlab/notebook": ">=3.6.0",
+         "@jupyterlab/settingregistry": ">=3.6.0",
++        "fa-icons": "^0.2.0",
+         "jquery": "^3.5.0"
+     },
+-    "description": "NBGallery Auto Download Notebooks that are starred or recently executed",
++    "description": "All the menu capabilities needed for saving/forking notebooks and submitting change request to Notebook Gallery",
+     "devDependencies": {
+         "@jupyterlab/builder": ">=3.3.2",
+         "@types/jquery": "^3.5.0",
+         "@typescript-eslint/eslint-plugin": "^4.8.1",
+         "@typescript-eslint/parser": "^4.8.1",
+         "eslint": "^8.0.0",
+         "eslint-config-prettier": "^6.15.0",
+@@ -29,29 +31,29 @@
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+         "schema/**/*.json"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+         "_build": {
+             "extension": "./extension",
+-            "load": "static/remoteEntry.3b39a47185ccd6dd26b9.js",
++            "load": "static/remoteEntry.03bf745401d2317e1d7d.js",
+             "style": "./style"
+         },
+         "extension": true,
+-        "outputDir": "../labextension/autodownload",
++        "outputDir": "../labextension/userpreferences",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+         "jupyter",
+         "jupyterlab",
+         "jupyterlab-extension"
+     ],
+     "license": "MIT",
+     "main": "lib/index.js",
+-    "name": "@jupyterlab-nbgallery/autodownload",
++    "name": "@jupyterlab-nbgallery/userpreferences",
+     "repository": {
+         "type": "git",
+         "url": "https://github.com/nbgallery/lab-extensions"
+     },
+     "scripts": {
+         "build": "jlpm run build:lib && jlpm run build:labextension:dev",
+         "build:all": "jlpm run build:prod",
+@@ -71,9 +73,9 @@
+         "watch:src": "tsc -w"
+     },
+     "sideEffects": [
+         "style/*.css"
+     ],
+     "style": "style/index.css",
+     "types": "lib/index.d.ts",
+-    "version": "1.0.3"
++    "version": "1.0.2"
+ }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/schemas/@jupyterlab-nbgallery/autodownload/package.json.orig`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/542.51fb91347d8a3d9a657a.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/542.51fb91347d8a3d9a657a.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/568.16e46c33ea6dee49a0d7.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/568.088b227a0b6b6168ee16.js`
+
+ * *Files 6% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,16 +1,16 @@
+ "use strict";
+ (self.webpackChunk_jupyterlab_nbgallery_autodownload = self.webpackChunk_jupyterlab_nbgallery_autodownload || []).push([
+     [568], {
+         568: (e, o, t) => {
+             t.r(o), t.d(o, {
+                 default: () => s
+             });
+-            var n = t(598),
+-                a = t(886),
++            var n = t(38),
++                a = t(142),
+                 c = t(569),
+                 r = t.n(c);
+             const s = {
+                 id: "@jupyterlab-nbgallery/autodownload",
+                 autoStart: !0,
+                 requires: [n.ISettingRegistry],
+                 activate: async (e, o) => {
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/638.0ed295d9378dea7c5c7b.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/remoteEntry.3b39a47185ccd6dd26b9.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/remoteEntry.fa15592bca73423b04a4.js`
+
+ * *Files 7% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,11 +1,11 @@
+ var _JUPYTERLAB;
+ (() => {
+     "use strict";
+-    var e, r, t, n, o, a, i, l, u, d, f, s, p, c, h, v, b, g, y = {
++    var e, r, t, n, o, a, i, l, u, d, s, f, p, c, h, v, b, g, y = {
+             735: (e, r, t) => {
+                 var n = {
+                         "./index": () => t.e(568).then((() => () => t(568))),
+                         "./extension": () => t.e(568).then((() => () => t(568))),
+                         "./style": () => t.e(542).then((() => () => t(542)))
+                     },
+                     o = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
+@@ -44,50 +44,50 @@
+     }, w.d = (e, r) => {
+         for (var t in r) w.o(r, t) && !w.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+     }, w.f = {}, w.e = e => Promise.all(Object.keys(w.f).reduce(((r, t) => (w.f[t](e, r), r)), [])), w.u = e => e + "." + {
+         542: "51fb91347d8a3d9a657a",
+-        568: "16e46c33ea6dee49a0d7",
++        568: "088b227a0b6b6168ee16",
+         638: "0ed295d9378dea7c5c7b"
+     } [e] + ".js?v=" + {
+         542: "51fb91347d8a3d9a657a",
+-        568: "16e46c33ea6dee49a0d7",
++        568: "088b227a0b6b6168ee16",
+         638: "0ed295d9378dea7c5c7b"
+     } [e], w.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+             if ("object" == typeof window) return window
+         }
+     }(), w.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r), e = {}, r = "@jupyterlab-nbgallery/autodownload:", w.l = (t, n, o, a) => {
+         if (e[t]) e[t].push(n);
+         else {
+             var i, l;
+             if (void 0 !== o)
+                 for (var u = document.getElementsByTagName("script"), d = 0; d < u.length; d++) {
+-                    var f = u[d];
+-                    if (f.getAttribute("src") == t || f.getAttribute("data-webpack") == r + o) {
+-                        i = f;
++                    var s = u[d];
++                    if (s.getAttribute("src") == t || s.getAttribute("data-webpack") == r + o) {
++                        i = s;
+                         break
+                     }
+                 }
+             i || (l = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, w.nc && i.setAttribute("nonce", w.nc), i.setAttribute("data-webpack", r + o), i.src = t), e[t] = [n];
+-            var s = (r, n) => {
++            var f = (r, n) => {
+                     i.onerror = i.onload = null, clearTimeout(p);
+                     var o = e[t];
+                     if (delete e[t], i.parentNode && i.parentNode.removeChild(i), o && o.forEach((e => e(n))), r) return r(n)
+                 },
+-                p = setTimeout(s.bind(null, void 0, {
++                p = setTimeout(f.bind(null, void 0, {
+                     type: "timeout",
+                     target: i
+                 }), 12e4);
+-            i.onerror = s.bind(null, i.onerror), i.onload = s.bind(null, i.onload), l && document.head.appendChild(i)
++            i.onerror = f.bind(null, i.onerror), i.onload = f.bind(null, i.onload), l && document.head.appendChild(i)
+         }
+     }, w.r = e => {
+         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+             value: "Module"
+         }), Object.defineProperty(e, "__esModule", {
+             value: !0
+         })
+@@ -166,33 +166,33 @@
+     }, a = (e, r) => {
+         if (0 in e) {
+             r = t(r);
+             var n = e[0],
+                 o = n < 0;
+             o && (n = -n - 1);
+             for (var i = 0, l = 1, u = !0;; l++, i++) {
+-                var d, f, s = l < e.length ? (typeof e[l])[0] : "";
+-                if (i >= r.length || "o" == (f = (typeof(d = r[i]))[0])) return !u || ("u" == s ? l > n && !o : "" == s != o);
+-                if ("u" == f) {
+-                    if (!u || "u" != s) return !1
++                var d, s, f = l < e.length ? (typeof e[l])[0] : "";
++                if (i >= r.length || "o" == (s = (typeof(d = r[i]))[0])) return !u || ("u" == f ? l > n && !o : "" == f != o);
++                if ("u" == s) {
++                    if (!u || "u" != f) return !1
+                 } else if (u)
+-                    if (s == f)
++                    if (f == s)
+                         if (l <= n) {
+                             if (d != e[l]) return !1
+                         } else {
+                             if (o ? d > e[l] : d < e[l]) return !1;
+                             d != e[l] && (u = !1)
+                         }
+-                else if ("s" != s && "n" != s) {
++                else if ("s" != f && "n" != f) {
+                     if (o || l <= n) return !1;
+                     u = !1, l--
+                 } else {
+-                    if (l <= n || f < s != o) return !1;
++                    if (l <= n || s < f != o) return !1;
+                     u = !1
+-                } else "s" != s && "n" != s && (u = !1, l--)
++                } else "s" != f && "n" != f && (u = !1, l--)
+             }
+         }
+         var p = [],
+             c = p.pop.bind(p);
+         for (i = 1; i < e.length; i++) {
+             var h = e[i];
+             p.push(1 == h ? c() | c() : 2 == h ? c() & c() : h ? a(h, r) : !c())
+@@ -203,30 +203,30 @@
+         if (!t || !w.o(t, r)) throw new Error("Shared module " + r + " doesn't exist in shared scope " + e);
+         return t
+     }, l = (e, r) => {
+         var t = e[r];
+         return Object.keys(t).reduce(((e, r) => !e || !t[e].loaded && n(e, r) ? r : e), 0)
+     }, u = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + o(n) + ")", d = (e, r, t, n) => {
+         var o = l(e, t);
+-        return a(n, o) || "undefined" != typeof console && console.warn && console.warn(u(e, t, o, n)), s(e[t][o])
+-    }, f = (e, r, t) => {
++        return a(n, o) || "undefined" != typeof console && console.warn && console.warn(u(e, t, o, n)), f(e[t][o])
++    }, s = (e, r, t) => {
+         var o = e[r];
+         return (r = Object.keys(o).reduce(((e, r) => !a(t, r) || e && !n(e, r) ? e : r), 0)) && o[r]
+-    }, s = e => (e.loaded = 1, e.get()), c = (p = e => function(r, t, n, o) {
++    }, f = e => (e.loaded = 1, e.get()), c = (p = e => function(r, t, n, o) {
+         var a = w.I(r);
+         return a && a.then ? a.then(e.bind(e, r, w.S[r], t, n, o)) : e(r, w.S[r], t, n, o)
+     })(((e, r, t, n) => (i(e, t), d(r, 0, t, n)))), h = p(((e, r, t, n, o) => {
+-        var a = r && w.o(r, t) && f(r, t, n);
+-        return a ? s(a) : o()
++        var a = r && w.o(r, t) && s(r, t, n);
++        return a ? f(a) : o()
+     })), v = {}, b = {
+-        569: () => h("default", "jquery", [1, 3, 5, 0], (() => w.e(638).then((() => () => w(638))))),
+-        598: () => c("default", "@jupyterlab/settingregistry", [1, 3, 6, 1]),
+-        886: () => c("default", "@jupyterlab/coreutils", [1, 5, 6, 1])
++        38: () => c("default", "@jupyterlab/settingregistry", [1, 3, 6, 3]),
++        142: () => c("default", "@jupyterlab/coreutils", [1, 5, 6, 3]),
++        569: () => h("default", "jquery", [1, 3, 5, 0], (() => w.e(638).then((() => () => w(638)))))
+     }, g = {
+-        568: [569, 598, 886]
++        568: [38, 142, 569]
+     }, w.f.consumes = (e, r) => {
+         w.o(g, e) && g[e].forEach((e => {
+             if (w.o(v, e)) return r.push(v[e]);
+             var t = r => {
+                     v[e] = 0, w.m[e] = t => {
+                         delete w.c[e], t.exports = r()
+                     }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/autodownload/static/third-party-licenses.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/static/third-party-licenses.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/package.json`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9994212962962963%*
+
+ * *Differences: {"'jupyterlab'": "{'_build': {'load': 'static/remoteEntry.dd7691336809bc6771e3.js'}}"}*
+
+```diff
+@@ -27,15 +27,15 @@
+         "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+         "_build": {
+             "extension": "./extension",
+-            "load": "static/remoteEntry.3c172e71981c8722b3b2.js",
++            "load": "static/remoteEntry.dd7691336809bc6771e3.js",
+             "style": "./style"
+         },
+         "extension": true,
+         "outputDir": "../labextension/environment-life",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/schemas/@jupyterlab-nbgallery/environment-life/package.json.orig`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/248.5e3dec99dfd0a4f4cac5.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/248.1d3351413b89920be9fb.js`
+
+ * *Files 10% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,18 +1,18 @@
+ "use strict";
+ (self.webpackChunk_jupyterlab_nbgallery_environment_life = self.webpackChunk_jupyterlab_nbgallery_environment_life || []).push([
+     [248], {
+         248: (e, t, n) => {
+             n.r(t), n.d(t, {
+                 default: () => s
+             });
+-            var r = n(431),
+-                i = n(169),
+-                o = n(886),
+-                a = n(258);
++            var r = n(832),
++                i = n(583),
++                o = n(142),
++                a = n(820);
+             const s = {
+                 id: "@jupyterlab-nbgallery/environment-life",
+                 autoStart: !0,
+                 requires: [i.IStatusBar],
+                 activate: async (e, t) => {
+                     let n = "";
+                     try {
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/542.e4d405f3b0e4f693ab53.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/542.e4d405f3b0e4f693ab53.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/remoteEntry.3c172e71981c8722b3b2.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/remoteEntry.dd7691336809bc6771e3.js`
+
+ * *Files 4% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -43,18 +43,18 @@
+         }), r
+     }, g.d = (e, r) => {
+         for (var t in r) g.o(r, t) && !g.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+     }, g.f = {}, g.e = e => Promise.all(Object.keys(g.f).reduce(((r, t) => (g.f[t](e, r), r)), [])), g.u = e => e + "." + {
+-        248: "5e3dec99dfd0a4f4cac5",
++        248: "1d3351413b89920be9fb",
+         542: "e4d405f3b0e4f693ab53"
+     } [e] + ".js?v=" + {
+-        248: "5e3dec99dfd0a4f4cac5",
++        248: "1d3351413b89920be9fb",
+         542: "e4d405f3b0e4f693ab53"
+     } [e], g.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+             if ("object" == typeof window) return window
+@@ -205,20 +205,20 @@
+     }, u = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + o(n) + ")", f = (e, r, t, n) => {
+         var o = l(e, t);
+         return a(n, o) || "undefined" != typeof console && console.warn && console.warn(u(e, t, o, n)), s(e[t][o])
+     }, s = e => (e.loaded = 1, e.get()), d = (e => function(r, t, n, o) {
+         var a = g.I(r);
+         return a && a.then ? a.then(e.bind(e, r, g.S[r], t, n, o)) : e(r, g.S[r], t, n)
+     })(((e, r, t, n) => (i(e, t), f(r, 0, t, n)))), p = {}, c = {
+-        169: () => d("default", "@jupyterlab/statusbar", [1, 3, 6, 1]),
+-        258: () => d("default", "@jupyterlab/services", [1, 6, 6, 1]),
+-        431: () => d("default", "@lumino/widgets", [1, 1, 37, 1]),
+-        886: () => d("default", "@jupyterlab/coreutils", [1, 5, 6, 1])
++        142: () => d("default", "@jupyterlab/coreutils", [1, 5, 6, 3]),
++        583: () => d("default", "@jupyterlab/statusbar", [1, 3, 6, 3]),
++        820: () => d("default", "@jupyterlab/services", [1, 6, 6, 3]),
++        832: () => d("default", "@lumino/widgets", [1, 1, 37, 2])
+     }, h = {
+-        248: [169, 258, 431, 886]
++        248: [142, 583, 820, 832]
+     }, g.f.consumes = (e, r) => {
+         g.o(h, e) && h[e].forEach((e => {
+             if (g.o(p, e)) return r.push(p[e]);
+             var t = r => {
+                     p[e] = 0, g.m[e] = t => {
+                         delete g.c[e], t.exports = r()
+                     }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-life/static/third-party-licenses.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-life/static/third-party-licenses.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/package.json`
+
+ * *Files 5% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9994212962962963%*
+
+ * *Differences: {"'jupyterlab'": "{'_build': {'load': 'static/remoteEntry.00e0256ee314fd224ea3.js'}}"}*
+
+```diff
+@@ -29,15 +29,15 @@
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+         "schema/**/*.json"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+         "_build": {
+             "extension": "./extension",
+-            "load": "static/remoteEntry.1a965fed730a2160bd3e.js",
++            "load": "static/remoteEntry.00e0256ee314fd224ea3.js",
+             "style": "./style"
+         },
+         "extension": true,
+         "outputDir": "../labextension/environment-registration",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/environment-registration.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/environment-registration.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/schemas/@jupyterlab-nbgallery/environment-registration/package.json.orig`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/542.feae6c397f33f9138fea.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/542.feae6c397f33f9138fea.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/638.36e464d3233849b6b07a.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/638.36e464d3233849b6b07a.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/784.20b8a2ad4acfd350b90c.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/784.c5c708b87c266cbabd98.js`
+
+ * *Files 10% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,17 +1,17 @@
+ "use strict";
+ (self.webpackChunk_jupyterlab_nbgallery_environment_registration = self.webpackChunk_jupyterlab_nbgallery_environment_registration || []).push([
+     [784], {
+         784: (e, n, t) => {
+             t.r(n), t.d(n, {
+                 default: () => s
+             });
+-            var r = t(598),
+-                a = t(886),
+-                o = t(258),
++            var r = t(38),
++                a = t(142),
++                o = t(820),
+                 i = t(569),
+                 l = t.n(i);
+             const s = {
+                 id: "@jupyterlab-nbgallery/environment-registration",
+                 autoStart: !0,
+                 requires: [r.ISettingRegistry],
+                 activate: async (e, n) => {
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/remoteEntry.1a965fed730a2160bd3e.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/remoteEntry.00e0256ee314fd224ea3.js`
+
+ * *Files 5% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,11 +1,11 @@
+ var _JUPYTERLAB;
+ (() => {
+     "use strict";
+-    var e, r, t, n, a, o, i, l, u, s, f, d, p, c, h, v, g, y, b = {
++    var e, r, t, n, a, o, i, l, u, s, f, d, c, p, h, v, g, b, y = {
+             374: (e, r, t) => {
+                 var n = {
+                         "./index": () => t.e(784).then((() => () => t(784))),
+                         "./extension": () => t.e(784).then((() => () => t(784))),
+                         "./style": () => t.e(542).then((() => () => t(542)))
+                     },
+                     a = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
+@@ -30,34 +30,34 @@
+     function w(e) {
+         var r = m[e];
+         if (void 0 !== r) return r.exports;
+         var t = m[e] = {
+             id: e,
+             exports: {}
+         };
+-        return b[e].call(t.exports, t, t.exports, w), t.exports
++        return y[e].call(t.exports, t, t.exports, w), t.exports
+     }
+-    w.m = b, w.c = m, w.n = e => {
++    w.m = y, w.c = m, w.n = e => {
+         var r = e && e.__esModule ? () => e.default : () => e;
+         return w.d(r, {
+             a: r
+         }), r
+     }, w.d = (e, r) => {
+         for (var t in r) w.o(r, t) && !w.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+     }, w.f = {}, w.e = e => Promise.all(Object.keys(w.f).reduce(((r, t) => (w.f[t](e, r), r)), [])), w.u = e => e + "." + {
+         542: "feae6c397f33f9138fea",
+         638: "36e464d3233849b6b07a",
+-        784: "20b8a2ad4acfd350b90c"
++        784: "c5c708b87c266cbabd98"
+     } [e] + ".js?v=" + {
+         542: "feae6c397f33f9138fea",
+         638: "36e464d3233849b6b07a",
+-        784: "20b8a2ad4acfd350b90c"
++        784: "c5c708b87c266cbabd98"
+     } [e], w.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+             if ("object" == typeof window) return window
+         }
+@@ -71,19 +71,19 @@
+                     if (f.getAttribute("src") == t || f.getAttribute("data-webpack") == r + a) {
+                         i = f;
+                         break
+                     }
+                 }
+             i || (l = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, w.nc && i.setAttribute("nonce", w.nc), i.setAttribute("data-webpack", r + a), i.src = t), e[t] = [n];
+             var d = (r, n) => {
+-                    i.onerror = i.onload = null, clearTimeout(p);
++                    i.onerror = i.onload = null, clearTimeout(c);
+                     var a = e[t];
+                     if (delete e[t], i.parentNode && i.parentNode.removeChild(i), a && a.forEach((e => e(n))), r) return r(n)
+                 },
+-                p = setTimeout(d.bind(null, void 0, {
++                c = setTimeout(d.bind(null, void 0, {
+                     type: "timeout",
+                     target: i
+                 }), 12e4);
+             i.onerror = d.bind(null, i.onerror), i.onload = d.bind(null, i.onload), l && document.head.appendChild(i)
+         }
+     }, w.r = e => {
+         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+@@ -187,49 +187,49 @@
+                     u = !1, l--
+                 } else {
+                     if (l <= n || f < d != a) return !1;
+                     u = !1
+                 } else "s" != d && "n" != d && (u = !1, l--)
+             }
+         }
+-        var p = [],
+-            c = p.pop.bind(p);
++        var c = [],
++            p = c.pop.bind(c);
+         for (i = 1; i < e.length; i++) {
+             var h = e[i];
+-            p.push(1 == h ? c() | c() : 2 == h ? c() & c() : h ? o(h, r) : !c())
++            c.push(1 == h ? p() | p() : 2 == h ? p() & p() : h ? o(h, r) : !p())
+         }
+-        return !!c()
++        return !!p()
+     }, i = (e, r) => {
+         var t = w.S[e];
+         if (!t || !w.o(t, r)) throw new Error("Shared module " + r + " doesn't exist in shared scope " + e);
+         return t
+     }, l = (e, r) => {
+         var t = e[r];
+         return Object.keys(t).reduce(((e, r) => !e || !t[e].loaded && n(e, r) ? r : e), 0)
+     }, u = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + a(n) + ")", s = (e, r, t, n) => {
+         var a = l(e, t);
+         return o(n, a) || "undefined" != typeof console && console.warn && console.warn(u(e, t, a, n)), d(e[t][a])
+     }, f = (e, r, t) => {
+         var a = e[r];
+         return (r = Object.keys(a).reduce(((e, r) => !o(t, r) || e && !n(e, r) ? e : r), 0)) && a[r]
+-    }, d = e => (e.loaded = 1, e.get()), c = (p = e => function(r, t, n, a) {
++    }, d = e => (e.loaded = 1, e.get()), p = (c = e => function(r, t, n, a) {
+         var o = w.I(r);
+         return o && o.then ? o.then(e.bind(e, r, w.S[r], t, n, a)) : e(r, w.S[r], t, n, a)
+-    })(((e, r, t, n) => (i(e, t), s(r, 0, t, n)))), h = p(((e, r, t, n, a) => {
++    })(((e, r, t, n) => (i(e, t), s(r, 0, t, n)))), h = c(((e, r, t, n, a) => {
+         var o = r && w.o(r, t) && f(r, t, n);
+         return o ? d(o) : a()
+     })), v = {}, g = {
+-        258: () => c("default", "@jupyterlab/services", [1, 6, 6, 1]),
++        38: () => p("default", "@jupyterlab/settingregistry", [1, 3, 6, 3]),
++        142: () => p("default", "@jupyterlab/coreutils", [1, 5, 6, 3]),
+         569: () => h("default", "jquery", [1, 3, 5, 0], (() => w.e(638).then((() => () => w(638))))),
+-        598: () => c("default", "@jupyterlab/settingregistry", [1, 3, 6, 1]),
+-        886: () => c("default", "@jupyterlab/coreutils", [1, 5, 6, 1])
+-    }, y = {
+-        784: [258, 569, 598, 886]
++        820: () => p("default", "@jupyterlab/services", [1, 6, 6, 3])
++    }, b = {
++        784: [38, 142, 569, 820]
+     }, w.f.consumes = (e, r) => {
+-        w.o(y, e) && y[e].forEach((e => {
++        w.o(b, e) && b[e].forEach((e => {
+             if (w.o(v, e)) return r.push(v[e]);
+             var t = r => {
+                     v[e] = 0, w.m[e] = t => {
+                         delete w.c[e], t.exports = r()
+                     }
+                 },
+                 n = r => {
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/environment-registration/static/third-party-licenses.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/environment-registration/static/third-party-licenses.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/package.json`
+
+ * *Files 4% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9982638888888887%*
+
+ * *Differences: {"'devDependencies'": "{'@jupyterlab/builder': '>=3.6.0'}",*
+
+ * * "'jupyterlab'": "{'_build': {'load': 'static/remoteEntry.3280b8022411403d2f46.js'}}"}*
+
+```diff
+@@ -9,15 +9,15 @@
+         "@jupyterlab/notebook": ">=3.6.0",
+         "@jupyterlab/settingregistry": ">=3.6.0",
+         "fa-icons": "^0.2.0",
+         "jquery": "^3.5.0"
+     },
+     "description": "All the menu capabilities needed for saving/forking notebooks and submitting change request to Notebook Gallery",
+     "devDependencies": {
+-        "@jupyterlab/builder": ">=3.3.2",
++        "@jupyterlab/builder": ">=3.6.0",
+         "@types/jquery": "^3.5.0",
+         "@typescript-eslint/eslint-plugin": "^4.8.1",
+         "@typescript-eslint/parser": "^4.8.1",
+         "eslint": "^8.0.0",
+         "eslint-config-prettier": "^6.15.0",
+         "eslint-plugin-jsdoc": "^39.0.0",
+         "eslint-plugin-prettier": "^3.1.4",
+@@ -31,15 +31,15 @@
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+         "schema/**/*.json"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+         "_build": {
+             "extension": "./extension",
+-            "load": "static/remoteEntry.f27f6bea83d4af450090.js",
++            "load": "static/remoteEntry.3280b8022411403d2f46.js",
+             "style": "./style"
+         },
+         "extension": true,
+         "outputDir": "../labextension/gallerymenu",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/schemas/@jupyterlab-nbgallery/gallerymenu/package.json.orig`
+
+ * *Files 0% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9988425925925924%*
+
+ * *Differences: {"'devDependencies'": "{'@jupyterlab/builder': '>=3.6.0'}"}*
+
+```diff
+@@ -9,15 +9,15 @@
+         "@jupyterlab/notebook": ">=3.6.0",
+         "@jupyterlab/settingregistry": ">=3.6.0",
+         "fa-icons": "^0.2.0",
+         "jquery": "^3.5.0"
+     },
+     "description": "All the menu capabilities needed for saving/forking notebooks and submitting change request to Notebook Gallery",
+     "devDependencies": {
+-        "@jupyterlab/builder": ">=3.3.2",
++        "@jupyterlab/builder": ">=3.6.0",
+         "@types/jquery": "^3.5.0",
+         "@typescript-eslint/eslint-plugin": "^4.8.1",
+         "@typescript-eslint/parser": "^4.8.1",
+         "eslint": "^8.0.0",
+         "eslint-config-prettier": "^6.15.0",
+         "eslint-plugin-jsdoc": "^39.0.0",
+         "eslint-plugin-prettier": "^3.1.4",
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/542.18fd91d86aaf6286edd0.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/542.18fd91d86aaf6286edd0.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/56.4cac067549099539bfd3.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/56.8dc3eaf446ef31335c65.js`
+
+ * *Files 2% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,20 +1,20 @@
+ "use strict";
+ (self.webpackChunk_jupyterlab_nbgallery_gallerymenu = self.webpackChunk_jupyterlab_nbgallery_gallerymenu || []).push([
+     [56], {
+         56: (e, t, a) => {
+             a.r(t), a.d(t, {
+                 default: () => k
+             });
+-            var l = a(705),
+-                i = a(510),
+-                o = a(431),
+-                n = a(767),
+-                s = a(258),
+-                r = a(886),
++            var l = a(344),
++                i = a(33),
++                o = a(832),
++                n = a(123),
++                s = a(820),
++                r = a(142),
+                 d = a(271);
+             class h extends i.ReactWidget {
+                 constructor() {
+                     super(), this.addClass("jp-ReactWidget")
+                 }
+                 render() {
+                     return d.createElement("div", {
+@@ -58,15 +58,15 @@
+                         },
+                         url: t,
+                         cache: !1,
+                         xhrFields: {
+                             withCredentials: !0
+                         },
+                         success: function(e) {
+-                            "" == a.gallery_url && (a.gallery_url = e.NBGALLERY_URL)
++                            "" == a.gallery_url && (a.gallery_url = e.NBGALLERY_URL), a.default_tags = e.DEFAULT_TAGS
+                         }
+                     }), this.gallery_menu = this.buildMenus(), this.mainMenu.addMenu(this.gallery_menu, {
+                         rank: 50
+                     }), setTimeout(this.gallery_menu.update, 4e3)
+                 }
+                 getGalleryMetadata(e) {
+                     return e.model.sharedModel.metadata.gallery
+@@ -147,15 +147,15 @@
+                             body: n,
+                             buttons: t
+                         }).then((async e => {
+                             if (this.dialogPromiseCache.delete(s), "Download and Replace Local" == e.button.label) this.downloadReplace(l, a);
+                             else if ("Upload and Replace Remote" == e.button.label) {
+                                 this.triggerSave();
+                                 let e = await this.stageNotebook(l, a, o.uuid);
+-                                e && (this.finishUpload(l, o, e, a, !1), this.updateMetadata(l, o, e))
++                                e && (this.finishUpload(l, o, e, a, !1, ""), this.updateMetadata(l, o, e))
+                             } else "View Diff" == e.button.label && this.changedDialog(!0)
+                         }), (e => {
+                             throw this.dialogPromiseCache.delete(s), e
+                         }));
+                         return this.dialogPromiseCache.set(s, e), e
+                     }
+                 }
+@@ -189,43 +189,44 @@
+                             },
+                             data: JSON.stringify(this.stripOutput(e))
+                         })
+                     } catch (e) {
+                         return void(0, i.showErrorMessage)("Staging Failed", "An error occured attempting to upload the specified notebook.  Please ensure that you are logged in to the Gallery.")
+                     }
+                 }
+-                finishUpload(e, t, a, l, i) {
+-                    t ? i ? window.open(l.origin + "/notebook/" + t.uuid + "?staged=" + a.staging_id + "#CHANGE_REQ") : t.link ? window.open(l.origin + "/notebook/" + a.link + "?staged=" + a.staging_id + "#UPDATE") : window.open(l.origin + "?staged=" + a.staging_id + "#STAGE") : window.open(l.origin + "?staged=" + a.staging_id + "#STAGE")
++                finishUpload(e, t, a, l, i, o) {
++                    t ? i ? window.open(l.origin + "/notebook/" + t.uuid + "?staged=" + a.staging_id + "#CHANGE_REQ") : t.link ? window.open(l.origin + "/notebook/" + a.link + "?staged=" + a.staging_id + "#UPDATE") : window.open(l.origin + "?staged=" + a.staging_id + "#STAGE") : window.open(l.origin + "?staged=" + a.staging_id + "&tags=" + encodeURIComponent(o) + "#STAGE")
+                 }
+                 async uploadCallback() {
+                     let e;
+                     this.triggerSave(), e = this.currentNotebook();
+                     let t = this.getGalleryMetadata(e),
+                         a = this.getGalleryLink(),
+-                        l = await this.stageNotebook(e, a, null);
+-                    l && (this.finishUpload(e, t, l, a, !1), this.updateMetadata(e, t, l))
++                        l = await this.stageNotebook(e, a, null),
++                        i = this.default_tags;
++                    l && (this.finishUpload(e, t, l, a, !1, i), this.updateMetadata(e, t, l))
+                 }
+                 async saveCallback() {
+                     let e;
+                     this.triggerSave(), e = this.currentNotebook();
+                     let t = this.getGalleryMetadata(e),
+                         a = this.getGalleryLink();
+                     if (await this.checkForUpdates(e, a)) this.changedDialog(!1);
+                     else {
+                         let l = await this.stageNotebook(e, a, t.uuid);
+-                        l && (this.finishUpload(e, t, l, a, !1), this.updateMetadata(e, t, l))
++                        l && (this.finishUpload(e, t, l, a, !1, ""), this.updateMetadata(e, t, l))
+                     }
+                 }
+                 async changereqCallback() {
+                     let e;
+                     this.triggerSave(), e = this.currentNotebook();
+                     let t = this.getGalleryMetadata(e),
+                         a = this.getGalleryLink(),
+                         l = await this.stageNotebook(e, a, t.uuid);
+-                    l && (this.finishUpload(e, t, l, a, !0), this.updateMetadata(e, t, l))
++                    l && (this.finishUpload(e, t, l, a, !0, ""), this.updateMetadata(e, t, l))
+                 }
+                 async changesCallback() {
+                     let e;
+                     this.triggerSave(), e = this.currentNotebook();
+                     let t = this.getGalleryLink();
+                     await this.checkForUpdates(e, t) && this.changedDialog(!1)
+                 }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/638.95e0186307171588df5b.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/638.95e0186307171588df5b.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/remoteEntry.f27f6bea83d4af450090.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/remoteEntry.3280b8022411403d2f46.js`
+
+ * *Files 5% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,11 +1,11 @@
+ var _JUPYTERLAB;
+ (() => {
+     "use strict";
+-    var e, r, t, n, a, o, l, i, u, f, s, d, p, c, h, v, y, g, b = {
++    var e, r, t, n, a, o, l, i, u, f, s, d, p, c, h, v, b, y, g = {
+             421: (e, r, t) => {
+                 var n = {
+                         "./index": () => t.e(56).then((() => () => t(56))),
+                         "./extension": () => t.e(56).then((() => () => t(56))),
+                         "./style": () => t.e(542).then((() => () => t(542)))
+                     },
+                     a = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
+@@ -30,32 +30,32 @@
+     function w(e) {
+         var r = m[e];
+         if (void 0 !== r) return r.exports;
+         var t = m[e] = {
+             id: e,
+             exports: {}
+         };
+-        return b[e].call(t.exports, t, t.exports, w), t.exports
++        return g[e].call(t.exports, t, t.exports, w), t.exports
+     }
+-    w.m = b, w.c = m, w.n = e => {
++    w.m = g, w.c = m, w.n = e => {
+         var r = e && e.__esModule ? () => e.default : () => e;
+         return w.d(r, {
+             a: r
+         }), r
+     }, w.d = (e, r) => {
+         for (var t in r) w.o(r, t) && !w.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+     }, w.f = {}, w.e = e => Promise.all(Object.keys(w.f).reduce(((r, t) => (w.f[t](e, r), r)), [])), w.u = e => e + "." + {
+-        56: "4cac067549099539bfd3",
++        56: "8dc3eaf446ef31335c65",
+         542: "18fd91d86aaf6286edd0",
+         638: "95e0186307171588df5b"
+     } [e] + ".js?v=" + {
+-        56: "4cac067549099539bfd3",
++        56: "8dc3eaf446ef31335c65",
+         542: "18fd91d86aaf6286edd0",
+         638: "95e0186307171588df5b"
+     } [e], w.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+@@ -213,40 +213,40 @@
+         return (r = Object.keys(a).reduce(((e, r) => !o(t, r) || e && !n(e, r) ? e : r), 0)) && a[r]
+     }, d = e => (e.loaded = 1, e.get()), c = (p = e => function(r, t, n, a) {
+         var o = w.I(r);
+         return o && o.then ? o.then(e.bind(e, r, w.S[r], t, n, a)) : e(r, w.S[r], t, n, a)
+     })(((e, r, t, n) => (l(e, t), f(r, 0, t, n)))), h = p(((e, r, t, n, a) => {
+         var o = r && w.o(r, t) && s(r, t, n);
+         return o ? d(o) : a()
+-    })), v = {}, y = {
+-        258: () => c("default", "@jupyterlab/services", [1, 6, 6, 1]),
++    })), v = {}, b = {
++        33: () => c("default", "@jupyterlab/apputils", [1, 3, 6, 3]),
++        123: () => c("default", "@jupyterlab/notebook", [1, 3, 6, 3]),
++        142: () => c("default", "@jupyterlab/coreutils", [1, 5, 6, 3]),
+         271: () => c("default", "react", [1, 17, 0, 1]),
+-        431: () => c("default", "@lumino/widgets", [1, 1, 37, 1]),
+-        510: () => c("default", "@jupyterlab/apputils", [1, 3, 6, 1]),
++        344: () => c("default", "@jupyterlab/mainmenu", [1, 3, 6, 3]),
+         569: () => h("default", "jquery", [1, 3, 5, 0], (() => w.e(638).then((() => () => w(638))))),
+-        705: () => c("default", "@jupyterlab/mainmenu", [1, 3, 6, 1]),
+-        767: () => c("default", "@jupyterlab/notebook", [1, 3, 6, 1]),
+-        886: () => c("default", "@jupyterlab/coreutils", [1, 5, 6, 1])
+-    }, g = {
+-        56: [258, 271, 431, 510, 569, 705, 767, 886]
++        820: () => c("default", "@jupyterlab/services", [1, 6, 6, 3]),
++        832: () => c("default", "@lumino/widgets", [1, 1, 37, 2])
++    }, y = {
++        56: [33, 123, 142, 271, 344, 569, 820, 832]
+     }, w.f.consumes = (e, r) => {
+-        w.o(g, e) && g[e].forEach((e => {
++        w.o(y, e) && y[e].forEach((e => {
+             if (w.o(v, e)) return r.push(v[e]);
+             var t = r => {
+                     v[e] = 0, w.m[e] = t => {
+                         delete w.c[e], t.exports = r()
+                     }
+                 },
+                 n = r => {
+                     delete v[e], w.m[e] = t => {
+                         throw delete w.c[e], r
+                     }
+                 };
+             try {
+-                var a = y[e]();
++                var a = b[e]();
+                 a.then ? r.push(v[e] = a.then(t).catch(n)) : t(a)
+             } catch (e) {
+                 n(e)
+             }
+         }))
+     }, (() => {
+         var e = {
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/gallerymenu/static/third-party-licenses.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/gallerymenu/static/third-party-licenses.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/package.json`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9990808823529411%*
+
+ * *Differences: {"'jupyterlab'": "{'_build': {'load': 'static/remoteEntry.02ddda09f0305fa467f4.js'}}"}*
+
+```diff
+@@ -27,15 +27,15 @@
+         "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+         "_build": {
+             "extension": "./extension",
+-            "load": "static/remoteEntry.2e054c19c350354e70b0.js"
++            "load": "static/remoteEntry.02ddda09f0305fa467f4.js"
+         },
+         "extension": true,
+         "outputDir": "../labextension/inject-uuid",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+         "jupyter",
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/schemas/@jupyterlab-nbgallery/inject-uuid/package.json.orig`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/568.c9be5995dc68aad7d3d1.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/568.1dcbb7bee8ca1152cf60.js`
+
+ * *Files 0% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -25,15 +25,15 @@
+             }
+             o.r(t), o.d(t, {
+                 default: () => r
+             });
+             const r = {
+                 id: "@jupyterlab-nbgallery/inject-uuid",
+                 autoStart: !0,
+-                requires: [o(767).INotebookTracker],
++                requires: [o(123).INotebookTracker],
+                 activate: (e, t) => {
+                     t.forEach(n), t.widgetAdded.connect(((e, t) => n(t)))
+                 }
+             }
+         }
+     }
+ ]);
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/inject-uuid/static/remoteEntry.2e054c19c350354e70b0.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/inject-uuid/static/remoteEntry.02ddda09f0305fa467f4.js`
+
+ * *Files 5% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,11 +1,11 @@
+ var _JUPYTERLAB;
+ (() => {
+     "use strict";
+-    var e, r, t, n, o, a, i, u, l, s, f, d, p, c, h, v = {
++    var e, r, t, n, o, a, i, u, l, f, s, d, p, c, h, v = {
+             711: (e, r, t) => {
+                 var n = {
+                         "./index": () => t.e(568).then((() => () => t(568))),
+                         "./extension": () => t.e(568).then((() => () => t(568)))
+                     },
+                     o = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
+                         throw new Error('Module "' + e + '" does not exist in container.')
+@@ -40,30 +40,30 @@
+             a: r
+         }), r
+     }, g.d = (e, r) => {
+         for (var t in r) g.o(r, t) && !g.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+-    }, g.f = {}, g.e = e => Promise.all(Object.keys(g.f).reduce(((r, t) => (g.f[t](e, r), r)), [])), g.u = e => e + ".c9be5995dc68aad7d3d1.js?v=c9be5995dc68aad7d3d1", g.g = function() {
++    }, g.f = {}, g.e = e => Promise.all(Object.keys(g.f).reduce(((r, t) => (g.f[t](e, r), r)), [])), g.u = e => e + ".1dcbb7bee8ca1152cf60.js?v=1dcbb7bee8ca1152cf60", g.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+             if ("object" == typeof window) return window
+         }
+     }(), g.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r), e = {}, r = "@jupyterlab-nbgallery/inject-uuid:", g.l = (t, n, o, a) => {
+         if (e[t]) e[t].push(n);
+         else {
+             var i, u;
+             if (void 0 !== o)
+-                for (var l = document.getElementsByTagName("script"), s = 0; s < l.length; s++) {
+-                    var f = l[s];
+-                    if (f.getAttribute("src") == t || f.getAttribute("data-webpack") == r + o) {
+-                        i = f;
++                for (var l = document.getElementsByTagName("script"), f = 0; f < l.length; f++) {
++                    var s = l[f];
++                    if (s.getAttribute("src") == t || s.getAttribute("data-webpack") == r + o) {
++                        i = s;
+                         break
+                     }
+                 }
+             i || (u = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, g.nc && i.setAttribute("nonce", g.nc), i.setAttribute("data-webpack", r + o), i.src = t), e[t] = [n];
+             var d = (r, n) => {
+                     i.onerror = i.onload = null, clearTimeout(p);
+                     var o = e[t];
+@@ -155,31 +155,31 @@
+     }, a = (e, r) => {
+         if (0 in e) {
+             r = t(r);
+             var n = e[0],
+                 o = n < 0;
+             o && (n = -n - 1);
+             for (var i = 0, u = 1, l = !0;; u++, i++) {
+-                var s, f, d = u < e.length ? (typeof e[u])[0] : "";
+-                if (i >= r.length || "o" == (f = (typeof(s = r[i]))[0])) return !l || ("u" == d ? u > n && !o : "" == d != o);
+-                if ("u" == f) {
++                var f, s, d = u < e.length ? (typeof e[u])[0] : "";
++                if (i >= r.length || "o" == (s = (typeof(f = r[i]))[0])) return !l || ("u" == d ? u > n && !o : "" == d != o);
++                if ("u" == s) {
+                     if (!l || "u" != d) return !1
+                 } else if (l)
+-                    if (d == f)
++                    if (d == s)
+                         if (u <= n) {
+-                            if (s != e[u]) return !1
++                            if (f != e[u]) return !1
+                         } else {
+-                            if (o ? s > e[u] : s < e[u]) return !1;
+-                            s != e[u] && (l = !1)
++                            if (o ? f > e[u] : f < e[u]) return !1;
++                            f != e[u] && (l = !1)
+                         }
+                 else if ("s" != d && "n" != d) {
+                     if (o || u <= n) return !1;
+                     l = !1, u--
+                 } else {
+-                    if (u <= n || f < d != o) return !1;
++                    if (u <= n || s < d != o) return !1;
+                     l = !1
+                 } else "s" != d && "n" != d && (l = !1, u--)
+             }
+         }
+         var p = [],
+             c = p.pop.bind(p);
+         for (i = 1; i < e.length; i++) {
+@@ -190,24 +190,24 @@
+     }, i = (e, r) => {
+         var t = g.S[e];
+         if (!t || !g.o(t, r)) throw new Error("Shared module " + r + " doesn't exist in shared scope " + e);
+         return t
+     }, u = (e, r) => {
+         var t = e[r];
+         return Object.keys(t).reduce(((e, r) => !e || !t[e].loaded && n(e, r) ? r : e), 0)
+-    }, l = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + o(n) + ")", s = (e, r, t, n) => {
++    }, l = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + o(n) + ")", f = (e, r, t, n) => {
+         var o = u(e, t);
+-        return a(n, o) || "undefined" != typeof console && console.warn && console.warn(l(e, t, o, n)), f(e[t][o])
+-    }, f = e => (e.loaded = 1, e.get()), d = (e => function(r, t, n, o) {
++        return a(n, o) || "undefined" != typeof console && console.warn && console.warn(l(e, t, o, n)), s(e[t][o])
++    }, s = e => (e.loaded = 1, e.get()), d = (e => function(r, t, n, o) {
+         var a = g.I(r);
+         return a && a.then ? a.then(e.bind(e, r, g.S[r], t, n, o)) : e(r, g.S[r], t, n)
+-    })(((e, r, t, n) => (i(e, t), s(r, 0, t, n)))), p = {}, c = {
+-        767: () => d("default", "@jupyterlab/notebook", [1, 3, 6, 1])
++    })(((e, r, t, n) => (i(e, t), f(r, 0, t, n)))), p = {}, c = {
++        123: () => d("default", "@jupyterlab/notebook", [1, 3, 6, 3])
+     }, h = {
+-        568: [767]
++        568: [123]
+     }, g.f.consumes = (e, r) => {
+         g.o(h, e) && h[e].forEach((e => {
+             if (g.o(p, e)) return r.push(p[e]);
+             var t = r => {
+                     p[e] = 0, g.m[e] = t => {
+                         delete g.c[e], t.exports = r()
+                     }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/package.json`
+
+ * *Files 2% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9990808823529411%*
+
+ * *Differences: {"'jupyterlab'": "{'_build': {'load': 'static/remoteEntry.53ed33a8ef1f603e0fc8.js'}}"}*
+
+```diff
+@@ -30,15 +30,15 @@
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+         "schema/**/*.json"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+         "_build": {
+             "extension": "./extension",
+-            "load": "static/remoteEntry.dbe6ded7718aebd9e3bc.js"
++            "load": "static/remoteEntry.53ed33a8ef1f603e0fc8.js"
+         },
+         "extension": true,
+         "outputDir": "../labextension/instrumentation",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+         "jupyter",
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/schemas/@jupyterlab-nbgallery/instrumentation/package.json.orig`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/568.3252d012ac78742aa152.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/568.0d3998aabd22f1867c40.js`
+
+ * *Files 3% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,18 +1,18 @@
+ "use strict";
+ (self.webpackChunk_jupyterlab_nbgallery_instrumentation = self.webpackChunk_jupyterlab_nbgallery_instrumentation || []).push([
+     [568], {
+         568: (e, t, n) => {
+             n.r(t), n.d(t, {
+                 default: () => u
+             });
+-            var l = n(598),
+-                o = n(886),
+-                i = n(767),
+-                a = n(952),
++            var l = n(38),
++                o = n(142),
++                i = n(123),
++                a = n(191),
+                 s = n(24),
+                 c = n(569),
+                 r = n.n(c);
+             const u = {
+                 id: "@juptyerlab-nbgallery/instrumentation",
+                 autoStart: !0,
+                 requires: [l.ISettingRegistry],
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/638.b95125ed695cee42aae4.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/638.b95125ed695cee42aae4.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/701.d81800f5926ab62cc8b2.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/701.d81800f5926ab62cc8b2.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/remoteEntry.dbe6ded7718aebd9e3bc.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/remoteEntry.53ed33a8ef1f603e0fc8.js`
+
+ * *Files 6% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,30 +1,30 @@
+ var _JUPYTERLAB;
+ (() => {
+     "use strict";
+-    var e, r, t, n, o, a, i, u, l, s, f, d, p, c, h, v, b, y, g, m, w, j, S = {
++    var e, r, t, n, a, o, i, u, l, s, f, d, c, p, h, v, b, y, g, m, w, j, S = {
+             250: (e, r, t) => {
+                 var n = {
+                         "./index": () => t.e(568).then((() => () => t(568))),
+                         "./extension": () => t.e(568).then((() => () => t(568)))
+                     },
+-                    o = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
++                    a = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
+                         throw new Error('Module "' + e + '" does not exist in container.')
+                     })), t.R = void 0, r),
+-                    a = (e, r) => {
++                    o = (e, r) => {
+                         if (t.S) {
+                             var n = "default",
+-                                o = t.S[n];
+-                            if (o && o !== e) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
++                                a = t.S[n];
++                            if (a && a !== e) throw new Error("Container initialization failed as it has already been initialized with a different share scope");
+                             return t.S[n] = e, t.I(n, r)
+                         }
+                     };
+                 t.d(r, {
+-                    get: () => o,
+-                    init: () => a
++                    get: () => a,
++                    init: () => o
+                 })
+             }
+         },
+         k = {};
+ 
+     function E(e) {
+         var r = k[e];
+@@ -41,47 +41,47 @@
+         }), r
+     }, E.d = (e, r) => {
+         for (var t in r) E.o(r, t) && !E.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+     }, E.f = {}, E.e = e => Promise.all(Object.keys(E.f).reduce(((r, t) => (E.f[t](e, r), r)), [])), E.u = e => e + "." + {
+-        568: "3252d012ac78742aa152",
++        568: "0d3998aabd22f1867c40",
+         638: "b95125ed695cee42aae4",
+         701: "d81800f5926ab62cc8b2"
+     } [e] + ".js?v=" + {
+-        568: "3252d012ac78742aa152",
++        568: "0d3998aabd22f1867c40",
+         638: "b95125ed695cee42aae4",
+         701: "d81800f5926ab62cc8b2"
+     } [e], E.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+             if ("object" == typeof window) return window
+         }
+-    }(), E.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r), e = {}, r = "@jupyterlab-nbgallery/instrumentation:", E.l = (t, n, o, a) => {
++    }(), E.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r), e = {}, r = "@jupyterlab-nbgallery/instrumentation:", E.l = (t, n, a, o) => {
+         if (e[t]) e[t].push(n);
+         else {
+             var i, u;
+-            if (void 0 !== o)
++            if (void 0 !== a)
+                 for (var l = document.getElementsByTagName("script"), s = 0; s < l.length; s++) {
+                     var f = l[s];
+-                    if (f.getAttribute("src") == t || f.getAttribute("data-webpack") == r + o) {
++                    if (f.getAttribute("src") == t || f.getAttribute("data-webpack") == r + a) {
+                         i = f;
+                         break
+                     }
+                 }
+-            i || (u = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, E.nc && i.setAttribute("nonce", E.nc), i.setAttribute("data-webpack", r + o), i.src = t), e[t] = [n];
++            i || (u = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, E.nc && i.setAttribute("nonce", E.nc), i.setAttribute("data-webpack", r + a), i.src = t), e[t] = [n];
+             var d = (r, n) => {
+-                    i.onerror = i.onload = null, clearTimeout(p);
+-                    var o = e[t];
+-                    if (delete e[t], i.parentNode && i.parentNode.removeChild(i), o && o.forEach((e => e(n))), r) return r(n)
++                    i.onerror = i.onload = null, clearTimeout(c);
++                    var a = e[t];
++                    if (delete e[t], i.parentNode && i.parentNode.removeChild(i), a && a.forEach((e => e(n))), r) return r(n)
+                 },
+-                p = setTimeout(d.bind(null, void 0, {
++                c = setTimeout(d.bind(null, void 0, {
+                     type: "timeout",
+                     target: i
+                 }), 12e4);
+             i.onerror = d.bind(null, i.onerror), i.onload = d.bind(null, i.onload), u && document.head.appendChild(i)
+         }
+     }, E.r = e => {
+         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+@@ -91,24 +91,24 @@
+         })
+     }, (() => {
+         E.S = {};
+         var e = {},
+             r = {};
+         E.I = (t, n) => {
+             n || (n = []);
+-            var o = r[t];
+-            if (o || (o = r[t] = {}), !(n.indexOf(o) >= 0)) {
+-                if (n.push(o), e[t]) return e[t];
++            var a = r[t];
++            if (a || (a = r[t] = {}), !(n.indexOf(a) >= 0)) {
++                if (n.push(a), e[t]) return e[t];
+                 E.o(E.S, t) || (E.S[t] = {});
+-                var a = E.S[t],
++                var o = E.S[t],
+                     i = "@jupyterlab-nbgallery/instrumentation",
+                     u = (e, r, t, n) => {
+-                        var o = a[e] = a[e] || {},
+-                            u = o[r];
+-                        (!u || !u.loaded && (!n != !u.eager ? n : i > u.from)) && (o[r] = {
++                        var a = o[e] = o[e] || {},
++                            u = a[r];
++                        (!u || !u.loaded && (!n != !u.eager ? n : i > u.from)) && (a[r] = {
+                             get: t,
+                             from: i,
+                             eager: !!n
+                         })
+                     },
+                     l = [];
+                 return "default" === t && (u("@jupyterlab-nbgallery/instrumentation", "2.0.0", (() => E.e(568).then((() => () => E(568))))), u("jquery", "3.6.4", (() => E.e(638).then((() => () => E(638))))), u("ts-md5", "1.3.1", (() => E.e(701).then((() => () => E(701)))))), e[t] = l.length ? Promise.all(l).then((() => e[t] = 1)) : 1
+@@ -129,163 +129,163 @@
+             t = /^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(e),
+             n = t[1] ? r(t[1]) : [];
+         return t[2] && (n.length++, n.push.apply(n, r(t[2]))), t[3] && (n.push([]), n.push.apply(n, r(t[3]))), n
+     }, n = (e, r) => {
+         e = t(e), r = t(r);
+         for (var n = 0;;) {
+             if (n >= e.length) return n < r.length && "u" != (typeof r[n])[0];
+-            var o = e[n],
+-                a = (typeof o)[0];
+-            if (n >= r.length) return "u" == a;
++            var a = e[n],
++                o = (typeof a)[0];
++            if (n >= r.length) return "u" == o;
+             var i = r[n],
+                 u = (typeof i)[0];
+-            if (a != u) return "o" == a && "n" == u || "s" == u || "u" == a;
+-            if ("o" != a && "u" != a && o != i) return o < i;
++            if (o != u) return "o" == o && "n" == u || "s" == u || "u" == o;
++            if ("o" != o && "u" != o && a != i) return a < i;
+             n++
+         }
+-    }, o = e => {
++    }, a = e => {
+         var r = e[0],
+             t = "";
+         if (1 === e.length) return "*";
+         if (r + .5) {
+             t += 0 == r ? ">=" : -1 == r ? "<" : 1 == r ? "^" : 2 == r ? "~" : r > 0 ? "=" : "!=";
+-            for (var n = 1, a = 1; a < e.length; a++) n--, t += "u" == (typeof(u = e[a]))[0] ? "-" : (n > 0 ? "." : "") + (n = 2, u);
++            for (var n = 1, o = 1; o < e.length; o++) n--, t += "u" == (typeof(u = e[o]))[0] ? "-" : (n > 0 ? "." : "") + (n = 2, u);
+             return t
+         }
+         var i = [];
+-        for (a = 1; a < e.length; a++) {
+-            var u = e[a];
+-            i.push(0 === u ? "not(" + l() + ")" : 1 === u ? "(" + l() + " || " + l() + ")" : 2 === u ? i.pop() + " " + i.pop() : o(u))
++        for (o = 1; o < e.length; o++) {
++            var u = e[o];
++            i.push(0 === u ? "not(" + l() + ")" : 1 === u ? "(" + l() + " || " + l() + ")" : 2 === u ? i.pop() + " " + i.pop() : a(u))
+         }
+         return l();
+ 
+         function l() {
+             return i.pop().replace(/^\((.+)\)$/, "$1")
+         }
+-    }, a = (e, r) => {
++    }, o = (e, r) => {
+         if (0 in e) {
+             r = t(r);
+             var n = e[0],
+-                o = n < 0;
+-            o && (n = -n - 1);
++                a = n < 0;
++            a && (n = -n - 1);
+             for (var i = 0, u = 1, l = !0;; u++, i++) {
+                 var s, f, d = u < e.length ? (typeof e[u])[0] : "";
+-                if (i >= r.length || "o" == (f = (typeof(s = r[i]))[0])) return !l || ("u" == d ? u > n && !o : "" == d != o);
++                if (i >= r.length || "o" == (f = (typeof(s = r[i]))[0])) return !l || ("u" == d ? u > n && !a : "" == d != a);
+                 if ("u" == f) {
+                     if (!l || "u" != d) return !1
+                 } else if (l)
+                     if (d == f)
+                         if (u <= n) {
+                             if (s != e[u]) return !1
+                         } else {
+-                            if (o ? s > e[u] : s < e[u]) return !1;
++                            if (a ? s > e[u] : s < e[u]) return !1;
+                             s != e[u] && (l = !1)
+                         }
+                 else if ("s" != d && "n" != d) {
+-                    if (o || u <= n) return !1;
++                    if (a || u <= n) return !1;
+                     l = !1, u--
+                 } else {
+-                    if (u <= n || f < d != o) return !1;
++                    if (u <= n || f < d != a) return !1;
+                     l = !1
+                 } else "s" != d && "n" != d && (l = !1, u--)
+             }
+         }
+-        var p = [],
+-            c = p.pop.bind(p);
++        var c = [],
++            p = c.pop.bind(c);
+         for (i = 1; i < e.length; i++) {
+             var h = e[i];
+-            p.push(1 == h ? c() | c() : 2 == h ? c() & c() : h ? a(h, r) : !c())
++            c.push(1 == h ? p() | p() : 2 == h ? p() & p() : h ? o(h, r) : !p())
+         }
+-        return !!c()
++        return !!p()
+     }, i = (e, r) => {
+         var t = E.S[e];
+         if (!t || !E.o(t, r)) throw new Error("Shared module " + r + " doesn't exist in shared scope " + e);
+         return t
+     }, u = (e, r) => {
+         var t = e[r];
+         return (r = Object.keys(t).reduce(((e, r) => !e || n(e, r) ? r : e), 0)) && t[r]
+     }, l = (e, r) => {
+         var t = e[r];
+         return Object.keys(t).reduce(((e, r) => !e || !t[e].loaded && n(e, r) ? r : e), 0)
+-    }, s = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + o(n) + ")", f = (e, r, t, n) => {
+-        var o = l(e, t);
+-        return a(n, o) || "undefined" != typeof console && console.warn && console.warn(s(e, t, o, n)), h(e[t][o])
++    }, s = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + a(n) + ")", f = (e, r, t, n) => {
++        var a = l(e, t);
++        return o(n, a) || "undefined" != typeof console && console.warn && console.warn(s(e, t, a, n)), h(e[t][a])
+     }, d = (e, r, t) => {
+-        var o = e[r];
+-        return (r = Object.keys(o).reduce(((e, r) => !a(t, r) || e && !n(e, r) ? e : r), 0)) && o[r]
+-    }, p = (e, r, t, n) => {
+-        var a = e[t];
+-        return "No satisfying version (" + o(n) + ") of shared module " + t + " found in shared scope " + r + ".\nAvailable versions: " + Object.keys(a).map((e => e + " from " + a[e].from)).join(", ")
++        var a = e[r];
++        return (r = Object.keys(a).reduce(((e, r) => !o(t, r) || e && !n(e, r) ? e : r), 0)) && a[r]
+     }, c = (e, r, t, n) => {
+-        "undefined" != typeof console && console.warn && console.warn(p(e, r, t, n))
+-    }, h = e => (e.loaded = 1, e.get()), b = (v = e => function(r, t, n, o) {
+-        var a = E.I(r);
+-        return a && a.then ? a.then(e.bind(e, r, E.S[r], t, n, o)) : e(r, E.S[r], t, n, o)
+-    })(((e, r, t, n) => (i(e, t), h(d(r, t, n) || c(r, e, t, n) || u(r, t))))), y = v(((e, r, t, n) => (i(e, t), f(r, 0, t, n)))), g = v(((e, r, t, n, o) => {
+-        var a = r && E.o(r, t) && d(r, t, n);
+-        return a ? h(a) : o()
++        var o = e[t];
++        return "No satisfying version (" + a(n) + ") of shared module " + t + " found in shared scope " + r + ".\nAvailable versions: " + Object.keys(o).map((e => e + " from " + o[e].from)).join(", ")
++    }, p = (e, r, t, n) => {
++        "undefined" != typeof console && console.warn && console.warn(c(e, r, t, n))
++    }, h = e => (e.loaded = 1, e.get()), b = (v = e => function(r, t, n, a) {
++        var o = E.I(r);
++        return o && o.then ? o.then(e.bind(e, r, E.S[r], t, n, a)) : e(r, E.S[r], t, n, a)
++    })(((e, r, t, n) => (i(e, t), h(d(r, t, n) || p(r, e, t, n) || u(r, t))))), y = v(((e, r, t, n) => (i(e, t), f(r, 0, t, n)))), g = v(((e, r, t, n, a) => {
++        var o = r && E.o(r, t) && d(r, t, n);
++        return o ? h(o) : a()
+     })), m = {}, w = {
+         24: () => g("default", "ts-md5", [1, 1, 2, 9], (() => E.e(701).then((() => () => E(701))))),
+-        569: () => g("default", "jquery", [1, 3, 5, 0], (() => E.e(638).then((() => () => E(638))))),
+-        598: () => y("default", "@jupyterlab/settingregistry", [1, 3, 6, 1]),
+-        767: () => y("default", "@jupyterlab/notebook", [1, 3, 6, 1]),
+-        886: () => y("default", "@jupyterlab/coreutils", [1, 5, 6, 1]),
+-        952: () => b("default", "@jupyterlab/cells", [1, 3, 6, 1])
++        38: () => y("default", "@jupyterlab/settingregistry", [1, 3, 6, 3]),
++        123: () => y("default", "@jupyterlab/notebook", [1, 3, 6, 3]),
++        142: () => y("default", "@jupyterlab/coreutils", [1, 5, 6, 3]),
++        191: () => b("default", "@jupyterlab/cells", [1, 3, 6, 3]),
++        569: () => g("default", "jquery", [1, 3, 5, 0], (() => E.e(638).then((() => () => E(638)))))
+     }, j = {
+-        568: [24, 569, 598, 767, 886, 952]
++        568: [24, 38, 123, 142, 191, 569]
+     }, E.f.consumes = (e, r) => {
+         E.o(j, e) && j[e].forEach((e => {
+             if (E.o(m, e)) return r.push(m[e]);
+             var t = r => {
+                     m[e] = 0, E.m[e] = t => {
+                         delete E.c[e], t.exports = r()
+                     }
+                 },
+                 n = r => {
+                     delete m[e], E.m[e] = t => {
+                         throw delete E.c[e], r
+                     }
+                 };
+             try {
+-                var o = w[e]();
+-                o.then ? r.push(m[e] = o.then(t).catch(n)) : t(o)
++                var a = w[e]();
++                a.then ? r.push(m[e] = a.then(t).catch(n)) : t(a)
+             } catch (e) {
+                 n(e)
+             }
+         }))
+     }, (() => {
+         var e = {
+             723: 0
+         };
+         E.f.j = (r, t) => {
+             var n = E.o(e, r) ? e[r] : void 0;
+             if (0 !== n)
+                 if (n) t.push(n[2]);
+                 else {
+-                    var o = new Promise(((t, o) => n = e[r] = [t, o]));
+-                    t.push(n[2] = o);
+-                    var a = E.p + E.u(r),
++                    var a = new Promise(((t, a) => n = e[r] = [t, a]));
++                    t.push(n[2] = a);
++                    var o = E.p + E.u(r),
+                         i = new Error;
+-                    E.l(a, (t => {
++                    E.l(o, (t => {
+                         if (E.o(e, r) && (0 !== (n = e[r]) && (e[r] = void 0), n)) {
+-                            var o = t && ("load" === t.type ? "missing" : t.type),
+-                                a = t && t.target && t.target.src;
+-                            i.message = "Loading chunk " + r + " failed.\n(" + o + ": " + a + ")", i.name = "ChunkLoadError", i.type = o, i.request = a, n[1](i)
++                            var a = t && ("load" === t.type ? "missing" : t.type),
++                                o = t && t.target && t.target.src;
++                            i.message = "Loading chunk " + r + " failed.\n(" + a + ": " + o + ")", i.name = "ChunkLoadError", i.type = a, i.request = o, n[1](i)
+                         }
+                     }), "chunk-" + r, r)
+                 }
+         };
+         var r = (r, t) => {
+-                var n, o, [a, i, u] = t,
++                var n, a, [o, i, u] = t,
+                     l = 0;
+-                if (a.some((r => 0 !== e[r]))) {
++                if (o.some((r => 0 !== e[r]))) {
+                     for (n in i) E.o(i, n) && (E.m[n] = i[n]);
+                     u && u(E)
+                 }
+-                for (r && r(t); l < a.length; l++) o = a[l], E.o(e, o) && e[o] && e[o][0](), e[o] = 0
++                for (r && r(t); l < o.length; l++) a = o[l], E.o(e, a) && e[a] && e[a][0](), e[a] = 0
+             },
+             t = self.webpackChunk_jupyterlab_nbgallery_instrumentation = self.webpackChunk_jupyterlab_nbgallery_instrumentation || [];
+         t.forEach(r.bind(null, 0)), t.push = r.bind(null, t.push.bind(t))
+     })();
+     var _ = E(250);
+     (_JUPYTERLAB = void 0 === _JUPYTERLAB ? {} : _JUPYTERLAB)["@jupyterlab-nbgallery/instrumentation"] = _
+ })();
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/instrumentation/static/third-party-licenses.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/instrumentation/static/third-party-licenses.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/package.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/package.json.orig`
+
+ * *Files 13% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9930555555555556%*
+
+ * *Differences: {"'jupyterlab'": "{delete: ['_build']}"}*
+
+```diff
+@@ -29,19 +29,14 @@
+     "files": [
+         "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+         "schema/**/*.json"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
+-        "_build": {
+-            "extension": "./extension",
+-            "load": "static/remoteEntry.3dcf202ddb367695afb0.js",
+-            "style": "./style"
+-        },
+         "extension": true,
+         "outputDir": "../labextension/userpreferences",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+         "jupyter",
+         "jupyterlab",
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/schemas/@jupyterlab-nbgallery/userpreferences/package.json.orig` & `jupyterlab_nbgallery-2.0.0a2/labextension/autodownload/package.json`
+
+ * *Files 14% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.8903769841269842%*
+
+ * *Differences: {"'dependencies'": "{'@jupyterlab/coreutils': '>=5.2.0', delete: ['@jupyterlab/notebook', "*
+
+ * *                   "'@jupyterlab/mainmenu', 'fa-icons']}",*
+
+ * * "'description'": "'NBGallery Auto Download Notebooks that are starred or recently executed'",*
+
+ * * "'jupyterlab'": "{'outputDir': '../labextension/autodownload', '_build': OrderedDict([('load', "*
+
+ * *                 "'static/remoteEntry.fa15592bca73423b04a4.js'), ('extension', './extension'), "*
+
+ * *                 "('style', './style')])}",*
+
+ * * "'name'": "'@jupyterlab-nb […]*
+
+```diff
+@@ -1,21 +1,19 @@
+ {
+     "author": "Team@NBG",
+     "bugs": {
+         "url": "https://github.com/nbgallery/lab-extensions/issues"
+     },
+     "dependencies": {
+         "@jupyterlab/application": ">=3.6.0",
+-        "@jupyterlab/mainmenu": ">=3.6.0 ||",
+-        "@jupyterlab/notebook": ">=3.6.0",
++        "@jupyterlab/coreutils": ">=5.2.0",
+         "@jupyterlab/settingregistry": ">=3.6.0",
+-        "fa-icons": "^0.2.0",
+         "jquery": "^3.5.0"
+     },
+-    "description": "All the menu capabilities needed for saving/forking notebooks and submitting change request to Notebook Gallery",
++    "description": "NBGallery Auto Download Notebooks that are starred or recently executed",
+     "devDependencies": {
+         "@jupyterlab/builder": ">=3.3.2",
+         "@types/jquery": "^3.5.0",
+         "@typescript-eslint/eslint-plugin": "^4.8.1",
+         "@typescript-eslint/parser": "^4.8.1",
+         "eslint": "^8.0.0",
+         "eslint-config-prettier": "^6.15.0",
+@@ -29,26 +27,31 @@
+     "files": [
+         "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+         "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}",
+         "schema/**/*.json"
+     ],
+     "homepage": "https://github.com/nbgallery/lab-extensions",
+     "jupyterlab": {
++        "_build": {
++            "extension": "./extension",
++            "load": "static/remoteEntry.fa15592bca73423b04a4.js",
++            "style": "./style"
++        },
+         "extension": true,
+-        "outputDir": "../labextension/userpreferences",
++        "outputDir": "../labextension/autodownload",
+         "schemaDir": "schema"
+     },
+     "keywords": [
+         "jupyter",
+         "jupyterlab",
+         "jupyterlab-extension"
+     ],
+     "license": "MIT",
+     "main": "lib/index.js",
+-    "name": "@jupyterlab-nbgallery/userpreferences",
++    "name": "@jupyterlab-nbgallery/autodownload",
+     "repository": {
+         "type": "git",
+         "url": "https://github.com/nbgallery/lab-extensions"
+     },
+     "scripts": {
+         "build": "jlpm run build:lib && jlpm run build:labextension:dev",
+         "build:all": "jlpm run build:prod",
+@@ -68,9 +71,9 @@
+         "watch:src": "tsc -w"
+     },
+     "sideEffects": [
+         "style/*.css"
+     ],
+     "style": "style/index.css",
+     "types": "lib/index.d.ts",
+-    "version": "1.0.2"
++    "version": "1.0.3"
+ }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/542.d1718a50e23f3808ba62.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/542.d1718a50e23f3808ba62.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/568.39c2bc83f0eb58b2c9fa.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/568.00695541aaa15d567580.js`
+
+ * *Files 2% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,19 +1,19 @@
+ "use strict";
+ (self.webpackChunk_jupyterlab_nbgallery_userpreferences = self.webpackChunk_jupyterlab_nbgallery_userpreferences || []).push([
+     [568], {
+         568: (e, r, t) => {
+             t.r(r), t.d(r, {
+                 default: () => p
+             });
+-            var a = t(705),
+-                s = t(510),
+-                n = t(431),
+-                l = t(258),
+-                o = t(886),
++            var a = t(344),
++                s = t(33),
++                n = t(832),
++                l = t(820),
++                o = t(142),
+                 i = t(569),
+                 c = t.n(i);
+             const u = {
+                 id: "@jupyterlab-nbgallery/userpreferences",
+                 autoStart: !0,
+                 requires: [a.IMainMenu],
+                 activate: function(e, r) {
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/638.e5080f99954048969f76.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/638.e5080f99954048969f76.js`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/remoteEntry.3dcf202ddb367695afb0.js` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/remoteEntry.03bf745401d2317e1d7d.js`
+
+ * *Files 6% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -1,11 +1,11 @@
+ var _JUPYTERLAB;
+ (() => {
+     "use strict";
+-    var e, r, t, n, a, o, i, u, l, s, f, p, d, c, h, v, b, g, y = {
++    var e, r, t, n, a, o, i, u, l, s, f, p, c, d, h, v, b, g, y = {
+             130: (e, r, t) => {
+                 var n = {
+                         "./index": () => t.e(568).then((() => () => t(568))),
+                         "./extension": () => t.e(568).then((() => () => t(568))),
+                         "./style": () => t.e(542).then((() => () => t(542)))
+                     },
+                     a = (e, r) => (t.R = r, r = t.o(n, e) ? n[e]() : Promise.resolve().then((() => {
+@@ -44,19 +44,19 @@
+     }, w.d = (e, r) => {
+         for (var t in r) w.o(r, t) && !w.o(e, t) && Object.defineProperty(e, t, {
+             enumerable: !0,
+             get: r[t]
+         })
+     }, w.f = {}, w.e = e => Promise.all(Object.keys(w.f).reduce(((r, t) => (w.f[t](e, r), r)), [])), w.u = e => e + "." + {
+         542: "d1718a50e23f3808ba62",
+-        568: "39c2bc83f0eb58b2c9fa",
++        568: "00695541aaa15d567580",
+         638: "e5080f99954048969f76"
+     } [e] + ".js?v=" + {
+         542: "d1718a50e23f3808ba62",
+-        568: "39c2bc83f0eb58b2c9fa",
++        568: "00695541aaa15d567580",
+         638: "e5080f99954048969f76"
+     } [e], w.g = function() {
+         if ("object" == typeof globalThis) return globalThis;
+         try {
+             return this || new Function("return this")()
+         } catch (e) {
+             if ("object" == typeof window) return window
+@@ -71,19 +71,19 @@
+                     if (f.getAttribute("src") == t || f.getAttribute("data-webpack") == r + a) {
+                         i = f;
+                         break
+                     }
+                 }
+             i || (u = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120, w.nc && i.setAttribute("nonce", w.nc), i.setAttribute("data-webpack", r + a), i.src = t), e[t] = [n];
+             var p = (r, n) => {
+-                    i.onerror = i.onload = null, clearTimeout(d);
++                    i.onerror = i.onload = null, clearTimeout(c);
+                     var a = e[t];
+                     if (delete e[t], i.parentNode && i.parentNode.removeChild(i), a && a.forEach((e => e(n))), r) return r(n)
+                 },
+-                d = setTimeout(p.bind(null, void 0, {
++                c = setTimeout(p.bind(null, void 0, {
+                     type: "timeout",
+                     target: i
+                 }), 12e4);
+             i.onerror = p.bind(null, i.onerror), i.onload = p.bind(null, i.onload), u && document.head.appendChild(i)
+         }
+     }, w.r = e => {
+         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+@@ -187,49 +187,49 @@
+                     l = !1, u--
+                 } else {
+                     if (u <= n || f < p != a) return !1;
+                     l = !1
+                 } else "s" != p && "n" != p && (l = !1, u--)
+             }
+         }
+-        var d = [],
+-            c = d.pop.bind(d);
++        var c = [],
++            d = c.pop.bind(c);
+         for (i = 1; i < e.length; i++) {
+             var h = e[i];
+-            d.push(1 == h ? c() | c() : 2 == h ? c() & c() : h ? o(h, r) : !c())
++            c.push(1 == h ? d() | d() : 2 == h ? d() & d() : h ? o(h, r) : !d())
+         }
+-        return !!c()
++        return !!d()
+     }, i = (e, r) => {
+         var t = w.S[e];
+         if (!t || !w.o(t, r)) throw new Error("Shared module " + r + " doesn't exist in shared scope " + e);
+         return t
+     }, u = (e, r) => {
+         var t = e[r];
+         return Object.keys(t).reduce(((e, r) => !e || !t[e].loaded && n(e, r) ? r : e), 0)
+     }, l = (e, r, t, n) => "Unsatisfied version " + t + " from " + (t && e[r][t].from) + " of shared singleton module " + r + " (required " + a(n) + ")", s = (e, r, t, n) => {
+         var a = u(e, t);
+         return o(n, a) || "undefined" != typeof console && console.warn && console.warn(l(e, t, a, n)), p(e[t][a])
+     }, f = (e, r, t) => {
+         var a = e[r];
+         return (r = Object.keys(a).reduce(((e, r) => !o(t, r) || e && !n(e, r) ? e : r), 0)) && a[r]
+-    }, p = e => (e.loaded = 1, e.get()), c = (d = e => function(r, t, n, a) {
++    }, p = e => (e.loaded = 1, e.get()), d = (c = e => function(r, t, n, a) {
+         var o = w.I(r);
+         return o && o.then ? o.then(e.bind(e, r, w.S[r], t, n, a)) : e(r, w.S[r], t, n, a)
+-    })(((e, r, t, n) => (i(e, t), s(r, 0, t, n)))), h = d(((e, r, t, n, a) => {
++    })(((e, r, t, n) => (i(e, t), s(r, 0, t, n)))), h = c(((e, r, t, n, a) => {
+         var o = r && w.o(r, t) && f(r, t, n);
+         return o ? p(o) : a()
+     })), v = {}, b = {
+-        258: () => c("default", "@jupyterlab/services", [1, 6, 6, 1]),
+-        431: () => c("default", "@lumino/widgets", [1, 1, 37, 1]),
+-        510: () => c("default", "@jupyterlab/apputils", [1, 3, 6, 1]),
++        33: () => d("default", "@jupyterlab/apputils", [1, 3, 6, 3]),
++        142: () => d("default", "@jupyterlab/coreutils", [1, 5, 6, 3]),
++        344: () => d("default", "@jupyterlab/mainmenu", [1, 3, 6, 3]),
+         569: () => h("default", "jquery", [1, 3, 5, 0], (() => w.e(638).then((() => () => w(638))))),
+-        705: () => c("default", "@jupyterlab/mainmenu", [1, 3, 6, 1]),
+-        886: () => c("default", "@jupyterlab/coreutils", [1, 5, 6, 1])
++        820: () => d("default", "@jupyterlab/services", [1, 6, 6, 3]),
++        832: () => d("default", "@lumino/widgets", [1, 1, 37, 2])
+     }, g = {
+-        568: [258, 431, 510, 569, 705, 886]
++        568: [33, 142, 344, 569, 820, 832]
+     }, w.f.consumes = (e, r) => {
+         w.o(g, e) && g[e].forEach((e => {
+             if (w.o(v, e)) return r.push(v[e]);
+             var t = r => {
+                     v[e] = 0, w.m[e] = t => {
+                         delete w.c[e], t.exports = r()
+                     }
+```
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/labextension/userpreferences/static/third-party-licenses.json` & `jupyterlab_nbgallery-2.0.0a2/labextension/userpreferences/static/third-party-licenses.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/package.json` & `jupyterlab_nbgallery-2.0.0a2/package.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jupyterlab_nbgallery-2.0.0a1/setup.py` & `jupyterlab_nbgallery-2.0.0a2/setup.py`
+
+ * *Files identical despite different names*
+

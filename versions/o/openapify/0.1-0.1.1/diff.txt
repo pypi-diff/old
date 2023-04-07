@@ -1,0 +1,322 @@
+--- tmp/openapify-0.1.tar.gz
++++ tmp/openapify-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "openapify-0.1.tar", last modified: Tue Apr  4 09:47:00 2023, max compression
+│ +gzip compressed data, was "openapify-0.1.1.tar", last modified: Fri Apr  7 10:28:17 2023, max compression
+│   --- openapify-0.1.tar
+├── +++ openapify-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,31 +1,31 @@
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.475330 openapify-0.1/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      730 2023-04-04 09:47:00.475210 openapify-0.1/PKG-INFO
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.471885 openapify-0.1/openapify/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      198 2023-04-03 17:00:50.000000 openapify-0.1/openapify/__init__.py
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.474201 openapify-0.1/openapify/core/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-03 13:14:57.000000 openapify-0.1/openapify/core/__init__.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     1115 2023-04-03 16:43:44.000000 openapify-0.1/openapify/core/apispec.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)    14643 2023-04-04 09:34:10.000000 openapify-0.1/openapify/core/builder.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       92 2023-03-20 20:50:13.000000 openapify-0.1/openapify/core/const.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      591 2023-04-03 13:10:22.000000 openapify-0.1/openapify/core/jsonschema.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     1730 2023-04-03 17:22:07.000000 openapify-0.1/openapify/core/models.py
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.474516 openapify-0.1/openapify/core/openapi/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-20 12:12:59.000000 openapify-0.1/openapify/core/openapi/__init__.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     5218 2023-04-04 09:34:10.000000 openapify-0.1/openapify/core/openapi/models.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     4724 2023-04-03 17:00:50.000000 openapify-0.1/openapify/decorators.py
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.474726 openapify-0.1/openapify/ext/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-17 15:48:32.000000 openapify-0.1/openapify/ext/__init__.py
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.474906 openapify-0.1/openapify/ext/web/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-18 09:45:46.000000 openapify-0.1/openapify/ext/web/__init__.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     4332 2023-04-03 13:47:08.000000 openapify-0.1/openapify/ext/web/aiohttp.py
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-17 11:19:37.000000 openapify-0.1/openapify/py.typed
+│ │ -drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-04 09:47:00.472727 openapify-0.1/openapify.egg-info/
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      730 2023-04-04 09:47:00.000000 openapify-0.1/openapify.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      594 2023-04-04 09:47:00.000000 openapify-0.1/openapify.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        1 2023-04-04 09:47:00.000000 openapify-0.1/openapify.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        1 2023-04-04 09:42:08.000000 openapify-0.1/openapify.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       42 2023-04-04 09:47:00.000000 openapify-0.1/openapify.egg-info/requires.txt
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       10 2023-04-04 09:47:00.000000 openapify-0.1/openapify.egg-info/top_level.txt
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      364 2023-03-17 15:32:02.000000 openapify-0.1/pyproject.toml
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       38 2023-04-04 09:47:00.475369 openapify-0.1/setup.cfg
+│ │ --rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     1097 2023-04-04 09:46:50.000000 openapify-0.1/setup.py
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.376541 openapify-0.1.1/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      732 2023-04-07 10:28:17.376418 openapify-0.1.1/PKG-INFO
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.373241 openapify-0.1.1/openapify/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      198 2023-04-03 17:00:50.000000 openapify-0.1.1/openapify/__init__.py
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.375168 openapify-0.1.1/openapify/core/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-03 13:14:57.000000 openapify-0.1.1/openapify/core/__init__.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     1115 2023-04-03 16:43:44.000000 openapify-0.1.1/openapify/core/apispec.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)    15113 2023-04-06 11:04:29.000000 openapify-0.1.1/openapify/core/builder.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       92 2023-03-20 20:50:13.000000 openapify-0.1.1/openapify/core/const.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      591 2023-04-03 13:10:22.000000 openapify-0.1.1/openapify/core/jsonschema.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     1730 2023-04-03 17:22:07.000000 openapify-0.1.1/openapify/core/models.py
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.375620 openapify-0.1.1/openapify/core/openapi/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-20 12:12:59.000000 openapify-0.1.1/openapify/core/openapi/__init__.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     5218 2023-04-04 09:34:10.000000 openapify-0.1.1/openapify/core/openapi/models.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     4724 2023-04-06 11:04:29.000000 openapify-0.1.1/openapify/decorators.py
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.375921 openapify-0.1.1/openapify/ext/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-17 15:48:32.000000 openapify-0.1.1/openapify/ext/__init__.py
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.376111 openapify-0.1.1/openapify/ext/web/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-18 09:45:46.000000 openapify-0.1.1/openapify/ext/web/__init__.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     4332 2023-04-03 13:47:08.000000 openapify-0.1.1/openapify/ext/web/aiohttp.py
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        0 2023-03-17 11:19:37.000000 openapify-0.1.1/openapify/py.typed
+│ │ +drwxr-xr-x   0 alexander.tikhonov   (503) staff       (20)        0 2023-04-07 10:28:17.373928 openapify-0.1.1/openapify.egg-info/
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      732 2023-04-07 10:28:17.000000 openapify-0.1.1/openapify.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      594 2023-04-07 10:28:17.000000 openapify-0.1.1/openapify.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        1 2023-04-07 10:28:17.000000 openapify-0.1.1/openapify.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)        1 2023-04-07 10:28:17.000000 openapify-0.1.1/openapify.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       42 2023-04-07 10:28:17.000000 openapify-0.1.1/openapify.egg-info/requires.txt
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       10 2023-04-07 10:28:17.000000 openapify-0.1.1/openapify.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)      364 2023-03-17 15:32:02.000000 openapify-0.1.1/pyproject.toml
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)       38 2023-04-07 10:28:17.376577 openapify-0.1.1/setup.cfg
+│ │ +-rw-r--r--   0 alexander.tikhonov   (503) staff       (20)     1099 2023-04-07 10:24:56.000000 openapify-0.1.1/setup.py
+│ │   --- openapify-0.1/PKG-INFO
+│ ├── +++ openapify-0.1.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: openapify
+│ │ -Version: 0.1
+│ │ +Version: 0.1.1
+│ │  Summary: Generate Open API Specification using decorators
+│ │  Author: Alexander Tikhonov
+│ │  Author-email: random.gauss@gmail.com
+│ │  License: Apache License, Version 2.0
+│ │  Platform: all
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- openapify-0.1/openapify/core/apispec.py
+│ ├── +++ openapify-0.1.1/openapify/core/apispec.py
+│ │┄ Files identical despite different names
+│ │   --- openapify-0.1/openapify/core/builder.py
+│ ├── +++ openapify-0.1.1/openapify/core/builder.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -9,18 +9,19 @@
+│ │      Sequence,
+│ │      Tuple,
+│ │      Type,
+│ │      Union,
+│ │      overload,
+│ │  )
+│ │  
+│ │ -from apispec import APISpec, BasePlugin
+│ │ +from apispec import BasePlugin
+│ │  from mashumaro.core.meta.helpers import type_name
+│ │  from typing_extensions import TypeAlias
+│ │  
+│ │ +from openapify.core.apispec import APISpec
+│ │  from openapify.core.jsonschema import build_json_schema
+│ │  from openapify.core.models import (
+│ │      Body,
+│ │      Cookie,
+│ │      Header,
+│ │      QueryParam,
+│ │      RouteDef,
+│ │ @@ -118,22 +119,26 @@
+│ │      def __init__(
+│ │          self,
+│ │          spec: Optional[APISpec] = None,
+│ │          title: str = "API",
+│ │          version: str = "1.0.0",
+│ │          openapi_version: str = "3.1.0",
+│ │          plugins: Sequence[BasePlugin] = (),
+│ │ +        servers: Optional[List[Union[str, openapi.Server]]] = None,
+│ │ +        security_schemes: Optional[Dict[str, openapi.SecurityScheme]] = None,
+│ │          **options: Any,
+│ │      ):
+│ │          if spec is None:
+│ │              spec = APISpec(
+│ │                  title=title,
+│ │                  version=version,
+│ │                  openapi_version=openapi_version,
+│ │                  plugins=plugins,
+│ │ +                servers=servers,
+│ │ +                security_schemes=security_schemes,
+│ │                  **options,
+│ │              )
+│ │          self.spec = spec
+│ │  
+│ │      def feed_routes(self, routes: Iterable[RouteDef]):
+│ │          for route in sorted(
+│ │              routes,
+│ │ @@ -188,24 +193,24 @@
+│ │                  cookies = args.get("cookies")
+│ │                  if cookies:
+│ │                      parameters.extend(self._build_cookies(cookies))
+│ │  
+│ │              elif args_type == "response":
+│ │                  args = args.copy()
+│ │                  http_code = args.pop("http_code")
+│ │ -                deprecated = args.pop("deprecated")
+│ │                  code_responses[http_code] = self._build_response(**args)
+│ │              elif args_type == "path_docs":
+│ │                  summary = args.get("summary")
+│ │                  description = args.get("description")
+│ │                  tags.extend(args.get("tags") or [])
+│ │                  _merge_parameters(parameters, args.get("parameters") or {})
+│ │                  external_docs = self._build_external_docs(
+│ │                      args.get("external_docs")
+│ │                  )
+│ │ +                deprecated = args.pop("deprecated")
+│ │              elif args_type == "security_requirements":
+│ │                  security = self._build_security_requirements(
+│ │                      args.get("requirements")
+│ │                  )
+│ │          self.spec.path(
+│ │              route.path,
+│ │              operations={
+│ │ @@ -406,19 +411,23 @@
+│ │      routes: Iterable[RouteDef],
+│ │      spec: Optional[APISpec] = None,
+│ │      *,
+│ │      title: str = "API",
+│ │      version: str = "1.0.0",
+│ │      openapi_version: str = "3.1.0",
+│ │      plugins: Sequence[BasePlugin] = (),
+│ │ +    servers: Optional[List[Union[str, openapi.Server]]] = None,
+│ │ +    security_schemes: Optional[Dict[str, openapi.SecurityScheme]] = None,
+│ │      **options: Any,
+│ │  ) -> APISpec:
+│ │      builder = OpenAPISpecBuilder(
+│ │          spec=spec,
+│ │          title=title,
+│ │          version=version,
+│ │          openapi_version=openapi_version,
+│ │          plugins=plugins,
+│ │ +        servers=servers,
+│ │ +        security_schemes=security_schemes,
+│ │          **options,
+│ │      )
+│ │      builder.feed_routes(routes)
+│ │      return builder.spec
+│ │   --- openapify-0.1/openapify/core/jsonschema.py
+│ ├── +++ openapify-0.1.1/openapify/core/jsonschema.py
+│ │┄ Files identical despite different names
+│ │   --- openapify-0.1/openapify/core/models.py
+│ ├── +++ openapify-0.1.1/openapify/core/models.py
+│ │┄ Files identical despite different names
+│ │   --- openapify-0.1/openapify/core/openapi/models.py
+│ ├── +++ openapify-0.1.1/openapify/core/openapi/models.py
+│ │┄ Files identical despite different names
+│ │   --- openapify-0.1/openapify/decorators.py
+│ ├── +++ openapify-0.1.1/openapify/decorators.py
+│ │┄ Ordering differences only
+│ │┄ Files 0% similar despite different names
+│ │ @@ -93,15 +93,14 @@
+│ │  
+│ │  def response_schema(
+│ │      schema: Type,
+│ │      http_code: HttpCode = 200,
+│ │      media_type: str = "application/json",
+│ │      description: Optional[str] = None,
+│ │      headers: Optional[Dict[str, Union[str, Header]]] = None,
+│ │ -    deprecated: Optional[bool] = None,
+│ │      example: Optional[Any] = None,
+│ │      examples: Optional[Dict[str, Union[Example, Any]]] = None,
+│ │  ):
+│ │      def decorator(handler):
+│ │          meta = getattr(handler, __openapify__, [])
+│ │          if not meta:
+│ │              handler.__openapify__ = meta
+│ │ @@ -110,15 +109,14 @@
+│ │                  "response",
+│ │                  {
+│ │                      "schema": schema,
+│ │                      "http_code": http_code,
+│ │                      "media_type": media_type,
+│ │                      "description": description,
+│ │                      "headers": headers,
+│ │ -                    "deprecated": deprecated,
+│ │                      "example": example,
+│ │                      "examples": examples,
+│ │                  },
+│ │              ),
+│ │          )
+│ │          return handler
+│ │  
+│ │ @@ -127,28 +125,30 @@
+│ │  
+│ │  def path_docs(
+│ │      summary: Optional[str] = None,
+│ │      description: Optional[str] = None,
+│ │      tags: Optional[Sequence[str]] = None,
+│ │      parameters: Optional[Dict[str, Union[str, Parameter]]] = None,
+│ │      external_docs: Optional[Union[str, Tuple[str, str]]] = None,
+│ │ +    deprecated: Optional[bool] = None,
+│ │  ):
+│ │      def decorator(handler):
+│ │          meta = getattr(handler, __openapify__, [])
+│ │          if not meta:
+│ │              handler.__openapify__ = meta
+│ │          meta.append(
+│ │              (
+│ │                  "path_docs",
+│ │                  {
+│ │                      "summary": summary,
+│ │                      "description": description,
+│ │                      "tags": tags,
+│ │                      "parameters": parameters,
+│ │                      "external_docs": external_docs,
+│ │ +                    "deprecated": deprecated,
+│ │                  },
+│ │              ),
+│ │          )
+│ │          return handler
+│ │  
+│ │      return decorator
+│ │   --- openapify-0.1/openapify/ext/web/aiohttp.py
+│ ├── +++ openapify-0.1.1/openapify/ext/web/aiohttp.py
+│ │┄ Files identical despite different names
+│ │   --- openapify-0.1/openapify.egg-info/PKG-INFO
+│ ├── +++ openapify-0.1.1/openapify.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: openapify
+│ │ -Version: 0.1
+│ │ +Version: 0.1.1
+│ │  Summary: Generate Open API Specification using decorators
+│ │  Author: Alexander Tikhonov
+│ │  Author-email: random.gauss@gmail.com
+│ │  License: Apache License, Version 2.0
+│ │  Platform: all
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Intended Audience :: Developers
+│ │   --- openapify-0.1/openapify.egg-info/SOURCES.txt
+│ ├── +++ openapify-0.1.1/openapify.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- openapify-0.1/setup.py
+│ ├── +++ openapify-0.1.1/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  #!/usr/bin/env python
+│ │  
+│ │  from setuptools import find_packages, setup
+│ │  
+│ │  setup(
+│ │      name="openapify",
+│ │ -    version="0.1",
+│ │ +    version="0.1.1",
+│ │      description="Generate Open API Specification using decorators",
+│ │      platforms="all",
+│ │      classifiers=[
+│ │          "License :: OSI Approved :: Apache Software License",
+│ │          "Intended Audience :: Developers",
+│ │          "Programming Language :: Python :: 3 :: Only",
+│ │          "Programming Language :: Python :: 3.7",
+│ │ @@ -22,14 +22,14 @@
+│ │      author="Alexander Tikhonov",
+│ │      author_email="random.gauss@gmail.com",
+│ │      packages=find_packages(include=("openapify", "openapify.*")),
+│ │      package_data={"openapify": ["py.typed"]},
+│ │      python_requires=">=3.7",
+│ │      install_requires=[
+│ │          "apispec",
+│ │ -        "mashumaro>=3.5",
+│ │ +        "mashumaro>=3.6",
+│ │      ],
+│ │      extras_require={
+│ │          "aiohttp": ["aiohttp"],
+│ │      },
+│ │      zip_safe=False,
+│ │  )
