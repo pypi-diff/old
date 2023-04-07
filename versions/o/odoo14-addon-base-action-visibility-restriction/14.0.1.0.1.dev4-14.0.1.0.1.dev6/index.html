@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev4-py3-none-any.whl.zip tmp/odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev6-py3-none-any.whl.zip --html versions/o/odoo14-addon-base-action-visibility-restriction/14.0.1.0.1.dev4-14.0.1.0.1.dev6/index.html --text versions/o/odoo14-addon-base-action-visibility-restriction/14.0.1.0.1.dev4-14.0.1.0.1.dev6/diff.txt --markdown versions/o/odoo14-addon-base-action-visibility-restriction/14.0.1.0.1.dev4-14.0.1.0.1.dev6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.3 KB</span></div>
+  <div><span class="source">tmp/odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev4-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev6-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">4.87 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>2<del>5</del>1<del>86</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>1<del>8</del></td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>2<ins>6</ins>1<ins>64</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>1<ins>9</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3936<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3936<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>572<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/__manifest__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>572<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/__manifest__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2775<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/i18n/base_action_visibility_restriction.pot</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2775<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/i18n/base_action_visibility_restriction.pot</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3090<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>07:34<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/i18n/it.po</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2000<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/ir_actions.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2000<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/ir_actions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>143<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/CONTRIBUTORS.rst</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>143<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/CONTRIBUTORS.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>328<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/DESCRIPTION.rst</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>328<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/DESCRIPTION.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/USAGE.rst</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/USAGE.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9455<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/static/description/icon.png</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9455<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/static/description/icon.png</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13469<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/static/description/index.html</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13469<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/static/description/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/tests/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2431<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/tests/test_base_action_visibility_restriction.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2431<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/tests/test_base_action_visibility_restriction.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/views/ir_actions_views.xml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1497<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo/addons/base_action_visibility_restriction/views/ir_actions_views.xml</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4517<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/METADATA</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4517<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/WHEEL</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/top_level.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>269</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<del>5</del><span class="dp">·</span><del>14</del>:<del>46</del><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/RECORD</td><td class="diffline">20 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>383</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-0<ins>7</ins><span class="dp">·</span><ins>07</ins>:<ins>34</ins><span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">1<del>8</del><span class="dp">·</span>files,<span class="dp">·</span>4<del>39</del>4<del>2</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>21<del>174</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>5<del>1</del>.<del>8</del>%</td><td class="diffline">21 </td><td class="diffpresent">1<ins>9</ins><span class="dp">·</span>files,<span class="dp">·</span>4<ins>71</ins>4<ins>6</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>21<ins>962</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>5<ins>3</ins>.<ins>4</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.61 KB</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 14 lines modified</td><td colspan="2">Offset 6, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/__manifest__.py</td><td class="diffline">6 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/__manifest__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">7 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/i18n/base_action_visibility_restriction.pot</td><td class="diffline">8 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/i18n/base_action_visibility_restriction.pot</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/i18n/it.po</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">13 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/ir_actions.py</td><td class="diffline">14 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/models/ir_actions.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">15 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/CONTRIBUTORS.rst</td><td class="diffline">16 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/readme/CONTRIBUTORS.rst</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 36, 20 lines modified</td><td colspan="2">Offset 39, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/tests/test_base_action_visibility_restriction.py</td><td class="diffline">39 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/tests/test_base_action_visibility_restriction.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">40 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/views/ir_actions_views.xml</td><td class="diffline">41 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo/addons/base_action_visibility_restriction/views/ir_actions_views.xml</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">42 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/METADATA</td><td class="diffline">43 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">44 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/WHEEL</td><td class="diffline">45 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">46 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/top_level.txt</td><td class="diffline">47 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">48 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/RECORD</td><td class="diffline">49 </td><td class="diffpresent">Filename:<span class="dp">·</span>odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">50 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">51 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">630 B</span></div>
+    <div><span class="source">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev4.dist-info/METADATA</span> vs.</div>
+    <div id="odoo--_addon_base_action_visibility_restriction---.-.-.-.-.dev-.dist-info-METADATA"><span class="source">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev6.dist-info/METADATA</span>
+      <a class="anchor" href="#odoo--_addon_base_action_visibility_restriction---.-.-.-.-.dev-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 0% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo14-addon-base-action-visibility-restriction</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>odoo14-addon-base-action-visibility-restriction</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>14.0.1.0.1.dev<del>4</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>14.0.1.0.1.dev<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Restrict<span class="dp">·</span>(with<span class="dp">·</span>groups)<span class="dp">·</span>action<span class="dp">·</span>visibilty</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Restrict<span class="dp">·</span>(with<span class="dp">·</span>groups)<span class="dp">·</span>action<span class="dp">·</span>visibilty</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/server-ux</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/OCA/server-ux</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>ForgeFlow,<span class="dp">·</span>Cetmix,<span class="dp">·</span>Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>ForgeFlow,<span class="dp">·</span>Cetmix,<span class="dp">·</span>Odoo<span class="dp">·</span>Community<span class="dp">·</span>Association<span class="dp">·</span>(OCA)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>support@odoo-community.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>AGPL-3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">3.05 KB</span></div>
+    <div><span class="source">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev4.dist-info/RECORD</span> vs.</div>
+    <div id="odoo--_addon_base_action_visibility_restriction---.-.-.-.-.dev-.dist-info-RECORD"><span class="source">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev6.dist-info/RECORD</span>
+      <a class="anchor" href="#odoo--_addon_base_action_visibility_restriction---.-.-.-.-.dev-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 9% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/README.rst,sha256=WRcQeTE2Igu7BO7hKnhg3JQh15JM9eFL5LWChepBxng,3936</td><td class="diffline">1 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/README.rst,sha256=WRcQeTE2Igu7BO7hKnhg3JQh15JM9eFL5LWChepBxng,3936</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21</td><td class="diffline">2 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/__manifest__.py,sha256=L2XLeJ3rKOI0yz-gRWk5CKLf8sLJaVF-bVvIuIi8Hlk,572</td><td class="diffline">3 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/__manifest__.py,sha256=L2XLeJ3rKOI0yz-gRWk5CKLf8sLJaVF-bVvIuIi8Hlk,572</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/i18n/base_action_visibility_restriction.pot,sha256=b3MplB-AVLbpPwxB3Va2puNLrEoZ1sxNMwpQnXhBmwY,2775</td><td class="diffline">4 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/i18n/base_action_visibility_restriction.pot,sha256=b3MplB-AVLbpPwxB3Va2puNLrEoZ1sxNMwpQnXhBmwY,2775</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/i18n/it.po,sha256=f6epkCFS-qkAD_9a8wRKDMcy5zVMGniF8HVpp3n-uvk,3090</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/models/__init__.py,sha256=g7nyg4c82IeB-LbxJTe429OMbLYGI4jbW-t9WH9Puxw,25</td><td class="diffline">6 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/models/__init__.py,sha256=g7nyg4c82IeB-LbxJTe429OMbLYGI4jbW-t9WH9Puxw,25</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/models/ir_actions.py,sha256=GfEJFrkPRYeufJxMbkMSS96AHRw6P7IXrRUDoGllVrA,2000</td><td class="diffline">7 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/models/ir_actions.py,sha256=GfEJFrkPRYeufJxMbkMSS96AHRw6P7IXrRUDoGllVrA,2000</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/readme/CONTRIBUTORS.rst,sha256=JLOCO5jIEuLt1UJOqEHVQDOax-HhEGuI6dAmqdktSAo,143</td><td class="diffline">8 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/readme/CONTRIBUTORS.rst,sha256=JLOCO5jIEuLt1UJOqEHVQDOax-HhEGuI6dAmqdktSAo,143</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/readme/DESCRIPTION.rst,sha256=jSYhPz-2M1HqeYsAktDIWA5ElnieOaz-1i8dhPBd8wg,328</td><td class="diffline">9 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/readme/DESCRIPTION.rst,sha256=jSYhPz-2M1HqeYsAktDIWA5ElnieOaz-1i8dhPBd8wg,328</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/readme/USAGE.rst,sha256=Zolt1SQZY6OrTc3sTWVWfoumk7UChbcizBVoEyreLBA,353</td><td class="diffline">10 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/readme/USAGE.rst,sha256=Zolt1SQZY6OrTc3sTWVWfoumk7UChbcizBVoEyreLBA,353</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455</td><td class="diffline">11 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/static/description/index.html,sha256=2PrEgnkfBw3Idk0i8Ks_wJ7iVG6IG8nMeYUfZRShrXw,13469</td><td class="diffline">12 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/static/description/index.html,sha256=2PrEgnkfBw3Idk0i8Ks_wJ7iVG6IG8nMeYUfZRShrXw,13469</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/tests/__init__.py,sha256=i6qZH6EGpqOShhlkOEQmxLKpw-93MwsJ0bKlskPmrF8,54</td><td class="diffline">13 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/tests/__init__.py,sha256=i6qZH6EGpqOShhlkOEQmxLKpw-93MwsJ0bKlskPmrF8,54</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/tests/test_base_action_visibility_restriction.py,sha256=ePqz-MRVFqTxvXeZdthpIVn1gZ1iuRM_e6B3CCspeC0,2431</td><td class="diffline">14 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/tests/test_base_action_visibility_restriction.py,sha256=ePqz-MRVFqTxvXeZdthpIVn1gZ1iuRM_e6B3CCspeC0,2431</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/views/ir_actions_views.xml,sha256=gt4knSXeSxvkMLWd6Z0hEavPsMUBfGLVczPg9GKLHAw,1497</td><td class="diffline">15 </td><td class="diffpresent">odoo/addons/base_action_visibility_restriction/views/ir_actions_views.xml,sha256=gt4knSXeSxvkMLWd6Z0hEavPsMUBfGLVczPg9GKLHAw,1497</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/METADATA,sha256=<del>TradBZcO4NoBmk</del>q<del>JILNb2YduJobc_HE5rAM5lechqw8</del>,4517</td><td class="diffline">16 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/METADATA,sha256=<ins>mG3Zs3Jy7IlasG</ins>q<ins>yfHnA50Uwfka0522CFwTOIHkplmU</ins>,4517</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td><td class="diffline">17 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td><td class="diffline">18 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<del>4</del>.dist-info/RECORD,,</td><td class="diffline">19 </td><td class="diffpresent">odoo14_addon_base_action_visibility_restriction-14.0.1.0.1.dev<ins>6</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

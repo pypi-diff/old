@@ -1,0 +1,356 @@
+--- tmp/PrSpiders-0.2.5.tar.gz
++++ tmp/PrSpiders-0.2.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "PrSpiders-0.2.5.tar", last modified: Thu Apr  6 01:43:11 2023, max compression
+│ +gzip compressed data, was "PrSpiders-0.2.6.tar", last modified: Fri Apr  7 07:28:59 2023, max compression
+│   --- PrSpiders-0.2.5.tar
+├── +++ PrSpiders-0.2.6.tar
+│ ├── file list
+│ │ @@ -1,35 +1,28 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.928791 PrSpiders-0.2.5/
+│ │ --rw-rw-rw-   0        0        0     1091 2023-02-21 09:22:44.000000 PrSpiders-0.2.5/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0     4511 2023-04-06 01:43:10.926790 PrSpiders-0.2.5/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.802795 PrSpiders-0.2.5/PrSpider/
+│ │ --rw-rw-rw-   0        0        0     7549 2023-04-06 01:42:48.000000 PrSpiders-0.2.5/PrSpider/PrSpiders.py
+│ │ --rw-rw-rw-   0        0        0       44 2023-03-28 05:34:05.000000 PrSpiders-0.2.5/PrSpider/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8967 2023-03-31 02:59:37.000000 PrSpiders-0.2.5/PrSpider/pxpath.py
+│ │ --rw-rw-rw-   0        0        0     3765 2023-03-28 05:32:27.000000 PrSpiders-0.2.5/PrSpider/requestXpath.py
+│ │ --rw-rw-rw-   0        0        0    11789 2023-02-22 08:11:29.000000 PrSpiders-0.2.5/PrSpider/useragent.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.827787 PrSpiders-0.2.5/PrSpiders.egg-info/
+│ │ --rw-rw-rw-   0        0        0     4511 2023-04-06 01:43:09.000000 PrSpiders-0.2.5/PrSpiders.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      628 2023-04-06 01:43:10.000000 PrSpiders-0.2.5/PrSpiders.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 01:43:09.000000 PrSpiders-0.2.5/PrSpiders.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       61 2023-04-06 01:43:09.000000 PrSpiders-0.2.5/PrSpiders.egg-info/entry_points.txt
+│ │ --rw-rw-rw-   0        0        0       40 2023-04-06 01:43:09.000000 PrSpiders-0.2.5/PrSpiders.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       38 2023-04-06 01:43:09.000000 PrSpiders-0.2.5/PrSpiders.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     3999 2023-03-30 07:25:40.000000 PrSpiders-0.2.5/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.829789 PrSpiders-0.2.5/pkg/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-31 06:28:23.000000 PrSpiders-0.2.5/pkg/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.845786 PrSpiders-0.2.5/pkg/prspider/
+│ │ --rw-rw-rw-   0        0        0     1164 2023-03-31 06:31:43.000000 PrSpiders-0.2.5/pkg/prspider/PrSpider_CMD.py
+│ │ --rw-rw-rw-   0        0        0      259 2023-03-31 06:17:29.000000 PrSpiders-0.2.5/pkg/prspider/PrSpider_run.py
+│ │ --rw-rw-rw-   0        0        0       73 2023-03-31 05:29:27.000000 PrSpiders-0.2.5/pkg/prspider/__init__.py
+│ │ --rw-rw-rw-   0        0        0      492 2023-03-31 06:15:13.000000 PrSpiders-0.2.5/pkg/prspider/start.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.873796 PrSpiders-0.2.5/requestXpath/
+│ │ --rw-rw-rw-   0        0        0      933 2023-03-23 08:11:59.000000 PrSpiders-0.2.5/requestXpath/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8883 2023-03-22 07:44:13.000000 PrSpiders-0.2.5/requestXpath/pxpath.py
+│ │ --rw-rw-rw-   0        0        0     4210 2023-03-23 08:11:59.000000 PrSpiders-0.2.5/requestXpath/requestXpath.py
+│ │ --rw-rw-rw-   0        0        0    11789 2023-02-22 08:11:29.000000 PrSpiders-0.2.5/requestXpath/useragent.py
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 01:43:10.928791 PrSpiders-0.2.5/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1020 2023-04-06 01:42:48.000000 PrSpiders-0.2.5/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 01:43:10.912792 PrSpiders-0.2.5/table_parse/
+│ │ --rw-rw-rw-   0        0        0   282891 2023-03-22 06:00:42.000000 PrSpiders-0.2.5/table_parse/T.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-22 06:03:34.000000 PrSpiders-0.2.5/table_parse/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3005 2023-03-22 08:01:31.000000 PrSpiders-0.2.5/table_parse/tb_parse.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 07:28:59.701983 PrSpiders-0.2.6/
+│ │ +-rw-rw-rw-   0        0        0     1091 2023-02-21 09:22:44.000000 PrSpiders-0.2.6/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0     4511 2023-04-07 07:28:59.699984 PrSpiders-0.2.6/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 07:28:59.619987 PrSpiders-0.2.6/PrSpider/
+│ │ +-rw-rw-rw-   0        0        0     8777 2023-04-07 07:28:46.000000 PrSpiders-0.2.6/PrSpider/PrSpiders.py
+│ │ +-rw-rw-rw-   0        0        0       44 2023-03-28 05:34:05.000000 PrSpiders-0.2.6/PrSpider/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    10988 2023-04-07 07:28:46.000000 PrSpiders-0.2.6/PrSpider/pxpath.py
+│ │ +-rw-rw-rw-   0        0        0     3995 2023-04-07 07:28:46.000000 PrSpiders-0.2.6/PrSpider/requestXpath.py
+│ │ +-rw-rw-rw-   0        0        0    11789 2023-02-22 08:11:29.000000 PrSpiders-0.2.6/PrSpider/useragent.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 07:28:59.666981 PrSpiders-0.2.6/PrSpiders.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     4511 2023-04-07 07:28:59.000000 PrSpiders-0.2.6/PrSpiders.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      507 2023-04-07 07:28:59.000000 PrSpiders-0.2.6/PrSpiders.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 07:28:59.000000 PrSpiders-0.2.6/PrSpiders.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       61 2023-04-07 07:28:59.000000 PrSpiders-0.2.6/PrSpiders.egg-info/entry_points.txt
+│ │ +-rw-rw-rw-   0        0        0       40 2023-04-07 07:28:59.000000 PrSpiders-0.2.6/PrSpiders.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       34 2023-04-07 07:28:59.000000 PrSpiders-0.2.6/PrSpiders.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     3999 2023-03-30 07:25:40.000000 PrSpiders-0.2.6/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 07:28:59.684984 PrSpiders-0.2.6/requestXpath/
+│ │ +-rw-rw-rw-   0        0        0      933 2023-03-23 08:11:59.000000 PrSpiders-0.2.6/requestXpath/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8883 2023-03-22 07:44:13.000000 PrSpiders-0.2.6/requestXpath/pxpath.py
+│ │ +-rw-rw-rw-   0        0        0     4210 2023-03-23 08:11:59.000000 PrSpiders-0.2.6/requestXpath/requestXpath.py
+│ │ +-rw-rw-rw-   0        0        0    11789 2023-02-22 08:11:29.000000 PrSpiders-0.2.6/requestXpath/useragent.py
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 07:28:59.701983 PrSpiders-0.2.6/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1020 2023-04-07 07:28:46.000000 PrSpiders-0.2.6/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 07:28:59.695989 PrSpiders-0.2.6/table_parse/
+│ │ +-rw-rw-rw-   0        0        0   282891 2023-03-22 06:00:42.000000 PrSpiders-0.2.6/table_parse/T.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-22 06:03:34.000000 PrSpiders-0.2.6/table_parse/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3005 2023-03-22 08:01:31.000000 PrSpiders-0.2.6/table_parse/tb_parse.py
+│ │   --- PrSpiders-0.2.5/LICENSE.txt
+│ ├── +++ PrSpiders-0.2.6/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/PKG-INFO
+│ ├── +++ PrSpiders-0.2.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: PrSpiders
+│ │ -Version: 0.2.5
+│ │ +Version: 0.2.6
+│ │  Summary: Inherit the requests module, add xpath functionality to expand the API, and handle request failures and retries
+│ │  Home-page: https://github.com/peng0928/prequests
+│ │  Author: penr
+│ │  Author-email: 1944542244@qq.com
+│ │  License: MIT
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │   --- PrSpiders-0.2.5/PrSpider/PrSpiders.py
+│ ├── +++ PrSpiders-0.2.6/PrSpider/PrSpiders.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -46,31 +46,65 @@
+│ │      def start_requests(cls, **kwargs):
+│ │          if isinstance(cls.start_urls, str):
+│ │              cls.start_urls = [cls.start_urls]
+│ │          url_dim_list = [cls.start_urls[i:i + cls.download_num]
+│ │                          for i in range(0, len(cls.start_urls), cls.download_num)]
+│ │          for u in url_dim_list:
+│ │              time.sleep(cls.download_delay)
+│ │ -            cls.SpiderPool(callback=cls.parse,
+│ │ -                           url=u, **kwargs)
+│ │ +            cls.Requests(callback=cls.parse,
+│ │ +                         url=u, **kwargs)
+│ │ +
+│ │ +    @classmethod
+│ │ +    def RequestsMap(cls, request=None, callback=None, headers=None, retry_time=3, method='GET', meta=None,
+│ │ +                    encoding='utf-8', retry_interval=1, timeout=10, **kwargs):
+│ │ +        futures = []
+│ │ +        if isinstance(request, str):
+│ │ +            raise AttributeError(
+│ │ +                "Requests object must be list")
+│ │ +        else:
+│ │ +            url_dim_list = [request[i:i + cls.download_num]
+│ │ +                            for i in range(0, len(request), cls.download_num)]
+│ │ +            for u in url_dim_list:
+│ │ +                time.sleep(cls.download_delay)
+│ │ +                for _u in u:
+│ │ +                    url = _u.get('url')
+│ │ +                    data = _u.get('data', None)
+│ │ +                    params = _u.get('params', None)
+│ │ +                    meta = _u.get('meta', None)
+│ │ +                    kwargs.update({"data": data})
+│ │ +                    kwargs.update({"params": params})
+│ │ +                    futures.append(
+│ │ +                        ThreadPoolExecutor(cls.workers).submit(cls.fetch, url=url, callback=callback, headers=headers,
+│ │ +                                                               timeout=timeout,
+│ │ +                                                               retry_time=retry_time,
+│ │ +                                                               method=method, meta=meta, encoding=encoding,
+│ │ +                                                               retry_interval=retry_interval, **kwargs))
+│ │ +
+│ │ +                for future in as_completed(futures):
+│ │ +                    worker_exception = future.exception()
+│ │ +                    if worker_exception:
+│ │ +                        current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+│ │ +                        logging.exception(
+│ │ +                            f'{current_time} [PrSpider Exception] %s' % worker_exception)
+│ │  
+│ │      @classmethod
+│ │      def Requests(cls, url=None, callback=None, headers=None, retry_time=3, method='GET', meta=None,
+│ │                   encoding='utf-8', retry_interval=1, timeout=10, **kwargs, ):
+│ │          futures = []
+│ │          if isinstance(url, str):
+│ │              url = [url]
+│ │          if len(url) > 10:
+│ │              url_dim_list = [url[i:i + cls.download_num]
+│ │                              for i in range(0, len(url), cls.download_num)]
+│ │              for u in url_dim_list:
+│ │                  time.sleep(cls.download_delay)
+│ │                  for _u in u:
+│ │                      futures.append(
+│ │ -                        ThreadPoolExecutor(cls.workers).submit(cls.fetch, url=_u, callback=callback, headers=headers, timeout=timeout,
+│ │ +                        ThreadPoolExecutor(cls.workers).submit(cls.fetch, url=_u, callback=callback, headers=headers,
+│ │ +                                                               timeout=timeout,
+│ │                                                                 retry_time=retry_time,
+│ │                                                                 method=method, meta=meta, encoding=encoding,
+│ │                                                                 retry_interval=retry_interval, **kwargs))
+│ │          else:
+│ │              for _url in url:
+│ │                  futures.append(
+│ │                      ThreadPoolExecutor(cls.workers).submit(cls.fetch, url=_url, callback=callback, headers=headers,
+│ │ @@ -81,44 +115,29 @@
+│ │              worker_exception = future.exception()
+│ │              if worker_exception:
+│ │                  current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+│ │                  logging.exception(
+│ │                      f'{current_time} [PrSpider Exception] %s' % worker_exception)
+│ │  
+│ │      @classmethod
+│ │ -    def SpiderPool(cls, callback=None, url=None, **kwargs):
+│ │ -        futures = []
+│ │ -        if isinstance(url, str):
+│ │ -            url = [url]
+│ │ -        for _url in url:
+│ │ -            futures.append(
+│ │ -                ThreadPoolExecutor(cls.workers).submit(cls.fetch, url=_url, callback=callback, **kwargs))
+│ │ -        for future in as_completed(futures):
+│ │ -            worker_exception = future.exception()
+│ │ -            if worker_exception:
+│ │ -                current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+│ │ -                logging.exception(
+│ │ -                    f'{current_time} [PrSpider Exception] %s' % worker_exception)
+│ │ -
+│ │ -    @classmethod
+│ │      def fetch(self, url, callback, headers=None, retry_time=3, method='GET', meta=None,
+│ │                encoding='utf-8', retry_interval=1, timeout=3, **kwargs):
+│ │          settions.request_num += 1
+│ │          current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+│ │          time.sleep(self.download_delay)
+│ │          response = prequest().get(url, headers=headers, retry_time=retry_time, method=method, meta=meta,
+│ │ -                                      encoding=encoding, retry_interval=retry_interval, timeout=timeout,
+│ │ -                                      settion=settions, **kwargs, )
+│ │ +                                  encoding=encoding, retry_interval=retry_interval, timeout=timeout,
+│ │ +                                  settion=settions, **kwargs)
+│ │          if response:
+│ │              if response.ok:
+│ │                  settions.success_num += 1
+│ │                  logging.info(
+│ │                      f'{current_time} [PrSpider] True [Method] {method} [Status] {response.code} [Url] {url}')
+│ │ -                callback(response)
+│ │ -                return self
+│ │ +            callback(response)
+│ │ +            return self
+│ │          else:
+│ │              settions.false_num += 1
+│ │              if response:
+│ │                  logging.error(
+│ │                      f'{current_time} [PrSpider] False [Method] {method} [Status] {response.code} [Url] {url}')
+│ │              else:
+│ │                  logging.error(
+│ │   --- PrSpiders-0.2.5/PrSpider/pxpath.py
+│ ├── +++ PrSpiders-0.2.6/requestXpath/pxpath.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  from urllib.parse import urljoin
+│ │  import re, time, logging, copy
+│ │  from lxml import etree
+│ │  from datetime import timedelta, datetime
+│ │  from table_parse import tb_parse
+│ │ -import unicodedata
+│ │ +
+│ │  
+│ │  class Xpath(object):
+│ │      def __init__(self, response, encoding='utf-8'):
+│ │          if isinstance(response, str):
+│ │              self.res = etree.HTML(response)
+│ │          else:
+│ │              response.encoding = encoding
+│ │ @@ -143,17 +143,17 @@
+│ │              result = parse_time(data, rule)
+│ │              result = result if result else None
+│ │              return result
+│ │  
+│ │      def replace(self, str):
+│ │          result = re.sub(r'(\\u[a-zA-Z0-9]{4})', lambda x: x.group(
+│ │              1).encode("utf-8").decode("unicode-escape"), str)
+│ │ -        result = re.sub(r'(\\r|\\n|\\t|\xa0|\\u[0-9]{4})', lambda x: '', result)
+│ │ -        result = unicodedata.normalize('NFKC', result)
+│ │ +        result = re.sub(r'(\\r|\\n|\\t|\xa0)', lambda x: '', result)
+│ │          return result.strip()
+│ │ +
+│ │      def process_text(self, obj, character=True, is_list=False):
+│ │          try:
+│ │              obj = [self.replace(i) for i in obj]
+│ │              obj = [i for i in obj if len(i) > 0]
+│ │              if is_list:
+│ │                  return obj
+│ │              character = '\n' if character else ''
+│ │   --- PrSpiders-0.2.5/PrSpider/requestXpath.py
+│ ├── +++ PrSpiders-0.2.6/PrSpider/requestXpath.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -70,20 +70,19 @@
+│ │                  self.response.encoding = encoding
+│ │                  if self.response.status_code == 200:
+│ │                      return self
+│ │                  else:
+│ │                      raise Exception(f'Respider {self.retry_interval}s')
+│ │              except Exception as e:
+│ │                  logging.error('%s [ERRORS] [Url] %s [Msg] %s' % (self.current_time, url, e))
+│ │ -                if settion.retry is False:
+│ │ -                    return None
+│ │                  logging.info('[Retry Url] %s [Interval] %ss' % (url, retry_interval))
+│ │                  retry_time -= 1
+│ │ -                if retry_time <= 0:
+│ │ -                    return None
+│ │ +                if retry_time <= 0 or settion.retry is False:
+│ │ +                    self.response.status_code = 405
+│ │ +                    return self
+│ │                  time.sleep(retry_interval)
+│ │  
+│ │      @property
+│ │      def text(self):
+│ │          return self.response.text
+│ │  
+│ │      @property
+│ │ @@ -117,18 +116,23 @@
+│ │      @property
+│ │      def tree(self):
+│ │          return Xpath(self.response.text)
+│ │  
+│ │      def xpath(self, xpath_str, **kwargs):
+│ │          return Xpath(self.response.text).xpath(xpath_str, **kwargs)
+│ │  
+│ │ +    def xxpath(self, xpath_str, **kwargs):
+│ │ +        return Xpath(self.response.text).xxpath(xpath_str, **kwargs)
+│ │ +
+│ │      @property
+│ │      def ok(self):
+│ │          return self.response.ok
+│ │  
+│ │      @property
+│ │      def meta(self):
+│ │          return self.meta_
+│ │  
+│ │ -
+│ │      def close(self):
+│ │ -        self.response.close()
+│ │ +        self.response.close()
+│ │ +
+│ │ +    def __str__(self) -> str:
+│ │ +        return f"<{type(self).__name__} code={self.code} len={self.get_len}>"
+│ │   --- PrSpiders-0.2.5/PrSpider/useragent.py
+│ ├── +++ PrSpiders-0.2.6/PrSpider/useragent.py
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/PrSpiders.egg-info/PKG-INFO
+│ ├── +++ PrSpiders-0.2.6/PrSpiders.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: PrSpiders
+│ │ -Version: 0.2.5
+│ │ +Version: 0.2.6
+│ │  Summary: Inherit the requests module, add xpath functionality to expand the API, and handle request failures and retries
+│ │  Home-page: https://github.com/peng0928/prequests
+│ │  Author: penr
+│ │  Author-email: 1944542244@qq.com
+│ │  License: MIT
+│ │  Classifier: Programming Language :: Python :: 3.6
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │   --- PrSpiders-0.2.5/README.md
+│ ├── +++ PrSpiders-0.2.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/requestXpath/__init__.py
+│ ├── +++ PrSpiders-0.2.6/requestXpath/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/requestXpath/requestXpath.py
+│ ├── +++ PrSpiders-0.2.6/requestXpath/requestXpath.py
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/requestXpath/useragent.py
+│ ├── +++ PrSpiders-0.2.6/requestXpath/useragent.py
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/setup.py
+│ ├── +++ PrSpiders-0.2.6/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  #!python
+│ │  # -*- coding:utf-8 -*-
+│ │  from __future__ import print_function
+│ │  from setuptools import setup, find_packages
+│ │ -__version__ = '0.2.5'
+│ │ +__version__ = '0.2.6'
+│ │  
+│ │  with open("README.md", "r", encoding='utf-8') as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setup(
+│ │      name="PrSpiders",
+│ │      version=__version__,
+│ │   --- PrSpiders-0.2.5/table_parse/T.py
+│ ├── +++ PrSpiders-0.2.6/table_parse/T.py
+│ │┄ Files identical despite different names
+│ │   --- PrSpiders-0.2.5/table_parse/tb_parse.py
+│ ├── +++ PrSpiders-0.2.6/table_parse/tb_parse.py
+│ │┄ Files identical despite different names

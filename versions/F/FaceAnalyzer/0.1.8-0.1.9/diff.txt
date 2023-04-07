@@ -1,0 +1,881 @@
+--- tmp/FaceAnalyzer-0.1.8.tar.gz
++++ tmp/FaceAnalyzer-0.1.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "FaceAnalyzer-0.1.8.tar", last modified: Tue Dec 21 23:44:30 2021, max compression
+│ +gzip compressed data, was "FaceAnalyzer-0.1.9.tar", last modified: Fri Dec 24 00:43:57 2021, max compression
+│   --- FaceAnalyzer-0.1.8.tar
+├── +++ FaceAnalyzer-0.1.9.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxrwxrwx   0        0        0        0 2021-12-21 23:44:30.241166 FaceAnalyzer-0.1.8/
+│ │ -drwxrwxrwx   0        0        0        0 2021-12-21 23:44:30.223161 FaceAnalyzer-0.1.8/FaceAnalyzer/
+│ │ --rw-rw-rw-   0        0        0    50290 2021-12-21 23:07:42.000000 FaceAnalyzer-0.1.8/FaceAnalyzer/Face.py
+│ │ --rw-rw-rw-   0        0        0     3753 2021-12-12 14:14:34.000000 FaceAnalyzer-0.1.8/FaceAnalyzer/FaceAnalyzer.py
+│ │ --rw-rw-rw-   0        0        0    12987 2021-12-16 22:13:56.000000 FaceAnalyzer-0.1.8/FaceAnalyzer/Helpers.py
+│ │ --rw-rw-rw-   0        0        0      801 2021-12-12 22:52:34.000000 FaceAnalyzer-0.1.8/FaceAnalyzer/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2021-12-21 23:44:30.240165 FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/
+│ │ --rw-rw-rw-   0        0        0     7054 2021-12-21 23:44:29.000000 FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      296 2021-12-21 23:44:30.000000 FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2021-12-21 23:44:29.000000 FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       50 2021-12-21 23:44:29.000000 FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       13 2021-12-21 23:44:29.000000 FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     7054 2021-12-21 23:44:30.241166 FaceAnalyzer-0.1.8/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     5560 2021-12-21 21:44:49.000000 FaceAnalyzer-0.1.8/README.md
+│ │ --rw-rw-rw-   0        0        0       42 2021-12-21 23:44:30.242166 FaceAnalyzer-0.1.8/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1097 2021-12-21 23:41:54.000000 FaceAnalyzer-0.1.8/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2021-12-24 00:43:57.761125 FaceAnalyzer-0.1.9/
+│ │ +drwxrwxrwx   0        0        0        0 2021-12-24 00:43:57.725117 FaceAnalyzer-0.1.9/FaceAnalyzer/
+│ │ +-rw-rw-rw-   0        0        0    52920 2021-12-23 23:12:53.000000 FaceAnalyzer-0.1.9/FaceAnalyzer/Face.py
+│ │ +-rw-rw-rw-   0        0        0     3753 2021-12-12 14:14:34.000000 FaceAnalyzer-0.1.9/FaceAnalyzer/FaceAnalyzer.py
+│ │ +-rw-rw-rw-   0        0        0    12987 2021-12-16 22:13:56.000000 FaceAnalyzer-0.1.9/FaceAnalyzer/Helpers.py
+│ │ +-rw-rw-rw-   0        0        0      801 2021-12-12 22:52:34.000000 FaceAnalyzer-0.1.9/FaceAnalyzer/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2021-12-24 00:43:57.760125 FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     9465 2021-12-24 00:43:57.000000 FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      296 2021-12-24 00:43:57.000000 FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2021-12-24 00:43:57.000000 FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       50 2021-12-24 00:43:57.000000 FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       13 2021-12-24 00:43:57.000000 FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     9465 2021-12-24 00:43:57.761125 FaceAnalyzer-0.1.9/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     7827 2021-12-24 00:27:50.000000 FaceAnalyzer-0.1.9/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2021-12-24 00:43:57.762126 FaceAnalyzer-0.1.9/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1097 2021-12-24 00:41:11.000000 FaceAnalyzer-0.1.9/setup.py
+│ │   --- FaceAnalyzer-0.1.8/FaceAnalyzer/Face.py
+│ ├── +++ FaceAnalyzer-0.1.9/FaceAnalyzer/Face.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -10,14 +10,15 @@
+│ │  
+│ │  import re
+│ │  from typing import NamedTuple, Tuple
+│ │  import numpy as np
+│ │  import mediapipe as mp
+│ │  import cv2
+│ │  from numpy import linalg
+│ │ +from numpy.lib.type_check import imag
+│ │  from scipy.signal import butter, filtfilt
+│ │  import math
+│ │  import time
+│ │  from PIL import Image
+│ │  from scipy.spatial import Delaunay
+│ │  from scipy.spatial.transform import Rotation as R
+│ │  
+│ │ @@ -317,61 +318,61 @@
+│ │          Returns:
+│ │              float: The width of the left eye
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │ -        p1 = self.getlandmark_pos(self.left_eye_contour_indices[2])
+│ │ -        p2 = self.getlandmark_pos(self.left_eye_contour_indices[0])
+│ │ +        p1 = self.get_landmark_pos(self.left_eye_contour_indices[2])
+│ │ +        p2 = self.get_landmark_pos(self.left_eye_contour_indices[0])
+│ │          return np.abs(p2[0] - p1[0])
+│ │  
+│ │      def get_left_eye_height(self):
+│ │          """Gets the left eye height
+│ │  
+│ │          Returns:
+│ │              float: The height of the left eye
+│ │          """        
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │ -        p1 = self.getlandmark_pos(self.left_eye_contour_indices[3])
+│ │ -        p2 = self.getlandmark_pos(self.left_eye_contour_indices[1])
+│ │ +        p1 = self.get_landmark_pos(self.left_eye_contour_indices[3])
+│ │ +        p2 = self.get_landmark_pos(self.left_eye_contour_indices[1])
+│ │          return np.abs(p2[1] - p1[1])
+│ │  
+│ │      def get_right_eye_width(self):
+│ │          """Gets the right eye width
+│ │  
+│ │          Returns:
+│ │              float: The width of the right eye
+│ │          """        
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │ -        p1 = self.getlandmark_pos(self.right_eye_contour_indices[2])
+│ │ -        p2 = self.getlandmark_pos(self.right_eye_contour_indices[0])
+│ │ +        p1 = self.get_landmark_pos(self.right_eye_contour_indices[2])
+│ │ +        p2 = self.get_landmark_pos(self.right_eye_contour_indices[0])
+│ │          return np.abs(p2[0] - p1[0])
+│ │  
+│ │      def get_right_eye_height(self):
+│ │          """Gets the right eye height
+│ │  
+│ │          Returns:
+│ │              float: The height of the left eye
+│ │          """        
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │ -        p1 = self.getlandmark_pos(self.right_eye_contour_indices[3])
+│ │ -        p2 = self.getlandmark_pos(self.right_eye_contour_indices[1])
+│ │ +        p1 = self.get_landmark_pos(self.right_eye_contour_indices[3])
+│ │ +        p2 = self.get_landmark_pos(self.right_eye_contour_indices[1])
+│ │          return np.abs(p2[1] - p1[1])
+│ │  
+│ │ -    def getlandmark_pos(self, index) -> Tuple:
+│ │ +    def get_landmark_pos(self, index) -> Tuple:
+│ │          """Recovers the position of a landmark from a results array
+│ │  
+│ │          Args:
+│ │              index (int): Index of the landmark to recover
+│ │  
+│ │          Returns:
+│ │              Tuple: Landmark 3D position in image space
+│ │ @@ -380,29 +381,54 @@
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │          lm = self.npLandmarks[index, ...]
+│ │          return np.array([lm[0], lm[1], lm[2]])
+│ │  
+│ │  
+│ │ -    def getlandmarks_pos(self, indices: list) -> np.ndarray:
+│ │ +
+│ │ +    def get_landmarks_pos(self, indices: list) -> np.ndarray:
+│ │          """Recovers the position of a landmark from a results array
+│ │  
+│ │          Args:
+│ │              indices (list): List of indices of landmarks to extract
+│ │  
+│ │          Returns:
+│ │              np.ndarray: A nX3 array where n is the number of landmarks to be extracted and 3 are the 3 cartesian coordinates
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │          return self.npLandmarks[indices,...]
+│ │  
+│ │ +    def get_realigned_landmarks_pos(self, indices: list=None) -> np.ndarray:
+│ │ +        """Returns a realigned version of the landmarks such that the head top is exactly in the center top and the chin is in the center  bottom
+│ │ +
+│ │ +        Args:
+│ │ +            indices (list): Indices of the landmarks to extract. Defaults to None, which means all landmarks
+│ │ +
+│ │ +        Returns:
+│ │ +            np.ndarray: A realigned landmars vector of form nX3
+│ │ +        """
+│ │ +        # Correct orientation
+│ │ +        vertices = self.npLandmarks.copy()
+│ │ +        up=vertices[10,:2]
+│ │ +        chin=vertices[152,:2]
+│ │ +        center = (up+chin)/2
+│ │ +        vertical_line=up-chin
+│ │ +        angle=np.arctan2(vertical_line[1],vertical_line[0]) + np.pi/2
+│ │ +        R = np.array([[np.cos(angle), -np.sin(angle)], [np.sin(angle), np.cos(angle)]])
+│ │ +        centered = (vertices[:,:2]-center[None,:])
+│ │ +        vertices[:,:2] = (centered@R)+center
+│ │ +        if indices is not None:
+│ │ +            return vertices[indices,:]
+│ │ +        else:
+│ │ +            return vertices
+│ │ +
+│ │      def draw_landmark_by_index(self, image: np.ndarray, index: int, color: tuple = (255, 0, 0), radius: int = 5, thickness:int=1) -> np.ndarray:
+│ │          """Draw a landmark on an image from landmark index
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): Image to draw the landmark on
+│ │              index (int): Index of the landmark
+│ │              color (tuple, optional): Color of the landmark. Defaults to (255, 0, 0).
+│ │ @@ -414,28 +440,31 @@
+│ │          """
+│ │          pos = self.npLandmarks[index,:]
+│ │          return cv2.circle(
+│ │              image,(int(pos[0]), int(pos[1])), radius, color, thickness
+│ │          )
+│ │  
+│ │  
+│ │ -    def draw_landmarks(self, image: np.ndarray, landmarks: np.ndarray, radius:int=1, color: tuple = (255, 0, 0), thickness: int = 1, link=False) -> np.ndarray:
+│ │ +    def draw_landmarks(self, image: np.ndarray, landmarks: np.ndarray=None, radius:int=1, color: tuple = (255, 0, 0), thickness: int = 1, link=False) -> np.ndarray:
+│ │          """Draw a list of landmarks on an image
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): Image to draw the contour on
+│ │ -            landmarks (np.ndarray): a nX3 ndarray containing the positions of the landmarks
+│ │ +            landmarks (np.ndarray): a nX3 ndarray containing the positions of the landmarks. Defaults to None (use all landmarks).
+│ │              radius (int, optional): Radius of the circle to draw the landmark. Defaults to 5.
+│ │              color (tuple, optional): Color of the landmark. Defaults to (255, 0, 0).
+│ │              thickness (int, optional): Thickness of the line to draw the landmark. Defaults to 5.
+│ │  
+│ │  
+│ │          Returns:
+│ │              np.ndarray: The image with the contour drawn on it
+│ │          """
+│ │ +        if landmarks is None:
+│ │ +            landmarks = self.npLandmarks
+│ │ +            
+│ │          lm_l=landmarks.shape[0]
+│ │          for i in range(lm_l):
+│ │              image = cv2.circle(image, (int(landmarks[i,0]), int(landmarks[i,1])), radius,color, thickness)
+│ │              if link:
+│ │                  image = cv2.line(image, (int(landmarks[i,0]), int(landmarks[i,1])),(int(landmarks[(i+1)%lm_l,0]), int(landmarks[(i+1)%lm_l,1])),color, thickness)
+│ │          return image
+│ │  
+│ │ @@ -486,15 +515,15 @@
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │  
+│ │  
+│ │          pImage = Image.fromarray(image)
+│ │ -        pos = self.getlandmark_pos(self.left_eye_center_index)[0:2]
+│ │ +        pos = self.get_landmark_pos(self.left_eye_center_index)[0:2]
+│ │  
+│ │          w = int(self.get_left_eye_width())
+│ │          h = int(self.get_left_eye_height())
+│ │  
+│ │          if w > 0 and h > 0:
+│ │              overlay_ = overlay.resize((w, h), Image.ANTIALIAS)
+│ │              x = int(pos[0] - overlay_.size[0] / 2)
+│ │ @@ -513,15 +542,15 @@
+│ │              np.ndarray: The image with the overlay drawn
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │          pImage = Image.fromarray(image)
+│ │ -        pos = self.getlandmark_pos(self.right_eye_center_index)[0:2]
+│ │ +        pos = self.get_landmark_pos(self.right_eye_center_index)[0:2]
+│ │  
+│ │          w = int(self.get_right_eye_width())
+│ │          h = int(self.get_right_eye_height())
+│ │  
+│ │          if w > 0 and h > 0:
+│ │              overlay_ = overlay.resize((w, h), Image.ANTIALIAS)
+│ │              x = int(pos[0] - overlay_.size[0] / 2)
+│ │ @@ -572,34 +601,34 @@
+│ │              tuple: (left_pos, right_pos) the iris position inside the eye 
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │          # Left eye
+│ │ -        iris = np.array(self.getlandmark_pos(Face.left_eye_center_index))
+│ │ +        iris = np.array(self.get_landmark_pos(Face.left_eye_center_index))
+│ │          
+│ │ -        left = np.array(self.getlandmark_pos(263))
+│ │ -        right = np.array(self.getlandmark_pos(362))
+│ │ +        left = np.array(self.get_landmark_pos(263))
+│ │ +        right = np.array(self.get_landmark_pos(362))
+│ │  
+│ │          center = (left+right)/2
+│ │          ex = left-right
+│ │          ex[2]=0
+│ │          nx = np.linalg.norm(ex)
+│ │          ex /=nx
+│ │  
+│ │          ey = np.cross(ex,np.array([0,0,1]))
+│ │  
+│ │  
+│ │          left_pos = np.array([np.dot((iris-center),ex)/nx,np.dot((iris-center),ey)/nx])
+│ │  
+│ │          # right
+│ │ -        iris = np.array(self.getlandmark_pos(Face.right_eye_center_index))
+│ │ -        left = np.array(self.getlandmark_pos(133))
+│ │ -        right = np.array(self.getlandmark_pos(130))
+│ │ +        iris = np.array(self.get_landmark_pos(Face.right_eye_center_index))
+│ │ +        left = np.array(self.get_landmark_pos(133))
+│ │ +        right = np.array(self.get_landmark_pos(130))
+│ │  
+│ │          center = (left+right)/2
+│ │          ex = left-right
+│ │          nx = np.linalg.norm(ex)
+│ │          ex /=nx
+│ │          nx/=2
+│ │  
+│ │ @@ -634,15 +663,15 @@
+│ │              int: The distance between the two eyes
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │  
+│ │ -        pos = self.getlandmarks_pos([self.left_eye_center_index, self.right_eye_center_index])
+│ │ +        pos = self.get_landmarks_pos([self.left_eye_center_index, self.right_eye_center_index])
+│ │          return np.linalg.norm(pos[1,:]-pos[0,:])
+│ │  
+│ │      def process_eyes(self, image: np.ndarray, detect_blinks: bool = False, blink_th:float=5, blinking_double_threshold_factor:float=1.05)->tuple:
+│ │          """Process eye information and extract eye opening value, normalized eye opening and detect blinks
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): Image to draw on when landmarks are to be drawn
+│ │ @@ -656,49 +685,49 @@
+│ │              left_eye_opening, right_eye_opening if blinking detection is deactivated
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │          # 12 ->13  vs 374
+│ │ -        left_eyelids_contour = self.getlandmarks_pos(self.left_eyelids_indices)
+│ │ +        left_eyelids_contour = self.get_landmarks_pos(self.left_eyelids_indices)
+│ │          left_eye_upper0 = left_eyelids_contour[12, ...]
+│ │          left_eye_upper1 = left_eyelids_contour[13, ...]
+│ │          left_eye_lower = left_eyelids_contour[4, ...]
+│ │          left_eye_upper = (left_eye_upper0+left_eye_upper1)/2
+│ │  
+│ │          ud = left_eye_upper-left_eye_lower
+│ │          ex = left_eye_upper1-left_eye_upper0
+│ │          ex /= np.linalg.norm(ex)
+│ │          ey = np.cross(np.array([0,0,1]),ex)
+│ │  
+│ │          left_eye_opening = np.dot(ud,ey)
+│ │          if left_eye_opening<0:
+│ │              right_eye_opening=0
+│ │  
+│ │ -        right_eyelids_contour = self.getlandmarks_pos(self.right_eyelids_indices)
+│ │ +        right_eyelids_contour = self.get_landmarks_pos(self.right_eyelids_indices)
+│ │          right_eye_upper0 = right_eyelids_contour[12, ...]
+│ │          right_eye_upper1 = right_eyelids_contour[13, ...]
+│ │          right_eye_lower = right_eyelids_contour[4, ...]
+│ │          right_eye_upper = (right_eye_upper0+right_eye_upper1)/2
+│ │  
+│ │          ud = right_eye_upper-right_eye_lower
+│ │          ex = right_eye_upper1-right_eye_upper0
+│ │          ex /= np.linalg.norm(ex)
+│ │          ey = np.cross(np.array([0,0,1]),ex)
+│ │  
+│ │          right_eye_opening = np.dot(ud,ey)  
+│ │          if right_eye_opening<0:
+│ │              right_eye_opening=0
+│ │  
+│ │ -        left_eye_contour = self.getlandmarks_pos(self.left_eye_contour_indices)
+│ │ +        left_eye_contour = self.get_landmarks_pos(self.left_eye_contour_indices)
+│ │          left_eye_iris_upper = left_eye_contour[3, ...]
+│ │          left_eye_iris_lower = left_eye_contour[1, ...]
+│ │  
+│ │ -        right_eye_contour = self.getlandmarks_pos(self.right_eye_contour_indices)
+│ │ +        right_eye_contour = self.get_landmarks_pos(self.right_eye_contour_indices)
+│ │          right_eye_iris_upper = right_eye_contour[3, ...]
+│ │          right_eye_iris_lower = right_eye_contour[1, ...]
+│ │  
+│ │          dl = np.linalg.norm(left_eye_iris_upper-left_eye_iris_lower)
+│ │          dr = np.linalg.norm(right_eye_iris_upper-right_eye_iris_lower)
+│ │  
+│ │          left_eye_opening /=dl
+│ │ @@ -722,19 +751,19 @@
+│ │  
+│ │      def draw_eyes_landmarks(self, image:np.ndarray):
+│ │          """Draws eyes landmarks on  the image
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): The image to draw the landmarks on
+│ │          """
+│ │ -        self.draw_contour(image, self.getlandmarks_pos(self.left_eye_contour_indices), (255,255,255))
+│ │ -        self.draw_contour(image, self.getlandmarks_pos(self.left_eyelids_indices), (0,0,0))
+│ │ +        self.draw_contour(image, self.get_landmarks_pos(self.left_eye_contour_indices), (255,255,255))
+│ │ +        self.draw_contour(image, self.get_landmarks_pos(self.left_eyelids_indices), (0,0,0))
+│ │  
+│ │ -        self.draw_contour(image, self.getlandmarks_pos(self.right_eye_contour_indices), (255,255,255))
+│ │ -        self.draw_contour(image, self.getlandmarks_pos(self.right_eyelids_indices), (0,0,0))
+│ │ +        self.draw_contour(image, self.get_landmarks_pos(self.right_eye_contour_indices), (255,255,255))
+│ │ +        self.draw_contour(image, self.get_landmarks_pos(self.right_eyelids_indices), (0,0,0))
+│ │  
+│ │  
+│ │      def process_mouth(self, image: np.ndarray, normalize:bool=False, detect_yawning: bool = False, yawning_th:float=5, yawning_double_threshold_factor:float=1.05, draw_landmarks: bool = False)->tuple:
+│ │          """Process mouth information and extract moth opening value, normalized mouth opening and detect yawning
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): Image to draw on when landmarks are to be drawn
+│ │ @@ -750,29 +779,29 @@
+│ │              left_eye_opening, right_eye_opening if yawning detection is deactivated
+│ │          """
+│ │  
+│ │          # Assertion to verify that the face object is ready
+│ │          assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │  
+│ │  
+│ │ -        left_eye_center = self.getlandmark_pos(self.left_eye_center_index)
+│ │ -        left_eyelids_contour = self.getlandmarks_pos(self.left_eyelids_indices)
+│ │ +        left_eye_center = self.get_landmark_pos(self.left_eye_center_index)
+│ │ +        left_eyelids_contour = self.get_landmarks_pos(self.left_eyelids_indices)
+│ │          left_eye_upper = left_eyelids_contour[3, ...]
+│ │          left_eye_lower = left_eyelids_contour[1, ...]
+│ │  
+│ │ -        left_eye_contour = self.getlandmarks_pos(self.left_eye_contour_indices)
+│ │ +        left_eye_contour = self.get_landmarks_pos(self.left_eye_contour_indices)
+│ │          left_eye_iris_upper = left_eye_contour[3, ...]
+│ │          left_eye_iris_lower = left_eye_contour[1, ...]
+│ │  
+│ │ -        right_eye_center = self.getlandmark_pos(self.right_eye_center_index)
+│ │ -        right_eyelids_contour = self.getlandmarks_pos(self.right_eyelids_indices)
+│ │ +        right_eye_center = self.get_landmark_pos(self.right_eye_center_index)
+│ │ +        right_eyelids_contour = self.get_landmarks_pos(self.right_eyelids_indices)
+│ │          right_eye_upper = right_eyelids_contour[3, ...]
+│ │          right_eye_lower = right_eyelids_contour[1, ...]
+│ │  
+│ │ -        right_eye_contour = self.getlandmarks_pos(self.right_eye_contour_indices)
+│ │ +        right_eye_contour = self.get_landmarks_pos(self.right_eye_contour_indices)
+│ │          right_eye_iris_upper = right_eye_contour[1, ...]
+│ │          right_eye_iris_lower = right_eye_contour[3, ...]
+│ │  
+│ │  
+│ │  
+│ │  
+│ │          if draw_landmarks:
+│ │ @@ -914,16 +943,39 @@
+│ │              if self.rect_contains(r, pt1) and self.rect_contains(r, pt2) and self.rect_contains(r, pt3):
+│ │                  img = cv2.line(img, pt1, pt2, delaunay_color, thickness)
+│ │                  img = cv2.line(img, pt2, pt3, delaunay_color, thickness)
+│ │                  img = cv2.line(img, pt3, pt1, delaunay_color, thickness)
+│ │  
+│ │          return img
+│ │  
+│ │ +    def getFaceBox(self, image:np.ndarray, landmark_indices:list=None)->np.ndarray:
+│ │ +        """Gets an image of the face extracted from the original image (simple box extraction which will extract some of the background)
+│ │ +
+│ │ +        Args:
+│ │ +            image (np.ndarray): Image to extract the face from
+│ │ +            src_triangles (list): The delaulay triangles indices (look at triangulate)
+│ │ +            landmark_indices (list, optional): The list of landmarks to be used (the same list used for the triangulate method that allowed the extraction of the triangles). Defaults to None.
+│ │ +
+│ │ +        Returns:
+│ │ +            np.ndarray: Face drawn on a black background (the size of the image is equal of that of the face in the original image)
+│ │ +        """
+│ │ +
+│ │ +        # Assertion to verify that the face object is ready
+│ │ +        assert self.ready, "Face object is not ready. There are no landmarks extracted."
+│ │ +
+│ │ +        if landmark_indices is None:
+│ │ +            landmarks = self.npLandmarks[:, :2]
+│ │ +        else:
+│ │ +            landmarks = self.npLandmarks[landmark_indices, :2]
+│ │ +        p1 = landmarks.min(axis=0)
+│ │ +        p2 = landmarks.max(axis=0)
+│ │ +        return image[int(p1[1]):int(p2[1]),int(p1[0]):int(p2[0])]
+│ │ +
+│ │      def getFace(self, image:np.ndarray, src_triangles:list(), landmark_indices:list=None)->np.ndarray:
+│ │ -        """Gets an image of the face extracted from the original image
+│ │ +        """Gets an image of the face extracted from the original image (only the face with no background)
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): Image to extract the face from
+│ │              src_triangles (list): The delaulay triangles indices (look at triangulate)
+│ │              landmark_indices (list, optional): The list of landmarks to be used (the same list used for the triangulate method that allowed the extraction of the triangles). Defaults to None.
+│ │  
+│ │          Returns:
+│ │ @@ -1029,25 +1081,27 @@
+│ │          try:
+│ │              dst_crop = cv2.seamlessClone(dest.astype(np.uint8), dst_crop, mask, (int(center[0]),int(center[1])), cv2.NORMAL_CLONE)
+│ │          except:
+│ │              pass
+│ │          dst_image[int(dst_p1[1]):int(dst_p2[1]), int(dst_p1[0]):int(dst_p2[0])] = dst_crop
+│ │          return dst_image
+│ │  
+│ │ -    def draw_bounding_box(self, image:np.ndarray, color:tuple=(255,0,0), thickness:int=1):
+│ │ +    def draw_bounding_box(self, image:np.ndarray, color:tuple=(255,0,0), thickness:int=1, text=None):
+│ │          """Draws a bounding box around the face
+│ │  
+│ │          Args:
+│ │              image (np.ndarray): The image on which we will draw the bounding box
+│ │              color (tuple, optional): The color of the bounding box. Defaults to (255,0,0).
+│ │              thickness (int, optional): The line thickness. Defaults to 1.
+│ │          """
+│ │          pt1 = self.npLandmarks.min(axis=0)
+│ │          pt2 = self.npLandmarks.max(axis=0)
+│ │          cv2.rectangle(image, (int(pt1[0]),int(pt1[1])), (int(pt2[0]),int(pt2[1])), color, thickness)
+│ │ +        if text is not None:
+│ │ +            cv2.putText(image, text, (int(pt1[0]),int(pt1[1]-20)),cv2.FONT_HERSHEY_SIMPLEX, 1, color, thickness)
+│ │  
+│ │      def get_face_outer_vertices(self):
+│ │          """ Draws a bounding box around the face that rotates wit the face
+│ │          Returns
+│ │              list : list containing indices of vertices that define the boundaries of the face
+│ │          """
+│ │          original = [x for x in range(self.npLandmarks.shape[0])]
+│ │   --- FaceAnalyzer-0.1.8/FaceAnalyzer/FaceAnalyzer.py
+│ ├── +++ FaceAnalyzer-0.1.9/FaceAnalyzer/FaceAnalyzer.py
+│ │┄ Files identical despite different names
+│ │   --- FaceAnalyzer-0.1.8/FaceAnalyzer/Helpers.py
+│ ├── +++ FaceAnalyzer-0.1.9/FaceAnalyzer/Helpers.py
+│ │┄ Files identical despite different names
+│ │   --- FaceAnalyzer-0.1.8/FaceAnalyzer/__init__.py
+│ ├── +++ FaceAnalyzer-0.1.9/FaceAnalyzer/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- FaceAnalyzer-0.1.8/FaceAnalyzer.egg-info/PKG-INFO
+│ ├── +++ FaceAnalyzer-0.1.9/README.md
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,134 +1,138 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: FaceAnalyzer
+│ │ -Version: 0.1.8
+│ │ -Summary: A python library for face detection and features extraction based on mediapipe library
+│ │ -Home-page: https://github.com/ParisNeo/FaceAnalyzer
+│ │ -Author: Saifeddine ALOUI
+│ │ -Author-email: aloui.saifeddine@gmail.com
+│ │ -License: UNKNOWN
+│ │ -Description: # FaceAnalyzer
+│ │ -        A python library for face detection and features extraction based on mediapipe library
+│ │ -        
+│ │ -        ## Introduction
+│ │ -        FaceAnalyzer is a library based on mediapipe library and is provided under MIT Licence. It provides an object oriented tool to play around with faces.
+│ │ -        It can be used to :
+│ │ -        1. Extract faces from an image
+│ │ -        2. Measure the face position and orientation
+│ │ -        3. Measure eyes openings
+│ │ -        4. Detect blinks
+│ │ -        5. Extract the face from an image (useful for face learning applications)
+│ │ -        6. Compute face triangulation (builds triangular surfaces that can be used to build 3D models of the face)
+│ │ -        7. Copy a face from an image to another.
+│ │ -        
+│ │ -        ## Requirements
+│ │ -        This library requires :
+│ │ -        1. mediapipe (used for facial landmarks extraction)
+│ │ -        2. opencv used for drawing and image morphing
+│ │ -        3. scipy used for efficient delaulay triangulation
+│ │ -        4. numpy, as any thing that uses math
+│ │ -        
+│ │ -        
+│ │ -        ## How to install
+│ │ -        Just install from pipy. 
+│ │ -        ```bash
+│ │ -        pip install FaceAnalyzer
+│ │ -        ```
+│ │ -        Make sure you upgrade the library from time to time as I am adding new features so frequently those days.
+│ │ -        
+│ │ -        ```bash
+│ │ -        pip install FaceAnalyzer --upgrade
+│ │ -        ```
+│ │ -        
+│ │ -        ## How to use
+│ │ -        
+│ │ -        ```python
+│ │ -        # Import the two main classes FaceAnalyzer and Face 
+│ │ -        from FaceAnalyzer import FaceAnalyzer, Face
+│ │ -        
+│ │ -        fa = FaceAnalyzer()
+│ │ -        # ... Recover an image in RGB format as numpy array (you can use pillow opencv but if you use opencv make sure you change the color space from BGR to RGB)
+│ │ -        # Now process the image
+│ │ -        fa.process(image)
+│ │ -        
+│ │ -        # Now you can find faces in fa.faces which is a list of instances of object Face
+│ │ -        if fa.nb_faces>0:
+│ │ -            print(f"{fa.nb_faces} Faces found")
+│ │ -            # We can get the landmarks in numpy format NX3 where N is the number of the landmarks and 3 is x,y,z coordinates 
+│ │ -            print(fa.faces[0].npLandmarks)
+│ │ -            # We can draw all landmarks
+│ │ -            # Get head position and orientation compared to the reference pose (here the first frame will define the orientation 0,0,0)
+│ │ -            pos, ori = fa.faces[0].get_head_posture(orientation_style=1)
+│ │ -        
+│ │ -        ```
+│ │ -        Make sure you look at the examples folder in the repository for more details.
+│ │ -        # Structure
+│ │ -        The library is structured as follow:
+│ │ -        
+│ │ -         - Helpers : A module containing Helper functions, namely geometric transformation between rotation formats, or generation of camera matrix etc
+│ │ -         - FaceAnalyzer : A module to process images and extract faces
+│ │ -         - Face         : The main module that represents a face. Allows doing multiple operations such as copying the face and put it on another one or estimate eye opening, head position/orientation in space etc.
+│ │ -         
+│ │ -        ## Examples
+│ │ -        ### OpenCV
+│ │ -        Here are opencv based programs
+│ │ -        #### face_mesh :
+│ │ -        A basic simple example of how to use webcam to get video and process each frame to extract faces and draw face landmarks on the face.
+│ │ -        #### from_image :
+│ │ -        A basic simple example of how to extract faces from an image file.
+│ │ -        #### eye_process :
+│ │ -        An example of how to extract faces from a video (using webcam) then process eyes and return eyes openings as well as detecting blinks.
+│ │ -        #### face_off :
+│ │ -        An example of how to use webcam to switch faces between two persons.
+│ │ -        #### face_mask :
+│ │ -        An example of how to use webcam to put a mask on a face.
+│ │ -        #### extract_face :
+│ │ -        An example of how to use webcam to extract only the face (generates a black image with only the face).
+│ │ -        #### eyes_tracker :
+│ │ -        An example to show how we can get the eyes orientation in space.
+│ │ -        ### Pygame
+│ │ -        Here you can find all examples using pygame library
+│ │ -        #### win_face_mouse_controller
+│ │ -        A software to control a mouse using the face and blink to press
+│ │ -        ### SQTUI
+│ │ -        
+│ │ -        #### q_face_infos_graph :
+│ │ -        An example to view face and eye information over time (uses pyqt or pySide through SQTUI library + pyqtgraph)
+│ │ -        please install sqtui using pip:
+│ │ -        
+│ │ -        ```
+│ │ -        pip install sqtui pyqt5
+│ │ -        ```
+│ │ -        
+│ │ -        or
+│ │ -        
+│ │ -        ```
+│ │ -        pip install sqtui pyside2
+│ │ -        ```
+│ │ -        Please notice that pyqt is a GPL3 library so if you need your code t be closed at some level, don't use it or consider paying a licence to pyQt to buy a comercial licence.
+│ │ -        As of pySide, it is a LGPL library which contaminates your code only if you link it statically.
+│ │ -        
+│ │ -        Using sqtui allows you to select pyqt5 or pyside2 by setting an environment variable at the beginning of your python code. The rest of the coding will be transparent.
+│ │ -        
+│ │ -        ```python
+│ │ -        os.environ['PYQTGRAPH_QT_LIB']="PySide2"
+│ │ -        ```
+│ │ -        
+│ │ -        We use the same environment variable used by PYQTGRAPH to avoid having two different environment variables and to synchronize stqui and pyqtgraph on the basme backbone.
+│ │ -        
+│ │ -        #### q_face_pointing_pos_graph :
+│ │ -        An example on how we can track face pointing vector and find the position of intersection between the line guided by this vector and a plane defined by at least 3 points in space. We demonstrate how it is possible to detect the intersection of this vector with a region that can be convex or not. This can also be done using gaze vector.
+│ │ -        
+│ │ -        This example allows us to define regions in a 3d space and determine if the user is looking at on object or another. Very useful for example for controlling stuff using gaze or face motion. This can help people with disability to use their gaze to interact with the screen. (A calibration may be required to determine how to position elements in the reference frame of the camera).
+│ │ -        
+│ │ -        The module shows how to use the kalman filter helper to enhance the tracking and remove noise.
+│ │ -        
+│ │ -        #### face_chacer :
+│ │ -        
+│ │ -        A little game where you use your face top chace some animals on the screen. You need to point on them and blink to shoot.
+│ │ -        Uses Kalman filter to filter motion which makes it interesting.
+│ │ -Platform: UNKNOWN
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Operating System :: OS Independent
+│ │ -Description-Content-Type: text/markdown
+│ │ -Provides-Extra: dev
+│ │ +# FaceAnalyzer
+│ │ +A python library for face detection and features extraction based on mediapipe library
+│ │ +
+│ │ +## Introduction
+│ │ +FaceAnalyzer is a library based on mediapipe library and is provided under MIT Licence. It provides an object oriented tool to play around with faces.
+│ │ +It can be used to :
+│ │ +0. Detect faces using the mediapipe library
+│ │ +1. Extract faces from an image (either a box around the face or a face contour cut without background)
+│ │ +2. Measure the face position and orientation
+│ │ +3. Measure eyes openings and orientation in 3D space
+│ │ +4. Detect blinks
+│ │ +5. Get the 2D gaze position on a predefined 3D plan(s) allowing to understand what the user is looking at
+│ │ +6. Compute face triangulation (builds triangular surfaces that can be used to build 3D models of the face)
+│ │ +7. Copy a face from an image to another.
+│ │ +8. With the help of facenet model, you can use FaceAnalyzer to recognize faces in an image (a ful example is provided under examples/OpenCV/face_recognizer_facenet)
+│ │ +9. A simple face recognition algorithm based on face landmarks is also presented as an example. 
+│ │ +
+│ │ +## Requirements
+│ │ +This library requires :
+│ │ +1. mediapipe (used for facial landmarks extraction)
+│ │ +2. opencv used for drawing and image morphing
+│ │ +3. scipy used for efficient delaulay triangulation
+│ │ +4. numpy, as any thing that uses math
+│ │ +5. For some examples, you may need some additional libraries:
+│ │ +    - For face_recognizer_facenet (under opencv examples set) you need to install tensorflow 2.0 or later
+│ │ +    - For pygame examples, install pygame
+│ │ +    - For SQTUI you need to install SQTUI with either PyQT5 or PySide2
+│ │ +
+│ │ +## How to install
+│ │ +Just install from pipy. 
+│ │ +```bash
+│ │ +pip install FaceAnalyzer
+│ │ +```
+│ │ +Make sure you upgrade the library from time to time as I am adding new features so frequently those days.
+│ │ +
+│ │ +```bash
+│ │ +pip install FaceAnalyzer --upgrade
+│ │ +```
+│ │ +
+│ │ +## How to use
+│ │ +
+│ │ +```python
+│ │ +# Import the two main classes FaceAnalyzer and Face 
+│ │ +from FaceAnalyzer import FaceAnalyzer, Face
+│ │ +
+│ │ +fa = FaceAnalyzer()
+│ │ +# ... Recover an image in RGB format as numpy array (you can use pillow opencv but if you use opencv make sure you change the color space from BGR to RGB)
+│ │ +# Now process the image
+│ │ +fa.process(image)
+│ │ +
+│ │ +# Now you can find faces in fa.faces which is a list of instances of object Face
+│ │ +if fa.nb_faces>0:
+│ │ +    print(f"{fa.nb_faces} Faces found")
+│ │ +    # We can get the landmarks in numpy format NX3 where N is the number of the landmarks and 3 is x,y,z coordinates 
+│ │ +    print(fa.faces[0].npLandmarks)
+│ │ +    # We can draw all landmarks
+│ │ +    # Get head position and orientation compared to the reference pose (here the first frame will define the orientation 0,0,0)
+│ │ +    pos, ori = fa.faces[0].get_head_posture(orientation_style=1)
+│ │ +
+│ │ +```
+│ │ +Make sure you look at the examples folder in the repository for more details.
+│ │ +# Structure
+│ │ +The library is structured as follow:
+│ │ +
+│ │ + - Helpers : A module containing Helper functions, namely geometric transformation between rotation formats, or generation of camera matrix etc
+│ │ + - FaceAnalyzer : A module to process images and extract faces
+│ │ + - Face         : The main module that represents a face. Allows doing multiple operations such as copying the face and put it on another one or estimate eye opening, head position/orientation in space etc.
+│ │ + 
+│ │ +## Examples
+│ │ +### OpenCV
+│ │ +Here are opencv based programs
+│ │ +#### face_mesh :
+│ │ +A basic simple example of how to use webcam to get video and process each frame to extract faces and draw face landmarks on the face.
+│ │ +#### from_image :
+│ │ +A basic simple example of how to extract faces from an image file.
+│ │ +#### eye_process :
+│ │ +An example of how to extract faces from a video (using webcam) then process eyes and return eyes openings as well as detecting blinks.
+│ │ +#### face_off :
+│ │ +An example of how to use webcam to switch faces between two persons.
+│ │ +#### face_mask :
+│ │ +An example of how to use webcam to put a mask on a face.
+│ │ +#### extract_face :
+│ │ +An example of how to use webcam to extract only the face (generates a black image with only the face).
+│ │ +#### eyes_tracker :
+│ │ +An example to show how we can get the eyes orientation in space.
+│ │ +#### face_recognizer :
+│ │ +An example to record and then recognize faces in a video stream using facial landmarks. This is a very fast but not robust face recognition tool. Multiple images are needed for a single person on multiple angles to perform better.
+│ │ +
+│ │ +The code starts by extracting landmarks. Then reorients the face so that the forehead is up and the chin is down, then normalizes the landmarks positions. Finally, distances between landmarks and their opposite landmarks are computed. This is done for each reference image, and for each frame from the video stream. Then a simple distance is computed between this vector and all the vectors from reference faces, and we take the face that is most close to the one we are watching. If the distance is higher than a threshold, the algorithm just says Unknown.
+│ │ +#### face_recognizer_facenet :
+│ │ +An example to record and then recognize faces in a video stream using facenet neural network.
+│ │ +
+│ │ +Here an embedding representation of each reference face is computed. We record multiple frames for each face and get a 128 dimensions vector for each one. The means and standard deviation are computed and saved.
+│ │ +
+│ │ +At inference time, each face is extracted and sent to the facenet network. We obtain an embedding. We compute the distance between this embedding and all our database. We take the closest one. If the distance is higher than a threshold, the algorithm says unknown.
+│ │ +
+│ │ +This is a more robust tool. Bust requires more resources. It is advised to use a GPU to have a decent framerate.
+│ │ +### Pygame
+│ │ +Here you can find all examples using pygame library
+│ │ +#### win_face_mouse_controller
+│ │ +A software to control a mouse using the face and blink to press
+│ │ +### SQTUI
+│ │ +
+│ │ +#### q_face_infos_graph :
+│ │ +An example to view face and eye information over time (uses pyqt or pySide through SQTUI library + pyqtgraph)
+│ │ +please install sqtui using pip:
+│ │ +
+│ │ +```
+│ │ +pip install sqtui pyqt5
+│ │ +```
+│ │ +
+│ │ +or
+│ │ +
+│ │ +```
+│ │ +pip install sqtui pyside2
+│ │ +```
+│ │ +Please notice that pyqt is a GPL3 library so if you need your code t be closed at some level, don't use it or consider paying a licence to pyQt to buy a comercial licence.
+│ │ +As of pySide, it is a LGPL library which contaminates your code only if you link it statically.
+│ │ +
+│ │ +Using sqtui allows you to select pyqt5 or pyside2 by setting an environment variable at the beginning of your python code. The rest of the coding will be transparent.
+│ │ +
+│ │ +```python
+│ │ +os.environ['PYQTGRAPH_QT_LIB']="PySide2"
+│ │ +```
+│ │ +
+│ │ +We use the same environment variable used by PYQTGRAPH to avoid having two different environment variables and to synchronize stqui and pyqtgraph on the basme backbone.
+│ │ +
+│ │ +#### q_face_pointing_pos_graph :
+│ │ +An example on how we can track face pointing vector and find the position of intersection between the line guided by this vector and a plane defined by at least 3 points in space. We demonstrate how it is possible to detect the intersection of this vector with a region that can be convex or not. This can also be done using gaze vector.
+│ │ +
+│ │ +This example allows us to define regions in a 3d space and determine if the user is looking at on object or another. Very useful for example for controlling stuff using gaze or face motion. This can help people with disability to use their gaze to interact with the screen. (A calibration may be required to determine how to position elements in the reference frame of the camera).
+│ │ +
+│ │ +The module shows how to use the kalman filter helper to enhance the tracking and remove noise.
+│ │ +
+│ │ +#### face_chacer :
+│ │ +
+│ │ +A little game where you use your face top chace some animals on the screen. You need to point on them and blink to shoot.
+│ │ +Uses Kalman filter to filter motion which makes it interesting.
+│ │   --- FaceAnalyzer-0.1.8/PKG-INFO
+│ ├── +++ FaceAnalyzer-0.1.9/FaceAnalyzer.egg-info/PKG-INFO
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,36 +1,42 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: FaceAnalyzer
+│ │ -Version: 0.1.8
+│ │ +Version: 0.1.9
+│ │  Summary: A python library for face detection and features extraction based on mediapipe library
+│ │  Home-page: https://github.com/ParisNeo/FaceAnalyzer
+│ │  Author: Saifeddine ALOUI
+│ │  Author-email: aloui.saifeddine@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: # FaceAnalyzer
+│ │          A python library for face detection and features extraction based on mediapipe library
+│ │          
+│ │          ## Introduction
+│ │          FaceAnalyzer is a library based on mediapipe library and is provided under MIT Licence. It provides an object oriented tool to play around with faces.
+│ │          It can be used to :
+│ │ -        1. Extract faces from an image
+│ │ +        0. Detect faces using the mediapipe library
+│ │ +        1. Extract faces from an image (either a box around the face or a face contour cut without background)
+│ │          2. Measure the face position and orientation
+│ │ -        3. Measure eyes openings
+│ │ +        3. Measure eyes openings and orientation in 3D space
+│ │          4. Detect blinks
+│ │ -        5. Extract the face from an image (useful for face learning applications)
+│ │ +        5. Get the 2D gaze position on a predefined 3D plan(s) allowing to understand what the user is looking at
+│ │          6. Compute face triangulation (builds triangular surfaces that can be used to build 3D models of the face)
+│ │          7. Copy a face from an image to another.
+│ │ +        8. With the help of facenet model, you can use FaceAnalyzer to recognize faces in an image (a ful example is provided under examples/OpenCV/face_recognizer_facenet)
+│ │ +        9. A simple face recognition algorithm based on face landmarks is also presented as an example. 
+│ │          
+│ │          ## Requirements
+│ │          This library requires :
+│ │          1. mediapipe (used for facial landmarks extraction)
+│ │          2. opencv used for drawing and image morphing
+│ │          3. scipy used for efficient delaulay triangulation
+│ │          4. numpy, as any thing that uses math
+│ │ -        
+│ │ +        5. For some examples, you may need some additional libraries:
+│ │ +            - For face_recognizer_facenet (under opencv examples set) you need to install tensorflow 2.0 or later
+│ │ +            - For pygame examples, install pygame
+│ │ +            - For SQTUI you need to install SQTUI with either PyQT5 or PySide2
+│ │          
+│ │          ## How to install
+│ │          Just install from pipy. 
+│ │          ```bash
+│ │          pip install FaceAnalyzer
+│ │          ```
+│ │          Make sure you upgrade the library from time to time as I am adding new features so frequently those days.
+│ │ @@ -81,14 +87,26 @@
+│ │          An example of how to use webcam to switch faces between two persons.
+│ │          #### face_mask :
+│ │          An example of how to use webcam to put a mask on a face.
+│ │          #### extract_face :
+│ │          An example of how to use webcam to extract only the face (generates a black image with only the face).
+│ │          #### eyes_tracker :
+│ │          An example to show how we can get the eyes orientation in space.
+│ │ +        #### face_recognizer :
+│ │ +        An example to record and then recognize faces in a video stream using facial landmarks. This is a very fast but not robust face recognition tool. Multiple images are needed for a single person on multiple angles to perform better.
+│ │ +        
+│ │ +        The code starts by extracting landmarks. Then reorients the face so that the forehead is up and the chin is down, then normalizes the landmarks positions. Finally, distances between landmarks and their opposite landmarks are computed. This is done for each reference image, and for each frame from the video stream. Then a simple distance is computed between this vector and all the vectors from reference faces, and we take the face that is most close to the one we are watching. If the distance is higher than a threshold, the algorithm just says Unknown.
+│ │ +        #### face_recognizer_facenet :
+│ │ +        An example to record and then recognize faces in a video stream using facenet neural network.
+│ │ +        
+│ │ +        Here an embedding representation of each reference face is computed. We record multiple frames for each face and get a 128 dimensions vector for each one. The means and standard deviation are computed and saved.
+│ │ +        
+│ │ +        At inference time, each face is extracted and sent to the facenet network. We obtain an embedding. We compute the distance between this embedding and all our database. We take the closest one. If the distance is higher than a threshold, the algorithm says unknown.
+│ │ +        
+│ │ +        This is a more robust tool. Bust requires more resources. It is advised to use a GPU to have a decent framerate.
+│ │          ### Pygame
+│ │          Here you can find all examples using pygame library
+│ │          #### win_face_mouse_controller
+│ │          A software to control a mouse using the face and blink to press
+│ │          ### SQTUI
+│ │          
+│ │          #### q_face_infos_graph :
+│ │   --- FaceAnalyzer-0.1.8/setup.py
+│ ├── +++ FaceAnalyzer-0.1.9/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -13,15 +13,15 @@
+│ │  
+│ │  
+│ │  requirements = read_requirements("requirements.txt")
+│ │  requirements_dev = read_requirements("requirements_dev.txt")
+│ │  
+│ │  setuptools.setup(
+│ │      name="FaceAnalyzer",
+│ │ -    version="0.1.8",
+│ │ +    version="0.1.9",
+│ │      author="Saifeddine ALOUI",
+│ │      author_email="aloui.saifeddine@gmail.com",
+│ │      description="A python library for face detection and features extraction based on mediapipe library",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/ParisNeo/FaceAnalyzer",
+│ │      packages=setuptools.find_packages(),

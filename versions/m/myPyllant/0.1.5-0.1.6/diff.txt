@@ -1,0 +1,178 @@
+--- tmp/mypyllant-0.1.5.tar.gz
++++ tmp/mypyllant-0.1.6.tar.gz
+│   --- mypyllant-0.1.5.tar
+├── +++ mypyllant-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,33 +1,33 @@
+│ │ --rw-r--r--   0        0        0     1181 2020-02-02 00:00:00.000000 mypyllant-0.1.5/.pre-commit-config.yaml
+│ │ --rw-r--r--   0        0        0    45426 2020-02-02 00:00:00.000000 mypyllant-0.1.5/logo.png
+│ │ --rw-r--r--   0        0        0      191 2020-02-02 00:00:00.000000 mypyllant-0.1.5/requirements-dev.txt
+│ │ --rw-r--r--   0        0        0     1446 2020-02-02 00:00:00.000000 mypyllant-0.1.5/setup.cfg
+│ │ --rw-r--r--   0        0        0     1032 2020-02-02 00:00:00.000000 mypyllant-0.1.5/.github/workflows/build-test.yaml
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/__init__.py
+│ │ --rw-r--r--   0        0        0    13545 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/api.py
+│ │ --rw-r--r--   0        0        0     1218 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/const.py
+│ │ --rwxr-xr-x   0        0        0     2480 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/export.py
+│ │ --rw-r--r--   0        0        0     6473 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/models.py
+│ │ --rw-r--r--   0        0        0     1735 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/sample.py
+│ │ --rw-r--r--   0        0        0     1575 2020-02-02 00:00:00.000000 mypyllant-0.1.5/src/myPyllant/utils.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/__init__.py
+│ │ --rw-r--r--   0        0        0     2085 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/conftest.py
+│ │ --rwxr-xr-x   0        0        0      784 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/find_countries.py
+│ │ --rw-r--r--   0        0        0     4523 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/generate_test_data.py
+│ │ --rw-r--r--   0        0        0     3438 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/test_api.py
+│ │ --rw-r--r--   0        0        0      442 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/test_countries.py
+│ │ --rw-r--r--   0        0        0     4866 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/test_generate_test_data.py
+│ │ --rw-r--r--   0        0        0     1515 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/current_system.json
+│ │ --rw-r--r--   0        0        0      320 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/device_buckets.json
+│ │ --rw-r--r--   0        0        0     6159 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/systems.json
+│ │ --rw-r--r--   0        0        0     2783 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/current_system.json
+│ │ --rw-r--r--   0        0        0      323 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/device_buckets.json
+│ │ --rw-r--r--   0        0        0     6354 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/systems.json
+│ │ --rw-r--r--   0        0        0     2783 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/current_system.json
+│ │ --rw-r--r--   0        0        0      323 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/device_buckets.json
+│ │ --rw-r--r--   0        0        0     6400 2020-02-02 00:00:00.000000 mypyllant-0.1.5/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/systems.json
+│ │ --rw-r--r--   0        0        0     3077 2020-02-02 00:00:00.000000 mypyllant-0.1.5/.gitignore
+│ │ --rw-r--r--   0        0        0     1068 2020-02-02 00:00:00.000000 mypyllant-0.1.5/LICENSE
+│ │ --rw-r--r--   0        0        0     4404 2020-02-02 00:00:00.000000 mypyllant-0.1.5/README.md
+│ │ --rw-r--r--   0        0        0      844 2020-02-02 00:00:00.000000 mypyllant-0.1.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0     5010 2020-02-02 00:00:00.000000 mypyllant-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1181 2020-02-02 00:00:00.000000 mypyllant-0.1.6/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0        0        0    45426 2020-02-02 00:00:00.000000 mypyllant-0.1.6/logo.png
+│ │ +-rw-r--r--   0        0        0      191 2020-02-02 00:00:00.000000 mypyllant-0.1.6/requirements-dev.txt
+│ │ +-rw-r--r--   0        0        0     1446 2020-02-02 00:00:00.000000 mypyllant-0.1.6/setup.cfg
+│ │ +-rw-r--r--   0        0        0     1032 2020-02-02 00:00:00.000000 mypyllant-0.1.6/.github/workflows/build-test.yaml
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/__init__.py
+│ │ +-rw-r--r--   0        0        0    13545 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/api.py
+│ │ +-rw-r--r--   0        0        0     1218 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/const.py
+│ │ +-rwxr-xr-x   0        0        0     2480 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/export.py
+│ │ +-rw-r--r--   0        0        0     6480 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/models.py
+│ │ +-rw-r--r--   0        0        0     1735 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/sample.py
+│ │ +-rw-r--r--   0        0        0     1575 2020-02-02 00:00:00.000000 mypyllant-0.1.6/src/myPyllant/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/__init__.py
+│ │ +-rw-r--r--   0        0        0     2085 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/conftest.py
+│ │ +-rwxr-xr-x   0        0        0      784 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/find_countries.py
+│ │ +-rw-r--r--   0        0        0     4523 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/generate_test_data.py
+│ │ +-rw-r--r--   0        0        0     3438 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/test_api.py
+│ │ +-rw-r--r--   0        0        0      442 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/test_countries.py
+│ │ +-rw-r--r--   0        0        0     4866 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/test_generate_test_data.py
+│ │ +-rw-r--r--   0        0        0     1515 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/current_system.json
+│ │ +-rw-r--r--   0        0        0      320 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/device_buckets.json
+│ │ +-rw-r--r--   0        0        0     6159 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/systems.json
+│ │ +-rw-r--r--   0        0        0     2783 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/current_system.json
+│ │ +-rw-r--r--   0        0        0      323 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/device_buckets.json
+│ │ +-rw-r--r--   0        0        0     6354 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/systems.json
+│ │ +-rw-r--r--   0        0        0     2783 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/current_system.json
+│ │ +-rw-r--r--   0        0        0      323 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/device_buckets.json
+│ │ +-rw-r--r--   0        0        0     6400 2020-02-02 00:00:00.000000 mypyllant-0.1.6/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/systems.json
+│ │ +-rw-r--r--   0        0        0     3077 2020-02-02 00:00:00.000000 mypyllant-0.1.6/.gitignore
+│ │ +-rw-r--r--   0        0        0     1068 2020-02-02 00:00:00.000000 mypyllant-0.1.6/LICENSE
+│ │ +-rw-r--r--   0        0        0     4404 2020-02-02 00:00:00.000000 mypyllant-0.1.6/README.md
+│ │ +-rw-r--r--   0        0        0      844 2020-02-02 00:00:00.000000 mypyllant-0.1.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     5010 2020-02-02 00:00:00.000000 mypyllant-0.1.6/PKG-INFO
+│ │   --- mypyllant-0.1.5/.pre-commit-config.yaml
+│ ├── +++ mypyllant-0.1.6/.pre-commit-config.yaml
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/logo.png
+│ ├── +++ mypyllant-0.1.6/logo.png
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/setup.cfg
+│ ├── +++ mypyllant-0.1.6/setup.cfg
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/.github/workflows/build-test.yaml
+│ ├── +++ mypyllant-0.1.6/.github/workflows/build-test.yaml
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/src/myPyllant/api.py
+│ ├── +++ mypyllant-0.1.6/src/myPyllant/api.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/src/myPyllant/const.py
+│ ├── +++ mypyllant-0.1.6/src/myPyllant/const.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/src/myPyllant/export.py
+│ ├── +++ mypyllant-0.1.6/src/myPyllant/export.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/src/myPyllant/models.py
+│ ├── +++ mypyllant-0.1.6/src/myPyllant/models.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -70,15 +70,15 @@
+│ │      time_windows: dict
+│ │  
+│ │  
+│ │  class Circuit(BaseModel):
+│ │      system_id: str
+│ │      index: int
+│ │      circuit_state: str
+│ │ -    current_circuit_flow_temperature: float
+│ │ +    current_circuit_flow_temperature: float | None
+│ │      heating_curve: float | None
+│ │      is_cooling_allowed: bool
+│ │      min_flow_temperature_setpoint: float | None
+│ │      mixer_circuit_type_external: str
+│ │      set_back_mode_enabled: bool
+│ │      zones: list = []
+│ │   --- mypyllant-0.1.5/src/myPyllant/sample.py
+│ ├── +++ mypyllant-0.1.6/src/myPyllant/sample.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/src/myPyllant/utils.py
+│ ├── +++ mypyllant-0.1.6/src/myPyllant/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/conftest.py
+│ ├── +++ mypyllant-0.1.6/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/find_countries.py
+│ ├── +++ mypyllant-0.1.6/tests/find_countries.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/generate_test_data.py
+│ ├── +++ mypyllant-0.1.6/tests/generate_test_data.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/test_api.py
+│ ├── +++ mypyllant-0.1.6/tests/test_api.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/test_generate_test_data.py
+│ ├── +++ mypyllant-0.1.6/tests/test_generate_test_data.py
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/current_system.json
+│ ├── +++ mypyllant-0.1.6/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/current_system.json
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/systems.json
+│ ├── +++ mypyllant-0.1.6/tests/json/064876fe84e6a872c97ac79ba1c2a7c71ff974ca/systems.json
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/current_system.json
+│ ├── +++ mypyllant-0.1.6/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/current_system.json
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/systems.json
+│ ├── +++ mypyllant-0.1.6/tests/json/1cb8b8ad6bbd158eaca1527b3d5f852b8b473c0c/systems.json
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/current_system.json
+│ ├── +++ mypyllant-0.1.6/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/current_system.json
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/systems.json
+│ ├── +++ mypyllant-0.1.6/tests/json/d121ac4dd73851053d557b1f8b6126bb1bf71a25/systems.json
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/.gitignore
+│ ├── +++ mypyllant-0.1.6/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/LICENSE
+│ ├── +++ mypyllant-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/README.md
+│ ├── +++ mypyllant-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/pyproject.toml
+│ ├── +++ mypyllant-0.1.6/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- mypyllant-0.1.5/PKG-INFO
+│ ├── +++ mypyllant-0.1.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: myPyllant
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: A Python library to interact with the API behind the myVAILLANT app
+│ │  Project-URL: Homepage, https://github.com/signalkraft/myPyllant
+│ │  Project-URL: Bug Tracker, https://github.com/signalkraft/myPyllant/issues
+│ │  Author-email: Philipp <pd@signalkraft.com>
+│ │  License-File: LICENSE
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
