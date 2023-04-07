@@ -1,0 +1,43 @@
+# Comparing `tmp/odoo_addons_oca_credit_control-15.0.20230406.0-py3-none-any.whl.zip` & `tmp/odoo_addons_oca_credit_control-16.0.20230308.0-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,6 +1,6 @@
+-Zip file size: 1482 bytes, number of entries: 4
+--rw-r--r--  2.0 unx      911 b- defN 23-Apr-07 03:47 odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 03:47 odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/WHEEL
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-07 03:47 odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      428 b- defN 23-Apr-07 03:47 odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/RECORD
+-4 files, 1432 bytes uncompressed, 636 bytes compressed:  55.6%
++Zip file size: 1413 bytes, number of entries: 4
++-rw-r--r--  2.0 unx      396 b- defN 23-Mar-09 03:50 odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Mar-09 03:50 odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/WHEEL
++-rw-r--r--  2.0 unx        1 b- defN 23-Mar-09 03:50 odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx      428 b- defN 23-Mar-09 03:50 odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/RECORD
++4 files, 917 bytes uncompressed, 567 bytes compressed:  38.2%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,13 +1,13 @@
+-Filename: odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/METADATA
++Filename: odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/WHEEL
++Filename: odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/top_level.txt
++Filename: odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addons_oca_credit_control-15.0.20230406.0.dist-info/RECORD
++Filename: odoo_addons_oca_credit_control-16.0.20230308.0.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+

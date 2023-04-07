@@ -1,0 +1,80 @@
+# Comparing `tmp/zuspec_fe_parser-0.0.1.4614306528-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.zip` & `tmp/zuspec_fe_parser-0.0.1.4635224209-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,12 +1,12 @@
+ Zip file size: 36395 bytes, number of entries: 10
+-drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-05 02:32 zuspec_fe_parser-0.0.1.4614306528.dist-info/
+-drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-05 02:32 zsp_fe_parser/
+-drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-05 02:32 zuspec_fe_parser.libs/
+--rw-r--r--  2.0 unx    11357 b- defN 23-Apr-05 02:32 zuspec_fe_parser-0.0.1.4614306528.dist-info/LICENSE
+--rw-r--r--  2.0 unx      217 b- defN 23-Apr-05 02:32 zuspec_fe_parser-0.0.1.4614306528.dist-info/WHEEL
+--rw-r--r--  2.0 unx       14 b- defN 23-Apr-05 02:32 zuspec_fe_parser-0.0.1.4614306528.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx      680 b- defN 23-Apr-05 02:32 zuspec_fe_parser-0.0.1.4614306528.dist-info/RECORD
+--rw-r--r--  2.0 unx      256 b- defN 23-Apr-05 02:32 zuspec_fe_parser-0.0.1.4614306528.dist-info/METADATA
+--rwxr-xr-x  2.0 unx    76848 b- defN 23-Apr-05 02:32 zsp_fe_parser/core.cpython-39-x86_64-linux-gnu.so
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 02:32 zsp_fe_parser/__init__.py
++drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-07 03:51 zsp_fe_parser/
++drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-07 03:51 zuspec_fe_parser-0.0.1.4635224209.dist-info/
++drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-07 03:51 zuspec_fe_parser.libs/
++-rwxr-xr-x  2.0 unx    76848 b- defN 23-Apr-07 03:51 zsp_fe_parser/core.cpython-39-x86_64-linux-gnu.so
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 03:51 zsp_fe_parser/__init__.py
++-rw-r--r--  2.0 unx    11357 b- defN 23-Apr-07 03:51 zuspec_fe_parser-0.0.1.4635224209.dist-info/LICENSE
++-rw-r--r--  2.0 unx      217 b- defN 23-Apr-07 03:51 zuspec_fe_parser-0.0.1.4635224209.dist-info/WHEEL
++-rw-r--r--  2.0 unx       14 b- defN 23-Apr-07 03:51 zuspec_fe_parser-0.0.1.4635224209.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx      680 b- defN 23-Apr-07 03:51 zuspec_fe_parser-0.0.1.4635224209.dist-info/RECORD
++-rw-r--r--  2.0 unx      256 b- defN 23-Apr-07 03:51 zuspec_fe_parser-0.0.1.4635224209.dist-info/METADATA
+ 10 files, 89372 bytes uncompressed, 34787 bytes compressed:  61.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,31 +1,31 @@
+-Filename: zuspec_fe_parser-0.0.1.4614306528.dist-info/
++Filename: zsp_fe_parser/
+ Comment: 
+ 
+-Filename: zsp_fe_parser/
++Filename: zuspec_fe_parser-0.0.1.4635224209.dist-info/
+ Comment: 
+ 
+ Filename: zuspec_fe_parser.libs/
+ Comment: 
+ 
+-Filename: zuspec_fe_parser-0.0.1.4614306528.dist-info/LICENSE
++Filename: zsp_fe_parser/core.cpython-39-x86_64-linux-gnu.so
+ Comment: 
+ 
+-Filename: zuspec_fe_parser-0.0.1.4614306528.dist-info/WHEEL
++Filename: zsp_fe_parser/__init__.py
+ Comment: 
+ 
+-Filename: zuspec_fe_parser-0.0.1.4614306528.dist-info/top_level.txt
++Filename: zuspec_fe_parser-0.0.1.4635224209.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: zuspec_fe_parser-0.0.1.4614306528.dist-info/RECORD
++Filename: zuspec_fe_parser-0.0.1.4635224209.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: zuspec_fe_parser-0.0.1.4614306528.dist-info/METADATA
++Filename: zuspec_fe_parser-0.0.1.4635224209.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: zsp_fe_parser/core.cpython-39-x86_64-linux-gnu.so
++Filename: zuspec_fe_parser-0.0.1.4635224209.dist-info/RECORD
+ Comment: 
+ 
+-Filename: zsp_fe_parser/__init__.py
++Filename: zuspec_fe_parser-0.0.1.4635224209.dist-info/METADATA
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `zuspec_fe_parser-0.0.1.4614306528.dist-info/LICENSE` & `zuspec_fe_parser-0.0.1.4635224209.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+

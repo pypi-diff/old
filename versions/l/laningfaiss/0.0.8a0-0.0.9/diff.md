@@ -1,0 +1,76 @@
+# Comparing `tmp/laningfaiss-0.0.8a0.tar.gz` & `tmp/laningfaiss-0.0.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/laningfaiss-0.0.8a0.tar", last modified: Thu Mar 30 03:48:25 2023, max compression
++gzip compressed data, was "dist/laningfaiss-0.0.9.tar", last modified: Fri Apr  7 03:48:16 2023, max compression
+```
+
+## Comparing `laningfaiss-0.0.8a0.tar` & `laningfaiss-0.0.9.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/
+--rw-rw-rw-   0 root         (0) root         (0)       36 2023-03-23 06:18:38.000000 laningfaiss-0.0.8a0/MANIFEST.in
+--rw-r--r--   0 root         (0) root         (0)      196 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)      396 2023-03-23 06:18:38.000000 laningfaiss-0.0.8a0/README.md
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss/
+--rw-rw-rw-   0 root         (0) root         (0)       30 2023-03-23 06:18:38.000000 laningfaiss-0.0.8a0/laningfaiss/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     9332 2023-03-30 03:33:51.000000 laningfaiss-0.0.8a0/laningfaiss/requester.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss.egg-info/
+--rw-r--r--   0 root         (0) root         (0)      196 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      249 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)       17 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss.egg-info/top_level.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/laningfaiss.egg-info/zip-safe
+--rw-r--r--   0 root         (0) root         (0)       38 2023-03-30 03:48:25.000000 laningfaiss-0.0.8a0/setup.cfg
+--rwxrwxrwx   0 root         (0) root         (0)      791 2023-03-23 06:38:42.000000 laningfaiss-0.0.8a0/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/
++-rw-rw-rw-   0 root         (0) root         (0)       36 2023-03-23 06:17:06.000000 laningfaiss-0.0.9/MANIFEST.in
++-rw-r--r--   0 root         (0) root         (0)      194 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)      396 2023-03-23 06:17:06.000000 laningfaiss-0.0.9/README.md
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss/
++-rw-rw-rw-   0 root         (0) root         (0)       30 2023-03-23 06:17:06.000000 laningfaiss-0.0.9/laningfaiss/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)     9465 2023-04-07 03:46:28.000000 laningfaiss-0.0.9/laningfaiss/requester.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss.egg-info/
++-rw-r--r--   0 root         (0) root         (0)      194 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)      249 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       17 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/laningfaiss.egg-info/zip-safe
++-rw-r--r--   0 root         (0) root         (0)       38 2023-04-07 03:48:16.000000 laningfaiss-0.0.9/setup.cfg
++-rwxrwxrwx   0 root         (0) root         (0)      791 2023-03-23 06:38:33.000000 laningfaiss-0.0.9/setup.py
+```
+
+### Comparing `laningfaiss-0.0.8a0/laningfaiss/requester.py` & `laningfaiss-0.0.9/laningfaiss/requester.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -104,14 +104,16 @@
+ 
+         payloads = {
+             "vectors": searching_vectors.tolist(),
+             "radius": threshold
+         }
+         response = await self.requester.post("range_search", json=payloads)
+         res = response["data"]["res"]
++        assert len(res) == len(vectors), \
++            f"The response of engine is incomplete. expect {len(vectors)} but {len(res)}"
+ 
+         searched_mapping = {}
+         for ftr_cmp_res, m in zip(res, number_list):
+             if ftr_cmp_res:
+                 vid = ftr_cmp_res[0][0]
+                 sim = ftr_cmp_res[0][1]
+                 searched_mapping[m] = (vid, sim)
+```
+
+### Comparing `laningfaiss-0.0.8a0/setup.py` & `laningfaiss-0.0.9/setup.py`
+
+ * *Files identical despite different names*
+

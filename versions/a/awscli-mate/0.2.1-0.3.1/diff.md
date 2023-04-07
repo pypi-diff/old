@@ -1,0 +1,374 @@
+# Comparing `tmp/awscli_mate-0.2.1.tar.gz` & `tmp/awscli_mate-0.3.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "awscli_mate-0.2.1.tar", last modified: Thu Apr  6 02:02:37 2023, max compression
++gzip compressed data, was "awscli_mate-0.3.1.tar", last modified: Fri Apr  7 03:48:53 2023, max compression
+```
+
+## Comparing `awscli_mate-0.2.1.tar` & `awscli_mate-0.3.1.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,35 @@
+-drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-06 02:02:37.687125 awscli_mate-0.2.1/
+--rw-r--r--   0 sanhehu    (501) staff       (20)      509 2023-04-04 15:13:55.000000 awscli_mate-0.2.1/AUTHORS.rst
+--rw-r--r--   0 sanhehu    (501) staff       (20)     1121 2023-04-04 15:13:55.000000 awscli_mate-0.2.1/LICENSE.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)      319 2023-04-04 15:13:55.000000 awscli_mate-0.2.1/MANIFEST.in
+--rw-r--r--   0 sanhehu    (501) staff       (20)     4185 2023-04-06 02:02:37.686991 awscli_mate-0.2.1/PKG-INFO
+--rw-r--r--   0 sanhehu    (501) staff       (20)     3086 2023-04-06 02:02:21.000000 awscli_mate-0.2.1/README.rst
+-drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-06 02:02:37.685719 awscli_mate-0.2.1/awscli_mate/
+--rw-r--r--   0 sanhehu    (501) staff       (20)      555 2023-04-06 01:58:29.000000 awscli_mate-0.2.1/awscli_mate/__init__.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)       93 2023-04-06 01:56:40.000000 awscli_mate-0.2.1/awscli_mate/_version.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)       58 2023-04-06 01:57:51.000000 awscli_mate-0.2.1/awscli_mate/api.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)     6573 2023-04-04 19:23:42.000000 awscli_mate-0.2.1/awscli_mate/awscli.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)      707 2023-04-06 01:57:32.000000 awscli_mate-0.2.1/awscli_mate/cli.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)      636 2023-04-04 17:52:15.000000 awscli_mate-0.2.1/awscli_mate/constants.py
+-drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-06 02:02:37.686481 awscli_mate-0.2.1/awscli_mate/docs/
+--rw-r--r--   0 sanhehu    (501) staff       (20)       43 2023-04-04 15:13:55.000000 awscli_mate-0.2.1/awscli_mate/docs/__init__.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)       73 2023-04-04 19:20:27.000000 awscli_mate-0.2.1/awscli_mate/exc.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)      307 2023-04-04 18:03:25.000000 awscli_mate-0.2.1/awscli_mate/paths.py
+-drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-06 02:02:37.686822 awscli_mate-0.2.1/awscli_mate/tests/
+--rw-r--r--   0 sanhehu    (501) staff       (20)       58 2023-04-04 15:56:46.000000 awscli_mate-0.2.1/awscli_mate/tests/__init__.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)     1215 2023-04-02 05:07:43.000000 awscli_mate-0.2.1/awscli_mate/tests/helper.py
+--rw-r--r--   0 sanhehu    (501) staff       (20)      370 2023-04-02 05:07:43.000000 awscli_mate-0.2.1/awscli_mate/tests/paths.py
+-drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-06 02:02:37.686375 awscli_mate-0.2.1/awscli_mate.egg-info/
+--rw-r--r--   0 sanhehu    (501) staff       (20)     4185 2023-04-06 02:02:37.000000 awscli_mate-0.2.1/awscli_mate.egg-info/PKG-INFO
+--rw-r--r--   0 sanhehu    (501) staff       (20)      655 2023-04-06 02:02:37.000000 awscli_mate-0.2.1/awscli_mate.egg-info/SOURCES.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)        1 2023-04-06 02:02:37.000000 awscli_mate-0.2.1/awscli_mate.egg-info/dependency_links.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)       49 2023-04-06 02:02:37.000000 awscli_mate-0.2.1/awscli_mate.egg-info/entry_points.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)      201 2023-04-06 02:02:37.000000 awscli_mate-0.2.1/awscli_mate.egg-info/requires.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)       12 2023-04-06 02:02:37.000000 awscli_mate-0.2.1/awscli_mate.egg-info/top_level.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)      870 2023-04-06 02:00:24.000000 awscli_mate-0.2.1/release-history.rst
+--rw-r--r--   0 sanhehu    (501) staff       (20)      289 2023-04-04 19:09:53.000000 awscli_mate-0.2.1/requirements-dev.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)      621 2023-04-04 15:13:55.000000 awscli_mate-0.2.1/requirements-doc.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)      183 2023-04-04 15:13:55.000000 awscli_mate-0.2.1/requirements-test.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)       30 2023-04-04 17:37:30.000000 awscli_mate-0.2.1/requirements.txt
+--rw-r--r--   0 sanhehu    (501) staff       (20)       38 2023-04-06 02:02:37.687168 awscli_mate-0.2.1/setup.cfg
+--rw-r--r--   0 sanhehu    (501) staff       (20)     7836 2023-04-06 01:42:35.000000 awscli_mate-0.2.1/setup.py
++drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-07 03:48:53.928111 awscli_mate-0.3.1/
++-rw-r--r--   0 sanhehu    (501) staff       (20)      509 2023-04-04 15:13:55.000000 awscli_mate-0.3.1/AUTHORS.rst
++-rw-r--r--   0 sanhehu    (501) staff       (20)     1121 2023-04-04 15:13:55.000000 awscli_mate-0.3.1/LICENSE.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)      319 2023-04-04 15:13:55.000000 awscli_mate-0.3.1/MANIFEST.in
++-rw-r--r--   0 sanhehu    (501) staff       (20)     5374 2023-04-07 03:48:53.927967 awscli_mate-0.3.1/PKG-INFO
++-rw-r--r--   0 sanhehu    (501) staff       (20)     4274 2023-04-07 03:18:16.000000 awscli_mate-0.3.1/README.rst
++drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-07 03:48:53.925868 awscli_mate-0.3.1/awscli_mate/
++-rw-r--r--   0 sanhehu    (501) staff       (20)      630 2023-04-07 02:45:19.000000 awscli_mate-0.3.1/awscli_mate/__init__.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)       93 2023-04-07 02:46:19.000000 awscli_mate-0.3.1/awscli_mate/_version.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)      183 2023-04-07 02:48:38.000000 awscli_mate-0.3.1/awscli_mate/api.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)     8578 2023-04-07 03:35:48.000000 awscli_mate-0.3.1/awscli_mate/awscli.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)      707 2023-04-06 01:57:32.000000 awscli_mate-0.3.1/awscli_mate/cli.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)      636 2023-04-04 17:52:15.000000 awscli_mate-0.3.1/awscli_mate/constants.py
++drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-07 03:48:53.926874 awscli_mate-0.3.1/awscli_mate/docs/
++-rw-r--r--   0 sanhehu    (501) staff       (20)       43 2023-04-04 15:13:55.000000 awscli_mate-0.3.1/awscli_mate/docs/__init__.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)      245 2023-04-07 02:32:41.000000 awscli_mate-0.3.1/awscli_mate/exc.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)      307 2023-04-04 18:03:25.000000 awscli_mate-0.3.1/awscli_mate/paths.py
++drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-07 03:48:53.927639 awscli_mate-0.3.1/awscli_mate/tests/
++-rw-r--r--   0 sanhehu    (501) staff       (20)       58 2023-04-04 15:56:46.000000 awscli_mate-0.3.1/awscli_mate/tests/__init__.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)     1215 2023-04-02 05:07:43.000000 awscli_mate-0.3.1/awscli_mate/tests/helper.py
++-rw-r--r--   0 sanhehu    (501) staff       (20)      370 2023-04-02 05:07:43.000000 awscli_mate-0.3.1/awscli_mate/tests/paths.py
++drwxr-xr-x   0 sanhehu    (501) staff       (20)        0 2023-04-07 03:48:53.926718 awscli_mate-0.3.1/awscli_mate.egg-info/
++-rw-r--r--   0 sanhehu    (501) staff       (20)     5374 2023-04-07 03:48:53.000000 awscli_mate-0.3.1/awscli_mate.egg-info/PKG-INFO
++-rw-r--r--   0 sanhehu    (501) staff       (20)      655 2023-04-07 03:48:53.000000 awscli_mate-0.3.1/awscli_mate.egg-info/SOURCES.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)        1 2023-04-07 03:48:53.000000 awscli_mate-0.3.1/awscli_mate.egg-info/dependency_links.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)       49 2023-04-07 03:48:53.000000 awscli_mate-0.3.1/awscli_mate.egg-info/entry_points.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)      248 2023-04-07 03:48:53.000000 awscli_mate-0.3.1/awscli_mate.egg-info/requires.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)       12 2023-04-07 03:48:53.000000 awscli_mate-0.3.1/awscli_mate.egg-info/top_level.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)     1276 2023-04-07 03:39:55.000000 awscli_mate-0.3.1/release-history.rst
++-rw-r--r--   0 sanhehu    (501) staff       (20)      228 2023-04-07 03:08:21.000000 awscli_mate-0.3.1/requirements-dev.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)      621 2023-04-04 15:13:55.000000 awscli_mate-0.3.1/requirements-doc.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)      196 2023-04-07 03:08:26.000000 awscli_mate-0.3.1/requirements-test.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)       64 2023-04-07 03:15:36.000000 awscli_mate-0.3.1/requirements.txt
++-rw-r--r--   0 sanhehu    (501) staff       (20)       38 2023-04-07 03:48:53.928273 awscli_mate-0.3.1/setup.cfg
++-rw-r--r--   0 sanhehu    (501) staff       (20)     7837 2023-04-07 03:48:12.000000 awscli_mate-0.3.1/setup.py
+```
+
+### Comparing `awscli_mate-0.2.1/LICENSE.txt` & `awscli_mate-0.3.1/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `awscli_mate-0.2.1/awscli_mate/__init__.py` & `awscli_mate-0.3.1/awscli_mate/__init__.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -12,14 +12,17 @@
+ __author__ = "Sanhe Hu"
+ __author_email__ = "husanhe@gmail.com"
+ __github_username__ = "MacHu-GWU"
+ 
+ try:
+     from .api import (
+         AWSCliConfig,
++        SectionTypeEnum,
++        ConfigKeyEnum,
++        CredentialKeyEnum,
+     )
+ except ImportError as e:  # pragma: no cover
+     print(e)
+ 
+ try:  # pragma: no cover
+     from .cli import main
+ except ImportError:  # pragma: no cover
+```
+
+### Comparing `awscli_mate-0.2.1/awscli_mate/awscli.py` & `awscli_mate-0.3.1/awscli_mate/awscli.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,48 +1,84 @@
+ # -*- coding: utf-8 -*-
+ 
++"""
++This module provides a set of functions to interact with AWS CLI.
++"""
++
+ import typing as T
+ import dataclasses
+ from pathlib import Path
++import configparser
++
++from atomicwrites import atomic_write
+ from commentedconfigparser import CommentedConfigParser
+ 
+ from .paths import path_config, path_credentials
+-from .exc import ProfileNotFoundError
++from . import exc
+ 
+ 
+ @dataclasses.dataclass
+ class AWSCliConfig:
++    """
++    Abstraction of the AWS CLI config files.
++    """
++
+     path_config: Path = dataclasses.field(default=path_config)
+     path_credentials: Path = dataclasses.field(default=path_credentials)
+ 
+-    def read_config(self) -> T.Tuple[CommentedConfigParser, CommentedConfigParser]:
+-        config = CommentedConfigParser()
+-        config.read(self.path_config)
+-        credentials = CommentedConfigParser()
+-        credentials.read(self.path_credentials)
++    def read_config(
++        self,
++    ) -> T.Tuple[CommentedConfigParser, CommentedConfigParser,]:
++        """
++        parse ~/.aws/config and ~/.aws/credentials file, return two config objects.
++        """
++        if not self.path_config.exists():
++            raise exc.AWSConfigFileNotExistError(f"{self.path_config} not exist!")
++        if not self.path_credentials.exists():
++            raise exc.AWSCredentialsFileNotExistError(
++                f"{self.path_credentials} not exist!"
++            )
++
++        try:
++            config = CommentedConfigParser()
++            config.read(self.path_config)
++        except configparser.ParsingError as e:
++            raise exc.MalformedConfigFileError(str(e))
++
++        try:
++            credentials = CommentedConfigParser()
++            credentials.read(self.path_credentials)
++        except configparser.ParsingError as e:
++            raise exc.MalformedConfigFileError(str(e))
++
+         return config, credentials
+ 
+     def ensure_profile_exists(
+         self,
+         profile: str,
+         config: CommentedConfigParser,
+         credentials: CommentedConfigParser,
+     ):
++        """
++        Ensure the profile exists in the config and credentials object.
++        """
+         msg = "Profile [{}] not found in {}"
+ 
+         if profile != "default":
+             section_name = f"profile {profile}"
+         else:
+             section_name = profile
+         if section_name not in config:
+-            raise ProfileNotFoundError(msg.format(section_name, self.path_config))
++            raise exc.ProfileNotFoundError(msg.format(section_name, self.path_config))
+ 
+         section_name = profile
+         if section_name not in credentials:
+-            raise ProfileNotFoundError(msg.format(section_name, self.path_credentials))
++            raise exc.ProfileNotFoundError(
++                msg.format(section_name, self.path_credentials)
++            )
+ 
+     def clear_section_data(
+         self,
+         config: CommentedConfigParser,
+         section_name: str,
+     ) -> bool:
+         """
+@@ -55,36 +91,53 @@
+         return len(kv_list) > 0
+ 
+     def copy_section_data(
+         self,
+         config: CommentedConfigParser,
+         from_section_name: str,
+         to_section_name: str,
++        create_if_not_exist: bool = False,
+     ):
++        """
++        Copy section data from one profile to another.
++        """
++        if create_if_not_exist:
++            if to_section_name not in config:
++                config[to_section_name] = {}
+         for k, v in list(config[from_section_name].items()):
+             config[to_section_name][k] = v
+ 
+     def replace_section_data(
+         self,
+         config: CommentedConfigParser,
+         from_section_name: str,
+         to_section_name: str,
++        create_if_not_exist: bool = False,
+     ) -> bool:
+         """
+         Replace section data, return a boolean flag to indicate that whether
+         there is any data change.
+         """
++        if create_if_not_exist:
++            if to_section_name not in config:
++                config[to_section_name] = {
++                    "this_is_a_dummy_key": "this_is_a_dummy_value"
++                }
++
+         if dict(config[from_section_name]) == dict(config[to_section_name]):
+             return False
+ 
+         self.clear_section_data(config, to_section_name)
+         self.copy_section_data(config, from_section_name, to_section_name)
+         return True
+ 
+     def set_profile_as_default(self, profile: str):
++        """
++        Set the given profile as the default profile by replacing the section data.
++        """
+         if profile == "default":
+             return
+ 
+         config, credentials = self.read_config()
+         self.ensure_profile_exists("default", config, credentials)
+         self.ensure_profile_exists(profile, config, credentials)
+ 
+@@ -156,35 +209,44 @@
+ 
+         # read existing config / credentials data
+         config, credentials = self.read_config()
+ 
+         # update config / credentials data in memory
+         new_profile = "{}_mfa".format(profile)
+ 
++        # update config data
+         # set initial value if section not exists
+         if f"profile {new_profile}" not in config:
+-            config[f"profile {new_profile}"] = {}
+-        if new_profile not in credentials:
+-            credentials[new_profile] = {}
++            flag_is_config_changed = True
++            self.copy_section_data(
++                config,
++                from_section_name=f"profile {profile}",
++                to_section_name=f"profile {new_profile}",
++            )
++        else:
++            flag_is_config_changed = False
+ 
+-        flag_is_config_changed = self.replace_section_data(
+-            config,
+-            from_section_name=f"profile {profile}",
+-            to_section_name=f"profile {new_profile}",
+-        )
++        # because mfa_auth is for the credentials
++        # we respect the ``..._mfa`` profile if it already exists,
++        # and it is different from te base profile
++        # we don't do ``replace_section_data`` here
+ 
++        # update credential data
++        # set initial value if section not exists
++        if new_profile not in credentials:
++            credentials[new_profile] = {}
+         self.clear_section_data(credentials, new_profile)
+         credentials[new_profile]["aws_access_key_id"] = aws_access_key_id
+         credentials[new_profile]["aws_secret_access_key"] = aws_secret_access_key
+         credentials[new_profile]["aws_session_token"] = aws_session_token
+ 
+         if overwrite_default:
+             self.copy_section_data(config, f"profile {new_profile}", "default")
+             self.copy_section_data(credentials, new_profile, "default")
+ 
+         # update ~/.aws/config and ~/.aws/credentials file
+         if flag_is_config_changed:
+-            with self.path_config.open("w") as f:
++            with atomic_write(f"{self.path_config}", overwrite=True) as f:
+                 config.write(f)
+ 
+-        with self.path_credentials.open("w") as f:
++        with atomic_write(f"{self.path_credentials}", overwrite=True) as f:
+             credentials.write(f)
+```
+
+### Comparing `awscli_mate-0.2.1/awscli_mate/cli.py` & `awscli_mate-0.3.1/awscli_mate/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `awscli_mate-0.2.1/awscli_mate/constants.py` & `awscli_mate-0.3.1/awscli_mate/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `awscli_mate-0.2.1/awscli_mate/tests/helper.py` & `awscli_mate-0.3.1/awscli_mate/tests/helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `awscli_mate-0.2.1/awscli_mate.egg-info/SOURCES.txt` & `awscli_mate-0.3.1/awscli_mate.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `awscli_mate-0.2.1/requirements-doc.txt` & `awscli_mate-0.3.1/requirements-doc.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `awscli_mate-0.2.1/setup.py` & `awscli_mate-0.3.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -116,19 +116,19 @@
+         "Intended Audience :: Developers",
+         "License :: OSI Approved :: MIT License",
+         "Natural Language :: English",
+         "Operating System :: Microsoft :: Windows",
+         "Operating System :: MacOS",
+         "Operating System :: Unix",
+         "Programming Language :: Python",
+-        "Programming Language :: Python :: 3.6",
+         "Programming Language :: Python :: 3.7",
+         "Programming Language :: Python :: 3.8",
+         "Programming Language :: Python :: 3.9",
+         "Programming Language :: Python :: 3.10",
++        "Programming Language :: Python :: 3.11",
+         "Programming Language :: Python :: 3 :: Only",
+     ]
+     """
+     Full list can be found at: https://pypi.python.org/pypi?%3Aaction=list_classifiers
+     """
+ 
+     def read_requirements_file(path):
+```
+
