@@ -1,0 +1,197 @@
+# Comparing `tmp/markdownlit-0.0.5.tar.gz` & `tmp/markdownlit-0.0.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "markdownlit-0.0.5.tar", last modified: Fri Nov 18 15:25:06 2022, max compression
++gzip compressed data, was "markdownlit-0.0.6.tar", last modified: Fri Apr  7 13:11:15 2023, max compression
+```
+
+## Comparing `markdownlit-0.0.5.tar` & `markdownlit-0.0.6.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,20 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-18 15:25:06.473577 markdownlit-0.0.5/
+--rw-r--r--   0 runner    (1001) docker     (121)     1124 2022-11-18 15:25:06.473577 markdownlit-0.0.5/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      633 2022-11-18 15:24:45.000000 markdownlit-0.0.5/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-18 15:25:06.473577 markdownlit-0.0.5/markdownlit/
+--rw-r--r--   0 runner    (1001) docker     (121)     2820 2022-11-18 15:24:45.000000 markdownlit-0.0.5/markdownlit/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-18 15:25:06.473577 markdownlit-0.0.5/markdownlit/extensions/
+--rw-r--r--   0 runner    (1001) docker     (121)     1104 2022-11-18 15:24:45.000000 markdownlit-0.0.5/markdownlit/extensions/align.py
+--rw-r--r--   0 runner    (1001) docker     (121)      620 2022-11-18 15:24:45.000000 markdownlit-0.0.5/markdownlit/extensions/arrow.py
+--rw-r--r--   0 runner    (1001) docker     (121)     4102 2022-11-18 15:24:45.000000 markdownlit-0.0.5/markdownlit/extensions/at_sign.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1194 2022-11-18 15:24:45.000000 markdownlit-0.0.5/markdownlit/extensions/color.py
+--rw-r--r--   0 runner    (1001) docker     (121)      516 2022-11-18 15:24:45.000000 markdownlit-0.0.5/markdownlit/extensions/double_dash.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-18 15:25:06.473577 markdownlit-0.0.5/markdownlit.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     1124 2022-11-18 15:25:06.000000 markdownlit-0.0.5/markdownlit.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      390 2022-11-18 15:25:06.000000 markdownlit-0.0.5/markdownlit.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-18 15:25:06.000000 markdownlit-0.0.5/markdownlit.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       78 2022-11-18 15:25:06.000000 markdownlit-0.0.5/markdownlit.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       12 2022-11-18 15:25:06.000000 markdownlit-0.0.5/markdownlit.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      797 2022-11-18 15:24:45.000000 markdownlit-0.0.5/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (121)       38 2022-11-18 15:25:06.473577 markdownlit-0.0.5/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:11:15.823478 markdownlit-0.0.6/
++-rw-r--r--   0 runner    (1001) docker     (123)    11358 2023-04-07 13:10:57.000000 markdownlit-0.0.6/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)    14278 2023-04-07 13:11:15.823478 markdownlit-0.0.6/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      781 2023-04-07 13:10:57.000000 markdownlit-0.0.6/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:11:15.823478 markdownlit-0.0.6/markdownlit/
++-rw-r--r--   0 runner    (1001) docker     (123)     2820 2023-04-07 13:10:57.000000 markdownlit-0.0.6/markdownlit/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:11:15.823478 markdownlit-0.0.6/markdownlit/extensions/
++-rw-r--r--   0 runner    (1001) docker     (123)     1104 2023-04-07 13:10:57.000000 markdownlit-0.0.6/markdownlit/extensions/align.py
++-rw-r--r--   0 runner    (1001) docker     (123)      620 2023-04-07 13:10:57.000000 markdownlit-0.0.6/markdownlit/extensions/arrow.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4253 2023-04-07 13:10:57.000000 markdownlit-0.0.6/markdownlit/extensions/at_sign.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1194 2023-04-07 13:10:57.000000 markdownlit-0.0.6/markdownlit/extensions/color.py
++-rw-r--r--   0 runner    (1001) docker     (123)      516 2023-04-07 13:10:57.000000 markdownlit-0.0.6/markdownlit/extensions/double_dash.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:11:15.823478 markdownlit-0.0.6/markdownlit.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)    14278 2023-04-07 13:11:15.000000 markdownlit-0.0.6/markdownlit.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      398 2023-04-07 13:11:15.000000 markdownlit-0.0.6/markdownlit.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 13:11:15.000000 markdownlit-0.0.6/markdownlit.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       78 2023-04-07 13:11:15.000000 markdownlit-0.0.6/markdownlit.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-07 13:11:15.000000 markdownlit-0.0.6/markdownlit.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      798 2023-04-07 13:10:57.000000 markdownlit-0.0.6/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 13:11:15.823478 markdownlit-0.0.6/setup.cfg
+```
+
+### Comparing `markdownlit-0.0.5/README.md` & `markdownlit-0.0.6/README.md`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,8 +1,9 @@
+-<a href="https://markdownlit.streamlit.app" title="Markdownlit app"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg"></a><br>
++<a href="https://markdownlit.streamlit.app" title="Markdownlit app"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg"></a>
++<a href="https://github.com/arnaudmiribel/streamlit-extras"> <img src="https://img.shields.io/badge/-%F0%9F%AA%A2%20featured%20extra-e8ded1"></img></a>
+ 
+ # markdownlit
+ 
+ `markdownlit` gives you a couple of lit additional Markdown commands for your Streamlit apps! It is built upon the [Python-Markdown/markdown](https://github.com/Python-Markdown/markdown) project.
+ 
+ ## Get started
+```
+
+#### html2text {}
+
+```diff
+@@ -1,7 +1,7 @@
++[https://static.streamlit.io/badges/streamlit_badge_black_white.svg] [https://
++img.shields.io/badge/-%F0%9F%AA%A2%20featured%20extra-e8ded1] # markdownlit
++`markdownlit` gives you a couple of lit additional Markdown commands for your
++Streamlit apps! It is built upon the [Python-Markdown/markdown](https://
++github.com/Python-Markdown/markdown) project. ## Get started The package is
++available on PyPI! ``` pip install markdownlit ``` ## Introduction Visit...
+ [https://static.streamlit.io/badges/streamlit_badge_black_white.svg]
+-# markdownlit `markdownlit` gives you a couple of lit additional Markdown
+-commands for your Streamlit apps! It is built upon the [Python-Markdown/
+-markdown](https://github.com/Python-Markdown/markdown) project. ## Get started
+-The package is available on PyPI! ``` pip install markdownlit ``` ##
+-Introduction Visit... [https://static.streamlit.io/badges/
+-streamlit_badge_black_white.svg]
+```
+
+### Comparing `markdownlit-0.0.5/markdownlit/__init__.py` & `markdownlit-0.0.6/markdownlit/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `markdownlit-0.0.5/markdownlit/extensions/align.py` & `markdownlit-0.0.6/markdownlit/extensions/align.py`
+
+ * *Files identical despite different names*
+
+### Comparing `markdownlit-0.0.5/markdownlit/extensions/arrow.py` & `markdownlit-0.0.6/markdownlit/extensions/arrow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `markdownlit-0.0.5/markdownlit/extensions/at_sign.py` & `markdownlit-0.0.6/markdownlit/extensions/at_sign.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -5,14 +5,19 @@
+ 
+ import favicon
+ import requests
+ import streamlit as st
+ from markdown.inlinepatterns import InlineProcessor
+ from streamlit_extras.mention import mention
+ 
++try:
++    from streamlit import cache_data  # streamlit >= 1.18.0
++except ImportError:
++    from streamlit import experimental_memo as cache_data  # streamlit >= 0.89
++
+ SUPPORTED_PLATFORMS = ("github", "notion", "twitter", "streamlit")
+ GITHUB_ICON = "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+ NOTION_ICON = "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
+ TWITTER_ICON = "https://seeklogo.com/images/T/twitter-icon-circle-blue-logo-0902F48837-seeklogo.com.png"
+ STREAMLIT_ICON = "https://aws1.discourse-cdn.com/business7/uploads/streamlit/original/2X/f/f0d0d26db1f2d99da8472951c60e5a1b782eb6fe.png"
+ 
+ AT_SIGN_RE = r"@(?P<a>\([^)]+\))(?P<b>\([^)]+\))?(?P<c>\([^)]+\))?"
+@@ -60,21 +65,21 @@
+         if html.find("</style>") != -1:
+             html = html[html.find("</style>") + len("</style>") :]
+         el = ET.ElementTree(ET.fromstring(str(html))).getroot()
+         el.set("style", "display: inline; color:inherit; text-decoration:inherit;")
+         return el, m.start(0), m.end(0)
+ 
+     @staticmethod
+-    @st.experimental_memo
++    @st.cache_data
+     def _get_favicon(url: str) -> str:
+         favicons = favicon.get(url, timeout=2)
+         return favicons[0].url
+ 
+     @staticmethod
+-    @st.experimental_memo
++    @st.cache_data
+     def _get_page_title(url: str) -> str:
+         n = requests.get(url)
+         al = n.text
+         return al[al.find("<title>") + 7 : al.find("</title>")]
+ 
+     def _guess_icon_and_label(self, url: str) -> Tuple[str, str]:
+         """Find out plausible icon and label from URL alone
+```
+
+### Comparing `markdownlit-0.0.5/markdownlit/extensions/color.py` & `markdownlit-0.0.6/markdownlit/extensions/color.py`
+
+ * *Files identical despite different names*
+
+### Comparing `markdownlit-0.0.5/markdownlit/extensions/double_dash.py` & `markdownlit-0.0.6/markdownlit/extensions/double_dash.py`
+
+ * *Files identical despite different names*
+
+### Comparing `markdownlit-0.0.5/pyproject.toml` & `markdownlit-0.0.6/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "markdownlit"
+-version = "0.0.5"
++version = "0.0.6"
+ authors = [
+   { name="Arnaud Miribel", email="arnaudmiribel@gmail.com" },
+ ]
+ description = "markdownlit adds a couple of lit Markdown capabilities to your Streamlit apps"
+ readme = "README.md"
+ license = { file="LICENSE" }
+ requires-python = ">=3.6"
+@@ -28,8 +28,8 @@
+     "python",
+     "streamlit",
+     "markdown",
+ ]
+ 
+ [project.urls]
+ "Homepage" = "https://github.com/arnaudmiribel/markdownlit"
+-"Bug Tracker" = "https://github.com/arnaudmiribel/markdownlit/issues"
++"Bug Tracker" = "https://github.com/arnaudmiribel/markdownlit/issues"
+```
+

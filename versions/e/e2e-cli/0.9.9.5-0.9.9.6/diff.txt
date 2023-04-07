@@ -1,0 +1,1328 @@
+--- tmp/e2e_cli-0.9.9.5.tar.gz
++++ tmp/e2e_cli-0.9.9.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "e2e_cli-0.9.9.5.tar", last modified: Fri Apr  7 08:39:32 2023, max compression
+│ +gzip compressed data, was "e2e_cli-0.9.9.6.tar", last modified: Fri Apr  7 13:12:25 2023, max compression
+│   --- e2e_cli-0.9.9.5.tar
+├── +++ e2e_cli-0.9.9.6.tar
+│ ├── file list
+│ │ @@ -1,106 +1,106 @@
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/LICENSE
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)       31 2023-03-03 10:09:05.000000 e2e_cli-0.9.9.5/MANIFEST.in
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      229 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/PKG-INFO
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     6237 2023-03-03 09:45:02.000000 e2e_cli-0.9.9.5/README.md
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.508890 e2e_cli-0.9.9.5/e2e_cli/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:32.000000 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3934 2023-04-06 09:40:06.000000 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/auto_scaling.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     2000 2023-04-06 11:22:35.000000 e2e_cli-0.9.9.5/e2e_cli/auto_scaling/autoscaling_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/bucket_store/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-20 13:31:40.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     8271 2023-04-06 10:32:48.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/bucket_actions.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:41.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3848 2023-04-06 10:15:21.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/bucket_storage.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     4485 2023-04-06 11:22:16.000000 e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/cdn/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:23.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3135 2023-04-06 11:06:02.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/cdn_action.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:19.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3598 2023-04-06 10:59:59.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/cdn.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3126 2023-04-06 11:22:26.000000 e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_routing.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     6044 2023-04-06 09:55:18.000000 e2e_cli-0.9.9.5/e2e_cli/commands_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/config/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/config/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     6580 2023-04-07 06:58:38.000000 e2e_cli-0.9.9.5/e2e_cli/config/config.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3108 2023-04-07 08:38:08.000000 e2e_cli-0.9.9.5/e2e_cli/config/config_routing.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      372 2023-03-24 06:11:14.000000 e2e_cli-0.9.9.5/e2e_cli/config/config_service.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/core/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/core/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     2238 2023-04-07 07:00:53.000000 e2e_cli-0.9.9.5/e2e_cli/core/alias_service.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      494 2023-03-30 12:12:51.000000 e2e_cli-0.9.9.5/e2e_cli/core/constants.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3639 2023-03-10 13:20:42.000000 e2e_cli-0.9.9.5/e2e_cli/core/error_logs_service.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     1797 2023-04-04 13:21:23.000000 e2e_cli-0.9.9.5/e2e_cli/core/help_messages.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3263 2023-04-06 09:53:11.000000 e2e_cli-0.9.9.5/e2e_cli/core/helper_service.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      657 2023-04-04 12:06:28.000000 e2e_cli-0.9.9.5/e2e_cli/core/py_manager.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      455 2023-03-21 09:56:43.000000 e2e_cli-0.9.9.5/e2e_cli/core/request_service.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/dbaas/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:07.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     8272 2023-04-06 12:16:27.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/dbaas_action.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:03.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     5221 2023-03-24 06:12:26.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     8922 2023-03-24 06:22:28.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas_services.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     5036 2023-04-06 12:18:07.000000 e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/docs/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/docs/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     7166 2023-04-07 08:33:45.000000 e2e_cli-0.9.9.5/e2e_cli/docs/e2e_cli.1
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/image/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:00:12.000000 e2e_cli-0.9.9.5/e2e_cli/image/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/image/image_crud/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:29.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_crud/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3345 2023-04-06 12:57:23.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_crud/image.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/image/image_listing/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:22.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_listing/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     1365 2023-03-24 06:10:02.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_listing/image_list.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     2674 2023-04-06 12:50:42.000000 e2e_cli-0.9.9.5/e2e_cli/image/image_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     4406 2023-03-02 07:23:13.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     1530 2023-04-06 13:10:48.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_routing.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)    42484 2023-03-24 06:23:22.000000 e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_services.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)    14058 2023-04-07 07:55:46.000000 e2e_cli-0.9.9.5/e2e_cli/main.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      459 2023-03-31 06:51:42.000000 e2e_cli-0.9.9.5/e2e_cli/man_display.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/node/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/node/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/node/node_actions/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 08:09:56.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_actions/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     8036 2023-04-04 12:12:13.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_actions/node_action.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.512890 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:01:01.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     6414 2023-04-05 05:52:33.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3666 2023-03-24 06:25:30.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node_listing_service.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     5378 2023-04-04 12:11:05.000000 e2e_cli-0.9.9.5/e2e_cli/node/node_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/volumes/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/__init__.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     1839 2023-03-24 06:28:30.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/volumes_action.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3749 2023-04-06 13:35:14.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/volumes.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     2809 2023-04-06 13:17:35.000000 e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/e2e_cli/vpc/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:29:40.000000 e2e_cli-0.9.9.5/e2e_cli/vpc/__init__.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     3510 2023-04-06 13:38:49.000000 e2e_cli-0.9.9.5/e2e_cli/vpc/vpc.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     2142 2023-04-06 13:34:46.000000 e2e_cli-0.9.9.5/e2e_cli/vpc/vpc_routing.py
+│ │ -drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 08:39:32.508890 e2e_cli-0.9.9.5/e2e_cli.egg-info/
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      229 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)     2450 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        1 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)       57 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)       40 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/requires.txt
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)        8 2023-04-07 08:39:32.000000 e2e_cli-0.9.9.5/e2e_cli.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      432 2023-03-30 07:14:12.000000 e2e_cli-0.9.9.5/install_man.py
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)       38 2023-04-07 08:39:32.516889 e2e_cli-0.9.9.5/setup.cfg
+│ │ --rw-rw-r--   0 aman      (1000) aman      (1000)      737 2023-04-07 08:39:20.000000 e2e_cli-0.9.9.5/setup.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.610128 e2e_cli-0.9.9.6/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/LICENSE
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)       31 2023-03-03 10:09:05.000000 e2e_cli-0.9.9.6/MANIFEST.in
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      229 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/PKG-INFO
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     6237 2023-03-03 09:45:02.000000 e2e_cli-0.9.9.6/README.md
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/auto_scaling/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:32.000000 e2e_cli-0.9.9.6/e2e_cli/auto_scaling/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     4068 2023-04-07 12:51:56.000000 e2e_cli-0.9.9.6/e2e_cli/auto_scaling/auto_scaling.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     2139 2023-04-07 12:18:48.000000 e2e_cli-0.9.9.6/e2e_cli/auto_scaling/autoscaling_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/bucket_store/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/bucket_store/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_actions/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-20 13:31:40.000000 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_actions/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     8272 2023-04-07 12:52:26.000000 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_actions/bucket_actions.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_crud/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:41.000000 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_crud/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     4074 2023-04-07 12:55:53.000000 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_crud/bucket_storage.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     4826 2023-04-07 12:16:30.000000 e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/cdn/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/cdn/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_actions/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:23.000000 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_actions/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3135 2023-04-06 11:06:02.000000 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_actions/cdn_action.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_crud/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:19.000000 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_crud/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3698 2023-04-07 12:53:46.000000 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_crud/cdn.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3500 2023-04-07 12:57:28.000000 e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_routing.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     6181 2023-04-07 12:18:27.000000 e2e_cli-0.9.9.6/e2e_cli/commands_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli/config/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/config/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     6580 2023-04-07 06:58:38.000000 e2e_cli-0.9.9.6/e2e_cli/config/config.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3144 2023-04-07 12:20:30.000000 e2e_cli-0.9.9.6/e2e_cli/config/config_routing.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      372 2023-03-24 06:11:14.000000 e2e_cli-0.9.9.6/e2e_cli/config/config_service.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/core/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/core/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     2249 2023-04-07 09:55:24.000000 e2e_cli-0.9.9.6/e2e_cli/core/alias_service.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      579 2023-04-07 13:00:14.000000 e2e_cli-0.9.9.6/e2e_cli/core/constants.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3639 2023-03-10 13:20:42.000000 e2e_cli-0.9.9.6/e2e_cli/core/error_logs_service.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     1797 2023-04-04 13:21:23.000000 e2e_cli-0.9.9.6/e2e_cli/core/help_messages.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3263 2023-04-06 09:53:11.000000 e2e_cli-0.9.9.6/e2e_cli/core/helper_service.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      657 2023-04-04 12:06:28.000000 e2e_cli-0.9.9.6/e2e_cli/core/py_manager.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      455 2023-03-21 09:56:43.000000 e2e_cli-0.9.9.6/e2e_cli/core/request_service.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/dbaas/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_actions/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:07.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_actions/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     8272 2023-04-06 12:16:27.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_actions/dbaas_action.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_crud/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:23:03.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_crud/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     5221 2023-03-24 06:12:26.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_crud/dbaas.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     8922 2023-03-24 06:22:28.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_crud/dbaas_services.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     5410 2023-04-07 12:22:15.000000 e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/docs/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/docs/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     7055 2023-04-07 12:44:52.000000 e2e_cli-0.9.9.6/e2e_cli/docs/e2e_cli.1
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/image/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:00:12.000000 e2e_cli-0.9.9.6/e2e_cli/image/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/image/image_crud/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:29.000000 e2e_cli-0.9.9.6/e2e_cli/image/image_crud/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3345 2023-04-06 12:57:23.000000 e2e_cli-0.9.9.6/e2e_cli/image/image_crud/image.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/image/image_listing/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 10:56:22.000000 e2e_cli-0.9.9.6/e2e_cli/image/image_listing/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     1365 2023-03-24 06:10:02.000000 e2e_cli-0.9.9.6/e2e_cli/image/image_listing/image_list.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     2813 2023-04-07 13:07:44.000000 e2e_cli-0.9.9.6/e2e_cli/image/image_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/loadbalancer/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/loadbalancer/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     4406 2023-03-02 07:23:13.000000 e2e_cli-0.9.9.6/e2e_cli/loadbalancer/lb.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     1530 2023-04-06 13:10:48.000000 e2e_cli-0.9.9.6/e2e_cli/loadbalancer/lb_routing.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)    42484 2023-03-24 06:23:22.000000 e2e_cli-0.9.9.6/e2e_cli/loadbalancer/lb_services.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)    14058 2023-04-07 12:30:51.000000 e2e_cli-0.9.9.6/e2e_cli/main.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      459 2023-03-31 06:51:42.000000 e2e_cli-0.9.9.6/e2e_cli/man_display.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/node/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/node/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/node/node_actions/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 08:09:56.000000 e2e_cli-0.9.9.6/e2e_cli/node/node_actions/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     8128 2023-04-07 11:42:29.000000 e2e_cli-0.9.9.6/e2e_cli/node/node_actions/node_action.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/node/node_crud/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-17 14:01:01.000000 e2e_cli-0.9.9.6/e2e_cli/node/node_crud/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     6680 2023-04-07 13:02:21.000000 e2e_cli-0.9.9.6/e2e_cli/node/node_crud/node.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3666 2023-03-24 06:25:30.000000 e2e_cli-0.9.9.6/e2e_cli/node/node_crud/node_listing_service.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     5561 2023-04-07 12:24:49.000000 e2e_cli-0.9.9.6/e2e_cli/node/node_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/volumes/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-02-17 14:04:58.000000 e2e_cli-0.9.9.6/e2e_cli/volumes/__init__.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_actions/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_actions/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     1839 2023-03-24 06:28:30.000000 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_actions/volumes_action.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_crud/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 09:26:32.000000 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_crud/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3930 2023-04-07 12:54:01.000000 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_crud/volumes.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3158 2023-04-07 12:25:51.000000 e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.606128 e2e_cli-0.9.9.6/e2e_cli/vpc/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        0 2023-03-22 08:29:40.000000 e2e_cli-0.9.9.6/e2e_cli/vpc/__init__.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     3510 2023-04-06 13:38:49.000000 e2e_cli-0.9.9.6/e2e_cli/vpc/vpc.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     2474 2023-04-07 12:27:10.000000 e2e_cli-0.9.9.6/e2e_cli/vpc/vpc_routing.py
+│ │ +drwxrwxr-x   0 aman      (1000) aman      (1000)        0 2023-04-07 13:12:25.602128 e2e_cli-0.9.9.6/e2e_cli.egg-info/
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      229 2023-04-07 13:12:25.000000 e2e_cli-0.9.9.6/e2e_cli.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)     2450 2023-04-07 13:12:25.000000 e2e_cli-0.9.9.6/e2e_cli.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        1 2023-04-07 13:12:25.000000 e2e_cli-0.9.9.6/e2e_cli.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)       57 2023-04-07 13:12:25.000000 e2e_cli-0.9.9.6/e2e_cli.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)       40 2023-04-07 13:12:25.000000 e2e_cli-0.9.9.6/e2e_cli.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)        8 2023-04-07 13:12:25.000000 e2e_cli-0.9.9.6/e2e_cli.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      432 2023-03-30 07:14:12.000000 e2e_cli-0.9.9.6/install_man.py
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)       38 2023-04-07 13:12:25.610128 e2e_cli-0.9.9.6/setup.cfg
+│ │ +-rw-rw-r--   0 aman      (1000) aman      (1000)      737 2023-04-07 13:10:53.000000 e2e_cli-0.9.9.6/setup.py
+│ │   --- e2e_cli-0.9.9.5/README.md
+│ ├── +++ e2e_cli-0.9.9.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/auto_scaling/auto_scaling.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/auto_scaling/auto_scaling.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -56,37 +56,39 @@
+│ │          req="DELETE"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │  
+│ │          if Checks.status_result(status,req):
+│ │                          Py_version_manager.py_print("autoscaling Successfully deleted")
+│ │                          Py_version_manager.py_print("use following command -> e2e_cli <alias> autoscaling list to check if autoscaling has been deleted")
+│ │          
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.show_json(status) 
+│ │  
+│ │  
+│ │      def list_autoscaling(self):
+│ │          my_payload={}
+│ │          API_key= self.API_key  
+│ │          Auth_Token= self.Auth_Token 
+│ │          url =  BASE_URL+"myaccount/api/v1/scaler/scalegroups?apikey="+ API_key+"&location=Delhi"
+│ │          req="GET"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │          
+│ │ -        if Checks.status_result(status, req):
+│ │ -                Py_version_manager.py_print("Your autoscalings : ")
+│ │ -                try:
+│ │ -                    list=status['data']
+│ │ -                    i=1
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["index", "ID", "Policy", "Name", "Max_nodes", "Min_nodes"]
+│ │ -                    for element in list:
+│ │ -                        x.add_row([i, element['id'], element['policy'], element['name'], element['max_nodes'], element["min_nodes"]])
+│ │ -                        i = i+1
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                      Py_version_manager.py_print("Errors : ", e)
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #         Py_version_manager.py_print("Your autoscalings : ")
+│ │ +        #         try:
+│ │ +        #             list=status['data']
+│ │ +        #             i=1
+│ │ +        #             x = PrettyTable()
+│ │ +        #             x.field_names = ["index", "ID", "Policy", "Name", "Max_nodes", "Min_nodes"]
+│ │ +        #             for element in list:
+│ │ +        #                 x.add_row([i, element['id'], element['policy'], element['name'], element['max_nodes'], element["min_nodes"]])
+│ │ +        #                 i = i+1
+│ │ +        #             Py_version_manager.py_print(x)
+│ │ +        #         except Exception as e:
+│ │ +        #               Py_version_manager.py_print("Errors : ", e)
+│ │                          
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -                    Checks.show_json(status)
+│ │ -    
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #             Checks.show_json(status)
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/auto_scaling/autoscaling_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/auto_scaling/autoscaling_routing.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -6,14 +6,16 @@
+│ │  class autoscaling_Routing:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │          
+│ │          
+│ │      def route(self, Parsing_Errors):
+│ │          if (self.arguments.args.autoscaling_commands is None):
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │              subprocess.call(['e2e_cli', 'autoscaling', '-h'])
+│ │  
+│ │          # elif (self.arguments.args.autoscaling_commands is not None) and (self.arguments.args.action is not None):
+│ │          #       Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │          elif(self.arguments.args.autoscaling_commands is not None):
+│ │              auto_scaling_operations = autoscaling_Crud(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │ @@ -36,8 +38,9 @@
+│ │                                      auto_scaling_operations.list_autoscaling()
+│ │                                  except KeyboardInterrupt:
+│ │                                      Py_version_manager.py_print(" ")
+│ │             
+│ │              
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_actions/bucket_actions.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_actions/bucket_actions.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -98,29 +98,29 @@
+│ │          my_payload={}
+│ │          API_key= self.API_key  
+│ │          Auth_Token= self.Auth_Token 
+│ │          url =  BASE_URL+"myaccount/api/v1/storage/core/list/users/?apikey="+ API_key+"&location=Delhi"
+│ │          req="GET"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │          
+│ │ -        if Checks.status_result(status, req):
+│ │ -                Py_version_manager.py_print("Your Keys : ")
+│ │ -                try:
+│ │ -                    list=status['data']
+│ │ -                    i=1
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["index", "ID", "Name", "access_key" ]
+│ │ -                    for element in list:
+│ │ -                        x.add_row([i, element['id'], element['tag'], element['access_key']])
+│ │ -                        i = i+1
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                      Checks.show_json(status, e)
+│ │ -                      return    
+│ │ -
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #         Py_version_manager.py_print("Your Keys : ")
+│ │ +        #         try:
+│ │ +        #             list=status['data']
+│ │ +        #             i=1
+│ │ +        #             x = PrettyTable()
+│ │ +        #             x.field_names = ["index", "ID", "Name", "access_key" ]
+│ │ +        #             for element in list:
+│ │ +        #                 x.add_row([i, element['id'], element['tag'], element['access_key']])
+│ │ +        #                 i = i+1
+│ │ +        #             Py_version_manager.py_print(x)
+│ │ +        #         except Exception as e:
+│ │ +        #               Checks.show_json(status, e)
+│ │ +        #               return    
+│ │ +        Checks.status_result(status)
+│ │          Checks.show_json(status)
+│ │  
+│ │  
+│ │      def lock_key(self):
+│ │          key_id=Checks.take_input(self.kwargs["inputs"], "key_id")
+│ │          while(not Checks.is_int(key_id)):
+│ │                  key_id=Py_version_manager.py_input("Only integer allowed ")
+│ │ @@ -186,17 +186,17 @@
+│ │          query['bucket_name']=bucket_name
+│ │          API_key=self.API_key
+│ │          Auth_Token=self.Auth_Token
+│ │          url =  BASE_URL+"myaccount/api/v1/storage/bucket_perms/?apikey="+API_key+"&location=Delhi"
+│ │          req="PUT"
+│ │          status=Request(url, Auth_Token, my_payload, req, query=query).response.json()
+│ │  
+│ │ -        # if(Checks.status_result(status)):
+│ │ -        #       Py_version_manager.py_print("Key deleted successfully")
+│ │ -        Checks.status_result(status)
+│ │ +        if(Checks.status_result(status)):
+│ │ +              Py_version_manager.py_print("Key deleted successfully")
+│ │ +              
+│ │          Checks.show_json(status)
+│ │  
+│ │  
+│ │      def remove_permission(self):
+│ │          access_key=Checks.take_input(self.kwargs["inputs"], "access_key")
+│ │          my_payload= {} 
+│ │          query= dict()
+│ │ @@ -206,9 +206,8 @@
+│ │          url =  BASE_URL+"myaccount/api/v1/storage/core/users/?apikey="+API_key+"&location=Delhi"
+│ │          req="DELETE"
+│ │          status=Request(url, Auth_Token, my_payload, req, query=query).response.json()
+│ │  
+│ │          if(Checks.status_result(status)):
+│ │                Py_version_manager.py_print("Key deleted successfully")
+│ │  
+│ │ -        Checks.status_result(status)
+│ │          Checks.show_json(status)
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_crud/bucket_storage.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_crud/bucket_storage.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -27,25 +27,27 @@
+│ │  
+│ │          API_key=self.API_key
+│ │          Auth_Token=self.Auth_Token
+│ │          url =  BASE_URL+"myaccount/api/v1/storage/buckets/"+ bucket_name +"/?apikey="+API_key+"&location=Delhi"
+│ │          req="POST"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │                 
+│ │ -        if Checks.status_result(status, req):
+│ │ -            try:
+│ │ -                x = PrettyTable()
+│ │ -                x.field_names = ["ID", "Name", "Created at"]
+│ │ -                x.add_row([status['data']['id'], status['data']['name'], status['data']['created_at']])
+│ │ -                Py_version_manager.py_print(x)
+│ │ -            except Exception as e:
+│ │ -                    Py_version_manager.py_print("Errors : ", e)
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #     try:
+│ │ +        #         x = PrettyTable()
+│ │ +        #         x.field_names = ["ID", "Name", "Created at"]
+│ │ +        #         x.add_row([status['data']['id'], status['data']['name'], status['data']['created_at']])
+│ │ +        #         Py_version_manager.py_print(x)
+│ │ +        #     except Exception as e:
+│ │ +        #             Py_version_manager.py_print("Errors : ", e)
+│ │                    
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)    
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status) 
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)   
+│ │  
+│ │  
+│ │      def delete_bucket(self):
+│ │          my_payload={}
+│ │          bucket_name=Checks.take_input(self.kwargs["inputs"], "bucket_name")
+│ │          while(Checks.bucket_name_validity(bucket_name)):
+│ │                  bucket_name=Py_version_manager.py_input("Only following chars are supported: lowercase letters (a-z) or numbers(0-9)  Re-enter : ")
+│ │ @@ -56,37 +58,39 @@
+│ │          req="DELETE"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │  
+│ │          if Checks.status_result(status,req):
+│ │                          Py_version_manager.py_print("Bucket Successfully deleted")
+│ │                          Py_version_manager.py_print("use following command -> e2e_cli <alias> bucket list to check if bucket has been deleted")
+│ │          
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ -
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.show_json(status)
+│ │  
+│ │      def list_bucket(self):
+│ │          my_payload={}
+│ │          API_key= self.API_key  
+│ │          Auth_Token= self.Auth_Token 
+│ │          url =  BASE_URL+"myaccount/api/v1/storage/buckets/?apikey="+ API_key+"&location=Delhi"
+│ │          req="GET"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │          
+│ │ -        if Checks.status_result(status, req):
+│ │ -                Py_version_manager.py_print("Your Buckets : ")
+│ │ -                try:
+│ │ -                    list=status['data']
+│ │ -                    i=1
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["index", "ID", "Name", "Created at", "bucket size"]
+│ │ -                    for element in list:
+│ │ -                        x.add_row([i, element['id'], element['name'], element['created_at'], element['bucket_size']])
+│ │ -                        i = i+1
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                    Py_version_manager.py_print("Errors : ", e)
+│ │ -
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #         Py_version_manager.py_print("Your Buckets : ")
+│ │ +        #         try:
+│ │ +        #             list=status['data']
+│ │ +        #             i=1
+│ │ +        #             x = PrettyTable()
+│ │ +        #             x.field_names = ["index", "ID", "Name", "Created at", "bucket size"]
+│ │ +        #             for element in list:
+│ │ +        #                 x.add_row([i, element['id'], element['name'], element['created_at'], element['bucket_size']])
+│ │ +        #                 i = i+1
+│ │ +        #             Py_version_manager.py_print(x)
+│ │ +        #         except Exception as e:
+│ │ +        #             Py_version_manager.py_print("Errors : ", e)
+│ │ +
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/bucket_store/bucket_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/bucket_store/bucket_routing.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -7,14 +7,16 @@
+│ │  class BucketRouting:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │          
+│ │          
+│ │      def route(self, Parsing_Errors):
+│ │          if (self.arguments.args.bucket_commands is None) and (self.arguments.args.action is None):
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │              subprocess.call(['e2e_cli', 'bucket', '-h'])
+│ │  
+│ │  
+│ │          elif (self.arguments.args.bucket_commands is not None) and (self.arguments.args.action is not None):
+│ │                Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │  
+│ │ @@ -88,12 +90,17 @@
+│ │                              Py_version_manager.py_print(" ")
+│ │  
+│ │                  elif self.arguments.args.action == 'add_permission':
+│ │                          try: 
+│ │                             Bucket_operations.add_permission()
+│ │                          except KeyboardInterrupt:
+│ │                              Py_version_manager.py_print(" ")
+│ │ -        
+│ │ +
+│ │ +                else:
+│ │ +                    Py_version_manager.py_print("command not found")
+│ │ +                    if(Parsing_Errors):
+│ │ +                        Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │  
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_actions/cdn_action.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_actions/cdn_action.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_crud/cdn.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/cdn/cdn_crud/cdn.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -65,25 +65,26 @@
+│ │          my_payload={}
+│ │          API_key= self.API_key  
+│ │          Auth_Token= self.Auth_Token 
+│ │          url =  BASE_URL+"myaccount/api/v1/cdn/distributions/?apikey="+ API_key
+│ │          req="GET"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │          
+│ │ -        if Checks.status_result(status, req):
+│ │ -                Py_version_manager.py_print("Your cdns : ")
+│ │ -                try:
+│ │ -                    list=status['data']
+│ │ -                    i=1
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["index", "ID", "user_domain_name", "Created at", "domain_id"]
+│ │ -                    for element in list:
+│ │ -                        x.add_row([i, element['id'], element['user_domain_name'], element['created_at'], element['domain_id']])
+│ │ -                        i = i+1
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                    Py_version_manager.py_print("Errors : ", e)
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #         Py_version_manager.py_print("Your cdns : ")
+│ │ +        #         try:
+│ │ +        #             list=status['data']
+│ │ +        #             i=1
+│ │ +        #             x = PrettyTable()
+│ │ +        #             x.field_names = ["index", "ID", "user_domain_name", "Created at", "domain_id"]
+│ │ +        #             for element in list:
+│ │ +        #                 x.add_row([i, element['id'], element['user_domain_name'], element['created_at'], element['domain_id']])
+│ │ +        #                 i = i+1
+│ │ +        #             Py_version_manager.py_print(x)
+│ │ +        #         except Exception as e:
+│ │ +        #             Py_version_manager.py_print("Errors : ", e)
+│ │                      
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ -    
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/cdn/cdn_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_routing.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,75 +1,69 @@
+│ │  import subprocess
+│ │  
+│ │  from e2e_cli.core.py_manager import Py_version_manager
+│ │ -from e2e_cli.cdn.cdn_crud.cdn import cdn_Crud
+│ │ -from e2e_cli.cdn.cdn_actions.cdn_action import cdnActions
+│ │ +from e2e_cli.volumes.volumes_crud.volumes import volumes_Crud
+│ │ +from e2e_cli.volumes.volumes_actions.volumes_action import volumesActions
+│ │  
+│ │ -class cdn_Routing:
+│ │ +class volumes_Routing:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │          
+│ │          
+│ │ -    def route(self, Parsing_Errors):
+│ │ -        if (self.arguments.args.action is None) and (self.arguments.args.cdn_commands is None):
+│ │ -            subprocess.call(['e2e_cli', 'cdn', '-h'])
+│ │ +    def route(self,  Parsing_Errors):
+│ │ +        if (self.arguments.args.action is None) and (self.arguments.args.volumes_commands is None):
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            subprocess.call(['e2e_cli', 'volumes', '-h'])
+│ │  
+│ │  
+│ │ -        elif (self.arguments.args.cdn_commands is not None) and (self.arguments.args.action is not None):
+│ │ +        elif (self.arguments.args.volumes_commands is not None) and (self.arguments.args.action is not None):
+│ │                Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │  
+│ │ -        elif(self.arguments.args.cdn_commands is not None):
+│ │ -            cdn_operations = cdn_Crud(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │ -            if(cdn_operations.possible):
+│ │ +        elif(self.arguments.args.volumes_commands is not None):
+│ │ +            volumes_operations = volumes_Crud(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │ +            if(volumes_operations.possible):
+│ │  
+│ │ -                if self.arguments.args.cdn_commands == 'create':
+│ │ +                if self.arguments.args.volumes_commands == 'create':
+│ │                          try:
+│ │ -                            cdn_operations.create_cdn()
+│ │ +                            volumes_operations.create_volumes()
+│ │                          except KeyboardInterrupt:
+│ │                              Py_version_manager.py_print(" ")
+│ │  
+│ │ -                elif self.arguments.args.cdn_commands == 'delete':
+│ │ +                elif self.arguments.args.volumes_commands == 'delete':
+│ │                          try:
+│ │ -                            cdn_operations.delete_cdn()
+│ │ +                            volumes_operations.delete_volumes()
+│ │                          except KeyboardInterrupt:
+│ │                              Py_version_manager.py_print(" ")
+│ │ -                        
+│ │ -                elif self.arguments.args.cdn_commands == 'list':
+│ │ +                                
+│ │ +                elif self.arguments.args.volumes_commands == 'list':
+│ │                          try:
+│ │ -                            cdn_operations.list_cdn()
+│ │ +                            volumes_operations.list_volumes()
+│ │                          except KeyboardInterrupt:
+│ │                              Py_version_manager.py_print(" ")
+│ │  
+│ │ +                else:
+│ │ +                    Py_version_manager.py_print("command not found")
+│ │ +                    if(Parsing_Errors):
+│ │ +                        Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +        # elif self.arguments.args.action == "attach_volume":
+│ │ +        #     volumes_operations = volumesActions(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │ +        #     if(volumes_operations.possible):
+│ │ +        #                 try:
+│ │ +        #                     volumes_operations.attach_volume()
+│ │ +        #                 except KeyboardInterrupt:
+│ │ +        #                     Py_version_manager.py_print(" ")
+│ │  
+│ │ -        elif(self.arguments.args.action is not None):
+│ │ -            cdn_operations = cdnActions(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │ -            if(cdn_operations.possible):
+│ │ -                
+│ │ -                if self.arguments.args.action == "enable_cdn":
+│ │ -                        try:
+│ │ -                            cdn_operations.enable_cdn()
+│ │ -                        except KeyboardInterrupt:
+│ │ -                            Py_version_manager.py_print(" ")
+│ │ -
+│ │ -                elif self.arguments.args.action == "disable_cdn":
+│ │ -                        try:
+│ │ -                            cdn_operations.disable_cdn()
+│ │ -                        except KeyboardInterrupt:
+│ │ -                            Py_version_manager.py_print(" ")
+│ │ -                
+│ │ -                elif self.arguments.args.action == "cdn_monitoring":
+│ │ -                        try:
+│ │ -                            cdn_operations.cdn_monitoring()
+│ │ -                        except KeyboardInterrupt:
+│ │ -                            Py_version_manager.py_print(" ")
+│ │ -
+│ │ -                elif self.arguments.args.action == "cdn_bandwidth_usage":
+│ │ -                        try:
+│ │ -                            cdn_operations.cdn_bandwidth_usage()
+│ │ -                        except KeyboardInterrupt:
+│ │ -                            Py_version_manager.py_print(" ")
+│ │ +        # elif self.arguments.args.action == "desable_volumes":
+│ │ +        #     volumes_operations = volumesActions(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │ +        #     if(volumes_operations.possible):
+│ │ +        #                 try:
+│ │ +        #                     volumes_operations.disable_volumes()
+│ │ +        #                 except KeyboardInterrupt:
+│ │ +        #                     Py_version_manager.py_print(" ")
+│ │ +        
+│ │          
+│ │ -
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/commands_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/commands_routing.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -24,37 +24,39 @@
+│ │      def route(self, Parsing_Errors):
+│ │  
+│ │          if(self.arguments.args.version):
+│ │                help_messages.e2e_version_info()
+│ │  
+│ │  
+│ │          elif(self.arguments.args.info):
+│ │ -              help_messages.e2e_pakage_info()
+│ │ +            help_messages.e2e_pakage_info()
+│ │  
+│ │  
+│ │          elif self.arguments.args.command is None:
+│ │ -                subprocess.call(['e2e_cli', "-h"])
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            subprocess.call(['e2e_cli', "-h"])
+│ │  
+│ │  
+│ │ -        elif self.arguments.args.command == "help" or self.arguments.args.command == "doc":
+│ │ +        elif self.arguments.args.command == "help" :
+│ │                  man_page()
+│ │  
+│ │  
+│ │          elif (self.arguments.args.command == "alias") :
+│ │  
+│ │              if self.arguments.args.alias_commands in ["add", "view", "add_file", "delete", "set"]:
+│ │                  try:
+│ │                      ConfigRouting(self.arguments).route(Parsing_Errors)
+│ │                  except Exception as e:
+│ │                      if("debug" in self.arguments.inputs):
+│ │                                  Checks.manage_exception(e)
+│ │                                  # action_on_exception(e, self.arguments.args.alias, traceback.print_exc())
+│ │              else:
+│ │ -
+│ │ -                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +                if(Parsing_Errors):
+│ │ +                    Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │                  subprocess.call(['e2e_cli', "alias","-h"])
+│ │      
+│ │      
+│ │          else:
+│ │              if(self.arguments.args.alias=="default"):
+│ │                  Py_version_manager.py_print("Using default alias")
+│ │  
+│ │ @@ -127,9 +129,10 @@
+│ │                  except Exception as e:
+│ │                              if("debug" in self.arguments.inputs):
+│ │                                  Checks.manage_exception(e)
+│ │                              # action_on_exception(e, self.arguments.args.alias, traceback.print_exc())  
+│ │  
+│ │              else:
+│ │                  Py_version_manager.py_print("Command not found!! for more help type e2e_cli help")
+│ │ -                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +                if(Parsing_Errors):
+│ │ +                    Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/config/config.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/config/config.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/config/config_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/config/config_routing.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -60,8 +60,9 @@
+│ │                      except KeyboardInterrupt:
+│ │                          Py_version_manager.py_print(" ")
+│ │                          pass
+│ │  
+│ │  
+│ │          else:
+│ │              Py_version_manager.py_print("Command not found!!")
+│ │ -            Py_version_manager.py_print(*Parsing_errors, sep="\n")                           
+│ │ +            if(Parsing_errors):
+│ │ +                Py_version_manager.py_print(*Parsing_errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/core/alias_service.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/core/alias_service.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -49,15 +49,15 @@
+│ │      
+│ │      # returns JSON object as a dictionary
+│ │      data = json.load(f)
+│ │  
+│ │      # view list of credentials incase of x==1
+│ │      if(name=="all" and x==1):
+│ │                  try:
+│ │ -                    Py_version_manager.py_print("default --> ", data["default"])
+│ │ +                    Py_version_manager.py_print("default --> ", data["default"]['api_key'])
+│ │                  except:
+│ │                      Py_version_manager.py_print("default --> ", "Not set")
+│ │                  return data.keys()
+│ │      
+│ │      # Closing file
+│ │      f.close()
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/core/error_logs_service.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/core/error_logs_service.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/core/help_messages.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/core/help_messages.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/core/helper_service.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/core/helper_service.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/core/py_manager.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/core/py_manager.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_actions/dbaas_action.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_actions/dbaas_action.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_crud/dbaas.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_crud/dbaas_services.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_crud/dbaas_services.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/dbaas/dbaas_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/dbaas/dbaas_routing.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -8,14 +8,16 @@
+│ │  
+│ │  class DBaaSRouting:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │  
+│ │      def route(self, Parsing_Errors):
+│ │          if (self.arguments.args.dbaas_commands is None) and (self.arguments.args.action is None):
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │              subprocess.call(['e2e_cli','dbaas', '-h'])
+│ │  
+│ │  
+│ │          elif (self.arguments.args.dbaas_commands is not None) and (self.arguments.args.action is not None):
+│ │                Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │  
+│ │ @@ -106,12 +108,18 @@
+│ │                              Py_version_manager.py_print(" ")
+│ │              
+│ │                  elif self.arguments.args.action == 'remove_vpc':
+│ │                          try: 
+│ │                             DBaas_operations.remove_vpc()
+│ │                          except KeyboardInterrupt:
+│ │                              Py_version_manager.py_print(" ")
+│ │ -        
+│ │ +                
+│ │ +                else:
+│ │ +                    Py_version_manager.py_print("command not found")
+│ │ +                    if(Parsing_Errors):
+│ │ +                        Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +                
+│ │  
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/docs/e2e_cli.1
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/docs/e2e_cli.1
+│ │┄ Files 2% similar despite different names
+│ │ @@ -36,19 +36,15 @@
+│ │        Inputs to be given to launch/access a service
+│ │  
+│ │  .SH GLOBAL OPTIONS
+│ │        --debug
+│ │         Turn on debugging and see errors/failure cause
+│ │  
+│ │        output formatting:
+│ │ -       The formatting style for command output.
+│ │ -
+│ │ -       o --json --> To view json response
+│ │ -
+│ │ -       o table/text --> default formatting in form of prettytable or text
+│ │ +       The formatting style for command output is json
+│ │  
+│ │  .SH AVAILABLE SERVICES
+│ │      o Node
+│ │      o Object-store/bucket
+│ │      o DBaaS
+│ │      o Volumes
+│ │      o CDN
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/image/image_crud/image.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/image/image_crud/image.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/image/image_listing/image_list.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/image/image_listing/image_list.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/image/image_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/image/image_routing.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -7,14 +7,16 @@
+│ │  class ImageRouting:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │          
+│ │  
+│ │      def route(self, Parsing_Errors):
+│ │          if (self.arguments.args.image_commands is None) and (self.arguments.args.list_by is None):
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │              subprocess.call(['e2e_cli', 'image', '-h'])
+│ │  
+│ │  
+│ │          elif (self.arguments.args.image_commands is not None) and (self.arguments.args.list_by is not None):
+│ │              Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │  
+│ │ @@ -52,8 +54,9 @@
+│ │          #                 try: 
+│ │          #                    image_operations.all()
+│ │          #                 except KeyboardInterrupt:
+│ │          #                     Py_version_manager.py_print(" ")
+│ │  
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/loadbalancer/lb.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/loadbalancer/lb_routing.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/loadbalancer/lb_services.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/loadbalancer/lb_services.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/main.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/main.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/node/node_actions/node_action.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/node/node_actions/node_action.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -16,27 +16,29 @@
+│ │              self.Auth_Token=get_user_cred(kwargs['alias'])[0]
+│ │              self.possible=True
+│ │          else:
+│ │              self.possible=False
+│ │  
+│ │  
+│ │      def action_table(self, status, req):
+│ │ -        if Checks.status_result(status, req):
+│ │ -                try:
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["Action_type", "Status", "Action ID"]
+│ │ -                    x.add_row([status['data']['action_type'],
+│ │ -                            status['data']['status'], status['data']['id']])
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                        Py_version_manager.py_print("Errors while reading json ", str(e))
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #         try:
+│ │ +        #             x = PrettyTable()
+│ │ +        #             x.field_names = ["Action_type", "Status", "Action ID"]
+│ │ +        #             x.add_row([status['data']['action_type'],
+│ │ +        #                     status['data']['status'], status['data']['id']])
+│ │ +        #             Py_version_manager.py_print(x)
+│ │ +        #         except Exception as e:
+│ │ +        #                 Py_version_manager.py_print("Errors while reading json ", str(e))
+│ │                  
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │  
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │  
+│ │      def node_monitoring(self):
+│ │          my_payload= {}
+│ │          node_id = Checks.take_input(self.kwargs["inputs"], "node_id")
+│ │          while(not Checks.is_int(node_id)):
+│ │                node_id = Py_version_manager.py_input("please enter node id (integer only) ")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/node/node_crud/node.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -53,26 +53,28 @@
+│ │                          user_agent='cli_python'
+│ │          else:
+│ │                  user_agent='cli-e2e'
+│ │          my_payload=my_payload.__dict__
+│ │  
+│ │          status = Request(url, Auth_Token, json.dumps(my_payload), req, user_agent).response.json()
+│ │      
+│ │ -        if Checks.status_result(status,req):
+│ │ -            try :
+│ │ -                x = PrettyTable()
+│ │ -                x.field_names = ["ID", "Name", "Created at", "disk", "Status", "Plan"]
+│ │ -                x.add_row([status['data']['id'], status['data']['name'],
+│ │ -                      status['data']['created_at'], status['data']['disk'], status['data']['status'], status['data']['plan']])
+│ │ -                Py_version_manager.py_print(x)
+│ │ -            except Exception as e:
+│ │ -                    Py_version_manager.py_print("Errors : ", e)
+│ │ -
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ +        # if Checks.status_result(status,req):
+│ │ +        #     try :
+│ │ +        #         x = PrettyTable()
+│ │ +        #         x.field_names = ["ID", "Name", "Created at", "disk", "Status", "Plan"]
+│ │ +        #         x.add_row([status['data']['id'], status['data']['name'],
+│ │ +        #               status['data']['created_at'], status['data']['disk'], status['data']['status'], status['data']['plan']])
+│ │ +        #         Py_version_manager.py_print(x)
+│ │ +        #     except Exception as e:
+│ │ +        #             Py_version_manager.py_print("Errors : ", e)
+│ │ +
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │  
+│ │  
+│ │      def delete_node(self):
+│ │          my_payload = {}
+│ │          API_key = self.API_key
+│ │          Auth_Token = self.Auth_Token
+│ │          node_id = Checks.take_input(self.kwargs["inputs"], "node_id")
+│ │ @@ -84,68 +86,73 @@
+│ │          confirmation =Py_version_manager.py_input("are you sure you want to delete press y for yes, else any other key : ")
+│ │          if(confirmation.lower()=="y"):
+│ │              status = Request(url, Auth_Token, my_payload, req).response.json()
+│ │              if Checks.status_result(status,req):
+│ │                          Py_version_manager.py_print("Node Successfully deleted")
+│ │                          Py_version_manager.py_print("use following command -> e2e_cli <alias> node list to check if bucket has been deleted")
+│ │              
+│ │ -            if('json' in self.kwargs["inputs"]):
+│ │ -                Checks.show_json(status)
+│ │ +            # if('json' in self.kwargs["inputs"]):
+│ │ +            #     Checks.show_json(status)
+│ │ +        Checks.show_json(status)
+│ │  
+│ │  
+│ │      def get_node_by_id(self):
+│ │          my_payload = {}
+│ │          API_key = self.API_key
+│ │          Auth_Token = self.Auth_Token
+│ │          node_id = node_id = Checks.take_input(self.kwargs["inputs"], "node_id")
+│ │          while(not Checks.is_int(node_id)):
+│ │                node_id = Py_version_manager.py_input("please enter node id (integer only) ")
+│ │          url =  BASE_URL+"myaccount/api/v1/nodes/" + str(node_id) + "/?apikey="+API_key
+│ │          req = "GET"
+│ │          status = Request(url, Auth_Token, my_payload, req).response.json()
+│ │  
+│ │ -        if Checks.status_result(status, req):
+│ │ -            try:
+│ │ -                x = PrettyTable()
+│ │ -                x.field_names = ["VM id", "Name", "Created at", "disk", "Plan", "Public IP", "Status"]
+│ │ -                x.add_row([ status['data']['vm_id'], status['data']['name'], status['data']['created_at'], status['data']['disk'],  status['data']['plan'], status['data']['public_ip_address'], status['data']['status'] ])
+│ │ -                Py_version_manager.py_print(x)
+│ │ -            except Exception as e:
+│ │ -                        Py_version_manager.py_print("Errors : ", e)
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #     try:
+│ │ +        #         x = PrettyTable()
+│ │ +        #         x.field_names = ["VM id", "Name", "Created at", "disk", "Plan", "Public IP", "Status"]
+│ │ +        #         x.add_row([ status['data']['vm_id'], status['data']['name'], status['data']['created_at'], status['data']['disk'],  status['data']['plan'], status['data']['public_ip_address'], status['data']['status'] ])
+│ │ +        #         Py_version_manager.py_print(x)
+│ │ +        #     except Exception as e:
+│ │ +        #                 Py_version_manager.py_print("Errors : ", e)
+│ │          
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │  
+│ │  
+│ │      def list_node(self, parameter=0):
+│ │          my_payload = {}
+│ │          API_key = self.API_key
+│ │          Auth_Token = self.Auth_Token
+│ │          url =  BASE_URL+"myaccount/api/v1/nodes/?apikey=" + API_key+"&location=Delhi"
+│ │          req = "GET"
+│ │          status = Request(url, Auth_Token, my_payload,
+│ │                         req).response.json()
+│ │  
+│ │          if parameter == 0:
+│ │ -            if Checks.status_result(status, req):
+│ │ -                list=status['data']
+│ │ -                try:
+│ │ -                    i = 1
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["index", "ID", "Name", "Created at", "disk", "Plan", "Status"]
+│ │ -                    for element in list:
+│ │ -                        x.add_row([i, element['id'], element['name'],
+│ │ -                                element['created_at'], element['disk'],  element['plan'],  element['status']])
+│ │ -                        i = i+1
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                        Py_version_manager.py_print("Errors : ", e)
+│ │ +            # if Checks.status_result(status, req):
+│ │ +            #     list=status['data']
+│ │ +            #     try:
+│ │ +            #         i = 1
+│ │ +            #         x = PrettyTable()
+│ │ +            #         x.field_names = ["index", "ID", "Name", "Plan", "Status"]
+│ │ +            #         for element in list:
+│ │ +            #             x.add_row([i, element['id'], element['name'],
+│ │ +            #                       element['plan'],  element['status']])
+│ │ +            #             i = i+1
+│ │ +            #         Py_version_manager.py_print(x)
+│ │ +            #     except Exception as e:
+│ │ +            #             Py_version_manager.py_print("Errors : ", e)
+│ │                          
+│ │ -                if('json' in self.kwargs["inputs"]):
+│ │ -                    Checks.show_json(status)
+│ │ +            #     if('json' in self.kwargs["inputs"]):
+│ │ +            #         Checks.show_json(status)
+│ │ +            Checks.status_result(status)
+│ │ +            Checks.show_json(status)
+│ │              
+│ │          elif parameter==1:
+│ │                      return status['data']
+│ │  
+│ │  
+│ │      def update_node(self):
+│ │          API_key = self.API_key
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/node/node_crud/node_listing_service.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/node/node_crud/node_listing_service.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/node/node_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/node/node_routing.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -7,14 +7,16 @@
+│ │  class NodeRouting:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │          
+│ │  
+│ │      def route(self, Parsing_Errors):
+│ │          if (self.arguments.args.node_commands is None) and (self.arguments.args.action is None):
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │              subprocess.call(['e2e_cli','node', '-h'])
+│ │  
+│ │  
+│ │          elif (self.arguments.args.node_commands is not None) and (self.arguments.args.action is not None):
+│ │                Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │  
+│ │ @@ -112,13 +114,15 @@
+│ │                          try: 
+│ │                             Node_operations.node_monitoring()
+│ │                          except KeyboardInterrupt:
+│ │                              Py_version_manager.py_print(" ")
+│ │                  
+│ │                  else:
+│ │                      Py_version_manager.py_print("command not found")
+│ │ -                    Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +                    if(Parsing_Errors):
+│ │ +                        Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │  
+│ │  
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_actions/volumes_action.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_actions/volumes_action.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/volumes/volumes_crud/volumes.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/volumes/volumes_crud/volumes.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -33,65 +33,68 @@
+│ │          })
+│ │          API_key=self.API_key
+│ │          Auth_Token=self.Auth_Token
+│ │          url =  BASE_URL+"myaccount/api/v1/block_storage/?apikey="+API_key+"&location=Delhi"
+│ │          req="POST"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │                 
+│ │ -        if Checks.status_result(status, req):
+│ │ -            try:
+│ │ -                x = PrettyTable()
+│ │ -                x.field_names = ["block_storage_id", "name"]
+│ │ -                x.add_row([status['data']['block_storage_id'], status['data']['image_name']])
+│ │ -                Py_version_manager.py_print(x)
+│ │ -            except Exception as e:
+│ │ -                      Checks.show_json(status, e)
+│ │ -                      return
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #     try:
+│ │ +        #         x = PrettyTable()
+│ │ +        #         x.field_names = ["block_storage_id", "name"]
+│ │ +        #         x.add_row([status['data']['block_storage_id'], status['data']['image_name']])
+│ │ +        #         Py_version_manager.py_print(x)
+│ │ +        #     except Exception as e:
+│ │ +        #               Checks.show_json(status, e)
+│ │ +        #               return
+│ │                    
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status)     
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status)
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)      
+│ │  
+│ │  
+│ │      def delete_volumes(self):
+│ │          my_payload={}
+│ │          blockstorage_id=Checks.take_input(self.kwargs["inputs"], "blockstorage_id")
+│ │          API_key=self.API_key
+│ │          Auth_Token=self.Auth_Token
+│ │          url =  BASE_URL+"myaccount/api/v1/block_storage/"+blockstorage_id+"/?apikey="+API_key+"&location=Delhi"
+│ │          req="DELETE"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │  
+│ │          if Checks.status_result(status,req):
+│ │                          Py_version_manager.py_print("volume Successfully deleted")
+│ │                          Py_version_manager.py_print("use following command -> e2e_cli <alias> volumes list to check if volumes has been deleted")
+│ │ -        
+│ │ +
+│ │          Checks.show_json(status)
+│ │  
+│ │  
+│ │      def list_volumes(self):
+│ │          my_payload={}
+│ │          API_key= self.API_key  
+│ │          Auth_Token= self.Auth_Token 
+│ │          url =  BASE_URL+"myaccount/api/v1/block_storage/?apikey="+ API_key+"&location=Delhi"
+│ │          req="GET"
+│ │          status=Request(url, Auth_Token, my_payload, req).response.json()
+│ │          
+│ │ -        if Checks.status_result(status, req):
+│ │ -                Py_version_manager.py_print("Your volumess : ")
+│ │ -                try:
+│ │ -                    list=status['data']
+│ │ -                    i=1
+│ │ -                    x = PrettyTable()
+│ │ -                    x.field_names = ["index", "name", "block_id", "status"]
+│ │ -                    for element in list:
+│ │ -                        x.add_row([i, element['name'], element['block_id'], element["status"]])
+│ │ -                        i = i+1
+│ │ -                    Py_version_manager.py_print(x)
+│ │ -                except Exception as e:
+│ │ -                    Py_version_manager.py_print("Errors : ", e)
+│ │ -
+│ │ -        if('json' in self.kwargs["inputs"]):
+│ │ -            Checks.show_json(status) 
+│ │ -    
+│ │ +        # if Checks.status_result(status, req):
+│ │ +        #         Py_version_manager.py_print("Your volumess : ")
+│ │ +        #         try:
+│ │ +        #             list=status['data']
+│ │ +        #             i=1
+│ │ +        #             x = PrettyTable()
+│ │ +        #             x.field_names = ["index", "name", "block_id", "status"]
+│ │ +        #             for element in list:
+│ │ +        #                 x.add_row([i, element['name'], element['block_id'], element["status"]])
+│ │ +        #                 i = i+1
+│ │ +        #             Py_version_manager.py_print(x)
+│ │ +        #         except Exception as e:
+│ │ +        #             Py_version_manager.py_print("Errors : ", e)
+│ │ +
+│ │ +        # if('json' in self.kwargs["inputs"]):
+│ │ +        #     Checks.show_json(status) 
+│ │ +        Checks.status_result(status)
+│ │ +        Checks.show_json(status)
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/vpc/vpc.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/vpc/vpc.py
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/e2e_cli/vpc/vpc_routing.py
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli/vpc/vpc_routing.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -6,15 +6,17 @@
+│ │  class vpc_Routing:
+│ │      def __init__(self, arguments):
+│ │          self.arguments = arguments
+│ │          
+│ │          
+│ │      def route(self, Parsing_Errors):
+│ │          if (self.arguments.args.vpc_commands is None):
+│ │ -            subprocess.call(['e2e_cli', 'alias', 'vpc', '-h'])
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            subprocess.call(['e2e_cli', 'vpc', '-h'])
+│ │  
+│ │  
+│ │          elif (self.arguments.args.vpc_commands is not None) and (self.arguments.args.action is not None):
+│ │              Py_version_manager.py_print("Only one action at a time !!")
+│ │  
+│ │  
+│ │          elif (self.arguments.args.vpc_commands is not None):
+│ │ @@ -38,12 +40,17 @@
+│ │                  elif self.arguments.args.vpc_commands == 'list':
+│ │                      vpc_operations = vpc_Crud(alias=self.arguments.args.alias, inputs=self.arguments.inputs)
+│ │                      if(vpc_operations.possible):
+│ │                                  try:
+│ │                                      vpc_operations.list_vpc()
+│ │                                  except KeyboardInterrupt:
+│ │                                      Py_version_manager.py_print(" ")
+│ │ -        
+│ │ +
+│ │ +                else:
+│ │ +                    Py_version_manager.py_print("command not found")
+│ │ +                    if(Parsing_Errors):
+│ │ +                        Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │  
+│ │          else:
+│ │              Py_version_manager.py_print("command not found")
+│ │ -            Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │ +            if(Parsing_Errors):
+│ │ +                Py_version_manager.py_print(*Parsing_Errors, sep="\n")
+│ │   --- e2e_cli-0.9.9.5/e2e_cli.egg-info/SOURCES.txt
+│ ├── +++ e2e_cli-0.9.9.6/e2e_cli.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- e2e_cli-0.9.9.5/setup.py
+│ ├── +++ e2e_cli-0.9.9.6/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │    from setuptools import setup, find_packages
+│ │  except ImportError:
+│ │    subprocess.call["pip","install","setuptools"]
+│ │    from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name='e2e_cli',
+│ │ -    version='0.9.9.5',
+│ │ +    version='0.9.9.6',
+│ │      description="This a E2E CLI tool for myAccount",
+│ │      author="Sajal&Aman@E2E_Networks_Ltd",
+│ │      packages=find_packages(),
+│ │      install_requires=['prettytable', 'requests', 'setuptools', 'chardet'],
+│ │  
+│ │      include_package_data = True,
+│ │      package_data = {

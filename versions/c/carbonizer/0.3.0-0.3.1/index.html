@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/carbonizer-0.3.0.tar.gz tmp/carbonizer-0.3.1.tar.gz --html versions/c/carbonizer/0.3.0-0.3.1/index.html --text versions/c/carbonizer/0.3.0-0.3.1/diff.txt --markdown versions/c/carbonizer/0.3.0-0.3.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.06 KB</span></div>
+  <div><span class="source">tmp/carbonizer-0.3.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/carbonizer-0.3.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">188 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;carbonizer-0.3.<del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;carbonizer-0.3.<ins>1</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.82 KB</span></div>
+    <div><span class="source">carbonizer-0.3.0.tar</span> vs.</div>
+    <div id="carbonizer--.-.-.tar"><span class="source">carbonizer-0.3.1.tar</span>
+      <a class="anchor" href="#carbonizer--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.07 KB</span></div>
+      <div id="carbonizer--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>903<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:43:05.537128<span class="dp">·</span>carbonizer-0.3.<del>0</del>/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>903<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:43:05.537128<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3552<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:40:25.360244<span class="dp">·</span>carbonizer-0.3.<del>0</del>/carbonizer/carbon.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3552<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:40:25.360244<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/carbonizer/carbon.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2518<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:18:04.668064<span class="dp">·</span>carbonizer-0.3.<del>0</del>/carbonizer/cli.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2518<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:18:04.668064<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/carbonizer/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>998<span class="dp">·</span>2023-04-02<span class="dp">·</span>13:53:46.903529<span class="dp">·</span>carbonizer-0.3.<del>0</del>/carbonizer/clipboard.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>998<span class="dp">·</span>2023-04-02<span class="dp">·</span>13:53:46.903529<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/carbonizer/clipboard.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:13:34.665768<span class="dp">·</span>carbonizer-0.3.<del>0</del>/carbonizer/example.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:13:34.665768<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/carbonizer/example.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1333<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:02:31.772102<span class="dp">·</span>carbonizer-0.3.<del>0</del>/carbonizer/options.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1333<span class="dp">·</span>2023-04-02<span class="dp">·</span>19:02:31.772102<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/carbonizer/options.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1518<span class="dp">·</span>2023-04-02<span class="dp">·</span>18:47:13.969176<span class="dp">·</span>carbonizer-0.3.<del>0</del>/carbonizer/utils.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1518<span class="dp">·</span>2023-04-02<span class="dp">·</span>18:47:13.969176<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/carbonizer/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47<del>1</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>9</del>:<del>43</del>:4<del>8</del>.<del>664</del>5<del>37</del><span class="dp">·</span>carbonizer-0.3.<del>0</del>/pyproject.toml</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47<ins>5</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>3</ins>:<ins>18</ins>:4<ins>7</ins>.<ins>133</ins>5<ins>94</ins><span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<del>4</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>carbonizer-0.3.<del>0</del>/setup.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<ins>8</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1520<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>carbonizer-0.3.<del>0</del>/PKG-INFO</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1520<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>carbonizer-0.3.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/README.md</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--README.md"><span class="source">carbonizer-0.3.1/README.md</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/carbonizer/carbon.py</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-carbon.py"><span class="source">carbonizer-0.3.1/carbonizer/carbon.py</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-carbon.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/carbonizer/cli.py</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-cli.py"><span class="source">carbonizer-0.3.1/carbonizer/cli.py</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/carbonizer/clipboard.py</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-clipboard.py"><span class="source">carbonizer-0.3.1/carbonizer/clipboard.py</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-clipboard.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/carbonizer/options.py</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-options.py"><span class="source">carbonizer-0.3.1/carbonizer/options.py</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-options.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/carbonizer/utils.py</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-utils.py"><span class="source">carbonizer-0.3.1/carbonizer/utils.py</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--carbonizer-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.64 KB</span></div>
+      <div><span class="source">carbonizer-0.3.0/setup.py</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--setup.py"><span class="source">carbonizer-0.3.1/setup.py</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 10, 19 lines modified</td><td colspan="2">Offset 10, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">10 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">[&#x27;loguru&gt;=0.6.0,&lt;0.7.0&#x27;,</td><td class="diffline">11 </td><td class="diffpresent">[&#x27;loguru&gt;=0.6.0,&lt;0.7.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span>&#x27;pyppeteer&gt;=1.0.2,&lt;2.0.0&#x27;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span>&#x27;pyppeteer&gt;=1.0.2,&lt;2.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span>&#x27;rich&gt;=13.3.3,&lt;14.0.0&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span>&#x27;rich&gt;=13.3.3,&lt;14.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span>&#x27;typer&gt;=0.7.0,&lt;0.8.0&#x27;]</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span>&#x27;typer&gt;=0.7.0,&lt;0.8.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">15 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;<del>g</del>r<del>eet</del><span class="dp">·</span>=<span class="dp">·</span>carbonizer.cli:carbonize&#x27;]}</td><td class="diffline">16 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;<ins>c</ins><ins>a</ins>r<ins>bon</ins><ins>ize</ins><span class="dp">·</span>=<span class="dp">·</span>carbonizer.cli:carbonize&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">17 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;carbonizer&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;carbonizer&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.3.<del>0</del>&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.3.<ins>1</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;A<span class="dp">·</span>Small<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>utilize<span class="dp">·</span>Carbon.now.sh&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;A<span class="dp">·</span>Small<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>utilize<span class="dp">·</span>Carbon.now.sh&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>Carbonizer\n\nA<span class="dp">·</span>Python<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>create<span class="dp">·</span>carbonized<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>your<span class="dp">·</span>code.<span class="dp">·</span>\nThis<span class="dp">·</span>projects<span class="dp">·</span>is<span class="dp">·</span>based<span class="dp">·</span>on:<span class="dp">·</span>[Carbon](carbon.now.sh),<span class="dp">·</span>[Pyppetter](https://miyakogi.github.io/pyppeteer/index.html)\nand<span class="dp">·</span>the<span class="dp">·</span>wonderful<span class="dp">·</span>[Typer](https://typer.tiangolo.com/)<span class="dp">·</span>Framework.\n\n\n##<span class="dp">·</span>Installation:\n\n```bash\n$<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>carbonizer\n```\n\n\n##<span class="dp">·</span>Usage\n\n```bash<span class="dp">·</span>\ncarbonizer<span class="dp">·</span>--help\n#<span class="dp">·</span>This<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>carbonized<span class="dp">·</span>version<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>same<span class="dp">·</span>directory\ncarbonizer<span class="dp">·</span>some_file.py<span class="dp">·</span>\n\n#<span class="dp">·</span>To<span class="dp">·</span>create<span class="dp">·</span>the<span class="dp">·</span>output<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>specific<span class="dp">·</span>folder\ncarbonizer<span class="dp">·</span>-o<span class="dp">·</span>target<span class="dp">·</span><span class="dp">·</span>some_file.py\n\n#<span class="dp">·</span>This<span class="dp">·</span>will<span class="dp">·</span>grab<span class="dp">·</span>all<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>carbonize<span class="dp">·</span>them\ncarbonizer<span class="dp">·</span>-o<span class="dp">·</span>target<span class="dp">·</span>.<span class="dp">·</span>\n\n#<span class="dp">·</span>The<span class="dp">·</span>-c<span class="dp">·</span>flag<span class="dp">·</span>directly<span class="dp">·</span>copied<span class="dp">·</span>the<span class="dp">·</span>output<span class="dp">·</span>into<span class="dp">·</span>your<span class="dp">·</span>clipboard\ncarbonizer<span class="dp">·</span>-c<span class="dp">·</span>some_file.py\n\n#<span class="dp">·</span>If<span class="dp">·</span>you<span class="dp">·</span>prefer<span class="dp">·</span>to<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>raw<span class="dp">·</span>code<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>project<span class="dp">·</span>like<span class="dp">·</span>\npython<span class="dp">·</span>__main__.py<span class="dp">·</span><span class="dp">·</span>-t<span class="dp">·</span>&quot;one-light&quot;<span class="dp">·</span>carbonizer<span class="dp">·</span>-o<span class="dp">·</span>target\n```\n\nNote:<span class="dp">·</span>The<span class="dp">·</span>copy<span class="dp">·</span>functionality<span class="dp">·</span>is<span class="dp">·</span>only<span class="dp">·</span>Linux<span class="dp">·</span><span class="dp">·</span>is<span class="dp">·</span>tested<span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>Mac<span class="dp">·</span>is<span class="dp">·</span>also<span class="dp">·</span>supported<span class="dp">·</span>-<span class="dp">·</span>theoretically.\n&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>Carbonizer\n\nA<span class="dp">·</span>Python<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>create<span class="dp">·</span>carbonized<span class="dp">·</span>versions<span class="dp">·</span>of<span class="dp">·</span>your<span class="dp">·</span>code.<span class="dp">·</span>\nThis<span class="dp">·</span>projects<span class="dp">·</span>is<span class="dp">·</span>based<span class="dp">·</span>on:<span class="dp">·</span>[Carbon](carbon.now.sh),<span class="dp">·</span>[Pyppetter](https://miyakogi.github.io/pyppeteer/index.html)\nand<span class="dp">·</span>the<span class="dp">·</span>wonderful<span class="dp">·</span>[Typer](https://typer.tiangolo.com/)<span class="dp">·</span>Framework.\n\n\n##<span class="dp">·</span>Installation:\n\n```bash\n$<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>carbonizer\n```\n\n\n##<span class="dp">·</span>Usage\n\n```bash<span class="dp">·</span>\ncarbonizer<span class="dp">·</span>--help\n#<span class="dp">·</span>This<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>carbonized<span class="dp">·</span>version<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>same<span class="dp">·</span>directory\ncarbonizer<span class="dp">·</span>some_file.py<span class="dp">·</span>\n\n#<span class="dp">·</span>To<span class="dp">·</span>create<span class="dp">·</span>the<span class="dp">·</span>output<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>specific<span class="dp">·</span>folder\ncarbonizer<span class="dp">·</span>-o<span class="dp">·</span>target<span class="dp">·</span><span class="dp">·</span>some_file.py\n\n#<span class="dp">·</span>This<span class="dp">·</span>will<span class="dp">·</span>grab<span class="dp">·</span>all<span class="dp">·</span>files<span class="dp">·</span>and<span class="dp">·</span>carbonize<span class="dp">·</span>them\ncarbonizer<span class="dp">·</span>-o<span class="dp">·</span>target<span class="dp">·</span>.<span class="dp">·</span>\n\n#<span class="dp">·</span>The<span class="dp">·</span>-c<span class="dp">·</span>flag<span class="dp">·</span>directly<span class="dp">·</span>copied<span class="dp">·</span>the<span class="dp">·</span>output<span class="dp">·</span>into<span class="dp">·</span>your<span class="dp">·</span>clipboard\ncarbonizer<span class="dp">·</span>-c<span class="dp">·</span>some_file.py\n\n#<span class="dp">·</span>If<span class="dp">·</span>you<span class="dp">·</span>prefer<span class="dp">·</span>to<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>raw<span class="dp">·</span>code<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>also<span class="dp">·</span>use<span class="dp">·</span>the<span class="dp">·</span>project<span class="dp">·</span>like<span class="dp">·</span>\npython<span class="dp">·</span>__main__.py<span class="dp">·</span><span class="dp">·</span>-t<span class="dp">·</span>&quot;one-light&quot;<span class="dp">·</span>carbonizer<span class="dp">·</span>-o<span class="dp">·</span>target\n```\n\nNote:<span class="dp">·</span>The<span class="dp">·</span>copy<span class="dp">·</span>functionality<span class="dp">·</span>is<span class="dp">·</span>only<span class="dp">·</span>Linux<span class="dp">·</span><span class="dp">·</span>is<span class="dp">·</span>tested<span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>Mac<span class="dp">·</span>is<span class="dp">·</span>also<span class="dp">·</span>supported<span class="dp">·</span>-<span class="dp">·</span>theoretically.\n&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;marvin<span class="dp">·</span>taschenberger&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;marvin<span class="dp">·</span>taschenberger&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;marvin.taschenberger@gmail.com&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;marvin.taschenberger@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">449 B</span></div>
+      <div><span class="source">carbonizer-0.3.0/PKG-INFO</span> vs.</div>
+      <div id="carbonizer--.-.-.tar---carbonizer--.-.--PKG-INFO"><span class="source">carbonizer-0.3.1/PKG-INFO</span>
+        <a class="anchor" href="#carbonizer--.-.-.tar---carbonizer--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>carbonizer</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>carbonizer</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Small<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>utilize<span class="dp">·</span>Carbon.now.sh</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Small<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>utilize<span class="dp">·</span>Carbon.now.sh</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>marvin<span class="dp">·</span>taschenberger</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>marvin<span class="dp">·</span>taschenberger</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>marvin.taschenberger@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>marvin.taschenberger@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

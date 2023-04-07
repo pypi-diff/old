@@ -1,0 +1,110 @@
+# Comparing `tmp/carbonizer-0.3.0.tar.gz` & `tmp/carbonizer-0.3.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "carbonizer-0.3.0.tar", max compression
++gzip compressed data, was "carbonizer-0.3.1.tar", max compression
+```
+
+## Comparing `carbonizer-0.3.0.tar` & `carbonizer-0.3.1.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,10 @@
+--rw-r--r--   0        0        0      903 2023-04-02 19:43:05.537128 carbonizer-0.3.0/README.md
+--rw-r--r--   0        0        0     3552 2023-04-02 19:40:25.360244 carbonizer-0.3.0/carbonizer/carbon.py
+--rw-r--r--   0        0        0     2518 2023-04-02 19:18:04.668064 carbonizer-0.3.0/carbonizer/cli.py
+--rw-r--r--   0        0        0      998 2023-04-02 13:53:46.903529 carbonizer-0.3.0/carbonizer/clipboard.py
+--rw-r--r--   0        0        0       46 2023-04-02 19:13:34.665768 carbonizer-0.3.0/carbonizer/example.py
+--rw-r--r--   0        0        0     1333 2023-04-02 19:02:31.772102 carbonizer-0.3.0/carbonizer/options.py
+--rw-r--r--   0        0        0     1518 2023-04-02 18:47:13.969176 carbonizer-0.3.0/carbonizer/utils.py
+--rw-r--r--   0        0        0      471 2023-04-02 19:43:48.664537 carbonizer-0.3.0/pyproject.toml
+--rw-r--r--   0        0        0     1774 1970-01-01 00:00:00.000000 carbonizer-0.3.0/setup.py
+--rw-r--r--   0        0        0     1520 1970-01-01 00:00:00.000000 carbonizer-0.3.0/PKG-INFO
++-rw-r--r--   0        0        0      903 2023-04-02 19:43:05.537128 carbonizer-0.3.1/README.md
++-rw-r--r--   0        0        0     3552 2023-04-02 19:40:25.360244 carbonizer-0.3.1/carbonizer/carbon.py
++-rw-r--r--   0        0        0     2518 2023-04-02 19:18:04.668064 carbonizer-0.3.1/carbonizer/cli.py
++-rw-r--r--   0        0        0      998 2023-04-02 13:53:46.903529 carbonizer-0.3.1/carbonizer/clipboard.py
++-rw-r--r--   0        0        0       46 2023-04-02 19:13:34.665768 carbonizer-0.3.1/carbonizer/example.py
++-rw-r--r--   0        0        0     1333 2023-04-02 19:02:31.772102 carbonizer-0.3.1/carbonizer/options.py
++-rw-r--r--   0        0        0     1518 2023-04-02 18:47:13.969176 carbonizer-0.3.1/carbonizer/utils.py
++-rw-r--r--   0        0        0      475 2023-04-07 13:18:47.133594 carbonizer-0.3.1/pyproject.toml
++-rw-r--r--   0        0        0     1778 1970-01-01 00:00:00.000000 carbonizer-0.3.1/setup.py
++-rw-r--r--   0        0        0     1520 1970-01-01 00:00:00.000000 carbonizer-0.3.1/PKG-INFO
+```
+
+### Comparing `carbonizer-0.3.0/README.md` & `carbonizer-0.3.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `carbonizer-0.3.0/carbonizer/carbon.py` & `carbonizer-0.3.1/carbonizer/carbon.py`
+
+ * *Files identical despite different names*
+
+### Comparing `carbonizer-0.3.0/carbonizer/cli.py` & `carbonizer-0.3.1/carbonizer/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `carbonizer-0.3.0/carbonizer/clipboard.py` & `carbonizer-0.3.1/carbonizer/clipboard.py`
+
+ * *Files identical despite different names*
+
+### Comparing `carbonizer-0.3.0/carbonizer/options.py` & `carbonizer-0.3.1/carbonizer/options.py`
+
+ * *Files identical despite different names*
+
+### Comparing `carbonizer-0.3.0/carbonizer/utils.py` & `carbonizer-0.3.1/carbonizer/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `carbonizer-0.3.0/setup.py` & `carbonizer-0.3.1/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -10,19 +10,19 @@
+ install_requires = \
+ ['loguru>=0.6.0,<0.7.0',
+  'pyppeteer>=1.0.2,<2.0.0',
+  'rich>=13.3.3,<14.0.0',
+  'typer>=0.7.0,<0.8.0']
+ 
+ entry_points = \
+-{'console_scripts': ['greet = carbonizer.cli:carbonize']}
++{'console_scripts': ['carbonize = carbonizer.cli:carbonize']}
+ 
+ setup_kwargs = {
+     'name': 'carbonizer',
+-    'version': '0.3.0',
++    'version': '0.3.1',
+     'description': 'A Small CLI to utilize Carbon.now.sh',
+     'long_description': '# Carbonizer\n\nA Python CLI to create carbonized versions of your code. \nThis projects is based on: [Carbon](carbon.now.sh), [Pyppetter](https://miyakogi.github.io/pyppeteer/index.html)\nand the wonderful [Typer](https://typer.tiangolo.com/) Framework.\n\n\n## Installation:\n\n```bash\n$ pip install carbonizer\n```\n\n\n## Usage\n\n```bash \ncarbonizer --help\n# This creates a carbonized version in the same directory\ncarbonizer some_file.py \n\n# To create the output in a specific folder\ncarbonizer -o target  some_file.py\n\n# This will grab all files and carbonize them\ncarbonizer -o target . \n\n# The -c flag directly copied the output into your clipboard\ncarbonizer -c some_file.py\n\n# If you prefer to run the raw code you can also use the project like \npython __main__.py  -t "one-light" carbonizer -o target\n```\n\nNote: The copy functionality is only Linux  is tested  while Mac is also supported - theoretically.\n',
+     'author': 'marvin taschenberger',
+     'author_email': 'marvin.taschenberger@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
+### Comparing `carbonizer-0.3.0/PKG-INFO` & `carbonizer-0.3.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: carbonizer
+-Version: 0.3.0
++Version: 0.3.1
+ Summary: A Small CLI to utilize Carbon.now.sh
+ License: MIT
+ Author: marvin taschenberger
+ Author-email: marvin.taschenberger@gmail.com
+ Requires-Python: >=3.10,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+

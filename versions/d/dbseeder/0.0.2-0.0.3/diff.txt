@@ -1,0 +1,234 @@
+--- tmp/dbseeder-0.0.2.tar.gz
++++ tmp/dbseeder-0.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dbseeder-0.0.2.tar", last modified: Thu Apr  6 15:07:06 2023, max compression
+│ +gzip compressed data, was "dbseeder-0.0.3.tar", last modified: Fri Apr  7 13:16:59 2023, max compression
+│   --- dbseeder-0.0.2.tar
+├── +++ dbseeder-0.0.3.tar
+│ ├── file list
+│ │ @@ -1,19 +1,18 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:07:06.909188 dbseeder-0.0.2/
+│ │ --rw-rw-rw-   0        0        0     1086 2023-04-05 14:21:00.000000 dbseeder-0.0.2/LICENSE
+│ │ --rw-rw-rw-   0        0        0     1578 2023-04-06 15:07:06.908321 dbseeder-0.0.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1029 2023-04-06 15:00:09.000000 dbseeder-0.0.2/README.md
+│ │ --rw-rw-rw-   0        0        0      627 2023-04-06 15:06:52.000000 dbseeder-0.0.2/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 15:07:06.909188 dbseeder-0.0.2/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:07:06.887364 dbseeder-0.0.2/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:07:06.892363 dbseeder-0.0.2/src/dbseeder/
+│ │ --rw-rw-rw-   0        0        0       44 2023-04-06 15:05:15.000000 dbseeder-0.0.2/src/dbseeder/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2108 2023-04-06 15:05:15.000000 dbseeder-0.0.2/src/dbseeder/database.py
+│ │ --rw-rw-rw-   0        0        0     3137 2023-04-06 12:11:43.000000 dbseeder-0.0.2/src/dbseeder/fields.py
+│ │ --rw-rw-rw-   0        0        0     1105 2023-04-06 15:05:15.000000 dbseeder-0.0.2/src/dbseeder/table.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:07:06.906826 dbseeder-0.0.2/src/dbseeder.egg-info/
+│ │ --rw-rw-rw-   0        0        0     1578 2023-04-06 15:07:06.000000 dbseeder-0.0.2/src/dbseeder.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      289 2023-04-06 15:07:06.000000 dbseeder-0.0.2/src/dbseeder.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 15:07:06.000000 dbseeder-0.0.2/src/dbseeder.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-04-06 15:07:06.000000 dbseeder-0.0.2/src/dbseeder.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 15:07:06.907324 dbseeder-0.0.2/tests/
+│ │ --rw-rw-rw-   0        0        0      167 2023-04-06 15:05:14.000000 dbseeder-0.0.2/tests/test_run.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:16:59.659155 dbseeder-0.0.3/
+│ │ +-rw-rw-rw-   0        0        0     1086 2023-04-05 14:21:00.000000 dbseeder-0.0.3/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     1599 2023-04-07 13:16:59.657822 dbseeder-0.0.3/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1050 2023-04-06 15:14:49.000000 dbseeder-0.0.3/README.md
+│ │ +-rw-rw-rw-   0        0        0      627 2023-04-07 13:16:14.000000 dbseeder-0.0.3/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 13:16:59.659155 dbseeder-0.0.3/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:16:59.641974 dbseeder-0.0.3/src/
+│ │ +-rw-rw-rw-   0        0        0       30 2023-04-07 12:43:03.000000 dbseeder-0.0.3/src/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2096 2023-04-07 12:42:14.000000 dbseeder-0.0.3/src/database.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:16:59.656821 dbseeder-0.0.3/src/dbseeder.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     1599 2023-04-07 13:16:59.000000 dbseeder-0.0.3/src/dbseeder.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      253 2023-04-07 13:16:59.000000 dbseeder-0.0.3/src/dbseeder.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 13:16:59.000000 dbseeder-0.0.3/src/dbseeder.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       31 2023-04-07 13:16:59.000000 dbseeder-0.0.3/src/dbseeder.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     3137 2023-04-06 12:11:43.000000 dbseeder-0.0.3/src/fields.py
+│ │ +-rw-rw-rw-   0        0        0     1093 2023-04-07 12:42:26.000000 dbseeder-0.0.3/src/table.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 13:16:59.657822 dbseeder-0.0.3/tests/
+│ │ +-rw-rw-rw-   0        0        0      158 2023-04-07 12:40:20.000000 dbseeder-0.0.3/tests/test_run.py
+│ │   --- dbseeder-0.0.2/LICENSE
+│ ├── +++ dbseeder-0.0.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dbseeder-0.0.2/PKG-INFO
+│ ├── +++ dbseeder-0.0.3/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dbseeder
+│ │ -Version: 0.0.2
+│ │ +Version: 0.0.3
+│ │  Summary: A package to make seeds for some relational databases
+│ │  Author-email: Long Pham <phamlong15297@gmail.com>
+│ │  Project-URL: Homepage, https://github.com/conlacda/auto-seeder
+│ │  Project-URL: Bug Tracker, https://github.com/conlacda/auto-seeder/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -15,14 +15,15 @@
+│ │  # Seeder for Mysql
+│ │  [![gh-action-pip-audit](https://github.com/conlacda/auto-seeder/actions/workflows/gh-action-pip-audit.yml/badge.svg)](https://github.com/conlacda/auto-seeder/actions/workflows/gh-action-pip-audit.yml)
+│ │  
+│ │  > Load database then make seeds for it
+│ │  
+│ │  ## Usage
+│ │  ```python
+│ │ +from dbseeder import Database
+│ │  db = Database(host="localhost", user="root", password="", database="seed")
+│ │  # Make seed without deleting the existence data
+│ │  db.makeSeed(rows_num=100000)
+│ │  # Delete data, then make seeds
+│ │  db.clearAndMakeSeed(rows_num=100000)
+│ │  ```
+│ │  
+│ │ @@ -35,15 +36,15 @@
+│ │  
+│ │  ```shell
+│ │  python -m pytest
+│ │  ```
+│ │  
+│ │  ## Packing
+│ │  * [Tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+│ │ -* [Pypi package](https://pypi.org/project/database-seeder/0.0.1/)
+│ │ +* [Package on Pypi](https://pypi.org/project/dbseeder/)
+│ │  
+│ │  ## My note
+│ │  To publish new version:
+│ │  * Change version in `pyproject.toml`
+│ │  * Build: `python -m build`
+│ │  * Upload to testpypi: `py -m twine upload --repository testpypi dist/*`
+│ │  * Upload to pypi: `py -m twine upload --repository pypi dist/`
+│ │   --- dbseeder-0.0.2/README.md
+│ ├── +++ dbseeder-0.0.3/README.md
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,14 +1,15 @@
+│ │  # Seeder for Mysql
+│ │  [![gh-action-pip-audit](https://github.com/conlacda/auto-seeder/actions/workflows/gh-action-pip-audit.yml/badge.svg)](https://github.com/conlacda/auto-seeder/actions/workflows/gh-action-pip-audit.yml)
+│ │  
+│ │  > Load database then make seeds for it
+│ │  
+│ │  ## Usage
+│ │  ```python
+│ │ +from dbseeder import Database
+│ │  db = Database(host="localhost", user="root", password="", database="seed")
+│ │  # Make seed without deleting the existence data
+│ │  db.makeSeed(rows_num=100000)
+│ │  # Delete data, then make seeds
+│ │  db.clearAndMakeSeed(rows_num=100000)
+│ │  ```
+│ │  
+│ │ @@ -21,15 +22,15 @@
+│ │  
+│ │  ```shell
+│ │  python -m pytest
+│ │  ```
+│ │  
+│ │  ## Packing
+│ │  * [Tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+│ │ -* [Pypi package](https://pypi.org/project/database-seeder/0.0.1/)
+│ │ +* [Package on Pypi](https://pypi.org/project/dbseeder/)
+│ │  
+│ │  ## My note
+│ │  To publish new version:
+│ │  * Change version in `pyproject.toml`
+│ │  * Build: `python -m build`
+│ │  * Upload to testpypi: `py -m twine upload --repository testpypi dist/*`
+│ │  * Upload to pypi: `py -m twine upload --repository pypi dist/`
+│ │   --- dbseeder-0.0.2/pyproject.toml
+│ ├── +++ dbseeder-0.0.3/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "dbseeder"
+│ │ -version = "0.0.2"
+│ │ +version = "0.0.3"
+│ │  authors = [
+│ │    { name="Long Pham", email="phamlong15297@gmail.com" },
+│ │  ]
+│ │  description = "A package to make seeds for some relational databases"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- dbseeder-0.0.2/src/dbseeder/database.py
+│ ├── +++ dbseeder-0.0.3/src/database.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  import mysql.connector
+│ │  from tqdm import tqdm
+│ │  
+│ │ -from src.dbseeder.table import Table
+│ │ +from .table import Table
+│ │  
+│ │  
+│ │  class Database:
+│ │      db = None
+│ │      tables = []
+│ │      batchSize = 100
+│ │      failed_query_num = 0
+│ │   --- dbseeder-0.0.2/src/dbseeder/fields.py
+│ ├── +++ dbseeder-0.0.3/src/fields.py
+│ │┄ Files identical despite different names
+│ │   --- dbseeder-0.0.2/src/dbseeder/table.py
+│ ├── +++ dbseeder-0.0.3/src/table.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  from dataclasses import dataclass, field
+│ │ -from src.dbseeder.fields import Field
+│ │ +from .fields import Field
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class Table:
+│ │      name: str = ""
+│ │      fields: list = field(default_factory=list)
+│ │      ignore_fields = ["id"]
+│ │   --- dbseeder-0.0.2/src/dbseeder.egg-info/PKG-INFO
+│ ├── +++ dbseeder-0.0.3/src/dbseeder.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dbseeder
+│ │ -Version: 0.0.2
+│ │ +Version: 0.0.3
+│ │  Summary: A package to make seeds for some relational databases
+│ │  Author-email: Long Pham <phamlong15297@gmail.com>
+│ │  Project-URL: Homepage, https://github.com/conlacda/auto-seeder
+│ │  Project-URL: Bug Tracker, https://github.com/conlacda/auto-seeder/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │ @@ -15,14 +15,15 @@
+│ │  # Seeder for Mysql
+│ │  [![gh-action-pip-audit](https://github.com/conlacda/auto-seeder/actions/workflows/gh-action-pip-audit.yml/badge.svg)](https://github.com/conlacda/auto-seeder/actions/workflows/gh-action-pip-audit.yml)
+│ │  
+│ │  > Load database then make seeds for it
+│ │  
+│ │  ## Usage
+│ │  ```python
+│ │ +from dbseeder import Database
+│ │  db = Database(host="localhost", user="root", password="", database="seed")
+│ │  # Make seed without deleting the existence data
+│ │  db.makeSeed(rows_num=100000)
+│ │  # Delete data, then make seeds
+│ │  db.clearAndMakeSeed(rows_num=100000)
+│ │  ```
+│ │  
+│ │ @@ -35,15 +36,15 @@
+│ │  
+│ │  ```shell
+│ │  python -m pytest
+│ │  ```
+│ │  
+│ │  ## Packing
+│ │  * [Tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+│ │ -* [Pypi package](https://pypi.org/project/database-seeder/0.0.1/)
+│ │ +* [Package on Pypi](https://pypi.org/project/dbseeder/)
+│ │  
+│ │  ## My note
+│ │  To publish new version:
+│ │  * Change version in `pyproject.toml`
+│ │  * Build: `python -m build`
+│ │  * Upload to testpypi: `py -m twine upload --repository testpypi dist/*`
+│ │  * Upload to pypi: `py -m twine upload --repository pypi dist/`
