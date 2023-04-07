@@ -1,0 +1,163 @@
+--- tmp/odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2-py3-none-any.whl.zip
++++ tmp/odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,28 +1,29 @@
+│ -Zip file size: 29219 bytes, number of entries: 26
+│ --rw-r--r--  2.0 unx     3343 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/README.rst
+│ --rw-r--r--  2.0 unx       41 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/__init__.py
+│ --rw-r--r--  2.0 unx      652 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/__manifest__.py
+│ --rw-r--r--  2.0 unx      732 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/data/hr_attendance.xml
+│ --rw-r--r--  2.0 unx      331 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/data/hr_attendance_reason.xml
+│ --rw-r--r--  2.0 unx     2316 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/i18n/es.po
+│ --rw-r--r--  2.0 unx     2378 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/i18n/hr.po
+│ --rw-r--r--  2.0 unx     1998 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/i18n/hr_attendance_autoclose.pot
+│ --rw-r--r--  2.0 unx       80 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/models/__init__.py
+│ --rw-r--r--  2.0 unx     2515 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/models/hr_attendance.py
+│ --rw-r--r--  2.0 unx      279 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/models/hr_employee.py
+│ --rw-r--r--  2.0 unx      332 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/models/res_company.py
+│ --rw-r--r--  2.0 unx      150 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/readme/CONTRIBUTORS.rst
+│ --rw-r--r--  2.0 unx      387 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/readme/DESCRIPTION.rst
+│ --rw-r--r--  2.0 unx      229 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/readme/USAGE.rst
+│ --rw-r--r--  2.0 unx     9455 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/static/description/icon.png
+│ --rw-r--r--  2.0 unx    12742 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/static/description/index.html
+│ --rw-r--r--  2.0 unx       44 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/tests/__init__.py
+│ --rw-r--r--  2.0 unx     1889 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/tests/test_hr_attendance_auto_close.py
+│ --rw-r--r--  2.0 unx     1057 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/views/hr_attendance_view.xml
+│ --rw-r--r--  2.0 unx      714 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/views/hr_employee.xml
+│ --rw-r--r--  2.0 unx      803 b- defN 21-Mar-18 10:58 odoo/addons/hr_attendance_autoclose/views/res_company_view.xml
+│ --rw-r--r--  2.0 unx     3893 b- defN 21-Mar-18 11:00 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 21-Mar-18 11:00 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx        5 b- defN 21-Mar-18 11:00 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     2953 b- defN 21-Mar-18 11:00 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/RECORD
+│ -26 files, 49410 bytes uncompressed, 24131 bytes compressed:  51.2%
+│ +Zip file size: 30159 bytes, number of entries: 27
+│ +-rw-r--r--  2.0 unx     3343 b- defN 23-Apr-07 04:32 odoo/addons/hr_attendance_autoclose/README.rst
+│ +-rw-r--r--  2.0 unx       41 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/__init__.py
+│ +-rw-r--r--  2.0 unx      652 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/__manifest__.py
+│ +-rw-r--r--  2.0 unx      732 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/data/hr_attendance.xml
+│ +-rw-r--r--  2.0 unx      331 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/data/hr_attendance_reason.xml
+│ +-rw-r--r--  2.0 unx     2316 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/i18n/es.po
+│ +-rw-r--r--  2.0 unx     2378 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/i18n/hr.po
+│ +-rw-r--r--  2.0 unx     1998 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/i18n/hr_attendance_autoclose.pot
+│ +-rw-r--r--  2.0 unx     2304 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/i18n/it.po
+│ +-rw-r--r--  2.0 unx       80 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/models/__init__.py
+│ +-rw-r--r--  2.0 unx     2515 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/models/hr_attendance.py
+│ +-rw-r--r--  2.0 unx      279 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/models/hr_employee.py
+│ +-rw-r--r--  2.0 unx      332 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/models/res_company.py
+│ +-rw-r--r--  2.0 unx      150 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/readme/CONTRIBUTORS.rst
+│ +-rw-r--r--  2.0 unx      387 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/readme/DESCRIPTION.rst
+│ +-rw-r--r--  2.0 unx      229 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/readme/USAGE.rst
+│ +-rw-r--r--  2.0 unx     9455 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/static/description/icon.png
+│ +-rw-r--r--  2.0 unx    12742 b- defN 23-Apr-07 04:32 odoo/addons/hr_attendance_autoclose/static/description/index.html
+│ +-rw-r--r--  2.0 unx       44 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1889 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/tests/test_hr_attendance_auto_close.py
+│ +-rw-r--r--  2.0 unx     1057 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/views/hr_attendance_view.xml
+│ +-rw-r--r--  2.0 unx      714 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/views/hr_employee.xml
+│ +-rw-r--r--  2.0 unx      803 b- defN 23-Apr-07 04:31 odoo/addons/hr_attendance_autoclose/views/res_company_view.xml
+│ +-rw-r--r--  2.0 unx     3931 b- defN 23-Apr-07 04:32 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 04:32 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx        5 b- defN 23-Apr-07 04:32 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     3056 b- defN 23-Apr-07 04:32 odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/RECORD
+│ +27 files, 51855 bytes uncompressed, 24903 bytes compressed:  52.0%
+├── zipnote {}
+│ @@ -18,14 +18,17 @@
+│  
+│  Filename: odoo/addons/hr_attendance_autoclose/i18n/hr.po
+│  Comment: 
+│  
+│  Filename: odoo/addons/hr_attendance_autoclose/i18n/hr_attendance_autoclose.pot
+│  Comment: 
+│  
+│ +Filename: odoo/addons/hr_attendance_autoclose/i18n/it.po
+│ +Comment: 
+│ +
+│  Filename: odoo/addons/hr_attendance_autoclose/models/__init__.py
+│  Comment: 
+│  
+│  Filename: odoo/addons/hr_attendance_autoclose/models/hr_attendance.py
+│  Comment: 
+│  
+│  Filename: odoo/addons/hr_attendance_autoclose/models/hr_employee.py
+│ @@ -60,20 +63,20 @@
+│  
+│  Filename: odoo/addons/hr_attendance_autoclose/views/hr_employee.xml
+│  Comment: 
+│  
+│  Filename: odoo/addons/hr_attendance_autoclose/views/res_company_view.xml
+│  Comment: 
+│  
+│ -Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/METADATA
+│ +Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/WHEEL
+│ +Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/top_level.txt
+│ +Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/RECORD
+│ +Filename: odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+│   --- odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/METADATA
+├── +++ odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/METADATA
+│┄ Files 2% similar despite different names
+│ @@ -1,18 +1,19 @@
+│  Metadata-Version: 2.1
+│  Name: odoo13-addon-hr-attendance-autoclose
+│ -Version: 13.0.1.1.1.dev2
+│ +Version: 13.0.1.1.1.dev4
+│  Summary: Close stale Attendances
+│  Home-page: https://github.com/OCA/hr-attendance
+│  Author: Odoo Community Association (OCA)
+│  Author-email: support@odoo-community.org
+│  License: AGPL-3
+│  Platform: UNKNOWN
+│  Classifier: Programming Language :: Python
+│  Classifier: Framework :: Odoo
+│ +Classifier: Framework :: Odoo :: 13.0
+│  Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+│  Requires-Python: >=3.5
+│  Requires-Dist: odoo13-addon-hr-attendance-reason
+│  Requires-Dist: odoo (<13.1dev,>=13.0a)
+│  
+│  ========================
+│  HR Attendance Auto Close
+│   --- odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/RECORD
+├── +++ odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/RECORD
+│┄ Files 13% similar despite different names
+│ @@ -2,25 +2,26 @@
+│  odoo/addons/hr_attendance_autoclose/__init__.py,sha256=soE498wxV3zjEpDltWKfvJuweli2yygYkOhQadzOIl4,41
+│  odoo/addons/hr_attendance_autoclose/__manifest__.py,sha256=Wsc5S74ChjZyCABZS4ciHoERwoTmiwhCJgQcxU0u4HQ,652
+│  odoo/addons/hr_attendance_autoclose/data/hr_attendance.xml,sha256=E2ynYbNvfcpkwNhhC27Lqsx4q4h9FNyQe0WCrxIy4YM,732
+│  odoo/addons/hr_attendance_autoclose/data/hr_attendance_reason.xml,sha256=aLuLDKzudZU0UFpgXsqRghjki3VhHdrNS1ym__W8IdE,331
+│  odoo/addons/hr_attendance_autoclose/i18n/es.po,sha256=KsbOjc0-WgqxGop7OQY5IoobQXVIlJEsBplL1hh7MBw,2316
+│  odoo/addons/hr_attendance_autoclose/i18n/hr.po,sha256=MqOIcKGDnWV8WQc75myunq8mO8PD0FRDGlYVFQHqbdY,2378
+│  odoo/addons/hr_attendance_autoclose/i18n/hr_attendance_autoclose.pot,sha256=GFuRM64aqieHCc1ykz8qSLVpqXPfoY1AIakIKPJqP64,1998
+│ +odoo/addons/hr_attendance_autoclose/i18n/it.po,sha256=Pg2eO_6rmzQx6I2xXaOtROCp5g7Ww52i3CO7gqUDkaw,2304
+│  odoo/addons/hr_attendance_autoclose/models/__init__.py,sha256=p4RzySRp-_naJ9sslHE0JjPrgDbyRtns2f-MXHY5mVg,80
+│  odoo/addons/hr_attendance_autoclose/models/hr_attendance.py,sha256=YYQG1hv1ojkocxNOQmACP_bRyNA4BhHVlMMHMaN5VZY,2515
+│  odoo/addons/hr_attendance_autoclose/models/hr_employee.py,sha256=DjbWT69UjzkEvSiL0Ily_a7otoWEm8haLi2ng5fsXL4,279
+│  odoo/addons/hr_attendance_autoclose/models/res_company.py,sha256=d95QTkJ0qzAGDrb-cEvoIhvhlHmp2G8JaWDYJ2aL1dg,332
+│  odoo/addons/hr_attendance_autoclose/readme/CONTRIBUTORS.rst,sha256=MXuJTM-1ul4k53I4Ue3YoqVO-8eanSo87NOGpy9kiM0,150
+│  odoo/addons/hr_attendance_autoclose/readme/DESCRIPTION.rst,sha256=lqfqimTEDcthnEclY31pQU2yYs4PEkpesGef2C55c8c,387
+│  odoo/addons/hr_attendance_autoclose/readme/USAGE.rst,sha256=u6vnccSP7D22laeYWYGLzeC0PiCdgxPmapX2zDnXio0,229
+│  odoo/addons/hr_attendance_autoclose/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+│  odoo/addons/hr_attendance_autoclose/static/description/index.html,sha256=YxfExS8Su1Ztiq38tmUfJbhxFmnn2tH9otoP6TTl8ZM,12742
+│  odoo/addons/hr_attendance_autoclose/tests/__init__.py,sha256=BDuCjdi_Er8OeHpv9XIJvz8JE4o-fOISh7aXVgZygxc,44
+│  odoo/addons/hr_attendance_autoclose/tests/test_hr_attendance_auto_close.py,sha256=KxTQTvh4wbG_CVuozOZaUaw0hwLY6yXGoU5yv3qBdyw,1889
+│  odoo/addons/hr_attendance_autoclose/views/hr_attendance_view.xml,sha256=IS6P33v4mp4Sh70GM_dMfaG66GRE_GF4M6ytswvjmao,1057
+│  odoo/addons/hr_attendance_autoclose/views/hr_employee.xml,sha256=__1zEnhw1NgvlqIJyHHgVsjQhKCqBwKBP5B4-nH4ZUI,714
+│  odoo/addons/hr_attendance_autoclose/views/res_company_view.xml,sha256=OfhF0w-Le_Eo1m7rMn6bCO8muRjZnGbNnE0jCerH-LA,803
+│ -odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/METADATA,sha256=xVh91W9IjCDuHSYpEy5MBJjNZIh_ou_J4xGlprNQTlc,3893
+│ -odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+│ -odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ -odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev2.dist-info/RECORD,,
+│ +odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/METADATA,sha256=pwOo-v9Y_VX0mzyn-rx-iVUp-kHS7h5tj7-qEY3ty3Y,3931
+│ +odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+│ +odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+│ +odoo13_addon_hr_attendance_autoclose-13.0.1.1.1.dev4.dist-info/RECORD,,

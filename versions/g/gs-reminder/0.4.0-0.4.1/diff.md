@@ -1,0 +1,344 @@
+# Comparing `tmp/gs_reminder-0.4.0.tar.gz` & `tmp/gs_reminder-0.4.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "gs_reminder-0.4.0.tar", max compression
++gzip compressed data, was "gs_reminder-0.4.1.tar", max compression
+```
+
+## Comparing `gs_reminder-0.4.0.tar` & `gs_reminder-0.4.1.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,16 @@
+--rw-r--r--   0        0        0     1065 2023-01-04 10:22:49.504509 gs_reminder-0.4.0/LICENSE
+--rw-r--r--   0        0        0     2382 2023-01-04 10:22:49.504509 gs_reminder-0.4.0/README.md
+--rw-r--r--   0        0        0        0 2023-01-04 10:22:49.504509 gs_reminder-0.4.0/gs_reminder/__init__.py
+--rw-r--r--   0        0        0      103 2023-01-04 10:22:49.504509 gs_reminder-0.4.0/gs_reminder/__main__.py
+--rw-r--r--   0        0        0      257 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/bridge.py
+--rw-r--r--   0        0        0      776 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/error.py
+--rw-r--r--   0        0        0        0 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/github/__init__.py
+--rw-r--r--   0        0        0     2208 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/github/api.py
+--rw-r--r--   0        0        0        0 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/github/models/__init__.py
+--rw-r--r--   0        0        0     1034 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/github/models/pull_request.py
+--rw-r--r--   0        0        0      457 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/github/models/user.py
+--rw-r--r--   0        0        0     2378 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/notifier.py
+--rw-r--r--   0        0        0        0 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/slack/__init__.py
+--rw-r--r--   0        0        0     4681 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/gs_reminder/slack/api.py
+--rw-r--r--   0        0        0     1200 2023-01-04 10:22:49.508509 gs_reminder-0.4.0/pyproject.toml
+--rw-r--r--   0        0        0     3380 1970-01-01 00:00:00.000000 gs_reminder-0.4.0/setup.py
+--rw-r--r--   0        0        0     3469 1970-01-01 00:00:00.000000 gs_reminder-0.4.0/PKG-INFO
++-rw-r--r--   0        0        0     1065 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/LICENSE
++-rw-r--r--   0        0        0     2317 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/README.md
++-rw-r--r--   0        0        0        0 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/__init__.py
++-rw-r--r--   0        0        0      103 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/__main__.py
++-rw-r--r--   0        0        0      257 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/bridge.py
++-rw-r--r--   0        0        0      868 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/error.py
++-rw-r--r--   0        0        0        0 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/github/__init__.py
++-rw-r--r--   0        0        0     2208 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/github/api.py
++-rw-r--r--   0        0        0        0 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/github/models/__init__.py
++-rw-r--r--   0        0        0     1034 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/github/models/pull_request.py
++-rw-r--r--   0        0        0      457 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/github/models/user.py
++-rw-r--r--   0        0        0     2378 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/notifier.py
++-rw-r--r--   0        0        0        0 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/slack/__init__.py
++-rw-r--r--   0        0        0     4681 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/gs_reminder/slack/api.py
++-rw-r--r--   0        0        0     1245 2023-04-07 04:38:16.020866 gs_reminder-0.4.1/pyproject.toml
++-rw-r--r--   0        0        0     3429 1970-01-01 00:00:00.000000 gs_reminder-0.4.1/PKG-INFO
+```
+
+### Comparing `gs_reminder-0.4.0/LICENSE` & `gs_reminder-0.4.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `gs_reminder-0.4.0/README.md` & `gs_reminder-0.4.1/README.md`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+-# github-pr-slack-reminder
++# gs-reminder
+ 
+-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/380a539992d941f0a6d9c045c48c580c)](https://www.codacy.com/gh/nnsnodnb/github-pr-slack-reminder/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nnsnodnb/github-pr-slack-reminder&amp;utm_campaign=Badge_Grade)
++[![Codacy Badge](https://app.codacy.com/project/badge/Grade/380a539992d941f0a6d9c045c48c580c)](https://www.codacy.com/gh/nnsnodnb/gs-reminder/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nnsnodnb/gs-reminder&amp;utm_campaign=Badge_Grade)
+ [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+ 
+ [![PyPI Package version](https://badge.fury.io/py/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
+ [![Python Supported versions](https://img.shields.io/pypi/pyversions/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
+ [![format](https://img.shields.io/pypi/format/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
+ [![implementation](https://img.shields.io/pypi/implementation/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
+ [![LICENSE](https://img.shields.io/pypi/l/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
+@@ -16,15 +16,15 @@
+ - Python 3.7 or later
+   - poetry
+ 
+ ## Usage
+ 
+ ```shell
+ pip install gs-reminder
+-gs-reminder -r nnsnodnb/github-pr-slack-reminder -u examples/username.json --icon
++gs-reminder -r nnsnodnb/gs-reminder -u examples/username.json --icon
+ ```
+ 
+ ### Environment variables
+ 
+ - `GITHUB_TOKEN`
+   - Required
+   - Your GitHub Personal Access Token.
+@@ -33,15 +33,15 @@
+   - Required
+   - Incoming webhook's url of Slack app.
+ 
+ ### Options
+ 
+ - `--repo` or `-r`
+   - Required
+-  - Your GitHub repository name. (ex. `nnsnodnb/github-pr-slack-reminder`)
++  - Your GitHub repository name. (ex. `nnsnodnb/gs-reminder`)
+ - `--file-username` or `-u`
+   - Optional
+   - Corresponding files for GitHub and Slack usernames. (ex. `examples/username.json`)
+     ```json
+     [
+       {
+         "github": "nnsnodnb",
+```
+
+### Comparing `gs_reminder-0.4.0/gs_reminder/error.py` & `gs_reminder-0.4.1/gs_reminder/error.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -5,14 +5,17 @@
+     status_code: int
+     response: Dict[Any, Any]
+ 
+     def __init__(self, status_code: int, response: Dict[Any, Any]) -> None:
+         self.status_code = status_code
+         self.response = response
+ 
++    def __str__(self) -> str:
++        return f"{self.__class__.__name__}: {self.__dict__}"
++
+ 
+ class GitHubException(_AbstractException):
+     detail: str
+ 
+     def __init__(self, status_code: int, response: Dict[Any, Any], detail: str) -> None:
+         self.status_code = status_code
+         self.response = response
+```
+
+### Comparing `gs_reminder-0.4.0/gs_reminder/github/api.py` & `gs_reminder-0.4.1/gs_reminder/github/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gs_reminder-0.4.0/gs_reminder/github/models/pull_request.py` & `gs_reminder-0.4.1/gs_reminder/github/models/pull_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gs_reminder-0.4.0/gs_reminder/notifier.py` & `gs_reminder-0.4.1/gs_reminder/notifier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gs_reminder-0.4.0/gs_reminder/slack/api.py` & `gs_reminder-0.4.1/gs_reminder/slack/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `gs_reminder-0.4.0/pyproject.toml` & `gs_reminder-0.4.1/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,36 +1,37 @@
+ [tool.poetry]
+ name = "gs-reminder"
+-version = "0.4.0"
++version = "0.4.1"
+ description = "Notify Slack of a review of Pull Requests in the GitHub repository."
+ authors = ["Yuya Oka <nnsnodnb@gmail.com>"]
+ license = "MIT"
+ readme = "README.md"
+-repository = "https://github.com/nnsnodnb/github-pr-slack-reminder"
++repository = "https://github.com/nnsnodnb/gs-reminder"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "Programming Language :: Python :: 3.7",
+     "Programming Language :: Python :: 3.8",
+     "Programming Language :: Python :: 3.9",
+-    "Programming Language :: Python :: 3.10"
++    "Programming Language :: Python :: 3.10",
++    "Programming Language :: Python :: 3.11",
+ ]
+ packages = [
+     { include = "gs_reminder"}
+ ]
+ 
+ [tool.poetry.dependencies]
+ python = "^3.7"
+ requests = "^2.27.1"
+ click = "^8.1.3"
+ 
+ [tool.poetry.group.dev.dependencies]
+-black = "^22.12.0"
++black = ">=22.12,<24.0"
+ isort = "^5.11.4"
+ flake8 = "^5.0.4"
+-mypy = "^0.991"
++mypy = ">=0.991,<1.2"
+ types-requests = "^2.28.11"
+ 
+ [tool.poetry.scripts]
+ gs-reminder = "gs_reminder.notifier:main"
+ 
+ [build-system]
+ requires = ["poetry-core>=1.0.0"]
+```
+
+### Comparing `gs_reminder-0.4.0/setup.py` & `gs_reminder-0.4.1/PKG-INFO`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,37 +1,102 @@
+-# -*- coding: utf-8 -*-
+-from setuptools import setup
++Metadata-Version: 2.1
++Name: gs-reminder
++Version: 0.4.1
++Summary: Notify Slack of a review of Pull Requests in the GitHub repository.
++Home-page: https://github.com/nnsnodnb/gs-reminder
++License: MIT
++Author: Yuya Oka
++Author-email: nnsnodnb@gmail.com
++Requires-Python: >=3.7,<4.0
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Programming Language :: Python :: 3
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Classifier: Programming Language :: Python :: 3
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Requires-Dist: click (>=8.1.3,<9.0.0)
++Requires-Dist: requests (>=2.27.1,<3.0.0)
++Project-URL: Repository, https://github.com/nnsnodnb/gs-reminder
++Description-Content-Type: text/markdown
++
++# gs-reminder
++
++[![Codacy Badge](https://app.codacy.com/project/badge/Grade/380a539992d941f0a6d9c045c48c580c)](https://www.codacy.com/gh/nnsnodnb/gs-reminder/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nnsnodnb/gs-reminder&amp;utm_campaign=Badge_Grade)
++[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
++
++[![PyPI Package version](https://badge.fury.io/py/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
++[![Python Supported versions](https://img.shields.io/pypi/pyversions/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
++[![format](https://img.shields.io/pypi/format/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
++[![implementation](https://img.shields.io/pypi/implementation/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
++[![LICENSE](https://img.shields.io/pypi/l/gs-reminder.svg)](https://pypi.org/project/gs-reminder)
++
++Notify Slack of a review of Pull Requests in the GitHub repository.
++
++## Environments
++
++- Python 3.7 or later
++  - poetry
++
++## Usage
++
++```shell
++pip install gs-reminder
++gs-reminder -r nnsnodnb/gs-reminder -u examples/username.json --icon
++```
++
++### Environment variables
++
++- `GITHUB_TOKEN`
++  - Required
++  - Your GitHub Personal Access Token.
++    - Create https://github.com/settings/tokens
++- `SLACK_URL`
++  - Required
++  - Incoming webhook's url of Slack app.
++
++### Options
++
++- `--repo` or `-r`
++  - Required
++  - Your GitHub repository name. (ex. `nnsnodnb/gs-reminder`)
++- `--file-username` or `-u`
++  - Optional
++  - Corresponding files for GitHub and Slack usernames. (ex. `examples/username.json`)
++    ```json
++    [
++      {
++        "github": "nnsnodnb",
++        "slack": "yuya.oka"    
++      }
++    ]
++    ```
++
++- `--limit` or `-l`
++  - Optional
++  - Number of Pull Requests to notify Slack. Max: 20 (default: 20)
++
++- `--icon` or `-i`
++  - Optional
++  - Give GitHub icons to Slack notifications.
++
++- `--exclude-users` or `-eu`
++  - Optional
++  - GitHub users to remove from reviewers upon notification.
++    ```
++    -eu nnsnodnb # this name is GitHub username
++    ```
+ 
+-packages = \
+-['gs_reminder',
+- 'gs_reminder.github',
+- 'gs_reminder.github.models',
+- 'gs_reminder.slack']
+-
+-package_data = \
+-{'': ['*']}
+-
+-install_requires = \
+-['click>=8.1.3,<9.0.0', 'requests>=2.27.1,<3.0.0']
+-
+-entry_points = \
+-{'console_scripts': ['gs-reminder = gs_reminder.notifier:main']}
+-
+-setup_kwargs = {
+-    'name': 'gs-reminder',
+-    'version': '0.4.0',
+-    'description': 'Notify Slack of a review of Pull Requests in the GitHub repository.',
+-    'long_description': '# github-pr-slack-reminder\n\n[![Codacy Badge](https://app.codacy.com/project/badge/Grade/380a539992d941f0a6d9c045c48c580c)](https://www.codacy.com/gh/nnsnodnb/github-pr-slack-reminder/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nnsnodnb/github-pr-slack-reminder&amp;utm_campaign=Badge_Grade)\n[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)\n\n[![PyPI Package version](https://badge.fury.io/py/gs-reminder.svg)](https://pypi.org/project/gs-reminder)\n[![Python Supported versions](https://img.shields.io/pypi/pyversions/gs-reminder.svg)](https://pypi.org/project/gs-reminder)\n[![format](https://img.shields.io/pypi/format/gs-reminder.svg)](https://pypi.org/project/gs-reminder)\n[![implementation](https://img.shields.io/pypi/implementation/gs-reminder.svg)](https://pypi.org/project/gs-reminder)\n[![LICENSE](https://img.shields.io/pypi/l/gs-reminder.svg)](https://pypi.org/project/gs-reminder)\n\nNotify Slack of a review of Pull Requests in the GitHub repository.\n\n## Environments\n\n- Python 3.7 or later\n  - poetry\n\n## Usage\n\n```shell\npip install gs-reminder\ngs-reminder -r nnsnodnb/github-pr-slack-reminder -u examples/username.json --icon\n```\n\n### Environment variables\n\n- `GITHUB_TOKEN`\n  - Required\n  - Your GitHub Personal Access Token.\n    - Create https://github.com/settings/tokens\n- `SLACK_URL`\n  - Required\n  - Incoming webhook\'s url of Slack app.\n\n### Options\n\n- `--repo` or `-r`\n  - Required\n  - Your GitHub repository name. (ex. `nnsnodnb/github-pr-slack-reminder`)\n- `--file-username` or `-u`\n  - Optional\n  - Corresponding files for GitHub and Slack usernames. (ex. `examples/username.json`)\n    ```json\n    [\n      {\n        "github": "nnsnodnb",\n        "slack": "yuya.oka"    \n      }\n    ]\n    ```\n\n- `--limit` or `-l`\n  - Optional\n  - Number of Pull Requests to notify Slack. Max: 20 (default: 20)\n\n- `--icon` or `-i`\n  - Optional\n  - Give GitHub icons to Slack notifications.\n\n- `--exclude-users` or `-eu`\n  - Optional\n  - GitHub users to remove from reviewers upon notification.\n    ```\n    -eu nnsnodnb # this name is GitHub username\n    ```\n\n## Example Result\n\n<img src="https://user-images.githubusercontent.com/9856514/168442310-af165e75-7329-4a37-8e67-3f2635c549ac.png" alt="example result" width="500px">\n\n## License\n\nThis software is licensed under the MIT License.\n',
+-    'author': 'Yuya Oka',
+-    'author_email': 'nnsnodnb@gmail.com',
+-    'maintainer': 'None',
+-    'maintainer_email': 'None',
+-    'url': 'https://github.com/nnsnodnb/github-pr-slack-reminder',
+-    'packages': packages,
+-    'package_data': package_data,
+-    'install_requires': install_requires,
+-    'entry_points': entry_points,
+-    'python_requires': '>=3.7,<4.0',
+-}
++## Example Result
+ 
++<img src="https://user-images.githubusercontent.com/9856514/168442310-af165e75-7329-4a37-8e67-3f2635c549ac.png" alt="example result" width="500px">
++
++## License
++
++This software is licensed under the MIT License.
+ 
+-setup(**setup_kwargs)
+```
+

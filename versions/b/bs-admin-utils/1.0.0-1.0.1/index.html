@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/bs_admin_utils-1.0.0.tar.gz tmp/bs_admin_utils-1.0.1.tar.gz --html versions/b/bs-admin-utils/1.0.0-1.0.1/index.html --text versions/b/bs-admin-utils/1.0.0-1.0.1/diff.txt --markdown versions/b/bs-admin-utils/1.0.0-1.0.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.24 KB</span></div>
+  <div><span class="source">tmp/bs_admin_utils-1.0.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/bs_admin_utils-1.0.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">278 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;bs_admin_utils-1.0.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>04:<del>21</del>:<del>44</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;bs_admin_utils-1.0.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Fri<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>7<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.91 KB</span></div>
+    <div><span class="source">bs_admin_utils-1.0.0.tar</span> vs.</div>
+    <div id="bs_admin_utils--.-.-.tar"><span class="source">bs_admin_utils-1.0.1.tar</span>
+      <a class="anchor" href="#bs_admin_utils--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.06 KB</span></div>
+      <div id="bs_admin_utils--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 23 lines modified</td><td colspan="2">Offset 1, 23 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.5<del>59937</del><span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.5<ins>84243</ins><span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1067<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:25:03.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1067<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:25:03.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:04:08.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:04:08.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>260<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.5<del>59937</del><span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>260<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.5<ins>84243</ins><span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>206<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:35:29.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>206<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:35:29.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.5<del>59937</del><span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/</td><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.5<ins>84243</ins><span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:39:05.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:39:05.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3943<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:49:11.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/api.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3943<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:49:11.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/api.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>490<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:11:32.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/decorators.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>490<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:11:32.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/decorators.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1034<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:48:50.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/model.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1034<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:48:50.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/model.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.5<del>59937</del><span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/static/</td><td class="diffline">11 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.5<ins>84243</ins><span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/static/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>367112<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:52:07.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/static/arial.ttf</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>367112<span class="dp">·</span>2023-04-07<span class="dp">·</span>03:52:07.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/static/arial.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<del>31</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>20</del>:<del>26</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/vercode.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23<ins>20</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>36</ins>:<ins>50</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/vercode.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2868<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:10:45.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils/websocket.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2868<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:10:45.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils/websocket.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.5<del>59937</del><span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/</td><td class="diffline">15 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.5<ins>84243</ins><span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>260<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/PKG-INFO</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>260<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>448<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/SOURCES.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>448<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/dependency_links.txt</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>44<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/requires.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>44<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/top_level.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/bs_admin_utils.egg-info/zip-safe</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/bs_admin_utils.egg-info/zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>21</del>:<del>44</del>.5<del>59937</del><span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/setup.cfg</td><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>37</ins>:<ins>17</ins>.5<ins>84243</ins><span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>620<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<del>02</del>:<del>00</del>.000000<span class="dp">·</span>bs_admin_utils-1.0.<del>0</del>/setup.py</td><td class="diffline">23 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>kiki-kanri<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>620<span class="dp">·</span>2023-04-07<span class="dp">·</span>04:<ins>36</ins>:<ins>55</ins>.000000<span class="dp">·</span>bs_admin_utils-1.0.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/LICENSE</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--LICENSE"><span class="source">bs_admin_utils-1.0.1/LICENSE</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/bs_admin_utils/api.py</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-api.py"><span class="source">bs_admin_utils-1.0.1/bs_admin_utils/api.py</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-api.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/bs_admin_utils/model.py</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-model.py"><span class="source">bs_admin_utils-1.0.1/bs_admin_utils/model.py</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-model.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/bs_admin_utils/static/arial.ttf</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-static-arial.ttf"><span class="source">bs_admin_utils-1.0.1/bs_admin_utils/static/arial.ttf</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-static-arial.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">678 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/bs_admin_utils/vercode.py</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-vercode.py"><span class="source">bs_admin_utils-1.0.1/bs_admin_utils/vercode.py</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-vercode.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 15 lines modified</td><td colspan="2">Offset 15, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>bg_color<span class="dp">·</span>=<span class="dp">·</span>(0,<span class="dp">·</span>0,<span class="dp">·</span>0,<span class="dp">·</span>0)</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>bg_color<span class="dp">·</span>=<span class="dp">·</span>(0,<span class="dp">·</span>0,<span class="dp">·</span>0,<span class="dp">·</span>0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_size<span class="dp">·</span>=<span class="dp">·</span>32</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_size<span class="dp">·</span>=<span class="dp">·</span>32</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image_height<span class="dp">·</span>=<span class="dp">·</span>50</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image_height<span class="dp">·</span>=<span class="dp">·</span>50</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image_width<span class="dp">·</span>=<span class="dp">·</span>150</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image_width<span class="dp">·</span>=<span class="dp">·</span>150</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image_size<span class="dp">·</span>=<span class="dp">·</span>(image_width,<span class="dp">·</span>image_height)</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image_size<span class="dp">·</span>=<span class="dp">·</span>(image_width,<span class="dp">·</span>image_height)</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vercode_length<span class="dp">·</span>=<span class="dp">·</span>4</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>vercode_length<span class="dp">·</span>=<span class="dp">·</span>4</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font<span class="dp">·</span>=<span class="dp">·</span>ImageFont.truetype(<del>&#x27;./</del><del>sta</del>t<del>ic/a</del><del>ri</del>a<del>l.t</del>t<del>f</del><del>&#x27;</del>,<span class="dp">·</span>size=font_size)</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font<span class="dp">·</span>=<span class="dp">·</span>ImageFont.truetype(<ins>fon</ins>t<ins>_p</ins>at<ins>h</ins>,<span class="dp">·</span>size=font_size)</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_base_x<span class="dp">·</span>=<span class="dp">·</span>(image_width<span class="dp">·</span>-<span class="dp">·</span>font_size<span class="dp">·</span>*<span class="dp">·</span>4)<span class="dp">·</span>/<span class="dp">·</span>2</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_base_x<span class="dp">·</span>=<span class="dp">·</span>(image_width<span class="dp">·</span>-<span class="dp">·</span>font_size<span class="dp">·</span>*<span class="dp">·</span>4)<span class="dp">·</span>/<span class="dp">·</span>2</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_base_y<span class="dp">·</span>=<span class="dp">·</span>(image_height<span class="dp">·</span>-<span class="dp">·</span>font_size)<span class="dp">·</span>/<span class="dp">·</span>2</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_base_y<span class="dp">·</span>=<span class="dp">·</span>(image_height<span class="dp">·</span>-<span class="dp">·</span>font_size)<span class="dp">·</span>/<span class="dp">·</span>2</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_pos<span class="dp">·</span>=<span class="dp">·</span>[]</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_pos<span class="dp">·</span>=<span class="dp">·</span>[]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>range(vercode_length):</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>range(vercode_length):</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_pos.append((font_base_x<span class="dp">·</span>+<span class="dp">·</span>font_size<span class="dp">·</span>*<span class="dp">·</span>i,<span class="dp">·</span>font_base_y))</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>font_pos.append((font_base_x<span class="dp">·</span>+<span class="dp">·</span>font_size<span class="dp">·</span>*<span class="dp">·</span>i,<span class="dp">·</span>font_base_y))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/bs_admin_utils/websocket.py</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-websocket.py"><span class="source">bs_admin_utils-1.0.1/bs_admin_utils/websocket.py</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--bs_admin_utils-websocket.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">538 B</span></div>
+      <div><span class="source">bs_admin_utils-1.0.0/setup.py</span> vs.</div>
+      <div id="bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--setup.py"><span class="source">bs_admin_utils-1.0.1/setup.py</span>
+        <a class="anchor" href="#bs_admin_utils--.-.-.tar---bs_admin_utils--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 8, 15 lines modified</td><td colspan="2">Offset 8, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(),</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>package_data={</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>package_data={</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;bs_admin_utils&#x27;:<span class="dp">·</span>[&#x27;*.ttf&#x27;]</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;bs_admin_utils&#x27;:<span class="dp">·</span>[&#x27;*.ttf&#x27;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_package_data=True,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_safe=True,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_safe=True,</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;1.0.<del>0</del>&#x27;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;1.0.<ins>1</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;Blacksheep<span class="dp">·</span>admin<span class="dp">·</span>backend<span class="dp">·</span>utils<span class="dp">·</span>classes<span class="dp">·</span>and<span class="dp">·</span>function.&#x27;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;Blacksheep<span class="dp">·</span>admin<span class="dp">·</span>backend<span class="dp">·</span>utils<span class="dp">·</span>classes<span class="dp">·</span>and<span class="dp">·</span>function.&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;kiki-kanri&#x27;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;kiki-kanri&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;a470666@gmail.com&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;a470666@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=[],</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=[],</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;beanie&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;beanie&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;blacksheep&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;blacksheep&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
