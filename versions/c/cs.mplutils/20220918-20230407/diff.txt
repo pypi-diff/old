@@ -1,0 +1,398 @@
+--- tmp/cs.mplutils-20220918.tar.gz
++++ tmp/cs.mplutils-20230407.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "cs.mplutils-20220918.tar", last modified: Sun Sep 18 00:49:47 2022, max compression
+│ +gzip compressed data, was "cs.mplutils-20230407.tar", last modified: Fri Apr  7 00:03:43 2023, max compression
+│   --- cs.mplutils-20220918.tar
+├── +++ cs.mplutils-20230407.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2022-09-18 00:49:47.152335 cs.mplutils-20220918/
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)       18 2022-09-18 00:49:35.000000 cs.mplutils-20220918/MANIFEST.in
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)     3422 2022-09-18 00:49:47.152468 cs.mplutils-20220918/PKG-INFO
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)     2746 2022-09-18 00:49:36.000000 cs.mplutils-20220918/README.md
+│ │ -drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2022-09-18 00:49:47.148265 cs.mplutils-20220918/lib/
+│ │ -drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2022-09-18 00:49:47.148494 cs.mplutils-20220918/lib/python/
+│ │ -drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2022-09-18 00:49:47.149985 cs.mplutils-20220918/lib/python/cs/
+│ │ --rw-r--r--   0 cameron    (501) cameron    (502)     6396 2022-09-18 00:49:25.000000 cs.mplutils-20220918/lib/python/cs/mplutils.py
+│ │ -drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2022-09-18 00:49:47.152088 cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)     3422 2022-09-18 00:49:47.000000 cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)      310 2022-09-18 00:49:47.000000 cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)        1 2022-09-18 00:49:47.000000 cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)       95 2022-09-18 00:49:47.000000 cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/requires.txt
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)        3 2022-09-18 00:49:47.000000 cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)     3699 2022-09-18 00:49:38.000000 cs.mplutils-20220918/pyproject.toml
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)      875 2022-09-18 00:49:47.153083 cs.mplutils-20220918/setup.cfg
+│ │ --rw-rw-r--   0 cameron    (501) cameron    (502)       59 2022-09-18 00:49:36.000000 cs.mplutils-20220918/setup.py
+│ │ +drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:03:43.661733 cs.mplutils-20230407/
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)       18 2023-04-07 00:03:32.000000 cs.mplutils-20230407/MANIFEST.in
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)     3561 2023-04-07 00:03:43.661862 cs.mplutils-20230407/PKG-INFO
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)     2885 2023-04-07 00:03:33.000000 cs.mplutils-20230407/README.md
+│ │ +drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:03:43.657406 cs.mplutils-20230407/lib/
+│ │ +drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:03:43.657759 cs.mplutils-20230407/lib/python/
+│ │ +drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:03:43.659716 cs.mplutils-20230407/lib/python/cs/
+│ │ +-rw-r--r--   0 cameron    (501) cameron    (502)     6850 2023-04-07 00:03:23.000000 cs.mplutils-20230407/lib/python/cs/mplutils.py
+│ │ +drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:03:43.661447 cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)     3561 2023-04-07 00:03:43.000000 cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)      310 2023-04-07 00:03:43.000000 cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)        1 2023-04-07 00:03:43.000000 cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)       93 2023-04-07 00:03:43.000000 cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)        3 2023-04-07 00:03:43.000000 cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)     3836 2023-04-07 00:03:35.000000 cs.mplutils-20230407/pyproject.toml
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)      873 2023-04-07 00:03:43.662497 cs.mplutils-20230407/setup.cfg
+│ │ +-rw-rw-r--   0 cameron    (501) cameron    (502)       59 2023-04-07 00:03:33.000000 cs.mplutils-20230407/setup.py
+│ │   --- cs.mplutils-20220918/PKG-INFO
+│ ├── +++ cs.mplutils-20230407/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cs.mplutils
+│ │ -Version: 20220918
+│ │ +Version: 20230407
+│ │  Summary: A few conveniences for working with matplotlib.
+│ │  Home-page: https://bitbucket.org/cameron_simpson/css/commits/all
+│ │  Author: Cameron Simpson
+│ │  Author-email: Cameron Simpson <cs@cskk.id.au>
+│ │  License: GNU General Public License v3 or later (GPLv3+)
+│ │  Project-URL: URL, https://bitbucket.org/cameron_simpson/css/commits/all
+│ │  Keywords: python3
+│ │ @@ -14,17 +14,16 @@
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  A few conveniences for working with matplotlib.
+│ │  
+│ │ -*Latest release 20220918*:
+│ │ -* New FigureSize class.
+│ │ -* axes(): accept a FigureSize for figure.
+│ │ +*Latest release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │  
+│ │  ## Function `axes(figure=None, ax=None, **fig_kw) -> matplotlib.axes._axes.Axes`
+│ │  
+│ │  Return a set of `Axes`.
+│ │  
+│ │  Parameters:
+│ │  * `figure`: optional `Figure` from which to obtain the `Axes`
+│ │ @@ -91,13 +90,16 @@
+│ │  * `dir`: passed to `tempfile.TemporaryDirectory`
+│ │  * `ext`: optional file extension, default `'png'`
+│ │  
+│ │  # Release Log
+│ │  
+│ │  
+│ │  
+│ │ +*Release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │ +
+│ │  *Release 20220918*:
+│ │  * New FigureSize class.
+│ │  * axes(): accept a FigureSize for figure.
+│ │  
+│ │  *Release 20220805*:
+│ │  Initial PyPI release.
+│ │   --- cs.mplutils-20220918/README.md
+│ ├── +++ cs.mplutils-20230407/README.md
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,12 +1,11 @@
+│ │  A few conveniences for working with matplotlib.
+│ │  
+│ │ -*Latest release 20220918*:
+│ │ -* New FigureSize class.
+│ │ -* axes(): accept a FigureSize for figure.
+│ │ +*Latest release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │  
+│ │  ## Function `axes(figure=None, ax=None, **fig_kw) -> matplotlib.axes._axes.Axes`
+│ │  
+│ │  Return a set of `Axes`.
+│ │  
+│ │  Parameters:
+│ │  * `figure`: optional `Figure` from which to obtain the `Axes`
+│ │ @@ -77,13 +76,16 @@
+│ │  * `dir`: passed to `tempfile.TemporaryDirectory`
+│ │  * `ext`: optional file extension, default `'png'`
+│ │  
+│ │  # Release Log
+│ │  
+│ │  
+│ │  
+│ │ +*Release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │ +
+│ │  *Release 20220918*:
+│ │  * New FigureSize class.
+│ │  * axes(): accept a FigureSize for figure.
+│ │  
+│ │  *Release 20220805*:
+│ │  Initial PyPI release.
+│ │   --- cs.mplutils-20220918/lib/python/cs/mplutils.py
+│ ├── +++ cs.mplutils-20230407/lib/python/cs/mplutils.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  #!/usr/bin/env python3
+│ │  
+│ │  ''' A few conveniences for working with matplotlib.
+│ │  '''
+│ │  
+│ │  from contextlib import contextmanager
+│ │ -from dataclasses import dataclass
+│ │ +from dataclasses import dataclass, field
+│ │  import os
+│ │  from os.path import (
+│ │      basename,
+│ │      dirname,
+│ │      exists as existspath,
+│ │      join as joinpath,
+│ │      splitext,
+│ │ @@ -19,18 +19,19 @@
+│ │  from typing import Union
+│ │  
+│ │  from typeguard import typechecked
+│ │  from matplotlib.figure import Axes, Figure
+│ │  
+│ │  from cs.buffer import CornuCopyBuffer
+│ │  from cs.deco import fmtdoc
+│ │ +from cs.env import getenv
+│ │  from cs.lex import r
+│ │  from cs.pfx import pfx_call
+│ │  
+│ │ -__version__ = '20220918'
+│ │ +__version__ = '20230407'
+│ │  
+│ │  DISTINFO = {
+│ │      'keywords': ["python3"],
+│ │      'classifiers': [
+│ │          "Development Status :: 3 - Alpha",
+│ │          "Programming Language :: Python :: 3",
+│ │      ],
+│ │ @@ -44,23 +45,40 @@
+│ │      ],
+│ │  }
+│ │  
+│ │  @dataclass
+│ │  class FigureSize:
+│ │    ''' Specifications for a `Figure`'s dimensions.
+│ │    '''
+│ │ +
+│ │    DEFAULT_DX = 14
+│ │ +  DEFAULT_DX_ENVVAR = 'FIGURE_SIZE_DX'
+│ │    DEFAULT_DY = 8
+│ │ +  DEFAULT_DY_ENVVAR = 'FIGURE_SIZE_DY'
+│ │    DEFAULT_DPI = 100
+│ │ +  DEFAULT_DPI_ENVVAR = 'FIGURE_SIZE_DPI'
+│ │ +
+│ │    # width in inches
+│ │ -  dx: Union[int, float]
+│ │ +  dx: Union[int, float] = field(
+│ │ +      default_factory=getenv(
+│ │ +          DEFAULT_DX_ENVVAR, default=DEFAULT_DX, parse=float
+│ │ +      )
+│ │ +  )
+│ │    # height in inches
+│ │ -  dy: Union[int, float]
+│ │ +  dy: Union[int, float] = field(
+│ │ +      default_factory=getenv(
+│ │ +          DEFAULT_DY_ENVVAR, default=DEFAULT_DY, parse=float
+│ │ +      )
+│ │ +  )
+│ │    # dots (pixels) per inch
+│ │ -  dpi: Union[int, float] = DEFAULT_DPI
+│ │ +  dpi: Union[int, float] = field(
+│ │ +      default_factory=getenv(
+│ │ +          DEFAULT_DPI_ENVVAR, default=DEFAULT_DPI, parse=float
+│ │ +      )
+│ │ +  )
+│ │  
+│ │    def Figure(self, **kw):
+│ │      ''' Return a new `Figure` of this size.
+│ │          It will have no subplots.
+│ │      '''
+│ │      return Figure(figsize=(self.dx, self.dy), dpi=self.dpi, **kw)
+│ │  
+│ │ @@ -90,18 +108,17 @@
+│ │        or as a `FigureSze`.
+│ │    '''
+│ │    if ax is None:
+│ │      ax = 0
+│ │    if not isinstance(ax, Axes):
+│ │      # we need a figure
+│ │      if figure is None:
+│ │ +      figsize = FigureSize()
+│ │        figure = Figure(
+│ │ -          figsize=(FigureSize.DEFAULT_DX, FigureSize.DEFAULT_DY),
+│ │ -          dpi=FigureSize.DEFAULT_DPI,
+│ │ -          **fig_kw
+│ │ +          figsize=(figsize.dx, figsize.dy), dpi=figsize.dpi, **fig_kw
+│ │        )
+│ │        figure.add_subplot()
+│ │      elif isinstance(figure, FigureSize):
+│ │        figure = figure.Figure(**fig_kw)
+│ │        figure.add_subplot()
+│ │      else:
+│ │        try:
+│ │   --- cs.mplutils-20220918/lib/python/cs.mplutils.egg-info/PKG-INFO
+│ ├── +++ cs.mplutils-20230407/lib/python/cs.mplutils.egg-info/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: cs.mplutils
+│ │ -Version: 20220918
+│ │ +Version: 20230407
+│ │  Summary: A few conveniences for working with matplotlib.
+│ │  Home-page: https://bitbucket.org/cameron_simpson/css/commits/all
+│ │  Author: Cameron Simpson
+│ │  Author-email: Cameron Simpson <cs@cskk.id.au>
+│ │  License: GNU General Public License v3 or later (GPLv3+)
+│ │  Project-URL: URL, https://bitbucket.org/cameron_simpson/css/commits/all
+│ │  Keywords: python3
+│ │ @@ -14,17 +14,16 @@
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  A few conveniences for working with matplotlib.
+│ │  
+│ │ -*Latest release 20220918*:
+│ │ -* New FigureSize class.
+│ │ -* axes(): accept a FigureSize for figure.
+│ │ +*Latest release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │  
+│ │  ## Function `axes(figure=None, ax=None, **fig_kw) -> matplotlib.axes._axes.Axes`
+│ │  
+│ │  Return a set of `Axes`.
+│ │  
+│ │  Parameters:
+│ │  * `figure`: optional `Figure` from which to obtain the `Axes`
+│ │ @@ -91,13 +90,16 @@
+│ │  * `dir`: passed to `tempfile.TemporaryDirectory`
+│ │  * `ext`: optional file extension, default `'png'`
+│ │  
+│ │  # Release Log
+│ │  
+│ │  
+│ │  
+│ │ +*Release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │ +
+│ │  *Release 20220918*:
+│ │  * New FigureSize class.
+│ │  * axes(): accept a FigureSize for figure.
+│ │  
+│ │  *Release 20220805*:
+│ │  Initial PyPI release.
+│ │   --- cs.mplutils-20220918/pyproject.toml
+│ ├── +++ cs.mplutils-20230407/pyproject.toml
+│ │┄ Files 11% similar despite different names
+│ │ @@ -4,44 +4,43 @@
+│ │  authors = [
+│ │      { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+│ │  ]
+│ │  keywords = [
+│ │      "python3",
+│ │  ]
+│ │  dependencies = [
+│ │ -    "cs.buffer>=20210316",
+│ │ -    "cs.deco>=20220918.1",
+│ │ -    "cs.lex>=20220918",
+│ │ -    "cs.pfx>=20220918",
+│ │ +    "cs.buffer>=20230401",
+│ │ +    "cs.deco>=20230331",
+│ │ +    "cs.lex>=20230401",
+│ │ +    "cs.pfx>=20230331",
+│ │      "matplotlib",
+│ │      "typeguard",
+│ │  ]
+│ │  classifiers = [
+│ │      "Development Status :: 3 - Alpha",
+│ │      "Programming Language :: Python :: 3",
+│ │      "Intended Audience :: Developers",
+│ │      "Operating System :: OS Independent",
+│ │      "Topic :: Software Development :: Libraries :: Python Modules",
+│ │      "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+│ │  ]
+│ │ -version = "20220918"
+│ │ +version = "20230407"
+│ │  
+│ │  [project.license]
+│ │  text = "GNU General Public License v3 or later (GPLv3+)"
+│ │  
+│ │  [project.urls]
+│ │  URL = "https://bitbucket.org/cameron_simpson/css/commits/all"
+│ │  
+│ │  [project.readme]
+│ │  text = """
+│ │  A few conveniences for working with matplotlib.
+│ │  
+│ │ -*Latest release 20220918*:
+│ │ -* New FigureSize class.
+│ │ -* axes(): accept a FigureSize for figure.
+│ │ +*Latest release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │  
+│ │  ## Function `axes(figure=None, ax=None, **fig_kw) -> matplotlib.axes._axes.Axes`
+│ │  
+│ │  Return a set of `Axes`.
+│ │  
+│ │  Parameters:
+│ │  * `figure`: optional `Figure` from which to obtain the `Axes`
+│ │ @@ -108,14 +107,17 @@
+│ │  * `dir`: passed to `tempfile.TemporaryDirectory`
+│ │  * `ext`: optional file extension, default `'png'`
+│ │  
+│ │  # Release Log
+│ │  
+│ │  
+│ │  
+│ │ +*Release 20230407*:
+│ │ +FigureSize: get defaults via $FIGURE_SIZE_DX, $FIGURE_SIZE_DY and $FIGURE_SIZE_DPI envvars.
+│ │ +
+│ │  *Release 20220918*:
+│ │  * New FigureSize class.
+│ │  * axes(): accept a FigureSize for figure.
+│ │  
+│ │  *Release 20220805*:
+│ │  Initial PyPI release."""
+│ │  content-type = "text/markdown"
+│ │   --- cs.mplutils-20220918/setup.cfg
+│ ├── +++ cs.mplutils-20230407/setup.cfg
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = cs.mplutils
+│ │ -version = 20220918
+│ │ +version = 20230407
+│ │  author = Cameron Simpson
+│ │  author_email = cs@cskk.id.au
+│ │  license = GNU General Public License v3 or later (GPLv3+)
+│ │  description = A few conveniences for working with matplotlib.
+│ │  keywords = python3
+│ │  url = https://bitbucket.org/cameron_simpson/css/commits/all
+│ │  classifiers = 
+│ │ @@ -17,18 +17,18 @@
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  
+│ │  [options]
+│ │  package_dir = 
+│ │  	= lib/python
+│ │  install_requires = 
+│ │ -	cs.buffer>=20210316
+│ │ -	cs.deco>=20220918.1
+│ │ -	cs.lex>=20220918
+│ │ -	cs.pfx>=20220918
+│ │ +	cs.buffer>=20230401
+│ │ +	cs.deco>=20230331
+│ │ +	cs.lex>=20230401
+│ │ +	cs.pfx>=20230331
+│ │  	matplotlib
+│ │  	typeguard
+│ │  
+│ │  [egg_info]
+│ │  tag_build = 
+│ │  tag_date = 0

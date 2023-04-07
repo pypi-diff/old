@@ -1,0 +1,301 @@
+# Comparing `tmp/cs.env-20190103.tar.gz` & `tmp/cs.env-20230407.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/cs.env-20190103.tar", last modified: Wed Jan  2 22:45:12 2019, max compression
++gzip compressed data, was "cs.env-20230407.tar", last modified: Fri Apr  7 00:02:05 2023, max compression
+```
+
+## Comparing `cs.env-20190103.tar` & `cs.env-20230407.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,17 @@
+-drwxrwxr-x   0 cameron    (501) cameron    (508)        0 2019-01-02 22:45:12.000000 cs.env-20190103/
+-drwxrwxr-x   0 cameron    (501) cameron    (508)        0 2019-01-02 22:45:12.000000 cs.env-20190103/lib/
+-drwxrwxr-x   0 cameron    (501) cameron    (508)        0 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/
+-drwxrwxr-x   0 cameron    (501) cameron    (508)        0 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs/
+--rw-r--r--   0 cameron    (501) cameron    (508)       21 2019-01-02 22:45:07.000000 cs.env-20190103/lib/python/cs/__init__.py
+--rw-r--r--   0 cameron    (501) cameron    (508)     2413 2019-01-02 22:45:07.000000 cs.env-20190103/lib/python/cs/env.py
+-drwxrwxr-x   0 cameron    (501) cameron    (508)        0 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs.env.egg-info/
+--rw-rw-r--   0 cameron    (501) cameron    (508)        1 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs.env.egg-info/dependency_links.txt
+--rw-rw-r--   0 cameron    (501) cameron    (508)     1975 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs.env.egg-info/PKG-INFO
+--rw-rw-r--   0 cameron    (501) cameron    (508)        7 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs.env.egg-info/requires.txt
+--rw-rw-r--   0 cameron    (501) cameron    (508)      271 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs.env.egg-info/SOURCES.txt
+--rw-rw-r--   0 cameron    (501) cameron    (508)        3 2019-01-02 22:45:12.000000 cs.env-20190103/lib/python/cs.env.egg-info/top_level.txt
+--rw-rw-r--   0 cameron    (501) cameron    (508)       19 2019-01-02 22:45:12.000000 cs.env-20190103/MANIFEST.in
+--rw-rw-r--   0 cameron    (501) cameron    (508)     1975 2019-01-02 22:45:12.000000 cs.env-20190103/PKG-INFO
+--rw-rw-r--   0 cameron    (501) cameron    (508)       38 2019-01-02 22:45:12.000000 cs.env-20190103/setup.cfg
+--rw-rw-r--   0 cameron    (501) cameron    (508)     1898 2019-01-02 22:45:12.000000 cs.env-20190103/setup.py
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:02:05.552398 cs.env-20230407/
++-rw-rw-r--   0 cameron    (501) cameron    (502)       18 2023-04-07 00:01:50.000000 cs.env-20230407/MANIFEST.in
++-rw-rw-r--   0 cameron    (501) cameron    (502)     2731 2023-04-07 00:02:05.552501 cs.env-20230407/PKG-INFO
++-rw-rw-r--   0 cameron    (501) cameron    (502)     1869 2023-04-07 00:01:52.000000 cs.env-20230407/README.md
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:02:05.548710 cs.env-20230407/lib/
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:02:05.548996 cs.env-20230407/lib/python/
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:02:05.550695 cs.env-20230407/lib/python/cs/
++-rw-r--r--   0 cameron    (501) cameron    (502)     3093 2023-04-07 00:01:42.000000 cs.env-20230407/lib/python/cs/env.py
++drwxrwxr-x   0 cameron    (501) cameron    (502)        0 2023-04-07 00:02:05.552155 cs.env-20230407/lib/python/cs.env.egg-info/
++-rw-rw-r--   0 cameron    (501) cameron    (502)     2731 2023-04-07 00:02:05.000000 cs.env-20230407/lib/python/cs.env.egg-info/PKG-INFO
++-rw-rw-r--   0 cameron    (501) cameron    (502)      280 2023-04-07 00:02:05.000000 cs.env-20230407/lib/python/cs.env.egg-info/SOURCES.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)        1 2023-04-07 00:02:05.000000 cs.env-20230407/lib/python/cs.env.egg-info/dependency_links.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)       39 2023-04-07 00:02:05.000000 cs.env-20230407/lib/python/cs.env.egg-info/requires.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)        3 2023-04-07 00:02:05.000000 cs.env-20230407/lib/python/cs.env.egg-info/top_level.txt
++-rw-rw-r--   0 cameron    (501) cameron    (502)     2925 2023-04-07 00:01:57.000000 cs.env-20230407/pyproject.toml
++-rw-rw-r--   0 cameron    (501) cameron    (502)      875 2023-04-07 00:02:05.552994 cs.env-20230407/setup.cfg
++-rw-rw-r--   0 cameron    (501) cameron    (502)       59 2023-04-07 00:01:52.000000 cs.env-20230407/setup.py
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `cs.env-20190103/lib/python/cs/env.py` & `cs.env-20230407/lib/python/cs/env.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,69 +1,97 @@
+ #!/usr/bin/python
+ #
+ # Environment access and substitution.
+-#   - Cameron Simpson <cs@cskk.id.au>
++# - Cameron Simpson <cs@cskk.id.au>
+ #
+ 
+ r'''
+ Some environment related functions.
+ 
+ * LOGDIR, VARRUN, FLAGDIR: lambdas defining standard places used in other modules
+ 
+ * envsub: replace substrings of the form '$var' with the value of 'var' from `environ`.
+ 
+ * getenv: fetch environment value, optionally performing substitution
+ '''
+ 
+ import os
++
++from cs.gimmicks import warning
+ from cs.lex import get_qstr
+ 
++__version__ = '20230407'
++
+ DISTINFO = {
+     'keywords': ["python2", "python3"],
+     'classifiers': [
+         "Programming Language :: Python",
+         "Programming Language :: Python :: 2",
+         "Programming Language :: Python :: 3",
+     ],
+-    'install_requires': ['cs.lex'],
++    'install_requires': ['cs.gimmicks', 'cs.lex'],
+ }
+ 
++# TODO: look at the standard desktop stuff for these?
++
+ # various standard locations used in the cs.* modules
+-LOGDIR = lambda environ=None: _get_standard_var('LOGDIR', '$HOME/var/log', environ=environ)
+-VARRUN = lambda environ=None: _get_standard_var('VARRUN', '$HOME/var/run', environ=environ)
+-FLAGDIR = lambda environ=None: _get_standard_var('FLAGDIR', '$HOME/var/flags', environ=environ)
++LOGDIR = lambda environ=None: _get_standard_var(
++    'LOGDIR', '$HOME/var/log', environ=environ
++)
++VARRUN = lambda environ=None: _get_standard_var(
++    'VARRUN', '$HOME/var/run', environ=environ
++)
++FLAGDIR = lambda environ=None: _get_standard_var(
++    'FLAGDIR', '$HOME/var/flags', environ=environ
++)
+ 
+ def _get_standard_var(varname, default, environ=None):
+   if environ is None:
+     environ = os.environ
+   value = environ.get(varname)
+   if value is None:
+     value = envsub(default, environ)
+   return value
+ 
+-def getenv(var, default=None, environ=None, dosub=False):
++def getenv(var, default=None, environ=None, dosub=False, parse=None):
+   ''' Fetch environment value.
+ 
+       Parameters:
+       * `var`: name of variable to fetch.
+       * `default`: default value if not present. If not specified or None,
+-          raise KeyError.
++        raise KeyError.
+       * `environ`: environment mapping, default `os.environ`.
+       * `dosub`: if true, use envsub() to perform environment variable
+-          substitution on `default` if it used. Default value is `False`.
++        substitution on `default` if it used. Default value is `False`.
++      * `parse`: optional callable to parse the environment variable;
++        *NOTE*: if this raises `ValueError` and there is a default, issue
++        a warning and return `default`
+   '''
+   if environ is None:
+     environ = os.environ
+   value = environ.get(var)
+   if value is None:
+     if default is None:
+       raise KeyError("getenv: $%s: unknown variable" % (var,))
+     value = default
+     if dosub:
+       value = envsub(value, environ=environ)
++  if parse is not None:
++    try:
++      value = parse(value)
++    except ValueError as e:
++      if default is None:
++        raise
++      warning(
++          "getenv: $%s: parse fails, using default %r: %s(%r): %s", var,
++          default, parse, value, e
++      )
++      value = default
++      if dosub:
++        value = envsub(value, environ=environ)
+   return value
+ 
+ def envsub(s, environ=None, default=None):
+   ''' Replace substrings of the form '$var' with the value of 'var' from environ.
+ 
+       Parameters:
+       * `environ`: environment mapping, default `os.environ`.
+```
+
+### Comparing `cs.env-20190103/setup.py` & `cs.env-20230407/pyproject.toml`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,17 +1,104 @@
+-#!/usr/bin/env python
+-from setuptools import setup
+-setup(
+-  name = 'cs.env',
+-  description = 'Some environment related functions.',
+-  author = 'Cameron Simpson',
+-  author_email = 'cs@cskk.id.au',
+-  version = '20190103',
+-  url = 'https://bitbucket.org/cameron_simpson/css/commits/all',
+-  classifiers = ['Programming Language :: Python', 'Programming Language :: Python :: 2', 'Programming Language :: Python :: 3', 'Development Status :: 4 - Beta', 'Intended Audience :: Developers', 'Operating System :: OS Independent', 'Topic :: Software Development :: Libraries :: Python Modules', 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'],
+-  install_requires = ['cs.lex'],
+-  keywords = ['python2', 'python3'],
+-  long_description = "Some environment related functions.\n\n* LOGDIR, VARRUN, FLAGDIR: lambdas defining standard places used in other modules\n\n* envsub: replace substrings of the form '$var' with the value of 'var' from `environ`.\n\n* getenv: fetch environment value, optionally performing substitution\n\n## Function `envsub(s, environ=None, default=None)`\n\nReplace substrings of the form '$var' with the value of 'var' from environ.\n\nParameters:\n* `environ`: environment mapping, default `os.environ`.\n* `default`: value to substitute for unknown vars;\n        if `default` is `None` a `ValueError` is raised.\n\n## Function `getenv(var, default=None, environ=None, dosub=False)`\n\nFetch environment value.\n\nParameters:\n* `var`: name of variable to fetch.\n* `default`: default value if not present. If not specified or None,\n    raise KeyError.\n* `environ`: environment mapping, default `os.environ`.\n* `dosub`: if true, use envsub() to perform environment variable\n    substitution on `default` if it used. Default value is `False`.",
+-  long_description_content_type = 'text/markdown',
+-  package_dir = {'': 'lib/python'},
+-  py_modules = ['cs.env'],
+-)
++[project]
++name = "cs.env"
++description = "Some environment related functions."
++authors = [
++    { name = "Cameron Simpson", email = "cs@cskk.id.au" },
++]
++keywords = [
++    "python2",
++    "python3",
++]
++dependencies = [
++    "cs.gimmicks>=20230331",
++    "cs.lex>=20230401",
++]
++classifiers = [
++    "Programming Language :: Python",
++    "Programming Language :: Python :: 2",
++    "Programming Language :: Python :: 3",
++    "Development Status :: 4 - Beta",
++    "Intended Audience :: Developers",
++    "Operating System :: OS Independent",
++    "Topic :: Software Development :: Libraries :: Python Modules",
++    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
++]
++version = "20230407"
++
++[project.license]
++text = "GNU General Public License v3 or later (GPLv3+)"
++
++[project.urls]
++URL = "https://bitbucket.org/cameron_simpson/css/commits/all"
++
++[project.readme]
++text = """
++Some environment related functions.
++
++*Latest release 20230407*:
++getenv: new parse callable parameter to parse the value.
++
++* LOGDIR, VARRUN, FLAGDIR: lambdas defining standard places used in other modules
++
++* envsub: replace substrings of the form '$var' with the value of 'var' from `environ`.
++
++* getenv: fetch environment value, optionally performing substitution
++
++## Function `envsub(s, environ=None, default=None)`
++
++Replace substrings of the form '$var' with the value of 'var' from environ.
++
++Parameters:
++* `environ`: environment mapping, default `os.environ`.
++* `default`: value to substitute for unknown vars;
++        if `default` is `None` a `ValueError` is raised.
++
++## Function `getenv(var, default=None, environ=None, dosub=False, parse=None)`
++
++Fetch environment value.
++
++Parameters:
++* `var`: name of variable to fetch.
++* `default`: default value if not present. If not specified or None,
++  raise KeyError.
++* `environ`: environment mapping, default `os.environ`.
++* `dosub`: if true, use envsub() to perform environment variable
++  substitution on `default` if it used. Default value is `False`.
++* `parse`: optional callable to parse the environment variable;
++  *NOTE*: if this raises `ValueError` and there is a default, issue
++  a warning and return `default`
++
++## Function `LOGDIR(environ=None)`
++
++various standard locations used in the cs.* modules
++
++# Release Log
++
++
++
++*Release 20230407*:
++getenv: new parse callable parameter to parse the value.
++
++*Release 20190103*:
++* Drop getLogin and getHomeDir, unused.
++* Make get_standard_var private as _get_standard_var.
++
++*Release 20170905.1*:
++Tweak doco and DISTINFO.
++
++*Release 20170905*:
++Add LOGDIR, VARRUN, FLAGDIR wrappers for new get_standard_var function to provide standard policy variables.
++
++*Release 20160828*:
++Update metadata with \"install_requires\" instead of \"requires\".
++
++*Release 20150118*:
++Initial PyPI release."""
++content-type = "text/markdown"
++
++[build-system]
++requires = [
++    "setuptools >= 61.2",
++    "trove-classifiers",
++    "wheel",
++]
++build-backend = "setuptools.build_meta"
+```
+

@@ -1,0 +1,664 @@
+--- tmp/eons-2.3.2.tar.gz
++++ tmp/eons-2.3.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "eons-2.3.2.tar", last modified: Thu Mar 16 04:14:24 2023, max compression
+│ +gzip compressed data, was "eons-2.3.3.tar", last modified: Thu Apr  6 23:55:10 2023, max compression
+│   --- eons-2.3.2.tar
+├── +++ eons-2.3.3.tar
+│ ├── file list
+│ │ @@ -1,21 +1,22 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-16 04:14:24.043596 eons-2.3.2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16886 2023-03-16 04:14:24.043596 eons-2.3.2/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16599 2023-03-16 04:14:06.000000 eons-2.3.2/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-16 04:14:24.039596 eons-2.3.2/pkg/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-16 04:14:24.039596 eons-2.3.2/pkg/eons/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       20 2023-03-16 04:14:14.000000 eons-2.3.2/pkg/eons/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    81419 2023-03-16 04:14:14.000000 eons-2.3.2/pkg/eons/eons.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-16 04:14:24.043596 eons-2.3.2/pkg/eons/resolve/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-16 04:14:14.000000 eons-2.3.2/pkg/eons/resolve/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3398 2023-03-16 04:13:59.000000 eons-2.3.2/pkg/eons/resolve/resolve_find_by_fetch.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      552 2023-03-16 04:13:59.000000 eons-2.3.2/pkg/eons/resolve/resolve_import_module.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      488 2023-03-16 04:13:59.000000 eons-2.3.2/pkg/eons/resolve/resolve_install_from_repo.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      389 2023-03-16 04:13:59.000000 eons-2.3.2/pkg/eons/resolve/resolve_install_with_pip.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-16 04:14:24.043596 eons-2.3.2/pkg/eons.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16886 2023-03-16 04:14:24.000000 eons-2.3.2/pkg/eons.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      435 2023-03-16 04:14:24.000000 eons-2.3.2/pkg/eons.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-16 04:14:24.000000 eons-2.3.2/pkg/eons.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       32 2023-03-16 04:14:24.000000 eons-2.3.2/pkg/eons.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-03-16 04:14:24.000000 eons-2.3.2/pkg/eons.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      104 2023-03-16 04:14:14.000000 eons-2.3.2/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      714 2023-03-16 04:14:24.043596 eons-2.3.2/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:55:10.974755 eons-2.3.3/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16886 2023-04-06 23:55:10.974755 eons-2.3.3/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16599 2023-04-06 23:54:54.000000 eons-2.3.3/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:55:10.970755 eons-2.3.3/pkg/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:55:10.970755 eons-2.3.3/pkg/eons/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 23:55:02.000000 eons-2.3.3/pkg/eons/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    81469 2023-04-06 23:55:02.000000 eons-2.3.3/pkg/eons/eons.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:55:10.974755 eons-2.3.3/pkg/eons/resolve/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:55:02.000000 eons-2.3.3/pkg/eons/resolve/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3398 2023-04-06 23:54:43.000000 eons-2.3.3/pkg/eons/resolve/resolve_find_by_fetch.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      552 2023-04-06 23:54:43.000000 eons-2.3.3/pkg/eons/resolve/resolve_import_module.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      490 2023-04-06 23:54:43.000000 eons-2.3.3/pkg/eons/resolve/resolve_install_from_repo.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-06 23:54:43.000000 eons-2.3.3/pkg/eons/resolve/resolve_install_from_repo_with_default_package_type.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-06 23:54:43.000000 eons-2.3.3/pkg/eons/resolve/resolve_install_with_pip.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:55:10.970755 eons-2.3.3/pkg/eons.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16886 2023-04-06 23:55:10.000000 eons-2.3.3/pkg/eons.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      507 2023-04-06 23:55:10.000000 eons-2.3.3/pkg/eons.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:55:10.000000 eons-2.3.3/pkg/eons.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       32 2023-04-06 23:55:10.000000 eons-2.3.3/pkg/eons.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 23:55:10.000000 eons-2.3.3/pkg/eons.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      104 2023-04-06 23:55:02.000000 eons-2.3.3/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      714 2023-04-06 23:55:10.974755 eons-2.3.3/setup.cfg
+│ │   --- eons-2.3.2/PKG-INFO
+│ ├── +++ eons-2.3.3/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: eons
+│ │ -Version: 2.3.2
+│ │ +Version: 2.3.3
+│ │  Summary: Eons Python Framework
+│ │  Home-page: https://github.com/eons-dev/eons.lib
+│ │  Author: Eons
+│ │  Author-email: support@eons.llc
+│ │  Project-URL: Bug Tracker, https://github.com/eons-dev/eons.lib/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- eons-2.3.2/README.md
+│ ├── +++ eons-2.3.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- eons-2.3.2/pkg/eons/eons.py
+│ ├── +++ eons-2.3.3/pkg/eons/eons.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,33 +1,33 @@
+│ │  import logging
+│ │ -from pathlib import Path
+│ │ -from subprocess import Popen
+│ │ -from subprocess import PIPE
+│ │ -from subprocess import STDOUT
+│ │  import os
+│ │  import shutil
+│ │  from copy import deepcopy
+│ │  import builtins
+│ │  import sys
+│ │  import pkgutil
+│ │  import importlib.machinery
+│ │  import importlib.util
+│ │  import types
+│ │  import traceback
+│ │  import jsonpickle
+│ │ +from pathlib import Path
+│ │ +from subprocess import Popen
+│ │ +from subprocess import PIPE
+│ │ +from subprocess import STDOUT
+│ │  import inspect
+│ │ +import ctypes
+│ │ +import operator
+│ │ +import re
+│ │  import argparse
+│ │  import requests
+│ │  import yaml
+│ │  from tqdm import tqdm
+│ │  from zipfile import ZipFile
+│ │  from distutils.dir_util import mkpath
+│ │ -import operator
+│ │ -import ctypes
+│ │ -import re
+│ │  
+│ │  ######## START CONTENT ########
+│ │  def INVALID_NAME():
+│ │  	return "INVALID_NAME"
+│ │  
+│ │  class ActualType(type):
+│ │  	def __repr__(self):
+│ │ @@ -1240,14 +1240,73 @@
+│ │  		if (saveout):
+│ │  			return p.returncode, output
+│ │  		
+│ │  		return p.returncode
+│ │  	######## END: UTILITIES ########
+│ │  
+│ │  
+│ │ +# ExecutorTracker is a global singleton which keeps a record of all Executors that have been launched.
+│ │ +# This can be abused quite a bit, so please try to restrict usage of this to only:
+│ │ +# * Ease of use global functions
+│ │ +#
+│ │ +# Thanks! 
+│ │ +class ExecutorTracker:
+│ │ +	def __init__(this):
+│ │ +		# Singletons man...
+│ │ +		if "instance" not in ExecutorTracker.__dict__:
+│ │ +			logging.debug(f"Creating new ExecutorTracker: {this}")
+│ │ +			ExecutorTracker.instance = this
+│ │ +		else:
+│ │ +			return None
+│ │ +
+│ │ +		this.executors = [None]
+│ │ +
+│ │ +	@staticmethod
+│ │ +	def Instance():
+│ │ +		if "instance" not in ExecutorTracker.__dict__:
+│ │ +			ExecutorTracker()
+│ │ +		return ExecutorTracker.instance
+│ │ +
+│ │ +	@staticmethod
+│ │ +	def Push(executor):
+│ │ +		ExecutorTracker.Instance().executors.append(executor)
+│ │ +
+│ │ +		# Adding the executor to our list here increases its reference count.
+│ │ +		# Executors are supposed to remove themselves from this list when they are deleted.
+│ │ +		# A python object cannot be deleted if it has references.
+│ │ +		# Thus, we forcibly decrease the reference count and rely on Exectuor's self-reporting to avoid accessing deallocated memory.
+│ │ +		# This appears to cause segfaults on some systems, so we'll just live with the fact that Executors will never be destroyed.
+│ │ +		# If you want your executor to stop being tracked, do it yourself. :(
+│ │ +		#
+│ │ +		# ctypes.pythonapi.Py_DecRef(ctypes.py_object(executor))
+│ │ +
+│ │ +		logging.debug(f"Now tracking Executor: {executor}")
+│ │ +
+│ │ +	@staticmethod
+│ │ +	def Pop(executor):
+│ │ +		try:
+│ │ +			ExecutorTracker.Instance().executors.remove(executor)
+│ │ +			logging.debug(f"No longer tracking Executor: {executor}")
+│ │ +		except:
+│ │ +			pass
+│ │ +
+│ │ +	@staticmethod
+│ │ +	def GetLatest():
+│ │ +		return ExecutorTracker.Instance().executors[-1]
+│ │ +
+│ │ +
+│ │ +# Global Fetch() function.
+│ │ +# Uses the latest registered Executor
+│ │ +def Fetch(varName, default=None, fetchFrom=None, start=True, attempted=None):
+│ │ +    return ExecutorTracker.GetLatest().Fetch(varName, default, fetchFrom, start, attempted)
+│ │ +
+│ │ +# Ease-of-use wrapper for the global Fetch()
+│ │ +def f(varName, default=None, fetchFrom=None, start=True, attempted=None):
+│ │ +    Fetch(varName, default, fetchFrom, start, attempted)
+│ │ +
+│ │  # A DataContainer allows Data to be stored and worked with.
+│ │  # This class is intended to be derived from and added to.
+│ │  # Each DataContainer is comprised of multiple Data (see Datum.py for more).
+│ │  # NOTE: DataContainers are, themselves Data. Thus, you can nest your child classes however you would like.
+│ │  class DataContainer(Datum):
+│ │  
+│ │  	def __init__(this, name=INVALID_NAME()):
+│ │ @@ -1398,14 +1457,167 @@
+│ │  	def ImportDataFrom(this, otherDataContainer, preventDuplicatesOf=None):
+│ │  		this.data.extend(otherDataContainer.data);
+│ │  		if (preventDuplicatesOf is not None):
+│ │  			return this.RemoveDuplicateDataOf(preventDuplicatesOf)
+│ │  		return []
+│ │  
+│ │  
+│ │ +
+│ │ +# Use an ErrorStringParser for each "parsers" in order to avoid having to override the GetObjectFromError method and create a new class for every error you want to handle.
+│ │ +# ErrorStringParsers enable ErrorResolutions to be created on a per-functionality, rather than per-error basis, reducing the total amount of duplicate code.
+│ │ +# Each error has a different string. In order to get the object of the error, we have to know where the object starts and ends.
+│ │ +# NOTE: this assumes only 1 object per string. Maybe fancier parsing logic can be added in the future.
+│ │ +#
+│ │ +# startPosition is always positive
+│ │ +# endPosition is always negative
+│ │ +class ErrorStringParser:
+│ │ +
+│ │ +	def __init__(this, applicableError, startPosition, endPosition):
+│ │ +		this.applicableError = applicableError
+│ │ +		this.startPosition = startPosition
+│ │ +		this.endPosition = endPosition
+│ │ +
+│ │ +	def Parse(this, errorString):
+│ │ +		end = this.endPosition
+│ │ +		if (not end):
+│ │ +			end = len(errorString)
+│ │ +		return errorString[this.startPosition:end]
+│ │ +
+│ │ +
+│ │ +# ErrorResolution is a Functor which can be executed when an Exception is raised.
+│ │ +# The goal of this class is to do some kind of work that will fix the problem on the second try of whatever generated the error.
+│ │ +class ErrorResolution(StandardFunctor):
+│ │ +
+│ │ +	def __init__(this, name=INVALID_NAME()):
+│ │ +		super().__init__(name)
+│ │ +
+│ │ +		# What errors, as ErrorStringParser objects, is *this prepared to handle?
+│ │ +		this.parsers = []
+│ │ +
+│ │ +		this.error = None
+│ │ +		this.errorType = ""
+│ │ +		this.errorString = ""
+│ │ +		this.errorObject = ""
+│ │ +		this.errorResolutionStack = {}
+│ │ +
+│ │ +		# Provided directly from the recoverable decorator.
+│ │ +		this.optionalKWArgs["obj"] = None
+│ │ +		this.optionalKWArgs["function"] = None
+│ │ +
+│ │ +		# We do want to know whether or not we should attempt to run whatever failed again.
+│ │ +		# So, let's store that in functionSucceeded. Meaning if this.functionSucceeded, try the original method again.
+│ │ +		# No rollback, by default and definitely don't throw Exceptions.
+│ │ +		this.enableRollback = False
+│ │ +		this.functionSucceeded = True
+│ │ +		this.raiseExceptions = False
+│ │ +
+│ │ +		this.errorShouldBeResolved = False
+│ │ +
+│ │ +
+│ │ +
+│ │ +	# Put your logic here!
+│ │ +	def Resolve(this):
+│ │ +		# You get the following members:
+│ │ +		# this.error (an Exception)
+│ │ +		# this.errorString (a string cast of the Exception)
+│ │ +		# this.errorType (a string)
+│ │ +		# this.errorObjet (a string or whatever you return from GetObjectFromError())
+│ │ +
+│ │ +		# You get the following guarantees:
+│ │ +		# *this has not been called on this particular error before.
+│ │ +		# the error given is applicable to *this per this.parsers
+│ │ +
+│ │ +		###############################################
+│ │ +		# Please throw errors if something goes wrong #
+│ │ +		# Otherwise, set this.errorShouldBeResolved   #
+│ │ +		###############################################
+│ │ +		
+│ │ +		pass
+│ │ +
+│ │ +
+│ │ +
+│ │ +	# Helper method for creating ErrorStringParsers
+│ │ +	# To use this, simply take an example output and replace the object you want to extract with "OBJECT"
+│ │ +	def ApplyTo(this, error, exampleString):
+│ │ +		match = re.search('OBJECT', exampleString)
+│ │ +		this.parsers.append(ErrorStringParser(error, match.start(), match.end() - len(exampleString)))
+│ │ +
+│ │ +
+│ │ +	# Get the type of this.error as a string.
+│ │ +	def GetErrorType(this):
+│ │ +		return type(this.error).__name__
+│ │ +
+│ │ +
+│ │ +	# Get an actionable object from the error.
+│ │ +	# For example, if the error is 'ModuleNotFoundError', what is the module?
+│ │ +	def GetObjectFromError(this):
+│ │ +		for parser in this.parsers:
+│ │ +			if (parser.applicableError != this.errorType):
+│ │ +				continue
+│ │ +
+│ │ +			this.errorObject = parser.Parse(this.errorString)
+│ │ +			return
+│ │ +
+│ │ +		raise ErrorResolutionError(f"{this.name} cannot parse error object from ({this.errorType}): {str(this.error)}.")
+│ │ +
+│ │ +
+│ │ +	# Determine if this resolution method is applicable.
+│ │ +	def CanProcess(this):
+│ │ +		return this.GetErrorType() in [parser.applicableError for parser in this.parsers]
+│ │ +
+│ │ +
+│ │ +	# Grab any known and necessary args from this.kwargs before any Fetch calls are made.
+│ │ +	def ParseInitialArgs(this):
+│ │ +		super().ParseInitialArgs()
+│ │ +		if ('error' in this.kwargs):
+│ │ +			this.error = this.kwargs.pop('error')
+│ │ +			# Just assume the error is an actual Exception object.
+│ │ +		else:
+│ │ +			raise ErrorResolutionError(f"{this.name} was not given an error to resolve.")
+│ │ +
+│ │ +		this.errorString = str(this.error)
+│ │ +		this.errorType = this.GetErrorType()
+│ │ +
+│ │ +		# Internal member to avoid processing duplicates
+│ │ +		this.errorResolutionStack = this.executor.errorResolutionStack
+│ │ +
+│ │ +
+│ │ +	# Error resolution is unchained.
+│ │ +	def PopulateNext(this):
+│ │ +		this.next = []
+│ │ +
+│ │ +
+│ │ +	# Override of Functor method.
+│ │ +	# We'll keep calling this until an error is raised.
+│ │ +	def Function(this):
+│ │ +		this.functionSucceeded = True
+│ │ +		this.errorShouldBeResolved = True
+│ │ +		
+│ │ +		if (not this.CanProcess()):
+│ │ +			this.errorShouldBeResolved = False
+│ │ +			return this.errorResolutionStack, this.errorShouldBeResolved
+│ │ +
+│ │ +		if (not this.errorString in this.errorResolutionStack.keys()):
+│ │ +			this.errorResolutionStack.update({this.errorString:[]})
+│ │ +		
+│ │ +		if (this.name in this.errorResolutionStack[this.errorString]):
+│ │ +			raise FailedErrorResolution(f"{this.name} already tried and failed to resolve {this.errorType}: {this.errorString}.")
+│ │ +
+│ │ +		this.GetObjectFromError()
+│ │ +
+│ │ +		try:
+│ │ +			this.Resolve()
+│ │ +		except Exception as e:
+│ │ +			logging.error(f"Error resolution with {this.name} failed: {e}")
+│ │ +			util.LogStack()
+│ │ +			this.functionSucceeded = False
+│ │ +		
+│ │ +		this.errorResolutionStack[this.errorString].append(this.name)
+│ │ +		return this.errorResolutionStack, this.errorShouldBeResolved
+│ │ +
+│ │  #from .Executor import Executor # don't import this, it'll be circular!
+│ │  
+│ │  # @recoverable
+│ │  # Decorating another function with this method will engage the error recovery system provided by *this.
+│ │  # To use this, you must define a GetExecutor() method in your class and decorate the functions you want to recover from.
+│ │  # For more info, see Executor.ResolveError and the README.md
+│ │  def recoverable(function):
+│ │ @@ -1478,64 +1690,14 @@
+│ │  		return ret
+│ │  
+│ │  	#  We failed to resolve the error. Die
+│ │  	sys.tracebacklimit = 0 # traceback is NOT helpful here.
+│ │  	raise FailedErrorResolution(f"Tried and failed to resolve: {error} STACK: {executor.errorResolutionStack}. See earlier logs (in debug) for traceback.")
+│ │  
+│ │  
+│ │ -# ExecutorTracker is a global singleton which keeps a record of all Executors that have been launched.
+│ │ -# This can be abused quite a bit, so please try to restrict usage of this to only:
+│ │ -# * Ease of use global functions
+│ │ -#
+│ │ -# Thanks! 
+│ │ -class ExecutorTracker:
+│ │ -	def __init__(this):
+│ │ -		# Singletons man...
+│ │ -		if "instance" not in ExecutorTracker.__dict__:
+│ │ -			logging.debug(f"Creating new ExecutorTracker: {this}")
+│ │ -			ExecutorTracker.instance = this
+│ │ -		else:
+│ │ -			return None
+│ │ -
+│ │ -		this.executors = [None]
+│ │ -
+│ │ -	@staticmethod
+│ │ -	def Instance():
+│ │ -		if "instance" not in ExecutorTracker.__dict__:
+│ │ -			ExecutorTracker()
+│ │ -		return ExecutorTracker.instance
+│ │ -
+│ │ -	@staticmethod
+│ │ -	def Push(executor):
+│ │ -		ExecutorTracker.Instance().executors.append(executor)
+│ │ -
+│ │ -		# Adding the executor to our list here increases its reference count.
+│ │ -		# Executors are supposed to remove themselves from this list when they are deleted.
+│ │ -		# A python object cannot be deleted if it has references.
+│ │ -		# Thus, we forcibly decrease the reference count and rely on Exectuor's self-reporting to avoid accessing deallocated memory.
+│ │ -		# This appears to cause segfaults on some systems, so we'll just live with the fact that Executors will never be destroyed.
+│ │ -		# If you want your executor to stop being tracked, do it yourself. :(
+│ │ -		#
+│ │ -		# ctypes.pythonapi.Py_DecRef(ctypes.py_object(executor))
+│ │ -
+│ │ -		logging.debug(f"Now tracking Executor: {executor}")
+│ │ -
+│ │ -	@staticmethod
+│ │ -	def Pop(executor):
+│ │ -		try:
+│ │ -			ExecutorTracker.Instance().executors.remove(executor)
+│ │ -			logging.debug(f"No longer tracking Executor: {executor}")
+│ │ -		except:
+│ │ -			pass
+│ │ -
+│ │ -	@staticmethod
+│ │ -	def GetLatest():
+│ │ -		return ExecutorTracker.Instance().executors[-1]
+│ │ -
+│ │ -
+│ │  # Executor: a base class for user interfaces.
+│ │  # An Executor is a functor and can be executed as such.
+│ │  # For example
+│ │  #	class MyExecutor(Executor):
+│ │  #		def __init__(this):
+│ │  #			super().__init__()
+│ │  #	. . .
+│ │ @@ -1551,14 +1713,15 @@
+│ │  
+│ │  		# Error resolution configuration.
+│ │  		this.resolveErrors = True
+│ │  		this.errorRecursionDepth = 0
+│ │  		this.errorResolutionStack = {}
+│ │  		this.resolveErrorsWith = [ # order matters: FIFO (first is first).
+│ │  			'find_by_fetch',
+│ │ +			'install_from_repo_with_default_package_type',
+│ │  			'install_from_repo',
+│ │  			'import_module',
+│ │  			'install_with_pip'
+│ │  		]
+│ │  
+│ │  		# Caching is required for Functor's staticKWArgs and other static features to be effective.
+│ │  		# This is used in Execute().
+│ │ @@ -2151,169 +2314,7 @@
+│ │  		for key, val in this.extraArgs.items():
+│ │  			if (key == varName):
+│ │  				return val, True
+│ │  		return default, False
+│ │  
+│ │  	######## END: Fetch Locations ########
+│ │  
+│ │ -
+│ │ -# Use an ErrorStringParser for each "parsers" in order to avoid having to override the GetObjectFromError method and create a new class for every error you want to handle.
+│ │ -# ErrorStringParsers enable ErrorResolutions to be created on a per-functionality, rather than per-error basis, reducing the total amount of duplicate code.
+│ │ -# Each error has a different string. In order to get the object of the error, we have to know where the object starts and ends.
+│ │ -# NOTE: this assumes only 1 object per string. Maybe fancier parsing logic can be added in the future.
+│ │ -#
+│ │ -# startPosition is always positive
+│ │ -# endPosition is always negative
+│ │ -class ErrorStringParser:
+│ │ -
+│ │ -	def __init__(this, applicableError, startPosition, endPosition):
+│ │ -		this.applicableError = applicableError
+│ │ -		this.startPosition = startPosition
+│ │ -		this.endPosition = endPosition
+│ │ -
+│ │ -	def Parse(this, errorString):
+│ │ -		end = this.endPosition
+│ │ -		if (not end):
+│ │ -			end = len(errorString)
+│ │ -		return errorString[this.startPosition:end]
+│ │ -
+│ │ -
+│ │ -# ErrorResolution is a Functor which can be executed when an Exception is raised.
+│ │ -# The goal of this class is to do some kind of work that will fix the problem on the second try of whatever generated the error.
+│ │ -class ErrorResolution(StandardFunctor):
+│ │ -
+│ │ -	def __init__(this, name=INVALID_NAME()):
+│ │ -		super().__init__(name)
+│ │ -
+│ │ -		# What errors, as ErrorStringParser objects, is *this prepared to handle?
+│ │ -		this.parsers = []
+│ │ -
+│ │ -		this.error = None
+│ │ -		this.errorType = ""
+│ │ -		this.errorString = ""
+│ │ -		this.errorObject = ""
+│ │ -		this.errorResolutionStack = {}
+│ │ -
+│ │ -		# Provided directly from the recoverable decorator.
+│ │ -		this.optionalKWArgs["obj"] = None
+│ │ -		this.optionalKWArgs["function"] = None
+│ │ -
+│ │ -		# We do want to know whether or not we should attempt to run whatever failed again.
+│ │ -		# So, let's store that in functionSucceeded. Meaning if this.functionSucceeded, try the original method again.
+│ │ -		# No rollback, by default and definitely don't throw Exceptions.
+│ │ -		this.enableRollback = False
+│ │ -		this.functionSucceeded = True
+│ │ -		this.raiseExceptions = False
+│ │ -
+│ │ -		this.errorShouldBeResolved = False
+│ │ -
+│ │ -
+│ │ -
+│ │ -	# Put your logic here!
+│ │ -	def Resolve(this):
+│ │ -		# You get the following members:
+│ │ -		# this.error (an Exception)
+│ │ -		# this.errorString (a string cast of the Exception)
+│ │ -		# this.errorType (a string)
+│ │ -		# this.errorObjet (a string or whatever you return from GetObjectFromError())
+│ │ -
+│ │ -		# You get the following guarantees:
+│ │ -		# *this has not been called on this particular error before.
+│ │ -		# the error given is applicable to *this per this.parsers
+│ │ -
+│ │ -		###############################################
+│ │ -		# Please throw errors if something goes wrong #
+│ │ -		# Otherwise, set this.errorShouldBeResolved   #
+│ │ -		###############################################
+│ │ -		
+│ │ -		pass
+│ │ -
+│ │ -
+│ │ -
+│ │ -	# Helper method for creating ErrorStringParsers
+│ │ -	# To use this, simply take an example output and replace the object you want to extract with "OBJECT"
+│ │ -	def ApplyTo(this, error, exampleString):
+│ │ -		match = re.search('OBJECT', exampleString)
+│ │ -		this.parsers.append(ErrorStringParser(error, match.start(), match.end() - len(exampleString)))
+│ │ -
+│ │ -
+│ │ -	# Get the type of this.error as a string.
+│ │ -	def GetErrorType(this):
+│ │ -		return type(this.error).__name__
+│ │ -
+│ │ -
+│ │ -	# Get an actionable object from the error.
+│ │ -	# For example, if the error is 'ModuleNotFoundError', what is the module?
+│ │ -	def GetObjectFromError(this):
+│ │ -		for parser in this.parsers:
+│ │ -			if (parser.applicableError != this.errorType):
+│ │ -				continue
+│ │ -
+│ │ -			this.errorObject = parser.Parse(this.errorString)
+│ │ -			return
+│ │ -
+│ │ -		raise ErrorResolutionError(f"{this.name} cannot parse error object from ({this.errorType}): {str(this.error)}.")
+│ │ -
+│ │ -
+│ │ -	# Determine if this resolution method is applicable.
+│ │ -	def CanProcess(this):
+│ │ -		return this.GetErrorType() in [parser.applicableError for parser in this.parsers]
+│ │ -
+│ │ -
+│ │ -	# Grab any known and necessary args from this.kwargs before any Fetch calls are made.
+│ │ -	def ParseInitialArgs(this):
+│ │ -		super().ParseInitialArgs()
+│ │ -		if ('error' in this.kwargs):
+│ │ -			this.error = this.kwargs.pop('error')
+│ │ -			# Just assume the error is an actual Exception object.
+│ │ -		else:
+│ │ -			raise ErrorResolutionError(f"{this.name} was not given an error to resolve.")
+│ │ -
+│ │ -		this.errorString = str(this.error)
+│ │ -		this.errorType = this.GetErrorType()
+│ │ -
+│ │ -		# Internal member to avoid processing duplicates
+│ │ -		this.errorResolutionStack = this.executor.errorResolutionStack
+│ │ -
+│ │ -
+│ │ -	# Error resolution is unchained.
+│ │ -	def PopulateNext(this):
+│ │ -		this.next = []
+│ │ -
+│ │ -
+│ │ -	# Override of Functor method.
+│ │ -	# We'll keep calling this until an error is raised.
+│ │ -	def Function(this):
+│ │ -		this.functionSucceeded = True
+│ │ -		this.errorShouldBeResolved = True
+│ │ -		
+│ │ -		if (not this.CanProcess()):
+│ │ -			this.errorShouldBeResolved = False
+│ │ -			return this.errorResolutionStack, this.errorShouldBeResolved
+│ │ -
+│ │ -		if (not this.errorString in this.errorResolutionStack.keys()):
+│ │ -			this.errorResolutionStack.update({this.errorString:[]})
+│ │ -		
+│ │ -		if (this.name in this.errorResolutionStack[this.errorString]):
+│ │ -			raise FailedErrorResolution(f"{this.name} already tried and failed to resolve {this.errorType}: {this.errorString}.")
+│ │ -
+│ │ -		this.GetObjectFromError()
+│ │ -
+│ │ -		try:
+│ │ -			this.Resolve()
+│ │ -		except Exception as e:
+│ │ -			logging.error(f"Error resolution with {this.name} failed: {e}")
+│ │ -			util.LogStack()
+│ │ -			this.functionSucceeded = False
+│ │ -		
+│ │ -		this.errorResolutionStack[this.errorString].append(this.name)
+│ │ -		return this.errorResolutionStack, this.errorShouldBeResolved
+│ │ -
+│ │ -
+│ │ -# Global Fetch() function.
+│ │ -# Uses the latest registered Executor
+│ │ -def Fetch(varName, default=None, fetchFrom=None, start=True, attempted=None):
+│ │ -    return ExecutorTracker.GetLatest().Fetch(varName, default, fetchFrom, start, attempted)
+│ │ -
+│ │ -# Ease-of-use wrapper for the global Fetch()
+│ │ -def f(varName, default=None, fetchFrom=None, start=True, attempted=None):
+│ │ -    Fetch(varName, default, fetchFrom, start, attempted)
+│ │   --- eons-2.3.2/pkg/eons/resolve/resolve_find_by_fetch.py
+│ ├── +++ eons-2.3.3/pkg/eons/resolve/resolve_find_by_fetch.py
+│ │┄ Files identical despite different names
+│ │   --- eons-2.3.2/pkg/eons/resolve/resolve_import_module.py
+│ ├── +++ eons-2.3.3/pkg/eons/resolve/resolve_import_module.py
+│ │┄ Files identical despite different names
+│ │   --- eons-2.3.2/pkg/eons.egg-info/PKG-INFO
+│ ├── +++ eons-2.3.3/pkg/eons.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: eons
+│ │ -Version: 2.3.2
+│ │ +Version: 2.3.3
+│ │  Summary: Eons Python Framework
+│ │  Home-page: https://github.com/eons-dev/eons.lib
+│ │  Author: Eons
+│ │  Author-email: support@eons.llc
+│ │  Project-URL: Bug Tracker, https://github.com/eons-dev/eons.lib/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- eons-2.3.2/setup.cfg
+│ ├── +++ eons-2.3.3/setup.cfg
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = eons
+│ │ -version = 2.3.2
+│ │ +version = 2.3.3
+│ │  author = Eons
+│ │  author_email = support@eons.llc
+│ │  description = Eons Python Framework
+│ │  license_files = LICENSE.txt
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/eons-dev/eons.lib
+│ │ @@ -18,18 +18,18 @@
+│ │  
+│ │  [options]
+│ │  package_dir = 
+│ │  	= pkg
+│ │  packages = find:
+│ │  python_requires = >=3.7
+│ │  install_requires = 
+│ │ -	requests
+│ │  	tqdm
+│ │  	jsonpickle
+│ │  	pyyaml
+│ │ +	requests
+│ │  
+│ │  [options.packages.find]
+│ │  where = pkg
+│ │  
+│ │  [egg_info]
+│ │  tag_build = 
+│ │  tag_date = 0

@@ -1,0 +1,25 @@
+--- tmp/practice-release-please-hamakou108-0.3.4.tar.gz
++++ tmp/practice-release-please-hamakou108-0.3.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "practice-release-please-hamakou108-0.3.4.tar", last modified: Fri Mar 10 00:12:09 2023, max compression
+│ +gzip compressed data, was "practice-release-please-hamakou108-0.3.5.tar", last modified: Thu Apr  6 23:57:58 2023, max compression
+│   --- practice-release-please-hamakou108-0.3.4.tar
+├── +++ practice-release-please-hamakou108-0.3.5.tar
+│ ├── file list
+│ │ @@ -1,6 +1,6 @@
+│ │ --rw-r--r--   0        0        0     1066 2023-03-10 00:11:54.173154 practice-release-please-hamakou108-0.3.4/LICENSE
+│ │ --rw-r--r--   0        0        0       37 2023-03-10 00:11:54.173154 practice-release-please-hamakou108-0.3.4/README.md
+│ │ --rw-r--r--   0        0        0      383 2023-03-10 00:11:54.173154 practice-release-please-hamakou108-0.3.4/pyproject.toml
+│ │ --rw-r--r--   0        0        0        0 2023-03-10 00:11:54.173154 practice-release-please-hamakou108-0.3.4/src/practice_release_please_hamakou108/__init__.py
+│ │ --rw-r--r--   0        0        0       94 2023-03-10 00:11:54.173154 practice-release-please-hamakou108-0.3.4/src/practice_release_please_hamakou108/example.py
+│ │ --rw-r--r--   0        0        0      242 1970-01-01 00:00:00.000000 practice-release-please-hamakou108-0.3.4/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1066 2023-04-06 23:57:41.963435 practice-release-please-hamakou108-0.3.5/LICENSE
+│ │ +-rw-r--r--   0        0        0       37 2023-04-06 23:57:41.963435 practice-release-please-hamakou108-0.3.5/README.md
+│ │ +-rw-r--r--   0        0        0      383 2023-04-06 23:57:41.963435 practice-release-please-hamakou108-0.3.5/pyproject.toml
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 23:57:41.963435 practice-release-please-hamakou108-0.3.5/src/practice_release_please_hamakou108/__init__.py
+│ │ +-rw-r--r--   0        0        0       94 2023-04-06 23:57:41.963435 practice-release-please-hamakou108-0.3.5/src/practice_release_please_hamakou108/example.py
+│ │ +-rw-r--r--   0        0        0      242 1970-01-01 00:00:00.000000 practice-release-please-hamakou108-0.3.5/PKG-INFO
+│ │   --- practice-release-please-hamakou108-0.3.4/LICENSE
+│ ├── +++ practice-release-please-hamakou108-0.3.5/LICENSE
+│ │┄ Files identical despite different names

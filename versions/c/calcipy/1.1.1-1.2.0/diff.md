@@ -1,0 +1,351 @@
+# Comparing `tmp/calcipy-1.1.1.tar.gz` & `tmp/calcipy-1.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "calcipy-1.1.1.tar", max compression
++gzip compressed data, was "calcipy-1.2.0.tar", max compression
+```
+
+## Comparing `calcipy-1.1.1.tar` & `calcipy-1.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,35 @@
+--rw-r--r--   0        0        0     1066 2023-04-06 13:01:00.709942 calcipy-1.1.1/LICENSE
+--rw-r--r--   0        0        0      167 2023-04-06 14:09:09.042588 calcipy-1.1.1/calcipy/__init__.py
+--rw-r--r--   0        0        0     1259 2023-02-23 02:19:12.612069 calcipy-1.1.1/calcipy/can_skip.py
+--rw-r--r--   0        0        0      175 2023-03-02 02:58:57.029784 calcipy-1.1.1/calcipy/check_for_stale_packages/__init__.py
+--rw-r--r--   0        0        0     8214 2023-03-02 02:41:41.090176 calcipy-1.1.1/calcipy/check_for_stale_packages/_check_for_stale_packages.py
+--rw-r--r--   0        0        0     5641 2023-04-01 13:12:52.506798 calcipy-1.1.1/calcipy/cli.py
+--rw-r--r--   0        0        0      154 2023-03-02 02:58:57.946199 calcipy-1.1.1/calcipy/code_tag_collector/__init__.py
+--rw-r--r--   0        0        0     9790 2023-02-26 00:17:08.509359 calcipy-1.1.1/calcipy/code_tag_collector/_collector.py
+--rw-r--r--   0        0        0      140 2023-03-02 02:58:58.498973 calcipy-1.1.1/calcipy/dot_dict/__init__.py
+--rw-r--r--   0        0        0      803 2023-02-25 23:58:05.004832 calcipy-1.1.1/calcipy/dot_dict/_dot_dict.py
+--rw-r--r--   0        0        0        0 2023-04-05 02:28:27.975837 calcipy-1.1.1/calcipy/experiments/__init__.py
+--rw-r--r--   0        0        0     1861 2023-04-06 13:10:19.822580 calcipy-1.1.1/calcipy/experiments/check_duplicate_test_names.py
+--rw-r--r--   0        0        0     3271 2023-02-23 02:19:12.613926 calcipy-1.1.1/calcipy/file_search.py
+--rw-r--r--   0        0        0     1814 2023-02-26 00:16:53.446873 calcipy-1.1.1/calcipy/invoke_helpers.py
+--rw-r--r--   0        0        0      162 2023-03-02 02:58:58.973806 calcipy-1.1.1/calcipy/md_writer/__init__.py
+--rw-r--r--   0        0        0     7815 2023-02-23 02:19:12.614596 calcipy-1.1.1/calcipy/md_writer/_writer.py
+--rw-r--r--   0        0        0      162 2023-03-02 02:58:59.584964 calcipy-1.1.1/calcipy/noxfile/__init__.py
+--rw-r--r--   0        0        0     6513 2023-02-23 13:23:19.364723 calcipy-1.1.1/calcipy/noxfile/_noxfile.py
+--rw-r--r--   0        0        0     1193 2023-03-02 02:45:23.652620 calcipy-1.1.1/calcipy/scripts.py
+--rw-r--r--   0        0        0        0 2023-02-21 03:18:10.928974 calcipy-1.1.1/calcipy/tasks/__init__.py
+--rw-r--r--   0        0        0     3104 2023-04-05 22:06:13.047283 calcipy-1.1.1/calcipy/tasks/all_tasks.py
+--rw-r--r--   0        0        0     1876 2023-04-06 12:55:27.782578 calcipy-1.1.1/calcipy/tasks/cl.py
+--rw-r--r--   0        0        0     1132 2023-02-23 02:54:45.453854 calcipy-1.1.1/calcipy/tasks/defaults.py
+--rw-r--r--   0        0        0     3589 2023-04-06 12:54:31.902116 calcipy-1.1.1/calcipy/tasks/doc.py
+--rw-r--r--   0        0        0     3861 2023-02-26 00:22:17.320612 calcipy-1.1.1/calcipy/tasks/lint.py
+--rw-r--r--   0        0        0      454 2023-02-23 02:19:12.617085 calcipy-1.1.1/calcipy/tasks/nox.py
+--rw-r--r--   0        0        0     1275 2023-02-23 02:19:12.617365 calcipy-1.1.1/calcipy/tasks/pack.py
+--rw-r--r--   0        0        0      557 2023-02-23 02:19:12.617596 calcipy-1.1.1/calcipy/tasks/stale.py
+--rw-r--r--   0        0        0     1498 2023-02-23 02:19:12.617900 calcipy-1.1.1/calcipy/tasks/tags.py
+--rw-r--r--   0        0        0     3182 2023-02-23 02:19:12.618169 calcipy-1.1.1/calcipy/tasks/test.py
+--rw-r--r--   0        0        0      634 2023-02-23 02:19:12.618406 calcipy-1.1.1/calcipy/tasks/types.py
+--rw-r--r--   0        0        0     6651 2023-04-06 14:09:18.297359 calcipy-1.1.1/docs/README.md
+--rw-r--r--   0        0        0     6455 2023-04-06 14:09:09.080237 calcipy-1.1.1/pyproject.toml
+--rw-r--r--   0        0        0     9950 1970-01-01 00:00:00.000000 calcipy-1.1.1/setup.py
+--rw-r--r--   0        0        0    11358 1970-01-01 00:00:00.000000 calcipy-1.1.1/PKG-INFO
++-rw-r--r--   0        0        0     1066 2023-04-06 13:01:00.709942 calcipy-1.2.0/LICENSE
++-rw-r--r--   0        0        0      167 2023-04-06 23:59:26.528244 calcipy-1.2.0/calcipy/__init__.py
++-rw-r--r--   0        0        0     1259 2023-02-23 02:19:12.612069 calcipy-1.2.0/calcipy/can_skip.py
++-rw-r--r--   0        0        0      175 2023-03-02 02:58:57.029784 calcipy-1.2.0/calcipy/check_for_stale_packages/__init__.py
++-rw-r--r--   0        0        0     8214 2023-03-02 02:41:41.090176 calcipy-1.2.0/calcipy/check_for_stale_packages/_check_for_stale_packages.py
++-rw-r--r--   0        0        0     5641 2023-04-01 13:12:52.506798 calcipy-1.2.0/calcipy/cli.py
++-rw-r--r--   0        0        0      154 2023-03-02 02:58:57.946199 calcipy-1.2.0/calcipy/code_tag_collector/__init__.py
++-rw-r--r--   0        0        0     9790 2023-02-26 00:17:08.509359 calcipy-1.2.0/calcipy/code_tag_collector/_collector.py
++-rw-r--r--   0        0        0      140 2023-03-02 02:58:58.498973 calcipy-1.2.0/calcipy/dot_dict/__init__.py
++-rw-r--r--   0        0        0      803 2023-02-25 23:58:05.004832 calcipy-1.2.0/calcipy/dot_dict/_dot_dict.py
++-rw-r--r--   0        0        0        0 2023-04-05 02:28:27.975837 calcipy-1.2.0/calcipy/experiments/__init__.py
++-rw-r--r--   0        0        0     1915 2023-04-06 23:41:07.217109 calcipy-1.2.0/calcipy/experiments/check_duplicate_test_names.py
++-rw-r--r--   0        0        0     3271 2023-02-23 02:19:12.613926 calcipy-1.2.0/calcipy/file_search.py
++-rw-r--r--   0        0        0     1792 2023-04-06 23:44:32.657148 calcipy-1.2.0/calcipy/invoke_helpers.py
++-rw-r--r--   0        0        0      162 2023-03-02 02:58:58.973806 calcipy-1.2.0/calcipy/md_writer/__init__.py
++-rw-r--r--   0        0        0     7815 2023-02-23 02:19:12.614596 calcipy-1.2.0/calcipy/md_writer/_writer.py
++-rw-r--r--   0        0        0      162 2023-03-02 02:58:59.584964 calcipy-1.2.0/calcipy/noxfile/__init__.py
++-rw-r--r--   0        0        0     6513 2023-02-23 13:23:19.364723 calcipy-1.2.0/calcipy/noxfile/_noxfile.py
++-rw-r--r--   0        0        0     1193 2023-03-02 02:45:23.652620 calcipy-1.2.0/calcipy/scripts.py
++-rw-r--r--   0        0        0        0 2023-02-21 03:18:10.928974 calcipy-1.2.0/calcipy/tasks/__init__.py
++-rw-r--r--   0        0        0     3104 2023-04-05 22:06:13.047283 calcipy-1.2.0/calcipy/tasks/all_tasks.py
++-rw-r--r--   0        0        0     1876 2023-04-06 12:55:27.782578 calcipy-1.2.0/calcipy/tasks/cl.py
++-rw-r--r--   0        0        0     1132 2023-02-23 02:54:45.453854 calcipy-1.2.0/calcipy/tasks/defaults.py
++-rw-r--r--   0        0        0     3589 2023-04-06 12:54:31.902116 calcipy-1.2.0/calcipy/tasks/doc.py
++-rw-r--r--   0        0        0     3861 2023-02-26 00:22:17.320612 calcipy-1.2.0/calcipy/tasks/lint.py
++-rw-r--r--   0        0        0      454 2023-02-23 02:19:12.617085 calcipy-1.2.0/calcipy/tasks/nox.py
++-rw-r--r--   0        0        0     1275 2023-02-23 02:19:12.617365 calcipy-1.2.0/calcipy/tasks/pack.py
++-rw-r--r--   0        0        0      557 2023-02-23 02:19:12.617596 calcipy-1.2.0/calcipy/tasks/stale.py
++-rw-r--r--   0        0        0     1498 2023-02-23 02:19:12.617900 calcipy-1.2.0/calcipy/tasks/tags.py
++-rw-r--r--   0        0        0     3510 2023-04-06 23:41:29.742135 calcipy-1.2.0/calcipy/tasks/test.py
++-rw-r--r--   0        0        0      634 2023-02-23 02:19:12.618406 calcipy-1.2.0/calcipy/tasks/types.py
++-rw-r--r--   0        0        0     6651 2023-04-06 23:59:33.222278 calcipy-1.2.0/docs/README.md
++-rw-r--r--   0        0        0     6455 2023-04-06 23:59:26.567472 calcipy-1.2.0/pyproject.toml
++-rw-r--r--   0        0        0     9950 1970-01-01 00:00:00.000000 calcipy-1.2.0/setup.py
++-rw-r--r--   0        0        0    11358 1970-01-01 00:00:00.000000 calcipy-1.2.0/PKG-INFO
+```
+
+### Comparing `calcipy-1.1.1/LICENSE` & `calcipy-1.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/can_skip.py` & `calcipy-1.2.0/calcipy/can_skip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/check_for_stale_packages/_check_for_stale_packages.py` & `calcipy-1.2.0/calcipy/check_for_stale_packages/_check_for_stale_packages.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/cli.py` & `calcipy-1.2.0/calcipy/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/code_tag_collector/_collector.py` & `calcipy-1.2.0/calcipy/code_tag_collector/_collector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/dot_dict/_dot_dict.py` & `calcipy-1.2.0/calcipy/dot_dict/_dot_dict.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/experiments/check_duplicate_test_names.py` & `calcipy-1.2.0/calcipy/experiments/check_duplicate_test_names.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -28,15 +28,15 @@
+ 
+     for path_test in test_path.rglob('test_*.py'):
+         logger.info(path_test.as_posix())
+         parsed_ast = ast.parse(path_test.read_text())
+ 
+         for node in parsed_ast.body:
+             if isinstance(node, ast.FunctionDef):
+-                if node.name in summary:
++                if node.name in summary and node.name.startswith('test_'):
+                     duplicates.append(node.name)
+                 summary.add(node.name)
+                 _show_info(node)
+             elif isinstance(node, ast.ClassDef):
+                 logger.info('Class name', name=node.name)
+                 for method in node.body:
+                     if isinstance(method, ast.FunctionDef):
+@@ -52,9 +52,9 @@
+                 summary.add(node.name)
+ 
+     if duplicates:
+         logger.error('Found Duplicates', duplicates=duplicates)
+     return duplicates
+ 
+ 
+-if __name__ == '__main__':
++if __name__ == '__main__':  # pragma: no cover
+     run(Path('tests'))
+```
+
+### Comparing `calcipy-1.1.1/calcipy/file_search.py` & `calcipy-1.2.0/calcipy/file_search.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/invoke_helpers.py` & `calcipy-1.2.0/calcipy/invoke_helpers.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -35,15 +35,14 @@
+         return ctx.run(*run_args, **run_kwargs)
+ 
+ 
+ # ----------------------------------------------------------------------------------------------------------------------
+ # Invoke Task Helpers
+ 
+ 
+-@lru_cache(maxsize=1)
+ @beartype
+ def get_project_path() -> Path:
+     """Retrieve the `cwd`."""
+     return Path.cwd()
+ 
+ 
+ @beartype
+```
+
+### Comparing `calcipy-1.1.1/calcipy/md_writer/_writer.py` & `calcipy-1.2.0/calcipy/md_writer/_writer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/noxfile/_noxfile.py` & `calcipy-1.2.0/calcipy/noxfile/_noxfile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/scripts.py` & `calcipy-1.2.0/calcipy/scripts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/all_tasks.py` & `calcipy-1.2.0/calcipy/tasks/all_tasks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/cl.py` & `calcipy-1.2.0/calcipy/tasks/cl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/defaults.py` & `calcipy-1.2.0/calcipy/tasks/defaults.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/doc.py` & `calcipy-1.2.0/calcipy/tasks/doc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/lint.py` & `calcipy-1.2.0/calcipy/tasks/lint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/pack.py` & `calcipy-1.2.0/calcipy/tasks/pack.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/stale.py` & `calcipy-1.2.0/calcipy/tasks/stale.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/tags.py` & `calcipy-1.2.0/calcipy/tasks/tags.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/test.py` & `calcipy-1.2.0/calcipy/tasks/test.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -4,14 +4,15 @@
+ 
+ from beartype import beartype
+ from beartype.typing import Optional
+ from corallium.file_helpers import open_in_browser, read_package_name
+ from invoke import Context
+ 
+ from ..cli import task
++from ..experiments import check_duplicate_test_names
+ from ..invoke_helpers import run
+ from .defaults import from_ctx
+ 
+ _STEPWISE_ARGS = ' --failed-first --new-first --exitfirst -vv --no-cov'
+ 
+ 
+ @beartype
+@@ -30,14 +31,21 @@
+     if marker:
+         cli_args += f' -m "{marker}"'
+     if fail_under := min_cover or int(from_ctx(ctx, 'test', 'min_cover')):
+         cli_args += f' --cov-fail-under={fail_under}'
+     run(ctx, f'poetry run {command} ./tests{cli_args}')
+ 
+ 
++@task()
++def check(_ctx: Context) -> None:
++    """Run pytest checks, such as identifying ."""
++    if duplciates := check_duplicate_test_names.run(Path('tests')):
++        raise RuntimeError(f'Duplicate test names found ({duplciates}). See above for details.')  # noqa: EM102
++
++
+ KM_HELP = {
+     # See: https://docs.pytest.org/en/latest/usage.html#specifying-tests-selecting-tests
+     'keyword': 'Only run tests that match the string pattern',
+     'marker': 'Only run tests matching given mark expression',
+ }
+```
+
+### Comparing `calcipy-1.1.1/calcipy/tasks/types.py` & `calcipy-1.2.0/calcipy/tasks/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/docs/README.md` & `calcipy-1.2.0/docs/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `calcipy-1.1.1/pyproject.toml` & `calcipy-1.2.0/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ [build-system]
+ build-backend = "poetry.core.masonry.api"
+ requires = ["poetry-core"]
+ 
+ [tool.commitizen]
+-version = "1.1.1"
++version = "1.2.0"
+ version_files = ["calcipy/__init__.py:^__version", "pyproject.toml:^version"]
+ 
+ [tool.poetry]
+ authors = ["Kyle King <dev.act.kyle@gmail.com>"]
+ classifiers = [
+   "Development Status :: 4 - Beta",
+   "Framework :: Pytest",
+@@ -26,15 +26,15 @@
+ include = ["LICENSE"]
+ keywords = ["nox", "python-poetry"]
+ license = "MIT"
+ maintainers = []
+ name = "calcipy"
+ readme = "docs/README.md"
+ repository = "https://github.com/kyleking/calcipy"
+-version = "1.1.1"
++version = "1.2.0"
+ 
+ [tool.poetry.dependencies]
+ python = "^3.8.12"
+ arrow = {optional = true, version = ">=1.2.3"} # tags
+ autopep8 = {optional = true, version = ">=2.0.1"} # flake8
+ bandit = {optional = true, version = ">=1.7.4"} # lint
+ beartype = ">=0.12.0"
+```
+
+### Comparing `calcipy-1.1.1/setup.py` & `calcipy-1.2.0/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -74,15 +74,15 @@
+ {'console_scripts': ['calcipy = calcipy.scripts:start',
+                      'calcipy_lint = calcipy.scripts:start_lint',
+                      'calcipy_tags = calcipy.scripts:start_tags',
+                      'calcipy_types = calcipy.scripts:start_types']}
+ 
+ setup_kwargs = {
+     'name': 'calcipy',
+-    'version': '1.1.1',
++    'version': '1.2.0',
+     'description': 'Python package to simplify development',
+     'long_description': '# calcipy\n\n![./calcipy-banner-wide.svg](https://raw.githubusercontent.com/KyleKing/calcipy/main/docs/calcipy-banner-wide.svg)\n\n`calcipy` is a Python package that implements best practices such as code style (linting, auto-fixes), documentation, CI/CD, and logging. Like the calcium carbonate in hard coral, packages can be built on the `calcipy` foundation.\n\n`calcipy` has some configurability, but is tailored for my particular use cases. If you want the same sort of functionality, there are a number of alternatives to consider:\n\n- [pyscaffold](https://github.com/pyscaffold/pyscaffold) is a much more mature project that aims for the same goals, but with a slightly different approach and tech stack (tox vs. nox, cookiecutter vs. copier, etc.)\n- [tidypy](https://github.com/jayclassless/tidypy#features), [pylama](https://github.com/klen/pylama), and [codecheck](https://pypi.org/project/codecheck/) offer similar functionality of bundling and running static checkers, but makes far fewer assumptions\n- [pytoil](https://github.com/FollowTheProcess/pytoil) is a general CLI tool for developer automation\n- And many more such as [pyta](https://github.com/pyta-uoft/pyta), [prospector](https://github.com/PyCQA/prospector), [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) / [cjolowicz/cookiecutter-hypermodern-python](https://github.com/cjolowicz/cookiecutter-hypermodern-python), [formate](https://github.com/python-formate/formate), [johnthagen/python-blueprint](https://github.com/johnthagen/python-blueprint), [oxsecurity/megalinter](https://github.com/oxsecurity/megalinter), etc.\n\n## Installation\n\nCalcipy needs a few static files managed using copier and a template project: [kyleking/calcipy_template](https://github.com/KyleKing/calcipy_template/)\n\nYou can quickly use the template to create a new project or add calcipy to an existing one:\n\n```sh\n# Install copier. pipx is recommended\npipx install copier\n\n# To create a new project\ncopier copy gh:KyleKing/calcipy_template new_project\ncd new_project\n\n# Or convert/update an existing one\ncd my_project\ncopier copy gh:KyleKing/calcipy_template .\ncopier update\n```\n\nSee [./Advanced_Configuration.md](./Advanced_Configuration.md) for documentation on the configurable aspects of `calcipy`\n\n### Calcipy CLI\n\nAdditionally, `calcipy` can be run as a CLI application without adding the package as a dependency.\n\nQuick Start:\n\n```sh\npipx install calcipy\n\n# Use \'tags\' to create a CODE_TAG_SUMMARY of the specified directory\ncalcipy tags --help\ncalcipy tags --base-dir=~/path/to/my_project\n\n# See additional documentation from the CLI help\n> calcipy\n\nSubcommands:\n\nmain                                     Main task pipeline.\nother                                    Run tasks that are otherwise not exercised in main.\nrelease                                  Release pipeline.\ncl.bump                                  Bumps project version based on commits & settings in pyproject.toml.\ncl.write                                 Write a Changelog file with the raw Git history.\ndoc.build                                Build documentation with mkdocs.\ndoc.deploy                               Deploy docs to the Github `gh-pages` branch.\ndoc.watch                                Serve local documentation for local editing.\nlint.autopep8                            Run autopep8.\nlint.check (lint)                        Run ruff as check-only.\nlint.fix                                 Run ruff and apply fixes.\nlint.flake8                              Run ruff and apply fixes.\nlint.pre-commit                          Run pre-commit.\nlint.pylint                              Run ruff and apply fixes.\nlint.security                            Attempt to identify possible security vulnerabilities.\nlint.watch                               Run ruff as check-only.\nnox.noxfile (nox)                        Run nox from the local noxfile.\npack.check-licenses                      Check licenses for compatibility with `licensecheck`.\npack.lock                                Ensure poetry.lock is  up-to-date.\npack.publish                             Build the distributed format(s) and publish.\nstale.check-for-stale-packages (stale)   Identify stale dependencies.\ntags.collect-code-tags (tags)            Create a `CODE_TAG_SUMMARY.md` with a table for TODO- and FIXME-style code comments.\ntest.coverage                            Generate useful coverage outputs after running pytest.\ntest.pytest (test)                       Run pytest with default arguments.\ntest.step                                Run pytest optimized to stop on first error.\ntest.watch                               Run pytest with polling and optimized to stop on first error.\ntypes.mypy                               Run mypy.\ntypes.pyright                            Run pyright.\n\nGlobal Task Options:\n\nworking_dir   Set the cwd for the program. Example: "../run --working-dir .. lint test"\n*file_args    List of Paths available globally to all tasks. Will resolve paths with working_dir\nverbose       Globally configure logger verbosity (-vvv for most verbose)\n```\n\n### Calcipy Pre-Commit\n\n`calcipy` can also be used as a `pre-commit` task by adding the below snippet to your `pre-commit` file:\n\n```yaml\nrepos:\n  - repo: https://github.com/KyleKing/calcipy\n    rev: main\n    hooks:\n      - id: tags\n      - id: lint-fix\n      - id: types\n```\n\n## Project Status\n\nSee the `Open Issues` and/or the [CODE_TAG_SUMMARY]. For release history, see the [CHANGELOG].\n\n## Contributing\n\nWe welcome pull requests! For your pull request to be accepted smoothly, we suggest that you first open a GitHub issue to discuss your idea. For resources on getting started with the code base, see the below documentation:\n\n- [DEVELOPER_GUIDE]\n- [STYLE_GUIDE]\n\n## Code of Conduct\n\nWe follow the [Contributor Covenant Code of Conduct][contributor-covenant].\n\n### Open Source Status\n\nWe try to reasonably meet most aspects of the "OpenSSF scorecard" from [Open Source Insights](https://deps.dev/pypi/calcipy)\n\n## Responsible Disclosure\n\nIf you have any security issue to report, please contact the project maintainers privately. You can reach us at [dev.act.kyle@gmail.com](mailto:dev.act.kyle@gmail.com).\n\n## License\n\n[LICENSE]\n\n[changelog]: https://calcipy.kyleking.me/docs/CHANGELOG\n[code_tag_summary]: https://calcipy.kyleking.me/docs/CODE_TAG_SUMMARY\n[contributor-covenant]: https://www.contributor-covenant.org\n[developer_guide]: https://calcipy.kyleking.me/docs/DEVELOPER_GUIDE\n[license]: https://github.com/kyleking/calcipy/blob/main/LICENSE\n[style_guide]: https://calcipy.kyleking.me/docs/STYLE_GUIDE\n',
+     'author': 'Kyle King',
+     'author_email': 'dev.act.kyle@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/kyleking/calcipy',
+```
+
+### Comparing `calcipy-1.1.1/PKG-INFO` & `calcipy-1.2.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: calcipy
+-Version: 1.1.1
++Version: 1.2.0
+ Summary: Python package to simplify development
+ Home-page: https://github.com/kyleking/calcipy
+ License: MIT
+ Keywords: nox,python-poetry
+ Author: Kyle King
+ Author-email: dev.act.kyle@gmail.com
+ Requires-Python: >=3.8.12,<4.0.0
+```
+

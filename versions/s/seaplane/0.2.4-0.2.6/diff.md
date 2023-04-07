@@ -1,0 +1,319 @@
+# Comparing `tmp/seaplane-0.2.4.tar.gz` & `tmp/seaplane-0.2.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "seaplane-0.2.4.tar", max compression
++gzip compressed data, was "seaplane-0.2.6.tar", max compression
+```
+
+## Comparing `seaplane-0.2.4.tar` & `seaplane-0.2.6.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,30 @@
+--rw-r--r--   0        0        0     1538 2023-03-15 11:58:02.676710 seaplane-0.2.4/README.md
+--rw-r--r--   0        0        0     2448 2023-04-03 15:41:22.462474 seaplane-0.2.4/pyproject.toml
+--rw-r--r--   0        0        0      899 2023-04-03 13:55:58.025326 seaplane-0.2.4/src/seaplane/__init__.py
+--rw-r--r--   0        0        0       84 2023-03-15 11:58:02.678488 seaplane-0.2.4/src/seaplane/api/__init__.py
+--rw-r--r--   0        0        0      527 2023-03-15 11:58:02.678632 seaplane-0.2.4/src/seaplane/api/api_http.py
+--rw-r--r--   0        0        0     2018 2023-04-03 13:55:58.025883 seaplane-0.2.4/src/seaplane/api/api_request.py
+--rw-r--r--   0        0        0     2987 2023-04-03 13:55:58.026605 seaplane-0.2.4/src/seaplane/api/compute_api.py
+--rw-r--r--   0        0        0     3158 2023-03-15 11:58:02.679076 seaplane-0.2.4/src/seaplane/api/formation_configuration_api.py
+--rw-r--r--   0        0        0     7410 2023-03-15 11:58:02.679237 seaplane-0.2.4/src/seaplane/api/lock_api.py
+--rw-r--r--   0        0        0     5806 2023-03-15 11:58:02.679378 seaplane-0.2.4/src/seaplane/api/metadata_api.py
+--rw-r--r--   0        0        0     7724 2023-03-15 11:58:02.679515 seaplane-0.2.4/src/seaplane/api/restrict_api.py
+--rw-r--r--   0        0        0     1045 2023-04-03 14:27:17.966028 seaplane-0.2.4/src/seaplane/api/sql_api.py
+--rw-r--r--   0        0        0     3141 2023-03-15 11:58:02.679748 seaplane-0.2.4/src/seaplane/api/token_api.py
+--rw-r--r--   0        0        0     5458 2023-04-03 13:55:58.027225 seaplane-0.2.4/src/seaplane/configuration.py
+--rw-r--r--   0        0        0     1830 2023-03-15 11:58:02.680173 seaplane-0.2.4/src/seaplane/logging/__init__.py
+--rw-r--r--   0        0        0      213 2023-04-03 13:55:58.027504 seaplane-0.2.4/src/seaplane/model/__init__.py
+--rw-r--r--   0        0        0     1310 2023-04-03 13:55:58.027773 seaplane-0.2.4/src/seaplane/model/compute/__init__.py
+--rw-r--r--   0        0        0     1539 2023-03-15 11:58:02.680692 seaplane-0.2.4/src/seaplane/model/compute/formation_configuration.py
+--rw-r--r--   0        0        0      129 2023-03-15 11:58:02.680816 seaplane-0.2.4/src/seaplane/model/compute/formation_metadata.py
+--rw-r--r--   0        0        0      436 2023-03-15 11:58:02.680940 seaplane-0.2.4/src/seaplane/model/errors.py
+--rw-r--r--   0        0        0     3077 2023-03-15 11:58:02.681149 seaplane-0.2.4/src/seaplane/model/locks/__init__.py
+--rw-r--r--   0        0        0     3560 2023-03-15 11:58:02.681329 seaplane-0.2.4/src/seaplane/model/metadata/__init__.py
+--rw-r--r--   0        0        0      422 2023-03-15 11:58:02.681451 seaplane-0.2.4/src/seaplane/model/provider.py
+--rw-r--r--   0        0        0      478 2023-03-15 11:58:02.681578 seaplane-0.2.4/src/seaplane/model/region.py
+--rw-r--r--   0        0        0     4221 2023-03-15 11:58:02.681752 seaplane-0.2.4/src/seaplane/model/restrict/__init__.py
+--rw-r--r--   0        0        0      386 2023-04-03 13:55:58.028133 seaplane-0.2.4/src/seaplane/model/sql/__init__.py
+--rw-r--r--   0        0        0      424 2023-03-15 11:58:02.681905 seaplane-0.2.4/src/seaplane/util/__init__.py
+--rw-r--r--   0        0        0      318 2023-03-15 11:58:02.682026 seaplane-0.2.4/src/seaplane/util/base64url.py
+--rw-r--r--   0        0        0     2877 2023-04-03 15:41:25.164489 seaplane-0.2.4/setup.py
+--rw-r--r--   0        0        0     2892 2023-04-03 15:41:25.164742 seaplane-0.2.4/PKG-INFO
++-rw-r--r--   0        0        0     1538 2023-04-06 23:53:57.317488 seaplane-0.2.6/README.md
++-rw-r--r--   0        0        0     2452 2023-04-06 23:53:57.317488 seaplane-0.2.6/pyproject.toml
++-rw-r--r--   0        0        0      899 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/__init__.py
++-rw-r--r--   0        0        0       84 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/__init__.py
++-rw-r--r--   0        0        0      527 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/api_http.py
++-rw-r--r--   0        0        0     2018 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/api_request.py
++-rw-r--r--   0        0        0     2987 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/compute_api.py
++-rw-r--r--   0        0        0     3158 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/formation_configuration_api.py
++-rw-r--r--   0        0        0     7410 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/lock_api.py
++-rw-r--r--   0        0        0     5806 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/metadata_api.py
++-rw-r--r--   0        0        0     7724 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/restrict_api.py
++-rw-r--r--   0        0        0     1520 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/sql_api.py
++-rw-r--r--   0        0        0     3141 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/api/token_api.py
++-rw-r--r--   0        0        0     5458 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/configuration.py
++-rw-r--r--   0        0        0     1830 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/logging/__init__.py
++-rw-r--r--   0        0        0      213 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/__init__.py
++-rw-r--r--   0        0        0     1310 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/compute/__init__.py
++-rw-r--r--   0        0        0     1539 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/compute/formation_configuration.py
++-rw-r--r--   0        0        0      129 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/compute/formation_metadata.py
++-rw-r--r--   0        0        0      436 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/errors.py
++-rw-r--r--   0        0        0     3077 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/locks/__init__.py
++-rw-r--r--   0        0        0     3560 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/metadata/__init__.py
++-rw-r--r--   0        0        0      422 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/provider.py
++-rw-r--r--   0        0        0      478 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/region.py
++-rw-r--r--   0        0        0     4221 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/restrict/__init__.py
++-rw-r--r--   0        0        0      386 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/model/sql/__init__.py
++-rw-r--r--   0        0        0      424 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/util/__init__.py
++-rw-r--r--   0        0        0      318 2023-04-06 23:53:57.317488 seaplane-0.2.6/src/seaplane/util/base64url.py
++-rw-r--r--   0        0        0     2882 2023-04-06 23:54:08.858218 seaplane-0.2.6/setup.py
++-rw-r--r--   0        0        0     2897 2023-04-06 23:54:08.858574 seaplane-0.2.6/PKG-INFO
+```
+
+### Comparing `seaplane-0.2.4/README.md` & `seaplane-0.2.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/pyproject.toml` & `seaplane-0.2.6/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,31 +1,31 @@
+ [tool.poetry]
+ name = "seaplane"
+-version = "0.2.4"
++version = "0.2.6"
+ description = "Seaplane Python SDK"
+ authors = ["Seaplane IO, Inc."]
+ license = "Apache License"
+ readme = "README.md"
+ repository = "https://github.com/seaplane-io/seaplane/tree/main/seaplane-sdk/python"
+ documentation = "https://github.com/seaplane-io/seaplane/tree/main/seaplane-sdk/python"
+ 
+ 
+ [tool.poetry.dependencies]
+-python = ">=3.8.*"
++python = ">=3.8.*,<4.0"
+ attrs = "21.4.0"
+ certifi = "2022.6.15"
+ charset-normalizer = "2.1.0"
+ idna = "3.3"
+ iniconfig = "1.1.1"
+ packaging = "21.3"
+ pluggy = "1.0.0"
+ py = "1.11.0"
+ pyparsing = "3.0.9"
+ requests = "2.28.1"
+-tomli= "2.0.1"
++tomli = "2.0.1"
+ urllib3 = "1.26.9"
+ types-requests = "^2.28.0"
+ returns = "^0.19.0"
+ requests-mock = "^1.9.3"
+ simplejson = "^3.17.6"
+ types-simplejson = "^3.17.7"
+ 
+@@ -89,13 +89,13 @@
+ src_paths = ["tests", "src/seaplane"]
+ skip_gitignore = true
+ 
+ [tool.pytest.ini_options]
+ filterwarnings = [
+     # When running tests, treat warnings as errors (e.g. -Werror).
+     # See: https://docs.pytest.org/en/latest/reference/reference.html#confval-filterwarnings
+-    "error",  
++    "error",
+ ]
+ log_cli = 1
+ 
+ [tool.coverage.run]
+ branch = true
+```
+
+### Comparing `seaplane-0.2.4/src/seaplane/__init__.py` & `seaplane-0.2.6/src/seaplane/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/api_http.py` & `seaplane-0.2.6/src/seaplane/api/api_http.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/api_request.py` & `seaplane-0.2.6/src/seaplane/api/api_request.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/compute_api.py` & `seaplane-0.2.6/src/seaplane/api/compute_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/formation_configuration_api.py` & `seaplane-0.2.6/src/seaplane/api/formation_configuration_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/lock_api.py` & `seaplane-0.2.6/src/seaplane/api/lock_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/metadata_api.py` & `seaplane-0.2.6/src/seaplane/api/metadata_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/restrict_api.py` & `seaplane-0.2.6/src/seaplane/api/restrict_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/sql_api.py` & `seaplane-0.2.6/src/seaplane/api/sql_api.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,7 +1,9 @@
++from typing import List
++
+ import requests
+ 
+ from ..configuration import Configuration, config
+ from ..model.sql import CreatedDatabase, to_created_database
+ from ..util import unwrap
+ from .api_http import headers
+ from .api_request import provision_req
+@@ -9,15 +11,15 @@
+ 
+ class GlobalSQL:
+     """
+     Class for handle Global SQL API calls.
+     """
+ 
+     def __init__(self, configuration: Configuration = config) -> None:
+-        self.url = f"{configuration.global_sql_endpoint}/tablespaces/provision_tenant"
++        self.url = f"{configuration.global_sql_endpoint}/databases"
+         self.req = provision_req(configuration._token_api)
+ 
+     def create_database(self) -> CreatedDatabase:
+         """Create a new Global Seaplane Database.
+ 
+         Returns
+         -------
+@@ -28,7 +30,22 @@
+         return unwrap(
+             self.req(
+                 lambda access_token: requests.post(
+                     self.url, data="{}", headers=headers(access_token)
+                 )
+             ).map(lambda database: to_created_database(database))
+         )
++
++    def list_databases(self) -> List[str]:
++        """List all Global Seaplane Databases.
++
++        Returns
++        -------
++        list[database_name: str]
++            Returns a list of database names if successful or it will raise an HTTPError otherwise.
++        """
++
++        return unwrap(
++            self.req(
++                lambda access_token: requests.get(self.url, headers=headers(access_token))
++            ).map(lambda databases: list(databases))
++        )
+```
+
+### Comparing `seaplane-0.2.4/src/seaplane/api/token_api.py` & `seaplane-0.2.6/src/seaplane/api/token_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/configuration.py` & `seaplane-0.2.6/src/seaplane/configuration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/logging/__init__.py` & `seaplane-0.2.6/src/seaplane/logging/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/model/compute/__init__.py` & `seaplane-0.2.6/src/seaplane/model/compute/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/model/compute/formation_configuration.py` & `seaplane-0.2.6/src/seaplane/model/compute/formation_configuration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/model/locks/__init__.py` & `seaplane-0.2.6/src/seaplane/model/locks/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/model/metadata/__init__.py` & `seaplane-0.2.6/src/seaplane/model/metadata/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/src/seaplane/model/restrict/__init__.py` & `seaplane-0.2.6/src/seaplane/model/restrict/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seaplane-0.2.4/setup.py` & `seaplane-0.2.6/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -36,24 +36,24 @@
+  'tomli==2.0.1',
+  'types-requests>=2.28.0,<3.0.0',
+  'types-simplejson>=3.17.7,<4.0.0',
+  'urllib3==1.26.9']
+ 
+ setup_kwargs = {
+     'name': 'seaplane',
+-    'version': '0.2.4',
++    'version': '0.2.6',
+     'description': 'Seaplane Python SDK',
+     'long_description': '# Seaplane Python SDK\n[![PyPI](https://badge.fury.io/py/seaplane.svg)](https://badge.fury.io/py/seaplane)\n[![Python](https://img.shields.io/pypi/pyversions/seaplane.svg?style=plastic)](https://badge.fury.io/py/seaplane)\n\nSimple Python library to manage your resources at seaplane.\n\n## What is Seaplane?\n\nSeaplane is the global platform for building and scaling your application stack\nwithout the complexity of managing cloud infrastructure.\n\nIt serves as a reference application for how our APIs can be utilized.\n\nNot sure where to go to quickly run a workload on Seaplane? See our [Getting\nStarted] guide.\n\nTo build and test this software yourself, see the CONTRIBUTING document that is a peer to this one.\n\n## Installation\n\n```shell\npip install seaplane\n```\n\n## Configure your API KEY\n\n* Set `SEAPLANE_API_KEY` environment variable.\n* Use `config` object in order to set the api key.\n\n```python\nfrom seaplane import sea\n\nsea.config.set_api_key("your_api_key")\n```\n\n## License\n\nLicensed under the Apache License, Version 2.0, [LICENSE]. Copyright 2022 Seaplane IO, Inc.\n\n[//]: # (Links)\n\n[Seaplane]: https://seaplane.io/\n[CLI]: https://github.com/seaplane-io/seaplane/tree/main/seaplane-cli\n[SDK]: https://github.com/seaplane-io/seaplane/tree/main/seaplane\n[Getting Started]: https://github.com/seaplane-io/seaplane/blob/main/seaplane-sdk/python/docs/quickstart.md\n[CONTRIBUTING]: https://github.com/seaplane-io/seaplane/tree/main/seaplane-sdk/python/CONTRIBUTIONS.md\n[LICENSE]: https://github.com/seaplane-io/seaplane/blob/main/LICENSE\n',
+     'author': 'Seaplane IO, Inc.',
+     'author_email': None,
+     'maintainer': None,
+     'maintainer_email': None,
+     'url': 'https://github.com/seaplane-io/seaplane/tree/main/seaplane-sdk/python',
+     'package_dir': package_dir,
+     'packages': packages,
+     'package_data': package_data,
+     'install_requires': install_requires,
+-    'python_requires': '>=3.8',
++    'python_requires': '>=3.8,<4.0',
+ }
+ 
+ 
+ setup(**setup_kwargs)
+```
+
+### Comparing `seaplane-0.2.4/PKG-INFO` & `seaplane-0.2.6/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ Metadata-Version: 2.1
+ Name: seaplane
+-Version: 0.2.4
++Version: 0.2.6
+ Summary: Seaplane Python SDK
+ Home-page: https://github.com/seaplane-io/seaplane/tree/main/seaplane-sdk/python
+ License: Apache License
+ Author: Seaplane IO, Inc.
+-Requires-Python: >=3.8
++Requires-Python: >=3.8,<4.0
+ Classifier: License :: Other/Proprietary License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Requires-Dist: attrs (==21.4.0)
+ Requires-Dist: certifi (==2022.6.15)
+```
+
