@@ -1,0 +1,210 @@
+# Comparing `tmp/pandas_paddles-1.3.3.tar.gz` & `tmp/pandas_paddles-1.3.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pandas_paddles-1.3.3.tar", max compression
++gzip compressed data, was "pandas_paddles-1.3.4.tar", max compression
+```
+
+## Comparing `pandas_paddles-1.3.3.tar` & `pandas_paddles-1.3.4.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,10 @@
+--rw-r--r--   0        0        0     1096 2022-02-20 21:56:35.807144 pandas_paddles-1.3.3/LICENSE
+--rw-r--r--   0        0        0     5904 2022-02-21 18:50:52.107738 pandas_paddles-1.3.3/README.rst
+--rw-r--r--   0        0        0     5843 2023-04-05 16:40:01.997378 pandas_paddles-1.3.3/pandas_paddles/__init__.py
+--rw-r--r--   0        0        0    16007 2023-04-04 17:06:19.675086 pandas_paddles-1.3.3/pandas_paddles/axis.py
+--rw-r--r--   0        0        0     6363 2022-07-06 19:06:27.967373 pandas_paddles-1.3.3/pandas_paddles/closures.py
+--rw-r--r--   0        0        0     9958 2023-04-04 17:06:19.675086 pandas_paddles-1.3.3/pandas_paddles/contexts.py
+--rw-r--r--   0        0        0     2756 2023-04-04 17:06:19.675086 pandas_paddles-1.3.3/pandas_paddles/util.py
+--rw-r--r--   0        0        0     1405 2023-04-05 16:38:53.409236 pandas_paddles-1.3.3/pyproject.toml
+--rw-r--r--   0        0        0     7057 2023-04-05 16:48:27.219674 pandas_paddles-1.3.3/setup.py
+--rw-r--r--   0        0        0     7194 2023-04-05 16:48:27.220437 pandas_paddles-1.3.3/PKG-INFO
++-rw-r--r--   0        0        0     1096 2022-02-20 21:56:35.807144 pandas_paddles-1.3.4/LICENSE
++-rw-r--r--   0        0        0     5904 2023-04-05 20:52:47.727556 pandas_paddles-1.3.4/README.rst
++-rw-r--r--   0        0        0     5843 2023-04-07 09:19:16.936374 pandas_paddles-1.3.4/pandas_paddles/__init__.py
++-rw-r--r--   0        0        0    16030 2023-04-05 20:39:46.320905 pandas_paddles-1.3.4/pandas_paddles/axis.py
++-rw-r--r--   0        0        0     6363 2022-07-06 19:06:27.967373 pandas_paddles-1.3.4/pandas_paddles/closures.py
++-rw-r--r--   0        0        0     9958 2023-04-04 17:06:19.675086 pandas_paddles-1.3.4/pandas_paddles/contexts.py
++-rw-r--r--   0        0        0     2756 2023-04-04 17:06:19.675086 pandas_paddles-1.3.4/pandas_paddles/util.py
++-rw-r--r--   0        0        0     1405 2023-04-07 09:19:51.247652 pandas_paddles-1.3.4/pyproject.toml
++-rw-r--r--   0        0        0     7057 2023-04-07 10:02:47.224363 pandas_paddles-1.3.4/setup.py
++-rw-r--r--   0        0        0     7194 2023-04-07 10:02:47.225144 pandas_paddles-1.3.4/PKG-INFO
+```
+
+### Comparing `pandas_paddles-1.3.3/LICENSE` & `pandas_paddles-1.3.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_paddles-1.3.3/README.rst` & `pandas_paddles-1.3.4/README.rst`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -43,15 +43,15 @@
+ 
+ - **Motivation**: Make chaining Pandas operations easier and bring
+   functionality to Pandas similar to Spark's `col()
+   <https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.col.html#pyspark.sql.functions.col>`_
+   function or referencing columns in R's `dplyr
+   <https://dplyr.tidyverse.org/articles/dplyr.html>`_.
+ - **Install** from PyPI with ``pip install
+-  pandas-paddles``. Pandas versions 1.0+ (``^1.0``) are supported.
++  pandas-paddles``. Pandas versions 1+ (``>=1,<3``) are supported.
+ - **Documentation** can be found at `readthedocs
+   <https://pandas-paddles.readthedocs.io/en/latest/>`_.
+ - **Source code** can be obtained from `GitHub <https://github.com/eikevons/pandas-paddles>`_.
+ - `Changelog <Changelog.md>`_
+ 
+ Example: Create new column and filter
+ -------------------------------------
+```
+
+### Comparing `pandas_paddles-1.3.3/pandas_paddles/__init__.py` & `pandas_paddles-1.3.4/pandas_paddles/__init__.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -221,15 +221,15 @@
+                   .loc[lambda df: df["x"] == 3]
+                   .assign(x_is_even = lambda df: (df["x"] % 2) == 0)
+                  )
+ 
+ 
+ Author: Eike von Seggern <eike@vonseggern.space>
+ """
+-__version__ = "1.3.3"
++__version__ = "1.3.4"
+ __all__ = ["C", "DF", "I", "S"]
+ 
+ from .contexts import DataframeContext, SeriesContext
+ from .axis import ColumnSelectionComposer, SelectionComposerBase
+ 
+ C = ColumnSelectionComposer("columns")
+ DF = DataframeContext()
+```
+
+### Comparing `pandas_paddles-1.3.3/pandas_paddles/axis.py` & `pandas_paddles-1.3.4/pandas_paddles/axis.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -402,16 +402,16 @@
+         super().__init__(axis, op=op)
+         self.levels = LeveledComposer(self.axis)
+ 
+     # Warn about experimental status of this feature.
+     # TODO: Remove once API is stable
+     def __getattribute__(self, name):
+         attr = super().__getattribute__(name)
+-        if name != "__init__":
+-            warn("Column/index selection is an experimental feature! The API might change in minor version updates.", stacklevel=2)
++        if not name in {"__init__", "axis"}:
++            warn("Column/index selection with C/I is an experimental feature! The API might change in minor version updates.", stacklevel=2)
+         return attr
+ 
+ 
+ class ColumnSelectionComposer(SelectionComposerBase):
+     """Compose callable to select or sort columns.
+ 
+     This acts as global entrypoint.
+```
+
+### Comparing `pandas_paddles-1.3.3/pandas_paddles/closures.py` & `pandas_paddles-1.3.4/pandas_paddles/closures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_paddles-1.3.3/pandas_paddles/contexts.py` & `pandas_paddles-1.3.4/pandas_paddles/contexts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_paddles-1.3.3/pandas_paddles/util.py` & `pandas_paddles-1.3.4/pandas_paddles/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pandas_paddles-1.3.3/pyproject.toml` & `pandas_paddles-1.3.4/pyproject.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "pandas_paddles"
+-version = "1.3.3"
++version = "1.3.4"
+ description = "Simple, composable selectors for loc[], iloc[], assign() and others for fluent-API style Pandas code."
+ authors = ["Eike von Seggern <eikevons@mailbox.org>"]
+ repository = "https://github.com/eikevons/pandas-paddles.git"
+ readme = "README.rst"
+ license = "MIT"
+ classifiers = [
+   "Development Status :: 5 - Production/Stable",
+```
+
+### Comparing `pandas_paddles-1.3.3/setup.py` & `pandas_paddles-1.3.4/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -12,17 +12,17 @@
+ 
+ extras_require = \
+ {':python_version <= "3.7"': ['typing-extensions>=4.1.1,<5.0.0'],
+  'rtdbuild': ['sphinx>=4.4.0,<5.0.0', 'pydata-sphinx-theme>=0.8.0,<0.9.0']}
+ 
+ setup_kwargs = {
+     'name': 'pandas-paddles',
+-    'version': '1.3.3',
++    'version': '1.3.4',
+     'description': 'Simple, composable selectors for loc[], iloc[], assign() and others for fluent-API style Pandas code.',
+-    'long_description': 'Pandas Paddles\n==============\n\nAccess the calling ``pandas`` data frame in ``loc[]``, ``iloc[]``,\n``assign()`` and other methods with ``DF`` to write better chains of\ndata frame operations, e.g.:\n\n.. code-block:: python\n\n    df = (df\n          # Select all rows with column "x" < 2\n          .loc[DF["x"] < 2]\n          .assign(\n              # Shift "x" by its minimum.\n              y = DF["x"] - DF["x"].min(),\n              # Clip "x" to it\'s central 50% window. Note how DF is used\n              # in the argument to `clip()`.\n              z = DF["x"].clip(\n                  lower=DF["x"].quantile(0.25),\n                  upper=DF["x"].quantile(0.75)\n              ),\n          )\n         )\n\n.. image:: https://readthedocs.org/projects/pandas-paddles/badge/?version=latest\n  :target: https://pandas-paddles.readthedocs.io/en/latest/?badge=latest\n  :alt: Documentation Status\n.. image:: https://github.com/eikevons/pandas-paddles/actions/workflows/check.yml/badge.svg\n  :target: https://github.com/eikevons/pandas-paddles/actions/workflows/check.yml\n  :alt: Test Status\n.. image:: https://img.shields.io/pypi/v/pandas-paddles\n   :target: https://pypi.org/project/pandas-paddles/\n   :alt: Latest version\n.. image:: https://img.shields.io/pypi/pyversions/pandas-paddles\n   :target: https://pypi.org/project/pandas-paddles/\n   :alt: Supported Python versions\n.. image:: https://img.shields.io/pypi/dm/pandas-paddles\n   :target: https://pypi.org/project/pandas-paddles/\n   :alt: PyPI downloads\n\nOverview\n--------\n\n- **Motivation**: Make chaining Pandas operations easier and bring\n  functionality to Pandas similar to Spark\'s `col()\n  <https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.col.html#pyspark.sql.functions.col>`_\n  function or referencing columns in R\'s `dplyr\n  <https://dplyr.tidyverse.org/articles/dplyr.html>`_.\n- **Install** from PyPI with ``pip install\n  pandas-paddles``. Pandas versions 1.0+ (``^1.0``) are supported.\n- **Documentation** can be found at `readthedocs\n  <https://pandas-paddles.readthedocs.io/en/latest/>`_.\n- **Source code** can be obtained from `GitHub <https://github.com/eikevons/pandas-paddles>`_.\n- `Changelog <Changelog.md>`_\n\nExample: Create new column and filter\n-------------------------------------\n\nInstead of writing "traditional" Pandas like this:\n\n.. code-block:: python\n\n    df_in = pd.DataFrame({"x": range(5)})\n    df = df_in.assign(y = df_in["x"] // 2)\n    df = df.loc[df["y"] <= 1]\n    df\n    #    x  y\n    # 0  0  0\n    # 1  1  0\n    # 2  2  1\n    # 3  3  1\n\nOne can write:\n\n.. code-block:: python\n\n    from pandas_paddles import DF\n    df = (df_in\n          .assign(y = DF["x"] // 2)\n          .loc[DF["y"] <= 1]\n         )\n\nThis is especially handy when re-iterating on data frame manipulations\ninteractively, e.g. in a notebook (just imagine you have to rename\n``df`` to ``df_out``).\n\nBut you can access all methods and attributes of the data frame from the\ncontext:\n\n.. code-block:: python\n\n    df = pd.DataFrame({\n        "X": range(5),\n        "y": ["1", "a", "c", "D", "e"],\n    })\n    df.loc[DF["y"]str.isupper() | DF["y"]str.isnumeric()]\n    #    X  y\n    # 0  0  1\n    # 3  3  D\n    df.loc[:, DF.columns.str.isupper()]\n    #    X\n    # 0  0\n    # 1  1\n    # 2  2\n    # 3  3\n    # 4  4\n\nYou can even use ``DF`` in the arguments to methods:\n\n.. code-block:: python\n\n    df = pd.DataFrame({\n        "x": range(5),\n        "y": range(2, 7),\n    })\n    df.assign(z = DF[\'x\'].clip(lower=2.2, upper=DF[\'y\'].median()))\n    #    x  y    z\n    # 0  0  2  2.2\n    # 1  1  3  2.2\n    # 2  2  4  2.2\n    # 3  3  5  3.0\n    # 4  4  6  4.0\n\nWhen working with ``~pd.Series`` the ``S`` object exists. It can be used\nsimilar to ``DF``:\n\n.. code-block:: python\n\n  s = pd.Series(range(5))\n  s[s < 3]\n  # 0    0\n  # 1    1\n  # 2    2\n  # dtype: int64\n\nSimilar projects for pandas\n===========================\n\n* `siuba <https://github.com/machow/siuba>`_\n\n  * (+) active\n  * (-) new API to learn\n\n* `pandas-ply <https://github.com/coursera/pandas-ply>`_\n\n  * (-) stale(?), last change 6 years ago\n  * (-) new API to learn\n  * (-) ``Symbol`` / ``pandas_ply.X`` works only with ``ply_*`` functions\n\n* `pandas-select <https://pandas-select.readthedocs.io/en/latest/reference/label_selection.html>`_\n\n  * (+) no explicite ``df`` necessary\n  * (-) new API to learn\n\n* `pandas-selectable <https://github.com/jseabold/pandas-selectable>`_\n\n  * (+) simple ``select`` accessor\n  * (-) usage inside chains clumsy (needs explicite ``df``):\n\n    .. code-block:: python\n\n       ((df\n         .select.A == \'a\')\n         .select.B == \'b\'\n       )\n\n  * (-) hard-coded ``str``, ``dt`` accessor methods\n  * (?) composable?\n\nDevelopment\n===========\n\nDevelopment is containerized with [Docker](https://www.docker.com/) to\nseparte from host systems and improve reproducability. No other\nprerequisites are needed on the host system.\n\n**Recommendation for Windows users:** install `WSL 2\n<https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_ (tested\non Ubuntu 20.04), and for containerized workflows, `Docker\nDesktop <https://www.docker.com/products/docker-desktop>`_ for Windows.\n\nThe **common tasks** are collected in ``Makefile`` (See ``make help`` for a\ncomplete list):\n\n- Run the unit tests: ``make test`` or ``make watch`` for continuously running\n  tests on code-changes.\n- Build the documentation: ``make docs``\n- **TODO**: Update the ``poetry.lock`` file: ``make lock``\n- Add a dependency:\n\n  1. Start a shell in a new container.\n  2. Add dependency with ``poetry add`` in the running container. This will update\n     ``poetry.lock`` automatically::\n\n        # 1. On the host system\n        % make shell\n        # 2. In the container instance:\n        I have no name!@7d0e85b3a303:/app$ poetry add --dev --lock falcon\n\n- Build the development image ``make devimage``\n  (Note: This should be done automatically for the targets.) \n',
++    'long_description': 'Pandas Paddles\n==============\n\nAccess the calling ``pandas`` data frame in ``loc[]``, ``iloc[]``,\n``assign()`` and other methods with ``DF`` to write better chains of\ndata frame operations, e.g.:\n\n.. code-block:: python\n\n    df = (df\n          # Select all rows with column "x" < 2\n          .loc[DF["x"] < 2]\n          .assign(\n              # Shift "x" by its minimum.\n              y = DF["x"] - DF["x"].min(),\n              # Clip "x" to it\'s central 50% window. Note how DF is used\n              # in the argument to `clip()`.\n              z = DF["x"].clip(\n                  lower=DF["x"].quantile(0.25),\n                  upper=DF["x"].quantile(0.75)\n              ),\n          )\n         )\n\n.. image:: https://readthedocs.org/projects/pandas-paddles/badge/?version=latest\n  :target: https://pandas-paddles.readthedocs.io/en/latest/?badge=latest\n  :alt: Documentation Status\n.. image:: https://github.com/eikevons/pandas-paddles/actions/workflows/check.yml/badge.svg\n  :target: https://github.com/eikevons/pandas-paddles/actions/workflows/check.yml\n  :alt: Test Status\n.. image:: https://img.shields.io/pypi/v/pandas-paddles\n   :target: https://pypi.org/project/pandas-paddles/\n   :alt: Latest version\n.. image:: https://img.shields.io/pypi/pyversions/pandas-paddles\n   :target: https://pypi.org/project/pandas-paddles/\n   :alt: Supported Python versions\n.. image:: https://img.shields.io/pypi/dm/pandas-paddles\n   :target: https://pypi.org/project/pandas-paddles/\n   :alt: PyPI downloads\n\nOverview\n--------\n\n- **Motivation**: Make chaining Pandas operations easier and bring\n  functionality to Pandas similar to Spark\'s `col()\n  <https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.col.html#pyspark.sql.functions.col>`_\n  function or referencing columns in R\'s `dplyr\n  <https://dplyr.tidyverse.org/articles/dplyr.html>`_.\n- **Install** from PyPI with ``pip install\n  pandas-paddles``. Pandas versions 1+ (``>=1,<3``) are supported.\n- **Documentation** can be found at `readthedocs\n  <https://pandas-paddles.readthedocs.io/en/latest/>`_.\n- **Source code** can be obtained from `GitHub <https://github.com/eikevons/pandas-paddles>`_.\n- `Changelog <Changelog.md>`_\n\nExample: Create new column and filter\n-------------------------------------\n\nInstead of writing "traditional" Pandas like this:\n\n.. code-block:: python\n\n    df_in = pd.DataFrame({"x": range(5)})\n    df = df_in.assign(y = df_in["x"] // 2)\n    df = df.loc[df["y"] <= 1]\n    df\n    #    x  y\n    # 0  0  0\n    # 1  1  0\n    # 2  2  1\n    # 3  3  1\n\nOne can write:\n\n.. code-block:: python\n\n    from pandas_paddles import DF\n    df = (df_in\n          .assign(y = DF["x"] // 2)\n          .loc[DF["y"] <= 1]\n         )\n\nThis is especially handy when re-iterating on data frame manipulations\ninteractively, e.g. in a notebook (just imagine you have to rename\n``df`` to ``df_out``).\n\nBut you can access all methods and attributes of the data frame from the\ncontext:\n\n.. code-block:: python\n\n    df = pd.DataFrame({\n        "X": range(5),\n        "y": ["1", "a", "c", "D", "e"],\n    })\n    df.loc[DF["y"]str.isupper() | DF["y"]str.isnumeric()]\n    #    X  y\n    # 0  0  1\n    # 3  3  D\n    df.loc[:, DF.columns.str.isupper()]\n    #    X\n    # 0  0\n    # 1  1\n    # 2  2\n    # 3  3\n    # 4  4\n\nYou can even use ``DF`` in the arguments to methods:\n\n.. code-block:: python\n\n    df = pd.DataFrame({\n        "x": range(5),\n        "y": range(2, 7),\n    })\n    df.assign(z = DF[\'x\'].clip(lower=2.2, upper=DF[\'y\'].median()))\n    #    x  y    z\n    # 0  0  2  2.2\n    # 1  1  3  2.2\n    # 2  2  4  2.2\n    # 3  3  5  3.0\n    # 4  4  6  4.0\n\nWhen working with ``~pd.Series`` the ``S`` object exists. It can be used\nsimilar to ``DF``:\n\n.. code-block:: python\n\n  s = pd.Series(range(5))\n  s[s < 3]\n  # 0    0\n  # 1    1\n  # 2    2\n  # dtype: int64\n\nSimilar projects for pandas\n===========================\n\n* `siuba <https://github.com/machow/siuba>`_\n\n  * (+) active\n  * (-) new API to learn\n\n* `pandas-ply <https://github.com/coursera/pandas-ply>`_\n\n  * (-) stale(?), last change 6 years ago\n  * (-) new API to learn\n  * (-) ``Symbol`` / ``pandas_ply.X`` works only with ``ply_*`` functions\n\n* `pandas-select <https://pandas-select.readthedocs.io/en/latest/reference/label_selection.html>`_\n\n  * (+) no explicite ``df`` necessary\n  * (-) new API to learn\n\n* `pandas-selectable <https://github.com/jseabold/pandas-selectable>`_\n\n  * (+) simple ``select`` accessor\n  * (-) usage inside chains clumsy (needs explicite ``df``):\n\n    .. code-block:: python\n\n       ((df\n         .select.A == \'a\')\n         .select.B == \'b\'\n       )\n\n  * (-) hard-coded ``str``, ``dt`` accessor methods\n  * (?) composable?\n\nDevelopment\n===========\n\nDevelopment is containerized with [Docker](https://www.docker.com/) to\nseparte from host systems and improve reproducability. No other\nprerequisites are needed on the host system.\n\n**Recommendation for Windows users:** install `WSL 2\n<https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_ (tested\non Ubuntu 20.04), and for containerized workflows, `Docker\nDesktop <https://www.docker.com/products/docker-desktop>`_ for Windows.\n\nThe **common tasks** are collected in ``Makefile`` (See ``make help`` for a\ncomplete list):\n\n- Run the unit tests: ``make test`` or ``make watch`` for continuously running\n  tests on code-changes.\n- Build the documentation: ``make docs``\n- **TODO**: Update the ``poetry.lock`` file: ``make lock``\n- Add a dependency:\n\n  1. Start a shell in a new container.\n  2. Add dependency with ``poetry add`` in the running container. This will update\n     ``poetry.lock`` automatically::\n\n        # 1. On the host system\n        % make shell\n        # 2. In the container instance:\n        I have no name!@7d0e85b3a303:/app$ poetry add --dev --lock falcon\n\n- Build the development image ``make devimage``\n  (Note: This should be done automatically for the targets.) \n',
+     'author': 'Eike von Seggern',
+     'author_email': 'eikevons@mailbox.org',
+     'maintainer': None,
+     'maintainer_email': None,
+     'url': 'https://github.com/eikevons/pandas-paddles.git',
+     'packages': packages,
+     'package_data': package_data,
+```
+
+### Comparing `pandas_paddles-1.3.3/PKG-INFO` & `pandas_paddles-1.3.4/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pandas-paddles
+-Version: 1.3.3
++Version: 1.3.4
+ Summary: Simple, composable selectors for loc[], iloc[], assign() and others for fluent-API style Pandas code.
+ Home-page: https://github.com/eikevons/pandas-paddles.git
+ License: MIT
+ Author: Eike von Seggern
+ Author-email: eikevons@mailbox.org
+ Requires-Python: >=3.7.0,<4.0.0
+ Classifier: Development Status :: 5 - Production/Stable
+@@ -72,15 +72,15 @@
+ 
+ - **Motivation**: Make chaining Pandas operations easier and bring
+   functionality to Pandas similar to Spark's `col()
+   <https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.col.html#pyspark.sql.functions.col>`_
+   function or referencing columns in R's `dplyr
+   <https://dplyr.tidyverse.org/articles/dplyr.html>`_.
+ - **Install** from PyPI with ``pip install
+-  pandas-paddles``. Pandas versions 1.0+ (``^1.0``) are supported.
++  pandas-paddles``. Pandas versions 1+ (``>=1,<3``) are supported.
+ - **Documentation** can be found at `readthedocs
+   <https://pandas-paddles.readthedocs.io/en/latest/>`_.
+ - **Source code** can be obtained from `GitHub <https://github.com/eikevons/pandas-paddles>`_.
+ - `Changelog <Changelog.md>`_
+ 
+ Example: Create new column and filter
+ -------------------------------------
+```
+

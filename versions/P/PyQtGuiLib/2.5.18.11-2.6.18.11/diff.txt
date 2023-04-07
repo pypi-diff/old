@@ -1,0 +1,2242 @@
+--- tmp/PyQtGuiLib-2.5.18.11.tar.gz
++++ tmp/PyQtGuiLib-2.6.18.11.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "PyQtGuiLib-2.5.18.11.tar", last modified: Thu Mar 23 06:05:22 2023, max compression
+│ +gzip compressed data, was "PyQtGuiLib-2.6.18.11.tar", last modified: Fri Apr  7 10:02:19 2023, max compression
+│   --- PyQtGuiLib-2.5.18.11.tar
+├── +++ PyQtGuiLib-2.6.18.11.tar
+│ ├── file list
+│ │ @@ -1,196 +1,226 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.778367 PyQtGuiLib-2.5.18.11/
+│ │ --rw-rw-rw-   0        0        0     1091 2022-12-10 10:29:38.000000 PyQtGuiLib-2.5.18.11/LICENSE.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.587646 PyQtGuiLib-2.5.18.11/Log/
+│ │ --rw-rw-rw-   0        0        0      107 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/Log/__init__.py
+│ │ --rw-rw-rw-   0        0        0     9032 2023-03-23 05:57:04.000000 PyQtGuiLib-2.5.18.11/Log/developmentLog.py
+│ │ --rw-rw-rw-   0        0        0    17763 2023-03-23 06:05:22.777367 PyQtGuiLib-2.5.18.11/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.588643 PyQtGuiLib-2.5.18.11/PyQtGuiLib/
+│ │ --rw-rw-rw-   0        0        0      106 2023-03-17 01:55:07.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.602980 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/
+│ │ --rw-rw-rw-   0        0        0      216 2023-03-17 10:17:57.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/__init__.py
+│ │ --rw-rw-rw-   0        0        0    11865 2023-03-22 04:02:50.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animation.py
+│ │ --rw-rw-rw-   0        0        0     1773 2023-03-22 00:58:38.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animationDrawType.py
+│ │ --rw-rw-rw-   0        0        0     9483 2023-03-22 04:16:04.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animationFactory.py
+│ │ --rw-rw-rw-   0        0        0     1636 2023-03-20 04:02:29.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animationLayout.py
+│ │ --rw-rw-rw-   0        0        0     2292 2023-03-15 01:17:54.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/customAniTest.py
+│ │ --rw-rw-rw-   0        0        0     3076 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/lmlmAni.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.613924 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/
+│ │ --rw-rw-rw-   0        0        0      540 2023-03-13 03:28:34.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5953 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/bubbleWidget.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.619063 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/
+│ │ --rw-rw-rw-   0        0        0      218 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4854 2023-02-13 10:30:41.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/combBox.py
+│ │ --rw-rw-rw-   0        0        0     8171 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/comboBox.py
+│ │ --rw-rw-rw-   0        0        0     4107 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/comboBox2.py
+│ │ --rw-rw-rw-   0        0        0     3886 2023-02-08 01:08:13.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/flowLayout.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.621058 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/lineedit/
+│ │ --rw-rw-rw-   0        0        0      170 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/lineedit/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3967 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/lineedit/dynamicTLine.py
+│ │ --rw-rw-rw-   0        0        0     5090 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/listWidget.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.623052 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/notice/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-08 01:08:13.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/notice/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4822 2023-02-10 11:02:17.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/notice/notice.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.627117 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/palettes/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/palettes/__init__.py
+│ │ --rw-rw-rw-   0        0        0     9818 2023-02-18 01:06:47.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/palettes/colorHsv.py
+│ │ --rw-rw-rw-   0        0        0     6728 2023-02-18 01:06:47.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/palettes/paletteFrame.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.633658 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/
+│ │ --rw-rw-rw-   0        0        0      244 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5602 2023-02-10 01:10:59.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/circularBar.py
+│ │ --rw-rw-rw-   0        0        0     3943 2023-02-10 01:10:59.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/gradientBar.py
+│ │ --rw-rw-rw-   0        0        0     4365 2023-02-10 01:10:59.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/loadBar.py
+│ │ --rw-rw-rw-   0        0        0     6734 2023-02-10 01:10:59.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/waterBar.py
+│ │ --rw-rw-rw-   0        0        0     5092 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/pullOver.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.636023 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/resolver/
+│ │ --rw-rw-rw-   0        0        0       59 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/resolver/__init__.py
+│ │ --rw-rw-rw-   0        0        0      674 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/resolver/controls.py
+│ │ --rw-rw-rw-   0        0        0     7628 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/rollWidget.py
+│ │ --rw-rw-rw-   0        0        0     8684 2023-03-07 03:04:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/slideShow.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.637021 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/slider/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-14 00:37:29.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/slider/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8623 2023-03-06 01:03:54.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/slider/slider.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.640013 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/switchButtons/
+│ │ --rw-rw-rw-   0        0        0       63 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/switchButtons/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4993 2023-02-23 01:29:46.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/switchButtons/swButton.py
+│ │ --rw-rw-rw-   0        0        0     2743 2023-03-06 05:54:08.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/toolBox.py
+│ │ --rw-rw-rw-   0        0        0     5588 2023-03-14 01:24:55.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/toolList.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.646917 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/
+│ │ --rw-rw-rw-   0        0        0    11338 2023-02-10 01:10:59.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/WidgetABC.py
+│ │ --rw-rw-rw-   0        0        0      260 2023-02-09 10:20:35.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3995 2023-02-10 07:29:38.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/borderlessMainWindow.py
+│ │ --rw-rw-rw-   0        0        0      303 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/borderlessWidget.py
+│ │ --rw-rw-rw-   0        0        0     4935 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/statusBar.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.650908 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/tets/
+│ │ --rw-rw-rw-   0        0        0      375 2023-02-27 10:18:30.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/tets/1.py
+│ │ --rw-rw-rw-   0        0        0     3504 2023-02-27 00:36:50.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/tets/2.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-24 00:57:42.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/tets/__init__.py
+│ │ --rw-rw-rw-   0        0        0    17840 2023-02-10 03:56:26.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/titleBar.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.656892 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.665867 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4997 2023-02-09 08:40:57.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qt.py
+│ │ --rw-rw-rw-   0        0        0     2672 2023-02-18 03:01:28.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtCore.py
+│ │ --rw-rw-rw-   0        0        0     3019 2023-02-18 05:34:36.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtGui.py
+│ │ --rw-rw-rw-   0        0        0      509 2023-02-09 08:33:46.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtSip.py
+│ │ --rw-rw-rw-   0        0        0      505 2023-02-13 08:07:57.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtUic.py
+│ │ --rw-rw-rw-   0        0        0     6996 2023-02-18 02:58:53.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtWidgets.py
+│ │ --rw-rw-rw-   0        0        0      632 2023-02-13 08:14:52.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/__init__.py
+│ │ --rw-rw-rw-   0        0        0     6403 2023-02-14 05:59:02.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/customStyle.py
+│ │ --rw-rw-rw-   0        0        0      262 2023-02-10 01:34:45.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/error.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.667862 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/py/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/py/__init__.py
+│ │ --rw-rw-rw-   0        0        0      103 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/py/common.py
+│ │ --rw-rw-rw-   0        0        0     3516 2023-02-13 08:24:26.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/utility.py
+│ │ --rw-rw-rw-   0        0        0      396 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/versions.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.669857 PyQtGuiLib-2.5.18.11/PyQtGuiLib/layoutDeformation/
+│ │ --rw-rw-rw-   0        0        0      106 2023-03-04 03:38:59.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/layoutDeformation/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4425 2023-03-07 08:03:39.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/layoutDeformation/test.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.674843 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/
+│ │ --rw-rw-rw-   0        0        0      234 2023-02-22 03:13:19.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.679958 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/
+│ │ --rw-rw-rw-   0        0        0      105 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7168 2023-02-24 00:57:42.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesigner.py
+│ │ --rw-rw-rw-   0        0        0     5062 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesignerUI.py
+│ │ --rw-rw-rw-   0        0        0     1237 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/controlConfig.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.681953 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/buttons/
+│ │ --rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/buttons/__init__.py
+│ │ --rw-rw-rw-   0        0        0      620 2023-02-01 01:34:23.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/buttons/buttonStyle.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.687937 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/
+│ │ --rw-rw-rw-   0        0        0      106 2023-02-20 02:36:19.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/__init__.py
+│ │ --rw-rw-rw-   0        0        0    26952 2023-02-23 01:15:37.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/component.py
+│ │ --rw-rw-rw-   0        0        0     8822 2023-03-13 01:50:58.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/controlType.py
+│ │ --rw-rw-rw-   0        0        0    11557 2023-02-23 09:01:24.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/styleLinker.py
+│ │ --rw-rw-rw-   0        0        0     1444 2023-02-22 03:17:40.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/styleLinkerUi.py
+│ │ --rw-rw-rw-   0        0        0    10615 2023-02-09 08:32:36.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/skinABC.py
+│ │ --rw-rw-rw-   0        0        0     8083 2023-03-22 05:39:15.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/styleAnalysis.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.690929 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter/
+│ │ --rw-rw-rw-   0        0        0      107 2023-03-18 07:49:47.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter/__init__.py
+│ │ --rw-rw-rw-   0        0        0     6774 2023-03-18 09:08:58.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter/graph.py
+│ │ --rw-rw-rw-   0        0        0     1071 2023-03-18 10:02:50.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter/superPainter.py
+│ │ --rw-rw-rw-   0        0        0    17854 2023-03-10 06:22:00.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.595625 PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/
+│ │ --rw-rw-rw-   0        0        0    17763 2023-03-23 06:05:22.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     5339 2023-03-23 06:05:22.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-23 06:05:22.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       33 2023-03-23 06:05:22.000000 PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0    17333 2023-03-23 03:36:40.000000 PyQtGuiLib-2.5.18.11/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.698821 PyQtGuiLib-2.5.18.11/abandonCase/
+│ │ --rw-rw-rw-   0        0        0      108 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.703809 PyQtGuiLib-2.5.18.11/abandonCase/acrylic/
+│ │ --rw-rw-rw-   0        0        0       37 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/acrylic/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1428 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/acrylic/acrylicWidget.py
+│ │ --rw-rw-rw-   0        0        0     1550 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/acrylic/cstruct.py
+│ │ --rw-rw-rw-   0        0        0     2183 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/acrylic/windowEffect.py
+│ │ --rw-rw-rw-   0        0        0     9981 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/bubbleWidget.py
+│ │ --rw-rw-rw-   0        0        0     3620 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/bubbleWidget_case.py
+│ │ --rw-rw-rw-   0        0        0     1411 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/nodeBar.py
+│ │ --rw-rw-rw-   0        0        0     9873 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/slideShow.py
+│ │ --rw-rw-rw-   0        0        0     7801 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/slideShow2.py
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/spaceWidget.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.714559 PyQtGuiLib-2.5.18.11/abandonCase/widgets/
+│ │ --rw-rw-rw-   0        0        0      110 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1389 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessFrame.py
+│ │ --rw-rw-rw-   0        0        0     1962 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessMainWindow.py
+│ │ --rw-rw-rw-   0        0        0     1441 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessStackedWidget.py
+│ │ --rw-rw-rw-   0        0        0     1402 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessWidget.py
+│ │ --rw-rw-rw-   0        0        0    10095 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessWidgetABC.py
+│ │ --rw-rw-rw-   0        0        0     5034 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/statusBar.py
+│ │ --rw-rw-rw-   0        0        0    17577 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/abandonCase/widgets/titleBar.py
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-23 06:05:22.778367 PyQtGuiLib-2.5.18.11/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      744 2023-03-23 05:57:04.000000 PyQtGuiLib-2.5.18.11/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.746779 PyQtGuiLib-2.5.18.11/tests/
+│ │ --rw-rw-rw-   0        0        0      107 2023-03-06 03:09:41.000000 PyQtGuiLib-2.5.18.11/tests/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.760742 PyQtGuiLib-2.5.18.11/tests/test_Animation/
+│ │ --rw-rw-rw-   0        0        0      606 2023-03-15 09:52:36.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7463 2023-03-22 03:35:43.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/eg1.py
+│ │ --rw-rw-rw-   0        0        0     1654 2023-03-22 03:08:42.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_1.py
+│ │ --rw-rw-rw-   0        0        0     1824 2023-03-23 01:34:23.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_10.py
+│ │ --rw-rw-rw-   0        0        0     1305 2023-03-22 03:11:18.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_2.py
+│ │ --rw-rw-rw-   0        0        0     2011 2023-03-22 03:15:34.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_3.py
+│ │ --rw-rw-rw-   0        0        0     1276 2023-03-22 03:27:48.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_4.py
+│ │ --rw-rw-rw-   0        0        0     1851 2023-03-23 01:16:56.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_5.py
+│ │ --rw-rw-rw-   0        0        0     1759 2023-03-22 03:27:13.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_6.py
+│ │ --rw-rw-rw-   0        0        0     2206 2023-03-23 01:21:04.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_7.py
+│ │ --rw-rw-rw-   0        0        0     2000 2023-03-23 01:21:04.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_8.py
+│ │ --rw-rw-rw-   0        0        0     1712 2023-03-23 01:21:04.000000 PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_9.py
+│ │ --rw-rw-rw-   0        0        0     1541 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_BubbleWidget.py
+│ │ --rw-rw-rw-   0        0        0     1592 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_Notice.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.771093 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/
+│ │ --rw-rw-rw-   0        0        0     1788 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2453 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg1.py
+│ │ --rw-rw-rw-   0        0        0     2306 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg2.py
+│ │ --rw-rw-rw-   0        0        0     1891 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg3.py
+│ │ --rw-rw-rw-   0        0        0     2110 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg4.py
+│ │ --rw-rw-rw-   0        0        0     2519 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg5.py
+│ │ --rw-rw-rw-   0        0        0     1881 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg6.py
+│ │ --rw-rw-rw-   0        0        0     2617 2023-03-22 05:45:33.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg7.py
+│ │ --rw-rw-rw-   0        0        0     2275 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis.py
+│ │ --rw-rw-rw-   0        0        0     2278 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_SlideShow.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.773256 PyQtGuiLib-2.5.18.11/tests/test_StyleLinker/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_StyleLinker/__init__.py
+│ │ --rw-rw-rw-   0        0        0      949 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_StyleLinker/eg1_QPushButton.py
+│ │ --rw-rw-rw-   0        0        0      807 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_StyleLinker/eg2_QLabel.py
+│ │ --rw-rw-rw-   0        0        0     2457 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_barset.py
+│ │ --rw-rw-rw-   0        0        0     1648 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_circularBar.py
+│ │ --rw-rw-rw-   0        0        0     1723 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_colorPalette.py
+│ │ --rw-rw-rw-   0        0        0     1042 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_comboBox.py
+│ │ --rw-rw-rw-   0        0        0      289 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_dumpStructure.py
+│ │ --rw-rw-rw-   0        0        0      830 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_dynamicTLine.py
+│ │ --rw-rw-rw-   0        0        0     1315 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_flowLayot.py
+│ │ --rw-rw-rw-   0        0        0     1788 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_gradientBar.py
+│ │ --rw-rw-rw-   0        0        0     1865 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_listWidget.py
+│ │ --rw-rw-rw-   0        0        0     1398 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_loadbar.py
+│ │ --rw-rw-rw-   0        0        0     2498 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_no_border.py
+│ │ --rw-rw-rw-   0        0        0     1365 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_no_border_pullOver.py
+│ │ --rw-rw-rw-   0        0        0     1022 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_pullOverWidget.py
+│ │ --rw-rw-rw-   0        0        0     1444 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_rollWidget.py
+│ │ --rw-rw-rw-   0        0        0     1666 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_slider.py
+│ │ --rw-rw-rw-   0        0        0     1721 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_statusBar.py
+│ │ --rw-rw-rw-   0        0        0     1014 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_styles.py
+│ │ --rw-rw-rw-   0        0        0     1122 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_switchButton.py
+│ │ --rw-rw-rw-   0        0        0     1138 2023-03-10 08:33:39.000000 PyQtGuiLib-2.5.18.11/tests/test_template.py
+│ │ --rw-rw-rw-   0        0        0     1356 2023-03-13 08:03:45.000000 PyQtGuiLib-2.5.18.11/tests/test_toolList.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-23 06:05:22.776370 PyQtGuiLib-2.5.18.11/tests/test_uic/
+│ │ --rw-rw-rw-   0        0        0      107 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_uic/__init__.py
+│ │ --rw-rw-rw-   0        0        0      377 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_uic/test_uic.py
+│ │ --rw-rw-rw-   0        0        0     1547 2023-03-06 00:27:58.000000 PyQtGuiLib-2.5.18.11/tests/test_waterBar.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.168904 PyQtGuiLib-2.6.18.11/
+│ │ +-rw-rw-rw-   0        0        0     1091 2022-12-10 10:29:38.000000 PyQtGuiLib-2.6.18.11/LICENSE.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.920568 PyQtGuiLib-2.6.18.11/Log/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/Log/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     9385 2023-04-07 09:59:18.000000 PyQtGuiLib-2.6.18.11/Log/developmentLog.py
+│ │ +-rw-rw-rw-   0        0        0    17825 2023-04-07 10:02:19.168904 PyQtGuiLib-2.6.18.11/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.922586 PyQtGuiLib-2.6.18.11/PyQtGuiLib/
+│ │ +-rw-rw-rw-   0        0        0      106 2023-04-03 06:49:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.936526 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/
+│ │ +-rw-rw-rw-   0        0        0      216 2023-03-17 10:17:57.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    21262 2023-03-28 10:15:34.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/animation.py
+│ │ +-rw-rw-rw-   0        0        0     2792 2023-03-28 09:06:54.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/animationDrawType.py
+│ │ +-rw-rw-rw-   0        0        0    11607 2023-03-27 02:05:15.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/animationFactory.py
+│ │ +-rw-rw-rw-   0        0        0     1636 2023-03-20 04:02:29.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/animationLayout.py
+│ │ +-rw-rw-rw-   0        0        0     2292 2023-03-15 01:17:54.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/customAniTest.py
+│ │ +-rw-rw-rw-   0        0        0     3076 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/lmlmAni.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.949490 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/
+│ │ +-rw-rw-rw-   0        0        0      540 2023-03-13 03:28:34.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     5953 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/bubbleWidget.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.954476 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/
+│ │ +-rw-rw-rw-   0        0        0      218 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4854 2023-02-13 10:30:41.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/combBox.py
+│ │ +-rw-rw-rw-   0        0        0     8171 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/comboBox.py
+│ │ +-rw-rw-rw-   0        0        0     4107 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/comboBox2.py
+│ │ +-rw-rw-rw-   0        0        0     3886 2023-02-08 01:08:13.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/flowLayout.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.956471 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/lineedit/
+│ │ +-rw-rw-rw-   0        0        0      170 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/lineedit/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3967 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/lineedit/dynamicTLine.py
+│ │ +-rw-rw-rw-   0        0        0     5090 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/listWidget.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.962456 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/logBrowser/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-27 09:33:07.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/logBrowser/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1823 2023-03-31 09:04:34.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/logBrowser/loadLogTh.py
+│ │ +-rw-rw-rw-   0        0        0     5112 2023-04-03 02:45:06.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/logBrowser/logBrowser.py
+│ │ +-rw-rw-rw-   0        0        0      554 2023-03-31 09:29:33.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/logBrowser/logSizeTh.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.964450 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/notice/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-08 01:08:13.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/notice/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4822 2023-02-10 11:02:17.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/notice/notice.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.967442 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/palettes/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/palettes/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     9818 2023-02-18 01:06:47.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/palettes/colorHsv.py
+│ │ +-rw-rw-rw-   0        0        0     6728 2023-02-18 01:06:47.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/palettes/paletteFrame.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.974424 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/
+│ │ +-rw-rw-rw-   0        0        0      244 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     5602 2023-02-10 01:10:59.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/circularBar.py
+│ │ +-rw-rw-rw-   0        0        0     3943 2023-02-10 01:10:59.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/gradientBar.py
+│ │ +-rw-rw-rw-   0        0        0     4365 2023-02-10 01:10:59.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/loadBar.py
+│ │ +-rw-rw-rw-   0        0        0     6734 2023-02-10 01:10:59.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/waterBar.py
+│ │ +-rw-rw-rw-   0        0        0     5092 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/pullOver.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.977416 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/resolver/
+│ │ +-rw-rw-rw-   0        0        0       59 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/resolver/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      674 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/resolver/controls.py
+│ │ +-rw-rw-rw-   0        0        0     7628 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/rollWidget.py
+│ │ +-rw-rw-rw-   0        0        0     8684 2023-03-07 03:04:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/slideShow.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.979410 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/slider/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-14 00:37:29.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/slider/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8623 2023-03-06 01:03:54.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/slider/slider.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.981405 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/switchButtons/
+│ │ +-rw-rw-rw-   0        0        0       63 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/switchButtons/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4993 2023-02-23 01:29:46.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/switchButtons/swButton.py
+│ │ +-rw-rw-rw-   0        0        0     2743 2023-03-06 05:54:08.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/toolBox.py
+│ │ +-rw-rw-rw-   0        0        0     5588 2023-03-14 01:24:55.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/toolList.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.990403 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/
+│ │ +-rw-rw-rw-   0        0        0    11338 2023-02-10 01:10:59.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/WidgetABC.py
+│ │ +-rw-rw-rw-   0        0        0      260 2023-02-09 10:20:35.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3995 2023-02-10 07:29:38.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/borderlessMainWindow.py
+│ │ +-rw-rw-rw-   0        0        0      303 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/borderlessWidget.py
+│ │ +-rw-rw-rw-   0        0        0     4935 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/statusBar.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.994388 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/tets/
+│ │ +-rw-rw-rw-   0        0        0      375 2023-02-27 10:18:30.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/tets/1.py
+│ │ +-rw-rw-rw-   0        0        0     3504 2023-02-27 00:36:50.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/tets/2.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-24 00:57:42.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/tets/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    17840 2023-02-10 03:56:26.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/titleBar.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.001369 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.011349 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4997 2023-02-09 08:40:57.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qt.py
+│ │ +-rw-rw-rw-   0        0        0     2672 2023-02-18 03:01:28.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtCore.py
+│ │ +-rw-rw-rw-   0        0        0     3019 2023-02-18 05:34:36.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtGui.py
+│ │ +-rw-rw-rw-   0        0        0      509 2023-02-09 08:33:46.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtSip.py
+│ │ +-rw-rw-rw-   0        0        0      505 2023-02-13 08:07:57.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtUic.py
+│ │ +-rw-rw-rw-   0        0        0     6996 2023-02-18 02:58:53.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtWidgets.py
+│ │ +-rw-rw-rw-   0        0        0      632 2023-02-13 08:14:52.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6403 2023-02-14 05:59:02.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/customStyle.py
+│ │ +-rw-rw-rw-   0        0        0      262 2023-02-10 01:34:45.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/error.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.013320 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/py/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/py/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      103 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/py/common.py
+│ │ +-rw-rw-rw-   0        0        0     3516 2023-02-13 08:24:26.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/utility.py
+│ │ +-rw-rw-rw-   0        0        0      396 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/versions.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.016336 PyQtGuiLib-2.6.18.11/PyQtGuiLib/layoutDeformation/
+│ │ +-rw-rw-rw-   0        0        0      106 2023-03-04 03:38:59.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/layoutDeformation/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4425 2023-03-07 08:03:39.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/layoutDeformation/test.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.022297 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/
+│ │ +-rw-rw-rw-   0        0        0      302 2023-04-07 09:06:55.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.028280 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/
+│ │ +-rw-rw-rw-   0        0        0      105 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     7168 2023-02-24 00:57:42.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesigner.py
+│ │ +-rw-rw-rw-   0        0        0     5062 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesignerUI.py
+│ │ +-rw-rw-rw-   0        0        0     1237 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/controlConfig.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.031274 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/buttons/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/buttons/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      620 2023-02-01 01:34:23.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/buttons/buttonStyle.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.039276 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/
+│ │ +-rw-rw-rw-   0        0        0      106 2023-02-20 02:36:19.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    26952 2023-02-23 01:15:37.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/component.py
+│ │ +-rw-rw-rw-   0        0        0     8822 2023-03-13 01:50:58.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/controlType.py
+│ │ +-rw-rw-rw-   0        0        0    11557 2023-02-23 09:01:24.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/styleLinker.py
+│ │ +-rw-rw-rw-   0        0        0     1444 2023-02-22 03:17:40.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/styleLinkerUi.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.042243 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-29 02:48:22.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.046232 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/drak/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-29 02:48:22.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/drak/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      187 2023-03-29 08:26:42.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/drak/config.py
+│ │ +-rw-rw-rw-   0        0        0    11537 2023-03-30 09:13:08.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/drak/qssDrak.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.050222 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/image/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-29 03:26:49.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/image/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    29060 2023-03-30 10:20:11.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/image/image_rc.py
+│ │ +-rw-rw-rw-   0        0        0      300 2023-03-30 10:19:06.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/image/qssFile.py
+│ │ +-rw-rw-rw-   0        0        0    20518 2023-03-30 10:20:35.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/qssFile.py
+│ │ +-rw-rw-rw-   0        0        0     6314 2023-03-30 09:24:42.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/qssFile/test.py
+│ │ +-rw-rw-rw-   0        0        0    10615 2023-02-09 08:32:36.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/skinABC.py
+│ │ +-rw-rw-rw-   0        0        0     8426 2023-04-06 03:40:05.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/styleAnalysis.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.053230 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/superPainter/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-18 07:49:47.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/superPainter/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    10866 2023-04-07 08:05:01.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/superPainter/superPainter.py
+│ │ +-rw-rw-rw-   0        0        0    17854 2023-03-10 06:22:00.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/superPainter.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:18.927550 PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/
+│ │ +-rw-rw-rw-   0        0        0    17825 2023-04-07 10:02:18.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     6182 2023-04-07 10:02:18.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 10:02:18.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       33 2023-04-07 10:02:18.000000 PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0    17395 2023-03-27 01:38:52.000000 PyQtGuiLib-2.6.18.11/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.062215 PyQtGuiLib-2.6.18.11/abandonCase/
+│ │ +-rw-rw-rw-   0        0        0      108 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.067176 PyQtGuiLib-2.6.18.11/abandonCase/acrylic/
+│ │ +-rw-rw-rw-   0        0        0       37 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/acrylic/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1428 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/acrylic/acrylicWidget.py
+│ │ +-rw-rw-rw-   0        0        0     1550 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/acrylic/cstruct.py
+│ │ +-rw-rw-rw-   0        0        0     2183 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/acrylic/windowEffect.py
+│ │ +-rw-rw-rw-   0        0        0     9981 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/bubbleWidget.py
+│ │ +-rw-rw-rw-   0        0        0     3620 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/bubbleWidget_case.py
+│ │ +-rw-rw-rw-   0        0        0     1411 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/nodeBar.py
+│ │ +-rw-rw-rw-   0        0        0     9873 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/slideShow.py
+│ │ +-rw-rw-rw-   0        0        0     7801 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/slideShow2.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/spaceWidget.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.078147 PyQtGuiLib-2.6.18.11/abandonCase/widgets/
+│ │ +-rw-rw-rw-   0        0        0      110 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1389 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessFrame.py
+│ │ +-rw-rw-rw-   0        0        0     1962 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessMainWindow.py
+│ │ +-rw-rw-rw-   0        0        0     1441 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessStackedWidget.py
+│ │ +-rw-rw-rw-   0        0        0     1402 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessWidget.py
+│ │ +-rw-rw-rw-   0        0        0    10095 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessWidgetABC.py
+│ │ +-rw-rw-rw-   0        0        0     5034 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/statusBar.py
+│ │ +-rw-rw-rw-   0        0        0    17577 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/abandonCase/widgets/titleBar.py
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 10:02:19.168904 PyQtGuiLib-2.6.18.11/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      744 2023-04-07 09:56:06.000000 PyQtGuiLib-2.6.18.11/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.117042 PyQtGuiLib-2.6.18.11/tests/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-06 03:09:41.000000 PyQtGuiLib-2.6.18.11/tests/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.135994 PyQtGuiLib-2.6.18.11/tests/test_Animation/
+│ │ +-rw-rw-rw-   0        0        0     1994 2023-04-05 10:25:59.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/1.py
+│ │ +-rw-rw-rw-   0        0        0      606 2023-03-15 09:52:36.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3285 2023-03-24 08:50:00.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/eg1.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.137988 PyQtGuiLib-2.6.18.11/tests/test_Animation/test_ani/
+│ │ +-rw-rw-rw-   0        0        0     6145 2023-04-05 10:32:05.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/test_ani/1.py
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-27 05:53:58.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/test_ani/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1654 2023-03-28 08:45:42.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_1.py
+│ │ +-rw-rw-rw-   0        0        0     1824 2023-03-28 08:48:45.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_10.py
+│ │ +-rw-rw-rw-   0        0        0     1305 2023-03-28 08:45:46.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_2.py
+│ │ +-rw-rw-rw-   0        0        0     2011 2023-03-28 08:45:51.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_3.py
+│ │ +-rw-rw-rw-   0        0        0     1276 2023-03-28 08:45:56.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_4.py
+│ │ +-rw-rw-rw-   0        0        0     1851 2023-03-28 08:46:24.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_5.py
+│ │ +-rw-rw-rw-   0        0        0     1759 2023-03-28 08:46:54.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_6.py
+│ │ +-rw-rw-rw-   0        0        0     2206 2023-03-28 08:47:16.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_7.py
+│ │ +-rw-rw-rw-   0        0        0     2000 2023-03-28 08:47:46.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_8.py
+│ │ +-rw-rw-rw-   0        0        0     1712 2023-03-28 08:48:15.000000 PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_9.py
+│ │ +-rw-rw-rw-   0        0        0     1541 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_BubbleWidget.py
+│ │ +-rw-rw-rw-   0        0        0     1592 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_Notice.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.150951 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/
+│ │ +-rw-rw-rw-   0        0        0     1788 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2379 2023-04-06 02:24:28.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg1.py
+│ │ +-rw-rw-rw-   0        0        0     2306 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg2.py
+│ │ +-rw-rw-rw-   0        0        0     1891 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg3.py
+│ │ +-rw-rw-rw-   0        0        0     2110 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg4.py
+│ │ +-rw-rw-rw-   0        0        0     2519 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg5.py
+│ │ +-rw-rw-rw-   0        0        0     1881 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg6.py
+│ │ +-rw-rw-rw-   0        0        0     2617 2023-03-22 05:45:33.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg7.py
+│ │ +-rw-rw-rw-   0        0        0     2042 2023-04-06 03:41:23.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/test.py
+│ │ +-rw-rw-rw-   0        0        0     2275 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis.py
+│ │ +-rw-rw-rw-   0        0        0     2278 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_SlideShow.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.154941 PyQtGuiLib-2.6.18.11/tests/test_StyleLinker/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_StyleLinker/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      949 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_StyleLinker/eg1_QPushButton.py
+│ │ +-rw-rw-rw-   0        0        0      807 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_StyleLinker/eg2_QLabel.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.161924 PyQtGuiLib-2.6.18.11/tests/test_SuperPainter/
+│ │ +-rw-rw-rw-   0        0        0      106 2023-04-07 09:06:55.000000 PyQtGuiLib-2.6.18.11/tests/test_SuperPainter/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1568 2023-04-07 09:19:44.000000 PyQtGuiLib-2.6.18.11/tests/test_SuperPainter/eg1.py
+│ │ +-rw-rw-rw-   0        0        0     2125 2023-04-07 09:35:19.000000 PyQtGuiLib-2.6.18.11/tests/test_SuperPainter/eg2.py
+│ │ +-rw-rw-rw-   0        0        0     1648 2023-04-07 09:39:03.000000 PyQtGuiLib-2.6.18.11/tests/test_SuperPainter/eg3.py
+│ │ +-rw-rw-rw-   0        0        0     2372 2023-04-07 09:54:15.000000 PyQtGuiLib-2.6.18.11/tests/test_SuperPainter/eg4.py
+│ │ +-rw-rw-rw-   0        0        0     2457 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_barset.py
+│ │ +-rw-rw-rw-   0        0        0     1648 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_circularBar.py
+│ │ +-rw-rw-rw-   0        0        0     1723 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_colorPalette.py
+│ │ +-rw-rw-rw-   0        0        0     1042 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_comboBox.py
+│ │ +-rw-rw-rw-   0        0        0      289 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_dumpStructure.py
+│ │ +-rw-rw-rw-   0        0        0      830 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_dynamicTLine.py
+│ │ +-rw-rw-rw-   0        0        0     1315 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_flowLayot.py
+│ │ +-rw-rw-rw-   0        0        0     1788 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_gradientBar.py
+│ │ +-rw-rw-rw-   0        0        0     1865 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_listWidget.py
+│ │ +-rw-rw-rw-   0        0        0     1398 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_loadbar.py
+│ │ +-rw-rw-rw-   0        0        0     2498 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_no_border.py
+│ │ +-rw-rw-rw-   0        0        0     1365 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_no_border_pullOver.py
+│ │ +-rw-rw-rw-   0        0        0     1022 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_pullOverWidget.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.164939 PyQtGuiLib-2.6.18.11/tests/test_qssFile/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-29 06:12:59.000000 PyQtGuiLib-2.6.18.11/tests/test_qssFile/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      584 2023-04-04 06:18:57.000000 PyQtGuiLib-2.6.18.11/tests/test_qssFile/test.py
+│ │ +-rw-rw-rw-   0        0        0     1444 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_rollWidget.py
+│ │ +-rw-rw-rw-   0        0        0     1666 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_slider.py
+│ │ +-rw-rw-rw-   0        0        0     1721 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_statusBar.py
+│ │ +-rw-rw-rw-   0        0        0     1014 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_styles.py
+│ │ +-rw-rw-rw-   0        0        0     1122 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_switchButton.py
+│ │ +-rw-rw-rw-   0        0        0     1138 2023-03-10 08:33:39.000000 PyQtGuiLib-2.6.18.11/tests/test_template.py
+│ │ +-rw-rw-rw-   0        0        0     1356 2023-03-13 08:03:45.000000 PyQtGuiLib-2.6.18.11/tests/test_toolList.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 10:02:19.166932 PyQtGuiLib-2.6.18.11/tests/test_uic/
+│ │ +-rw-rw-rw-   0        0        0      107 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_uic/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      377 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_uic/test_uic.py
+│ │ +-rw-rw-rw-   0        0        0     1547 2023-03-06 00:27:58.000000 PyQtGuiLib-2.6.18.11/tests/test_waterBar.py
+│ │   --- PyQtGuiLib-2.5.18.11/LICENSE.txt
+│ ├── +++ PyQtGuiLib-2.6.18.11/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/Log/developmentLog.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/Log/developmentLog.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  # @file:developmentLog.py
+│ │  # @software:PyCharm
+│ │  '''
+│ │      开发日志文件
+│ │  '''
+│ │  
+│ │  
+│ │ -'''
+│ │ +r'''
+│ │  2022.12.13  0.0.1.4版本  气泡窗口已经基本实现,持续优化更新
+│ │  2022.12.13  0.0.1.5版本  重写了气泡窗口的部分实现代码
+│ │  2022.12.19  0.0.2.0版本
+│ │      --- 气泡窗口 优化了代码,修复了文字大小无法设置的BUG,以及文字位置的问题
+│ │      --- 新增无边框窗口 BorderlessWidget 类,导入方式 from PyQtGuiLib.core.widgets import BorderlessWidget
+│ │      --- 新增圆角窗口 RoundWidget 类,导入方式 from PyQtGuiLib.core.widgets import RoundWidget
+│ │      --- 靠边窗口功能完成(任意窗口都可以加上该功能),PullOver类 导入方式 from PyQtGuiLib.core.pullOver import PullOver
+│ │ @@ -149,14 +149,21 @@
+│ │          目前仅支持 QPushButton,QLabel,QLineEdit 控件
+│ │          
+│ │  2023.2.20 - 2023.3.23 [2.5.18.11]
+│ │      调整结构 将 abandonCasem目录,Log目录和tests目录移出项目
+│ │      新增ToolListWidget 控件(未完成)
+│ │      新增SuperPainter 超级画师(未完成) - 重构中
+│ │      新增Animation 动画框架(未完成) - 测试部分
+│ │ +
+│ │ +2023.3.24 - 2023.4.7
+│ │ +    - Animation 动画框架 已经快接近完成,目前大部分功能已经可用
+│ │ +    - 修改QSS解析器的已知BUG,并且在多线程时,是安全的
+│ │ +    - 新增 SuperPainter 超级画师类
+│ │ +        - 导入方法 from PyQtGuiLib.styles import SuperPainter
+│ │ +        - 教学案例在test\test_SuperPainter 目录下
+│ │  '''
+│ │  
+│ │  
+│ │  # -------------------------------
+│ │  '''
+│ │      暂时搁浅的任务
+│ │  1.新无边框窗口主窗口,(还没有设计完成,暂时先放下 2023.1.31)
+│ │   --- PyQtGuiLib-2.5.18.11/PKG-INFO
+│ ├── +++ PyQtGuiLib-2.6.18.11/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,24 +1,30 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: PyQtGuiLib
+│ │ -Version: 2.5.18.11
+│ │ +Version: 2.6.18.11
+│ │  Summary: Python version of the qt component library.
+│ │  Home-page: https://github.com/LX-sys/PyQtGuiLib
+│ │  Author: LX
+│ │  Author-email: lx984608061@163.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE.txt
+│ │  
+│ │  [TOC]
+│ │  
+│ │  # python-qt组件库
+│ │  
+│ │ +### 说明
+│ │ +
+│ │ +```
+│ │ +该项目,目前处于开发阶段
+│ │ +```
+│ │ +
+│ │  ### python版本需求
+│ │  
+│ │  ```
+│ │  3.xxx 以上
+│ │  ```
+│ │  
+│ │  ### python下qt支持的版本
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animationDrawType.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_gradientBar.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,83 +1,75 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/3/1715:33
+│ │ +# @time:2022/12/2710:59
+│ │  # @author:LX
+│ │ -# @file:animationDrawType.py
+│ │ +# @file:test_gradientBar.py
+│ │  # @software:PyCharm
+│ │ -
+│ │ -'''
+│ │ -    这个类为绘图动画的封装类型
+│ │ -'''
+│ │ -import typing
+│ │  from PyQtGuiLib.header import (
+│ │ +    PYQT_VERSIONS,
+│ │ +    sys,
+│ │ +    QApplication,
+│ │ +    QMainWindow,
+│ │ +    QThread,
+│ │ +    Signal,
+│ │      QColor,
+│ │ -    QRect
+│ │ +    QThread
+│ │  )
+│ │  
+│ │ -Any = typing.Any
+│ │ -'''
+│ │ -
+│ │ -后续这里的值需要改成float类型
+│ │ -'''
+│ │ -
+│ │ -# 值类型
+│ │ -class AniNumber:
+│ │ -    def __init__(self,n):
+│ │ -        self.__n = n
+│ │ -
+│ │ -    def setNumber(self,n):
+│ │ -        self.__n = n
+│ │ -
+│ │ -    def value(self)->int:
+│ │ -        return self.__n
+│ │ -
+│ │ -    # 这里表示任意类型
+│ │ -    def type(self) -> Any:
+│ │ -        return type(self.value())
+│ │ -
+│ │ +from PyQtGuiLib.core.progressBar import GradientBar
+│ │  
+│ │ -# 多值类型
+│ │ -class AniNumbers:
+│ │ -    def __init__(self,*args):
+│ │ -        self.__an = []
+│ │ -        if args:
+│ │ -            self.setNumbers(*args)
+│ │  
+│ │ -    def setNumbers(self,*args):
+│ │ -        for an in args:
+│ │ -            self.__an.append(AniNumber(an))
+│ │ +class DurationTimeThread(QThread):
+│ │ +    added = Signal(int)
+│ │ +    def __init__(self,*args,**kwargs):
+│ │ +        super().__init__(*args,**kwargs)
+│ │ +
+│ │ +
+│ │ +    def run(self) -> None:
+│ │ +        n=1
+│ │ +        while True:
+│ │ +            self.added.emit(n)
+│ │ +            n+=1
+│ │ +            self.msleep(80)
+│ │ +            if n == 100+1:
+│ │ +                break
+│ │  
+│ │ -    def type(self) -> list:
+│ │ -        return list
+│ │ -
+│ │ -    def numberObjs(self) -> list:
+│ │ -        return [n for n in self.__an]
+│ │ -
+│ │ -    def values(self) -> list:
+│ │ -        return [n.value() for n in self.__an]
+│ │ -
+│ │ -
+│ │ -# 颜色类型
+│ │ -class AniColor(AniNumbers):
+│ │ -    def __init__(self,r:int,g:int,b:int,a:int=255):
+│ │ -        if r < 0 or r >255 or g <0 or g>255 or b <0 or b>255 or b <0 or b >255\
+│ │ -            or a <0 or a > 255:
+│ │ -            raise Exception("The value ranges from 0 to 255!")
+│ │ -        super().__init__(r,g,b,a)
+│ │ -
+│ │ -    def type(self) -> QColor:
+│ │ -        return QColor
+│ │ -
+│ │ -    def values(self) -> QColor:
+│ │ -        return QColor(*super().values())
+│ │ -
+│ │ -
+│ │ -# 矩形类型
+│ │ -class AniRect(AniNumbers):
+│ │ -    def __init__(self,x:int,y:int,w:int,h:int):
+│ │ -        super().__init__(x,y,w,h)
+│ │ -
+│ │ -    def type(self) -> QRect:
+│ │ -        return QRect
+│ │ +'''
+│ │ +    线性渐变进度条 测试用例
+│ │ +'''
+│ │  
+│ │ -    def values(self) -> QRect:
+│ │ -        return QRect(*super().values())
+│ │ +class TestGradientBar(QMainWindow):
+│ │ +    def __init__(self,*args,**kwargs):
+│ │ +        super().__init__(*args,**kwargs)
+│ │ +        self.resize(800,500)
+│ │ +
+│ │ +        self.gbar = GradientBar(self)
+│ │ +        self.gbar.move(50,50)
+│ │ +        self.gbar.resize(500,10)
+│ │ +        self.gbar.setValue(0)
+│ │ +        self.gbar.setColorAts(
+│ │ +            [(0.2, QColor(170, 170, 255)), (0.4, QColor(170, 255, 127)), (0.6, QColor(85, 170, 127))]
+│ │ +        )
+│ │ +        # self.gbar.appendColor((0.5,QColor(85, 85, 127)))
+│ │ +        self.gbar.setRadius(3)
+│ │ +
+│ │ +        self.th = DurationTimeThread()
+│ │ +        self.th.added.connect(self.test)
+│ │ +        self.th.start()
+│ │ +
+│ │ +    def test(self,n):
+│ │ +        print(n)
+│ │ +        # if n > 20 and n <50:
+│ │ +        #     self.gbar.setRadius(2)
+│ │ +        # elif n>50:
+│ │ +        #     self.gbar.setRadius(5)
+│ │ +        self.gbar.setValue(n)
+│ │ +
+│ │ +
+│ │ +if __name__ == '__main__':
+│ │ +    app = QApplication(sys.argv)
+│ │ +    win = TestGradientBar()
+│ │ +    win.show()
+│ │ +
+│ │ +    if PYQT_VERSIONS in ["PyQt6", "PySide6"]:
+│ │ +        sys.exit(app.exec())
+│ │ +    else:
+│ │ +        sys.exit(app.exec_())
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animationFactory.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/animationFactory.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -5,22 +5,25 @@
+│ │      QObject,
+│ │      QColor,
+│ │      QRect,
+│ │      QPoint,
+│ │      QSize,
+│ │      pyqtProperty,
+│ │      Signal,
+│ │ +    QGraphicsDropShadowEffect,
+│ │ +    QGraphicsBlurEffect
+│ │  )
+│ │  from PyQtGuiLib.styles import QssStyleAnalysis
+│ │  from PyQtGuiLib.animation.animationDrawType import AniNumber
+│ │  '''
+│ │      QPropertyAnimation: you're trying to animate a non-existing property value of your QObject
+│ │      该警告出现mac下,部分win可能也会出现,可以忽略该警告
+│ │  '''
+│ │  
+│ │ +
+│ │  # 公用动画基类
+│ │  class PropertyAnimation(QPropertyAnimation):
+│ │      drawfinished = Signal()
+│ │  
+│ │      Parallel = 1
+│ │      Sequential = 2
+│ │      # 动画对象模式
+│ │ @@ -33,62 +36,79 @@
+│ │          super().__init__(parent)
+│ │  
+│ │          # 动画对象模式
+│ │          self.__ani_obj_mode = ani_obj_mode
+│ │  
+│ │          self.__all_ani_data = ani_data
+│ │  
+│ │ -        self.targetObj = ani_data.get("targetObj", None)
+│ │ -        self.propertyName = ani_data.get("propertyName", None)
+│ │ -        self.sv = ani_data.get("sv", None)
+│ │ -        self.atv = ani_data.get("atv", None)
+│ │ -        self.ev = ani_data.get("ev", None)
+│ │ -        self.call = ani_data.get("call", None)
+│ │ -        self.call_argc = ani_data.get("argc", None)
+│ │ -        self.selector = ani_data.get("selector", None)
+│ │ -        self.qssSuffix = ani_data.get("qss-suffix","px")
+│ │ -
+│ │ -        self.duration = ani_data.get("duration", self.duration())
+│ │ -        self.special = ani_data.get("special", self.special())
+│ │ -        self.loopCount = ani_data.get("loop", self.loopCount())
+│ │ -
+│ │ -        self.setTargetObject(self.targetObj)
+│ │ -        self.setDuration(self.duration)
+│ │ -        self.setSpecial(self.special)
+│ │ -        self.setLoopCount(self.loopCount)
+│ │ +        self.aniInit()
+│ │  
+│ │          # 保存绘图动画的开始对象
+│ │          self.__drawStartObj = self.sv
+│ │  
+│ │ -    def drawSv(self):
+│ │ -        return self.__drawStartObj
+│ │ -
+│ │      def allAniDatas(self)->dict:
+│ │          return self.__all_ani_data
+│ │  
+│ │ +    def aniInit(self):
+│ │ +        self.targetObj = self.allAniDatas().get("targetObj", None)
+│ │ +        self.propertyName = self.allAniDatas().get("propertyName", None)
+│ │ +        self.sv = self.allAniDatas().get("sv", None)
+│ │ +        self.atv = self.allAniDatas().get("atv", None)
+│ │ +        self.ev = self.allAniDatas().get("ev", None)
+│ │ +        self.call = self.allAniDatas().get("call", None)
+│ │ +        self.call_argc = self.allAniDatas().get("argc", None)
+│ │ +        self.selector = self.allAniDatas().get("selector", None)
+│ │ +        self.qssSuffix = self.allAniDatas().get("qss-suffix", "px")
+│ │ +
+│ │ +        special = self.allAniDatas().get("special", self.special())
+│ │ +        duration = self.allAniDatas().get("duration", self.duration())
+│ │ +        loopCount = self.allAniDatas().get("loop", self.loopCount())
+│ │ +
+│ │ +        self.setTargetObject(self.targetObj)
+│ │ +        self.setDuration(duration)
+│ │ +        self.setSpecial(special)
+│ │ +        self.setLoopCount(loopCount)
+│ │ +
+│ │ +    def drawSv(self):
+│ │ +        return self.__drawStartObj
+│ │ +
+│ │      def aniObjMode(self):
+│ │          return self.__ani_obj_mode
+│ │  
+│ │      # 设置动效
+│ │      def setSpecial(self,special):
+│ │          self.setEasingCurve(special)
+│ │  
+│ │      def special(self):
+│ │          return self.easingCurve()
+│ │  
+│ │      # 判断sv是不是this
+│ │ -    def isThis(self):
+│ │ +    def isThis(self) -> bool:
+│ │          if isinstance(self.sv,str) and self.sv.lower() == "this":
+│ │              return True
+│ │          return False
+│ │  
+│ │ +    # 判断是否开启特殊动画
+│ │ +    def isEffect(self) -> bool:
+│ │ +        return True if self.allAniDatas().get("isEffect",None) else False
+│ │ +
+│ │ +    # 返回备注信息
+│ │ +    def commentInfo(self) -> str:
+│ │ +        return self.allAniDatas().get("comment","")
+│ │ +
+│ │      # 刷新绘图动画
+│ │      def updateDraw(self):
+│ │          self.__parent.update()
+│ │  
+│ │ +    # 更新动画信息
+│ │ +    def updateAni(self,new_datas:dict):
+│ │ +        self.allAniDatas().update(new_datas)
+│ │ +        self.aniInit()
+│ │ +        self.createAni()
+│ │ +
+│ │      # 子类重写(默认模式)
+│ │      def createAni(self):
+│ │          self.setStartValue(self.sv)
+│ │          if self.atv:
+│ │              one_e = self.atv[0]
+│ │              if isinstance(one_e, tuple) or isinstance(one_e, list):
+│ │                  for step, value in self.atv:
+│ │ @@ -181,25 +201,59 @@
+│ │      def __init__(self,parent:QObject,ani_data:dict,ani_obj_mode="control"):
+│ │          super().__init__(parent,ani_data,ani_obj_mode)
+│ │  
+│ │          self.setPropertyName(self.propertyName)
+│ │          self.createAni()
+│ │  
+│ │      def setStartValue(self, value) -> None:
+│ │ -        if self.propertyName == b"geometry":
+│ │ -            value = self.targetObject().rect()
+│ │ -        elif self.propertyName == b"size":
+│ │ -            value = self.targetObject().size()
+│ │ -        elif self.propertyName == b"pos":
+│ │ -            value = self.targetObject().pos()
+│ │ -        elif self.propertyName == b"windowOpacity":
+│ │ -            value = self.targetObject().windowOpacity()
+│ │ +        if self.isThis():
+│ │ +            if self.propertyName == b"geometry":
+│ │ +                value = self.targetObject().rect()
+│ │ +            elif self.propertyName == b"size":
+│ │ +                value = self.targetObject().size()
+│ │ +            elif self.propertyName == b"pos":
+│ │ +                value = self.targetObject().pos()
+│ │ +            elif self.propertyName == b"windowOpacity":
+│ │ +                value = self.targetObject().windowOpacity()
+│ │          super().setStartValue(value)
+│ │  
+│ │  
+│ │ +# 普通控件的特殊效果动画 - 阴影动画
+│ │ +class ShadowAnimation(PropertyAnimation):
+│ │ +    def __init__(self,parent:QObject,ani_data:dict,ani_obj_mode="control"):
+│ │ +        super().__init__(parent,ani_data,ani_obj_mode)
+│ │ +
+│ │ +        if self.isEffect() is False:
+│ │ +            raise Exception("Special animation is not enabled,isEffect is False!")
+│ │ +        if self.targetObj.graphicsEffect() is None:
+│ │ +            self.__shadow = QGraphicsDropShadowEffect()
+│ │ +            self.targetObj.setGraphicsEffect(self.__shadow)
+│ │ +            self.__shadow.setOffset(0, 0)
+│ │ +        else:
+│ │ +            self.__shadow = self.targetObj.graphicsEffect()
+│ │ +        self.setPropertyName(self.propertyName)
+│ │ +        self.createAni()
+│ │ +
+│ │ +    def setStartValue(self, value) -> None:
+│ │ +        value = value.value()
+│ │ +        if isinstance(value,int):
+│ │ +            self.__shadow.setBlurRadius(value)
+│ │ +            super().setStartValue(value)
+│ │ +        elif isinstance(value,QColor):
+│ │ +            self.__shadow.setColor(value)
+│ │ +            super().setStartValue(value)
+│ │ +
+│ │ +    def updateCurrentValue(self, value: typing.Any) -> None:
+│ │ +        # print(value)
+│ │ +        if isinstance(value,int):
+│ │ +            print(value)
+│ │ +            self.__shadow.setBlurRadius(value)
+│ │ +        if isinstance(value,QColor):
+│ │ +            self.__shadow.setColor(value)
+│ │ +
+│ │  
+│ │  # 普通绘图 - 单值动画
+│ │  class AnimationDrawValue(PropertyAnimation):
+│ │      def __init__(self,parent:QObject,ani_data:dict,ani_obj_mode="control"):
+│ │          super().__init__(parent,ani_data,ani_obj_mode)
+│ │  
+│ │          self.setPropertyName(b"value")
+│ │ @@ -216,15 +270,14 @@
+│ │  
+│ │      def updateCurrentValue(self, value) -> None:
+│ │          if self.drawSv():
+│ │              self.drawSv().setNumber(value)
+│ │              self.updateDraw()
+│ │  
+│ │  
+│ │ -
+│ │  # 返回动画类型
+│ │  CreateAni = [AnimationControl,QSSPropertyAnimation,AnimationDrawValue]
+│ │  
+│ │  
+│ │  '''
+│ │      动画工厂
+│ │  '''
+│ │ @@ -254,14 +307,16 @@
+│ │          return self.parent(),self.aniData(),self.aniObjMode()
+│ │  
+│ │      # 返回动画的实例
+│ │      def createAni(self) -> CreateAni:
+│ │          if self.aniObjMode() == AnimationFactory.Control:
+│ │              if self.propertyName() in [b"geometry",b"size",b"pos",b"windowOpacity"]:
+│ │                  ani = AnimationControl(*self.argc())
+│ │ +            elif self.propertyName() == b"shadow":
+│ │ +                ani = ShadowAnimation(*self.argc())
+│ │              elif self.propertyName() and self.aniData().get("selector",None):  # 处理所有qss属性
+│ │                  ani = QSSPropertyAnimation(*self.argc())
+│ │              else:
+│ │                  raise Exception("There is no animation property,{}!".format(self.propertyName()))
+│ │          elif self.aniObjMode() == AnimationFactory.Draw:
+│ │              if self.propertyName() == b"value":
+│ │                  ani = AnimationDrawValue(*self.argc())
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/animationLayout.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/animationLayout.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/customAniTest.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/customAniTest.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/animation/lmlmAni.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/animation/lmlmAni.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/__init__.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/bubbleWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/bubbleWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/combBox.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/combBox.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/comboBox.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/comboBox.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/comboBox/comboBox2.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/comboBox/comboBox2.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/flowLayout.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/flowLayout.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/lineedit/dynamicTLine.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/lineedit/dynamicTLine.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/listWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/listWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/notice/notice.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/notice/notice.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/palettes/colorHsv.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/palettes/colorHsv.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/palettes/paletteFrame.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/palettes/paletteFrame.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/circularBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/circularBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/gradientBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/gradientBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/loadBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/loadBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/progressBar/waterBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/progressBar/waterBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/pullOver.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/pullOver.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/resolver/controls.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/resolver/controls.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/rollWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/rollWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/slideShow.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/slideShow.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/slider/slider.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/slider/slider.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/switchButtons/swButton.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/switchButtons/swButton.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/toolBox.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/toolBox.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/toolList.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/toolList.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/WidgetABC.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/WidgetABC.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/borderlessMainWindow.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/borderlessMainWindow.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/statusBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/statusBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/tets/2.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/tets/2.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/core/widgets/titleBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/core/widgets/titleBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qt.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qt.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtCore.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtCore.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtGui.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtGui.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/Qt/qtWidgets.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/Qt/qtWidgets.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/__init__.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/customStyle.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/customStyle.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/header/utility.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/header/utility.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/layoutDeformation/test.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/layoutDeformation/test.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesigner.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesigner.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesignerUI.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/builtStyleDesignerUI.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/builtStyleDesigner/controlConfig.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/builtStyleDesigner/controlConfig.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/buttons/buttonStyle.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/buttons/buttonStyle.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/component.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/component.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/controlType.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/controlType.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/styleLinker.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/styleLinker.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/linker/styleLinkerUi.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/linker/styleLinkerUi.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/skinABC.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/skinABC.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/styleAnalysis.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/styleAnalysis.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -9,16 +9,18 @@
+│ │      QSS 样式解析器
+│ │  '''
+│ │  from PyQtGuiLib.header import (
+│ │      SyntaxError,
+│ │      KeyError,
+│ │      QMutex
+│ │  )
+│ │ +import typing
+│ │  import re
+│ │  
+│ │ +Ang = typing.TypeVar("Any",str,int)
+│ │  
+│ │  def dictTostr(qss_dict)->str:
+│ │      combination = ""
+│ │      for selector, attribute in qss_dict.items():
+│ │          combination += selector + "{\n"
+│ │          for attrk, attrv in attribute.items():
+│ │              combination += "%s:%s;\n" % (attrk, attrv)
+│ │ @@ -27,21 +29,25 @@
+│ │  
+│ │  
+│ │  class Qss:
+│ │      def __init__(self,qss:str,qs=None,parent=None):
+│ │          self.__parent =parent
+│ │          self.__qs = qs
+│ │  
+│ │ -        self._qss_str = qss
+│ │ +        self._qss_str = self.uncomment(qss)
+│ │          self._qss_dict = dict()
+│ │          self._qss_header = ""
+│ │          self._qss_body = ""
+│ │  
+│ │          self.Init()
+│ │  
+│ │ +    # Uncomment information
+│ │ +    def uncomment(self,qss:str) -> str:
+│ │ +        return re.sub("/\*.*?\*/","",qss,flags=re.DOTALL)
+│ │ +
+│ │      def Init(self):
+│ │          header = re.findall(".*{", self._qss_str, re.DOTALL)
+│ │          if header:
+│ │              self._qss_header = header[0].replace("\n", "").replace("{", "").strip()
+│ │          else:
+│ │              raise SyntaxError("Syntax error, missing {")
+│ │  
+│ │ @@ -51,15 +57,17 @@
+│ │              self._qss_body = body[0].strip()
+│ │          self._qss_dict = {self.header(): self.bodyToDict()}
+│ │  
+│ │      def header(self)->str:
+│ │          return self._qss_header
+│ │  
+│ │      def headerSubdivision(self)->list:
+│ │ -        return self.header().split(",")
+│ │ +        if "," in self.header():
+│ │ +            return self.header().split(",")
+│ │ +        return self.header().split(" ")
+│ │  
+│ │      def body(self)->str:
+│ │          return self._qss_body
+│ │  
+│ │      def bodySubdivision(self)->list:
+│ │          bodysub_list = []
+│ │  
+│ │ @@ -74,38 +82,38 @@
+│ │              key,value = v.split(":",1)
+│ │              s_dict[key]=value.strip()
+│ │          return s_dict
+│ │  
+│ │      def toDict(self)->dict:
+│ │          return self._qss_dict
+│ │  
+│ │ -    def attr(self,key)->str:
+│ │ +    def attr(self,key:str)->str:
+│ │          if key in self.bodyToDict():
+│ │              return self.bodyToDict()[key]
+│ │          else:
+│ │             raise KeyError("Without this attribute,'%s'" % key)
+│ │  
+│ │ -    def updateAttr(self,key,value):
+│ │ +    def updateAttr(self,key:str,value:str):
+│ │          self._qss_dict[self.header()][key]=value
+│ │          self._qss_str = dictTostr(self._qss_dict)
+│ │          self.Init()
+│ │          if self.__parent:
+│ │              self.__qs.updateStyleSheet()
+│ │  
+│ │ -    def removeAttr(self,key):
+│ │ +    def removeAttr(self,key:str):
+│ │          if key in self._qss_dict[self.header()]:
+│ │              del self._qss_dict[self.header()][key]
+│ │              self._qss_str = dictTostr(self._qss_dict)
+│ │              self.Init()
+│ │              if self.__parent:
+│ │                  self.__qs.updateStyleSheet()
+│ │          else:
+│ │              raise TypeError("Without this attribute,'%s'"%key)
+│ │  
+│ │ -    def isAttr(self,key):
+│ │ +    def isAttr(self,key:str)->bool:
+│ │          if self._qss_dict[self.header()].get(key):
+│ │              return True
+│ │          return False
+│ │  
+│ │      def toStr(self)->str:
+│ │          return self._qss_str
+│ │  
+│ │ @@ -193,21 +201,21 @@
+│ │          self.__mappCoordinate(old_count,self.count())
+│ │          if self.__parent:
+│ │              self.__updateStyle(self.__parent)
+│ │  
+│ │      def appendQSSDict(self,qss_dict:dict):
+│ │          self.appendQSS(dictTostr(qss_dict))
+│ │  
+│ │ -    def selectorKey(self,key)->Qss:
+│ │ +    def selectorKey(self,key:str)->Qss:
+│ │          return self.selectorIndex(self._map_qss[key])
+│ │  
+│ │      def selectorIndex(self,i:int)->Qss:
+│ │          return self._qss[i]
+│ │  
+│ │ -    def selector(self,ang)->Qss:
+│ │ +    def selector(self,ang:Ang)->Qss:
+│ │          if isinstance(ang,int):
+│ │              return self.selectorIndex(ang)
+│ │          elif isinstance(ang,str):
+│ │              return self.selectorKey(ang)
+│ │          else:
+│ │              raise TypeError("Parameter error!")
+│ │  
+│ │ @@ -220,23 +228,23 @@
+│ │  
+│ │          # Rebidirectional mapping
+│ │          self.__mappCoordinate(0,self.count())
+│ │  
+│ │      def removeSelectorKey(self,key:str):
+│ │          self.removeSelectorIndex(self._map_qss[key])
+│ │  
+│ │ -    def removeSelector(self,ang):
+│ │ +    def removeSelector(self,ang:Ang):
+│ │          if isinstance(ang, int):
+│ │              return self.removeSelectorIndex(ang)
+│ │          elif isinstance(ang, str):
+│ │              return self.removeSelectorKey(ang)
+│ │          else:
+│ │              raise TypeError("Parameter error!")
+│ │  
+│ │ -    def isSelectKey(self,key):
+│ │ +    def isSelectKey(self,key:str):
+│ │          if self._map_qss.get(key,-1)>=0:
+│ │              return True
+│ │          return False
+│ │  
+│ │      def toDict(self)->dict:
+│ │          qss_dict = dict()
+│ │          for i in range(self.count()):
+│ │ @@ -246,21 +254,22 @@
+│ │      def header(self)->list:
+│ │          return list(self.toDict().keys())
+│ │  
+│ │      def toStr(self)->str:
+│ │          return dictTostr(self.toDict())
+│ │  
+│ │      def __updateStyle(self, parent):
+│ │ +        # Thread safety
+│ │          self.__mutex.lock()
+│ │          parent.setStyleSheet("")
+│ │          parent.setStyleSheet(self.toStr())
+│ │          parent.update()
+│ │          self.__mutex.unlock()
+│ │  
+│ │ -    # 更新样式
+│ │ +    # updata QSS
+│ │      def updateStyleSheet(self,ang=None,parent=None):
+│ │          if ang is None:
+│ │              ang = self._qss[0].header()
+│ │          if parent is None and self.__parent is None:
+│ │              raise TypeError("Cannot update without a parent class!")
+│ │          elif parent:
+│ │              pass
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter/superPainter.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_2.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,48 +1,57 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/3/1817:31
+│ │ +# @time:2023/3/2211:07
+│ │  # @author:LX
+│ │ -# @file:superPainter.py
+│ │ +# @file:tutorial_2.py
+│ │  # @software:PyCharm
+│ │ -
+│ │  from PyQtGuiLib.header import (
+│ │      QApplication,
+│ │      PYQT_VERSIONS,
+│ │      sys,
+│ │ -    QPainter
+│ │ +    QWidget,
+│ │ +    QPushButton,
+│ │ +    QRect,
+│ │ +    QPoint,
+│ │ +    QSize
+│ │  )
+│ │ -from PyQtGuiLib.styles.superPainter.graph import Rect
+│ │ -
+│ │ -
+│ │ -class SuperPainterABC:
+│ │ -    def __init__(self, parent: QWidget = None):
+│ │ -        self.__parent = None
+│ │ -
+│ │ -        self.__painter = QPainter()
+│ │ -
+│ │ -    def setParent(self,parent):
+│ │ -        self.__parent = parent
+│ │ -
+│ │ -    def parent(self):
+│ │ -        return self.__parent
+│ │ -
+│ │ -    def painter(self)->QPainter:
+│ │ -        return self.__painter
+│ │ -
+│ │ -    def begin(self,parent=None):
+│ │ -        if parent:
+│ │ -            self.painter().begin(parent)
+│ │ -        else:
+│ │ -            self.painter().begin(self.parent())
+│ │ -
+│ │ -    def end(self):
+│ │ -        self.painter().end()
+│ │ -
+│ │ -
+│ │ -class SuperPainter(SuperPainterABC):
+│ │ -    def __init__(self, parent: QWidget = None):
+│ │ -        super(SuperPainter, self).__init__(parent)
+│ │  
+│ │ +# 动画框架
+│ │ +from PyQtGuiLib.animation import Animation
+│ │  
+│ │ -    def drawRect(self,*args,**kwargs):
+│ │ -        obj = Rect(self.painter(),*args,**kwargs)
+│ │ -        obj.draw()
+│ │ +class Test(QWidget):
+│ │ +    def __init__(self,*args,**kwargs):
+│ │ +        super().__init__(*args,**kwargs)
+│ │ +        self.resize(600,600)
+│ │ +        '''
+│ │ +             Animation 动画框架 案例二,改变一个按钮的大小
+│ │ +        '''
+│ │ +
+│ │ +        self.btn = QPushButton("按钮",self)
+│ │ +        self.btn.move(50,50)
+│ │ +        self.btn.resize(100,60)
+│ │ +
+│ │ +        # 实例化动画类
+│ │ +        self.ani = Animation(self)
+│ │ +        # 设置动画时长
+│ │ +        self.ani.setDuration(2000) # 2秒
+│ │ +
+│ │ +        # 对按钮添加缩放动画
+│ │ +        self.ani.addAni({
+│ │ +            "targetObj": self.btn,
+│ │ +            "propertyName": b"size",
+│ │ +            "sv": self.btn.size(),
+│ │ +            "ev": QSize(150,100)
+│ │ +        })
+│ │ +        # 开始动画
+│ │ +        self.ani.start()
+│ │ +
+│ │ +
+│ │ +if __name__ == '__main__':
+│ │ +    app = QApplication(sys.argv)
+│ │ +
+│ │ +    win = Test()
+│ │ +    win.show()
+│ │ +
+│ │ +    if PYQT_VERSIONS in ["PyQt6","PySide6"]:
+│ │ +        sys.exit(app.exec())
+│ │ +    else:
+│ │ +        sys.exit(app.exec_())
+│ │ ├── encoding
+│ │ │ @@ -1 +1 @@
+│ │ │ -us-ascii
+│ │ │ +utf-8
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib/styles/superPainter.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib/styles/superPainter.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/PKG-INFO
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,24 +1,30 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: PyQtGuiLib
+│ │ -Version: 2.5.18.11
+│ │ +Version: 2.6.18.11
+│ │  Summary: Python version of the qt component library.
+│ │  Home-page: https://github.com/LX-sys/PyQtGuiLib
+│ │  Author: LX
+│ │  Author-email: lx984608061@163.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE.txt
+│ │  
+│ │  [TOC]
+│ │  
+│ │  # python-qt组件库
+│ │  
+│ │ +### 说明
+│ │ +
+│ │ +```
+│ │ +该项目,目前处于开发阶段
+│ │ +```
+│ │ +
+│ │  ### python版本需求
+│ │  
+│ │  ```
+│ │  3.xxx 以上
+│ │  ```
+│ │  
+│ │  ### python下qt支持的版本
+│ │   --- PyQtGuiLib-2.5.18.11/PyQtGuiLib.egg-info/SOURCES.txt
+│ ├── +++ PyQtGuiLib-2.6.18.11/PyQtGuiLib.egg-info/SOURCES.txt
+│ │┄ Files 12% similar despite different names
+│ │ @@ -26,14 +26,18 @@
+│ │  PyQtGuiLib/core/toolList.py
+│ │  PyQtGuiLib/core/comboBox/__init__.py
+│ │  PyQtGuiLib/core/comboBox/combBox.py
+│ │  PyQtGuiLib/core/comboBox/comboBox.py
+│ │  PyQtGuiLib/core/comboBox/comboBox2.py
+│ │  PyQtGuiLib/core/lineedit/__init__.py
+│ │  PyQtGuiLib/core/lineedit/dynamicTLine.py
+│ │ +PyQtGuiLib/core/logBrowser/__init__.py
+│ │ +PyQtGuiLib/core/logBrowser/loadLogTh.py
+│ │ +PyQtGuiLib/core/logBrowser/logBrowser.py
+│ │ +PyQtGuiLib/core/logBrowser/logSizeTh.py
+│ │  PyQtGuiLib/core/notice/__init__.py
+│ │  PyQtGuiLib/core/notice/notice.py
+│ │  PyQtGuiLib/core/palettes/__init__.py
+│ │  PyQtGuiLib/core/palettes/colorHsv.py
+│ │  PyQtGuiLib/core/palettes/paletteFrame.py
+│ │  PyQtGuiLib/core/progressBar/__init__.py
+│ │  PyQtGuiLib/core/progressBar/circularBar.py
+│ │ @@ -82,16 +86,24 @@
+│ │  PyQtGuiLib/styles/buttons/__init__.py
+│ │  PyQtGuiLib/styles/buttons/buttonStyle.py
+│ │  PyQtGuiLib/styles/linker/__init__.py
+│ │  PyQtGuiLib/styles/linker/component.py
+│ │  PyQtGuiLib/styles/linker/controlType.py
+│ │  PyQtGuiLib/styles/linker/styleLinker.py
+│ │  PyQtGuiLib/styles/linker/styleLinkerUi.py
+│ │ +PyQtGuiLib/styles/qssFile/__init__.py
+│ │ +PyQtGuiLib/styles/qssFile/qssFile.py
+│ │ +PyQtGuiLib/styles/qssFile/test.py
+│ │ +PyQtGuiLib/styles/qssFile/drak/__init__.py
+│ │ +PyQtGuiLib/styles/qssFile/drak/config.py
+│ │ +PyQtGuiLib/styles/qssFile/drak/qssDrak.py
+│ │ +PyQtGuiLib/styles/qssFile/image/__init__.py
+│ │ +PyQtGuiLib/styles/qssFile/image/image_rc.py
+│ │ +PyQtGuiLib/styles/qssFile/image/qssFile.py
+│ │  PyQtGuiLib/styles/superPainter/__init__.py
+│ │ -PyQtGuiLib/styles/superPainter/graph.py
+│ │  PyQtGuiLib/styles/superPainter/superPainter.py
+│ │  abandonCase/__init__.py
+│ │  abandonCase/bubbleWidget.py
+│ │  abandonCase/bubbleWidget_case.py
+│ │  abandonCase/nodeBar.py
+│ │  abandonCase/slideShow.py
+│ │  abandonCase/slideShow2.py
+│ │ @@ -130,32 +142,43 @@
+│ │  tests/test_slider.py
+│ │  tests/test_statusBar.py
+│ │  tests/test_styles.py
+│ │  tests/test_switchButton.py
+│ │  tests/test_template.py
+│ │  tests/test_toolList.py
+│ │  tests/test_waterBar.py
+│ │ +tests/test_Animation/1.py
+│ │  tests/test_Animation/__init__.py
+│ │  tests/test_Animation/eg1.py
+│ │  tests/test_Animation/tutorial_1.py
+│ │  tests/test_Animation/tutorial_10.py
+│ │  tests/test_Animation/tutorial_2.py
+│ │  tests/test_Animation/tutorial_3.py
+│ │  tests/test_Animation/tutorial_4.py
+│ │  tests/test_Animation/tutorial_5.py
+│ │  tests/test_Animation/tutorial_6.py
+│ │  tests/test_Animation/tutorial_7.py
+│ │  tests/test_Animation/tutorial_8.py
+│ │  tests/test_Animation/tutorial_9.py
+│ │ +tests/test_Animation/test_ani/1.py
+│ │ +tests/test_Animation/test_ani/__init__.py
+│ │  tests/test_QssStyleAnalysis/__init__.py
+│ │  tests/test_QssStyleAnalysis/eg1.py
+│ │  tests/test_QssStyleAnalysis/eg2.py
+│ │  tests/test_QssStyleAnalysis/eg3.py
+│ │  tests/test_QssStyleAnalysis/eg4.py
+│ │  tests/test_QssStyleAnalysis/eg5.py
+│ │  tests/test_QssStyleAnalysis/eg6.py
+│ │  tests/test_QssStyleAnalysis/eg7.py
+│ │ +tests/test_QssStyleAnalysis/test.py
+│ │  tests/test_StyleLinker/__init__.py
+│ │  tests/test_StyleLinker/eg1_QPushButton.py
+│ │  tests/test_StyleLinker/eg2_QLabel.py
+│ │ +tests/test_SuperPainter/__init__.py
+│ │ +tests/test_SuperPainter/eg1.py
+│ │ +tests/test_SuperPainter/eg2.py
+│ │ +tests/test_SuperPainter/eg3.py
+│ │ +tests/test_SuperPainter/eg4.py
+│ │ +tests/test_qssFile/__init__.py
+│ │ +tests/test_qssFile/test.py
+│ │  tests/test_uic/__init__.py
+│ │  tests/test_uic/test_uic.py
+│ │   --- PyQtGuiLib-2.5.18.11/README.md
+│ ├── +++ PyQtGuiLib-2.6.18.11/README.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,17 @@
+│ │  [TOC]
+│ │  
+│ │  # python-qt组件库
+│ │  
+│ │ +### 说明
+│ │ +
+│ │ +```
+│ │ +该项目,目前处于开发阶段
+│ │ +```
+│ │ +
+│ │  ### python版本需求
+│ │  
+│ │  ```
+│ │  3.xxx 以上
+│ │  ```
+│ │  
+│ │  ### python下qt支持的版本
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/acrylic/acrylicWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/acrylic/acrylicWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/acrylic/cstruct.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/acrylic/cstruct.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/acrylic/windowEffect.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/acrylic/windowEffect.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/bubbleWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/bubbleWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/bubbleWidget_case.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/bubbleWidget_case.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/nodeBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/nodeBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/slideShow.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/slideShow.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/slideShow2.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/slideShow2.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessFrame.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessFrame.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessMainWindow.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessMainWindow.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessStackedWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessStackedWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/borderlessWidgetABC.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/borderlessWidgetABC.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/statusBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/statusBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/abandonCase/widgets/titleBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/abandonCase/widgets/titleBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/setup.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -7,15 +7,15 @@
+│ │  from distutils.core import setup
+│ │  from setuptools import find_packages
+│ │  
+│ │  
+│ │  setup(
+│ │      name="PyQtGuiLib",
+│ │      packages =find_packages(),
+│ │ -    version="2.5.18.11",
+│ │ +    version="2.6.18.11",
+│ │      author="LX",
+│ │      author_email = "lx984608061@163.com",
+│ │      description = "Python version of the qt component library.",
+│ │      long_description=open('README.md', 'r',encoding="utf8").read(),
+│ │      long_description_content_type="text/markdown",
+│ │      url = "https://github.com/LX-sys/PyQtGuiLib",
+│ │      classifiers = [
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/__init__.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_1.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_1.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_10.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_10.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_2.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_5.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/3/2211:07
+│ │ +# @time:2023/3/2211:19
+│ │  # @author:LX
+│ │ -# @file:tutorial_2.py
+│ │ +# @file:tutorial_5.py
+│ │  # @software:PyCharm
+│ │  from PyQtGuiLib.header import (
+│ │      QApplication,
+│ │      PYQT_VERSIONS,
+│ │      sys,
+│ │      QWidget,
+│ │      QPushButton,
+│ │ @@ -18,33 +18,46 @@
+│ │  from PyQtGuiLib.animation import Animation
+│ │  
+│ │  class Test(QWidget):
+│ │      def __init__(self,*args,**kwargs):
+│ │          super().__init__(*args,**kwargs)
+│ │          self.resize(600,600)
+│ │          '''
+│ │ -             Animation 动画框架 案例二,改变一个按钮的大小
+│ │ +             Animation 动画框架 案例五,串行动画
+│ │ +             让一个按钮先移动完成之后,在变大,
+│ │ +             
+│ │ +             注意: 动作的执行顺序,与添加动作的顺序有关
+│ │          '''
+│ │  
+│ │          self.btn = QPushButton("按钮",self)
+│ │          self.btn.move(50,50)
+│ │          self.btn.resize(100,60)
+│ │  
+│ │          # 实例化动画类
+│ │          self.ani = Animation(self)
+│ │ +        # 关键设置(Animation.Sequential 表示串行动画)
+│ │ +        self.ani.setAniMode(Animation.Sequential) # Animation.Parallel 这个是默认设置,也就是并行动画
+│ │          # 设置动画时长
+│ │          self.ani.setDuration(2000) # 2秒
+│ │  
+│ │ +        # 再添加一个移动的动画
+│ │ +        self.ani.addAni({
+│ │ +            "targetObj": self.btn,
+│ │ +            "propertyName": b"pos",
+│ │ +            "sv": self.btn.pos(),
+│ │ +            "ev": QPoint(300, 100)
+│ │ +        })
+│ │          # 对按钮添加缩放动画
+│ │          self.ani.addAni({
+│ │              "targetObj": self.btn,
+│ │              "propertyName": b"size",
+│ │              "sv": self.btn.size(),
+│ │ -            "ev": QSize(150,100)
+│ │ +            "ev": QSize(150, 100)
+│ │          })
+│ │ +
+│ │          # 开始动画
+│ │          self.ani.start()
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      app = QApplication(sys.argv)
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_3.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_3.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_4.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_4.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_5.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_6.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/3/2211:19
+│ │ +# @time:2023/3/2211:23
+│ │  # @author:LX
+│ │ -# @file:tutorial_5.py
+│ │ +# @file:tutorial_6.py
+│ │  # @software:PyCharm
+│ │  from PyQtGuiLib.header import (
+│ │      QApplication,
+│ │      PYQT_VERSIONS,
+│ │      sys,
+│ │      QWidget,
+│ │      QPushButton,
+│ │ @@ -18,46 +18,41 @@
+│ │  from PyQtGuiLib.animation import Animation
+│ │  
+│ │  class Test(QWidget):
+│ │      def __init__(self,*args,**kwargs):
+│ │          super().__init__(*args,**kwargs)
+│ │          self.resize(600,600)
+│ │          '''
+│ │ -             Animation 动画框架 案例五,串行动画
+│ │ -             让一个按钮先移动完成之后,在变大,
+│ │ -             
+│ │ -             注意: 动作的执行顺序,与添加动作的顺序有关
+│ │ +             Animation 动画框架 案例六, "this" 值
+│ │ +             顾名思义this就是代表者自己,
+│ │ +             下面用一个按钮的缩放来演示
+│ │          '''
+│ │  
+│ │          self.btn = QPushButton("按钮",self)
+│ │          self.btn.move(50,50)
+│ │          self.btn.resize(100,60)
+│ │  
+│ │          # 实例化动画类
+│ │          self.ani = Animation(self)
+│ │ -        # 关键设置(Animation.Sequential 表示串行动画)
+│ │ -        self.ani.setAniMode(Animation.Sequential) # Animation.Parallel 这个是默认设置,也就是并行动画
+│ │          # 设置动画时长
+│ │          self.ani.setDuration(2000) # 2秒
+│ │  
+│ │ -        # 再添加一个移动的动画
+│ │ -        self.ani.addAni({
+│ │ -            "targetObj": self.btn,
+│ │ -            "propertyName": b"pos",
+│ │ -            "sv": self.btn.pos(),
+│ │ -            "ev": QPoint(300, 100)
+│ │ -        })
+│ │          # 对按钮添加缩放动画
+│ │ +        # self.ani.addAni({
+│ │ +        #     "targetObj": self.btn,
+│ │ +        #     "propertyName": b"size",
+│ │ +        #     "sv": self.btn.size(), # 这是之前案例中的 sv对应的value的写法
+│ │ +        #     "ev": QSize(150,100)
+│ │ +        # })
+│ │          self.ani.addAni({
+│ │              "targetObj": self.btn,
+│ │              "propertyName": b"size",
+│ │ -            "sv": self.btn.size(),
+│ │ -            "ev": QSize(150, 100)
+│ │ +            "sv": "this",  # 现在这里可以直接写成 this,大部分情况下,sv想表示自己当前的值的时候,就可以直接写成 this
+│ │ +            "ev": QSize(150,100)
+│ │          })
+│ │ -
+│ │          # 开始动画
+│ │          self.ani.start()
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      app = QApplication(sys.argv)
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_6.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg2.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,60 +1,84 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/3/2211:23
+│ │ +# @time:2023/2/918:26
+│ │  # @author:LX
+│ │ -# @file:tutorial_6.py
+│ │ -# @software:PyCharm
+│ │ +# @file:eg2.py
+│ │ +
+│ │ +
+│ │  from PyQtGuiLib.header import (
+│ │ -    QApplication,
+│ │      PYQT_VERSIONS,
+│ │ +    QApplication,
+│ │      sys,
+│ │      QWidget,
+│ │ +    qt,
+│ │      QPushButton,
+│ │ -    QRect,
+│ │ -    QPoint,
+│ │ -    QSize
+│ │ +    QLabel,
+│ │ +    Qt,
+│ │ +    QFrame,
+│ │ +    QStyleOption,
+│ │ +    QPainter,
+│ │ +    QStyle
+│ │  )
+│ │  
+│ │ -# 动画框架
+│ │ -from PyQtGuiLib.animation import Animation
+│ │ +from PyQtGuiLib.styles import QssStyleAnalysis
+│ │ +
+│ │  
+│ │  class Test(QWidget):
+│ │      def __init__(self,*args,**kwargs):
+│ │          super().__init__(*args,**kwargs)
+│ │          self.resize(600,600)
+│ │ +
+│ │ +
+│ │ +        self.setAttribute(Qt.WA_StyledBackground,True)
+│ │ +
+│ │ +        self.l = QLabel("测试标签",self)
+│ │ +        self.btn = QPushButton("测试按钮",self)
+│ │ +        self.btn.setObjectName("btn")
+│ │ +        self.btn2 = QPushButton("测试按钮2号",self)
+│ │ +        self.l.move(30, 30)
+│ │ +        self.btn.resize(150, 80)
+│ │ +        self.btn.move(80, 80)
+│ │ +        self.btn2.resize(100,60)
+│ │ +        self.btn2.move(250,80)
+│ │ +
+│ │          '''
+│ │ -             Animation 动画框架 案例六, "this" 值
+│ │ -             顾名思义this就是代表者自己,
+│ │ -             下面用一个按钮的缩放来演示
+│ │ +            解析 测试2
+│ │          '''
+│ │  
+│ │ -        self.btn = QPushButton("按钮",self)
+│ │ -        self.btn.move(50,50)
+│ │ -        self.btn.resize(100,60)
+│ │ -
+│ │ -        # 实例化动画类
+│ │ -        self.ani = Animation(self)
+│ │ -        # 设置动画时长
+│ │ -        self.ani.setDuration(2000) # 2秒
+│ │ -
+│ │ -        # 对按钮添加缩放动画
+│ │ -        # self.ani.addAni({
+│ │ -        #     "targetObj": self.btn,
+│ │ -        #     "propertyName": b"size",
+│ │ -        #     "sv": self.btn.size(), # 这是之前案例中的 sv对应的value的写法
+│ │ -        #     "ev": QSize(150,100)
+│ │ -        # })
+│ │ -        self.ani.addAni({
+│ │ -            "targetObj": self.btn,
+│ │ -            "propertyName": b"size",
+│ │ -            "sv": "this",  # 现在这里可以直接写成 this,大部分情况下,sv想表示自己当前的值的时候,就可以直接写成 this
+│ │ -            "ev": QSize(150,100)
+│ │ +        # 创建一个针对整个窗口的 QSS 解析器
+│ │ +        self.qss = QssStyleAnalysis(self)
+│ │ +        # 对窗口上所有按钮,标签设置样式
+│ │ +        self.qss.setQSS('''
+│ │ +        QPushButton{
+│ │ +        color: rgb(0, 255, 127);
+│ │ +        background-color:rgb(0, 170, 0);
+│ │ +        }
+│ │ +        QLabel{
+│ │ +        color: rgb(42, 55, 127);
+│ │ +        background-color:rgb(255, 170, 0);
+│ │ +        }
+│ │ +        ''')
+│ │ +
+│ │ +        print("-------------------------------")
+│ │ +        print(self.qss.selector("QPushButton").attr("color")) # 获取该选择器下面某个属性的值
+│ │ +        self.qss.selector("QPushButton").updateAttr("background-color","red") # 修改背景样式
+│ │ +        # self.qss.selector("QLabel").removeAttr("background-color") # 移除该标签的属性
+│ │ +        self.qss.removeSelector("QPushButton") # 移除该选择器的所有样式
+│ │ +
+│ │ +        print("--------")
+│ │ +        self.qss.appendQSSDict({
+│ │ +            "QPushButton":{
+│ │ +                "border":"2px solid red"
+│ │ +            }
+│ │          })
+│ │ -        # 开始动画
+│ │ -        self.ani.start()
+│ │ +        self.qss.appendQSS('''
+│ │ +        QPushButton:hover{
+│ │ +        border:2px solid blue;
+│ │ +        }
+│ │ +        ''')
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      app = QApplication(sys.argv)
+│ │  
+│ │      win = Test()
+│ │      win.show()
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_7.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_7.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_8.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_8.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Animation/tutorial_9.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Animation/tutorial_9.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_BubbleWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_BubbleWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_Notice.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_Notice.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/__init__.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg1.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg1.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -6,24 +6,18 @@
+│ │  
+│ │  
+│ │  from PyQtGuiLib.header import (
+│ │      PYQT_VERSIONS,
+│ │      QApplication,
+│ │      sys,
+│ │      QWidget,
+│ │ -    qt,
+│ │      QPushButton,
+│ │      QLabel,
+│ │      Qt,
+│ │ -    QFrame,
+│ │ -    QStyleOption,
+│ │ -    QPainter,
+│ │ -    QStyle
+│ │  )
+│ │ -
+│ │  from PyQtGuiLib.styles import QssStyleAnalysis
+│ │  
+│ │  
+│ │  class Test(QWidget):
+│ │      def __init__(self,*args,**kwargs):
+│ │          super().__init__(*args,**kwargs)
+│ │          self.resize(600,600)
+│ │ @@ -36,19 +30,17 @@
+│ │          self.btn.setObjectName("btn")
+│ │          self.btn2 = QPushButton("测试按钮2号",self)
+│ │          self.l.move(30, 30)
+│ │          self.btn.resize(150, 80)
+│ │          self.btn.move(80, 80)
+│ │          self.btn2.resize(100,60)
+│ │          self.btn2.move(250,80)
+│ │ -
+│ │          '''
+│ │              解析 测试1 
+│ │          '''
+│ │ -
+│ │          # 创建一个针对整个窗口的 QSS 解析器
+│ │          self.qss = QssStyleAnalysis(self)
+│ │          # 对窗口上所有按钮,标签设置样式
+│ │          self.qss.setQSS('''
+│ │          QPushButton{
+│ │          color: rgb(0, 255, 127);
+│ │          background-color:rgb(0, 170, 0);
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg2.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,84 +1,80 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/2/918:26
+│ │ +# @time:2023/2/818:14
+│ │  # @author:LX
+│ │ -# @file:eg2.py
+│ │ +# @file:test_QssStyleAnalysis.py
+│ │ +# @software:PyCharm
+│ │  
+│ │  
+│ │  from PyQtGuiLib.header import (
+│ │      PYQT_VERSIONS,
+│ │      QApplication,
+│ │      sys,
+│ │      QWidget,
+│ │      qt,
+│ │      QPushButton,
+│ │      QLabel,
+│ │      Qt,
+│ │ -    QFrame,
+│ │ -    QStyleOption,
+│ │ -    QPainter,
+│ │ -    QStyle
+│ │ +    QMainWindow,
+│ │ +    QPainterPath
+│ │  )
+│ │  
+│ │  from PyQtGuiLib.styles import QssStyleAnalysis
+│ │  
+│ │  
+│ │ -class Test(QWidget):
+│ │ +class Test(QMainWindow):
+│ │      def __init__(self,*args,**kwargs):
+│ │          super().__init__(*args,**kwargs)
+│ │          self.resize(600,600)
+│ │  
+│ │ -
+│ │ -        self.setAttribute(Qt.WA_StyledBackground,True)
+│ │ -
+│ │          self.l = QLabel("测试标签",self)
+│ │          self.btn = QPushButton("测试按钮",self)
+│ │ -        self.btn.setObjectName("btn")
+│ │ -        self.btn2 = QPushButton("测试按钮2号",self)
+│ │ +
+│ │ +        # QSS 解析器
+│ │ +        # self.qss = QssStyleAnalysis(self)
+│ │ +        # self.qss.setQSS('''
+│ │ +        # QPushButton{
+│ │ +        # color: rgb(0, 255, 127);
+│ │ +        # background-color:rgb(0, 170, 0);
+│ │ +        # }
+│ │ +        # QPushButton:hover{
+│ │ +        # }
+│ │ +        # ''')
+│ │ +        # self.qss.appendQSSDict({
+│ │ +        #     "QLabel":{
+│ │ +        #         "border":"2px solid yellow",
+│ │ +        #         "background-color":"rgb(150,20,200)",
+│ │ +        #     },
+│ │ +        #     "QLabel:hover": {
+│ │ +        #         "border": "2px solid blue",
+│ │ +        #         "color": "red",
+│ │ +        #     }
+│ │ +        # })
+│ │ +        # self.qss.selector("QPushButton").updateAttr("background-color", "rgb(255,0,0)")
+│ │ +        # # self.qss.selectorPoint("QPushButton.color")
+│ │ +
+│ │          self.l.move(30, 30)
+│ │ -        self.btn.resize(150, 80)
+│ │ -        self.btn.move(80, 80)
+│ │ -        self.btn2.resize(100,60)
+│ │ -        self.btn2.move(250,80)
+│ │ -
+│ │ -        '''
+│ │ -            解析 测试2
+│ │ -        '''
+│ │ +        self.btn.resize(150,80)
+│ │ +        self.btn.move(80,80)
+│ │  
+│ │          # 创建一个针对整个窗口的 QSS 解析器
+│ │          self.qss = QssStyleAnalysis(self)
+│ │          # 对窗口上所有按钮,标签设置样式
+│ │          self.qss.setQSS('''
+│ │ -        QPushButton{
+│ │ -        color: rgb(0, 255, 127);
+│ │ -        background-color:rgb(0, 170, 0);
+│ │ -        }
+│ │ -        QLabel{
+│ │ -        color: rgb(42, 55, 127);
+│ │ -        background-color:rgb(255, 170, 0);
+│ │ -        }
+│ │ -        ''')
+│ │ -
+│ │ -        print("-------------------------------")
+│ │ -        print(self.qss.selector("QPushButton").attr("color")) # 获取该选择器下面某个属性的值
+│ │ -        self.qss.selector("QPushButton").updateAttr("background-color","red") # 修改背景样式
+│ │ -        # self.qss.selector("QLabel").removeAttr("background-color") # 移除该标签的属性
+│ │ -        self.qss.removeSelector("QPushButton") # 移除该选择器的所有样式
+│ │ -
+│ │ -        print("--------")
+│ │ -        self.qss.appendQSSDict({
+│ │ -            "QPushButton":{
+│ │ -                "border":"2px solid red"
+│ │ -            }
+│ │ -        })
+│ │ -        self.qss.appendQSS('''
+│ │ -        QPushButton:hover{
+│ │ -        border:2px solid blue;
+│ │ -        }
+│ │ -        ''')
+│ │ +                QPushButton{
+│ │ +                color: rgb(0, 255, 127);
+│ │ +                background-color:rgb(0, 170, 0);
+│ │ +                }
+│ │ +                QLabel{
+│ │ +                color: rgb(42, 55, 127);
+│ │ +                background-color:rgb(255, 170, 0);
+│ │ +                }
+│ │ +                ''')
+│ │ +        self.qss.selector("QPushButton").updateAttr("background-color", "red")  #
+│ │ +        print(self.styleSheet())
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      app = QApplication(sys.argv)
+│ │  
+│ │      win = Test()
+│ │      win.show()
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg3.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg3.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg4.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg4.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg5.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg5.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg6.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg6.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis/eg7.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_QssStyleAnalysis/eg7.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_QssStyleAnalysis.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_no_border.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,85 +1,81 @@
+│ │  # -*- coding:utf-8 -*-
+│ │ -# @time:2023/2/818:14
+│ │ +# @time:2022/12/2710:59
+│ │  # @author:LX
+│ │ -# @file:test_QssStyleAnalysis.py
+│ │ +# @file:test_gradientBar.py
+│ │  # @software:PyCharm
+│ │ -
+│ │ -
+│ │  from PyQtGuiLib.header import (
+│ │      PYQT_VERSIONS,
+│ │ -    QApplication,
+│ │      sys,
+│ │ -    QWidget,
+│ │ -    qt,
+│ │ +    QApplication,
+│ │      QPushButton,
+│ │ -    QLabel,
+│ │ -    Qt,
+│ │ -    QMainWindow,
+│ │ -    QPainterPath
+│ │ +    qt,
+│ │ +    QPropertyAnimation,
+│ │ +    QColor,
+│ │ +    QGraphicsBlurEffect,
+│ │ +    QLabel
+│ │  )
+│ │  
+│ │ -from PyQtGuiLib.styles import QssStyleAnalysis
+│ │ -
+│ │ +from PyQtGuiLib.core.widgets import BorderlessWidget
+│ │ +'''
+│ │ +    无边框QWidget窗口 测试
+│ │ +'''
+│ │  
+│ │ -class Test(QMainWindow):
+│ │ +class TestNoBorder(BorderlessWidget):
+│ │      def __init__(self,*args,**kwargs):
+│ │          super().__init__(*args,**kwargs)
+│ │ -        self.resize(600,600)
+│ │ +        self.resize(500,500)
+│ │  
+│ │ -        self.l = QLabel("测试标签",self)
+│ │ -        self.btn = QPushButton("测试按钮",self)
+│ │ +        # self.setEnableGColor(True)
+│ │ +        self.setStyleSheet('''
+│ │ +        WidgetABC{
+│ │ +        qproperty-radius:10;
+│ │ +        qproperty-backgroundColor: rgba(240, 240, 240,255);
+│ │ +        /*qproperty-linearDirection:"LR";
+│ │ +        qproperty-linearColor:"rgba(142, 144, 69, 255) rgba(176, 184, 130, 255) rgba(130, 184, 130, 255)";
+│ │ +        qproperty-linear:"LR rgba(142, 144, 69, 255) rgba(176, 184, 130, 255) rgba(130, 184, 130, 255)";*/
+│ │ +        qproperty-border:"1 solid rgba(0, 0, 0, 255)";
+│ │ +        /*qproperty-ani:xx; 窗口动画*/
+│ │ +        }
+│ │ +        #     ''')
+│ │  
+│ │ -        # QSS 解析器
+│ │ -        # self.qss = QssStyleAnalysis(self)
+│ │ -        # self.qss.setQSS('''
+│ │ -        # QPushButton{
+│ │ -        # color: rgb(0, 255, 127);
+│ │ -        # background-color:rgb(0, 170, 0);
+│ │ -        # }
+│ │ -        # QPushButton:hover{
+│ │ -        # }
+│ │ -        # ''')
+│ │ -        # self.qss.appendQSSDict({
+│ │ -        #     "QLabel":{
+│ │ -        #         "border":"2px solid yellow",
+│ │ -        #         "background-color":"rgb(150,20,200)",
+│ │ -        #     },
+│ │ -        #     "QLabel:hover": {
+│ │ -        #         "border": "2px solid blue",
+│ │ -        #         "color": "red",
+│ │ -        #     }
+│ │ -        # })
+│ │ -        # self.qss.selector("QPushButton").updateAttr("background-color", "rgb(255,0,0)")
+│ │ -        # # self.qss.selectorPoint("QPushButton.color")
+│ │ -
+│ │ -        self.l.move(30, 30)
+│ │ -        self.btn.resize(150,80)
+│ │ -        self.btn.move(80,80)
+│ │ -
+│ │ -        # 创建一个针对整个窗口的 QSS 解析器
+│ │ -        self.qss = QssStyleAnalysis(self)
+│ │ -        # 对窗口上所有按钮,标签设置样式
+│ │ -        self.qss.setQSS('''
+│ │ -                QPushButton{
+│ │ -                color: rgb(0, 255, 127);
+│ │ -                background-color:rgb(0, 170, 0);
+│ │ -                }
+│ │ -                QLabel{
+│ │ -                color: rgb(42, 55, 127);
+│ │ -                background-color:rgb(255, 170, 0);
+│ │ -                }
+│ │ -                ''')
+│ │ -        self.qss.selector("QPushButton").updateAttr("background-color", "red")  #
+│ │ -        print(self.styleSheet())
+│ │  
+│ │  
+│ │ +        self.flag = False
+│ │ +        # self.btn = QPushButton("固定", self)
+│ │ +        # self.btn.resize(self.size())
+│ │ +        # self.btn.move(100, 100)
+│ │ +        # self.btn.clicked.connect(self.test)
+│ │ +
+│ │ +
+│ │ +    def test(self):
+│ │ +        if self.flag is False:
+│ │ +            self.btn.setText("解放")
+│ │ +            self.windowHandle().setFlags(self.windowFlags() | qt.WindowStaysOnTopHint)
+│ │ +            self.flag= True
+│ │ +
+│ │ +            self.ani = QPropertyAnimation(self, b"backgroundColor")
+│ │ +            self.ani.setDuration(4000)
+│ │ +            self.ani.setLoopCount(-1)
+│ │ +            self.ani.setStartValue(self.get_backgroundColor())
+│ │ +            self.ani.setKeyValueAt(0.4, QColor(200, 100, 45, 230))
+│ │ +            self.ani.setKeyValueAt(0.6, QColor(200, 50, 45, 200))
+│ │ +            self.ani.setKeyValueAt(0.8, QColor(200, 0, 45, 150))
+│ │ +            self.ani.setEndValue(self.get_backgroundColor())
+│ │ +            #
+│ │ +            self.ani.start()
+│ │ +        else:
+│ │ +            self.btn.setText("固定")
+│ │ +            self.windowHandle().setFlags(self.windowFlags() | qt.Widget)
+│ │ +            self.flag = False
+│ │ +        self.show()
+│ │ +        self.update()
+│ │ +
+│ │  if __name__ == '__main__':
+│ │      app = QApplication(sys.argv)
+│ │ -
+│ │ -    win = Test()
+│ │ +    win = TestNoBorder()
+│ │      win.show()
+│ │  
+│ │ -    if PYQT_VERSIONS in ["PyQt6","PySide6"]:
+│ │ +    if PYQT_VERSIONS in ["PyQt6", "PySide6"]:
+│ │          sys.exit(app.exec())
+│ │      else:
+│ │          sys.exit(app.exec_())
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_SlideShow.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_SlideShow.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_StyleLinker/eg1_QPushButton.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_StyleLinker/eg1_QPushButton.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_StyleLinker/eg2_QLabel.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_StyleLinker/eg2_QLabel.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_barset.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_barset.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_circularBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_circularBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_colorPalette.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_colorPalette.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_comboBox.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_comboBox.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_dynamicTLine.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_dynamicTLine.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_flowLayot.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_flowLayot.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_listWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_listWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_loadbar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_loadbar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_no_border_pullOver.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_no_border_pullOver.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_pullOverWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_pullOverWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_rollWidget.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_rollWidget.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_slider.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_slider.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_statusBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_statusBar.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_styles.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_styles.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_switchButton.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_switchButton.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_template.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_template.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_toolList.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_toolList.py
+│ │┄ Files identical despite different names
+│ │   --- PyQtGuiLib-2.5.18.11/tests/test_waterBar.py
+│ ├── +++ PyQtGuiLib-2.6.18.11/tests/test_waterBar.py
+│ │┄ Files identical despite different names

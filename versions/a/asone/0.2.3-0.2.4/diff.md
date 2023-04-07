@@ -1,0 +1,1048 @@
+# Comparing `tmp/asone-0.2.3-py3-none-any.whl.zip` & `tmp/asone-0.2.4-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,24 +1,24 @@
+-Zip file size: 316492 bytes, number of entries: 182
+--rw-rw-r--  2.0 unx     2091 b- defN 23-Mar-27 16:01 asone/__init__.py
+--rw-rw-r--  2.0 unx     7408 b- defN 23-Mar-29 09:43 asone/asone.py
+--rw-rw-r--  2.0 unx     2715 b- defN 23-Mar-29 07:21 asone/demo_detector.py
+--rw-rw-r--  2.0 unx     2159 b- defN 23-Mar-29 06:56 asone/demo_ocr.py
++Zip file size: 367347 bytes, number of entries: 212
++-rw-rw-r--  2.0 unx     2117 b- defN 23-Apr-06 10:46 asone/__init__.py
++-rw-rw-r--  2.0 unx     7408 b- defN 23-Apr-03 14:05 asone/asone.py
++-rw-rw-r--  2.0 unx     2715 b- defN 23-Apr-06 10:44 asone/demo_detector.py
++-rw-rw-r--  2.0 unx     2150 b- defN 23-Apr-06 10:46 asone/demo_ocr.py
+ -rw-rw-r--  2.0 unx     3139 b- defN 23-Mar-27 23:09 asone/demo_tracker.py
+--rw-rw-r--  2.0 unx      543 b- defN 23-Mar-27 16:01 asone/detectors/__init__.py
+--rw-rw-r--  2.0 unx     4187 b- defN 23-Mar-27 16:01 asone/detectors/detector.py
+--rw-rw-r--  2.0 unx       66 b- defN 23-Mar-27 16:01 asone/detectors/easyocr_detector/__init__.py
+--rw-rw-r--  2.0 unx     1902 b- defN 23-Mar-29 09:43 asone/detectors/easyocr_detector/text_detector.py
++-rw-rw-r--  2.0 unx      543 b- defN 23-Apr-03 14:05 asone/detectors/__init__.py
++-rw-rw-r--  2.0 unx     4234 b- defN 23-Apr-06 10:46 asone/detectors/detector.py
++-rw-rw-r--  2.0 unx       66 b- defN 23-Apr-03 14:05 asone/detectors/easyocr_detector/__init__.py
++-rw-rw-r--  2.0 unx     1902 b- defN 23-Apr-06 10:44 asone/detectors/easyocr_detector/text_detector.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/utils/__init__.py
+ -rw-rw-r--  2.0 unx      533 b- defN 23-Mar-10 13:35 asone/detectors/utils/cfg_path.py
+--rw-rw-r--  2.0 unx     1545 b- defN 23-Mar-27 16:01 asone/detectors/utils/coreml_utils.py
++-rw-rw-r--  2.0 unx     1545 b- defN 23-Apr-03 14:05 asone/detectors/utils/coreml_utils.py
+ -rw-rw-r--  2.0 unx     1478 b- defN 23-Mar-10 13:35 asone/detectors/utils/exp_name.py
+ -rw-rw-r--  2.0 unx     6694 b- defN 23-Mar-10 13:35 asone/detectors/utils/weights_path.py
+ -rw-rw-r--  2.0 unx       69 b- defN 23-Mar-10 13:35 asone/detectors/yolor/__init__.py
+--rw-rw-r--  2.0 unx     5180 b- defN 23-Mar-10 13:35 asone/detectors/yolor/yolor_detector.py
++-rw-rw-r--  2.0 unx     5315 b- defN 23-Apr-06 10:46 asone/detectors/yolor/yolor_detector.py
+ -rw-rw-r--  2.0 unx    14241 b- defN 23-Mar-10 13:35 asone/detectors/yolor/cfg/yolor_csp.cfg
+ -rw-rw-r--  2.0 unx    16338 b- defN 23-Mar-10 13:35 asone/detectors/yolor/cfg/yolor_csp_x.cfg
+ -rw-rw-r--  2.0 unx    18330 b- defN 23-Mar-10 13:35 asone/detectors/yolor/cfg/yolor_p6.cfg
+ -rw-rw-r--  2.0 unx        1 b- defN 23-Mar-10 13:35 asone/detectors/yolor/models/__init__.py
+ -rw-rw-r--  2.0 unx    38971 b- defN 23-Mar-10 13:35 asone/detectors/yolor/models/common.py
+ -rw-rw-r--  2.0 unx     2733 b- defN 23-Mar-10 13:35 asone/detectors/yolor/models/export.py
+ -rw-rw-r--  2.0 unx    36694 b- defN 23-Mar-10 13:35 asone/detectors/yolor/models/models.py
+@@ -33,26 +33,26 @@
+ -rw-rw-r--  2.0 unx     7443 b- defN 23-Mar-10 13:35 asone/detectors/yolor/utils/loss.py
+ -rw-rw-r--  2.0 unx     5137 b- defN 23-Mar-10 13:35 asone/detectors/yolor/utils/metrics.py
+ -rw-rw-r--  2.0 unx     2995 b- defN 23-Mar-10 13:35 asone/detectors/yolor/utils/parse_config.py
+ -rw-rw-r--  2.0 unx    15468 b- defN 23-Mar-10 13:35 asone/detectors/yolor/utils/plots.py
+ -rw-rw-r--  2.0 unx     9396 b- defN 23-Mar-10 13:35 asone/detectors/yolor/utils/torch_utils.py
+ -rw-rw-r--  2.0 unx     9267 b- defN 23-Mar-10 13:35 asone/detectors/yolor/utils/yolor_utils.py
+ -rw-rw-r--  2.0 unx       72 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/__init__.py
+--rw-rw-r--  2.0 unx     6197 b- defN 23-Mar-27 16:01 asone/detectors/yolov5/yolov5_detector.py
++-rw-rw-r--  2.0 unx     6323 b- defN 23-Apr-06 10:46 asone/detectors/yolov5/yolov5_detector.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/__init__.py
+ -rw-rw-r--  2.0 unx       64 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/models/__init__.py
+ -rw-rw-r--  2.0 unx    36615 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/models/common.py
+ -rw-rw-r--  2.0 unx     2340 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/models/experimental.py
+ -rw-rw-r--  2.0 unx    42725 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/models/general.py
+ -rw-rw-r--  2.0 unx    15923 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/models/yolo.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/utils/__init__.py
+ -rw-rw-r--  2.0 unx    15973 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/utils/torch_utils.py
+ -rw-rw-r--  2.0 unx     8854 b- defN 23-Mar-10 13:35 asone/detectors/yolov5/yolov5/utils/yolov5_utils.py
+ -rw-rw-r--  2.0 unx       72 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/__init__.py
+--rw-rw-r--  2.0 unx     5525 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6_detector.py
++-rw-rw-r--  2.0 unx     5640 b- defN 23-Apr-06 10:46 asone/detectors/yolov6/yolov6_detector.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/__init__.py
+ -rw-rw-r--  2.0 unx       85 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/assigners/__init__.py
+ -rw-rw-r--  2.0 unx     2372 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/assigners/anchor_generator.py
+ -rw-rw-r--  2.0 unx     3682 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/assigners/assigner_utils.py
+ -rw-rw-r--  2.0 unx     7099 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/assigners/atss_assigner.py
+ -rw-rw-r--  2.0 unx     9211 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/assigners/iou2d_calculator.py
+ -rw-rw-r--  2.0 unx     6143 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/assigners/tal_assigner.py
+@@ -69,29 +69,29 @@
+ -rw-rw-r--  2.0 unx     3951 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/models/yolo.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/utils/__init__.py
+ -rw-rw-r--  2.0 unx     1880 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/utils/events.py
+ -rw-rw-r--  2.0 unx     2674 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/utils/general.py
+ -rw-rw-r--  2.0 unx     3373 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/utils/torch_utils.py
+ -rw-rw-r--  2.0 unx     9628 b- defN 23-Mar-10 13:35 asone/detectors/yolov6/yolov6/utils/yolov6_utils.py
+ -rw-rw-r--  2.0 unx       72 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/__init__.py
+--rw-rw-r--  2.0 unx     4808 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7_detector.py
++-rw-rw-r--  2.0 unx     4932 b- defN 23-Apr-06 10:46 asone/detectors/yolov7/yolov7_detector.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/__init__.py
+ -rw-rw-r--  2.0 unx       64 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/models/__init__.py
+ -rw-rw-r--  2.0 unx    84188 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/models/common.py
+ -rw-rw-r--  2.0 unx     1603 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/models/experimental.py
+ -rw-rw-r--  2.0 unx    41743 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/models/yolo.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/utils/__init__.py
+ -rw-rw-r--  2.0 unx    15467 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/utils/torch_utils.py
+ -rw-rw-r--  2.0 unx     8208 b- defN 23-Mar-10 13:35 asone/detectors/yolov7/yolov7/utils/yolov7_utils.py
+ -rw-rw-r--  2.0 unx       72 b- defN 23-Mar-10 13:35 asone/detectors/yolov8/__init__.py
+--rw-rw-r--  2.0 unx     4173 b- defN 23-Mar-10 13:35 asone/detectors/yolov8/yolov8_detector.py
++-rw-rw-r--  2.0 unx     4306 b- defN 23-Apr-06 10:46 asone/detectors/yolov8/yolov8_detector.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/detectors/yolov8/utils/__init__.py
+ -rw-rw-r--  2.0 unx     1919 b- defN 23-Mar-10 13:35 asone/detectors/yolov8/utils/yolov8_utils.py
+ -rw-rw-r--  2.0 unx       69 b- defN 23-Mar-10 13:35 asone/detectors/yolox/__init__.py
+--rw-rw-r--  2.0 unx     6442 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox_detector.py
++-rw-rw-r--  2.0 unx     6573 b- defN 23-Apr-06 10:46 asone/detectors/yolox/yolox_detector.py
+ -rw-rw-r--  2.0 unx     4277 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox_utils.py
+ -rw-rw-r--  2.0 unx       95 b- defN 23-Mar-10 13:35 asone/detectors/yolox/exps/__init__.py
+ -rw-rw-r--  2.0 unx     1042 b- defN 23-Mar-10 13:35 asone/detectors/yolox/exps/yolov3.py
+ -rw-rw-r--  2.0 unx      377 b- defN 23-Mar-10 13:35 asone/detectors/yolox/exps/yolox_l.py
+ -rw-rw-r--  2.0 unx      379 b- defN 23-Mar-10 13:35 asone/detectors/yolox/exps/yolox_m.py
+ -rw-rw-r--  2.0 unx     1561 b- defN 23-Mar-10 13:35 asone/detectors/yolox/exps/yolox_nano.py
+ -rw-rw-r--  2.0 unx      379 b- defN 23-Mar-10 13:35 asone/detectors/yolox/exps/yolox_s.py
+@@ -122,24 +122,24 @@
+ -rw-rw-r--  2.0 unx     2073 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/ema.py
+ -rw-rw-r--  2.0 unx    12664 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/logger.py
+ -rw-rw-r--  2.0 unx     6551 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/lr_scheduler.py
+ -rw-rw-r--  2.0 unx     3256 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/metric.py
+ -rw-rw-r--  2.0 unx     5614 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/model_utils.py
+ -rw-rw-r--  2.0 unx     2675 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/setup_env.py
+ -rw-rw-r--  2.0 unx     3599 b- defN 23-Mar-10 13:35 asone/detectors/yolox/yolox/utils/visualize.py
+--rw-rw-r--  2.0 unx      182 b- defN 23-Mar-27 16:01 asone/recognizers/__init__.py
+--rw-rw-r--  2.0 unx      933 b- defN 23-Mar-27 16:01 asone/recognizers/recognizer.py
+--rw-rw-r--  2.0 unx       81 b- defN 23-Mar-27 16:01 asone/recognizers/easyocr_recognizer/__init__.py
+--rw-rw-r--  2.0 unx     1721 b- defN 23-Mar-29 09:43 asone/recognizers/easyocr_recognizer/easyocr_recognizer.py
+--rw-rw-r--  2.0 unx        0 b- defN 23-Mar-27 16:01 asone/recognizers/utils/__init__.py
+--rw-rw-r--  2.0 unx      196 b- defN 23-Mar-27 16:01 asone/recognizers/utils/recognizer_name.py
+--rw-rw-r--  2.0 unx      323 b- defN 23-Mar-27 16:01 asone/trackers/__init__.py
+--rw-rw-r--  2.0 unx     1030 b- defN 23-Mar-27 16:01 asone/trackers/tracker.py
++-rw-rw-r--  2.0 unx      182 b- defN 23-Apr-03 14:05 asone/recognizers/__init__.py
++-rw-rw-r--  2.0 unx      933 b- defN 23-Apr-03 14:05 asone/recognizers/recognizer.py
++-rw-rw-r--  2.0 unx       81 b- defN 23-Apr-03 14:05 asone/recognizers/easyocr_recognizer/__init__.py
++-rw-rw-r--  2.0 unx     1721 b- defN 23-Apr-06 10:44 asone/recognizers/easyocr_recognizer/easyocr_recognizer.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-03 14:05 asone/recognizers/utils/__init__.py
++-rw-rw-r--  2.0 unx      196 b- defN 23-Apr-03 14:05 asone/recognizers/utils/recognizer_name.py
++-rw-rw-r--  2.0 unx      458 b- defN 23-Apr-06 10:46 asone/trackers/__init__.py
++-rw-rw-r--  2.0 unx     1157 b- defN 23-Apr-06 10:46 asone/trackers/tracker.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/trackers/byte_track/__init__.py
+--rw-rw-r--  2.0 unx     2252 b- defN 23-Mar-28 06:30 asone/trackers/byte_track/bytetracker.py
++-rw-rw-r--  2.0 unx     2252 b- defN 23-Apr-03 09:59 asone/trackers/byte_track/bytetracker.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/trackers/byte_track/tracker/__init__.py
+ -rw-rw-r--  2.0 unx      950 b- defN 23-Mar-10 13:35 asone/trackers/byte_track/tracker/basetrack.py
+ -rw-rw-r--  2.0 unx    11950 b- defN 23-Mar-10 13:35 asone/trackers/byte_track/tracker/byte_tracker.py
+ -rw-rw-r--  2.0 unx     9547 b- defN 23-Mar-10 13:35 asone/trackers/byte_track/tracker/kalman_filter.py
+ -rw-rw-r--  2.0 unx     6208 b- defN 23-Mar-13 09:26 asone/trackers/byte_track/tracker/matching.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/__init__.py
+ -rw-rw-r--  2.0 unx     2208 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/deepsort.py
+@@ -158,27 +158,57 @@
+ -rw-rw-r--  2.0 unx     2843 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/iou_matching.py
+ -rw-rw-r--  2.0 unx     7787 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/kalman_filter.py
+ -rw-rw-r--  2.0 unx     7894 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/linear_assignment.py
+ -rw-rw-r--  2.0 unx     5469 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/nn_matching.py
+ -rw-rw-r--  2.0 unx     1914 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/preprocessing.py
+ -rw-rw-r--  2.0 unx     5063 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/track.py
+ -rw-rw-r--  2.0 unx     5605 b- defN 23-Mar-10 13:35 asone/trackers/deep_sort/tracker/sort/tracker.py
+--rw-rw-r--  2.0 unx        0 b- defN 23-Mar-27 16:01 asone/trackers/motpy/__init__.py
+--rw-rw-r--  2.0 unx     1907 b- defN 23-Mar-27 16:01 asone/trackers/motpy/motpy.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-03 14:05 asone/trackers/motpy/__init__.py
++-rw-rw-r--  2.0 unx     1844 b- defN 23-Apr-06 10:46 asone/trackers/motpy/motpy.py
+ -rw-rw-r--  2.0 unx        0 b- defN 23-Mar-10 13:35 asone/trackers/nor_fair/__init__.py
+ -rw-rw-r--  2.0 unx     1909 b- defN 23-Mar-13 12:04 asone/trackers/nor_fair/norfair.py
++-rw-rw-r--  2.0 unx       56 b- defN 23-Apr-06 10:46 asone/trackers/oc_sort/__init__.py
++-rw-rw-r--  2.0 unx     1026 b- defN 23-Apr-06 10:46 asone/trackers/oc_sort/ocsort.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-06 10:46 asone/trackers/oc_sort/tracker/__init__.py
++-rw-rw-r--  2.0 unx    14315 b- defN 23-Apr-06 10:46 asone/trackers/oc_sort/tracker/association.py
++-rw-rw-r--  2.0 unx    59022 b- defN 23-Apr-06 10:46 asone/trackers/oc_sort/tracker/kalmanfilter.py
++-rw-rw-r--  2.0 unx    13155 b- defN 23-Apr-06 10:46 asone/trackers/oc_sort/tracker/ocsort.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/__init__.py
++-rw-rw-r--  2.0 unx     1226 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/strongsort.py
++-rw-rw-r--  2.0 unx      510 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/__init__.py
++-rw-rw-r--  2.0 unx     5178 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/strong_sort.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/deep/__init__.py
++-rw-rw-r--  2.0 unx     4858 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/deep/reid_model_factory.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/__init__.py
++-rw-rw-r--  2.0 unx     1439 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/detection.py
++-rw-rw-r--  2.0 unx     2843 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/iou_matching.py
++-rw-rw-r--  2.0 unx     8114 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/kalman_filter.py
++-rw-rw-r--  2.0 unx     7624 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/linear_assignment.py
++-rw-rw-r--  2.0 unx     5770 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/nn_matching.py
++-rw-rw-r--  2.0 unx     1914 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/preprocessing.py
++-rw-rw-r--  2.0 unx    10653 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/track.py
++-rw-rw-r--  2.0 unx     7684 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/sort/tracker.py
++-rw-rw-r--  2.0 unx        0 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/__init__.py
++-rw-rw-r--  2.0 unx      316 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/asserts.py
++-rw-rw-r--  2.0 unx     1125 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/draw.py
++-rw-rw-r--  2.0 unx     3532 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/evaluation.py
++-rw-rw-r--  2.0 unx     4357 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/io.py
++-rw-rw-r--  2.0 unx    11762 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/json_logger.py
++-rw-rw-r--  2.0 unx      463 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/log.py
++-rw-rw-r--  2.0 unx     1078 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/parser.py
++-rw-rw-r--  2.0 unx      734 b- defN 23-Apr-06 10:46 asone/trackers/strong_sort/tracker/utils/tools.py
+ -rw-rw-r--  2.0 unx      430 b- defN 23-Mar-10 13:35 asone/utils/__init__.py
+ -rw-rw-r--  2.0 unx     1066 b- defN 23-Mar-10 13:35 asone/utils/classes.py
+ -rw-rw-r--  2.0 unx      697 b- defN 23-Mar-10 13:35 asone/utils/colors.py
+ -rw-rw-r--  2.0 unx      558 b- defN 23-Mar-10 13:35 asone/utils/counting.py
+ -rw-rw-r--  2.0 unx      358 b- defN 23-Mar-10 13:35 asone/utils/default_cfg.py
+ -rw-rw-r--  2.0 unx     4278 b- defN 23-Mar-10 13:35 asone/utils/download.py
+ -rw-rw-r--  2.0 unx     4941 b- defN 23-Mar-13 11:58 asone/utils/draw.py
+ -rw-rw-r--  2.0 unx      864 b- defN 23-Mar-10 13:35 asone/utils/ponits_conversion.py
+ -rw-rw-r--  2.0 unx      796 b- defN 23-Mar-10 13:35 asone/utils/temp_loader.py
+--rw-rw-r--  2.0 unx    35148 b- defN 23-Mar-29 10:07 asone-0.2.3.dist-info/LICENCE
+--rw-rw-r--  2.0 unx    12222 b- defN 23-Mar-29 10:07 asone-0.2.3.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 23-Mar-29 10:07 asone-0.2.3.dist-info/WHEEL
+--rw-rw-r--  2.0 unx       72 b- defN 23-Mar-29 10:07 asone-0.2.3.dist-info/dependency_links.txt
+--rw-rw-r--  2.0 unx        6 b- defN 23-Mar-29 10:07 asone-0.2.3.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx    17743 b- defN 23-Mar-29 10:07 asone-0.2.3.dist-info/RECORD
+-182 files, 1068174 bytes uncompressed, 287604 bytes compressed:  73.1%
++-rw-rw-r--  2.0 unx    35148 b- defN 23-Apr-07 10:05 asone-0.2.4.dist-info/LICENCE
++-rw-rw-r--  2.0 unx    12205 b- defN 23-Apr-07 10:05 asone-0.2.4.dist-info/METADATA
++-rw-rw-r--  2.0 unx       92 b- defN 23-Apr-07 10:05 asone-0.2.4.dist-info/WHEEL
++-rw-rw-r--  2.0 unx       72 b- defN 23-Apr-07 10:05 asone-0.2.4.dist-info/dependency_links.txt
++-rw-rw-r--  2.0 unx        6 b- defN 23-Apr-07 10:05 asone-0.2.4.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx    20895 b- defN 23-Apr-07 10:05 asone-0.2.4.dist-info/RECORD
++212 files, 1241090 bytes uncompressed, 333263 bytes compressed:  73.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -495,14 +495,104 @@
+ 
+ Filename: asone/trackers/nor_fair/__init__.py
+ Comment: 
+ 
+ Filename: asone/trackers/nor_fair/norfair.py
+ Comment: 
+ 
++Filename: asone/trackers/oc_sort/__init__.py
++Comment: 
++
++Filename: asone/trackers/oc_sort/ocsort.py
++Comment: 
++
++Filename: asone/trackers/oc_sort/tracker/__init__.py
++Comment: 
++
++Filename: asone/trackers/oc_sort/tracker/association.py
++Comment: 
++
++Filename: asone/trackers/oc_sort/tracker/kalmanfilter.py
++Comment: 
++
++Filename: asone/trackers/oc_sort/tracker/ocsort.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/__init__.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/strongsort.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/__init__.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/strong_sort.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/deep/__init__.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/deep/reid_model_factory.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/__init__.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/detection.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/iou_matching.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/kalman_filter.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/linear_assignment.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/nn_matching.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/preprocessing.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/track.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/sort/tracker.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/__init__.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/asserts.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/draw.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/evaluation.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/io.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/json_logger.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/log.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/parser.py
++Comment: 
++
++Filename: asone/trackers/strong_sort/tracker/utils/tools.py
++Comment: 
++
+ Filename: asone/utils/__init__.py
+ Comment: 
+ 
+ Filename: asone/utils/classes.py
+ Comment: 
+ 
+ Filename: asone/utils/colors.py
+@@ -522,26 +612,26 @@
+ 
+ Filename: asone/utils/ponits_conversion.py
+ Comment: 
+ 
+ Filename: asone/utils/temp_loader.py
+ Comment: 
+ 
+-Filename: asone-0.2.3.dist-info/LICENCE
++Filename: asone-0.2.4.dist-info/LICENCE
+ Comment: 
+ 
+-Filename: asone-0.2.3.dist-info/METADATA
++Filename: asone-0.2.4.dist-info/METADATA
+ Comment: 
+ 
+-Filename: asone-0.2.3.dist-info/WHEEL
++Filename: asone-0.2.4.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: asone-0.2.3.dist-info/dependency_links.txt
++Filename: asone-0.2.4.dist-info/dependency_links.txt
+ Comment: 
+ 
+-Filename: asone-0.2.3.dist-info/top_level.txt
++Filename: asone-0.2.4.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: asone-0.2.3.dist-info/RECORD
++Filename: asone-0.2.4.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## asone/__init__.py
+
+```diff
+@@ -4,14 +4,16 @@
+ import asone.recognizers
+ 
+ 
+ BYTETRACK = 0
+ DEEPSORT = 1
+ NORFAIR = 2
+ MOTPY = 3
++OCSORT = 4
++STRONGSORT = 5
+ 
+ 
+ YOLOV5X6_PYTORCH = 0
+ YOLOV5S_PYTORCH = 2
+ YOLOV5N_PYTORCH = 4
+ YOLOV5M_PYTORCH = 6
+ YOLOV5L_PYTORCH = 8
+```
+
+## asone/demo_ocr.py
+
+```diff
+@@ -2,15 +2,15 @@
+ import asone
+ from asone import ASOne
+ 
+ def main(args):
+ 
+     detect = ASOne(
+         tracker=asone.BYTETRACK,
+-        detector=asone.YOLOV7_PYTORCH,
++        detector=asone.CRAFT,
+         weights=args.weights,
+         recognizer=asone.EASYOCR,
+         use_cuda=args.use_cuda
+         )
+     # Get tracking function
+     track = detect.track_video(args.video_path,
+                                 output_dir=args.output_dir,
+```
+
+## asone/detectors/detector.py
+
+```diff
+@@ -89,16 +89,17 @@
+         return _detector
+ 
+     def get_detector(self):
+         return self.model
+ 
+     def detect(self,
+                image: list,
++               return_image=False,
+                **kwargs: dict):
+-        return self.model.detect(image, **kwargs)
++        return self.model.detect(image,return_image,**kwargs)
+ 
+ 
+ if __name__ == '__main__':
+ 
+     # Initialize YOLOv6 object detector
+     model_type = 56
+     result = Detector(model_flag=model_type, use_cuda=True)
+```
+
+## asone/detectors/yolor/yolor_detector.py
+
+```diff
+@@ -70,15 +70,16 @@
+     def detect(self, image: list,
+                input_shape: tuple = (640, 640),
+                conf_thres: float = 0.25,
+                iou_thres: float = 0.45,
+                max_det: int = 1000,
+                filter_classes: bool = None,
+                agnostic_nms: bool = True,
+-               with_p6: bool = False) -> list:
++               with_p6: bool = False,
++               return_image=False) -> list:
+ 
+         # Image Preprocessing
+         original_image, processed_image = self.image_preprocessing(
+             image, input_shape)
+ 
+         # Inference
+         if self.use_onnx:
+@@ -131,8 +132,12 @@
+                     else:
+                         warnings.warn(
+                             f"class {_class} not found in model classes list.")
+ 
+             # detection = detection[np.in1d(
+             #     detection[:, 5].astype(int), filter_class_idx)]
+ 
+-        return predictions, image_info
++        if return_image:
++            return predictions, original_image
++        else: 
++            return predictions, image_info
++
+```
+
+## asone/detectors/yolov5/yolov5_detector.py
+
+```diff
+@@ -66,15 +66,16 @@
+     def detect(self, image: list,
+                input_shape: tuple = (640, 640),
+                conf_thres: float = 0.25,
+                iou_thres: float = 0.45,
+                max_det: int = 1000,
+                filter_classes: bool = None,
+                agnostic_nms: bool = True,
+-               with_p6: bool = False) -> list:
++               with_p6: bool = False, 
++               return_image=False) -> list:
+      
+         # Image Preprocessing
+         original_image, processed_image = self.image_preprocessing(image, input_shape)
+         
+         # Inference
+         if self.use_onnx:
+             # Input names of ONNX model on which it is exported   
+@@ -144,10 +145,13 @@
+                     if _class.lower() in class_names:
+                         filter_class_idx.append(class_names.index(_class.lower()))
+                     else:
+                         warnings.warn(f"class {_class} not found in model classes list.")
+ 
+             detections = detections[np.in1d(detections[:,5].astype(int), filter_class_idx)]
+ 
+-        return detections, image_info
++        if return_image:
++            return detections, original_image
++        else: 
++            return detections, image_info
+```
+
+## asone/detectors/yolov6/yolov6_detector.py
+
+```diff
+@@ -73,15 +73,16 @@
+     def detect(self, image: list,
+                input_shape: tuple = (640, 640),
+                conf_thres: float = 0.25,
+                iou_thres: float = 0.45,
+                max_det: int = 1000,
+                filter_classes: bool = None,
+                agnostic_nms: bool = True,
+-               with_p6: bool = False) -> list:
++               with_p6: bool = False,
++               return_image=False) -> list:
+         
+         # Prepare Input
+         img_height, img_width = image.shape[:2]
+         processed_image = prepare_input(image, input_shape[0], input_shape[1])
+         
+         # Perform Inference on the Image
+         if self.use_onnx:
+@@ -132,8 +133,11 @@
+             detection = detection[np.in1d(detection[:,5].astype(int), filter_class_idx)]
+     
+         image_info = {
+             'width': image.shape[1],
+             'height': image.shape[0],
+         }
+ 
+-        return detection, image_info
++        if return_image:
++            return detection, image
++        else: 
++            return detection, image_info
+```
+
+## asone/detectors/yolov7/yolov7_detector.py
+
+```diff
+@@ -52,15 +52,16 @@
+     def detect(self, image: list,
+                input_shape: tuple = (640, 640),
+                conf_thres: float = 0.25,
+                iou_thres: float = 0.45,
+                max_det: int = 1000,
+                filter_classes: bool = None,
+                agnostic_nms: bool = True,
+-               with_p6: bool = False) -> list:
++               with_p6: bool = False,
++               return_image=False) -> list:
+ 
+         # Preprocess input image and also copying original image for later use
+         original_image = image.copy()
+         img_height, img_width = original_image.shape[:2]
+         processed_image = prepare_input(image, input_shape)
+         
+         # Perform Inference on the Image
+@@ -116,8 +117,11 @@
+                     if _class.lower() in class_names:
+                         filter_class_idx.append(class_names.index(_class.lower()))
+                     else:
+                         warnings.warn(f"class {_class} not found in model classes list.")
+ 
+             detection = detection[np.in1d(detection[:,5].astype(int), filter_class_idx)]
+ 
+-        return detection, image_info
++        if return_image:
++            return detection, original_image
++        else: 
++            return detection, image_info
+```
+
+## asone/detectors/yolov8/yolov8_detector.py
+
+```diff
+@@ -52,15 +52,16 @@
+     def detect(self, image: list,
+                input_shape: tuple = (640, 640),
+                conf_thres: float = 0.25,
+                iou_thres: float = 0.45,
+                max_det: int = 1000,
+                filter_classes: bool = None,
+                agnostic_nms: bool = True,
+-               with_p6: bool = False
++               with_p6: bool = False,
++               return_image=False
+                ) -> list:
+ 
+         # Preprocess input image and also copying original image for later use
+         original_image = image.copy()
+         processed_image = prepare_input(
+             image, input_shape, 32, False if self.use_onnx else True)
+ 
+@@ -107,8 +108,12 @@
+                     else:
+                         warnings.warn(
+                             f"class {_class} not found in model classes list.")
+ 
+             detection = detection[np.in1d(
+                 detection[:, 5].astype(int), filter_class_idx)]
+ 
+-        return detection, image_info
++        if return_image:
++            return detection, original_image
++        else: 
++            return detection, image_info
++
+```
+
+## asone/detectors/yolox/yolox_detector.py
+
+```diff
+@@ -81,15 +81,16 @@
+                image: list,
+                input_shape: tuple = (640, 640),
+                conf_thres: float = 0.25,
+                iou_thres: float = 0.45,
+                max_det: int = 1000,
+                filter_classes: bool = None,
+                agnostic_nms: bool = True,
+-               with_p6: bool = False
++               with_p6: bool = False,
++               return_image=False
+                ) -> list:
+ 
+         if self.weights_name in ['yolox_tiny.onnx', 'yolox_nano.onnx']:
+             input_shape = (416, 416)
+ 
+         self.input_shape = input_shape
+ 
+@@ -167,9 +168,13 @@
+             detection = detection[np.in1d(
+                 detection[:, 5].astype(int), filter_class_idx)]
+ 
+         image_info = {
+             'width': image.shape[1],
+             'height': image.shape[0],
+         }
+-
+-        return detection, image_info
++       
++        if return_image:
++            return detection, image
++        else: 
++            return detection, image_info
++
+```
+
+## asone/trackers/__init__.py
+
+```diff
+@@ -1,7 +1,10 @@
+ from asone.trackers.byte_track.bytetracker import ByteTrack
+ from asone.trackers.deep_sort.deepsort import DeepSort
+ from asone.trackers.nor_fair.norfair import NorFair
+ from asone.trackers.motpy.motpy import Motpy
++from asone.trackers.oc_sort.ocsort import OcSort
++from asone.trackers.strong_sort.strongsort import StrongSort
+ from asone.trackers.tracker import Tracker
+ 
+-__all__ = ['Tracker', 'ByteTrack', 'DeepSort', 'NorFair', 'Motpy']
++
++__all__ = ['Tracker', 'ByteTrack', 'DeepSort', 'NorFair', 'Motpy', 'OcSort', 'StrongSort']
+```
+
+## asone/trackers/tracker.py
+
+```diff
+@@ -1,20 +1,25 @@
+ from asone.trackers import ByteTrack
+ from asone.trackers import NorFair
+ from asone.trackers import DeepSort
+ from asone.trackers import Motpy
++from asone.trackers import OcSort
++from asone.trackers import StrongSort
++
+ 
+ class Tracker:
+     def __init__(self, tracker: int, detector: object, use_cuda=True) -> None:
+         
+         self.trackers = {
+             '0': ByteTrack,
+             '1': DeepSort,
+             '2': NorFair,
+-            '3': Motpy
++            '3': Motpy,
++            '4': OcSort,
++            '5': StrongSort
+         }
+ 
+         self.tracker = self._select_tracker(tracker, detector, use_cuda=use_cuda)
+ 
+     def _select_tracker(self, tracker, detector, use_cuda):
+         _tracker = self.trackers.get(str(tracker), None)
+```
+
+## asone/trackers/motpy/motpy.py
+
+```diff
+@@ -1,54 +1,51 @@
+ from motpy import Detection, MultiObjectTracker
+ import numpy as np
+ 
+ 
+ class Motpy:
+-    def __init__(self, detector, max_distance_between_points=30) -> None:
+-
+-        self.tracker = MultiObjectTracker(dt=0.1)
++    
++    def __init__(self, detector, dt=0.1) -> None:
++        self.tracker = MultiObjectTracker(dt=dt)
+         self.detector = detector
+         try:
+             self.input_shape = tuple(detector.model.get_inputs()[0].shape[2:])
+         except AttributeError as e:
+             self.input_shape = (640, 640)
+         self.obj_count = 0
+         self.uuids = {}
++        
+     def detect_and_track(self, image: np.ndarray, config: dict) -> tuple:
+-                       
+         _dets_xyxy, image_info = self.detector.detect(
+             image, **config
+             )
+         class_ids = []
+         ids = []
+         bboxes_xyxy = []
+         scores = []
+-        
+         if isinstance(_dets_xyxy, np.ndarray) and len(_dets_xyxy) > 0:
+             self.tracker.step(detections=[
+                 Detection(
+                     box=box[:4],
+                     score= box[4],
+                     class_id=box[5]
+                     )
+                 for box in _dets_xyxy
+                 ])
+             bboxes_xyxy, ids,  scores, class_ids = self._tracker_update()
+-        
+         return bboxes_xyxy, ids, scores, class_ids
+ 
+     def _tracker_update(self):
+ 
+         bboxes_xyxy = []
+         class_ids = []
+         scores = []
+         ids = []
+ 
+         tracked_objects = self.tracker.active_tracks()
+-        
+         for obj in tracked_objects:
+             
+             if obj[0] in self.uuids:
+                 obj_id = self.uuids[obj[0]] 
+             else:
+                 self.obj_count += 1
+                 self.uuids[obj[0]] = self.obj_count
+```
+
+## Comparing `asone-0.2.3.dist-info/LICENCE` & `asone-0.2.4.dist-info/LICENCE`
+
+ * *Files identical despite different names*
+
+## Comparing `asone-0.2.3.dist-info/METADATA` & `asone-0.2.4.dist-info/METADATA`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: asone
+-Version: 0.2.3
++Version: 0.2.4
+ Summary: UNKNOWN
+ Home-page: https://github.com/axcelerateai/asone
+ Author: AxcelerateAI
+ Author-email: umair.imran@axcelerate.ai
+ License: BSD 2-clause
+ Keywords: asone bytetrack deepsort norfair yolo yolox yolor yolov5 yolov7 installation inferencing
+ Platform: UNKNOWN
+@@ -25,21 +25,23 @@
+ Requires-Dist: easydict
+ Requires-Dist: gdown
+ Requires-Dist: lap
+ Requires-Dist: loguru
+ Requires-Dist: motpy
+ Requires-Dist: norfair
+ Requires-Dist: numpy (==1.23.3)
+-Requires-Dist: onnxruntime
++Requires-Dist: onnxruntime-gpu (==1.12.1)
+ Requires-Dist: opencv-python
+ Requires-Dist: pandas
+ Requires-Dist: pyyaml
+ Requires-Dist: scipy
+ Requires-Dist: tabulate
++Requires-Dist: tensorboard
+ Requires-Dist: torch
++Requires-Dist: torchreid (==0.2.5)
+ Requires-Dist: torchvision
+ Requires-Dist: typing-extensions (==3.10.0.2)
+ Requires-Dist: ultralytics
+ Requires-Dist: wheel
+ 
+ # AS-One : A Modular Libary for YOLO Object Detection and Object Tracking `BETA`
+ 
+@@ -330,14 +332,16 @@
+ # run on cpu
+ python -m asone.demo_detector data/sample_videos/test.mp4 --cpu
+ ```
+ </details>
+ <details>
+ <summary>6.3. Text Detection</summary>
+ 
++Sample code to detect text on an image
++
+ ```python
+ # Detect and recognize text
+ import asone
+ from asone import utils
+ from asone import ASOne
+ import cv2
+ from asone import utils
+@@ -353,50 +357,50 @@
+ 
+ Use Tracker on Text
+ ```python
+ import asone
+ from asone import ASOne
+ 
+ # Instantiate Asone object
+-detect = ASOne(tracker=asone.BYTETRACK, detector=asone.YOLOV7_PYTORCH, weights='data/custom_weights/yolov7_custom.pt', recognizer=asone.EASYOCR, use_cuda=True) #set use_cuda=False to use cpu
++detect = ASOne(tracker=asone.BYTETRACK, detector=asone.CRAFT, recognizer=asone.EASYOCR, use_cuda=True) #set use_cuda=False to use cpu
+ 
+ # ##############################################
+ #           To track using video file
+ # ##############################################
+ # Get tracking function
+-track = detect.track_video('data/sample_videos/license_video.mp4', output_dir='data/results', save_result=True, display=True)
++track = detect.track_video('data/sample_videos/license_plates.mp4', output_dir='data/results', save_result=True, display=True)
+ 
+ # Loop over track to retrieve outputs of each frame 
+ for bbox_details, frame_details in track:
+     bbox_xyxy, ids, scores, class_ids = bbox_details
+     frame, frame_num, fps = frame_details
+     # Do anything with bboxes here
+ ```
+ 
+ Run the `asone/demo_ocr.py` to test ocr.
+ 
+ ```shell
+ # run on gpu
+- python -m asone.demo_ocr data/sample_videos/license_video.mp4 -w data/custom_weights/yolov7_custom.pt
++ python -m asone.demo_ocr data/sample_videos/license_plates.mp4
+ 
+ # run on cpu
+- python -m asone.demo_ocr data/sample_videos/license_video.mp4 -w data/custom_weights/yolov7_custom.pt --cpu
++ python -m asone.demo_ocr data/sample_videos/license_plates.mp4 --cpu
+ ```
+ 
+ </details>
+ 
+ To setup ASOne using Docker follow instructions given in [docker setup](asone/linux/Instructions/Docker-Setup.md) 
+ 
+ # ToDo
+ - [x] First Release
+ - [x] Import trained models
+ - [x] Simplify code even further
+ - [x] Updated for YOLOv8
+ - [x] OCR and Counting
+-- [ ] OCSORT, StrongSORT, MoTPy
++- [x] OCSORT, StrongSORT, MoTPy
+ - [ ] M1/2 Apple Silicon Compatibility
+ 
+ |Offered By: |Maintained By:|
+ |-------------|-------------|
+ |[![AugmentedStarups](https://user-images.githubusercontent.com/107035454/195115263-d3271ef3-973b-40a4-83c8-0ade8727dd40.png)](https://augmentedstartups.com)|[![AxcelerateAI](https://user-images.githubusercontent.com/107035454/195114870-691c8a52-fcf0-462e-9e02-a720fc83b93f.png)](https://axcelerate.ai/)|
+```
+
+## Comparing `asone-0.2.3.dist-info/RECORD` & `asone-0.2.4.dist-info/RECORD`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,23 +1,23 @@
+-asone/__init__.py,sha256=FcTouAgx2Sydq3UbMYtt8KM349fMELbOJV-5-qx90hU,2091
++asone/__init__.py,sha256=yJEAKfShOaEmusERTIaJgnD393TBX1BZ3QDBCFvERhY,2117
+ asone/asone.py,sha256=UazrS9iJ8w4vRBI5wVjJPbpZFdSpVmrf59FaG2Ujdpw,7408
+ asone/demo_detector.py,sha256=Va6ahBMHn8R5GA7hrXPvCJ-hcQe5laC52P4hFMNzLXE,2715
+-asone/demo_ocr.py,sha256=OFufrz0-1Mo3b0gRbdRkZn0r4P5dN_JrvoGMZAaqcw0,2159
++asone/demo_ocr.py,sha256=5aXnmzwx1cd-snKUZD6JBQU9EVJRNp-eukycI2hL6Xg,2150
+ asone/demo_tracker.py,sha256=6eOOUXlbQ2hyRQL7q6l6-I0v6j0n17A0xO1s158FtIw,3139
+ asone/detectors/__init__.py,sha256=VBuECYTWxrnHVMOW5txTnztTc1pVfASsK5tI8ZfaSFs,543
+-asone/detectors/detector.py,sha256=j4Fm5b-VMqanny_-EX05UHomcV56v2nwBHWkO4_dzpc,4187
++asone/detectors/detector.py,sha256=95J5vqiDHHWWFnqxAFFyXqEibGH9TXvvCwANyyH7m0w,4234
+ asone/detectors/easyocr_detector/__init__.py,sha256=s6CVaMCy-Y4-k7gxZ6jCg28mGp_YxrvweOICgMwbLzc,66
+ asone/detectors/easyocr_detector/text_detector.py,sha256=_l5PhJZ3zTFSXRFTCmRmj4l59fIpzxrZCyFYdUYraDA,1902
+ asone/detectors/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/utils/cfg_path.py,sha256=meeJjd_Ici6Khmf7YjuTErq4mrJAE1qDqhtXPDFiSn0,533
+ asone/detectors/utils/coreml_utils.py,sha256=G4qkahiEnLxHPT_nxI0SAZ7Qy34r3zf036ZSNhsF_Gc,1545
+ asone/detectors/utils/exp_name.py,sha256=znQ0oMgfyFSEWI6YOgjekVsGdWOeOI-Uom9BLdL9YNY,1478
+ asone/detectors/utils/weights_path.py,sha256=qHt_bCsVvNE527BAtUtxHMVHagc_DN42p3GtQiXbGUo,6694
+ asone/detectors/yolor/__init__.py,sha256=rK6ZEZXSC091X3i_towa6w7-DC0ABVOMF3tsUZdqftA,69
+-asone/detectors/yolor/yolor_detector.py,sha256=y-xF3SMtlu2xOeXZzpWhL_YNeIs_jq3qac5laIppgDc,5180
++asone/detectors/yolor/yolor_detector.py,sha256=GPfszy9rdsv1F_8kdUScrQdrGcSRzLT6y41lHKiQ_3M,5315
+ asone/detectors/yolor/cfg/yolor_csp.cfg,sha256=03194cNE7d-d3freWbD6Jfn1qIl6clliprVW8nHYj8E,14241
+ asone/detectors/yolor/cfg/yolor_csp_x.cfg,sha256=jokGophucWBWc7YB5mnBffkUWmojxu-a4Z2aKa54FO8,16338
+ asone/detectors/yolor/cfg/yolor_p6.cfg,sha256=4sEvW_-v-cZU9Azpx-oG9eU1RstD4Ni1Q2ZuElCo-6o,18330
+ asone/detectors/yolor/models/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ asone/detectors/yolor/models/common.py,sha256=e23HDO0VBXkT__m8Smgq-iY1XCPj7eR16bfDIBvPJjc,38971
+ asone/detectors/yolor/models/export.py,sha256=r_e6dF6-5XhrUGZ_YjO2e-tG-e6emErq-ZrmKbI-fEw,2733
+ asone/detectors/yolor/models/models.py,sha256=MM7hzFL4Qb40orOqvKG8PYkczYU-NRyJ6CNyeoJp1fo,36694
+@@ -32,26 +32,26 @@
+ asone/detectors/yolor/utils/loss.py,sha256=sw3zUfj4lsER3qEllr0oz1P1UcfFYhjcWaQ0fhUUzss,7443
+ asone/detectors/yolor/utils/metrics.py,sha256=vmxuZ9LKAHOVZ7L1AFG_xtJC_AYqo8Em2SlPZulAtC8,5137
+ asone/detectors/yolor/utils/parse_config.py,sha256=VFeWMavkPpT6ddQW6HIGsdEDMkxWg7gOXlQEM-K0m3o,2995
+ asone/detectors/yolor/utils/plots.py,sha256=19Z3Xk4Z28BnPruyoPpeyhKwasZfB4GQNxsIlrUAUdo,15468
+ asone/detectors/yolor/utils/torch_utils.py,sha256=jNQVAq95mtTR4G2bRvAx4hczttGddxKtsY465e3IceI,9396
+ asone/detectors/yolor/utils/yolor_utils.py,sha256=ABOlxvZM1JNYBiyI61aglpmfx6e8oQYN4pCG0Op8iOU,9267
+ asone/detectors/yolov5/__init__.py,sha256=mVVYSOviSotOMReWcSP7Vq3iZWShB34altKnreF_nK0,72
+-asone/detectors/yolov5/yolov5_detector.py,sha256=gzDy7m8aBzIY7BRRcZIsNUXWsS8-MsXm1ssfXh-Mlds,6197
++asone/detectors/yolov5/yolov5_detector.py,sha256=6AXLzjB7DtCfTZUUDZnStZp-PPGY_ggJxWLieH5yCHc,6323
+ asone/detectors/yolov5/yolov5/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov5/yolov5/models/__init__.py,sha256=TkKpSkpmF4gQOK8yHwCN7-VqQqrNAEFyQHfoe88Labg,64
+ asone/detectors/yolov5/yolov5/models/common.py,sha256=_r1B3ylrtS5hcY3ifzUXpRRpxl5bpE6ZeVTLb4nUiQ0,36615
+ asone/detectors/yolov5/yolov5/models/experimental.py,sha256=tcQWn9XstiyE22Brmm950pJfgqcq1poO0nnf_-r9oOQ,2340
+ asone/detectors/yolov5/yolov5/models/general.py,sha256=31jeYQ-flUCfGY5m9hS_7flMppHIgteOQoxYTFhHlao,42725
+ asone/detectors/yolov5/yolov5/models/yolo.py,sha256=g7bU0exAXBU2O76Ov82VfhfeIqHQBN9jknVBviv8qzE,15923
+ asone/detectors/yolov5/yolov5/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov5/yolov5/utils/torch_utils.py,sha256=ripAzFGlzBgVAHq3yABdAwKPLR5dFllIha_8UEAIccc,15973
+ asone/detectors/yolov5/yolov5/utils/yolov5_utils.py,sha256=2PiMch361g8JRZkdjQiY3jF2v0ReCeTbLj3UiaXpbMY,8854
+ asone/detectors/yolov6/__init__.py,sha256=oSeXuhTzdjjfPm2qaswO_7zpfKnGxr2lvva0BfTe68M,72
+-asone/detectors/yolov6/yolov6_detector.py,sha256=uPyWUljpklzuyw8wJ76ecTLaw2Yynad4ZhVicURmCFk,5525
++asone/detectors/yolov6/yolov6_detector.py,sha256=9GlyNcNJIBWIswDxBOTqP90nisKotk1igsI_BjY4hKY,5640
+ asone/detectors/yolov6/yolov6/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov6/yolov6/assigners/__init__.py,sha256=X3xqE8mFqmAj_kjiyCne4PNYCbOrL9KUrK6_lYM3rFA,85
+ asone/detectors/yolov6/yolov6/assigners/anchor_generator.py,sha256=iDVbI8hXCW78iVXrihYaRI2F4H9DzlfoSziwfEDWUHI,2372
+ asone/detectors/yolov6/yolov6/assigners/assigner_utils.py,sha256=FX2f4nyocuX3VUetaBo64K-kImrDExUiSAfAGByeWZ0,3682
+ asone/detectors/yolov6/yolov6/assigners/atss_assigner.py,sha256=BcmJrCeOzuqSjZSdMAzVLeuqlHIhiJxomROo4u0I4-s,7099
+ asone/detectors/yolov6/yolov6/assigners/iou2d_calculator.py,sha256=RAnX8NlITg8UmY0DNFno8T_5J_LMO8-1Rkm61cnq2rk,9211
+ asone/detectors/yolov6/yolov6/assigners/tal_assigner.py,sha256=vFOVn1e-McCPo9R30Pd5SOnmmd6_-5cAPIOw_j8B5hw,6143
+@@ -68,29 +68,29 @@
+ asone/detectors/yolov6/yolov6/models/yolo.py,sha256=3yx72C8DlFWwIAOpVXD4Wl5Xe6_kNfIoKA_rooMvLnA,3951
+ asone/detectors/yolov6/yolov6/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov6/yolov6/utils/events.py,sha256=CrXv7iKTeK9TPlfdeOsB1S1ZxGxLPy8KScBuB9R-gFw,1880
+ asone/detectors/yolov6/yolov6/utils/general.py,sha256=3chdS9R10j2upvSybru0fhTgqO3jVP4Dk6uOdtRGXUM,2674
+ asone/detectors/yolov6/yolov6/utils/torch_utils.py,sha256=uL9fUXbCmW1FNkELYHyOWIfuv8aTZP_u0zIvzJGqYx4,3373
+ asone/detectors/yolov6/yolov6/utils/yolov6_utils.py,sha256=QArZQ3UEctSjBNR82Koau6kjDsXuGSMmy3kUIWrqDvk,9628
+ asone/detectors/yolov7/__init__.py,sha256=Aykqp9f9UfvAQdGoKhoJv0Q_yb8DbxYEJ7TjUvzEE34,72
+-asone/detectors/yolov7/yolov7_detector.py,sha256=QnNnE9b6Qdt1v2vzOiny6WzX3RTxRRjrvhQhh-25di8,4808
++asone/detectors/yolov7/yolov7_detector.py,sha256=FwZfdX_0ZghDeQGT0tS0vtIsQwZkGcEnwngrKQ-BExw,4932
+ asone/detectors/yolov7/yolov7/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov7/yolov7/models/__init__.py,sha256=TkKpSkpmF4gQOK8yHwCN7-VqQqrNAEFyQHfoe88Labg,64
+ asone/detectors/yolov7/yolov7/models/common.py,sha256=my6xnnGfHEE6sWlFnt1E_eGUsF5JvXKZu1vx8eC41PU,84188
+ asone/detectors/yolov7/yolov7/models/experimental.py,sha256=7wh9oPcJtjP9RfFE5b-2uYohD85-dalCrGYkNRzTYYU,1603
+ asone/detectors/yolov7/yolov7/models/yolo.py,sha256=zgs6pklpKOEaWMARPatJ5asTjXSuNinRUgG9sidRKRM,41743
+ asone/detectors/yolov7/yolov7/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov7/yolov7/utils/torch_utils.py,sha256=7r4uhQSYmEChWUrNENskL0_ujH-DbEoFQEgoL32eqWw,15467
+ asone/detectors/yolov7/yolov7/utils/yolov7_utils.py,sha256=eYl_rx3GOaZtkmDq4HC_ClMD-EmsnXpg13LdXUNZ1_U,8208
+ asone/detectors/yolov8/__init__.py,sha256=m1DxmLUVuMjSuiiP7p6VdQnm_3Mggf-eRuHfux0nWGs,72
+-asone/detectors/yolov8/yolov8_detector.py,sha256=HlnT24dMRLEG1x5BoYtBsxUqa15NXv5dcB-s1l7a824,4173
++asone/detectors/yolov8/yolov8_detector.py,sha256=vnLQ6aawJmc3pe-l2DHrRVFfzjqvR9HIk-ruwkBapU4,4306
+ asone/detectors/yolov8/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/detectors/yolov8/utils/yolov8_utils.py,sha256=9zojjbIIBEXQ7AO2j5Uxe8t_UuhFepmxVn1LTsq3Il0,1919
+ asone/detectors/yolox/__init__.py,sha256=7WgNUuH6D8WFO3-Tq6UBCms5mHbxp-bj-TudcocFdIY,69
+-asone/detectors/yolox/yolox_detector.py,sha256=BJtlL5-jtUdCReNNoWXMgyGSTPZiR7d31Vl1D45T67U,6442
++asone/detectors/yolox/yolox_detector.py,sha256=-v9Y_In4rUrSYPHz-FyPvTJ0pFgUsrxGmTi3Ok68VII,6573
+ asone/detectors/yolox/yolox_utils.py,sha256=Hnw0iRKDe_rG7ahEjthnmaEm9VAiLtQ06OoR4bqJscA,4277
+ asone/detectors/yolox/exps/__init__.py,sha256=G_SRYxMk69Pprvwez5astCZqMghyh56hcN18Fzc2xDA,95
+ asone/detectors/yolox/exps/yolov3.py,sha256=g-N5d6-5jWbGQYLARmuK2EbnQUbaFgjxOJjDIgoRF_A,1042
+ asone/detectors/yolox/exps/yolox_l.py,sha256=WRMg9fU_5auZ3vUELR7_N7l1gcLkAOpQ8vZSn--3OdU,377
+ asone/detectors/yolox/exps/yolox_m.py,sha256=wy3vIOIqZsWt-xXxnowKRbMxkXzjsox1sorAsj3txQ4,379
+ asone/detectors/yolox/exps/yolox_nano.py,sha256=9AAioUkMK-SasRm5MUZ61OWmDREsezh_CUiIj0XvT5I,1561
+ asone/detectors/yolox/exps/yolox_s.py,sha256=yM2653P9JuLqkV5AqhoCyRuhpWGLSSZdXzSlH7Ll_UE,379
+@@ -127,16 +127,16 @@
+ asone/detectors/yolox/yolox/utils/visualize.py,sha256=RvOyoU2Dge0CLivJC1k1gAcPFBlbcxCi6SrFNuiXaA4,3599
+ asone/recognizers/__init__.py,sha256=nSJykZSpyOaIhmAJa2zHzD5xge7Wpr0ai7_oe3j0gCQ,182
+ asone/recognizers/recognizer.py,sha256=HNLdohgno698w1D-TIp_eSLKV7uu3ltzHea4lfCKb90,933
+ asone/recognizers/easyocr_recognizer/__init__.py,sha256=9EmmhNjR4M2YetUFG4XibRUF_heBynSrcos_LzDgAtQ,81
+ asone/recognizers/easyocr_recognizer/easyocr_recognizer.py,sha256=8doZktZo4J2t8-TsiFIjCqOcK0BpyxCbX9UektFPj4s,1721
+ asone/recognizers/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/recognizers/utils/recognizer_name.py,sha256=L_o9qS77PevQ8JTvOJTc2df0WYDXHDhn2tsgRaql3S8,196
+-asone/trackers/__init__.py,sha256=qLIcxbTKAGBcmlx8LjhQrclwSTLfqyQ6ZcwipOsmmMg,323
+-asone/trackers/tracker.py,sha256=a4YQ6wFnEd3UJViyeFKiGq2Nn70K-3IFF-SMCWxrf1w,1030
++asone/trackers/__init__.py,sha256=KThEUR5sY7Ra7Zi-74OSFNrz0aXe_czHbI2TK34mqXI,458
++asone/trackers/tracker.py,sha256=fFy22t2-X2EXhNb4-yeu8UoHwENDUjOg3OZgnFtU38M,1157
+ asone/trackers/byte_track/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/trackers/byte_track/bytetracker.py,sha256=dYytRf4ZUYSfjbO073rwUQpZ_gpHxHh526nFjTCB1CA,2252
+ asone/trackers/byte_track/tracker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/trackers/byte_track/tracker/basetrack.py,sha256=6DsGdsXkZ1fAqx4lPzksbCNGkNTa38_MyYawfXvCGq4,950
+ asone/trackers/byte_track/tracker/byte_tracker.py,sha256=ZMi71j1QXm12eqgWKIa7xOvV-xo95_9k8A8_P-or8x8,11950
+ asone/trackers/byte_track/tracker/kalman_filter.py,sha256=mELQ3ZlXyX4xLULleJRBrdVQggZth8wFGsdoFDpG6zk,9547
+ asone/trackers/byte_track/tracker/matching.py,sha256=CF0nC3xt-c6jz_wgQR9xjDn23ypm7l4Qb1R4XMP_wmA,6208
+@@ -158,25 +158,55 @@
+ asone/trackers/deep_sort/tracker/sort/kalman_filter.py,sha256=-pPoynyPcJd8p6D-C1WTZczxpz4-bokAzmNM-HtdLcA,7787
+ asone/trackers/deep_sort/tracker/sort/linear_assignment.py,sha256=1lZcGnBQW0ybshoIBqKpobwmIaX9xXHg7LjUgI5Le8I,7894
+ asone/trackers/deep_sort/tracker/sort/nn_matching.py,sha256=U0NYReianEohMc9eA_eAuXjqMkqkNjWlq40S7VvYKHs,5469
+ asone/trackers/deep_sort/tracker/sort/preprocessing.py,sha256=upkyHNUnLIXcKnDv65Lj9UvL-d0WjpxDrk8xLhA8B5U,1914
+ asone/trackers/deep_sort/tracker/sort/track.py,sha256=9c5zV9J5RE78TTcIuSIjNmQNIzCAyQ0MgaKykol15Uc,5063
+ asone/trackers/deep_sort/tracker/sort/tracker.py,sha256=K6OeN6HKZV_s236ogUeWMXklCjgftw8PeAyaMN9c1gc,5605
+ asone/trackers/motpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-asone/trackers/motpy/motpy.py,sha256=MsUckYIIGqJZv5It2DOuvFwRIeSi-W8QSj-FA_Bjmx8,1907
++asone/trackers/motpy/motpy.py,sha256=F3PiZFsPn28eUhR4MPTwuVT7f9xhRAM6TqjNXEqtJXc,1844
+ asone/trackers/nor_fair/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ asone/trackers/nor_fair/norfair.py,sha256=txnrGo_aiPEFI9ROh8-jSG2cIvsBjkqqUO70R599ILc,1909
++asone/trackers/oc_sort/__init__.py,sha256=EU-t0zNBF2E57vNYM35QzCwx1WwYFG4uyF6teFaPgak,56
++asone/trackers/oc_sort/ocsort.py,sha256=ScsW_PTZxeBO45kJ2f7Ik2UELa451JHs7E5Jux2ulFY,1026
++asone/trackers/oc_sort/tracker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++asone/trackers/oc_sort/tracker/association.py,sha256=3vknTHCcmlZQk4un6buV27uMafM7YQBsiqbqMy5EFaw,14315
++asone/trackers/oc_sort/tracker/kalmanfilter.py,sha256=Yi-2kGHfI84JJdvTtBDHKxuFzqrkB7K1ceByhxG_Ha4,59022
++asone/trackers/oc_sort/tracker/ocsort.py,sha256=7ttqbx8ttNv-kGYR5d9o42xs70Udbr4QDf0mkwfynsQ,13155
++asone/trackers/strong_sort/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++asone/trackers/strong_sort/strongsort.py,sha256=Reh0usqTquwyhRs5HUrN8qwX12sgvv82TZvQRBTWuu4,1226
++asone/trackers/strong_sort/tracker/__init__.py,sha256=oZ3WSDlcfdFENEvhCycfonxhHyx80aToKCT9LIwIg5Q,510
++asone/trackers/strong_sort/tracker/strong_sort.py,sha256=EGvBPo6ssFo-nJfTQJ5e004Cjt59CLBS35rF4R19nUE,5178
++asone/trackers/strong_sort/tracker/deep/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++asone/trackers/strong_sort/tracker/deep/reid_model_factory.py,sha256=kESnMMHCNbjbaTwFXxxSZ4zGSz9QGdxMog-rMqU7nMg,4858
++asone/trackers/strong_sort/tracker/sort/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++asone/trackers/strong_sort/tracker/sort/detection.py,sha256=fSKnE9A1MVF1gBYeranhRoqakJYC5zy1lb-E9pftlME,1439
++asone/trackers/strong_sort/tracker/sort/iou_matching.py,sha256=58b5xzmPIFusvzdsgi4Kq3qLGhzXKyppVYTpSwDfGek,2843
++asone/trackers/strong_sort/tracker/sort/kalman_filter.py,sha256=u96HgUxo8chhOZ9IxYHj7v_alqk-ynwWiN1KTPR9wno,8114
++asone/trackers/strong_sort/tracker/sort/linear_assignment.py,sha256=H4nQz--Eag466jOzV47EZu0WtRVe4Wgy_aj2r8JiVPw,7624
++asone/trackers/strong_sort/tracker/sort/nn_matching.py,sha256=gmv521F0MUalCmdeKeXlMmhTf4VxyfOXtUwUwwwJLRM,5770
++asone/trackers/strong_sort/tracker/sort/preprocessing.py,sha256=upkyHNUnLIXcKnDv65Lj9UvL-d0WjpxDrk8xLhA8B5U,1914
++asone/trackers/strong_sort/tracker/sort/track.py,sha256=9cmoZOizcOd6DjZy2o3hZILnbNVMqIIRqWilswYjZ5c,10653
++asone/trackers/strong_sort/tracker/sort/tracker.py,sha256=fQ4Nc5QFcLu8SPPEQPBvqalWewNlDtrteCFyFhHRqAQ,7684
++asone/trackers/strong_sort/tracker/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++asone/trackers/strong_sort/tracker/utils/asserts.py,sha256=1szupbDM-e7NmXSrG1ONgzOYRA8qlRk9OTPBbBBWvTg,316
++asone/trackers/strong_sort/tracker/utils/draw.py,sha256=51RumdDHHLI6udEg-YLYx7hNSuW_Ta4uCbEhAHGG8oA,1125
++asone/trackers/strong_sort/tracker/utils/evaluation.py,sha256=kJ55uqWhOiWUFTUu_kdA6vfDO8eXIwWYTgEthXo_Ihw,3532
++asone/trackers/strong_sort/tracker/utils/io.py,sha256=OtHGaXw5X4Ymf1V4wJnwfCj_5Uo7OTpvinzsSTEmy6M,4357
++asone/trackers/strong_sort/tracker/utils/json_logger.py,sha256=L3fkYTPIs1EVweSArjOvfqZsGA7wjhGblt2RTSyqy0A,11762
++asone/trackers/strong_sort/tracker/utils/log.py,sha256=ruYuKeq0CM8Vz17AH7YnnnCscMH2nCHOgqZkYCAhu5M,463
++asone/trackers/strong_sort/tracker/utils/parser.py,sha256=N_Rsu_XjVL07YhmHaHXX8uSKNJ3Ahqy-EUH07ugxmUk,1078
++asone/trackers/strong_sort/tracker/utils/tools.py,sha256=AqR1I_jgJmFMcubeKEGX-fc96AKa-x4EnIM6QA4aSY8,734
+ asone/utils/__init__.py,sha256=PEjGp-MJb1dLDaQmqZPZysX_v1w6hvb6NrT0tEVCb5o,430
+ asone/utils/classes.py,sha256=ajXF6VM_0K1_9hmgb02zb1_wWM_OV4G-9Z8vtHQSoVY,1066
+ asone/utils/colors.py,sha256=wfraLg9ULR0wLTz4UbAh2fkhXrvmRrODDEbbXNqHHIY,697
+ asone/utils/counting.py,sha256=PThbapxvLFn6ftbEbV9kxHvWmBuXLglR33-athJa8EQ,558
+ asone/utils/default_cfg.py,sha256=UzCAEVMGSLbeqYgmr3y5-F3rgXCVqdB8Hm7nPsOlMhU,358
+ asone/utils/download.py,sha256=AiXJsOVKYR1iDFIbXAhyWTAh2H-bYhzYi6aD4Z3txmI,4278
+ asone/utils/draw.py,sha256=2Pa4DJ-2DyuF-p3kZBfSpbJTnZGI7ppJnfdC5wP2mRw,4941
+ asone/utils/ponits_conversion.py,sha256=rlPuPNplz2WzsIQScS4xRvwxkDKr18WI2kr9HI3W-iY,864
+ asone/utils/temp_loader.py,sha256=K8NRezJkFkB_XQbcgkl1-h1pTWRV528ntqMwXuABaCs,796
+-asone-0.2.3.dist-info/LICENCE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+-asone-0.2.3.dist-info/METADATA,sha256=WwZMkLpgZWRuSwbSzjOVrak0YHoRSYwxwXwkxnb0Jkw,12222
+-asone-0.2.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-asone-0.2.3.dist-info/dependency_links.txt,sha256=Yt-SL99DmwySbgxGwJLEZqCU9bLw-mgok8v_E4vqBlE,72
+-asone-0.2.3.dist-info/top_level.txt,sha256=n-xJvkjLnGLv_U9fB26iIIWEXbTcOkw2hvrAPeWaPUE,6
+-asone-0.2.3.dist-info/RECORD,,
++asone-0.2.4.dist-info/LICENCE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
++asone-0.2.4.dist-info/METADATA,sha256=FDTm1eFebvQhUyt8mDhvu3Tqq-L6xHfAZDVlTx46hjw,12205
++asone-0.2.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++asone-0.2.4.dist-info/dependency_links.txt,sha256=Yt-SL99DmwySbgxGwJLEZqCU9bLw-mgok8v_E4vqBlE,72
++asone-0.2.4.dist-info/top_level.txt,sha256=n-xJvkjLnGLv_U9fB26iIIWEXbTcOkw2hvrAPeWaPUE,6
++asone-0.2.4.dist-info/RECORD,,
+```
+

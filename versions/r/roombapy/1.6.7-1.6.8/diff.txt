@@ -1,0 +1,344 @@
+--- tmp/roombapy-1.6.7.tar.gz
++++ tmp/roombapy-1.6.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "roombapy-1.6.7.tar", max compression
+│ +gzip compressed data, was "roombapy-1.6.8.tar", max compression
+│   --- roombapy-1.6.7.tar
+├── +++ roombapy-1.6.8.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ --rw-r--r--   0        0        0     1069 2023-03-19 16:05:14.150603 roombapy-1.6.7/LICENSE
+│ │ --rwxr-xr-x   0        0        0     1300 2023-03-19 16:05:14.150603 roombapy-1.6.7/README.md
+│ │ --rw-r--r--   0        0        0     1021 2023-03-19 16:05:14.150603 roombapy-1.6.7/pyproject.toml
+│ │ --rw-r--r--   0        0        0      252 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/__init__.py
+│ │ --rw-r--r--   0        0        0     4258 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/const.py
+│ │ --rw-r--r--   0        0        0     3158 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/discovery.py
+│ │ --rw-r--r--   0        0        0     2121 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/entry_points.py
+│ │ --rw-r--r--   0        0        0     2466 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/getpassword.py
+│ │ --rw-r--r--   0        0        0     4683 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/remote_client.py
+│ │ --rwxr-xr-x   0        0        0    17622 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/roomba.py
+│ │ --rw-r--r--   0        0        0      637 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/roomba_factory.py
+│ │ --rw-r--r--   0        0        0     1061 2023-03-19 16:05:14.150603 roombapy-1.6.7/roombapy/roomba_info.py
+│ │ --rw-r--r--   0        0        0     2283 1970-01-01 00:00:00.000000 roombapy-1.6.7/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1069 2023-04-07 10:09:20.211472 roombapy-1.6.8/LICENSE
+│ │ +-rwxr-xr-x   0        0        0     1300 2023-04-07 10:09:20.211472 roombapy-1.6.8/README.md
+│ │ +-rw-r--r--   0        0        0     1040 2023-04-07 10:09:20.211472 roombapy-1.6.8/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      252 2023-04-07 10:09:20.211472 roombapy-1.6.8/roombapy/__init__.py
+│ │ +-rw-r--r--   0        0        0     4258 2023-04-07 10:09:20.211472 roombapy-1.6.8/roombapy/const.py
+│ │ +-rw-r--r--   0        0        0     3165 2023-04-07 10:09:20.211472 roombapy-1.6.8/roombapy/discovery.py
+│ │ +-rw-r--r--   0        0        0     2121 2023-04-07 10:09:20.211472 roombapy-1.6.8/roombapy/entry_points.py
+│ │ +-rw-r--r--   0        0        0     2466 2023-04-07 10:09:20.211472 roombapy-1.6.8/roombapy/getpassword.py
+│ │ +-rw-r--r--   0        0        0     4591 2023-04-07 10:09:20.215473 roombapy-1.6.8/roombapy/remote_client.py
+│ │ +-rwxr-xr-x   0        0        0    17743 2023-04-07 10:09:20.215473 roombapy-1.6.8/roombapy/roomba.py
+│ │ +-rw-r--r--   0        0        0      637 2023-04-07 10:09:20.215473 roombapy-1.6.8/roombapy/roomba_factory.py
+│ │ +-rw-r--r--   0        0        0     1061 2023-04-07 10:09:20.215473 roombapy-1.6.8/roombapy/roomba_info.py
+│ │ +-rw-r--r--   0        0        0     2315 1970-01-01 00:00:00.000000 roombapy-1.6.8/PKG-INFO
+│ │   --- roombapy-1.6.7/LICENSE
+│ ├── +++ roombapy-1.6.8/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/README.md
+│ ├── +++ roombapy-1.6.8/README.md
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/pyproject.toml
+│ ├── +++ roombapy-1.6.8/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "roombapy"
+│ │ -version = "1.6.7"
+│ │ +version = "1.6.8"
+│ │  description = "Python program and library to control Wi-Fi enabled iRobot Roombas"
+│ │  authors = ["Philipp Schmitt <philipp@schmitt.co>"]
+│ │  readme = "README.md"
+│ │  license = "MIT"
+│ │  repository = "https://github.com/pschmitt/roombapy"
+│ │  classifiers = [
+│ │      "Topic :: Software Development",
+│ │ @@ -18,19 +18,20 @@
+│ │  roomba-connect = "roombapy.entry_points:connect"
+│ │  roomba-discovery = "roombapy.entry_points:discovery"
+│ │  roomba-password = "roombapy.entry_points:password"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = ">=3.7,<4.0"
+│ │  paho-mqtt = "^1.5.1"
+│ │ +orjson = ">=3.8.7"
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │  pytest = "^7.2.2"
+│ │ -pytest-asyncio = "^0.20.3"
+│ │ -black = "^23.1"
+│ │ +pytest-asyncio = "^0.21.0"
+│ │ +black = "^23.3"
+│ │  isort = "^5.11.5"
+│ │  flake8 = "^5.0.4"
+│ │  amqtt = "^0.10.1"
+│ │  
+│ │  [build-system]
+│ │  requires = ["poetry-core>=1.0.0"]
+│ │  build-backend = "poetry.core.masonry.api"
+│ │   --- roombapy-1.6.7/roombapy/const.py
+│ ├── +++ roombapy-1.6.8/roombapy/const.py
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/roombapy/discovery.py
+│ ├── +++ roombapy-1.6.8/roombapy/discovery.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,11 +1,12 @@
+│ │ -import json
+│ │  import logging
+│ │  import socket
+│ │  
+│ │ +import orjson
+│ │ +
+│ │  from roombapy.roomba_info import RoombaInfo
+│ │  
+│ │  
+│ │  class RoombaDiscovery:
+│ │      udp_bind_address = ""
+│ │      udp_address = "<broadcast>"
+│ │      udp_port = 5678
+│ │ @@ -57,15 +58,15 @@
+│ │              self.log.info("Socket timeout")
+│ │              return None
+│ │  
+│ │      def _is_from_irobot(self, data):
+│ │          if data == self.roomba_message:
+│ │              return False
+│ │  
+│ │ -        json_response = json.loads(data)
+│ │ +        json_response = orjson.loads(data)
+│ │          if (
+│ │              "Roomba" in json_response["hostname"]
+│ │              or "iRobot" in json_response["hostname"]
+│ │          ):
+│ │              return True
+│ │  
+│ │          return False
+│ │ @@ -85,15 +86,15 @@
+│ │  
+│ │      def _start_server(self):
+│ │          self.server_socket.bind((self.udp_bind_address, self.udp_port))
+│ │          self.log.debug("Socket server started, port %s", self.udp_port)
+│ │  
+│ │  
+│ │  def _decode_data(data):
+│ │ -    json_response = json.loads(data)
+│ │ +    json_response = orjson.loads(data)
+│ │      return RoombaInfo(
+│ │          hostname=json_response["hostname"],
+│ │          robot_name=json_response["robotname"],
+│ │          ip=json_response["ip"],
+│ │          mac=json_response["mac"],
+│ │          firmware=json_response["sw"],
+│ │          sku=json_response["sku"],
+│ │   --- roombapy-1.6.7/roombapy/entry_points.py
+│ ├── +++ roombapy-1.6.8/roombapy/entry_points.py
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/roombapy/getpassword.py
+│ ├── +++ roombapy-1.6.8/roombapy/getpassword.py
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/roombapy/remote_client.py
+│ ├── +++ roombapy-1.6.8/roombapy/remote_client.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,17 +1,31 @@
+│ │  import logging
+│ │  import ssl
+│ │ +from functools import cache
+│ │  
+│ │  import paho.mqtt.client as mqtt
+│ │  
+│ │  from roombapy.const import MQTT_ERROR_MESSAGES
+│ │  
+│ │  MAX_CONNECTION_RETRIES = 3
+│ │  
+│ │  
+│ │ +@cache
+│ │ +def _generate_tls_context() -> ssl.SSLContext:
+│ │ +    """Generate TLS context.
+│ │ +
+│ │ +    We only want to do this once ever because it's expensive.
+│ │ +    """
+│ │ +    ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+│ │ +    ssl_context.verify_mode = ssl.CERT_NONE
+│ │ +    ssl_context.set_ciphers("DEFAULT:!DH")
+│ │ +    ssl_context.load_default_certs()
+│ │ +    return ssl_context
+│ │ +
+│ │ +
+│ │  class RoombaRemoteClient:
+│ │      address = None
+│ │      port = None
+│ │      blid = None
+│ │      password = None
+│ │      log = None
+│ │      was_connected = False
+│ │ @@ -84,28 +98,17 @@
+│ │      def _get_mqtt_client(self):
+│ │          mqtt_client = mqtt.Client(client_id=self.blid)
+│ │          mqtt_client.username_pw_set(username=self.blid, password=self.password)
+│ │          mqtt_client.on_connect = self._internal_on_connect
+│ │          mqtt_client.on_disconnect = self._internal_on_disconnect
+│ │  
+│ │          self.log.debug("Setting TLS certificate")
+│ │ -        try:
+│ │ -            mqtt_client.tls_set(
+│ │ -                cert_reqs=ssl.CERT_NONE,
+│ │ -                tls_version=ssl.PROTOCOL_TLS,
+│ │ -                ciphers="DEFAULT:!DH",
+│ │ -            )
+│ │ -        except ValueError:  # try V1.3 version
+│ │ -            self.log.warning("TLS Setting failed - trying 1.3 version")
+│ │ -            mqtt_client._ssl_context = None
+│ │ -            ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+│ │ -            ssl_context.verify_mode = ssl.CERT_NONE
+│ │ -            ssl_context.set_ciphers("DEFAULT:!DH")
+│ │ -            ssl_context.load_default_certs()
+│ │ -            mqtt_client.tls_set_context(ssl_context)
+│ │ +        mqtt_client._ssl_context = None
+│ │ +        ssl_context = _generate_tls_context()
+│ │ +        mqtt_client.tls_set_context(ssl_context)
+│ │          mqtt_client.tls_insecure_set(True)
+│ │          mqtt_client._ssl_context.options |= 0x4  # set OP_LEGACY_SERVER_CONNECT
+│ │  
+│ │          return mqtt_client
+│ │  
+│ │      def _internal_on_connect(self, client, userdata, flags, rc):
+│ │          self.log.debug(
+│ │   --- roombapy-1.6.7/roombapy/roomba.py
+│ ├── +++ roombapy-1.6.8/roombapy/roomba.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -12,22 +12,22 @@
+│ │  Nick Waterton 5th July   2017  V 1.1.2: Minor fixes, CV version 3 .2 support
+│ │  Nick Waterton 7th July   2017  V1.2.0: Added -o option "roomOutline" allows
+│ │  enabling/disabling of room outline drawing, added auto creation of css/html
+│ │  files Nick Waterton 11th July  2017  V1.2.1: Quick (untested) fix for room
+│ │  outlines if you don't have OpenCV
+│ │  """
+│ │  
+│ │ -import json
+│ │  import logging
+│ │  import threading
+│ │  import time
+│ │ -from collections import OrderedDict
+│ │  from collections.abc import Mapping
+│ │  from datetime import datetime
+│ │  
+│ │ +import orjson
+│ │ +
+│ │  from roombapy.const import ROOMBA_ERROR_MESSAGES, ROOMBA_STATES
+│ │  
+│ │  MAX_CONNECTION_RETRIES = 3
+│ │  
+│ │  
+│ │  class RoombaConnectionError(Exception):
+│ │      """Roomba connection exception."""
+│ │ @@ -217,30 +217,30 @@
+│ │          roomba_command = {
+│ │              "command": command,
+│ │              "time": int(datetime.timestamp(datetime.now())),
+│ │              "initiator": "localApp",
+│ │          }
+│ │          roomba_command.update(params)
+│ │  
+│ │ -        str_command = json.dumps(roomba_command)
+│ │ +        str_command = orjson.dumps(roomba_command).decode("utf-8")
+│ │          self.log.debug("Publishing Roomba Command : %s", str_command)
+│ │          self.remote_client.publish("cmd", str_command)
+│ │  
+│ │      def set_preference(self, preference, setting):
+│ │          self.log.debug("Set preference: %s, %s", preference, setting)
+│ │          val = setting
+│ │          # Parse boolean string
+│ │          if isinstance(setting, str):
+│ │              if setting.lower() == "true":
+│ │                  val = True
+│ │              elif setting.lower() == "false":
+│ │                  val = False
+│ │          tmp = {preference: val}
+│ │          roomba_command = {"state": tmp}
+│ │ -        str_command = json.dumps(roomba_command)
+│ │ +        str_command = orjson.dumps(roomba_command).decode("utf-8")
+│ │          self.log.debug("Publishing Roomba Setting : %s" % str_command)
+│ │          self.remote_client.publish("delta", str_command)
+│ │  
+│ │      def dict_merge(self, dct, merge_dct):
+│ │          """
+│ │          Recursive dict merge.
+│ │  
+│ │ @@ -268,29 +268,33 @@
+│ │  
+│ │          Returns string sutiable for logging, and a dict of the json data
+│ │          """
+│ │          indent = self.master_indent + 31  # number of spaces to indent json data
+│ │  
+│ │          json_data = None
+│ │          try:
+│ │ -            # if it's json data, decode it (use OrderedDict to preserve keys
+│ │ -            # order), else return as is...
+│ │ -            json_data = json.loads(
+│ │ +            # if it's json data, decode it. OrderedDict is no longer
+│ │ +            # needed since python 3.6 and later guarantees dict
+│ │ +            # insertion order
+│ │ +            json_data = orjson.loads(
+│ │                  payload.decode("utf-8")
+│ │                  .replace(":nan", ":NaN")
+│ │                  .replace(":inf", ":Infinity")
+│ │                  .replace(":-inf", ":-Infinity"),
+│ │ -                object_pairs_hook=OrderedDict,
+│ │              )
+│ │              # if it's not a dictionary, probably just a number
+│ │              if not isinstance(json_data, dict):
+│ │                  return json_data, dict(json_data)
+│ │              json_data_string = "\n".join(
+│ │                  (indent * " ") + i
+│ │ -                for i in (json.dumps(json_data, indent=2)).splitlines()
+│ │ +                for i in (
+│ │ +                    orjson.dumps(json_data, option=orjson.OPT_INDENT_2).decode(
+│ │ +                        "utf-8"
+│ │ +                    )
+│ │ +                ).splitlines()
+│ │              )
+│ │  
+│ │              formatted_data = "Decoded JSON: \n%s" % json_data_string
+│ │  
+│ │          except ValueError:
+│ │              formatted_data = payload
+│ │          return formatted_data, dict(json_data)
+│ │   --- roombapy-1.6.7/roombapy/roomba_factory.py
+│ ├── +++ roombapy-1.6.8/roombapy/roomba_factory.py
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/roombapy/roomba_info.py
+│ ├── +++ roombapy-1.6.8/roombapy/roomba_info.py
+│ │┄ Files identical despite different names
+│ │   --- roombapy-1.6.7/PKG-INFO
+│ ├── +++ roombapy-1.6.8/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: roombapy
+│ │ -Version: 1.6.7
+│ │ +Version: 1.6.8
+│ │  Summary: Python program and library to control Wi-Fi enabled iRobot Roombas
+│ │  Home-page: https://github.com/pschmitt/roombapy
+│ │  License: MIT
+│ │  Author: Philipp Schmitt
+│ │  Author-email: philipp@schmitt.co
+│ │  Requires-Python: >=3.7,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -14,14 +14,15 @@
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Classifier: Topic :: Software Development
+│ │  Classifier: Topic :: Software Development :: Libraries
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │  Classifier: Topic :: System :: Networking
+│ │ +Requires-Dist: orjson (>=3.8.7)
+│ │  Requires-Dist: paho-mqtt (>=1.5.1,<2.0.0)
+│ │  Project-URL: Repository, https://github.com/pschmitt/roombapy
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # roombapy
+│ │  
+│ │  [![CI](https://github.com/pschmitt/roombapy/actions/workflows/ci.yaml/badge.svg)](https://github.com/pschmitt/roombapy/actions/workflows/ci.yaml)

@@ -1,0 +1,156 @@
+# Comparing `tmp/image-trimmer-0.0.8.tar.gz` & `tmp/image-trimmer-0.0.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "image-trimmer-0.0.8.tar", last modified: Fri Apr  7 09:54:49 2023, max compression
++gzip compressed data, was "image-trimmer-0.0.9.tar", last modified: Fri Apr  7 10:07:01 2023, max compression
+```
+
+## Comparing `image-trimmer-0.0.8.tar` & `image-trimmer-0.0.9.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 09:54:49.461815 image-trimmer-0.0.8/
+--rw-rw-rw-   0        0        0      851 2023-04-07 09:54:49.461315 image-trimmer-0.0.8/PKG-INFO
+-drwxrwxrwx   0        0        0        0 2023-04-07 09:54:49.446315 image-trimmer-0.0.8/image_trimmer/
+--rw-rw-rw-   0        0        0        0 2023-04-07 07:37:37.000000 image-trimmer-0.0.8/image_trimmer/__init__.py
+--rw-rw-rw-   0        0        0     3435 2023-04-07 09:54:42.000000 image-trimmer-0.0.8/image_trimmer/image_trimmer.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 09:54:49.459816 image-trimmer-0.0.8/image_trimmer.egg-info/
+--rw-rw-rw-   0        0        0      851 2023-04-07 09:54:49.000000 image-trimmer-0.0.8/image_trimmer.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      289 2023-04-07 09:54:49.000000 image-trimmer-0.0.8/image_trimmer.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 09:54:49.000000 image-trimmer-0.0.8/image_trimmer.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       67 2023-04-07 09:54:49.000000 image-trimmer-0.0.8/image_trimmer.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       26 2023-04-07 09:54:49.000000 image-trimmer-0.0.8/image_trimmer.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       14 2023-04-07 09:54:49.000000 image-trimmer-0.0.8/image_trimmer.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 09:54:49.461815 image-trimmer-0.0.8/setup.cfg
+--rw-rw-rw-   0        0        0      830 2023-04-07 09:54:46.000000 image-trimmer-0.0.8/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 10:07:01.167993 image-trimmer-0.0.9/
++-rw-rw-rw-   0        0        0      996 2023-04-07 10:07:01.167492 image-trimmer-0.0.9/PKG-INFO
++drwxrwxrwx   0        0        0        0 2023-04-07 10:07:01.148993 image-trimmer-0.0.9/image_trimmer/
++-rw-rw-rw-   0        0        0        0 2023-04-07 07:37:37.000000 image-trimmer-0.0.9/image_trimmer/__init__.py
++-rw-rw-rw-   0        0        0     3435 2023-04-07 09:54:42.000000 image-trimmer-0.0.9/image_trimmer/image_trimmer.py
++drwxrwxrwx   0        0        0        0 2023-04-07 10:07:01.166493 image-trimmer-0.0.9/image_trimmer.egg-info/
++-rw-rw-rw-   0        0        0      996 2023-04-07 10:07:01.000000 image-trimmer-0.0.9/image_trimmer.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      289 2023-04-07 10:07:01.000000 image-trimmer-0.0.9/image_trimmer.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 10:07:01.000000 image-trimmer-0.0.9/image_trimmer.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       67 2023-04-07 10:07:01.000000 image-trimmer-0.0.9/image_trimmer.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       26 2023-04-07 10:07:01.000000 image-trimmer-0.0.9/image_trimmer.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       14 2023-04-07 10:07:01.000000 image-trimmer-0.0.9/image_trimmer.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 10:07:01.168492 image-trimmer-0.0.9/setup.cfg
++-rw-rw-rw-   0        0        0      830 2023-04-07 10:06:54.000000 image-trimmer-0.0.9/setup.py
+```
+
+### Comparing `image-trimmer-0.0.8/PKG-INFO` & `image-trimmer-0.0.9/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,27 +1,31 @@
+ Metadata-Version: 2.1
+ Name: image-trimmer
+-Version: 0.0.8
++Version: 0.0.9
+ Summary: A tool to crop images and extract text using OCR
+ Home-page: https://github.com/jaytrairat/python-image-trimmer
+ Author: jaytrairat
+ Author-email: jaytrairat@outlook.com
+ Classifier: Programming Language :: Python :: 3
+ Description-Content-Type: text/markdown
+ 
+ # Image Cropping and Text Extraction
+ 
+-This code is designed to crop images and extract text from them using Optical Character Recognition (OCR). It is particularly useful for processing images of documents or forms where specific information needs to be extracted.
++This code is designed to crop images and extract text from them using Optical Character Recognition (OCR). It is particularly useful for processing images of documents or forms where specific information needs to be extracted. Please install tesseract ocr first!
+ 
+ ## Installation
+ 
+ ```bash
+ pip install image-trimmer
+ ```
+ 
+ ## Usage
+ 
+ The code can be run from the command line using the following syntax:
+ 
+ ```bash
+ image_cropping -i <path to input folder> -o <path to output folder> -t <template name>
+ ```
++
++
++## Example
++![Example](https://raw.githubusercontent.com/jaytrairat/python-image-trimmer/main/demo.gif)
+```
+
+### Comparing `image-trimmer-0.0.8/image_trimmer/image_trimmer.py` & `image-trimmer-0.0.9/image_trimmer/image_trimmer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `image-trimmer-0.0.8/image_trimmer.egg-info/PKG-INFO` & `image-trimmer-0.0.9/image_trimmer.egg-info/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,27 +1,31 @@
+ Metadata-Version: 2.1
+ Name: image-trimmer
+-Version: 0.0.8
++Version: 0.0.9
+ Summary: A tool to crop images and extract text using OCR
+ Home-page: https://github.com/jaytrairat/python-image-trimmer
+ Author: jaytrairat
+ Author-email: jaytrairat@outlook.com
+ Classifier: Programming Language :: Python :: 3
+ Description-Content-Type: text/markdown
+ 
+ # Image Cropping and Text Extraction
+ 
+-This code is designed to crop images and extract text from them using Optical Character Recognition (OCR). It is particularly useful for processing images of documents or forms where specific information needs to be extracted.
++This code is designed to crop images and extract text from them using Optical Character Recognition (OCR). It is particularly useful for processing images of documents or forms where specific information needs to be extracted. Please install tesseract ocr first!
+ 
+ ## Installation
+ 
+ ```bash
+ pip install image-trimmer
+ ```
+ 
+ ## Usage
+ 
+ The code can be run from the command line using the following syntax:
+ 
+ ```bash
+ image_cropping -i <path to input folder> -o <path to output folder> -t <template name>
+ ```
++
++
++## Example
++![Example](https://raw.githubusercontent.com/jaytrairat/python-image-trimmer/main/demo.gif)
+```
+
+### Comparing `image-trimmer-0.0.8/setup.py` & `image-trimmer-0.0.9/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ from setuptools import setup, find_packages
+ 
+ with open("README.md", "r", encoding="utf-8") as readme_file:
+     readme = readme_file.read()
+ 
+ setup(
+     name="image-trimmer",
+-    version="0.0.8",
++    version="0.0.9",
+     packages=find_packages(),
+     include_package_data=True,
+     install_requires=[
+         "pytesseract",
+         "Pillow",
+         "pyyaml",
+     ],
+```
+
