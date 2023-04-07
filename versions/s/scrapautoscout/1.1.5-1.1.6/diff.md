@@ -1,0 +1,180 @@
+# Comparing `tmp/scrapautoscout-1.1.5.tar.gz` & `tmp/scrapautoscout-1.1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "scrapautoscout-1.1.5.tar", last modified: Fri Mar 17 11:06:10 2023, max compression
++gzip compressed data, was "scrapautoscout-1.1.6.tar", last modified: Fri Apr  7 14:14:42 2023, max compression
+```
+
+## Comparing `scrapautoscout-1.1.5.tar` & `scrapautoscout-1.1.6.tar`
+
+### file list
+
+```diff
+@@ -1,29 +1,30 @@
+-drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-03-17 11:06:10.600894 scrapautoscout-1.1.5/
+--rw-r--r--   0 vicolc     (501) staff       (20)     1068 2023-03-16 13:16:28.000000 scrapautoscout-1.1.5/LICENSE
+--rw-r--r--   0 vicolc     (501) staff       (20)       39 2023-03-16 13:16:28.000000 scrapautoscout-1.1.5/MANIFEST.in
+--rw-r--r--   0 vicolc     (501) staff       (20)     1119 2023-03-17 11:06:10.600717 scrapautoscout-1.1.5/PKG-INFO
+--rw-r--r--   0 vicolc     (501) staff       (20)      513 2023-03-16 13:16:28.000000 scrapautoscout-1.1.5/README.md
+-drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-03-17 11:06:10.597323 scrapautoscout-1.1.5/scrapautoscout/
+--rw-r--r--   0 vicolc     (501) staff       (20)        1 2023-03-16 13:16:28.000000 scrapautoscout-1.1.5/scrapautoscout/__init__.py
+-drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-03-17 11:06:10.600051 scrapautoscout-1.1.5/scrapautoscout/__pycache__/
+--rw-r--r--   0 vicolc     (501) staff       (20)      154 2023-03-16 14:55:35.000000 scrapautoscout-1.1.5/scrapautoscout/__pycache__/__init__.cpython-310.pyc
+--rw-r--r--   0 vicolc     (501) staff       (20)     4280 2023-03-16 14:55:35.000000 scrapautoscout-1.1.5/scrapautoscout/__pycache__/config.cpython-310.pyc
+--rw-r--r--   0 vicolc     (501) staff       (20)     2247 2023-03-16 15:51:58.000000 scrapautoscout-1.1.5/scrapautoscout/__pycache__/daily_scrapper.cpython-310.pyc
+--rw-r--r--   0 vicolc     (501) staff       (20)     1809 2023-03-16 15:51:58.000000 scrapautoscout-1.1.5/scrapautoscout/__pycache__/proxies.cpython-310.pyc
+--rw-r--r--   0 vicolc     (501) staff       (20)    10169 2023-03-16 16:02:11.000000 scrapautoscout-1.1.5/scrapautoscout/__pycache__/scrapper.cpython-310.pyc
+-drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-03-17 11:06:10.600448 scrapautoscout-1.1.5/scrapautoscout/artifacts/
+--rw-r--r--   0 vicolc     (501) staff       (20)     2708 2023-03-16 16:03:23.000000 scrapautoscout-1.1.5/scrapautoscout/artifacts/logs.log
+--rwxr-xr-x   0 vicolc     (501) staff       (20)     1010 2023-03-17 11:05:43.000000 scrapautoscout-1.1.5/scrapautoscout/cli.py
+--rw-r--r--   0 vicolc     (501) staff       (20)     4529 2023-03-16 13:16:28.000000 scrapautoscout-1.1.5/scrapautoscout/config.py
+--rw-r--r--   0 vicolc     (501) staff       (20)     3058 2023-03-17 11:02:43.000000 scrapautoscout-1.1.5/scrapautoscout/daily_scrapper.py
+--rw-r--r--   0 vicolc     (501) staff       (20)     2049 2023-03-16 13:16:28.000000 scrapautoscout-1.1.5/scrapautoscout/proxies.py
+--rw-r--r--   0 vicolc     (501) staff       (20)    16189 2023-03-17 10:56:22.000000 scrapautoscout-1.1.5/scrapautoscout/scrapper.py
+-drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-03-17 11:06:10.598579 scrapautoscout-1.1.5/scrapautoscout.egg-info/
+--rw-r--r--   0 vicolc     (501) staff       (20)     1119 2023-03-17 11:06:10.000000 scrapautoscout-1.1.5/scrapautoscout.egg-info/PKG-INFO
+--rw-r--r--   0 vicolc     (501) staff       (20)      725 2023-03-17 11:06:10.000000 scrapautoscout-1.1.5/scrapautoscout.egg-info/SOURCES.txt
+--rw-r--r--   0 vicolc     (501) staff       (20)        1 2023-03-17 11:06:10.000000 scrapautoscout-1.1.5/scrapautoscout.egg-info/dependency_links.txt
+--rw-r--r--   0 vicolc     (501) staff       (20)       59 2023-03-17 11:06:10.000000 scrapautoscout-1.1.5/scrapautoscout.egg-info/entry_points.txt
+--rw-r--r--   0 vicolc     (501) staff       (20)       37 2023-03-17 11:06:10.000000 scrapautoscout-1.1.5/scrapautoscout.egg-info/requires.txt
+--rw-r--r--   0 vicolc     (501) staff       (20)       15 2023-03-17 11:06:10.000000 scrapautoscout-1.1.5/scrapautoscout.egg-info/top_level.txt
+--rw-r--r--   0 vicolc     (501) staff       (20)       38 2023-03-17 11:06:10.600950 scrapautoscout-1.1.5/setup.cfg
+--rw-r--r--   0 vicolc     (501) staff       (20)     1098 2023-03-17 11:06:07.000000 scrapautoscout-1.1.5/setup.py
++drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-04-07 14:14:42.946037 scrapautoscout-1.1.6/
++-rw-r--r--   0 vicolc     (501) staff       (20)     1068 2023-03-16 13:16:28.000000 scrapautoscout-1.1.6/LICENSE
++-rw-r--r--   0 vicolc     (501) staff       (20)       39 2023-03-16 13:16:28.000000 scrapautoscout-1.1.6/MANIFEST.in
++-rw-r--r--   0 vicolc     (501) staff       (20)     1718 2023-04-07 14:14:42.945851 scrapautoscout-1.1.6/PKG-INFO
++-rw-r--r--   0 vicolc     (501) staff       (20)     1108 2023-04-06 11:54:53.000000 scrapautoscout-1.1.6/README.md
++drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-04-07 14:14:42.941326 scrapautoscout-1.1.6/scrapautoscout/
++-rw-r--r--   0 vicolc     (501) staff       (20)        1 2023-03-16 13:16:28.000000 scrapautoscout-1.1.6/scrapautoscout/__init__.py
++drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-04-07 14:14:42.945439 scrapautoscout-1.1.6/scrapautoscout/__pycache__/
++-rw-r--r--   0 vicolc     (501) staff       (20)      154 2023-03-16 14:55:35.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/__init__.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)     8877 2023-04-05 10:11:26.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/config.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)     2318 2023-04-05 12:10:28.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/pipeline.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)     3094 2023-04-07 09:58:17.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/proxies.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)    21353 2023-04-07 13:16:23.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/scrapper.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)     5771 2023-04-05 10:45:15.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/transform.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)     1815 2023-03-28 11:38:09.000000 scrapautoscout-1.1.6/scrapautoscout/__pycache__/utils.cpython-310.pyc
++-rw-r--r--   0 vicolc     (501) staff       (20)    12415 2023-04-05 09:33:57.000000 scrapautoscout-1.1.6/scrapautoscout/config.py
++-rw-r--r--   0 vicolc     (501) staff       (20)     2197 2023-04-05 12:11:33.000000 scrapautoscout-1.1.6/scrapautoscout/pipeline.py
++-rw-r--r--   0 vicolc     (501) staff       (20)     3459 2023-04-07 09:58:17.000000 scrapautoscout-1.1.6/scrapautoscout/proxies.py
++-rw-r--r--   0 vicolc     (501) staff       (20)    30220 2023-04-07 13:16:23.000000 scrapautoscout-1.1.6/scrapautoscout/scrapper.py
++-rw-r--r--   0 vicolc     (501) staff       (20)     7592 2023-04-05 09:33:57.000000 scrapautoscout-1.1.6/scrapautoscout/transform.py
++-rw-r--r--   0 vicolc     (501) staff       (20)     1416 2023-03-28 11:10:05.000000 scrapautoscout-1.1.6/scrapautoscout/utils.py
++drwxr-xr-x   0 vicolc     (501) staff       (20)        0 2023-04-07 14:14:42.942638 scrapautoscout-1.1.6/scrapautoscout.egg-info/
++-rw-r--r--   0 vicolc     (501) staff       (20)     1718 2023-04-07 14:14:42.000000 scrapautoscout-1.1.6/scrapautoscout.egg-info/PKG-INFO
++-rw-r--r--   0 vicolc     (501) staff       (20)      811 2023-04-07 14:14:42.000000 scrapautoscout-1.1.6/scrapautoscout.egg-info/SOURCES.txt
++-rw-r--r--   0 vicolc     (501) staff       (20)        1 2023-04-07 14:14:42.000000 scrapautoscout-1.1.6/scrapautoscout.egg-info/dependency_links.txt
++-rw-r--r--   0 vicolc     (501) staff       (20)       64 2023-04-07 14:14:42.000000 scrapautoscout-1.1.6/scrapautoscout.egg-info/entry_points.txt
++-rw-r--r--   0 vicolc     (501) staff       (20)       88 2023-04-07 14:14:42.000000 scrapautoscout-1.1.6/scrapautoscout.egg-info/requires.txt
++-rw-r--r--   0 vicolc     (501) staff       (20)       15 2023-04-07 14:14:42.000000 scrapautoscout-1.1.6/scrapautoscout.egg-info/top_level.txt
++-rw-r--r--   0 vicolc     (501) staff       (20)       38 2023-04-07 14:14:42.946090 scrapautoscout-1.1.6/setup.cfg
++-rw-r--r--   0 vicolc     (501) staff       (20)     1074 2023-04-06 11:37:56.000000 scrapautoscout-1.1.6/setup.py
+```
+
+### Comparing `scrapautoscout-1.1.5/LICENSE` & `scrapautoscout-1.1.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `scrapautoscout-1.1.5/scrapautoscout.egg-info/SOURCES.txt` & `scrapautoscout-1.1.6/scrapautoscout.egg-info/SOURCES.txt`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,22 +1,24 @@
+ LICENSE
+ MANIFEST.in
+ README.md
+ setup.py
+ scrapautoscout/__init__.py
+-scrapautoscout/cli.py
+ scrapautoscout/config.py
+-scrapautoscout/daily_scrapper.py
++scrapautoscout/pipeline.py
+ scrapautoscout/proxies.py
+ scrapautoscout/scrapper.py
++scrapautoscout/transform.py
++scrapautoscout/utils.py
+ scrapautoscout.egg-info/PKG-INFO
+ scrapautoscout.egg-info/SOURCES.txt
+ scrapautoscout.egg-info/dependency_links.txt
+ scrapautoscout.egg-info/entry_points.txt
+ scrapautoscout.egg-info/requires.txt
+ scrapautoscout.egg-info/top_level.txt
+ scrapautoscout/__pycache__/__init__.cpython-310.pyc
+ scrapautoscout/__pycache__/config.cpython-310.pyc
+-scrapautoscout/__pycache__/daily_scrapper.cpython-310.pyc
++scrapautoscout/__pycache__/pipeline.cpython-310.pyc
+ scrapautoscout/__pycache__/proxies.cpython-310.pyc
+ scrapautoscout/__pycache__/scrapper.cpython-310.pyc
+-scrapautoscout/artifacts/logs.log
++scrapautoscout/__pycache__/transform.cpython-310.pyc
++scrapautoscout/__pycache__/utils.cpython-310.pyc
+```
+
+### Comparing `scrapautoscout-1.1.5/setup.py` & `scrapautoscout-1.1.6/setup.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,48 +1,35 @@
+ from setuptools import setup
+ from io import open
+ 
+-VERSION = '1.1.5'
++VERSION = '1.1.6'
+ DESCRIPTION = 'autoscout24 web scrapper'
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+-setup(
++with open("requirements.txt", "r") as fh:
++    requirements = fh.read().splitlines()
+ 
++setup(
+     name="scrapautoscout",
+     version=VERSION,
+-
+-    author='viggleUnik',
++    author='Vicol Cristian',
+     author_email='vicol.cristianken@gmail.com',
+-
+     description=DESCRIPTION,
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+-
+     url='https://github.com/viggleUnik/scrapautoscout',
+-
+     license='MIT',
+-
+     packages=['scrapautoscout'],
+-    install_requires=[
+-        'beautifulsoup4',
+-        'requests',
+-        'boto3',
+-        'awscli'
+-    ],
++    install_requires=requirements,
+     python_requires=">=3.6",
+     classifiers=[
+         "Development Status :: 1 - Planning",
+         "Intended Audience :: Developers",
+         "Programming Language :: Python :: 3",
+         "Operating System :: Unix",
+         "Operating System :: MacOS :: MacOS X",
+         "Operating System :: Microsoft :: Windows",
+     ],
+-    entry_points={
+-        'console_scripts': [
+-            'scrapautoscout = scrapautoscout.cli:run'
+-        ]
+-    },
+-
++    entry_points={'console_scripts': ['scrapautoscout = scrapautoscout.pipeline:run']},
+ )
+```
+
