@@ -1,0 +1,128 @@
+--- tmp/greptime-0.0.3.tar.gz
++++ tmp/greptime-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "greptime-0.0.3.tar", last modified: Fri Apr  7 08:36:50 2023, max compression
+│ +gzip compressed data, was "greptime-0.0.4.tar", last modified: Fri Apr  7 08:57:43 2023, max compression
+│   --- greptime-0.0.3.tar
+├── +++ greptime-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,14 +1,16 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 08:36:50.518633 greptime-0.0.3/
+│ │ --rw-rw-rw-   0        0        0      664 2023-04-07 08:36:50.517635 greptime-0.0.3/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      247 2023-04-07 07:41:52.000000 greptime-0.0.3/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 08:36:50.508637 greptime-0.0.3/greptime/
+│ │ --rw-rw-rw-   0        0        0    15048 2023-04-07 08:26:58.000000 greptime-0.0.3/greptime/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-07 08:36:50.516636 greptime-0.0.3/greptime.egg-info/
+│ │ --rw-rw-rw-   0        0        0      664 2023-04-07 08:36:50.000000 greptime-0.0.3/greptime.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      213 2023-04-07 08:36:50.000000 greptime-0.0.3/greptime.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-07 08:36:50.000000 greptime-0.0.3/greptime.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        6 2023-04-07 08:36:50.000000 greptime-0.0.3/greptime.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-04-07 08:36:50.000000 greptime-0.0.3/greptime.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0      108 2023-04-07 05:41:24.000000 greptime-0.0.3/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-07 08:36:50.518633 greptime-0.0.3/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      930 2023-04-07 08:35:13.000000 greptime-0.0.3/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:57:43.377101 greptime-0.0.4/
+│ │ +-rw-rw-rw-   0        0        0      664 2023-04-07 08:57:43.376099 greptime-0.0.4/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      247 2023-04-07 07:41:52.000000 greptime-0.0.4/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:57:43.366171 greptime-0.0.4/greptime/
+│ │ +-rw-rw-rw-   0        0        0    15179 2023-04-07 08:57:26.000000 greptime-0.0.4/greptime/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:57:43.374101 greptime-0.0.4/greptime.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      664 2023-04-07 08:57:43.000000 greptime-0.0.4/greptime.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      227 2023-04-07 08:57:43.000000 greptime-0.0.4/greptime.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-07 08:57:43.000000 greptime-0.0.4/greptime.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        6 2023-04-07 08:57:43.000000 greptime-0.0.4/greptime.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-07 08:57:43.000000 greptime-0.0.4/greptime.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0      108 2023-04-07 05:41:24.000000 greptime-0.0.4/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-07 08:57:43.377101 greptime-0.0.4/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      930 2023-04-07 08:56:00.000000 greptime-0.0.4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-07 08:57:43.375100 greptime-0.0.4/tests/
+│ │ +-rw-rw-rw-   0        0        0      170 2023-04-07 08:47:08.000000 greptime-0.0.4/tests/test.py
+│ │   --- greptime-0.0.3/PKG-INFO
+│ ├── +++ greptime-0.0.4/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: greptime
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: A mock test library for greptimedb's scripting feature
+│ │  Home-page: https://github.com/GreptimeTeam/greptime_py_mock
+│ │  Author: discord9
+│ │  Author-email: zglzy29yzdk@gmail.com
+│ │  License: Apache License 2.0
+│ │  Project-URL: Bug Tracker, https://github.com/GreptimeTeam/greptime_py_mock/issues
+│ │  Requires-Python: >=3.6
+│ │   --- greptime-0.0.3/greptime/__init__.py
+│ ├── +++ greptime-0.0.4/greptime/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -113,14 +113,18 @@
+│ │          return PyVector(self.v & other.v)
+│ │  
+│ │      def __xor__(self, other):
+│ │          return PyVector(self.v ^ other.v)
+│ │  
+│ │      def __or__(self, other):
+│ │          return PyVector(self.v | other.v)
+│ │ +    
+│ │ +def vector(v: 'np.ndarray') -> 'PyVector':
+│ │ +    '''Takes a numpy.ndarray and returns a PyVector object.'''
+│ │ +    return PyVector(v)
+│ │  
+│ │  
+│ │  class PyExpr:
+│ │      def __call__(self) -> 'PyExpr':
+│ │          return self
+│ │      def alias(self, name: str) -> 'PyExpr':
+│ │          '''Return self AS name alias expression'''
+│ │ @@ -257,15 +261,15 @@
+│ │  
+│ │  
+│ │  def dataframe() -> PyDataFrame:
+│ │      '''This is a function that returns a PyDataFrame object, constructed from current context's input Recordbatch.'''
+│ │      pass
+│ │  
+│ │  
+│ │ -def query_engine() -> PyQueryEngine:
+│ │ +def query() -> PyQueryEngine:
+│ │      '''This is a function that returns a PyQueryEngine object.'''
+│ │      pass
+│ │  
+│ │  
+│ │  def lit(x) -> PyExpr:
+│ │      pass
+│ │   --- greptime-0.0.3/greptime.egg-info/PKG-INFO
+│ ├── +++ greptime-0.0.4/greptime.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: greptime
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: A mock test library for greptimedb's scripting feature
+│ │  Home-page: https://github.com/GreptimeTeam/greptime_py_mock
+│ │  Author: discord9
+│ │  Author-email: zglzy29yzdk@gmail.com
+│ │  License: Apache License 2.0
+│ │  Project-URL: Bug Tracker, https://github.com/GreptimeTeam/greptime_py_mock/issues
+│ │  Requires-Python: >=3.6
+│ │   --- greptime-0.0.3/setup.py
+│ ├── +++ greptime-0.0.4/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  long_desc = open("README.md").read()
+│ │  required = ["numpy"] # Comma seperated dependent libraries name
+│ │  
+│ │  setuptools.setup(
+│ │      name="greptime",
+│ │ -    version="0.0.3",
+│ │ +    version="0.0.4",
+│ │      author="discord9",
+│ │      author_email="zglzy29yzdk@gmail.com",
+│ │      license="Apache License 2.0",
+│ │      description="A mock test library for greptimedb's scripting feature",
+│ │      long_description=long_desc,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/GreptimeTeam/greptime_py_mock",

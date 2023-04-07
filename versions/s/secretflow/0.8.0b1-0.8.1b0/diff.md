@@ -1,0 +1,9755 @@
+# Comparing `tmp/secretflow-0.8.0b1-cp38-cp38-manylinux2014_x86_64.whl.zip` & `tmp/secretflow-0.8.1b0-cp38-cp38-macosx_11_0_arm64.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,195 +1,230 @@
+-Zip file size: 1148075 bytes, number of entries: 193
+--rw-r--r--  2.0 unx     1136 b- defN 23-Apr-03 02:15 secretflow/__init__.py
+--rw-r--r--  2.0 unx      754 b- defN 23-Apr-03 02:15 secretflow/data/__init__.py
+--rw-r--r--  2.0 unx    14806 b- defN 23-Apr-03 02:15 secretflow/data/base.py
+--rw-r--r--  2.0 unx     1108 b- defN 23-Apr-03 02:15 secretflow/data/math_utils.py
+--rw-r--r--  2.0 unx    26347 b- defN 23-Apr-03 02:15 secretflow/data/ndarray.py
+--rw-r--r--  2.0 unx     5586 b- defN 23-Apr-03 02:15 secretflow/data/split.py
+--rw-r--r--  2.0 unx      716 b- defN 23-Apr-03 02:15 secretflow/data/horizontal/__init__.py
+--rw-r--r--  2.0 unx    15042 b- defN 23-Apr-03 02:15 secretflow/data/horizontal/dataframe.py
+--rw-r--r--  2.0 unx     2557 b- defN 23-Apr-03 02:15 secretflow/data/horizontal/io.py
+--rw-r--r--  2.0 unx     1555 b- defN 23-Apr-03 02:15 secretflow/data/horizontal/sampler.py
+--rw-r--r--  2.0 unx      627 b- defN 23-Apr-03 02:15 secretflow/data/io/__init__.py
+--rw-r--r--  2.0 unx     2112 b- defN 23-Apr-03 02:15 secretflow/data/io/oss.py
+--rw-r--r--  2.0 unx     2075 b- defN 23-Apr-03 02:15 secretflow/data/io/util.py
+--rw-r--r--  2.0 unx      691 b- defN 23-Apr-03 02:15 secretflow/data/mix/__init__.py
+--rw-r--r--  2.0 unx    15054 b- defN 23-Apr-03 02:15 secretflow/data/mix/dataframe.py
+--rw-r--r--  2.0 unx      716 b- defN 23-Apr-03 02:15 secretflow/data/vertical/__init__.py
+--rw-r--r--  2.0 unx    22943 b- defN 23-Apr-03 02:15 secretflow/data/vertical/dataframe.py
+--rw-r--r--  2.0 unx     6821 b- defN 23-Apr-03 02:15 secretflow/data/vertical/io.py
+--rw-r--r--  2.0 unx      745 b- defN 23-Apr-03 02:15 secretflow/device/__init__.py
+--rw-r--r--  2.0 unx    15193 b- defN 23-Apr-03 02:15 secretflow/device/driver.py
+--rw-r--r--  2.0 unx    10796 b- defN 23-Apr-03 02:15 secretflow/device/link.py
+--rw-r--r--  2.0 unx     8100 b- defN 23-Apr-03 02:15 secretflow/device/proxy.py
+--rw-r--r--  2.0 unx      894 b- defN 23-Apr-03 02:15 secretflow/device/device/__init__.py
+--rw-r--r--  2.0 unx     2920 b- defN 23-Apr-03 02:15 secretflow/device/device/base.py
+--rw-r--r--  2.0 unx    17158 b- defN 23-Apr-03 02:15 secretflow/device/device/heu.py
+--rw-r--r--  2.0 unx     3545 b- defN 23-Apr-03 02:15 secretflow/device/device/heu_object.py
+--rw-r--r--  2.0 unx     5201 b- defN 23-Apr-03 02:15 secretflow/device/device/pyu.py
+--rw-r--r--  2.0 unx     3572 b- defN 23-Apr-03 02:15 secretflow/device/device/register.py
+--rw-r--r--  2.0 unx    47878 b- defN 23-Apr-03 02:15 secretflow/device/device/spu.py
+--rw-r--r--  2.0 unx     2410 b- defN 23-Apr-03 02:15 secretflow/device/device/type_traits.py
+--rw-r--r--  2.0 unx      638 b- defN 23-Apr-03 02:15 secretflow/device/kernels/__init__.py
+--rw-r--r--  2.0 unx     5528 b- defN 23-Apr-03 02:15 secretflow/device/kernels/heu.py
+--rw-r--r--  2.0 unx     2205 b- defN 23-Apr-03 02:15 secretflow/device/kernels/pyu.py
+--rw-r--r--  2.0 unx    12954 b- defN 23-Apr-03 02:15 secretflow/device/kernels/spu.py
+--rw-r--r--  2.0 unx      223 b- defN 23-Apr-03 02:15 secretflow/distributed/__init__.py
+--rw-r--r--  2.0 unx     5018 b- defN 23-Apr-03 02:15 secretflow/distributed/primitive.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/__init__.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/boost/__init__.py
+--rw-r--r--  2.0 unx      654 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/__init__.py
+--rw-r--r--  2.0 unx     9580 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/homo_booster.py
+--rw-r--r--  2.0 unx     7462 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/homo_booster_worker.py
+--rw-r--r--  2.0 unx    11165 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/homo_decision_tree.py
+--rw-r--r--  2.0 unx     3043 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_param.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/boost_core/__init__.py
+--rw-r--r--  2.0 unx     4365 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/boost_core/callback.py
+--rw-r--r--  2.0 unx     7192 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/boost_core/core.py
+--rw-r--r--  2.0 unx     9318 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/boost_core/training.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/__init__.py
+--rw-r--r--  2.0 unx     4429 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/criterion.py
+--rw-r--r--  2.0 unx    18556 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/decision_tree.py
+--rw-r--r--  2.0 unx     9371 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/feature_histogram.py
+--rw-r--r--  2.0 unx     2535 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/feature_importance.py
+--rw-r--r--  2.0 unx     4218 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/loss_function.py
+--rw-r--r--  2.0 unx     2060 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/node.py
+--rw-r--r--  2.0 unx     9846 b- defN 23-Apr-03 02:15 secretflow/ml/boost/homo_boost/tree_core/splitter.py
+--rw-r--r--  2.0 unx      660 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/__init__.py
+--rw-r--r--  2.0 unx    20000 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/model.py
+--rw-r--r--  2.0 unx        0 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/core/__init__.py
+--rw-r--r--  2.0 unx     8800 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/core/node_split.py
+--rw-r--r--  2.0 unx    10969 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/core/tree_worker.py
+--rw-r--r--  2.0 unx     1513 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/core/utils.py
+--rw-r--r--  2.0 unx      980 b- defN 23-Apr-03 02:15 secretflow/ml/boost/ss_xgb_v/core/xgb_tree.py
+--rw-r--r--  2.0 unx     1013 b- defN 23-Apr-03 02:15 secretflow/ml/linear/__init__.py
+--rw-r--r--  2.0 unx    11737 b- defN 23-Apr-03 02:15 secretflow/ml/linear/fl_lr_mix.py
+--rw-r--r--  2.0 unx    19161 b- defN 23-Apr-03 02:15 secretflow/ml/linear/fl_lr_v.py
+--rw-r--r--  2.0 unx     1375 b- defN 23-Apr-03 02:15 secretflow/ml/linear/linear_model.py
+--rw-r--r--  2.0 unx      673 b- defN 23-Apr-03 02:15 secretflow/ml/linear/hess_sgd/__init__.py
+--rw-r--r--  2.0 unx    13250 b- defN 23-Apr-03 02:15 secretflow/ml/linear/hess_sgd/model.py
+--rw-r--r--  2.0 unx      639 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_glm/__init__.py
+--rw-r--r--  2.0 unx    23754 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_glm/model.py
+--rw-r--r--  2.0 unx      233 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_glm/core/__init__.py
+--rw-r--r--  2.0 unx     5287 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_glm/core/distribution.py
+--rw-r--r--  2.0 unx     2950 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_glm/core/link.py
+--rw-r--r--  2.0 unx      653 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_sgd/__init__.py
+--rw-r--r--  2.0 unx    17121 b- defN 23-Apr-03 02:15 secretflow/ml/linear/ss_sgd/model.py
+--rw-r--r--  2.0 unx      698 b- defN 23-Apr-03 02:15 secretflow/ml/nn/__init__.py
+--rw-r--r--  2.0 unx     8065 b- defN 23-Apr-03 02:15 secretflow/ml/nn/metrics.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/__init__.py
+--rw-r--r--  2.0 unx     1741 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/compress.py
+--rw-r--r--  2.0 unx    28179 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/fl_model.py
+--rw-r--r--  2.0 unx     2152 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/strategy_dispatcher.py
+--rw-r--r--  2.0 unx     3279 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/utils.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/__init__.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/__init__.py
+--rw-r--r--  2.0 unx    10911 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/fl_base.py
+--rw-r--r--  2.0 unx     4369 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/sampler.py
+--rw-r--r--  2.0 unx      905 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/__init__.py
+--rw-r--r--  2.0 unx     4072 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_g.py
+--rw-r--r--  2.0 unx     4104 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_u.py
+--rw-r--r--  2.0 unx     3833 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_w.py
+--rw-r--r--  2.0 unx     4676 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_prox.py
+--rw-r--r--  2.0 unx     5579 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_scr.py
+--rw-r--r--  2.0 unx     5453 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_stc.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/__init__.py
+--rw-r--r--  2.0 unx    11627 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/fl_base.py
+--rw-r--r--  2.0 unx     3607 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/sampler.py
+--rw-r--r--  2.0 unx     2702 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/utils.py
+--rw-r--r--  2.0 unx      904 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/__init__.py
+--rw-r--r--  2.0 unx     3481 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_g.py
+--rw-r--r--  2.0 unx     3323 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_u.py
+--rw-r--r--  2.0 unx     3380 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_w.py
+--rw-r--r--  2.0 unx     3837 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/fed_prox.py
+--rw-r--r--  2.0 unx     5266 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/fed_scr.py
+--rw-r--r--  2.0 unx     5275 b- defN 23-Apr-03 02:15 secretflow/ml/nn/fl/backend/torch/strategy/fed_stc.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/__init__.py
+--rw-r--r--  2.0 unx    28571 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/sl_model.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/__init__.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/tensorflow/__init__.py
+--rw-r--r--  2.0 unx    31717 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/tensorflow/sl_base.py
+--rw-r--r--  2.0 unx     4145 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/tensorflow/utils.py
+--rw-r--r--  2.0 unx      666 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/tensorflow/strategy/__init__.py
+--rw-r--r--  2.0 unx     6428 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/tensorflow/strategy/split_async.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/ml/nn/sl/backend/torch/__init__.py
+--rw-r--r--  2.0 unx      923 b- defN 23-Apr-03 02:15 secretflow/preprocessing/__init__.py
+--rw-r--r--  2.0 unx     1231 b- defN 23-Apr-03 02:15 secretflow/preprocessing/base.py
+--rw-r--r--  2.0 unx    11845 b- defN 23-Apr-03 02:15 secretflow/preprocessing/discretization.py
+--rw-r--r--  2.0 unx    13154 b- defN 23-Apr-03 02:15 secretflow/preprocessing/encoder.py
+--rw-r--r--  2.0 unx    14116 b- defN 23-Apr-03 02:15 secretflow/preprocessing/scaler.py
+--rw-r--r--  2.0 unx     5162 b- defN 23-Apr-03 02:15 secretflow/preprocessing/transformer.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/__init__.py
+--rw-r--r--  2.0 unx     7218 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/homo_binning.py
+--rw-r--r--  2.0 unx    11273 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/homo_binning_base.py
+--rw-r--r--  2.0 unx    10436 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/vert_woe_binning.py
+--rw-r--r--  2.0 unx    21935 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/vert_woe_binning_pyu.py
+--rw-r--r--  2.0 unx     3502 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/vert_woe_substitution.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/kernels/__init__.py
+--rw-r--r--  2.0 unx     2524 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/kernels/base_binning.py
+--rw-r--r--  2.0 unx     5290 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/kernels/quantile_binning.py
+--rw-r--r--  2.0 unx     6517 b- defN 23-Apr-03 02:15 secretflow/preprocessing/binning/kernels/quantile_summaries.py
+--rw-r--r--  2.0 unx      963 b- defN 23-Apr-03 02:15 secretflow/security/__init__.py
+--rw-r--r--  2.0 unx    11579 b- defN 23-Apr-03 02:15 secretflow/security/diffie_hellman.py
+--rw-r--r--  2.0 unx      946 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/__init__.py
+--rw-r--r--  2.0 unx     1039 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/_utils.py
+--rw-r--r--  2.0 unx     1072 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/aggregator.py
+--rw-r--r--  2.0 unx     4473 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/plain_aggregator.py
+--rw-r--r--  2.0 unx    12147 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/secure_aggregator.py
+--rw-r--r--  2.0 unx     4971 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/sparse_plain_aggregator.py
+--rw-r--r--  2.0 unx     4178 b- defN 23-Apr-03 02:15 secretflow/security/aggregation/spu_aggregator.py
+--rw-r--r--  2.0 unx      858 b- defN 23-Apr-03 02:15 secretflow/security/compare/__init__.py
+--rw-r--r--  2.0 unx     1066 b- defN 23-Apr-03 02:15 secretflow/security/compare/comparator.py
+--rw-r--r--  2.0 unx     2220 b- defN 23-Apr-03 02:15 secretflow/security/compare/device_comparator.py
+--rw-r--r--  2.0 unx     1871 b- defN 23-Apr-03 02:15 secretflow/security/compare/plain_comparator.py
+--rw-r--r--  2.0 unx     1762 b- defN 23-Apr-03 02:15 secretflow/security/compare/spu_comparator.py
+--rw-r--r--  2.0 unx      957 b- defN 23-Apr-03 02:15 secretflow/security/privacy/__init__.py
+--rw-r--r--  2.0 unx  2211448 b- defN 23-Apr-03 02:19 secretflow/security/privacy/_lib.cpython-38-x86_64-linux-gnu.so
+--rw-r--r--  2.0 unx     2749 b- defN 23-Apr-03 02:15 secretflow/security/privacy/strategy.py
+--rw-r--r--  2.0 unx     1875 b- defN 23-Apr-03 02:15 secretflow/security/privacy/strategy_fl.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/security/privacy/accounting/__init__.py
+--rw-r--r--  2.0 unx     2508 b- defN 23-Apr-03 02:15 secretflow/security/privacy/accounting/gdp_accountant.py
+--rw-r--r--  2.0 unx     3670 b- defN 23-Apr-03 02:15 secretflow/security/privacy/accounting/log_utils.py
+--rw-r--r--  2.0 unx     5700 b- defN 23-Apr-03 02:15 secretflow/security/privacy/accounting/rdp_accountant.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/security/privacy/mechanism/__init__.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/security/privacy/mechanism/tensorflow/__init__.py
+--rw-r--r--  2.0 unx     6127 b- defN 23-Apr-03 02:15 secretflow/security/privacy/mechanism/tensorflow/layers.py
+--rw-r--r--  2.0 unx     5250 b- defN 23-Apr-03 02:15 secretflow/security/privacy/mechanism/tensorflow/mechanism_fl.py
+--rw-r--r--  2.0 unx     1160 b- defN 23-Apr-03 02:15 secretflow/stats/__init__.py
+--rw-r--r--  2.0 unx     4042 b- defN 23-Apr-03 02:15 secretflow/stats/biclassification_eval.py
+--rw-r--r--  2.0 unx     2386 b- defN 23-Apr-03 02:15 secretflow/stats/psi_eval.py
+--rw-r--r--  2.0 unx     2751 b- defN 23-Apr-03 02:15 secretflow/stats/pva_eval.py
+--rw-r--r--  2.0 unx     2993 b- defN 23-Apr-03 02:15 secretflow/stats/regression_eval.py
+--rw-r--r--  2.0 unx     4422 b- defN 23-Apr-03 02:15 secretflow/stats/score_card.py
+--rw-r--r--  2.0 unx     2425 b- defN 23-Apr-03 02:15 secretflow/stats/ss_pearsonr_v.py
+--rw-r--r--  2.0 unx     7181 b- defN 23-Apr-03 02:15 secretflow/stats/ss_pvalue_v.py
+--rw-r--r--  2.0 unx     3634 b- defN 23-Apr-03 02:15 secretflow/stats/ss_vif_v.py
+--rw-r--r--  2.0 unx     3260 b- defN 23-Apr-03 02:15 secretflow/stats/table_statistics.py
+--rw-r--r--  2.0 unx      726 b- defN 23-Apr-03 02:15 secretflow/stats/core/__init__.py
+--rw-r--r--  2.0 unx    20047 b- defN 23-Apr-03 02:15 secretflow/stats/core/biclassification_eval_core.py
+--rw-r--r--  2.0 unx     2802 b- defN 23-Apr-03 02:15 secretflow/stats/core/psi_core.py
+--rw-r--r--  2.0 unx     1665 b- defN 23-Apr-03 02:15 secretflow/stats/core/pva_core.py
+--rw-r--r--  2.0 unx     1776 b- defN 23-Apr-03 02:15 secretflow/stats/core/utils.py
+--rw-r--r--  2.0 unx      662 b- defN 23-Apr-03 02:15 secretflow/utils/__init__.py
+--rw-r--r--  2.0 unx    11206 b- defN 23-Apr-03 02:15 secretflow/utils/compressor.py
+--rw-r--r--  2.0 unx     1084 b- defN 23-Apr-03 02:15 secretflow/utils/errors.py
+--rw-r--r--  2.0 unx      283 b- defN 23-Apr-03 02:15 secretflow/utils/hash.py
+--rw-r--r--  2.0 unx      391 b- defN 23-Apr-03 02:15 secretflow/utils/io.py
+--rw-r--r--  2.0 unx      378 b- defN 23-Apr-03 02:15 secretflow/utils/logging.py
+--rw-r--r--  2.0 unx     2842 b- defN 23-Apr-03 02:15 secretflow/utils/ndarray_bigint.py
+--rw-r--r--  2.0 unx     2489 b- defN 23-Apr-03 02:15 secretflow/utils/ndarray_encoding.py
+--rw-r--r--  2.0 unx      216 b- defN 23-Apr-03 02:15 secretflow/utils/random.py
+--rw-r--r--  2.0 unx     3928 b- defN 23-Apr-03 02:15 secretflow/utils/sigmoid.py
+--rw-r--r--  2.0 unx     3342 b- defN 23-Apr-03 02:15 secretflow/utils/testing.py
+--rw-r--r--  2.0 unx      585 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/__init__.py
+--rw-r--r--  2.0 unx    20821 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/datasets.py
+--rw-r--r--  2.0 unx     8941 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/tf_gnn_model.py
+--rw-r--r--  2.0 unx      769 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/data/__init__.py
+--rw-r--r--  2.0 unx     2548 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/data/_utils.py
+--rw-r--r--  2.0 unx     5389 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/data/dataframe.py
+--rw-r--r--  2.0 unx     4093 b- defN 23-Apr-03 02:15 secretflow/utils/simulation/data/ndarray.py
+--rw-r--r--  2.0 unx    11356 b- defN 23-Apr-03 02:19 secretflow-0.8.0b1.dist-info/LICENSE
+--rw-r--r--  2.0 unx     3648 b- defN 23-Apr-03 02:19 secretflow-0.8.0b1.dist-info/METADATA
+--rw-r--r--  2.0 unx      111 b- defN 23-Apr-03 02:19 secretflow-0.8.0b1.dist-info/WHEEL
+--rw-r--r--  2.0 unx       44 b- defN 23-Apr-03 02:19 secretflow-0.8.0b1.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx    18879 b- defN 23-Apr-03 02:19 secretflow-0.8.0b1.dist-info/RECORD
+-193 files, 3292906 bytes uncompressed, 1117487 bytes compressed:  66.1%
++Zip file size: 1461760 bytes, number of entries: 228
++-rw-r--r--  2.0 unx     1261 b- defN 23-Apr-07 09:00 secretflow/__init__.py
++-rw-r--r--  2.0 unx      607 b- defN 23-Apr-07 09:00 secretflow/version.py
++-rw-r--r--  2.0 unx      754 b- defN 23-Apr-07 09:00 secretflow/data/__init__.py
++-rw-r--r--  2.0 unx    14806 b- defN 23-Apr-07 09:00 secretflow/data/base.py
++-rw-r--r--  2.0 unx     1108 b- defN 23-Apr-07 09:00 secretflow/data/math_utils.py
++-rw-r--r--  2.0 unx    24878 b- defN 23-Apr-07 09:00 secretflow/data/ndarray.py
++-rw-r--r--  2.0 unx     5420 b- defN 23-Apr-07 09:00 secretflow/data/split.py
++-rw-r--r--  2.0 unx      716 b- defN 23-Apr-07 09:00 secretflow/data/horizontal/__init__.py
++-rw-r--r--  2.0 unx    15042 b- defN 23-Apr-07 09:00 secretflow/data/horizontal/dataframe.py
++-rw-r--r--  2.0 unx     2557 b- defN 23-Apr-07 09:00 secretflow/data/horizontal/io.py
++-rw-r--r--  2.0 unx     1555 b- defN 23-Apr-07 09:00 secretflow/data/horizontal/sampler.py
++-rw-r--r--  2.0 unx      627 b- defN 23-Apr-07 09:00 secretflow/data/io/__init__.py
++-rw-r--r--  2.0 unx     2112 b- defN 23-Apr-07 09:00 secretflow/data/io/oss.py
++-rw-r--r--  2.0 unx     2083 b- defN 23-Apr-07 09:00 secretflow/data/io/util.py
++-rw-r--r--  2.0 unx      691 b- defN 23-Apr-07 09:00 secretflow/data/mix/__init__.py
++-rw-r--r--  2.0 unx    15054 b- defN 23-Apr-07 09:00 secretflow/data/mix/dataframe.py
++-rw-r--r--  2.0 unx      716 b- defN 23-Apr-07 09:00 secretflow/data/vertical/__init__.py
++-rw-r--r--  2.0 unx    22944 b- defN 23-Apr-07 09:00 secretflow/data/vertical/dataframe.py
++-rw-r--r--  2.0 unx     6821 b- defN 23-Apr-07 09:00 secretflow/data/vertical/io.py
++-rw-r--r--  2.0 unx      745 b- defN 23-Apr-07 09:00 secretflow/device/__init__.py
++-rw-r--r--  2.0 unx    22444 b- defN 23-Apr-07 09:00 secretflow/device/driver.py
++-rw-r--r--  2.0 unx     2981 b- defN 23-Apr-07 09:00 secretflow/device/global_state.py
++-rw-r--r--  2.0 unx    10795 b- defN 23-Apr-07 09:00 secretflow/device/link.py
++-rw-r--r--  2.0 unx     8100 b- defN 23-Apr-07 09:00 secretflow/device/proxy.py
++-rw-r--r--  2.0 unx      939 b- defN 23-Apr-07 09:00 secretflow/device/device/__init__.py
++-rw-r--r--  2.0 unx      889 b- defN 23-Apr-07 09:00 secretflow/device/device/_utils.py
++-rw-r--r--  2.0 unx     2264 b- defN 23-Apr-07 09:00 secretflow/device/device/base.py
++-rw-r--r--  2.0 unx    22903 b- defN 23-Apr-07 09:00 secretflow/device/device/heu.py
++-rw-r--r--  2.0 unx     6068 b- defN 23-Apr-07 09:00 secretflow/device/device/heu_object.py
++-rw-r--r--  2.0 unx     4693 b- defN 23-Apr-07 09:00 secretflow/device/device/pyu.py
++-rw-r--r--  2.0 unx     3589 b- defN 23-Apr-07 09:00 secretflow/device/device/register.py
++-rw-r--r--  2.0 unx    56627 b- defN 23-Apr-07 09:00 secretflow/device/device/spu.py
++-rw-r--r--  2.0 unx     7655 b- defN 23-Apr-07 09:00 secretflow/device/device/teeu.py
++-rw-r--r--  2.0 unx     2410 b- defN 23-Apr-07 09:00 secretflow/device/device/type_traits.py
++-rw-r--r--  2.0 unx      638 b- defN 23-Apr-07 09:00 secretflow/device/kernels/__init__.py
++-rw-r--r--  2.0 unx     5716 b- defN 23-Apr-07 09:00 secretflow/device/kernels/heu.py
++-rw-r--r--  2.0 unx     6837 b- defN 23-Apr-07 09:00 secretflow/device/kernels/pyu.py
++-rw-r--r--  2.0 unx    14374 b- defN 23-Apr-07 09:00 secretflow/device/kernels/spu.py
++-rw-r--r--  2.0 unx      923 b- defN 23-Apr-07 09:00 secretflow/device/kernels/teeu.py
++-rw-r--r--  2.0 unx      784 b- defN 23-Apr-07 09:00 secretflow/distributed/__init__.py
++-rw-r--r--  2.0 unx     6373 b- defN 23-Apr-07 09:00 secretflow/distributed/primitive.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/__init__.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/boost/__init__.py
++-rw-r--r--  2.0 unx      654 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/__init__.py
++-rw-r--r--  2.0 unx     9580 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/homo_booster.py
++-rw-r--r--  2.0 unx     7462 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/homo_booster_worker.py
++-rw-r--r--  2.0 unx    11166 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/homo_decision_tree.py
++-rw-r--r--  2.0 unx     3043 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_param.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/boost_core/__init__.py
++-rw-r--r--  2.0 unx     4365 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/boost_core/callback.py
++-rw-r--r--  2.0 unx     7192 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/boost_core/core.py
++-rw-r--r--  2.0 unx     9317 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/boost_core/training.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/__init__.py
++-rw-r--r--  2.0 unx     4429 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/criterion.py
++-rw-r--r--  2.0 unx    18557 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/decision_tree.py
++-rw-r--r--  2.0 unx     9371 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/feature_histogram.py
++-rw-r--r--  2.0 unx     2535 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/feature_importance.py
++-rw-r--r--  2.0 unx     4218 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/loss_function.py
++-rw-r--r--  2.0 unx     2060 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/node.py
++-rw-r--r--  2.0 unx     9846 b- defN 23-Apr-07 09:00 secretflow/ml/boost/homo_boost/tree_core/splitter.py
++-rw-r--r--  2.0 unx      677 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/__init__.py
++-rw-r--r--  2.0 unx     3472 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/model.py
++-rw-r--r--  2.0 unx    17539 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/sgb.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/__init__.py
++-rw-r--r--  2.0 unx     9768 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/label_holder.py
++-rw-r--r--  2.0 unx     2043 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/level_cache.py
++-rw-r--r--  2.0 unx     1139 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/params.py
++-rw-r--r--  2.0 unx     3212 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/preprocessing.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/distributed_tree/__init__.py
++-rw-r--r--  2.0 unx     2785 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/distributed_tree/distributed_tree.py
++-rw-r--r--  2.0 unx     1582 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/distributed_tree/split_tree.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/__init__.py
++-rw-r--r--  2.0 unx     2600 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/boost.py
++-rw-r--r--  2.0 unx     1724 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/bucket_sum.py
++-rw-r--r--  2.0 unx      930 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/grad.py
++-rw-r--r--  2.0 unx     1994 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/node_select.py
++-rw-r--r--  2.0 unx     1452 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/pred.py
++-rw-r--r--  2.0 unx      776 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/pure_numpy_ops/random.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/split_tree_trainer/__init__.py
++-rw-r--r--  2.0 unx     4712 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/split_tree_trainer/order_map_context.py
++-rw-r--r--  2.0 unx     2446 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/split_tree_trainer/shuffler.py
++-rw-r--r--  2.0 unx     3828 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/split_tree_trainer/split_tree_trainer.py
++-rw-r--r--  2.0 unx     5057 b- defN 23-Apr-07 09:00 secretflow/ml/boost/sgb_v/core/split_tree_trainer/splitter.py
++-rw-r--r--  2.0 unx      661 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/__init__.py
++-rw-r--r--  2.0 unx    19885 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/model.py
++-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/core/__init__.py
++-rw-r--r--  2.0 unx     8801 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/core/node_split.py
++-rw-r--r--  2.0 unx     9885 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/core/tree_worker.py
++-rw-r--r--  2.0 unx     1513 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/core/utils.py
++-rw-r--r--  2.0 unx      980 b- defN 23-Apr-07 09:00 secretflow/ml/boost/ss_xgb_v/core/xgb_tree.py
++-rw-r--r--  2.0 unx     1013 b- defN 23-Apr-07 09:00 secretflow/ml/linear/__init__.py
++-rw-r--r--  2.0 unx    11736 b- defN 23-Apr-07 09:00 secretflow/ml/linear/fl_lr_mix.py
++-rw-r--r--  2.0 unx    19131 b- defN 23-Apr-07 09:00 secretflow/ml/linear/fl_lr_v.py
++-rw-r--r--  2.0 unx     3129 b- defN 23-Apr-07 09:00 secretflow/ml/linear/linear_model.py
++-rw-r--r--  2.0 unx      673 b- defN 23-Apr-07 09:00 secretflow/ml/linear/hess_sgd/__init__.py
++-rw-r--r--  2.0 unx    13250 b- defN 23-Apr-07 09:00 secretflow/ml/linear/hess_sgd/model.py
++-rw-r--r--  2.0 unx      639 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_glm/__init__.py
++-rw-r--r--  2.0 unx    23754 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_glm/model.py
++-rw-r--r--  2.0 unx      233 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_glm/core/__init__.py
++-rw-r--r--  2.0 unx     5287 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_glm/core/distribution.py
++-rw-r--r--  2.0 unx     2950 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_glm/core/link.py
++-rw-r--r--  2.0 unx      653 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_sgd/__init__.py
++-rw-r--r--  2.0 unx    21895 b- defN 23-Apr-07 09:00 secretflow/ml/linear/ss_sgd/model.py
++-rw-r--r--  2.0 unx      698 b- defN 23-Apr-07 09:00 secretflow/ml/nn/__init__.py
++-rw-r--r--  2.0 unx     8064 b- defN 23-Apr-07 09:00 secretflow/ml/nn/metrics.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/applications/__init__.py
++-rw-r--r--  2.0 unx     5261 b- defN 23-Apr-07 09:00 secretflow/ml/nn/applications/sl_deep_fm.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/__init__.py
++-rw-r--r--  2.0 unx     1743 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/compress.py
++-rw-r--r--  2.0 unx    30837 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/fl_model.py
++-rw-r--r--  2.0 unx     2152 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/strategy_dispatcher.py
++-rw-r--r--  2.0 unx     3279 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/utils.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/__init__.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/__init__.py
++-rw-r--r--  2.0 unx    12678 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/fl_base.py
++-rw-r--r--  2.0 unx     4369 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/sampler.py
++-rw-r--r--  2.0 unx      904 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/__init__.py
++-rw-r--r--  2.0 unx     4073 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_g.py
++-rw-r--r--  2.0 unx     4105 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_u.py
++-rw-r--r--  2.0 unx     3834 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_w.py
++-rw-r--r--  2.0 unx     4677 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_prox.py
++-rw-r--r--  2.0 unx     5579 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_scr.py
++-rw-r--r--  2.0 unx     5453 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_stc.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/__init__.py
++-rw-r--r--  2.0 unx    13406 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/fl_base.py
++-rw-r--r--  2.0 unx     3606 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/sampler.py
++-rw-r--r--  2.0 unx     2710 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/utils.py
++-rw-r--r--  2.0 unx      904 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/__init__.py
++-rw-r--r--  2.0 unx     3482 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_g.py
++-rw-r--r--  2.0 unx     3324 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_u.py
++-rw-r--r--  2.0 unx     3381 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_w.py
++-rw-r--r--  2.0 unx     3838 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/fed_prox.py
++-rw-r--r--  2.0 unx     5266 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/fed_scr.py
++-rw-r--r--  2.0 unx     5275 b- defN 23-Apr-07 09:00 secretflow/ml/nn/fl/backend/torch/strategy/fed_stc.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/__init__.py
++-rw-r--r--  2.0 unx    28640 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/sl_model.py
++-rw-r--r--  2.0 unx     2395 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/strategy_dispatcher.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/__init__.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/tensorflow/__init__.py
++-rw-r--r--  2.0 unx    34424 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/tensorflow/sl_base.py
++-rw-r--r--  2.0 unx     4487 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/tensorflow/utils.py
++-rw-r--r--  2.0 unx      753 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/tensorflow/strategy/__init__.py
++-rw-r--r--  2.0 unx     6773 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/tensorflow/strategy/split_async.py
++-rw-r--r--  2.0 unx     5162 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/tensorflow/strategy/split_state_async.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/ml/nn/sl/backend/torch/__init__.py
++-rw-r--r--  2.0 unx      923 b- defN 23-Apr-07 09:00 secretflow/preprocessing/__init__.py
++-rw-r--r--  2.0 unx     1231 b- defN 23-Apr-07 09:00 secretflow/preprocessing/base.py
++-rw-r--r--  2.0 unx    11845 b- defN 23-Apr-07 09:00 secretflow/preprocessing/discretization.py
++-rw-r--r--  2.0 unx    13154 b- defN 23-Apr-07 09:00 secretflow/preprocessing/encoder.py
++-rw-r--r--  2.0 unx    14116 b- defN 23-Apr-07 09:00 secretflow/preprocessing/scaler.py
++-rw-r--r--  2.0 unx     5162 b- defN 23-Apr-07 09:00 secretflow/preprocessing/transformer.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/__init__.py
++-rw-r--r--  2.0 unx     7218 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/homo_binning.py
++-rw-r--r--  2.0 unx    11274 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/homo_binning_base.py
++-rw-r--r--  2.0 unx    10841 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/vert_woe_binning.py
++-rw-r--r--  2.0 unx    22492 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/vert_woe_binning_pyu.py
++-rw-r--r--  2.0 unx     3503 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/vert_woe_substitution.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/kernels/__init__.py
++-rw-r--r--  2.0 unx     2524 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/kernels/base_binning.py
++-rw-r--r--  2.0 unx     5291 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/kernels/quantile_binning.py
++-rw-r--r--  2.0 unx     6517 b- defN 23-Apr-07 09:00 secretflow/preprocessing/binning/kernels/quantile_summaries.py
++-rw-r--r--  2.0 unx      941 b- defN 23-Apr-07 09:00 secretflow/security/__init__.py
++-rw-r--r--  2.0 unx    11579 b- defN 23-Apr-07 09:00 secretflow/security/diffie_hellman.py
++-rw-r--r--  2.0 unx      946 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/__init__.py
++-rw-r--r--  2.0 unx     1039 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/_utils.py
++-rw-r--r--  2.0 unx     1072 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/aggregator.py
++-rw-r--r--  2.0 unx     4473 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/plain_aggregator.py
++-rw-r--r--  2.0 unx    12148 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/secure_aggregator.py
++-rw-r--r--  2.0 unx     5009 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/sparse_plain_aggregator.py
++-rw-r--r--  2.0 unx     4179 b- defN 23-Apr-07 09:00 secretflow/security/aggregation/spu_aggregator.py
++-rw-r--r--  2.0 unx      858 b- defN 23-Apr-07 09:00 secretflow/security/compare/__init__.py
++-rw-r--r--  2.0 unx     1066 b- defN 23-Apr-07 09:00 secretflow/security/compare/comparator.py
++-rw-r--r--  2.0 unx     2220 b- defN 23-Apr-07 09:00 secretflow/security/compare/device_comparator.py
++-rw-r--r--  2.0 unx     1871 b- defN 23-Apr-07 09:00 secretflow/security/compare/plain_comparator.py
++-rw-r--r--  2.0 unx     1762 b- defN 23-Apr-07 09:00 secretflow/security/compare/spu_comparator.py
++-rw-r--r--  2.0 unx      933 b- defN 23-Apr-07 09:00 secretflow/security/privacy/__init__.py
++-rw-r--r--  2.0 unx  2208676 b- defN 23-Apr-07 09:02 secretflow/security/privacy/_lib.cpython-38-darwin.so
++-rw-r--r--  2.0 unx     2749 b- defN 23-Apr-07 09:00 secretflow/security/privacy/strategy.py
++-rw-r--r--  2.0 unx     1875 b- defN 23-Apr-07 09:00 secretflow/security/privacy/strategy_fl.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/security/privacy/accounting/__init__.py
++-rw-r--r--  2.0 unx     2508 b- defN 23-Apr-07 09:00 secretflow/security/privacy/accounting/gdp_accountant.py
++-rw-r--r--  2.0 unx     3670 b- defN 23-Apr-07 09:00 secretflow/security/privacy/accounting/log_utils.py
++-rw-r--r--  2.0 unx     5702 b- defN 23-Apr-07 09:00 secretflow/security/privacy/accounting/rdp_accountant.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/security/privacy/mechanism/__init__.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/security/privacy/mechanism/tensorflow/__init__.py
++-rw-r--r--  2.0 unx     6127 b- defN 23-Apr-07 09:00 secretflow/security/privacy/mechanism/tensorflow/layers.py
++-rw-r--r--  2.0 unx     5251 b- defN 23-Apr-07 09:00 secretflow/security/privacy/mechanism/tensorflow/mechanism_fl.py
++-rw-r--r--  2.0 unx     1159 b- defN 23-Apr-07 09:00 secretflow/stats/__init__.py
++-rw-r--r--  2.0 unx     4042 b- defN 23-Apr-07 09:00 secretflow/stats/biclassification_eval.py
++-rw-r--r--  2.0 unx     2386 b- defN 23-Apr-07 09:00 secretflow/stats/psi_eval.py
++-rw-r--r--  2.0 unx     2751 b- defN 23-Apr-07 09:00 secretflow/stats/pva_eval.py
++-rw-r--r--  2.0 unx     2995 b- defN 23-Apr-07 09:00 secretflow/stats/regression_eval.py
++-rw-r--r--  2.0 unx     4421 b- defN 23-Apr-07 09:00 secretflow/stats/score_card.py
++-rw-r--r--  2.0 unx     2421 b- defN 23-Apr-07 09:00 secretflow/stats/ss_pearsonr_v.py
++-rw-r--r--  2.0 unx     7264 b- defN 23-Apr-07 09:00 secretflow/stats/ss_pvalue_v.py
++-rw-r--r--  2.0 unx     3631 b- defN 23-Apr-07 09:00 secretflow/stats/ss_vif_v.py
++-rw-r--r--  2.0 unx     3262 b- defN 23-Apr-07 09:00 secretflow/stats/table_statistics.py
++-rw-r--r--  2.0 unx      726 b- defN 23-Apr-07 09:00 secretflow/stats/core/__init__.py
++-rw-r--r--  2.0 unx    20047 b- defN 23-Apr-07 09:00 secretflow/stats/core/biclassification_eval_core.py
++-rw-r--r--  2.0 unx     2802 b- defN 23-Apr-07 09:00 secretflow/stats/core/psi_core.py
++-rw-r--r--  2.0 unx     1665 b- defN 23-Apr-07 09:00 secretflow/stats/core/pva_core.py
++-rw-r--r--  2.0 unx     1776 b- defN 23-Apr-07 09:00 secretflow/stats/core/utils.py
++-rw-r--r--  2.0 unx      662 b- defN 23-Apr-07 09:00 secretflow/utils/__init__.py
++-rw-r--r--  2.0 unx    13370 b- defN 23-Apr-07 09:00 secretflow/utils/cloudpickle.py
++-rw-r--r--  2.0 unx    11236 b- defN 23-Apr-07 09:00 secretflow/utils/compressor.py
++-rw-r--r--  2.0 unx     1084 b- defN 23-Apr-07 09:00 secretflow/utils/errors.py
++-rw-r--r--  2.0 unx      870 b- defN 23-Apr-07 09:00 secretflow/utils/hash.py
++-rw-r--r--  2.0 unx      978 b- defN 23-Apr-07 09:00 secretflow/utils/io.py
++-rw-r--r--  2.0 unx      964 b- defN 23-Apr-07 09:00 secretflow/utils/logging.py
++-rw-r--r--  2.0 unx     2842 b- defN 23-Apr-07 09:00 secretflow/utils/ndarray_bigint.py
++-rw-r--r--  2.0 unx     2489 b- defN 23-Apr-07 09:00 secretflow/utils/ndarray_encoding.py
++-rw-r--r--  2.0 unx      803 b- defN 23-Apr-07 09:00 secretflow/utils/random.py
++-rw-r--r--  2.0 unx     1330 b- defN 23-Apr-07 09:00 secretflow/utils/ray_compatibility.py
++-rw-r--r--  2.0 unx     3930 b- defN 23-Apr-07 09:00 secretflow/utils/sigmoid.py
++-rw-r--r--  2.0 unx     3308 b- defN 23-Apr-07 09:00 secretflow/utils/testing.py
++-rw-r--r--  2.0 unx      585 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/__init__.py
++-rw-r--r--  2.0 unx    30639 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/datasets.py
++-rw-r--r--  2.0 unx     8941 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/tf_gnn_model.py
++-rw-r--r--  2.0 unx      769 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/data/__init__.py
++-rw-r--r--  2.0 unx     2548 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/data/_utils.py
++-rw-r--r--  2.0 unx     5389 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/data/dataframe.py
++-rw-r--r--  2.0 unx     4093 b- defN 23-Apr-07 09:00 secretflow/utils/simulation/data/ndarray.py
++-rw-r--r--  2.0 unx    11356 b- defN 23-Apr-07 09:02 secretflow-0.8.1b0.dist-info/LICENSE
++-rw-r--r--  2.0 unx     3787 b- defN 23-Apr-07 09:02 secretflow-0.8.1b0.dist-info/METADATA
++-rw-r--r--  2.0 unx      108 b- defN 23-Apr-07 09:02 secretflow-0.8.1b0.dist-info/WHEEL
++-rw-r--r--  2.0 unx       55 b- defN 23-Apr-07 09:02 secretflow-0.8.1b0.dist-info/dependency_links.txt
++-rw-r--r--  2.0 unx       44 b- defN 23-Apr-07 09:02 secretflow-0.8.1b0.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx    22533 b- defN 23-Apr-07 09:02 secretflow-0.8.1b0.dist-info/RECORD
++228 files, 3460966 bytes uncompressed, 1425154 bytes compressed:  58.8%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,10 +1,13 @@
+ Filename: secretflow/__init__.py
+ Comment: 
+ 
++Filename: secretflow/version.py
++Comment: 
++
+ Filename: secretflow/data/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/data/base.py
+ Comment: 
+ 
+ Filename: secretflow/data/math_utils.py
+@@ -54,23 +57,29 @@
+ 
+ Filename: secretflow/device/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/device/driver.py
+ Comment: 
+ 
++Filename: secretflow/device/global_state.py
++Comment: 
++
+ Filename: secretflow/device/link.py
+ Comment: 
+ 
+ Filename: secretflow/device/proxy.py
+ Comment: 
+ 
+ Filename: secretflow/device/device/__init__.py
+ Comment: 
+ 
++Filename: secretflow/device/device/_utils.py
++Comment: 
++
+ Filename: secretflow/device/device/base.py
+ Comment: 
+ 
+ Filename: secretflow/device/device/heu.py
+ Comment: 
+ 
+ Filename: secretflow/device/device/heu_object.py
+@@ -81,14 +90,17 @@
+ 
+ Filename: secretflow/device/device/register.py
+ Comment: 
+ 
+ Filename: secretflow/device/device/spu.py
+ Comment: 
+ 
++Filename: secretflow/device/device/teeu.py
++Comment: 
++
+ Filename: secretflow/device/device/type_traits.py
+ Comment: 
+ 
+ Filename: secretflow/device/kernels/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/device/kernels/heu.py
+@@ -96,14 +108,17 @@
+ 
+ Filename: secretflow/device/kernels/pyu.py
+ Comment: 
+ 
+ Filename: secretflow/device/kernels/spu.py
+ Comment: 
+ 
++Filename: secretflow/device/kernels/teeu.py
++Comment: 
++
+ Filename: secretflow/distributed/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/distributed/primitive.py
+ Comment: 
+ 
+ Filename: secretflow/ml/__init__.py
+@@ -159,14 +174,83 @@
+ 
+ Filename: secretflow/ml/boost/homo_boost/tree_core/node.py
+ Comment: 
+ 
+ Filename: secretflow/ml/boost/homo_boost/tree_core/splitter.py
+ Comment: 
+ 
++Filename: secretflow/ml/boost/sgb_v/__init__.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/model.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/sgb.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/__init__.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/label_holder.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/level_cache.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/params.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/preprocessing.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/distributed_tree/__init__.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/distributed_tree/distributed_tree.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/distributed_tree/split_tree.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/__init__.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/boost.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/bucket_sum.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/grad.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/node_select.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/pred.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/pure_numpy_ops/random.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/split_tree_trainer/__init__.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/split_tree_trainer/order_map_context.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/split_tree_trainer/shuffler.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/split_tree_trainer/split_tree_trainer.py
++Comment: 
++
++Filename: secretflow/ml/boost/sgb_v/core/split_tree_trainer/splitter.py
++Comment: 
++
+ Filename: secretflow/ml/boost/ss_xgb_v/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/boost/ss_xgb_v/model.py
+ Comment: 
+ 
+ Filename: secretflow/ml/boost/ss_xgb_v/core/__init__.py
+@@ -225,14 +309,20 @@
+ 
+ Filename: secretflow/ml/nn/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/metrics.py
+ Comment: 
+ 
++Filename: secretflow/ml/nn/applications/__init__.py
++Comment: 
++
++Filename: secretflow/ml/nn/applications/sl_deep_fm.py
++Comment: 
++
+ Filename: secretflow/ml/nn/fl/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/fl/compress.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/fl/fl_model.py
+@@ -312,14 +402,17 @@
+ 
+ Filename: secretflow/ml/nn/sl/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/sl/sl_model.py
+ Comment: 
+ 
++Filename: secretflow/ml/nn/sl/strategy_dispatcher.py
++Comment: 
++
+ Filename: secretflow/ml/nn/sl/backend/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/sl/backend/tensorflow/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/sl/backend/tensorflow/sl_base.py
+@@ -330,14 +423,17 @@
+ 
+ Filename: secretflow/ml/nn/sl/backend/tensorflow/strategy/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/ml/nn/sl/backend/tensorflow/strategy/split_async.py
+ Comment: 
+ 
++Filename: secretflow/ml/nn/sl/backend/tensorflow/strategy/split_state_async.py
++Comment: 
++
+ Filename: secretflow/ml/nn/sl/backend/torch/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/preprocessing/__init__.py
+ Comment: 
+ 
+ Filename: secretflow/preprocessing/base.py
+@@ -426,15 +522,15 @@
+ 
+ Filename: secretflow/security/compare/spu_comparator.py
+ Comment: 
+ 
+ Filename: secretflow/security/privacy/__init__.py
+ Comment: 
+ 
+-Filename: secretflow/security/privacy/_lib.cpython-38-x86_64-linux-gnu.so
++Filename: secretflow/security/privacy/_lib.cpython-38-darwin.so
+ Comment: 
+ 
+ Filename: secretflow/security/privacy/strategy.py
+ Comment: 
+ 
+ Filename: secretflow/security/privacy/strategy_fl.py
+ Comment: 
+@@ -507,14 +603,17 @@
+ 
+ Filename: secretflow/stats/core/utils.py
+ Comment: 
+ 
+ Filename: secretflow/utils/__init__.py
+ Comment: 
+ 
++Filename: secretflow/utils/cloudpickle.py
++Comment: 
++
+ Filename: secretflow/utils/compressor.py
+ Comment: 
+ 
+ Filename: secretflow/utils/errors.py
+ Comment: 
+ 
+ Filename: secretflow/utils/hash.py
+@@ -531,14 +630,17 @@
+ 
+ Filename: secretflow/utils/ndarray_encoding.py
+ Comment: 
+ 
+ Filename: secretflow/utils/random.py
+ Comment: 
+ 
++Filename: secretflow/utils/ray_compatibility.py
++Comment: 
++
+ Filename: secretflow/utils/sigmoid.py
+ Comment: 
+ 
+ Filename: secretflow/utils/testing.py
+ Comment: 
+ 
+ Filename: secretflow/utils/simulation/__init__.py
+@@ -558,23 +660,26 @@
+ 
+ Filename: secretflow/utils/simulation/data/dataframe.py
+ Comment: 
+ 
+ Filename: secretflow/utils/simulation/data/ndarray.py
+ Comment: 
+ 
+-Filename: secretflow-0.8.0b1.dist-info/LICENSE
++Filename: secretflow-0.8.1b0.dist-info/LICENSE
++Comment: 
++
++Filename: secretflow-0.8.1b0.dist-info/METADATA
+ Comment: 
+ 
+-Filename: secretflow-0.8.0b1.dist-info/METADATA
++Filename: secretflow-0.8.1b0.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: secretflow-0.8.0b1.dist-info/WHEEL
++Filename: secretflow-0.8.1b0.dist-info/dependency_links.txt
+ Comment: 
+ 
+-Filename: secretflow-0.8.0b1.dist-info/top_level.txt
++Filename: secretflow-0.8.1b0.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: secretflow-0.8.0b1.dist-info/RECORD
++Filename: secretflow-0.8.1b0.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## secretflow/__init__.py
+
+```diff
+@@ -8,15 +8,25 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from . import data, device, ml, preprocessing, security, utils
++
++from .version import __version__  # type: ignore
++
++from . import (
++    data,
++    device,
++    ml,
++    preprocessing,
++    security,
++    utils,
++)
+ from .device import (
+     HEU,
+     PYU,
+     SPU,
+     Device,
+     DeviceObject,
+     HEUObject,
+@@ -27,14 +37,16 @@
+     reveal,
+     shutdown,
+     to,
+     wait,
+ )
+ 
+ __all__ = [
++    'protos',
++    'kuscia',
+     'data',
+     'device',
+     'ml',
+     'preprocessing',
+     'security',
+     'utils',
+     'HEU',
+@@ -47,8 +59,9 @@
+     'SPUObject',
+     'init',
+     'proxy',
+     'reveal',
+     'shutdown',
+     'to',
+     'wait',
++    'component',
+ ]
+```
+
+## secretflow/data/base.py
+
+```diff
+@@ -10,19 +10,19 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from abc import ABC, abstractmethod
+ from dataclasses import dataclass
+-from typing import Union, List, Callable
++from typing import Callable, List, Union
+ 
+ import pandas as pd
+-from pandas.core.indexes.base import Index
+ from jax.tree_util import tree_map
++from pandas.core.indexes.base import Index
+ 
+ from secretflow.data.io.util import to_csv_wrapper
+ from secretflow.device import PYUObject, reveal
+ 
+ 
+ class DataFrameBase(ABC):
+     """Abstract base class for horizontal, vertical and mixed partitioned DataFrame"""
+```
+
+## secretflow/data/ndarray.py
+
+```diff
+@@ -8,36 +8,33 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-import random
+ from copy import deepcopy
+ from dataclasses import dataclass
+-from typing import Callable, Dict, List, Tuple, Union, Optional
+-
+ from enum import Enum, unique
+-import numpy as np
+-import jax.numpy as jnp
++from typing import Callable, Dict, List, Optional, Tuple, Union
+ 
+-from sklearn.model_selection import train_test_split as _train_test_split
++import jax.numpy as jnp
++import numpy as np
+ 
+ from secretflow.data.io import util as io_util
+-from secretflow.device import PYU, PYUObject, reveal, SPU, to
++from secretflow.device import PYU, SPU, PYUObject, reveal
+ from secretflow.utils.errors import InvalidArgumentError
+ 
+ from .math_utils import (
+-    sum_of_difference_squares,
+-    sum_of_difference_abs,
+-    sum_of_difference_ratio_abs,
+-    mean_of_difference_squares,
+     mean_of_difference_abs,
+     mean_of_difference_ratio_abs,
++    mean_of_difference_squares,
++    sum_of_difference_abs,
++    sum_of_difference_ratio_abs,
++    sum_of_difference_squares,
+ )
+ 
+ # 下面的函数是同时支持水平和垂直的。
+ __ndarray = "__ndarray_type__"
+ 
+ 
+ @unique
+@@ -274,53 +271,14 @@
+             parts[device] = device(_get_item)(idx, data)
+         if m == __ndarray and len(file_names) == 1:
+             return FedNdarray(partitions=parts, partition_way=partition_way)
+         result[m] = FedNdarray(partitions=parts, partition_way=partition_way)
+     return result
+ 
+ 
+-def train_test_split(
+-    data: FedNdarray, ratio: float, random_state: int = None, shuffle=True
+-) -> Tuple[FedNdarray, FedNdarray]:
+-    """Split data into train and test dataset.
+-
+-    Args:
+-        data: Data to split.
+-        ratio: Train dataset ratio.
+-        random_state: Controls the shuffling applied to the data before applying the split.
+-        shuffle: Whether or not to shuffle the data before splitting.
+-
+-    Returns:
+-        Tuple of train and test dataset.
+-    """
+-    assert data.partitions, "Data partitions are None or empty."
+-    assert 0 < ratio < 1, f"Invalid split ratio {ratio}, must be in (0, 1)"
+-
+-    if random_state is None:
+-        random_state = random.randint(0, 2**32 - 1)
+-
+-    assert isinstance(random_state, int), f"random_state must be an integer"
+-
+-    def split(*args, **kwargs) -> Tuple[np.ndarray, np.ndarray]:
+-        if len(args[0].shape) == 0:
+-            return np.array(None), np.array(None)
+-        results = _train_test_split(*args, **kwargs)
+-        return results[0], results[1]
+-
+-    parts_train, parts_test = {}, {}
+-    for device, part in data.partitions.items():
+-        parts_train[device], parts_test[device] = device(split)(
+-            part, train_size=ratio, random_state=random_state, shuffle=shuffle
+-        )
+-    return (
+-        FedNdarray(parts_train, data.partition_way),
+-        FedNdarray(parts_test, data.partition_way),
+-    )
+-
+-
+ def shuffle(data: FedNdarray):
+     """Random shuffle data.
+ 
+     Args:
+         data: data to be shuffled.
+     """
+     rng = np.random.default_rng()
+@@ -354,31 +312,31 @@
+     y_len = len(y.partitions.keys())
+     if y_len == 1:
+         for device, partition in y.partitions.items():
+             if simulate_double_value_replacer_handle:
+                 return device(len_1_handle_function)(partition, d)
+             return device(len_1_handle_function)(partition)
+     elif y_len > 1:
+-        assert spu_device is not None, "A SPU device is required"
+-        obj_list = [to(spu_device, partition) for partition in y.partitions.values()]
++        assert spu_device is not None, "An SPU device is required"
++        obj_list = [partition.to(spu_device) for partition in y.partitions.values()]
+         if simulate_double_value_replacer_handle:
+             return spu_device(handle_function)(obj_list, d)
+         return spu_device(handle_function)(obj_list)
+     else:
+         return 0
+ 
+ 
+ def mean(y: FedNdarray, spu_device: Optional[SPU] = None):
+     """Mean of all elements
+     Args:
+         y: FedNdarray
+         spu_device: SPU
+     If y is from a single party, then a PYUObject is returned.
+     If y is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y is empty return 0.
+     """
+ 
+     def spu_mean(obj_list: List[np.ndarray]):
+         sums = jnp.array([jnp.sum(obj) for obj in obj_list])
+         sizes = jnp.array([obj.size for obj in obj_list])
+         return jnp.sum(sums) / jnp.sum(sizes)
+@@ -397,29 +355,29 @@
+     enable_local_compute_optimization = check_same_partition_shapes(y1, y2)
+ 
+     if enable_local_compute_optimization:
+         if y_len == 1:
+             for device, partition in y1.partitions.items():
+                 return device(len_1_handle_function)(partition, y2.partitions[device])
+         elif y_len > 1:
+-            assert spu_device is not None, "A SPU device is required"
++            assert spu_device is not None, "An SPU device is required"
+             obj1_list = [
+-                to(spu_device, partition) for partition in y1.partitions.values()
++                partition.to(spu_device) for partition in y1.partitions.values()
+             ]
+             obj2_list = [
+-                to(spu_device, partition) for partition in y2.partitions.values()
++                partition.to(spu_device) for partition in y2.partitions.values()
+             ]
+             return spu_device(handle_function)(obj1_list, obj2_list)
+         else:
+             return 0
+     else:
+-        assert spu_device is not None, "A SPU device is required"
++        assert spu_device is not None, "An SPU device is required"
+         assert y1.shape == y2.shape, "Two shapes must coincide"
+-        obj1_list = [to(spu_device, partition) for partition in y1.partitions.values()]
+-        obj2_list = [to(spu_device, partition) for partition in y2.partitions.values()]
++        obj1_list = [partition.to(spu_device) for partition in y1.partitions.values()]
++        obj2_list = [partition.to(spu_device) for partition in y2.partitions.values()]
+         axis_1 = get_concat_axis(y1)
+         axis_2 = get_concat_axis(y2)
+ 
+         def binary_op_concat_composition(
+             obj1_list: List[np.ndarray],
+             obj2_list: List[np.ndarray],
+             axis_1: int,
+@@ -452,15 +410,15 @@
+         y2 : FedNdarray
+         spu_device: SPU
+ 
+     y1 and y2 must have the same device and partition shapes
+ 
+     If y1 is from a single party, then a PYUObject is returned.
+     If y1 is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y1 is empty return 0.
+ 
+     """
+ 
+     def spu_rss(obj1_list: List[np.ndarray], obj2_list: List[np.ndarray]):
+         sums = jnp.array(
+             [
+@@ -480,15 +438,15 @@
+     https://en.wikipedia.org/wiki/Total_sum_of_squares
+ 
+     Args:
+         y: FedNdarray
+ 
+     If y is from a single party, then a PYUObject is returned.
+     If y is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y is empty return 0.
+     """
+ 
+     def spu_tss(obj1_list: List[np.ndarray], y_mean):
+         sums = jnp.array([sum_of_difference_squares(obj, y_mean) for obj in obj1_list])
+         return jnp.sum(sums)
+ 
+@@ -514,15 +472,15 @@
+         y_pred : FedNdarray
+         spu_device: SPU
+ 
+     y_true and y_pred must have the same device and partition shapes
+ 
+     If y_true is from a single party, then a PYUObject is returned.
+     If y_true is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y_true is empty return 0.
+ 
+     """
+ 
+     # TODO: check y1 and y2 have the same device and shapes
+     def spu_mse(obj1_list: List[np.ndarray], obj2_list: List[np.ndarray]):
+         sums = jnp.array(
+@@ -550,18 +508,19 @@
+         y_pred : FedNdarray
+         spu_device: SPU
+ 
+     y_true and y_pred must have the same device and partition shapes
+ 
+     If y_true is from a single party, then a PYUObject is returned.
+     If y_true is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y_true is empty return 0.
+ 
+     """
++
+     # TODO: check y1 and y2 have the same device and shapes
+     def spu_rmse(obj1_list: List[np.ndarray], obj2_list: List[np.ndarray]):
+         sums = jnp.array(
+             [
+                 sum_of_difference_squares(obj1_list[i], obj2_list[i])
+                 for i in range(len(obj1_list))
+             ]
+@@ -590,15 +549,15 @@
+         y_true: FedNdarray
+         y_pred: FedNdarray
+ 
+     y_true and y_pred must have the same device and partition shapes
+ 
+     If y_true is from a single party, then a PYUObject is returned.
+     If y_true is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y_true is empty return 0.
+     """
+ 
+     def spu_mean_abs_err(obj1_list: List[np.ndarray], obj2_list: List[np.ndarray]):
+         sums = jnp.array(
+             [
+                 sum_of_difference_abs(obj1_list[i], obj2_list[i])
+@@ -626,15 +585,15 @@
+         y_true: FedNdarray
+         y_pred: FedNdarray
+ 
+     y_true and y_pred must have the same device and partition shapes
+ 
+     If y_true is from a single party, then a PYUObject is returned.
+     If y_true is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y_true is empty return 0.
+ 
+     """
+ 
+     def spu_mean_ratio_abs_err(
+         obj1_list: List[np.ndarray], obj2_list: List[np.ndarray]
+     ):
+@@ -663,15 +622,15 @@
+         y_true : FedNdarray
+         y_pred : FedNdarray
+ 
+     y_true and y_pred must have the same device and partition shapes
+ 
+     If y_true is from a single party, then a PYUObject is returned.
+     If y_true is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     If y_true is empty return 0.
+     """
+ 
+     def r2_from_tss_rss(tss_val, rss_val):
+         return 1 - rss_val / tss_val
+ 
+     same_p = check_same_partition_shapes(y_true, y_pred)
+@@ -679,17 +638,17 @@
+     tss_val = tss(y_true, spu_device)
+     rss_val = rss(y_true, y_pred, spu_device)
+ 
+     if same_p and y_len == 1:
+         for device in y_true.partitions.keys():
+             return device(r2_from_tss_rss)(tss_val, rss_val)
+     else:
+-        assert spu_device is not None, "A SPU device is required"
++        assert spu_device is not None, "An SPU device is required"
+         return spu_device(r2_from_tss_rss)(
+-            to(spu_device, tss_val), to(spu_device, rss_val)
++            tss_val.to(spu_device), rss_val.to(spu_device)
+         )
+ 
+ 
+ def histogram(y: FedNdarray, bins: int = 10, spu_device: Optional[SPU] = None):
+     """Histogram of all elements
+     a restricted version of the counterpart in numpy
+ 
+@@ -697,24 +656,24 @@
+     https://numpy.org/doc/stable/reference/generated/numpy.histogram.html
+ 
+     Args:
+         y: FedNdarray
+ 
+     If y is from a single party, then a PYUObject is returned.
+     If y is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     """
+     y_len = len(y.partitions.keys())
+     if y_len == 1:
+         for device, partition in y.partitions.items():
+             return device(jnp.histogram)(partition, bins)
+     else:
+         assert False, "Feature Not Supported Yet"
+-        assert spu_device is not None, "A SPU device is required"
+-        obj_list = [to(spu_device, partition) for partition in y.partitions.values()]
++        assert spu_device is not None, "An SPU device is required"
++        obj_list = [partition.to(spu_device) for partition in y.partitions.values()]
+         axis = get_concat_axis(y)
+ 
+         def hist_concat_composition(obj_list: List[np.array], axis: int, bins: int):
+             return jnp.histogram(jnp.concatenate(obj_list, axis=axis), bins=bins)
+ 
+         return spu_device(hist_concat_composition, static_argnames=("bins", "axis"))(
+             obj_list, bins=bins, axis=axis
+@@ -730,15 +689,15 @@
+ 
+     Args:
+         y1: FedNdarray
+         y2: FedNdarray
+ 
+     If y is from a single party, then a PYUObject is returned.
+     If y is from multiple parties, then
+-        a SPU device is required and a SPUObject is returned.
++        an SPU device is required and an SPUObject is returned.
+     """
+     y_len = len(y1.partitions.keys())
+     enable_local_compute_optimization = check_same_partition_shapes(y1, y2)
+ 
+     def hist_subtract_composition(y1, y2, bins, axis=None):
+         if type(y1) == type(list):
+             residual = jnp.concatenate([y1[i] - y2[i] for i in range(len(y1))], axis)
+@@ -750,33 +709,33 @@
+         if y_len == 1:
+             for device, partition in y1.partitions.items():
+                 return device(hist_subtract_composition, static_argnames="bins")(
+                     partition, y2.partitions[device], bins=bins
+                 )
+         elif y_len > 1:
+             assert False, "Feature Not Supported Yet"
+-            assert spu_device is not None, "A SPU device is required"
++            assert spu_device is not None, "An SPU device is required"
+             obj1_list = [
+-                to(spu_device, partition) for partition in y1.partitions.values()
++                partition.to(spu_device) for partition in y1.partitions.values()
+             ]
+             obj2_list = [
+-                to(spu_device, partition) for partition in y2.partitions.values()
++                partition.to(spu_device) for partition in y2.partitions.values()
+             ]
+             return spu_device(
+                 hist_subtract_composition, static_argnames=("bins", "axis")
+             )(obj1_list, obj2_list, bins=bins, axis=get_concat_axis(y1))
+         else:
+             # empty FedNdarray
+             return None
+     else:
+         assert False, "Feature Not Supported Yet"
+-        assert spu_device is not None, "A SPU device is required"
++        assert spu_device is not None, "An SPU device is required"
+         assert y1.shape == y2.shape, "Two shapes must coincide"
+-        obj1_list = [to(spu_device, partition) for partition in y1.partitions.values()]
+-        obj2_list = [to(spu_device, partition) for partition in y2.partitions.values()]
++        obj1_list = [partition.to(spu_device) for partition in y1.partitions.values()]
++        obj2_list = [partition.to(spu_device) for partition in y2.partitions.values()]
+         axis_1 = get_concat_axis(y1)
+         axis_2 = get_concat_axis(y2)
+ 
+         def hist_concat_composition(
+             obj1_list: List[np.ndarray],
+             obj2_list: List[np.ndarray],
+             axis_1: int,
+```
+
+## secretflow/data/split.py
+
+```diff
+@@ -8,45 +8,42 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
++import logging
+ from typing import Tuple, Union
+ 
+ import numpy as np
+ import pandas as pd
+-
+-import logging
+ from sklearn.model_selection import train_test_split as _train_test_split
+ 
+ from secretflow.data.base import Partition
+ from secretflow.data.horizontal.dataframe import HDataFrame
+ from secretflow.data.ndarray import FedNdarray
+ from secretflow.data.vertical.dataframe import VDataFrame
+ 
+ 
+ def train_test_split(
+     data: Union[VDataFrame, HDataFrame, FedNdarray],
+     test_size=None,
+     train_size=None,
+     random_state=1234,
+     shuffle=True,
+-    stratify=None,
+ ) -> Tuple[object, object]:
+     """Split data into train and test dataset.
+ 
+     Args:
+         data : DataFrame to split, supported are: VDataFrame,HDataFrame,FedNdarray.
+         test_size (float): test dataset size, default is None.
+         train_size (float): train dataset size, default is None.
+         random_state (int): Controls the shuffling applied to the data before applying the split.
+         shuffle (bool): Whether or not to shuffle the data before splitting, default is True.
+-        stratify (array-like): If not None, data is split in a stratified fashion, using this as the class labels.
+ 
+     Returns
+         splitting : list, length=2 * len(arrays)
+ 
+     Examples:
+         >>> import numpy as np
+         >>> from secret.data.split import train_test_split
+@@ -109,15 +106,14 @@
+             part_data = part.data
+         parts_train[device], parts_test[device] = device(split)(
+             part_data,
+             train_size=train_size,
+             test_size=test_size,
+             random_state=random_state,
+             shuffle=shuffle,
+-            stratify=stratify,
+         )
+ 
+     if isinstance(data, VDataFrame):
+         return VDataFrame(
+             partitions={pyu: Partition(data=part) for pyu, part in parts_train.items()},
+             aligned=data.aligned,
+         ), VDataFrame(
+```
+
+## secretflow/data/io/util.py
+
+```diff
+@@ -15,16 +15,14 @@
+ import builtins
+ from pathlib import Path
+ from typing import Union
+ from urllib.parse import urlparse
+ 
+ import pandas as pd
+ 
+-import secretflow.data.io.oss as oss
+-
+ 
+ def open(filepath: Union[str, Path], mode='rb'):
+     """Open a oss/http/https file.
+ 
+     Args:
+         filepath: The file path, which can be an oss, or pathlib.Path object.
+         mode: optional. open mode.
+@@ -33,14 +31,16 @@
+         the file object.
+     """
+     if not isinstance(filepath, str):
+         return filepath
+ 
+     o = urlparse(filepath)
+     if o.scheme == 'oss':
++        import secretflow.data.io.oss as oss
++
+         return oss.open(filepath, mode)
+ 
+     return builtins.open(filepath, mode)
+ 
+ 
+ def is_local_file(uri: str) -> bool:
+     return uri and not urlparse(uri).scheme
+```
+
+## secretflow/data/vertical/dataframe.py
+
+```diff
+@@ -13,14 +13,15 @@
+ # limitations under the License.
+ 
+ from dataclasses import dataclass
+ from typing import Callable, Dict, List, Union
+ 
+ import pandas as pd
+ from pandas.core.indexes.base import Index
++
+ from secretflow.data.base import DataFrameBase, Partition
+ from secretflow.data.ndarray import FedNdarray, PartitionWay
+ from secretflow.device import PYU, Device, reveal
+ from secretflow.utils.errors import InvalidArgumentError, NotFoundError
+ 
+ 
+ @dataclass
+```
+
+## secretflow/device/driver.py
+
+```diff
+@@ -10,38 +10,41 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import logging
+ import os
++import pathlib
+ from functools import wraps
+ from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
+ 
+ import fed
+ import jax
+ import multiprocess
+ import ray
+ 
+ import secretflow.distributed as sfd
++from secretflow.device import global_state
+ from secretflow.utils.errors import InvalidArgumentError
+ from secretflow.utils.logging import set_logging_level
++from secretflow.utils.ray_compatibility import ray_version_less_than_2_0_0
+ 
+ from .device import (
+     HEU,
+     PYU,
+     SPU,
+     SPUIO,
+     Device,
+     DeviceObject,
+     HEUObject,
+     PYUObject,
+     SPUObject,
++    TEEUObject,
+ )
+-from .device.base import MoveConfig
+ 
+ 
+ def with_device(
+     dev: Device,
+     *,
+     num_returns: int = None,
+     static_argnames: Union[str, Iterable[str], None] = None,
+@@ -67,33 +70,29 @@
+ 
+     def wrapper(fn):
+         return dev(fn, num_returns=num_returns, static_argnames=static_argnames)
+ 
+     return wrapper
+ 
+ 
+-def to(device: Device, data: Any, spu_vis: str = 'secret'):
++def to(device: Device, data: Any):
+     """Device object conversion.
+ 
+     Args:
+         device (Device): Target device.
+         data (Any): DeviceObject or plaintext data.
+-        spu_vis (str): Deivce object visibility, SPU device only.
+-          secret: Secret sharing with protocol spdz-2k, aby3, etc.
+-          public: Public sharing, which means data will be replicated to each node.
+ 
+     Returns:
+         DeviceObject: Target device object.
+     """
+-    assert (
+-        spu_vis == 'secret' or spu_vis == 'public'
+-    ), f'spu_vis must be public or secret'
+-
+     if isinstance(data, DeviceObject):
+-        return data.to(device, MoveConfig(spu_vis=spu_vis))
++        raise InvalidArgumentError(
++            'You should use `DeviceObject.to(device)` directly to'
++            'transfer DeviceObject to another device.'
++        )
+ 
+     if isinstance(device, PYU):
+         return device(lambda x: x)(data)
+ 
+     if isinstance(device, SPU):
+         raise ValueError(
+             "You cannot put data to SPU directly, "
+@@ -144,21 +143,24 @@
+             all_object_refs.append(ref)
+         elif isinstance(x, SPUObject):
+             assert isinstance(
+                 x.shares_name[0], (ray.ObjectRef, fed.FedObject)
+             ), f"shares_name in spu obj should be ObjectRef or FedObject, but got {type(x.shares_name[0])} "
+             all_object_refs.append(x.meta)
+             all_object_refs.extend(x.device.outfeed_shares(x.shares_name))
++        elif isinstance(x, TEEUObject):
++            all_object_refs.append(x.data)
++            logging.debug(f'Getting teeu data from TEEU {x.device.party}.')
+ 
+     cur_idx = 0
+     all_object = sfd.get(all_object_refs)
+ 
+     new_flatten_val = []
+     for x in flatten_val:
+-        if isinstance(x, PYUObject) or isinstance(x, HEUObject):
++        if isinstance(x, (PYUObject, HEUObject, TEEUObject)):
+             new_flatten_val.append(all_object[cur_idx])
+             cur_idx += 1
+ 
+         elif isinstance(x, SPUObject):
+             io = SPUIO(x.device.conf, x.device.world_size)
+             meta = all_object[cur_idx]
+             shares = [all_object[cur_idx + i + 1] for i in range(x.device.world_size)]
+@@ -170,30 +172,33 @@
+             new_flatten_val.append(x)
+ 
+     return jax.tree_util.tree_unflatten(tree, new_flatten_val)
+ 
+ 
+ def wait(objects: Any):
+     """Wait for device objects until all are ready or error occurrency.
+-    NOTE: This function uses reveal internally, but won't reveal result to public. So this is secure to use this as synchronization semantics.
++
++    NOTE: This function uses reveal internally, but won't reveal result to
++    public. So this is secure to use this as synchronization semantics.
++
+     Args:
+         objects: struct of device objects.
+-    
++
+     Examples:
+         >>> spu = sf.SPU()
+         >>> spu_value = spu(some_function)(some_value)
+         >>> alice_value = spu_value.to(alice)
+         >>> # synchronization
+         >>> sf.wait(alice(some_save_value_function_locally)(alice_value))
+     """
+     # TODO(@xibin.wxb): support HEUObject
+     objs = [
+         x
+         for x in jax.tree_util.tree_leaves(objects)
+-        if isinstance(x, PYUObject) or isinstance(x, SPUObject)
++        if isinstance(x, (PYUObject, SPUObject, TEEUObject))
+     ]
+ 
+     reveal([o.device(lambda o: None)(o) for o in objs])
+ 
+ 
+ def init(
+     parties: Union[str, List[str]] = None,
+@@ -201,16 +206,23 @@
+     cluster_config: Dict = None,
+     num_cpus: Optional[int] = None,
+     log_to_driver=True,
+     omp_num_threads: int = None,
+     logging_level: str = 'info',
+     cross_silo_grpc_retry_policy: Dict = None,
+     cross_silo_send_max_retries: int = None,
++    cross_silo_messages_max_size_in_bytes: int = None,
+     cross_silo_serializing_allowed_list: Dict = None,
++    cross_silo_timeout_in_seconds: int = 3600,
+     exit_on_failure_cross_silo_sending: bool = True,
++    enable_waiting_for_other_parties_ready: bool = True,
++    tls_config: Dict[str, Dict] = None,
++    auth_manager_config: Dict = None,
++    party_key_pair: Dict[str, Dict] = None,
++    tee_simulation: bool = False,
+     **kwargs,
+ ):
+     """Connect to an existing Ray cluster or start one and connect to it.
+ 
+     Args:
+         parties: parties this node represents, e.g: 'alice', ['alice', 'bob', 'carol'].
+             If parties are provided, then simulation mode will be enabled,
+@@ -286,54 +298,156 @@
+                     "backoffMultiplier": 2,
+                     "retryableStatusCodes": [
+                         "UNAVAILABLE"
+                     ]
+                 }
+         cross_silo_send_max_retries: optional, works only in production mode.
+             the max retries for sending data cross silo.
++        cross_silo_messages_max_size_in_bytes: int, works only in production mode.
++            the max number of byte for one transaction.
++            The size must be strictly less than 2GB, i.e. 2 * (1024 ** 3).
+         cross_silo_serializing_allowed_list: optional, works only in production mode.
+             A dict describes the package or class list allowed for cross-silo
+             serializing(deserializating). It's used for avoiding pickle deserializing
+             execution attack when crossing silos. E.g.
+ 
+             .. code:: python
+                 {
+                     "numpy.core.numeric": ["*"],
+                     "numpy": ["dtype"],
+                 }
++        cross_silo_timeout_in_seconds: The timeout in seconds of a cross-silo RPC call.
++            It's 3600 by default.
+         exit_on_failure_cross_silo_sending: optional, works only in production mode.
+             whether exit when failure on cross-silo sending. If True, a SIGTERM
+             will be signaled to self if failed to sending cross-silo data.
++        enable_waiting_for_other_parties_ready: wait for other parties ready if True.
++        tls_config: optional, a dict describes the tls certificate and key infomations. E.g.
++
++            # For alice
++            .. code:: python
++                {
++                    'alice': {
++                        'key': 'server key of alice in pem.'
++                        'cert': 'server certificate of alice in pem.',
++                        'ca_cert': 'root ca certificate of other parties (E.g. bob)'
++                    }
++                }
++
++            # For bob
++            .. code:: python
++                {
++                    'bob': {
++                        'key': 'server key of bob in pem.'
++                        'cert': 'server certificate of bob in pem.',
++                        'ca_cert': 'root ca certificate of other parties (E.g. alice)'
++                    }
++                }
++        auth_manager_config: optional, a dict describes the config about authority manager
++            service. Authority manager helps manage the authority of TEE data.
++            This parameter is for TEE users only. An example,
++
++            .. code:: python
++                {
++                    'host': 'host of authority manager service.'
++                    'mr_enclave': 'mr_enclave of authority manager.',
++                    'ca_cert': 'optional, root ca certificate of authority manager.'
++                }
++        party_key_pair: optional, a dict describes the asymmetric key pair.
++            This is required for party who wants to send data to TEEU.
++            E.g.
++
++            # For alice
++            .. code:: python
++                {
++                    'alice': {
++                        'public_key': 'RSA public key of alice in pem.',
++                        'private_key': 'RSA private key of alice in pem.',
++                    }
++                }
++
++            # For bob
++            .. code:: python
++                {
++                    'bob': {
++                        'public_key': 'RSA public key of bob in pem.',
++                        'private_key': 'RSA private key of bob in pem.',
++                    }
++                }
++        tee_simulation: optional, enable TEE simulation if True.
++            When simulation is enabled, the remote attestation for auth manager
++            will be ignored. This is for test only and keep it False when for production.
+         **kwargs: see :py:meth:`ray.init` parameters.
+     """
+-    resources = None
+-    is_standalone = True if parties else False
+-    local_mode = address == 'local'
++    set_logging_level(logging_level)
++    simluation_mode = True if parties else False
++    if auth_manager_config and simluation_mode:
++        raise InvalidArgumentError(
++            'TEE abilities is available only in production mode.'
++            'Please run SecretFlow in production mode.'
++        )
++
++    if ray_version_less_than_2_0_0():
++        if address:
++            local_mode = False
++        else:
++            local_mode = True
++    else:
++        local_mode = address == 'local'
+     if not local_mode and num_cpus is not None:
+         raise InvalidArgumentError(
+             'When connecting to an existing cluster, num_cpus must not be provided.'
+         )
+     if local_mode and num_cpus is None:
+         num_cpus = multiprocess.cpu_count()
+-        if is_standalone:
++        if simluation_mode:
+             # Give num_cpus a min value for better simulation.
+             num_cpus = max(num_cpus, 32)
+-    set_logging_level(logging_level)
+ 
+-    if is_standalone:
+-        logging.info('Run secretflow in simulation mode.')
++    if tls_config:
++        _parse_tls_config(tls_config)
++
++    if party_key_pair:
++        _parse_party_key_pair(party_key_pair)
++
++    if auth_manager_config:
++        if not isinstance(auth_manager_config, dict):
++            raise InvalidArgumentError(
++                f'auth_manager_config should be a dict but got {type(auth_manager_config)}.'
++            )
++        if 'host' not in auth_manager_config:
++            raise InvalidArgumentError('auth_manager_config does not contain host.')
++        if 'mr_enclave' not in auth_manager_config:
++            raise InvalidArgumentError(
++                'auth_manager_config does not contain mr_enclave.'
++            )
++
++        logging.info(f'Authority manager config is {auth_manager_config}')
++        global_state.set_auth_manager_host(auth_host=auth_manager_config['host'])
++        global_state.set_auth_manager_mr_enclave(
++            mr_enclave=auth_manager_config['mr_enclave']
++        )
++        auth_ca_cert_path = auth_manager_config.get('ca_cert', None)
++        if auth_ca_cert_path:
++            with open(auth_ca_cert_path, 'r') as f:
++                auth_ca_cert = f.read()
++        global_state.set_auth_manager_ca_cert(ca_cert=auth_ca_cert)
++
++    global_state.set_tee_simulation(tee_simulation=tee_simulation)
++
++    if simluation_mode:
+         if cluster_config:
+             raise InvalidArgumentError(
+                 'Simulation mode is enabled when `parties` is provided, '
+                 'but you provide `cluster_config` at the same time. '
+                 '`cluster_config` is for production mode only and should be `None` in simulation mode. '
+                 'Or if you want to run SecretFlow in product mode, '
+                 'please keep `parties` with `None`.'
+             )
+-        # Standalone mode
++        # Simulation mode
+         sfd.set_production(False)
+         if not isinstance(parties, (str, Tuple, List)):
+             raise InvalidArgumentError('parties must be str or list of str.')
+         if isinstance(parties, str):
+             parties = [parties]
+         else:
+             assert len(set(parties)) == len(parties), f'duplicated parties {parties}.'
+@@ -351,15 +465,14 @@
+             address,
+             num_cpus=num_cpus,
+             resources=resources,
+             log_to_driver=log_to_driver,
+             **kwargs,
+         )
+     else:
+-        logging.info('Run secretflow in production mode.')
+         sfd.set_production(True)
+         # cluster mode
+         if not cluster_config:
+             raise InvalidArgumentError(
+                 'Must provide `cluster_config` when running with production mode.'
+                 ' Or if you want to run SecretFlow in simulation mode, you should'
+                 ' provide `parties` and keep `cluster_config` with `None`.'
+@@ -370,30 +483,95 @@
+             raise InvalidArgumentError('Miss parties in cluster config.')
+         self_party = cluster_config['self_party']
+         all_parties = cluster_config['parties']
+         if self_party not in all_parties:
+             raise InvalidArgumentError(
+                 f'Party {self_party} not found in cluster config parties.'
+             )
++        global_state.set_self_party(self_party)
+         fed.init(
+             address=address,
+             cluster=all_parties,
+             party=self_party,
+             log_to_driver=log_to_driver,
+             num_cpus=num_cpus,
+             logging_level=logging_level,
++            tls_config=tls_config,
+             cross_silo_grpc_retry_policy=cross_silo_grpc_retry_policy,
+             cross_silo_send_max_retries=cross_silo_send_max_retries,
+             cross_silo_serializing_allowed_list=cross_silo_serializing_allowed_list,
++            cross_silo_messages_max_size_in_bytes=cross_silo_messages_max_size_in_bytes,
++            cross_silo_timeout_in_seconds=cross_silo_timeout_in_seconds,
+             exit_on_failure_cross_silo_sending=exit_on_failure_cross_silo_sending,
++            enable_waiting_for_other_parties_ready=enable_waiting_for_other_parties_ready,
+             **kwargs,
+         )
+ 
+ 
+ def shutdown():
+     """Disconnect the worker, and terminate processes started by secretflow.init().
+ 
+     This will automatically run at the end when a Python process that uses Ray exits.
+     It is ok to run this twice in a row. The primary use case for this function
+     is to cleanup state between tests.
+     """
+     sfd.shutdown()
++
++
++def _parse_tls_config(
++    tls_config: Dict[str, Union[Dict, str]]
++) -> Dict[str, global_state.PartyCert]:
++    party_certs = {}
++    for name, info in tls_config.items():
++        if 'cert' not in info or 'key' not in info or 'ca_cert' not in info:
++            raise InvalidArgumentError(
++                'You should provide cert, key and ca_cert at the same time.'
++            )
++        key_path = pathlib.Path(info['key'])
++        cert_path = pathlib.Path(info['cert'])
++        root_cert_path = pathlib.Path(info['ca_cert'])
++
++        if not key_path.exists:
++            raise InvalidArgumentError(
++                f'Private key file {info["key"]} does not exist!'
++            )
++        if not cert_path.exists:
++            raise InvalidArgumentError(f'Cert file {info["cert"]} does not exist!')
++        if not root_cert_path.exists:
++            raise InvalidArgumentError(
++                f'CA cert file {info["ca_cert"]} does not exist!'
++            )
++        party_cert = global_state.PartyCert(
++            party_name=name,
++            key=key_path.read_text(),
++            cert=cert_path.read_text(),
++            root_ca_cert=root_cert_path.read_text(),
++        )
++        party_certs[name] = party_cert
++    global_state.set_party_certs(party_certs=party_certs)
++
++
++def _parse_party_key_pair(
++    party_key_pair: Dict[str, Union[Dict, str]]
++) -> Dict[str, global_state.PartyCert]:
++    party_key_pairs = {}
++    for name, info in party_key_pair.items():
++        if 'private_key' not in info or 'public_key' not in info:
++            raise InvalidArgumentError(
++                'You should provide private_key and public_key at the same time.'
++            )
++        pub_key_path = pathlib.Path(info['public_key'])
++        pri_key_path = pathlib.Path(info['private_key'])
++
++        if not pub_key_path.exists:
++            raise InvalidArgumentError(f'Public key file {info["key"]} does not exist!')
++        if not pri_key_path.exists:
++            raise InvalidArgumentError(
++                f'Private key file {info["key"]} does not exist!'
++            )
++        party_key_pair = global_state.PartyKeyPair(
++            party_name=name,
++            public_key=pub_key_path.read_text(),
++            private_key=pri_key_path.read_text(),
++        )
++        party_key_pairs[name] = party_key_pair
++    global_state.set_party_key_pairs(party_key_pairs=party_key_pairs)
+```
+
+## secretflow/device/link.py
+
+```diff
+@@ -183,15 +183,15 @@
+                     break
+                 self._cv.wait()
+ 
+         return list(vals.values())[0] if is_single else list(vals.values())
+ 
+ 
+ class Link:
+-    """A helper class for communication inside actor between serveral actors.
++    """A helper class for communication inside actor between several actors.
+ 
+     You should not use this class directly but inherit it and decorate your
+     child class with :py:meth:`~secretflow.device.proxy`.
+ 
+     Examples
+     --------
+     >>> from secretflow.device import proxy
+```
+
+## secretflow/device/device/__init__.py
+
+```diff
+@@ -14,8 +14,9 @@
+ 
+ from .base import Device, DeviceObject
+ from .heu import HEU
+ from .heu_object import HEUObject
+ from .pyu import PYU, PYUObject
+ from .register import DeviceType, register
+ from .spu import SPU, SPUIO, SPUCompilerNumReturnsPolicy, SPUObject, SPUValueMeta
++from .teeu import TEEU, TEEUData, TEEUObject
+ from .type_traits import spu_fxp_precision, spu_fxp_size
+```
+
+## secretflow/device/device/base.py
+
+```diff
+@@ -9,20 +9,16 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from abc import ABC, abstractmethod
+-from dataclasses import dataclass
+-from typing import Union
+ 
+-from heu import phe
+-
+-from .register import DeviceType, dispatch
++from .register import DeviceType, dispatch, register
+ 
+ 
+ class Device(ABC):
+     def __init__(self, device_type: DeviceType):
+         """Abstraction device base class.
+ 
+         Args:
+@@ -37,40 +33,16 @@
+ 
+     @abstractmethod
+     def __call__(self, fn, **kwargs):
+         """Set up ``fn`` for scheduling to this device"""
+         pass
+ 
+ 
+-@dataclass
+-class MoveConfig:
+-    spu_vis: str = 'secret'
+-    """spu_vis (str): Deivce object visibility, SPU device only. Value can be:
+-        - secret: Secret sharing with protocol spdz-2k, aby3, etc.
+-        - public: Public sharing, which means data will be replicated to each node.
+-    """
+-
+-    heu_dest_party: str = 'auto'
+-    """Where the encrypted data is located"""
+-
+-    heu_encoder: Union[
+-        phe.IntegerEncoder,
+-        phe.FloatEncoder,
+-        phe.BigintEncoder,
+-        phe.BatchEncoder,
+-        phe.IntegerEncoderParams,
+-        phe.FloatEncoderParams,
+-        phe.BigintEncoderParams,
+-        phe.BatchEncoderParams,
+-    ] = None
+-
+-    """Do encode before move data to heu"""
+-
+-    heu_audit_log: str = None
+-    """file path to record audit log"""
++def _name_of_to(device_type: DeviceType):
++    return f'to_{device_type.name}'
+ 
+ 
+ class DeviceObject(ABC):
+     def __init__(self, device: Device):
+         """Abstraction device object base class.
+ 
+         Args:
+@@ -79,24 +51,29 @@
+         self.device = device
+ 
+     @property
+     def device_type(self):
+         """Get underlying device type"""
+         return self.device.device_type
+ 
+-    def to(self, device: Device, config: MoveConfig = None):
++    def to(self, device: Device, *args, **kwargs):
+         """Device object conversion.
+ 
+         Args:
+             device (Device): Target device
+             config: configuration of this data movement
+ 
+         Returns:
+             DeviceObject: Target device object.
+         """
+-        assert isinstance(
+-            config, (type(None), MoveConfig)
+-        ), f"config must be MoveConfig type, got {type(config)}, value={config}"
+-
+-        return dispatch(
+-            'to', self, device, config if config is not None else MoveConfig()
+-        )
++        return dispatch(_name_of_to(device.device_type), self, device, *args, **kwargs)
++
++
++def register_to(from_device_type, to_device_type):
++    """Register to as device kernel.
++
++    Args:
++        from_device_type: the source device type.
++        to_device_type: the dest device type.
++    """
++
++    return register(device_type=from_device_type, op_name=_name_of_to(to_device_type))
+```
+
+## secretflow/device/device/heu.py
+
+```diff
+@@ -7,21 +7,24 @@
+ #      https://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
++
++from dataclasses import dataclass
+ from functools import reduce
+ from pathlib import Path
+ from typing import Union
+-import jax.tree_util
+-import ray
++
+ import cloudpickle as pickle
++import jax.tree_util
+ import numpy as np
++import ray
+ import spu
+ from heu import numpy as hnp
+ from heu import phe
+ 
+ import secretflow.distributed as sfd
+ from secretflow.utils.errors import PartyNotFoundError
+ 
+@@ -31,14 +34,35 @@
+     heu_datatype_to_numpy,
+     heu_datatype_to_spu,
+     spu_fxp_precision,
+     spu_fxp_size,
+ )
+ 
+ 
++@dataclass
++class HEUMoveConfig:
++    heu_dest_party: str = 'auto'
++    """Where the encrypted data is located"""
++
++    heu_encoder: Union[
++        phe.IntegerEncoder,
++        phe.FloatEncoder,
++        phe.BigintEncoder,
++        phe.IntegerEncoderParams,
++        phe.FloatEncoderParams,
++        phe.BigintEncoderParams,
++        phe.BatchFloatEncoderParams,
++        phe.BatchIntegerEncoderParams,
++    ] = None
++    """Do encode before move data to heu"""
++
++    heu_audit_log: str = None
++    """file path to record audit log"""
++
++
+ class HEUActor:
+     def __init__(
+         self,
+         heu_id,
+         party: str,
+         hekit: Union[hnp.HeKit, hnp.DestinationHeKit],
+         cleartext_type: np.dtype,
+@@ -51,15 +75,16 @@
+             party: The party id
+             hekit: hnp.HeKit for sk_keeper or hnp.DestinationHeKit for evaluator
+             encoder: Encode cleartext (float value) to plaintext (big int value).
+                 available encoders:
+                     - phe.IntegerEncoder
+                     - phe.FloatEncoder
+                     - phe.BigintEncoder
+-                    - phe.BatchEncoder
++                    - phe.BatchIntegerEncoder
++                    - phe.BatchFloatEncoder
+         """
+         self.heu_id = heu_id
+         self.party = party
+         self.hekit = hekit
+         self.encryptor = hekit.encryptor()
+         self.evaluator = hekit.evaluator()
+         self.cleartext_type = cleartext_type
+@@ -70,15 +95,17 @@
+         item = jax.tree_util.tree_map(
+             lambda x: ray.get(x) if isinstance(x, ray.ObjectRef) else x,
+             item,
+         )
+         item = jax.tree_util.tree_map(
+             lambda x: x.tolist() if isinstance(x, np.ndarray) else x, item
+         )
+-
++        item = jax.tree_util.tree_map(
++            lambda x: int(x) if isinstance(x, np.int64) else x, item
++        )
+         return data[item]
+ 
+     def setitem(self, data, key, value):
+         """Delegate of hnp ndarray.__setitem___()"""
+         if isinstance(key, np.ndarray):
+             key = key.tolist()
+ 
+@@ -91,14 +118,127 @@
+         ), f"data must be hnp.ndarray type, real type={type(data)}"
+         assert (
+             data.size > 0
+         ), f"You cannot sum an empty ndarray, data.shape={data.rows}x{data.cols}"
+ 
+         return self.evaluator.sum(data)
+ 
++    def select_sum(self, data, item):
++        """sum of data on selected elements"""
++        assert isinstance(
++            data, (hnp.PlaintextArray, hnp.CiphertextArray)
++        ), f"data must be hnp.ndarray type, real type={type(data)}"
++        assert (
++            data.size > 0
++        ), f"You cannot select sum an empty ndarray, data.shape={data.rows}x{data.cols}"
++        item = jax.tree_util.tree_map(
++            lambda x: ray.get(x) if isinstance(x, ray.ObjectRef) else x,
++            item,
++        )
++        item = jax.tree_util.tree_map(
++            lambda x: x.tolist() if isinstance(x, np.ndarray) else x, item
++        )
++        return self.evaluator.select_sum(data, item)
++
++    def batch_select_sum(self, data, item):
++        """sum of data on selected elements"""
++        assert isinstance(
++            data, (hnp.PlaintextArray, hnp.CiphertextArray)
++        ), f"data must be hnp.ndarray type, real type={type(data)}"
++        assert (
++            data.size > 0
++        ), f"You cannot select sum an empty ndarray, data.shape={data.rows}x{data.cols}"
++        item = jax.tree_util.tree_map(
++            lambda x: ray.get(x) if isinstance(x, ray.ObjectRef) else x,
++            item,
++        )
++        item = jax.tree_util.tree_map(
++            lambda x: x.tolist() if isinstance(x, np.ndarray) else x, item
++        )
++        assert isinstance(item, list), "item must be a list, but now item is {}".format(
++            type(item)
++        )
++        if len(item) == 0:
++            return data[item]
++        return self.evaluator.batch_select_sum(data, item)
++
++    def feature_wise_bucket_sum(self, data, subgroup_map, order_map, bucket_num, cumsum=False):
++        """sum of data on selected elements"""
++        assert isinstance(
++            data, (hnp.PlaintextArray, hnp.CiphertextArray)
++        ), f"data must be hnp.ndarray type, real type={type(data)}"
++        assert (
++            data.size > 0
++        ), f"You cannot select sum an empty ndarray, data.shape={data.rows}x{data.cols}"
++
++        def process_data(x):
++            res = x
++            if isinstance(x, ray.ObjectRef):
++                res = ray.get(x)
++            return res
++
++        subgroup_map = jax.tree_util.tree_map(process_data, subgroup_map)
++        assert isinstance(
++            subgroup_map, list
++        ), "item must be a list of np.array, but now item is {}, value {}".format(
++            type(subgroup_map), subgroup_map
++        )
++        order_map = jax.tree_util.tree_map(process_data, order_map)
++        assert isinstance(
++            order_map, list
++        ), "item must be a list, but now item is {}, value {}".format(
++            type(order_map), order_map
++        )
++        bucket_num = process_data(bucket_num)
++        assert isinstance(
++            bucket_num, np.ndarray
++        ), "item must be a np.ndarray, but now item is {}, value {}".format(
++            type(bucket_num), bucket_num
++        )
++        return self.evaluator.feature_wise_bucket_sum(
++            data, subgroup_map, order_map, bucket_num, cumsum
++        )
++
++    def batch_feature_wise_bucket_sum(self, data, subgroup_map, order_map, bucket_num, cumsum=False):
++        """sum of data on selected elements"""
++        assert isinstance(
++            data, (hnp.PlaintextArray, hnp.CiphertextArray)
++        ), f"data must be hnp.ndarray type, real type={type(data)}"
++        assert (
++            data.size > 0
++        ), f"You cannot select sum an empty ndarray, data.shape={data.rows}x{data.cols}"
++
++        def process_data(x):
++            res = x
++            if isinstance(x, ray.ObjectRef):
++                res = ray.get(x)
++            return res
++
++        subgroup_map = jax.tree_util.tree_map(process_data, subgroup_map)
++        assert isinstance(
++            subgroup_map, list
++        ), "item must be a list of np.array, but now item is {}, value {}".format(
++            type(subgroup_map), subgroup_map
++        )
++        order_map = jax.tree_util.tree_map(process_data, order_map)
++        assert isinstance(
++            order_map, np.ndarray
++        ), "item must be a np.ndarray, but now item is {}, value {}".format(
++            type(order_map), order_map
++        )
++        bucket_num = process_data(bucket_num)
++        assert isinstance(
++            bucket_num, int
++        ), "item must be a int, but now item is {}, value {}".format(
++            type(bucket_num), bucket_num
++        )
++        return self.evaluator.batch_feature_wise_bucket_sum(
++            data, subgroup_map, order_map, bucket_num, cumsum
++        )
++
+     def encode(self, data: np.ndarray, edr=None):
+         """encode cleartext to plaintext
+ 
+         Args:
+             data: cleartext
+             edr: encoder
+         """
+@@ -110,23 +250,26 @@
+     def decode(self, data: hnp.PlaintextArray, edr=None):
+         """decode plaintext to cleartext
+ 
+         Args:
+             data: plaintext
+             edr: encoder
+         """
++        if isinstance(data, list):
++            return [self.decode(d, edr) for d in data]
+         if edr is None:
+             edr = self.encoder
+         if isinstance(
+             edr,
+             (
+                 phe.BigintEncoderParams,
+                 phe.IntegerEncoderParams,
+                 phe.FloatEncoderParams,
+-                phe.BigintEncoderParams,
++                phe.BatchIntegerEncoderParams,
++                phe.BatchFloatEncoderParams,
+             ),
+         ):
+             edr = edr.instance(self.hekit.get_schema())
+         if isinstance(data, hnp.PlaintextArray):
+             return data.to_numpy(edr)
+ 
+         if isinstance(data, phe.Plaintext):
+@@ -200,14 +343,17 @@
+         pk = self.hekit.public_key()
+         Path(path).parent.mkdir(parents=True, exist_ok=True)
+         with open(path, "wb") as f:
+             pickle.dump(pk, f)
+ 
+     def decrypt(self, data) -> Union[phe.Plaintext, hnp.PlaintextArray]:
+         """Decrypt data: ciphertext -> plaintext"""
++        if isinstance(data, list):
++            return [self.decrypt(d) for d in data]
++
+         if isinstance(data, hnp.CiphertextArray):
+             return self.hekit.decryptor().decrypt(data)
+ 
+         if isinstance(data, phe.Ciphertext):
+             return self.hekit.decryptor().phe.decrypt(data)
+ 
+         raise AssertionError(f"heu can not decrypt {type(data)} type")
+@@ -361,15 +507,16 @@
+                             # DT_I1, DT_I8, DT_I16, DT_I32, DT_I64 or DT_FXP (default)
+                             'cleartext_type': "DT_FXP"
+                             # see https://www.secretflow.org.cn/docs/heu/en/getting_started/quick_start.html#id3 for detail
+                             # available encoders:
+                             #     - IntegerEncoder: Plaintext = Cleartext * scale
+                             #     - FloatEncoder (default): Plaintext = Cleartext * scale
+                             #     - BigintEncoder: Plaintext = Cleartext
+-                            #     - BatchEncoder: Plaintext = Pack[Cleartext, Cleartext]
++                            #     - BatchIntegerEncoder: Plaintext = Pack[Cleartext, Cleartext]
++                            #     - BatchFloatEncoder: Plaintext = Pack[Cleartext, Cleartext]
+                             'encoder': 'FloatEncoder'
+                         }
+                         'he_parameters': {
+                             'schema': 'paillier',
+                             'key_pair': {
+                                 'generate': {
+                                     'bit_size': 2048,
+@@ -413,16 +560,19 @@
+             elif edr_name == "FloatEncoder":
+                 edr_args["scale"] = edr_args.get("scale", default_scale)
+                 self.encoder = phe.FloatEncoder(schema, **edr_args)
+                 self.scale = edr_args["scale"]
+             elif edr_name == "BigintEncoder":
+                 self.encoder = phe.BigintEncoder(schema)
+                 self.scale = 1
+-            elif edr_name == "BatchEncoder":
+-                self.encoder = phe.BatchEncoder(schema, **edr_args)
++            elif edr_name == "BatchIntegerEncoder":
++                self.encoder = phe.BatchIntegerEncoder(schema, **edr_args)
++                self.scale = edr_args.get("scale", 1)
++            elif edr_name == "BatchFloatEncoder":
++                self.encoder = phe.BatchFloatEncoder(schema, **edr_args)
+                 self.scale = edr_args.get("scale", 1)
+             else:
+                 raise AssertionError(f"Unsupported encoder type {edr_name}")
+ 
+         self.init()
+ 
+     def init(self):
+```
+
+## secretflow/device/device/heu_object.py
+
+```diff
+@@ -7,19 +7,21 @@
+ #      https://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-import ray
+ import jax.tree_util
++import ray
++
++from secretflow.device.device.pyu import PYUObject
++
+ from .base import DeviceObject
+ from .register import dispatch
+-from secretflow.device.device.pyu import PYUObject
+ 
+ 
+ class HEUObject(DeviceObject):
+     """HEU Object
+ 
+     Attributes:
+         data: The data hold by this Heu object
+@@ -115,7 +117,88 @@
+             self.location,
+             self.is_plain,
+         )
+ 
+     def dump(self, path):
+         """Dump ciphertext into files."""
+         self.device.get_participant(self.location).dump.remote(self.data, path)
++
++    def select_sum(self, item):
++        """
++        Sum of HEUObject selected elements
++        """
++        item = jax.tree_util.tree_map(
++            lambda x: x.data if isinstance(x, PYUObject) else x, item
++        )
++        return HEUObject(
++            self.device,
++            self.device.get_participant(self.location).select_sum.remote(
++                self.data, item
++            ),
++            self.location,
++            self.is_plain,
++        )
++
++    def batch_select_sum(self, item):
++        """
++        Sum of HEUObject selected elements
++        """
++        item = jax.tree_util.tree_map(
++            lambda x: x.data if isinstance(x, PYUObject) else x, item
++        )
++
++        return HEUObject(
++            self.device,
++            self.device.get_participant(self.location).batch_select_sum.remote(
++                self.data, item
++            ),
++            self.location,
++            self.is_plain,
++        )
++
++    def feature_wise_bucket_sum(self, subgroup_map, order_map, bucket_num, cumsum=False):
++        """
++        Sum of HEUObject selected elements
++        """
++
++        def process_data(x):
++            res = x
++            if isinstance(x, PYUObject):
++                res = x.data
++            return res
++
++        subgroup_map = jax.tree_util.tree_map(process_data, subgroup_map)
++        order_map = jax.tree_util.tree_map(process_data, order_map)
++        bucket_num = process_data(bucket_num)
++        return HEUObject(
++            self.device,
++            self.device.get_participant(self.location).feature_wise_bucket_sum.remote(
++                self.data, subgroup_map, order_map, bucket_num, cumsum
++            ),
++            self.location,
++            self.is_plain,
++        )
++
++    def batch_feature_wise_bucket_sum(self, subgroup_map, order_map, bucket_num, cumsum=False):
++        """
++        Sum of HEUObject selected elements
++        """
++
++        def process_data(x):
++            res = x
++            if isinstance(x, PYUObject):
++                res = x.data
++            return res
++
++        subgroup_map = jax.tree_util.tree_map(process_data, subgroup_map)
++        order_map = jax.tree_util.tree_map(process_data, order_map)
++        bucket_num = process_data(bucket_num)
++        return HEUObject(
++            self.device,
++            self.device.get_participant(
++                self.location
++            ).batch_feature_wise_bucket_sum.remote(
++                self.data, subgroup_map, order_map, bucket_num, cumsum
++            ),
++            self.location,
++            self.is_plain,
++        )
+```
+
+## secretflow/device/device/pyu.py
+
+```diff
+@@ -8,53 +8,28 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-import inspect
+ import logging
+ from typing import Union
+ 
+ import fed
+ import jax
+ import ray
+ 
+ import secretflow.distributed as sfd
+ from secretflow.utils.logging import LOG_FORMAT, get_logging_level
+ 
++from ._utils import check_num_returns
+ from .base import Device, DeviceObject, DeviceType
+ 
+ 
+-def _check_num_returns(fn):
+-    # inspect.signature fails on some builtin method (e.g. numpy.random.rand).
+-    # You can wrap a self define function which calls builtin function inside
+-    # with return annotation to get multi returns for now.
+-    if inspect.isbuiltin(fn):
+-        sig = inspect.signature(lambda *arg, **kwargs: fn(*arg, **kwargs))
+-    else:
+-        sig = inspect.signature(fn)
+-
+-    if sig.return_annotation is None or sig.return_annotation == sig.empty:
+-        num_returns = 1
+-    else:
+-        if (
+-            hasattr(sig.return_annotation, '_name')
+-            and sig.return_annotation._name == 'Tuple'
+-        ):
+-            num_returns = len(sig.return_annotation.__args__)
+-        elif isinstance(sig.return_annotation, tuple):
+-            num_returns = len(sig.return_annotation)
+-        else:
+-            num_returns = 1
+-
+-    return num_returns
+-
+-
+ class PYUObject(DeviceObject):
+     """PYU device object.
+ 
+     Attributes:
+         data: Reference to underlying data.
+     """
+ 
+@@ -65,28 +40,26 @@
+ 
+ class PYU(Device):
+     """PYU is the device doing computation in single domain.
+ 
+     Essentially PYU is a python worker who can execute any python code.
+     """
+ 
+-    def __init__(self, party: str, node: str = ""):
++    def __init__(self, party: str):
+         """PYU contructor.
+ 
+         Args:
+             party (str): Party name where this device is located.
+-            node (str, optional): Node name where the device is located. Defaults to "".
+         """
+         super().__init__(DeviceType.PYU)
+ 
+         self.party = party
+-        self.node = node
+ 
+     def __str__(self) -> str:
+-        return f'{self.party}_{self.node}'
++        return f'{self.party}'
+ 
+     def __repr__(self) -> str:
+         return str(self)
+ 
+     def __eq__(self, other):
+         return type(other) == type(self) and str(other) == str(self)
+ 
+@@ -116,17 +89,15 @@
+                     return arg.data
+                 return arg
+ 
+             args_, kwargs_ = jax.tree_util.tree_map(
+                 lambda arg: try_get_data(arg, self), (args, kwargs)
+             )
+ 
+-            _num_returns = (
+-                _check_num_returns(fn) if num_returns is None else num_returns
+-            )
++            _num_returns = check_num_returns(fn) if num_returns is None else num_returns
+             data = (
+                 sfd.remote(self._run)
+                 .party(self.party)
+                 .options(num_returns=_num_returns)
+                 .remote(fn, *args_, **kwargs_)
+             )
+             logging.debug(
+@@ -138,14 +109,34 @@
+             if _num_returns == 1:
+                 return PYUObject(self, data)
+             else:
+                 return [PYUObject(self, datum) for datum in data]
+ 
+         return wrapper
+ 
++    def dump(self, obj: PYUObject, path: str):
++        assert obj.device == self, "obj must be owned by this device."
++
++        def fn(data, path):
++            import cloudpickle as pickle
++
++            with open(path, 'wb') as f:
++                pickle.dump(data, f)
++
++        self.__call__(fn)(obj, path)
++
++    def load(self, path: str):
++        def fn(path):
++            import cloudpickle as pickle
++
++            with open(path, 'rb') as f:
++                return pickle.load(f)
++
++        return self.__call__(fn)(path)
++
+     @staticmethod
+     def _run(fn, *args, **kwargs):
+         logging.basicConfig(level=get_logging_level(), format=LOG_FORMAT)
+         logging.debug(f'PYU runs function: {fn}')
+ 
+         # Automatically parse ray Object ref. Note that if it is a dictionary key, it is not parsed.
+         arg_flat, arg_tree = jax.tree_util.tree_flatten((args, kwargs))
+```
+
+## secretflow/device/device/register.py
+
+```diff
+@@ -14,28 +14,28 @@
+ 
+ from enum import IntEnum
+ from typing import Callable
+ 
+ 
+ # NOTE: Device Conversion Table
+ # +-------------------+---------------+---------+-------------+
+-# |     |     PYU     |       SPU     |  TEE    |      HEU    |
++# |     |     PYU     |       SPU     |  TEEU   |      HEU    |
+ # +-----+-------------+---------------+---------+-------------+
+ # | PYU |             |      share    | encrypt |    encrypt  |
+ # +-----+-------------+---------------+---------+-------------+
+ # | SPU | reconstruct |               |    x    | encrypt+add |
+ # +-----+-------------+---------------+---------+-------------+
+ # | TEE |   decrypt   |       x       |         |      x      |
+ # +-----+-------------+---------------+---------+-------------+
+ # | HEU |   decrypt   | minus+decrypt |    x    |             |
+ # +-----+-------------+---------------+---------+-------------+
+ class DeviceType(IntEnum):
+     PYU = 0  # Python Unit
+     SPU = 1  # Privacy Preserving Processing Unit
+-    TEE = 2  # Trusted Execution Environment
++    TEEU = 2  # Trusted Execution Environment Processing Unit
+     HEU = 3  # Homomorphic Encryption Unit
+     NUM = 4  # Number of device type
+ 
+ 
+ class Registrar:
+     """Device kernel registry"""
+```
+
+## secretflow/device/device/spu.py
+
+```diff
+@@ -47,25 +47,37 @@
+ 
+ from .base import Device, DeviceObject, DeviceType
+ from .pyu import PYUObject
+ from .register import dispatch
+ from .type_traits import spu_datatype_to_heu, spu_fxp_size
+ 
+ _LINK_DESC_NAMES = [
++    'connect_retry_times',
+     'connect_retry_interval_ms',
+     'recv_timeout_ms',
+     'http_max_payload_size',
+     'http_timeout_ms',
+     'throttle_window_size',
+     'brpc_channel_protocol',
+     'brpc_channel_connection_type',
+ ]
+ 
+ 
+-def _fill_link_desc_attrs(link_desc: Dict, desc: spu_link.Desc):
++def _fill_link_ssl_opts(tls_opts: Dict, link_ssl_opts: spu_link.SSLOptions):
++    for name, value in tls_opts.items():
++        assert (
++            isinstance(name, str) and name
++        ), f'tls options name shall be a valid string but got {type(name)}.'
++        if hasattr(link_ssl_opts.cert, name):
++            setattr(link_ssl_opts.cert, name, value)
++        if hasattr(link_ssl_opts.verify, name):
++            setattr(link_ssl_opts.verify, name, value)
++
++
++def _fill_link_desc_attrs(link_desc: Dict, tls_opts: Dict, desc: spu_link.Desc):
+     if link_desc:
+         for name, value in link_desc.items():
+             assert (
+                 isinstance(name, str) and name
+             ), f'Link desc param name shall be a valid string but got {type(name)}.'
+             if name not in _LINK_DESC_NAMES:
+                 raise InvalidArgumentError(
+@@ -77,14 +89,21 @@
+     if not link_desc or 'recv_timeout_ms' not in link_desc.keys():
+         # set default timeout 120s
+         desc.recv_timeout_ms = 120 * 1000
+     if not link_desc or 'http_timeout_ms' not in link_desc.keys():
+         # set default timeout 120s
+         desc.http_timeout_ms = 120 * 1000
+ 
++    if tls_opts:
++        server_opts = tls_opts.get('server_ssl_opts')
++        client_opts = tls_opts.get('client_ssl_opts')
++        _fill_link_ssl_opts(server_opts, desc.server_ssl_opts)
++        _fill_link_ssl_opts(client_opts, desc.client_ssl_opts)
++        desc.enable_ssl = True
++
+ 
+ def _plaintext_to_numpy(data: Any) -> np.ndarray:
+     """try to convert anything to a jax-friendly numpy array.
+ 
+     Args:
+         data (Any): data
+ 
+@@ -94,15 +113,15 @@
+ 
+     # NOTE(junfeng): jnp.asarray would transfer int64s to int32s.
+     return np.asarray(jnp.asarray(data))
+ 
+ 
+ @dataclass
+ class SPUValueMeta:
+-    """The metadata of a SPU value, which is a Numpy array or equivalent."""
++    """The metadata of an SPU value, which is a Numpy array or equivalent."""
+ 
+     shape: Sequence[int]
+     dtype: np.dtype
+     vtype: spu.Visibility
+ 
+     # the following meta ensures SPU object could be consumed by SPU device.
+     protocol: spu_pb2.ProtocolKind
+@@ -114,15 +133,15 @@
+     def __init__(
+         self,
+         device: Device,
+         meta: Union[ray.ObjectRef, fed.FedObject],
+         shares_name: Sequence[Union[ray.ObjectRef, fed.FedObject]],
+     ):
+         """SPUObject refers to a Python Object which could be flattened to a
+-        list of SPU Values. A SPU value is a Numpy array or equivalent.
++        list of SPU Values. An SPU value is a Numpy array or equivalent.
+         e.g.
+ 
+         1. If referred Python object is [1,2,3]
+         Then meta would be referred to a single SPUValueMeta, and shares is
+         a list of referrence to pieces of share of [1,2,3].
+ 
+         2. If referred Python object is {'a': 1, 'b': [3, np.array(...)]}
+@@ -132,16 +151,16 @@
+         {'a': share1, 'b': [share2, share3]}
+ 
+         3. shares is a list of ObjectRef to share slices while these share
+         slices are not necessarily located at SPU device. The data transfer
+         would only happen when SPU device consumes SPU objects.
+ 
+         Args:
+-            meta: Ref to the metadata.
+-            refs (Sequence[ray.ObjectRef]): Refs to shares of data.
++            meta: Union[ray.ObjectRef, fed.FedObject]: Ref to the metadata.
++            shares_name: Sequence[Union[ray.ObjectRef, fed.FedObject]]: names of shares of data in each SPU node.
+         """
+         super().__init__(device)
+         self.meta = meta
+         self.shares_name = shares_name
+ 
+     def __del__(self):
+         if hasattr(self, "shares_name"):
+@@ -165,22 +184,22 @@
+             world_size (int): world_size of SPU device.
+         """
+         self.runtime_config = runtime_config
+         self.world_size = world_size
+         self.io = spu.Io(self.world_size, self.runtime_config)
+ 
+     def make_shares(self, data: Any, vtype: spu.Visibility) -> Tuple[Any, List[Any]]:
+-        """Convert a Python object to meta and shares of a SPUObject.
++        """Convert a Python object to meta and shares of an SPUObject.
+ 
+         Args:
+             data (Any): Any Python object.
+             vtype (Visibility): Visibility
+ 
+         Returns:
+-            Tuple[Any, List[Any]]: meta and shares of a SPUObject
++            Tuple[Any, List[Any]]: meta and shares of an SPUObject
+         """
+         flatten_value, tree = jax.tree_util.tree_flatten(data)
+         flatten_shares = []
+         flatten_meta = []
+         for val in flatten_value:
+             val = _plaintext_to_numpy(val)
+             flatten_meta.append(
+@@ -197,19 +216,19 @@
+ 
+         return jax.tree_util.tree_unflatten(tree, flatten_meta), *[  # noqa e999
+             jax.tree_util.tree_unflatten(tree, list(shares))
+             for shares in list(zip(*flatten_shares))
+         ]
+ 
+     def reconstruct(self, shares: List[Any], meta: Any = None) -> Any:
+-        """Convert shares of a SPUObject to the origin Python object.
++        """Convert shares of an SPUObject to the origin Python object.
+ 
+         Args:
+-            shares (List[Any]): Shares of a SPUObject
+-            meta (Any): Meta of a SPUObject. If not provided, sanity check would be skipped.
++            shares (List[Any]): Shares of an SPUObject
++            meta (Any): Meta of an SPUObject. If not provided, sanity check would be skipped.
+ 
+         Returns:
+             Any: the origin Python object.
+         """
+         assert len(shares) == self.world_size
+         if meta:
+             flatten_metas, _ = jax.tree_util.tree_flatten(meta)
+@@ -248,37 +267,46 @@
+ class SPURuntime:
+     def __init__(
+         self,
+         rank: int,
+         cluster_def: Dict,
+         link_desc: Dict = None,
+         log_options: spu_logging.LogOptions = spu_logging.LogOptions(),
++        use_link: bool = True,
+     ):
+         """wrapper of spu.Runtime.
+ 
+         Args:
+             rank (int): rank of runtime
+             cluster_def (Dict): config of spu cluster
+             link_desc (Dict, optional): link config. Defaults to None.
+             log_options (spu_logging.LogOptions, optional): spu log options.
++            use_link: optional. flag for create brpc link, default True.
+         """
+         spu_logging.setup_logging(log_options)
+ 
+         self.rank = rank
+         self.cluster_def = cluster_def
+ 
+         desc = spu_link.Desc()
++        tls_opts = None
+         for i, node in enumerate(cluster_def['nodes']):
+-            if i == rank and node.get('listen_address', ''):
+-                desc.add_party(node['id'], node['listen_address'])
+-            else:
+-                desc.add_party(node['id'], node['address'])
+-        _fill_link_desc_attrs(link_desc=link_desc, desc=desc)
++            address = node['address']
++            if i == rank:
++                tls_opts = node.get('tls_opts', None)
++                if node.get('listen_address', ''):
++                    address = node['listen_address']
++            desc.add_party(node['party'], address)
++        _fill_link_desc_attrs(link_desc=link_desc, tls_opts=tls_opts, desc=desc)
++
++        if use_link:
++            self.link = spu_link.create_brpc(desc, rank)
++        else:
++            self.link = None
+ 
+-        self.link = spu_link.create_brpc(desc, rank)
+         self.conf = json_format.Parse(
+             json.dumps(cluster_def['runtime_config']), spu.RuntimeConfig()
+         )
+         self.runtime = spu.Runtime(self.link, self.conf)
+         self.share_seq_id = 0
+ 
+     def get_new_share_name(self) -> str:
+@@ -305,14 +333,44 @@
+ 
+     def del_share(self, val: Any):
+         flatten_names, _ = jax.tree_util.tree_flatten(val)
+         for name in flatten_names:
+             assert isinstance(name, str)
+             self.runtime.del_var(name)
+ 
++    def dump(self, meta: Any, val: Any, path: str):
++        flatten_names, _ = jax.tree_util.tree_flatten(val)
++        shares = []
++        for name in flatten_names:
++            shares.append(self.runtime.get_var(name).decode("latin1"))
++
++        import cloudpickle as pickle
++
++        with open(path, 'wb') as f:
++            pickle.dump({'meta': meta, 'shares': shares}, f)
++
++    def load(self, path: str) -> Any:
++        import cloudpickle as pickle
++
++        with open(path, 'rb') as f:
++            record = pickle.load(f)
++
++        meta = record['meta']
++        shares = record['shares']
++
++        shares_name = []
++        for share in shares:
++            name = self.get_new_share_name()
++            self.runtime.set_var(name, share.encode("latin1"))
++            shares_name.append(name)
++
++        _, flatten_tree = jax.tree_util.tree_flatten(meta)
++
++        return meta, jax.tree_util.tree_unflatten(flatten_tree, shares_name)
++
+     def run(
+         self,
+         num_returns_policy: SPUCompilerNumReturnsPolicy,
+         out_shape,
+         executable: spu.spu_pb2.ExecutableProto,
+         *val,
+     ):
+@@ -428,28 +486,35 @@
+         precheck_input=True,
+         sort=True,
+         broadcast_result=True,
+         bucket_size=1 << 20,
+         curve_type="CURVE_25519",
+         preprocess_path=None,
+         ecdh_secret_key_path=None,
++        dppsi_bob_sub_sampling=0.9,
++        dppsi_epsilon=3,
+         ic_mode: bool = False,
+     ):
+         """Private set intersection with DataFrame.
+ 
+         Args:
+             key (str, List[str]): Column(s) used to join.
+             data (pd.DataFrame): DataFrame to be joined.
+             receiver (str): Which party can get joined data, others will get None.
+             protocol (str): PSI protocol, See spu.psi.PsiType.
+             precheck_input (bool): Whether to check input data before join.
+             sort (bool): Whether sort data by key after join.
+             broadcast_result (bool): Whether to broadcast joined data to all parties.
+             bucket_size (int): Specified the hash bucket size used in psi. Larger values consume more memory.
+             curve_type (str): curve for ecdh psi
++            preprocess_path (str): preprocess file path for unbalanced psi.
++            ecdh_secret_key_path (str): ecdh_oprf secretkey file path, binary format, 32B.
++            dppsi_bob_sub_sampling (double): bob subsampling bernoulli_distribution
++                probability of dp psi
++            dppsi_epsilon (double): epsilon of dp psi
+             ic_mode (bool): Whether to run psi in interconnection mode
+ 
+         Returns:
+             pd.DataFrame or None: joined DataFrame.
+         """
+         # save key dataframe to temp file for streaming psi
+         data_dir = f'.data/{self.rank}-{uuid.uuid4()}'
+@@ -470,14 +535,16 @@
+                 precheck_input,
+                 sort,
+                 broadcast_result,
+                 bucket_size,
+                 curve_type,
+                 preprocess_path,
+                 ecdh_secret_key_path,
++                dppsi_bob_sub_sampling,
++                dppsi_epsilon,
+                 ic_mode,
+             )
+ 
+             if report['intersection_count'] == -1:
+                 # can not get result, return None
+                 return None
+             else:
+@@ -496,49 +563,67 @@
+         precheck_input=True,
+         sort=True,
+         broadcast_result=True,
+         bucket_size=1 << 20,
+         curve_type="CURVE_25519",
+         preprocess_path=None,
+         ecdh_secret_key_path=None,
++        dppsi_bob_sub_sampling=0.9,
++        dppsi_epsilon=3,
+         ic_mode: bool = False,
+     ):
+         """Private set intersection with csv file.
+ 
+         Examples:
+             >>> spu = sf.SPU(utils.cluster_def)
+             >>> alice = sf.PYU('alice'), sf.PYU('bob')
+             >>> input_path = {alice: '/path/to/alice.csv', bob: '/path/to/bob.csv'}
+             >>> output_path = {alice: '/path/to/alice_psi.csv', bob: '/path/to/bob_psi.csv'}
+             >>> spu.psi_csv(['c1', 'c2'], input_path, output_path, 'alice')
+ 
+         Args:
+             key (str, List[str]): Column(s) used to join.
+-            input_path: CSV file to be joined, comma seperated and contains header.
+-            output_path: Joined csv file, comma seperated and contains header.
++            input_path: CSV file to be joined, comma separated and contains header.
++                Use an absolute path.
++            output_path: Joined csv file, comma separated and contains header.
++                Use an absolute path.
+             receiver (str): Which party can get joined data.
+                 Others won't generate output file and `intersection_count` get `-1`.
+                 for unbalanced PSI, receiver is client(small dataset party)
+                 unbalanced PSI offline phase, receiver(client) get preprocess_path data
+                 unbalanced PSI online phase, receiver(client) get psi result
++                unbalanced PSI shuffle online phase, only receiver(large set party) get psi result
+             protocol (str): PSI protocol.
+             precheck_input (bool): Whether to check input data before join.
++                check input file whether have duplicated data and csv column ids.
+             sort (bool): Whether sort data by key after join.
+             broadcast_result (bool): Whether to broadcast joined data to all parties.
+             bucket_size (int): Specified the hash bucket size used in psi.
+-            Larger values consume more memory.
++                Larger values consume more memory.
+             curve_type (str): curve for ecdh psi
++            dppsi_bob_sub_sampling (double): bob subsampling bernoulli_distribution
++                probability of dp psi
++            dppsi_epsilon (double): epsilon of dp psi
+             ic_mode (bool): Whether to run psi in interconnection mode
+ 
+         Returns:
+             Dict: PSI report output by SPU.
+         """
+         if isinstance(key, str):
+             key = [key]
+ 
++        party = self.cluster_def['nodes'][self.rank]['party']
++
++        if (protocol == "ECDH_OPRF_UB_PSI_2PC_GEN_CACHE") and (party != receiver):
++            return {
++                'party': party,
++                'original_count': 0,
++                'intersection_count': -1,
++            }
++
+         receiver_rank = -1
+         for i, node in enumerate(self.cluster_def['nodes']):
+             if node['party'] == receiver:
+                 receiver_rank = i
+                 break
+         assert receiver_rank >= 0, f'invalid receiver {receiver}'
+ 
+@@ -550,36 +635,67 @@
+                 path=input_path, select_fields=key, precheck=precheck_input
+             ),
+             output_params=psi.OutputParams(path=output_path, need_sort=sort),
+             curve_type=curve_type,
+             bucket_size=bucket_size,
+         )
+ 
+-        if (
++        if protocol == "DP_PSI_2PC":
++            assert (
++                0 < dppsi_bob_sub_sampling < 1
++            ), f'invalid bob_sub_sampling({dppsi_bob_sub_sampling}) for dp-psi'
++            assert 0 < dppsi_epsilon, f'invalid epsilon({dppsi_epsilon}) for dp-psi'
++
++            config.dppsi_params = psi.DpPsiParams(
++                bob_sub_sampling=dppsi_bob_sub_sampling, epsilon=dppsi_epsilon
++            )
++        elif protocol == "ECDH_OPRF_UB_PSI_2PC_GEN_CACHE":
++            assert isinstance(
++                ecdh_secret_key_path, str
++            ), f'invalid ecdh_secret_key for {protocol}'
++            config.ecdh_secret_key_path = ecdh_secret_key_path
++        elif protocol == "ECDH_OPRF_UB_PSI_2PC_TRANSFER_CACHE":
++            assert isinstance(
++                preprocess_path, str
++            ), f'invalid preprocess_path for {protocol}'
++            if receiver_rank == self.link.rank:
++                config.preprocess_path = preprocess_path
++        elif protocol == "ECDH_OPRF_UB_PSI_2PC_SHUFFLE_ONLINE":
++            assert isinstance(
++                ecdh_secret_key_path, str
++            ), f'invalid ecdh_secret_key for {protocol}'
++            assert isinstance(
++                preprocess_path, str
++            ), f'invalid preprocess_path for {protocol}'
++
++            config.preprocess_path = preprocess_path
++            if receiver_rank == self.link.rank:
++                config.ecdh_secret_key_path = ecdh_secret_key_path
++        elif (
+             protocol == "ECDH_OPRF_UB_PSI_2PC_OFFLINE"
+             or protocol == "ECDH_OPRF_UB_PSI_2PC_ONLINE"
+         ):
+             assert (
+                 self.link.world_size == 2
+             ), f'invalid world_size for {self.link.world_size}'
+ 
+             assert isinstance(
+                 preprocess_path, str
+             ), f'invalid preprocess_path for {protocol}'
+-            config.preprocess_path = preprocess_path
+ 
+             if receiver_rank != self.link.rank:
+                 assert isinstance(
+                     ecdh_secret_key_path, str
+                 ), f'invalid ecdh_secret_key for {protocol}'
+                 config.ecdh_secret_key_path = ecdh_secret_key_path
++            else:
++                config.preprocess_path = preprocess_path
+ 
+         report = psi.bucket_psi(self.link, config, ic_mode)
+ 
+-        party = self.cluster_def['nodes'][self.rank]['party']
+         return {
+             'party': party,
+             'original_count': report.original_count,
+             'intersection_count': report.intersection_count,
+         }
+ 
+     def psi_join_df(
+@@ -666,27 +782,35 @@
+             >>> alice = sf.PYU('alice'), sf.PYU('bob')
+             >>> input_path = {alice: '/path/to/alice.csv', bob: '/path/to/bob.csv'}
+             >>> output_path = {alice: '/path/to/alice_psi.csv', bob: '/path/to/bob_psi.csv'}
+             >>> spu.psi_join_csv(['c1', 'c2'], input_path, output_path, 'alice', 'alice')
+ 
+         Args:
+             key (str, List[str]): Column(s) used to join.
+-            input_path: CSV file to be joined, comma seperated and contains header.
+-            output_path: Joined csv file, comma seperated and contains header.
++            input_path: CSV file to be joined, comma separated and contains header.
++                Use an absolute path.
++            output_path: Joined csv file, comma separated and contains header.
++                Use an absolute path.
+             receiver (str): Which party can get joined data. Others won't generate output file and `intersection_count` get `-1`
+             join_party (str): party joined data
+             protocol (str): PSI protocol.
+             precheck_input (bool): Whether to check input data before join.
+             bucket_size (int): Specified the hash bucket size used in psi. Larger values consume more memory.
+             curve_type (str): curve for ecdh psi
+             ic_mode (bool): Whether to run psi in interconnection mode
+ 
+         Returns:
+             Dict: PSI report output by SPU.
+         """
++        assert (
++            (protocol == "ECDH_PSI_2PC")
++            or (protocol == "KKRT_PSI_2PC")
++            or (protocol == "BC22_PSI_2PC")
++        ), f"Unsupported protocol:{protocol}"
++
+         if isinstance(key, str):
+             key = [key]
+ 
+         receiver_rank = -1
+         for i, node in enumerate(self.cluster_def['nodes']):
+             if node['party'] == receiver:
+                 receiver_rank = i
+@@ -878,63 +1002,63 @@
+     if isinstance(static_argnames, str):
+         static_argnames = (static_argnames,)
+ 
+     static_kwargs = {k: kwargs.pop(k) for k in static_argnames if k in kwargs}
+     return functools.partial(fn, **static_kwargs), kwargs
+ 
+ 
+-def _generate_input_uuid(name):
+-    return f'{name}-input-{uuid.uuid4()}'
++def _generate_input_uuid():
++    return f'input-{uuid.uuid4()}'
+ 
+ 
+-def _generate_output_uuid(name):
+-    return f'{name}-output-{uuid.uuid4()}'
++def _generate_output_uuid():
++    return f'output-{uuid.uuid4()}'
+ 
+ 
+-def _spu_compile(spu_name, fn, *meta_args, **meta_kwargs):
++def _spu_compile(fn, *meta_args, **meta_kwargs):
+     meta_args, meta_kwargs = jax.tree_util.tree_map(
+         lambda x: ray.get(x) if isinstance(x, ray.ObjectRef) else x,
+         (meta_args, meta_kwargs),
+     )
+ 
+     # prepare inputs and metatdata.
+     input_name = []
+     input_vis = []
+ 
+     def _get_input_metatdata(obj: SPUObject):
+-        input_name.append(_generate_input_uuid(spu_name))
++        input_name.append(_generate_input_uuid())
+         input_vis.append(obj.vtype)
+ 
+     jax.tree_util.tree_map(_get_input_metatdata, (meta_args, meta_kwargs))
+ 
+     try:
+         executable, output_tree = spu_fe.compile(
+             spu_fe.Kind.JAX,
+             fn,
+             meta_args,
+             meta_kwargs,
+             input_name,
+             input_vis,
+             lambda output_flat: [
+-                _generate_output_uuid(spu_name) for _ in range(len(output_flat))
++                _generate_output_uuid() for _ in range(len(output_flat))
+             ],
+         )
+     except Exception as error:
+         raise ray.exceptions.WorkerCrashedError()
+ 
+     return executable, output_tree
+ 
+ 
+ class SPU(Device):
+     def __init__(
+         self,
+         cluster_def: Dict,
+         link_desc: Dict = None,
+-        name: str = 'SPU',
+         log_options: spu_logging.LogOptions = spu_logging.LogOptions(),
++        use_link: bool = True,
+     ):
+         """SPU device constructor.
+ 
+         Args:
+             cluster_def: SPU cluster definition. More details refer to
+                 `SPU runtime config <https://www.secretflow.org.cn/docs/spu/en/reference/runtime_config.html>`_.
+ 
+@@ -942,72 +1066,113 @@
+ 
+                 .. code:: python
+ 
+                     {
+                         'nodes': [
+                             {
+                                 'party': 'alice',
+-                                'id': 'local:0',
+                                 # The address for other peers.
+                                 'address': '127.0.0.1:9001',
+                                 # The listen address of this node.
+                                 # Optional. Address will be used if listen_address is empty.
+-                                'listen_address': ''
++                                'listen_address': '',
++                                # Optional. TLS related options.
++                                'tls_opts': {
++                                    'server_ssl_opts': {
++                                        'certificate_path': 'servercert.pem',
++                                        'private_key_path': 'serverkey.pem',
++                                        # The options used for verify peer's client certificate
++                                        'ca_file_path': 'cacert.pem',
++                                        # Maximum depth of the certificate chain for verification
++                                        'verify_depth': 1
++                                    },
++                                    'client_ssl_opts': {
++                                        'certificate_path': 'clientcert.pem',
++                                        'private_key_path': 'clientkey.pem',
++                                        # The options used for verify peer's server certificate
++                                        'ca_file_path': 'cacert.pem',
++                                        # Maximum depth of the certificate chain for verification
++                                        'verify_depth': 1
++                                    }
++                                }
+                             },
+                             {
+                                 'party': 'bob',
+-                                'id': 'local:1',
+                                 'address': '127.0.0.1:9002',
+-                                'listen_address': ''
++                                'listen_address': '',
++                                'tls_opts': {
++                                    'server_ssl_opts': {
++                                        'certificate_path': "bob's servercert.pem",
++                                        'private_key_path': "bob's serverkey.pem",
++                                        'ca_file_path': "other's client cacert.pem",
++                                        'verify_depth': 1
++                                    },
++                                    'client_ssl_opts': {
++                                        'certificate_path': "bob's clientcert.pem",
++                                        'private_key_path': "bob's clientkey.pem",
++                                        'ca_file_path': "other's server cacert.pem",
++                                        'verify_depth': 1
++                                    }
++                                }
+                             },
+                         ],
+                         'runtime_config': {
+                             'protocol': spu.spu_pb2.SEMI2K,
+                             'field': spu.spu_pb2.FM128,
+                             'sigmoid_mode': spu.spu_pb2.RuntimeConfig.SIGMOID_REAL,
+                         }
+                     }
+-            link_desc: optional. A dict specifies the link parameters.
++            link_desc: Optional. A dict specifies the link parameters.
+                 Available parameters are:
+-                    1. connect_retry_interval_ms
++                    1. connect_retry_times
+ 
+-                    2. recv_timeout_ms
++                    2. connect_retry_interval_ms
+ 
+-                    3. http_max_payload_size
++                    3. recv_timeout_ms
+ 
+-                    4. http_timeout_ms
++                    4. http_max_payload_size
+ 
+-                    5. throttle_window_size
++                    5. http_timeout_ms
+ 
+-                    6. brpc_channel_protocol refer to `https://github.com/apache/incubator-brpc/blob/master/docs/en/client.md#protocols`
++                    6. throttle_window_size
+ 
+-                    7. brpc_channel_connection_type refer to `https://github.com/apache/incubator-brpc/blob/master/docs/en/client.md#connection-type`
+-            log_options: optional. options of spu logging.
++                    7. brpc_channel_protocol refer to `https://github.com/apache/brpc/blob/master/docs/en/client.md#protocols`
++
++                    8. brpc_channel_connection_type refer to `https://github.com/apache/brpc/blob/master/docs/en/client.md#connection-type`
++            log_options: Optional. Options of spu logging.
++            use_link: Optional. flag for create brpc link, default True.
+         """
+         super().__init__(DeviceType.SPU)
+         self.cluster_def = cluster_def
++        self.cluster_def['nodes'].sort(key=lambda x: x['party'])
+         self.link_desc = link_desc
+         self.log_options = log_options
+         self.conf = json_format.Parse(
+             json.dumps(cluster_def['runtime_config']), spu.RuntimeConfig()
+         )
+         self.world_size = len(self.cluster_def['nodes'])
+-        self.name = name
+         self.actors = {}
+         self._task_id = -1
+         self.io = SPUIO(self.conf, self.world_size)
++        self.use_link = use_link
+         self.init()
+ 
+     def init(self):
+         """Init SPU runtime in each party"""
+         for rank, node in enumerate(self.cluster_def['nodes']):
+             self.actors[node['party']] = (
+                 sfd.remote(SPURuntime)
+                 .party(node['party'])
+-                .remote(rank, self.cluster_def, self.link_desc, self.log_options)
++                .remote(
++                    rank,
++                    self.cluster_def,
++                    self.link_desc,
++                    self.log_options,
++                    self.use_link,
++                )
+             )
+ 
+     def reset(self):
+         """Reset spu to clear corrupted internal state, for test only"""
+         self.shutdown()
+         time.sleep(0.5)
+         self.init()
+@@ -1029,14 +1194,30 @@
+                 for i, actor in enumerate(self.actors.values()):
+                     shares_name.append(actor.infeed_share.remote(refs[i]))
+ 
+                 return SPUObject(self, meta, shares_name)
+ 
+         return jax.tree_util.tree_map(place, (args, kwargs))
+ 
++    def dump(self, obj: SPUObject, paths: List[str]):
++        assert obj.device == self, "obj must be owned by this device."
++        for i, actor in enumerate(self.actors.values()):
++            actor.dump.remote(obj.meta, obj.shares_name[i], paths[i])
++
++    def load(self, paths: List[str]) -> SPUObject:
++        outputs = [None] * self.world_size
++        for i, actor in enumerate(self.actors.values()):
++            actor_out = actor.load.options(num_returns=2).remote(paths[i])
++
++            outputs[i] = actor_out
++
++        return SPUObject(
++            self, outputs[0][0], [outputs[i][1] for i in range(self.world_size)]
++        )
++
+     def __call__(
+         self,
+         func: Callable,
+         *,
+         static_argnames: Union[str, Iterable[str], None] = None,
+         num_returns_policy: SPUCompilerNumReturnsPolicy = SPUCompilerNumReturnsPolicy.SINGLE,
+         user_specified_num_returns: int = 1,
+@@ -1057,15 +1238,15 @@
+ 
+             # it's ok to choose any party to compile,
+             # here we choose party 0.
+             executable, out_shape = (
+                 sfd.remote(_spu_compile)
+                 .party(self.cluster_def['nodes'][0]['party'])
+                 .options(num_returns=2)
+-                .remote(self.name, fn, *meta_args, **meta_kwargs)
++                .remote(fn, *meta_args, **meta_kwargs)
+             )
+ 
+             if num_returns_policy == SPUCompilerNumReturnsPolicy.FROM_COMPILER:
+                 # Since user choose to use num of returns from compiler result,
+                 # the compiler result must be revealed to host.
+                 # Performance may hurt here.
+                 # However, since we only expose executable here, it's still
+@@ -1075,15 +1256,14 @@
+ 
+             if num_returns_policy == SPUCompilerNumReturnsPolicy.SINGLE:
+                 num_returns = 1
+ 
+             # run executable and get returns.
+             outputs = [None] * self.world_size
+             for i, actor in enumerate(self.actors.values()):
+-
+                 (actor_args, actor_kwargs) = jax.tree_util.tree_map(
+                     lambda x: x.shares_name[i], (args, kwargs)
+                 )
+ 
+                 val, _ = jax.tree_util.tree_flatten((actor_args, actor_kwargs))
+ 
+                 actor_out = actor.run.options(num_returns=2 * num_returns).remote(
+@@ -1146,14 +1326,16 @@
+         precheck_input=True,
+         sort=True,
+         broadcast_result=True,
+         bucket_size=1 << 20,
+         curve_type="CURVE_25519",
+         preprocess_path=None,
+         ecdh_secret_key_path=None,
++        dppsi_bob_sub_sampling=0.9,
++        dppsi_epsilon=3,
+     ):
+         """Private set intersection with DataFrame.
+ 
+         Args:
+             key (str, List[str], Dict[Device, List[str]]): Column(s) used to join.
+             dfs (List[PYUObject]): DataFrames to be joined, which
+             should be colocated with SPU runtimes.
+@@ -1163,14 +1345,17 @@
+             sort (bool): Whether sort data by key after join.
+             broadcast_result (bool): Whether to broadcast joined data to all parties.
+             bucket_size (int): Specified the hash bucket size used in psi.
+             Larger values consume more memory.
+             curve_type (str): curve for ecdh psi.
+             preprocess_path (str): preprocess file path for unbalanced psi.
+             ecdh_secret_key_path (str): ecdh_oprf secretkey file path, binary format, 32B, for unbalanced psi.
++            dppsi_bob_sub_sampling (double): bob subsampling bernoulli_distribution
++                probability of dp psi
++            dppsi_epsilon (double): epsilon of dp psi
+ 
+         Returns:
+             List[PYUObject]: Joined DataFrames with order reserved.
+         """
+         return dispatch(
+             'psi_df',
+             self,
+@@ -1181,14 +1366,16 @@
+             precheck_input,
+             sort,
+             broadcast_result,
+             bucket_size,
+             curve_type,
+             preprocess_path,
+             ecdh_secret_key_path,
++            dppsi_bob_sub_sampling,
++            dppsi_epsilon,
+         )
+ 
+     def psi_csv(
+         self,
+         key: Union[str, List[str], Dict[Device, List[str]]],
+         input_path: Union[str, Dict[Device, str]],
+         output_path: Union[str, Dict[Device, str]],
+@@ -1197,33 +1384,40 @@
+         precheck_input=True,
+         sort=True,
+         broadcast_result=True,
+         bucket_size=1 << 20,
+         curve_type="CURVE_25519",
+         preprocess_path=None,
+         ecdh_secret_key_path=None,
++        dppsi_bob_sub_sampling=0.9,
++        dppsi_epsilon=3,
+     ):
+         """Private set intersection with csv file.
+ 
+         Args:
+             key (str, List[str], Dict[Device, List[str]]): Column(s) used to join.
+-            input_path: CSV files to be joined, comma seperated and contains header.
+-            output_path: Joined csv files, comma seperated and contains header.
++            input_path: CSV files to be joined, comma separated and contains header.
++                Use an absolute path.
++            output_path: Joined csv files, comma separated and contains header.
++                Use an absolute path.
+             receiver (str): Which party can get joined data.
+             Others won't generate output file and `intersection_count` get `-1`.
+             protocol (str): PSI protocol.
+             precheck_input (bool): Whether check input data before joining,
+             for now, it will check if key duplicate.
+             sort (bool): Whether sort data by key after joining.
+             broadcast_result (bool): Whether broadcast joined data to all parties.
+             bucket_size (int): Specified the hash bucket size used in psi.
+             Larger values consume more memory.
+             curve_type (str): curve for ecdh psi.
+             preprocess_path (str): preprocess file path for unbalanced psi.
+             ecdh_secret_key_path (str): ecdh_oprf secretkey file path, binary format, 32B.
++            dppsi_bob_sub_sampling (double): bob subsampling bernoulli_distribution
++                probability of dp psi
++            dppsi_epsilon (double): epsilon of dp psi
+ 
+         Returns:
+             List[Dict]: PSI reports output by SPU with order reserved.
+         """
+ 
+         return dispatch(
+             'psi_csv',
+@@ -1236,14 +1430,16 @@
+             precheck_input,
+             sort,
+             broadcast_result,
+             bucket_size,
+             curve_type,
+             preprocess_path,
+             ecdh_secret_key_path,
++            dppsi_bob_sub_sampling,
++            dppsi_epsilon,
+         )
+ 
+     def psi_join_df(
+         self,
+         key: Union[str, List[str], Dict[Device, List[str]]],
+         dfs: List['PYUObject'],
+         receiver: str,
+@@ -1294,16 +1490,18 @@
+         bucket_size=1 << 20,
+         curve_type="CURVE_25519",
+     ):
+         """Private set intersection with csv file.
+ 
+         Args:
+             key (str, List[str], Dict[Device, List[str]]): Column(s) used to join.
+-            input_path: CSV files to be joined, comma seperated and contains header.
+-            output_path: Joined csv files, comma seperated and contains header.
++            input_path: CSV files to be joined, comma separated and contains header.
++                Use an absolute path.
++            output_path: Joined csv files, comma separated and contains header.
++                Use an absolute path.
+             receiver (str): Which party can get joined data. Others won't generate output file and `intersection_count` get `-1`
+             join_party (str): party can get joined data
+             protocol (str): PSI protocol.
+             precheck_input (bool): Whether check input data before joining, for now, it will check if key duplicate.
+             bucket_size (int): Specified the hash bucket size used in psi. Larger values consume more memory.
+             curve_type (str): curve for ecdh psi
+```
+
+## secretflow/device/kernels/__init__.py
+
+```diff
+@@ -8,9 +8,9 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from . import heu, spu, pyu
++from . import heu, pyu, spu
+ from .spu import psi_df
+```
+
+## secretflow/device/kernels/heu.py
+
+```diff
+@@ -11,37 +11,73 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from heu import numpy as hnp
+ from spu import spu_pb2
+ 
+-from secretflow.device import (HEU, PYU, SPU, Device, DeviceObject, DeviceType,
+-                               HEUObject, PYUObject, SPUObject, register)
+-from secretflow.device.device.base import MoveConfig
+-
+-
+-@register(DeviceType.HEU)
+-def to(self: HEUObject, device: Device, config):
+-    assert isinstance(device, Device)
+-
+-    if isinstance(device, HEU):
+-        if self.device is device:
+-            return heu_to_same_heu(self, config)
+-        else:
+-            return heu_to_other_heu(self, device, config)
+-    if isinstance(device, PYU):  # pure local operation
+-        return heu_to_pyu(self, device, config)
+-    if isinstance(device, SPU):
+-        return heu_to_spu(self, device)
++from secretflow.device import (
++    HEU,
++    PYU,
++    SPU,
++    DeviceObject,
++    DeviceType,
++    HEUObject,
++    PYUObject,
++    SPUObject,
++    register,
++)
++from secretflow.device.device.base import register_to
++from secretflow.device.device.heu import HEUMoveConfig
++
++
++@register_to(DeviceType.HEU, DeviceType.HEU)
++def heu_to_heu(self: HEUObject, heu: HEU, config: HEUMoveConfig = None):
++    assert isinstance(heu, HEU), f'Expect an HEU but got {type(heu)}.'
++    if config is None:
++        config = HEUMoveConfig()
+ 
+-    raise ValueError(f'Unexpected device type: {type(device)}')
++    if self.device is heu:
++        return heu_to_same_heu(self, config)
++    else:
++        return heu_to_other_heu(self, heu, config)
++
++
++@register_to(DeviceType.HEU, DeviceType.PYU)
++def heu_to_pyu(self: HEUObject, pyu: PYU, config: HEUMoveConfig = None):
++    assert isinstance(pyu, PYU), f'Expect a PYU but got {type(pyu)}.'
++    if config is None:
++        config = HEUMoveConfig()
++
++    # heu -> heu(sk_keeper)
++    if self.location != pyu.party:
++        config.heu_dest_party = pyu.party
++        self = self.to(self.device, config)
++
++    # below is pure local operation
++    if self.is_plain:
++        cleartext = self.device.get_participant(self.location).decode.remote(
++            self.data, config.heu_encoder
++        )
++        return PYUObject(pyu, cleartext)
++
++    assert (
++        pyu.party == self.device.sk_keeper_name()
++    ), f'Can not convert to PYU device {pyu.party} without secret key'
++
++    # HEU -> PYU: Decrypt
++    cleartext = self.device.sk_keeper.decrypt_and_decode.remote(
++        self.data, config.heu_encoder
++    )
++    return PYUObject(pyu, cleartext)
+ 
+ 
++@register_to(DeviceType.HEU, DeviceType.SPU)
+ def heu_to_spu(self: HEUObject, spu: SPU):
++    assert isinstance(spu, SPU), f'Expect an SPU but got {type(spu)}.'
+     heu = self.device
+ 
+     assert (
+         heu.sk_keeper_name() in spu.actors.keys()
+     ), f'SPU not exist in {heu.sk_keeper_name()}'
+ 
+     heu_parties = list(heu.evaluator_names()) + [heu.sk_keeper_name()]
+@@ -90,15 +126,15 @@
+ 
+     refs.insert(spu_actor_idx_for_keeper, sk_keeper_data)
+ 
+     return SPUObject(spu, meta, spu.infeed_shares(refs))
+ 
+ 
+ # Data flows inside the HEU, across network
+-def heu_to_same_heu(self: HEUObject, config: MoveConfig):
++def heu_to_same_heu(self: HEUObject, config: HEUMoveConfig):
+     if self.location == config.heu_dest_party:
+         return self  # nothing to do
+ 
+     if self.is_plain:
+         # encrypt and send
+         ct = self.device.get_participant(self.location).encrypt.remote(
+             self.data, config.heu_audit_log
+@@ -106,42 +142,18 @@
+         return HEUObject(self.device, ct, config.heu_dest_party, is_plain=False)
+     else:
+         # directly send
+         return HEUObject(self.device, self.data, config.heu_dest_party, is_plain=False)
+ 
+ 
+ # The two HEU have different pk/sk
+-def heu_to_other_heu(self: DeviceObject, dest_device: HEU, config):
++def heu_to_other_heu(self: DeviceObject, dest_device: HEU, config: HEUMoveConfig):
+     raise NotImplementedError("Heu object cannot flow across HEUs")
+ 
+ 
+-def heu_to_pyu(self: HEUObject, device: PYU, config: MoveConfig):
+-    # heu -> heu(sk_keeper)
+-    if self.location != device.party:
+-        config.heu_dest_party = device.party
+-        self = self.to(self.device, config)
+-
+-    # below is pure local operation
+-    if self.is_plain:
+-        cleartext = self.device.get_participant(self.location).decode.remote(
+-            self.data, config.heu_encoder
+-        )
+-        return PYUObject(device, cleartext)
+-
+-    assert (
+-        device.party == self.device.sk_keeper_name()
+-    ), f'Can not convert to PYU device {device.party} without secret key'
+-
+-    # HEU -> PYU: Decrypt
+-    cleartext = self.device.sk_keeper.decrypt_and_decode.remote(
+-        self.data, config.heu_encoder
+-    )
+-    return PYUObject(device, cleartext)
+-
+-
+ def _binary_op(self: HEUObject, other: HEUObject, op) -> 'HEUObject':
+     assert isinstance(other, HEUObject)
+     assert self.location == other.location, (
+         f"Heu objects that are not on the same node cannot perform operations, "
+         f"left:{self.location}, right:{other.location}"
+     )
+```
+
+## secretflow/device/kernels/pyu.py
+
+```diff
+@@ -8,51 +8,201 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from spu import Visibility
+ 
+-from secretflow.device import (HEU, PYU, SPU, SPUIO, Device, DeviceType,
+-                               HEUObject, PYUObject, SPUObject, register)
++import logging
++import secrets
++from typing import Any, Callable, List, Union
+ 
++from spu import Visibility
+ 
+-@register(DeviceType.PYU)
+-def to(self: PYUObject, device: Device, config):
+-    assert isinstance(device, Device), f'Expect a device but got {type(device)}'
++from secretflow.device import (
++    HEU,
++    PYU,
++    SPU,
++    SPUIO,
++    TEEU,
++    DeviceType,
++    HEUObject,
++    PYUObject,
++    SPUObject,
++    TEEUData,
++    TEEUObject,
++    global_state,
++    wait,
++)
++from secretflow.device.device.base import register_to
++from secretflow.device.device.heu import HEUMoveConfig
++
++
++@register_to(DeviceType.PYU, DeviceType.PYU)
++def pyu_to_pyu(self: PYUObject, pyu: PYU) -> PYUObject:
++    assert isinstance(pyu, PYU), f'Expect a PYU but got {type(pyu)}.'
++    return PYUObject(pyu, self.data)
++
++
++@register_to(DeviceType.PYU, DeviceType.SPU)
++def pyu_to_spu(self: PYUObject, spu: SPU, spu_vis: str = 'secret') -> SPUObject:
++    """Transfer pyuobject to the spu.
++
++    Args:
++        self: the pyuobject to transfer.
++        spu: to this SPU device.
++        spu_vis: optional; SPU object visibility. Value can be:
++            - secret: Secret sharing with protocol spdz-2k, aby3, etc.
++            - public: Public sharing, which means data will be replicated to each node.
++
++    Returns:
++        the transferred SPUObject.
++    """
++    assert isinstance(spu, SPU), f'Expect an SPU but got {type(spu)}'
++    assert spu_vis in ('secret', 'public'), f'vis must be public or secret'
++
++    vtype = Visibility.VIS_PUBLIC if spu_vis == 'public' else Visibility.VIS_SECRET
++
++    def run_spu_io(data, runtime_config, world_size, vtype):
++        io = SPUIO(runtime_config, world_size)
++        return io.make_shares(data, vtype)
++
++    meta, *shares = self.device(run_spu_io, num_returns=(1 + spu.world_size))(
++        self.data, spu.conf, spu.world_size, vtype
++    )
++    return SPUObject(
++        spu, meta.data, spu.infeed_shares([share.data for share in shares])
++    )
++
++
++@register_to(DeviceType.PYU, DeviceType.HEU)
++def pyu_to_heu(self: PYUObject, heu: HEU, config: HEUMoveConfig = None):
++    assert isinstance(heu, HEU), f'Expect an HEU but got {type(heu)}'
++    if config is None:
++        config = HEUMoveConfig()
++
++    if config.heu_dest_party == 'auto':
++        config.heu_dest_party = list(heu.evaluator_names())[0]
++
++    data = heu.get_participant(self.device.party).encode.remote(
++        self.data, config.heu_encoder
++    )
++    return HEUObject(heu, data, self.device.party, True).to(heu, config)
++
++
++@register_to(DeviceType.PYU, DeviceType.TEEU)
++def pyu_to_teeu(
++    self: PYUObject,
++    teeu: TEEU,
++    allow_funcs: Union[Callable, List[Callable]],
++):
++    """Transfer a PYUObject to TEEU.
++
++    Transfer a PYUObject to TEEU, the main steps are:
++    1) Create an authority with the specific function and enclave through
++        the authority manager. A data key will be generated for next step.
++    2) Use the data key to encrypt the data with AES-GCM.
++
++    Args:
++        self: the PYUObject instance.
++        teeu: the TEEU.
++        allow_funcs: the function(s) to allow using this PYUObject.
++            Function not in this list can not use this PYUObject.
++
++    Returns:
++        A TEEUObject whose underlying data is ciphertext.
++    """
++    from sdc.auth_frame import AuthFrame, CredentialsConf
++
++    assert isinstance(teeu, TEEU), f'Expect a TEEU but got {type(teeu)}'
++    logging.debug(
++        f'Transfer PYU object from {self.device.party} to TEEU of {teeu.party}.'
++    )
++
++    def create_auth(
++        data: Any,
++        public_key: str,
++        private_key: str,
++        tls_cert: str,
++        tls_key: str,
++        allow_funcs: Union[Callable, List[Callable]],
++        allow_enclaves: List[str],
++        auth_host: str,
++        auth_mr_enclave: str,
++        auth_ca_cert: str,
++        sim: bool,
++    ):
++        if not isinstance(allow_funcs, (list, tuple)):
++            allow_funcs = [allow_funcs]
+ 
+-    if isinstance(device, PYU):
+-        return PYUObject(device, self.data)
+-    elif isinstance(device, SPU):
+-        assert (
+-            config.spu_vis == 'secret' or config.spu_vis == 'public'
+-        ), f'vis must be public or secret'
++        from secretflow.utils.cloudpickle import (
++            code_position_independent_dumps as dumps,
++        )
+ 
+-        vtype = (
+-            Visibility.VIS_PUBLIC
+-            if config.spu_vis == 'public'
+-            else Visibility.VIS_SECRET
++        allow_funcs_bytes = [dumps(func, protocol=4) for func in allow_funcs]
++        if auth_ca_cert:
++            credentials = CredentialsConf(
++                root_ca=auth_ca_cert.encode('utf-8'),
++                private_key=tls_key.encode('utf-8') if tls_key else None,
++                cert_chain=tls_cert.encode('utf-8') if tls_cert else None,
++            )
++        else:
++            credentials = None
++        auth_frame = AuthFrame(
++            authm_host=auth_host,
++            authm_mr_enclave=auth_mr_enclave,
++            conf=credentials,
++            sim=sim,
++        )
++        data_uuid, data_key = auth_frame.create_auth(
++            data=data,
++            public_key_pem=public_key,
++            private_key_pem=private_key,
++            allow_funcs=allow_funcs_bytes,
++            allow_enclaves=allow_enclaves,
+         )
++        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+ 
+-        def run_spu_io(data, runtime_config, world_size, vtype):
+-            io = SPUIO(runtime_config, world_size)
+-            return io.make_shares(data, vtype)
++        aesgcm = AESGCM(data_key)
++        nonce = secrets.token_bytes(12)
++        aad = data_uuid.encode('utf-8')
+ 
+-        meta, *shares = self.device(run_spu_io, num_returns=(1 + device.world_size))(
+-            self.data, device.conf, device.world_size, vtype
+-        )
+-        return SPUObject(
+-            device, meta.data, device.infeed_shares([share.data for share in shares])
++        import ray.cloudpickle as pickle
++
++        encrypted_data = aesgcm.encrypt(
++            nonce=nonce, data=pickle.dumps(data, protocol=4), associated_data=aad
+         )
+ 
+-    elif isinstance(device, HEU):  # PYU -> HEU, pure local operation
+-        if config.heu_dest_party == 'auto':
+-            config.heu_dest_party = list(device.evaluator_names())[0]
++        return TEEUData(
++            data=encrypted_data,
++            data_uuid=data_uuid,
++            nonce=nonce,
++            aad=aad,
++        )
+ 
+-        data = device.get_participant(self.device.party).encode.remote(
+-            self.data, config.heu_encoder
++    party = self.device.party
++    if party == global_state.self_party():
++        assert party in global_state.party_key_pairs(), (
++            f'Can not find key pair of {party}, '
++            'you can provide it through `party_key_pair` when calling `sf.init`'
+         )
+-        return HEUObject(device, data, self.device.party, True).to(device, config)
++        party_key_pair = global_state.party_key_pairs()[party]
++    else:
++        party_key_pair = global_state.PartyKeyPair()
++    party_cert = global_state.party_certs().get(party, global_state.PartyCert())
++    teeu_data = self.device(create_auth)(
++        data=self.data,
++        public_key=party_key_pair.public_key,
++        private_key=party_key_pair.private_key,
++        tls_cert=party_cert.cert,
++        tls_key=party_cert.key,
++        allow_funcs=allow_funcs,
++        allow_enclaves=[teeu.mr_enclave],
++        auth_host=global_state.auth_manager_host(),
++        auth_mr_enclave=global_state.auth_manager_mr_enclave(),
++        auth_ca_cert=global_state.auth_manager_ca_cert(),
++        sim=global_state.tee_simulation(),
++    )
++    wait(teeu_data)
+ 
+-    raise ValueError(f'Unexpected device type: {type(device)}')
++    return TEEUObject(teeu, teeu_data.data)
+```
+
+## secretflow/device/kernels/spu.py
+
+```diff
+@@ -23,57 +23,64 @@
+     Device,
+     DeviceType,
+     HEUObject,
+     PYUObject,
+     SPUObject,
+     register,
+ )
++from secretflow.device.device.base import register_to
++from secretflow.device.device.heu import HEUMoveConfig
+ 
+ 
+-@register(DeviceType.SPU)
+-def to(self: SPUObject, device: Device, config):
+-    if isinstance(device, PYU):
+-
+-        def reveal(conf, world_size, refs, meta):
+-            io = SPUIO(conf, world_size)
+-            return io.reconstruct(refs, meta)
+-
+-        return device(reveal)(
+-            self.device.conf,
+-            self.device.world_size,
+-            self.device.outfeed_shares(self.shares_name),
+-            self.meta,
+-        )
+-
+-    if isinstance(device, SPU):
+-        # same spu
+-        if self.device == device:
+-            return self
+-
+-        # send to another spu.
+-        assert (
+-            device.conf.protocol == self.device.conf.protocol
+-            and device.conf.field == self.device.conf.field
+-            and device.conf.fxp_fraction_bits == self.device.conf.fxp_fraction_bits
+-            and device.world_size == self.device.world_size
+-        )
+-
+-        shares = self.device.outfeed_shares(self.shares_name)
+-        shares_name = device.infeed_shares(shares)
+-
+-        # TODO: do we need reshare shares.
+-        return SPUObject(device, self.meta, shares_name)
+-
+-    if isinstance(device, HEU):
+-        return spu_to_heu(self, device, config)
+-
+-    raise ValueError(f'Unexpected device type: {type(device)}')
+-
++@register_to(DeviceType.SPU, DeviceType.PYU)
++def spu_to_pyu(self: SPUObject, pyu: Device, config: HEUMoveConfig = None):
++    assert isinstance(pyu, PYU), f'Expect a PYU but got {type(pyu)}.'
++    if config is None:
++        config = HEUMoveConfig()
++
++    def reveal(conf, world_size, refs, meta):
++        io = SPUIO(conf, world_size)
++        return io.reconstruct(refs, meta)
++
++    return pyu(reveal)(
++        self.device.conf,
++        self.device.world_size,
++        self.device.outfeed_shares(self.shares_name),
++        self.meta,
++    )
++
++
++@register_to(DeviceType.SPU, DeviceType.SPU)
++def spu_to_spu(self: SPUObject, spu: SPU):
++    assert isinstance(spu, SPU), f'Expect an SPU but got {type(spu)}.'
++    # same spu
++    if self.device == spu:
++        return self
++
++    # send to another spu.
++    assert (
++        spu.conf.protocol == self.device.conf.protocol
++        and spu.conf.field == self.device.conf.field
++        and spu.conf.fxp_fraction_bits == self.device.conf.fxp_fraction_bits
++        and spu.world_size == self.device.world_size
++    )
++
++    shares = self.device.outfeed_shares(self.shares_name)
++    shares_name = spu.infeed_shares(shares)
++
++    # TODO: do we need reshare shares.
++    return SPUObject(spu, self.meta, shares_name)
++
++
++@register_to(DeviceType.SPU, DeviceType.HEU)
++def spu_to_heu(self: SPUObject, heu: Device, config: HEUMoveConfig = None):
++    assert isinstance(heu, HEU), f'Expect an HEU but got {type(heu)}.'
++    if config is None:
++        config = HEUMoveConfig()
+ 
+-def spu_to_heu(self: SPUObject, heu: HEU, config):
+     if config.heu_dest_party == "auto":
+         config.heu_dest_party = list(heu.evaluator_names())[0]
+ 
+     if config.heu_dest_party == heu.sk_keeper_name():
+         raise RuntimeError(
+             f"move data to heu sk_keeper({config.heu_dest_party}) is dangerous. If you are "
+             f"sure you want to do this, please reveal the data to PYU first, "
+@@ -113,14 +120,16 @@
+     precheck_input=True,
+     sort=True,
+     broadcast_result=True,
+     bucket_size=1 << 20,
+     curve_type="CURVE_25519",
+     preprocess_path=None,
+     ecdh_secret_key_path=None,
++    dppsi_bob_sub_sampling=0.9,
++    dppsi_epsilon=3,
+ ) -> List[PYUObject]:
+     assert isinstance(device, SPU), f'device must be SPU device'
+     assert isinstance(
+         key, (str, List, Dict)
+     ), f'invalid key, must be str of list of str or dict of str list'
+     assert len(set([df.device for df in dfs])) == len(
+         dfs
+@@ -150,14 +159,16 @@
+                     precheck_input,
+                     sort,
+                     broadcast_result,
+                     bucket_size,
+                     curve_type,
+                     preprocess_path,
+                     ecdh_secret_key_path,
++                    dppsi_bob_sub_sampling,
++                    dppsi_epsilon,
+                 ),
+             )
+         )
+ 
+     return res
+ 
+ 
+@@ -170,16 +181,18 @@
+     receiver: str,
+     protocol='KKRT_PSI_2PC',
+     precheck_input=True,
+     sort=True,
+     broadcast_result=True,
+     bucket_size=1 << 20,
+     curve_type="CURVE_25519",
+-    preprocess_path=None,
++    preprocess_path: Union[str, Dict[Device, str]] = None,
+     ecdh_secret_key_path=None,
++    dppsi_bob_sub_sampling=0.9,
++    dppsi_epsilon=3,
+ ):
+     assert isinstance(device, SPU), f'device must be SPU device'
+     assert isinstance(
+         key, (str, List, Dict)
+     ), f'invalid key, must be str of list of str or dict of list str'
+     assert isinstance(input_path, (str, Dict)), f'input_path must be str or dict of str'
+     assert isinstance(
+@@ -210,56 +223,80 @@
+             ), f'input_path {dev} not co-located with {device}'
+ 
+         for dev in output_path.keys():
+             assert (
+                 dev.party in device.actors
+             ), f'output_path {dev} not co-located with {device}'
+ 
++    if isinstance(preprocess_path, Dict):
++        if isinstance(input_path, Dict):
++            assert (
++                preprocess_path.keys() == input_path.keys() == output_path.keys()
++            ), f'mismatch key & input_path & out_path devices'
++            for dev in preprocess_path.keys():
++                assert (
++                    dev.party in device.actors
++                ), f'key {dev} not co-located with {device}'
++
+     res = []
+     if isinstance(input_path, str):
+         assert isinstance(
+             output_path, str
+         ), f'input_path and output_path must be same types'
+-        for actor in device.actors:
++        for actor in device.actors.values():
+             k = key[actor] if isinstance(key, Dict) else key
++            p = (
++                preprocess_path[actor]
++                if isinstance(preprocess_path, Dict)
++                else preprocess_path
++            )
+             res.append(
+                 actor.psi_csv.remote(
+                     k,
+                     input_path,
+                     output_path,
+                     receiver,
+                     protocol,
+                     precheck_input,
+                     sort,
+                     broadcast_result,
+                     bucket_size,
+                     curve_type,
+-                    preprocess_path,
++                    p,
+                     ecdh_secret_key_path,
++                    dppsi_bob_sub_sampling,
++                    dppsi_epsilon,
+                 )
+             )
+     else:
+         for dev, ipath in input_path.items():
+             opath = output_path[dev]
+             actor = device.actors[dev.party]
+             k = key[dev] if isinstance(key, Dict) else key
++            p = (
++                preprocess_path[dev]
++                if isinstance(preprocess_path, Dict)
++                else preprocess_path
++            )
+             res.append(
+                 actor.psi_csv.remote(
+                     k,
+                     ipath,
+                     opath,
+                     receiver,
+                     protocol,
+                     precheck_input,
+                     sort,
+                     broadcast_result,
+                     bucket_size,
+                     curve_type,
+-                    preprocess_path,
++                    p,
+                     ecdh_secret_key_path,
++                    dppsi_bob_sub_sampling,
++                    dppsi_epsilon,
+                 )
+             )
+ 
+     # wait for all tasks done
+     return sfd.get(res)
+```
+
+## secretflow/distributed/__init__.py
+
+```diff
+@@ -1,9 +1,23 @@
+-from .primitive import (get, kill, production_mode, remote, set_production,
+-                        shutdown)
++# Copyright 2023 Ant Group Co., Ltd.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++
++from .primitive import get, kill, production_mode, remote, set_production, shutdown
+ 
+ __all__ = [
+     'get',
+     'kill',
+     'production_mode',
+     'remote',
+     'set_production',
+```
+
+## secretflow/distributed/primitive.py
+
+```diff
+@@ -1,39 +1,65 @@
++# Copyright 2023 Ant Group Co., Ltd.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++
+ import inspect
+ from functools import partial
+ from typing import List, Union
+ 
+ import fed
+ import jax
+ import ray
+ from ray import Language
+ from ray._private import ray_option_utils
+-from ray._private.inspect_util import is_cython
+-from ray.actor import (
+-    ActorClass,
+-    ActorClassID,
+-    _inject_tracing_into_class,
+-    _modify_class,
+-    ray_constants,
+-)
++from ray.actor import ActorClass, _inject_tracing_into_class, ray_constants
+ from ray.remote_function import RemoteFunction
+ 
++from secretflow.utils.ray_compatibility import ray_version_less_than_2_0_0
++
+ _production_mode = False
+ 
+ 
+ def set_production(mode: bool):
+     global _production_mode
+     _production_mode = mode
+ 
+ 
+ def production_mode():
+     global _production_mode
+     return _production_mode
+ 
+ 
++def _is_cython(obj):
++    """Check if an object is a Cython function or method"""
++
++    # TODO(suo): We could split these into two functions, one for Cython
++    # functions and another for Cython methods.
++    # TODO(suo): There doesn't appear to be a Cython function 'type' we can
++    # check against via isinstance. Please correct me if I'm wrong.
++    def check_cython(x):
++        return type(x).__name__ == "cython_function_or_method"
++
++    # Check if function or method, respectively
++    return check_cython(obj) or (
++        hasattr(obj, "__func__") and check_cython(obj.__func__)
++    )
++
++
+ def remote(*args, **kwargs):
+     if production_mode():
+         return fed.remote(*args, **kwargs)
+     else:
+         return ray_remote(*args, **kwargs)
+ 
+ 
+@@ -79,19 +105,19 @@
+ 
+ class RemoteFunctionWrapper(RemoteFunction):
+     def _remote(self, *args, **kwargs):
+         args, kwargs = _resolve_args(*args, **kwargs)
+         return super()._remote(*args, **kwargs)
+ 
+     def party(self, party: str):
++        self.party = party
+         if 'resources' in self._default_options:
+             self._default_options['resources'].update({self.party: 1})
+         else:
+             self._default_options.update({'resources': {self.party: 1}})
+-        self.party = party
+         return self
+ 
+     def options(self, **task_options):
+         if hasattr(self, 'party') and self.party:
+             if 'resources' in task_options:
+                 task_options['resources'].update({self.party: 1})
+             else:
+@@ -118,14 +144,20 @@
+ 
+     def remote(self, *args, **kwargs):
+         args, kwargs = _resolve_args(*args, **kwargs)
+         return super().remote(*args, **kwargs)
+ 
+ 
+ def _make_actor(cls, actor_options):
++    if ray_version_less_than_2_0_0():
++        from ray import ActorClassID
++        from ray.actor import modify_class as _modify_class
++    else:
++        from ray.actor import ActorClassID, _modify_class
++
+     Class = _modify_class(cls)
+     _inject_tracing_into_class(Class)
+ 
+     if "max_restarts" in actor_options:
+         if actor_options["max_restarts"] != -1:  # -1 represents infinite restart
+             # Make sure we don't pass too big of an int to C++, causing
+             # an overflow.
+@@ -137,23 +169,22 @@
+         Class,
+         ActorClassID.from_random(),
+         actor_options,
+     )
+ 
+ 
+ def _make_remote(function_or_class, options):
+-    if inspect.isfunction(function_or_class) or is_cython(function_or_class):
++    if inspect.isfunction(function_or_class) or _is_cython(function_or_class):
+         ray_option_utils.validate_task_options(options, in_options=False)
+         return RemoteFunctionWrapper(
+             Language.PYTHON,
+             function_or_class,
+             None,
+             options,
+         )
+-
+     if inspect.isclass(function_or_class):
+         ray_option_utils.validate_actor_options(options, in_options=False)
+         return _make_actor(function_or_class, options)
+ 
+     raise TypeError(
+         "The @ray.remote decorator must be applied to either a function or a class."
+     )
+```
+
+## secretflow/ml/boost/homo_boost/homo_decision_tree.py
+
+```diff
+@@ -18,14 +18,15 @@
+ 
+ """ Homo Decision Tree """
+ import logging
+ from concurrent.futures import ThreadPoolExecutor
+ from functools import reduce
+ 
+ import numpy as np
++
+ import secretflow.device.link as link
+ from secretflow.data.horizontal import HDataFrame
+ from secretflow.ml.boost.homo_boost.tree_core.decision_tree import DecisionTree
+ from secretflow.ml.boost.homo_boost.tree_core.feature_histogram import (
+     FeatureHistogram,
+     HistogramBag,
+ )
+```
+
+## secretflow/ml/boost/homo_boost/boost_core/training.py
+
+```diff
+@@ -138,15 +138,15 @@
+     if role == link.SERVER:
+         pre_round_list = link.recv_from_clients(
+             name="pre_round",
+             version=0,
+         )
+         if len(set(pre_round_list)) != 1:
+             raise ValueError(
+-                f"num round before trainning for clients must aligned, but got {pre_round_list}"
++                f"num round before training for clients must aligned, but got {pre_round_list}"
+             )
+         pre_round = pre_round_list[0]
+     start_iteration += pre_round
+     for i in range(start_iteration, start_iteration + num_boost_round):
+         if callbacks.before_iteration(bst, i, dtrain, evals):
+             break
+         # bst calls federate_update to build the tree of this iteration in federated mode, and merges it into the xgboost model after the construction is complete
+```
+
+## secretflow/ml/boost/homo_boost/tree_core/decision_tree.py
+
+```diff
+@@ -19,14 +19,15 @@
+ import json
+ import logging
+ from typing import List
+ 
+ import numpy as np
+ import pandas
+ import xgboost as xgb
++
+ from secretflow.ml.boost.homo_boost.tree_core.feature_histogram import FeatureHistogram
+ from secretflow.ml.boost.homo_boost.tree_core.feature_importance import (
+     FeatureImportance,
+ )
+ from secretflow.ml.boost.homo_boost.tree_core.node import Node
+ from secretflow.ml.boost.homo_boost.tree_core.splitter import SplitInfo, Splitter
+ from secretflow.ml.boost.homo_boost.tree_param import TreeParam
+```
+
+## secretflow/ml/boost/homo_boost/tree_core/feature_histogram.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -12,23 +12,23 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-from dataclasses import dataclass
+-from typing import Dict, List
+-from operator import add, sub
+ import copy
+ from concurrent.futures import ThreadPoolExecutor
++from dataclasses import dataclass
++from operator import add, sub
++from typing import Dict, List
+ 
+ import numpy
+-import pandas
+ import numpy as np
++import pandas
+ 
+ from secretflow.utils.errors import InvalidArgumentError
+ 
+ 
+ @dataclass()
+ class HistogramBag(object):
+     """Histogram container
+```
+
+## secretflow/ml/boost/ss_xgb_v/__init__.py
+
+```diff
+@@ -8,13 +8,13 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from .model import XgbModel, Xgb
++from .model import Xgb, XgbModel
+ 
+ __all__ = [
+     'XgbModel',
+     'Xgb',
+-]
++]
+```
+
+## secretflow/ml/boost/ss_xgb_v/model.py
+
+```diff
+@@ -27,15 +27,14 @@
+     PYU,
+     SPU,
+     PYUObject,
+     SPUCompilerNumReturnsPolicy,
+     SPUObject,
+     wait,
+ )
+-from secretflow.device.device.base import MoveConfig
+ 
+ from .core import node_split as split_fn
+ from .core.node_split import RegType
+ from .core.tree_worker import XgbTreeWorker as Worker
+ from .core.utils import prepare_dataset
+ 
+ 
+@@ -323,17 +322,15 @@
+             )
+ 
+         assert len(self.y) == len(self.pred)
+ 
+         if self.colsample < 1:
+             self.col_choices = []
+             for spu in self.spu:
+-                choices = [
+-                    c.to(spu, MoveConfig(spu_vis='public')) for c in col_buckets_choices
+-                ]
++                choices = [c.to(spu, spu_vis='public') for c in col_buckets_choices]
+                 spu_choices = spu(lambda c: jnp.concatenate(c, axis=None))(choices)
+                 self.col_choices.append(spu_choices)
+         else:
+             self.col_choices = [None] * self.spus
+ 
+         self.sub_choices = list()
+         self.ghs = list()
+@@ -348,15 +345,15 @@
+             assert choices > 0, f"subsample {self.subsample} is too small"
+ 
+             if choices < samples:
+                 sub_choices = self.workers[0].device(
+                     lambda s, c: np.sort(np.random.choice(s, c, replace=False))
+                 )(samples, choices)
+                 # same as colsample above, keep choices in public.
+-                sub_choices = sub_choices.to(spu, MoveConfig(spu_vis='public'))
++                sub_choices = sub_choices.to(spu, spu_vis='public')
+             else:
+                 sub_choices = None
+ 
+             gh = spu(split_fn.tree_setup, static_argnames=("objective"),)(
+                 pred,
+                 y,
+                 sub_choices,
+```
+
+## secretflow/ml/boost/ss_xgb_v/core/node_split.py
+
+```diff
+@@ -9,17 +9,18 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
++from enum import Enum, unique
+ from typing import Any, Dict, List, Tuple
++
+ import jax.numpy as jnp
+-from enum import Enum, unique
+ import numpy as np
+ 
+ from secretflow.utils import sigmoid as appr_sig
+ 
+ 
+ @unique
+ class RegType(Enum):
+```
+
+## secretflow/ml/boost/ss_xgb_v/core/tree_worker.py
+
+```diff
+@@ -9,19 +9,23 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import math
+-from typing import Tuple, List
++from typing import List, Tuple
++
+ import numpy as np
+-from .xgb_tree import XgbTree
++from heu import numpy as hnp
++
+ from secretflow.device import PYUObject, proxy
+ 
++from .xgb_tree import XgbTree
++
+ 
+ @proxy(PYUObject)
+ class XgbTreeWorker:
+     '''
+     use in XGB model.
+     do some compute works that only use one partition' dataset.
+     '''
+@@ -37,44 +41,15 @@
+             x: dataset from this partition.
+             tree: tree model store by this partition.
+ 
+         Return:
+             leaf nodes' selects
+         '''
+         x = x if isinstance(x, np.ndarray) else np.array(x)
+-        split_nodes = len(tree.split_features)
+-
+-        select = np.zeros((x.shape[0], split_nodes + 1), dtype=np.int8)
+-        # should parallel in c++
+-        for r in range(x.shape[0]):
+-            row = x[r, :]
+-            idxs = list()
+-            idxs.append(0)
+-            while len(idxs):
+-                idx = idxs.pop(0)
+-                if idx < split_nodes:
+-                    f = tree.split_features[idx]
+-                    v = tree.split_values[idx]
+-                    if f == -1:
+-                        # if node split by others partition's feature
+-                        # mark all split paths in tree.
+-                        idxs.append(idx * 2 + 1)
+-                        idxs.append(idx * 2 + 2)
+-                    else:
+-                        # if node split by this partition's feature
+-                        # mark the clearly split path in tree.
+-                        if row[f] < v:
+-                            idxs.append(idx * 2 + 1)
+-                        else:
+-                            idxs.append(idx * 2 + 2)
+-                else:
+-                    leaf_idx = idx - split_nodes
+-                    select[r, leaf_idx] = 1
+-
+-        return select
++        return hnp.tree_predict(x, tree.split_features, tree.split_values)
+ 
+     def _qcut(self, x: np.ndarray) -> Tuple[np.ndarray, List]:
+         sorted_x = np.sort(x, axis=0)
+         samples = len(sorted_x)
+         remained_count = samples
+         assert remained_count > 0, 'can not qcut empty x'
+```
+
+## secretflow/ml/boost/ss_xgb_v/core/utils.py
+
+```diff
+@@ -8,21 +8,20 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
++import math
++from typing import Tuple, Union
++
+ from secretflow.data import FedNdarray, PartitionWay
+ from secretflow.data.vertical import VDataFrame
+ 
+-from typing import Union, Tuple
+-
+-import math
+-
+ 
+ def prepare_dataset(
+     ds: Union[FedNdarray, VDataFrame]
+ ) -> Tuple[FedNdarray, Tuple[int, int]]:
+     """
+     check data setting and get total shape.
+ 
+@@ -37,14 +36,14 @@
+         ds, (FedNdarray, VDataFrame)
+     ), f"ds should be FedNdarray or VDataFrame, got {type(ds)}"
+ 
+     ds = ds if isinstance(ds, FedNdarray) else ds.values
+ 
+     assert ds.partition_way == PartitionWay.VERTICAL, (
+         "SS XGB Only support vertical dataset, "
+-        "for horizontal dataset please use secreflow.ml.boost.homo_boost"
++        "for horizontal dataset please use secretflow.ml.boost.homo_boost"
+     )
+ 
+     shape = ds.shape
+     assert math.prod(shape), f"not support empty dataset, shape {shape}"
+ 
+     return ds, shape
+```
+
+## secretflow/ml/linear/__init__.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -11,17 +11,17 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from .fl_lr_mix import FlLogisticRegressionMix
+ from .fl_lr_v import FlLogisticRegressionVertical
+ from .hess_sgd import HESSLogisticRegression
+-from .ss_sgd import SSRegression
+ from .linear_model import LinearModel, RegType
+ from .ss_glm import SSGLM
++from .ss_sgd import SSRegression
+ 
+ __all__ = [
+     'FlLogisticRegressionMix',
+     'FlLogisticRegressionVertical',
+     'HESSLogisticRegression',
+     'SSRegression',
+     'LinearModel',
+```
+
+## secretflow/ml/linear/fl_lr_mix.py
+
+```diff
+@@ -11,28 +11,28 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import logging
+ import math
+ from typing import Dict, List, Optional
++
+ import numpy as np
+ import spu
+ 
+ from secretflow import reveal
+ from secretflow.data.mix.dataframe import MixDataFrame, PartitionWay
++from secretflow.device.device import PYU
+ from secretflow.device.device.heu import HEU
+ from secretflow.device.device.pyu import PYUObject
+ from secretflow.device.device.type_traits import spu_fxp_precision
+ from secretflow.ml.linear.fl_lr_v import FlLogisticRegressionVertical
+ from secretflow.security.aggregation import Aggregator, SecureAggregator
+ from secretflow.utils.errors import InvalidArgumentError
+ 
+-from secretflow.device.device import PYU
+-
+ 
+ class _CustomSecureAggregator(SecureAggregator):
+     """This aggregator is based on secure aggregator
+     while this aggregator supports multi inputs from one device.
+ 
+     The multi inputs from same device will be aggregated first and secure
+     aggregation will be executed then.
+@@ -167,15 +167,15 @@
+         learning_rate: Optional[float] = 0.1,
+         agg_epochs: Optional[int] = 1,
+         audit_log_dir: Dict[PYU, str] = None,
+     ):
+         """Fit the model.
+ 
+         Args:
+-            x: trainning vector. X should be a horizontal partitioned
++            x: training vector. X should be a horizontal partitioned
+                 :py:class:`~secretflow.data.mix.MixDataFrame`, which consists
+                 of :py:class:`~secretflow.data.vertical.VDataFrame`s.
+             y: target vector relative to x. Y should be a horizontal partitioned
+                 :py:class:`~secretflow.data.mix.MixDataFrame` alos. X and y
+                 should have the same amount of `VDataFrame`s.
+             batch_size: number of samples per gradient update.
+             epochs: number of epochs to train the model.
+```
+
+## secretflow/ml/linear/fl_lr_v.py
+
+```diff
+@@ -22,16 +22,15 @@
+ from heu import phe
+ from numpy.random import RandomState
+ 
+ from secretflow import reveal
+ from secretflow.data.ndarray import FedNdarray
+ from secretflow.data.vertical.dataframe import VDataFrame
+ from secretflow.device import proxy
+-from secretflow.device.device.base import MoveConfig
+-from secretflow.device.device.heu import HEU
++from secretflow.device.device.heu import HEU, HEUMoveConfig
+ from secretflow.device.device.pyu import PYU, PYUObject
+ from secretflow.device.device.type_traits import spu_fxp_precision
+ from secretflow.security.aggregation.aggregator import Aggregator
+ 
+ 
+ class FlLrVWorker(object):
+     def _data_generator(
+@@ -362,15 +361,15 @@
+         epochs: int,
+         tol: Optional[float] = 1e-4,
+         learning_rate: Optional[float] = 0.1,
+     ):
+         """Fit the model.
+ 
+         Args:
+-            x: trainning vector.
++            x: training vector.
+             y: target vector relative to x.
+             batch_size: number of samples per gradient update.
+             epochs: number of epochs to train the model.
+             tol: optional, tolerance for stopping criteria. Defaults to 1e-4.
+             learning_rate: optional, learning rate. Defaults to 0.1.
+         """
+         assert isinstance(
+@@ -465,34 +464,34 @@
+             for i, (device, worker) in enumerate(self.workers.items()):
+                 if device == self.y_device:
+                     continue
+                 # step 2: current device compute the gradients locally,
+                 # and add mask and send to y device.
+                 x_heu = worker.encode(x_batchs[i], self.fxp_bits).to(
+                     self.heu,
+-                    MoveConfig(
++                    HEUMoveConfig(
+                         heu_dest_party=device.party,
+                         heu_encoder=phe.FloatEncoder(self.heu.schema, 1),
+                         heu_audit_log=_gen_auth_file_path(
+                             self.audit_log_dir, device, epoch, step, 'masked_g'
+                         ),
+                     ),
+                 )
+                 r_heu = r.to(
+                     self.heu,
+-                    MoveConfig(
++                    HEUMoveConfig(
+                         heu_dest_party=device.party,
+                         heu_audit_log=_gen_auth_file_path(
+                             self.audit_log_dir, device, epoch, step, 'residual'
+                         ),
+                     ),
+                 )
+                 m_heu = worker.generate_rand_mask(self.fxp_bits).to(
+                     self.heu,
+-                    MoveConfig(
++                    HEUMoveConfig(
+                         heu_dest_party=device.party,
+                         heu_audit_log=_gen_auth_file_path(
+                             self.audit_log_dir, device, epoch, step, 'rand_mask'
+                         ),
+                     ),
+                 )
+                 maskg_heu = r_heu @ x_heu + m_heu
+```
+
+## secretflow/ml/linear/linear_model.py
+
+```diff
+@@ -9,28 +9,44 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
++import dataclasses
++import os
+ from enum import Enum, unique
+-from dataclasses import dataclass
+-from typing import Union, List
++from typing import Dict, List, Union
++
++from secretflow.device import PYU, SPU, PYUObject, SPUObject
+ from secretflow.utils.sigmoid import SigType
+-from secretflow.device import SPUObject, PYUObject
+ 
+ 
+ @unique
+ class RegType(Enum):
+     Linear = 'linear'
+     Logistic = 'logistic'
+ 
+ 
+-@dataclass
++@dataclasses.dataclass
++class PartyPath:
++    party: str
++    path: str
++
++
++@dataclasses.dataclass
++class LinearModelRecord:
++    reg_type: RegType
++    sig_type: SigType
++    weights_spu: List[PartyPath]
++    weights_pyu: List[PartyPath]
++
++
++@dataclasses.dataclass
+ class LinearModel:
+     """
+     Unified linear regression model.
+ 
+     Attributes:
+ 
+         weights : {SPUObject, List[PYUObject]}
+@@ -40,7 +56,51 @@
+         sig_type : SigType
+             which sigmoid approximation should use, only use in mpc lr.
+     """
+ 
+     weights: Union[SPUObject, List[PYUObject]]
+     reg_type: RegType
+     sig_type: SigType
++
++    def dump(self, dir_path: Dict[str, str]) -> LinearModelRecord:
++        if isinstance(self.weights, SPUObject):
++            spu_paths = [
++                os.path.join(dir_path[name], 'weights')
++                for name in self.weights.device.actors.keys()
++            ]
++            self.weights.device.dump(self.weights, spu_paths)
++
++            weights_pyu = None
++            weights_spu = [
++                PartyPath(party, path)
++                for party, path in zip(self.weights.device.actors.keys(), spu_paths)
++            ]
++        else:
++            raise NotImplementedError("pyu weights are not supported")
++
++        return LinearModelRecord(
++            reg_type=self.reg_type,
++            sig_type=self.sig_type,
++            weights_pyu=weights_pyu,
++            weights_spu=weights_spu,
++        )
++
++    @classmethod
++    def load(
++        cls,
++        record: LinearModelRecord,
++        spu: SPU = None,
++        pyus: List[PYU] = None,
++    ) -> 'LinearModel':
++        assert len(record.weights_spu) or len(
++            record.weights_pyu
++        ), 'weights are not provided.'
++
++        if record.weights_spu:
++            assert spu, 'spu device is not provided'
++            path_dict = {t.party: t.path for t in record.weights_spu}
++            paths = [path_dict[party] for party in spu.actors.keys()]
++            weights = spu.load(paths)
++        else:
++            raise NotImplementedError("pyu weights are not supported")
++
++        return cls(weights, record.reg_type, record.sig_type)
+```
+
+## secretflow/ml/linear/hess_sgd/model.py
+
+```diff
+@@ -9,25 +9,25 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import logging
+-from typing import Tuple, Union, List
++from typing import List, Tuple, Union
+ 
+ import jax.numpy as jnp
+ import numpy as np
+ 
+ from secretflow.data import FedNdarray, PartitionWay
+ from secretflow.data.vertical import VDataFrame
+-from secretflow.device import HEU, SPU, PYUObject, wait, SPUObject
++from secretflow.device import HEU, SPU, PYUObject, SPUObject, wait
+ from secretflow.device.device.type_traits import spu_fxp_precision
++from secretflow.ml.linear.linear_model import LinearModel, RegType
+ from secretflow.utils.sigmoid import SigType, sigmoid
+-from secretflow.ml.linear.linear_model import RegType, LinearModel
+ 
+ 
+ # hess-lr
+ class HESSLogisticRegression:
+     """This method provides logistic regression linear models for vertical split dataset
+     setting by using secret sharing and homomorphic encryption with mini batch SGD
+     training solver. HESS-SGD is short for HE & secret sharing SGD training.
+```
+
+## secretflow/ml/linear/ss_sgd/model.py
+
+```diff
+@@ -8,36 +8,51 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-import time
+-import math
+ import logging
+-import numpy as np
++import math
++import time
+ from enum import Enum, unique
++from typing import List, Tuple, Union
++
++import jax.lax
+ import jax.numpy as jnp
+-from typing import Union, List, Tuple
++import numpy as np
+ 
+-from secretflow.utils.sigmoid import sigmoid, SigType
+ from secretflow.data import FedNdarray, PartitionWay
+ from secretflow.data.vertical import VDataFrame
+-from secretflow.device import SPU, SPUObject, wait, PYUObject, PYU
+-from secretflow.ml.linear.linear_model import RegType, LinearModel
++from secretflow.device import (
++    PYU,
++    SPU,
++    PYUObject,
++    SPUCompilerNumReturnsPolicy,
++    SPUObject,
++    wait,
++)
++from secretflow.device.driver import reveal
++from secretflow.ml.linear.linear_model import LinearModel, RegType
++from secretflow.utils.sigmoid import SigType, sigmoid
+ 
+ 
+ @unique
+ class Penalty(Enum):
+     NONE = 'None'
+     L1 = 'l1'  # not supported
+     L2 = 'l2'
+ 
+ 
++class Strategy(Enum):
++    NAIVE_SGD = 'naive_sgd'
++    POLICY_SGD = 'policy_sgd'
++
++
+ '''
+ stateless functions use in LR training.
+ please keep functions stateless to make jax happy
+ see https://jax.readthedocs.io/en/latest/jax-101/07-state.html
+ '''
+ 
+ 
+@@ -102,82 +117,120 @@
+ 
+ 
+ def _init_w(base: float, num_feat: int) -> np.ndarray:
+     # last one is bias
+     return jnp.full((num_feat + 1, 1), base, dtype=jnp.float32)
+ 
+ 
++def _convergence(
++    old_w: np.ndarray,
++    current_w: np.ndarray,
++    norm_eps: float,
++    eps_scale: float,
++):
++    max_delta = jnp.max(jnp.abs(current_w - old_w)) * eps_scale
++    max_w = jnp.max(jnp.abs(current_w))
++
++    return (max_delta / max_w) < norm_eps
++
++
++def _compute_2norm(grad, eps=1e-4):
++    return jax.lax.rsqrt(jnp.sum(jnp.square(grad)) + eps)
++
++
+ def _batch_update_w(
+     x: np.ndarray,
+     y: np.ndarray,
+     w: np.ndarray,
+     learning_rate: float,
+     l2_norm: float,
+     sig_type: SigType,
+     reg_type: RegType,
+     penalty: Penalty,
+     total_batch: int,
+     batch_size: int,
+-) -> np.ndarray:
++    strategy: Strategy,
++    dk_arr: np.ndarray,
++) -> Tuple[np.ndarray, np.ndarray]:
+     """
+     update weights on dataset in one iteration.
+ 
+     Args:
+-        dataset: input datasets.
++        x,y: input features and label.
+         w: base model weights.
+         learning_rate: controls how much to change the model in one epoch.
+-        batch_size: how many samples use in one calculation.
++        l2_norm: L2 regularization term.
+         sig_type: sigmoid approximation type.
+         reg_type: Linear or Logistic regression.
+         penalty: The penalty (aka regularization term) to be used.
+-        l2_norm: L2 regularization term.
++        total_batch: how many full batch in x.
++        batch_size: how many samples use in one calculation.
++        strategy: learning strategy for updating weights.
++        dk_arr: only useful for policy-sgd, store the recently 1/norm(g_k) in this infeed.
+ 
+     Return:
+-        W after update.
++        W after update and array of norm of gradient.
+     """
+     assert x.shape[0] >= total_batch * batch_size, "total batch is too large"
+     num_feat = x.shape[1]
+     assert w.shape[0] == num_feat + 1, "w shape is mismatch to x"
+     assert len(w.shape) == 1 or (
+         len(w.shape) == 2 and w.shape[1] == 1
+     ), "w should be list or 1D array"
+     w = w.reshape((w.shape[0], 1))
+     assert y.shape[0] == x.shape[0], "x & y not aligned"
+     assert len(y.shape) == 1 or (
+         len(y.shape) == 2 and y.shape[1] == 1
+     ), "Y should be be list or 1D array"
+     y = y.reshape((y.shape[0], 1))
+ 
++    compute_dk = False
++    if dk_arr is None and strategy == Strategy.POLICY_SGD:
++        compute_dk = True
++        dk_arr = []
++
+     for idx in range(total_batch):
+         begin = idx * batch_size
+         end = (idx + 1) * batch_size
+         # padding one col for bias in w
+         x_slice = jnp.concatenate((x[begin:end, :], jnp.ones((batch_size, 1))), axis=1)
+         y_slice = y[begin:end, :]
+ 
+         pred = jnp.matmul(x_slice, w)
+         if reg_type == RegType.Logistic:
+             pred = sigmoid(pred, sig_type)
+ 
+         err = pred - y_slice
+-        grad = jnp.matmul(jnp.transpose(x_slice), err)
++        grad = jnp.matmul(jnp.transpose(x_slice), err) / batch_size
++
++        if strategy == Strategy.POLICY_SGD:
++            if compute_dk:
++                scale_factor = _compute_2norm(grad)
++                dk_arr.append(scale_factor)
++            else:
++                scale_factor = dk_arr[idx]
++        else:
++            scale_factor = 1
++
++        step = learning_rate * scale_factor * grad
+ 
+         if penalty == Penalty.L2:
+             w_with_zero_bias = jnp.resize(w, (num_feat, 1))
+             w_with_zero_bias = jnp.concatenate(
+                 (w_with_zero_bias, jnp.zeros((1, 1))),
+                 axis=0,
+             )
+-            grad = grad + w_with_zero_bias * l2_norm
+-
+-        step = (learning_rate * grad) / batch_size
++            step = step + w_with_zero_bias * l2_norm * learning_rate / batch_size
+ 
+         w = w - step
+ 
+-    return w
++    if compute_dk:
++        dk_arr = jnp.array(dk_arr)
++
++    return w, dk_arr
+ 
+ 
+ class SSRegression:
+     """
+     This method provides both linear and logistic regression linear models
+     for vertical split dataset setting by using secret sharing with mini
+     batch SGD training solver. SS-SGD is short for secret sharing SGD training.
+@@ -254,14 +307,18 @@
+         epochs: int,
+         learning_rate: float,
+         batch_size: int,
+         sig_type: str,
+         reg_type: str,
+         penalty: str,
+         l2_norm: float,
++        eps: float,
++        decay_epoch: int,
++        decay_rate: float,
++        strategy: str,
+     ):
+         """
+         Parameter validity check
+ 
+         Args:
+             see fit()
+         """
+@@ -290,96 +347,149 @@
+             e.value for e in SigType
+         ], f"sig_type should in {[e.value for e in SigType]}, but got {sig_type}"
+         assert reg_type in [
+             e.value for e in RegType
+         ], f"reg_type should in {[e.value for e in RegType]}, but got {reg_type}"
+         assert penalty in [
+             e.value for e in Penalty
+-        ], f"penalty should in {[e.value for e in Penalty]}, but got {reg_type}"
++        ], f"penalty should in {[e.value for e in Penalty]}, but got {penalty}"
++        assert strategy in [
++            e.value for e in Strategy
++        ], f"strategy should in {[e.value for e in Strategy]}, but got {strategy}"
++
++        if strategy == Strategy.POLICY_SGD:
++            assert (
++                reg_type == RegType.Logistic
++            ), f"policy_sgd only works fine in logistic regression"
++
++        assert eps >= 0
++        if eps > 0:
++            self.eps_scale = 2 ** math.floor(-math.log2(eps))
++            self.norm_eps = eps * self.eps_scale
++
++        if decay_rate is not None:
++            assert 0 < decay_rate < 1, f"decay_rate should in (0, 1), got {decay_rate}"
++            assert (
++                decay_epoch is not None and decay_epoch > 0
++            ), f"decay_epoch should > 0 if decay_rate set, got {decay_epoch}"
++        self.decay_rate = decay_rate
++        self.decay_epoch = decay_epoch
++
++        if strategy == Strategy.POLICY_SGD and decay_rate is None:
++            # default early stop strategy for policy-sgd
++            self.decay_rate = 0.5
++            self.decay_epoch = 5
+ 
+         self.lr_batch_size = batch_size
+         # for large dataset, batch infeed data for each 20w*200d size.
+         infeed_rows = math.ceil((200000 * 200) / self.num_feat)
+         # align to lr_batch_size, for algorithm accuracy
+         infeed_rows = int((infeed_rows + batch_size - 1) / batch_size) * batch_size
+         self.infeed_batch_size = infeed_rows
+         self.infeed_total_batch = math.ceil(self.samples / infeed_rows)
+         self.learning_rate = learning_rate
+         self.l2_norm = l2_norm
+         self.penalty = Penalty(penalty)
+         self.reg_type = RegType(reg_type)
+         self.sig_type = SigType(sig_type)
++        self.strategy = Strategy(strategy)
+ 
+     def _next_infeed_batch(self, ds: PYUObject, infeed_step: int) -> PYUObject:
+         being = infeed_step * self.infeed_batch_size
+         assert being < self.samples
+         end = min(being + self.infeed_batch_size, self.samples)
+         rows = end - being
+         lr_total_batch = math.floor(rows / self.lr_batch_size)
+         return ds[being:end], lr_total_batch
+ 
++    def _get_sgd_learning_rate(self, epoch_idx: int):
++        if self.decay_rate is not None:
++            rate = self.decay_rate ** math.floor(epoch_idx / self.decay_epoch)
++            sgd_lr = self.learning_rate * rate
++        else:
++            sgd_lr = self.learning_rate
++
++        return sgd_lr
++
+     def _epoch(self, spu_w: SPUObject, epoch_idx: int) -> SPUObject:
+         """
+         Complete one iteration
+ 
+         Args:
+-            spu_dataset: infeed dataset.
+             spu_w: base W to do iteration.
+-            sig_type: sigmoid approximation type.
++            epoch_idx: current epoch index.
+ 
+         Return:
+             W after update in SPUObject.
+         """
++        learning_rate = self._get_sgd_learning_rate(epoch_idx)
++
+         for infeed_step in range(self.infeed_total_batch):
+             if epoch_idx == 0:
+                 x, lr_total_batch = self._next_infeed_batch(self.x, infeed_step)
+                 y, lr_total_batch = self._next_infeed_batch(self.y, infeed_step)
+                 spu_x = self.spu(_concatenate, static_argnames=('axis'))(
+                     [x.partitions[pyu].to(self.spu) for pyu in x.partitions], axis=1
+                 )
+                 spu_y = [y.partitions[pyu].to(self.spu) for pyu in y.partitions][0]
+                 self.batch_cache[infeed_step] = (spu_x, spu_y, lr_total_batch)
+             else:
+                 spu_x, spu_y, lr_total_batch = self.batch_cache[infeed_step]
+ 
+-            spu_w = self.spu(
++            spu_w, dk_arr = self.spu(
+                 _batch_update_w,
+                 static_argnames=(
+                     'reg_type',
+                     'penalty',
+                     'sig_type',
+                     'total_batch',
+                     'batch_size',
++                    'strategy',
+                 ),
++                num_returns_policy=SPUCompilerNumReturnsPolicy.FROM_USER,
++                user_specified_num_returns=2,
+             )(
+                 spu_x,
+                 spu_y,
+                 spu_w,
+-                self.learning_rate,
++                learning_rate,
+                 self.l2_norm,
+                 sig_type=self.sig_type,
+                 reg_type=self.reg_type,
+                 penalty=self.penalty,
+                 total_batch=lr_total_batch,
+                 batch_size=self.lr_batch_size,
++                strategy=self.strategy,
++                dk_arr=self.dk_norm_dict.get(infeed_step, None),
+             )
++            self.dk_norm_dict[infeed_step] = dk_arr
+ 
+         return spu_w
+ 
++    def _convergence(self, old_w: SPUObject, current_w: SPUObject):
++        spu_converged = self.spu(
++            _convergence, static_argnames=('norm_eps', 'eps_scale')
++        )(old_w, current_w, norm_eps=self.norm_eps, eps_scale=self.eps_scale)
++        return reveal(spu_converged)
++
+     def fit(
+         self,
+         x: Union[FedNdarray, VDataFrame],
+         y: Union[FedNdarray, VDataFrame],
+         epochs: int,
+         learning_rate: float = 0.1,
+         batch_size: int = 1024,
+         sig_type: str = 't1',
+         reg_type: str = 'logistic',
+         penalty: str = 'None',
+         l2_norm: float = 0.5,
++        eps: float = 1e-3,
++        decay_epoch: int = None,
++        decay_rate: float = None,
++        strategy: str = 'naive_sgd',
+     ) -> None:
+         """
+         Fit the model according to the given training data.
+ 
+         Args:
+ 
+             x : {FedNdarray, VDataFrame} of shape (n_samples, n_features)
+@@ -397,58 +507,76 @@
+                 sigmoid approximation type.
+             reg_type : str, default=logistic
+                 Linear or Logistic regression.
+             penalty : str, default=None
+                 The penalty (aka regularization term) to be used.
+             l2_norm : float, default=0.5
+                 L2 regularization term.
+-
++            eps : float, default=1e-3
++                If the W's change rate is less than this threshold, the model is considered to be converged, and the training stops early. 0 disable.
++            decay_epoch / decay_rate : int, default=None
++                decay learning rate, learning_rate * (decay_rate ** floor(epoch / decay_epoch)). None disable
++                If strategy=policy_sgd, then decay_rate and decay_epoch have default value 0.5, 5.
++            strategy : str, default=naive_sgd
++                optimization strategy used in training
++                  naive_sgd means origin sgd
++                  policy_sgd(LR only) will scale the learning_rate in each update like adam but with unify factor,
++                so the batch_size can be larger and the early stop strategy can be more aggressive, which accelerates
++                training in most scenery(But not recommend for training with large regularization).
+         Return:
+             Final weights in SPUObject.
+         """
+         self._pre_check(
+             x,
+             y,
+             epochs,
+             learning_rate,
+             batch_size,
+             sig_type,
+             reg_type,
+             penalty,
+             l2_norm,
++            eps,
++            decay_epoch,
++            decay_rate,
++            strategy,
+         )
+ 
+         spu_w = self.spu(_init_w, static_argnames=('base', 'num_feat'))(
+             base=0, num_feat=self.num_feat
+         )
+ 
+         self.batch_cache = {}
++        self.dk_norm_dict = {}
+         for epoch_idx in range(epochs):
+             start = time.time()
++            old_w = spu_w
+             spu_w = self._epoch(spu_w, epoch_idx)
+             wait([spu_w])
+             logging.info(f"epoch {epoch_idx + 1} times: {time.time() - start}s")
+-            # todo: do early stop
++            if eps > 0 and epoch_idx > 0 and self._convergence(old_w, spu_w):
++                logging.info(f"early stop in {epoch_idx} epoch.")
++                break
++
+         self.batch_cache = {}
++        self.dk_norm_dict = {}
+         self.spu_w = spu_w
+ 
+     def save_model(self) -> LinearModel:
+         """
+         Save fit model in LinearModel format.
+         """
+         assert hasattr(self, 'spu_w'), 'please fit model first'
+         return LinearModel(self.spu_w, self.reg_type, self.sig_type)
+ 
+     def load_model(self, m: LinearModel) -> None:
+         """
+         Load LinearModel format model.
+         """
+-        assert (
+-            isinstance(m.weights, SPUObject) and m.weights.device == self.spu
+-        ), 'weights should saved in same spu'
++        assert isinstance(m.weights, SPUObject), 'weights should be saved as SPUObject'
+         self.spu_w = m.weights
+         self.reg_type = m.reg_type
+         self.sig_type = m.sig_type
+ 
+     def predict(
+         self,
+         x: Union[FedNdarray, VDataFrame],
+@@ -462,15 +590,15 @@
+ 
+             x : {FedNdarray, VDataFrame} of shape (n_samples, n_features)
+                 Predict samples.
+ 
+             batch_size : int, default=1024
+                 how many samples use in one calculation.
+ 
+-            to: the prediction initiator
++            to_pyu: the prediction initiator
+                 if not None predict result is reveal to to_pyu device and save as FedNdarray
+                 otherwise, keep predict result in secret and save as SPUObject.
+ 
+         Return:
+             pred scores in SPUObject or FedNdarray, shape (n_samples,)
+         """
+         assert hasattr(self, 'spu_w'), 'please fit model first'
+```
+
+## secretflow/ml/nn/metrics.py
+
+```diff
+@@ -12,19 +12,18 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+ """keras global evaluation metrics
+ 
+ """
++import logging
++from abc import ABC, abstractmethod
+ from dataclasses import dataclass
+ from typing import List
+-from abc import ABC, abstractmethod
+-import logging
+-
+ 
+ # The reason we just do not inherit or combine tensorflow metrics
+ # is tensorflow metrics are un-serializable but we need send they from worker to server.
+ 
+ 
+ class Metric(ABC):
+     @abstractmethod
+```
+
+## secretflow/ml/nn/fl/compress.py
+
+```diff
+@@ -12,16 +12,18 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-import numpy as np
+ from typing import List
++
++import numpy as np
++
+ from secretflow.utils.compressor import STCSparse
+ 
+ COMPRESS_STRATEGY = ("fed_stc", "fed_scr")
+ 
+ 
+ def stc_compress(compressor, server_weights, agg_updates, res):
+     def _add(matrices_a: List, matrices_b: List):
+```
+
+## secretflow/ml/nn/fl/fl_model.py
+
+```diff
+@@ -113,87 +113,114 @@
+             clients_weights.append(weights)
+         initial_weight = self._aggregator.average(clients_weights, axis=0)
+         for device, worker in self._workers.items():
+             weights = initial_weight.to(device) if initial_weight is not None else None
+             worker.set_weights(weights)
+         return initial_weight
+ 
+-    def handle_file(
++    def _handle_file(
+         self,
+         train_dict: Dict[PYU, str],
+-        label: str,
++        label: str = None,
+         batch_size: Union[int, Dict[PYU, int]] = 32,
+         sampling_rate=None,
+         shuffle=False,
+         random_seed=1234,
+         epochs=1,
+         stage="train",
+         label_decoder=None,
+         max_batch_size=20000,
+         prefetch_buffer_size=None,
++        dataset_builder=None,
+     ):
+-        # get party length
+-        parties_length = reveal(
+-            {
+-                device: worker.get_rows_count(train_dict[device])
+-                for device, worker in self._workers.items()
+-            }
+-        )
+-        if sampling_rate is None:
+-            if isinstance(batch_size, int):
+-                sampling_rate = max(
+-                    [batch_size / length for length in parties_length.values()]
+-                )
+-            else:
+-                sampling_rate = max(
+-                    [
+-                        batch_size[device] / length
+-                        for device, length in parties_length.items()
+-                    ]
++        if dataset_builder:
++
++            steps_per_epochs = []
++            for device, worker in self._workers.items():
++                assert (
++                    device in dataset_builder
++                ), f"party={device} does not provide dataset_builder, please check"
++                steps_per_epoch = worker.build_dataset_from_builder(
++                    dataset_builder[device],
++                    train_dict[device],
++                    label,
++                    None,
++                    stage=stage,
++                    repeat_count=epochs,
+                 )
+-            if sampling_rate > 1.0:
+-                sampling_rate = 1.0
+-                logging.warn("Batchsize is too large it will be set to the data size")
+-        # check batchsize
+-        for length in parties_length.values():
+-            batch_size = math.floor(length * sampling_rate)
++                steps_per_epochs.append(steps_per_epoch)
++            set_steps_per_epochs = set(reveal(steps_per_epochs))
+             assert (
+-                batch_size < max_batch_size
+-            ), f"Automatic batchsize is too big(batch_size={batch_size}), variable batchsize in dict is recommended"
+-        assert (
+-            sampling_rate <= 1.0 and sampling_rate > 0.0
+-        ), f'invalid sampling rate {sampling_rate}'
+-        self.steps_per_epoch = math.ceil(1.0 / sampling_rate)
++                len(set_steps_per_epochs) == 1
++            ), "steps_per_epochs of all parties must be same"
++            self.steps_per_epoch = set_steps_per_epochs.pop()
+ 
+-        for device, worker in self._workers.items():
+-            repeat_count = epochs
+-            worker.build_dataset_from_csv(
+-                train_dict[device],
+-                label,
+-                sampling_rate=sampling_rate,
+-                shuffle=shuffle,
+-                random_seed=random_seed,
+-                repeat_count=repeat_count,
+-                sample_length=parties_length[device],
+-                prefetch_buffer_size=prefetch_buffer_size,
+-                stage=stage,
+-                label_decoder=label_decoder,
++        else:
++            # get party length
++            parties_length = reveal(
++                {
++                    device: worker.get_rows_count(train_dict[device])
++                    for device, worker in self._workers.items()
++                }
+             )
++            if sampling_rate is None:
++                if isinstance(batch_size, int):
++                    sampling_rate = max(
++                        [batch_size / length for length in parties_length.values()]
++                    )
++                else:
++                    sampling_rate = max(
++                        [
++                            batch_size[device] / length
++                            for device, length in parties_length.items()
++                        ]
++                    )
++                if sampling_rate > 1.0:
++                    sampling_rate = 1.0
++                    logging.warn(
++                        "Batchsize is too large it will be set to the data size"
++                    )
++            # check batchsize
++            for length in parties_length.values():
++                batch_size = math.floor(length * sampling_rate)
++                assert (
++                    batch_size < max_batch_size
++                ), f"Automatic batchsize is too big(batch_size={batch_size}), variable batchsize in dict is recommended"
++            assert (
++                sampling_rate <= 1.0 and sampling_rate > 0.0
++            ), f'invalid sampling rate {sampling_rate}'
++            self.steps_per_epoch = math.ceil(1.0 / sampling_rate)
++
++            for device, worker in self._workers.items():
++                repeat_count = epochs
++                worker.build_dataset_from_csv(
++                    train_dict[device],
++                    label,
++                    sampling_rate=sampling_rate,
++                    shuffle=shuffle,
++                    random_seed=random_seed,
++                    repeat_count=repeat_count,
++                    sample_length=parties_length[device],
++                    prefetch_buffer_size=prefetch_buffer_size,
++                    stage=stage,
++                    label_decoder=label_decoder,
++                )
+         return self.steps_per_epoch
+ 
+-    def handle_data(
++    def _handle_data(
+         self,
+         train_x: Union[HDataFrame, FedNdarray],
+         train_y: Union[HDataFrame, FedNdarray] = None,
+         batch_size: Union[int, Dict[PYU, int]] = 32,
+         sampling_rate=None,
+         shuffle=False,
+         random_seed=1234,
+         epochs=1,
+         sample_weight: Union[FedNdarray, HDataFrame] = None,
++        dataset_builder: Callable = None,
+         sampler_method="batch",
+         stage="train",
+     ):
+         assert isinstance(
+             batch_size, (int, dict)
+         ), f'Batch size shall be int or dict but got {type(batch_size)}.'
+         if train_x is not None and train_y is not None:
+@@ -241,25 +268,40 @@
+                 sample_weight_partitions = sample_weight.partitions[device]
+             else:
+                 sample_weight_partitions = None
+             if train_y is not None:
+                 y_partitions = train_y.partitions[device]
+             else:
+                 y_partitions = None
+-            worker.build_dataset(
+-                train_x.partitions[device],
+-                y_partitions,
+-                s_w=sample_weight_partitions,
+-                sampling_rate=sampling_rate,
+-                shuffle=shuffle,
+-                random_seed=random_seed,
+-                repeat_count=repeat_count,
+-                sampler_method=sampler_method,
+-                stage=stage,
+-            )
++
++            if dataset_builder:
++                assert (
++                    device in dataset_builder
++                ), f"party={device} does not provide dataset_builder, please check"
++
++                worker.build_dataset_from_builder(
++                    dataset_builder[device],
++                    train_x.partitions[device],
++                    y_partitions,
++                    s_w=sample_weight_partitions,
++                    repeat_count=repeat_count,
++                    stage=stage,
++                )
++            else:
++                worker.build_dataset(
++                    train_x.partitions[device],
++                    y_partitions,
++                    s_w=sample_weight_partitions,
++                    sampling_rate=sampling_rate,
++                    shuffle=shuffle,
++                    random_seed=random_seed,
++                    repeat_count=repeat_count,
++                    sampler_method=sampler_method,
++                    stage=stage,
++                )
+         return self.steps_per_epoch
+ 
+     def fit(
+         self,
+         x: Union[HDataFrame, FedNdarray, Dict[PYU, str]],
+         y: Union[HDataFrame, FedNdarray, str],
+         batch_size: Union[int, Dict[PYU, int]] = 32,
+@@ -276,14 +318,15 @@
+         label_decoder=None,
+         max_batch_size=20000,
+         prefetch_buffer_size=None,
+         sampler_method='batch',
+         random_seed=None,
+         dp_spent_step_freq=None,
+         audit_log_dir=None,
++        dataset_builder: Dict[PYU, Callable] = None,
+     ) -> History:
+         """Horizontal federated training interface
+ 
+         Args:
+             x: feature, FedNdArray, HDataFrame or Dict {PYU: model_path}
+             y: label, FedNdArray, HDataFrame or str(column name of label)
+             batch_size: Number of samples per gradient update, int or Dict, recommend 64 or more for safety
+@@ -300,14 +343,15 @@
+             label_decoder: Only used for CSV reading, for label preprocess
+             max_batch_size: Max limit of batch size
+             prefetch_buffer_size: An int specifying the number of feature batches to prefetch for performance improvement. Only for csv reader
+             sampler_method: The name of sampler method
+             random_seed: Prg seed for shuffling
+             dp_spent_step_freq: specifies how many training steps to check the budget of dp
+             audit_log_dir: path of audit log dir, checkpoint will be save if audit_log_dir is not None
++            dataset_builder: Callable function about hot to build the dataset. must return (dataset, steps_per_epoch)
+         Returns:
+             A history object. It's history.global_history attribute is a
+             aggregated record of training loss values and metrics, while
+             history.local_history attribute is a record of training loss
+             values and metrics of each party.
+         """
+         if not random_seed:
+@@ -327,48 +371,50 @@
+         # build dataset
+         if isinstance(x, Dict):
+             if validation_data is not None:
+                 valid_x, valid_y = validation_data, y
+             else:
+                 valid_x, valid_y = None, None
+ 
+-            self.handle_file(
++            self._handle_file(
+                 x,
+                 y,
+                 batch_size=batch_size,
+                 sampling_rate=batch_sampling_rate,
+                 shuffle=shuffle,
+                 random_seed=random_seed,
+                 epochs=epochs,
+                 label_decoder=label_decoder,
+                 max_batch_size=max_batch_size,
+                 prefetch_buffer_size=prefetch_buffer_size,
++                dataset_builder=dataset_builder,
+             )
+         else:
+             assert type(x) == type(y), "x and y must be same data type"
+             if isinstance(x, HDataFrame) and isinstance(y, HDataFrame):
+                 train_x, train_y = x.values, y.values
+             else:
+                 train_x, train_y = x, y
+ 
+             if validation_data is not None:
+                 valid_x, valid_y = validation_data[0], validation_data[1]
+             else:
+                 valid_x, valid_y = None, None
+ 
+-            self.handle_data(
++            self._handle_data(
+                 train_x,
+                 train_y,
+                 sample_weight=sample_weight,
+                 batch_size=batch_size,
+                 sampling_rate=batch_sampling_rate,
+                 shuffle=shuffle,
+                 random_seed=random_seed,
+                 epochs=epochs,
+                 sampler_method=sampler_method,
++                dataset_builder=dataset_builder,
+             )
+         history = History()
+ 
+         initial_weight = self.initialize_weights()
+         logging.debug(f"initial_weight: {initial_weight}")
+         if self.server:
+             server_weight = initial_weight
+@@ -457,14 +503,15 @@
+                     valid_y,
+                     batch_size=batch_size,
+                     sample_weight=sample_weight,
+                     return_dict=True,
+                     label_decoder=label_decoder,
+                     random_seed=random_seed,
+                     sampler_method=sampler_method,
++                    dataset_builder=dataset_builder,
+                 )
+                 for device, worker in self._workers.items():
+                     worker.set_validation_metrics(global_eval)
+                     history.record_local_history(
+                         party=device.party,
+                         metrics=local_eval[device.party].values(),
+                         stage="val",
+@@ -496,52 +543,56 @@
+     def predict(
+         self,
+         x: Union[HDataFrame, FedNdarray, Dict],
+         batch_size=None,
+         label_decoder=None,
+         sampler_method='batch',
+         random_seed=1234,
++        dataset_builder: Dict[PYU, Callable] = None,
+     ) -> Dict[PYU, PYUObject]:
+         """Horizontal federated offline prediction interface
+ 
+         Args:
+             x: feature, FedNdArray or HDataFrame
+             batch_size: Number of samples per gradient update, int or Dict
+             label_decoder: Only used for CSV reading, for label preprocess
+             sampler_method: The name of sampler method
+             random_seed: Prg seed for shuffling
++            dataset_builder: Callable function about hot to build the dataset. must return (dataset, steps_per_epoch)
+         Returns:
+             predict results, numpy.array
+         """
+         if not random_seed:
+             random_seed = global_random([*self._workers][0], 100000)
+         if isinstance(x, Dict):
+-            predict_steps = self.handle_file(
++            predict_steps = self._handle_file(
+                 x,
+                 None,
+                 batch_size=batch_size,
+                 stage="eval",
+                 epochs=1,
+                 label_decoder=label_decoder,
++                dataset_builder=dataset_builder,
+             )
+         else:
+             if isinstance(x, HDataFrame):
+                 eval_x = x.values
+             else:
+                 eval_x = x
+ 
+-            predict_steps = self.handle_data(
++            predict_steps = self._handle_data(
+                 eval_x,
+                 train_y=None,
+                 sample_weight=None,
+                 batch_size=batch_size,
+                 stage="eval",
+                 epochs=1,
+                 sampler_method=sampler_method,
+                 random_seed=random_seed,
++                dataset_builder=dataset_builder,
+             )
+ 
+         result = {}
+ 
+         for device, worker in self._workers.items():
+             pred = worker.predict(predict_steps)
+             result[device] = pred
+@@ -554,14 +605,15 @@
+         y: Union[HDataFrame, FedNdarray, str] = None,
+         batch_size: Union[int, Dict[PYU, int]] = 32,
+         sample_weight: Union[HDataFrame, FedNdarray] = None,
+         label_decoder=None,
+         return_dict=False,
+         sampler_method='batch',
+         random_seed=None,
++        dataset_builder: Dict[PYU, Callable] = None,
+     ) -> Tuple[
+         Union[List[Metric], Dict[str, Metric]],
+         Union[Dict[str, List[Metric]], Dict[str, Dict[str, Metric]]],
+     ]:
+         """Horizontal federated offline evaluation interface
+ 
+         Args:
+@@ -574,53 +626,56 @@
+                 - HDataFrame
+                 - str column name of csv
+             batch_size: Integer or `Dict`. Number of samples per batch of
+                 computation. If unspecified, `batch_size` will default to 32.
+             sample_weight: Optional Numpy array of weights for the test samples,
+                 used for weighting the loss function.
+             label_decoder: User define how to handle label column when use csv reader
+-            sampler_method: The name of sampler method
+             return_dict: If `True`, loss and metric results are returned as a dict,
+                 with each key being the name of the metric. If `False`, they are
+                 returned as a list.
++            sampler_method: The name of sampler method.
++            dataset_builder: Callable function about hot to build the dataset. must return (dataset, steps_per_epoch)
+ 
+         Returns:
+             A tuple of two objects. The first object is a aggregated record of
+             metrics, and the second object is a record of training loss values
+             and metrics of each party.
+         """
+         if not random_seed:
+             random_seed = global_random([*self._workers][0], 100000)
+         if isinstance(x, Dict):
+-            evaluate_steps = self.handle_file(
++            evaluate_steps = self._handle_file(
+                 x,
+                 y,
+                 batch_size=batch_size,
+                 stage="eval",
+                 epochs=1,
+                 label_decoder=label_decoder,
++                dataset_builder=dataset_builder,
+             )
+         else:
+             assert type(x) == type(y), "x and y must be same data type"
+             if isinstance(x, HDataFrame) and isinstance(y, HDataFrame):
+                 eval_x, eval_y = x.values, y.values
+             else:
+                 eval_x, eval_y = x, y
+             if isinstance(sample_weight, HDataFrame):
+                 sample_weight = sample_weight.values
+ 
+-            evaluate_steps = self.handle_data(
++            evaluate_steps = self._handle_data(
+                 eval_x,
+                 eval_y,
+                 sample_weight=sample_weight,
+                 batch_size=batch_size,
+                 stage="eval",
+                 epochs=1,
+                 sampler_method=sampler_method,
+                 random_seed=random_seed,
++                dataset_builder=dataset_builder,
+             )
+ 
+         local_metrics = {}
+         metric_objs = {}
+         for device, worker in self._workers.items():
+             metric_objs[device.party] = worker.evaluate(evaluate_steps)
+         local_metrics = reveal(metric_objs)
+```
+
+## secretflow/ml/nn/fl/backend/tensorflow/fl_base.py
+
+```diff
+@@ -13,17 +13,18 @@
+ # limitations under the License.
+ 
+ 
+ import collections
+ import math
+ from abc import abstractmethod
+ from pathlib import Path
+-from typing import Callable, Optional
++from typing import Callable, Optional, Union
+ 
+ import numpy as np
++import pandas as pd
+ import tensorflow as tf
+ 
+ from secretflow.ml.nn.fl.backend.tensorflow.sampler import sampler_data
+ from secretflow.ml.nn.metrics import AUC, Mean, Precision, Recall
+ from secretflow.utils.io import rows_count
+ 
+ 
+@@ -155,14 +156,55 @@
+         if stage == "train":
+             self.train_set = iter(data_set)
+         elif stage == "eval":
+             self.eval_set = iter(data_set)
+         else:
+             raise Exception(f"Illegal argument stage={stage}")
+ 
++    def build_dataset_from_builder(
++        self,
++        dataset_builder: Callable,
++        x: Union[pd.DataFrame, str],
++        y: Optional[np.ndarray] = None,
++        s_w: Optional[np.ndarray] = None,
++        repeat_count=1,
++        stage="train",
++    ):
++        """build tf.data.Dataset
++
++        Args:
++            dataset_builder: Function of how to build dataset, must return dataset and step_per_epoch
++            x: A string representing the path to a CSV file or data folder containing the input data.
++            y: label, FedNdArray or HDataFrame
++            s_w: Default None, all samples are assumed to have equal weight.
++            repeat_count: An integer specifying the number of times to repeat the dataset. This is useful for increasing the effective size of the dataset.
++            stage: A string specifying the stage of the dataset to build. This is useful for separating training, validation, and test datasets.
++        Returns:
++            A tensorflow dataset
++        """
++        data_set = None
++        assert dataset_builder is not None, "Dataset builder cannot be none"
++        if isinstance(x, str):
++            data_set, step_per_epoch = dataset_builder(x, stage=stage)
++        else:
++            if y is not None:
++                x.append(y)
++                if s_w is not None and len(s_w.shape) > 0:
++                    x.append(s_w)
++
++            data_set, step_per_epoch = dataset_builder(x, stage=stage)
++        data_set = data_set.repeat(repeat_count)
++        if stage == "train":
++            self.train_set = iter(data_set)
++        elif stage == "eval":
++            self.eval_set = iter(data_set)
++        else:
++            raise Exception(f"Illegal argument stage={stage}")
++        return step_per_epoch
++
+     def get_rows_count(self, filename):
+         return int(rows_count(filename=filename)) - 1  # except header line
+ 
+     def get_weights(self):
+         return self.model.get_weights()
+ 
+     def set_weights(self, weights):
+```
+
+## secretflow/ml/nn/fl/backend/tensorflow/strategy/__init__.py
+
+```diff
+@@ -8,21 +8,20 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from .fed_avg_w import PYUFedAvgW
+ from .fed_avg_g import PYUFedAvgG
+ from .fed_avg_u import PYUFedAvgU
++from .fed_avg_w import PYUFedAvgW
++from .fed_prox import PYUFedProx
+ from .fed_scr import PYUFedSCR
+ from .fed_stc import PYUFedSTC
+-from .fed_prox import PYUFedProx
+-
+ 
+ __all__ = [
+     'PYUFedAvgG',
+     'PYUFedAvgW',
+     'PYUFedAvgU',
+     'PYUFedSCR',
+     'PYUFedSTC',
+```
+
+## secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_g.py
+
+```diff
+@@ -12,22 +12,23 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
++import collections
++import copy
+ from typing import Tuple
+-from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
++
+ import numpy as np
+-import copy
+-import collections
+ import tensorflow as tf
+ 
+ from secretflow.device import PYUObject, proxy
++from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedAvgG(BaseTFModel):
+     """
+     FedAvgG: An implementation of FedAvg, where the clients upload their accumulated
+     gradients during the federated round to the server for averaging and update their
+```
+
+## secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_u.py
+
+```diff
+@@ -12,22 +12,23 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
++import collections
++import copy
+ from typing import Tuple
+-from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
++
+ import numpy as np
+-import copy
+-import collections
+ import tensorflow as tf
+ 
+ from secretflow.device import PYUObject, proxy
++from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedAvgU(BaseTFModel):
+     """
+     FedAvgU: An implementation of FedAvg, where the clients upload their model updates
+     to the server for averaging and update their local models with the aggregated
+```
+
+## secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_w.py
+
+```diff
+@@ -12,22 +12,23 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
++import collections
++import copy
+ from typing import Tuple
+-from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
++
+ import numpy as np
+-import copy
+-import collections
+ import tensorflow as tf
+ 
+ from secretflow.device import PYUObject, proxy
++from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedAvgW(BaseTFModel):
+     """
+     FedAvgW: A naive implementation of FedAvg, where the clients upload their trained model
+     weights to the server for averaging and update their local models via the aggregated weights
+```
+
+## secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_prox.py
+
+```diff
+@@ -12,22 +12,23 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
++import collections
++import copy
+ from typing import List, Tuple
+-from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
++
+ import numpy as np
+-import copy
+-import collections
+ import tensorflow as tf
+ 
+ from secretflow.device import PYUObject, proxy
++from secretflow.ml.nn.fl.backend.tensorflow.fl_base import BaseTFModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedProx(BaseTFModel):
+     """
+     FedfProx: An FL optimization strategy that addresses the challenge of heterogeneity on data
+     (non-IID) and devices, which adds a proximal term to the local objective function of each
+```
+
+## secretflow/ml/nn/fl/backend/torch/fl_base.py
+
+```diff
+@@ -9,21 +9,22 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-from pathlib import Path
+ from abc import ABC, abstractmethod
+-from typing import Callable, Optional
++from pathlib import Path
++from typing import Callable, Optional, Union
++
+ import numpy as np
+ import torch
+ import torchmetrics
+-
++import pandas as pd
+ from secretflow.ml.nn.fl.backend.torch.sampler import sampler_data
+ from secretflow.ml.nn.fl.backend.torch.utils import TorchModel
+ from secretflow.ml.nn.metrics import Default, Mean, Precision, Recall
+ from secretflow.utils.io import rows_count
+ 
+ # Torch model on worker side
+ 
+@@ -146,14 +147,55 @@
+         if stage == "train":
+             self.train_set = data_set
+         elif stage == "eval":
+             self.eval_set = data_set
+         else:
+             raise Exception(f"Illegal argument stage={stage}")
+ 
++    def build_dataset_from_builder(
++        self,
++        dataset_builder: Callable,
++        x: Union[pd.DataFrame, str],
++        y: Optional[np.ndarray] = None,
++        s_w: Optional[np.ndarray] = None,
++        repeat_count=1,
++        stage="train",
++    ):
++        """build tf.data.Dataset
++
++        Args:
++            dataset_builder: Function of how to build dataset, must return dataset and step_per_epoch
++            x: A pandas Dataframe or A string representing the path to a CSV file or data folder containing the input data.
++            y: label, An optional NumPy array containing the labels for the dataset. Defaults to None.
++            s_w: An optional NumPy array containing the sample weights for the dataset. Defaults to None.
++            repeat_count: An integer specifying the number of times to repeat the dataset. This is useful for increasing the effective size of the dataset.
++            stage: A string indicating the stage of the dataset (either "train", "eval"). Defaults to "train".
++
++        Returns:
++            A tensorflow dataset
++        """
++        data_set = None
++        assert dataset_builder is not None, "Dataset builder cannot be none"
++        if isinstance(x, str):
++            data_set, step_per_epoch = dataset_builder(x, stage=stage)
++        else:
++            if y is not None:
++                x.append(y)
++                if s_w is not None and len(s_w.shape) > 0:
++                    x.append(s_w)
++
++            data_set, step_per_epoch = dataset_builder(x, stage=stage)
++        if stage == "train":
++            self.train_set = data_set
++        elif stage == "eval":
++            self.eval_set = data_set
++        else:
++            raise Exception(f"Illegal argument stage={stage}")
++        return step_per_epoch
++
+     def get_rows_count(self, filename):
+         return int(rows_count(filename=filename)) - 1  # except header line
+ 
+     def get_weights(self):
+         return self.model.get_weights(return_numpy=True)
+ 
+     def set_weights(self, weights):
+@@ -283,15 +325,14 @@
+         if self.train_set is not None:
+             self.train_iter = iter(self.train_set)
+         if self.eval_set is not None:
+             self.eval_iter = iter(self.eval_set)
+ 
+     def on_epoch_end(self, epoch):
+         self.epoch.append(epoch)
+-
+         for k, v in self.epoch_logs.items():
+             self.history.setdefault(k, []).append(v)
+         self.training_logs = self.epoch_logs
+ 
+         return self.epoch_logs
+ 
+     def transform_metrics(self, logs, stage="train"):
+```
+
+## secretflow/ml/nn/fl/backend/torch/sampler.py
+
+```diff
+@@ -17,15 +17,14 @@
+ 
+ 
+ import logging
+ import math
+ import random
+ 
+ import numpy as np
+-
+ import torch
+ from torch.utils.data import DataLoader, TensorDataset
+ 
+ 
+ def batch_sampler(
+     x, y, s_w, sampling_rate, buffer_size, shuffle, repeat_count, random_seed
+ ):
+```
+
+## secretflow/ml/nn/fl/backend/torch/utils.py
+
+```diff
+@@ -16,19 +16,18 @@
+ # limitations under the License.
+ 
+ 
+ from abc import ABC, abstractmethod
+ from typing import List, Optional, Union
+ 
+ import numpy as np
+-from torchmetrics import Metric
+-
+ import torch
+ from torch import nn, optim
+ from torch.nn.modules.loss import _Loss as BaseTorchLoss
++from torchmetrics import Metric
+ 
+ 
+ class BaseModule(ABC, nn.Module):
+     @abstractmethod
+     def forward(self, x):
+         pass
+ 
+@@ -44,15 +43,15 @@
+     def set_weights(self, weights):
+         self.load_state_dict(weights)
+ 
+     def update_weights(self, weights):
+         keys = self.state_dict().keys()
+         weights_dict = {}
+         for k, v in zip(keys, weights):
+-            weights_dict[k] = torch.Tensor(v)
++            weights_dict[k] = torch.Tensor(np.copy(v))
+         self.load_state_dict(weights_dict)
+ 
+     def get_gradients(self, parameters=None):
+         if parameters is None:
+             parameters = self.parameters()
+         grads = []
+         for p in parameters:
+```
+
+## secretflow/ml/nn/fl/backend/torch/strategy/__init__.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -8,17 +8,17 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from .fed_avg_w import PYUFedAvgW
+ from .fed_avg_g import PYUFedAvgG
+ from .fed_avg_u import PYUFedAvgU
++from .fed_avg_w import PYUFedAvgW
+ from .fed_prox import PYUFedProx
+ from .fed_scr import PYUFedSCR
+ from .fed_stc import PYUFedSTC
+ 
+ __all__ = [
+     'PYUFedAvgW',
+     'PYUFedAvgG',
+```
+
+## secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_g.py
+
+```diff
+@@ -16,14 +16,15 @@
+ # limitations under the License.
+ 
+ 
+ import copy
+ from typing import Tuple
+ 
+ import numpy as np
++
+ from secretflow.device import PYUObject, proxy
+ from secretflow.ml.nn.fl.backend.torch.fl_base import BaseTorchModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedAvgG(BaseTorchModel):
+     """
+```
+
+## secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_u.py
+
+```diff
+@@ -16,14 +16,15 @@
+ # limitations under the License.
+ 
+ 
+ import copy
+ from typing import Tuple
+ 
+ import numpy as np
++
+ from secretflow.device import PYUObject, proxy
+ from secretflow.ml.nn.fl.backend.torch.fl_base import BaseTorchModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedAvgU(BaseTorchModel):
+     """
+```
+
+## secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_w.py
+
+```diff
+@@ -17,14 +17,15 @@
+ 
+ 
+ import copy
+ from typing import Tuple
+ 
+ import numpy as np
+ import torch
++
+ from secretflow.device import PYUObject, proxy
+ from secretflow.ml.nn.fl.backend.torch.fl_base import BaseTorchModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedAvgW(BaseTorchModel):
+     """
+```
+
+## secretflow/ml/nn/fl/backend/torch/strategy/fed_prox.py
+
+```diff
+@@ -17,14 +17,15 @@
+ 
+ 
+ import copy
+ from typing import List, Tuple
+ 
+ import numpy as np
+ import torch
++
+ from secretflow.device import PYUObject, proxy
+ from secretflow.ml.nn.fl.backend.torch.fl_base import BaseTorchModel
+ from secretflow.ml.nn.fl.strategy_dispatcher import register_strategy
+ 
+ 
+ class FedProx(BaseTorchModel):
+     """
+```
+
+## secretflow/ml/nn/sl/sl_model.py
+
+```diff
+@@ -21,28 +21,27 @@
+ """
+ 
+ import logging
+ import math
+ import os
+ from typing import Callable, Dict, Iterable, List, Tuple, Union
+ 
++from multiprocess import cpu_count
+ from tqdm import tqdm
+ 
+ from secretflow.data.base import Partition
+ from secretflow.data.horizontal import HDataFrame
+ from secretflow.data.ndarray import FedNdarray
+ from secretflow.data.vertical import VDataFrame
+ from secretflow.device import PYU, Device, reveal, wait
+ from secretflow.device.device.pyu import PYUObject
+-from secretflow.ml.nn.sl.backend.tensorflow.sl_base import PYUSLTFModel
+-from secretflow.ml.nn.sl.backend.tensorflow.strategy import PYUSLAsyncTFModel
++from secretflow.ml.nn.sl.strategy_dispatcher import dispatch_strategy
+ from secretflow.security.privacy import DPStrategy
+ from secretflow.utils.compressor import Compressor
+ from secretflow.utils.random import global_random
+-from multiprocess import cpu_count
+ 
+ 
+ class SLModel:
+     def __init__(
+         self,
+         base_model_dict: Dict[Device, Callable[[], 'tensorflow.keras.Model']] = {},
+         device_y: PYU = None,
+@@ -66,47 +65,37 @@
+ 
+         self.device_y = device_y
+         self.has_compressor = compressor is not None
+         self.dp_strategy_dict = dp_strategy_dict
+         self.simulation = kwargs.get('simulation', False)
+         self.num_parties = len(base_model_dict)
+ 
+-        if strategy == 'split_nn':
+-            self._workers = {
+-                device: PYUSLTFModel(
+-                    device=device,
+-                    builder_base=model,
+-                    builder_fuse=None if device != device_y else model_fuse,
+-                    compressor=compressor,
+-                    random_seed=random_seed,
+-                    dp_strategy=dp_strategy_dict.get(device, None)
+-                    if dp_strategy_dict
+-                    else None,
+-                )
+-                for device, model in base_model_dict.items()
+-            }
+-        elif strategy == 'split_async':
+-            self._workers = {
+-                device: PYUSLAsyncTFModel(
+-                    device=device,
+-                    builder_base=model,
+-                    builder_fuse=None if device != device_y else model_fuse,
+-                    compressor=compressor,
+-                    random_seed=random_seed,
+-                    dp_strategy=dp_strategy_dict.get(device, None)
+-                    if dp_strategy_dict
+-                    else None,
+-                    base_local_steps=kwargs.get('base_local_steps', 1),
+-                    fuse_local_steps=kwargs.get('fuse_local_steps', 1),
+-                    bound_param=kwargs.get('bound_param', 0.0),
+-                )
+-                for device, model in base_model_dict.items()
+-            }
+-        else:
+-            logging.error("unvalid split learning strategy: ", strategy)
++        # TODO: add argument `backend`
++        import secretflow.ml.nn.sl.backend.tensorflow.strategy  # noqa
++
++        self._workers = {}
++        for device, model in base_model_dict.items():
++            self._workers[device], self.check_skip_grad = dispatch_strategy(
++                strategy,
++                backend=kwargs.get('backend', 'tensorflow'),
++                device=device,
++                builder_base=model,
++                builder_fuse=None if device != device_y else model_fuse,
++                compressor=compressor,
++                random_seed=random_seed,
++                dp_strategy=dp_strategy_dict.get(device, None)
++                if dp_strategy_dict
++                else None,
++                base_local_steps=kwargs.get('base_local_steps', 1),
++                fuse_local_steps=kwargs.get('fuse_local_steps', 1),
++                bound_param=kwargs.get('bound_param', 0.0),
++                loss_thres=kwargs.get('loss_thres', 0.01),
++                split_steps=kwargs.get('split_steps', 1),
++                max_fuse_local_steps=kwargs.get('max_fuse_local_steps', 1),
++            )
+ 
+     def handle_data(
+         self,
+         x: Union[
+             VDataFrame,
+             FedNdarray,
+             List[Union[HDataFrame, VDataFrame, FedNdarray]],
+@@ -298,14 +287,15 @@
+             res = []
+             report_list = []
+             report_list.append(f"epoch: {epoch+1}/{epochs} - ")
+             if verbose == 1:
+                 pbar = tqdm(total=steps_per_epoch)
+             self._workers[self.device_y].reset_metrics()
+             self._workers[self.device_y].on_epoch_begin(epoch)
++            fuse_net_num_returns = sum(self.basenet_output_num.values())
+             for step in range(0, steps_per_epoch):
+                 if verbose == 1:
+                     pbar.update(1)
+                 hiddens = []
+                 self._workers[self.device_y].on_train_batch_begin(step=step)
+                 for device, worker in self._workers.items():
+                     # enable compression in fit when model has compressor
+@@ -315,24 +305,33 @@
+                     hiddens.append(hidden.to(self.device_y))
+ 
+                 gradients = self._workers[self.device_y].fuse_net(
+                     *hiddens,
+                     _num_returns=fuse_net_num_returns,
+                     compress=self.has_compressor,
+                 )
++                # In some strategies, we need to bypass the backpropagation step.
++                skip_gradient = False
++                if self.check_skip_grad:
++                    skip_gradient = reveal(
++                        self._workers[self.device_y].get_skip_gradient()
++                    )
+ 
+-                idx = 0
+-                for device, worker in self._workers.items():
+-                    gradient_list = []
+-                    for i in range(self.basenet_output_num[device]):
+-                        gradient = gradients[idx + i].to(device)
+-                        gradient_list.append(gradient)
+-
+-                    worker.base_backward(gradient_list, compress=self.has_compressor)
+-                    idx += self.basenet_output_num[device]
++                if not skip_gradient:
++                    idx = 0
++                    for device, worker in self._workers.items():
++                        gradient_list = []
++                        for i in range(self.basenet_output_num[device]):
++                            gradient = gradients[idx + i].to(device)
++                            gradient_list.append(gradient)
++
++                        worker.base_backward(
++                            gradient_list, compress=self.has_compressor
++                        )
++                        idx += self.basenet_output_num[device]
+                 r_count = self._workers[self.device_y].on_train_batch_end(step=step)
+                 res.append(r_count)
+                 if self.dp_strategy_dict is not None and dp_spent_step_freq is not None:
+                     current_step = epoch * steps_per_epoch + step
+                     if current_step % dp_spent_step_freq == 0:
+                         privacy_device = {}
+                         for device, dp_strategy in self.dp_strategy_dict.items():
+```
+
+## secretflow/ml/nn/sl/backend/tensorflow/sl_base.py
+
+```diff
+@@ -31,19 +31,20 @@
+ from torch import nn
+ from torch.nn.modules.loss import _Loss as BaseTorchLoss
+ from torch.optim import Optimizer
+ from torch.utils.data import DataLoader
+ 
+ import secretflow.device as ft
+ from secretflow.device import PYUObject, proxy
++from secretflow.ml.nn.metrics import AUC, Mean, Precision, Recall
++from secretflow.ml.nn.sl.backend.tensorflow.utils import ForwardData
++from secretflow.ml.nn.sl.strategy_dispatcher import register_strategy
+ from secretflow.security.privacy import DPStrategy
+ from secretflow.utils.compressor import Compressor, SparseCompressor
+ 
+-from secretflow.ml.nn.metrics import AUC, Mean, Precision, Recall
+-
+ 
+ class SLBaseModel(ABC):
+     def __init__(self, builder_base: Callable, builder_fuse: Callable = None):
+         self.model_base = builder_base() if builder_base is not None else None
+         self.model_fuse = builder_fuse() if builder_fuse is not None else None
+ 
+     @abstractmethod
+@@ -112,23 +113,26 @@
+         self.eval_set = None
+         self.valid_set = None
+         self.tape = None
+         self.h = None
+         self.train_x, self.train_y = None, None
+         self.eval_x, self.eval_y = None, None
+         self.kwargs = {}
+-        self.has_y = False
+-        self.has_s_w = False
++        self.train_has_y = False
++        self.train_has_s_w = False
++        self.eval_has_y = False
++        self.eval_has_s_w = False
+         self.train_sample_weight = None
+         self.eval_sample_weight = None
+         self.fuse_callbacks = None
+         self.logs = None
+         self.epoch_logs = None
+         self.training_logs = None
+         self.steps_per_epoch = None
++        self.skip_gradient = False
+         if random_seed is not None:
+             tf.keras.utils.set_random_seed(random_seed)
+         super().__init__(builder_base, builder_fuse)
+ 
+     @staticmethod
+     @tf.custom_gradient
+     def fuse_op(x, y):
+@@ -181,35 +185,37 @@
+             shuffle: whether shuffle the dataset or not
+             repeat_count: num of repeats
+             stage: stage of this datset
+             random_seed: Prg seed for shuffling
+         """
+         assert x and x[0] is not None, "X can not be None, please check"
+         x = [xi for xi in x]
+-        self.has_y = False
+-        self.has_s_w = False
++        has_y = False
++        has_s_w = False
+         if y is not None and len(y.shape) > 0:
+-            self.has_y = True
++            has_y = True
+             x.append(y)
+             if s_w is not None and len(s_w.shape) > 0:
+-                self.has_s_w = True
++                has_s_w = True
+                 x.append(s_w)
+ 
+         # convert pandas.DataFrame to numpy.ndarray
+         x = [t.values if isinstance(t, pd.DataFrame) else t for t in x]
+         # https://github.com/tensorflow/tensorflow/issues/20481
+         x = x[0] if len(x) == 1 else tuple(x)
+ 
+         data_set = (
+             tf.data.Dataset.from_tensor_slices(x).batch(batch_size).repeat(repeat_count)
+         )
+         if shuffle:
+             data_set = data_set.shuffle(buffer_size, seed=random_seed)
+ 
+-        self.set_dataset_stage(data_set=data_set, stage=stage)
++        self.set_dataset_stage(
++            data_set=data_set, stage=stage, has_y=has_y, has_s_w=has_s_w
++        )
+ 
+     def build_dataset_from_builder(
+         self,
+         *x: List[np.ndarray],
+         y: Optional[np.ndarray] = None,
+         s_w: Optional[np.ndarray] = None,
+         batch_size=-1,
+@@ -226,21 +232,21 @@
+             y: label, FedNdArray or HDataFrame
+             s_w: sample weight, FedNdArray or HDataFrame
+             stage: stage of this datset
+             dataset_builder: dataset build callable function of worker
+         """
+         assert x and x[0] is not None, "X can not be None, please check"
+         x = [xi for xi in x]
+-        self.has_y = False
+-        self.has_s_w = False
++        has_y = False
++        has_s_w = False
+         if y is not None and len(y.shape) > 0:
+-            self.has_y = True
++            has_y = True
+             x.append(y)
+             if s_w is not None and len(s_w.shape) > 0:
+-                self.has_s_w = True
++                has_s_w = True
+                 x.append(s_w)
+ 
+         data_set = dataset_builder(x)
+         # Compatible with existing gnn databuilder
+         if hasattr(data_set, 'steps_per_epoch'):
+             return data_set.steps_per_epoch
+ 
+@@ -262,28 +268,43 @@
+             else:
+                 batch_size = batch_size_inf
+         else:
+             raise Exception(
+                 f"Unable to get batchsize from dataset, please spcify batchsize in 'fit'"
+             )
+ 
+-        self.set_dataset_stage(data_set=data_set, stage=stage)
++        self.set_dataset_stage(
++            data_set=data_set,
++            stage=stage,
++            has_y=has_y,
++            has_s_w=has_s_w,
++        )
+         if isinstance(data_set, tf.data.Dataset):
+             import math
+ 
+             return math.ceil(len(x[0]) / batch_size)  # use ceil to avoid drop_last
+         else:
+             raise Exception("Unknown databuilder")
+ 
+-    def set_dataset_stage(self, data_set, stage="train"):
++    def set_dataset_stage(
++        self,
++        data_set,
++        stage="train",
++        has_y=None,
++        has_s_w=None,
++    ):
+         data_set = iter(data_set)
+         if stage == "train":
+             self.train_set = data_set
++            self.train_has_y = has_y
++            self.train_has_s_w = has_s_w
+         elif stage == "eval":
+             self.eval_set = data_set
++            self.eval_has_y = has_y
++            self.eval_has_s_w = has_s_w
+         else:
+             raise Exception(f"Illegal argument stage={stage}")
+ 
+     @tf.function
+     def _base_forward_internal(self, data_x):
+         h = self.model_base(data_x)
+ 
+@@ -291,15 +312,15 @@
+         if self.embedding_dp is not None:
+             if isinstance(h, List):
+                 h = [self.embedding_dp(hi) for hi in h]
+             else:
+                 h = self.embedding_dp(h)
+         return h
+ 
+-    def base_forward(self, stage="train", compress: bool = False):
++    def base_forward(self, stage="train", compress: bool = False) -> ForwardData:
+         """compute hidden embedding
+         Args:
+             stage: Which stage of the base forward
+             compress: Whether to compress cross device data.
+         Returns: hidden embedding
+         """
+ 
+@@ -307,16 +328,16 @@
+             self.model_base is not None
+         ), "Base model cannot be none, please give model define or load a trained model"
+ 
+         data_x = None
+         self.init_data()
+         if stage == "train":
+             train_data = next(self.train_set)
+-            if self.has_y:
+-                if self.has_s_w:
++            if self.train_has_y:
++                if self.train_has_s_w:
+                     data_x = train_data[:-2]
+                     train_y = train_data[-2]
+                     self.train_sample_weight = train_data[-1]
+                 else:
+                     data_x = train_data[:-1]
+                     train_y = train_data[-1]
+                 # Label differential privacy
+@@ -325,16 +346,16 @@
+                     self.train_y = tf.convert_to_tensor(dp_train_y)
+                 else:
+                     self.train_y = train_y
+             else:
+                 data_x = train_data
+         elif stage == "eval":
+             eval_data = next(self.eval_set)
+-            if self.has_y:
+-                if self.has_s_w:
++            if self.eval_has_y:
++                if self.eval_has_s_w:
+                     data_x = eval_data[:-2]
+                     eval_y = eval_data[-2]
+                     self.eval_sample_weight = eval_data[-1]
+                 else:
+                     data_x = eval_data[:-1]
+                     eval_y = eval_data[-1]
+                 # Label differential privacy
+@@ -353,24 +374,30 @@
+ 
+         self.tape = tf.GradientTape(persistent=True)
+         with self.tape:
+             self.h = self._base_forward_internal(
+                 data_x,
+             )
+         self.data_x = data_x
++
++        forward_data = ForwardData()
++        if len(self.model_base.losses) > 0:
++            forward_data.losses = tf.add_n(self.model_base.losses)
+         # TODO: only vaild on no server mode, refactor when use agglayer or server mode.
+         # no need to compress data on model_fuse side
+         if compress and not self.model_fuse:
+             if self.compressor:
+-                return self.compressor.compress(self.h.numpy())
++                forward_data.hidden = self.compressor.compress(self.h.numpy())
+             else:
+                 raise Exception(
+                     'can not find compressor when compress data in base_forward'
+                 )
+-        return self.h
++        else:
++            forward_data.hidden = self.h
++        return forward_data
+ 
+     @tf.function
+     def _base_backward_internal(self, gradients, trainable_vars):
+         self.model_base.optimizer.apply_gradients(zip(gradients, trainable_vars))
+ 
+     def base_backward(self, gradient, compress: bool = False):
+         """backward on fusenet
+@@ -394,25 +421,30 @@
+         with self.tape:
+             if len(gradient) == len(self.h):
+                 for i in range(len(gradient)):
+                     return_hiddens.append(self.fuse_op(self.h[i], gradient[i]))
+             else:
+                 gradient = gradient[0]
+                 return_hiddens.append(self.fuse_op(self.h, gradient))
++            # add model.losses into graph
++            return_hiddens.append(self.model_base.losses)
+ 
+         trainable_vars = self.model_base.trainable_variables
+         gradients = self.tape.gradient(return_hiddens, trainable_vars)
+ 
+         self._base_backward_internal(gradients, trainable_vars)
+ 
+         # clear intermediate results
+         self.tape = None
+         self.h = None
+         self.kwargs = {}
+ 
++    def get_base_losses(self):
++        return self.model_base.losses
++
+     def get_base_weights(self):
+         return self.model_base.get_weights()
+ 
+     def get_fuse_weights(self):
+         return self.model_fuse.get_weights() if self.model_fuse is not None else None
+ 
+     def init_training(self, callbacks, epochs=1, steps=0, verbose=0):
+@@ -466,35 +498,48 @@
+         if stage == "train":
+             self.train_sample_weight = sample_weight
+         elif stage == "eval":
+             self.eval_sample_weight = sample_weight
+         else:
+             raise Exception("Illegal Argument")
+ 
+-    def fuse_net(self, *hidden_features, _num_returns=2, compress=False):
++    def fuse_net(
++        self,
++        *forward_data: List[ForwardData],
++        _num_returns: int = 2,
++        compress: bool = False,
++    ):
+         """Fuses the hidden layer and calculates the reverse gradient
+         only on the side with the label
+ 
+         Args:
+-            hidden_features: A list of hidden layers for each party to compute
++            forward_data: A list of ForwardData containing hidden layers, losses, etc.
++                that are uploaded by each party for computation.
+             compress: Whether to decompress/compress data.
+         Returns:
+             gradient Of hiddens
+         """
+         assert (
+             self.model_fuse is not None
+         ), "Fuse model cannot be none, please give model define"
++        for i, h in enumerate(forward_data):
++            assert h.hidden is not None, f"hidden cannot be found in forward_data[{i}]"
++        # get reg losses:
++        losses = [h.losses for h in forward_data if h.losses is not None]
++        hidden_features = [h.hidden for h in forward_data]
+         if compress:
+             if self.compressor:
+                 iscompressed = self.compressor.iscompressed(hidden_features)
+                 # save fuse_sparse_masks to apply on gradients
+                 if isinstance(self.compressor, SparseCompressor):
+                     fuse_sparse_masks = list(
+                         map(
+-                            lambda d, compressed: (d != 0) * 1 if compressed else None,
++                            # Get a sparse matrix mask with dtype=bool.
++                            # Using <bool> as the dtype will ensure that the data type of gradients after applying the mask does not change.
++                            lambda d, compressed: (d != 0) if compressed else None,
+                             hidden_features,
+                             iscompressed,
+                         )
+                     )
+                 # decompress
+                 hidden_features = list(
+                     map(
+@@ -516,19 +561,22 @@
+             if isinstance(h, List):
+                 for i in range(len(h)):
+                     hiddens.append(tf.convert_to_tensor(h[i]))
+             else:
+                 hiddens.append(tf.convert_to_tensor(h))
+ 
+         logs = {}
+-        gradient = self._fuse_net_train(hiddens)
++        gradient = self._fuse_net_train(hiddens, losses)
+ 
+         for m in self.model_fuse.metrics:
+             logs['train_' + m.name] = m.result().numpy()
+         self.logs = logs
++        # In some strategies, we don't need to return gradient.
++        if self.skip_gradient:
++            return [None] * _num_returns
+         if compress:
+             gradient = [g.numpy() for g in gradient]
+             # apply fuse_sparse_masks on gradients
+             if fuse_sparse_masks:
+                 assert len(fuse_sparse_masks) == len(
+                     gradient
+                 ), f'length of fuse_sparse_masks and gradient mismatch: {len(fuse_sparse_masks)} - {len(gradient)}'
+@@ -547,37 +595,38 @@
+                         else d
+                     ),
+                     gradient,
+                     iscompressed,
+                 )
+         return gradient
+ 
+-    def _fuse_net_train(self, hiddens):
++    def _fuse_net_train(self, hiddens, losses=[]):
+         return self._fuse_net_internal(
+             hiddens,
++            losses,
+             self.train_y,
+             self.train_sample_weight,
+         )
+ 
+     @tf.function
+-    def _fuse_net_internal(self, hiddens, train_y, train_sample_weight):
++    def _fuse_net_internal(self, hiddens, losses, train_y, train_sample_weight):
+         with tf.GradientTape(persistent=True) as tape:
+             for h in hiddens:
+                 tape.watch(h)
+ 
+             # Step 1: forward pass
+             y_pred = self.model_fuse(hiddens, training=True, **self.kwargs)
+             # Step 2: loss calculation, the loss function is configured in `compile()`.
+             # if isinstance(self.model_fuse.loss, tfutils.custom_loss):
+             #     self.model_fuse.loss.with_kwargs(kwargs)
+             loss = self.model_fuse.compiled_loss(
+                 train_y,
+                 y_pred,
+                 sample_weight=train_sample_weight,
+-                regularization_losses=self.model_fuse.losses,
++                regularization_losses=self.model_fuse.losses + losses,
+             )
+ 
+         # Step3: compute gradients
+         trainable_vars = self.model_fuse.trainable_variables
+         gradients = tape.gradient(loss, trainable_vars)
+         self.model_fuse.optimizer.apply_gradients(zip(gradients, trainable_vars))
+ 
+@@ -589,51 +638,57 @@
+         return tape.gradient(loss, hiddens)
+ 
+     def reset_metrics(self):
+         self.model_fuse.compiled_metrics.reset_state()
+         self.model_fuse.compiled_loss.reset_state()
+ 
+     @tf.function
+-    def _evaluate_internal(self, hiddens, eval_y, eval_sample_weight):
++    def _evaluate_internal(self, hiddens, eval_y, eval_sample_weight, losses=None):
+         # Step 1: forward pass
+         y_pred = self.model_fuse(hiddens, training=False, **self.kwargs)
+ 
+         # Step 2: update loss
+         # custom loss will be re-open in the next version
+         # if isinstance(self.model_fuse.loss, tfutils.custom_loss):
+         #     self.model_fuse.loss.with_kwargs(kwargs)
+         self.model_fuse.compiled_loss(
+             eval_y,
+             y_pred,
+             sample_weight=eval_sample_weight,
+-            regularization_losses=self.model_fuse.losses,
++            regularization_losses=self.model_fuse.losses + losses,
+         )
+         # Step 3: update metrics
+         self.model_fuse.compiled_metrics.update_state(
+             eval_y, y_pred, sample_weight=eval_sample_weight
+         )
+ 
+         result = {}
+         for m in self.model_fuse.metrics:
+             result[m.name] = m.result()
+         return result
+ 
+-    def evaluate(self, *hidden_features, compress: bool = False):
++    def evaluate(self, *forward_data: List[ForwardData], compress: bool = False):
+         """Returns the loss value & metrics values for the model in test mode.
+ 
+         Args:
+-            hidden_features: A list of hidden layers for each party to compute
++            forward_data: A list of data dictionaries containing hidden layers, losses, etc.
++                that are uploaded by each party for computation.
+             compress: Whether to decompress input data.
+         Returns:
+             map of model metrics.
+         """
+ 
+         assert (
+             self.model_fuse is not None
+         ), "model cannot be none, please give model define"
++        for i, h in enumerate(forward_data):
++            assert h.hidden is not None, f"hidden cannot be found in forward_data[{i}]"
++        # get reg losses:
++        losses = [h.losses for h in forward_data if h.losses is not None]
++        hidden_features = [h.hidden for h in forward_data]
+         if compress:
+             if self.compressor:
+                 hidden_features = self.compressor.decompress(hidden_features)
+             else:
+                 raise Exception(
+                     'can not find compressor when decompress data in evaluate'
+                 )
+@@ -644,14 +699,15 @@
+                     hiddens.append(tf.convert_to_tensor(h[i]))
+             else:
+                 hiddens.append(tf.convert_to_tensor(h))
+         metrics = self._evaluate_internal(
+             hiddens=hiddens,
+             eval_y=self.eval_y,
+             eval_sample_weight=self.eval_sample_weight,
++            losses=losses,
+         )
+         result = {}
+         for k, v in metrics.items():
+             result[k] = v.numpy()
+         return result
+ 
+     def wrap_local_metrics(self):
+@@ -699,26 +755,30 @@
+         return self.wrap_local_metrics()
+ 
+     @tf.function
+     def _predict_internal(self, hiddens):
+         y_pred = self.model_fuse(hiddens)
+         return y_pred
+ 
+-    def predict(self, *hidden_features, compress: bool = False):
++    def predict(self, *forward_data: List[ForwardData], compress: bool = False):
+         """Generates output predictions for the input hidden layer features.
+ 
+         Args:
+-            hidden_features: A list of hidden layers for each party to compute
++            forward_data: A list of data dictionaries containing hidden layers,
++                that are uploaded by each party for computation.
+             compress: Whether to decompress input data.
+         Returns:
+             Array(s) of predictions.
+         """
+         assert (
+             self.model_fuse is not None
+         ), "Fuse model cannot be none, please give model define"
++        for i, h in enumerate(forward_data):
++            assert h.hidden is not None, f"hidden cannot be found in forward_data[{i}]"
++        hidden_features = [h.hidden for h in forward_data]
+         if compress:
+             if self.compressor:
+                 hidden_features = self.compressor.decompress(hidden_features)
+             else:
+                 raise Exception(
+                     'can not find compressor when decompress data in predict'
+                 )
+@@ -759,24 +819,26 @@
+         return self._export_model(self.model_fuse, model_path, save_format, **kwargs)
+ 
+     def _export_model(
+         self, model, model_path: str, save_format: str = "onnx", **kwargs
+     ):
+         Path(model_path).parent.mkdir(parents=True, exist_ok=True)
+         assert model_path is not None, "model path cannot be empty"
+-        assert save_format in ["onnx", "tf"], "save_format must be 'onnx' or 'tf'"
++        assert save_format in [
++            "onnx", "tf"], "save_format must be 'onnx' or 'tf'"
+         if save_format == "onnx":
+             return self._export_onnx(model, model_path, **kwargs)
+         elif save_format == "tf":
+             return self._export_tf(model, model_path, **kwargs)
+         else:
+             raise Exception("invalid save_format")
+ 
+     def _export_onnx(self, model, model_path, **kwargs):
+         import tf2onnx
++
+         from .utils import wrap_onnx_input_output
+ 
+         model_proto, _ = tf2onnx.convert.from_keras(
+             model, output_path=model_path, **kwargs
+         )
+         return {
+             'inputs': wrap_onnx_input_output(model_proto.graph.input),
+@@ -784,19 +846,21 @@
+         }
+ 
+     def _export_tf(self, model, model_path, **kwargs):
+         kwargs["save_format"] = "tf"  # only SavedModel format is supported
+         model.save(model_path, **kwargs)
+ 
+         from tensorflow.python.tools import saved_model_utils
++
+         from .utils import wrap_tf_input_output
+ 
+         tag_set = 'serve'
+         signature_def_key = 'serving_default'
+-        meta_graph_def = saved_model_utils.get_meta_graph_def(model_path, tag_set)
++        meta_graph_def = saved_model_utils.get_meta_graph_def(
++            model_path, tag_set)
+         if signature_def_key not in meta_graph_def.signature_def:
+             raise ValueError(
+                 f'Could not find signature "{signature_def_key}". Please choose from: '
+                 f'{", ".join(meta_graph_def.signature_def.keys())}'
+             )
+         inputs = meta_graph_def.signature_def[signature_def_key].inputs
+         outputs = meta_graph_def.signature_def[signature_def_key].outputs
+@@ -811,14 +875,17 @@
+         Args:
+             step: The current step of model training or prediction.
+             orders: An array (or a scalar) of RDP orders.
+         """
+         privacy_dict = self.dp_strategy.get_privacy_spent(step, orders)
+         return privacy_dict
+ 
++    def get_skip_gradient(self):
++        return False
++
+ 
+ class ModelPartition(object):
+     def __init__(self, model_fn, optim_fn, loss_fn, dataloader_fn):
+         self.model: SLBaseModule = model_fn()
+         self.optimizer: Optimizer = optim_fn(self.model.parameters())
+         self.loss: BaseTorchLoss = loss_fn()
+         self._dataloader: Dict[str, DataLoader] = {
+@@ -875,14 +942,15 @@
+         self.model.set_weights(weights)
+ 
+     def call_model_fn(self, fn_name, *args, **kwargs):
+         # TODO: a temporary utils
+         return getattr(self.model, fn_name)(*args, **kwargs)
+ 
+ 
++@register_strategy(strategy_name='split_nn', backend='tensorflow')
+ @proxy(PYUObject)
+ class PYUSLTFModel(SLBaseTFModel):
+     pass
+ 
+ 
+ @proxy(ft.PYUObject)
+ class PYUModel(ModelPartition):
+```
+
+## secretflow/ml/nn/sl/backend/tensorflow/utils.py
+
+```diff
+@@ -13,15 +13,15 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+ from dataclasses import dataclass
+-from typing import List, Callable
++from typing import Any, Callable, List, Union
+ 
+ import tensorflow as tf
+ 
+ 
+ class custom_loss:
+     """Decorator to define a function with a custom loss.
+ 
+@@ -128,7 +128,20 @@
+         tensor_info.tensor_name = info_pb.name
+         tensor_info.dtype = (
+             supported_dtypes[info_pb.dtype] if info_pb.dtype in supported_dtypes else ""
+         )
+         tensor_info.shape.extend([dim.size for dim in info_pb.tensor_shape.dim])
+         results.append(tensor_info)
+     return results
++
++
++@dataclass
++class ForwardData:
++    """
++    ForwardData is a dataclass for data uploaded by each party to label party for computation.
++
++    hidden: base model hidden layers outputs
++    losses: the sum of base model losses should added up to fuse model loss
++    """
++
++    hidden: Union[Any, List[Any]] = None
++    losses: Any = None
+```
+
+## secretflow/ml/nn/sl/backend/tensorflow/strategy/__init__.py
+
+```diff
+@@ -7,11 +7,15 @@
+ #      https://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
++
+ from .split_async import PYUSLAsyncTFModel
++from .split_state_async import PYUSLStateAsyncTFModel
++
+ __all__ = [
+     "PYUSLAsyncTFModel",
+-]
++    "PYUSLStateAsyncTFModel",
++]
+```
+
+## secretflow/ml/nn/sl/backend/tensorflow/strategy/split_async.py
+
+```diff
+@@ -23,14 +23,15 @@
+ import copy
+ from typing import Callable, List
+ 
+ import tensorflow as tf
+ 
+ from secretflow.device import PYUObject, proxy
+ from secretflow.ml.nn.sl.backend.tensorflow.sl_base import SLBaseTFModel
++from secretflow.ml.nn.sl.strategy_dispatcher import register_strategy
+ from secretflow.security.privacy import DPStrategy
+ from secretflow.utils.compressor import Compressor
+ 
+ 
+ class SLAsyncTFModel(SLBaseTFModel):
+     def __init__(
+         self,
+@@ -89,52 +90,61 @@
+                     h = self._base_forward_internal(self.data_x, use_dp=False)
+                 if len(gradient) == len(h):
+                     for i in range(len(gradient)):
+                         return_hiddens.append(self.fuse_op(h[i], gradient[i]))
+                 else:
+                     gradient = gradient[0]
+                     return_hiddens.append(self.fuse_op(h, gradient))
++                # add model.losses into graph
++                return_hiddens.append(self.model_base.losses)
+ 
+             trainable_vars = self.model_base.trainable_variables
+             gradients = self.tape.gradient(return_hiddens, trainable_vars)
+             self._base_backward_internal(gradients, trainable_vars)
+ 
+         # clear intermediate results
+         self.tape = None
+         self.h = None
+         self.data_x = None
+         self.kwargs = {}
+ 
+-    def _fuse_net_train(self, hiddens):
++    def _fuse_net_train(self, hiddens, losses=[]):
+         self.hiddens = copy.deepcopy(hiddens)
+         return self._fuse_net_async_internal(
+             hiddens,
++            losses,
+             self.train_y,
+             self.train_sample_weight,
+             self.fuse_local_steps,
+             self.bound_param,
+         )
+ 
+     @tf.function
+     def _fuse_net_async_internal(
+-        self, hiddens, train_y, train_sample_weight, fuse_local_steps, bound_param
++        self,
++        hiddens,
++        losses,
++        train_y,
++        train_sample_weight,
++        fuse_local_steps,
++        bound_param,
+     ):
+         accumulated_gradients = []
+         for local_step in range(fuse_local_steps):
+             with tf.GradientTape(persistent=True) as tape:
+                 for h in hiddens:
+                     tape.watch(h)
+                 # Step 1: forward pass
+                 y_pred = self.model_fuse(hiddens, training=True, **self.kwargs)
+                 # Step 2: loss calculation, the loss function is configured in `compile()`.
+                 loss = self.model_fuse.compiled_loss(
+                     train_y,
+                     y_pred,
+                     sample_weight=train_sample_weight,
+-                    regularization_losses=self.model_fuse.losses,
++                    regularization_losses=self.model_fuse.losses + losses,
+                 )
+ 
+             # Step3: compute gradients
+             trainable_vars = self.model_fuse.trainable_variables
+             gradients = tape.gradient(loss, trainable_vars)
+             self.model_fuse.optimizer.apply_gradients(zip(gradients, trainable_vars))
+             hidden_layer_gradients = tape.gradient(loss, hiddens)
+@@ -165,10 +175,11 @@
+                     tf.math.subtract(layer_var, tf.math.multiply(lr, h_grad))
+                     for layer_var, h_grad in zip(hiddens, hidden_layer_gradients)
+                 ]
+ 
+         return accumulated_gradients
+ 
+ 
++@register_strategy(strategy_name='split_async', backend='tensorflow')
+ @proxy(PYUObject)
+ class PYUSLAsyncTFModel(SLAsyncTFModel):
+     pass
+```
+
+## secretflow/preprocessing/discretization.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -19,18 +19,18 @@
+ from sklearn.preprocessing import KBinsDiscretizer as SkKBinsDiscretizer
+ 
+ from secretflow.data.base import Partition
+ from secretflow.data.horizontal import HDataFrame
+ from secretflow.data.mix.dataframe import MixDataFrame, PartitionWay
+ from secretflow.data.vertical import VDataFrame
+ from secretflow.device.driver import reveal
++from secretflow.preprocessing.base import _PreprocessBase
+ from secretflow.preprocessing.binning.homo_binning import HomoBinning
+ from secretflow.security.aggregation import Aggregator
+ from secretflow.security.compare import Comparator
+-from secretflow.preprocessing.base import _PreprocessBase
+ 
+ _STRATEGIES = ['uniform', 'quantile']
+ 
+ 
+ class KBinsDiscretizer(_PreprocessBase):
+     """Bin continuous data into intervals.
+```
+
+## secretflow/preprocessing/scaler.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -20,17 +20,17 @@
+ from sklearn.preprocessing import StandardScaler as SkStandardScaler
+ 
+ from secretflow.data.base import Partition
+ from secretflow.data.horizontal import HDataFrame
+ from secretflow.data.mix import MixDataFrame, PartitionWay
+ from secretflow.data.vertical import VDataFrame
+ from secretflow.device.driver import reveal
++from secretflow.preprocessing.base import _PreprocessBase
+ from secretflow.security.aggregation import Aggregator
+ from secretflow.utils.errors import InvalidArgumentError
+-from secretflow.preprocessing.base import _PreprocessBase
+ 
+ 
+ class MinMaxScaler(_PreprocessBase):
+     """Transform features by scaling each feature to a given range.
+ 
+     Attributes:
+         _scaler: the sklearn MinMaxScaler instance.
+```
+
+## secretflow/preprocessing/transformer.py
+
+```diff
+@@ -8,16 +8,16 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from typing import Any, Union, Callable, Dict
+ from functools import partial
++from typing import Any, Callable, Dict, Union
+ 
+ import numpy as np
+ import pandas as pd
+ from sklearn.preprocessing import FunctionTransformer as SkFunctionTransformer
+ 
+ from secretflow.data.base import Partition
+ from secretflow.data.horizontal import HDataFrame
+```
+
+## secretflow/preprocessing/binning/homo_binning_base.py
+
+```diff
+@@ -19,14 +19,15 @@
+ import copy
+ import functools
+ import operator
+ from dataclasses import dataclass
+ from typing import Dict, List
+ 
+ import numpy as np
++
+ from secretflow.device import PYUObject, proxy
+ from secretflow.preprocessing.binning.kernels.base_binning import BaseBinning
+ from secretflow.preprocessing.binning.kernels.quantile_binning import QuantileBinning
+ from secretflow.preprocessing.binning.kernels.quantile_summaries import (
+     QuantileSummaries,
+ )
+```
+
+## secretflow/preprocessing/binning/vert_woe_binning.py
+
+```diff
+@@ -8,25 +8,26 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from typing import List, Dict, Union
++from typing import Dict, List, Union
++
+ import jax.numpy as jnp
+ import numpy as np
++from heu import phe
+ 
+-from secretflow.device.device.base import MoveConfig
++from secretflow.data.vertical import VDataFrame
++from secretflow.device import HEU, PYU, SPU, PYUObject
++from secretflow.device.device.heu import HEUMoveConfig
+ from secretflow.preprocessing.binning.vert_woe_binning_pyu import (
+     VertWoeBinningPyuWorker,
+ )
+-from secretflow.device import SPU, HEU, PYU, PYUObject
+-from secretflow.data.vertical import VDataFrame
+-from heu import phe
+ 
+ 
+ class VertWoeBinning:
+     """
+     woe binning for vertical slice datasets.
+ 
+     Split all features into bins by equal frequency or ChiMerge.
+@@ -196,46 +197,58 @@
+         # coordinator build woe rules
+         coordinator_worker = workers[coordinator_device]
+         label, coordinator_report = coordinator_worker.coordinator_work(
+             vdata.partitions[coordinator_device].data
+         )
+         woe_rules[coordinator_device] = coordinator_report
+ 
+-        secure_label = label.to(
+-            self.secure_device, MoveConfig(heu_audit_log=coordinator_audit_log_path)
+-        )
++        if isinstance(self.secure_device, SPU):
++            secure_label = label.to(self.secure_device)
++        elif isinstance(self.secure_device, HEU):
++            secure_label = label.to(
++                self.secure_device,
++                HEUMoveConfig(heu_audit_log=coordinator_audit_log_path),
++            )
++        else:
++            raise NotImplementedError(
++                f'Secure device should be SPU or HEU, but got {type(self.secure_device)}.'
++            )
+ 
+         # all participants
+         for device in workers:
+             if device == coordinator_device:
+                 continue
+ 
+             worker = workers[device]
+-            bin_select = worker.participant_build_sum_select(
+-                vdata.partitions[device].data
+-            )
++
+             if isinstance(self.secure_device, HEU):
+                 if audit_log_path:
+                     assert (
+                         device.party in audit_log_path
+                     ), f"can not find {device.party} device's audit log path"
+                     worker_audit_path = audit_log_path[device.party]
+                     secure_label.dump(worker_audit_path)
+                     self.secure_device.get_participant(device.party).dump_pk.remote(
+                         f'{worker_audit_path}.pk.pickle'
+                     )
+-                move_config = MoveConfig()
++                move_config = HEUMoveConfig()
+                 move_config.heu_encoder = phe.BigintEncoderParams()
+-                bin_select_heu = bin_select.to(self.secure_device, move_config)
++                bin_indices = worker.participant_build_sum_indices(
++                    vdata.partitions[device].data
++                )
+                 bins_positive = (
+-                    (secure_label @ bin_select_heu).to(coordinator_device).to(device)
++                    secure_label.batch_select_sum(bin_indices)
++                    .to(coordinator_device)
++                    .to(device)
+                 )
+-                bins_positive = device(lambda x: x)(bins_positive)
+                 bin_stats = worker.participant_sum_bin(bins_positive)
+             else:
++                bin_select = worker.participant_build_sum_select(
++                    vdata.partitions[device].data
++                )
+ 
+                 def spu_work(label, select):
+                     return jnp.matmul(label, select)
+ 
+                 bins_positive = self.secure_device(spu_work)(
+                     secure_label, bin_select.to(self.secure_device)
+                 ).to(device)
+```
+
+## secretflow/preprocessing/binning/vert_woe_binning_pyu.py
+
+```diff
+@@ -8,19 +8,20 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from typing import List, Dict, Union, Tuple
+-from scipy.stats import chi2
+-import pandas as pd
+-import numpy as np
+ import math
++from typing import Dict, List, Tuple, Union
++
++import numpy as np
++import pandas as pd
++from scipy.stats import chi2
+ 
+ from secretflow.device import PYUObject, proxy
+ 
+ 
+ @proxy(PYUObject)
+ class VertWoeBinningPyuWorker:
+     """
+@@ -470,14 +471,28 @@
+         return (
+             label,
+             self._build_report(
+                 woe_ivs, split_points, else_woe_ivs, total_counts, else_counts
+             ),
+         )
+ 
++    def participant_build_sum_indices(self, data: pd.DataFrame) -> List[List[int]]:
++        '''
++        build sum indices for driver to calculate positive samples by HE.
++        Attributes:
++            data: full dataset for this party.
++
++        Return:
++            bin indices.
++        '''
++        bins_idx, self.split_points, else_bins_idx = self._build_feature_bins(data)
++        self.total_counts = [b.size for b in bins_idx]
++        self.else_counts = [b.size for b in else_bins_idx]
++        return [*bins_idx, *[e for e in else_bins_idx if e.size]]
++
+     def participant_build_sum_select(self, data: pd.DataFrame) -> np.ndarray:
+         '''
+         build select matrix for driver to calculate positive samples by Secret Sharing.
+         Attributes:
+             data: full dataset for this party.
+ 
+         Return:
+```
+
+## secretflow/preprocessing/binning/vert_woe_substitution.py
+
+```diff
+@@ -9,20 +9,21 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from typing import Dict
+-import pandas as pd
++
+ import numpy as np
++import pandas as pd
+ 
+-from secretflow.device import proxy, PYUObject, PYU
+-from secretflow.data.vertical import VDataFrame
+ from secretflow.data.base import Partition
++from secretflow.data.vertical import VDataFrame
++from secretflow.device import PYU, PYUObject, proxy
+ 
+ 
+ @proxy(PYUObject)
+ class VertWOESubstitutionPyuWorker:
+     def sub(self, data: pd.DataFrame, r: Dict) -> pd.DataFrame:
+         """
+         PYU functions for woe substitution.
+```
+
+## secretflow/preprocessing/binning/kernels/quantile_binning.py
+
+```diff
+@@ -17,14 +17,15 @@
+ 
+ 
+ import logging
+ from typing import Dict, List
+ 
+ import numpy as np
+ import pandas as pd
++
+ from secretflow.preprocessing.binning.kernels.base_binning import BaseBinning
+ from secretflow.preprocessing.binning.kernels.quantile_summaries import (
+     QuantileSummaries,
+ )
+ 
+ 
+ class QuantileBinning(BaseBinning):
+```
+
+## secretflow/security/__init__.py
+
+```diff
+@@ -8,21 +8,15 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from .aggregation import (
+-    Aggregator,
+-    SecureAggregator,
+-    PlainAggregator,
+-    SPUAggregator,
+-)
+-
++from .aggregation import Aggregator, PlainAggregator, SecureAggregator, SPUAggregator
+ from .compare import Comparator, DeviceComparator, PlainComparator, SPUComparator
+ 
+ __all__ = [
+     'Aggregator',
+     'SecureAggregator',
+     'PlainAggregator',
+     'SPUAggregator',
+```
+
+## secretflow/security/aggregation/secure_aggregator.py
+
+```diff
+@@ -138,21 +138,21 @@
+     .. math::
+         y_1 + y_2 + y_3 = x_1 + s_{a,b} + s_{a,c} + x_2 - s_{a,b} + s_{b,c} + x_3 - s_{a,c} - s_{b,c}
+         = x_1 + x_2 + x_3
+ 
+     Notes:
+         `Masking with One-Time Pads` is based on semi-honest assumptions
+         and does not support client dropping. For more information, please refer to
+-        `Practical Secure Aggregationfor Privacy-Preserving Machine Learning <https://eprint.iacr.org/2017/281.pdf>`_
++        `Practical Secure Aggregation for Privacy-Preserving Machine Learning <https://eprint.iacr.org/2017/281.pdf>`_
+ 
+     Warnings:
+         The SecureAggregator uses :py:meth:`numpy.random.PCG64`. There are many
+         discussions of whether PCG is a CSPRNG
+         (e.g. https://crypto.stackexchange.com/questions/77101/is-the-pcg-prng-a-csprng-or-why-not),
+-        we perfer a conservative strategy unless a further security analysis came
++        we prefer a conservative strategy unless a further security analysis came
+         up. Therefore we recommend users to use a standardized CSPRNG in industrial
+         scenarios.
+ 
+     Examples:
+         >>> # Alice and bob are both pyu instances.
+         >>> aggregator = SecureAggregator(alice, [alice, bob])
+         >>> a = alice(lambda : np.random.rand(2, 5))()
+```
+
+## secretflow/security/aggregation/sparse_plain_aggregator.py
+
+```diff
+@@ -12,15 +12,14 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+ from typing import List
+ 
+ import numpy as np
+-import sparse as sp
+ 
+ from secretflow.device import PYU, DeviceObject
+ from secretflow.security.aggregation.plain_aggregator import PlainAggregator
+ from secretflow.utils.compressor import sparse_decode
+ 
+ 
+ class SparsePlainAggregator(PlainAggregator):
+@@ -44,25 +43,29 @@
+ 
+     def __post_init__(self):
+         assert isinstance(
+             self.device, PYU
+         ), f'Accepts PYU only but got {type(self.device)}.'
+ 
+     def _zip_decode_data(self, data: List) -> List:
++        import sparse as sp
++
+         if isinstance(data[0][0], (sp._coo.core.COO, sp._compressed.compressed.GCXS)):
+             decoded_data = [sparse_decode(data=element) for element in zip(*data)]
+         elif isinstance(data[0][0], np.ndarray):
+             decoded_data = zip(*data)
+         else:
+             assert (
+                 False
+             ), 'Sparse encoding method not supporterd in SecurePlainAggregator'
+         return decoded_data
+ 
+     def _decode_data(self, data: List) -> List:
++        import sparse as sp
++
+         if isinstance(data[0][0], (sp._coo.core.COO, sp._compressed.compressed.GCXS)):
+             decoded_data = sparse_decode(data=data)
+         elif isinstance(data[0], np.ndarray):
+             decoded_data = data
+         else:
+             assert (
+                 False
+```
+
+## secretflow/security/aggregation/spu_aggregator.py
+
+```diff
+@@ -23,15 +23,15 @@
+ 
+ class SPUAggregator(Aggregator):
+     """Aggregator based on SPU.
+ 
+     The computation will be performed on the given SPU device.
+ 
+     Examples:
+-      >>> # spu shall be a SPU device instance.
++      >>> # spu shall be an SPU device instance.
+       >>> aggregator = SPUAggregator(spu)
+       >>> # Alice and bob are both pyu instances.
+       >>> a = alice(lambda : np.random.rand(2, 5))()
+       >>> b = bob(lambda : np.random.rand(2, 5))()
+       >>> sum_a_b = aggregator.sum([a, b], axis=0)
+       >>> # Get the result.
+       >>> sf.reveal(sum_a_b)
+```
+
+## secretflow/security/compare/device_comparator.py
+
+```diff
+@@ -13,15 +13,15 @@
+ # limitations under the License.
+ 
+ from dataclasses import dataclass
+ from typing import List, Union
+ 
+ import jax.numpy as jnp
+ 
+-from secretflow.device import SPU, PYU, DeviceObject
++from secretflow.device import PYU, SPU, DeviceObject
+ from secretflow.security.compare.comparator import Comparator
+ 
+ 
+ @dataclass
+ class DeviceComparator(Comparator):
+     """
+     Comparator based on a device (PYU or SPU).
+```
+
+## secretflow/security/privacy/__init__.py
+
+```diff
+@@ -8,23 +8,16 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from .mechanism.tensorflow.layers import (
+-    GaussianEmbeddingDP,
+-    LabelDP,
+-)
+-
+-from .mechanism.tensorflow.mechanism_fl import (
+-    GaussianModelDP,
+-)
+-
++from .mechanism.tensorflow.layers import GaussianEmbeddingDP, LabelDP
++from .mechanism.tensorflow.mechanism_fl import GaussianModelDP
+ from .strategy import DPStrategy
+ from .strategy_fl import DPStrategyFL
+ 
+ __all__ = [
+     'GaussianEmbeddingDP',
+     'GaussianModelDP',
+     'LabelDP',
+```
+
+## secretflow/security/privacy/accounting/rdp_accountant.py
+
+```diff
+@@ -9,15 +9,17 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import math
++
+ import numpy as np
++
+ from .log_utils import log_alpha
+ 
+ """Implements privacy accounting for Rényi Differential Privacy.
+ """
+ 
+ 
+ def rdp_core(q: float, noise_multiplier: float, alpha: float):
+```
+
+## secretflow/security/privacy/mechanism/tensorflow/layers.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -8,29 +8,29 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-import numpy as np
+-import tensorflow as tf
+ from abc import ABC, abstractmethod
+ from typing import List
+ 
+-from secretflow.security.privacy.accounting.rdp_accountant import (
+-    get_rdp,
+-    get_privacy_spent_rdp,
+-)
++import numpy as np
++import tensorflow as tf
+ 
+ from secretflow.security.privacy.accounting.gdp_accountant import (
+     cal_mu_poisson,
+     cal_mu_uniform,
+     get_eps_from_mu,
+ )
++from secretflow.security.privacy.accounting.rdp_accountant import (
++    get_privacy_spent_rdp,
++    get_rdp,
++)
+ 
+ 
+ class EmbeddingDP(tf.keras.layers.Layer, ABC):
+     def __init__(self) -> None:
+         super().__init__()
+ 
+     @abstractmethod
+```
+
+## secretflow/security/privacy/mechanism/tensorflow/mechanism_fl.py
+
+```diff
+@@ -8,21 +8,22 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-import tensorflow as tf
+ from typing import List
++
+ import numpy as np
++import tensorflow as tf
+ 
+ from secretflow.security.privacy.accounting.rdp_accountant import (
+-    get_rdp,
+     get_privacy_spent_rdp,
++    get_rdp,
+ )
+ 
+ 
+ class GaussianModelDP:
+     """global model differential privacy perturbation using gaussian noise"""
+ 
+     def __init__(
+```
+
+## secretflow/stats/__init__.py
+
+```diff
+@@ -8,24 +8,23 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from .ss_pearsonr_v import PearsonR as SSVertPearsonR
+-from .ss_vif_v import VIF as SSVertVIF
+-from .ss_pvalue_v import PVlaue as SSPValue
+-from .regression_eval import RegressionEval
+ from .biclassification_eval import BiClassificationEval
+-from .pva_eval import pva_eval
+ from .psi_eval import psi_eval
+-from .table_statistics import table_statistics
++from .pva_eval import pva_eval
++from .regression_eval import RegressionEval
+ from .score_card import ScoreCard
+-
++from .ss_pearsonr_v import PearsonR as SSVertPearsonR
++from .ss_pvalue_v import PVlaue as SSPValue
++from .ss_vif_v import VIF as SSVertVIF
++from .table_statistics import table_statistics
+ 
+ __all__ = [
+     'SSVertPearsonR',
+     'SSVertVIF',
+     'SSPValue',
+     'RegressionEval',
+     'BiClassificationEval',
+```
+
+## secretflow/stats/regression_eval.py
+
+```diff
+@@ -9,37 +9,37 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-from secretflow.device import SPU
+ from secretflow.data import FedNdarray
+ from secretflow.data.ndarray import (
+     mean,
+-    r2_score,
+-    rss,
+     mean_abs_err,
+     mean_abs_percent_err,
+     mean_squared_error,
+-    root_mean_squared_error,
++    r2_score,
+     residual_histogram,
++    root_mean_squared_error,
++    rss,
+ )
++from secretflow.device import SPU
+ 
+ 
+ class RegressionEval:
+     """
+     Statistics Evaluation for a regression model on a dataset.
+ 
+     Attributes:
+         y_true: FedNdarray
+             If y_true is from a single party, then each statistics is a PYUObject.
+-            If y_true is from multiple parties, then a SPU device is required
+-            and each statistics is a SPUObject.
++            If y_true is from multiple parties, then an SPU device is required
++            and each statistics is an SPUObject.
+         y_pred: FedNdarray
+             y_true and y_pred must have the same device and partition shapes
+         r2_score: Union[PYUObject, SPUObject]
+ 
+         mean_abs_err: Union[PYUObject, SPUObject]
+ 
+         mean_abs_percent_err: Union[PYUObject, SPUObject]
+```
+
+## secretflow/stats/score_card.py
+
+```diff
+@@ -8,23 +8,22 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from typing import Union
+-
+ import math
++from typing import Union
+ 
+ import numpy as np
+ 
+-from secretflow.data.vertical import VDataFrame
+-from secretflow.data.horizontal import HDataFrame
+ from secretflow.data import FedNdarray
++from secretflow.data.horizontal import HDataFrame
++from secretflow.data.vertical import VDataFrame
+ 
+ 
+ class ScoreCard:
+     """
+     The component provides a mapping procedure from binary regression's probability value to an integer range score.
+ 
+     The mapping process is as follows:
+```
+
+## secretflow/stats/ss_pearsonr_v.py
+
+```diff
+@@ -10,16 +10,16 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from typing import List
+ 
+-import numpy as np
+ import jax.numpy as jnp
++import numpy as np
+ 
+ import secretflow as sf
+ from secretflow.data.vertical import VDataFrame
+ from secretflow.device import SPU
+ from secretflow.preprocessing.scaler import StandardScaler
+ 
+ 
+@@ -54,15 +54,15 @@
+                 standardize purpose:
+                 - reduce the result number of matrix xtx, avoid overflow in secret sharing.
+                 - after standardize, the variance is 1 and the mean is 0, which can simplify the calculation.
+         """
+         if standardize:
+             scaler = StandardScaler()
+             vdata = scaler.fit_transform(vdata)
+-        obj_list = [sf.to(self.spu_device, d.data) for d in vdata.partitions.values()]
++        obj_list = [d.data.to(self.spu_device) for d in vdata.partitions.values()]
+ 
+         rows = vdata.shape[0]
+ 
+         def spu_xtx(objs: List[np.ndarray]):
+             data = jnp.concatenate(objs, axis=1)
+             return jnp.matmul(data.transpose(), data)
+```
+
+## secretflow/stats/ss_pvalue_v.py
+
+```diff
+@@ -10,24 +10,24 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+ import logging
+-from typing import List, Tuple
+-import numpy as np
++from typing import Any, List, Tuple
++
+ import jax.numpy as jnp
++import numpy as np
+ from scipy import stats
+ 
+ import secretflow as sf
+-from secretflow.utils.sigmoid import SigType
+-from secretflow.device import SPUObject, SPU
+-from secretflow.ml.linear import LinearModel, RegType, SSRegression
+ from secretflow.data.vertical import VDataFrame
++from secretflow.device import SPU, SPUObject
++from secretflow.utils.sigmoid import SigType
+ 
+ from .core.utils import newton_matrix_inverse
+ 
+ 
+ # spu functions for Logistic PValue
+ def _hessian_matrix(x: np.ndarray, yhat: np.ndarray):
+     """
+@@ -172,15 +172,17 @@
+                     "\n2. if input model is converged."
+                     "\n3. if dataset is same with the one used during training."
+                     "\n4. if dataset is normalized or standardized."
+                 )
+                 square[idx] = 0
+         return square
+ 
+-    def pvalues(self, x: VDataFrame, y: VDataFrame, model: LinearModel) -> np.ndarray:
++    def pvalues(self, x: VDataFrame, y: VDataFrame, model: Any) -> np.ndarray:
++        from secretflow.ml.linear import LinearModel, RegType, SSRegression
++
+         """
+         computer pvalue for lr model
+ 
+         Args:
+ 
+             x : VDataFrame
+                 input dataset
+@@ -188,14 +190,15 @@
+                 true label
+             model : LinearModel
+                 lr model
+ 
+         Return:
+             PValue
+         """
++        assert isinstance(model, LinearModel), "Only support Linear model."
+         assert isinstance(model.weights, SPUObject), (
+             "Only support model fit by sslr/hesslr that "
+             "training on vertical slice dataset."
+         )
+         assert model.weights.device == self.spu, "weights should saved in same spu"
+         lr = SSRegression(self.spu)
+         # hessian_matrix is very sensitive on yhat, use a expensive but more precision sig approximation.
+```
+
+## secretflow/stats/ss_vif_v.py
+
+```diff
+@@ -10,21 +10,22 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from typing import List
+ 
+-import numpy as np
+ import jax.numpy as jnp
++import numpy as np
+ 
+ import secretflow as sf
+ from secretflow.data.vertical import VDataFrame
+ from secretflow.device import SPU
+ from secretflow.preprocessing.scaler import StandardScaler
++
+ from .core.utils import newton_matrix_inverse
+ 
+ 
+ class VIF:
+     """
+     Calculate variance inflation factor for vertical slice dataset
+     by using secret sharing.
+@@ -73,15 +74,15 @@
+                 - reduce the result number of matrix xtx, avoid overflow in secret sharing.
+                 - after standardize, the variance is 1 and the mean is 0, which can simplify the calculation.
+ 
+         """
+         if standardize:
+             scaler = StandardScaler()
+             vdata = scaler.fit_transform(vdata)
+-        obj_list = [sf.to(self.spu_device, d.data) for d in vdata.partitions.values()]
++        obj_list = [d.data.to(self.spu_device) for d in vdata.partitions.values()]
+ 
+         rows = vdata.shape[0]
+ 
+         def spu_vif(objs: List[np.ndarray]):
+             data = jnp.concatenate(objs, axis=1)
+             xtx = jnp.matmul(data.transpose(), data)
+             x_inv = newton_matrix_inverse(xtx)
+```
+
+## secretflow/stats/table_statistics.py
+
+```diff
+@@ -8,17 +8,19 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
++from typing import Union
++
+ import pandas as pd
++
+ from secretflow.data.vertical import VDataFrame
+-from typing import Union
+ 
+ 
+ def table_statistics(table: Union[pd.DataFrame, VDataFrame]) -> pd.DataFrame:
+     """Get table statistics for a pd.DataFrame or VDataFrame.
+ 
+     Args:
+         table: Union[pd.DataFrame, VDataFrame]
+```
+
+## secretflow/stats/core/__init__.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -9,9 +9,9 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from .biclassification_eval_core import gen_all_reports as gen_biclassification_reports
+-from .pva_core import pva
+ from .psi_core import psi
++from .pva_core import pva
+```
+
+## secretflow/stats/core/utils.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -9,16 +9,16 @@
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ 
+-import numpy as np
+ import jax.numpy as jnp
++import numpy as np
+ 
+ 
+ def newton_matrix_inverse(x: np.ndarray, iter_round: int = 20):
+     """
+     computing the inverse of a matrix by newton iteration.
+     https://aalexan3.math.ncsu.edu/articles/mat-inv-rep.pdf
+     """
+```
+
+## secretflow/utils/__init__.py
+
+```diff
+@@ -8,13 +8,13 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-from . import testing, sigmoid
++from . import sigmoid, testing
+ 
+ __all__ = [
+     'testing',
+     'sigmoid',
+ ]
+```
+
+## secretflow/utils/compressor.py
+
+```diff
+@@ -12,15 +12,14 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ from abc import ABC, abstractmethod
+ from typing import Any, List, Union
+ 
+ import numpy as np
+-import sparse as sp
+ from scipy import sparse
+ 
+ 
+ class Compressor(ABC):
+     """Abstract base class for cross device data compressor"""
+ 
+     @abstractmethod
+@@ -298,14 +297,16 @@
+     if data is None:
+         return None
+     assert encode_method in [
+         'coo',
+         'gcxs',
+     ], f'Get unsupport sparse encoding method: {encode_method}, '
+     encoded_datas = []
++    import sparse as sp
++
+     for datum in data:
+         if encode_method == 'coo':
+             encoded_data = sp.COO(datum)
+         else:
+             encoded_data = sp.GCXS(datum)
+         encoded_datas.append(encoded_data)
+     return encoded_datas
+@@ -315,14 +316,16 @@
+     """Decode the compressed sparse matrix
+ 
+     Args:
+         data: compressed matrix to be decoded
+     Returns:
+         decoded_datas: Decoded matrix
+     """
++    import sparse as sp
++
+     if data is None:
+         return None
+     assert isinstance(
+         data[0], (sp._coo.core.COO, sp._compressed.compressed.GCXS)
+     ), 'Sparse encoding method not supporterd, Only COO GCXS supported'
+     decode_datas = []
+     for datum in data:
+```
+
+## secretflow/utils/hash.py
+
+```diff
+@@ -1,7 +1,22 @@
++# Copyright 2023 Ant Group Co., Ltd.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++
+ import hashlib
+ 
+ _BUF_SIZE = 64 * 1024
+ 
+ 
+ def sha256sum(filename: str):
+     h = hashlib.sha256()
+```
+
+## secretflow/utils/io.py
+
+```diff
+@@ -1,7 +1,22 @@
++# Copyright 2023 Ant Group Co., Ltd.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++
+ import platform
+ 
+ 
+ def rows_count(filename):
+     """get rows count from file"""
+     line_break = b'\r\n' if platform.system().lower() == "windows" else b'\n'
+     with open(filename, "rb") as f:
+```
+
+## secretflow/utils/logging.py
+
+```diff
+@@ -1,7 +1,21 @@
++# Copyright 2023 Ant Group Co., Ltd.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
+ from logging import _checkLevel
+ 
+ _LOGGING_LEVEL = 'INFO'
+ 
+ LOG_FORMAT = '%(asctime)s,%(msecs)d %(levelname)s [%(filename)s:%(funcName)s:%(lineno)d] %(message)s'
+```
+
+## secretflow/utils/ndarray_bigint.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -8,17 +8,17 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
++import math
+ import random
+ 
+-import math
+ import numpy as np
+ from heu import numpy as hnp
+ 
+ 
+ def randbits(shape: tuple, bits):
+     items = math.prod(shape)
+     data = [random.getrandbits(bits) - (1 << (bits - 1)) for _ in range(items)]
+```
+
+## secretflow/utils/random.py
+
+```diff
+@@ -1,7 +1,22 @@
++# Copyright 2023 Ant Group Co., Ltd.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#      https://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++
++
+ import secrets
+ 
+ from secretflow.device import PYU, reveal
+ 
+ 
+ def global_random(device: PYU, exclusive_upper_bound: int) -> int:
+     return reveal(device(lambda bound: secrets.randbelow(bound))(exclusive_upper_bound))
+```
+
+## secretflow/utils/sigmoid.py
+
+```diff
+@@ -8,16 +8,18 @@
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+-import jax.numpy as jnp
+ from enum import Enum, unique
++
++import jax.numpy as jnp
++
+ from secretflow.utils.errors import InvalidArgumentError
+ 
+ 
+ def t1_sig(x, limit: bool = True):
+     '''
+     taylor series referenced from:
+     https://mortendahl.github.io/2017/04/17/private-deep-learning-with-mpc/
+```
+
+## secretflow/utils/testing.py
+
+```diff
+@@ -10,15 +10,15 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import socket
+ from contextlib import closing
+-from typing import List, Tuple, cast, Dict, Any
++from typing import Any, Dict, List, Tuple, cast
+ 
+ import spu
+ 
+ DEFAULT_SEMI2K_RUNTIME_CONFIG = {
+     'protocol': spu.spu_pb2.SEMI2K,
+     'field': spu.spu_pb2.FM128,
+ }
+@@ -47,15 +47,15 @@
+                 `SPU runtime config <https://www.secretflow.org.cn/docs/spu/en/reference/runtime_config.html>`_.
+             Defaults to None and use default runtime config.
+                 1. If 3 parties are present, protocol would be set to ABY3 and field to FM128.
+                 2. Otherwise, protocol would be set to SEMI2k and field to FM128.
+                 Other options are using default values.
+ 
+     Returns:
+-        Dict[str, Any]: A SPU cluster_def to initiate a SPU device.
++        Dict[str, Any]: An SPU cluster_def to initiate an SPU device.
+     """
+     assert (
+         isinstance(parties, (Tuple, List)) and len(parties) >= 2
+     ), 'number of parties should be >= 2'
+     assert len(set(parties)) == len(parties), f'duplicated parties {parties}'
+ 
+     if not runtime_config:
+@@ -72,15 +72,14 @@
+         'runtime_config': runtime_config,
+     }
+ 
+     for i, party in enumerate(parties):
+         cdef['nodes'].append(
+             {
+                 'party': party,
+-                'id': f'local:{i}',
+                 'address': f'127.0.0.1:{unused_tcp_port()}',
+             }
+         )
+ 
+     return cdef
+```
+
+## secretflow/utils/simulation/datasets.py
+
+```diff
+@@ -11,19 +11,20 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import hashlib
+ import os
+ import pickle
++import random
+ import zipfile
+ from collections import namedtuple
+ from pathlib import Path
+ from typing import Dict, List, Tuple, Union
+-import random
++
+ import networkx as nx
+ import numpy as np
+ import pandas as pd
+ import requests
+ import scipy
+ 
+ from secretflow.data.horizontal import HDataFrame
+@@ -78,14 +79,24 @@
+         'd1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d',
+     ),
+     'ml-1m': _Dataset(
+         'ml-1m.zip',
+         'https://secretflow-data.oss-accelerate.aliyuncs.com/datasets/movielens/ml-1m.zip',
+         'a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20',
+     ),
++    'pubmed': _Dataset(
++        'pubmed.zip',
++        'https://secretflow-data.oss-accelerate.aliyuncs.com/datasets/pubmed/pubmed.zip',
++        '04a5aa8b3b3432d617d35286e42011b64d58ac362a107d2c257d9da85bf0c021',
++    ),
++    'citeseer': _Dataset(
++        'citeseer.zip',
++        'https://secretflow-data.oss-accelerate.aliyuncs.com/datasets/citeseer/citeseer.zip',
++        '8f0f1aba42c7be5818dc43d96913713a2ffc1c0d9dc09bef30d0432d2c102b49',
++    ),
+ }
+ 
+ 
+ def _unzip(file, extract_path=None):
+     if not extract_path:
+         extract_path = str(Path(file).parent)
+     with zipfile.ZipFile(file, 'r') as zip_f:
+@@ -440,15 +451,15 @@
+ 
+     feature_split_idxs = np.rint(np.linspace(0, nodes.shape[1], len(parts) + 1)).astype(
+         np.int32
+     )
+     x_arr = FedNdarray(
+         partitions={
+             part: part(
+-                lambda: nodes[:, feature_split_idxs[i] : feature_split_idxs[i + 1]]
++                lambda: nodes[:, feature_split_idxs[i]: feature_split_idxs[i + 1]]
+             )()
+             for i, part in enumerate(parts)
+         },
+         partition_way=PartitionWay.VERTICAL,
+     )
+     Y_train_arr = FedNdarray(
+         partitions={parts[0]: parts[0](lambda: y_train)()},
+@@ -483,14 +494,305 @@
+         Y_test_arr,
+         idx_train_arr,
+         idx_val_arr,
+         idx_test_arr,
+     )
+ 
+ 
++def load_pubmed(
++    parts: List[PYU], data_dir: str = None, add_self_loop: bool = True
++) -> Tuple[
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++]:
++    """Load the pubmed dataset for split learning GNN.
++    Datasource: https://github.com/kimiyoung/planetoid/tree/master/data
++
++    Args:
++        parts (List[PYU]): parties that the paper features will be partitioned
++            evenly.
++
++    Returns:
++        A tuple of FedNdarray: edge, x, Y_train, Y_val, Y_valid, index_train,
++        index_val, index_test. Note that Y is bound to the first participant.
++    """
++    assert parts, 'Parts shall not be None or empty!'
++    if data_dir is None:
++        data_dir = os.path.join(_CACHE_DIR, 'pubmed')
++        if not Path(data_dir).is_dir():
++            filepath = _get_dataset(_DATASETS['pubmed'])
++            _unzip(filepath, data_dir)
++
++    file_names = [
++        os.path.join(data_dir, f'ind.pubmed.{name}')
++        for name in ['y', 'tx', 'ty', 'allx', 'ally', 'graph']
++    ]
++
++    objects = []
++    for name in file_names:
++        with open(name, 'rb') as f:
++            objects.append(pickle.load(f, encoding='latin1'))
++
++    y, tx, ty, allx, ally, graph = tuple(objects)
++
++    with open(os.path.join(data_dir, f"ind.pubmed.test.index"), 'r') as f:
++        test_idx_reorder = f.readlines()
++    test_idx_reorder = list(map(lambda s: int(s.strip()), test_idx_reorder))
++    test_idx_range = np.sort(test_idx_reorder)
++
++    nodes = scipy.sparse.vstack((allx, tx)).tolil()
++    nodes[test_idx_reorder, :] = nodes[test_idx_range, :]
++    edge_sparse = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
++
++    labels = np.vstack((ally, ty))
++    labels[test_idx_reorder, :] = labels[test_idx_range, :]
++
++    # test 1000
++    # train #class * 20 = 7 * 20 = 140
++    # val 500
++    idx_test = test_idx_range.tolist()
++    idx_train = range(len(y))
++    idx_val = range(len(y), len(y) + 500)
++
++    def sample_mask(idx, length):
++        mask = np.zeros(length)
++        mask[idx] = 1
++        return np.array(mask, dtype=np.bool)
++
++    train_mask = sample_mask(idx_train, labels.shape[0])
++    val_mask = sample_mask(idx_val, labels.shape[0])
++    test_mask = sample_mask(idx_test, labels.shape[0])
++
++    y_train = np.zeros(labels.shape)
++    y_val = np.zeros(labels.shape)
++    y_test = np.zeros(labels.shape)
++    y_train[train_mask, :] = labels[train_mask, :]
++    y_val[val_mask, :] = labels[val_mask, :]
++    y_test[test_mask, :] = labels[test_mask, :]
++
++    def edge_dense(edge: np.ndarray):
++        if add_self_loop:
++            return edge + np.eye(edge.shape[1])
++        else:
++            return edge.toarray()
++
++    nodes = nodes.toarray()
++    edge_arr = FedNdarray(
++        partitions={part: part(edge_dense)(edge_sparse) for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++
++    feature_split_idxs = np.rint(np.linspace(0, nodes.shape[1], len(parts) + 1)).astype(
++        np.int32
++    )
++    x_arr = FedNdarray(
++        partitions={
++            part: part(
++                lambda: nodes[:, feature_split_idxs[i] : feature_split_idxs[i + 1]]
++            )()
++            for i, part in enumerate(parts)
++        },
++        partition_way=PartitionWay.VERTICAL,
++    )
++    Y_train_arr = FedNdarray(
++        partitions={parts[0]: parts[0](lambda: y_train)()},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    Y_val_arr = FedNdarray(
++        partitions={parts[0]: parts[0](lambda: y_val)()},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    Y_test_arr = FedNdarray(
++        partitions={parts[0]: parts[0](lambda: y_test)()},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    idx_train_arr = FedNdarray(
++        partitions={part: part(lambda: train_mask)() for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    idx_val_arr = FedNdarray(
++        partitions={part: part(lambda: val_mask)() for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    idx_test_arr = FedNdarray(
++        partitions={part: part(lambda: test_mask)() for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++
++    return (
++        edge_arr,
++        x_arr,
++        Y_train_arr,
++        Y_val_arr,
++        Y_test_arr,
++        idx_train_arr,
++        idx_val_arr,
++        idx_test_arr,
++    )
++
++
++def load_citeseer(
++    parts: List[PYU], data_dir: str = None, add_self_loop: bool = True
++) -> Tuple[
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++    FedNdarray,
++]:
++    """Load the citeseer dataset for split learning GNN.
++    Datasource: https://github.com/kimiyoung/planetoid/tree/master/data
++
++    Args:
++        parts (List[PYU]): parties that the paper features will be partitioned
++            evenly.
++
++    Returns:
++        A tuple of FedNdarray: edge, x, Y_train, Y_val, Y_valid, index_train,
++        index_val, index_test. Note that Y is bound to the first participant.
++    """
++    assert parts, 'Parts shall not be None or empty!'
++    if data_dir is None:
++        data_dir = os.path.join(_CACHE_DIR, 'citeseer')
++        if not Path(data_dir).is_dir():
++            filepath = _get_dataset(_DATASETS['citeseer'])
++            _unzip(filepath, data_dir)
++
++    file_names = [
++        os.path.join(data_dir, f'ind.citeseer.{name}')
++        for name in ['x', 'y', 'tx', 'ty', 'allx', 'ally', 'graph']
++    ]
++
++    objects = []
++    for name in file_names:
++        with open(name, 'rb') as f:
++            objects.append(pickle.load(f, encoding='latin1'))
++
++    x, y, tx, ty, allx, ally, graph = tuple(objects)
++
++    with open(os.path.join(data_dir, f"ind.citeseer.test.index"), 'r') as f:
++        test_idx_reorder = f.readlines()
++    test_idx_reorder = list(map(lambda s: int(s.strip()), test_idx_reorder))
++    test_idx_range = np.sort(test_idx_reorder)
++
++    # Fix citeseer dataset (there are some isolated nodes in the graph)
++    # Find isolated nodes, add them as zero-vecs into the right position
++    test_idx_range_full = range(min(test_idx_reorder), max(test_idx_reorder) + 1)
++    zero_ind = list(set(test_idx_range_full) - set(test_idx_reorder))
++    tx_extended = scipy.sparse.lil_matrix((len(test_idx_range_full), x.shape[1]))
++    tx_extended[test_idx_range - min(test_idx_range), :] = tx
++    tx = tx_extended
++    ty_extended = np.zeros((len(test_idx_range_full), y.shape[1]))
++    ty_extended[test_idx_range - min(test_idx_range), :] = ty
++    ty_extended[
++        zero_ind - min(test_idx_range),
++        np.random.randint(0, y.shape[1], len(zero_ind)),
++    ] = 1
++    ty = ty_extended
++
++    nodes = scipy.sparse.vstack((allx, tx)).tolil()
++    nodes[test_idx_reorder, :] = nodes[test_idx_range, :]
++    edge_sparse = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
++
++    labels = np.vstack((ally, ty))
++    labels[test_idx_reorder, :] = labels[test_idx_range, :]
++
++    # test 1000
++    # train #class * 20 = 6 * 20 = 120
++    # val 500
++    idx_test = test_idx_range.tolist()
++    idx_train = range(len(y))
++    idx_val = range(len(y), len(y) + 500)
++
++    def sample_mask(idx, length):
++        mask = np.zeros(length)
++        mask[idx] = 1
++        return np.array(mask, dtype=np.bool)
++
++    train_mask = sample_mask(idx_train, labels.shape[0])
++    val_mask = sample_mask(idx_val, labels.shape[0])
++    test_mask = sample_mask(idx_test, labels.shape[0])
++
++    y_train = np.zeros(labels.shape)
++    y_val = np.zeros(labels.shape)
++    y_test = np.zeros(labels.shape)
++    y_train[train_mask, :] = labels[train_mask, :]
++    y_val[val_mask, :] = labels[val_mask, :]
++    y_test[test_mask, :] = labels[test_mask, :]
++
++    def edge_dense(edge: np.ndarray):
++        if add_self_loop:
++            return edge + np.eye(edge.shape[1])
++        else:
++            return edge.toarray()
++
++    nodes = nodes.toarray()
++    edge_arr = FedNdarray(
++        partitions={part: part(edge_dense)(edge_sparse) for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++
++    feature_split_idxs = np.rint(np.linspace(0, nodes.shape[1], len(parts) + 1)).astype(
++        np.int32
++    )
++    x_arr = FedNdarray(
++        partitions={
++            part: part(
++                lambda: nodes[:, feature_split_idxs[i] : feature_split_idxs[i + 1]]
++            )()
++            for i, part in enumerate(parts)
++        },
++        partition_way=PartitionWay.VERTICAL,
++    )
++    Y_train_arr = FedNdarray(
++        partitions={parts[0]: parts[0](lambda: y_train)()},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    Y_val_arr = FedNdarray(
++        partitions={parts[0]: parts[0](lambda: y_val)()},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    Y_test_arr = FedNdarray(
++        partitions={parts[0]: parts[0](lambda: y_test)()},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    idx_train_arr = FedNdarray(
++        partitions={part: part(lambda: train_mask)() for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    idx_val_arr = FedNdarray(
++        partitions={part: part(lambda: val_mask)() for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++    idx_test_arr = FedNdarray(
++        partitions={part: part(lambda: test_mask)() for part in parts},
++        partition_way=PartitionWay.HORIZONTAL,
++    )
++
++    return (
++        edge_arr,
++        x_arr,
++        Y_train_arr,
++        Y_val_arr,
++        Y_test_arr,
++        idx_train_arr,
++        idx_val_arr,
++        idx_test_arr,
++    )
++
++
+ def load_ml_1m(
+     part: Dict[PYU, List],
+     data_dir: str = None,
+     shuffle: bool = False,
+     num_sample: int = -1,
+ ):
+     """Load the movie lens 1M dataset for split learning.
+@@ -562,15 +864,14 @@
+     if shuffle:
+         shuffled_filename = _shuffle_data(extract_dir + "/ratings.dat")
+         f = open(shuffled_filename, "r", encoding="unicode_escape")
+     else:
+         f = open(extract_dir + "/ratings.dat", "r", encoding="unicode_escape")
+ 
+     for line in f:
+-
+         ls = line.strip().split("::")
+         rating = dict(zip(ratings_columns, ls))
+         rating.update(users_data.get(ls[0]))
+         rating.update(movies_data.get(ls[1]))
+         for device, columns in part.items():
+             parse_f = _parse_example(rating, columns, index)
+             csv_writer_container[device].write(parse_f + "\n")
+```
+
+## secretflow/utils/simulation/data/_utils.py
+
+ * *Ordering differences only*
+
+```diff
+@@ -1,12 +1,12 @@
+ from typing import Dict, List, Tuple, Union
+ 
+-from secretflow.device.device.pyu import PYU
+ import numpy as np
+ 
++from secretflow.device.device.pyu import PYU
+ from secretflow.utils.errors import InvalidArgumentError
+ 
+ 
+ def cal_indexes(
+     parts: Union[List[PYU], Dict[PYU, Union[float, Tuple]]], total_num: int
+ ) -> Dict[PYU, Tuple]:
+     """Calculate the indexes by the given partitions.
+```
+
+## Comparing `secretflow-0.8.0b1.dist-info/LICENSE` & `secretflow-0.8.1b0.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `secretflow-0.8.0b1.dist-info/METADATA` & `secretflow-0.8.1b0.dist-info/METADATA`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ 00000000: 4d65 7461 6461 7461 2d56 6572 7369 6f6e  Metadata-Version
+ 00000010: 3a20 322e 310a 4e61 6d65 3a20 7365 6372  : 2.1.Name: secr
+ 00000020: 6574 666c 6f77 0a56 6572 7369 6f6e 3a20  etflow.Version: 
+-00000030: 302e 382e 3062 310a 5375 6d6d 6172 793a  0.8.0b1.Summary:
++00000030: 302e 382e 3162 300a 5375 6d6d 6172 793a  0.8.1b0.Summary:
+ 00000040: 2053 6563 7265 7420 466c 6f77 0a48 6f6d   Secret Flow.Hom
+ 00000050: 652d 7061 6765 3a20 6874 7470 733a 2f2f  e-page: https://
+ 00000060: 6769 7468 7562 2e63 6f6d 2f73 6563 7265  github.com/secre
+ 00000070: 7466 6c6f 772f 7365 6372 6574 666c 6f77  tflow/secretflow
+ 00000080: 0a41 7574 686f 723a 2053 4349 2043 656e  .Author: SCI Cen
+ 00000090: 7465 720a 4175 7468 6f72 2d65 6d61 696c  ter.Author-email
+ 000000a0: 3a20 7365 6372 6574 666c 6f77 2d63 6f6e  : secretflow-con
+@@ -23,206 +23,215 @@
+ 00000160: 6c69 620a 5265 7175 6972 6573 2d44 6973  lib.Requires-Dis
+ 00000170: 743a 206d 756c 7469 7072 6f63 6573 730a  t: multiprocess.
+ 00000180: 5265 7175 6972 6573 2d44 6973 743a 206e  Requires-Dist: n
+ 00000190: 6574 776f 726b 7820 283d 3d32 2e38 2e38  etworkx (==2.8.8
+ 000001a0: 290a 5265 7175 6972 6573 2d44 6973 743a  ).Requires-Dist:
+ 000001b0: 206e 756d 7079 2028 3d3d 312e 3233 2e35   numpy (==1.23.5
+ 000001c0: 290a 5265 7175 6972 6573 2d44 6973 743a  ).Requires-Dist:
+-000001d0: 206f 6e6e 7820 283d 3d31 2e31 322e 3029   onnx (==1.12.0)
+-000001e0: 0a52 6571 7569 7265 732d 4469 7374 3a20  .Requires-Dist: 
+-000001f0: 7061 6e64 6173 2028 3d3d 312e 352e 3329  pandas (==1.5.3)
+-00000200: 0a52 6571 7569 7265 732d 4469 7374 3a20  .Requires-Dist: 
+-00000210: 7072 6f74 6f62 7566 2028 3d3d 332e 3139  protobuf (==3.19
+-00000220: 2e36 290a 5265 7175 6972 6573 2d44 6973  .6).Requires-Dis
+-00000230: 743a 2070 7961 7272 6f77 2028 3d3d 3131  t: pyarrow (==11
+-00000240: 2e30 2e30 290a 5265 7175 6972 6573 2d44  .0.0).Requires-D
+-00000250: 6973 743a 2073 3366 7320 283d 3d32 3032  ist: s3fs (==202
+-00000260: 322e 312e 3029 0a52 6571 7569 7265 732d  2.1.0).Requires-
+-00000270: 4469 7374 3a20 7363 696b 6974 2d6c 6561  Dist: scikit-lea
+-00000280: 726e 2028 3d3d 312e 312e 3329 0a52 6571  rn (==1.1.3).Req
+-00000290: 7569 7265 732d 4469 7374 3a20 7365 6372  uires-Dist: secr
+-000002a0: 6574 666c 6f77 2d72 6179 6665 6420 283d  etflow-rayfed (=
+-000002b0: 3d30 2e31 2e31 6133 290a 5265 7175 6972  =0.1.1a3).Requir
+-000002c0: 6573 2d44 6973 743a 2073 7061 7273 6520  es-Dist: sparse 
+-000002d0: 283e 3d30 2e31 342e 3029 0a52 6571 7569  (>=0.14.0).Requi
+-000002e0: 7265 732d 4469 7374 3a20 7370 7520 283d  res-Dist: spu (=
+-000002f0: 3d30 2e33 2e32 6231 3129 0a52 6571 7569  =0.3.2b11).Requi
+-00000300: 7265 732d 4469 7374 3a20 7366 2d68 6575  res-Dist: sf-heu
+-00000310: 2028 3d3d 302e 332e 3262 3129 0a52 6571   (==0.3.2b1).Req
+-00000320: 7569 7265 732d 4469 7374 3a20 7374 6174  uires-Dist: stat
+-00000330: 736d 6f64 656c 7320 283d 3d30 2e31 332e  smodels (==0.13.
+-00000340: 3229 0a52 6571 7569 7265 732d 4469 7374  2).Requires-Dist
+-00000350: 3a20 7466 326f 6e6e 7820 283e 3d31 2e31  : tf2onnx (>=1.1
+-00000360: 332e 3029 0a52 6571 7569 7265 732d 4469  3.0).Requires-Di
+-00000370: 7374 3a20 746f 7263 6820 283d 3d32 2e30  st: torch (==2.0
+-00000380: 2e30 290a 5265 7175 6972 6573 2d44 6973  .0).Requires-Dis
+-00000390: 743a 2074 6f72 6368 6d65 7472 6963 7320  t: torchmetrics 
+-000003a0: 283d 3d30 2e39 2e32 290a 5265 7175 6972  (==0.9.2).Requir
+-000003b0: 6573 2d44 6973 743a 2074 7164 6d0a 5265  es-Dist: tqdm.Re
+-000003c0: 7175 6972 6573 2d44 6973 743a 2076 616c  quires-Dist: val
+-000003d0: 6964 6174 6f72 2e70 7920 283d 3d31 2e33  idator.py (==1.3
+-000003e0: 2e30 290a 5265 7175 6972 6573 2d44 6973  .0).Requires-Dis
+-000003f0: 743a 2078 6762 6f6f 7374 2028 3d3d 312e  t: xgboost (==1.
+-00000400: 352e 3229 0a52 6571 7569 7265 732d 4469  5.2).Requires-Di
+-00000410: 7374 3a20 7768 6565 6c20 283e 3d30 2e33  st: wheel (>=0.3
+-00000420: 382e 3129 0a52 6571 7569 7265 732d 4469  8.1).Requires-Di
+-00000430: 7374 3a20 7465 6e73 6f72 666c 6f77 2028  st: tensorflow (
+-00000440: 3d3d 322e 3130 2e31 2920 3b20 706c 6174  ==2.10.1) ; plat
+-00000450: 666f 726d 5f6d 6163 6869 6e65 2021 3d20  form_machine != 
+-00000460: 2261 726d 3634 220a 5265 7175 6972 6573  "arm64".Requires
+-00000470: 2d44 6973 743a 2074 656e 736f 7266 6c6f  -Dist: tensorflo
+-00000480: 772d 6d61 636f 7320 283d 3d32 2e31 312e  w-macos (==2.11.
+-00000490: 3029 203b 2070 6c61 7466 6f72 6d5f 6d61  0) ; platform_ma
+-000004a0: 6368 696e 6520 3d3d 2022 6172 6d36 3422  chine == "arm64"
+-000004b0: 2061 6e64 2070 6c61 7466 6f72 6d5f 7379   and platform_sy
+-000004c0: 7374 656d 203d 3d20 2244 6172 7769 6e22  stem == "Darwin"
+-000004d0: 0a50 726f 7669 6465 732d 4578 7472 613a  .Provides-Extra:
+-000004e0: 2064 6576 0a52 6571 7569 7265 732d 4469   dev.Requires-Di
+-000004f0: 7374 3a20 7079 6c69 6e74 203b 2065 7874  st: pylint ; ext
+-00000500: 7261 203d 3d20 2764 6576 270a 0a3c 6469  ra == 'dev'..<di
+-00000510: 7620 616c 6967 6e3d 2263 656e 7465 7222  v align="center"
+-00000520: 3e0a 2020 2020 3c69 6d67 2073 7263 3d22  >.    <img src="
+-00000530: 646f 6373 2f5f 7374 6174 6963 2f6c 6f67  docs/_static/log
+-00000540: 6f2d 6c69 6768 742e 706e 6722 3e0a 3c2f  o-light.png">.</
+-00000550: 6469 763e 0a0a 2d2d 2d0a 0a5b 215b 4369  div>..---..[![Ci
+-00000560: 7263 6c65 4349 5d28 6874 7470 733a 2f2f  rcleCI](https://
+-00000570: 646c 2e63 6972 636c 6563 692e 636f 6d2f  dl.circleci.com/
+-00000580: 7374 6174 7573 2d62 6164 6765 2f69 6d67  status-badge/img
+-00000590: 2f67 682f 7365 6372 6574 666c 6f77 2f73  /gh/secretflow/s
+-000005a0: 6563 7265 7466 6c6f 772f 7472 6565 2f6d  ecretflow/tree/m
+-000005b0: 6169 6e2e 7376 673f 7374 796c 653d 7376  ain.svg?style=sv
+-000005c0: 6729 5d28 6874 7470 733a 2f2f 646c 2e63  g)](https://dl.c
+-000005d0: 6972 636c 6563 692e 636f 6d2f 7374 6174  ircleci.com/stat
+-000005e0: 7573 2d62 6164 6765 2f72 6564 6972 6563  us-badge/redirec
+-000005f0: 742f 6768 2f73 6563 7265 7466 6c6f 772f  t/gh/secretflow/
+-00000600: 7365 6372 6574 666c 6f77 2f74 7265 652f  secretflow/tree/
+-00000610: 6d61 696e 290a 0a53 6563 7265 7446 6c6f  main)..SecretFlo
+-00000620: 7720 6973 2061 2075 6e69 6669 6564 2066  w is a unified f
+-00000630: 7261 6d65 776f 726b 2066 6f72 2070 7269  ramework for pri
+-00000640: 7661 6379 2d70 7265 7365 7276 696e 6720  vacy-preserving 
+-00000650: 6461 7461 2069 6e74 656c 6c69 6765 6e63  data intelligenc
+-00000660: 6520 616e 6420 6d61 6368 696e 6520 6c65  e and machine le
+-00000670: 6172 6e69 6e67 2e20 546f 2061 6368 6965  arning. To achie
+-00000680: 7665 2074 6869 7320 676f 616c 2c0a 6974  ve this goal,.it
+-00000690: 2070 726f 7669 6465 733a 0a0a 2d20 416e   provides:..- An
+-000006a0: 2061 6273 7472 6163 7420 6465 7669 6365   abstract device
+-000006b0: 206c 6179 6572 2063 6f6e 7369 7374 7320   layer consists 
+-000006c0: 6f66 2070 6c61 696e 2064 6576 6963 6573  of plain devices
+-000006d0: 2061 6e64 2073 6563 7265 7420 6465 7669   and secret devi
+-000006e0: 6365 7320 7768 6963 6820 656e 6361 7073  ces which encaps
+-000006f0: 756c 6174 6520 7661 7269 6f75 7320 6372  ulate various cr
+-00000700: 7970 746f 6772 6170 6869 6320 7072 6f74  yptographic prot
+-00000710: 6f63 6f6c 732e 0a2d 2041 2064 6576 6963  ocols..- A devic
+-00000720: 6520 666c 6f77 206c 6179 6572 206d 6f64  e flow layer mod
+-00000730: 656c 696e 6720 6869 6768 6572 2061 6c67  eling higher alg
+-00000740: 6f72 6974 686d 7320 6173 2064 6576 6963  orithms as devic
+-00000750: 6520 6f62 6a65 6374 2066 6c6f 7720 616e  e object flow an
+-00000760: 6420 4441 472e 0a2d 2041 6e20 616c 676f  d DAG..- An algo
+-00000770: 7269 7468 6d20 6c61 7965 7220 746f 2064  rithm layer to d
+-00000780: 6f20 6461 7461 2061 6e61 6c79 7369 7320  o data analysis 
+-00000790: 616e 6420 6d61 6368 696e 6520 6c65 6172  and machine lear
+-000007a0: 6e69 6e67 2077 6974 6820 686f 7269 7a6f  ning with horizo
+-000007b0: 6e74 616c 206f 7220 7665 7274 6963 616c  ntal or vertical
+-000007c0: 2070 6172 7469 7469 6f6e 6564 2064 6174   partitioned dat
+-000007d0: 612e 0a2d 2041 2077 6f72 6b66 6c6f 7720  a..- A workflow 
+-000007e0: 6c61 7965 7220 7468 6174 2073 6561 6d6c  layer that seaml
+-000007f0: 6573 736c 7920 696e 7465 6772 6174 6573  essly integrates
+-00000800: 2064 6174 6120 7072 6f63 6573 7369 6e67   data processing
+-00000810: 2c20 6d6f 6465 6c20 7472 6169 6e69 6e67  , model training
+-00000820: 2c20 616e 6420 6879 7065 7270 6172 616d  , and hyperparam
+-00000830: 6574 6572 2074 756e 696e 672e 0a0a 3c64  eter tuning...<d
+-00000840: 6976 2061 6c69 676e 3d22 6365 6e74 6572  iv align="center
+-00000850: 223e 0a20 2020 203c 696d 6720 7372 633d  ">.    <img src=
+-00000860: 2264 6f63 732f 5f73 7461 7469 632f 7365  "docs/_static/se
+-00000870: 6372 6574 666c 6f77 5f61 7263 682e 7376  cretflow_arch.sv
+-00000880: 6722 3e0a 3c2f 6469 763e 0a0a 2323 2044  g">.</div>..## D
+-00000890: 6f63 756d 656e 7461 7469 6f6e 0a0a 2d20  ocumentation..- 
+-000008a0: 5b53 6563 7265 7446 6c6f 775d 2868 7474  [SecretFlow](htt
+-000008b0: 7073 3a2f 2f77 7777 2e73 6563 7265 7466  ps://www.secretf
+-000008c0: 6c6f 772e 6f72 672e 636e 2f64 6f63 732f  low.org.cn/docs/
+-000008d0: 7365 6372 6574 666c 6f77 2f7a 685f 434e  secretflow/zh_CN
+-000008e0: 2f29 0a20 202d 205b 4765 7474 696e 6720  /).  - [Getting 
+-000008f0: 5374 6172 7465 645d 2868 7474 7073 3a2f  Started](https:/
+-00000900: 2f77 7777 2e73 6563 7265 7466 6c6f 772e  /www.secretflow.
+-00000910: 6f72 672e 636e 2f64 6f63 732f 7365 6372  org.cn/docs/secr
+-00000920: 6574 666c 6f77 2f7a 685f 434e 2f67 6574  etflow/zh_CN/get
+-00000930: 7469 6e67 5f73 7461 7274 6564 2f69 6e64  ting_started/ind
+-00000940: 6578 2e68 746d 6c29 0a20 202d 205b 436f  ex.html).  - [Co
+-00000950: 6d70 6f6e 656e 7473 5d28 6874 7470 733a  mponents](https:
+-00000960: 2f2f 7777 772e 7365 6372 6574 666c 6f77  //www.secretflow
+-00000970: 2e6f 7267 2e63 6e2f 646f 6373 2f73 6563  .org.cn/docs/sec
+-00000980: 7265 7466 6c6f 772f 7a68 5f43 4e2f 636f  retflow/zh_CN/co
+-00000990: 6d70 6f6e 656e 7473 2f69 6e64 6578 2e68  mponents/index.h
+-000009a0: 746d 6c29 0a20 202d 205b 4150 4920 5265  tml).  - [API Re
+-000009b0: 6665 7265 6e63 655d 2868 7474 7073 3a2f  ference](https:/
+-000009c0: 2f77 7777 2e73 6563 7265 7466 6c6f 772e  /www.secretflow.
+-000009d0: 6f72 672e 636e 2f64 6f63 732f 7365 6372  org.cn/docs/secr
+-000009e0: 6574 666c 6f77 2f7a 685f 434e 2f61 7069  etflow/zh_CN/api
+-000009f0: 2f69 6e64 6578 2e68 746d 6c29 0a20 202d  /index.html).  -
+-00000a00: 205b 5475 746f 7269 616c 5d28 6874 7470   [Tutorial](http
+-00000a10: 733a 2f2f 7777 772e 7365 6372 6574 666c  s://www.secretfl
+-00000a20: 6f77 2e6f 7267 2e63 6e2f 646f 6373 2f73  ow.org.cn/docs/s
+-00000a30: 6563 7265 7466 6c6f 772f 7a68 5f43 4e2f  ecretflow/zh_CN/
+-00000a40: 7475 746f 7269 616c 2f69 6e64 6578 2e68  tutorial/index.h
+-00000a50: 746d 6c29 0a0a 0a23 2320 5365 6372 6574  tml)...## Secret
+-00000a60: 466c 6f77 2052 656c 6174 6564 2050 726f  Flow Related Pro
+-00000a70: 6a65 6374 730a 0a2d 205b 5343 514c 5d28  jects..- [SCQL](
+-00000a80: 6874 7470 733a 2f2f 6769 7468 7562 2e63  https://github.c
+-00000a90: 6f6d 2f73 6563 7265 7466 6c6f 772f 7363  om/secretflow/sc
+-00000aa0: 716c 293a 2041 2073 7973 7465 6d20 7468  ql): A system th
+-00000ab0: 6174 2061 6c6c 6f77 7320 6d75 6c74 6970  at allows multip
+-00000ac0: 6c65 2064 6973 7472 7573 7469 6e67 2070  le distrusting p
+-00000ad0: 6172 7469 6573 2074 6f20 7275 6e20 6a6f  arties to run jo
+-00000ae0: 696e 7420 616e 616c 7973 6973 2077 6974  int analysis wit
+-00000af0: 686f 7574 2072 6576 6561 6c69 6e67 2074  hout revealing t
+-00000b00: 6865 6972 2070 7269 7661 7465 2064 6174  heir private dat
+-00000b10: 612e 0a2d 205b 5350 555d 2868 7474 7073  a..- [SPU](https
+-00000b20: 3a2f 2f67 6974 6875 622e 636f 6d2f 7365  ://github.com/se
+-00000b30: 6372 6574 666c 6f77 2f73 7075 293a 2041  cretflow/spu): A
+-00000b40: 2070 726f 7661 626c 652c 206d 6561 7375   provable, measu
+-00000b50: 7261 626c 6520 7365 6375 7265 2063 6f6d  rable secure com
+-00000b60: 7075 7461 7469 6f6e 2064 6576 6963 652c  putation device,
+-00000b70: 2077 6869 6368 2070 726f 7669 6465 7320   which provides 
+-00000b80: 636f 6d70 7574 6174 696f 6e20 6162 696c  computation abil
+-00000b90: 6974 7920 7768 696c 6520 6b65 6570 696e  ity while keepin
+-00000ba0: 6720 796f 7572 2070 7269 7661 7465 2064  g your private d
+-00000bb0: 6174 6120 7072 6f74 6563 7465 642e 0a2d  ata protected..-
+-00000bc0: 205b 4845 555d 2868 7474 7073 3a2f 2f67   [HEU](https://g
+-00000bd0: 6974 6875 622e 636f 6d2f 7365 6372 6574  ithub.com/secret
+-00000be0: 666c 6f77 2f68 6575 293a 2041 2068 6967  flow/heu): A hig
+-00000bf0: 682d 7065 7266 6f72 6d61 6e63 6520 686f  h-performance ho
+-00000c00: 6d6f 6d6f 7270 6869 6320 656e 6372 7970  momorphic encryp
+-00000c10: 7469 6f6e 2061 6c67 6f72 6974 686d 206c  tion algorithm l
+-00000c20: 6962 7261 7279 2e0a 2d20 5b59 4143 4c5d  ibrary..- [YACL]
+-00000c30: 2868 7474 7073 3a2f 2f67 6974 6875 622e  (https://github.
+-00000c40: 636f 6d2f 7365 6372 6574 666c 6f77 2f79  com/secretflow/y
+-00000c50: 6163 6c29 3a20 4120 432b 2b20 6c69 6272  acl): A C++ libr
+-00000c60: 6172 7920 7468 6174 2063 6f6e 7461 696e  ary that contain
+-00000c70: 7320 6372 7970 7467 7261 7068 792c 206e  s cryptgraphy, n
+-00000c80: 6574 776f 726b 2061 6e64 2069 6f20 6d6f  etwork and io mo
+-00000c90: 6475 6c65 7320 7768 6963 6820 6f74 6865  dules which othe
+-00000ca0: 7220 5365 6372 6574 466c 6f77 2063 6f64  r SecretFlow cod
+-00000cb0: 6520 6465 7065 6e64 7320 6f6e 2e0a 0a23  e depends on...#
+-00000cc0: 2320 496e 7374 616c 6c0a 0a50 6c65 6173  # Install..Pleas
+-00000cd0: 6520 6368 6563 6b20 5b49 4e53 5441 4c4c  e check [INSTALL
+-00000ce0: 4154 494f 4e2e 6d64 5d28 2e2f 494e 5354  ATION.md](./INST
+-00000cf0: 414c 4c41 5449 4f4e 2e6d 6429 0a0a 2323  ALLATION.md)..##
+-00000d00: 2044 6570 6c6f 796d 656e 740a 0a50 6c65   Deployment..Ple
+-00000d10: 6173 6520 6368 6563 6b20 5b44 4550 4c4f  ase check [DEPLO
+-00000d20: 594d 454e 542e 6d64 5d28 2e2f 4445 504c  YMENT.md](./DEPL
+-00000d30: 4f59 4d45 4e54 2e6d 6429 0a0a 2323 2043  OYMENT.md)..## C
+-00000d40: 6f6e 7472 6962 7574 696e 670a 0a50 6c65  ontributing..Ple
+-00000d50: 6173 6520 6368 6563 6b20 5b43 4f4e 5452  ase check [CONTR
+-00000d60: 4942 5554 494e 472e 6d64 5d28 2e2f 434f  IBUTING.md](./CO
+-00000d70: 4e54 5249 4255 5449 4e47 2e6d 6429 0a0a  NTRIBUTING.md)..
+-00000d80: 2323 2044 6973 636c 6169 6d65 720a 0a4e  ## Disclaimer..N
+-00000d90: 6f6e 2d72 656c 6561 7365 2076 6572 7369  on-release versi
+-00000da0: 6f6e 7320 6f66 2053 6563 7265 7446 6c6f  ons of SecretFlo
+-00000db0: 7720 6172 6520 7072 6f68 6962 6974 6564  w are prohibited
+-00000dc0: 2074 6f20 7573 6520 696e 2061 6e79 2070   to use in any p
+-00000dd0: 726f 6475 6374 696f 6e20 656e 7669 726f  roduction enviro
+-00000de0: 6e6d 656e 7420 6475 6520 746f 2070 6f73  nment due to pos
+-00000df0: 7369 626c 6520 6275 6773 2c20 676c 6974  sible bugs, glit
+-00000e00: 6368 6573 2c20 6c61 636b 206f 6620 6675  ches, lack of fu
+-00000e10: 6e63 7469 6f6e 616c 6974 792c 2073 6563  nctionality, sec
+-00000e20: 7572 6974 7920 6973 7375 6573 206f 7220  urity issues or 
+-00000e30: 6f74 6865 7220 7072 6f62 6c65 6d73 2e0a  other problems..
++000001d0: 2070 616e 6461 7320 283d 3d31 2e35 2e33   pandas (==1.5.3
++000001e0: 290a 5265 7175 6972 6573 2d44 6973 743a  ).Requires-Dist:
++000001f0: 2070 726f 746f 6275 6620 283d 3d33 2e31   protobuf (==3.1
++00000200: 392e 3629 0a52 6571 7569 7265 732d 4469  9.6).Requires-Di
++00000210: 7374 3a20 7079 6172 726f 7720 283d 3d31  st: pyarrow (==1
++00000220: 312e 302e 3029 0a52 6571 7569 7265 732d  1.0.0).Requires-
++00000230: 4469 7374 3a20 7333 6673 2028 3d3d 3230  Dist: s3fs (==20
++00000240: 3232 2e31 2e30 290a 5265 7175 6972 6573  22.1.0).Requires
++00000250: 2d44 6973 743a 2073 6369 6b69 742d 6c65  -Dist: scikit-le
++00000260: 6172 6e20 283d 3d31 2e31 2e33 290a 5265  arn (==1.1.3).Re
++00000270: 7175 6972 6573 2d44 6973 743a 2073 6563  quires-Dist: sec
++00000280: 7265 7466 6c6f 772d 7261 7966 6564 2028  retflow-rayfed (
++00000290: 3d3d 302e 312e 3161 3329 0a52 6571 7569  ==0.1.1a3).Requi
++000002a0: 7265 732d 4469 7374 3a20 7370 6172 7365  res-Dist: sparse
++000002b0: 2028 3e3d 302e 3134 2e30 290a 5265 7175   (>=0.14.0).Requ
++000002c0: 6972 6573 2d44 6973 743a 2073 7075 2028  ires-Dist: spu (
++000002d0: 3d3d 302e 332e 3262 3132 290a 5265 7175  ==0.3.2b12).Requ
++000002e0: 6972 6573 2d44 6973 743a 2073 662d 6865  ires-Dist: sf-he
++000002f0: 7520 283d 3d30 2e34 2e32 6230 290a 5265  u (==0.4.2b0).Re
++00000300: 7175 6972 6573 2d44 6973 743a 2074 6632  quires-Dist: tf2
++00000310: 6f6e 6e78 2028 3e3d 312e 3133 2e30 290a  onnx (>=1.13.0).
++00000320: 5265 7175 6972 6573 2d44 6973 743a 2074  Requires-Dist: t
++00000330: 7164 6d0a 5265 7175 6972 6573 2d44 6973  qdm.Requires-Dis
++00000340: 743a 2076 616c 6964 6174 6f72 2e70 7920  t: validator.py 
++00000350: 283d 3d31 2e33 2e30 290a 5265 7175 6972  (==1.3.0).Requir
++00000360: 6573 2d44 6973 743a 2078 6762 6f6f 7374  es-Dist: xgboost
++00000370: 2028 3d3d 312e 352e 3229 0a52 6571 7569   (==1.5.2).Requi
++00000380: 7265 732d 4469 7374 3a20 7768 6565 6c20  res-Dist: wheel 
++00000390: 283e 3d30 2e33 382e 3129 0a52 6571 7569  (>=0.38.1).Requi
++000003a0: 7265 732d 4469 7374 3a20 746f 7263 6820  res-Dist: torch 
++000003b0: 283d 3d32 2e30 2e30 290a 5265 7175 6972  (==2.0.0).Requir
++000003c0: 6573 2d44 6973 743a 2074 6f72 6368 6d65  es-Dist: torchme
++000003d0: 7472 6963 7320 283d 3d30 2e31 312e 3429  trics (==0.11.4)
++000003e0: 0a52 6571 7569 7265 732d 4469 7374 3a20  .Requires-Dist: 
++000003f0: 746f 7263 6876 6973 696f 6e20 283d 3d30  torchvision (==0
++00000400: 2e31 352e 3129 0a52 6571 7569 7265 732d  .15.1).Requires-
++00000410: 4469 7374 3a20 746f 7263 6861 7564 696f  Dist: torchaudio
++00000420: 2028 3d3d 322e 302e 3129 0a52 6571 7569   (==2.0.1).Requi
++00000430: 7265 732d 4469 7374 3a20 7465 6e73 6f72  res-Dist: tensor
++00000440: 666c 6f77 2028 3d3d 322e 3130 2e31 2920  flow (==2.10.1) 
++00000450: 3b20 706c 6174 666f 726d 5f6d 6163 6869  ; platform_machi
++00000460: 6e65 2021 3d20 2261 726d 3634 220a 5265  ne != "arm64".Re
++00000470: 7175 6972 6573 2d44 6973 743a 2074 656e  quires-Dist: ten
++00000480: 736f 7266 6c6f 772d 6d61 636f 7320 283d  sorflow-macos (=
++00000490: 3d32 2e31 312e 3029 203b 2070 6c61 7466  =2.11.0) ; platf
++000004a0: 6f72 6d5f 6d61 6368 696e 6520 3d3d 2022  orm_machine == "
++000004b0: 6172 6d36 3422 2061 6e64 2070 6c61 7466  arm64" and platf
++000004c0: 6f72 6d5f 7379 7374 656d 203d 3d20 2244  orm_system == "D
++000004d0: 6172 7769 6e22 0a50 726f 7669 6465 732d  arwin".Provides-
++000004e0: 4578 7472 613a 2064 6576 0a52 6571 7569  Extra: dev.Requi
++000004f0: 7265 732d 4469 7374 3a20 7079 6c69 6e74  res-Dist: pylint
++00000500: 203b 2065 7874 7261 203d 3d20 2764 6576   ; extra == 'dev
++00000510: 270a 0a3c 6469 7620 616c 6967 6e3d 2263  '..<div align="c
++00000520: 656e 7465 7222 3e0a 2020 2020 3c69 6d67  enter">.    <img
++00000530: 2073 7263 3d22 646f 6373 2f5f 7374 6174   src="docs/_stat
++00000540: 6963 2f6c 6f67 6f2d 6c69 6768 742e 706e  ic/logo-light.pn
++00000550: 6722 3e0a 3c2f 6469 763e 0a0a 2d2d 2d0a  g">.</div>..---.
++00000560: 0a5b 215b 4369 7263 6c65 4349 5d28 6874  .[![CircleCI](ht
++00000570: 7470 733a 2f2f 646c 2e63 6972 636c 6563  tps://dl.circlec
++00000580: 692e 636f 6d2f 7374 6174 7573 2d62 6164  i.com/status-bad
++00000590: 6765 2f69 6d67 2f67 682f 7365 6372 6574  ge/img/gh/secret
++000005a0: 666c 6f77 2f73 6563 7265 7466 6c6f 772f  flow/secretflow/
++000005b0: 7472 6565 2f6d 6169 6e2e 7376 673f 7374  tree/main.svg?st
++000005c0: 796c 653d 7376 6729 5d28 6874 7470 733a  yle=svg)](https:
++000005d0: 2f2f 646c 2e63 6972 636c 6563 692e 636f  //dl.circleci.co
++000005e0: 6d2f 7374 6174 7573 2d62 6164 6765 2f72  m/status-badge/r
++000005f0: 6564 6972 6563 742f 6768 2f73 6563 7265  edirect/gh/secre
++00000600: 7466 6c6f 772f 7365 6372 6574 666c 6f77  tflow/secretflow
++00000610: 2f74 7265 652f 6d61 696e 290a 0a3c 7020  /tree/main)..<p 
++00000620: 616c 6967 6e3d 2263 656e 7465 7222 3e0a  align="center">.
++00000630: 3c61 2068 7265 663d 222e 2f52 4541 444d  <a href="./READM
++00000640: 452e 7a68 2d43 4e2e 6d64 223e e7ae 80e4  E.zh-CN.md">....
++00000650: bd93 e4b8 ade6 9687 3c2f 613e efbd 9c3c  ........</a>...<
++00000660: 6120 6872 6566 3d22 2e2f 5245 4144 4d45  a href="./README
++00000670: 2e6d 6422 3e45 6e67 6c69 7368 3c2f 613e  .md">English</a>
++00000680: 0a3c 2f70 3e0a 0a53 6563 7265 7446 6c6f  .</p>..SecretFlo
++00000690: 7720 6973 2061 2075 6e69 6669 6564 2066  w is a unified f
++000006a0: 7261 6d65 776f 726b 2066 6f72 2070 7269  ramework for pri
++000006b0: 7661 6379 2d70 7265 7365 7276 696e 6720  vacy-preserving 
++000006c0: 6461 7461 2069 6e74 656c 6c69 6765 6e63  data intelligenc
++000006d0: 6520 616e 6420 6d61 6368 696e 6520 6c65  e and machine le
++000006e0: 6172 6e69 6e67 2e20 546f 2061 6368 6965  arning. To achie
++000006f0: 7665 2074 6869 7320 676f 616c 2c0a 6974  ve this goal,.it
++00000700: 2070 726f 7669 6465 733a 0a0a 2d20 416e   provides:..- An
++00000710: 2061 6273 7472 6163 7420 6465 7669 6365   abstract device
++00000720: 206c 6179 6572 2063 6f6e 7369 7374 7320   layer consists 
++00000730: 6f66 2070 6c61 696e 2064 6576 6963 6573  of plain devices
++00000740: 2061 6e64 2073 6563 7265 7420 6465 7669   and secret devi
++00000750: 6365 7320 7768 6963 6820 656e 6361 7073  ces which encaps
++00000760: 756c 6174 6520 7661 7269 6f75 7320 6372  ulate various cr
++00000770: 7970 746f 6772 6170 6869 6320 7072 6f74  yptographic prot
++00000780: 6f63 6f6c 732e 0a2d 2041 2064 6576 6963  ocols..- A devic
++00000790: 6520 666c 6f77 206c 6179 6572 206d 6f64  e flow layer mod
++000007a0: 656c 696e 6720 6869 6768 6572 2061 6c67  eling higher alg
++000007b0: 6f72 6974 686d 7320 6173 2064 6576 6963  orithms as devic
++000007c0: 6520 6f62 6a65 6374 2066 6c6f 7720 616e  e object flow an
++000007d0: 6420 4441 472e 0a2d 2041 6e20 616c 676f  d DAG..- An algo
++000007e0: 7269 7468 6d20 6c61 7965 7220 746f 2064  rithm layer to d
++000007f0: 6f20 6461 7461 2061 6e61 6c79 7369 7320  o data analysis 
++00000800: 616e 6420 6d61 6368 696e 6520 6c65 6172  and machine lear
++00000810: 6e69 6e67 2077 6974 6820 686f 7269 7a6f  ning with horizo
++00000820: 6e74 616c 206f 7220 7665 7274 6963 616c  ntal or vertical
++00000830: 2070 6172 7469 7469 6f6e 6564 2064 6174   partitioned dat
++00000840: 612e 0a2d 2041 2077 6f72 6b66 6c6f 7720  a..- A workflow 
++00000850: 6c61 7965 7220 7468 6174 2073 6561 6d6c  layer that seaml
++00000860: 6573 736c 7920 696e 7465 6772 6174 6573  essly integrates
++00000870: 2064 6174 6120 7072 6f63 6573 7369 6e67   data processing
++00000880: 2c20 6d6f 6465 6c20 7472 6169 6e69 6e67  , model training
++00000890: 2c20 616e 6420 6879 7065 7270 6172 616d  , and hyperparam
++000008a0: 6574 6572 2074 756e 696e 672e 0a0a 3c64  eter tuning...<d
++000008b0: 6976 2061 6c69 676e 3d22 6365 6e74 6572  iv align="center
++000008c0: 223e 0a20 2020 203c 696d 6720 7372 633d  ">.    <img src=
++000008d0: 2264 6f63 732f 5f73 7461 7469 632f 7365  "docs/_static/se
++000008e0: 6372 6574 666c 6f77 5f61 7263 682e 7376  cretflow_arch.sv
++000008f0: 6722 3e0a 3c2f 6469 763e 0a0a 2323 2044  g">.</div>..## D
++00000900: 6f63 756d 656e 7461 7469 6f6e 0a0a 2d20  ocumentation..- 
++00000910: 5b53 6563 7265 7446 6c6f 775d 2868 7474  [SecretFlow](htt
++00000920: 7073 3a2f 2f77 7777 2e73 6563 7265 7466  ps://www.secretf
++00000930: 6c6f 772e 6f72 672e 636e 2f64 6f63 732f  low.org.cn/docs/
++00000940: 7365 6372 6574 666c 6f77 2f65 6e2f 290a  secretflow/en/).
++00000950: 2020 2d20 5b47 6574 7469 6e67 2053 7461    - [Getting Sta
++00000960: 7274 6564 5d28 6874 7470 733a 2f2f 7777  rted](https://ww
++00000970: 772e 7365 6372 6574 666c 6f77 2e6f 7267  w.secretflow.org
++00000980: 2e63 6e2f 646f 6373 2f73 6563 7265 7466  .cn/docs/secretf
++00000990: 6c6f 772f 656e 2f67 6574 7469 6e67 5f73  low/en/getting_s
++000009a0: 7461 7274 6564 2f69 6e64 6578 2e68 746d  tarted/index.htm
++000009b0: 6c29 0a20 202d 205b 436f 6d70 6f6e 656e  l).  - [Componen
++000009c0: 7473 5d28 6874 7470 733a 2f2f 7777 772e  ts](https://www.
++000009d0: 7365 6372 6574 666c 6f77 2e6f 7267 2e63  secretflow.org.c
++000009e0: 6e2f 646f 6373 2f73 6563 7265 7466 6c6f  n/docs/secretflo
++000009f0: 772f 656e 2f63 6f6d 706f 6e65 6e74 732f  w/en/components/
++00000a00: 696e 6465 782e 6874 6d6c 290a 2020 2d20  index.html).  - 
++00000a10: 5b41 5049 2052 6566 6572 656e 6365 5d28  [API Reference](
++00000a20: 6874 7470 733a 2f2f 7777 772e 7365 6372  https://www.secr
++00000a30: 6574 666c 6f77 2e6f 7267 2e63 6e2f 646f  etflow.org.cn/do
++00000a40: 6373 2f73 6563 7265 7466 6c6f 772f 656e  cs/secretflow/en
++00000a50: 2f61 7069 2f69 6e64 6578 2e68 746d 6c29  /api/index.html)
++00000a60: 0a20 202d 205b 5475 746f 7269 616c 5d28  .  - [Tutorial](
++00000a70: 6874 7470 733a 2f2f 7777 772e 7365 6372  https://www.secr
++00000a80: 6574 666c 6f77 2e6f 7267 2e63 6e2f 646f  etflow.org.cn/do
++00000a90: 6373 2f73 6563 7265 7466 6c6f 772f 656e  cs/secretflow/en
++00000aa0: 2f74 7574 6f72 6961 6c2f 696e 6465 782e  /tutorial/index.
++00000ab0: 6874 6d6c 290a 0a0a 2323 2053 6563 7265  html)...## Secre
++00000ac0: 7446 6c6f 7720 5265 6c61 7465 6420 5072  tFlow Related Pr
++00000ad0: 6f6a 6563 7473 0a0a 2d20 5b53 4351 4c5d  ojects..- [SCQL]
++00000ae0: 2868 7474 7073 3a2f 2f67 6974 6875 622e  (https://github.
++00000af0: 636f 6d2f 7365 6372 6574 666c 6f77 2f73  com/secretflow/s
++00000b00: 6371 6c29 3a20 4120 7379 7374 656d 2074  cql): A system t
++00000b10: 6861 7420 616c 6c6f 7773 206d 756c 7469  hat allows multi
++00000b20: 706c 6520 6469 7374 7275 7374 696e 6720  ple distrusting 
++00000b30: 7061 7274 6965 7320 746f 2072 756e 206a  parties to run j
++00000b40: 6f69 6e74 2061 6e61 6c79 7369 7320 7769  oint analysis wi
++00000b50: 7468 6f75 7420 7265 7665 616c 696e 6720  thout revealing 
++00000b60: 7468 6569 7220 7072 6976 6174 6520 6461  their private da
++00000b70: 7461 2e0a 2d20 5b53 5055 5d28 6874 7470  ta..- [SPU](http
++00000b80: 733a 2f2f 6769 7468 7562 2e63 6f6d 2f73  s://github.com/s
++00000b90: 6563 7265 7466 6c6f 772f 7370 7529 3a20  ecretflow/spu): 
++00000ba0: 4120 7072 6f76 6162 6c65 2c20 6d65 6173  A provable, meas
++00000bb0: 7572 6162 6c65 2073 6563 7572 6520 636f  urable secure co
++00000bc0: 6d70 7574 6174 696f 6e20 6465 7669 6365  mputation device
++00000bd0: 2c20 7768 6963 6820 7072 6f76 6964 6573  , which provides
++00000be0: 2063 6f6d 7075 7461 7469 6f6e 2061 6269   computation abi
++00000bf0: 6c69 7479 2077 6869 6c65 206b 6565 7069  lity while keepi
++00000c00: 6e67 2079 6f75 7220 7072 6976 6174 6520  ng your private 
++00000c10: 6461 7461 2070 726f 7465 6374 6564 2e0a  data protected..
++00000c20: 2d20 5b48 4555 5d28 6874 7470 733a 2f2f  - [HEU](https://
++00000c30: 6769 7468 7562 2e63 6f6d 2f73 6563 7265  github.com/secre
++00000c40: 7466 6c6f 772f 6865 7529 3a20 4120 6869  tflow/heu): A hi
++00000c50: 6768 2d70 6572 666f 726d 616e 6365 2068  gh-performance h
++00000c60: 6f6d 6f6d 6f72 7068 6963 2065 6e63 7279  omomorphic encry
++00000c70: 7074 696f 6e20 616c 676f 7269 7468 6d20  ption algorithm 
++00000c80: 6c69 6272 6172 792e 0a2d 205b 5941 434c  library..- [YACL
++00000c90: 5d28 6874 7470 733a 2f2f 6769 7468 7562  ](https://github
++00000ca0: 2e63 6f6d 2f73 6563 7265 7466 6c6f 772f  .com/secretflow/
++00000cb0: 7961 636c 293a 2041 2043 2b2b 206c 6962  yacl): A C++ lib
++00000cc0: 7261 7279 2074 6861 7420 636f 6e74 6169  rary that contai
++00000cd0: 6e73 2063 7279 7074 6772 6170 6879 2c20  ns cryptgraphy, 
++00000ce0: 6e65 7477 6f72 6b20 616e 6420 696f 206d  network and io m
++00000cf0: 6f64 756c 6573 2077 6869 6368 206f 7468  odules which oth
++00000d00: 6572 2053 6563 7265 7446 6c6f 7720 636f  er SecretFlow co
++00000d10: 6465 2064 6570 656e 6473 206f 6e2e 0a0a  de depends on...
++00000d20: 2323 2049 6e73 7461 6c6c 0a0a 506c 6561  ## Install..Plea
++00000d30: 7365 2063 6865 636b 205b 494e 5354 414c  se check [INSTAL
++00000d40: 4c41 5449 4f4e 2e6d 645d 282e 2f64 6f63  LATION.md](./doc
++00000d50: 732f 6765 7474 696e 675f 7374 6172 7465  s/getting_starte
++00000d60: 642f 494e 5354 414c 4c41 5449 4f4e 2e6d  d/INSTALLATION.m
++00000d70: 6429 0a0a 2323 2044 6570 6c6f 796d 656e  d)..## Deploymen
++00000d80: 740a 0a50 6c65 6173 6520 6368 6563 6b20  t..Please check 
++00000d90: 5b44 4550 4c4f 594d 454e 542e 6d64 5d28  [DEPLOYMENT.md](
++00000da0: 2e2f 646f 6373 2f67 6574 7469 6e67 5f73  ./docs/getting_s
++00000db0: 7461 7274 6564 2f44 4550 4c4f 594d 454e  tarted/DEPLOYMEN
++00000dc0: 542e 6d64 290a 0a23 2320 436f 6e74 7269  T.md)..## Contri
++00000dd0: 6275 7469 6e67 0a0a 506c 6561 7365 2063  buting..Please c
++00000de0: 6865 636b 205b 434f 4e54 5249 4255 5449  heck [CONTRIBUTI
++00000df0: 4e47 2e6d 645d 282e 2f43 4f4e 5452 4942  NG.md](./CONTRIB
++00000e00: 5554 494e 472e 6d64 290a 0a23 2320 4469  UTING.md)..## Di
++00000e10: 7363 6c61 696d 6572 0a0a 4e6f 6e2d 7265  sclaimer..Non-re
++00000e20: 6c65 6173 6520 7665 7273 696f 6e73 206f  lease versions o
++00000e30: 6620 5365 6372 6574 466c 6f77 2061 7265  f SecretFlow are
++00000e40: 2070 726f 6869 6269 7465 6420 746f 2075   prohibited to u
++00000e50: 7365 2069 6e20 616e 7920 7072 6f64 7563  se in any produc
++00000e60: 7469 6f6e 2065 6e76 6972 6f6e 6d65 6e74  tion environment
++00000e70: 2064 7565 2074 6f20 706f 7373 6962 6c65   due to possible
++00000e80: 2062 7567 732c 2067 6c69 7463 6865 732c   bugs, glitches,
++00000e90: 206c 6163 6b20 6f66 2066 756e 6374 696f   lack of functio
++00000ea0: 6e61 6c69 7479 2c20 7365 6375 7269 7479  nality, security
++00000eb0: 2069 7373 7565 7320 6f72 206f 7468 6572   issues or other
++00000ec0: 2070 726f 626c 656d 732e 0a               problems..
+```
+
+## Comparing `secretflow-0.8.0b1.dist-info/RECORD` & `secretflow-0.8.1b0.dist-info/RECORD`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,193 +1,228 @@
+-secretflow/__init__.py,sha256=PqDTmqrGhw8NAV93A4e5bSSB8ko_btGH2RXuGNwIZ_0,1136
++secretflow/__init__.py,sha256=caiZVbXMRwqUKhDuy_Ca295Mw-YYMhrUOteWHx0RgLA,1261
++secretflow/version.py,sha256=wboVrEO0tVexsLCxIhz7UiDnY8fePbece6gbPAMGQmk,607
+ secretflow/data/__init__.py,sha256=dfSoOj_BQ2QEMiFZXgitx2IHrpJ2qyN4hGfgpKbeKcI,754
+-secretflow/data/base.py,sha256=T_oMESbpRn7nfVdSA4PbWhkBSVxebWKNiFoYVuoYaG4,14806
++secretflow/data/base.py,sha256=qDwucRS3FHJ0kYYMatUuS_1HL67UxJ2IjKi6UvFBfSw,14806
+ secretflow/data/math_utils.py,sha256=wLVcz6eJC7LAYdTXfxERZmwtmxVfchpUkTNKVEW86HA,1108
+-secretflow/data/ndarray.py,sha256=mcGhGs9FtEGOhHUVeNlUmZ_RdBDjBQaUgBmuP5S32_c,26347
+-secretflow/data/split.py,sha256=WVobfLqgsP2blK3LHUsoNWjSt_hDffS7iHzZoU8ZEss,5586
++secretflow/data/ndarray.py,sha256=DN3GXtz2MAbbohNPvnJvYvSs9Eyy6a2kBJekTNElgh4,24878
++secretflow/data/split.py,sha256=s8HV00DaVKulNvP2-BkH_Y8cWrrnqSc_ANPgKtOQBlY,5420
+ secretflow/data/horizontal/__init__.py,sha256=_2-VKz4GGygJrut0AqnLa4qvWQGztgzHkFIcoLMYhmk,716
+ secretflow/data/horizontal/dataframe.py,sha256=Vbc_GmHbDE6o54qEdYSQ12FVRPTc5TPzCdorO5nMZcQ,15042
+ secretflow/data/horizontal/io.py,sha256=qIkzQLT8kMBq-PLU1M3OfS7-fXug61AbdzItvaNySsY,2557
+ secretflow/data/horizontal/sampler.py,sha256=wTkHd8A_C4bLSm380P2Lg0e6LBeLXplAQdHDrXDNz1M,1555
+ secretflow/data/io/__init__.py,sha256=GiNwroIs5A3LY5nKf5KR32Gay8e-zoVHo8_qKdVZEd4,627
+ secretflow/data/io/oss.py,sha256=ma0WzVSQO37GBDI7AmHQByM1eUtXRMMBL1z3CxoM6ag,2112
+-secretflow/data/io/util.py,sha256=973b5DUSsfpZWQaGFlcaAtz2_zvGRODXi3OpnEppHXU,2075
++secretflow/data/io/util.py,sha256=wUL1gtqT72yuAwP31UTPI2wMgaVT_tKp92FlOR0KSlo,2083
+ secretflow/data/mix/__init__.py,sha256=h2bB-DvEkqUeUINstjjMvNzTEOxrwDpp3DML2oD2RoU,691
+ secretflow/data/mix/dataframe.py,sha256=vAuf-CVuCrG6U5qUtbcwdv-N2I6ORLzGdHgna7-oRuY,15054
+ secretflow/data/vertical/__init__.py,sha256=lvsakfHAkSdOtxQ88zhVftq5opqHQbKWs_3avYr5-xc,716
+-secretflow/data/vertical/dataframe.py,sha256=0RXtRls2Qrr5l0utPdEZToPoZ5FIngaht20Kx7-INZw,22943
++secretflow/data/vertical/dataframe.py,sha256=EAzfauTNycPHfZHteBf-FLVOqiBS0VuLkpzf7mtjF5Q,22944
+ secretflow/data/vertical/io.py,sha256=M640m6S3Rh5pD4w4e1AvHRkyVu4S8R3UXLPvuf0jZBI,6821
+ secretflow/device/__init__.py,sha256=BEn43Wg3C8Pr9-f1ynF-L1HJ4IVKC8R2tU-SqnOOpp4,745
+-secretflow/device/driver.py,sha256=EryVwQvQFgVmBx9qJIUx0fnEzLG95lH2I4dudH2Kfuc,15193
+-secretflow/device/link.py,sha256=gIHF8_dmcyVo6aFCb0qy9nW7UKtZFJvJOkiatkhM5Qs,10796
++secretflow/device/driver.py,sha256=M67_J2NG0VIvmfhEB9G7qpqgvv3OIZ2ZLUXzSpDPGYQ,22444
++secretflow/device/global_state.py,sha256=5C6cysrgRG56oB93sBYHr2afkTMjlM3rL1VlD6sBuvw,2981
++secretflow/device/link.py,sha256=s8Dsx-UQ2XcbByFauiix2TXUWIosXhZCvB2T1dtPRJ0,10795
+ secretflow/device/proxy.py,sha256=DZTukc-c3-PmdJwpTgoUY7HqaxNWkdGYIepts87akDI,8100
+-secretflow/device/device/__init__.py,sha256=GVMdpOYEwHB_BtPA19Rjof0aklq02-U8sq1b5gATlYo,894
+-secretflow/device/device/base.py,sha256=E6Lun94gcl2msOlny8hfz6F_N86l4aH6c1wXKdPShlM,2920
+-secretflow/device/device/heu.py,sha256=dowbUZLZWhY7upmxkbepMFoBlII-eFD_D1Bq5XnC8UY,17158
+-secretflow/device/device/heu_object.py,sha256=2hHVhIwZTzEbm6o8frVFFHSZkLPNjxmS7vY1MJ5_hF4,3545
+-secretflow/device/device/pyu.py,sha256=0Sy6cJ65_yA8vX-zDC20rpTE5qqemW_UCaqdYEzhx04,5201
+-secretflow/device/device/register.py,sha256=A_hVaNvIDQSycn_LQTgRFbFg1bmqfoooBmKRGLMJjLc,3572
+-secretflow/device/device/spu.py,sha256=OYnya6VIEjy-Ha2f9UuwpwjyxXttif_p_4uoGyxyv7g,47878
++secretflow/device/device/__init__.py,sha256=WI_jmQfWPY5VQu-b-cUbqK8SqjXHYdRG-NF4iIFTEgc,939
++secretflow/device/device/_utils.py,sha256=H6q--hVRw7lQYzSbIenVM1vcGheQY8kNVK-KOEg-13w,889
++secretflow/device/device/base.py,sha256=kvlkLFmZ0fmAsGQOTR5NC3X6YAnc9NecAPSS_UNoSGQ,2264
++secretflow/device/device/heu.py,sha256=40aEkeQb4ncdmAleZFAGmQZJI9cjkiOF49qDoj1iVck,22903
++secretflow/device/device/heu_object.py,sha256=JuDaZYK8g55qzfFcqQkARmkZCX93BKV4nxsOu2Ei67E,6068
++secretflow/device/device/pyu.py,sha256=T8SoyTiNIUQWj4OmBgqV7EFZxFkS-q-OxV54Zo0eRkU,4693
++secretflow/device/device/register.py,sha256=-2PA4a01mX5Rlh-bbNEgto73P_3c4EtaFd1gbdUVICc,3589
++secretflow/device/device/spu.py,sha256=psOU76PxI9rN7fD6R5S_-y0F1SHkAB0e9S2lEBsKWmU,56627
++secretflow/device/device/teeu.py,sha256=PDW90WT01sI2Cv4tihbaiIGgSwE-FFh4_fZhX2Afu1w,7655
+ secretflow/device/device/type_traits.py,sha256=5jU1LTot9DrQl2meNc5c3mt-_NSnpKnLrHsTUZ-azUI,2410
+-secretflow/device/kernels/__init__.py,sha256=a1uhKy7tbA7WxfxqSWFPjElnJ-gz7pyFYquoVDXDCqs,638
+-secretflow/device/kernels/heu.py,sha256=suSmCv38m02GGpLZu4ryBO_giZ6p3TWG9REBFslAroQ,5528
+-secretflow/device/kernels/pyu.py,sha256=CnQ6qyBlO92zkTzNZV_XqDv3kCltYXakPxoVA1jKcvY,2205
+-secretflow/device/kernels/spu.py,sha256=yfi28HCzQsP5vedA0awRTxKvqE2N-_G1qOqPHsKKcr8,12954
+-secretflow/distributed/__init__.py,sha256=sTHao4gj8FwiXUBfFl0_-qWU-tMNYHnL-57-NOdms6g,223
+-secretflow/distributed/primitive.py,sha256=8ITnRB0aGn_AC14NVKJ3NlnOUs56Y_HGpNpf6jy0vzw,5018
++secretflow/device/kernels/__init__.py,sha256=gWgvZx-2t6_XfGQoVdC9TQNyF-Jm9I9hnn-iVUcNKlE,638
++secretflow/device/kernels/heu.py,sha256=OEVnoebeKU6Jxua1yOCsEPQlhHUlYiQkvpwvvElGkrk,5716
++secretflow/device/kernels/pyu.py,sha256=8VBjgHxYYB14QZGI1XE60SySI4v1uQdbtIe8HJyIBoo,6837
++secretflow/device/kernels/spu.py,sha256=4l6v0c_RL-p4MlsFiH5OE84D23Km2-qfxjANRftlZR0,14374
++secretflow/device/kernels/teeu.py,sha256=o6T8NLSpE9skxJ8eQAqcA4Dk00kC0mMjCzcmkcM1dQc,923
++secretflow/distributed/__init__.py,sha256=lemgXRrzin237GO_Srg0VjaXv0PeJ0daxPVLJT78Qns,784
++secretflow/distributed/primitive.py,sha256=3cSCX6kwIjnB38zzO7TRk9EACZamOhe-NeBg66Yy6p4,6373
+ secretflow/ml/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/ml/boost/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/ml/boost/homo_boost/__init__.py,sha256=MWOYs8dgKs5CBSGS6V95PYd3_j5QGxRvota2xXDXjfk,654
+ secretflow/ml/boost/homo_boost/homo_booster.py,sha256=QSmPBfQy6zh0w7ImjApumrKsHMvED2mB8AILtFroQpk,9580
+ secretflow/ml/boost/homo_boost/homo_booster_worker.py,sha256=BRW8t729QXx3mhd-BhMlDAWDNsSDfVnBoMit1F5jGXg,7462
+-secretflow/ml/boost/homo_boost/homo_decision_tree.py,sha256=-8Rxp8Izl4jLU-j3HPDk-xMuuUQLCG8nwVOu4gJgPSA,11165
++secretflow/ml/boost/homo_boost/homo_decision_tree.py,sha256=tL9ZNnCzEtItkBcm2IOzvyld1oso0z0FUHIa6XF-uZI,11166
+ secretflow/ml/boost/homo_boost/tree_param.py,sha256=y7-5wrirBUU0qTiARbf3UMPTFHtVeawXVOblX9NTb7o,3043
+ secretflow/ml/boost/homo_boost/boost_core/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/ml/boost/homo_boost/boost_core/callback.py,sha256=VMFBtZA0Kxny-X_QwwMSX4QDSMkIqjtq6jn_tNQe_ik,4365
+ secretflow/ml/boost/homo_boost/boost_core/core.py,sha256=1XIyKXDQt5-yxcKkZISL7qQJXthQvEa5LrBIFrrcM_c,7192
+-secretflow/ml/boost/homo_boost/boost_core/training.py,sha256=ubmJSU6lk-AG4fFkso-cOVWSUKHSgVlhw_zwVy01Ngo,9318
++secretflow/ml/boost/homo_boost/boost_core/training.py,sha256=2MMvRppspwE8DBXDthkl6fcG1006EbP4TQ6R3pVb-lY,9317
+ secretflow/ml/boost/homo_boost/tree_core/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/ml/boost/homo_boost/tree_core/criterion.py,sha256=4JERxTXcVG_Ad_bJP7OgqyOnCkh7H3RN-6gPVtX7rS4,4429
+-secretflow/ml/boost/homo_boost/tree_core/decision_tree.py,sha256=zJuhDlyYY0BjcIW-4t1rkrYTv4NdtCkQ0LvFzpBvyzg,18556
+-secretflow/ml/boost/homo_boost/tree_core/feature_histogram.py,sha256=jFBW4p2BH4zsYWt66WKSqyCiZKJPrbHagiqqhiSbmzo,9371
++secretflow/ml/boost/homo_boost/tree_core/decision_tree.py,sha256=svtnTv-E7EZstW000PqRadyV7AxY-kxMNUkLdIRoy1Y,18557
++secretflow/ml/boost/homo_boost/tree_core/feature_histogram.py,sha256=365Zuy8Y9PczRYMHYbR1QrmxDUBWZ68wca1aQJWBxi0,9371
+ secretflow/ml/boost/homo_boost/tree_core/feature_importance.py,sha256=RtYMeKZ4aA8FnihFaTGTfvaeOh0098kvwahY9aj3bY4,2535
+ secretflow/ml/boost/homo_boost/tree_core/loss_function.py,sha256=DGW0AuQuZe64a-SQPfr8XKEknMeW3HW-cK4K-ivc_m4,4218
+ secretflow/ml/boost/homo_boost/tree_core/node.py,sha256=oogyME57SuPl08PcXtUXtK37Wqsbb7LFSuQ0gp52n-M,2060
+ secretflow/ml/boost/homo_boost/tree_core/splitter.py,sha256=pK0qK3Ia5LMziazmdBHTRtum0VjcyohXbCq_nm-qDHA,9846
+-secretflow/ml/boost/ss_xgb_v/__init__.py,sha256=nY9jiO3VpOccBN9COTyPmBbBAzoKySZh7vMW6Rc5RlE,660
+-secretflow/ml/boost/ss_xgb_v/model.py,sha256=hRYRfAvopE_oIXLdKoYAFm08ZJ0JH3JKrIBI1QtwrRY,20000
++secretflow/ml/boost/sgb_v/__init__.py,sha256=05aqw2SGTwLGKUNNvdB1PLL_mh3Keo6k2gDVgF579WU,677
++secretflow/ml/boost/sgb_v/model.py,sha256=CR_A-ESukei3H5xQGvQnkHWTOJuKq18SkLU_xQIREO8,3472
++secretflow/ml/boost/sgb_v/sgb.py,sha256=pqtAs30zec-sAmt-F_x_GBRwDj5PSuBJ81dNEPyYzVM,17539
++secretflow/ml/boost/sgb_v/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++secretflow/ml/boost/sgb_v/core/label_holder.py,sha256=oJIeTqV2Qk9XzxHP5pAZpjbYKp-4iwb3yGKBM41ExWM,9768
++secretflow/ml/boost/sgb_v/core/level_cache.py,sha256=uUt-Ywq2359wFAmnxVgv8KeyApChB67CWtcwDhWL-w8,2043
++secretflow/ml/boost/sgb_v/core/params.py,sha256=GXnNKrQzlznCU99upWCydnCDKA-0VfVnBlTrGbkKPoo,1139
++secretflow/ml/boost/sgb_v/core/preprocessing.py,sha256=711Ipmof58GoGilrHyriXCsC_JovNn-jZAEf8ZGip-o,3212
++secretflow/ml/boost/sgb_v/core/distributed_tree/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++secretflow/ml/boost/sgb_v/core/distributed_tree/distributed_tree.py,sha256=a4yDnl0Onr0Q0oEQ1BeK4ta86BO3ULmO6zVqDYaMfmU,2785
++secretflow/ml/boost/sgb_v/core/distributed_tree/split_tree.py,sha256=jrDeMm7aLqxoRa4cOqXApnUZlWA4TCE0N4vwNiAI1Uk,1582
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/boost.py,sha256=6zzT8bKJqPk7goWarPvOgAb4BaHlEZx-MT7e23vFPdY,2600
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/bucket_sum.py,sha256=oYgjkq2LEL4BPcIGFqYToA8kU8fgNVv-5IFi4kKwocU,1724
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/grad.py,sha256=tRL8nIprFDOr9RsGuqSIEglaLiP6NeuZ8-dK4c0HMCU,930
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/node_select.py,sha256=VtrHE_9U01ChoUj60-Nc2p-oLw9K6JKNxyhBFZ_tMtc,1994
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/pred.py,sha256=HzfGKu-GrWV512hSEnMmc3yccSkmvqESgfip390eUhc,1452
++secretflow/ml/boost/sgb_v/core/pure_numpy_ops/random.py,sha256=0LfG6qRSbj5jRFR8t7LHFmyEXrlMBoOtD1eY2SOOh7Q,776
++secretflow/ml/boost/sgb_v/core/split_tree_trainer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
++secretflow/ml/boost/sgb_v/core/split_tree_trainer/order_map_context.py,sha256=UnVQaD1aoyR6LaPjQU2Ir8VFmvVjRViBO5yC6iv31c4,4712
++secretflow/ml/boost/sgb_v/core/split_tree_trainer/shuffler.py,sha256=Utmj_ETZPRDJzTkzsQ70orNrh6JBXb09TSWWIWat1pQ,2446
++secretflow/ml/boost/sgb_v/core/split_tree_trainer/split_tree_trainer.py,sha256=UWQPzJ8pocK2iG6GpddyyiO2_ImTn9aQ7uh3dA1l_3I,3828
++secretflow/ml/boost/sgb_v/core/split_tree_trainer/splitter.py,sha256=be8BquAywE7IH4WUnALuWudtaX6OuTHq1oXRBK91cCQ,5057
++secretflow/ml/boost/ss_xgb_v/__init__.py,sha256=mWFWnNM-indGXq7-H80y9KisAWayUQtH0MV0nVG0ymE,661
++secretflow/ml/boost/ss_xgb_v/model.py,sha256=-ZKihB60XDRPbn2tqXRwQdZhKY_-RBboves8Dmpa6LY,19885
+ secretflow/ml/boost/ss_xgb_v/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-secretflow/ml/boost/ss_xgb_v/core/node_split.py,sha256=1jJBpuevSj1ypfluMzOtNn2XlVFEv3kpge7M4_B-anU,8800
+-secretflow/ml/boost/ss_xgb_v/core/tree_worker.py,sha256=a9Dvru_WtzVl5nwBiM8syML401kyMh8IvTI41A1Hpe8,10969
+-secretflow/ml/boost/ss_xgb_v/core/utils.py,sha256=0gcvvaptykj8K2JQgCVSbf7z_eRwuV2u_cx4-3CAhmc,1513
++secretflow/ml/boost/ss_xgb_v/core/node_split.py,sha256=_DQ01D3dn-SKpJAwS6NNDKJXNp1Cro41Fpip_AzKO1U,8801
++secretflow/ml/boost/ss_xgb_v/core/tree_worker.py,sha256=CW9JWpwmCLdpNjxXOvChgLIM8MVoxVjW4PvdFwMqJdI,9885
++secretflow/ml/boost/ss_xgb_v/core/utils.py,sha256=DQZ4xkE_6UhQIM0Wh8gfVDFG7wPlfsNV6mGtdyOu76s,1513
+ secretflow/ml/boost/ss_xgb_v/core/xgb_tree.py,sha256=JNeEdH_Boe7mJ8hNjCu0nnuNm2LIfIdiNHBWmDIPF_w,980
+-secretflow/ml/linear/__init__.py,sha256=qg9VX_gG5brIbsi6iQoV5DtrG7234lyz9plKgSHhQ_8,1013
+-secretflow/ml/linear/fl_lr_mix.py,sha256=oVuiSAEF3LVj0h_UU2l2g8_chDALnYcClUUaCL3JXmY,11737
+-secretflow/ml/linear/fl_lr_v.py,sha256=eFqN4Yb71ibUMtAuLSrah9j4_aty1vdxzv764lkFIWY,19161
+-secretflow/ml/linear/linear_model.py,sha256=RV0m4JfVIvNiAhQPWwHkfVxRHmaCQRbD8eMJeL-dCTY,1375
++secretflow/ml/linear/__init__.py,sha256=S6Te5j_pKa2N860u3hrjDaxnN2hiW3c_On6JDidhxQM,1013
++secretflow/ml/linear/fl_lr_mix.py,sha256=YRr1_B-GzdiyhkaAN8xaddjvoGDh1mn03VF3xOjtLXk,11736
++secretflow/ml/linear/fl_lr_v.py,sha256=TePHL_2PAwvvvOFGvGzwKRnzM2r73ScJHEk_yhhE8_E,19131
++secretflow/ml/linear/linear_model.py,sha256=UX7sn9dj60-YVkI7POpiaRbFphntrtje099rOFFZHFE,3129
+ secretflow/ml/linear/hess_sgd/__init__.py,sha256=tqLher8w0NHhOe5pb7Erfdg8Woa6793desVvSkKRJCU,673
+-secretflow/ml/linear/hess_sgd/model.py,sha256=XBr1IG8-GjXS7vMJFcXmFTHaJ3iXvfjgPEYDlt5XqzM,13250
++secretflow/ml/linear/hess_sgd/model.py,sha256=e1p-lv0Mpq8E5h9J3_S28vNVDs8t1LGXJvGHGNFM15k,13250
+ secretflow/ml/linear/ss_glm/__init__.py,sha256=SXmD8shOQpUA5Dp89bX5yNSDThcsWbeVTKMhtLuxRJw,639
+ secretflow/ml/linear/ss_glm/model.py,sha256=znhxnxq5e0k3bLctH3WegAz6E418Z-vS-J1D3DSEKuw,23754
+ secretflow/ml/linear/ss_glm/core/__init__.py,sha256=Hz7_m2Fjd5Efyq_PWbvAAGFaM33blcDFMGURY1v0Fq4,233
+ secretflow/ml/linear/ss_glm/core/distribution.py,sha256=fUizQ1UYW8OyF6Vs5X6Wu3Ue3_7NPaU4MDFRCfGWwQo,5287
+ secretflow/ml/linear/ss_glm/core/link.py,sha256=DXNbYAyxUzheTplGMtqjOOYclhlol0wWqC5iDH_yQTM,2950
+ secretflow/ml/linear/ss_sgd/__init__.py,sha256=hdNmisOmrvblwF4XbF2v8Ddv3ldHzbkYjW2f5rhkM5o,653
+-secretflow/ml/linear/ss_sgd/model.py,sha256=dLtYJzLewyRH1aNxTWXh9g0wOdX7o4uP1uNhIAK-1A4,17121
++secretflow/ml/linear/ss_sgd/model.py,sha256=JSlUpHLBNeniq04TRIDuHRJ3WzFBB6kGSKzysej-pp4,21895
+ secretflow/ml/nn/__init__.py,sha256=iOeB3Fi78uSNTBvlkmcpgkRLo1IPw7ipn1yj6rQrXu4,698
+-secretflow/ml/nn/metrics.py,sha256=rUWzjZfWqpRBhlJVHbJ7bLdMZPdCZQb5tFnxPVFGGF0,8065
++secretflow/ml/nn/metrics.py,sha256=gBobUmtRhk3ZKUAqG1ahKpSe68pOCTQq7KdQiqOKN2g,8064
++secretflow/ml/nn/applications/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
++secretflow/ml/nn/applications/sl_deep_fm.py,sha256=w252NcasCrQwgiO1pPOjZ4kh9Yrld2HW3-Q9I14-7eE,5261
+ secretflow/ml/nn/fl/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/ml/nn/fl/compress.py,sha256=GaPHfpRZ580oueiCQzlRXjeI_0B8QvsUO5IhcLYPVYU,1741
+-secretflow/ml/nn/fl/fl_model.py,sha256=Vkdhy1F57C-3zrbMCPp57CKlJVent3xuW_TduxtCOP8,28179
++secretflow/ml/nn/fl/compress.py,sha256=Vuhbq4PCfEy0rsuLEEQNAshlr6Qxl14MBRgQO7h2pLg,1743
++secretflow/ml/nn/fl/fl_model.py,sha256=At5sXpxFcykejqb1TTWAOkjzhgL8yOJhNNqwJa43SE0,30837
+ secretflow/ml/nn/fl/strategy_dispatcher.py,sha256=C2uR__I-aepXfC8RlOKue9Y_YBo7wnR5JISWegEZkJE,2152
+ secretflow/ml/nn/fl/utils.py,sha256=ZzX_JJqba9f7O7cuc7OhoAksWM7jyfmYD1tFlkLjJMo,3279
+ secretflow/ml/nn/fl/backend/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/ml/nn/fl/backend/tensorflow/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/ml/nn/fl/backend/tensorflow/fl_base.py,sha256=-9jvsqD78LgOLXt5I2pI3z1cyEQGPfmtsCcv3xgc-1I,10911
++secretflow/ml/nn/fl/backend/tensorflow/fl_base.py,sha256=TAwxMXhX5euL4jU7PrDXdKAYz5ce3NkTZ4_tQKQ-oYA,12678
+ secretflow/ml/nn/fl/backend/tensorflow/sampler.py,sha256=noozDHkSAhHRWyui5YFrwEO9hAtn9mtQyESsF8Ooy7o,4369
+-secretflow/ml/nn/fl/backend/tensorflow/strategy/__init__.py,sha256=ymb5f8RwVf0pj5G2WfPh_TKgQ54WHc-S8fs0D_lF2rE,905
+-secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_g.py,sha256=JspKzJEg5s_9NSAWFNKyOdGIR-yOaUDrvh-sESAaiJM,4072
+-secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_u.py,sha256=mhMZMVfXb9U1SBfNNtDj-BpQkkwrqG5_qHLuJ00jYX0,4104
+-secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_w.py,sha256=e5IPsrtqrByMhwGyRfwhsjDpeeqKv5Iu0l5EznRr2bc,3833
+-secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_prox.py,sha256=cKzqmrHmRj30pkkUycTKotnBwjpqSFehlA4tWOiuOYI,4676
++secretflow/ml/nn/fl/backend/tensorflow/strategy/__init__.py,sha256=HkHwvlJJEqZUA1kQ_TtPXDhfRu7cygrdG4X4R9pp6mg,904
++secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_g.py,sha256=uCTNkOEQHhQ5l3mz6RHz5nhUfyBni3TS4czgQPhHkH8,4073
++secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_u.py,sha256=I8pNc5zYvg-mExDfuI5FprvUze5lwSzHdCxJQc5lsgg,4105
++secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_avg_w.py,sha256=0-3BwO1Eb7Ewd5WXITiEfnTGjTkTTcyjBbeIHGUe5DU,3834
++secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_prox.py,sha256=2IqdzPwyYETf7SfBUbpWaEqCKxVL7_qQAjMK7R5Wk28,4677
+ secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_scr.py,sha256=fJJSAhBDBwhYEL3nnRamOkI-CgSm533BXqfkUbHSdmM,5579
+ secretflow/ml/nn/fl/backend/tensorflow/strategy/fed_stc.py,sha256=986SjH0AH1y9_1VogzDm_4VPM74nkUFVPc8kWbxN840,5453
+ secretflow/ml/nn/fl/backend/torch/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/ml/nn/fl/backend/torch/fl_base.py,sha256=zQ_01riqQuh9Y5LymP3bNndBPaVM0vBoLW5NaKWgV8U,11627
+-secretflow/ml/nn/fl/backend/torch/sampler.py,sha256=JZzu2_jvhBrqcWQNfU7Qb8yFwhm1suiWwcjAI0i03Uk,3607
+-secretflow/ml/nn/fl/backend/torch/utils.py,sha256=UqwODrRVc0JsKE2lE7dxGxd92M2Myg-9N_bp8b7L3EI,2702
+-secretflow/ml/nn/fl/backend/torch/strategy/__init__.py,sha256=XoBlDQP4nc8FrfjKjGdKqTwupaPp9exRRPU4_ZtOmw4,904
+-secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_g.py,sha256=1olWSdnIAuNC3zw7-8Wdn9tUybq5h4S0XAV2Mkjac1Y,3481
+-secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_u.py,sha256=iKheBSMh7S0c2CZc22q9vE94XRvGQ71DBRz901dVmfY,3323
+-secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_w.py,sha256=CH5j9o34EglfRiC6BkzsPAo2zPe_b1y6WJQWNh0kdoo,3380
+-secretflow/ml/nn/fl/backend/torch/strategy/fed_prox.py,sha256=zg-lOZ9QEkFwrTKJnnUoxGnEzseroL9pRrfZ21o-wp8,3837
++secretflow/ml/nn/fl/backend/torch/fl_base.py,sha256=Zpr8WQGLzQEo8it5de8-p22w2Zc0SfbSfVg9suliG3c,13406
++secretflow/ml/nn/fl/backend/torch/sampler.py,sha256=r6Wkw3LdkfcHo_cv8iop220ZlugCH25_0Yyj7mCnby0,3606
++secretflow/ml/nn/fl/backend/torch/utils.py,sha256=2kL3E9kEoAGUV05-ntG_3iujuQ0gy8-C_9kYwr0q_aU,2710
++secretflow/ml/nn/fl/backend/torch/strategy/__init__.py,sha256=RgjI2iZFjusgZ25_8-s2iNIyUsAbUjK3SaUJGoiDPhc,904
++secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_g.py,sha256=9WkDVZ69S8jm6w1KHMbCSYu5w0ddFiE1xekDo6FSzp4,3482
++secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_u.py,sha256=7oSPq97gpMYJ6QgC-UVk3YkW5j21MOseXOzr0X2PMt0,3324
++secretflow/ml/nn/fl/backend/torch/strategy/fed_avg_w.py,sha256=LpJBwjb6r8QGVbu48ook0DUrqTh2OMNFRkI9aBFYjlA,3381
++secretflow/ml/nn/fl/backend/torch/strategy/fed_prox.py,sha256=DBIdG6LQo3ZXM4YkbSzG3hpUM0TILORyhfi2wF4KF7U,3838
+ secretflow/ml/nn/fl/backend/torch/strategy/fed_scr.py,sha256=zo8ZtKnOLj9QeI9utApthejtcvIxs_Il-oK9u7w-bds,5266
+ secretflow/ml/nn/fl/backend/torch/strategy/fed_stc.py,sha256=MqV42jJewc5_zB6kogIOYr4VYckTu_NTlDHkerZv0R4,5275
+ secretflow/ml/nn/sl/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/ml/nn/sl/sl_model.py,sha256=T4iSZ_X7HU1RUhpLSpcfK0tcue0rWugnH5e3iTesDEo,28571
++secretflow/ml/nn/sl/sl_model.py,sha256=E8OkQbQfF8VETK43B5fJ9dyRg6RoRGY3kmUv4alQu3k,28640
++secretflow/ml/nn/sl/strategy_dispatcher.py,sha256=1Sac34P5sXSlZKJqYM2OvuJcQNt9KHjcOZ5A74QzJ-0,2395
+ secretflow/ml/nn/sl/backend/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/ml/nn/sl/backend/tensorflow/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/ml/nn/sl/backend/tensorflow/sl_base.py,sha256=CaAMrXZBSLRis5xWViv6hCrbcaYkfXBxVmV9VEdZ164,31717
+-secretflow/ml/nn/sl/backend/tensorflow/utils.py,sha256=sGg2lovd0Sa85Yc6hgJQ_26GCx6KGUDY5Zw6eXcFlMs,4145
+-secretflow/ml/nn/sl/backend/tensorflow/strategy/__init__.py,sha256=ZcDNQCi9vHziP82W3ZBcexoU-sNWFXqRbVKcDKuRP_E,666
+-secretflow/ml/nn/sl/backend/tensorflow/strategy/split_async.py,sha256=xZVfFfovAWDucOUBId2-a-AWI_YHFcRfjwI900mLLuI,6428
++secretflow/ml/nn/sl/backend/tensorflow/sl_base.py,sha256=z276tkAdillmuyHCL6GuT3iM7cggh8_umVrHc8G7eXc,34424
++secretflow/ml/nn/sl/backend/tensorflow/utils.py,sha256=My5jPf99yW11QGgp-XRAwMv7TdfsnxL8JOnMorcwiUc,4487
++secretflow/ml/nn/sl/backend/tensorflow/strategy/__init__.py,sha256=Wiv8YukYUdZMHtdjpFdBD7tPt0yiodlUiMkgEdpqWnc,753
++secretflow/ml/nn/sl/backend/tensorflow/strategy/split_async.py,sha256=lbgw7N3HjDWqMKBd7SryJuvJQ4cQDlN3IhGqMsGyGLo,6773
++secretflow/ml/nn/sl/backend/tensorflow/strategy/split_state_async.py,sha256=7TGyI9oUDNTXuUBJKHGJiK9DyLd3chpEF-udkIKvVrw,5162
+ secretflow/ml/nn/sl/backend/torch/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/preprocessing/__init__.py,sha256=WArCKEUzlmqFHl08W4XvmFNSR24fShDAmUH3uF_cexk,923
+ secretflow/preprocessing/base.py,sha256=hi3nD9aE7c4gNyfdhrOdHVoZ6KKugP8GgUqziEM2ddI,1231
+-secretflow/preprocessing/discretization.py,sha256=aBV6Ly9IhTC25dXrzyOup0i4MwX4Y1Nl2VkDyBLOPlc,11845
++secretflow/preprocessing/discretization.py,sha256=U5iTyPDKc13_-ZiaNxXCmImUs4h_DKhR3cSRbobSkh8,11845
+ secretflow/preprocessing/encoder.py,sha256=uUPDtydfMUh2gGmx1ZQyQBH5moMTsuvIpkYJEVUOQ8c,13154
+-secretflow/preprocessing/scaler.py,sha256=wMV0h1c9BfxtR8b6evL2P0yifcTRrXxIaTh7zzNdlTA,14116
+-secretflow/preprocessing/transformer.py,sha256=LlN6vp6OGR7aTa3FozbtV_ySoOZk1E6ExxH45Imd2lw,5162
++secretflow/preprocessing/scaler.py,sha256=-8xLo-suvMmiDbAONdRR9kbKv9BGTX28UQ1pCooHXlU,14116
++secretflow/preprocessing/transformer.py,sha256=1dlC3DVSoARXphMa2x2_sxbhkiVczRlElsDaAN7-aT8,5162
+ secretflow/preprocessing/binning/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/preprocessing/binning/homo_binning.py,sha256=0lsDRvj4vUavSajUZgt5TJh__q-MIt6zkAYyo6fkVnk,7218
+-secretflow/preprocessing/binning/homo_binning_base.py,sha256=H_CN3-lp36dMrrvwCv9BItDwmu95o1EuNRR5GLJAc4k,11273
+-secretflow/preprocessing/binning/vert_woe_binning.py,sha256=0W_n1t8yiCUacaK4pOzHujBRkLw3xZQDbF6pv_ctkvE,10436
+-secretflow/preprocessing/binning/vert_woe_binning_pyu.py,sha256=qBc4qwxrcO1UOOYGK7vsOikS6pg8bz63f6UV7gbVU4k,21935
+-secretflow/preprocessing/binning/vert_woe_substitution.py,sha256=K6xx-TxrjR-lvNPxuo2_3jdTkPuRqwNME7Gft1O2yyY,3502
++secretflow/preprocessing/binning/homo_binning_base.py,sha256=wHcPdvgbPTrVMUP4ajYviFybnuixYi2gxwmkjJikHxs,11274
++secretflow/preprocessing/binning/vert_woe_binning.py,sha256=fzuKZRpaZMIRjmXhW91cUKjKkil-ocCe_2OB6rJ_vjg,10841
++secretflow/preprocessing/binning/vert_woe_binning_pyu.py,sha256=Qqcdg6CcmHKDSGs6vgmsJH1HxYwgZiKMMK-sNMtkevc,22492
++secretflow/preprocessing/binning/vert_woe_substitution.py,sha256=1wSHMFMUYIHHAR84Bsnrpw2t7zTuikQ5rgfRxacV2SI,3503
+ secretflow/preprocessing/binning/kernels/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/preprocessing/binning/kernels/base_binning.py,sha256=_0whbDbFJ4wL5lxtacAIQTikDcmCKIhHk9p2ku65shs,2524
+-secretflow/preprocessing/binning/kernels/quantile_binning.py,sha256=KRNTHo9DtgA039RCGyj8gbu6bAbN14wYOPARtan_EFE,5290
++secretflow/preprocessing/binning/kernels/quantile_binning.py,sha256=ZZqP7k4vSxyY1eQUvcNZccjda_eFsVWjVddZhACF0aE,5291
+ secretflow/preprocessing/binning/kernels/quantile_summaries.py,sha256=wIzrTEr8goAn9sMOdFdhVrSq3npChJrpOXlyQpkzc7E,6517
+-secretflow/security/__init__.py,sha256=YlCcC0PHq4DtMzPwbd1paBcetpfeMCOO_41U98LDIXY,963
++secretflow/security/__init__.py,sha256=XSa8vQ3YNjHEWbHVXrM9MwxonaxndtCOi50CipzrU90,941
+ secretflow/security/diffie_hellman.py,sha256=uIAICEjHJZKNYP2A50R6nWU6qGkVGSgGNIV9CXn48z0,11579
+ secretflow/security/aggregation/__init__.py,sha256=QLB9vulzN399OMy9T_S6ZA0iaeKuVbRS9L61Hpz2F8o,946
+ secretflow/security/aggregation/_utils.py,sha256=KgXRCCxr9PQsinDALN4a5Dn0jycSF3x3qYqq2kcTMv4,1039
+ secretflow/security/aggregation/aggregator.py,sha256=smdPapUc9I3LdAuneIIbdKOWcGvWKOUeLxTlN47o85g,1072
+ secretflow/security/aggregation/plain_aggregator.py,sha256=h2FEQgiyU77zW6qisJnJURiX0_S1guRGmNMgQ2gnsT4,4473
+-secretflow/security/aggregation/secure_aggregator.py,sha256=tWVEAEV8EUwd5xYxJC375ZUqLkvgxVnUXyLoFtr92bQ,12147
+-secretflow/security/aggregation/sparse_plain_aggregator.py,sha256=fyo2UGpRrrVpnNL2eJcwVbDr0XacNtGibASvsrzt59Y,4971
+-secretflow/security/aggregation/spu_aggregator.py,sha256=54zd9g5Zs7SrchZ-su4WZIPkDy01bDzmYncpXJyjKss,4178
++secretflow/security/aggregation/secure_aggregator.py,sha256=HiSf8dostWXMxA2N46NpCU2icr23cAsEUWTNK94yfCk,12148
++secretflow/security/aggregation/sparse_plain_aggregator.py,sha256=KWiNrMX1HEfTorGyGDWjqqI651jaquxU90cwMSwoNcc,5009
++secretflow/security/aggregation/spu_aggregator.py,sha256=KYUUmwf99bXamZ2CVxTZGvKtnOCEoBJ262ehdiKegfQ,4179
+ secretflow/security/compare/__init__.py,sha256=yVG0XmROdF0Qq3LYeXJb8SzVuXtu-Ii8yoCCWNahoRY,858
+ secretflow/security/compare/comparator.py,sha256=3L4W9SKlWi9FDKOidGfOjlPb0SB5XogJWdKbDnBB2mw,1066
+-secretflow/security/compare/device_comparator.py,sha256=7ekhMPeIcXpYu3wV2jbFfwNRzRLVWsRXGR39iz7MHEc,2220
++secretflow/security/compare/device_comparator.py,sha256=e5P0yTEqRFTmr1a8fOJtRt-NurXb5pJ-d8bT9BY-Rhk,2220
+ secretflow/security/compare/plain_comparator.py,sha256=wpn4UusUHkFeCAUTvUw_SIhQB-7GClaD50z7QcCCMwg,1871
+ secretflow/security/compare/spu_comparator.py,sha256=iQCd8z0UpkKD3h5AhPklQ9oP-8KAGkTUNyyRyJ2qvDg,1762
+-secretflow/security/privacy/__init__.py,sha256=2JkeitHhkjnE5jHJ7o9fbOZB5hmK8I88Stx4HX_P2eA,957
+-secretflow/security/privacy/_lib.cpython-38-x86_64-linux-gnu.so,sha256=FCKO40lKmxLJ4NTDb3l1UissX4YJIBSOFEN1fV2JJjQ,2211448
++secretflow/security/privacy/__init__.py,sha256=5kkF46VCKxJmsPoutJ2b22FA3xYpdp9itV1zCbJJR2s,933
++secretflow/security/privacy/_lib.cpython-38-darwin.so,sha256=J4Exd7HVf6ac00WBmZlorcfloUP-MEgQuRzqD6jDeuM,2208676
+ secretflow/security/privacy/strategy.py,sha256=-H8riGuYZEuuEDmRzwO1HvDCGK89TjWpknXUv2bm3yQ,2749
+ secretflow/security/privacy/strategy_fl.py,sha256=WAUGSRS1ZRW2XxAqeQwMVe2Tgyab_AOOYspUcXBWxl8,1875
+ secretflow/security/privacy/accounting/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/security/privacy/accounting/gdp_accountant.py,sha256=J7pOwbiStkOuX37pIGkx7RnEdH7DwGRgUXE3duskRPk,2508
+ secretflow/security/privacy/accounting/log_utils.py,sha256=cbyOYkWMuJxJgdL8zT7DidWHuA-RPl-W77CQJ1aLmVQ,3670
+-secretflow/security/privacy/accounting/rdp_accountant.py,sha256=d1Z8ZKNoPQUwG4bS4nPoSk2AeOWOvSuq-E1jdipM7Ys,5700
++secretflow/security/privacy/accounting/rdp_accountant.py,sha256=QAowmFm3Vyd-cOH_i0y1mI3YnagbthHtq-Nwnv7yEEo,5702
+ secretflow/security/privacy/mechanism/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+ secretflow/security/privacy/mechanism/tensorflow/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/security/privacy/mechanism/tensorflow/layers.py,sha256=5nkOdMKzRJX78c6nIiOBijavbQQ2LYCY--m0Q119VpU,6127
+-secretflow/security/privacy/mechanism/tensorflow/mechanism_fl.py,sha256=FdKUPY_5qOBVwQ_htzQ5Pc7hRNYhoe_e-VbVbdsjePk,5250
+-secretflow/stats/__init__.py,sha256=BAC4gS_8wtrvuG6Xg-5j4iO8g5PhSeIRYISpHpLTG6w,1160
++secretflow/security/privacy/mechanism/tensorflow/layers.py,sha256=NetuDiA6icc5jXKs0SRjVwyOj3mJmBXdo3-kT5-GQDQ,6127
++secretflow/security/privacy/mechanism/tensorflow/mechanism_fl.py,sha256=aA54csKBRrpBSQ7MwIR0JQwxWzjl9fqckHJbSsU2fkI,5251
++secretflow/stats/__init__.py,sha256=31yDkVpNZ9Xa3bwohM_3JiEk1hzTIjdE5n0Foys3kJk,1159
+ secretflow/stats/biclassification_eval.py,sha256=Teu4hKYJKYzTlWBo9BkA-8K1STBorfLPXiyNGkDtMvk,4042
+ secretflow/stats/psi_eval.py,sha256=2ACH222UQj5RtOz4fbCE-gMIbd7SvCuyWv4AgZoOnP8,2386
+ secretflow/stats/pva_eval.py,sha256=Z1WkfUg6-Ca5i7cpG9PLtd9O31T5g_PfhazWqhSFPTs,2751
+-secretflow/stats/regression_eval.py,sha256=-fHR_3xxgLtmt6i44xcxTrKQ6uXdMZtYHNds2nT-rTU,2993
+-secretflow/stats/score_card.py,sha256=VXs98mapOQFchPMoeOYRdhKh3fngeE6_Cz7WdVChiJg,4422
+-secretflow/stats/ss_pearsonr_v.py,sha256=m50f2XEGpMy6A9HBJTsePWWvSW6LIIZKcfnVgHE6Vqo,2425
+-secretflow/stats/ss_pvalue_v.py,sha256=b69JodvErC2w77Y-Bm51n6qKYHLgGYfR6_iTo0dIv5E,7181
+-secretflow/stats/ss_vif_v.py,sha256=kkQIJl0CTTGC_zpLH3ENTyagtzpD4bWdR-xd-hfCw4w,3634
+-secretflow/stats/table_statistics.py,sha256=Xb1cQzdX-s6-bP9J35YKGfNgkWMpJuU0iEYoGq2HreY,3260
+-secretflow/stats/core/__init__.py,sha256=dXzv3YfGXmG7hDda8v1PBslVwGcXnVnckbjmXGWzFEs,726
++secretflow/stats/regression_eval.py,sha256=YdmfF2L5RExr5Yr_UeHT7CMvT-F5AXpiYy8pFUvcSlQ,2995
++secretflow/stats/score_card.py,sha256=P8MyXGvVU1aV11f_Vkd57mEtLVZ3Yz5OFlq3BRekTYA,4421
++secretflow/stats/ss_pearsonr_v.py,sha256=MS5ASr1P_5OoiC5vL2rPGnazA7iFsG1N4CsS6MdybIQ,2421
++secretflow/stats/ss_pvalue_v.py,sha256=0CAI8dF2RCG7SP0qFR1WNAP6wwt3yo-q4RU1xJD4K0A,7264
++secretflow/stats/ss_vif_v.py,sha256=jN0M-1TTpjK10TEjgkdI1NGvAIM_kiVDdmDIUyWAA-s,3631
++secretflow/stats/table_statistics.py,sha256=PS-wrfFqcza9vjI_W48mq3B1A45gj4SOcWC21vVlMPM,3262
++secretflow/stats/core/__init__.py,sha256=FCobL1hK9wpgG3MpMSZRojYPUOJEwgZwYcYnLbsPTS0,726
+ secretflow/stats/core/biclassification_eval_core.py,sha256=ae3EyxuUZG1cVoExCm9MJmAk7gj1NSnsXPmZ6n7B_hU,20047
+ secretflow/stats/core/psi_core.py,sha256=gYMoHQfNpWh5VFgNv-aA6H6bWIeXIFxtcrZePNLfVuM,2802
+ secretflow/stats/core/pva_core.py,sha256=CLSvM35Bag8nGsGvjUeL4lFsAv0lCANClHArZsOtC_w,1665
+-secretflow/stats/core/utils.py,sha256=GE-1Vy4U1E-5pbzEnvx3cyYJuEvxprvSUwOu3G4MM2c,1776
+-secretflow/utils/__init__.py,sha256=kMM7Xt24uaiEDf0JmeIBTHDsZVuDoPZa1bKMRWwQ700,662
+-secretflow/utils/compressor.py,sha256=jX39F37uaLCBPngk3t6QFv6rvzEmuzUHtqOHUrDLgQM,11206
++secretflow/stats/core/utils.py,sha256=VL6W4gR6ciggEoRYLEUutViWql5cnsjyjQtSYqdkA24,1776
++secretflow/utils/__init__.py,sha256=LsaruislCBOGxAxIhzEQEuRvZP0bW9-M3OgabZQiwRA,662
++secretflow/utils/cloudpickle.py,sha256=D9Lf_I_I4iJFmahoM2OOBvfQPLcs2McBHbMuMgqr-nk,13370
++secretflow/utils/compressor.py,sha256=qWydSrBqDzBjEs2yv40Q5EgnwCa95eeH-QfrAM8DpgM,11236
+ secretflow/utils/errors.py,sha256=rRnEwSIU-ewJ4JXNBkbn_bk_ifGGaWS2CeeiAbYpGHg,1084
+-secretflow/utils/hash.py,sha256=vBaZO4hL_2fMiHgZVBNkrE3pucoyJCDlpjoOLroPUK4,283
+-secretflow/utils/io.py,sha256=1hU7Wtif5eKHzZNEvNsDjFOkZ3F-l1CgpZ6IX6Um-oo,391
+-secretflow/utils/logging.py,sha256=JDTz3PPpfbdX7G-nokEthPubPwgL76S0z4XVqPsQ-fo,378
+-secretflow/utils/ndarray_bigint.py,sha256=VHoeOsy6bpPUWtoijEdSALl7V1L-_N-QE1mgI_IQuE8,2842
++secretflow/utils/hash.py,sha256=aWbXLTdmXc_xOl5FlXQW7Yw93iujdqu2X_01t6LF8cU,870
++secretflow/utils/io.py,sha256=vDesPaH9sKe8X7qdVDEaFhF4RksVzowNIJ-YuvYZ-TY,978
++secretflow/utils/logging.py,sha256=OZHkbOTsiN17do3t1iT6lbjW9JrdqJyBPEx4CCskF-8,964
++secretflow/utils/ndarray_bigint.py,sha256=awneTcQwL2SCMsE5dnv3WXGg9ZIWGM6MrEHteTldCgA,2842
+ secretflow/utils/ndarray_encoding.py,sha256=Fs-q-409SG7Jh2mgBy64uDv7F2kJygrRpgZKFgP9l4A,2489
+-secretflow/utils/random.py,sha256=PmXkrerZN7zmsi5mhGXI0VQ6daAiLFFwycfWMLJRIkk,216
+-secretflow/utils/sigmoid.py,sha256=uVmEHOzc_d6ovYwU8ucZilbsYe-9cBGSuvtZpWCBmn0,3928
+-secretflow/utils/testing.py,sha256=PkYjAKRBXNP3DoaiAy8h_u9hi_wxP9sE864AkBgkfEg,3342
++secretflow/utils/random.py,sha256=YR5ZysYl6AyOMV0qV0qMxQYzsZ8O7YqYrRnCBseMWIg,803
++secretflow/utils/ray_compatibility.py,sha256=gVO78f_ZzuH0yaZGMtjn5v0NP00p_cZ_BdmRNgZ6XeI,1330
++secretflow/utils/sigmoid.py,sha256=cMw5zBMeJ9yYT4TrJdfsMr6PowQyxkNftCOIgMaSMHY,3930
++secretflow/utils/testing.py,sha256=JsZrw5PMsyeBJp1h-fWQHpzGcNHn13NYxdoHhFCGE8w,3308
+ secretflow/utils/simulation/__init__.py,sha256=Wd00rjlQJKH-aY2LbPoVGjBo932U5pCSy9wAKN9ekjw,585
+-secretflow/utils/simulation/datasets.py,sha256=1FpcYUP7BbH6IYQdCGnY4vdRftDI1tA86QIAZBVfsC4,20821
++secretflow/utils/simulation/datasets.py,sha256=v_7nDz4VBhAazodMhdKX7nwATSi1FRRafed4ZbNhxgU,30639
+ secretflow/utils/simulation/tf_gnn_model.py,sha256=385s0qZEOACN97MYQEPJX-vSVNEeQq8xb-nVYHEV7ls,8941
+ secretflow/utils/simulation/data/__init__.py,sha256=KD77PGi-0ECpneFzilAxvo-N9fknaBc9CgiB2qlfuZU,769
+-secretflow/utils/simulation/data/_utils.py,sha256=g8Chtdl2Q9S7QPr6j7Kq57mirq3WgfK2bbO5SvLLiHU,2548
++secretflow/utils/simulation/data/_utils.py,sha256=YauA2ujZLhodRrVGF1xMLVIHqSrLSbXLB5iOrxxO45I,2548
+ secretflow/utils/simulation/data/dataframe.py,sha256=CRcnioLLM0o2bwy8SoLmx21S0icW6GG5yqfnlxkzAvY,5389
+ secretflow/utils/simulation/data/ndarray.py,sha256=YkH4ZkIJYd9sKIB0YAueGlgb77iGQ9xEGs_mQTKHCbQ,4093
+-secretflow-0.8.0b1.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+-secretflow-0.8.0b1.dist-info/METADATA,sha256=rZ_CKp5ErAVvzqReUNX_rFwmoe2lIpygHmCQ9WR7iTs,3648
+-secretflow-0.8.0b1.dist-info/WHEEL,sha256=CowjqCzRumLgAtUDmyNxeTdxkXu0Sqg-h49y7ZnLV6g,111
+-secretflow-0.8.0b1.dist-info/top_level.txt,sha256=gnx5PWbIu_7IpkW_zzqjwN5TFcosT0RCQGqKRUlVt7I,44
+-secretflow-0.8.0b1.dist-info/RECORD,,
++secretflow-0.8.1b0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
++secretflow-0.8.1b0.dist-info/METADATA,sha256=jVsQU6nsyzPlUxi_u6HPahuBOZAq9V2GOC8aKHVcLSM,3787
++secretflow-0.8.1b0.dist-info/WHEEL,sha256=lbCZQl32rz70_Iou4S1h8sUmNh5Rak_YxaqmnmkwnjQ,108
++secretflow-0.8.1b0.dist-info/dependency_links.txt,sha256=LI4hT0fA00A7twyfHB-RG2dlg3JwhnHCi7lOWmSjA3E,55
++secretflow-0.8.1b0.dist-info/top_level.txt,sha256=gnx5PWbIu_7IpkW_zzqjwN5TFcosT0RCQGqKRUlVt7I,44
++secretflow-0.8.1b0.dist-info/RECORD,,
+```
+

@@ -1,0 +1,109 @@
+# Comparing `tmp/appmesh-0.3.5-py3-none-any.whl.zip` & `tmp/appmesh-0.3.6-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Zip file size: 13677 bytes, number of entries: 6
+--rw-r--r--  2.0 unx       11 b- defN 23-Apr-04 02:08 appmesh/__init__.py
+--rw-r--r--  2.0 unx    49828 b- defN 23-Apr-04 02:08 appmesh/appmesh_client.py
+--rw-r--r--  2.0 unx    10620 b- defN 23-Apr-04 02:08 appmesh-0.3.5.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-04 02:08 appmesh-0.3.5.dist-info/WHEEL
+--rw-r--r--  2.0 unx        8 b- defN 23-Apr-04 02:08 appmesh-0.3.5.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx      455 b- defN 23-Apr-04 02:08 appmesh-0.3.5.dist-info/RECORD
+-6 files, 61014 bytes uncompressed, 12855 bytes compressed:  78.9%
++Zip file size: 13690 bytes, number of entries: 6
++-rw-r--r--  2.0 unx       11 b- defN 23-Apr-07 08:54 appmesh/__init__.py
++-rw-r--r--  2.0 unx    49876 b- defN 23-Apr-07 08:54 appmesh/appmesh_client.py
++-rw-r--r--  2.0 unx    10620 b- defN 23-Apr-07 08:54 appmesh-0.3.6.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 08:54 appmesh-0.3.6.dist-info/WHEEL
++-rw-r--r--  2.0 unx        8 b- defN 23-Apr-07 08:54 appmesh-0.3.6.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx      455 b- defN 23-Apr-07 08:54 appmesh-0.3.6.dist-info/RECORD
++6 files, 61062 bytes uncompressed, 12868 bytes compressed:  78.9%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,19 +1,19 @@
+ Filename: appmesh/__init__.py
+ Comment: 
+ 
+ Filename: appmesh/appmesh_client.py
+ Comment: 
+ 
+-Filename: appmesh-0.3.5.dist-info/METADATA
++Filename: appmesh-0.3.6.dist-info/METADATA
+ Comment: 
+ 
+-Filename: appmesh-0.3.5.dist-info/WHEEL
++Filename: appmesh-0.3.6.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: appmesh-0.3.5.dist-info/top_level.txt
++Filename: appmesh-0.3.6.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: appmesh-0.3.5.dist-info/RECORD
++Filename: appmesh-0.3.6.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## appmesh/appmesh_client.py
+
+```diff
+@@ -1056,15 +1056,15 @@
+         rest_url = parse.urljoin(self.server_url, path)
+         if self.jwt_token:
+             header["Authorization"] = "Bearer " + self.jwt_token
+ 
+         if method is AppMeshClient.Method.GET:
+             return requests.get(url=rest_url, params=query, headers=header, verify=self.ssl_verify, timeout=self.rest_timeout)
+         elif method is AppMeshClient.Method.POST:
+-            return requests.post(url=rest_url, params=query, headers=header, json=body, verify=self.ssl_verify, timeout=self.rest_timeout)
++            return requests.post(url=rest_url, params=query, headers=header, data=json.dumps(body) if isinstance(body, dict) else body, verify=self.ssl_verify, timeout=self.rest_timeout)
+         elif method is AppMeshClient.Method.POST_STREAM:
+             return requests.post(
+                 url=rest_url,
+                 params=query,
+                 headers=header,
+                 data=body,
+                 verify=False,
+```
+
+## Comparing `appmesh-0.3.5.dist-info/METADATA` & `appmesh-0.3.6.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: appmesh
+-Version: 0.3.5
++Version: 0.3.6
+ Summary: Client SDK for App Mesh
+ Home-page: https://github.com/laoshanxi/app-mesh
+ Author: laoshanxi
+ Author-email: 178029200@qq.com
+ License: MIT
+ Keywords: appmesh AppMesh app-mesh
+ Classifier: Programming Language :: Python :: 3
+```
+
+### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: appmesh Version: 0.3.5 Summary: Client SDK for App
++Metadata-Version: 2.1 Name: appmesh Version: 0.3.6 Summary: Client SDK for App
+ Mesh Home-page: https://github.com/laoshanxi/app-mesh Author: laoshanxi Author-
+ email: 178029200@qq.com License: MIT Keywords: appmesh AppMesh app-mesh
+ Classifier: Programming Language :: Python :: 3 Classifier: License :: OSI
+ Approved :: MIT License Classifier: Operating System :: OS Independent
+ Requires-Python: >=3 Description-Content-Type: text/markdown Requires-Dist:
+ requests Requires-Dist: msgpack Requires-Dist: requests-toolbelt Requires-Dist:
+ aniso8601 ï»¿[![language.badge]][language.url] [![standard.badge]]
+```
+
