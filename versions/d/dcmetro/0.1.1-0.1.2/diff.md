@@ -1,0 +1,266 @@
+# Comparing `tmp/dcmetro-0.1.1.tar.gz` & `tmp/dcmetro-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dcmetro-0.1.1.tar", last modified: Thu Apr  6 03:56:24 2023, max compression
++gzip compressed data, was "dcmetro-0.1.2.tar", last modified: Fri Apr  7 00:40:02 2023, max compression
+```
+
+## Comparing `dcmetro-0.1.1.tar` & `dcmetro-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+-drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-06 03:56:24.057036 dcmetro-0.1.1/
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     1061 2023-04-06 03:01:14.000000 dcmetro-0.1.1/LICENSE.txt
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     2406 2023-04-06 03:56:24.057230 dcmetro-0.1.1/PKG-INFO
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     2170 2023-04-06 03:55:28.000000 dcmetro-0.1.1/README.md
+-drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-06 03:56:24.049266 dcmetro-0.1.1/dcmetro.egg-info/
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     2406 2023-04-06 03:56:23.000000 dcmetro-0.1.1/dcmetro.egg-info/PKG-INFO
+--rw-r--r--   0 harunferaidon   (501) staff       (20)      438 2023-04-06 03:56:23.000000 dcmetro-0.1.1/dcmetro.egg-info/SOURCES.txt
+--rw-r--r--   0 harunferaidon   (501) staff       (20)        1 2023-04-06 03:56:23.000000 dcmetro-0.1.1/dcmetro.egg-info/dependency_links.txt
+--rw-r--r--   0 harunferaidon   (501) staff       (20)       60 2023-04-06 03:56:23.000000 dcmetro-0.1.1/dcmetro.egg-info/entry_points.txt
+--rw-r--r--   0 harunferaidon   (501) staff       (20)       27 2023-04-06 03:56:23.000000 dcmetro-0.1.1/dcmetro.egg-info/requires.txt
+--rw-r--r--   0 harunferaidon   (501) staff       (20)        4 2023-04-06 03:56:23.000000 dcmetro-0.1.1/dcmetro.egg-info/top_level.txt
+--rw-r--r--   0 harunferaidon   (501) staff       (20)       79 2023-04-06 03:56:24.057922 dcmetro-0.1.1/setup.cfg
+--rw-r--r--   0 harunferaidon   (501) staff       (20)      707 2023-04-06 03:55:58.000000 dcmetro-0.1.1/setup.py
+-drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-06 03:56:24.049804 dcmetro-0.1.1/src/
+--rw-r--r--   0 harunferaidon   (501) staff       (20)        0 2023-04-04 00:34:40.000000 dcmetro-0.1.1/src/__init__.py
+-drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-06 03:56:24.056123 dcmetro-0.1.1/src/main/
+--rw-r--r--   0 harunferaidon   (501) staff       (20)        0 2023-03-28 20:16:32.000000 dcmetro-0.1.1/src/main/__init__.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     2260 2023-04-06 02:58:18.000000 dcmetro-0.1.1/src/main/app.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     1930 2023-04-06 02:46:56.000000 dcmetro-0.1.1/src/main/build_graph.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     6597 2023-04-04 05:08:25.000000 dcmetro-0.1.1/src/main/commands.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)    11170 2023-04-04 05:08:25.000000 dcmetro-0.1.1/src/main/constants.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     1843 2023-04-04 00:34:40.000000 dcmetro-0.1.1/src/main/dijkstra.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)      574 2023-04-04 05:08:25.000000 dcmetro-0.1.1/src/main/generate_station_codes.py
+--rw-r--r--   0 harunferaidon   (501) staff       (20)     1098 2023-04-04 05:08:25.000000 dcmetro-0.1.1/src/main/get_station_distances.py
++drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-07 00:40:02.225430 dcmetro-0.1.2/
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     1061 2023-04-06 04:00:36.000000 dcmetro-0.1.2/LICENSE.txt
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     2619 2023-04-07 00:40:02.225589 dcmetro-0.1.2/PKG-INFO
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     2383 2023-04-07 00:39:35.000000 dcmetro-0.1.2/README.md
++drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-07 00:40:02.221249 dcmetro-0.1.2/dcmetro.egg-info/
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     2619 2023-04-07 00:40:02.000000 dcmetro-0.1.2/dcmetro.egg-info/PKG-INFO
++-rw-r--r--   0 harunferaidon   (501) staff       (20)      438 2023-04-07 00:40:02.000000 dcmetro-0.1.2/dcmetro.egg-info/SOURCES.txt
++-rw-r--r--   0 harunferaidon   (501) staff       (20)        1 2023-04-07 00:40:02.000000 dcmetro-0.1.2/dcmetro.egg-info/dependency_links.txt
++-rw-r--r--   0 harunferaidon   (501) staff       (20)       60 2023-04-07 00:40:02.000000 dcmetro-0.1.2/dcmetro.egg-info/entry_points.txt
++-rw-r--r--   0 harunferaidon   (501) staff       (20)       27 2023-04-07 00:40:02.000000 dcmetro-0.1.2/dcmetro.egg-info/requires.txt
++-rw-r--r--   0 harunferaidon   (501) staff       (20)        4 2023-04-07 00:40:02.000000 dcmetro-0.1.2/dcmetro.egg-info/top_level.txt
++-rw-r--r--   0 harunferaidon   (501) staff       (20)       79 2023-04-07 00:40:02.226165 dcmetro-0.1.2/setup.cfg
++-rw-r--r--   0 harunferaidon   (501) staff       (20)      707 2023-04-07 00:38:40.000000 dcmetro-0.1.2/setup.py
++drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-07 00:40:02.221652 dcmetro-0.1.2/src/
++-rw-r--r--   0 harunferaidon   (501) staff       (20)        0 2023-04-04 00:34:40.000000 dcmetro-0.1.2/src/__init__.py
++drwxr-xr-x   0 harunferaidon   (501) staff       (20)        0 2023-04-07 00:40:02.225022 dcmetro-0.1.2/src/main/
++-rw-r--r--   0 harunferaidon   (501) staff       (20)        0 2023-03-28 20:16:32.000000 dcmetro-0.1.2/src/main/__init__.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     2260 2023-04-07 00:36:46.000000 dcmetro-0.1.2/src/main/app.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     1930 2023-04-06 04:00:36.000000 dcmetro-0.1.2/src/main/build_graph.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     6689 2023-04-07 00:33:34.000000 dcmetro-0.1.2/src/main/commands.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)    11170 2023-04-04 05:08:25.000000 dcmetro-0.1.2/src/main/constants.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     1843 2023-04-04 00:34:40.000000 dcmetro-0.1.2/src/main/dijkstra.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)      574 2023-04-04 05:08:25.000000 dcmetro-0.1.2/src/main/generate_station_codes.py
++-rw-r--r--   0 harunferaidon   (501) staff       (20)     1098 2023-04-04 05:08:25.000000 dcmetro-0.1.2/src/main/get_station_distances.py
+```
+
+### Comparing `dcmetro-0.1.1/LICENSE.txt` & `dcmetro-0.1.2/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `dcmetro-0.1.1/PKG-INFO` & `dcmetro-0.1.2/README.md`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,29 +1,20 @@
+-Metadata-Version: 2.1
+-Name: dcmetro
+-Version: 0.1.1
+-Summary: Console app for sending commands to get live information on the DC Metro
+-Author: Harun Feraidon
+-License: MIT
+-Description-Content-Type: text/markdown
+-License-File: LICENSE.txt
+-
+ # DC Metro Command Line Tool
+-[Imgur](https://i.imgur.com/rE4AKgU.gifv)
++![gif not found, check images/demo.gif](images/demo.gif)
+ 
+ ## What is it
+ With this application, you can submit concise commands via your terminal to request and then receive information.
++[PyPi page here](https://pypi.org/project/dcmetro/0.1.1/)
+ 
+ ## Setup
+ 1. Setup a python virtual environment. `python3 -m venv venv`
+ 2. Activate your python virtual environment. `source venv/bin/activate`
+ 3. Install with `pip install dcmetro`.
+-4. Setup a WMATA API token [here](https://developer.wmata.com).
+-5. Run `echo 'API_KEY = "<YOUR TOKEN HERE>"' > .env`
+-6. Run `dcmetro` to start.
++4. (OPTIONAL, BUT RECOMMENDED) Skipping this step means you will be using a community API key. Creating your own API token will be more reliable. Setup a WMATA API token [here](https://developer.wmata.com). Run `echo 'API_KEY = "<YOUR TOKEN HERE>"' > .env`
++5. Run `dcmetro` to start.
+ 
+ Useful commands include:
+ - `when <location>` to view incoming trains.
+ - `length <from_location> to <to_location>` to get an estimated length of rail time (not including stops, which will vary)
+ - `path <from_location> to <to_location>` to get the shortest path from one location to the other.
+ 
+ # How it works
+```
+
+### Comparing `dcmetro-0.1.1/README.md` & `dcmetro-0.1.2/PKG-INFO`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,20 +1,29 @@
++Metadata-Version: 2.1
++Name: dcmetro
++Version: 0.1.2
++Summary: Console app for sending commands to get live information on the DC Metro
++Author: Harun Feraidon
++License: MIT
++Description-Content-Type: text/markdown
++License-File: LICENSE.txt
++
+ # DC Metro Command Line Tool
+-[Imgur](https://i.imgur.com/rE4AKgU.gifv)
++![gif not found, check images/demo.gif](images/demo.gif)
+ 
+ ## What is it
+ With this application, you can submit concise commands via your terminal to request and then receive information.
++[PyPi page here](https://pypi.org/project/dcmetro/0.1.1/)
+ 
+ ## Setup
+ 1. Setup a python virtual environment. `python3 -m venv venv`
+ 2. Activate your python virtual environment. `source venv/bin/activate`
+ 3. Install with `pip install dcmetro`.
+-4. Setup a WMATA API token [here](https://developer.wmata.com).
+-5. Run `echo 'API_KEY = "<YOUR TOKEN HERE>"' > .env`
+-6. Run `dcmetro` to start.
++4. (OPTIONAL, BUT RECOMMENDED) Skipping this step means you will be using a community API key. Creating your own API token will be more reliable. Setup a WMATA API token [here](https://developer.wmata.com). Run `echo 'API_KEY = "<YOUR TOKEN HERE>"' > .env`
++5. Run `dcmetro` to start.
+ 
+ Useful commands include:
+ - `when <location>` to view incoming trains.
+ - `length <from_location> to <to_location>` to get an estimated length of rail time (not including stops, which will vary)
+ - `path <from_location> to <to_location>` to get the shortest path from one location to the other.
+ 
+ # How it works
+```
+
+### Comparing `dcmetro-0.1.1/dcmetro.egg-info/PKG-INFO` & `dcmetro-0.1.2/dcmetro.egg-info/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,29 +1,29 @@
+ Metadata-Version: 2.1
+ Name: dcmetro
+-Version: 0.1.1
++Version: 0.1.2
+ Summary: Console app for sending commands to get live information on the DC Metro
+ Author: Harun Feraidon
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE.txt
+ 
+ # DC Metro Command Line Tool
+-[Imgur](https://i.imgur.com/rE4AKgU.gifv)
++![gif not found, check images/demo.gif](images/demo.gif)
+ 
+ ## What is it
+ With this application, you can submit concise commands via your terminal to request and then receive information.
++[PyPi page here](https://pypi.org/project/dcmetro/0.1.1/)
+ 
+ ## Setup
+ 1. Setup a python virtual environment. `python3 -m venv venv`
+ 2. Activate your python virtual environment. `source venv/bin/activate`
+ 3. Install with `pip install dcmetro`.
+-4. Setup a WMATA API token [here](https://developer.wmata.com).
+-5. Run `echo 'API_KEY = "<YOUR TOKEN HERE>"' > .env`
+-6. Run `dcmetro` to start.
++4. (OPTIONAL, BUT RECOMMENDED) Skipping this step means you will be using a community API key. Creating your own API token will be more reliable. Setup a WMATA API token [here](https://developer.wmata.com). Run `echo 'API_KEY = "<YOUR TOKEN HERE>"' > .env`
++5. Run `dcmetro` to start.
+ 
+ Useful commands include:
+ - `when <location>` to view incoming trains.
+ - `length <from_location> to <to_location>` to get an estimated length of rail time (not including stops, which will vary)
+ - `path <from_location> to <to_location>` to get the shortest path from one location to the other.
+ 
+ # How it works
+```
+
+### Comparing `dcmetro-0.1.1/setup.py` & `dcmetro-0.1.2/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ 
+ with open(os.path.join(os.path.dirname(__file__), "README.md"), "r") as f:
+     long_description = f.read()
+ 
+ setup(
+     name='dcmetro',
+     packages=find_packages(include=["src", "src.main"]),
+-    version='0.1.1',
++    version='0.1.2',
+     description='Console app for sending commands to get live information on the DC Metro',
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     author='Harun Feraidon',
+     license='MIT',
+     entry_points={
+         "console_scripts": [
+```
+
+### Comparing `dcmetro-0.1.1/src/main/app.py` & `dcmetro-0.1.2/src/main/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcmetro-0.1.1/src/main/build_graph.py` & `dcmetro-0.1.2/src/main/build_graph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcmetro-0.1.1/src/main/commands.py` & `dcmetro-0.1.2/src/main/commands.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+ from dotenv import load_dotenv, find_dotenv
+ from . import constants
+ from .dijkstra import dijkstra
+ from .build_graph import Graph, GraphNode
+ import json
+ 
+ load_dotenv(find_dotenv())
+-API_KEY = os.environ.get("API_KEY")
++API_KEY = os.environ.get("API_KEY") if os.environ.get("API_KEY") else "e13626d03d8e4c03ac07f95541b3091b" # public community key
+ headers = {
+     # Request headers
+     'api_key': API_KEY,
+ }
+ 
+ def handle_commands(command: str, args: list) -> str:
+     commands = {
+```
+
+### Comparing `dcmetro-0.1.1/src/main/constants.py` & `dcmetro-0.1.2/src/main/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcmetro-0.1.1/src/main/dijkstra.py` & `dcmetro-0.1.2/src/main/dijkstra.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcmetro-0.1.1/src/main/generate_station_codes.py` & `dcmetro-0.1.2/src/main/generate_station_codes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcmetro-0.1.1/src/main/get_station_distances.py` & `dcmetro-0.1.2/src/main/get_station_distances.py`
+
+ * *Files identical despite different names*
+

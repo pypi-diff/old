@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/kubric-nightly-2023.4.5.tar.gz tmp/kubric-nightly-2023.4.6.tar.gz --html versions/k/kubric-nightly/2023.4.5-2023.4.6/index.html --text versions/k/kubric-nightly/2023.4.5-2023.4.6/diff.txt --markdown versions/k/kubric-nightly/2023.4.5-2023.4.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">25.8 KB</span></div>
+  <div><span class="source">tmp/kubric-nightly-2023.4.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/kubric-nightly-2023.4.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">294 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/kubric-nightly-2023.4.<del>5</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/kubric-nightly-2023.4.<ins>6</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">25.5 KB</span></div>
+    <div><span class="source">kubric-nightly-2023.4.5.tar</span> vs.</div>
+    <div id="kubric-nightly-----.-.-.tar"><span class="source">kubric-nightly-2023.4.6.tar</span>
+      <a class="anchor" href="#kubric-nightly-----.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">17.4 KB</span></div>
+      <div id="kubric-nightly-----.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 67 lines modified</td><td colspan="2">Offset 1, 67 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11358<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11358<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6275<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6275<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5436<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5436<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3331<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3331<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>17</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/assets/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/assets/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>660<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/assets/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>660<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/assets/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10406<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/assets/asset_preprocessing.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10406<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/assets/asset_preprocessing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8942<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/assets/asset_source.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8942<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/assets/asset_source.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5716<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/assets/utils.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5716<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/assets/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>848<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>848<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6198<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/assets.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6198<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/assets.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5834<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/cameras.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5834<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/cameras.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4479<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/color.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4479<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/color.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1327<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/lights.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1327<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/lights.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2029<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/materials.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2029<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/materials.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10262<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/objects.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10262<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/objects.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6706<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/scene.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6706<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/scene.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4061<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/traits.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4061<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/traits.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3334<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/core/view.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3334<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/core/view.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/datasets/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/datasets/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1166<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/datasets/__init__.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1166<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/datasets/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/datasets/movid.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/datasets/movid.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9641<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/datasets/utils.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9641<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/datasets/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12943<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/file_io.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12943<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/file_io.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>974<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/kubric_typing.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>974<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/kubric_typing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/plotting.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/plotting.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2797<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/post_processing.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2797<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/post_processing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6442<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/randomness.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6442<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/randomness.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2100<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/redirect_io.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2100<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/redirect_io.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/renderer/</td><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/renderer/</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>628<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/renderer/__init__.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>628<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/renderer/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36278<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/renderer/blender.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36278<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/renderer/blender.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18525<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/renderer/blender_utils.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18525<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/renderer/blender_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/safeimport/</td><td class="diffline">37 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/safeimport/</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1166<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/safeimport/__init__.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1166<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/safeimport/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>550<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/safeimport/bpy.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>550<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/safeimport/bpy.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/simulator/</td><td class="diffline">40 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/simulator/</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>631<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/simulator/__init__.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>631<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/simulator/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15699<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/simulator/pybullet.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15699<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/simulator/pybullet.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/sunds/</td><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/sunds/</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>786<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/sunds/__init__.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>786<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/sunds/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12084<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/sunds/kubric_builder.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12084<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/sunds/kubric_builder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2984<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/sunds/kubric_builder_test.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2984<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/sunds/kubric_builder_test.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2314<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/sunds/render_mock_utils.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2314<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/sunds/render_mock_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9738<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric/utils.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9738<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric_nightly.egg-info/</td><td class="diffline">49 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric_nightly.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6275<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric_nightly.egg-info/PKG-INFO</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6275<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric_nightly.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1329<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric_nightly.egg-info/SOURCES.txt</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1329<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric_nightly.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric_nightly.egg-info/dependency_links.txt</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric_nightly.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>255<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric_nightly.egg-info/requires.txt</td><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>255<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric_nightly.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/kubric_nightly.egg-info/top_level.txt</td><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/kubric_nightly.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/setup.cfg</td><td class="diffline">55 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3703<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/setup.py</td><td class="diffline">56 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3703<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:4<del>5</del>:<del>51</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/</td><td class="diffline">57 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:4<ins>6</ins>:<ins>18</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/</td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>584<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/__init__.py</td><td class="diffline">58 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>584<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5093<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_blender.py</td><td class="diffline">59 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5093<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_blender.py</td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1140<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_cameras.py</td><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1140<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_cameras.py</td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3631<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_color.py</td><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3631<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_color.py</td></tr>
+<tr class="diffchanged"><td class="diffline">62 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8014<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_core.py</td><td class="diffline">62 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8014<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_core.py</td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6174<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_fileio.py</td><td class="diffline">63 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6174<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_fileio.py</td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6256<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_postprocessing.py</td><td class="diffline">64 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6256<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_postprocessing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">65 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1631<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_pybullet.py</td><td class="diffline">65 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1631<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_pybullet.py</td></tr>
+<tr class="diffchanged"><td class="diffline">66 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3591<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_scene.py</td><td class="diffline">66 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3591<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_scene.py</td></tr>
+<tr class="diffchanged"><td class="diffline">67 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2838<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>00:45:<del>36</del>.000000<span class="dp">·</span>kubric-nightly-2023.4.<del>5</del>/test/test_traits.py</td><td class="diffline">67 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2838<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>00:45:<ins>59</ins>.000000<span class="dp">·</span>kubric-nightly-2023.4.<ins>6</ins>/test/test_traits.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/LICENSE</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--LICENSE"><span class="source">kubric-nightly-2023.4.6/LICENSE</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">616 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/PKG-INFO</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--PKG-INFO"><span class="source">kubric-nightly-2023.4.6/PKG-INFO</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>kubric-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>kubric-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.4.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.4.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>data<span class="dp">·</span>generation<span class="dp">·</span>pipeline<span class="dp">·</span>for<span class="dp">·</span>creating<span class="dp">·</span>semi-realistic<span class="dp">·</span>synthetic<span class="dp">·</span>multi-object<span class="dp">·</span>videos<span class="dp">·</span>with<span class="dp">·</span>rich<span class="dp">·</span>annotations<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>instance<span class="dp">·</span>segmentation,<span class="dp">·</span>depth<span class="dp">·</span>maps,<span class="dp">·</span>and<span class="dp">·</span>optical<span class="dp">·</span>flow.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>data<span class="dp">·</span>generation<span class="dp">·</span>pipeline<span class="dp">·</span>for<span class="dp">·</span>creating<span class="dp">·</span>semi-realistic<span class="dp">·</span>synthetic<span class="dp">·</span>multi-object<span class="dp">·</span>videos<span class="dp">·</span>with<span class="dp">·</span>rich<span class="dp">·</span>annotations<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>instance<span class="dp">·</span>segmentation,<span class="dp">·</span>depth<span class="dp">·</span>maps,<span class="dp">·</span>and<span class="dp">·</span>optical<span class="dp">·</span>flow.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/google-research/kubric</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/google-research/kubric</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kubric<span class="dp">·</span>team</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kubric<span class="dp">·</span>team</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kubric+dev@google.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kubric+dev@google.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/README.md</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--README.md"><span class="source">kubric-nightly-2023.4.6/README.md</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">626 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 15 lines modified</td><td colspan="2">Offset 11, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>WITHOUT<span class="dp">·</span>WARRANTIES<span class="dp">·</span>OR<span class="dp">·</span>CONDITIONS<span class="dp">·</span>OF<span class="dp">·</span>ANY<span class="dp">·</span>KIND,<span class="dp">·</span>either<span class="dp">·</span>express<span class="dp">·</span>or<span class="dp">·</span>implied.</td><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>WITHOUT<span class="dp">·</span>WARRANTIES<span class="dp">·</span>OR<span class="dp">·</span>CONDITIONS<span class="dp">·</span>OF<span class="dp">·</span>ANY<span class="dp">·</span>KIND,<span class="dp">·</span>either<span class="dp">·</span>express<span class="dp">·</span>or<span class="dp">·</span>implied.</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>See<span class="dp">·</span>the<span class="dp">·</span>License<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>specific<span class="dp">·</span>language<span class="dp">·</span>governing<span class="dp">·</span>permissions<span class="dp">·</span>and</td><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>See<span class="dp">·</span>the<span class="dp">·</span>License<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>specific<span class="dp">·</span>language<span class="dp">·</span>governing<span class="dp">·</span>permissions<span class="dp">·</span>and</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>limitations<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>License.</td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>limitations<span class="dp">·</span>under<span class="dp">·</span>the<span class="dp">·</span>License.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">&quot;&quot;&quot;Root<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>kubric<span class="dp">·</span>module.&quot;&quot;&quot;</td><td class="diffline">14 </td><td class="diffpresent">&quot;&quot;&quot;Root<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>kubric<span class="dp">·</span>module.&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>---<span class="dp">·</span>auto-computed<span class="dp">·</span>by<span class="dp">·</span>setup.py,<span class="dp">·</span>source<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>always<span class="dp">·</span>at<span class="dp">·</span>HEAD</td><td class="diffline">15 </td><td class="diffpresent">#<span class="dp">·</span>---<span class="dp">·</span>auto-computed<span class="dp">·</span>by<span class="dp">·</span>setup.py,<span class="dp">·</span>source<span class="dp">·</span>version<span class="dp">·</span>is<span class="dp">·</span>always<span class="dp">·</span>at<span class="dp">·</span>HEAD</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;2023.4.<del>5</del>&quot;</td><td class="diffline">16 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;2023.4.<ins>6</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>---<span class="dp">·</span>basic<span class="dp">·</span>kubric<span class="dp">·</span>types</td><td class="diffline">17 </td><td class="diffpresent">#<span class="dp">·</span>---<span class="dp">·</span>basic<span class="dp">·</span>kubric<span class="dp">·</span>types</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>pyquaternion<span class="dp">·</span>import<span class="dp">·</span>Quaternion</td><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>pyquaternion<span class="dp">·</span>import<span class="dp">·</span>Quaternion</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">from<span class="dp">·</span>kubric.core.scene<span class="dp">·</span>import<span class="dp">·</span>Scene</td><td class="diffline">19 </td><td class="diffpresent">from<span class="dp">·</span>kubric.core.scene<span class="dp">·</span>import<span class="dp">·</span>Scene</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>kubric.core.assets<span class="dp">·</span>import<span class="dp">·</span>Asset</td><td class="diffline">20 </td><td class="diffpresent">from<span class="dp">·</span>kubric.core.assets<span class="dp">·</span>import<span class="dp">·</span>Asset</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/assets/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/assets/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/assets/asset_preprocessing.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-asset_preprocessing.py"><span class="source">kubric-nightly-2023.4.6/kubric/assets/asset_preprocessing.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-asset_preprocessing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/assets/asset_source.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-asset_source.py"><span class="source">kubric-nightly-2023.4.6/kubric/assets/asset_source.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-asset_source.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/assets/utils.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-utils.py"><span class="source">kubric-nightly-2023.4.6/kubric/assets/utils.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-assets-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/assets.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-assets.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/assets.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-assets.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/cameras.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-cameras.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/cameras.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-cameras.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/color.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-color.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/color.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-color.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/lights.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-lights.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/lights.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-lights.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/materials.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-materials.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/materials.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-materials.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/objects.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-objects.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/objects.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-objects.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/scene.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-scene.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/scene.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-scene.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/traits.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-traits.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/traits.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-traits.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/core/view.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-view.py"><span class="source">kubric-nightly-2023.4.6/kubric/core/view.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-core-view.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/datasets/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-datasets-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/datasets/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-datasets-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/datasets/utils.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-datasets-utils.py"><span class="source">kubric-nightly-2023.4.6/kubric/datasets/utils.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-datasets-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/file_io.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-file_io.py"><span class="source">kubric-nightly-2023.4.6/kubric/file_io.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-file_io.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/kubric_typing.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-kubric_typing.py"><span class="source">kubric-nightly-2023.4.6/kubric/kubric_typing.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-kubric_typing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/plotting.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-plotting.py"><span class="source">kubric-nightly-2023.4.6/kubric/plotting.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-plotting.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/post_processing.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-post_processing.py"><span class="source">kubric-nightly-2023.4.6/kubric/post_processing.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-post_processing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/randomness.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-randomness.py"><span class="source">kubric-nightly-2023.4.6/kubric/randomness.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-randomness.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/redirect_io.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-redirect_io.py"><span class="source">kubric-nightly-2023.4.6/kubric/redirect_io.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-redirect_io.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/renderer/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-renderer-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/renderer/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-renderer-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/renderer/blender.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-renderer-blender.py"><span class="source">kubric-nightly-2023.4.6/kubric/renderer/blender.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-renderer-blender.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/renderer/blender_utils.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-renderer-blender_utils.py"><span class="source">kubric-nightly-2023.4.6/kubric/renderer/blender_utils.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-renderer-blender_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/safeimport/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-safeimport-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/safeimport/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-safeimport-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/safeimport/bpy.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-safeimport-bpy.py"><span class="source">kubric-nightly-2023.4.6/kubric/safeimport/bpy.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-safeimport-bpy.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/simulator/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-simulator-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/simulator/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-simulator-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/simulator/pybullet.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-simulator-pybullet.py"><span class="source">kubric-nightly-2023.4.6/kubric/simulator/pybullet.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-simulator-pybullet.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/sunds/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-__init__.py"><span class="source">kubric-nightly-2023.4.6/kubric/sunds/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/sunds/kubric_builder.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-kubric_builder.py"><span class="source">kubric-nightly-2023.4.6/kubric/sunds/kubric_builder.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-kubric_builder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/sunds/kubric_builder_test.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-kubric_builder_test.py"><span class="source">kubric-nightly-2023.4.6/kubric/sunds/kubric_builder_test.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-kubric_builder_test.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/sunds/render_mock_utils.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-render_mock_utils.py"><span class="source">kubric-nightly-2023.4.6/kubric/sunds/render_mock_utils.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-sunds-render_mock_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric/utils.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-utils.py"><span class="source">kubric-nightly-2023.4.6/kubric/utils.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">664 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric_nightly.egg-info/PKG-INFO</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric_nightly.egg-info-PKG-INFO"><span class="source">kubric-nightly-2023.4.6/kubric_nightly.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric_nightly.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>kubric-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>kubric-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.4.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.4.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>data<span class="dp">·</span>generation<span class="dp">·</span>pipeline<span class="dp">·</span>for<span class="dp">·</span>creating<span class="dp">·</span>semi-realistic<span class="dp">·</span>synthetic<span class="dp">·</span>multi-object<span class="dp">·</span>videos<span class="dp">·</span>with<span class="dp">·</span>rich<span class="dp">·</span>annotations<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>instance<span class="dp">·</span>segmentation,<span class="dp">·</span>depth<span class="dp">·</span>maps,<span class="dp">·</span>and<span class="dp">·</span>optical<span class="dp">·</span>flow.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>data<span class="dp">·</span>generation<span class="dp">·</span>pipeline<span class="dp">·</span>for<span class="dp">·</span>creating<span class="dp">·</span>semi-realistic<span class="dp">·</span>synthetic<span class="dp">·</span>multi-object<span class="dp">·</span>videos<span class="dp">·</span>with<span class="dp">·</span>rich<span class="dp">·</span>annotations<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>instance<span class="dp">·</span>segmentation,<span class="dp">·</span>depth<span class="dp">·</span>maps,<span class="dp">·</span>and<span class="dp">·</span>optical<span class="dp">·</span>flow.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/google-research/kubric</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/google-research/kubric</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kubric<span class="dp">·</span>team</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Kubric<span class="dp">·</span>team</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kubric+dev@google.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kubric+dev@google.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/kubric_nightly.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric_nightly.egg-info-SOURCES.txt"><span class="source">kubric-nightly-2023.4.6/kubric_nightly.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--kubric_nightly.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/setup.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--setup.py"><span class="source">kubric-nightly-2023.4.6/setup.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/__init__.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-__init__.py"><span class="source">kubric-nightly-2023.4.6/test/__init__.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_blender.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_blender.py"><span class="source">kubric-nightly-2023.4.6/test/test_blender.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_blender.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_cameras.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_cameras.py"><span class="source">kubric-nightly-2023.4.6/test/test_cameras.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_cameras.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_color.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_color.py"><span class="source">kubric-nightly-2023.4.6/test/test_color.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_color.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_core.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_core.py"><span class="source">kubric-nightly-2023.4.6/test/test_core.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_core.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_fileio.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_fileio.py"><span class="source">kubric-nightly-2023.4.6/test/test_fileio.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_fileio.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_postprocessing.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_postprocessing.py"><span class="source">kubric-nightly-2023.4.6/test/test_postprocessing.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_postprocessing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_pybullet.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_pybullet.py"><span class="source">kubric-nightly-2023.4.6/test/test_pybullet.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_pybullet.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_scene.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_scene.py"><span class="source">kubric-nightly-2023.4.6/test/test_scene.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_scene.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">kubric-nightly-2023.4.5/test/test_traits.py</span> vs.</div>
+      <div id="kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_traits.py"><span class="source">kubric-nightly-2023.4.6/test/test_traits.py</span>
+        <a class="anchor" href="#kubric-nightly-----.-.-.tar---kubric-nightly-----.-.--test-test_traits.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
